@@ -1,5 +1,6 @@
 @echo off
-REM Este es un comentario
+
+REM Banner
 
 echo """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 echo "                                                                                          "
@@ -18,6 +19,8 @@ echo "                                                                          
 echo "                                                                                          "
 echo """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+REM Execute BlackShark
+
 echo           Bienvenido a BlackShark!!! Presiona cuaqluier tecla para continuar...
 pause > nul
 echo Ejecutando BlackShark, espere un momento...
@@ -25,4 +28,7 @@ echo.
 start "" /D "C:\Program Files\Wireshark" "Wireshark.exe" -platform windows:darkmode=2
 echo.
 echo BlackShark ejecutado!!! 
+
+REM Pausa para mostrar todos los mensajes en consola hasta salir
+
 pause > nul
