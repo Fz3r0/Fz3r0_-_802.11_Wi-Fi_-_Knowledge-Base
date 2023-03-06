@@ -58,6 +58,8 @@ Y ARRANCAN!!!
 - Se dice que cada Layer sirve hacia el Layer de arriba y abajo de él, excepto por las 2 Layers finales: `Layer 1 (capa final de transmisión)` & `Layer 7 (capa final de recepción)`
 - Mientras los datos se mueven por las capas del Modelo OSI, se van `encapsulando` y `decapsulando`
 
+![image](https://user-images.githubusercontent.com/94720207/223029707-a67719fd-de81-407c-97d0-7c118cbf9b80.png)
+
 ### Encapsulamiento
 
 - Simplemente es `append` o `preppend` (poner antes o después) bits de datos adicionales. 
@@ -101,6 +103,10 @@ Y ARRANCAN!!!
 - No establece una conexión antes de enviar datos y no proporciona garantías de que los datos sean recibidos correctamente o en el orden correcto `No tiene ACK, Cheksum, etc`. 
 - Los datos se envían en datagramas, y no hay confirmación de recepción ni retransmisión de paquetes perdidos. 
 - UDP es útil para aplicaciones en las que la velocidad es más importante que la confiabilidad, como en la transmisión de audio o video en tiempo real.
+
+![image](https://user-images.githubusercontent.com/94720207/223029378-5c82410f-0388-4e63-8fe1-1c968da26008.png)
+
+
 
 ### Otros
 
