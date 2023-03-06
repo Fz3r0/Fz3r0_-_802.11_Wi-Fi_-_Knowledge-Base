@@ -155,8 +155,9 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 ### LLC - Logical Link Control (Sublayer)
 
 - El protocolo de control lógico (LLC) es el protocolo que proporciona un `enlace de comunicación entre la Capa 2 y la Capa 3`.
+- El LLC se encarga de proporcionar servicios de control de enlace de datos a la capa de red superior y garantizar que la información se transmita de manera confiable entre dos dispositivos de red (Por ejemplo, PC-A y PC-B en una red ethernet cableada).
 - La subcapa LLC proporciona servicios para la comunicación entre dispositivos en diferentes redes lógicas. 
-- Proporciona un mecanismo para multiplexar y desmultiplexar diferentes protocolos de la Capa 3 (como IPX, TCP, etc.) en la misma red física. 
+- Proporciona un mecanismo para multiplexar y desmultiplexar diferentes protocolos de la Capa 3 (como IPX, TCP, etc.) en la misma red física (como el cable que usa ethernet, o el aire que usa WiFi). 
 
 #### Multiplexación y desmultiplexación 
 
