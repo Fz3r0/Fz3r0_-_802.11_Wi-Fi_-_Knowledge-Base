@@ -56,7 +56,13 @@ Y ARRANCAN!!!
 ## Funcionamiento de los Layers
 
 - Se dice que cada Layer sirve hacia el Layer de arriba y abajo de él, excepto por las 2 Layers finales: `Layer 1 (capa final de transmisión)` & `Layer 7 (capa final de recepción)`
-- Mientras los datos se mueven por las capas del Modelo OSI, se dan encapsulando y decapsulando _(`encapsular`: append o preppend (poner antes o después) bits de datos adicionales. "Técnica utilizada por protcolos por capas (layers) para cargar protocolos ajenos de esa capa particular en una red. Por ejemplo, Que Layer 2 pueda contener los datos que vienen de arriba en Layer 3, 4, 5, 6 o 7")_
+- Mientras los datos se mueven por las capas del Modelo OSI, se van `encapsulando` y `decapsulando`
+
+### Encapsulamiento
+
+- Simplemente es `append` o `preppend` (poner antes o después) bits de datos adicionales. 
+- Es una técnica utilizada por protcolos por capas (layers) para cargar protocolos ajenos de esa capa particular en una red. 
+- Por ejemplo, Que Layer 2 pueda contener los datos que vienen de arriba en Layer 3, 4, 5, 6 o 7... sin necesidad que esa capa los "entienda". 
 
     - Si los datos se mueven de `Arriba (Layer 7)` hacia --->>> `Abajo (Layer 1)` los datos se `encapsulan`
     - Si los datos se mueven de `Abajo (Layer 1)` hacia --->>> `Arriba (Layer 7)` los datos se `decapsulan`
