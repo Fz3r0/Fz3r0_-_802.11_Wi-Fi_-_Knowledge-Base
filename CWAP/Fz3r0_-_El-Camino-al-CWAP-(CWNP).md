@@ -4,11 +4,12 @@ Y ARRANCAN!!!
 
  -->
 
-# CWAP
+# El camino al CWAP - Certified Wireless Analysis Professional
+_Writeup en español por Fz3r0 💀 (CWNA)_
 
 ## Conocimiento Requerido para CWAP-402
 
-- Está en cortina:
+- El examen está dividido de la siguiente manera:
 
 | **Conocimiento CWAP**         | **Porcentaje** |
 |:-----------------------------:|:--------------:|
@@ -38,13 +39,15 @@ Y ARRANCAN!!!
 
 ## CWAP: Modelo OSI (usado en el libro)
 
-- `Layer 7` - Application Layer
-- `Layer 6` - Presentation Layer
-- `Layer 5` - Session Layer
-- `Layer 4` - Transport Layer
-- `Layer 3` - Network Layer
-- `Layer 2` - Data Link Layer     
-- `Layer 1` - Physical Layer 
+- `Layer 7` - Application Layer `Data`
+- `Layer 6` - Presentation Layer `Data`
+- `Layer 5` - Session Layer `Data`
+- `Layer 4` - Transport Layer `Segment`
+- `Layer 3` - Network Layer `Packet`
+- `Layer 2` - Data Link Layer `Frame`    
+- `Layer 1` - Physical Layer `Frame/Bit`
+
+![image](https://user-images.githubusercontent.com/94720207/223137182-929a5e71-1b1f-48c4-94b4-1553a386fefa.png)
 
 ### 💀 `Fz3r0 Pro Tip:`
 
@@ -86,13 +89,13 @@ Y ARRANCAN!!!
 
 - La Capa 4 del modelo OSI es la capa de transporte, y su función principal es proporcionar un medio para que los procesos de aplicaciones en diferentes dispositivos puedan establecer, mantener y terminar conexiones de comunicación. En esta capa se encuentran dos protocolos principales: TCP y UDP.
 
-- `Medio`: Conjunto de servicios y protocolos que permiten a los procesos de aplicaciones en diferentes dispositivos establecer y gestionar una conexión de comunicación extremo a extremo.
+- `Medio` _(Hablando de la capa 4 de transporte)_: Conjunto de servicios y protocolos que permiten a los procesos de aplicaciones en diferentes dispositivos establecer y gestionar una conexión de comunicación extremo a extremo.
 
 ### TCP
 
 - `TCP` (Transmission Control Protocol): Protocolo orientado a conexión y confiable. `Connection-oriented and Reliable`
-- Proporciona un canal de comunicación extremo a extremo que garantiza que los datos enviados sean recibidos en el orden correcto y sin errores `ACK`. 
-- Para lograr esto, TCP establece una conexión entre dos dispositivos antes de enviar datos (3-way-handshake). 
+- Proporciona un canal de comunicación extremo a extremo que garantiza que los datos enviados sean recibidos en el orden correcto y sin errores `ACK`, `Checksum`, `Seq`, etc. 
+- Para lograr esto, TCP establece una conexión entre dos dispositivos antes de enviar datos `3-way-handshake`. 
 - Los datos se envían en segmentos y se espera que el receptor confirme la recepción de cada segmento. 
 - Si un segmento no se recibe correctamente, TCP lo retransmite hasta que el receptor lo confirma. 
 - TCP también controla la tasa de transmisión para evitar la congestión de la red.
@@ -100,7 +103,7 @@ Y ARRANCAN!!!
 ### UDP
 
 - `UDP` (User Datagram Protocol) es un protocolo sin conexión y no confiable `Connectionless and Unreliable`. 
-- No establece una conexión antes de enviar datos y no proporciona garantías de que los datos sean recibidos correctamente o en el orden correcto `No tiene ACK, Cheksum, etc`. 
+- No establece una conexión antes de enviar datos y no proporciona garantías de que los datos sean recibidos correctamente o en el orden correcto `No tiene ACK, Cheksum, etc` _(Algunos pueden llegar a traer Seq)_. 
 - Los datos se envían en datagramas, y no hay confirmación de recepción ni retransmisión de paquetes perdidos. 
 - UDP es útil para aplicaciones en las que la velocidad es más importante que la confiabilidad, como en la transmisión de audio o video en tiempo real.
 
@@ -145,21 +148,29 @@ Y ARRANCAN!!!
 
 - [Extreme Networks @ Layer 2 – the Data Link Layer](https://youtu.be/B0Uf3uojpv0)
 
-### LLC (Sublayer)
+![image](https://user-images.githubusercontent.com/94720207/223143142-42e11745-b223-4637-93af-0e5238f4ffcd.png)
 
+![image](https://user-images.githubusercontent.com/94720207/223142755-ec76569c-f874-4dda-979e-95bd53ce1929.png)
+
+### LLC - Logical Link Control (Sublayer)
+
+- El protocolo de control lógico (LLC) es el protocolo que proporciona un `enlace de comunicación entre la Capa 2 y la Capa 3`.
 - La subcapa LLC proporciona servicios para la comunicación entre dispositivos en diferentes redes lógicas. 
 - Proporciona un mecanismo para multiplexar y desmultiplexar diferentes protocolos de la Capa 3 (como IPX, TCP, etc.) en la misma red física. 
 
 #### Multiplexación y desmultiplexación 
 
-- La capacidad de la Capa 2 de Enlace de Datos para combinar varios flujos de datos de la Capa 3 (como por ejemplo, diferentes protocolos de red) en un solo flujo de datos que se transmite a través de un único medio físico compartido, y luego separarlos nuevamente en la Capa 2 del otro extremo.
-- En palabras más sencillas es una manera de convertir "datos digitales de computadora" a "pulsos eléctricos, ondas de radio, etc". Aunque en realidad es algo un poco más complejo, esa es la idea principal. 
-- Ethernet es una tecnología de red cableada que utiliza un cable para conectar dispositivos a una red. La tecnología Wi-Fi, por otro lado, es una tecnología inalámbrica que utiliza ondas de radio para transmitir datos a través del aire.
+- La multiplexación es la capacidad de la Capa 2 de Enlace de Datos para combinar varios flujos de datos que vienen de de la Capa 3 (como por ejemplo, diferentes protocolos de red) en un solo flujo de datos que se transmite a través de un único medio físico compartido (como un cable o el aire), y luego separarlos nuevamente en la Capa 2 del otro extremo.
+- En palabras más sencillas: 
+
+    - Es una manera de convertir "datos digitales de computadora" que tienen como `origen: PC-A` a "pulsos eléctricos, ondas de radio, etc" que `pasan por un cable o el aire`, y luego volverlos a convertir a "datos digitales de computadora" los cuales recibe el `destino: PC-B`. Aunque en realidad es algo un poco más complejo, esa es la idea principal. 
+
+- Nota_ Ethernet es una tecnología de red cableada que utiliza un cable para conectar dispositivos a una red. La tecnología Wi-Fi, por otro lado, es una tecnología inalámbrica que utiliza ondas de radio para transmitir datos a través del aire.
     
-    - Por ejemplo: 
+#### Ejemplo de Multiplexación:
     
-        - En el caso de comunicaciones DSL, se utiliza la técnica de multiplexación por división de frecuencia (FDM) para combinar la señal de datos con la señal de voz en una señal única que se transmite a través del cableado de cobre. 
-        - Los datos se transmiten a través del medio físico en forma de pulsos eléctricos modulados utilizando técnicas de modulación de amplitud.
+- En el caso de comunicaciones DSL, se utiliza la técnica de multiplexación por división de frecuencia (FDM) para combinar la señal de datos con la señal de voz en una señal única que se transmite a través del cableado de cobre. 
+- Los datos se transmiten a través del medio físico en forma de pulsos eléctricos modulados utilizando técnicas de modulación de amplitud.
 
 ### MAC (Sublayer)
 
