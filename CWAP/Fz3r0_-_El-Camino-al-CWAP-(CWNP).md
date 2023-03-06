@@ -115,12 +115,23 @@ Y ARRANCAN!!!
 ## `Layer 3` Network
 
 - La Capa 3 del modelo OSI es la capa de red, y su función principal es proporcionar servicios para enrutar los paquetes de datos a través de la red desde el origen al destino. `Origen(IP) <---> Destino(IP)`
+
+### IP (Internet Protocol)
+
 - En esta capa se encuentra el protocolo de Internet (IP) `IP (Internet Protocol)`, que es el protocolo principal utilizado en Internet para enrutar paquetes entre dispositivos.
-- Además de IP, hay otros protocolos de la Capa 3 en el modelo OSI, como ICMP (Internet Control Message Protocol), que se utiliza para enviar mensajes de error y de control entre dispositivos en la red, y IGMP (Internet Group Management Protocol), que se utiliza para gestionar grupos de dispositivos que desean recibir un flujo de datos en multicast.
+- Los paquetes de datos se envían en forma de datagramas, y cada datagrama incluye la `IP Address` del dispositivo de `origen` y del dispositivo de `destino`. 
+- La dirección IP se utiliza para enrutar el datagrama a través de la red.
+- El protocolo de Internet versión 4 `IPv4` es el protocolo de red más utilizado en la actualidad. 
+- IPv4 utiliza direcciones de 32 bits para identificar los dispositivos en la red. 
+- Sin embargo, debido a la cantidad limitada de direcciones IPv4 disponibles, se ha desarrollado un nuevo protocolo de Internet versión 6 `IPv6` que utiliza direcciones de 128 bits para permitir un mayor número de dispositivos en la red.
 
 ![image](https://user-images.githubusercontent.com/94720207/223030711-14388bc0-b4b9-43ea-9645-ec7c02c65722.png)
 
 ![image](https://user-images.githubusercontent.com/94720207/223030667-0e798b26-03da-48b1-97e9-5e5050eee172.png)
+
+### Otros
+
+- Además de IP, hay otros protocolos de la Capa 3 en el modelo OSI, como ICMP (Internet Control Message Protocol), que se utiliza para enviar mensajes de error y de control entre dispositivos en la red, y IGMP (Internet Group Management Protocol), que se utiliza para gestionar grupos de dispositivos que desean recibir un flujo de datos en multicast.
 
 ## `Layer 2` Data Link
 
@@ -131,6 +142,8 @@ Y ARRANCAN!!!
 
     1. `LLC - Logical Link Control` = Capa de Control de Enlace Lógico
     2. `MAC - Medium  Access Control` = Capa de Control de Acceso al Medio
+
+- [Extreme Networks @ Layer 2 – the Data Link Layer](https://youtu.be/B0Uf3uojpv0)
 
 ### LLC (Sublayer)
 
