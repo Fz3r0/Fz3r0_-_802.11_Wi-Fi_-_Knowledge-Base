@@ -101,9 +101,43 @@ AGREGAR UN MODELO OSI DE REFERENCIA
 - Además de IP, hay otros protocolos de la Capa 3 en el modelo OSI, como ICMP (Internet Control Message Protocol), que se utiliza para enviar mensajes de error y de control entre dispositivos en la red, y IGMP (Internet Group Management Protocol), que se utiliza para gestionar grupos de dispositivos que desean recibir un flujo de datos en multicast.
 
 
-## Layer 2
+## `Layer 2` Data Link
 
-![image](https://user-images.githubusercontent.com/94720207/223023042-7de1473a-2859-44f0-8a14-5f86a476bd72.png)
+- La Capa 2 del modelo OSI es la capa de enlace de datos, y su función principal es proporcionar servicios para la transmisión fiable de datos entre dispositivos en la misma red física. 
+- Tanto WiFi como Ethernet (inalámbrico y alámbrico) utilizan la Capa 2 de manera similar
+- La principal diferencia entre Ethernet y Wi-Fi en la Capa 2 es la forma en que los datos se transmiten a través del medio físico (aire o cables).
+- Esta capa se divide en dos subcapas: 
+
+    1. `LLC - Logical Link Control` = Capa de Control de Enlace Lógico
+    2. `MAC - Medium  Access Control` = Capa de Control de Acceso al Medio
+
+### LLC (Sublayer)
+
+- La subcapa LLC proporciona servicios para la comunicación entre dispositivos en diferentes redes lógicas. 
+- Proporciona un mecanismo para multiplexar y desmultiplexar diferentes protocolos de la Capa 3 (como IPX, TCP, etc.) en la misma red física. 
+
+#### Multiplexación y desmultiplexación 
+
+- La capacidad de la Capa 2 de Enlace de Datos para combinar varios flujos de datos de la Capa 3 (como por ejemplo, diferentes protocolos de red) en un solo flujo de datos que se transmite a través de un único medio físico compartido, y luego separarlos nuevamente en la Capa 2 del otro extremo.
+- En palabras más sencillas es una manera de convertir "datos digitales de computadora" a "pulsos eléctricos, ondas de radio, etc". Aunque en realidad es algo un poco más complejo, esa es la idea principal. 
+- Ethernet es una tecnología de red cableada que utiliza un cable para conectar dispositivos a una red. La tecnología Wi-Fi, por otro lado, es una tecnología inalámbrica que utiliza ondas de radio para transmitir datos a través del aire.
+    
+    - Por ejemplo: 
+    
+        - En el caso de comunicaciones DSL, se utiliza la técnica de multiplexación por división de frecuencia (FDM) para combinar la señal de datos con la señal de voz en una señal única que se transmite a través del cableado de cobre. 
+        - Los datos se transmiten a través del medio físico en forma de pulsos eléctricos modulados utilizando técnicas de modulación de amplitud.
+
+### MAC (Sublayer)
+
+- La subcapa MAC, por otro lado, proporciona servicios para la comunicación entre dispositivos en la misma red física.
+
+Ethernet y Wi-Fi son dos tecnologías de Capa 2 utilizadas comúnmente en redes de computadoras.  
+
+En Ethernet, los datos se transmiten en forma de tramas (frames) a través del cable. Cada trama contiene una dirección MAC del dispositivo de origen y del dispositivo de destino, y se envía utilizando el protocolo CSMA/CD (Carrier Sense Multiple Access with Collision Detection), que asegura que solo un dispositivo transmita a la vez para evitar colisiones de datos. Por otro lado, en Wi-Fi, los datos se transmiten en forma de paquetes a través del aire utilizando una técnica llamada modulación de frecuencia de espectro ensanchado (Spread Spectrum Frequency Hopping). Cada paquete incluye una dirección MAC del dispositivo de origen y del dispositivo de destino, y se envía utilizando el protocolo de control de acceso al medio (MAC) de Wi-Fi, que utiliza una técnica llamada CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance) para evitar colisiones de datos.
+
+En resumen, la Capa 2 del modelo OSI es la capa de enlace de datos que proporciona servicios para la transmisión fiable de datos entre dispositivos en la misma red física. Esta capa se divide en dos subcapas: la Capa de Control de Enlace Lógico (LLC) y la Capa de Control de Acceso al Medio (MAC). Las tecnologías Ethernet y Wi-Fi son dos tecnologías de Capa 2 utilizadas comúnmente en redes de computadoras, y la principal diferencia entre ellas es la forma en que los datos se transmiten a través del medio físico.
+
+![image](https://user-images.githubusercontent.com/94720207/223023395-805f7429-af91-4920-b38d-866cab8046ba.png)
 
 ![image](https://user-images.githubusercontent.com/94720207/223023071-19560cf8-3027-4be2-9496-80fe121a3775.png)
 
