@@ -1,3 +1,9 @@
+<!-- 
+
+Y ARRANCAN!!!
+
+ -->
+
 # CWAP
 
 ## Conocimiento Requerido para CWAP-402
@@ -13,11 +19,9 @@
 | **WLAN Medium Access**        | 10%            |
 | **802.11 Frame Exchanges**    | 30%            |
 
-## CWNA Troubleshooting Methodology
-
 ## CWAP: Objetivos
 
-- Asegurarse que el troubleshooting se está llevando a cabo con todos los tipos de anlálisis.
+- El Ingeniero CWAP debe asegurarse que el troubleshooting se está llevando a cabo con todos los tipos de anlálisis y poder realizar los siguientes pasos:
 
 1. Definir el problema
 2. Determinar la escala del problema 
@@ -27,11 +31,10 @@
 6. Seleccionar los pasos apropiados para remediar el problema
 7. Documentar el problema y resolución 
 
-- Aplicar y comprender los conocimientos respecto a los **PHY Technologies** como son: `PHY headers`, `Preambles`, `Training Fields`, `Frame Aggregation`, `Data Rates`.
-
+- El Ingeniero CWAP debe ser experto en aplicar y comprender los conocimientos respecto a los **PHY Technologies** como son: `PHY headers`, `Preambles`, `Training Fields`, `Frame Aggregation`, `Data Rates`, etc.
 - Entender por completo el `Frame` y `Frame Aggregation`
-
-    - Frame Aggregation: `A-MSDU` & `A-MPDU` 
+ 
+     - Frame Aggregation: `A-MSDU` & `A-MPDU` 
 
 ## CWAP: Modelo OSI (usado en el libro)
 
@@ -43,29 +46,32 @@
 - `Layer 2` - Data Link Layer     
 - `Layer 1` - Physical Layer 
 
-### `Pro Tip:`
+### 💀 `Fz3r0 Pro Tip:`
 
+- `Layer 1`, `Layer 2`, `Layer 3` y `Layer 4` son los importantes en Networking
 - Los estándares `IEEE 802.3 (ethernet)` y `802.11 (wireless)` operan primariamente en `Layer 1` & `Layer 2` 
 - Los estándares `IETF` de los protocolos `TCP` & `IP` operan primariamente en `Layer 3` & `Layer 4` 
+- `Layer 1` & `Layer 2` son las capas principales en las que se enfoca el `CWAP` (Ya que el WiFi es donde funciona realmente 😉) 
 
-### Funcionamiento de los Layers
+## Funcionamiento de los Layers
 
 - Se dice que cada Layer sirve hacia el Layer de arriba y abajo de él, excepto por las 2 Layers finales: `Layer 1 (capa final de transmisión)` & `Layer 7 (capa final de recepción)`
 - Mientras los datos se mueven por las capas del Modelo OSI, se dan encapsulando y decapsulando _(`encapsular`: append o preppend (poner antes o después) bits de datos adicionales. "Técnica utilizada por protcolos por capas (layers) para cargar protocolos ajenos de esa capa particular en una red. Por ejemplo, Que Layer 2 pueda contener los datos que vienen de arriba en Layer 3, 4, 5, 6 o 7")_
 
     - Si los datos se mueven de `Arriba (Layer 7)` hacia --->>> `Abajo (Layer 1)` los datos se `encapsulan`
-    - Si los datos se mueven de `Abajo (Layer 7)` hacia --->>> `Arriba (Layer 1)` los datos se `decapsulan`
+    - Si los datos se mueven de `Abajo (Layer 1)` hacia --->>> `Arriba (Layer 7)` los datos se `decapsulan`
+
+![image](https://user-images.githubusercontent.com/94720207/223026259-b2f1cd67-9dba-4a2a-b76b-8e99d2a54242.png)
+
+![image](https://user-images.githubusercontent.com/94720207/223026368-7c497884-9f6f-489b-9fe6-ab46fc521b01.png)
+
 
 - **`CWAP Definition`** 
 
     - `Encapsulation` - Is the process of of **prepending and/or appending information to a message for `transmission`** (communication) `TO a peer`.
     - `Decaspulation` - Is the process of **reading, processing and removing prepended and/or appended information for `reception`** (communication) `FROM a peer`.
 
-<!-- 
 
-AGREGAR UN MODELO OSI DE REFERENCIA
-
- -->
 
 
 ## `Layer 4` Transport
