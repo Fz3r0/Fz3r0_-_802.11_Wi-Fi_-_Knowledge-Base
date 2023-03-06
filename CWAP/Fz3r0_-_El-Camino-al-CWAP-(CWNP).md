@@ -182,11 +182,14 @@ En Ethernet, los datos se transmiten en forma de tramas (frames) a través del c
 
 En resumen, la Capa 2 del modelo OSI es la capa de enlace de datos que proporciona servicios para la transmisión fiable de datos entre dispositivos en la misma red física. Esta capa se divide en dos subcapas: la Capa de Control de Enlace Lógico (LLC) y la Capa de Control de Acceso al Medio (MAC). Las tecnologías Ethernet y Wi-Fi son dos tecnologías de Capa 2 utilizadas comúnmente en redes de computadoras, y la principal diferencia entre ellas es la forma en que los datos se transmiten a través del medio físico.
 
+### LLC 
+
 ![image](https://user-images.githubusercontent.com/94720207/223023395-805f7429-af91-4920-b38d-866cab8046ba.png)
 
 ![image](https://user-images.githubusercontent.com/94720207/223023071-19560cf8-3027-4be2-9496-80fe121a3775.png)
 
 ![image](https://user-images.githubusercontent.com/94720207/223023334-c1b51e69-ee9e-4976-b571-877f3e9c77c5.png)
 
+![image](https://user-images.githubusercontent.com/94720207/223145162-b19d49b2-7160-4a81-bc68-93f7891b11cf.png)
 
 
