@@ -2,6 +2,9 @@
 
 Y ARRANCAN!!!
 
+
+<span align="center"> <p align="center"> IMAGEN </p> </span> 
+
  -->
 
 # El camino al CWAP - Certified Wireless Analysis Professional
@@ -47,7 +50,9 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 - `Layer 2` - Data Link Layer `Frame`    
 - `Layer 1` - Physical Layer `Frame/Bit`
 
-![image](https://user-images.githubusercontent.com/94720207/223137182-929a5e71-1b1f-48c4-94b4-1553a386fefa.png)
+<span align="center"> <p align="center"> ![image](https://user-images.githubusercontent.com/94720207/223137182-929a5e71-1b1f-48c4-94b4-1553a386fefa.png) </p> </span> 
+
+
 
 ### 💀 `Fz3r0 Pro Tip:`
 
@@ -61,7 +66,7 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 - Se dice que cada Layer sirve hacia el Layer de arriba y abajo de él, excepto por las 2 Layers finales: `Layer 1 (capa final de transmisión)` & `Layer 7 (capa final de recepción)`
 - Mientras los datos se mueven por las capas del Modelo OSI, se van `encapsulando` y `decapsulando`
 
-![image](https://user-images.githubusercontent.com/94720207/223029707-a67719fd-de81-407c-97d0-7c118cbf9b80.png)
+<span align="center"> <p align="center"> ![image](https://user-images.githubusercontent.com/94720207/223029707-a67719fd-de81-407c-97d0-7c118cbf9b80.png)</p> </span> 
 
 ### Encapsulamiento
 
@@ -72,9 +77,9 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
     - Si los datos se mueven de `Arriba (Layer 7)` hacia --->>> `Abajo (Layer 1)` los datos se `encapsulan`
     - Si los datos se mueven de `Abajo (Layer 1)` hacia --->>> `Arriba (Layer 7)` los datos se `decapsulan`
 
-![image](https://user-images.githubusercontent.com/94720207/223026259-b2f1cd67-9dba-4a2a-b76b-8e99d2a54242.png)
+<span align="center"> <p align="center"> ![image](https://user-images.githubusercontent.com/94720207/223026259-b2f1cd67-9dba-4a2a-b76b-8e99d2a54242.png) </p> </span> 
 
-![image](https://user-images.githubusercontent.com/94720207/223026368-7c497884-9f6f-489b-9fe6-ab46fc521b01.png)
+<span align="center"> <p align="center"> ![image](https://user-images.githubusercontent.com/94720207/223026368-7c497884-9f6f-489b-9fe6-ab46fc521b01.png) </p> </span> 
 
 
 - **`CWAP Definition`** 
