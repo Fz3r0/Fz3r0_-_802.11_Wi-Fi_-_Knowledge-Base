@@ -159,11 +159,9 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 ![image](https://user-images.githubusercontent.com/94720207/223464477-b3c49e23-d208-493c-a8fc-1d79c73ef37e.png)
 
-![image](https://user-images.githubusercontent.com/94720207/223312112-66e4f3c8-9800-4ae8-a4d8-7c2285a4e194.png)
-
 ![image](https://user-images.githubusercontent.com/94720207/223311481-6e5e391b-d28c-403d-8384-492f018be840.png)
 
-![image](https://user-images.githubusercontent.com/94720207/223023071-19560cf8-3027-4be2-9496-80fe121a3775.png)
+![image](https://user-images.githubusercontent.com/94720207/223485061-0c34d8a0-0ae0-4156-ae94-a7964522a016.png)
 
 #### Multiplexación y desmultiplexación 
 
@@ -196,7 +194,7 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 ![image](https://user-images.githubusercontent.com/94720207/223023395-805f7429-af91-4920-b38d-866cab8046ba.png)
 
-![image](https://user-images.githubusercontent.com/94720207/223023334-c1b51e69-ee9e-4976-b571-877f3e9c77c5.png)
+![image](https://user-images.githubusercontent.com/94720207/223023071-19560cf8-3027-4be2-9496-80fe121a3775.png)
 
 ## `Layer 1` Physical
 
