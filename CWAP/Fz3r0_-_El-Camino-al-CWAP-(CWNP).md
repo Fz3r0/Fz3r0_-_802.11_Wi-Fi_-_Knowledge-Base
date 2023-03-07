@@ -109,8 +109,6 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 ![image](https://user-images.githubusercontent.com/94720207/223029378-5c82410f-0388-4e63-8fe1-1c968da26008.png)
 
-
-
 ### Otros
 
 - Además de TCP y UDP, hay otros protocolos de transporte en la Capa 4 del modelo OSI, como SCTP (Stream Control Transmission Protocol), que es similar a TCP pero se utiliza para aplicaciones de tiempo real y en redes móviles, y DCCP (Datagram Congestion Control Protocol), que es similar a UDP pero con mecanismos para evitar la congestión de la red.
@@ -143,8 +141,8 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 - La principal diferencia entre Ethernet y Wi-Fi en la Capa 2 es la forma en que los datos se transmiten a través del medio físico (aire o cables).
 - Esta capa se divide en dos subcapas: 
 
-    1. `LLC - Logical Link Control` = Capa de Control de Enlace Lógico
-    2. `MAC - Medium  Access Control` = Capa de Control de Acceso al Medio
+    1. `LLC - Logical Link Control` = Capa de Control de Enlace Lógico `UPPER`
+    2. `MAC - Medium  Access Control` = Capa de Control de Acceso al Medio `LOWER`
 
 - [Extreme Networks @ Layer 2 – the Data Link Layer](https://youtu.be/B0Uf3uojpv0)
 
@@ -161,11 +159,9 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 ![image](https://user-images.githubusercontent.com/94720207/223312112-66e4f3c8-9800-4ae8-a4d8-7c2285a4e194.png)
 
-
 ![image](https://user-images.githubusercontent.com/94720207/223311481-6e5e391b-d28c-403d-8384-492f018be840.png)
 
 ![image](https://user-images.githubusercontent.com/94720207/223023071-19560cf8-3027-4be2-9496-80fe121a3775.png)
-
 
 #### Multiplexación y desmultiplexación 
 
@@ -196,15 +192,30 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 ![image](https://user-images.githubusercontent.com/94720207/223311147-d3127cac-05ec-4f5b-a290-4cf011504175.png)
 
-### LLC 
-
 ![image](https://user-images.githubusercontent.com/94720207/223023395-805f7429-af91-4920-b38d-866cab8046ba.png)
-
-
 
 ![image](https://user-images.githubusercontent.com/94720207/223023334-c1b51e69-ee9e-4976-b571-877f3e9c77c5.png)
 
 ## `Layer 1` Physical
+
+- La capa física se encarga de la `transmisión de bits` a través de un `medio físico`. 
+- La diferencia entre `Ethernet` y `WiFi` en esta capa es el `medio de transmisión` utilizado: `cableado` versus `inalámbrico`.
+- Capacidades típicas de capa 1 se encuentran:
+1. `Encoding` 
+2. `Modulation`
+3. `Demodulation`
+4. `Timing`
+5. `Signal Processing`
+
+### Encoding
+
+- El encoding (codificación) se refiere al proceso de `convertir los datos` de entrada en una `secuencia de bits` que se puedan transmitir a través del medio físico. - - En otras palabras, el encoding es la forma en que los datos se transforman para que puedan ser transmitidos en el medio de comunicación utilizado, ya sea un cable, fibra óptica o una señal de radio.
+- Por ejemplo, se toman todos los datos ya encapusolados de todas las capas superiores y se transforman en pulsos eléctricos para viajar por el cable en el caso de ethernet. En caso de WiFi se convierte en ondas de radio que viajan por el aire. 
+- `decoding` se refiere al proceso inverso 
+
+### Modulation
+
+
 
 ## `Frames`: En `Layer 1` y `Layer 2`
 
