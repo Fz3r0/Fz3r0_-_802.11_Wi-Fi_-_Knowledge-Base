@@ -112,8 +112,6 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 - Permite que el `dispositivo receptor` **verifique** si la trama se ha corrompido durante la transmisión. 
 - El dispositivo receptor puede utilizar FCS para determinar si ocurrieron errores durante la transmisión y, en caso afirmativo, la trama se descarta.
 
-![image](https://user-images.githubusercontent.com/94720207/223145162-b19d49b2-7160-4a81-bc68-93f7891b11cf.png)
-
 ### ⚠️ **`CWAP Definition`** ⚠️ 
 
 - `Encapsulation` - Is the process of of **prepending and/or appending information to a message for `transmission`** (communication) `TO a peer`.
@@ -121,8 +119,16 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 ## `Frames`: En `Layer 1` y `Layer 2`
 
+- [IEEE `802.11 Frame` Format vs. IEEE `802.3 Frame` Format](https://dot11ap.wordpress.com/ieee-802-11-frame-format-vs-ieee-802-3-frame-format/)
+- [Difference between Ethernet and Wi-Fi @ `Sunny`](https://www.youtube.com/watch?v=Uyrun_ZB3EE)
 - Los Frames son paquetes de datos que vienen de capas superiores en el modelo OSI.
 - A estos paquetes se les agrega al principio o al final `append / prepend` frames para poder realizar su **trasnmisión en el medio local**. 
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223580792-368e0582-1170-4b24-ad31-812aa5aa7912.png" alt="Encapsula" height=180px/> </a> </p> 
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223580827-9a0f5347-fcfa-4a52-a884-c20bef35b568.png" alt="Encapsula" height=180px/> </a> </p> 
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223580395-cd80622a-5239-4151-8cf0-fbd77cf0a12a.png" alt="Encapsula" height=450px/> </a> </p> 
 
 ### Layer 1: `Physical Layer Frame`
 
@@ -348,6 +354,26 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223568602-8cfe0fc5-2e93-4f6b-b17c-50588475c069.png" alt="encoding" height=325px/> </a> </p> 
 
+## `PHY Sublayer - 802.11-2016` / (Antes: `PLCP` + `PMD`)
+
+- [802.11 PHY – PPDU (2014)](https://mrncciew.com/2014/10/14/cwap-802-11-phy-ppdu/)
+- Antes de 2016, la Physical Layer de la norma IEEE 802.11, se dividía en dos subcapas: 
+1. `PLCP - Physical Layer Conversion Protocol` (Control de Enlace de Capa Física) 
+2. `PMD - Physical Medium Dependent` (Dispositivo de Medios Físicos)
+ 
+### `PLCP` & `PMD` (Legacy)
+
+- Se encargaba de la gestión de la señal de transmisión en la capa física, mientras que el PMD se encargaba de la transmisión de la señal a través del medio físico, como el aire.
+- En `2016`, se publicó una` nueva versión del estándar IEEE 802.11` conocida como `IEEE 802.11-2016`. 
+- En esta versión, se simplificó la capa física eliminando la distinción entre el PLCP y el PMD y se los agrupó como una única subcapa, denominada `PHY` (Physical Layer) sublayer.
+- La simplificación de la capa física permitió una mayor flexibilidad y eficiencia en la implementación de la norma Wi-Fi, ya que se eliminaron las restricciones que antes limitaban las opciones de diseño y los fabricantes de hardware y software. 
+- También permitió una mayor interoperabilidad entre los dispositivos Wi-Fi de diferentes fabricantes y un mayor rendimiento en general.
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223579886-5fe1c532-062b-450e-9a45-537b5b085deb.png" alt="encoding" height=325px/> </a> </p> 
+
+
+
+### `PHY Sublayer` (802.11-2016 [Actual])
 
 
 
