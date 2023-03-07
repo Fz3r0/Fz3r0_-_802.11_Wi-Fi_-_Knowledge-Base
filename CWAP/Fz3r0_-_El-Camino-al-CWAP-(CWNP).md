@@ -119,6 +119,23 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 - `Encapsulation` - Is the process of of **prepending and/or appending information to a message for `transmission`** (communication) `TO a peer`.
 - `Decaspulation` - Is the process of **reading, processing and removing prepended and/or appended information for `reception`** (communication) `FROM a peer`.
 
+## `Frames`: En `Layer 1` y `Layer 2`
+
+- Los Frames son paquetes de datos que vienen de capas superiores en el modelo OSI.
+- A estos paquetes se les agrega al principio o al final `append / prepend` frames para poder realizar su **trasnmisión en el medio local**. 
+
+### Layer 1: `Physical Layer Frame`
+
+- En `Layer 1 (Physical Layer)`, un frame se refiere a un `conjunto de bits` que se transmiten en la red en una única transmisión. 
+- Estos bits se organizan en un formato específico para que puedan `ser enviados a través de medios físicos como cables, fibra óptica o ondas de radio`. 
+- El formato de estos bits se llama `Physical Layer Frame`.
+
+### Layer 2: `Data Link Layer Frame`
+
+- En `Layer 2 (Data Link Layer)`, un frame se refiere a un `paquete de datos` que se transmite entre dispositivos de red en una red local. 
+- Este paquete de datos incluye `información de control adicional`, como `direcciones de origen y destino`, que permiten que los dispositivos de red se comuniquen entre sí de manera efectiva. 
+- El formato de estos paquetes se llama `Data Link Layer Frame`.
+
 ## `Layer 4` Transport
 
 - La Capa 4 del modelo OSI es la capa de transporte, y su función principal es proporcionar un medio para que los procesos de aplicaciones en diferentes dispositivos puedan establecer, mantener y terminar conexiones de comunicación. 
@@ -331,22 +348,7 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223568602-8cfe0fc5-2e93-4f6b-b17c-50588475c069.png" alt="encoding" height=325px/> </a> </p> 
 
-## `Frames`: En `Layer 1` y `Layer 2`
 
-- Los Frames son paquetes de datos que vienen de capas superiores en el modelo OSI.
-- A estos paquetes se les agrega al principio o al final (append prepend) frames para poder realizar su trasnmisión en el medio local. 
-
-### Layer 1: `Physical Layer Frame`
-
-- En `Layer 1 (Physical Layer)`, un frame se refiere a un `conjunto de bits` que se transmiten en la red en una única transmisión. 
-- Estos bits se organizan en un formato específico para que puedan `ser enviados a través de medios físicos como cables, fibra óptica o ondas de radio`. 
-- El formato de estos bits se llama `Physical Layer Frame`.
-
-### Layer 2: `Data Link Layer Frame`
-
-- En `Layer 2 (Data Link Layer)`, un frame se refiere a un `paquete de datos` que se transmite entre dispositivos de red en una red local. 
-- Este paquete de datos incluye `información de control adicional`, como `direcciones de origen y destino`, que permiten que los dispositivos de red se comuniquen entre sí de manera efectiva. 
-- El formato de estos paquetes se llama `Data Link Layer Frame`.
 
 
 
