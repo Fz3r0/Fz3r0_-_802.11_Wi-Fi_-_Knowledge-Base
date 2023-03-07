@@ -63,10 +63,14 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 - Los estándares `IETF` de los protocolos `TCP/IP` operan primariamente en `Layer 3` (Direccionamiento `IPv4/IPv6`) & `Layer 4` (Segmentación `TCP / UDP`)
 - `Layer 1` & `Layer 2` son las capas principales en las que se enfoca el `CWAP` (Ya que el WiFi es donde funciona realmente 😉) 
 
-#### Bonus: Upper Layers Basic Knowledge
+---
 
-- [ICND1 - Video #6 - Layers 5-7 - The Upper Layers](https://youtu.be/vfRL4n1vxyE)
-- [WireShark Analysis: Layer 5 Session](https://www.youtube.com/watch?v=ORR3tAAz4F4)
+### 💀 `Fz3r0 Bonus`: Upper Layers Basic Knowledge
+
+- [ICND1 - **Layers 5-7** - The Upper Layers](https://youtu.be/vfRL4n1vxyE)
+- [`WireShark Analysis`: **Layer 5 Session**](https://www.youtube.com/watch?v=ORR3tAAz4F4)
+- [`WireShark Analysis`: **Layer 6 Presentation**](https://www.youtube.com/watch?v=qnEFsoz-cwQ)
+- [`WireShark Analysis`: **Layer 7 Application**](https://www.youtube.com/watch?v=L_wLexApMkA)
 - [Magic Numbers & A file viewed as hexadecimal](https://youtu.be/IfohUaMDsGo) 
 
 ## Funcionamiento de los Layers
@@ -76,29 +80,29 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223029707-a67719fd-de81-407c-97d0-7c118cbf9b80.png" alt="Modelo OSI" height=520px/> </a> </p> 
 
+---
 
+### `Encapsulation` & `Decapsulation`
 
-
-### Encapsulamiento
-
-- Simplemente es `append` o `preppend` (poner antes o después) bits de datos adicionales. 
+- `Encapsular` es simplemente un `append` o `preppend` (poner antes o después) de bits de datos adicionales a los paquetes que vienen de capas superiores. 
+- `Decapsular` es lo contrario, una vez que el paquete se envía a las capas superiores. 
 - Es una técnica utilizada por protcolos por capas (layers) para cargar protocolos ajenos de esa capa particular en una red. 
-- Por ejemplo, Que Layer 2 pueda contener los datos que vienen de arriba en Layer 3, 4, 5, 6 o 7... sin necesidad que esa capa los "entienda". 
+- Por ejemplo, Layer 2 encapusla los datos que vienen de arriba en Layer 3, 4, 5, 6 o 7... sin necesidad que esa capa los "entienda", así los puede transmitir por un medio físico sin importar que los datos sean por ejemplo: un mensaje de whatsapp, una transmisión ssh o una partida de Street Fighter VI. 
 
     - Si los datos se mueven de `Arriba (Layer 7)` hacia --->>> `Abajo (Layer 1)` los datos se `encapsulan`
     - Si los datos se mueven de `Abajo (Layer 1)` hacia --->>> `Arriba (Layer 7)` los datos se `decapsulan`
 
-<span align="center"> <p align="center"> ![image](https://user-images.githubusercontent.com/94720207/223026259-b2f1cd67-9dba-4a2a-b76b-8e99d2a54242.png) </p> </span> 
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223026259-b2f1cd67-9dba-4a2a-b76b-8e99d2a54242.png" alt="Encapsula" height=420px/> </a> </p> 
 
 <span align="center"> <p align="center"> ![image](https://user-images.githubusercontent.com/94720207/223026368-7c497884-9f6f-489b-9fe6-ab46fc521b01.png) </p> </span> 
 
-### Append y Prepend
+### `Append` y `Prepend`
 
 - Un `append` y `prepend` (por ejemplo en el sublayer superior de capa 2 `llc`), se refiere al hecho de que, en algunos casos, los datos que se transmiten a través de la red pueden tener información de control adicional agregada por capas superiores del modelo OSI, incluyendo su `payload` (data)
 - El `append` se refiere a agregar esta información de control al `final` del paquete de datos. 
 - El `prepend` se refiere a agregar esta información de control al `principio` del paquete de datos.
 
-![image](https://user-images.githubusercontent.com/94720207/223307931-405fc7e5-1474-4c24-a4d0-60f6e0faa451.png)
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223307931-405fc7e5-1474-4c24-a4d0-60f6e0faa451.png" alt="Encapsula" height=180px/> </a> </p> 
 
 ### 💀 `Fz3r0 Pro Tip:`
 
@@ -115,42 +119,47 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 - `Encapsulation` - Is the process of of **prepending and/or appending information to a message for `transmission`** (communication) `TO a peer`.
 - `Decaspulation` - Is the process of **reading, processing and removing prepended and/or appended information for `reception`** (communication) `FROM a peer`.
 
-
-
-
 ## `Layer 4` Transport
 
-- La Capa 4 del modelo OSI es la capa de transporte, y su función principal es proporcionar un medio para que los procesos de aplicaciones en diferentes dispositivos puedan establecer, mantener y terminar conexiones de comunicación. En esta capa se encuentran dos protocolos principales: TCP y UDP.
+- La Capa 4 del modelo OSI es la capa de transporte, y su función principal es proporcionar un medio para que los procesos de aplicaciones en diferentes dispositivos puedan establecer, mantener y terminar conexiones de comunicación. 
+- En esta capa se encuentran **2 protocolos principales**: `TCP` y `UDP`.
 
-- `Medio` _(Hablando de la capa 4 de transporte)_: Conjunto de servicios y protocolos que permiten a los procesos de aplicaciones en diferentes dispositivos establecer y gestionar una conexión de comunicación extremo a extremo.
+    - `Propoprcionar un Medio (Lógico)` _(Hablando de la capa 4 de transporte)_: Similar a un cable (medio físico), la capa de transporte utiliza un medio pero a nivel de software (lógico) para transmitir datos.
+    - Este medio en realidad son un conjunto de servicios y protocolos que permiten a los procesos de aplicaciones en diferentes dispositivos establecer y gestionar una conexión de comunicación extremo a extremo.
 
-### TCP
+![image](https://user-images.githubusercontent.com/94720207/223029378-5c82410f-0388-4e63-8fe1-1c968da26008.png)
 
-- `TCP` (Transmission Control Protocol): Protocolo orientado a conexión y confiable. `Connection-oriented and Reliable`
+### `TCP` - Transmission Control Protocol
+
+- `TCP`: Protocolo orientado a conexión y confiable. `Connection-oriented and Reliable`
 - Proporciona un canal de comunicación extremo a extremo que garantiza que los datos enviados sean recibidos en el orden correcto y sin errores `ACK`, `Checksum`, `Seq`, etc. 
 - Para lograr esto, TCP establece una conexión entre dos dispositivos antes de enviar datos `3-way-handshake`. 
 - Los datos se envían en segmentos y se espera que el receptor confirme la recepción de cada segmento. 
 - Si un segmento no se recibe correctamente, TCP lo retransmite hasta que el receptor lo confirma. 
 - TCP también controla la tasa de transmisión para evitar la congestión de la red.
 
-### UDP
+### `UDP` - User Datagram Protocol
 
-- `UDP` (User Datagram Protocol) es un protocolo sin conexión y no confiable `Connectionless and Unreliable`. 
+- `UDP`: Protocolo sin conexión y no confiable `Connectionless and Unreliable`. 
 - No establece una conexión antes de enviar datos y no proporciona garantías de que los datos sean recibidos correctamente o en el orden correcto `No tiene ACK, Cheksum, etc` _(Algunos pueden llegar a traer Seq)_. 
 - Los datos se envían en datagramas, y no hay confirmación de recepción ni retransmisión de paquetes perdidos. 
 - UDP es útil para aplicaciones en las que la velocidad es más importante que la confiabilidad, como en la transmisión de audio o video en tiempo real.
 
-![image](https://user-images.githubusercontent.com/94720207/223029378-5c82410f-0388-4e63-8fe1-1c968da26008.png)
+![image](https://user-images.githubusercontent.com/94720207/223545373-28bf556f-62da-40fd-85fd-3a7290f0815c.png)
 
-### Otros
+### Otros protocolos Layer 4
 
-- Además de TCP y UDP, hay otros protocolos de transporte en la Capa 4 del modelo OSI, como SCTP (Stream Control Transmission Protocol), que es similar a TCP pero se utiliza para aplicaciones de tiempo real y en redes móviles, y DCCP (Datagram Congestion Control Protocol), que es similar a UDP pero con mecanismos para evitar la congestión de la red.
+- Además de TCP y UDP, hay otros protocolos de transporte en la Capa 4 del modelo OSI, como: 
+    - `SCTP` (Stream Control Transmission Protocol): similar a TCP pero se utiliza para aplicaciones de tiempo real y en redes móviles
+    - `DCCP` (Datagram Congestion Control Protocol): similar a UDP pero con mecanismos para evitar la congestión de la red.
 
 ## `Layer 3` Network
 
-- La Capa 3 del modelo OSI es la capa de red, y su función principal es proporcionar servicios para enrutar los paquetes de datos a través de la red desde el origen al destino. `Origen(IP) <---> Destino(IP)`
+- La Capa 3 del modelo OSI es la capa de red, y su función principal es proporcionar servicios para enrutar los paquetes de datos a través de la red desde el origen al destino. 
 
-### IP (Internet Protocol)
+    * `Origen(IP) <---> Destino(IP)`
+
+### `IP` - Internet Protocol
 
 - En esta capa se encuentra el protocolo de Internet (IP) `IP (Internet Protocol)`, que es el protocolo principal utilizado en Internet para enrutar paquetes entre dispositivos.
 - Los paquetes de datos se envían en forma de datagramas, y cada datagrama incluye la `IP Address` del dispositivo de `origen` y del dispositivo de `destino`. 
@@ -170,6 +179,9 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 ## `Layer 2` Data Link
 
 - La Capa 2 del modelo OSI es la capa de enlace de datos, y su función principal es proporcionar servicios para la transmisión fiable de datos entre dispositivos en la misma red física. 
+
+    * `Origen(MAC) <---> Destino(MAC)`
+
 - Tanto WiFi como Ethernet (inalámbrico y alámbrico) utilizan la Capa 2 de manera similar
 - La principal diferencia entre Ethernet y Wi-Fi en la Capa 2 es la forma en que los datos se transmiten a través del medio físico (aire o cables).
 - Esta capa se divide en dos subcapas: 
