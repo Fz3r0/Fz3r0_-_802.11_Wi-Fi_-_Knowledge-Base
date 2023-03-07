@@ -58,17 +58,26 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 ### 💀 `Fz3r0 Pro Tip:`
 
 - `Layer 1`, `Layer 2`, `Layer 3` y `Layer 4` son los importantes y donde ocurre la magia en Networking
-- `Layer 5`, `Layer 6`, y `Layer 7` están dentro del mundo del software, desarrollo y programación. Estos están fuera del alcance del CWAP.
-- Los estándares `IEEE 802.3 (ethernet)` y `802.11 (wireless)` operan primariamente en `Layer 1` & `Layer 2`. (Cableado y Ondas de Radio en el aire) 
-- Los estándares `IETF` de los protocolos `TCP` & `IP` operan primariamente en `Layer 3` & `Layer 4` 
+- `Layer 5`, `Layer 6`, y `Layer 7` están fuera del alcance del CWAP.
+- Los estándares `IEEE 802.3 (ethernet / cableado)` y `802.11 (wireless / aire)` operan primariamente en `Layer 1` & `Layer 2`. 
+- Los estándares `IETF` de los protocolos `TCP/IP` operan primariamente en `Layer 3` (Direccionamiento `IPv4/IPv6`) & `Layer 4` (Segmentación `TCP / UDP`)
 - `Layer 1` & `Layer 2` son las capas principales en las que se enfoca el `CWAP` (Ya que el WiFi es donde funciona realmente 😉) 
+
+#### Bonus: Upper Layers Basic Knowledge
+
+- [ICND1 - Video #6 - Layers 5-7 - The Upper Layers](https://youtu.be/vfRL4n1vxyE)
+- [WireShark Analysis: Layer 5 Session](https://www.youtube.com/watch?v=ORR3tAAz4F4)
+- [Magic Numbers & A file viewed as hexadecimal](https://youtu.be/IfohUaMDsGo) 
 
 ## Funcionamiento de los Layers
 
 - Se dice que cada Layer sirve hacia el Layer de arriba y abajo de él, excepto por las 2 Layers finales (que ya no tienen nada antes/después): `Layer 1 (capa final de transmisión)` & `Layer 7 (capa final de recepción)`
 - Mientras los datos se mueven por las capas del Modelo OSI, se van `encapsulando` y `decapsulando`
 
-<span align="center"> <p align="center"> ![image](https://user-images.githubusercontent.com/94720207/223029707-a67719fd-de81-407c-97d0-7c118cbf9b80.png) alt="Mac" height=48px </p> </span> 
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223029707-a67719fd-de81-407c-97d0-7c118cbf9b80.png" alt="Modelo OSI" height=520px/> </a> </p> 
+
+
+
 
 ### Encapsulamiento
 
