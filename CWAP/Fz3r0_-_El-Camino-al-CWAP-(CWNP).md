@@ -193,8 +193,6 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 ![image](https://user-images.githubusercontent.com/94720207/223023334-c1b51e69-ee9e-4976-b571-877f3e9c77c5.png)
 
-![image](https://user-images.githubusercontent.com/94720207/223145162-b19d49b2-7160-4a81-bc68-93f7891b11cf.png)
-
 ## `Layer 1` Physical
 
 ## `Frames`: En `Layer 1` y `Layer 2`
@@ -222,4 +220,5 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 ![image](https://user-images.githubusercontent.com/94720207/223307931-405fc7e5-1474-4c24-a4d0-60f6e0faa451.png)
 
+![image](https://user-images.githubusercontent.com/94720207/223145162-b19d49b2-7160-4a81-bc68-93f7891b11cf.png)
 
