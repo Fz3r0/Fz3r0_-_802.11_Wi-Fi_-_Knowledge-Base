@@ -221,7 +221,7 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 - Los `3 tipos de Frames` que principalmente se estudian en este curso y que forman el `MAC sublayer de 802.11` son:
 1. **`Management Frames`**
 2. **`Control Frames`**
-3. **`Data Frames`**
+3. **`Data Frames` / `QoS Data Frames`**
 
 ![image](https://user-images.githubusercontent.com/94720207/223311147-d3127cac-05ec-4f5b-a290-4cf011504175.png)
 
@@ -248,7 +248,7 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 ![image](https://user-images.githubusercontent.com/94720207/223327865-2fc7626b-23b4-4bb1-a510-22ee19eb54db.png)
 
-### Modulation
+### Modulation & Demodulation
 
 - La modulación es importante en la capa física porque permite la transmisión de información a través de medios de comunicación físicos, como cables o señales de radio. 
 - La modulación también ayuda a mejorar la eficiencia y la velocidad de la transmisión de datos, al permitir la transmisión de una gran cantidad de información en una sola onda portadora.
@@ -261,8 +261,25 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 ![image](https://user-images.githubusercontent.com/94720207/223328643-b5cbe71d-2d0f-4997-a5cf-c24baf2da84f.png)
 
+### Timing
+
+- [Time Synchronization in Wireless Networks](https://www.cse.wustl.edu/~jain/cse574-06/ftp/time_sync/index.html)
+
+- **El `receptor` debe estar soncronizado con el `transmisor`**
+- "Time Synchronization" o "Sincronización de Tiempo" se refiere al proceso de sincronización del reloj entre los dispositivos inalámbricos dentro de una red Wi-Fi.
+- La sincronización de tiempo es esencial en las redes Wi-Fi para garantizar una transmisión de datos confiable y sin errores. 
+- Cuando los dispositivos están sincronizados en tiempo, se asegura que los paquetes de datos se transmitan y reciban en el momento adecuado, y evita que los dispositivos transmitan en el mismo canal y en el mismo tiempo, lo que podría provocar colisiones y errores en la transmisión de datos.
+- En las redes Wi-Fi, la sincronización de tiempo se realiza mediante un protocolo denominado `Wi-Fi Time Synchronization Protocol - WTS`. 
+- Este protocolo permite a los dispositivos inalámbricos sincronizar sus relojes y establecer un intervalo de tiempo común para la transmisión y recepción de paquetes de datos.
+
+![image](https://user-images.githubusercontent.com/94720207/223516976-b101676d-f484-4dd3-971f-d9e111c9ecfa.png)
+
+![image](https://user-images.githubusercontent.com/94720207/223516228-0393f57b-74e4-4a8f-a8d2-add576ec21bd.png)
+
+![image](https://user-images.githubusercontent.com/94720207/223516131-3b4b8377-1be3-43ca-ae51-4f9a17c0b0cf.png)
 
 
+### Signal Processing
 
 ## `Frames`: En `Layer 1` y `Layer 2`
 
