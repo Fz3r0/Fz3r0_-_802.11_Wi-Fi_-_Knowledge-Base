@@ -49,8 +49,8 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 - `Layer 5` - Session Layer `Data`
 - `Layer 4` - Transport Layer `Segment`
 - `Layer 3` - Network Layer `Packet`
-- `Layer 2` - Data Link Layer `Frame`    
-- `Layer 1` - Physical Layer `Frame/Bit`
+- `Layer 2` - Data Link Layer `Data Link Layer Frame`    
+- `Layer 1` - Physical Layer `Physical Layer Frame` _(Si existe Framing en Layer 1, además de los bits que se generan)_
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223137182-929a5e71-1b1f-48c4-94b4-1553a386fefa.png" alt="Modelo OSI" height=480px/> </a> </p> 
 
@@ -92,11 +92,28 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 <span align="center"> <p align="center"> ![image](https://user-images.githubusercontent.com/94720207/223026368-7c497884-9f6f-489b-9fe6-ab46fc521b01.png) </p> </span> 
 
+### Append y Prepend
 
-- **`CWAP Definition`** 
+- Un `append` y `prepend` (por ejemplo en el sublayer superior de capa 2 `llc`), se refiere al hecho de que, en algunos casos, los datos que se transmiten a través de la red pueden tener información de control adicional agregada por capas superiores del modelo OSI, incluyendo su `payload` (data)
+- El `append` se refiere a agregar esta información de control al `final` del paquete de datos. 
+- El `prepend` se refiere a agregar esta información de control al `principio` del paquete de datos.
 
-    - `Encapsulation` - Is the process of of **prepending and/or appending information to a message for `transmission`** (communication) `TO a peer`.
-    - `Decaspulation` - Is the process of **reading, processing and removing prepended and/or appended information for `reception`** (communication) `FROM a peer`.
+![image](https://user-images.githubusercontent.com/94720207/223307931-405fc7e5-1474-4c24-a4d0-60f6e0faa451.png)
+
+### 💀 `Fz3r0 Pro Tip:`
+
+- Por ejemplo, el `FCS` es un campo que se agrega **al final de una trama** en la mayoría de los protocolos de red, incluido Ethernet y WiFi. 
+- Por lo tanto, FCS se agrega típicamente `al final de una trama`. 
+- El propósito de FCS se verá más adelante a fondo, pero en resumen: 
+- Permite que el `dispositivo receptor` **verifique** si la trama se ha corrompido durante la transmisión. 
+- El dispositivo receptor puede utilizar FCS para determinar si ocurrieron errores durante la transmisión y, en caso afirmativo, la trama se descarta.
+
+![image](https://user-images.githubusercontent.com/94720207/223145162-b19d49b2-7160-4a81-bc68-93f7891b11cf.png)
+
+### ⚠️ **`CWAP Definition`** ⚠️ 
+
+- `Encapsulation` - Is the process of of **prepending and/or appending information to a message for `transmission`** (communication) `TO a peer`.
+- `Decaspulation` - Is the process of **reading, processing and removing prepended and/or appended information for `reception`** (communication) `FROM a peer`.
 
 
 
@@ -264,13 +281,5 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 - Este paquete de datos incluye `información de control adicional`, como `direcciones de origen y destino`, que permiten que los dispositivos de red se comuniquen entre sí de manera efectiva. 
 - El formato de estos paquetes se llama `Data Link Layer Frame`.
 
-### Append y Prepend
 
-- En cuanto a la referencia a un "append" y "prepend" del upper layer, esto se refiere al hecho de que, en algunos casos, los datos que se transmiten a través de la red pueden tener información de control adicional agregada por capas superiores del modelo OSI, incluyendo su `payload` (data)
-- El `append` se refiere a agregar esta información de control al final del paquete de datos, 
-- El `prepend` se refiere a agregar esta información de control al principio del paquete de datos.
-
-![image](https://user-images.githubusercontent.com/94720207/223307931-405fc7e5-1474-4c24-a4d0-60f6e0faa451.png)
-
-![image](https://user-images.githubusercontent.com/94720207/223145162-b19d49b2-7160-4a81-bc68-93f7891b11cf.png)
 
