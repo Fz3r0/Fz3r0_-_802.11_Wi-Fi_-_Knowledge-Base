@@ -159,6 +159,14 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 - La subcapa LLC proporciona servicios para la comunicación entre dispositivos en diferentes redes lógicas. 
 - Proporciona un mecanismo para multiplexar y desmultiplexar diferentes protocolos de la Capa 3 (como IPX, TCP, etc.) en la misma red física (como el cable que usa ethernet, o el aire que usa WiFi). 
 
+![image](https://user-images.githubusercontent.com/94720207/223312112-66e4f3c8-9800-4ae8-a4d8-7c2285a4e194.png)
+
+
+![image](https://user-images.githubusercontent.com/94720207/223311481-6e5e391b-d28c-403d-8384-492f018be840.png)
+
+![image](https://user-images.githubusercontent.com/94720207/223023071-19560cf8-3027-4be2-9496-80fe121a3775.png)
+
+
 #### Multiplexación y desmultiplexación 
 
 - La multiplexación es la capacidad de la Capa 2 de Enlace de Datos para combinar varios flujos de datos que vienen de de la Capa 3 (como por ejemplo, diferentes protocolos de red) en un solo flujo de datos que se transmite a través de un único medio físico compartido (como un cable o el aire), y luego separarlos nuevamente en la Capa 2 del otro extremo.
@@ -177,6 +185,7 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 - Este es el sublayer en el que más se enfoca el `CWAP`
 - La subcapa MAC, proporciona servicios para la comunicación entre dispositivos en la misma red física.
+- En esta capa se encuentran mecanismos como CSMA/CA y CSMA/CD para evitar colisiones.
 - Esta subcapa permite crear un `local link`, que se refiere a la comunicación en la `red local (LAN)` utilizando `Layer 1` y `Layer 2`.
 - El local link trabaja en Layer 1 y 2, pero trae el payload y los datos de las capas superiores para ser trasnmitadas.
 - La MAC se define en el estándar IEEE 802.3 en caso de Ethernet y 802.11 en caso de WiFi.
@@ -185,11 +194,13 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 2. **`Control Frames`**
 3. **`Data Frames`**
 
+![image](https://user-images.githubusercontent.com/94720207/223311147-d3127cac-05ec-4f5b-a290-4cf011504175.png)
+
 ### LLC 
 
 ![image](https://user-images.githubusercontent.com/94720207/223023395-805f7429-af91-4920-b38d-866cab8046ba.png)
 
-![image](https://user-images.githubusercontent.com/94720207/223023071-19560cf8-3027-4be2-9496-80fe121a3775.png)
+
 
 ![image](https://user-images.githubusercontent.com/94720207/223023334-c1b51e69-ee9e-4976-b571-877f3e9c77c5.png)
 
