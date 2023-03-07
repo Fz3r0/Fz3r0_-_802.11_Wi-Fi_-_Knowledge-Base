@@ -150,12 +150,14 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 ![image](https://user-images.githubusercontent.com/94720207/223142755-ec76569c-f874-4dda-979e-95bd53ce1929.png)
 
-### LLC - Logical Link Control (Sublayer)
+### `LLC` - Logical Link Control (Sublayer) `802.2`
 
 - El protocolo de control lógico (LLC) es el protocolo que proporciona un `enlace de comunicación entre la Capa 2 y la Capa 3`.
 - El LLC se encarga de proporcionar servicios de control de enlace de datos a la capa de red superior y garantizar que la información se transmita de manera confiable entre dos dispositivos de red (Por ejemplo, PC-A y PC-B en una red ethernet cableada).
 - La subcapa LLC proporciona servicios para la comunicación entre dispositivos en diferentes redes lógicas. 
 - Proporciona un mecanismo para multiplexar y desmultiplexar diferentes protocolos de la Capa 3 (como IPX, TCP, etc.) en la misma red física (como el cable que usa ethernet, o el aire que usa WiFi). 
+
+![image](https://user-images.githubusercontent.com/94720207/223464477-b3c49e23-d208-493c-a8fc-1d79c73ef37e.png)
 
 ![image](https://user-images.githubusercontent.com/94720207/223312112-66e4f3c8-9800-4ae8-a4d8-7c2285a4e194.png)
 
@@ -177,7 +179,7 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 - En el caso de comunicaciones DSL, se utiliza la técnica de multiplexación por división de frecuencia (FDM) para combinar la señal de datos con la señal de voz en una señal única que se transmite a través del cableado de cobre. 
 - Los datos se transmiten a través del medio físico en forma de pulsos eléctricos modulados utilizando técnicas de modulación de amplitud.
 
-### MAC (Sublayer)
+### `MAC` - Media Access Control (Sublayer) `802.3 (Ethernet)` & `802.11 (Wireless)`
 
 - Este es el sublayer en el que más se enfoca el `CWAP`
 - La subcapa MAC, proporciona servicios para la comunicación entre dispositivos en la misma red física.
