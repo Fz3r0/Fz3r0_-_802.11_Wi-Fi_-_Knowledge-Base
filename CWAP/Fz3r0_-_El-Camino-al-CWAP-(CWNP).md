@@ -52,7 +52,7 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 - `Layer 2` - Data Link Layer `Frame`    
 - `Layer 1` - Physical Layer `Frame/Bit`
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223137182-929a5e71-1b1f-48c4-94b4-1553a386fefa.png" alt="Mac" height=600px/> </a> </p> 
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223137182-929a5e71-1b1f-48c4-94b4-1553a386fefa.png" alt="Modelo OSI" height=480px/> </a> </p> 
 
 
 ### 💀 `Fz3r0 Pro Tip:`
