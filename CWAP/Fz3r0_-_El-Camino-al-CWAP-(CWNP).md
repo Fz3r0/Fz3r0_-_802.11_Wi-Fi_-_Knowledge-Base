@@ -3,7 +3,9 @@
 Y ARRANCAN!!!
 
 
-<span align="center"> <p align="center"> IMAGEN </p> </span> 
+<p align="center"> <img src="solo el link" alt="Mac" height=600px/> </a> </p> 
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223137182-929a5e71-1b1f-48c4-94b4-1553a386fefa.png" alt="Mac" height=600px/> </a> </p> 
 
  -->
 
@@ -50,8 +52,7 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 - `Layer 2` - Data Link Layer `Frame`    
 - `Layer 1` - Physical Layer `Frame/Bit`
 
-<span align="center"> <p align="center"> ![image](https://user-images.githubusercontent.com/94720207/223137182-929a5e71-1b1f-48c4-94b4-1553a386fefa.png) </p> </span> 
-
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223137182-929a5e71-1b1f-48c4-94b4-1553a386fefa.png" alt="Mac" height=600px/> </a> </p> 
 
 
 ### 💀 `Fz3r0 Pro Tip:`
@@ -66,7 +67,7 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 - Se dice que cada Layer sirve hacia el Layer de arriba y abajo de él, excepto por las 2 Layers finales: `Layer 1 (capa final de transmisión)` & `Layer 7 (capa final de recepción)`
 - Mientras los datos se mueven por las capas del Modelo OSI, se van `encapsulando` y `decapsulando`
 
-<span align="center"> <p align="center"> ![image](https://user-images.githubusercontent.com/94720207/223029707-a67719fd-de81-407c-97d0-7c118cbf9b80.png)</p> </span> 
+<span align="center"> <p align="center"> ![image](https://user-images.githubusercontent.com/94720207/223029707-a67719fd-de81-407c-97d0-7c118cbf9b80.png) alt="Mac" height=48px </p> </span> 
 
 ### Encapsulamiento
 
