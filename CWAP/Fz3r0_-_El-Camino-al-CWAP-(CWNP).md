@@ -57,14 +57,15 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 ### 💀 `Fz3r0 Pro Tip:`
 
-- `Layer 1`, `Layer 2`, `Layer 3` y `Layer 4` son los importantes en Networking
-- Los estándares `IEEE 802.3 (ethernet)` y `802.11 (wireless)` operan primariamente en `Layer 1` & `Layer 2` 
+- `Layer 1`, `Layer 2`, `Layer 3` y `Layer 4` son los importantes y donde ocurre la magia en Networking
+- `Layer 5`, `Layer 6`, y `Layer 7` están dentro del mundo del software, desarrollo y programación. Estos están fuera del alcance del CWAP.
+- Los estándares `IEEE 802.3 (ethernet)` y `802.11 (wireless)` operan primariamente en `Layer 1` & `Layer 2`. (Cableado y Ondas de Radio en el aire) 
 - Los estándares `IETF` de los protocolos `TCP` & `IP` operan primariamente en `Layer 3` & `Layer 4` 
 - `Layer 1` & `Layer 2` son las capas principales en las que se enfoca el `CWAP` (Ya que el WiFi es donde funciona realmente 😉) 
 
 ## Funcionamiento de los Layers
 
-- Se dice que cada Layer sirve hacia el Layer de arriba y abajo de él, excepto por las 2 Layers finales: `Layer 1 (capa final de transmisión)` & `Layer 7 (capa final de recepción)`
+- Se dice que cada Layer sirve hacia el Layer de arriba y abajo de él, excepto por las 2 Layers finales (que ya no tienen nada antes/después): `Layer 1 (capa final de transmisión)` & `Layer 7 (capa final de recepción)`
 - Mientras los datos se mueven por las capas del Modelo OSI, se van `encapsulando` y `decapsulando`
 
 <span align="center"> <p align="center"> ![image](https://user-images.githubusercontent.com/94720207/223029707-a67719fd-de81-407c-97d0-7c118cbf9b80.png) alt="Mac" height=48px </p> </span> 
