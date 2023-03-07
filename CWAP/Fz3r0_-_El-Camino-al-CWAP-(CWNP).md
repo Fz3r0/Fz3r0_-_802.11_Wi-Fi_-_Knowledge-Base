@@ -175,13 +175,15 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 ### MAC (Sublayer)
 
-- La subcapa MAC, por otro lado, proporciona servicios para la comunicación entre dispositivos en la misma red física.
-
-Ethernet y Wi-Fi son dos tecnologías de Capa 2 utilizadas comúnmente en redes de computadoras.  
-
-En Ethernet, los datos se transmiten en forma de tramas (frames) a través del cable. Cada trama contiene una dirección MAC del dispositivo de origen y del dispositivo de destino, y se envía utilizando el protocolo CSMA/CD (Carrier Sense Multiple Access with Collision Detection), que asegura que solo un dispositivo transmita a la vez para evitar colisiones de datos. Por otro lado, en Wi-Fi, los datos se transmiten en forma de paquetes a través del aire utilizando una técnica llamada modulación de frecuencia de espectro ensanchado (Spread Spectrum Frequency Hopping). Cada paquete incluye una dirección MAC del dispositivo de origen y del dispositivo de destino, y se envía utilizando el protocolo de control de acceso al medio (MAC) de Wi-Fi, que utiliza una técnica llamada CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance) para evitar colisiones de datos.
-
-En resumen, la Capa 2 del modelo OSI es la capa de enlace de datos que proporciona servicios para la transmisión fiable de datos entre dispositivos en la misma red física. Esta capa se divide en dos subcapas: la Capa de Control de Enlace Lógico (LLC) y la Capa de Control de Acceso al Medio (MAC). Las tecnologías Ethernet y Wi-Fi son dos tecnologías de Capa 2 utilizadas comúnmente en redes de computadoras, y la principal diferencia entre ellas es la forma en que los datos se transmiten a través del medio físico.
+- Este es el sublayer en el que más se enfoca el `CWAP`
+- La subcapa MAC, proporciona servicios para la comunicación entre dispositivos en la misma red física.
+- Esta subcapa permite crear un `local link`, que se refiere a la comunicación en la `red local (LAN)` utilizando `Layer 1` y `Layer 2`.
+- El local link trabaja en Layer 1 y 2, pero trae el payload y los datos de las capas superiores para ser trasnmitadas.
+- La MAC se define en el estándar IEEE 802.3 en caso de Ethernet y 802.11 en caso de WiFi.
+- Los `3 tipos de Frames` que principalmente se estudian en este curso y que forman el `MAC sublayer de 802.11` son:
+1. **`Management Frames`**
+2. **`Control Frames`**
+3. **`Data Frames`**
 
 ### LLC 
 
@@ -192,5 +194,32 @@ En resumen, la Capa 2 del modelo OSI es la capa de enlace de datos que proporcio
 ![image](https://user-images.githubusercontent.com/94720207/223023334-c1b51e69-ee9e-4976-b571-877f3e9c77c5.png)
 
 ![image](https://user-images.githubusercontent.com/94720207/223145162-b19d49b2-7160-4a81-bc68-93f7891b11cf.png)
+
+## `Layer 1` Physical
+
+## `Frames`: En `Layer 1` y `Layer 2`
+
+- Los Frames son paquetes de datos que vienen de capas superiores en el modelo OSI.
+- A estos paquetes se les agrega al principio o al final (append prepend) frames para poder realizar su trasnmisión en el medio local. 
+
+### Layer 1: `Physical Layer Frame`
+
+- En `Layer 1 (Physical Layer)`, un frame se refiere a un `conjunto de bits` que se transmiten en la red en una única transmisión. 
+- Estos bits se organizan en un formato específico para que puedan `ser enviados a través de medios físicos como cables, fibra óptica o ondas de radio`. 
+- El formato de estos bits se llama `Physical Layer Frame`.
+
+### Layer 2: `Data Link Layer Frame`
+
+- En `Layer 2 (Data Link Layer)`, un frame se refiere a un `paquete de datos` que se transmite entre dispositivos de red en una red local. 
+- Este paquete de datos incluye `información de control adicional`, como `direcciones de origen y destino`, que permiten que los dispositivos de red se comuniquen entre sí de manera efectiva. 
+- El formato de estos paquetes se llama `Data Link Layer Frame`.
+
+### Append y Prepend
+
+- En cuanto a la referencia a un "append" y "prepend" del upper layer, esto se refiere al hecho de que, en algunos casos, los datos que se transmiten a través de la red pueden tener información de control adicional agregada por capas superiores del modelo OSI, incluyendo su `payload` (data)
+- El `append` se refiere a agregar esta información de control al final del paquete de datos, 
+- El `prepend` se refiere a agregar esta información de control al principio del paquete de datos.
+
+![image](https://user-images.githubusercontent.com/94720207/223307931-405fc7e5-1474-4c24-a4d0-60f6e0faa451.png)
 
 
