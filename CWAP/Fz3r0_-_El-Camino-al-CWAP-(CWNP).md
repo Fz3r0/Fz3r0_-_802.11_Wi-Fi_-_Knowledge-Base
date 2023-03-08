@@ -44,14 +44,6 @@ _Writeup en español por **Fz3r0** 💀 (CWNA)_
 
 ## `CWAP`: Modelo OSI _(usado en el libro)_
 
-- `Layer 7` - Application Layer `Data`
-- `Layer 6` - Presentation Layer `Data`
-- `Layer 5` - Session Layer `Data`
-- `Layer 4` - Transport Layer `Segment`
-- `Layer 3` - Network Layer `Packet`
-- `Layer 2` - Data Link Layer `Data Link Layer Frame`    
-- `Layer 1` - Physical Layer `Physical Layer Frame` _(Si existe Framing en Layer 1, además de los bits que se generan)_
-
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223612406-8d8a9825-2405-4f88-927b-fe767d8b0973.png" alt="Modelo OSI"/> </a> </p> 
 
 ### 💀 `Fz3r0 Pro Tip:`
@@ -91,7 +83,7 @@ _Writeup en español por **Fz3r0** 💀 (CWNA)_
     - Si los datos se mueven de `Arriba (Layer 7)` hacia --->>> `Abajo (Layer 1)` los datos se `encapsulan`
     - Si los datos se mueven de `Abajo (Layer 1)` hacia --->>> `Arriba (Layer 7)` los datos se `decapsulan`
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223026259-b2f1cd67-9dba-4a2a-b76b-8e99d2a54242.png" alt="Encapsula" height=420px/> </a> </p> 
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223026259-b2f1cd67-9dba-4a2a-b76b-8e99d2a54242.png" alt="Encapsula" height=418px/> </a> </p> 
 
 <span align="center"> <p align="center"> ![image](https://user-images.githubusercontent.com/94720207/223026368-7c497884-9f6f-489b-9fe6-ab46fc521b01.png) </p> </span> 
 
@@ -101,7 +93,7 @@ _Writeup en español por **Fz3r0** 💀 (CWNA)_
 - El `append` se refiere a agregar esta información de control al `final` del paquete de datos. 
 - El `prepend` se refiere a agregar esta información de control al `principio` del paquete de datos.
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223307931-405fc7e5-1474-4c24-a4d0-60f6e0faa451.png" alt="Encapsula" height=180px/> </a> </p> 
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223307931-405fc7e5-1474-4c24-a4d0-60f6e0faa451.png" alt="Encapsula" height=175px/> </a> </p> 
 
 ### 💀 `Fz3r0 Pro Tip:`
 
@@ -123,11 +115,11 @@ _Writeup en español por **Fz3r0** 💀 (CWNA)_
 - Los Frames son paquetes de datos que vienen de capas superiores en el modelo OSI.
 - A estos paquetes se les agrega al principio o al final `append / prepend` frames para poder realizar su **trasnmisión en el medio local**. 
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223580792-368e0582-1170-4b24-ad31-812aa5aa7912.png" alt="Encapsula" height=180px/> </a> </p> 
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223580792-368e0582-1170-4b24-ad31-812aa5aa7912.png" alt="Encapsula" height=165px/> </a> </p> 
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223580827-9a0f5347-fcfa-4a52-a884-c20bef35b568.png" alt="Encapsula" height=180px/> </a> </p> 
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223580827-9a0f5347-fcfa-4a52-a884-c20bef35b568.png" alt="Encapsula" height=170px/> </a> </p> 
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223580395-cd80622a-5239-4151-8cf0-fbd77cf0a12a.png" alt="Encapsula" height=450px/> </a> </p> 
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223580395-cd80622a-5239-4151-8cf0-fbd77cf0a12a.png" alt="Encapsula" height=427px/> </a> </p> 
 
 ### Layer 1: `Physical Layer Frame`
 
