@@ -9,7 +9,7 @@ Y ARRANCAN!!!
 
  -->
 
-# El camino al `CWAP`: <br> `Certified Wireless Analysis Professional` 📡🔍🦈  
+# El camino al `CWAP-402`: <br> `Certified Wireless Analysis Professional` 📡🔍🦈  
 _Writeup en español por **Fz3r0** 💀 (CWNA)_
 
 ## Conocimiento Requerido para `CWAP-402`
@@ -186,7 +186,9 @@ _Writeup en español por **Fz3r0** 💀 (CWNA)_
     - Por otro lado, cuando realizas una `llamada de voz o video`, se utiliza `UDP` para la transmisión de datos. 
     - La transmisión de voz y video en tiempo real **no requiere la misma garantía de entrega confiable que un mensaje de texto**, por lo que se utiliza `UDP` para minimizar la latencia y permitir una comunicación en tiempo real.
 
-![image](https://user-images.githubusercontent.com/94720207/223623288-52bb135f-3685-409c-9029-1745c04aa2b2.png)
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223623288-52bb135f-3685-409c-9029-1745c04aa2b2.png" alt="TCP vs UDP" height=240px/> </a> </p> 
+
+
 
 
 ### Otros protocolos Layer 4
