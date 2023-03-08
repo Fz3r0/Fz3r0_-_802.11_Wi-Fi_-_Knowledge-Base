@@ -385,15 +385,47 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223579886-5fe1c532-062b-450e-9a45-537b5b085deb.png" alt="encoding" height=325px/> </a> </p> 
 
-
+---
 
 ### `PHY Sublayer` (802.11-2016 [Actual])
 
-- La PHY sublayer se encarga de la transmisión y recepción de la señal de datos a través del medio físico, como el aire en el caso de las redes inalámbricas. Esta subcapa está diseñada para ser independiente del medio físico específico utilizado y proporciona una interfaz estándar entre la capa física y la capa de enlace de datos, que se encuentra en el nivel 2 del modelo OSI.
+- Actualmente, la `PHY Sublayer` se encarga de lo que hacía antes el `PLCP` & `PMD`
+- La `PHY` se encarga de agregar parámetros como los `trainging fields` que necesitan recibir las Estaciones receptoras `STA` para que procesen la transmisión correctamente. 
+- Las `STA`receptoras usan la información del `PHY Header` para sincronizar sus radios al mismo `data rate` y así poder lograr recibir frames de `Data (802.11)` que es el `PHY payload`
+- La `PHY` sublayer se encarga de la `transmisión y recepción de la señal` de datos a través del `medio físico`, como el `aire` en el caso de las redes inalámbricas. 
+- Esta subcapa está diseñada para ser independiente del medio físico específico utilizado y **proporciona una interfaz estándar entre la capa física y la capa de enlace de datos, que se encuentra en el nivel 2 del modelo OSI**.
+- La PHY sublayer contiene una serie de estándares y especificaciones técnicas que definen cómo se transmite la señal de datos a través del medio físico. Esto incluye ejemplos como: 
+1. La codificación y modulación de los datos. 
+2. La gestión del ancho de banda.
+3. La gestión de la potencia de la señal.
+4. Implementación de mecanismos de corrección de errores para garantizar la fiabilidad de la transmisión.
+5. Otros...
 
-La PHY sublayer contiene una serie de estándares y especificaciones técnicas que definen cómo se transmite la señal de datos a través del medio físico. Esto incluye la codificación y modulación de los datos, la gestión del ancho de banda, la gestión de la potencia de la señal y la implementación de mecanismos de corrección de errores para garantizar la fiabilidad de la transmisión.
+---
 
-En resumen, la PHY sublayer es una subcapa de la capa física en la norma IEEE 802.11, que se utiliza para la implementación de redes Wi-Fi. Se encuentra en el nivel 1 del modelo OSI y se encarga de la transmisión y recepción de la señal de datos a través del medio físico. La PHY sublayer define cómo se transmite la señal de datos a través del medio físico y proporciona una interfaz estándar entre la capa física y la capa de enlace de datos.
+### 💀 `Fz3r0 Pro Tip`: ¿Qué es un`Payload`?
+
+- En el contexto de las `redes informáticas` o `Networking`, `payload` se refiere al `contenido útil` o `información` que se transmite a través de la red. 
+- En una `transmisión de datos`, el payload es la `parte de los datos` que contiene la información real que se envía, **`excluyendo` cualquier información adicional necesaria para enviar los datos, como los `headers`, `source`, `destination`, `FCS` y otros `metadatos/metadata`.** (Como los headers agregados en cada capa para la transmisión de datos 😉)
+- Es decir, si por ejemplo quiero enviar una `foto.jpg` por `whatsapp`, lo importante en el envío es la foto después de todo... Eso es el `payload`!!!
+- Sin embargo, para lograr enviar esta foto por la red, ese `payload` se debe segmentar, fragmentar, encapsular, encriptar, agregar headers, enviar por un medio físico como un cable o aire, etc, etc... 
+- Cada proceso de pasar por layers y transmisión agrega metadata (bit adicionales de datos con información) para lograr la transmisión del `payload` original. 
+
+![image](https://user-images.githubusercontent.com/94720207/223596127-396f0615-fc1f-45b8-ba8d-1859aeb2297b.png)
+
+#### Payload en Seguridad Informática y Hacking
+
+- El término `payload` se utiliza comúnmente en el contexto de la seguridad informática y el hacking porque, en muchos casos, los atacantes utilizan un `payload malicioso` para comprometer un sistema. 
+- Es importante tener en cuenta el contexto en el que se utiliza el término para evitar confusiones y malentendidos.
+- Un `payload malicioso` es un tipo de `código malicioso` diseñado para ser `ejecutado` en un sistema comprometido con el fin de llevar a cabo acciones maliciosas, como robo de datos, daños al sistema, etc.
+- Esta confusión puede surgir porque el término `payload` se utiliza tanto en el contexto de la transmisión de datos legítima como en el contexto de los ataques cibernéticos maliciosos. 
+    - Es decir... **Un payload puede ser tanto legítimo como una `foto.jpg` como lo puede ser un payload malicioso como una `Reverse Shell` usando `MSF Venom / Metasploit` ya que ambos es el "contenido de datos importante" viajando por el medio después de todo!!!**
+
+---
+
+
+
+
 
 
 
