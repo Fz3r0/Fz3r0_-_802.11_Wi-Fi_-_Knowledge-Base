@@ -9,10 +9,10 @@ Y ARRANCAN!!!
 
  -->
 
-# El camino al CWAP - Certified Wireless Analysis Professional
-_Writeup en español por Fz3r0 💀 (CWNA)_
+# El camino al `CWAP`: <br> `Certified Wireless Analysis Professional` 📡🔍🦈  
+_Writeup en español por **Fz3r0** 💀 (CWNA)_
 
-## Conocimiento Requerido para CWAP-402
+## Conocimiento Requerido para `CWAP-402`
 
 - El examen está dividido de la siguiente manera:
 
@@ -25,7 +25,7 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 | **WLAN Medium Access**        | 10%            |
 | **802.11 Frame Exchanges**    | 30%            |
 
-## CWAP: Objetivos
+## `CWAP`: Objetivos
 
 - El Ingeniero CWAP debe asegurarse que el troubleshooting se está llevando a cabo con todos los tipos de anlálisis y poder realizar los siguientes pasos:
 
@@ -42,7 +42,7 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
  
      - Frame Aggregation: `A-MSDU` & `A-MPDU` 
 
-## CWAP: Modelo OSI (usado en el libro)
+## `CWAP`: Modelo OSI _(usado en el libro)_
 
 - `Layer 7` - Application Layer `Data`
 - `Layer 6` - Presentation Layer `Data`
@@ -53,8 +53,6 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 - `Layer 1` - Physical Layer `Physical Layer Frame` _(Si existe Framing en Layer 1, además de los bits que se generan)_
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223612406-8d8a9825-2405-4f88-927b-fe767d8b0973.png" alt="Modelo OSI"/> </a> </p> 
-
-
 
 ### 💀 `Fz3r0 Pro Tip:`
 
