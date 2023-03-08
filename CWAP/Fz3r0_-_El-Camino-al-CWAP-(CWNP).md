@@ -10,7 +10,8 @@ Y ARRANCAN!!!
  -->
 
 # El camino al `CWAP-402`: <br> `Certified Wireless Analysis Professional` 📡🔍🦈  
-_Writeup en español por **Fz3r0** 💀 (CWNA)_
+_Writeup para la certificación **CWAP-402** de **CWNP (Certified Wireless Network Professional)**_ <br>
+_por @ **Fz3r0** 💀 (CWNA)_
 
 ## Conocimiento Requerido para `CWAP-402`
 
