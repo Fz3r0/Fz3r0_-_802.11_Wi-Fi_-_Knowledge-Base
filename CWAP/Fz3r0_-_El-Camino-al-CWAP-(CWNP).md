@@ -411,7 +411,8 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 - Sin embargo, para lograr enviar esta foto por la red, ese `payload` se debe segmentar, fragmentar, encapsular, encriptar, agregar headers, enviar por un medio físico como un cable o aire, etc, etc... 
 - Cada proceso de pasar por layers y transmisión agrega metadata (bit adicionales de datos con información) para lograr la transmisión del `payload` original. 
 
-![image](https://user-images.githubusercontent.com/94720207/223596127-396f0615-fc1f-45b8-ba8d-1859aeb2297b.png)
+![image](https://user-images.githubusercontent.com/94720207/223599815-51381029-f32b-44c9-93a5-9dabcaaaba24.png)
+
 
 #### Payload en Seguridad Informática y Hacking
 
@@ -423,6 +424,19 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 ---
 
+### 💀 `Fz3r0 Pro Tip`: ¿Qué es un`Header` y  un `Footer`?
+
+- En el contexto de la transmisión de datos en redes informáticas y en el modelo OSI, un "header" y un "footer" son dos componentes importantes de un paquete de datos.
+- El header está `prepended` (puesto antes) de los datos que proceden de los upper layers. 
+- El `header` es la parte del paquete de datos que **contiene información sobre el origen y el destino del paquete, así como información sobre cómo se deben procesar los datos en el paquete.** 
+- El encabezado (`header`) **también puede contener información de control, como el número de secuencia o el tiempo de vida del paquete.**
+
+![image](https://user-images.githubusercontent.com/94720207/223600032-ebdd85fa-ffdf-4a5a-a0c1-f5886c184905.png)
+
+
+El "footer", también conocido como tráiler, es la parte del paquete de datos que se utiliza para verificar la integridad de los datos que se están transmitiendo. El tráiler suele contener un código de verificación de redundancia cíclica (CRC), que es un valor numérico que se calcula a partir de los datos que se están transmitiendo. Cuando el paquete de datos llega a su destino, se calcula un nuevo valor CRC a partir de los datos recibidos y se compara con el valor CRC en el tráiler. Si los dos valores coinciden, esto indica que los datos se transmitieron correctamente.
+
+Tanto el encabezado como el tráiler son importantes para garantizar una transmisión de datos eficiente y segura en una red. El encabezado se utiliza para enrutar y procesar los datos correctamente, mientras que el tráiler se utiliza para verificar la integridad de los datos y detectar cualquier error de transmisión.
 
 
 
