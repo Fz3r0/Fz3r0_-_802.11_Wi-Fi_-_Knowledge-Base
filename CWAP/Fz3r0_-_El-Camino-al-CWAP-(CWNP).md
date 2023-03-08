@@ -434,17 +434,22 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 ![image](https://user-images.githubusercontent.com/94720207/223602287-09982459-bfe5-42e2-be0f-7e7e31968dbc.png)
 
+### `Header`
+
 - El header está `prepended` (puesto antes) de los datos que proceden de los upper layers. 
 - El `header` es la parte del paquete de datos que **contiene información sobre el origen y el destino del paquete, así como información sobre cómo se deben procesar los datos en el paquete.** 
 - El encabezado (`header`) **también puede contener información de control, como el número de secuencia o el tiempo de vida del paquete.**
 
 ![image](https://user-images.githubusercontent.com/94720207/223600032-ebdd85fa-ffdf-4a5a-a0c1-f5886c184905.png)
 
-- El `footer`, también conocido como `tráiler`, está `appended` del payload. 
+### `Footer`
+
+- El `footer`, también conocido como `tráiler`, está `appended` (puesto después) del payload. 
+- El contenido del `footer` generalmente contiene el resultado del `CRC` conocido como `FCS` (uno depende del otro)
 - Es la parte del paquete de datos que se utiliza para `verificar la integridad de los datos que se están transmitiendo`. 
-- El tráiler suele contener un código de verificación de redundancia cíclica `Cyclic Redundancy Check CRC`, que es un valor numérico que se calcula a partir de los datos que se están transmitiendo. 
+- El `tráiler/footer` suele contener un "código de verificación de redundancia cíclica" `Cyclic Redundancy Check - CRC`, que es un valor numérico que se calcula a partir de los datos que se están transmitiendo. 
 - El `CRC` es un algoritmo utilizado para `detectar errores` en la transmisión de datos en redes de comunicación. 
-- **El resultado del cálculo CRC se conoce como `FCS (Frame Check Sequence)`, que es el valor numérico utilizado para verificar la integridad de los datos transmitidos.
+- **El resultado del cálculo del algoritmo CRC se conoce como `FCS (Frame Check Sequence)`, que es el valor numérico utilizado para verificar la integridad de los datos transmitidos.**
 - Cuando el paquete de datos llega a su destino, se calcula un nuevo valor CRC a partir de los datos recibidos y se compara con el valor CRC en el tráiler. Si los dos valores coinciden, esto indica que los datos se transmitieron correctamente.
 
 ![image](https://user-images.githubusercontent.com/94720207/223602974-c43aa55c-61b5-4d15-aa50-fdf8c4904752.png)
