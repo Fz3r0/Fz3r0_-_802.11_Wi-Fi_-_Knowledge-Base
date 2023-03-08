@@ -222,7 +222,7 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 ---
 
-### `LLC` - Logical Link Control `Upper Sublayer` - `802.2`
+### Layer 2: `LLC` - Logical Link Control `Upper Sublayer` - `802.2`
 
 - El protocolo de control lógico (LLC) es el protocolo que proporciona un `enlace de comunicación entre la Capa 2 y la Capa 3`.
 - El LLC se encarga de proporcionar servicios de control de enlace de datos a la capa de red superior y garantizar que la información se transmita de manera confiable entre dos dispositivos de red (Por ejemplo, PC-A y PC-B en una red ethernet cableada).
@@ -253,7 +253,7 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 ---
 
-### `MAC` - Media Access Control `Upper Sublayer` - `802.3 (Ethernet)` & `802.11 (Wireless)`
+### Layer 2: `MAC` - Media Access Control `Lower Sublayer` - `802.3 (Ethernet)` & `802.11 (Wireless)`
 
 - Este es el sublayer en el que más se enfoca el `CWAP`
 - La subcapa MAC, proporciona servicios para la comunicación entre dispositivos en la misma red física.
@@ -354,7 +354,21 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223568602-8cfe0fc5-2e93-4f6b-b17c-50588475c069.png" alt="encoding" height=325px/> </a> </p> 
 
-## `PHY Sublayer - 802.11-2016` / (Antes: `PLCP` + `PMD`)
+## Layer 1: `Physical`
+
+- La `subcapa PHY` comparte Layer 1 con la `subcapa MAC` en el modelo OSI.
+- La `subcapa MAC` es responsable de la gestión del acceso al medio y del control de flujo en la capa física. 
+- La `MAC` se encarga de garantizar que sólo un dispositivo pueda transmitir datos a través del medio físico a la vez, y que los datos se entreguen de manera segura y confiable.
+- La `PHY` es responsable de la transmisión y recepción de datos a través del medio físico. Esto incluye la conversión de los datos digitales en señales analógicas (en el caso de la transmisión por cable) o la conversión de los datos digitales en señales de radiofrecuencia (en el caso de la transmisión inalámbrica).
+
+### Layer 1: `MAC Sublayer - 802.11-2016` / (Antes: `PLCP` + `PMD`) `upper`
+
+- **No es curioso que se **reptita en Layer 1 la misma sublayer que en Layer 2**: `MAC`**
+- Es por eso que en Layer 2 la `MAC` es la `Lower Sublayer` mientras que en Layer 1 es la `Upper Sublayer`, en realidad es la misma y contiene la misma información. 
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223585212-9e7fbe05-fb01-46eb-a172-ed06ead03631.png" alt="sublayers"/> </a> </p> 
+  
+### Layer 1: `PHY Sublayer - 802.11-2016` / (Antes: `PLCP` + `PMD`) `lower`
 
 - [802.11 PHY – PPDU (2014)](https://mrncciew.com/2014/10/14/cwap-802-11-phy-ppdu/)
 - Antes de 2016, la Physical Layer de la norma IEEE 802.11, se dividía en dos subcapas: 
@@ -375,6 +389,11 @@ _Writeup en español por Fz3r0 💀 (CWNA)_
 
 ### `PHY Sublayer` (802.11-2016 [Actual])
 
+- La PHY sublayer se encarga de la transmisión y recepción de la señal de datos a través del medio físico, como el aire en el caso de las redes inalámbricas. Esta subcapa está diseñada para ser independiente del medio físico específico utilizado y proporciona una interfaz estándar entre la capa física y la capa de enlace de datos, que se encuentra en el nivel 2 del modelo OSI.
+
+La PHY sublayer contiene una serie de estándares y especificaciones técnicas que definen cómo se transmite la señal de datos a través del medio físico. Esto incluye la codificación y modulación de los datos, la gestión del ancho de banda, la gestión de la potencia de la señal y la implementación de mecanismos de corrección de errores para garantizar la fiabilidad de la transmisión.
+
+En resumen, la PHY sublayer es una subcapa de la capa física en la norma IEEE 802.11, que se utiliza para la implementación de redes Wi-Fi. Se encuentra en el nivel 1 del modelo OSI y se encarga de la transmisión y recepción de la señal de datos a través del medio físico. La PHY sublayer define cómo se transmite la señal de datos a través del medio físico y proporciona una interfaz estándar entre la capa física y la capa de enlace de datos.
 
 
 
