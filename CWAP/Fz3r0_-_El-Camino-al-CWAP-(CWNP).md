@@ -507,7 +507,6 @@ _por @ **Fz3r0** 💀 (CWNA)_
 ### `802.11` - `Modulation Methods` AKA `PHY`
 
 - Durante el `CWNA` hice una tabla que me ayudó mucho a entender los `PHY`, `Ammandments`, `Standards`:
-
 - Esta es la versión simplificada en .md: 
 
 | **Nombre**     | **Acrónimo** | **Nombre Completo**                        | **Año** | **Banda(s)**          | **Bandwith**                               | **Max. Data Rate** |
@@ -523,6 +522,19 @@ _por @ **Fz3r0** 💀 (CWNA)_
 | **_802.11af_** | _TVWS_       | _Television White Spaces_                  | _2014_  | _54-790 MHz_          | _6 MHz, 7 MHz, 8 MHz_                      | _570 Mbps_         |
 | **_802.11ah_** | _HaLow_      | _High Efficiency WLAN_                     | _2016_  | _900 MHz_             | _1 MHz, 2 MHz, 4 MHz, 8 MHz, 16 MHz_       | _347 Mbps_         |
 
+- Los `Data Rates` varían mucho depende de la `PHY` que esté siendo usada. 
+- Los primeros `dispositivos WiFi` soportaban un máximo de 1 o 2 Mbps... Pero actualmente pueden llegar a data rates de casi 10 Gbps
+- Sin embargo, en un mundo real `casi ningún dispositivo sería capaz de llegar a ese data rate` por razones como:
+1. El medio (aire) se comparte con otros dispositivos WiFi en el mismo canal.
+2. Los `Management Frames` de 802.11 crean `overhead` lo cual también consume `airtime`.
+
+- Los `802.11 PHY` utilizan un `PHY header` (también conocidos como `campos de PPDU`) que son `prepended` al `payload` que proviene del `MAC Layer`
+- El `PHY header` contiene la información necesaria para que el `receptor` ajuste su `data rate` dependiendo sus posibilidades para así poder sincronizarse con el `transmisor`
+
+
+#### `Nota`:
+
+- Para cuando escribí esto `802.11be` AKA `WiFi 7` aún no sale al mercado, es por eso que no lo incluí en la tabla. 
 
 
 
