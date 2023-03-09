@@ -512,7 +512,7 @@ _por @ **Fz3r0** 💀 (CWNA)_
 
 | **Nombre**     | **Acrónimo** | **Nombre Completo**                        | **Año** | **Banda(s)**          | **Bandwith**                               | **Max. Data Rate** |
 |----------------|--------------|--------------------------------------------|---------|-----------------------|--------------------------------------------|--------------------|
-| **802.11**     | DSSS         | Direct Sequence Spread Spectrum            | 1997    | 2.4 GHz               | 22 MHz                                     | 2 Mbps             |
+| **802.11-prime**     | DSSS         | Direct Sequence Spread Spectrum            | 1997    | 2.4 GHz               | 22 MHz                                     | 2 Mbps             |
 | **802.11b**    | HR/DSSS      | High Rate/Direct Sequence Spread Spectrum  | 1999    | 2.4 GHz               | 22 MHz                                     | 11 Mbps            |
 | **802.11a**    | OFDM         | Orthogonal Frequency Division Multiplexing | 1999    | 5 GHz                 | 20 MHz                                     | 54 Mbps            |
 | **802.11g**    | ERP          | Extended Rate PHY                          | 2003    | 2.4 GHz               | 20 MHz                                     | 54 Mbps            |
