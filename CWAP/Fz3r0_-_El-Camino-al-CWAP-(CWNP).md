@@ -430,11 +430,9 @@ _por @ **Fz3r0** 💀 (CWNA)_
 4. Implementación de mecanismos de corrección de errores para garantizar la fiabilidad de la transmisión.
 5. Otros...
 
-![image](https://user-images.githubusercontent.com/94720207/223601083-7bbb8add-e106-4ed9-b096-84da49a96b5a.png)
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223601083-7bbb8add-e106-4ed9-b096-84da49a96b5a.png" alt="encoding" /> </a> </p> 
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223601578-3857ebdc-5cb8-4884-b244-86c002f586bd.png" alt="encoding" height=185px/> </a> </p> 
-
-
 
 ---
 
@@ -461,9 +459,9 @@ _por @ **Fz3r0** 💀 (CWNA)_
 
 ### 💀 `Fz3r0 Pro Tip`: ¿Qué es un`Header` y  un `Footer`?
 
-- En el contexto de la transmisión de datos en redes informáticas y en el modelo OSI, un `header` y un `footer` son dos componentes importantes de un paquete de datos.
+- En el contexto de la transmisión de datos en redes informáticas y en el modelo OSI, un `header` y un `footer` (también conocido como `trailer`) son dos componentes importantes de un paquete de datos.
 
-![image](https://user-images.githubusercontent.com/94720207/223602287-09982459-bfe5-42e2-be0f-7e7e31968dbc.png)
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223602287-09982459-bfe5-42e2-be0f-7e7e31968dbc.png" alt="encoding" height=185px/> </a> </p> 
 
 ### `Header`
 
@@ -498,7 +496,7 @@ _por @ **Fz3r0** 💀 (CWNA)_
 - El estándar 802.11 especifica las `frecuencias de radio`, los` protocolos de acceso al medio`, los `mecanismos de autenticación` y `encriptación`, `y otros aspectos` necesarios para el funcionamiento de una red inalámbrica. 
 - El estándar también define diferentes variantes, como `802.11a`, `802.11b`, `802.11g`, `802.11n`, `802.11ac`, `802.11ax`; cada una con **diferentes características y velocidades de transmisión de datos.**
 
-![image](https://user-images.githubusercontent.com/94720207/223910395-92a65b7d-d17f-4688-bf4c-1c220526f038.png)
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223910395-92a65b7d-d17f-4688-bf4c-1c220526f038.png" alt="encoding"/> </a> </p> 
 
 ## `Physical Layer` para la comunicación WiFi - `PHY`
 
@@ -510,8 +508,27 @@ _por @ **Fz3r0** 💀 (CWNA)_
 
 - Durante el `CWNA` hice una tabla que me ayudó mucho a entender los `PHY`, `Ammandments`, `Standards`:
 
+- Esta es la versión simplificada en .md: 
+
+| **Nombre**     | **Acrónimo** | **Nombre Completo**                        | **Año** | **Banda(s)**          | **Bandwith**                               | **Max. Data Rate** |
+|----------------|--------------|--------------------------------------------|---------|-----------------------|--------------------------------------------|--------------------|
+| **802.11**     | DSSS         | Direct Sequence Spread Spectrum            | 1997    | 2.4 GHz               | 22 MHz                                     | 2 Mbps             |
+| **802.11b**    | HR/DSSS      | High Rate/Direct Sequence Spread Spectrum  | 1999    | 2.4 GHz               | 22 MHz                                     | 11 Mbps            |
+| **802.11a**    | OFDM         | Orthogonal Frequency Division Multiplexing | 1999    | 5 GHz                 | 20 MHz                                     | 54 Mbps            |
+| **802.11g**    | ERP          | Extended Rate PHY                          | 2003    | 2.4 GHz               | 20 MHz                                     | 54 Mbps            |
+| **802.11n**    | HT           | High Throughput PHY                        | 2009    | 2.4 GHz, 5 GHz        | 20 MHz, 40 MHz, 80 MHz, 160 MHz            | 600 Mbps           |
+| **802.11ac**   | VHT          | Very High Throughput PHY                   | 2013    | 5 GHz                 | 20 MHz, 40 MHz, 80 MHz, 160 MHz, 80+80 MHz | 6.9 Gbps           |
+| **802.11ax**   | HE           | High Efficiency PHY                        | 2019    | 2.4 GHz, 5 GHz, 6 GHz | 20 MHz, 40 MHz, 80 MHz, 80+80 MHz, 160 MHz | 9.6 Gbps           |
+| **_802.11ad_** | _WiGig_      | _Wireless Gigabit_                         | _2012_  | _60 GHz_              | _2.16 GHz_                                 | _7 Gbps_           |
+| **_802.11af_** | _TVWS_       | _Television White Spaces_                  | _2014_  | _54-790 MHz_          | _6 MHz, 7 MHz, 8 MHz_                      | _570 Mbps_         |
+| **_802.11ah_** | _HaLow_      | _High Efficiency WLAN_                     | _2016_  | _900 MHz_             | _1 MHz, 2 MHz, 4 MHz, 8 MHz, 16 MHz_       | _347 Mbps_         |
 
 
+
+
+
+
+### 
 
 
 
