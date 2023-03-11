@@ -602,7 +602,22 @@ Es mejor aprender con la `MCS Table` con la tabla de `802.11n/ac` ya que `802.11
 
 ![image](https://user-images.githubusercontent.com/94720207/224502878-2edac492-fcc3-492d-86e1-f1f46740e546.png)
 
+Primero identificaré cada parte de la tabla:
 
+1. **`Identificación de PHY / 802.11 IEEE Standard`**
+
+    - `HT` corresponde a `802.11n`
+    - `VHT` corresponde a `802.11ac`
+
+![image](https://user-images.githubusercontent.com/94720207/224513646-18efeefd-17d5-4cfd-89fe-b8cc4fc69e78.png)
+
+`Importante`: Como cada `PHY` funciona diferente hay que encontrar el específico que queremos buscar.
+
+- `HT` = `802.11n`
+
+![image](https://user-images.githubusercontent.com/94720207/224513676-50930b4d-6da6-48ed-831c-ffcad6dd4329.png)
+
+- 
 
 
 
