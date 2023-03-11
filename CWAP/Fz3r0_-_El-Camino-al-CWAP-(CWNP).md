@@ -549,21 +549,17 @@ _por @ **Fz3r0** 💀 (CWNA)_
 - El `PHY header` contiene la información necesaria para que el `receptor` ajuste su `data rate` dependiendo sus posibilidades para así poder sincronizarse con el `transmisor`
 
 
-
-
-
-
-
-
-
 ## `MCS Table` - Modulation & Coding Scheme
 
 - [Wireless LAN Professionals: `MCS Table and How You Can Use it`](https://youtu.be/QBiBPbME5tY)
 - La `MCS Table` Ayuda a evular la calidad del ambiente de RF `quality of the RF enviorment`
-- Cada dispositivo que `transmite` en una red `WiFi` (como un AP, celular, o cualquier antena WiFi) debe tomar `decisiones internas` y preguntarse `"¿Qué MCS usaré?"`
-- La `MCS (Modulation and Coding Scheme)` es una tabla utilizada en las redes Wi-Fi para definir la `tasa de transmisión de datos` que se puede lograr en un canal de comunicación inalámbrico. La tabla MCS establece la relación entre la modulación utilizada para enviar datos y la tasa de bits por segundo (bps) que se puede alcanzar.
 - La `tabla MCS` se utiliza en las redes Wi-Fi que operan en las bandas de frecuencia de `2,4 GHz` y `5 GHz`. 
-- `MCS` agrupa varias cosas como:
+- Cada dispositivo que `transmite` en una red `WiFi` (como un AP, celular, o cualquier antena WiFi) debe tomar `decisiones internas` y preguntarse `"¿Qué MCS usaré?"`
+- La `MCS (Modulation and Coding Scheme)` es una tabla utilizada en las redes Wi-Fi para definir la el `data rate` (tasa de transmisión de datos) que se puede lograr en un canal de comunicación inalámbrico. 
+- La tabla MCS establece la relación entre la modulación utilizada para enviar datos y la tasa de bits por segundo (bps) que se puede alcanzar.
+
+`MCS` agrupa varias cosas como:
+
 1. `Modulation`
 2. `Coding Scheme`
 3. `Guard Interval`
@@ -571,7 +567,7 @@ _por @ **Fz3r0** 💀 (CWNA)_
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/224464689-e23b9e37-e27f-4d32-891c-21934bce8086.png" alt="encoding" height=385px/> </a> </p> 
 
-#### `PHYs compatibles` con `MCS Table`
+### `PHYs compatibles` con `MCS Table`
 
 - La `MCS table` se utiliza **únicamente en los estándares 802.11 que utilizan la técnica de modulación `OFDM`** para transmitir datos. 
 
@@ -581,11 +577,9 @@ La técnica `OFDM` es una forma de `dividir la señal de transmisión` en múlti
  
 `DSSS` utiliza una técnica de `esparcimiento de espectro` que extiende la señal de transmisión en un ancho de banda más amplio que la señal original, lo que reduce la interferencia y mejora la calidad de la señal. Debido a esta técnica de transmisión, no se pueden utilizar las mismas combinaciones de modulación y codificación que se utilizan en OFDM, por lo que la MCS table no es aplicable en 802.11b. 
 
+**Cada `PHY` (enmienda IEEE) tiene su propia tabla `MCS`**, que especifica las tasas de datos máximas que se pueden lograr en diferentes condiciones de transmisión, como la `calidad de la señal`, la `interferencia` y la `distancia` entre el dispositivo emisor y el receptor. <br>
 
-
-**Cada `banda` y cada `PHY` (enmienda IEEE) tiene su propia tabla `MCS`**, que especifica las tasas de datos máximas que se pueden lograr en diferentes condiciones de transmisión, como la `calidad de la señal`, la `interferencia` y la `distancia` entre el dispositivo emisor y el receptor. <br>
-
-`Nota`: A medida que la tecnología avanza y se añaden nuevas características a la `PHY`, también la `MCS Table` crece.
+`Nota`: A medida que la tecnología avanza y **se añaden nuevas características y tecnologías adicionales** a la `PHY`, también la `MCS Table` crece.
 
 |    **Estándar**   | **Estándar IETF** | **Año de lanzamiento** | **Técnica de modulación** | **Banda de frecuencia** |            **Tecnologías adicionales**           | **Máxima tasa de datos** |
 |:-----------------:|:-----------------:|:----------------------:|:-------------------------:|:-----------------------:|:------------------------------------------------:|:------------------------:|
@@ -596,6 +590,15 @@ La técnica `OFDM` es una forma de `dividir la señal de transmisión` en múlti
 | **IEEE 802.11ax** | Wi-Fi 6           | 2021                   | OFDM y HE-OFDM            | 2,4 GHz y 5 GHz         | múltiples bandas de frecuencia, MU-MIMO mejorada | 11 Gbps                  |
 
 Las tasas de datos más altas se logran utilizando modulaciones más complejas y una mayor cantidad de bits por símbolo, lo que aumenta la eficiencia espectral de la transmisión. Sin embargo, **estas tasas de datos máximas solo se pueden lograr en condiciones óptimas de transmisión**, y la tasa real de datos puede variar según las condiciones del entorno y el hardware utilizado.
+
+### 💀 `Fz3r0 Pro Tip`: ¿Cómo leer la MCS Table like a sir?
+
+Es mejor aprender con la `MCS Table` del primer `OFDM` de `802.11a`, ya que es la tabla más pequeña y de aquí se puede partir a PHYs más nuevas. 
+
+- Comparando 802.11a (WiFi6) VS 802.11ax (WiFi prime)
+
+![image](https://user-images.githubusercontent.com/94720207/224502668-3671d933-d4f7-4338-a7c3-fdd65f85062c.png)
+
 
 ### 💀 `Fz3r0 Pro Tip`: `Data Rate`, `Bit Rate`, `Throughput`
 
@@ -609,3 +612,17 @@ Las tasas de datos más altas se logran utilizando modulaciones más complejas y
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+- [OFDM Frame Structure](https://rfmw.em.keysight.com/wireless/helpfiles/89600b/webhelp/Subsystems/wlan-ofdm/Content/ofdm_80211-overview.htm)
