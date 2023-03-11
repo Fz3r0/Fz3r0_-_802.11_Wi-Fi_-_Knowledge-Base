@@ -565,7 +565,7 @@ _por @ **Fz3r0** 💀 (CWNA)_
 3. `Guard Interval`
 4. `Channel Width`
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/224464689-e23b9e37-e27f-4d32-891c-21934bce8086.png" alt="encoding" height=385px/> </a> </p> 
+![image](https://user-images.githubusercontent.com/94720207/224502668-3671d933-d4f7-4338-a7c3-fdd65f85062c.png)
 
 ### `PHYs compatibles` con `MCS Table`
 
@@ -595,9 +595,9 @@ Las tasas de datos más altas se logran utilizando modulaciones más complejas y
 
 Es mejor aprender con la `MCS Table` del primer `OFDM` de `802.11a`, ya que es la tabla más pequeña y de aquí se puede partir a PHYs más nuevas. 
 
-- Comparando 802.11a (WiFi6) VS 802.11ax (WiFi prime)
+![image](https://user-images.githubusercontent.com/94720207/224502878-2edac492-fcc3-492d-86e1-f1f46740e546.png)
 
-![image](https://user-images.githubusercontent.com/94720207/224502668-3671d933-d4f7-4338-a7c3-fdd65f85062c.png)
+
 
 
 ### 💀 `Fz3r0 Pro Tip`: `Data Rate`, `Bit Rate`, `Throughput`
