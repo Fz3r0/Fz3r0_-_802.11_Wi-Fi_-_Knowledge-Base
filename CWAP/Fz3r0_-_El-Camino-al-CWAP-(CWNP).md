@@ -556,7 +556,17 @@ _por @ **Fz3r0** 💀 (CWNA)_
 
 
 
-## MCS Table
+## `MCS Table` - Modulation & Coding Scheme
+
+- La `MCS (Modulation and Coding Scheme)` es una tabla utilizada en las redes Wi-Fi para definir la `tasa de transmisión de datos` que se puede lograr en un canal de comunicación inalámbrico. La tabla MCS establece la relación entre la modulación utilizada para enviar datos y la tasa de bits por segundo (bps) que se puede alcanzar.
+- La `tabla MCS` se utiliza en las redes Wi-Fi que operan en las bandas de frecuencia de `2,4 GHz` y `5 GHz`. 
+- **Cada banda tiene su propia tabla MCS**, que especifica las tasas de datos máximas que se pueden lograr en diferentes condiciones de transmisión, como la `calidad de la señal`, la `interferencia` y la `distancia` entre el dispositivo emisor y el receptor.
+- Las tasas de datos más altas se logran utilizando modulaciones más complejas y una mayor cantidad de bits por símbolo, lo que aumenta la eficiencia espectral de la transmisión. 
+- Sin embargo, **estas tasas de datos máximas solo se pueden lograr en condiciones óptimas de transmisión**, y la tasa real de datos puede variar según las condiciones del entorno y el hardware utilizado.
+
+### : Data Rate, Bit Rate, Throughput
+
+- La tasa de transmisión de datos se le llama "data transmission rate" o "data transfer rate" en inglés. También puede ser conocida como "data rate", "bit rate" o "throughput".
 
 #### `PHYs compatibles` con `MCS Table`:
 
