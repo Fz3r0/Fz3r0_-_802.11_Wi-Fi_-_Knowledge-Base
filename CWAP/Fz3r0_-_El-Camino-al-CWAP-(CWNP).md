@@ -593,9 +593,10 @@ Las tasas de datos más altas se logran utilizando modulaciones más complejas y
 
 ### 💀 `Fz3r0 Pro Tip`: ¿Cómo leer la MCS Table like a sir?
 
-Es mejor aprender con la `MCS Table` del primer `OFDM` de `802.11a`, ya que es la tabla más pequeña y de aquí se puede partir a PHYs más nuevas. 
+Es mejor aprender con la `MCS Table` con la tabla de `802.11n/ac` ya que `802.11ax` se vuelve demasiado grande para comprender al principio.
 
 ![image](https://user-images.githubusercontent.com/94720207/224502878-2edac492-fcc3-492d-86e1-f1f46740e546.png)
+
 
 
 
