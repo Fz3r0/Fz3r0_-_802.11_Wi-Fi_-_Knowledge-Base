@@ -565,21 +565,15 @@ _por @ **Fz3r0** 💀 (CWNA)_
 - La `tabla MCS` se utiliza en las redes Wi-Fi que operan en las bandas de frecuencia de `2,4 GHz` y `5 GHz`. 
 - `MCS` agrupa varias cosas como:
 1. `Modulation`
-2. `Coding Scheme`, `Guard Interval`
-
-- **Cada banda tiene su propia tabla MCS**, que especifica las tasas de datos máximas que se pueden lograr en diferentes condiciones de transmisión, como la `calidad de la señal`, la `interferencia` y la `distancia` entre el dispositivo emisor y el receptor.
-- Las tasas de datos más altas se logran utilizando modulaciones más complejas y una mayor cantidad de bits por símbolo, lo que aumenta la eficiencia espectral de la transmisión. 
-- Sin embargo, **estas tasas de datos máximas solo se pueden lograr en condiciones óptimas de transmisión**, y la tasa real de datos puede variar según las condiciones del entorno y el hardware utilizado.
+2. `Coding Scheme`
+3. `Guard Interval`
+4. `Channel Width`
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/224464689-e23b9e37-e27f-4d32-891c-21934bce8086.png" alt="encoding" height=385px/> </a> </p> 
 
-
-
-### 💀 `Fz3r0 Pro Tip`: `Data Rate`, `Bit Rate`, `Throughput`
-
-- La tasa de transmisión de datos se le llama "data transmission rate" o "data transfer rate" en inglés. También puede ser conocida como "data rate", "bit rate" o "throughput".
-
 #### `PHYs compatibles` con `MCS Table`
+
+**Cada banda tiene su propia tabla MCS**, que especifica las tasas de datos máximas que se pueden lograr en diferentes condiciones de transmisión, como la `calidad de la señal`, la `interferencia` y la `distancia` entre el dispositivo emisor y el receptor. <br>
 
 - `IEEE 802.11a`: utiliza OFDM en la banda de frecuencia de `5 GHz`.
 - `IEEE 802.11g`: utiliza OFDM en la banda de frecuencia de `2,4 GHz`.
@@ -589,6 +583,14 @@ _por @ **Fz3r0** 💀 (CWNA)_
     - Utiliza tecnología `MU-MIMO` para mejorar la tasa de transmisión en entornos de alta densidad de usuarios.
 - `IEEE 802.11ax`: utiliza `OFDM` y `HE-OFDM` en las bandas de frecuencia de `2,4 GHz` y `5 GHz`. 
     - Además, también utiliza nuevas tecnologías, como el uso de múltiples bandas de frecuencia y la tecnología `MU-MIMO mejorada`, para mejorar aún más la eficiencia espectral y la tasa de transmisión en entornos de alta densidad de usuarios.
+
+Las tasas de datos más altas se logran utilizando modulaciones más complejas y una mayor cantidad de bits por símbolo, lo que aumenta la eficiencia espectral de la transmisión. Sin embargo, **estas tasas de datos máximas solo se pueden lograr en condiciones óptimas de transmisión**, y la tasa real de datos puede variar según las condiciones del entorno y el hardware utilizado.
+
+### 💀 `Fz3r0 Pro Tip`: `Data Rate`, `Bit Rate`, `Throughput`
+
+- La tasa de transmisión de datos se le llama "data transmission rate" o "data transfer rate" en inglés. También puede ser conocida como "data rate", "bit rate" o "throughput".
+
+
 
 
 
