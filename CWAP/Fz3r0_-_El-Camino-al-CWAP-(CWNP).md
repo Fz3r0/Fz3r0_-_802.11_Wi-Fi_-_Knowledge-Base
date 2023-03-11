@@ -602,7 +602,7 @@ Es mejor aprender con la `MCS Table` con la tabla de `802.11n/ac` ya que `802.11
 
 ![image](https://user-images.githubusercontent.com/94720207/224502878-2edac492-fcc3-492d-86e1-f1f46740e546.png)
 
-Primero identificaré cada parte de la tabla:
+Primero identificar cada parte de la tabla:
 
 1. **`Identificación de PHY / 802.11 IEEE Standard`**
 
@@ -615,9 +615,24 @@ Primero identificaré cada parte de la tabla:
 
 - `HT` = `802.11n`
 
-![image](https://user-images.githubusercontent.com/94720207/224513676-50930b4d-6da6-48ed-831c-ffcad6dd4329.png)
+![image](https://user-images.githubusercontent.com/94720207/224515014-47294704-4d6d-41f4-bbb5-4f6232ed3bb3.png)
 
-- 
+- En caso de `HT` = `802.11n` la encontramos en la `primer` columna.
+- Se cuenta primero de `0` a `7`, después de `8` a `16`... Y si viéramos la tabla completa sigue haciendo esos bloques hasta llegar a `77`.
+- Es decir, un total de `77 rows` (filas) de combinaciones posibles.
+
+Sin embargo, en caso de `VHT` es un poco diferente:
+
+- `VHT` = `802.11ac`
+
+![image](https://user-images.githubusercontent.com/94720207/224514909-7e8a0c9a-4c54-45c7-a153-38a7e9a7f8d3.png)
+
+- En caso de `VHT` = `802.11ac` la encontramos en la `segunda` columna.
+- Si se siguiera el mismo método que `HT` se convertiría en cientos y cientos de `rows`, para evitar esto se hizo lo siguiente: 
+
+    1. Se cuenta del `0` al `9` el cual corresponde a un `spatial stream`
+    2. Cada que se pasa al siguiente bloque va en aumento. por ejemplo, al pasar al segundo bloque es del `0` al `9` dos veces!
+    - Es decir, primer bloque = `0` to `9`, segundo bloque **son 2 veces** `0` to `9`, tercer bloque **son 3 veces** `0` to `9`
 
 
 
