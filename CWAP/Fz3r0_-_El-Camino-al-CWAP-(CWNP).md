@@ -556,7 +556,18 @@ _por @ **Fz3r0** 💀 (CWNA)_
 
 
 
-### 
+## MCS Table
+
+#### `PHYs compatibles` con `MCS Table`:
+
+- `IEEE 802.11a`: utiliza OFDM en la banda de frecuencia de `5 GHz`.
+- `IEEE 802.11g`: utiliza OFDM en la banda de frecuencia de `2,4 GHz`.
+- `IEEE 802.11n`: utiliza OFDM y HT-OFDM en las bandas de frecuencia de `2,4 GHz` y `5 GHz`. 
+    - Utiliza múltiples antenas `MIMO` para mejorar la calidad de la señal y la tasa de transmisión.
+- `IEEE 802.11ac`: utiliza OFDM en la banda de frecuencia de `5 GHz` y utiliza canales más anchos y la 
+    - Utiliza tecnología `MU-MIMO` para mejorar la tasa de transmisión en entornos de alta densidad de usuarios.
+- `IEEE 802.11ax`: utiliza `OFDM` y `HE-OFDM` en las bandas de frecuencia de `2,4 GHz` y `5 GHz`. 
+    - Además, también utiliza nuevas tecnologías, como el uso de múltiples bandas de frecuencia y la tecnología `MU-MIMO mejorada`, para mejorar aún más la eficiencia espectral y la tasa de transmisión en entornos de alta densidad de usuarios.
 
 
 
