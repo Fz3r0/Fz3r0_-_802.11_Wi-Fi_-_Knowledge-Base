@@ -573,16 +573,27 @@ _por @ **Fz3r0** 💀 (CWNA)_
 
 #### `PHYs compatibles` con `MCS Table`
 
-**Cada banda tiene su propia tabla MCS**, que especifica las tasas de datos máximas que se pueden lograr en diferentes condiciones de transmisión, como la `calidad de la señal`, la `interferencia` y la `distancia` entre el dispositivo emisor y el receptor. <br>
+- La `MCS table` se utiliza **únicamente en los estándares 802.11 que utilizan la técnica de modulación `OFDM`** para transmitir datos. 
 
-- `IEEE 802.11a`: utiliza OFDM en la banda de frecuencia de `5 GHz`.
-- `IEEE 802.11g`: utiliza OFDM en la banda de frecuencia de `2,4 GHz`.
-- `IEEE 802.11n`: utiliza OFDM y HT-OFDM en las bandas de frecuencia de `2,4 GHz` y `5 GHz`. 
-    - Utiliza múltiples antenas `MIMO` para mejorar la calidad de la señal y la tasa de transmisión.
-- `IEEE 802.11ac`: utiliza OFDM en la banda de frecuencia de `5 GHz` y utiliza canales más anchos y la 
-    - Utiliza tecnología `MU-MIMO` para mejorar la tasa de transmisión en entornos de alta densidad de usuarios.
-- `IEEE 802.11ax`: utiliza `OFDM` y `HE-OFDM` en las bandas de frecuencia de `2,4 GHz` y `5 GHz`. 
-    - Además, también utiliza nuevas tecnologías, como el uso de múltiples bandas de frecuencia y la tecnología `MU-MIMO mejorada`, para mejorar aún más la eficiencia espectral y la tasa de transmisión en entornos de alta densidad de usuarios.
+La técnica `OFDM` es una forma de `dividir la señal de transmisión` en múltiples subportadoras que `se transmiten en paralelo`, lo que permite una mayor eficiencia espectral y una mayor capacidad de transmisión.
+
+- Por otro lado, poniendo el ejemplo del estándar `802.11b` que utiliza la técnica de modulación `DSSS (Direct-Sequence Spread Spectrum)` que **NO es compatible con la MCS table.** 
+ 
+`DSSS` utiliza una técnica de `esparcimiento de espectro` que extiende la señal de transmisión en un ancho de banda más amplio que la señal original, lo que reduce la interferencia y mejora la calidad de la señal. Debido a esta técnica de transmisión, no se pueden utilizar las mismas combinaciones de modulación y codificación que se utilizan en OFDM, por lo que la MCS table no es aplicable en 802.11b. 
+
+
+
+**Cada `banda` y cada `PHY` (enmienda IEEE) tiene su propia tabla `MCS`**, que especifica las tasas de datos máximas que se pueden lograr en diferentes condiciones de transmisión, como la `calidad de la señal`, la `interferencia` y la `distancia` entre el dispositivo emisor y el receptor. <br>
+
+`Nota`: A medida que la tecnología avanza y se añaden nuevas características a la `PHY`, también la `MCS Table` crece.
+
+|    **Estándar**   | **Estándar IETF** | **Año de lanzamiento** | **Técnica de modulación** | **Banda de frecuencia** |            **Tecnologías adicionales**           | **Máxima tasa de datos** |
+|:-----------------:|:-----------------:|:----------------------:|:-------------------------:|:-----------------------:|:------------------------------------------------:|:------------------------:|
+| **IEEE 802.11a**  | prime             | 1999                   | OFDM                      | 5 GHz                   | N/A                                              | 54 Mbps                  |
+| **IEEE 802.11g**  | N/A               | 2003                   | OFDM                      | 2,4 GHz                 | N/A                                              | 54 Mbps                  |
+| **IEEE 802.11n**  | Wi-Fi 4           | 2009                   | OFDM y HT-OFDM            | 2,4 GHz y 5 GHz         | MIMO                                             | 600 Mbps                 |
+| **IEEE 802.11ac** | Wi-Fi 5           | 2013                   | OFDM                      | 5 GHz                   | canales más anchos, MU-MIMO                      | 6,9 Gbps                 |
+| **IEEE 802.11ax** | Wi-Fi 6           | 2021                   | OFDM y HE-OFDM            | 2,4 GHz y 5 GHz         | múltiples bandas de frecuencia, MU-MIMO mejorada | 11 Gbps                  |
 
 Las tasas de datos más altas se logran utilizando modulaciones más complejas y una mayor cantidad de bits por símbolo, lo que aumenta la eficiencia espectral de la transmisión. Sin embargo, **estas tasas de datos máximas solo se pueden lograr en condiciones óptimas de transmisión**, y la tasa real de datos puede variar según las condiciones del entorno y el hardware utilizado.
 
