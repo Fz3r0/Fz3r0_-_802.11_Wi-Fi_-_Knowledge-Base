@@ -15,9 +15,35 @@ _por @ **Fz3r0** 💀 (CWNA)_
 
 ## La analogía del CWAP y una expedición al K2
 
-- La manera en la que he ajustado mi mente y motivación para estudiar esta certificación y documentar en este repositorio el conocimiento requerido en español, fue imaginarlo como escalar el K2 por la ruta Abruzzi o `K2 Abruzzi Spur`
+**La manera en la que he ajustado mi mente y motivación para estudiar esta certificación y documentar en este repositorio el conocimiento requerido en español, fue imaginarlo como escalar el K2 por la ruta Abruzzi o `K2 Abruzzi Spur`**
 
 ![image](https://user-images.githubusercontent.com/94720207/224564103-b9889d9f-2bb3-4ba8-aa31-ce31bddfa949.png)
+
+El `K2` es la segunda montaña más alta del mundo, majestuosa y poderosa. Conocida como `The Savage Mountain` (La Montaña salvaje), es una de las cumbres más temibles del mundo, que se encuentra en el corazón del Himalaya. Se eleva a una altitud de 8.611 metros y es un reto indomable que ha desafiado a los alpinistas más valientes y experimentados. <br>
+
+La `ruta Abruzzi` es la vía de ascenso más icónica y desafiante del K2, llamada así en honor a la expedición italiana que la abrió por primera vez en 1954. Pero no te engañes! esta ruta es un desafío muy real, plagado de obstáculos técnicos que ponen a prueba las habilidades de los alpinistas en cada paso del camino. <br>
+
+La ruta Abruzzi atraviesa la cara sureste de la montaña, presentando una serie de desafíos técnicos extremos, que incluyen empinadas escaladas en hielo y roca, peligrosas travesías y zonas expuestas a avalanchas. Los alpinistas deben enfrentar la altitud extrema y las duras condiciones climáticas que cambian rápidamente, incluyendo fuertes vientos, temperaturas bajo cero y tormentas de nieve.
+
+Los escaladores que se aventuran en esta ruta ponen sus vidas en juego con cada paso que dan, mientras luchan contra la montaña y contra ellos mismos, poniendo a prueba su coraje, determinación, control mental y altas habilidades técnicas. Pero aquellos que logran alcanzar la cumbre por la ruta Abruzzi, se convierten en verdaderos héroes del alpinismo, consiguiendo un logro que solo unos pocos pueden reclamar en el mundo.
+
+---
+
+### `Bottleneck` & `Serarc` = Examen CWAP-404 @ Pearson Veu
+
+El Bottleneck es una sección crítica en la ruta Abruzzi del K2, esta zona es un corredor estrecho de hielo y roca que se encuentra a una altitud de casi 8.000 metros. Es un lugar donde el aire es escaso y el peligro es constante, lo que la convierte en un desafío extremadamente difícil para los escaladores que intentan llegar a la cima. <br>
+
+Los escaladores se enfrentan a una pared de hielo y roca que parece insuperable y una locura tan solo intentarlo... la estrechez del camino aumenta el riesgo de accidentes. La zona es extremadamente peligrosa y requiere una gran habilidad técnica y resistencia física. Los alpinistas deben estar completamente preparados tanto física como mentalmente para enfrentar este desafío. <br>
+
+Una vez que los escaladores superan el Bottleneck, aún enfrentan un peligroso obstáculo: la `Serac`. Esta masa de hielo peligrosamente colgante es una de las mayores amenazas para los escaladores en el K2, ya que puede desplomarse en cualquier momento, sin previo aviso, y arrastrar a los escaladores consigo. La Serac es una prueba de la fragilidad de la vida en la montaña y de la importancia de estar siempre alerta y preparado para cualquier eventualidad.
+
+A pesar de los peligros y desafíos que enfrentan los escaladores en el K2, superar el Bottleneck y la Serac en la ruta Abruzzi es un logro heroico que demuestra la capacidad humana de superar cualquier obstáculo. Es una muestra de valentía, perseverancia y dedicación en la búsqueda de un objetivo mayor. Los alpinistas que alcanzan la cima del K2 después de pasar por estas zonas peligrosas pueden considerarse verdaderos héroes, capaces de enfrentar los mayores desafíos y triunfar sobre ellos.
+
+### `Cima del K2` = `Certifcación como Ingeniero CWAP-404`
+
+La `ruta Abruzzi del K2` es un camino lleno de peligros y desafíos que ponen a prueba la resistencia física y mental de los alpinistas. Desde el `base camp` hasta la `cima del K2`, la ruta está plagada de peligros mortales. A pesar de esto, aquellos que logran completar la ruta pueden considerarse verdaderos héroes, capaces de enfrentar lo inimaginable y triunfar sobre él. <br> 
+
+**La hazaña de superar la ruta completa del K2 es una demostración de la fuerza y la determinación humana y un recordatorio de que, con suficiente dedicación y perseverancia, no hay nada que el ser humano no pueda superar.**
 
 
 - "K2, avanzar a morir"
