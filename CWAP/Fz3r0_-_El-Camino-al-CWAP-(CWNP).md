@@ -608,6 +608,14 @@ Para que `802.11n` o `802.11ac` puedan obtener mayor `throughput` existen 4 mane
 
 ![image](https://user-images.githubusercontent.com/94720207/224576564-19103768-81c5-4a1d-8b85-551d97eaf703.png)
 
+### Tipos de `Frame Aggregation`
+
+#### Sin agregación
+
+- Este es un frame normal, sin `frame aggegation`
+
+![image](https://user-images.githubusercontent.com/94720207/224578454-86728faa-a9ee-4b1b-8a2e-27c6f82e7610.png)
+
 
 
 
