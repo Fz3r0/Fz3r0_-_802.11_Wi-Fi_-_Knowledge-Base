@@ -13,7 +13,46 @@ Y ARRANCAN!!!
 _Writeup para la certificación **CWAP-402** de **CWNP (Certified Wireless Network Professional)**_ <br>
 _por @ **Fz3r0** 💀 (CWNA)_
 
-## La analogía del CWAP y una expedición al K2
+## Introducción
+
+`CWAP (Certified Wireless Analysis Professional)` es una certificación ofrecida por `CWNP (Certified Wireless Network Professional)` que se centra en el análisis avanzado de redes inalámbricas. Los profesionales que buscan obtener la certificación CWAP deben demostrar un amplio conocimiento de los principios y técnicas de análisis de redes inalámbricas, así como habilidades para resolver problemas complejos y mejorar el rendimiento de redes inalámbricas existentes.
+
+Los temas abordados en la certificación `CWAP` incluyen la captura y análisis de tráfico inalámbrico, la identificación y solución de problemas de cobertura y rendimiento, el análisis de interferencias y la aplicación de soluciones de seguridad inalámbrica. A través de la certificación CWAP, los profesionales pueden demostrar su experiencia en la gestión y optimización de redes inalámbricas avanzadas y su capacidad para abordar los desafíos de análisis y resolución de problemas en entornos de red inalámbrica complejos. <br>
+
+En este repostorio y writeup que he realizado, nos adentraremos en el camino hacia la certificación `CWAP`, cubriendo todos los temas incluidos en el plan de estudios oficial de CWNP. Además, profundizaremos en temas que no se abordan en detalle en la documentación oficial, brindando una comprensión completa de los desafíos y soluciones en el análisis avanzado de redes inalámbricas.
+
+### Importante
+
+Para presentar el examen de certificación CWAP, es necesario tener acreditado el examen CWNA y que éste se encuentre vigente. El CWNA es un requisito previo para poder presentar el examen CWAP, ya que se considera una base fundamental en cuanto a los conocimientos y habilidades necesarios para entender y manejar el protocolo de redes inalámbricas. <br>
+
+Además, es importante destacar que la certificación CWNA debe estar vigente al momento de presentar el examen CWAP, ya que se requiere que el candidato tenga un conocimiento actualizado sobre las tecnologías inalámbricas. De esta manera, se garantiza que los candidatos que obtengan la certificación CWAP cuenten con un alto nivel de conocimientos y habilidades en el manejo de redes inalámbricas.
+
+**Para presentar el examen de certificación CWAP, se recomienda tener una serie de conocimientos previos y certificaciones que pueden ser de gran ayuda para el candidato, tales como:**
+
+#### 1. `Routing & Switching` (ej. `Cisco CCNA`)
+
+- Poniendo de ejemplo el `Cisco CCNA` ya que este valida los conocimientos y habilidades necesarios para instalar, configurar, operar y solucionar problemas en redes de área local (LAN) y de área amplia (WAN) utilizando dispositivos de red Cisco (routers & switches). 
+- CCNA también cubre los fundamentos de 802.11 Wireless WiFi
+
+#### 2. `Protocolos de Red`
+
+- Un protocolo de red es un conjunto de reglas y estándares que permiten que los dispositivos de red se comuniquen entre sí y compartan información en una red de computadoras.
+- Es importante destacar que los protocolos de red son necesarios tanto para redes alámbricas como inalámbricas, ya que permiten la transmisión de datos a través de diferentes medios de comunicación, incluyendo cableado de cobre, fibra óptica y ondas de radio.
+- Nuevamente, certificaciones como CCNA o Network+ cubren perfectamente este tema
+
+#### 3. `Wireless` = `CWNA`
+
+- Es necesario contar con la certificación CWNA, ya que esta certificación es la base fundamental para comprender el protocolo de redes inalámbricas y es obligatoria para presentar el CWAP.
+- Es importante tener un conocimiento profundo sobre las tecnologías inalámbricas, incluyendo los diferentes estándares de redes inalámbricas, protocolos de seguridad, administración de redes inalámbricas, entre otros.
+
+Conocimientos en protocolos de red: Se recomienda tener conocimientos sólidos sobre protocolos de red, incluyendo el protocolo de internet (IP), routing y switching, entre otros. En este caso, el certificado CCNA de Cisco puede ser de gran ayuda, pero también se pueden considerar otras certificaciones como la certificación Network+ de CompTIA.
+
+Conocimientos en seguridad de redes inalámbricas: Es importante tener conocimientos sólidos sobre seguridad en redes inalámbricas, incluyendo el uso de VPNs, autenticación y autorización de usuarios, cifrado de datos, entre otros. En este caso, la certificación Security+ de CompTIA puede ser de gran ayuda.
+
+En resumen, para presentar el examen de certificación CWAP se recomienda tener una base sólida en redes inalámbricas, protocolos de red y seguridad de redes, con la certificación CWNA como requisito previo y conocimientos adicionales que se pueden obtener a través de certificaciones como CCNA, Network+ y Security+.
+
+
+## La analogía del `CWAP` y una expedición al `K2` 🏔️🧗 
 
 **La manera en la que he ajustado mi mente y motivación para estudiar esta certificación y documentar en este repositorio el conocimiento requerido en español, fue imaginarlo como escalar el K2 por la ruta Abruzzi o `K2 Abruzzi Spur`**
 
