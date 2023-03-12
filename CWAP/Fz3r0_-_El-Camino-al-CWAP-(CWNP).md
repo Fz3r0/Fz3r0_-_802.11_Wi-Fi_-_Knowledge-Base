@@ -591,7 +591,22 @@ La `ruta Abruzzi del K2` es un camino lleno de peligros y desafíos que ponen a 
 Para que `802.11n` o `802.11ac` puedan obtener mayor `throughput` existen 4 maneras posibles:
 
 1. **`Increase Modulation`** (Incrementar la modulación)
-2. **`Increase Modulation`** (Incrementar la modulación)
+2. **`Wider Channel Bandwith`** (Incrementar el ancho de la banda. ej. 5 GHz)
+3. **`MIMO - Multiple Input / Multiple Output`** (Antentas MIMO. ej. 2x2:2)
+4. **`Frame Aggregation`** (Agregación de Tramas)
+
+![image](https://user-images.githubusercontent.com/94720207/224576441-f3589df1-50b1-4c49-bd6d-10325994564b.png)
+
+###| La analogía de la carretera, los coches y el camión
+
+**¿Por qué "agregar"?... Why aggregate?**
+
+- Es lo mismo que la típica foto del camión y el coche en una autopista, donde al mismo tiempo ambas solcuiones tienen la misma capacidad para transportar exactamente a la misma cantidad de gente. 
+- Sin embargo, **al hacerlo en coches la autopista se satura lo que casua problemas como más tráfico, lentitud y más consumo de rescursos. En cambio, `"agregar" a todas esas personas en un solo camión, hace que el tráfico y la velocidad sean más eficientes`**  
+- Los coches representan el `overhead` (`headers`, `footers`, `QoS`, `management`, `control`, etc, etc...) ya que es tráfico de diferentes personas que no se conocen y viajan en diferentes coches. 
+- **Pero, si estas personas aunque no se conocen se pusieran de acuerdo, pudieran viajar todos de manera más eficiente en el mismo camión.** 
+
+![image](https://user-images.githubusercontent.com/94720207/224576564-19103768-81c5-4a1d-8b85-551d97eaf703.png)
 
 
 
