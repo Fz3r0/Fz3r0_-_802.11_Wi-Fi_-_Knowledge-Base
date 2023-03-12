@@ -9,9 +9,18 @@ Y ARRANCAN!!!
 
  -->
 
-# El camino al `CWAP-402`: <br> `Certified Wireless Analysis Professional` 📡🔍🦈  
+# El camino a la cima del `CWAP-402`: <br> `Certified Wireless Analysis Professional` 📡🔍🦈  
 _Writeup para la certificación **CWAP-402** de **CWNP (Certified Wireless Network Professional)**_ <br>
 _por @ **Fz3r0** 💀 (CWNA)_
+
+## La analogía del CWAP y una expedición al K2
+
+- La manera en la que he ajustado mi mente y motivación para estudiar esta certificación y documentar en este repositorio el conocimiento requerido en español, fue imaginarlo como escalar el K2 por la ruta Abruzzi o `K2 Abruzzi Spur`
+
+![image](https://user-images.githubusercontent.com/94720207/224564103-b9889d9f-2bb3-4ba8-aa31-ce31bddfa949.png)
+
+
+- "K2, avanzar a morir"
 
 ## Conocimiento Requerido para `CWAP-402`
 
