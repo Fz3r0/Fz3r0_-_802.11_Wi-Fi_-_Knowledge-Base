@@ -726,9 +726,20 @@ Determina el SNR mínimo y el RSSI requerido para un índice MSC específico.
 ![image](https://user-images.githubusercontent.com/94720207/224523058-f4960b76-873a-4b03-aa7d-c8151efb2ee4.png)
 
 
-### 💀 `Fz3r0 Pro Tip`: `Data Rate`, `Bit Rate`, `Throughput`
+### `Bandwith`
 
 - La tasa de transmisión de datos se le llama "data transmission rate" o "data transfer rate" en inglés. También puede ser conocida como "data rate", "bit rate" o "throughput".
+
+### `Analogía de la carretera`
+
+- En esta analogía el `bandwith` representa la capacidad total de `coches` que puede soportar una carretera en un momento exacto. 
+- Es decir, la cantidad de datos que pueden pasar en un segundo... 
+- Por ejemplo, un bandwith de 24 Mbps, es igual a una carretera que soporta `24 coches`
+- 24 Mbps sería el bandwith total, quiere decir que puede transferir 24 Mb cada segundo que pasa, si una canción `.mp3` pesara `24Mb` se transferiría en `1 segundo exacto.`
+
+**Sin embargo, en `un mundo real` esto sería imposible, ya que nunca podrían ponerse de acuerdo esos `24 coches` para abarcar exactamente los espacios necesarios de la carretera, en un mundo real la capacidad quizás bajaría a unos `20 coches`... o `20 Mbps`**. <br>
+
+- Factores como el `ruido`, `interferencia`, otros `clientes` (STA), coding, etc, etc... representan esos espacios en la carretera, eso sería el `throughput` real:
 
 ![image](https://user-images.githubusercontent.com/94720207/224523134-bcd5b4e0-9bee-4296-b21d-57d985690b2a.png)
 
