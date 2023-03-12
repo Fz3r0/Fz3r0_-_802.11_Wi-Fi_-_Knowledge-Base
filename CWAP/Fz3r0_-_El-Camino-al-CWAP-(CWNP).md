@@ -721,6 +721,8 @@ Determina el SNR mínimo y el RSSI requerido para un índice MSC específico.
 
 - La tasa de transmisión de datos se le llama "data transmission rate" o "data transfer rate" en inglés. También puede ser conocida como "data rate", "bit rate" o "throughput".
 
+![image](https://user-images.githubusercontent.com/94720207/224523134-bcd5b4e0-9bee-4296-b21d-57d985690b2a.png)
+
 
 
 
