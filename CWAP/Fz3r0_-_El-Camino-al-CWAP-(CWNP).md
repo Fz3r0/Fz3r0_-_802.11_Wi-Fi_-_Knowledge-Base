@@ -759,6 +759,15 @@ Determina el SNR mínimo y el RSSI requerido para un índice MSC específico.
 
 - Por ejemplo: Una `STA` que está haciendo `stream en 4k` puede tener un `mayor throughput`, en comparación con una `STA` que solo está mandando `mensajes de texto` por WhatsApp.
 
+![image](https://user-images.githubusercontent.com/94720207/224558297-b6c1ab57-4caf-489c-ac95-b7023087581a.png)
+
+
+![image](https://user-images.githubusercontent.com/94720207/224558987-ef8e02b8-53af-481d-886a-1d9ae7621891.png)
+
+- **Un test de `"velocidad de internet"` como el que ofrece `speedtest.com` en realidad mide el `throughput` de la conexión de un usuario hacia los servidores del ISP, no el `Bandwith` asignado por el ISP.** 
+- El throughput medido por el test de velocidad indica la cantidad de datos que se pueden transmitir en un período de tiempo determinado, lo que refleja la capacidad real de la conexión de un usuario en ese preciso momento.
+
+Es importante tener en cuenta que el `bandwith asignado` por el ISP puede variar en función de diferentes factores lo cual resulta en el `throughput` real, como la hora del día, la demanda de la red y la calidad de la conexión física. Por lo tanto, el ancho de banda asignado puede no ser siempre el mismo que el anunciado por el ISP, y es posible que el throughput real que se pueda obtener en un momento determinado sea menor al anunciado.
 
 
 
