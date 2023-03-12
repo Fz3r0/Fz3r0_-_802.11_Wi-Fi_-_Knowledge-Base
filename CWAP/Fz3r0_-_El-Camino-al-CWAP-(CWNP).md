@@ -606,6 +606,8 @@ Es mejor aprender con la `MCS Table` con la tabla de `802.11n/ac` ya que `802.11
 
 - **`IMPORTANTE`: Antes de aprender a leer la `MCS Table`, hay que identificar exactamente `cada parte que la compone`, al saber leer la `MCS` de `802.11n/ac`, en realidad se puede leer cualquiera ya sea anterior o posterior a ese Estándar IEEE.** 
 
+---
+
 ### **`Spatial Streams`**
 
 Los `spatial streams` son una técnica utilizada en los estándares inalámbricos `IEEE 802.11n` y IEEE `802.11ac` (y posteriores...) que permite `transmitir y recibir varios flujos de datos simultáneamente` mediante la `utilización de múltiples antenas`. <br>
@@ -642,54 +644,57 @@ Ahora, podemos saber lo que en realidad se refieren esas diviones de `spatial st
 
 ![image](https://user-images.githubusercontent.com/94720207/224517178-f31b1ee0-8fac-4f3f-9eea-2b9c0f3e22ff.png)
 
+---
 
+### **`Identificación de PHY / 802.11 IEEE Standard`**
 
-
-
-
-
-
-
-
-2. **`Identificación de PHY / 802.11 IEEE Standard`**
-
-    - `HT` corresponde a `802.11n`
-    - `VHT` corresponde a `802.11ac`
+- `HT` corresponde a `802.11n`
+- `VHT` corresponde a `802.11ac`
 
 ![image](https://user-images.githubusercontent.com/94720207/224513646-18efeefd-17d5-4cfd-89fe-b8cc4fc69e78.png)
 
 `Importante`: Como cada `PHY` funciona diferente hay que encontrar el específico que queremos buscar.
 
-- `HT` = `802.11n`
+---
+
+### `HT` = `802.11n`
+
+- Modulación y Esquema de Codificación de Alta Velocidad (HT-MCS)
+- En caso de `HT` = `802.11n` la encontramos en la `primer` columna.
+- Representado por **un número entero en el rango de `0-76`.**
+- Se cuenta primero de `0` a `7`, después de `8` a `16`... Y si viéramos la tabla completa sigue haciendo esos bloques hasta llegar a `77`.
+- **Es decir, un total de `77 rows` (filas) de `combinaciones posibles en total.`**
 
 ![image](https://user-images.githubusercontent.com/94720207/224515014-47294704-4d6d-41f4-bbb5-4f6232ed3bb3.png)
 
-- En caso de `HT` = `802.11n` la encontramos en la `primer` columna.
-- Modulación y Esquema de Codificación de Alta Velocidad (HT-MCS)
-- Representado por **un número entero en el rango de `0-76`.**
-- Se cuenta primero de `0` a `7`, después de `8` a `16`... Y si viéramos la tabla completa sigue haciendo esos bloques hasta llegar a `77`.
-- Es decir, un total de `77 rows` (filas) de combinaciones posibles.
+**Sin embargo, en caso de `VHT` es un poco diferente:**
 
-Sin embargo, en caso de `VHT` es un poco diferente:
+---
 
-- `VHT` = `802.11ac`
+### `VHT` = `802.11ac`
 
 ![image](https://user-images.githubusercontent.com/94720207/224514909-7e8a0c9a-4c54-45c7-a153-38a7e9a7f8d3.png)
 
-- En caso de `VHT` = `802.11ac` la encontramos en la `segunda` columna.
 - Modulación y Esquema de Codificación de Muy Alta Velocidad (VHT-MCS)
+- En caso de `VHT` = `802.11ac` la encontramos en la `segunda` columna.
 - Representado por **un número entero en el rango de `0-9`**.
-- Si se siguiera el mismo método que `HT` se convertiría en cientos y cientos de `rows`, para evitar esto se hizo lo siguiente: 
 
-    1. Se cuenta del `0` al `9` el cual corresponde a un `spatial stream`
-    2. Cada que se pasa al siguiente bloque va en aumento. por ejemplo, al pasar al segundo bloque es del `0` al `9` dos veces y con las nuevas combinaciones correspondientes. 
-    - Es decir, primer bloque = `0` to `9`, segundo bloque **son 2 veces** `0` to `9`, tercer bloque **son 3 veces** `0` to `9`
+`OJO!!!`: Si se siguiera el mismo método que `HT` se convertiría en cientos y cientos de `rows` en la misma tabla, para evitar esto se hizo lo siguiente: 
 
-Los valores en la tabla que se repiten en el rango de `0-9` corresponden a diferentes `combinaciones` de `modulación`, `esquemas de codificación` y `ancho de banda` que se pueden utilizar en 802.11ac para lograr diferentes tasas de transferencia de datos. <br>
+1. Se cuenta del `0` al `9` el cual corresponde a un `spatial stream`
+2. Cada que se pasa al siguiente spatial stream se aumenta nuevamente el doble. Por ejemplo, al pasar al segundo bloque de `spatial stream 2` es del `0` al `9` dos veces y con las nuevas combinaciones correspondientes. 
+    - Es decir, primer bloque `1 spatial stream` = `0` to `9`, segundo bloque `2 spatial stream` **son 2 veces** `0` to `9`, tercer bloque `3 spatial stream` **son 3 veces** `0` to `9`, etc, etc... 
+
+Los valores en la tabla que se repiten en el rango de `0-9` corresponden a diferentes `combinaciones` de `modulación`, `esquemas de codificación` y `ancho de banda` que se pueden utilizar en `802.11ac` para lograr diferentes tasas de transferencia de datos o `data rate`. <br>
 
 Cada combinación de valores se representa con un número en el rango de 0-9 en la columna VHT-MCS de la tabla. Es importante tener en cuenta que el valor 9 en VHT-MCS no es lo mismo que el valor 9 en HT-MCS, ya que corresponden a diferentes combinaciones de modulación y esquemas de codificación en cada estándar.
 
-MCS Parameters
+---
+
+### **`Modulation Scheme`**
+
+![image](https://user-images.githubusercontent.com/94720207/224521846-04cf91ad-dfac-4813-adeb-2afa274ed362.png)
+
 
 
 
@@ -708,7 +713,6 @@ Tiempo de espera o pausa entre cada transmisión de paquete. 802.11n tiene 400ns
 
 • SNR mínimo y RSSI
 Determina el SNR mínimo y el RSSI requerido para un índice MSC específico.
-
 
 ### 💀 `Fz3r0 Pro Tip`: `Data Rate`, `Bit Rate`, `Throughput`
 
