@@ -596,15 +596,46 @@ La técnica `OFDM` es una forma de `dividir la señal de transmisión` en múlti
 
 Las tasas de datos más altas se logran utilizando modulaciones más complejas y una mayor cantidad de bits por símbolo, lo que aumenta la eficiencia espectral de la transmisión. Sin embargo, **estas tasas de datos máximas solo se pueden lograr en condiciones óptimas de transmisión**, y la tasa real de datos puede variar según las condiciones del entorno y el hardware utilizado.
 
+---
+
 ### 💀 `Fz3r0 Pro Tip`: ¿Cómo leer la MCS Table like a sir?
 
 Es mejor aprender con la `MCS Table` con la tabla de `802.11n/ac` ya que `802.11ax` se vuelve demasiado grande para comprender al principio.
 
 ![image](https://user-images.githubusercontent.com/94720207/224502878-2edac492-fcc3-492d-86e1-f1f46740e546.png)
 
-Primero identificar cada parte de la tabla:
+### **`Spatial Streams`**
 
-1. **`Identificación de PHY / 802.11 IEEE Standard`**
+Los `spatial streams` son una técnica utilizada en los estándares inalámbricos IEEE 802.11n y IEEE 802.11ac (y posteriores...) que permite `transmitir y recibir varios flujos de datos simultáneamente` mediante la `utilización de múltiples antenas`. <br>
+
+Cada `spatial stream` se puede pensar como **una vía separada para transmitir datos**, lo que **aumenta la capacidad del sistema inalámbrico** y **mejora la velocidad de transmisión**.
+
+Para utilizar los spatial streams se necesita una configuración de antenas `MIMO (Multiple Input Multiple Output)` en el dispositivo inalámbrico. 
+
+- `Nota`: Recordar que el `MIMO` se implementó a partir de `802.11n-2009`. Antes existía OFDM pero utilizaban `SISO (Single Input Single Output)`, es decír **NO tenía más de 1 solo spatial stream** (Como 802.11a) con una sola antena de transmisión y una sola antena de recepción.
+
+Los sistemas `MIMO` tienen `múltiples antenas de transmisión y recepción` que se utilizan para `transmitir y recibir datos simultáneamente`. En un sistema MIMO, **las antenas transmiten y reciben señales de forma independiente**, lo que `permite que múltiples spatial streams` **se transmitan a través de múltiples antenas**.
+
+![image](https://user-images.githubusercontent.com/94720207/224518340-64f3f973-a551-475b-9bf9-a44fc9902d1f.png)
+
+- La configuración de antenas MIMO más común es `2x2 MIMO`. 
+- Utiliza `dos antenas de transmisión` y `dos antenas de recepción`. 
+
+Con esta configuración, se pueden utilizar `dos spatial streams para transmitir y recibir datos`, lo que **aumenta la capacidad del sistema inalámbrico y mejora la velocidad de transmisión en comparación con un sistema `SISO (Single Input Single Output)`** con una sola antena de transmisión y una sola antena de recepción. <br>
+
+Para maximizar la capacidad del sistema inalámbrico y la velocidad de transmisión, se recomienda que ambos extremos tengan la misma configuración de antenas MIMO y que las antenas estén configuradas de manera óptima para aprovechar las condiciones del canal inalámbrico en tiempo real. <br>
+
+Cuando se combinan diferentes configuraciones de antenas de cada lado de una comunicación inalámbrica, por ejemplo, una configuración de 1x1 en un extremo y una configuración de 2x2 en el otro extremo, se producen algunas limitaciones en el sistema inalámbrico. <br>
+
+En este caso, la configuración de 2x2 puede transmitir y recibir dos spatial streams simultáneamente, mientras que la configuración de 1x1 solo puede transmitir y recibir un spatial stream. Esto significa que, en la comunicación entre ambos extremos, solo se pueden utilizar un spatial stream, ya que este es el máximo que puede ser transmitido y recibido por ambas configuraciones de antenas. <br>
+
+![image](https://user-images.githubusercontent.com/94720207/224517321-e03d7e75-6d26-4b8b-a28f-d94c478dbe96.png)
+
+
+![image](https://user-images.githubusercontent.com/94720207/224517178-f31b1ee0-8fac-4f3f-9eea-2b9c0f3e22ff.png)
+
+
+2. **`Identificación de PHY / 802.11 IEEE Standard`**
 
     - `HT` corresponde a `802.11n`
     - `VHT` corresponde a `802.11ac`
