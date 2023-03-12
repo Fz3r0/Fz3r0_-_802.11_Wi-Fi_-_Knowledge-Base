@@ -504,8 +504,34 @@ _por @ **Fz3r0** 💀 (CWNA)_
 
 ![image](https://user-images.githubusercontent.com/94720207/224217527-a7e42d07-4b60-46df-8d99-314ecf541e09.png)
 
+## `802.11 Aggregation` / `Frame Aggregation`
 
----
+- [`802.11 Aggregation` - Friend or Foe? | Wes Purvis](https://www.youtube.com/watch?v=3jqYwFQSqnE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <br>
 <br>
