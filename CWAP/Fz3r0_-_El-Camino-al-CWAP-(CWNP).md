@@ -618,6 +618,8 @@ Primero identificar cada parte de la tabla:
 ![image](https://user-images.githubusercontent.com/94720207/224515014-47294704-4d6d-41f4-bbb5-4f6232ed3bb3.png)
 
 - En caso de `HT` = `802.11n` la encontramos en la `primer` columna.
+- Modulación y Esquema de Codificación de Alta Velocidad (HT-MCS)
+- Representado por **un número entero en el rango de `0-76`.**
 - Se cuenta primero de `0` a `7`, después de `8` a `16`... Y si viéramos la tabla completa sigue haciendo esos bloques hasta llegar a `77`.
 - Es decir, un total de `77 rows` (filas) de combinaciones posibles.
 
@@ -628,12 +630,37 @@ Sin embargo, en caso de `VHT` es un poco diferente:
 ![image](https://user-images.githubusercontent.com/94720207/224514909-7e8a0c9a-4c54-45c7-a153-38a7e9a7f8d3.png)
 
 - En caso de `VHT` = `802.11ac` la encontramos en la `segunda` columna.
+- Modulación y Esquema de Codificación de Muy Alta Velocidad (VHT-MCS)
+- Representado por **un número entero en el rango de `0-9`**.
 - Si se siguiera el mismo método que `HT` se convertiría en cientos y cientos de `rows`, para evitar esto se hizo lo siguiente: 
 
     1. Se cuenta del `0` al `9` el cual corresponde a un `spatial stream`
-    2. Cada que se pasa al siguiente bloque va en aumento. por ejemplo, al pasar al segundo bloque es del `0` al `9` dos veces!
+    2. Cada que se pasa al siguiente bloque va en aumento. por ejemplo, al pasar al segundo bloque es del `0` al `9` dos veces y con las nuevas combinaciones correspondientes. 
     - Es decir, primer bloque = `0` to `9`, segundo bloque **son 2 veces** `0` to `9`, tercer bloque **son 3 veces** `0` to `9`
 
+Los valores en la tabla que se repiten en el rango de `0-9` corresponden a diferentes `combinaciones` de `modulación`, `esquemas de codificación` y `ancho de banda` que se pueden utilizar en 802.11ac para lograr diferentes tasas de transferencia de datos. <br>
+
+Cada combinación de valores se representa con un número en el rango de 0-9 en la columna VHT-MCS de la tabla. Es importante tener en cuenta que el valor 9 en VHT-MCS no es lo mismo que el valor 9 en HT-MCS, ya que corresponden a diferentes combinaciones de modulación y esquemas de codificación en cada estándar.
+
+MCS Parameters
+
+
+
+
+• Esquema de Modulación
+Define la fase y amplitud requerida para el cálculo de bits, desde BPSK hasta QPSK, 16-QAM, 64-QAM y 256-QAM.
+
+• Codificación
+Tasa de bits transferidos y corrección de errores hacia adelante. Una codificación de 1/2 significa que se transfieren dos bits y se recibe uno. Minimizar el esquema de codificación implicaría enviar los datos más rápido pero perdiendo robustez.
+
+• Ancho de Banda de Datos
+Especifica el canal utilizado: 20MHz, 40MHz, 80MHz y 160MHz.
+
+• Intervalo de Guarda
+Tiempo de espera o pausa entre cada transmisión de paquete. 802.11n tiene 400ns y 802.11ac tiene 800 ns. Cuanto menor sea el intervalo de guarda, mayor será la velocidad de transferencia de datos.
+
+• SNR mínimo y RSSI
+Determina el SNR mínimo y el RSSI requerido para un índice MSC específico.
 
 
 ### 💀 `Fz3r0 Pro Tip`: `Data Rate`, `Bit Rate`, `Throughput`
