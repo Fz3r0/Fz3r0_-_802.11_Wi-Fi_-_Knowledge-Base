@@ -714,6 +714,9 @@ Tiempo de espera o pausa entre cada transmisión de paquete. 802.11n tiene 400ns
 • SNR mínimo y RSSI
 Determina el SNR mínimo y el RSSI requerido para un índice MSC específico.
 
+![image](https://user-images.githubusercontent.com/94720207/224523058-f4960b76-873a-4b03-aa7d-c8151efb2ee4.png)
+
+
 ### 💀 `Fz3r0 Pro Tip`: `Data Rate`, `Bit Rate`, `Throughput`
 
 - La tasa de transmisión de datos se le llama "data transmission rate" o "data transfer rate" en inglés. También puede ser conocida como "data rate", "bit rate" o "throughput".
