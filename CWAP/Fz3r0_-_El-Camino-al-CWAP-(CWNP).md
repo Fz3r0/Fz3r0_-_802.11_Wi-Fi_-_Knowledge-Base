@@ -23,11 +23,9 @@ En este repostorio y writeup que he realizado, nos adentraremos en el camino hac
 
 ### Importante
 
-Para presentar el examen de certificación CWAP, es necesario tener acreditado el examen CWNA y que éste se encuentre vigente. El CWNA es un requisito previo para poder presentar el examen CWAP, ya que se considera una base fundamental en cuanto a los conocimientos y habilidades necesarios para entender y manejar el protocolo de redes inalámbricas. <br>
+**Para presentar el examen de certificación CWAP, es necesario tener acreditado el examen CWNA y que éste se encuentre vigente. El CWNA es un requisito previo para poder presentar el examen CWAP, ya que se considera una base fundamental en cuanto a los conocimientos y habilidades necesarios para entender y manejar el protocolo de redes inalámbricas.** <br>
 
-Además, es importante destacar que la certificación CWNA debe estar vigente al momento de presentar el examen CWAP, ya que se requiere que el candidato tenga un conocimiento actualizado sobre las tecnologías inalámbricas. De esta manera, se garantiza que los candidatos que obtengan la certificación CWAP cuenten con un alto nivel de conocimientos y habilidades en el manejo de redes inalámbricas.
-
-**Para presentar el examen de certificación CWAP, se recomienda tener una serie de conocimientos previos y certificaciones que pueden ser de gran ayuda para el candidato, tales como:**
+**Además, se recomienda tener una serie de conocimientos previos y certificaciones que pueden ser de gran ayuda para el candidato, tales como:**
 
 #### 1. `Routing & Switching` (ej. `Cisco CCNA`)
 
@@ -45,12 +43,10 @@ Además, es importante destacar que la certificación CWNA debe estar vigente al
 - Es necesario contar con la certificación CWNA, ya que esta certificación es la base fundamental para comprender el protocolo de redes inalámbricas y es obligatoria para presentar el CWAP.
 - Es importante tener un conocimiento profundo sobre las tecnologías inalámbricas, incluyendo los diferentes estándares de redes inalámbricas, protocolos de seguridad, administración de redes inalámbricas, entre otros.
 
-Conocimientos en protocolos de red: Se recomienda tener conocimientos sólidos sobre protocolos de red, incluyendo el protocolo de internet (IP), routing y switching, entre otros. En este caso, el certificado CCNA de Cisco puede ser de gran ayuda, pero también se pueden considerar otras certificaciones como la certificación Network+ de CompTIA.
+#### 4. `Network Security` (ej. `Security+`)
 
-Conocimientos en seguridad de redes inalámbricas: Es importante tener conocimientos sólidos sobre seguridad en redes inalámbricas, incluyendo el uso de VPNs, autenticación y autorización de usuarios, cifrado de datos, entre otros. En este caso, la certificación Security+ de CompTIA puede ser de gran ayuda.
-
-En resumen, para presentar el examen de certificación CWAP se recomienda tener una base sólida en redes inalámbricas, protocolos de red y seguridad de redes, con la certificación CWNA como requisito previo y conocimientos adicionales que se pueden obtener a través de certificaciones como CCNA, Network+ y Security+.
-
+- Es importante tener conocimientos sólidos sobre seguridad en redes inalámbricas, incluyendo el uso de VPNs, autenticación y autorización de usuarios, cifrado de datos, entre otros. 
+- En este caso, la certificación Security+ de CompTIA puede ser de gran ayuda, aunque también hay una gran gama que se pueden seleccionar, además que son temas también abordados durante el `CWNA`.
 
 ## La analogía del `CWAP` y una expedición al `K2` 🏔️🧗 
 
@@ -58,11 +54,13 @@ En resumen, para presentar el examen de certificación CWAP se recomienda tener 
 
 ![image](https://user-images.githubusercontent.com/94720207/224564103-b9889d9f-2bb3-4ba8-aa31-ce31bddfa949.png)
 
-El `K2` es la segunda montaña más alta del mundo, majestuosa y poderosa. Conocida como `The Savage Mountain` (La Montaña salvaje), es una de las cumbres más temibles del mundo, que se encuentra en el corazón del Himalaya. Se eleva a una altitud de 8.611 metros y es un reto indomable que ha desafiado a los alpinistas más valientes y experimentados. <br>
+La montaña `K2`, también conocida como `la "Montaña Salvaje"`, es un coloso de hielo y roca que se eleva majestuoso en la cordillera del Karakórum, en el corazón de los Himalaya. Con una altura de más de 8.600 metros, es la segunda montaña más alta del mundo después del Monte Everest. `K2` es una de las cumbres más temibles y es un reto indomable que ha desafiado a los alpinistas más valientes y experimentados. <br>
 
 La `ruta Abruzzi` es la vía de ascenso más icónica y desafiante del K2, llamada así en honor a la expedición italiana que la abrió por primera vez en 1954. Pero no te engañes! esta ruta es un desafío muy real, plagado de obstáculos técnicos que ponen a prueba las habilidades de los alpinistas en cada paso del camino. <br>
 
 La ruta Abruzzi atraviesa la cara sureste de la montaña, presentando una serie de desafíos técnicos extremos, que incluyen empinadas escaladas en hielo y roca, peligrosas travesías y zonas expuestas a avalanchas. Los alpinistas deben enfrentar la altitud extrema y las duras condiciones climáticas que cambian rápidamente, incluyendo fuertes vientos, temperaturas bajo cero y tormentas de nieve.
+
+La `tasa de mortalidad` en las expediciones al K2 es asombrosamente alta, y a menudo deja una estela de tragedia y dolor en su camino. Se estima que alrededor del `25% de los alpinistas que intentan escalar el K2 no regresan con vida`, es decir, 1 de 4 expedicionarios mueren en el intento. Los supervivientes de estas expediciones a menudo describen el K2 como una montaña implacable y cruel, donde los peligros acechan en cada paso.
 
 Los escaladores que se aventuran en esta ruta ponen sus vidas en juego con cada paso que dan, mientras luchan contra la montaña y contra ellos mismos, poniendo a prueba su coraje, determinación, control mental y altas habilidades técnicas. Pero aquellos que logran alcanzar la cumbre por la ruta Abruzzi, se convierten en verdaderos héroes del alpinismo, consiguiendo un logro que solo unos pocos pueden reclamar en el mundo.
 
