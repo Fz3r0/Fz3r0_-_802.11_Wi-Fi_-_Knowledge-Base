@@ -634,7 +634,12 @@ Para que `802.11n` o `802.11ac` puedan obtener mayor `throughput` existen 4 mane
 
 ![image](https://user-images.githubusercontent.com/94720207/224578454-86728faa-a9ee-4b1b-8a2e-27c6f82e7610.png)
 
-#### `No aggregation`
+#### `A-MPDU Aggregation`
+
+- Este tipo de `aggregation` es **el más común.**
+- Proporciona una enorme cantidad de incremento en el `throughput`.
+- Básicamente lo que hace es enviar una serie de `MPDU's` que se delimitan con cada `MAC header`.
+- Así que, lo que hace es evitar las retranmisiones de `PHY headers` y cada `ACK` de intermedio. 
 
 
 ![image](https://user-images.githubusercontent.com/94720207/224580263-126441d8-2f75-40ed-8d9c-5a3ed7024ef8.png)
