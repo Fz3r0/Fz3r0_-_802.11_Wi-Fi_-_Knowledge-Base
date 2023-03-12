@@ -597,7 +597,7 @@ Para que `802.11n` o `802.11ac` puedan obtener mayor `throughput` existen 4 mane
 
 ![image](https://user-images.githubusercontent.com/94720207/224576441-f3589df1-50b1-4c49-bd6d-10325994564b.png)
 
-###| La analogía de la carretera, los coches y el camión
+### La analogía de la carretera, los coches y el camión
 
 **¿Por qué "agregar"?... Why aggregate?**
 
