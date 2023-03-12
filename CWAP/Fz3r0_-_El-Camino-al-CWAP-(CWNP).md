@@ -557,6 +557,7 @@ _por @ **Fz3r0** 💀 (CWNA)_
 ## `MCS Table` - Modulation & Coding Scheme
 
 - [Wireless LAN Professionals: `MCS Table and How You Can Use it`](https://youtu.be/QBiBPbME5tY)
+- [`VHT` (802.11n/ac) MCS Chart – Wave 1](https://www.wirelesstrainingsolutions.com/wireless-tools/vht-mcs-chart-wave-1/)
 - La `MCS Table` Ayuda a evular la calidad del ambiente de RF `quality of the RF enviorment`
 - La `tabla MCS` se utiliza en las redes Wi-Fi que operan en las bandas de frecuencia de `2,4 GHz` y `5 GHz`. 
 - Cada dispositivo que `transmite` en una red `WiFi` (como un AP, celular, o cualquier antena WiFi) debe tomar `decisiones internas` y preguntarse `"¿Qué MCS usaré?"`
@@ -692,6 +693,14 @@ Cada combinación de valores se representa con un número en el rango de 0-9 en 
 ---
 
 ### **`Modulation Scheme`**
+
+- Existen diferentes `técnicas de modulación`, como `BPSK`, `QPSK`, `16-QAM`, `64-QAM`, entre otras... 
+- Cada una de estas técnicas utiliza una diferente combinación de `amplitud`, `fase` y `frecuencia` de onda para representar `bits de información`.
+- Las técnicas de modulación `más complejas`, como `64-QAM`, **pueden transmitir más bits de información en un solo símbolo que las técnicas más simples, como `BPSK`**. Sin embargo, **las técnicas de modulación más complejas también son más susceptibles a errores de transmisión debido a la presencia de ruido y otros factores en el canal de comunicación.**
+
+![image](https://user-images.githubusercontent.com/94720207/224524309-07be4db5-af3b-45fe-8fcd-71bbb0b068a3.png)
+
+Por lo tanto, la elección de la técnica de modulación adecuada depende de varios factores, como la calidad de la señal, el ancho de banda disponible y la tasa de errores de transmisión permitida. Las combinaciones de técnicas de modulación y codificación que se muestran en una tabla MCS se organizan en función de su eficiencia en términos de tasa de transferencia de datos y resistencia a errores de transmisión.
 
 ![image](https://user-images.githubusercontent.com/94720207/224521846-04cf91ad-dfac-4813-adeb-2afa274ed362.png)
 
