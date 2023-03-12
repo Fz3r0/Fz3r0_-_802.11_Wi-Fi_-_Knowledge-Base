@@ -748,7 +748,7 @@ Determina el SNR mínimo y el RSSI requerido para un índice MSC específico.
 
 
 
-
+https://www.wirelesstrainingsolutions.com/understanding-ofdm-part-4-refresh/
 
 
 
