@@ -743,6 +743,10 @@ Determina el SNR mínimo y el RSSI requerido para un índice MSC específico.
 
 ![image](https://user-images.githubusercontent.com/94720207/224551755-a707ebfd-f37a-423b-99e1-b360f9b08cb1.png)
 
+- Ahora, se visualizan 2 STA
+
+![image](https://user-images.githubusercontent.com/94720207/224553627-80e02f16-a8cf-499c-9914-8b312ccedbd4.png)
+
 
 
 
