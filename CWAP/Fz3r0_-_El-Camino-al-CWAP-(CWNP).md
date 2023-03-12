@@ -32,7 +32,7 @@ En este repostorio y writeup que he realizado, nos adentraremos en el camino hac
 - Poniendo de ejemplo el `Cisco CCNA` ya que este valida los conocimientos y habilidades necesarios para instalar, configurar, operar y solucionar problemas en redes de área local (LAN) y de área amplia (WAN) utilizando dispositivos de red Cisco (routers & switches). 
 - CCNA también cubre los fundamentos de 802.11 Wireless WiFi
 
-#### 2. `Netork Protocols`
+#### 2. `Network Protocols`
 
 - Un protocolo de red es un conjunto de reglas y estándares que permiten que los dispositivos de red se comuniquen entre sí y compartan información en una red de computadoras.
 - Es importante destacar que los protocolos de red son necesarios tanto para redes alámbricas como inalámbricas, ya que permiten la transmisión de datos a través de diferentes medios de comunicación, incluyendo cableado de cobre, fibra óptica y ondas de radio.
@@ -52,6 +52,20 @@ En este repostorio y writeup que he realizado, nos adentraremos en el camino hac
 
 - Wireshark es una herramienta de análisis de tráfico de red gratuita y de código abierto que permite capturar y examinar el tráfico de red en tiempo real. Con Wireshark, es posible analizar el tráfico de redes cableadas e inalámbricas para solucionar problemas y detectar fallos de seguridad.
 - También existen otros tipos de analizadores de protocolos, pero este writeup se centrará en `Wireshark` y en específico mi porpia modificación y perfil llamado `The BlackShark`
+
+![image](https://user-images.githubusercontent.com/94720207/224579398-5a633384-fa93-4db3-8d15-06612067ad1c.png)
+
+![image](https://user-images.githubusercontent.com/94720207/224579439-ba192f45-b093-46d6-b7f6-d725591965b7.png)
+
+![image](https://user-images.githubusercontent.com/94720207/224579523-323f0d5a-15fd-417b-869f-f9eaa3b8df98.png)
+
+![image](https://user-images.githubusercontent.com/94720207/224579701-e8c22265-2417-4ffe-9796-7dc222f8d520.png)
+
+
+![image](https://user-images.githubusercontent.com/94720207/224579649-14938e8b-79c4-498c-8f3f-002e9b7e6a32.png)
+
+
+
 
 ## La analogía del `CWAP` y una expedición al `K2` 🏔️🧗 
 
@@ -608,11 +622,13 @@ Para que `802.11n` o `802.11ac` puedan obtener mayor `throughput` existen 4 mane
 
 ![image](https://user-images.githubusercontent.com/94720207/224576564-19103768-81c5-4a1d-8b85-551d97eaf703.png)
 
+**Esto es lo que realmente hace el `Frame Aggregation`, reduce de gran manera el `overhead` y hace que el `WiFi` sea mucho más eficiente.**
+
 ### Tipos de `Frame Aggregation`
 
-#### Sin agregación
+#### `No aggregation`
 
-- Este es un frame normal, sin `frame aggegation`
+- Este es un frame normal, sin `aggegation`
 
 ![image](https://user-images.githubusercontent.com/94720207/224578454-86728faa-a9ee-4b1b-8a2e-27c6f82e7610.png)
 
