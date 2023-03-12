@@ -21,9 +21,9 @@ Los temas abordados en la certificación `CWAP` incluyen la captura y análisis 
 
 En este repostorio y writeup que he realizado, nos adentraremos en el camino hacia la certificación `CWAP`, cubriendo todos los temas incluidos en el plan de estudios oficial de CWNP. Además, profundizaremos en temas que no se abordan en detalle en la documentación oficial, brindando una comprensión completa de los desafíos y soluciones en el análisis avanzado de redes inalámbricas.
 
-### Importante
+### `Importante`
 
-**Para presentar el examen de certificación CWAP, es necesario tener acreditado el examen CWNA y que éste se encuentre vigente. El CWNA es un requisito previo para poder presentar el examen CWAP, ya que se considera una base fundamental en cuanto a los conocimientos y habilidades necesarios para entender y manejar el protocolo de redes inalámbricas.** <br>
+**Para presentar el examen de certificación `CWAP`, es necesario tener acreditado el examen `CWNA` y que éste se encuentre vigente.** El CWNA es un requisito previo para poder presentar el examen CWAP, ya que se considera una base fundamental en cuanto a los conocimientos y habilidades necesarios para entender y manejar el protocolo de redes inalámbricas. <br>
 
 **Además, se recomienda tener una serie de conocimientos previos y certificaciones que pueden ser de gran ayuda para el candidato, tales como:**
 
