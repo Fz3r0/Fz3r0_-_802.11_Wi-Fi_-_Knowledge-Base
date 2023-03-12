@@ -15,7 +15,7 @@ _por @ **Fz3r0** 💀 (CWNA)_
 
 ## Introducción
 
-`CWAP (Certified Wireless Analysis Professional)` es una certificación ofrecida por `CWNP (Certified Wireless Network Professional)` que se centra en el análisis avanzado de redes inalámbricas. Los profesionales que buscan obtener la certificación CWAP deben demostrar un amplio conocimiento de los principios y técnicas de análisis de redes inalámbricas, así como habilidades para resolver problemas complejos y mejorar el rendimiento de redes inalámbricas existentes.
+`CWAP (Certified Wireless Analysis Professional)` es una certificación ofrecida por `CWNP (Certified Wireless Network Professional)` que se centra en el **`análisis avanzado de redes inalámbricas`**. Los profesionales que buscan obtener la certificación CWAP deben demostrar un amplio conocimiento de los principios y técnicas de análisis de redes inalámbricas, así como habilidades para resolver problemas complejos y mejorar el rendimiento de redes inalámbricas existentes.
 
 Los temas abordados en la certificación `CWAP` incluyen la captura y análisis de tráfico inalámbrico, la identificación y solución de problemas de cobertura y rendimiento, el análisis de interferencias y la aplicación de soluciones de seguridad inalámbrica. A través de la certificación CWAP, los profesionales pueden demostrar su experiencia en la gestión y optimización de redes inalámbricas avanzadas y su capacidad para abordar los desafíos de análisis y resolución de problemas en entornos de red inalámbrica complejos. <br>
 
@@ -32,7 +32,7 @@ En este repostorio y writeup que he realizado, nos adentraremos en el camino hac
 - Poniendo de ejemplo el `Cisco CCNA` ya que este valida los conocimientos y habilidades necesarios para instalar, configurar, operar y solucionar problemas en redes de área local (LAN) y de área amplia (WAN) utilizando dispositivos de red Cisco (routers & switches). 
 - CCNA también cubre los fundamentos de 802.11 Wireless WiFi
 
-#### 2. `Protocolos de Red`
+#### 2. `Netork Protocols`
 
 - Un protocolo de red es un conjunto de reglas y estándares que permiten que los dispositivos de red se comuniquen entre sí y compartan información en una red de computadoras.
 - Es importante destacar que los protocolos de red son necesarios tanto para redes alámbricas como inalámbricas, ya que permiten la transmisión de datos a través de diferentes medios de comunicación, incluyendo cableado de cobre, fibra óptica y ondas de radio.
@@ -47,6 +47,11 @@ En este repostorio y writeup que he realizado, nos adentraremos en el camino hac
 
 - Es importante tener conocimientos sólidos sobre seguridad en redes inalámbricas, incluyendo el uso de VPNs, autenticación y autorización de usuarios, cifrado de datos, entre otros. 
 - En este caso, la certificación Security+ de CompTIA puede ser de gran ayuda, aunque también hay una gran gama que se pueden seleccionar, además que son temas también abordados durante el `CWNA`.
+
+#### 5. `Protocol Analysis` (ej. `Wireshark`)
+
+- Wireshark es una herramienta de análisis de tráfico de red gratuita y de código abierto que permite capturar y examinar el tráfico de red en tiempo real. Con Wireshark, es posible analizar el tráfico de redes cableadas e inalámbricas para solucionar problemas y detectar fallos de seguridad.
+- También existen otros tipos de analizadores de protocolos, pero este writeup se centrará en `Wireshark` y en específico mi porpia modificación y perfil llamado `The BlackShark`
 
 ## La analogía del `CWAP` y una expedición al `K2` 🏔️🧗 
 
