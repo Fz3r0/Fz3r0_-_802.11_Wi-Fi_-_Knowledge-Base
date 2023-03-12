@@ -604,9 +604,11 @@ Es mejor aprender con la `MCS Table` con la tabla de `802.11n/ac` ya que `802.11
 
 ![image](https://user-images.githubusercontent.com/94720207/224502878-2edac492-fcc3-492d-86e1-f1f46740e546.png)
 
+- **`IMPORTANTE`: Antes de aprender a leer la `MCS Table`, hay que identificar exactamente `cada parte que la compone`, al saber leer la `MCS` de `802.11n/ac`, en realidad se puede leer cualquiera ya sea anterior o posterior a ese Estándar IEEE.** 
+
 ### **`Spatial Streams`**
 
-Los `spatial streams` son una técnica utilizada en los estándares inalámbricos IEEE 802.11n y IEEE 802.11ac (y posteriores...) que permite `transmitir y recibir varios flujos de datos simultáneamente` mediante la `utilización de múltiples antenas`. <br>
+Los `spatial streams` son una técnica utilizada en los estándares inalámbricos `IEEE 802.11n` y IEEE `802.11ac` (y posteriores...) que permite `transmitir y recibir varios flujos de datos simultáneamente` mediante la `utilización de múltiples antenas`. <br>
 
 Cada `spatial stream` se puede pensar como **una vía separada para transmitir datos**, lo que **aumenta la capacidad del sistema inalámbrico** y **mejora la velocidad de transmisión**.
 
@@ -623,11 +625,14 @@ Los sistemas `MIMO` tienen `múltiples antenas de transmisión y recepción` que
 
 Con esta configuración, se pueden utilizar `dos spatial streams para transmitir y recibir datos`, lo que **aumenta la capacidad del sistema inalámbrico y mejora la velocidad de transmisión en comparación con un sistema `SISO (Single Input Single Output)`** con una sola antena de transmisión y una sola antena de recepción. <br>
 
-Para maximizar la capacidad del sistema inalámbrico y la velocidad de transmisión, se recomienda que ambos extremos tengan la misma configuración de antenas MIMO y que las antenas estén configuradas de manera óptima para aprovechar las condiciones del canal inalámbrico en tiempo real. <br>
+Para maximizar la capacidad del sistema inalámbrico y la velocidad de transmisión, se recomienda **que ambos extremos tengan la misma configuración de antenas MIMO y que las antenas estén configuradas de manera óptima para aprovechar las condiciones del canal inalámbrico en tiempo real**. <br>
 
-Cuando se combinan diferentes configuraciones de antenas de cada lado de una comunicación inalámbrica, por ejemplo, una configuración de 1x1 en un extremo y una configuración de 2x2 en el otro extremo, se producen algunas limitaciones en el sistema inalámbrico. <br>
+Cuando se combinan diferentes configuraciones de antenas de cada lado de una comunicación inalámbrica, por ejemplo, una configuración de `1x1 SISO`  en un extremo y una configuración de `2x2 MIMO` en el otro extremo, se producen algunas limitaciones en el sistema inalámbrico. <br>
 
-En este caso, la configuración de 2x2 puede transmitir y recibir dos spatial streams simultáneamente, mientras que la configuración de 1x1 solo puede transmitir y recibir un spatial stream. Esto significa que, en la comunicación entre ambos extremos, solo se pueden utilizar un spatial stream, ya que este es el máximo que puede ser transmitido y recibido por ambas configuraciones de antenas. <br>
+- La configuración de `2x2` puede transmitir y recibir `dos spatial streams simultáneamente`
+- La configuración de `1x1` solo puede transmitir y recibir `un spatial stream`. 
+
+Esto significa que, en la comunicación entre ambos extremos, **solo se pueden utilizar un spatial stream**, ya que este `es el máximo` que puede ser transmitido y recibido por `ambas configuraciones de antenas`. <br>
 
 ![image](https://user-images.githubusercontent.com/94720207/224517321-e03d7e75-6d26-4b8b-a28f-d94c478dbe96.png)
 
