@@ -628,10 +628,16 @@ Para que `802.11n` o `802.11ac` puedan obtener mayor `throughput` existen 4 mane
 
 #### `No aggregation`
 
-- Este es un frame normal, sin `aggegation`
+- Este es un frame normal, sin `aggegation`.
+- Tiene un `un PHY header`, `un MAC header`, `un MSDU`,... y **existe un ``ACK` (Acknowledgement) para cada uno de esos frames.**
+- Este funciona generalmente para estándares legacy como `802.11a` y no es muy eficiente. 
 
 ![image](https://user-images.githubusercontent.com/94720207/224578454-86728faa-a9ee-4b1b-8a2e-27c6f82e7610.png)
 
+#### `No aggregation`
+
+
+![image](https://user-images.githubusercontent.com/94720207/224580263-126441d8-2f75-40ed-8d9c-5a3ed7024ef8.png)
 
 
 
