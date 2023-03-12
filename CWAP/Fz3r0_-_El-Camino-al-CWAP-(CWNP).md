@@ -741,7 +741,8 @@ Determina el SNR mínimo y el RSSI requerido para un índice MSC específico.
 
 - Factores como el `ruido`, `interferencia`, otros `clientes` (STA), coding, etc, etc... representan esos espacios en la carretera, eso sería el `throughput` real:
 
-![image](https://user-images.githubusercontent.com/94720207/224523134-bcd5b4e0-9bee-4296-b21d-57d985690b2a.png)
+![image](https://user-images.githubusercontent.com/94720207/224551755-a707ebfd-f37a-423b-99e1-b360f9b08cb1.png)
+
 
 
 
