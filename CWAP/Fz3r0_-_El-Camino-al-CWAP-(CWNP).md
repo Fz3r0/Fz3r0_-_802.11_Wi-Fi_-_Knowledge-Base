@@ -504,9 +504,32 @@ _por @ **Fz3r0** 💀 (CWNA)_
 
 ![image](https://user-images.githubusercontent.com/94720207/224217527-a7e42d07-4b60-46df-8d99-314ecf541e09.png)
 
+
+
 ## `802.11 Aggregation` / `Frame Aggregation`
 
 - [`802.11 Aggregation` - Friend or Foe? | Wes Purvis](https://www.youtube.com/watch?v=3jqYwFQSqnE)
+- [`Aggregation in WiFi`](https://www.youtube.com/watch?v=RvLVDi41lKQ)
+
+Para que `802.11n` o `802.11ac` puedan obtener mayor `throughput` existen 4 maneras posibles:
+
+1. **`Increase Modulation`** (Incrementar la modulación)
+2. **`Increase Modulation`** (Incrementar la modulación)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
