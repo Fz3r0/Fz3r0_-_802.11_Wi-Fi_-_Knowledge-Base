@@ -597,52 +597,7 @@ La `ruta Abruzzi del K2` es un camino lleno de peligros y desafíos que ponen a 
 
 
 
-## `802.11 Aggregation` / `Frame Aggregation`
 
-- [`802.11 Aggregation` - Friend or Foe? | Wes Purvis](https://www.youtube.com/watch?v=3jqYwFQSqnE)
-- [`Aggregation in WiFi`](https://www.youtube.com/watch?v=RvLVDi41lKQ)
-
-Para que `802.11n` o `802.11ac` puedan obtener mayor `throughput` existen 4 maneras posibles:
-
-1. **`Increase Modulation`** (Incrementar la modulación)
-2. **`Wider Channel Bandwith`** (Incrementar el ancho de la banda. ej. 5 GHz)
-3. **`MIMO - Multiple Input / Multiple Output`** (Antentas MIMO. ej. 2x2:2)
-4. **`Frame Aggregation`** (Agregación de Tramas)
-
-![image](https://user-images.githubusercontent.com/94720207/224576441-f3589df1-50b1-4c49-bd6d-10325994564b.png)
-
-### La analogía de la carretera, los coches y el camión
-
-**¿Por qué "agregar"?... Why aggregate?**
-
-- Es lo mismo que la típica foto del camión y el coche en una autopista, donde al mismo tiempo ambas solcuiones tienen la misma capacidad para transportar exactamente a la misma cantidad de gente. 
-- Sin embargo, **al hacerlo en coches la autopista se satura lo que casua problemas como más tráfico, lentitud y más consumo de rescursos. En cambio, `"agregar" a todas esas personas en un solo camión, hace que el tráfico y la velocidad sean más eficientes`**  
-- Los coches representan el `overhead` (`headers`, `footers`, `QoS`, `management`, `control`, etc, etc...) ya que es tráfico de diferentes personas que no se conocen y viajan en diferentes coches. 
-- **Pero, si estas personas aunque no se conocen se pusieran de acuerdo, pudieran viajar todos de manera más eficiente en el mismo camión.** 
-
-![image](https://user-images.githubusercontent.com/94720207/224576564-19103768-81c5-4a1d-8b85-551d97eaf703.png)
-
-**Esto es lo que realmente hace el `Frame Aggregation`, reduce de gran manera el `overhead` y hace que el `WiFi` sea mucho más eficiente.**
-
-### Tipos de `Frame Aggregation`
-
-#### `No aggregation`
-
-- Este es un frame normal, sin `aggegation`.
-- Tiene un `un PHY header`, `un MAC header`, `un MSDU`,... y **existe un ``ACK` (Acknowledgement) para cada uno de esos frames.**
-- Este funciona generalmente para estándares legacy como `802.11a` y no es muy eficiente. 
-
-![image](https://user-images.githubusercontent.com/94720207/224578454-86728faa-a9ee-4b1b-8a2e-27c6f82e7610.png)
-
-#### `A-MPDU Aggregation`
-
-- Este tipo de `aggregation` es **el más común.**
-- Proporciona una enorme cantidad de incremento en el `throughput`.
-- Básicamente lo que hace es enviar una serie de `MPDU's` que se delimitan con cada `MAC header`.
-- Así que, lo que hace es evitar las retranmisiones de `PHY headers` y cada `ACK` de intermedio. 
-
-
-![image](https://user-images.githubusercontent.com/94720207/224580263-126441d8-2f75-40ed-8d9c-5a3ed7024ef8.png)
 
 
 
@@ -944,6 +899,65 @@ Determina el SNR mínimo y el RSSI requerido para un índice MSC específico.
 - El throughput medido por el test de velocidad indica la cantidad de datos que se pueden transmitir en un período de tiempo determinado, lo que refleja la capacidad real de la conexión de un usuario en ese preciso momento.
 
 Es importante tener en cuenta que el `bandwith asignado` por el ISP puede variar en función de diferentes factores lo cual resulta en el `throughput` real, como la hora del día, la demanda de la red y la calidad de la conexión física. Por lo tanto, el ancho de banda asignado puede no ser siempre el mismo que el anunciado por el ISP, y es posible que el throughput real que se pueda obtener en un momento determinado sea menor al anunciado.
+
+
+
+
+## `802.11 Aggregation` / `Frame Aggregation`
+
+- [`802.11 Aggregation` - Friend or Foe? | Wes Purvis](https://www.youtube.com/watch?v=3jqYwFQSqnE)
+- [`Aggregation in WiFi`](https://www.youtube.com/watch?v=RvLVDi41lKQ)
+
+Para que `802.11n` o `802.11ac` puedan obtener mayor `throughput` existen 4 maneras posibles:
+
+1. **`Increase Modulation`** (Incrementar la modulación)
+2. **`Wider Channel Bandwith`** (Incrementar el ancho de la banda. ej. 5 GHz)
+3. **`MIMO - Multiple Input / Multiple Output`** (Antentas MIMO. ej. 2x2:2)
+4. **`Frame Aggregation`** (Agregación de Tramas)
+
+![image](https://user-images.githubusercontent.com/94720207/224576441-f3589df1-50b1-4c49-bd6d-10325994564b.png)
+
+### La analogía de la carretera, los coches y el camión
+
+**¿Por qué "agregar"?... Why aggregate?**
+
+- Es lo mismo que la típica foto del camión y el coche en una autopista, donde al mismo tiempo ambas solcuiones tienen la misma capacidad para transportar exactamente a la misma cantidad de gente. 
+- Sin embargo, **al hacerlo en coches la autopista se satura lo que casua problemas como más tráfico, lentitud y más consumo de rescursos. En cambio, `"agregar" a todas esas personas en un solo camión, hace que el tráfico y la velocidad sean más eficientes`**  
+- Los coches representan el `overhead` (`headers`, `footers`, `QoS`, `management`, `control`, etc, etc...) ya que es tráfico de diferentes personas que no se conocen y viajan en diferentes coches. 
+- **Pero, si estas personas aunque no se conocen se pusieran de acuerdo, pudieran viajar todos de manera más eficiente en el mismo camión.** 
+
+![image](https://user-images.githubusercontent.com/94720207/224576564-19103768-81c5-4a1d-8b85-551d97eaf703.png)
+
+**Esto es lo que realmente hace el `Frame Aggregation`, reduce de gran manera el `overhead` y hace que el `WiFi` sea mucho más eficiente.**
+
+### Tipos de `Frame Aggregation`
+
+#### `No aggregation`
+
+- Este es un frame normal, sin `aggegation`.
+- Tiene un `un PHY header`, `un MAC header`, `un MSDU`,... y **existe un ``ACK` (Acknowledgement) para cada uno de esos frames.**
+- Este funciona generalmente para estándares legacy como `802.11a` y no es muy eficiente. 
+
+![image](https://user-images.githubusercontent.com/94720207/224578454-86728faa-a9ee-4b1b-8a2e-27c6f82e7610.png)
+
+#### `A-MPDU Aggregation`
+
+- Este tipo de `aggregation` es **el más común.**
+- Proporciona una enorme cantidad de incremento en el `throughput`.
+- Básicamente lo que hace es enviar una serie de `MPDU's` que se delimitan con cada `MAC header`.
+- Así que, lo que hace es evitar las retranmisiones de `PHY headers` y cada `ACK` de intermedio. 
+
+
+![image](https://user-images.githubusercontent.com/94720207/224580263-126441d8-2f75-40ed-8d9c-5a3ed7024ef8.png)
+
+
+
+
+
+
+
+
+
 
 
 
