@@ -944,13 +944,15 @@ Sin embargo, **al hacerlo en coches la autopista se satura lo que casua problema
 
 ### Tipos de `Frame Aggregation`
 
-Existen `3` tipos de `Aggregation`:
+A continuación se explican a detalle los `3` tipos de `Aggregation`:
 
 1. `A-MPDU Aggregation`
 2. `A-MSDU Aggregation`
 3. `A-MPDU and A-MSDU Aggregation`
 
-#### `No aggregation`
+---
+
+### `No aggregation`
 
 - Este es un frame normal, sin `aggegation`.
 - Tiene un `un PHY header`, `un MAC header`, `un MSDU`,... y **existe un ``ACK` (Acknowledgement) para cada uno de esos frames.**
@@ -958,13 +960,17 @@ Existen `3` tipos de `Aggregation`:
 
 ![image](https://user-images.githubusercontent.com/94720207/224578454-86728faa-a9ee-4b1b-8a2e-27c6f82e7610.png)
 
+#### `Escenario de Falla` : `No aggregation`
+
 - En caso de error **`solo se retransmite 1 frame`**
 - Cada frame contiene dentro un `MSDU`
 - Cada frame contiene sus respectivos headers como `MAC`, `PHY` y `ACK`
 
 ![image](https://user-images.githubusercontent.com/94720207/225209145-b5b3654d-5422-47fa-bd02-331c57f3ebd8.png)
 
-#### `A-MPDU Aggregation`
+---
+
+### `A-MPDU Aggregation`
 
 - Este tipo de `aggregation` es **el más `común`.**
 - Proporciona una enorme cantidad de incremento en el `throughput`.
@@ -974,16 +980,20 @@ Existen `3` tipos de `Aggregation`:
 
 ![image](https://user-images.githubusercontent.com/94720207/225181794-df541475-46ed-42ef-8a6d-ff5786bebc6d.png)
 
-- En caso de error **`solo se retransmite 1 frame... _(1 subframe MPDU con su propia MAC y PHY header)_`**
+#### `Escenario de Falla` : `A-MPDU`
+
+- En caso de error **`solo se retransmite 1 frame... (1 subframe MPDU con su propia MAC y PHY header)`**
 - De hecho una gran ventaja, es que ese `1 subrame MPDU` puede viajar en el siguiente `A-MPDU` en alguno de los "espacios del camión". 
 
 ![image](https://user-images.githubusercontent.com/94720207/225212751-1052128c-8168-46a6-8349-afc217404377.png)
 
-En el proceso de A-MPDU Aggregation, varios paquetes de datos que se dirigen al mismo destinatario se agrupan en un solo paquete, lo que se conoce como una "unidad de datos de protocolo de agregación" `A-MPDU`. Este paquete más grande se divide en varias subunidades de datos `MPDUs`, cada una de las cuales se transmite en una trama de radio separada. <br>
+**`A-MPDU Aggregation` agrupa múltiples `MPDUs` en un solo paquete.** En el proceso de A-MPDU Aggregation, varios paquetes de datos que se dirigen al mismo destinatario se agrupan en un solo paquete, lo que se conoce como una "unidad de datos de protocolo de agregación" `A-MPDU`. Este paquete más grande se divide en varias subunidades de datos `MPDUs`, cada una de las cuales se transmite en una trama de radio separada. <br>
 
 En la recepción, el destinatario reensambla los paquetes originales a partir de las subunidades de datos recibidas. Este proceso de agrupación y desagrupación de paquetes es manejado por la capa MAC del sistema de comunicaciones inalámbricas.
 
-#### `A-MSDU Aggregation`
+---
+
+### `A-MSDU Aggregation`
 
 - Este tipo de `aggregation` es **el más `eficiente`.**
 - Tiene los mayores pros... Pero, también es el que tiene los mayores contras.
@@ -992,19 +1002,30 @@ En la recepción, el destinatario reensambla los paquetes originales a partir de
 
 ![image](https://user-images.githubusercontent.com/94720207/225184155-30cf5564-2664-453f-8128-9dc2612d3118.png)
 
+#### `Escenario de Falla` : `A-MSDU`
+
+- En caso de error **`se retransmite 1 frame largo... (el frame es igual a tooodo el A-MSDU) `**
+- Por ejemplo, si la suma de todos los `MSDU` que van dentro del `A-MSDU` son `6000 bytes`, entonces se retransmiten TODOS los `6000 bytes`
+- En caso de errores, retransmisiones tan largas podrían generar falta de eficiencia en la red y problemas derivados. 
+
+![image](https://user-images.githubusercontent.com/94720207/225452761-80551fbf-dd51-45d6-b21e-2f68f3b20a81.png)
+
 A diferencia de A-MPDU Aggregation, que agrupa múltiples MPDUs en un solo paquete... A-MSDU Aggregation **combina múltiples MSDUs (unidades de servicio de datos de capa superior) en un solo paquete más grande**, lo que mejora aún más la eficiencia de la transmisión inalámbrica. <br>
 
 En el proceso de A-MSDU Aggregation, varios paquetes de nivel superior, que pueden ser fragmentados en múltiples MPDUs, se agrupan en un solo paquete A-MSDU. Este paquete más grande se divide en varias subunidades de datos (MPDUs), cada una de las cuales se transmite en una trama de radio separada. <br>
 
 En general, la elección de utilizar A-MPDU Aggregation o A-MSDU Aggregation dependerá de las características específicas de la aplicación y de los requisitos de transmisión de datos. Por ejemplo, en aplicaciones con cargas de datos más pesadas, A-MSDU Aggregation puede ser más eficiente, mientras que en aplicaciones con cargas de datos más ligeras, A-MPDU Aggregation puede ser más adecuado.
 
-#### `A-MPDU and A-MSDU Aggregation`
+---
+
+### `A-MPDU and A-MSDU Aggregation`
 
 - Este tipo de `aggregation` **combina lo mejor de `ambos anteriores`.**
 - Continúan siendo frames largos en el aire, pero en caso de existir un error no se generaría una retransmisión tan larga debido a los `MPDU delimiter` que genera dividir los `MSDUs` en `MPDUs`.
 
 ![image](https://user-images.githubusercontent.com/94720207/225208271-123232c2-11fb-4c6f-b4d4-f14d7086524a.png)
 
+#### `Escenario de Falla` : `A-MPDU and A-MSDU Aggregation`
 
 
 En esta técnica, se agrupan múltiples MSDUs en un solo paquete A-MSDU y, a su vez, se agrupan múltiples paquetes A-MSDU en un solo paquete A-MPDU. Este paquete A-MPDU más grande se divide en varias subunidades de datos (MPDUs), cada una de las cuales se transmite en una trama de radio separada. <br>
