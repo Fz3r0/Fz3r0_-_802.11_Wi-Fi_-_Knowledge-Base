@@ -932,24 +932,43 @@ Para que `802.11n` o `802.11ac` puedan obtener mayor `throughput` existen 4 mane
 
 ### Tipos de `Frame Aggregation`
 
+Existen `3` tipos de `Aggregation`:
+
+
+2. `A-MPDU Aggregation`
+3. `A-MSDU Aggregation`
+
 #### `No aggregation`
 
 - Este es un frame normal, sin `aggegation`.
 - Tiene un `un PHY header`, `un MAC header`, `un MSDU`,... y **existe un ``ACK` (Acknowledgement) para cada uno de esos frames.**
-- Este funciona generalmente para estándares legacy como `802.11a` y no es muy eficiente. 
+- Este funciona generalmente para estándares legacy como `802.11a`, es bueno, pero no tan eficiente. 
 
 ![image](https://user-images.githubusercontent.com/94720207/224578454-86728faa-a9ee-4b1b-8a2e-27c6f82e7610.png)
 
 #### `A-MPDU Aggregation`
 
-- Este tipo de `aggregation` es **el más común.**
+- Este tipo de `aggregation` es **el más `común`.**
 - Proporciona una enorme cantidad de incremento en el `throughput`.
 - Básicamente lo que hace es enviar una serie de `MPDU's` que se delimitan con cada `MAC header`.
 - Así que, lo que hace es evitar las retranmisiones de `PHY headers` y cada `ACK` de intermedio. 
+- Es decir: Solo hay 1 `ACK`, que se llama `Block ACK` para responder a, por ejemplo, 64 frames juntos que generan un `block` (bloque) de frames.
+
+![image](https://user-images.githubusercontent.com/94720207/225181794-df541475-46ed-42ef-8a6d-ff5786bebc6d.png)
+
+#### `A-MSDU Aggregation`
+
+- Este tipo de `aggregation` es **el más `eficiente`.**
+- Tiene los mayores pros... Pero, también es el que tiene los mayores contras.
+- Son basicamente frames largos en el aire, por ejemplo un `MSDU de 500 bytes`, esto se convertiría ya con su overhead a un frame de casi `600 bytes` en el aire. 
+- `600 bytes` en el aire, claro! está perfecto!... cuando funciona...
+
+![image](https://user-images.githubusercontent.com/94720207/225184155-30cf5564-2664-453f-8128-9dc2612d3118.png)
 
 
-![image](https://user-images.githubusercontent.com/94720207/224580263-126441d8-2f75-40ed-8d9c-5a3ed7024ef8.png)
+#### `A-MPDU of and A-MSDU Aggregation`
 
+- Este tipo de `aggregation` **combina lo mejor de `ambos anteriores`.**
 
 
 
