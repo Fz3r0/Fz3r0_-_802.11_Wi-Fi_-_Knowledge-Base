@@ -95,7 +95,9 @@ Los expedicionarios deben ser capaces de navegar con habilidad en terrenos empin
 
 En la cima del Bottleneck se encuentra su majestuosa Serac, es ahí donde se pone a prueba todo lo que los escaladores han aprendido y entrenado. La serac es un monstruo gigante de hielo, amenazando con hacer trizas a cualquiera que se cruce en su camino. Solo aquellos con la más alta técnica y habilidad pueden escalar con éxito a través de ella. Se dice que es en el Bottleneck donde tu vida deja de estar en tus manos.
 
-Al lograr pasar la Serarc, el camino a la cima son tan solo unos cortos pasos...
+![image](https://user-images.githubusercontent.com/94720207/225210926-c1e5788f-3f22-42af-994b-350232c730fb.png)
+
+Al lograr pasar la Serarc, el camino a la cima son tan solo unos cortos pasosa los cuales le llaman `traverse` "el último empuje"...
 
 ### `Cima del K2` = `Certifcación como Ingeniero CWAP-404`
 
@@ -965,6 +967,11 @@ Existen `3` tipos de `Aggregation`:
 - Es decir: Solo hay 1 `ACK`, que se llama `Block ACK` para responder a, por ejemplo, 64 frames juntos que generan un `block` (bloque) de frames.
 
 ![image](https://user-images.githubusercontent.com/94720207/225181794-df541475-46ed-42ef-8a6d-ff5786bebc6d.png)
+
+- En caso de error **`solo se retransmite 1 frame... _(1 subframe MPDU con su propia MAC y PHY header)_`**
+- De hecho una gran ventaja, es que ese `1 subrame MPDU` puede viajar en el siguiente `A-MPDU` en alguno de los "espacios del camión". 
+
+![image](https://user-images.githubusercontent.com/94720207/225212751-1052128c-8168-46a6-8349-afc217404377.png)
 
 En el proceso de A-MPDU Aggregation, varios paquetes de datos que se dirigen al mismo destinatario se agrupan en un solo paquete, lo que se conoce como una "unidad de datos de protocolo de agregación" `A-MPDU`. Este paquete más grande se divide en varias subunidades de datos `MPDUs`, cada una de las cuales se transmite en una trama de radio separada. <br>
 
