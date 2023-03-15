@@ -950,6 +950,12 @@ Existen `3` tipos de `Aggregation`:
 
 ![image](https://user-images.githubusercontent.com/94720207/224578454-86728faa-a9ee-4b1b-8a2e-27c6f82e7610.png)
 
+- En caso de error **`solo se retransmite 1 frame`**
+- Cada frame contiene dentro un `MSDU`
+- Cada frame contiene sus respectivos headers como `MAC`, `PHY` y `ACK`
+
+![image](https://user-images.githubusercontent.com/94720207/225209145-b5b3654d-5422-47fa-bd02-331c57f3ebd8.png)
+
 #### `A-MPDU Aggregation`
 
 - Este tipo de `aggregation` es **el más `común`.**
