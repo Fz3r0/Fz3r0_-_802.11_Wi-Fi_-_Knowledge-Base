@@ -13,13 +13,17 @@ Y ARRANCAN!!!
 _Writeup y bitácora para la certificación **CWAP-402** de **CWNP (Certified Wireless Network Professional)**_ <br>
 _por @ **Fz3r0 💀** (CWNA)_
 
-## Introducción
+## 🟢 `Introducción`
 
 **`CWAP (Certified Wireless Analysis Professional)`** es una certificación ofrecida por **`CWNP (Certified Wireless Network Professional)`** que se centra en el **`análisis avanzado de redes inalámbricas`**. Los profesionales que buscan obtener la certificación CWAP deben demostrar un amplio conocimiento de los principios y técnicas de análisis de redes inalámbricas, protocolos, así como habilidades para resolver problemas complejos y mejorar el rendimiento de redes inalámbricas existentes.
 
 Los temas abordados en la certificación `CWAP` incluyen la **captura y análisis de tráfico inalámbrico, la identificación y solución de problemas de cobertura y rendimiento, el análisis de interferencias y la aplicación de soluciones de seguridad inalámbrica**. A través de la certificación CWAP, los profesionales pueden demostrar su experiencia en la gestión y optimización de redes inalámbricas avanzadas y su capacidad para abordar los desafíos de análisis y resolución de problemas en entornos de red inalámbrica complejos. <br>
 
-En este writeup que he realizado, abordaré el camino hacia la certificación `CWAP`, cubriendo todos los temas incluidos en el plan de estudios oficial de CWNP. Además, profundizaré en temas que no se abordan en detalle en la documentación oficial, brindando una comprensión completa de los desafíos y soluciones en el análisis avanzado de redes inalámbricas.
+En este writeup que he realizado, abordaré el camino hacia la certificación `CWAP`, cubriendo todos los temas incluidos en el plan de estudios oficial de CWNP. Además, profundizaré en temas que no se abordan en detalle en la documentación oficial, brindando una comprensión completa de los desafíos y soluciones en el análisis avanzado de redes inalámbricas. <br>
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/225448792-f8d6c4bc-4cc1-4fd4-8557-d809f55cf7ee.png" alt="CWAP" height=150px/> </a>   </p> 
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/225448937-f621ea2e-d0cd-4e6c-9570-b38a6c94d194.png" alt="CWAP" height=60px/> </a>   </p> 
 
 ---
 
@@ -29,28 +33,28 @@ En este writeup que he realizado, abordaré el camino hacia la certificación `C
 
 **Además, se recomienda tener una serie de conocimientos previos y certificaciones que pueden ser de gran ayuda para el candidato, tales como:**
 
-#### 1. `Routing & Switching` (ej. `Cisco: CCNA`, `Comptia Network+`)
+#### 1. ✅ `Routing & Switching` (ej. `Cisco: CCNA`, `Comptia Network+`)
 
 - Poniendo de ejemplo el `Cisco CCNA` ya que este valida los conocimientos y habilidades necesarios para instalar, configurar, operar y solucionar problemas en redes de área local (LAN) y de área amplia (WAN) utilizando dispositivos de red Cisco (routers & switches). 
 - CCNA también cubre los fundamentos de 802.11 Wireless WiFi
 
-#### 2. `Network Protocols`
+#### 2. ✅ `Network Protocols`
 
 - Un protocolo de red es un conjunto de reglas y estándares que permiten que los dispositivos de red se comuniquen entre sí y compartan información en una red de computadoras.
 - Es importante destacar que los protocolos de red son necesarios tanto para redes alámbricas como inalámbricas, ya que permiten la transmisión de datos a través de diferentes medios de comunicación, incluyendo cableado de cobre, fibra óptica y ondas de radio.
 - Nuevamente, certificaciones como CCNA o Network+ cubren perfectamente este tema
 
-#### 3. `Wireless` = `CWNP: CWNA`
+#### 3. ✅ `Wireless` = `CWNP: CWNA`
 
 - Es necesario contar con la certificación CWNA, ya que esta certificación es la base fundamental para comprender el protocolo de redes inalámbricas y es obligatoria para presentar el CWAP.
 - Es importante tener un conocimiento profundo sobre las tecnologías inalámbricas, incluyendo los diferentes estándares de redes inalámbricas, protocolos de seguridad, administración de redes inalámbricas, entre otros.
 
-#### 4. `Network Security` (ej. `Offensive Security: OSCP`, `Comptia: Security+`)
+#### 4. ✅ `Network Security` (ej. `Offensive Security: OSCP`, `Comptia: Security+`)
 
 - Es importante tener conocimientos sólidos sobre seguridad en redes inalámbricas, incluyendo el uso de VPNs, autenticación y autorización de usuarios, cifrado de datos, entre otros. 
 - En este caso, la certificación Security+ de CompTIA puede ser de gran ayuda, aunque también hay una gran gama que se pueden seleccionar, además que son temas también abordados durante el `CWNA`.
 
-#### 5. `Protocol Analysis` (ej. `Wireshark`, `TCP Dump`)
+#### 5. ✅ `Protocol Analysis` (ej. `Wireshark`, `TCP Dump`)
 
 - Wireshark es una herramienta de análisis de tráfico de red gratuita y de código abierto que permite capturar y examinar el tráfico de red en tiempo real. Con Wireshark, es posible analizar el tráfico de redes cableadas e inalámbricas para solucionar problemas y detectar fallos de seguridad.
 - También existen otros tipos de analizadores de protocolos, pero este writeup se centrará en `Wireshark` y en específico mi porpia modificación y perfil llamado `The BlackShark`
