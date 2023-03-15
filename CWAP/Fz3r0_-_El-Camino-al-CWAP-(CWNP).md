@@ -9,9 +9,9 @@ Y ARRANCAN!!!
 
  -->
 
-# El camino a la cima del `CWAP-402`: <br> `Certified Wireless Analysis Professional` 📡🔍🦈  
-_Writeup para la certificación **CWAP-402** de **CWNP (Certified Wireless Network Professional)**_ <br>
-_por @ **Fz3r0** 💀 (CWNA)_
+# Hacia la cima del `CWAP-402`: <br> `Certified Wireless Analysis Professional` 📡💊🔍🦈  
+_Writeup y bitácora para la certificación **CWAP-402** de **CWNP (Certified Wireless Network Professional)**_ <br>
+_por @ **Fz3r0 💀** (CWNA) | Hecho en México_
 
 ## Introducción
 
@@ -89,20 +89,23 @@ Los escaladores que se aventuran en esta ruta ponen sus vidas en juego con cada 
 
 El Bottleneck es una sección crítica en la ruta Abruzzi del K2, esta zona es un corredor estrecho de hielo y roca que se encuentra a una altitud de casi 8.000 metros. Es un lugar donde el aire es escaso y el peligro es constante, lo que la convierte en un desafío extremadamente difícil para los escaladores que intentan llegar a la cima. <br>
 
-Los escaladores se enfrentan a una pared de hielo y roca que parece insuperable y una locura tan solo intentarlo... la estrechez del camino aumenta el riesgo de accidentes. La zona es extremadamente peligrosa y requiere una gran habilidad técnica y resistencia física. Los alpinistas deben estar completamente preparados tanto física como mentalmente para enfrentar este desafío. <br>
+Para tener éxito en el Bottleneck, se necesita más que solo coraje y determinación. Se requiere un conocimiento experto en la técnica, un entrenamiento riguroso en las condiciones más extremas y una habilidad sobrehumana para mantener la calma y el enfoque en medio del caos. <br>
 
-Una vez que los escaladores superan el Bottleneck, aún enfrentan un peligroso obstáculo: la `Serac`. Esta masa de hielo peligrosamente colgante es una de las mayores amenazas para los escaladores en el K2, ya que puede desplomarse en cualquier momento, sin previo aviso, y arrastrar a los escaladores consigo. La Serac es una prueba de la fragilidad de la vida en la montaña y de la importancia de estar siempre alerta y preparado para cualquier eventualidad.
+Los expedicionarios deben ser capaces de navegar con habilidad en terrenos empinados, sobre hielo y roca, y de escalar con seguridad en condiciones extremadamente peligrosas. Deben estar preparados para enfrentar el clima adverso, la falta de oxígeno y la incertidumbre constante.
 
-A pesar de los peligros y desafíos que enfrentan los escaladores en el K2, superar el Bottleneck y la Serac en la ruta Abruzzi es un logro heroico que demuestra la capacidad humana de superar cualquier obstáculo. Es una muestra de valentía, perseverancia y dedicación en la búsqueda de un objetivo mayor. Los alpinistas que alcanzan la cima del K2 después de pasar por estas zonas peligrosas pueden considerarse verdaderos héroes, capaces de enfrentar los mayores desafíos y triunfar sobre ellos.
+En la cima del Bottleneck se encuentra su majestuosa Serac, es ahí donde se pone a prueba todo lo que los escaladores han aprendido y entrenado. La serac es un monstruo gigante de hielo, amenazando con hacer trizas a cualquiera que se cruce en su camino. Solo aquellos con la más alta técnica y habilidad pueden escalar con éxito a través de ella. Se dice que es en el Bottleneck donde tu vida deja de estar en tus manos.
+
+Al lograr pasar la Serarc, el camino a la cima son tan solo unos cortos pasos...
 
 ### `Cima del K2` = `Certifcación como Ingeniero CWAP-404`
 
+Al superar los todos los obstáculos, solo hay que dar unos pasos más hacia la cima y disfrutar la de vista de los Himalaya, para después seguir con el siguiente reto...
+
 La `ruta Abruzzi del K2` es un camino lleno de peligros y desafíos que ponen a prueba la resistencia física y mental de los alpinistas. Desde el `base camp` hasta la `cima del K2`, la ruta está plagada de peligros mortales. A pesar de esto, aquellos que logran completar la ruta pueden considerarse verdaderos héroes, capaces de enfrentar lo inimaginable y triunfar sobre él. <br> 
 
-**La hazaña de superar la ruta completa del K2 es una demostración de la fuerza y la determinación humana y un recordatorio de que, con suficiente dedicación y perseverancia, no hay nada que el ser humano no pueda superar.**
+**La hazaña de superar la ruta completa del K2 es una demostración de la fuerza y la determinación humana y un recordatorio de que, con suficiente dedicación y perseverancia, no hay nada que el ser humano no pueda superar.** <br> 
 
-
-- "K2, avanzar a morir"
+ _"K2, avanzar a morir!"_
 
 ## Conocimiento Requerido para `CWAP-402`
 
@@ -907,6 +910,7 @@ Es importante tener en cuenta que el `bandwith asignado` por el ISP puede variar
 
 - [`802.11 Aggregation` - Friend or Foe? | Wes Purvis](https://www.youtube.com/watch?v=3jqYwFQSqnE)
 - [`Aggregation in WiFi`](https://www.youtube.com/watch?v=RvLVDi41lKQ)
+- [`Aggregation`](https://www.youtube.com/watch?v=kT5KS1-2ZQE)
 
 Para que `802.11n` o `802.11ac` puedan obtener mayor `throughput` existen 4 maneras posibles:
 
@@ -919,12 +923,12 @@ Para que `802.11n` o `802.11ac` puedan obtener mayor `throughput` existen 4 mane
 
 ### La analogía de la carretera, los coches y el camión
 
-**¿Por qué "agregar"?... Why aggregate?**
+**¿Por qué "agregar"?** Es el mismo beneficio que brinda esa típica foto del camión VS muchos coches en una autopista, donde al mismo tiempo ambas solcuiones tienen la misma capacidad para transportar exactamente a la misma cantidad de gente... <br>
 
-- Es lo mismo que la típica foto del camión y el coche en una autopista, donde al mismo tiempo ambas solcuiones tienen la misma capacidad para transportar exactamente a la misma cantidad de gente. 
-- Sin embargo, **al hacerlo en coches la autopista se satura lo que casua problemas como más tráfico, lentitud y más consumo de rescursos. En cambio, `"agregar" a todas esas personas en un solo camión, hace que el tráfico y la velocidad sean más eficientes`**  
-- Los coches representan el `overhead` (`headers`, `footers`, `QoS`, `management`, `control`, etc, etc...) ya que es tráfico de diferentes personas que no se conocen y viajan en diferentes coches. 
-- **Pero, si estas personas aunque no se conocen se pusieran de acuerdo, pudieran viajar todos de manera más eficiente en el mismo camión.** 
+Sin embargo, **al hacerlo en coches la autopista se satura lo que casua problemas como más tráfico, lentitud y más consumo de rescursos. En cambio, `"agregar" a todas esas personas en un solo camión, hace que el tráfico y la velocidad sean más eficientes`** <br> 
+
+- Los coches representan el `overhead` (`headers`, `footers`, `QoS`, `management`, `control`, etc, etc...) ya que es tráfico de diferentes personas que no se conocen y viajan en diferentes coches (la clásica segmentación en frames que contienen un payload, es decir, como tradicionalmente es la transferencia de datos en una red). 
+- **Pero... si estas personas se pusieran de acuerdo, podrían viajar todos de manera más `eficiente` en el mismo camión, siempre y cuando todos vengan del mismo `origen` y vayan al mismo `destino`.** 
 
 ![image](https://user-images.githubusercontent.com/94720207/224576564-19103768-81c5-4a1d-8b85-551d97eaf703.png)
 
@@ -934,9 +938,9 @@ Para que `802.11n` o `802.11ac` puedan obtener mayor `throughput` existen 4 mane
 
 Existen `3` tipos de `Aggregation`:
 
-
-2. `A-MPDU Aggregation`
-3. `A-MSDU Aggregation`
+1. `A-MPDU Aggregation`
+2. `A-MSDU Aggregation`
+3. `A-MPDU and A-MSDU Aggregation`
 
 #### `No aggregation`
 
@@ -956,19 +960,41 @@ Existen `3` tipos de `Aggregation`:
 
 ![image](https://user-images.githubusercontent.com/94720207/225181794-df541475-46ed-42ef-8a6d-ff5786bebc6d.png)
 
+En el proceso de A-MPDU Aggregation, varios paquetes de datos que se dirigen al mismo destinatario se agrupan en un solo paquete, lo que se conoce como una "unidad de datos de protocolo de agregación" `A-MPDU`. Este paquete más grande se divide en varias subunidades de datos `MPDUs`, cada una de las cuales se transmite en una trama de radio separada. <br>
+
+En la recepción, el destinatario reensambla los paquetes originales a partir de las subunidades de datos recibidas. Este proceso de agrupación y desagrupación de paquetes es manejado por la capa MAC del sistema de comunicaciones inalámbricas.
+
 #### `A-MSDU Aggregation`
 
 - Este tipo de `aggregation` es **el más `eficiente`.**
 - Tiene los mayores pros... Pero, también es el que tiene los mayores contras.
-- Son basicamente frames largos en el aire, por ejemplo un `MSDU de 500 bytes`, esto se convertiría ya con su overhead a un frame de casi `600 bytes` en el aire. 
-- `600 bytes` en el aire, claro! está perfecto!... cuando funciona...
+- Son basicamente frames largos en el aire, por ejemplo, pueden contener muchos `MSDU de 500 bytes`, combinados y con overheads adicionales podría repretentar `6000 bytes en el aire`
+- `6000 bytes` en el aire, ¡claro, está perfecto! 😀... cuando funciona 😑... ¡¿Imagina retransmitir 6000 bytes siempre que exista un error 😧?! Hay que recordar que las retransmisiones en WiFi son comunes a cierta escala.
 
 ![image](https://user-images.githubusercontent.com/94720207/225184155-30cf5564-2664-453f-8128-9dc2612d3118.png)
 
+A diferencia de A-MPDU Aggregation, que agrupa múltiples MPDUs en un solo paquete... A-MSDU Aggregation **combina múltiples MSDUs (unidades de servicio de datos de capa superior) en un solo paquete más grande**, lo que mejora aún más la eficiencia de la transmisión inalámbrica. <br>
 
-#### `A-MPDU of and A-MSDU Aggregation`
+En el proceso de A-MSDU Aggregation, varios paquetes de nivel superior, que pueden ser fragmentados en múltiples MPDUs, se agrupan en un solo paquete A-MSDU. Este paquete más grande se divide en varias subunidades de datos (MPDUs), cada una de las cuales se transmite en una trama de radio separada. <br>
+
+En general, la elección de utilizar A-MPDU Aggregation o A-MSDU Aggregation dependerá de las características específicas de la aplicación y de los requisitos de transmisión de datos. Por ejemplo, en aplicaciones con cargas de datos más pesadas, A-MSDU Aggregation puede ser más eficiente, mientras que en aplicaciones con cargas de datos más ligeras, A-MPDU Aggregation puede ser más adecuado.
+
+#### `A-MPDU and A-MSDU Aggregation`
 
 - Este tipo de `aggregation` **combina lo mejor de `ambos anteriores`.**
+- Continúan siendo frames largos en el aire, pero en caso de existir un error no se generaría una retransmisión tan larga debido a los `MPDU delimiter` que genera dividir los `MSDUs` en `MPDUs`.
+
+![image](https://user-images.githubusercontent.com/94720207/225208271-123232c2-11fb-4c6f-b4d4-f14d7086524a.png)
+
+
+
+En esta técnica, se agrupan múltiples MSDUs en un solo paquete A-MSDU y, a su vez, se agrupan múltiples paquetes A-MSDU en un solo paquete A-MPDU. Este paquete A-MPDU más grande se divide en varias subunidades de datos (MPDUs), cada una de las cuales se transmite en una trama de radio separada. <br>
+
+La combinación de A-MPDU y A-MSDU Aggregation tiene como objetivo mejorar aún más la eficiencia de la transmisión inalámbrica al aprovechar los beneficios de ambas técnicas de agregación de paquetes. Al agrupar múltiples MSDUs en un paquete A-MSDU, se reduce la sobrecarga de la capa MAC y se disminuye la cantidad de tiempo de transmisión necesario para transmitir un conjunto de paquetes. Luego, al agrupar varios paquetes A-MSDU en un paquete A-MPDU, se reduce aún más la sobrecarga de la capa MAC y se mejora la eficiencia de la transmisión inalámbrica.
+
+
+
+
 
 
 
