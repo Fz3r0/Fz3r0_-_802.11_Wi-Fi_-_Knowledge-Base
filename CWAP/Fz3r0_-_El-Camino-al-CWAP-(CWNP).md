@@ -914,7 +914,7 @@ Es importante tener en cuenta que el `bandwith asignado` por el ISP puede variar
 
 
 
-## `802.11 Aggregation` / `Frame Aggregation`
+## 🟢 `802.11 Aggregation` / `Frame Aggregation`
 
 - [`802.11 Aggregation` - Friend or Foe? | Wes Purvis](https://www.youtube.com/watch?v=3jqYwFQSqnE)
 - [`Aggregation in WiFi`](https://www.youtube.com/watch?v=RvLVDi41lKQ)
@@ -929,7 +929,9 @@ Para que `802.11n` o `802.11ac` puedan obtener mayor `throughput` existen 4 mane
 
 ![image](https://user-images.githubusercontent.com/94720207/224576441-f3589df1-50b1-4c49-bd6d-10325994564b.png)
 
-### La analogía de la carretera, los coches y el camión
+---
+
+### 🟣 La analogía de la carretera, los coches y el camión
 
 **¿Por qué "agregar"?** Es el mismo beneficio que brinda esa típica foto del camión VS muchos coches en una autopista, donde al mismo tiempo ambas solcuiones tienen la misma capacidad para transportar exactamente a la misma cantidad de gente... <br>
 
@@ -942,7 +944,9 @@ Sin embargo, **al hacerlo en coches la autopista se satura lo que casua problema
 
 **Esto es lo que realmente hace el `Frame Aggregation`, reduce de gran manera el `overhead` y hace que el `WiFi` sea mucho más eficiente.**
 
-### Tipos de `Frame Aggregation`
+---
+
+### 🟣 Tipos de `Frame Aggregation`
 
 A continuación se explican a detalle los `3` tipos de `Aggregation`:
 
@@ -952,7 +956,7 @@ A continuación se explican a detalle los `3` tipos de `Aggregation`:
 
 ---
 
-### `No aggregation`
+### ⭕ `No aggregation`
 
 - Este es un frame normal, sin `aggegation`.
 - Tiene un `un PHY header`, `un MAC header`, `un MSDU`,... y **existe un ``ACK` (Acknowledgement) para cada uno de esos frames.**
@@ -960,7 +964,7 @@ A continuación se explican a detalle los `3` tipos de `Aggregation`:
 
 ![image](https://user-images.githubusercontent.com/94720207/224578454-86728faa-a9ee-4b1b-8a2e-27c6f82e7610.png)
 
-#### `Escenario de Falla` : `No aggregation`
+#### 💥 `Escenario de Falla` : `No aggregation`
 
 - En caso de error **`solo se retransmite 1 frame`**
 - Cada frame contiene dentro un `MSDU`
@@ -970,7 +974,7 @@ A continuación se explican a detalle los `3` tipos de `Aggregation`:
 
 ---
 
-### `A-MPDU Aggregation`
+### ⭕ `A-MPDU Aggregation`
 
 - Este tipo de `aggregation` es **el más `común`.**
 - Proporciona una enorme cantidad de incremento en el `throughput`.
@@ -980,7 +984,7 @@ A continuación se explican a detalle los `3` tipos de `Aggregation`:
 
 ![image](https://user-images.githubusercontent.com/94720207/225181794-df541475-46ed-42ef-8a6d-ff5786bebc6d.png)
 
-#### `Escenario de Falla` : `A-MPDU`
+#### 💥 `Escenario de Falla` : `A-MPDU`
 
 - En caso de error **`solo se retransmite 1 frame... (1 subframe MPDU con su propia MAC y PHY header)`**
 - De hecho una gran ventaja, es que ese `1 subrame MPDU` puede viajar en el siguiente `A-MPDU` en alguno de los "espacios del camión". 
@@ -993,7 +997,7 @@ En la recepción, el destinatario reensambla los paquetes originales a partir de
 
 ---
 
-### `A-MSDU Aggregation`
+### ⭕ `A-MSDU Aggregation`
 
 - Este tipo de `aggregation` es **el más `eficiente`.**
 - Tiene los mayores pros... Pero, también es el que tiene los mayores contras.
@@ -1002,7 +1006,7 @@ En la recepción, el destinatario reensambla los paquetes originales a partir de
 
 ![image](https://user-images.githubusercontent.com/94720207/225184155-30cf5564-2664-453f-8128-9dc2612d3118.png)
 
-#### `Escenario de Falla` : `A-MSDU`
+#### 💥 `Escenario de Falla` : `A-MSDU`
 
 - En caso de error **`se retransmite 1 frame largo... (el frame es igual a tooodo el A-MSDU) `**
 - Por ejemplo, si la suma de todos los `MSDU` que van dentro del `A-MSDU` son `6000 bytes`, entonces se retransmiten TODOS los `6000 bytes`
@@ -1018,19 +1022,48 @@ En general, la elección de utilizar A-MPDU Aggregation o A-MSDU Aggregation dep
 
 ---
 
-### `A-MPDU and A-MSDU Aggregation`
+### ⭕ `A-MPDU of an A-MSDU Aggregation`
 
 - Este tipo de `aggregation` **combina lo mejor de `ambos anteriores`.**
 - Continúan siendo frames largos en el aire, pero en caso de existir un error no se generaría una retransmisión tan larga debido a los `MPDU delimiter` que genera dividir los `MSDUs` en `MPDUs`.
 
 ![image](https://user-images.githubusercontent.com/94720207/225208271-123232c2-11fb-4c6f-b4d4-f14d7086524a.png)
 
-#### `Escenario de Falla` : `A-MPDU and A-MSDU Aggregation`
+#### 💥 `Escenario de Falla` : `A-MPDU and A-MSDU Aggregation`
 
+- En caso de error **`se retransmite 1 frame mediano... (el frame es igual al MPDU que se debe retransmitir) `**
+- En este ejemplo, sólo se retransmitiría la mitad de todo el `A-MPDU + A-MSDU`, esto debido al delimitados del `MPDU`
+- Esto lo hace más eficiente que el `A-MSDU`, pero sin tanto problema por las grandes retransmisiones. 
+
+![image](https://user-images.githubusercontent.com/94720207/225468575-45fcf166-3ea8-40ea-9fac-c1ac537c3213.png)
 
 En esta técnica, se agrupan múltiples MSDUs en un solo paquete A-MSDU y, a su vez, se agrupan múltiples paquetes A-MSDU en un solo paquete A-MPDU. Este paquete A-MPDU más grande se divide en varias subunidades de datos (MPDUs), cada una de las cuales se transmite en una trama de radio separada. <br>
 
 La combinación de A-MPDU y A-MSDU Aggregation tiene como objetivo mejorar aún más la eficiencia de la transmisión inalámbrica al aprovechar los beneficios de ambas técnicas de agregación de paquetes. Al agrupar múltiples MSDUs en un paquete A-MSDU, se reduce la sobrecarga de la capa MAC y se disminuye la cantidad de tiempo de transmisión necesario para transmitir un conjunto de paquetes. Luego, al agrupar varios paquetes A-MSDU en un paquete A-MPDU, se reduce aún más la sobrecarga de la capa MAC y se mejora la eficiencia de la transmisión inalámbrica.
+
+---
+
+### 🟣 `Tráfico TCP` vs `Throughput` | `A-MPDU` + `802.11ac @ 80MHz`
+
+#### ⭕ `A-MPDU` : `Throughput`
+
+- Este ejemplo se hace con el `A-MPDU`, la `agregación más común`, usando `802.11ac @ 80 MHz`
+- Estos solo son unos cálculos muy optimistas para darnos una idea el Throughtput posible con esta combinación. 
+- Las lineas azules representan las medidas promedio y usuales
+- Cada linea de colores respresenta un `spatial stream` diferente `1x1`, `2x2`, `3x3`
+
+![image](https://user-images.githubusercontent.com/94720207/225475120-173be773-0ffe-4562-9795-aba74f64eeb0.png)
+
+#### ⭕ `A-MSDU` : `Throughput`
+
+- Este ejemplo se hace con el `A-MPDU`, la `agregación más eficiente, pero con contras de largas retransmisiones`, usando `802.11ac @ 80 MHz`
+- Estos solo son unos cálculos muy optimistas para darnos una idea el Throughtput posible con esta combinación. 
+- Las lineas azules representan las medidas promedio y usuales
+- Cada linea de colores respresenta un `spatial stream` diferente `1x1`, `2x2`, `3x3`
+
+![image](https://user-images.githubusercontent.com/94720207/225476948-fb7606ae-734c-4ed1-be85-8fc396e621ea.png)
+
+**Sin duda con A-MSDU se consigue un mucho mejor Throughput, el problema son esas largas retransmisiones... Es por eso que para utilizarlo lo mejor es combinar ambos tipos de `Aggregation` para lograr el tercero (fusión de ambos) = `A-MPDU of an A-MSDU Aggregation`.** <br>
 
 
 
