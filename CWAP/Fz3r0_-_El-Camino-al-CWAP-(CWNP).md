@@ -119,14 +119,18 @@ La `ruta Abruzzi del K2` es un camino lleno de peligros y desafíos que ponen a 
 
 - El examen está dividido de la siguiente manera:
 
-| **Conocimiento CWAP**         | **Porcentaje** |
-|-------------------------------|:--------------:|
-| Protocol Analysis             | 15%            |
-| Spectrum Analysus             | 10%            |
-| PHY Layers & Technologies     | 10%            |
-| MAC Sublayers & Functions     | 25%            |
-| WLAN Medium Access            | 10%            |
-| 802.11 Frame Exchanges        | 30%            |
+<div align="center">
+  
+| **Conocimiento CWAP**        | **Porcentaje** |
+|------------------------------|:--------------:|
+| Protocol Analysis            | 15%            |
+| Spectrum Analysis            | 10%            |
+| PHY Layers & Technologies    | 10%            |
+| MAC Sublayers & Functions    | 25%            |
+| WLAN Medium Access           | 10%            |
+| 802.11 Frame Exchanges       | 30%            |
+
+</div>
 
 ## `CWAP`: Objetivos
 
