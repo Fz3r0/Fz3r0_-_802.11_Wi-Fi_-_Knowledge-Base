@@ -13,17 +13,31 @@ Y ARRANCAN!!!
 _Writeup y bitácora para la certificación **CWAP-402** de **CWNP (Certified Wireless Network Professional)**_ <br>
 _por @ **Fz3r0 💀** (CWNA)_
 
+<div align="center">
+
+## 🗂️ `ÍNDICE` 🗂️
+
+</div> 
+ 
+### [🟢 `Introducción`]()
+- [🚨 Importante]()
+
+### [🏔️ `La analogía del CWAP y una expedición al K2`]() 
+- [🟣 Bottleneck & Serarc = Examen CWAP-404 @ Pearson Veu]()
+- [🟣 Cima del K2 = Certifcación como Ingeniero CWAP-404]()
+
+### [🟢 `Introducción`]()
+- [🚨 Importante]()
+
 ## 🟢 `Introducción`
 
 **`CWAP (Certified Wireless Analysis Professional)`** es una certificación ofrecida por **`CWNP (Certified Wireless Network Professional)`** que se centra en el **`análisis avanzado de redes inalámbricas`**. Los profesionales que buscan obtener la certificación CWAP deben demostrar un amplio conocimiento de los principios y técnicas de análisis de redes inalámbricas, protocolos, así como habilidades para resolver problemas complejos y mejorar el rendimiento de redes inalámbricas existentes.
 
 Los temas abordados en la certificación `CWAP` incluyen la **captura y análisis de tráfico inalámbrico, la identificación y solución de problemas de cobertura y rendimiento, el análisis de interferencias y la aplicación de soluciones de seguridad inalámbrica**. A través de la certificación CWAP, los profesionales pueden demostrar su experiencia en la gestión y optimización de redes inalámbricas avanzadas y su capacidad para abordar los desafíos de análisis y resolución de problemas en entornos de red inalámbrica complejos. <br>
 
-En este writeup que he realizado, abordaré el camino hacia la certificación `CWAP`, cubriendo todos los temas incluidos en el plan de estudios oficial de CWNP. Además, profundizaré en temas que no se abordan en detalle en la documentación oficial, brindando una comprensión completa de los desafíos y soluciones en el análisis avanzado de redes inalámbricas. <br>
+En este writeup que he realizado, abordaré el camino hacia la certificación `CWAP`, cubriendo todos los temas incluidos en el plan de estudios oficial de CWNP. Además, profundizaré en temas que no se abordan en detalle en la documentación oficial, brindando una comprensión completa de los desafíos y soluciones en el análisis avanzado de redes inalámbricas. <br><br>
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/225448792-f8d6c4bc-4cc1-4fd4-8557-d809f55cf7ee.png" alt="CWAP" height=150px/> </a>   </p> 
-
-<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/225448937-f621ea2e-d0cd-4e6c-9570-b38a6c94d194.png" alt="CWAP" height=60px/> </a>   </p> 
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/225515551-3de68463-c5b1-4573-8a22-bfa77fd7e834.png" alt="CWAP" height=165px/> </a>   </p> 
 
 ---
 
@@ -73,7 +87,7 @@ En este writeup que he realizado, abordaré el camino hacia la certificación `C
 
 
 
-## La analogía del `CWAP` y una expedición al `K2` 🏔️🧗 
+## 🏔️ La analogía del `CWAP` y una expedición al `K2` 
 
 **La manera en la que he ajustado mi mente y motivación para estudiar esta certificación y documentar en este repositorio el conocimiento requerido en español, fue imaginarlo como escalar el K2 por la ruta Abruzzi o `K2 Abruzzi Spur`**
 
@@ -91,7 +105,7 @@ Los escaladores que se aventuran en esta ruta ponen sus vidas en juego con cada 
 
 ---
 
-### `Bottleneck` & `Serarc` = Examen CWAP-404 @ Pearson Veu
+### 🟣 `Bottleneck` & `Serarc` = Examen CWAP-404 @ Pearson Veu
 
 El Bottleneck es una sección crítica en la ruta Abruzzi del K2, esta zona es un corredor estrecho de hielo y roca que se encuentra a una altitud de casi 8.000 metros. Es un lugar donde el aire es escaso y el peligro es constante, lo que la convierte en un desafío extremadamente difícil para los escaladores que intentan llegar a la cima. <br>
 
@@ -105,7 +119,7 @@ En la cima del Bottleneck se encuentra su majestuosa Serac, es ahí donde se pon
 
 Al lograr pasar la Serarc, el camino a la cima son tan solo unos cortos pasosa los cuales le llaman `traverse` "el último empuje"...
 
-### `Cima del K2` = `Certifcación como Ingeniero CWAP-404`
+### 🟣 `Cima del K2` = `Certifcación como Ingeniero CWAP-404`
 
 Al superar los todos los obstáculos, solo hay que dar unos pasos más hacia la cima y disfrutar la de vista de los Himalaya, para después seguir con el siguiente reto...
 
@@ -115,7 +129,7 @@ La `ruta Abruzzi del K2` es un camino lleno de peligros y desafíos que ponen a 
 
  _"K2, avanzar a morir!"_
 
-## Conocimiento Requerido para `CWAP-402`
+## 🟢 Conocimiento Requerido para `CWAP-402`
 
 - El examen está dividido de la siguiente manera:
 
