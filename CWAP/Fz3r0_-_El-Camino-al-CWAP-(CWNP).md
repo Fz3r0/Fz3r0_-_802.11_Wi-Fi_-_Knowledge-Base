@@ -1079,6 +1079,11 @@ La combinación de A-MPDU y A-MSDU Aggregation tiene como objetivo mejorar aún 
 
 ![image](https://user-images.githubusercontent.com/94720207/225499979-157c6084-9440-4595-b8ea-0131634b2b28.png)
 
+- En el ejemplo anterior se utilizaron `2 A-MSDU` dentro de `1 A-MPDU` (como la mayoría de vendors utilizan)
+- Pero ¿Qué pasaría si metiéramos `8 A-MSDU` dentro de `1 A-MDPU`?
+- Tendríamos `1 A-MDPU`, es decir `1 frame`, totalmente impráctico y gigantesco... pero divertido para experimentar!!! 🧪
+
+![image](https://user-images.githubusercontent.com/94720207/225503072-d0624a4b-a1fe-477a-90d2-9c0d03183aaa.png)
 
 
 
