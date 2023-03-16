@@ -1067,6 +1067,19 @@ La combinación de A-MPDU y A-MSDU Aggregation tiene como objetivo mejorar aún 
 
 **Ahora sabemos que: `Existe un gran beneficio de hacer "A-MPDU Aggregation", además, existé un significativamente gran beneficio de utilizar "A-MPDU of an A-MSDU Aggregation"`** <br>
 
+---
+
+### 🦈 Estructura de `A-MPDU` @ `Wireshark`
+
+- Se puede saber que es un `A-MPDU` cuando se ven un grupo de `data frames` apilados uno encima del otro.
+- Comienza con un `RTS`(Ready-To-Send) para avisar que enviará `frames` al aire.
+- Al final se podrá encontrar el `Block ACK`.
+- El `RSSI` solo se puede encontrar en el `último frame`
+- En este ejemplo, debido al `lenght` de `3104` se puede saber que se trata de `2 A-MSDU` dentro de `1 A-MPDU`
+
+![image](https://user-images.githubusercontent.com/94720207/225499979-157c6084-9440-4595-b8ea-0131634b2b28.png)
+
+
 
 
 
