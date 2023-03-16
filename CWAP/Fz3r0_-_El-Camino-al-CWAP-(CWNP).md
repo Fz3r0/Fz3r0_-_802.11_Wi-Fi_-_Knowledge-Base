@@ -1069,7 +1069,7 @@ La combinación de A-MPDU y A-MSDU Aggregation tiene como objetivo mejorar aún 
 
 ---
 
-### 🦈 Estructura de `A-MPDU` @ `Wireshark`
+### 🦈 Estructura de `A-MSDU in a A-MPDU` @ `Wireshark`
 
 - Se puede saber que es un `A-MPDU` cuando se ven un grupo de `data frames` apilados uno encima del otro.
 - Comienza con un `RTS`(Ready-To-Send) para avisar que enviará `frames` al aire.
@@ -1085,6 +1085,60 @@ La combinación de A-MPDU y A-MSDU Aggregation tiene como objetivo mejorar aún 
 
 ![image](https://user-images.githubusercontent.com/94720207/225503072-d0624a4b-a1fe-477a-90d2-9c0d03183aaa.png)
 
+
+
+
+
+
+
+
+
+
+
+
+## 🟢 `Industry Troubleshooting Methods`
+
+Los métodos de `troubleshooting` en `redes inalámbricas` se refieren al **conjunto de pasos que se utilizan para `identificar y resolver problemas` en la `conectividad`, `rendimiento` y `seguridad` de las redes inalámbricas**. Estos métodos suelen incluir la identificación del problema, la recopilación de datos, el análisis de datos, las pruebas y la implementación de soluciones. <br>
+
+Cada vendor (proveedor) de equipos de redes inalámbricas puede tener sus propios métodos y pasos específicos para el troubleshooting de problemas. Esto se debe a que cada proveedor puede tener su propia tecnología y enfoque para la implementación de redes inalámbricas, lo que puede afectar la forma en que se resuelven los problemas. <br>
+
+Además, cada vendor puede tener diferentes herramientas y recursos de soporte disponibles para ayudar en el proceso de troubleshooting, lo que puede influir en los métodos y pasos que se utilizan. Por ejemplo, algunos vendors pueden tener herramientas de diagnóstico específicas para su hardware y software, mientras que otros pueden requerir herramientas de terceros. <br>
+
+### 🚨☢️ `Importante` ☢️🚨
+
+- **En el exámen `CWAP` no se pregunta por ningún método de troubleshooting específico de un vendor, sin embargo, se pregunta del `CWNP Troubleshooting Method` que abordaré más adelante**
+
+--- 
+
+### 🟣 `Cisco Troubleshooting Process`
+
+- [Cisco Troubleshooting Process](https://www.cisco.com/en/US/docs/internetworking/troubleshooting/guide/tr1901.html)
+
+El `Cisco Troubleshooting Process` es un marco de trabajo utilizado para identificar y resolver problemas en redes y tecnologías de `Cisco Networks`. Este proceso sigue `8 pasos` sistemáticos para garantizar que los problemas sean identificados de manera efectiva y resueltos de manera rápida.  <br>
+
+Los pasos del proceso son los siguientes:
+
+1. ⭕ `Definir el problema`: para analizar adecuadamente el problema, es necesario definirlo en términos de síntomas y posibles causas. Identifique los síntomas generales y determine qué tipos de problemas (causas) podrían provocar estos síntomas.
+
+2. ⭕ `Recopilar información`: recopile información de fuentes como sistemas de gestión de red, trazas de analizadores de protocolo, salida de comandos de diagnóstico de enrutadores o notas de lanzamiento de software. También debe hacer preguntas a los usuarios afectados, administradores de red, gerentes y otras personas clave.
+
+3. ⭕ `Considerar posibles problemas`: utilizando la información recopilada, elimine algunos de los posibles problemas de su lista. Trate de reducir el número de problemas potenciales para crear un plan de acción eficiente.
+
+4. ⭕ `Crear un plan de acción`: cree un plan de acción basado en los problemas potenciales restantes. Comience con el problema más probable y diseñe un plan en el que solo se manipule una variable a la vez.
+
+5. ⭕ `Implementar el plan de acción`: realice cada paso del plan con cuidado mientras prueba para ver si el síntoma desaparece.
+
+6. ⭕ `Recolectar resultados`: siempre que cambie una variable, asegúrese de recopilar resultados de la misma manera que lo hizo en el paso 2.
+
+7. ⭕ `Analizar los resultados`: analice los resultados para determinar si el problema ha sido resuelto. Si es así, el proceso ha terminado.
+
+8. ⭕ Si el problema no se ha resuelto, cree un nuevo plan de acción basado en el siguiente problema más probable en su lista. Regrese al paso 4, cambie una variable a la vez y repita el proceso hasta que se resuelva el problema.
+
+_Se puede obtener información más detallada de este método en el link que compartí al inicio._
+
+--- 
+
+### 🟣 `Cisco Troubleshooting Process`
 
 
 
