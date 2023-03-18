@@ -974,9 +974,9 @@ La diferencia es que la `PDU` de una capa, **especifica el conjunto de datos a e
 
 ![image](https://user-images.githubusercontent.com/94720207/226130762-5342bd37-d22e-4879-a3af-7920b06c4103.png)
 
+Cada layer cuenta con su propio `PDU` y `SDU` que lo identifica, por ejemplo el `MPDU` y `MSDU` que sirven a `layer 2 MAC`, lo mismo pasa con los `PPDU` y `PSDU` de `layer 1 PHY`: 
+
 ![image](https://user-images.githubusercontent.com/94720207/226131377-5e0059bf-31f0-42df-bacb-4220ded4cd11.png)
-
-
 
 #### 🪬 `PDU`
 
