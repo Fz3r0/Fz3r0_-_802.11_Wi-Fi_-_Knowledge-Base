@@ -938,6 +938,35 @@ Es importante tener en cuenta que el `bandwith asignado` por el ISP puede variar
 
 Para saber analizar los frames del tráfico de red, primero se deben conocer con conceptos como lo son `Encapsulation` y `Frame Aggregation`
 
+### 🟣 `Encapsulation`
+
+- Mientras los `datos` se mueven `de ARRIBA hacia ABAJO` en el modelo `OSI` los datos se `encapsulan` para su `delivery` (entrega).
+
+Cada `layer` del modelo OSI se puede conceptualizar **como si se comunicara con la capa del mismo nivel en la STA de destino.** 
+
+- Por ejemplo: La `network layer 4` del dispositivo de origen, se comunicará con la `network layer 4` del dispositivo de `destino`; así mismo con cada uno de los layers.
+
+Cada `layer` depende del `layer` que se encuentra debajo para poder proveer comunicación. 
+
+- Por ejemplo: Un `IP packet (layer 3)` destinado a `192.168.1.10` que fue enviado desde `192.168.1.11`, depende de la `Data Link (layer 2)` para comunicaciones basadas en `MAC Address`, a pesar que las `IP Addresses` se encuentren en la misma subnet. 
+- Después, la `Data Link (layer 2)` **encapsula** el `Network (layer 3) IP Packet` poniendo antes, mejor conocido como `prepending` un `frame header`, y poniendo después o `appending` un `FCS (Frame Check Sequence)` para detectar errores en la transmisión. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
