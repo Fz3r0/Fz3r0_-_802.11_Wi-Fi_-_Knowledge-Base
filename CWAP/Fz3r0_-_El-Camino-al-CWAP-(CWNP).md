@@ -991,26 +991,36 @@ Cada layer cuenta con su propio `PDU` y `SDU` que lo identifica, por ejemplo el 
 
 - Un `SDU (Service Data Unit)` es `toda la información` que **un nivel recibe del nivel superior para `procesarla y convertirla en su propio PDU`**. - Es decir, **es la información que se entrega `de un nivel superior a un nivel inferior`.**
 
-#### 🪬 `MSDU`
+#### 🪬 `MSDU` : `Layer 2: MAC`
 
 - Un `MSDU (MAC Service Data Unit)` simplemente equivale al `SDU` que se utiliza específicamente a nivel de `layer 2 - data link - MAC`.
 - Un MSDU se refiere a los datos que se entregan desde la capa de red al nivel de enlace de datos para su posterior procesamiento.
 
 En otras palabras, un MSDU es un conjunto de datos que se entrega **desde** la capa de red `layer 3 network` **hacia** la capa de enlace de datos `layer 2 - data link` para su posterior encapsulamiento en un `MPDU`.
 
-#### 🪬 `MPDU`
+#### 🪬 `MPDU` : `Layer 2: MAC`
 
-
-Un MPDU (MAC Protocol Data Unit) es una unidad de datos del protocolo de enlace de datos que se utiliza para la transmisión de datos entre nodos en una red de área local.
+- Un `MPDU (MAC Protocol Data Unit)` simplemente equivale al `PDU` que se utiliza específicamente a nivel de `layer 2 - data link - MAC`.
+- Un `MPDU` es una unidad de datos del protocolo de enlace de datos que se utiliza para la transmisión de datos entre nodos en una red de área local.
 Un MPDU consta de un encabezado y un cuerpo.
 El encabezado incluye información de control, como las direcciones de origen y destino, y el cuerpo contiene los datos que se transmitirán.
 En el nivel de enlace de datos, los MSDU se encapsulan en MPDU antes de ser transmitidos en la red.
 
-PSDU
+#### 🪬 `PSDU` : `Layer 1: PHY`
 
-PPDU
+Un PSDU (Physical Service Data Unit) es una unidad de datos de servicio físico que se utiliza en el nivel físico del modelo OSI.
+Es el conjunto de datos que se entregan desde la capa de enlace de datos al nivel físico para su posterior procesamiento y transmisión.
+La PSDU incluye tanto los datos que se transmitirán como los encabezados de la capa física necesarios para la transmisión.
 
+#### 🪬 `PPDU` : `Layer 1: PHY`
 
+Un PPDU (Physical Protocol Data Unit) es una unidad de datos de protocolo físico que se utiliza en el nivel físico del modelo OSI.
+Es la unidad de datos que se transmite físicamente en la red, y que incluye tanto los datos que se transmitirán como los encabezados de la capa física necesarios para la transmisión.
+La PPDU es el resultado de encapsular la PSDU en los encabezados de la capa física, y es lo que se transmite a través del medio físico de la red.
+
+#### 👹 `Fz3r0 Table` : `SDU` + `PDU` + `MSDU` + `MPDU` + `PSDU` + `PPDU`
+
+- En la siguiente tabla hice el modelo para que se comprenda más la encapsulación de los SDU y PDU, poniéndo mayor detalle en layer 1 y layer 2 que es la que más nos interesa para el CWAP. 
 
 | **Layer**     	| **OSI Layer**    	| **Sublayer**               	| **PDU**                       	| **PDU Name**           	| **SDU** 	 | **SDU Name**               	| **Technology**    	|
 |---------------	|------------------	|----------------------------	|-------------------------------	|------------------------	|----------	|----------------------------	|-------------------	|
