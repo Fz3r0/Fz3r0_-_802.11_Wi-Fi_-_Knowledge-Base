@@ -963,12 +963,25 @@ _La encapsulación es el proceso de "encerrar" la información de `layers` super
 
 ### ⭕ `SDU` & `PDU`
 
+[Unidad de datos de servicio `SDU`](https://es.wikipedia.org/wiki/Unidad_de_datos_de_servicio#Relaci%C3%B3n_con_la_PDU)
+
+- **`SDU` (Service Data Unit)**: Datos que se mantienen inalterados entre capas pares y se van transmitiendo en forma transparente a través de la red.
+- **`PDU` (Protocol Data Unit)**: UDS más la información de control (Header) de ese nivel. 
+
+La diferencia es que la `PDU` de una capa, **especifica el conjunto de datos a enviar al protocolo par ubicado en el receptor**, mientras que la `SDU` **es el conjunto de datos que proviene de la capa superior, aún no encapsulada**. 
+
+**Es decir, **el `SDU` de cada capa corresponderá a la porción de `datos (payload)` de la `PDU` de la misma capa. Se podría decir que el `SDU` es lo que va dentro de un `PDU`**
+
+![image](https://user-images.githubusercontent.com/94720207/226130762-5342bd37-d22e-4879-a3af-7920b06c4103.png)
+
+![image](https://user-images.githubusercontent.com/94720207/226131377-5e0059bf-31f0-42df-bacb-4220ded4cd11.png)
+
 
 
 #### 🪬 `PDU`
 
 - En el modelo OSI, un `PDU (Protocol Data Unit)` es una `unidad de información` que se usa en la **comunicación entre los diferentes niveles de la red**. 
-- **Cada nivel agrega su propio PDU y lo envía al siguiente nivel para que lo procese.**
+- **Cada nivel agrega su propio `PDU` y lo envía al siguiente nivel para que lo procese.**
 
 #### 🪬 `SDU`
 
