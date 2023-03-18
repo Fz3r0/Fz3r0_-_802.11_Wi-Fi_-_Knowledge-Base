@@ -52,7 +52,7 @@ En este writeup que he realizado, abordaré el camino hacia la certificación `C
 - Poniendo de ejemplo el `Cisco CCNA` ya que este valida los conocimientos y habilidades necesarios para instalar, configurar, operar y solucionar problemas en redes de área local (LAN) y de área amplia (WAN) utilizando dispositivos de red Cisco (routers & switches). 
 - CCNA también cubre los fundamentos de 802.11 Wireless WiFi
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/226084436-c5f11a9c-9e3b-49ce-82d1-cbf5e2696775.png" alt="CWAP" height=165px/> </a>   </p> 
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/226084436-c5f11a9c-9e3b-49ce-82d1-cbf5e2696775.png" alt="CWAP" height=160px/> </a>   </p> 
 
 
 #### 2. ✅ `Network Protocols`
@@ -66,12 +66,14 @@ En este writeup que he realizado, abordaré el camino hacia la certificación `C
 - Es necesario contar con la certificación CWNA, ya que esta certificación es la base fundamental para comprender el protocolo de redes inalámbricas y es obligatoria para presentar el CWAP.
 - Es importante tener un conocimiento profundo sobre las tecnologías inalámbricas, incluyendo los diferentes estándares de redes inalámbricas, protocolos de seguridad, administración de redes inalámbricas, entre otros. <br> <br>
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/226084303-f71e19bc-414e-42de-ac21-bfc130e1f2cd.png" alt="CWAP" height=165px/> </a>   </p> 
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/226084303-f71e19bc-414e-42de-ac21-bfc130e1f2cd.png" alt="CWAP" height=160px/> </a>   </p> 
 
 #### 4. ✅ `Network Security` (ej. `Offensive Security: OSCP`, `Comptia: Security+`)
 
 - Es importante tener conocimientos sólidos sobre seguridad en redes inalámbricas, incluyendo el uso de VPNs, autenticación y autorización de usuarios, cifrado de datos, entre otros. 
-- En este caso, la certificación Security+ de CompTIA puede ser de gran ayuda, aunque también hay una gran gama que se pueden seleccionar, además que son temas también abordados durante el `CWNA`.
+- En este caso, la certificación Security+ de CompTIA puede ser de gran ayuda, aunque también hay una gran gama que se pueden seleccionar, además que son temas también abordados durante el `CWNA`. <br>
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/226111039-0910d2b0-e838-4ce5-801e-3afdcc3b9a98.png" alt="CWAP" height=165px/> </a>   </p> 
 
 #### 5. ✅ `Protocol Analysis` (ej. `Wireshark`, `TCP Dump`)
 
