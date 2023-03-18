@@ -10,6 +10,8 @@ Y ARRANCAN!!!
  -->
 
 # Hacia la cima del `CWAP-402`: <br> `Certified Wireless Analysis Professional` 📡🔍🦈  
+
+![image](https://user-images.githubusercontent.com/94720207/226141680-289c202f-47d7-48d8-b61a-950372a58da0.png)
 _Writeup y bitácora para la certificación **CWAP-402** de **CWNP (Certified Wireless Network Professional)**_ <br>
 _por @ **Fz3r0 💀** (CWNA)_
 
