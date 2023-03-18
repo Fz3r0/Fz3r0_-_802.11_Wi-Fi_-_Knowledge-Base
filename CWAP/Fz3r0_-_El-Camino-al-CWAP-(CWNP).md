@@ -64,7 +64,7 @@ En este writeup que he realizado, abordaré el camino hacia la certificación `C
 #### 3. ✅ `Wireless` = `CWNP: CWNA`
 
 - Es necesario contar con la certificación CWNA, ya que esta certificación es la base fundamental para comprender el protocolo de redes inalámbricas y es obligatoria para presentar el CWAP.
-- Es importante tener un conocimiento profundo sobre las tecnologías inalámbricas, incluyendo los diferentes estándares de redes inalámbricas, protocolos de seguridad, administración de redes inalámbricas, entre otros.
+- Es importante tener un conocimiento profundo sobre las tecnologías inalámbricas, incluyendo los diferentes estándares de redes inalámbricas, protocolos de seguridad, administración de redes inalámbricas, entre otros. <br> <br>
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/226084303-f71e19bc-414e-42de-ac21-bfc130e1f2cd.png" alt="CWAP" height=165px/> </a>   </p> 
 
@@ -76,21 +76,9 @@ En este writeup que he realizado, abordaré el camino hacia la certificación `C
 #### 5. ✅ `Protocol Analysis` (ej. `Wireshark`, `TCP Dump`)
 
 - Wireshark es una herramienta de análisis de tráfico de red gratuita y de código abierto que permite capturar y examinar el tráfico de red en tiempo real. Con Wireshark, es posible analizar el tráfico de redes cableadas e inalámbricas para solucionar problemas y detectar fallos de seguridad.
-- También existen otros tipos de analizadores de protocolos, pero este writeup se centrará en `Wireshark` y en específico mi porpia modificación y perfil llamado `The BlackShark`
+- También existen otros tipos de analizadores de protocolos, pero este writeup se centrará en `Wireshark` y en específico mi porpia modificación y perfil llamado `The BlackShark`  <br> <br> 
 
-![image](https://user-images.githubusercontent.com/94720207/224579398-5a633384-fa93-4db3-8d15-06612067ad1c.png)
-
-![image](https://user-images.githubusercontent.com/94720207/224579439-ba192f45-b093-46d6-b7f6-d725591965b7.png)
-
-![image](https://user-images.githubusercontent.com/94720207/224579523-323f0d5a-15fd-417b-869f-f9eaa3b8df98.png)
-
-![image](https://user-images.githubusercontent.com/94720207/224579701-e8c22265-2417-4ffe-9796-7dc222f8d520.png)
-
-
-![image](https://user-images.githubusercontent.com/94720207/224579649-14938e8b-79c4-498c-8f3f-002e9b7e6a32.png)
-
-
-
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/226084984-53d0035a-6285-4c8c-8849-1d8d0df7343b.png" alt="CWAP" height=120px/> </a>   </p> <br>
 
 ## 🏔️ La analogía del `CWAP` y una expedición al `K2` 
 
