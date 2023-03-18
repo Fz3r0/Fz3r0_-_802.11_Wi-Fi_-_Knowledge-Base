@@ -970,26 +970,45 @@ _La encapsulación es el proceso de "encerrar" la información de `layers` super
 
 La diferencia es que la `PDU` de una capa, **especifica el conjunto de datos a enviar al protocolo par ubicado en el receptor**, mientras que la `SDU` **es el conjunto de datos que proviene de la capa superior, aún no encapsulada**. 
 
-**Es decir, **el `SDU` de cada capa corresponderá a la porción de `datos (payload)` de la `PDU` de la misma capa. Se podría decir que el `SDU` es lo que va dentro de un `PDU`**
+**Es decir, el `SDU` de cada capa corresponderá a la porción de `datos (payload)` de la `PDU` de la misma capa. Se podría decir que el `SDU` es lo que va dentro de un `PDU`**
 
 ![image](https://user-images.githubusercontent.com/94720207/226130762-5342bd37-d22e-4879-a3af-7920b06c4103.png)
 
-Cada layer cuenta con su propio `PDU` y `SDU` que lo identifica, por ejemplo el `MPDU` y `MSDU` que sirven a `layer 2 MAC`, lo mismo pasa con los `PPDU` y `PSDU` de `layer 1 PHY`: 
+**El SDU es como un paquete que un nivel superior entrega a un nivel inferior, mientras que el PDU es como una caja que cada nivel envuelve al paquete antes de entregárselo al siguiente nivel inferior.** <br>
+
+Cada layer cuenta con su propio `PDU` y `SDU` que lo identifica, por ejemplo el `MPDU` y `MSDU` que sirven a `layer 2 MAC`; lo mismo pasa con los `PPDU` y `PSDU` de `layer 1 PHY`: 
 
 ![image](https://user-images.githubusercontent.com/94720207/226131377-5e0059bf-31f0-42df-bacb-4220ded4cd11.png)
 
 #### 🪬 `PDU`
 
-- En el modelo OSI, un `PDU (Protocol Data Unit)` es una `unidad de información` que se usa en la **comunicación entre los diferentes niveles de la red**. 
+- Un `PDU (Protocol Data Unit)` es una `unidad de información` que se usa en la **comunicación entre los diferentes niveles de la red**. 
 - **Cada nivel agrega su propio `PDU` y lo envía al siguiente nivel para que lo procese.**
 
 #### 🪬 `SDU`
 
-- En el modelo OSI, un `SDU (Service Data Unit)` es `toda la información` que **un nivel recibe del nivel superior para `procesarla y convertirla en su propio PDU`**. - Es decir, **es la información que se entrega `de un nivel superior a un nivel inferior`.**
+- Un `SDU (Service Data Unit)` es `toda la información` que **un nivel recibe del nivel superior para `procesarla y convertirla en su propio PDU`**. - Es decir, **es la información que se entrega `de un nivel superior a un nivel inferior`.**
 
-**El SDU es como un paquete que un nivel superior entrega a un nivel inferior, mientras que el PDU es como una caja que cada nivel envuelve al paquete antes de entregárselo al siguiente nivel inferior.** <br>
+#### 🪬 `MSDU`
 
-Podemos decir que **el `SDU` es la información que se envía desde arriba hacia abajo** a través de las capas de la red, mientras que **el PDU es la `unidad de información` que se usa para la comunicación entre niveles en la red OSI, y que se envía desde abajo hacia arriba.**
+- Un `MSDU (MAC Service Data Unit)` simplemente equivale al `SDU` que se utiliza específicamente a nivel de `layer 2 - data link - MAC`.
+- Un MSDU se refiere a los datos que se entregan desde la capa de red al nivel de enlace de datos para su posterior procesamiento.
+
+En otras palabras, un MSDU es un conjunto de datos que se entrega **desde** la capa de red `layer 3 network` **hacia** la capa de enlace de datos `layer 2 - data link` para su posterior encapsulamiento en un `MPDU`.
+
+#### 🪬 `MPDU`
+
+
+Un MPDU (MAC Protocol Data Unit) es una unidad de datos del protocolo de enlace de datos que se utiliza para la transmisión de datos entre nodos en una red de área local.
+Un MPDU consta de un encabezado y un cuerpo.
+El encabezado incluye información de control, como las direcciones de origen y destino, y el cuerpo contiene los datos que se transmitirán.
+En el nivel de enlace de datos, los MSDU se encapsulan en MPDU antes de ser transmitidos en la red.
+
+PSDU
+
+PPDU
+
+
 
 | **Layer**     	| **OSI Layer**    	| **Sublayer**               	| **PDU**                       	| **PDU Name**           	| **SDU** 	 | **SDU Name**               	| **Technology**    	|
 |---------------	|------------------	|----------------------------	|-------------------------------	|------------------------	|----------	|----------------------------	|-------------------	|
