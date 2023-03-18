@@ -987,29 +987,20 @@ La diferencia es que la `PDU` de una capa, **especifica el conjunto de datos a e
 
 - En el modelo OSI, un `SDU (Service Data Unit)` es `toda la información` que **un nivel recibe del nivel superior para `procesarla y convertirla en su propio PDU`**. - Es decir, **es la información que se entrega `de un nivel superior a un nivel inferior`.**
 
-#### 🪬 La analogía de el paquete por correo
-
 **El SDU es como un paquete que un nivel superior entrega a un nivel inferior, mientras que el PDU es como una caja que cada nivel envuelve al paquete antes de entregárselo al siguiente nivel inferior.** <br>
-
-- Imagina que estás enviando una carta por correo... 
-
-1. El `contenido de la carta` sería como el `SDU` que se envía **desde el nivel superior** (como la capa de aplicación) hacia el **nivel inferior** (como la capa de transporte). 
-2. Sin embargo, para que la carta llegue a su destino, necesita ser **empacada en un sobre** (como el `PDU` de la capa de aplicación) y luego en una caja (como el `PDU` de la capa de transporte).
 
 Podemos decir que **el `SDU` es la información que se envía desde arriba hacia abajo** a través de las capas de la red, mientras que **el PDU es la `unidad de información` que se usa para la comunicación entre niveles en la red OSI, y que se envía desde abajo hacia arriba.**
 
-| **Layer** | **OSI Layer**    | **Sublayer**               | **SDU Name (Acronym)** | **SDU Name (Full)**          | **PDU Name (Acronym)**        | **PDU Name (Full)**    | **Ethernet/Wireless** |
-|-----------|------------------|----------------------------|------------------------|------------------------------|-------------------------------|------------------------|-----------------------|
-| **7**     | **Application**  | -                          | -                      | User Data                    | ADU                           | Application Data Unit  | Ethernet/Wireless     |
-| **6**     | **Presentation** | -                          | -                      | User Data                    | PD                            | Presentation Data      | Ethernet/Wireless     |
-| **5**     | **Session**      | -                          | -                      | User Data                    | SD                            | Session Data           | Ethernet/Wireless     |
-| **4**     | **Transport**    | -                          | -                      | User Data                    | Segment (TCP), Datagram (UDP) | -                      | Ethernet/Wireless     |
-| **3**     | **Network**      | -                          | Datagram (IP)          | Datagram (Internet Protocol) | Packet                        | -                      | Ethernet/Wireless     |
-| **2**     | **Data Link**    | LLC (Logical Link Control) | -                      | -                            | LLC PDU                       | LLC Protocol Data Unit | Ethernet/Wireless     |
-| **2**     | **Data Link**    | MAC (Media Access Control) | MSDU                   | MAC Service Data Unit        | MPDU                          | MAC Protocol Data Unit | Wireless              |
-| **1**     | **Physical**     | PHY (Physical Layer)       | PSDU                   | Physical Service Data Unit   | PPDU                          | PHY Protocol Data Unit | Wireless              |
-
-
+| **Layer**     	| **OSI Layer**    	| **Sublayer**               	| **PDU**                       	| **PDU Name**           	| **SDU** 	 | **SDU Name**               	| **Technology**    	|
+|---------------	|------------------	|----------------------------	|-------------------------------	|------------------------	|----------	|----------------------------	|-------------------	|
+| **7**         	| **Application**  	| -                          	| ADU                           	| Application Data Unit  	| -        	| User Data                  	| Ethernet/Wireless 	|
+| **6**         	| **Presentation** 	| -                          	| PD                            	| Presentation Data      	| -        	| User Data                  	| Ethernet/Wireless 	|
+| **5**         	| **Session**      	| -                          	| SD                            	| Session Data           	| -        	| User Data                  	| Ethernet/Wireless 	|
+| **4**         	| **Transport**    	| -                          	| Segment (TCP), Datagram (UDP) 	| -                      	| -        	| User Data                  	| Ethernet/Wireless 	|
+| **3**         	| **Network**      	| -                          	| Packet                        	| -                      	| -        	| Datagram (IP)              	| Ethernet/Wireless 	|
+| **2** (upper) 	| **Data Link**    	| LLC (Logical Link Control) 	| LPDU                          	| LLC Protocol Data Unit 	| LSDU     	| LLC Service Data Unit      	| Ethernet/Wireless 	|
+| **2** (lower) 	| **Data Link**    	| MAC (Media Access Control) 	| MPDU                          	| MAC Protocol Data Unit 	| MSDU     	| MAC Service Data Unit      	| Wireless          	|
+| **1**         	| **Physical**     	| PHY (Physical Layer)       	| PPDU                          	| PHY Protocol Data Unit 	| PSDU     	| Physical Service Data Unit 	| Wireless          	|
 
 
 
