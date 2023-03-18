@@ -78,7 +78,7 @@ En este writeup que he realizado, abordaré el camino hacia la certificación `C
 - Wireshark es una herramienta de análisis de tráfico de red gratuita y de código abierto que permite capturar y examinar el tráfico de red en tiempo real. Con Wireshark, es posible analizar el tráfico de redes cableadas e inalámbricas para solucionar problemas y detectar fallos de seguridad.
 - También existen otros tipos de analizadores de protocolos, pero este writeup se centrará en `Wireshark` y en específico mi porpia modificación y perfil llamado `The BlackShark`  <br> <br> 
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/226084984-53d0035a-6285-4c8c-8849-1d8d0df7343b.png" alt="CWAP" height=120px/> </a>   </p> <br>
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/226084984-53d0035a-6285-4c8c-8849-1d8d0df7343b.png" alt="CWAP" height=110px/> </a>   </p> <br>
 
 ## 🏔️ La analogía del `CWAP` y una expedición al `K2` 
 
@@ -921,6 +921,36 @@ Determina el SNR mínimo y el RSSI requerido para un índice MSC específico.
 - El throughput medido por el test de velocidad indica la cantidad de datos que se pueden transmitir en un período de tiempo determinado, lo que refleja la capacidad real de la conexión de un usuario en ese preciso momento.
 
 Es importante tener en cuenta que el `bandwith asignado` por el ISP puede variar en función de diferentes factores lo cual resulta en el `throughput` real, como la hora del día, la demanda de la red y la calidad de la conexión física. Por lo tanto, el ancho de banda asignado puede no ser siempre el mismo que el anunciado por el ISP, y es posible que el throughput real que se pueda obtener en un momento determinado sea menor al anunciado.
+
+
+
+
+
+
+
+## 🟢 `Network Frames` - `Data Link (MAC) Layer`
+
+- Los `Network Frames` operan en la `Layer 2 - Data Link` del modelo `OSI`.
+- Se utilizar para proveer comunicaciones en una red LAN y están basados típicamente, en `Medium Access Control (MAC) Addresses` (Direcciones MAC).
+- Lo mismo ocurre tanto para redes cableadas `LAN`, como redes inalámbircas `WLAN`.
+
+Para saber analizar los frames del tráfico de red, primero se deben conocer con conceptos como lo son `Encapsulation` y `Frame Aggregation`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
