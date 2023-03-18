@@ -951,7 +951,17 @@ Cada `layer` depende del `layer` que se encuentra debajo para poder proveer comu
 - Por ejemplo: Un `IP packet (layer 3)` destinado a `192.168.1.10` que fue enviado desde `192.168.1.11`, depende de la `Data Link (layer 2)` para comunicaciones basadas en `MAC Address`, a pesar que las `IP Addresses` se encuentren en la misma subnet. 
 - Después, la `Data Link (layer 2)` **encapsula** el `Network (layer 3) IP Packet` poniendo antes, mejor conocido como `prepending` un `frame header`, y poniendo después o `appending` un `FCS (Frame Check Sequence)` para detectar errores en la transmisión. 
 
+### ⚠️ **`CWAP Definition`** ⚠️ 
 
+- `Encapsulation` - Is the process of of **prepending and/or appending information to a message for `transmission`** (communication) `TO a peer`.
+- `Decaspulation` - Is the process of **reading, processing and removing prepended and/or appended information for `reception`** (communication) `FROM a peer`.
+- `Encapsulation` is the process of **enclosing upper-layer information into the current layer's delivey format**. For example, IP packets encapsulate TCP datagrams or messages, and 802.11 frames encapsulate IP packets. 
+
+_La encapsulación es el proceso de "encerrar" la información de `layers` superiores en el formato de entrega de la `layer` actual. Por ejemplo, los `IP packets` encapsulan `datagramas o mensajes TCP`, y los `frames 802.11` encapsulan `IP packets`._
+
+---
+
+### ⭕ `SDU` & `PDU`
 
 
 
