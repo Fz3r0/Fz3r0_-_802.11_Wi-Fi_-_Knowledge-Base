@@ -13,11 +13,11 @@ Y ARRANCAN!!!
 _Writeup y bitácora para la certificación **CWAP-402** de **CWNP (Certified Wireless Network Professional)**_ <br>
 _por @ **Fz3r0 💀** (CWNA)_
 
-<div align="center">
 
-## 🗂️ `ÍNDICE` 🗂️
 
-</div> 
+## 🗂️ `ÍNDICE`
+
+
  
 ### [🟢 `Introducción`]()
 - [🚨 Importante]()
