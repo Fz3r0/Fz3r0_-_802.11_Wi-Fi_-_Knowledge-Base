@@ -52,6 +52,9 @@ En este writeup que he realizado, abordaré el camino hacia la certificación `C
 - Poniendo de ejemplo el `Cisco CCNA` ya que este valida los conocimientos y habilidades necesarios para instalar, configurar, operar y solucionar problemas en redes de área local (LAN) y de área amplia (WAN) utilizando dispositivos de red Cisco (routers & switches). 
 - CCNA también cubre los fundamentos de 802.11 Wireless WiFi
 
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/226084436-c5f11a9c-9e3b-49ce-82d1-cbf5e2696775.png" alt="CWAP" height=165px/> </a>   </p> 
+
+
 #### 2. ✅ `Network Protocols`
 
 - Un protocolo de red es un conjunto de reglas y estándares que permiten que los dispositivos de red se comuniquen entre sí y compartan información en una red de computadoras.
@@ -62,6 +65,8 @@ En este writeup que he realizado, abordaré el camino hacia la certificación `C
 
 - Es necesario contar con la certificación CWNA, ya que esta certificación es la base fundamental para comprender el protocolo de redes inalámbricas y es obligatoria para presentar el CWAP.
 - Es importante tener un conocimiento profundo sobre las tecnologías inalámbricas, incluyendo los diferentes estándares de redes inalámbricas, protocolos de seguridad, administración de redes inalámbricas, entre otros.
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/226084303-f71e19bc-414e-42de-ac21-bfc130e1f2cd.png" alt="CWAP" height=165px/> </a>   </p> 
 
 #### 4. ✅ `Network Security` (ej. `Offensive Security: OSCP`, `Comptia: Security+`)
 
