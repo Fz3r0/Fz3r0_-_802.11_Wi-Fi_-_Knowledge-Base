@@ -1130,7 +1130,7 @@ La combinación de A-MPDU y A-MSDU Aggregation tiene como objetivo mejorar aún 
 <br>
 <br>
 
-## 802.11 Standard Protocol
+## 🟢 `802.11 Standard Protocol`
 
 - **El estándar de protocolo IEEE 802.11 define a la `MAC` y la `PHY` para comunicaciones en una `LAN` utilizando `RF` como `medio de transmisión` (osea una `WLAN`).**
 - Las enmiendas modernas de 802.11 incluyen soporte a redes `mesh` y otro métodos de comunicaciones `devide-to-device`
@@ -1140,9 +1140,11 @@ La combinación de A-MPDU y A-MSDU Aggregation tiene como objetivo mejorar aún 
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223910395-92a65b7d-d17f-4688-bf4c-1c220526f038.png" alt="encoding"/> </a> </p> 
 
-## Utilizando `radiofrecuencias` para comunicar `datos` - `Physical Layer`
+---
 
-- Comunmente se les llama simplemente `PHY` a las `enmiendas IEEE` que utilizan `métodos de modulación de radiofrecuencias (b/a/g/n/ac/ax)` para lograr la `interoperabilidad` de redes wireless.
+### 🟣 Utilizando `radiofrecuencias` para comunicar `datos` - `Physical Layer`
+
+**Comunmente se les llama simplemente `PHY` a las `enmiendas IEEE 802.11` que funcionan en la `physical layer 1`, y que utilizan `métodos de modulación de radiofrecuencias (b/a/g/n/ac/ax)` para lograr la `interoperabilidad` de redes wireless y así poder enviar datos a través del `wireless medium`.** <br>
 
 Las radiofrecuencias o `RF` se utilizan en la `Physical Layer 1` de la comunicación `WiFi 802.11` para transmitir datos a través del aire. Las `RF waves` se utilizan como portadoras de datos o `data carriers`, lo que significa que **los datos se `modulan` en una `señal de RF` y se `transmiten` a través del aire.** 
 
@@ -1155,10 +1157,27 @@ Además, **las frecuencias más altas permiten un mayor `bandwith & throughput`*
 
 - **Para que las `RF waves` (ondas de radiofrecuencia) sirvan como `carriers` de datos, los `wireless devices` utilizan `modulación` para ingresar `datos` a las ondas de radiofrecuencia. **
 
-### `802.11` - `Modulation Methods` AKA `PHY`
+## 🟢 `802.11` - `Modulation Methods` AKA `PHY`
 
-- Durante el `CWNA` hice una tabla que me ayudó mucho a entender los `PHY`, `Ammandments`, `Standards`:
-- Esta es la versión simplificada en .md: 
+En el contexto de las redes `WiFi 802.11`, la `modulación` se refiere al **proceso de convertir una `señal digital`, que representa `bits de información`, en una `señal analógica` que se puede transmitir a través de un medio de comunicación, como el aire a través de `RF`. La `modulación` es una `técnica de transmisión` que permite enviar información a través de `ondas electromagnéticas` y es esencial para la `transmisión inalámbrica de datos`. <br>
+
+La `modulación` es una manera de **manipular un medio de comunicación, como una `onda de radio`, para representar `bits de información`**. La modulación puede ser de varios tipos, incluyendo:
+
+### `ASK (Amplitude Shift Keying)` 
+
+En `ASK` o `modulación por desplazamiento de amplitud`, la amplitud de la `carrier wave` se modifica para representar los bits de información. Por ejemplo, si un bit 1 se representa aumentando la amplitud de la onda portadora y un bit 0 se representa manteniendo la amplitud sin cambios, entonces ASK se utiliza para transmitir información.
+
+### `ASK (Amplitude Shift Keying)` 
+
+PSK (Phase Shift Keying): modulación por desplazamiento de fase. En PSK, la fase de la onda portadora se modifica para representar los bits de información. Por ejemplo, si un bit 1 se representa desplazando la fase de la onda portadora 180 grados y un bit 0 se representa sin cambios en la fase, entonces PSK se utiliza para transmitir información.
+
+FSK (Frequency Shift Keying): modulación por desplazamiento de frecuencia. En FSK, la frecuencia de la onda portadora se modifica para representar los bits de información. Por ejemplo, si un bit 1 se representa transmitiendo una onda portadora a una frecuencia más alta y un bit 0 se representa transmitiendo una onda portadora a una frecuencia más baja, entonces FSK se utiliza para transmitir información.
+
+QAM (Quadrature Amplitude Modulation): modulación de amplitud en cuadratura. En QAM, se utilizan dos señales moduladoras, una en fase y otra en cuadratura (90 grados fuera de fase), para modular la amplitud y la fase de la onda portadora. Por lo tanto, QAM combina ASK y PSK. Cuanto mayor sea el número de estados de QAM, mayor será la cantidad de bits que se pueden transmitir por símbolo. Por ejemplo, una señal QAM de 16 estados puede transmitir 4 bits por símbolo.
+
+En las redes WiFi, se utilizan diferentes tipos de modulación según la capacidad del canal de radio y el entorno de la red. Los estándares más antiguos como 802.11b utilizan modulaciones más básicas como ASK y PSK, mientras que los estándares más recientes como 802.11ac y 802.11ax utilizan modulaciones más complejas como QAM. La elección de la modulación adecuada es importante para optimizar la tasa de transferencia de datos y la calidad de la señal en una red inalámbrica.
+
+- Durante el `CWNA` hice una tabla que me ayudó mucho a entender los `PHY`, `Ammandments`, `Standards`. Esta es la versión simplificada:
 
 | **IEEE Standard** 	|   **PHY**   	|            **PHY** _(Full Name)_           	| **Year** 	|       **Utilization**      	|      **Band(s)**      	|        **Bandwidth**       	| **Max. Data Rate** 	|
 |:-----------------:	|:-----------:	|:------------------------------------------:	|:--------:	|:--------------------------:	|:---------------------:	|:--------------------------:	|:------------------:	|
@@ -1183,7 +1202,7 @@ Además, **las frecuencias más altas permiten un mayor `bandwith & throughput`*
 - El `PHY header` contiene la información necesaria para que el `receptor` ajuste su `data rate` dependiendo sus posibilidades para así poder sincronizarse con el `transmisor`
 
 
-## `MCS Table` - Modulation & Coding Scheme
+## 🟢 `MCS Table` - Modulation & Coding Scheme
 
 - [Wireless LAN Professionals: `MCS Table and How You Can Use it`](https://youtu.be/QBiBPbME5tY)
 - [`VHT` (802.11n/ac) MCS Chart – Wave 1](https://www.wirelesstrainingsolutions.com/wireless-tools/vht-mcs-chart-wave-1/)
