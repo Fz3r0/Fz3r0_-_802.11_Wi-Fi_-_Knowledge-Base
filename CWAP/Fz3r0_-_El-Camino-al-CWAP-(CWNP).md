@@ -624,11 +624,11 @@ La `ruta Abruzzi del K2` es un camino lleno de peligros y desafíos que ponen a 
 
 ![image](https://user-images.githubusercontent.com/94720207/224217527-a7e42d07-4b60-46df-8d99-314ecf541e09.png)
 
-### 💀 `Fz3r0 Pro Tip`: ¿Qué es el `preamble`?
+### 💀 `Fz3r0 Pro Tip`: ¿Qué es el `Preamble`?
 
 [WiFi Preamble Type: Short Or Long](https://routerguide.net/preamble-type-short-or-long/)
 
-- El `preamble` es una secuencia de bits que **se incluye al inicio (prepended) de cada `physical layer frame` transmitido en una red `LAN-Ethernet` o `WLAN-WiFi`.
+- El `preamble` es una secuencia de bits que **se incluye al inicio (prepended) de cada `physical layer frame` transmitido ya sea en una red `LAN-Ethernet` o `WLAN-WiFi`.
 - En `WLAN WiFi` el `preamble` se utiliza en la `physical sublayer` de la `layer 2 data link (MAC)`
 - En `LAN Ethernet` el `preamble` incluye en la trama Ethernet en la `physical sublayer` de `layer 2 data link`.
 
@@ -722,7 +722,7 @@ _La encapsulación es el proceso de "encerrar" la información de `layers` super
 
 ---
 
-### ⭕ `SDU` & `PDU`
+### ⭕ `Service Data Units (SDU)` & `Protocol Data Units (PDU)` in the OSI Model
 
 [Unidad de datos de servicio `SDU`](https://es.wikipedia.org/wiki/Unidad_de_datos_de_servicio#Relaci%C3%B3n_con_la_PDU)
 
@@ -791,7 +791,7 @@ Es la unidad de datos que se transmite físicamente en la red, y que incluye tan
 
 **La PPDU es el resultado de encapsular la PSDU en los encabezados de la capa física, y es lo que se transmite a través del medio físico de la red. Es decir, a través del aire por medio de radio frecuancias moduladas.**
 
-#### 👹 `Fz3r0 Table` : `SDU` + `PDU` + `MSDU` + `MPDU` + `PSDU` + `PPDU`
+### 👹 `Fz3r0 Table` : `SDU` + `PDU` + `MSDU` + `MPDU` + `PSDU` + `PPDU`
 
 - En la siguiente tabla hice el modelo para que se comprenda más la encapsulación de los SDU y PDU, poniéndo mayor detalle en layer 1 y layer 2 que es la que más nos interesa para el CWAP. 
 
