@@ -1140,11 +1140,20 @@ La combinación de A-MPDU y A-MSDU Aggregation tiene como objetivo mejorar aún 
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223910395-92a65b7d-d17f-4688-bf4c-1c220526f038.png" alt="encoding"/> </a> </p> 
 
-## `Physical Layer` para la comunicación WiFi - `PHY`
+## Utilizando `radiofrecuencias` para comunicar `datos` - `Physical Layer`
 
-- Comunmente se les llama simplemente `PHY` a las enmiendas que utilizan `métodos de modulación de radiofrecuencias (b/a/g/n/ac/ax)` para lograr la `interoperabilidad` de redes wireless.
-- La mayoría soportan `2.4 GHz` & `5 GHz`, aunque algunas soportan `otras frecuencias` mas `altas` o `bajas`.
-- Para que las `RF waves` (ondas de radiofrecuencia) sirvan como `carriers` de datos, los `wireless devices` utilizan `modulación` para ingresar `datos` a las ondas de radiofrecuencia. 
+- Comunmente se les llama simplemente `PHY` a las `enmiendas IEEE` que utilizan `métodos de modulación de radiofrecuencias (b/a/g/n/ac/ax)` para lograr la `interoperabilidad` de redes wireless.
+
+Las radiofrecuencias o `RF` se utilizan en la `Physical Layer 1` de la comunicación `WiFi 802.11` para transmitir datos a través del aire. Las `RF waves` se utilizan como portadoras de datos o `data carriers`, lo que significa que **los datos se `modulan` en una `señal de RF` y se `transmiten` a través del aire.** 
+
+- Para realizar el `envío` de datos, los datos se `modulan`.
+- En la `recepción`, los datos se extraen de la señal de RF modulada y se `decodifican` para su uso.
+
+Las mayoría de redes Wi-Fi modernas pueden operar en frecuencias de `2.4 GHz` y `5 GHz`, pero las nuevas tecnologías de Wi-Fi, como `Wi-Fi 6E`, también soportan frecuencias más altas en la banda de `6 GHz`, además de que se presume pronto será el release de `WiFi7`. Esta banda se ha reservado específicamente para Wi-Fi, lo que significa que hay menos interferencia y una mayor capacidad para transmitir datos. <br> 
+
+Además, **las frecuencias más altas permiten un mayor `bandwith & throughput`**, lo que se traduce en una mayor capacidad para transmitir datos a mayores velocidades. Cabe señalar que, aunque las frecuencias más altas proporcionan velocidades más rápidas, **también tienen una menor penetración y alcance de la señal y son más susceptibles a la atenuación por obstáculos como paredes, lo que puede afectar la calidad de la señal.**
+
+- **Para que las `RF waves` (ondas de radiofrecuencia) sirvan como `carriers` de datos, los `wireless devices` utilizan `modulación` para ingresar `datos` a las ondas de radiofrecuencia. **
 
 ### `802.11` - `Modulation Methods` AKA `PHY`
 
