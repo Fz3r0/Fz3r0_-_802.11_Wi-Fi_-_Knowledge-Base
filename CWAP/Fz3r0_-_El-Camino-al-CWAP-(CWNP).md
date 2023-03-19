@@ -164,7 +164,37 @@ La `ruta Abruzzi del K2` es un camino lleno de peligros y desafíos que ponen a 
  
      - Frame Aggregation: `A-MSDU` & `A-MPDU` 
 
-## `CWAP`: Modelo OSI _(usado en el libro)_
+## El truco del `Modelo OSI` para `Wireless`
+
+Antes que nada, quiero destacar que tanto para CWNA como CWAP no se utliza el `modelo TCP/IP`, sino que se basa en el `modelo OSI`, aunque no totalmente como lo conocemos... <br>
+
+Al principio es algo confuso cuando mencionan los cursos de `CWNP` (u otros cursos y certificaciones) cuando dicen "no estamos usando el modelo OSI, solo hacemos referencia para que se comprenda el concepto" y a partir de eso se dan explicaciones de X o Y cosa... pero después de todo para eso es el modelo... simplemente es una referencia! <br> 
+
+Por ejemplo, en hacking y cyber-seguridad ya he realizado writeups donde podemos hacer `packet tampering` e inyectarlos a la red sin importarnos para nada la estructura del `modelo OSI`. Básicamente puedo inyectar HEX random y los paquetes/frames se transmiten sin importar que estén completamente mal-formados sin respetar el modelo por capas. <br>
+
+**El truco que he encontrado para comprender al 100% el proceso de transmisión que se llevará a cabo y será el pan de cada día de esta certificación consiste en "añadir un sublayer al modelo original".** Pero ¿A qué me refiero con esto?
+
+### Modelo OSI "original"
+
+- El `OSI model` original se basa en `7 layers`, para las alturas de este curso ya se debe tener muy bien comprendido para que sirve cada capa! 
+
+### Modelo OSI "Fz3r0 WiFi Custom"
+
+- En este modelo se agregan las sublayers correspondientes de las que tanto se hablan en el curso, donde `layer 1` y `layer 2` se convierten en una especia de `sub-layers`. 
+- La `MAC sublayer` existe tanto el `layer 1` como en `layer 2`, pero para fines prácticos que se ven más adelante durante `Encapsulation` y `Frame Aggregation` el truco está en plasmarlo en una tabla esas 3 capas como `sublayers`: <br>
+    - Mientras que `MAC sublayer` permanece aparentemente solo en `layer 2`, en realidad esa es la `lower sublayer` de `layer 2`
+    - Es decir, la `MAC sublayer` también "baja" hacia `layer 1 physical`. 
+
+En este modelo existen 3 sublayers en total:
+
+1. `LLC` - `Layer 2`
+2. `MAC` - `Layer 2 & Layer 1`
+3. `PHY` - `Layer 1`
+
+La manera más páctica que encontré de representarlo en una tabla, y de hecho, el que utilizaré muy seguido en este write-up es la siguiente: 
+
+
+Sin embargo, para que se comprenda al 100% como "baja" la `MAC Sublayer` desde `layer 2` hacia la `layer 1`, la mejor manera es representarlo en una tabla donde se deben combinar celdas para poder detallar con exactitud a lo que me refiero: 
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223612406-8d8a9825-2405-4f88-927b-fe767d8b0973.png" alt="Modelo OSI"/> </a> </p> 
 
