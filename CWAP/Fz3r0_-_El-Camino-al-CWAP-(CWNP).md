@@ -996,6 +996,8 @@ Cada layer cuenta con su propio `PDU` y `SDU` que lo identifica, por ejemplo el 
 - **Un `MSDU (MAC Service Data Unit)` simplemente equivale al `SDU` que se utiliza específicamente a nivel de `layer 2 - data link - MAC`.**
 - Un `MSDU` se refiere a los datos que se entregan desde la capa de red al nivel de enlace de datos para su posterior procesamiento.
 
+![image](https://user-images.githubusercontent.com/94720207/226146232-7ecad3a8-54e3-4050-8a8c-9ee8d8dab5d5.png)
+
 En otras palabras, un `MSDU` es un `conjunto de datos` que se entrega **desde arriba** `layer 3 network` **hacia abajo** `layer 2 - data link` para su **posterior encapsulamiento** en un `MPDU`.
 
 #### 🪬 `MPDU` : `Layer 2: MAC`
@@ -1004,6 +1006,9 @@ En otras palabras, un `MSDU` es un `conjunto de datos` que se entrega **desde ar
 - Un `MPDU` consta de un `header` y un `body`.
 - El `header` incluye información de `control`, como las direcciones de `origen` y `destino`
 - El `body` contiene los `datos / payload` que se transmitirá.
+
+![image](https://user-images.githubusercontent.com/94720207/226146355-9a2aed7f-9143-4b41-9179-076abc2a7534.png)
+
 
 En el nivel de `layer 2 - data link`, **los `MSDU` se encapsulan en `MPDU` antes de ser transmitidos en la red.**
 
