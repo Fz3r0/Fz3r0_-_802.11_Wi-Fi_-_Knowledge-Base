@@ -174,9 +174,13 @@ Por ejemplo, en hacking y cyber-seguridad ya he realizado writeups donde podemos
 
 **El truco que he encontrado para comprender al 100% el proceso de transmisión que se llevará a cabo y será el pan de cada día de esta certificación consiste en "añadir un sublayer al modelo original".** Pero ¿A qué me refiero con esto?
 
+---
+
 ### Modelo OSI "original"
 
-- El `OSI model` original se basa en `7 layers`, para las alturas de este curso ya se debe tener muy bien comprendido para que sirve cada capa! 
+- [OSI/IEC Reference Model - Second Edition 1994](https://standards.iso.org/ittf/PubliclyAvailableStandards/s020269_ISO_IEC_7498-1_1994(E).zip)
+
+El `OSI model` original se basa en `7 layers`, para las alturas de este curso ya se debe tener muy bien comprendido para que sirve cada capa, a grandes rasgos es el siguiente:  
 
 | **Layer** 	|     **Name**     	|   **Protocol Data Unit (PDU)**   	|                                                                       **Función**                                                                      	|
 |:---------:	|:----------------:	|:--------------------------------:	|:------------------------------------------------------------------------------------------------------------------------------------------------------:	|
@@ -187,6 +191,8 @@ Por ejemplo, en hacking y cyber-seguridad ya he realizado writeups donde podemos
 |   **3**   	|    **Network**   	|              Packet              	| Determina la mejor ruta para que los datos viajen desde el remitente al receptor y maneja la dirección lógica y el enrutamiento.                       	|
 |   **2**   	|   **Data Link**  	|               Frame              	| Transfiere datos entre dispositivos de red y maneja la dirección física, la corrección de errores y el control de flujo.                               	|
 |   **1**   	|   **Physical**   	|                Bit               	| Convierte los datos a un formato que se puede transmitir por la red física y maneja los medios, la señal y la transmisión de datos.                    	|
+
+---
 
 ### Modelo OSI "Fz3r0 WiFi Custom"
 
