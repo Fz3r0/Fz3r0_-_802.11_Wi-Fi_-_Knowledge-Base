@@ -621,7 +621,38 @@ La `ruta Abruzzi del K2` es un camino lleno de peligros y desafíos que ponen a 
 
 ![image](https://user-images.githubusercontent.com/94720207/224217527-a7e42d07-4b60-46df-8d99-314ecf541e09.png)
 
+### 💀 `Fz3r0 Pro Tip`: ¿Qué es el `preamble`?
 
+[WiFi Preamble Type: Short Or Long](https://routerguide.net/preamble-type-short-or-long/)
+
+- El `preamble` es una secuencia de bits que **se incluye al inicio (prepended) de cada `physical layer frame` transmitido en una red `LAN-Ethernet` o `WLAN-WiFi`.
+- En `WLAN WiFi` el `preamble` se utiliza en la `physical sublayer` de la `layer 2 data link (MAC)`
+- En `LAN Ethernet` el `preamble` incluye en la trama Ethernet en la `physical sublayer` de `layer 2 data link`.
+
+El propósito del `preamble` es **permitir a los dispositivos receptores `sincronizarse` con el `data frame` entrante y `ajustar su reloj interno` para asegurar que la información se reciba de manera correcta. La secuencia de bits en el "preamble" es siempre la misma, lo que facilita la sincronización. <br>
+
+#### `preamble` en `ethernet LAN`
+
+El "preamble" consta de 7 bytes (56 bits) y es seguido por el "start of frame delimiter" (SFD), que indica el comienzo de la trama de datos y tiene un valor fijo de 10101011. Juntos, el "preamble" y el SFD forman los primeros 8 bytes de la trama Ethernet y permiten a los dispositivos receptores detectar el inicio de la trama y sincronizar su reloj interno con el transmisor.
+
+en que layer funciona 
+
+ y se 
+
+
+En el caso de Wi-Fi, el "preamble" se utiliza en la subcapa física de la capa de enlace de datos (MAC) y también tiene como objetivo permitir la sincronización de los dispositivos receptores con la trama de datos entrante y ajustar su reloj interno para asegurar la correcta recepción de los datos. Sin embargo, en Wi-Fi, el "preamble" es diferente al de Ethernet y tiene una longitud variable en lugar de una longitud fija de 7 bytes.
+
+en wifi 
+
+El "preamble" en las redes inalámbricas basadas en IEEE 802.11, como Wi-Fi, es una secuencia de bits que se incluye al principio de cada trama de datos transmitida.
+
+El propósito del "preamble" en Wi-Fi es permitir a los dispositivos receptores sincronizarse con la trama de datos entrante y ajustar su reloj interno para asegurar que la información se reciba correctamente. Además, el "preamble" también se utiliza para informar a los dispositivos receptores sobre la velocidad de transmisión que se utilizará para transmitir los datos.
+
+El "preamble" en Wi-Fi consta de una secuencia de bits de 56 u 80 microsegundos de duración, conocida como "Short Preamble" o "Long Preamble", respectivamente. Esta secuencia de bits se transmite antes de la trama de datos y consta de dos partes: la "Sync Sequence" y la "Signal" o "Start Frame Delimiter" (SFD).
+
+La "Sync Sequence" es una secuencia de 10 u 30 microsegundos de duración, que se utiliza para permitir a los dispositivos receptores sincronizarse con la señal entrante.
+La "Signal" o "Start Frame Delimiter" es una secuencia de 2 u 4 microsegundos de duración, que indica el comienzo de la trama de datos y se utiliza para informar a los dispositivos receptores sobre la velocidad de transmisión que se utilizará para transmitir los datos.
+En resumen, el "preamble" en las redes inalámbricas basadas en IEEE 802.11, como Wi-Fi, es una secuencia de bits que se utiliza para sincronizar los dispositivos receptores con la trama de datos entrante, informarles sobre la velocidad de transmisión que se utilizará y asegurar la correcta recepción de los datos.
 
 
 
