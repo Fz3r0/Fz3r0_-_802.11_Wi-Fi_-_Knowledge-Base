@@ -102,7 +102,7 @@ La ruta Abruzzi atraviesa la cara sureste de la montaña, presentando una serie 
 
 La `tasa de mortalidad` en las expediciones al K2 es asombrosamente alta, y a menudo deja una estela de tragedia y dolor en su camino. Se estima que alrededor del `25% de los alpinistas que intentan escalar el K2 no regresan con vida`, es decir, 1 de 4 expedicionarios mueren en el intento. Los supervivientes de estas expediciones a menudo describen el K2 como una montaña implacable y cruel, donde los peligros acechan en cada paso.
 
-Los escaladores que se aventuran en esta ruta ponen sus vidas en juego con cada paso que dan, mientras luchan contra la montaña y contra ellos mismos, poniendo a prueba su coraje, determinación, control mental y altas habilidades técnicas. Pero aquellos que logran alcanzar la cumbre por la ruta Abruzzi, se convierten en verdaderos héroes del alpinismo, consiguiendo un logro que solo unos pocos pueden reclamar en el mundo.
+Los escaladores que se aventuran en esta ruta ponen sus vidas en juego con cada paso que dan, mientras luchan contra la montaña y contra ellos mismos, poniendo a prueba su coraje, determinación, control mental y altas habilidades técnicas. Pero aquellos que logran alcanzar la cumbre por la ruta Abruzzi, se convierten en verdaderos héroes del alpinismo, consiguiendo un logro que solo unos pocos pued en reclamar en el mundo.
 
 ---
 
@@ -1207,13 +1207,13 @@ La técnica `OFDM` es una forma de `dividir la señal de transmisión` en múlti
 
 `Nota`: A medida que la tecnología avanza y **se añaden nuevas características y tecnologías adicionales** a la `PHY`, también la `MCS Table` crece.
 
-|    **Standard**   	| **IETF Standard** 	| **Release Year** 	|   **Modulation**   	|     **Band**    	|           **Additional Technologies**          	| **Spatial Streams** 	| **Maximum Data Rate** 	|
-|:-----------------:	|:-----------------:	|:----------------:	|:------------------:	|:---------------:	|:----------------------------------------------:	|:-------------------:	|:---------------------:	|
-|  **IEEE 802.11a** 	|       prime       	|       1999       	|      **OFDM**      	|      5 GHz      	|                      _N/A_                     	|        _N/A_        	|      **54 Mbps**      	|
-|  **IEEE 802.11g** 	|        N/A        	|       2003       	|      **OFDM**      	|     2.4 GHz     	|                      _N/A_                     	|        _N/A_        	|      **54 Mbps**      	|
-|  **IEEE 802.11n** 	|      Wi-Fi 4      	|       2009       	| **OFDM & HT-OFDM** 	| 2.4 GHz & 5 GHz 	|                    **MIMO**                    	|       **1-4**       	|      **600 Mbps**     	|
-| **IEEE 802.11ac** 	|      Wi-Fi 5      	|       2013       	|      **OFDM**      	|      5 GHz      	|     **MU-MIMO <br> More Channel Bandwidth**    	|       **1-8**       	|      **6.9 Gbps**     	|
-| **IEEE 802.11ax** 	|      Wi-Fi 6      	|       2021       	| **OFDM & HE-OFDM** 	| 2.4 GHz & 5 GHz 	| **Optimized MU-MIMO Multiple Frequency Bands** 	|       **1-12**      	|      **11 Gbps**      	|
+|    **Standard**   	| **IETF Standard** 	| **Release Year** 	|   **Modulation**   	|     **Band**    	|           **Additional Technologies**          	| **MIMO Spatial Streams** 	| **Channel Bandwidth** 	| **Maximum Data Rate** 	|
+|:-----------------:	|:-----------------:	|:----------------:	|:------------------:	|:---------------:	|:----------------------------------------------:	|:------------------------:	|:---------------------:	|:---------------------:	|
+| **IEEE 802.11a**  	| _prime_           	| 1999             	| **OFDM**           	| 5 GHz           	| _N/A_                                          	| N/A                      	| 20 MHz                	| **54 Mbps**           	|
+| **IEEE 802.11g**  	| _N/A_             	| 2003             	| **OFDM**           	| 2.4 GHz         	| _N/A_                                          	| N/A                      	| 20 MHz                	| **54 Mbps**           	|
+| **IEEE 802.11n**  	| **Wi-Fi 4**       	| 2009             	| **OFDM & HT-OFDM** 	| 2.4 GHz & 5 GHz 	| **MIMO**                                       	| 1-4                      	| 20/40 MHz             	| **600 Mbps**          	|
+| **IEEE 802.11ac** 	| **Wi-Fi 5**       	| 2013             	| **OFDM**           	| 5 GHz           	| **MU-MIMO More Channel Bandwidth**             	| 1-8                      	| 20/40/80/160 MHz      	| **6.9 Gbps**          	|
+| **IEEE 802.11ax** 	| **Wi-Fi 6**       	| 2021             	| **OFDM & HE-OFDM** 	| 2.4 GHz & 5 GHz 	| **Optimized MU-MIMO Multiple Frequency Bands** 	| 1-12                     	| 20/40/80/160 MHz      	| **11 Gbps**           	|
 
 Las tasas de datos más altas se logran utilizando modulaciones más complejas y una mayor cantidad de bits por símbolo, lo que aumenta la eficiencia espectral de la transmisión. Sin embargo, **estas tasas de datos máximas solo se pueden lograr en condiciones óptimas de transmisión**, y la tasa real de datos puede variar según las condiciones del entorno y el hardware utilizado.
 
