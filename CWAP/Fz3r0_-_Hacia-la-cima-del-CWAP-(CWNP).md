@@ -847,6 +847,19 @@ Es la unidad de datos que se transmite físicamente en la red, y que incluye tan
 
 **La PPDU es el resultado de encapsular la PSDU en los encabezados de la capa física, y es lo que se transmite a través del medio físico de la red. Es decir, a través del aire por medio de radio frecuancias moduladas.**
 
+### `Fz3r0 Pro Tip`: El ejemplo del `Beacon Frame` y los `PPDU`
+
+Se podría decir que **CASI SIEMPRE** los `PPDU` que se transmiten en el `wireless medium` (osea por el aire), contienen los datos del `payload` que viene desde capas superiores que se han ido `encapsulando` a lo largo de los `layers` del `modelo OSI`, hasta llegar a la `layer 1 PHY`... <br>
+
+Sin embargo, hay algunos casos donde no necesariamente viene desde `layers superiores` el frame `PPDU`, por ejemplo, los `beacon frames` son `control frames` que envía directamente el `Access Point` hacia el `wireless medium` en forma de `broadcast` cada `102.4 ms`. <br>
+
+El `beacon frame` es un `layer 2 frame - data link` que se genera directamente por el `AP (Acess Point)` y proveé la información del `BSS (Basic Service Set)` para que un cliente `STA (Station)` pueda conectarse a la red Wireless. <br>
+
+Entonces está bien decir que: 
+
+- **El `PPDU` del `Beacon Frame` no viene de `layers` superiores, sino que se origina en `layer 2` por el `AP` y se envía directamente hacia `layer 1`.** 
+- **Entonces, un `PPDU` de `Beacon Frame` no cuenta con información por ejemplo de: `IP Address (Layer 3)` o  `TCP/UDP Protocols (Layer 4)`**
+
 ### 👹 `Fz3r0 Table` : `SDU` + `PDU` + `MSDU` + `MPDU` + `PSDU` + `PPDU`
 
 - En la siguiente tabla hice el modelo para que se comprenda más la encapsulación de los `SDU` y `PDU`. 
