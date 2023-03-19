@@ -709,12 +709,12 @@ Para saber analizar los frames del tráfico de red, primero se deben conocer con
 
 Cada `layer` del modelo OSI se puede conceptualizar **como si se comunicara con la capa del mismo nivel en la STA de destino.** 
 
-- Por ejemplo: La `network layer 4` del dispositivo de origen, se comunicará con la `network layer 4` del dispositivo de `destino`; así mismo con cada uno de los layers.
+- Por ejemplo: La `network layer 3 (AP Address)` del dispositivo `source`, se comunicará con la `network layer 3 (AP Address)` del dispositivo `destination`; así mismo con cada uno de los layers.
 
 Cada `layer` depende del `layer` que se encuentra debajo para poder proveer comunicación. 
 
-- Por ejemplo: Un `IP packet (layer 3)` destinado a `192.168.1.10` que fue enviado desde `192.168.1.11`, depende de la `Data Link (layer 2)` para comunicaciones basadas en `MAC Address`, a pesar que las `IP Addresses` se encuentren en la misma subnet. 
-- Después, la `Data Link (layer 2)` **encapsula** el `Network (layer 3) IP Packet` poniendo antes, mejor conocido como `prepending` un `frame header`, y poniendo después o `appending` un `FCS (Frame Check Sequence)` para detectar errores en la transmisión. 
+- Por ejemplo: Un `IP packet (layer 3)` destinado a `192.168.1.2` que fue enviado desde `192.168.1.1`, depende de la `Data Link (layer 2)` para comunicaciones basadas en `MAC Address (layer 2)`, a pesar que las `IP Addresses (layer 3)` se encuentren en la misma subnet. 
+- Después, la `Data Link (layer 2) MAC` **encapsula** el `Network (layer 3) IP Packet` poniendo antes o `prepending` un `frame header`, y poniendo después o `appending` un `FCS (Frame Check Sequence)` para detectar errores en la transmisión. 
 
 ![image](https://user-images.githubusercontent.com/94720207/226181901-cf64e1f6-27fc-4895-910e-428ec33326d2.png)
 
@@ -799,26 +799,20 @@ Es la unidad de datos que se transmite físicamente en la red, y que incluye tan
 
 ### 👹 `Fz3r0 Table` : `SDU` + `PDU` + `MSDU` + `MPDU` + `PSDU` + `PPDU`
 
-- En la siguiente tabla hice el modelo para que se comprenda más la encapsulación de los SDU y PDU, poniéndo mayor detalle en layer 1 y layer 2 que es la que más nos interesa para el CWAP. 
+- En la siguiente tabla hice el modelo para que se comprenda más la encapsulación de los `SDU` y `PDU`. 
+- Se especifican los nombres de los `SDU` y `PDU` de cada `layer` determinada. (`LSDU, LPDU` & `MSDU, MPDU` & `PSDU, PPDU`)
+- Se pone mayor detalle en `layer 1` y `layer 2` que es la que más nos interesa para el `CWAP`. 
 
-| **Layer**     	| **OSI Layer**    	| **Sublayer**               	| **PDU**                       	| **PDU Name**           	| **SDU** 	 | **SDU Name**               	| **Technology**    	|
-|---------------	|------------------	|----------------------------	|-------------------------------	|------------------------	|----------	|----------------------------	|-------------------	|
-| **7**         	| **Application**  	| -                          	| ADU                           	| Application Data Unit  	| -        	| User Data                  	| Ethernet/Wireless 	|
-| **6**         	| **Presentation** 	| -                          	| PD                            	| Presentation Data      	| -        	| User Data                  	| Ethernet/Wireless 	|
-| **5**         	| **Session**      	| -                          	| SD                            	| Session Data           	| -        	| User Data                  	| Ethernet/Wireless 	|
-| **4**         	| **Transport**    	| -                          	| Segment (TCP), Datagram (UDP) 	| -                      	| -        	| User Data                  	| Ethernet/Wireless 	|
-| **3**         	| **Network**      	| -                          	| Packet                        	| -                      	| -        	| Datagram (IP)              	| Ethernet/Wireless 	|
-| **2** (upper) 	| **Data Link**    	| LLC (Logical Link Control) 	| LPDU                          	| LLC Protocol Data Unit 	| LSDU     	| LLC Service Data Unit      	| Ethernet/Wireless 	|
-| **2** (lower) 	| **Data Link**    	| MAC (Media Access Control) 	| MPDU                          	| MAC Protocol Data Unit 	| MSDU     	| MAC Service Data Unit      	| Wireless          	|
-| **1**         	| **Physical**     	| PHY (Physical Layer)       	| PPDU                          	| PHY Protocol Data Unit 	| PSDU     	| Physical Service Data Unit 	| Wireless          	|
-
-
-
-
-
-
-
-
+|      **Layer**     	|  **OSI Layer** 	|                       **Sublayer**                       	|  **PDU** 	|            **PDU Name**            	|  **SDU** 	|            **SDU Name**            	|     **Technology**    	|
+|:------------------:	|:--------------:	|:--------------------------------------------------------:	|:--------:	|:----------------------------------:	|:--------:	|:----------------------------------:	|:---------------------:	|
+| _7_                	| _Application_  	| _-_                                                      	| _ADU_    	| _Application Data Unit_            	| _-_      	| _User Data_                        	| _Data_                	|
+| _6_                	| _Presentation_ 	| _-_                                                      	| _PD_     	| _Presentation Data_                	| _-_      	| _User Data_                        	| _Data_                	|
+| _5_                	| _Session_      	| _-_                                                      	| _SD_     	| _Session Data_                     	| _-_      	| _User Data_                        	| _Data_                	|
+| _4_                	| _Transport_    	| -                                                        	| -        	| _Segment (TCP) <br>Datagram (UDP)_ 	| _-_      	| _User Data_                        	| _TCP/UDP_             	|
+| _3_                	| _Network_      	| -                                                        	| -        	| _Packet_                           	| _-_      	| _Datagram_                         	| _IP_                  	|
+| **2** <br> _upper_ 	| **Data Link**  	| **LLC <br>(Logical Link Control)** <br> (upper sublayer) 	| **LPDU** 	| **LLC <br>Protocol Data Unit**     	| **LSDU** 	| **LLC <br>Service Data Unit**      	| **Ethernet/Wireless** 	|
+| **2** <br> _lower_ 	| **Data Link**  	| **MAC <br>(Media Access Control)** <br> (lower sublayer) 	| **MPDU** 	| **MAC <br>Protocol Data Unit**     	| **MSDU** 	| **MAC <br>Service Data Unit**      	| **Wireless**          	|
+| **1**              	| **Physical**   	| **PHY <br>(Physical Layer)**                             	| **PPDU** 	| **PHY <br>Protocol Data Unit**     	| **PSDU** 	| **Physical <br>Service Data Unit** 	| **Wireless**          	|
 
 
 
