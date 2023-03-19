@@ -654,6 +654,16 @@ La "Sync Sequence" es una secuencia de 10 u 30 microsegundos de duración, que s
 La "Signal" o "Start Frame Delimiter" es una secuencia de 2 u 4 microsegundos de duración, que indica el comienzo de la trama de datos y se utiliza para informar a los dispositivos receptores sobre la velocidad de transmisión que se utilizará para transmitir los datos.
 En resumen, el "preamble" en las redes inalámbricas basadas en IEEE 802.11, como Wi-Fi, es una secuencia de bits que se utiliza para sincronizar los dispositivos receptores con la trama de datos entrante, informarles sobre la velocidad de transmisión que se utilizará y asegurar la correcta recepción de los datos.
 
+### Short Preamble VS Long Preamble
+
+Normalmente el "Long Preamble" es más utilizado en redes Wi-Fi de alta velocidad, ya que es necesario para las tasas de datos más altas, como 54 Mbps. Por lo tanto, se puede decir que el "Long Preamble" es adecuado para redes inalámbricas más modernas y rápidas.
+
+Por otro lado, el "Short Preamble" se utiliza en redes Wi-Fi más antiguas y de menor velocidad, ya que se diseñó originalmente para soportar tasas de datos de hasta 20 Mbps. También es importante tener en cuenta que el uso del "Short Preamble" puede ahorrar tiempo en la transmisión y reducir el consumo de energía.
+
+**La elección entre el "Short Preamble" y el "Long Preamble" dependerá de las necesidades y requerimientos específicos de la red Wi-Fi en cuestión.**
+
+- En una red Wi-Fi más antigua o en una red que no requiere tasas de datos muy altas, el "Short Preamble" puede ser suficiente y adecuado. 
+- En una red Wi-Fi más moderna y rápida que requiere tasas de datos más altas, el "Long Preamble" es necesario.
 
 
 
