@@ -1151,18 +1151,18 @@ La combinación de A-MPDU y A-MSDU Aggregation tiene como objetivo mejorar aún 
 - Durante el `CWNA` hice una tabla que me ayudó mucho a entender los `PHY`, `Ammandments`, `Standards`:
 - Esta es la versión simplificada en .md: 
 
-| **Nombre**     | **Acrónimo** | **Nombre Completo**                        | **Año** | **Banda(s)**          | **Bandwith**                               | **Max. Data Rate** |
-|----------------|--------------|--------------------------------------------|---------|-----------------------|--------------------------------------------|--------------------|
-| **802.11-prime**     | DSSS         | Direct Sequence Spread Spectrum            | 1997    | 2.4 GHz               | 22 MHz                                     | 2 Mbps             |
-| **802.11b**    | HR/DSSS      | High Rate/Direct Sequence Spread Spectrum  | 1999    | 2.4 GHz               | 22 MHz                                     | 11 Mbps            |
-| **802.11a**    | OFDM         | Orthogonal Frequency Division Multiplexing | 1999    | 5 GHz                 | 20 MHz                                     | 54 Mbps            |
-| **802.11g**    | ERP          | Extended Rate PHY                          | 2003    | 2.4 GHz               | 20 MHz                                     | 54 Mbps            |
-| **802.11n**    | HT           | High Throughput PHY                        | 2009    | 2.4 GHz, 5 GHz        | 20 MHz, 40 MHz, 80 MHz, 160 MHz            | 600 Mbps           |
-| **802.11ac**   | VHT          | Very High Throughput PHY                   | 2013    | 5 GHz                 | 20 MHz, 40 MHz, 80 MHz, 160 MHz, 80+80 MHz | 6.9 Gbps           |
-| **802.11ax**   | HE           | High Efficiency PHY                        | 2019    | 2.4 GHz, 5 GHz, 6 GHz | 20 MHz, 40 MHz, 80 MHz, 80+80 MHz, 160 MHz | 9.6 Gbps           |
-| **_802.11ad_** | _WiGig_      | _Wireless Gigabit_                         | _2012_  | _60 GHz_              | _2.16 GHz_                                 | _7 Gbps_           |
-| **_802.11af_** | _TVWS_       | _Television White Spaces_                  | _2014_  | _54-790 MHz_          | _6 MHz, 7 MHz, 8 MHz_                      | _570 Mbps_         |
-| **_802.11ah_** | _HaLow_      | _High Efficiency WLAN_                     | _2016_  | _900 MHz_             | _1 MHz, 2 MHz, 4 MHz, 8 MHz, 16 MHz_       | _347 Mbps_         |
+| **IEEE Standard** 	|   **PHY**   	|            **PHY** _(Full Name)_           	| **Year** 	|       **Utilization**      	|      **Band(s)**      	|        **Bandwidth**       	| **Max. Data Rate** 	|
+|:-----------------:	|:-----------:	|:------------------------------------------:	|:--------:	|:--------------------------:	|:---------------------:	|:--------------------------:	|:------------------:	|
+|  **802.11-prime** 	|   **DSSS**  	|       Direct Sequence Spread Spectrum      	|   1997   	|        WiFi Networks       	|        2.4 GHz        	|           22 MHz           	|       2 Mbps       	|
+|    **802.11b**    	| **HR/DSSS** 	|  High Rate/Direct Sequence Spread Spectrum 	|   1999   	|        WiFi Networks       	|        2.4 GHz        	|           22 MHz           	|       11 Mbps      	|
+|    **802.11a**    	|   **OFDM**  	| Orthogonal Frequency Division Multiplexing 	|   1999   	|        WiFi Networks       	|         5 GHz         	|           20 MHz           	|       54 Mbps      	|
+|    **802.11g**    	|   **ERP**   	|              Extended Rate PHY             	|   2003   	|        WiFi Networks       	|        2.4 GHz        	|           20 MHz           	|       54 Mbps      	|
+|    **802.11n**    	|    **HT**   	|             High Throughput PHY            	|   2009   	|        WiFi Networks       	|     2.4 GHz, 5 GHz    	|     20, 40, 80, 160 MHz    	|      600 Mbps      	|
+|    **802.11ac**   	|   **VHT**   	|          Very High Throughput PHY          	|   2013   	|        WiFi Networks       	|         5 GHz         	| 20, 40, 80, 160, 80+80 MHz 	|      6.9 Gbps      	|
+|    **802.11ax**   	|    **HE**   	|             High Efficiency PHY            	|   2019   	|        WiFi Networks       	| 2.4 GHz, 5 GHz, 6 GHz 	| 20, 40, 80, 80+80, 160 MHz 	|      9.6 Gbps      	|
+|     _802.11ad_    	|   _WiGig_   	|             _Wireless Gigabit_             	|  _2012_  	|       _Wireless PAN_       	|        _60 GHz_       	|         _2.16 GHz_         	|      _7 Gbps_      	|
+|     _802.11af_    	|    _TVWS_   	|          _Television White Spaces_         	|  _2014_  	| _Cognitive Radio Networks_ 	|      _54-790 MHz_     	|    _6 MHz, 7 MHz, 8 MHz_   	|     _570 Mbps_     	|
+|     _802.11ah_    	|   _HaLow_   	|           _High Efficiency WLAN_           	|  _2016_  	|     _IoT/M2M Networks_     	|       _900 MHz_       	|    _1, 2, 4, 8, 16 MHz_    	|     _347 Mbps_     	|
 
 - Los `Data Rates` varían mucho depende de la `PHY` que esté siendo usada. 
 - Los primeros `dispositivos WiFi` soportaban un máximo de 1 o 2 Mbps... Pero actualmente pueden llegar a data rates de casi 10 Gbps
