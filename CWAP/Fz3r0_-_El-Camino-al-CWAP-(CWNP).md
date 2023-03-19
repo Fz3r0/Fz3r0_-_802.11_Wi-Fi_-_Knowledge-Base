@@ -406,9 +406,12 @@ La `ruta Abruzzi del K2` es un camino lleno de peligros y desafíos que ponen a 
 - El local link trabaja en Layer 1 y 2, pero trae el payload y los datos de las capas superiores para ser trasnmitadas.
 - La MAC se define en el estándar IEEE 802.3 en caso de Ethernet y 802.11 en caso de WiFi.
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223023071-19560cf8-3027-4be2-9496-80fe121a3775.png" alt="mac ofrmat" height=403px/> </a> </p> 
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/226150472-5d122e77-8fbb-486c-953f-2f57ff5e8fd2.png" alt="mac ofrmat" height=233px/> </a> </p> 
 
-- Los `3 tipos de Frames` que principalmente se estudian en este curso y que forman el `MAC sublayer de 802.11` son:
+
+### 🚨☢️ `Importante` ☢️🚨
+
+- Los `3 tipos de Frames` que principalmente se estudian para el `CWAP` y que forman el `MAC sublayer de 802.11` son:
 1. **`Management Frames`**
 2. **`Control Frames`**
 3. **`Data Frames` / `QoS Data Frames`**
