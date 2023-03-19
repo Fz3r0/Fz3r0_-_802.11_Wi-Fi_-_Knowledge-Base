@@ -1138,13 +1138,13 @@ La técnica `OFDM` es una forma de `dividir la señal de transmisión` en múlti
 
 `Nota`: A medida que la tecnología avanza y **se añaden nuevas características y tecnologías adicionales** a la `PHY`, también la `MCS Table` crece.
 
-|    **Estándar**   | **Estándar IETF** | **Año de lanzamiento** | **Técnica de modulación** | **Banda de frecuencia** |            **Tecnologías adicionales**           | **Máxima tasa de datos** |
-|:-----------------:|:-----------------:|:----------------------:|:-------------------------:|:-----------------------:|:------------------------------------------------:|:------------------------:|
-| **IEEE 802.11a**  | prime             | 1999                   | OFDM                      | 5 GHz                   | N/A                                              | 54 Mbps                  |
-| **IEEE 802.11g**  | N/A               | 2003                   | OFDM                      | 2,4 GHz                 | N/A                                              | 54 Mbps                  |
-| **IEEE 802.11n**  | Wi-Fi 4           | 2009                   | OFDM y HT-OFDM            | 2,4 GHz y 5 GHz         | MIMO                                             | 600 Mbps                 |
-| **IEEE 802.11ac** | Wi-Fi 5           | 2013                   | OFDM                      | 5 GHz                   | canales más anchos, MU-MIMO                      | 6,9 Gbps                 |
-| **IEEE 802.11ax** | Wi-Fi 6           | 2021                   | OFDM y HE-OFDM            | 2,4 GHz y 5 GHz         | múltiples bandas de frecuencia, MU-MIMO mejorada | 11 Gbps                  |
+|    **Standard**   	| **IETF Standard** 	| **Release Year** 	|   **Modulation**   	|     **Band**    	|           **Additional Technologies**          	| **Spatial Streams** 	| **Maximum Data Rate** 	|
+|:-----------------:	|:-----------------:	|:----------------:	|:------------------:	|:---------------:	|:----------------------------------------------:	|:-------------------:	|:---------------------:	|
+|  **IEEE 802.11a** 	|       prime       	|       1999       	|      **OFDM**      	|      5 GHz      	|                      _N/A_                     	|        _N/A_        	|      **54 Mbps**      	|
+|  **IEEE 802.11g** 	|        N/A        	|       2003       	|      **OFDM**      	|     2.4 GHz     	|                      _N/A_                     	|        _N/A_        	|      **54 Mbps**      	|
+|  **IEEE 802.11n** 	|      Wi-Fi 4      	|       2009       	| **OFDM & HT-OFDM** 	| 2.4 GHz & 5 GHz 	|                    **MIMO**                    	|       **1-4**       	|      **600 Mbps**     	|
+| **IEEE 802.11ac** 	|      Wi-Fi 5      	|       2013       	|      **OFDM**      	|      5 GHz      	|     **MU-MIMO <br> More Channel Bandwidth**    	|       **1-8**       	|      **6.9 Gbps**     	|
+| **IEEE 802.11ax** 	|      Wi-Fi 6      	|       2021       	| **OFDM & HE-OFDM** 	| 2.4 GHz & 5 GHz 	| **Optimized MU-MIMO Multiple Frequency Bands** 	|       **1-12**      	|      **11 Gbps**      	|
 
 Las tasas de datos más altas se logran utilizando modulaciones más complejas y una mayor cantidad de bits por símbolo, lo que aumenta la eficiencia espectral de la transmisión. Sin embargo, **estas tasas de datos máximas solo se pueden lograr en condiciones óptimas de transmisión**, y la tasa real de datos puede variar según las condiciones del entorno y el hardware utilizado.
 
