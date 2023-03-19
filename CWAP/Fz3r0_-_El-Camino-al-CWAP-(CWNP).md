@@ -711,7 +711,7 @@ Cada layer cuenta con su propio `PDU` y `SDU` que lo identifica, por ejemplo el 
 - **Un `MSDU (MAC Service Data Unit)` simplemente equivale al `SDU` que se utiliza específicamente a nivel de `layer 2 - data link - MAC`.**
 - Un `MSDU` se refiere a los datos que se entregan desde la capa de red al nivel de enlace de datos para su posterior procesamiento.
 
-![image](https://user-images.githubusercontent.com/94720207/226146232-7ecad3a8-54e3-4050-8a8c-9ee8d8dab5d5.png)
+![image](https://user-images.githubusercontent.com/94720207/226147231-c788bb67-b987-44dc-8f09-75b56413e68c.png)
 
 En otras palabras, un `MSDU` es un `conjunto de datos` que se entrega **desde arriba** `layer 3 network` **hacia abajo** `layer 2 - data link` para su **posterior encapsulamiento** en un `MPDU`.
 
@@ -733,6 +733,8 @@ En el nivel de `layer 2 - data link`, **los `MSDU` se encapsulan en `MPDU` antes
 - Es `PSDU` el conjunto de datos que se entregan desde arriba la capa de enlace de datos al nivel físico para su posterior procesamiento y transmisión.
 - La PSDU incluye tanto los datos que se transmitirán como los encabezados de la capa física necesarios para la transmisión.
 
+![image](https://user-images.githubusercontent.com/94720207/226147253-40389e22-7664-43ff-ba32-eca2d2e06282.png)
+
 En otras palabras, un `PSDU` es un `conjunto de datos` que se entrega **desde arriba** `layer 2 - data link` **hacia abajo** `layer 1 - physical` para su **posterior encapsulamiento** en un `PPDU`.
 
 #### 🪬 `PPDU` : `Layer 1: PHY`
@@ -740,7 +742,10 @@ En otras palabras, un `PSDU` es un `conjunto de datos` que se entrega **desde ar
 - **Un `PPDU (Physical Protocol Data Unit)` simplemente equivale al `PDU` que se utiliza específicamente a nivel de `layer 1 - physical - PHY`.**
 Un PPDU (Physical Protocol Data Unit) es una unidad de datos de protocolo físico que se utiliza en el nivel físico del modelo OSI.
 Es la unidad de datos que se transmite físicamente en la red, y que incluye tanto los datos que se transmitirán como los encabezados de la capa física necesarios para la transmisión.
-La PPDU es el resultado de encapsular la PSDU en los encabezados de la capa física, y es lo que se transmite a través del medio físico de la red.
+
+![image](https://user-images.githubusercontent.com/94720207/226147447-c18bd2bd-905d-459d-8e8a-734bdeb20c84.png)
+
+**La PPDU es el resultado de encapsular la PSDU en los encabezados de la capa física, y es lo que se transmite a través del medio físico de la red. Es decir, a través del aire por medio de radio frecuancias moduladas.**
 
 #### 👹 `Fz3r0 Table` : `SDU` + `PDU` + `MSDU` + `MPDU` + `PSDU` + `PPDU`
 
