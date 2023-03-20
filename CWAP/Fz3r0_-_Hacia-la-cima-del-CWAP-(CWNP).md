@@ -1204,7 +1204,18 @@ QPSK (Quadrature Phase Shift Keying) es una forma de PSK en la que se utilizan d
 
 En resumen, OFDM es una técnica de modulación que utiliza una combinación de técnicas de modulación como QAM, PSK, BPSK, QPSK, 16-QAM, 64-QAM o 256-QAM para transmitir datos a través de subportadoras en un canal de comunicación.
 
+![image](https://user-images.githubusercontent.com/94720207/226240066-e6ea677a-9339-47c2-870c-2fe018c34b35.png)
 
+
+![image](https://user-images.githubusercontent.com/94720207/226239572-61cab589-7986-415b-863a-9d88a5a1710e.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/94720207/226239299-3e1fe2fc-b60d-4285-9d96-3370d56c682c.png)
+
+
+![image](https://user-images.githubusercontent.com/94720207/226240122-754717bf-ddb6-483b-bef9-434fb72889a4.png)
 
 
 
