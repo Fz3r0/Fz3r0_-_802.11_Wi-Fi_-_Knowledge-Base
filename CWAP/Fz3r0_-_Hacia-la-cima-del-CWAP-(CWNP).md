@@ -1165,15 +1165,19 @@ La `modulación` es una manera de **manipular un medio de comunicación, como un
 
 ### `ASK (Amplitude Shift Keying)` 
 
-En `ASK` o `modulación por desplazamiento de amplitud`, la amplitud de la `carrier wave` se modifica para representar los bits de información. Por ejemplo, si un bit 1 se representa aumentando la amplitud de la onda portadora y un bit 0 se representa manteniendo la amplitud sin cambios, entonces ASK se utiliza para transmitir información.
+En `ASK` o `modulación por desplazamiento de amplitud`, la `amplitud` de la `carrier wave` se modifica para representar los bits de información. Por ejemplo, si un bit 1 se representa aumentando la amplitud de la onda portadora y un bit 0 se representa manteniendo la amplitud sin cambios, entonces ASK se utiliza para transmitir información.
 
-### `ASK (Amplitude Shift Keying)` 
+### `PSK (Phase Shift Keying)` 
 
-PSK (Phase Shift Keying): modulación por desplazamiento de fase. En PSK, la fase de la onda portadora se modifica para representar los bits de información. Por ejemplo, si un bit 1 se representa desplazando la fase de la onda portadora 180 grados y un bit 0 se representa sin cambios en la fase, entonces PSK se utiliza para transmitir información.
+En `PSK` o `modulación por desplazamiento de fase`, la `fase` de la onda portadora se modifica para representar los bits de información. Por ejemplo, si un bit 1 se representa desplazando la fase de la onda portadora 180 grados y un bit 0 se representa sin cambios en la fase, entonces PSK se utiliza para transmitir información.
 
-FSK (Frequency Shift Keying): modulación por desplazamiento de frecuencia. En FSK, la frecuencia de la onda portadora se modifica para representar los bits de información. Por ejemplo, si un bit 1 se representa transmitiendo una onda portadora a una frecuencia más alta y un bit 0 se representa transmitiendo una onda portadora a una frecuencia más baja, entonces FSK se utiliza para transmitir información.
+### `FSK (Frequency Shift Keying)` 
 
-QAM (Quadrature Amplitude Modulation): modulación de amplitud en cuadratura. En QAM, se utilizan dos señales moduladoras, una en fase y otra en cuadratura (90 grados fuera de fase), para modular la amplitud y la fase de la onda portadora. Por lo tanto, QAM combina ASK y PSK. Cuanto mayor sea el número de estados de QAM, mayor será la cantidad de bits que se pueden transmitir por símbolo. Por ejemplo, una señal QAM de 16 estados puede transmitir 4 bits por símbolo.
+En `FSK` o `modulación por desplazamiento de frecuencia`, `frecuencia` de la onda portadora se modifica para representar los bits de información. Por ejemplo, si un bit 1 se representa transmitiendo una onda portadora a una frecuencia más alta y un bit 0 se representa transmitiendo una onda portadora a una frecuencia más baja, entonces FSK se utiliza para transmitir información.
+
+- **`OJO:`** **`FSK` NO se utiliza para redes WiFi y está fuera del alcance del `CWAP`.**
+
+### QAM (Quadrature Amplitude Modulation): modulación de amplitud en cuadratura. En QAM, se utilizan dos señales moduladoras, una en fase y otra en cuadratura (90 grados fuera de fase), para modular la amplitud y la fase de la onda portadora. Por lo tanto, QAM combina ASK y PSK. Cuanto mayor sea el número de estados de QAM, mayor será la cantidad de bits que se pueden transmitir por símbolo. Por ejemplo, una señal QAM de 16 estados puede transmitir 4 bits por símbolo.
 
 En las redes WiFi, se utilizan diferentes tipos de modulación según la capacidad del canal de radio y el entorno de la red. Los estándares más antiguos como 802.11b utilizan modulaciones más básicas como ASK y PSK, mientras que los estándares más recientes como 802.11ac y 802.11ax utilizan modulaciones más complejas como QAM. La elección de la modulación adecuada es importante para optimizar la tasa de transferencia de datos y la calidad de la señal en una red inalámbrica.
 
