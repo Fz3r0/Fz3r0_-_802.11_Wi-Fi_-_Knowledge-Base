@@ -1157,21 +1157,21 @@ Además, **las frecuencias más altas permiten un mayor `bandwith & throughput`*
 
 - **Para que las `RF waves` (ondas de radiofrecuencia) sirvan como `carriers` de datos, los `wireless devices` utilizan `modulación` para ingresar `datos` a las ondas de radiofrecuencia. **
 
-## 🟢 `802.11` - `Modulation Methods` AKA `PHY`
+## 🟢 `802.11` - `Modulation Methods`
 
 En el contexto de las redes `WiFi 802.11`, la `modulación` se refiere al **proceso de convertir una `señal digital`, que representa `bits de información`, en una `señal analógica` que se puede transmitir a través de un medio de comunicación, como el aire a través de `RF`. La `modulación` es una `técnica de transmisión` que permite enviar información a través de `ondas electromagnéticas` y es esencial para la `transmisión inalámbrica de datos`. <br>
 
 La `modulación` es una manera de **manipular un medio de comunicación, como una `onda de radio`, para representar `bits de información`**. La modulación puede ser de varios tipos, incluyendo:
 
-### `ASK (Amplitude Shift Keying)` 
+### ⭕ `ASK (Amplitude Shift Keying)` 
 
 En `ASK` o `modulación por desplazamiento de amplitud`, la `amplitud` de la `carrier wave` se modifica para representar los bits de información. Por ejemplo, si un bit 1 se representa aumentando la amplitud de la onda portadora y un bit 0 se representa manteniendo la amplitud sin cambios, entonces ASK se utiliza para transmitir información.
 
-### `PSK (Phase Shift Keying)` 
+### ⭕ `PSK (Phase Shift Keying)` 
 
 En `PSK` o `modulación por desplazamiento de fase`, la `fase` de la onda portadora se modifica para representar los bits de información. Por ejemplo, si un bit 1 se representa desplazando la fase de la onda portadora 180 grados y un bit 0 se representa sin cambios en la fase, entonces PSK se utiliza para transmitir información.
 
-### `FSK (Frequency Shift Keying)` 
+### ⭕ `FSK (Frequency Shift Keying)` 
 
 En `FSK` o `modulación por desplazamiento de frecuencia`, `frecuencia` de la onda portadora se modifica para representar los bits de información. Por ejemplo, si un bit 1 se representa transmitiendo una onda portadora a una frecuencia más alta y un bit 0 se representa transmitiendo una onda portadora a una frecuencia más baja, entonces FSK se utiliza para transmitir información.
 
@@ -1183,9 +1183,47 @@ La modulación `ASK` se utiliza en **sistemas de comunicaciones de `baja velocid
 
 **La modulación `PSK` se utiliza en aplicaciones de comunicaciones de `alta velocidad`, como la comunicación satelital y la transmisión de datos de alta velocidad a través de fibra óptica. Específicamente, el estándar `802.11 WiFi` utiliza la `variante PSK` llamada `QPSK (Quadrature Phase Shift Keying)`, que permite transmitir dos bits por símbolo y, por lo tanto, aumenta la tasa de transferencia de datos** <br>
 
-- **Es decir, ninguna de estas modulaciones básicas son utlizadas actualmente para WiFi, pero son las bases o variantes de las que se utilizan en 802.11 WiFi**
+- **Es decir, ninguna de estas modulaciones básicas son utlizadas actualmente para WiFi, pero son las bases que fundamentan la modulación `OFDM` que es la principalmente utilizada en la actualidad para redes `Wifi 802.11`**
 
-### Modlucaciones `OFDM`, `QAM` y `QPSK`
+---
+
+### 🟣 `OFDM Modulation` = [`QAM`/`BPSK`/`QPSK`]
+
+
+OFDM (Orthogonal Frequency Division Multiplexing) es una técnica de modulación que divide el ancho de banda disponible en una serie de subportadoras más estrechas, cada una de las cuales se modula individualmente utilizando una técnica de modulación como QAM, PSK, BPSK, QPSK, 16-QAM, 64-QAM o 256-QAM.
+
+QAM (Quadrature Amplitude Modulation) es una técnica de modulación que combina dos señales portadoras en cuadratura, cada una de las cuales se modula con una señal digital, para producir una señal compleja. La amplitud y la fase de la señal compleja se utilizan para transmitir la información.
+
+PSK (Phase Shift Keying) es una técnica de modulación en la que la fase de la portadora se cambia para representar los datos.
+
+BPSK (Binary Phase Shift Keying) es una forma de PSK en la que se utiliza una sola señal portadora que cambia de fase entre dos estados diferentes para representar los datos.
+
+QPSK (Quadrature Phase Shift Keying) es una forma de PSK en la que se utilizan dos señales portadoras en cuadratura, cada una de las cuales cambia de fase entre cuatro estados diferentes para representar los datos.
+
+16-QAM, 64-QAM y 256-QAM son formas de QAM en las que se utilizan 16, 64 y 256 estados diferentes de amplitud y fase de la señal compleja para representar los datos. A medida que aumenta el número de estados de la señal, se puede transmitir más información en la misma cantidad de ancho de banda, pero se requiere una mayor precisión en la detección de la señal.
+
+En resumen, OFDM es una técnica de modulación que utiliza una combinación de técnicas de modulación como QAM, PSK, BPSK, QPSK, 16-QAM, 64-QAM o 256-QAM para transmitir datos a través de subportadoras en un canal de comunicación.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 - Si no se utliza ni `PSK`, ni `ASK`, ni `FSK` ¿ qué modulación utiliza WiFi específicamente?
 
