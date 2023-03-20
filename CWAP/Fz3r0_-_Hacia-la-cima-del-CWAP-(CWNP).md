@@ -1175,9 +1175,30 @@ En `PSK` o `modulación por desplazamiento de fase`, la `fase` de la onda portad
 
 En `FSK` o `modulación por desplazamiento de frecuencia`, `frecuencia` de la onda portadora se modifica para representar los bits de información. Por ejemplo, si un bit 1 se representa transmitiendo una onda portadora a una frecuencia más alta y un bit 0 se representa transmitiendo una onda portadora a una frecuencia más baja, entonces FSK se utiliza para transmitir información.
 
-- **`OJO:`** **`FSK` NO se utiliza para redes WiFi y está fuera del alcance del `CWAP`.**
-
 ![image](https://user-images.githubusercontent.com/94720207/226231485-87e1936e-bdb9-4762-91bf-6882a28382c6.png)
+
+**Actualmente la modulación `FSK` NO se utiliza en WLAN.** Los estándares de WiFi actuales `802.11a/b/g/n/ac/ax` utilizan principalmente la modulación `OFDM` para transmitir datos de manera eficiente y confiable. <br>
+
+La modulación `ASK` se utiliza en **sistemas de comunicaciones de `baja velocidad`, como sensores inalámbricos y sistemas de control remoto, donde la transmisión de datos no requiere un alto ancho de banda.** <br>
+
+**La modulación `PSK` se utiliza en aplicaciones de comunicaciones de `alta velocidad`, como la comunicación satelital y la transmisión de datos de alta velocidad a través de fibra óptica. Específicamente, el estándar `802.11 WiFi` utiliza la `variante PSK` llamada `QPSK (Quadrature Phase Shift Keying)`, que permite transmitir dos bits por símbolo y, por lo tanto, aumenta la tasa de transferencia de datos** <br>
+
+- **Es decir, ninguna de estas modulaciones básicas son utlizadas actualmente para WiFi, pero son las bases o variantes de las que se utilizan en 802.11 WiFi**
+
+### Modlucaciones `OFDM`, `QAM` y `QPSK`
+
+- Si no se utliza ni `PSK`, ni `ASK`, ni `FSK` ¿ qué modulación utiliza WiFi específicamente?
+
+**El estándar de WiFi 802.11 utiliza principalmente la modulación `OFDM` la cual principalmente se basa en la modulación `QAM`.
+
+**la modulación QAM (Quadrature Amplitude Modulation) para transmitir datos a alta velocidad. Aunque es cierto que la modulación PSK (QPSK) también se utiliza en algunos casos específicos, como en el caso de la transmisión de datos a baja velocidad o en situaciones de baja calidad de la señal.
+
+La modulación ASK (Amplitude Shift Keying) también se puede utilizar en algunos casos, como en la transmisión de señales de control o sincronización en la capa física de WiFi. Sin embargo, la modulación ASK no se utiliza para la transmisión de datos en sí.
+
+
+### QPSK
+
+en WiFi se utiliza una variante de la modulación digital PSK (Phase Shift Keying) para transmitir datos de forma inalámbrica. Pero En concreto, el estándar de WiFi 802.11 utiliza la modulación PSK para modificación en la fase de la señal portadora para transmitir datos a alta velocidad. Específicamente, el estándar 802.11 utiliza la variante PSK llamada QPSK (Quadrature Phase Shift Keying), que permite transmitir dos bits por símbolo y, por lo tanto, aumenta la tasa de transferencia de datos. Además, el estándar más reciente 802.11ax también utiliza la modulación PSK para la transmisión de datos en una amplia gama de frecuencias para mejorar la eficiencia espectral y la tasa de transferencia de datos.
 
 ---
 
@@ -1187,18 +1208,15 @@ En las redes WiFi, se utilizan diferentes tipos de modulación según la capacid
 
 - Durante el `CWNA` hice una tabla que me ayudó mucho a entender los `PHY`, `Ammandments`, `Standards`. Esta es la versión simplificada:
 
-| **IEEE Standard** 	|   **PHY**   	|            **PHY** _(Full Name)_           	| **Year** 	|       **Utilization**      	|      **Band(s)**      	|        **Bandwidth**       	| **Max. Data Rate** 	|
-|:-----------------:	|:-----------:	|:------------------------------------------:	|:--------:	|:--------------------------:	|:---------------------:	|:--------------------------:	|:------------------:	|
-|  **802.11-prime** 	|   **DSSS**  	|       Direct Sequence Spread Spectrum      	|   1997   	|        WiFi Networks       	|        2.4 GHz        	|           22 MHz           	|       2 Mbps       	|
-|    **802.11b**    	| **HR/DSSS** 	|  High Rate/Direct Sequence Spread Spectrum 	|   1999   	|        WiFi Networks       	|        2.4 GHz        	|           22 MHz           	|       11 Mbps      	|
-|    **802.11a**    	|   **OFDM**  	| Orthogonal Frequency Division Multiplexing 	|   1999   	|        WiFi Networks       	|         5 GHz         	|           20 MHz           	|       54 Mbps      	|
-|    **802.11g**    	|   **ERP**   	|              Extended Rate PHY             	|   2003   	|        WiFi Networks       	|        2.4 GHz        	|           20 MHz           	|       54 Mbps      	|
-|    **802.11n**    	|    **HT**   	|             High Throughput PHY            	|   2009   	|        WiFi Networks       	|     2.4 GHz, 5 GHz    	|     20, 40, 80, 160 MHz    	|      600 Mbps      	|
-|    **802.11ac**   	|   **VHT**   	|          Very High Throughput PHY          	|   2013   	|        WiFi Networks       	|         5 GHz         	| 20, 40, 80, 160, 80+80 MHz 	|      6.9 Gbps      	|
-|    **802.11ax**   	|    **HE**   	|             High Efficiency PHY            	|   2019   	|        WiFi Networks       	| 2.4 GHz, 5 GHz, 6 GHz 	| 20, 40, 80, 80+80, 160 MHz 	|      9.6 Gbps      	|
-|     _802.11ad_    	|   _WiGig_   	|             _Wireless Gigabit_             	|  _2012_  	|       _Wireless PAN_       	|        _60 GHz_       	|         _2.16 GHz_         	|      _7 Gbps_      	|
-|     _802.11af_    	|    _TVWS_   	|          _Television White Spaces_         	|  _2014_  	| _Cognitive Radio Networks_ 	|      _54-790 MHz_     	|    _6 MHz, 7 MHz, 8 MHz_   	|     _570 Mbps_     	|
-|     _802.11ah_    	|   _HaLow_   	|           _High Efficiency WLAN_           	|  _2016_  	|     _IoT/M2M Networks_     	|       _900 MHz_       	|    _1, 2, 4, 8, 16 MHz_    	|     _347 Mbps_     	|
+|  **IEEE Standard** 	| **PHY** 	|             **PHY (Full Name)**            	| **Year** 	|      **Band(s)**      	|        **Bandwidth**       	|                 **Modulation(s)**                 	| **Max. Data Rate** 	|
+|:------------------:	|:-------:	|:------------------------------------------:	|:--------:	|:---------------------:	|:--------------------------:	|:-------------------------------------------------:	|:------------------:	|
+| **_802.11-prime_** 	|  _DSSS_ 	|      _Direct Sequence Spread Spectrum_     	|  _1997_  	|       _2.4 GHz_       	|          _22 MHz_          	|                **_ASK, PSK, QAM_**                	|      _2 Mbps_      	|
+|     **802.11b**    	| HR/DSSS 	|  High Rate/Direct Sequence Spread Spectrum 	|   1999   	|        2.4 GHz        	|           22 MHz           	|                      **DSSS**                     	|       11 Mbps      	|
+|     **802.11a**    	|   OFDM  	| Orthogonal Frequency Division Multiplexing 	|   1999   	|         5 GHz         	|           20 MHz           	|                      **OFDM**                     	|       54 Mbps      	|
+|     **802.11g**    	|   ERP   	|              Extended Rate PHY             	|   2003   	|        2.4 GHz        	|           20 MHz           	|                   **OFDM, DSSS**                  	|       54 Mbps      	|
+|     **802.11n**    	|    HT   	|             High Throughput PHY            	|   2009   	|     2.4 GHz, 5 GHz    	|     20, 40, 80, 160 MHz    	|                **OFDM, MIMO-OFDM**                	|      600 Mbps      	|
+|    **802.11ac**    	|   VHT   	|          Very High Throughput PHY          	|   2013   	|         5 GHz         	| 20, 40, 80, 160, 80+80 MHz 	|                **OFDM, MIMO-OFDM**                	|      6.9 Gbps      	|
+|    **802.11ax**    	|    HE   	|             High Efficiency PHY            	|   2019   	| 2.4 GHz, 5 GHz, 6 GHz 	| 20, 40, 80, 80+80, 160 MHz 	| **OFDM, MIMO-OFDM, MU-MIMO, QAM, PSK, QPSK, FSK** 	|       9.6 Gbp      	|
 
 - Los `Data Rates` varían mucho depende de la `PHY` que esté siendo usada. 
 - Los primeros `dispositivos WiFi` soportaban un máximo de 1 o 2 Mbps... Pero actualmente pueden llegar a data rates de casi 10 Gbps
