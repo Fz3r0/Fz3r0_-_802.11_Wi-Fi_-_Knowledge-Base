@@ -1160,7 +1160,7 @@ Además, **las frecuencias más altas permiten un mayor `bandwith & throughput`*
 
 En el contexto de las redes `WiFi 802.11`, la `modulación` se refiere al **proceso de convertir una `señal digital`, que representa `bits de información`, en una `señal analógica` que se puede transmitir a través de un medio de comunicación, como el aire a través de `RF`. La `modulación` es una `técnica de transmisión` que permite enviar información a través de `ondas electromagnéticas` y es esencial para la `transmisión inalámbrica de datos`. <br>
 
-La `modulación` es una manera de **manipular un medio de comunicación, como una `onda de radio`, para representar `bits de información`**. La modulación puede ser de varios tipos, incluyendo:
+La modulación es una técnica utilizada para transmitir información a través de una `señal de alta frecuencia`, llamada portadora o `carrier` que es modificada pra transmitir. Es decir, la `modulación` es una manera de **manipular un medio de comunicación, como una `onda de radio`, para representar `bits de información`**. La modulación puede ser de varios tipos, incluyendo:
 
 ### ⭕ `ASK (Amplitude Shift Keying)` 
 
@@ -1182,12 +1182,21 @@ La modulación `ASK` se utiliza en **sistemas de comunicaciones de `baja velocid
 
 **La modulación `PSK` se utiliza en aplicaciones de comunicaciones de `alta velocidad`, como la comunicación satelital y la transmisión de datos de alta velocidad a través de fibra óptica. Específicamente, el estándar `802.11 WiFi` utiliza la `variante PSK` llamada `QPSK (Quadrature Phase Shift Keying)`, que permite transmitir dos bits por símbolo y, por lo tanto, aumenta la tasa de transferencia de datos** <br>
 
-- **Es decir, ninguna de estas modulaciones básicas son utlizadas actualmente para WiFi, pero son las bases que fundamentan la modulación `OFDM` que es la principalmente utilizada en la actualidad para redes `Wifi 802.11`**
+- **Como se puede observar, ninguna de estas modulaciones básicas son utlizadas actualmente para WiFi, pero son las bases que fundamentan todo el `esquema de modulación OFDM`, puesto que `OFDM` se compone de varios tipos de modulación que parten que es la principalmente utilizada en la actualidad para redes `Wifi 802.11`**
 
 ---
 
-### 🟣 `OFDM Modulation` = [`QAM`/`BPSK`/`QPSK`]
+### 🟣 `OFDM Modulation Scheme` = `QAM`/`BPSK`/`QPSK` Modulations
 
+La razón por la que la modulación `OFDM (Orthogonal Frequency Division Multiplexing)` se describe comúnmente como un **"esquema de modulación" o `Modulation Scheme`** en lugar de simplemente una "modulación" o `modulation` es porque **`OFDM` NO es una técnica de modulación tradicional en sí misma, sino que se compone de varias técnicas diferentes de modulación.** <br> 
+
+La `modulación` es una técnica utilizada para transmitir información a través de una `señal de alta frecuencia`, llamada portadora o `carrier`. En la modulación tradicional, esta portadora se modifica para transmitir la información. <br> 
+
+Por otro lado, en el `OFDM modulation scheme`, la señal de información se divide en **varias señales de `baja frecuencia`**, llamadas subportadoras o `subcarriers`. Cada `subcarrier` se modula individualmente con una técnica de modulación convencional, como `QPSK` o `QAM`. <br> 
+
+**Después de que cada `subcarrier` se modula, se combinan todas para formar la señal `OFDM` final que se transmite.** <br> 
+
+![image](https://user-images.githubusercontent.com/94720207/226240066-e6ea677a-9339-47c2-870c-2fe018c34b35.png)
 
 OFDM (Orthogonal Frequency Division Multiplexing) es una técnica de modulación que divide el ancho de banda disponible en una serie de subportadoras más estrechas, cada una de las cuales se modula individualmente utilizando una técnica de modulación como QAM, PSK, BPSK, QPSK, 16-QAM, 64-QAM o 256-QAM.
 
@@ -1203,7 +1212,7 @@ QPSK (Quadrature Phase Shift Keying) es una forma de PSK en la que se utilizan d
 
 En resumen, OFDM es una técnica de modulación que utiliza una combinación de técnicas de modulación como QAM, PSK, BPSK, QPSK, 16-QAM, 64-QAM o 256-QAM para transmitir datos a través de subportadoras en un canal de comunicación.
 
-![image](https://user-images.githubusercontent.com/94720207/226240066-e6ea677a-9339-47c2-870c-2fe018c34b35.png)
+
 
 
 ![image](https://user-images.githubusercontent.com/94720207/226239572-61cab589-7986-415b-863a-9d88a5a1710e.png)
