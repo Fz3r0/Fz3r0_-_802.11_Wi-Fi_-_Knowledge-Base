@@ -62,7 +62,7 @@ En este writeup, abordaré el camino hacia la certificación `CWAP`, cubriendo t
 
 Personalmente recomiendo el `Cisco CCNA`, `CompTIA Network+` y `Ruckus ICX Implementer`, que son certificaciones reconocidas en la industria que cubren los `fundamentos de networking`, incluyendo `routing` y `switching`, además de funamentos de `Wireless`. Estas certificaciones son diseñadas para proporcionar una comprensión sólida de cómo funcionan las redes, cómo se conectan y cómo se comunican los dispositivos en una red.
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/226084436-c5f11a9c-9e3b-49ce-82d1-cbf5e2696775.png" alt="CWAP" height=160px/> </a>   </p> 
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/226084436-c5f11a9c-9e3b-49ce-82d1-cbf5e2696775.png" alt="CWAP" height=145px/> </a>   </p> 
 
 
 
@@ -71,7 +71,10 @@ Personalmente recomiendo el `Cisco CCNA`, `CompTIA Network+` y `Ruckus ICX Imple
 - Es necesario contar con la certificación CWNA, ya que esta certificación es la base fundamental para comprender el protocolo de redes inalámbricas y es obligatoria para presentar el CWAP.
 - Es importante tener un conocimiento profundo sobre las tecnologías inalámbricas, incluyendo los diferentes estándares de redes inalámbricas, protocolos de seguridad, administración de redes inalámbricas, entre otros. <br> <br>
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/226084303-f71e19bc-414e-42de-ac21-bfc130e1f2cd.png" alt="CWAP" height=160px/> </a>   </p> 
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/227316603-2adc530c-54a7-453b-9fe5-7719b71c975e.png" alt="CWAP" height=130px/> </a>   </p> 
+
+
+
 
 #### 4. ✅ `Network Security` (ej. `Offensive Security: OSCP`, `Comptia: Security+`)
 
@@ -85,7 +88,7 @@ Personalmente recomiendo el `Cisco CCNA`, `CompTIA Network+` y `Ruckus ICX Imple
 - Wireshark es una herramienta de análisis de tráfico de red gratuita y de código abierto que permite capturar y examinar el tráfico de red en tiempo real. Con Wireshark, es posible analizar el tráfico de redes cableadas e inalámbricas para solucionar problemas y detectar fallos de seguridad.
 - También existen otros tipos de analizadores de protocolos, pero este writeup se centrará en `Wireshark` y en específico mi porpia modificación y perfil llamado `The BlackShark`  <br> <br> 
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/226084984-53d0035a-6285-4c8c-8849-1d8d0df7343b.png" alt="CWAP" height=110px/> </a>   </p> <br>
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/226084984-53d0035a-6285-4c8c-8849-1d8d0df7343b.png" alt="CWAP" height=90px/> </a>   </p> <br>
 
 ## 🏔️ La analogía del `CWAP` y una expedición al `K2` 
 
