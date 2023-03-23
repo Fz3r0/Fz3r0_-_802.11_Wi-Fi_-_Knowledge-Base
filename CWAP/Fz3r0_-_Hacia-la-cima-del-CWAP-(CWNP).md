@@ -33,11 +33,14 @@ _por @ **Fz3r0 💀** (CWNA)_
 
 ## 🟢 `Introducción`
 
-**`CWAP (Certified Wireless Analysis Professional)`** es una certificación ofrecida por **`CWNP (Certified Wireless Network Professional)`** que se centra en el **`análisis avanzado de redes inalámbricas`**. Los profesionales que buscan obtener la certificación CWAP deben demostrar un amplio conocimiento de los principios y técnicas de análisis de redes inalámbricas, protocolos, así como habilidades para resolver problemas complejos y mejorar el rendimiento de redes inalámbricas existentes.
 
-Los temas abordados en la certificación `CWAP` incluyen la **captura y análisis de tráfico inalámbrico, la identificación y solución de problemas de cobertura y rendimiento, el análisis de interferencias y la aplicación de soluciones de seguridad inalámbrica**. A través de la certificación CWAP, los profesionales pueden demostrar su experiencia en la gestión y optimización de redes inalámbricas avanzadas y su capacidad para abordar los desafíos de análisis y resolución de problemas en entornos de red inalámbrica complejos. <br>
+La certificación **`CWAP (Certified Wireless Analysis Professional)`**, otorgada por la prestigiosa organización **`CWNP (Certified Wireless Network Professional)`**, representa una credencial de alto nivel en el ámbito de las redes inalámbricas. Diseñada específicamente para aquellos profesionales que buscan demostrar su competencia en el análisis avanzado y resolución de problemas en entornos de redes inalámbricas, esta certificación implica un conocimiento profundo de los protocolos de red, la seguridad de la red inalámbrica y el diseño de redes inalámbricas de alto rendimiento. <br>
 
-En este writeup que he realizado, abordaré el camino hacia la certificación `CWAP`, cubriendo todos los temas incluidos en el plan de estudios oficial de CWNP. Además, profundizaré en temas que no se abordan en detalle en la documentación oficial, brindando una comprensión completa de los desafíos y soluciones en el análisis avanzado de redes inalámbricas. <br><br>
+Los profesionales que buscan obtener la certificación `CWAP` deben demostrar un amplio conocimiento de los principios y técnicas de análisis de redes inalámbricas, protocolos, así como habilidades para resolver problemas complejos y mejorar tanto rendimiento como la seguridad de redes inalámbricas. <br>
+
+Los temas abordados en la certificación `CWAP` incluyen la **captura y análisis de tráfico inalámbrico, análisis de espectro, la identificación y solución de problemas de cobertura y rendimiento, el análisis de interferencias y la aplicación de soluciones de seguridad inalámbrica**. A través de la certificación `CWAP`, los profesionales pueden demostrar su experiencia en la gestión y optimización de redes inalámbricas avanzadas y su capacidad para abordar los desafíos de análisis y resolución de problemas en entornos de red inalámbrica complejos. <br>
+
+En este writeup, abordaré el camino hacia la certificación `CWAP`, cubriendo todos los temas incluidos en el plan de estudios oficial de `CWNP`. Además, profundizaré en temas que no se abordan en detalle en la documentación oficial, brindando una comprensión completa de los desafíos y soluciones en el análisis avanzado de redes inalámbricas. También incluyo mis propios laboratorios de análisis que realicé a lo largo de mi travesía: hacia la cima del CWAP. <br><br>
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/225515551-3de68463-c5b1-4573-8a22-bfa77fd7e834.png" alt="CWAP" height=165px/> </a>   </p> 
 
@@ -49,11 +52,12 @@ En este writeup que he realizado, abordaré el camino hacia la certificación `C
 
 **Además, se recomienda tener una serie de conocimientos previos y certificaciones que pueden ser de gran ayuda para el candidato, tales como:**
 
-#### 1. ✅ `Routing & Switching` 
+#### 1. ✅ `Routing & Switching` + `Network Protocols`
 
 - La certificación `CWAP` se enfoca en la implementación y análisis de redes inalámbricas (WiFi), pero es necesario tener conocimientos sólidos de routing y switching a nivel LAN (redes cableadas) porque las redes inalámbricas se conectan y comunican con las redes cableadas.
-- Por ejemplo, los `WiFi Access Points` se conectan a `switches` y `routers` para acceder a la red y otros dispositivos. 
 - Además, las redes inalámbricas se integran con la red cableada para permitir el acceso a los recursos compartidos. De hecho, tanto clientes Wireless o Wired puedes comuicarse entre si por igual  
+
+
 - Por lo tanto, es importante entender la topología y arquitectura de la red a nivel de switching y routing para obtener la certificación CWAP con éxito.
 
 Personalmente recomiendo el `Cisco CCNA`, `CompTIA Network+` y `Ruckus ICX Implementer`, que son certificaciones reconocidas en la industria que cubren los `fundamentos de networking`, incluyendo `routing` y `switching`, además de funamentos de `Wireless`. Estas certificaciones son diseñadas para proporcionar una comprensión sólida de cómo funcionan las redes, cómo se conectan y cómo se comunican los dispositivos en una red.
@@ -61,11 +65,6 @@ Personalmente recomiendo el `Cisco CCNA`, `CompTIA Network+` y `Ruckus ICX Imple
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/226084436-c5f11a9c-9e3b-49ce-82d1-cbf5e2696775.png" alt="CWAP" height=160px/> </a>   </p> 
 
 
-#### 2. ✅ `Network Protocols`
-
-- Un protocolo de red es un conjunto de reglas y estándares que permiten que los dispositivos de red se comuniquen entre sí y compartan información en una red de computadoras.
-- Es importante destacar que los protocolos de red son necesarios tanto para redes alámbricas como inalámbricas, ya que permiten la transmisión de datos a través de diferentes medios de comunicación, incluyendo cableado de cobre, fibra óptica y ondas de radio.
-- Nuevamente, certificaciones como CCNA o Network+ cubren perfectamente este tema
 
 #### 3. ✅ `Wireless` = `CWNP: CWNA`
 
