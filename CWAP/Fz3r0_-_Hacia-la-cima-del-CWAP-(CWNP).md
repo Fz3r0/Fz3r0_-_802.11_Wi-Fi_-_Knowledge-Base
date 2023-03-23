@@ -1198,19 +1198,34 @@ Por otro lado, en el `OFDM modulation scheme`, la señal de información se divi
 
 ![image](https://user-images.githubusercontent.com/94720207/226240066-e6ea677a-9339-47c2-870c-2fe018c34b35.png)
 
-OFDM (Orthogonal Frequency Division Multiplexing) es una técnica de modulación que divide el ancho de banda disponible en una serie de subportadoras más estrechas, cada una de las cuales se modula individualmente utilizando una técnica de modulación como QAM, PSK, BPSK, QPSK, 16-QAM, 64-QAM o 256-QAM.
+OFDM permite que un solo AP transmita múltiples subportadoras con diferentes técnicas de modulación para adaptarse a diferentes necesidades de transmisión de información. Además, cada cliente puede recibir las subportadoras que mejor se adapten a sus necesidades específicas de transmisión. <br>
+
+Por ejemplo, si un AP necesita transmitir diferentes tipos de información a diferentes velocidades hacia diferentes clientes, puede usar diferentes técnicas de modulación en diferentes subportadoras para adaptarse a cada tipo de información y cada tipo de cliente/dispositivo. <br>
+
+En cuanto a los clientes, cada cliente puede recibir las subportadoras que mejor se adapten a sus necesidades de transmisión. En otras palabras, si un cliente necesita una alta velocidad de transmisión, el AP puede asignarle subportadoras con una técnica de modulación más avanzada, como 64-QAM. Por otro lado, si un cliente está en un lugar con una señal débil o interferencia, el AP puede asignarle subportadoras con una técnica de modulación menos avanzada, como QPSK. <br>
+
+A continuación se explica el `OFDM Modulation Scheme` y las técnicas de modulación de sus `subcarriers` para redes `802.11 WiFi`:
+
+### ⭕ `OFDM (Orthogonal Frequency Division Multiplexing)`
+
+OFDM es una técnica de modulación que divide el ancho de banda disponible en una serie de subportadoras más estrechas, cada una de las cuales se modula individualmente utilizando una técnica de modulación como QAM, PSK, BPSK, QPSK, 16-QAM, 64-QAM o 256-QAM.
+
+### ⭕ `OFDM (Orthogonal Frequency Division Multiplexing)`
+
 
 QAM (Quadrature Amplitude Modulation) es una técnica de modulación que combina dos señales portadoras en cuadratura, cada una de las cuales se modula con una señal digital, para producir una señal compleja. La amplitud y la fase de la señal compleja se utilizan para transmitir la información.
 
-PSK (Phase Shift Keying) es una técnica de modulación en la que la fase de la portadora se cambia para representar los datos.
+### ⭕ `OFDM (Orthogonal Frequency Division Multiplexing)`
 
 BPSK (Binary Phase Shift Keying) es una forma de PSK en la que se utiliza una sola señal portadora que cambia de fase entre dos estados diferentes para representar los datos.
+
+### ⭕ `OFDM (Orthogonal Frequency Division Multiplexing)`
 
 QPSK (Quadrature Phase Shift Keying) es una forma de PSK en la que se utilizan dos señales portadoras en cuadratura, cada una de las cuales cambia de fase entre cuatro estados diferentes para representar los datos.
 
 16-QAM, 64-QAM y 256-QAM son formas de QAM en las que se utilizan 16, 64 y 256 estados diferentes de amplitud y fase de la señal compleja para representar los datos. A medida que aumenta el número de estados de la señal, se puede transmitir más información en la misma cantidad de ancho de banda, pero se requiere una mayor precisión en la detección de la señal.
 
-En resumen, OFDM es una técnica de modulación que utiliza una combinación de técnicas de modulación como QAM, PSK, BPSK, QPSK, 16-QAM, 64-QAM o 256-QAM para transmitir datos a través de subportadoras en un canal de comunicación.
+
 
 
 
