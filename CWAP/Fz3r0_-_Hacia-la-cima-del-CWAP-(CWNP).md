@@ -1223,15 +1223,37 @@ OFDM es una técnica de modulación que divide el ancho de banda disponible en u
 
 BPSK (Binary Phase Shift Keying) es una forma de PSK en la que se utiliza una sola señal portadora que cambia de fase entre dos estados diferentes para representar los datos.
 
+![image](https://user-images.githubusercontent.com/94720207/227410891-7deb087c-14fa-4ea5-9abe-a5cf3a579d16.png)
+
+
 ![image](https://user-images.githubusercontent.com/94720207/227403843-58842dee-697e-4853-bc52-aed31b5e878f.png)
+
+![image](https://user-images.githubusercontent.com/94720207/227410671-f3b41dfb-c0d9-4eb5-8e27-12fdbf3e6bd5.png)
+
+
+
 
 
 ![image](https://user-images.githubusercontent.com/94720207/227403605-6e93eb0d-0aa7-4f69-9684-2cd9e9f0f6dc.png)
 
+### ⭕ `QPSK (Quadrature Phase Shift Keying)`
 
-### ⭕ `QAM (Quadrature Amplitude Modulation)`
+QPSK (Quadrature Phase Shift Keying) es una forma de PSK en la que se utilizan dos señales portadoras en cuadratura, cada una de las cuales cambia de fase entre cuatro estados diferentes para representar los datos.
 
-QAM es una técnica de modulación que combina dos señales portadoras en cuadratura, cada una de las cuales se modula con una señal digital, para producir una señal compleja. La amplitud y la fase de la señal compleja se utilizan para transmitir la información.
+![image](https://user-images.githubusercontent.com/94720207/227410403-dc4da348-b660-4249-9ed5-fd706ca82695.png)
+
+![image](https://user-images.githubusercontent.com/94720207/227410281-f3597e0c-3057-485e-965a-8302b595e81a.png)
+
+
+![image](https://user-images.githubusercontent.com/94720207/227410268-3f8e7794-fd65-4d57-9368-9ca4b2f5ec0b.png)
+
+
+
+### ⭕ `QAM (Quadrature Amplitude Modulation)` - `16-QAM`, `32-QAM`, `64-QAM`, `128-QAM`, 
+
+QAM es una técnica de modulación que combina dos señales portadoras en cuadratura, cada una de las cuales se modula con una señal digital, para producir una señal compleja. La amplitud y la fase de la señal compleja se utilizan para transmitir la información. <br>
+
+16-QAM, 64-QAM y 256-QAM son formas de QAM en las que se utilizan 16, 64 y 256 estados diferentes de amplitud y fase de la señal compleja para representar los datos. A medida que aumenta el número de estados de la señal, se puede transmitir más información en la misma cantidad de ancho de banda, pero se requiere una mayor precisión en la detección de la señal.
 
 ![image](https://user-images.githubusercontent.com/94720207/227402853-9bc8b232-1829-4c4a-bfae-db0abf2a7ff6.png)
 
@@ -1239,11 +1261,6 @@ QAM es una técnica de modulación que combina dos señales portadoras en cuadra
 
 
 
-### ⭕ `OFDM (Orthogonal Frequency Division Multiplexing)`
-
-QPSK (Quadrature Phase Shift Keying) es una forma de PSK en la que se utilizan dos señales portadoras en cuadratura, cada una de las cuales cambia de fase entre cuatro estados diferentes para representar los datos.
-
-16-QAM, 64-QAM y 256-QAM son formas de QAM en las que se utilizan 16, 64 y 256 estados diferentes de amplitud y fase de la señal compleja para representar los datos. A medida que aumenta el número de estados de la señal, se puede transmitir más información en la misma cantidad de ancho de banda, pero se requiere una mayor precisión en la detección de la señal.
 
 
 
