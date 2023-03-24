@@ -1354,11 +1354,10 @@ En las redes WiFi, se utilizan diferentes tipos de modulación según la capacid
 
 - [Wireless LAN Professionals: `MCS Table and How You Can Use it`](https://youtu.be/QBiBPbME5tY)
 - [`VHT` (802.11n/ac) MCS Chart – Wave 1](https://www.wirelesstrainingsolutions.com/wireless-tools/vht-mcs-chart-wave-1/)
-- La `MCS Table` Ayuda a evular la calidad del ambiente de RF `quality of the RF enviorment`
-- La `tabla MCS` se utiliza en las redes Wi-Fi que operan en las bandas de frecuencia de `2,4 GHz` y `5 GHz`. 
-- Cada dispositivo que `transmite` en una red `WiFi` (como un AP, celular, o cualquier antena WiFi) debe tomar `decisiones internas` y preguntarse `"¿Qué MCS usaré?"`
-- La `MCS (Modulation and Coding Scheme)` es una tabla utilizada en las redes Wi-Fi para definir la el `data rate` (tasa de transmisión de datos) que se puede lograr en un canal de comunicación inalámbrico. 
-- La tabla MCS establece la relación entre la modulación utilizada para enviar datos y la tasa de bits por segundo (bps) que se puede alcanzar.
+
+La `MCS Table` es una herramienta esencial para **evaluar la calidad del ambiente de RF y determinar el `data rate` en las redes Wi-Fi de `2.4 GHz` y `5 GHz`. Los `dispositivos inalámbricos`, como los `AP`, los `teléfonos celulares` y las `antenas WiFi`, deben **seleccionar la `modulación` y la `codificación` adecuadas para enviar datos en un canal específico.** <br>
+
+La `MCS Table` establece la relación entre la `modulación` y la tasa de bits por segundo o `bit rate`, teniendo en cuenta la calidad del canal, la interferencia y otros factores. Además, la elección adecuada de la modulación y codificación es fundamental para optimizar la eficiencia y la confiabilidad de la transmisión inalámbrica, ya que una modulación y codificación más robusta pueden aumentar la tasa de transmisión pero también la posibilidad de errores de transmisión. En resumen, la MCS Table es una herramienta valiosa para garantizar la máxima eficiencia y fiabilidad de las redes inalámbricas. <br>
 
 `MCS` agrupa varias cosas como:
 
