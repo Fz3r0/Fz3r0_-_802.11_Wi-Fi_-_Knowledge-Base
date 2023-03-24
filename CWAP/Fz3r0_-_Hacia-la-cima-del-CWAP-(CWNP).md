@@ -1213,6 +1213,30 @@ En cuanto a los clientes, cada cliente puede recibir las "subportadoras" que mej
 
 - **`Importante`: Mientras más rápida y compleja sea la modulación, es necesario que tenga mejor `señal/SNR`, es decir, a `64-QAM` le afecta mucho más el `ruido` y la `interferencia` que a `QPSK`** 
 
+---
+
+### 🟣 Factores que influyen a la elección de Modulación
+
+Existen varios factores críticos para la elección adecuada de la modulación y codificación en la transmisión inalámbrica. Por ejemplo, a medida que la complejidad y la velocidad de la modulación aumentan, se requiere una señal más fuerte y una SNR más alta para asegurar la transmisión confiable de datos. Por lo tanto, los dispositivos que utilizan modulaciones más complejas, como 64-QAM o 256-QAM, deben estar ubicados más cerca del punto de acceso o tener menos interferencia para asegurar una transmisión exitosa. Además, la elección de la codificación de canal adecuada también puede mejorar la eficiencia de la transmisión y reducir la tasa de errores de transmisión. 
+
+A continuación se exponen algunos factores que influyen le lección de modulación en OFDM:
+
+Señal: La calidad de la señal recibida afecta directamente la elección de la modulación. Modulaciones más complejas requieren una señal más fuerte para una transmisión efectiva de datos.
+
+Relación señal-ruido (SNR): La relación señal-ruido es un factor crítico para la elección de la modulación. Las modulaciones más complejas requieren una SNR más alta para una transmisión efectiva de datos.
+
+Ancho de banda disponible: El ancho de banda disponible en el canal inalámbrico puede limitar la tasa de transmisión de datos. Modulaciones más complejas requieren más ancho de banda para transmitir la misma cantidad de datos que una modulación más básica.
+
+Interferencia en el canal: La interferencia en el canal puede afectar la calidad de la señal y reducir la tasa de transmisión de datos. Las modulaciones más complejas son más susceptibles a la interferencia y pueden ser menos efectivas en entornos con alta interferencia.
+
+Distancia de transmisión: La distancia entre el transmisor y el receptor también es importante para determinar la elección de la modulación. Las modulaciones más complejas pueden ser efectivas a distancias cortas, pero pueden ser menos efectivas a distancias más largas.
+
+Requerimientos de energía: Las modulaciones más complejas pueden requerir más energía para transmitir la misma cantidad de datos que una modulación más básica. Esto puede ser un factor importante a considerar en dispositivos que funcionan con batería.
+
+---
+
+### 🟣 `OFDM Modulation Scheme Subcarriers`
+
 A continuación se explica el `OFDM Modulation Scheme` y las técnicas de modulación de sus `subcarriers` para redes `802.11 WiFi`:
 
 ### ⭕ `OFDM (Orthogonal Frequency Division Multiplexing)`
@@ -1277,6 +1301,7 @@ QAM es una técnica de modulación que combina dos señales portadoras en cuadra
 
 ![image](https://user-images.githubusercontent.com/94720207/226240122-754717bf-ddb6-483b-bef9-434fb72889a4.png)
 
+---
 
 
 
@@ -1296,18 +1321,6 @@ QAM es una técnica de modulación que combina dos señales portadoras en cuadra
 
 
 
-- Si no se utliza ni `PSK`, ni `ASK`, ni `FSK` ¿ qué modulación utiliza WiFi específicamente?
-
-**El estándar de WiFi 802.11 utiliza principalmente la modulación `OFDM` la cual principalmente se basa en la modulación `QAM`.
-
-**la modulación QAM (Quadrature Amplitude Modulation) para transmitir datos a alta velocidad. Aunque es cierto que la modulación PSK (QPSK) también se utiliza en algunos casos específicos, como en el caso de la transmisión de datos a baja velocidad o en situaciones de baja calidad de la señal.
-
-La modulación ASK (Amplitude Shift Keying) también se puede utilizar en algunos casos, como en la transmisión de señales de control o sincronización en la capa física de WiFi. Sin embargo, la modulación ASK no se utiliza para la transmisión de datos en sí.
-
-
-### 
-
-en WiFi se utiliza una variante de la modulación digital PSK (Phase Shift Keying) para transmitir datos de forma inalámbrica. Pero En concreto, el estándar de WiFi 802.11 utiliza la modulación PSK para modificación en la fase de la señal portadora para transmitir datos a alta velocidad. Específicamente, el estándar 802.11 utiliza la variante PSK llamada QPSK (Quadrature Phase Shift Keying), que permite transmitir dos bits por símbolo y, por lo tanto, aumenta la tasa de transferencia de datos. Además, el estándar más reciente 802.11ax también utiliza la modulación PSK para la transmisión de datos en una amplia gama de frecuencias para mejorar la eficiencia espectral y la tasa de transferencia de datos.
 
 ---
 
