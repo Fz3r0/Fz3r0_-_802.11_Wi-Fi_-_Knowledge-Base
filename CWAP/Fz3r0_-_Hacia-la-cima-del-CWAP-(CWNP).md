@@ -1205,11 +1205,13 @@ Por otro lado, en el `OFDM modulation scheme`, la señal de información se divi
 
 ![image](https://user-images.githubusercontent.com/94720207/226240066-e6ea677a-9339-47c2-870c-2fe018c34b35.png)
 
-OFDM permite que un solo AP transmita múltiples subportadoras con diferentes técnicas de modulación para adaptarse a diferentes necesidades de transmisión de información. Además, cada cliente puede recibir las subportadoras que mejor se adapten a sus necesidades específicas de transmisión. <br>
+`OFDM` permite que **un solo AP transmita múltiples subportadoras con diferentes técnicas de modulación para adaptarse a diferentes necesidades de transmisión de información. Además, cada cliente puede recibir las subportadoras que mejor se adapten a sus necesidades específicas de transmisión.** <br>
 
-Por ejemplo, si un AP necesita transmitir diferentes tipos de información a diferentes velocidades hacia diferentes clientes, puede usar diferentes técnicas de modulación en diferentes subportadoras para adaptarse a cada tipo de información y cada tipo de cliente/dispositivo. <br>
+Por ejemplo, si un `AP` necesita transmitir diferentes tipos de información a diferentes velocidades hacia diferentes clientes, puede usar diferentes técnicas de modulación en diferentes subportadoras para adaptarse a cada tipo de información y cada tipo de cliente/dispositivo. <br>
 
-En cuanto a los clientes, cada cliente puede recibir las subportadoras que mejor se adapten a sus necesidades de transmisión. En otras palabras, si un cliente necesita una alta velocidad de transmisión, el AP puede asignarle subportadoras con una técnica de modulación más avanzada, como 64-QAM. Por otro lado, si un cliente está en un lugar con una señal débil o interferencia, el AP puede asignarle subportadoras con una técnica de modulación menos avanzada, como QPSK. <br>
+En cuanto a los clientes, cada cliente puede recibir las "subportadoras" que mejor se adapten a sus necesidades de transmisión. En otras palabras, **si un cliente necesita una alta velocidad de transmisión, el AP puede asignarle subportadoras con una técnica de modulación `más avanzada`, como `64-QAM`. Por otro lado, si un cliente está en un lugar con una señal débil o interferencia, el `AP` puede asignarle subportadoras con una técnica de modulación `menos avanzada`, como `QPSK`.** <br>
+
+- **`Importante`: Mientras más rápida y compleja sea la modulación, es necesario que tenga mejor `señal/SNR`, es decir, a `64-QAM` le afecta mucho más el `ruido` y la `interferencia` que a `QPSK`** 
 
 A continuación se explica el `OFDM Modulation Scheme` y las técnicas de modulación de sus `subcarriers` para redes `802.11 WiFi`:
 
@@ -1217,14 +1219,25 @@ A continuación se explica el `OFDM Modulation Scheme` y las técnicas de modula
 
 OFDM es una técnica de modulación que divide el ancho de banda disponible en una serie de subportadoras más estrechas, cada una de las cuales se modula individualmente utilizando una técnica de modulación como QAM, PSK, BPSK, QPSK, 16-QAM, 64-QAM o 256-QAM.
 
-### ⭕ `OFDM (Orthogonal Frequency Division Multiplexing)`
-
-
-QAM (Quadrature Amplitude Modulation) es una técnica de modulación que combina dos señales portadoras en cuadratura, cada una de las cuales se modula con una señal digital, para producir una señal compleja. La amplitud y la fase de la señal compleja se utilizan para transmitir la información.
-
-### ⭕ `OFDM (Orthogonal Frequency Division Multiplexing)`
+### ⭕ `BPSK (Binary Phase Shift Keying)`
 
 BPSK (Binary Phase Shift Keying) es una forma de PSK en la que se utiliza una sola señal portadora que cambia de fase entre dos estados diferentes para representar los datos.
+
+![image](https://user-images.githubusercontent.com/94720207/227403843-58842dee-697e-4853-bc52-aed31b5e878f.png)
+
+
+![image](https://user-images.githubusercontent.com/94720207/227403605-6e93eb0d-0aa7-4f69-9684-2cd9e9f0f6dc.png)
+
+
+### ⭕ `QAM (Quadrature Amplitude Modulation)`
+
+QAM es una técnica de modulación que combina dos señales portadoras en cuadratura, cada una de las cuales se modula con una señal digital, para producir una señal compleja. La amplitud y la fase de la señal compleja se utilizan para transmitir la información.
+
+![image](https://user-images.githubusercontent.com/94720207/227402853-9bc8b232-1829-4c4a-bfae-db0abf2a7ff6.png)
+
+![image](https://user-images.githubusercontent.com/94720207/227402972-ca67092a-d8fc-4762-8898-f4beb9399966.png)
+
+
 
 ### ⭕ `OFDM (Orthogonal Frequency Division Multiplexing)`
 
