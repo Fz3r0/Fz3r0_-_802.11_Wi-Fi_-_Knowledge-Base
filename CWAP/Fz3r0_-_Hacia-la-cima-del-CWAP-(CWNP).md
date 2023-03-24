@@ -1185,11 +1185,11 @@ En `FSK` o `modulación por desplazamiento de frecuencia`, `frecuencia` de la on
 
 **Actualmente la modulación `FSK` NO se utiliza en WLAN.** Los estándares de WiFi actuales `802.11a/b/g/n/ac/ax` utilizan principalmente la modulación `OFDM` para transmitir datos de manera eficiente y confiable. <br>
 
-La modulación `ASK` se utiliza en **sistemas de comunicaciones de `baja velocidad`, como sensores inalámbricos y sistemas de control remoto, donde la transmisión de datos no requiere un alto ancho de banda.** <br>
+La modulación `ASK` se utiliza en **sistemas de comunicaciones de `baja velocidad`, como sensores inalámbricos y sistemas de control remoto, donde la transmisión de datos no requiere un alto ancho de banda.** <br> 
 
 **La modulación `PSK` se utiliza en aplicaciones de comunicaciones de `alta velocidad`, como la comunicación satelital y la transmisión de datos de alta velocidad a través de fibra óptica. Específicamente, el estándar `802.11 WiFi` utiliza la `variante PSK` llamada `QPSK (Quadrature Phase Shift Keying)`, que permite transmitir dos bits por símbolo y, por lo tanto, aumenta la tasa de transferencia de datos** <br>
 
-- **Como se puede observar, ninguna de estas modulaciones básicas son utlizadas actualmente para WiFi, pero son las bases que fundamentan todo el `esquema de modulación OFDM`, puesto que `OFDM` se compone de varios tipos de modulación que parten que es la principalmente utilizada en la actualidad para redes `Wifi 802.11`**
+- **Como se puede observar, ninguna de estas modulaciones básicas son utlizadas actualmente para WiFi, pero son las bases que fundamentan todo el `esquema de modulación OFDM`, puesto que `OFDM` se compone de varios tipos de modulación que parten que es la principalmente utilizada en la actualidad para redes `Wifi 802.11` como lo son las `QPSK (basada en PSK)` y `QAM (basada en ASK)`**
 
 ---
 
@@ -1305,13 +1305,13 @@ QAM es una técnica de modulación que combina dos señales portadoras en cuadra
 La modulación ASK (Amplitude Shift Keying) también se puede utilizar en algunos casos, como en la transmisión de señales de control o sincronización en la capa física de WiFi. Sin embargo, la modulación ASK no se utiliza para la transmisión de datos en sí.
 
 
-### QPSK
+### 
 
 en WiFi se utiliza una variante de la modulación digital PSK (Phase Shift Keying) para transmitir datos de forma inalámbrica. Pero En concreto, el estándar de WiFi 802.11 utiliza la modulación PSK para modificación en la fase de la señal portadora para transmitir datos a alta velocidad. Específicamente, el estándar 802.11 utiliza la variante PSK llamada QPSK (Quadrature Phase Shift Keying), que permite transmitir dos bits por símbolo y, por lo tanto, aumenta la tasa de transferencia de datos. Además, el estándar más reciente 802.11ax también utiliza la modulación PSK para la transmisión de datos en una amplia gama de frecuencias para mejorar la eficiencia espectral y la tasa de transferencia de datos.
 
 ---
 
-### QAM (Quadrature Amplitude Modulation): modulación de amplitud en cuadratura. En QAM, se utilizan dos señales moduladoras, una en fase y otra en cuadratura (90 grados fuera de fase), para modular la amplitud y la fase de la onda portadora. Por lo tanto, QAM combina ASK y PSK. Cuanto mayor sea el número de estados de QAM, mayor será la cantidad de bits que se pueden transmitir por símbolo. Por ejemplo, una señal QAM de 16 estados puede transmitir 4 bits por símbolo.
+### `IEEE 802.11` & `PHY Modulations`
 
 En las redes WiFi, se utilizan diferentes tipos de modulación según la capacidad del canal de radio y el entorno de la red. Los estándares más antiguos como 802.11b utilizan modulaciones más básicas como ASK y PSK, mientras que los estándares más recientes como 802.11ac y 802.11ax utilizan modulaciones más complejas como QAM. La elección de la modulación adecuada es importante para optimizar la tasa de transferencia de datos y la calidad de la señal en una red inalámbrica.
 
