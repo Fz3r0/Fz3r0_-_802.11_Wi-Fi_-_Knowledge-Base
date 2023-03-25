@@ -1239,11 +1239,25 @@ Requerimientos de energía: Las modulaciones más complejas pueden requerir más
 
 ### `Symbol`
 
+En la transmisión de datos inalámbrica, un símbolo es la unidad básica de información que se transmite de un dispositivo a otro.
 
+Cada símbolo representa una combinación de valores de amplitud, fase y/o frecuencia, que se modulan para transmitir información. La elección de la técnica de modulación adecuada (por ejemplo, BPSK, QPSK, 16-QAM, etc.) determina el número de estados que se pueden representar con cada símbolo y la cantidad de bits de información que se pueden transmitir en cada símbolo.
+
+Por ejemplo, en una modulación BPSK, cada símbolo representa uno de dos estados posibles, que pueden representar los bits 0 o 1. En una modulación QPSK, cada símbolo representa uno de cuatro estados posibles, que pueden representar combinaciones de dos bits (00, 01, 10, 11). En una modulación 16-QAM, cada símbolo representa uno de 16 estados posibles, que pueden representar combinaciones de 4 bits (0000, 0001, 0010, etc.).
 
 ### `Coding` AKA `Coding Rate`
 
 - [Iain Explains - `What are Channel Capacity and Code Rate?`](https://www.youtube.com/watch?v=P0WY96WBUyA)
+
+El parámetro de `coding` se refiere a la tasa de codificación `code rate` utilizada en la transmisión de datos wireless y se expresan como una fracción que indica la cantidad de bits codificados por cada símbolo transmitido. La `coding rate` es la relación entre la cantidad de bits de información transmitidos y la cantidad total de bits transmitidos, incluyendo los bits de control y corrección de errores.
+
+Por ejemplo, en el caso de "bpsk coding = 1/2", significa que se utiliza una modulación BPSK (Binary Phase Shift Keying) para transmitir los datos, y se está codificando cada bit con una longitud de código de 1, lo que resulta en una tasa de codificación de 1/2. Esto significa que por cada símbolo transmitido, se están enviando 2 bits de información.
+
+De manera similar, en el caso de "qpsk coding = 3/4", significa que se está utilizando una modulación QPSK (Quadrature Phase Shift Keying) para transmitir los datos, y se está codificando cada bit con una longitud de código de 2, lo que resulta en una tasa de codificación de 3/4. Esto significa que por cada símbolo transmitido, se están enviando 3 bits de información.
+
+En general, cuanto mayor sea la tasa de codificación, mayor será la cantidad de información que se puede transmitir en un período de tiempo determinado. Sin embargo, a medida que aumenta la tasa de codificación, también aumenta la sensibilidad de la transmisión a la interferencia y al ruido en la señal, lo que puede reducir la calidad y la confiabilidad de la transmisión.
+
+Por lo tanto, la elección de la tasa de codificación adecuada depende de las condiciones específicas de la red y del tipo de datos que se están transmitiendo, y debe ser cuidadosamente seleccionada para optimizar la eficiencia y la confiabilidad de la transmisión.
 
 
 ![image](https://user-images.githubusercontent.com/94720207/227722433-84a79817-2966-4dc1-b95d-f3a93b0cdb95.png)
@@ -1425,11 +1439,11 @@ Las tasas de datos más altas se logran utilizando modulaciones más complejas y
 
 ### 💀 `Fz3r0 Pro Tip`: ¿Cómo leer la MCS Table like a sir?
 
-Es mejor aprender con la `MCS Table` con la tabla de `802.11n/ac` ya que `802.11ax` se vuelve demasiado grande para comprender al principio.
+Es mejor aprender con la `MCS Table` con la tabla de `802.11n/ac` ya que `802.11ax` se vuelve demasiado grande para comprender al principio. Sin embargo, al final es exctamente la misma manera de leerla. 
 
 ![image](https://user-images.githubusercontent.com/94720207/224502878-2edac492-fcc3-492d-86e1-f1f46740e546.png)
 
-- **`IMPORTANTE`: Antes de aprender a leer la `MCS Table`, hay que identificar exactamente `cada parte que la compone`, al saber leer la `MCS` de `802.11n/ac`, en realidad se puede leer cualquiera ya sea anterior o posterior a ese Estándar IEEE.** 
+Antes de aprender a leer la `MCS Table`, hay que identificar exactamente `cada parte que la compone`, yo usaré el ejemplo de `802.11n/ac`, pero en realidad se puede leer cualquier `PHY` ya sea anterior o posterior a ese `Estándar IEEE`.** 
 
 ---
 
@@ -1518,17 +1532,25 @@ Cada combinación de valores se representa con un número en el rango de 0-9 en 
 
 ### **`Modulation Scheme`**
 
-- Existen diferentes `técnicas de modulación`, como `BPSK`, `QPSK`, `16-QAM`, `64-QAM`, entre otras... 
-- Cada una de estas técnicas utiliza una diferente combinación de `amplitud`, `fase` y `frecuencia` de onda para representar `bits de información`.
-- Las técnicas de modulación `más complejas`, como `64-QAM`, **pueden transmitir más bits de información en un solo símbolo que las técnicas más simples, como `BPSK`**. Sin embargo, **las técnicas de modulación más complejas también son más susceptibles a errores de transmisión debido a la presencia de ruido y otros factores en el canal de comunicación.**
+- Existen diferentes `técnicas de modulación`, como `BPSK`, `QPSK`, `16-QAM`, `64-QAM`, `256-QAM` y no sabemos que nos depara el futuro! 🤖
+- Cada una de estas técnicas utiliza una diferente combinación de `amplitud`, `fase` y `frecuencia` de onda para representar `bits de información`. 
 
-![image](https://user-images.githubusercontent.com/94720207/224524309-07be4db5-af3b-45fe-8fcd-71bbb0b068a3.png)
+Las técnicas de modulación `más complejas`, como `64-QAM`, **pueden transmitir más bits de información en un solo `symbol` que las técnicas más simples, como `BPSK`**. Sin embargo, **las técnicas de modulación más complejas también son más susceptibles a errores de transmisión debido a la presencia de ruido y otros factores en el canal de comunicación.**
 
-Por lo tanto, la elección de la técnica de modulación adecuada depende de varios factores, como la calidad de la señal, el ancho de banda disponible y la tasa de errores de transmisión permitida. Las combinaciones de técnicas de modulación y codificación que se muestran en una tabla MCS se organizan en función de su eficiencia en términos de tasa de transferencia de datos y resistencia a errores de transmisión.
+![image](https://user-images.githubusercontent.com/94720207/227726920-29c6ef1d-6fb5-442d-abc1-556ff7081c8b.png)
+
+Por lo tanto, la elección de la técnica de modulación adecuada depende de varios factores, como la calidad de la señal, el ancho de banda disponible y la tasa de errores de transmisión permitida. Las combinaciones de técnicas de modulación y codificación que se muestran en una tabla MCS se organizan en función de su eficiencia en términos de:
+
+1. Tasa de transferencia de datos = `data rate` 
+2. Resistencia a errores de transmisión = `coding rate`
 
 ![image](https://user-images.githubusercontent.com/94720207/224521846-04cf91ad-dfac-4813-adeb-2afa274ed362.png)
 
+---
 
+### Coding Rate
+
+![image](https://user-images.githubusercontent.com/94720207/224524309-07be4db5-af3b-45fe-8fcd-71bbb0b068a3.png)
 
 
 
