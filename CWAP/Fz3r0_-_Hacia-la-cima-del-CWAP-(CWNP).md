@@ -1288,6 +1288,8 @@ Por lo tanto, la elección de la tasa de codificación adecuada depende de las c
 
 A continuación se explica el `OFDM Modulation Scheme` y las técnicas de modulación de sus `subcarriers` para redes `802.11 WiFi`:
 
+![image](https://user-images.githubusercontent.com/94720207/227729443-fbb458b1-76bd-43ad-ba1d-7a169e90ca42.png)
+
 ### ⭕ `OFDM (Orthogonal Frequency Division Multiplexing)`
 
 OFDM es una técnica de modulación que divide el ancho de banda disponible en una serie de subportadoras más estrechas, cada una de las cuales se modula individualmente utilizando una técnica de modulación como QAM, PSK, BPSK, QPSK, 16-QAM, 64-QAM o 256-QAM.
