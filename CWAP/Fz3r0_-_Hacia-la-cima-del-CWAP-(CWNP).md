@@ -1148,6 +1148,91 @@ La combinación de A-MPDU y A-MSDU Aggregation tiene como objetivo mejorar aún 
 
 ---
 
+### `IEEE 802.11` & `PHY Modulations`
+
+En las redes WiFi, se utilizan diferentes tipos de modulación según la capacidad del canal de radio y el entorno de la red. Los estándares más antiguos como 802.11b utilizan modulaciones más básicas como ASK y PSK, mientras que los estándares más recientes como 802.11ac y 802.11ax utilizan modulaciones más complejas como QAM. La elección de la modulación adecuada es importante para optimizar la tasa de transferencia de datos y la calidad de la señal en una red inalámbrica.
+
+- Durante el `CWNA` hice una tabla que me ayudó mucho a entender los `PHY`, `Ammandments`, `Standards`. Esta es la versión simplificada:
+
+| IEEE Standard 	| PHY     	| PHY (Full Name)                            	| Year 	| Band(s)               	| Bandwidth                  	| Modulation(s)                                 	| Max. Data Rate 	| Max. Spatial Streams 	|
+|---------------	|---------	|--------------------------------------------	|------	|-----------------------	|----------------------------	|-----------------------------------------------	|----------------	|----------------------	|
+| 802.11-prime  	| DSSS    	| Direct Sequence Spread Spectrum            	| 1997 	| 2.4 GHz               	| 22 MHz                     	| ASK, PSK, QAM                                 	| 2 Mbps         	| 1                    	|
+| 802.11b       	| HR/DSSS 	| High Rate/Direct Sequence Spread Spectrum  	| 1999 	| 2.4 GHz               	| 22 MHz                     	| DSSS                                          	| 11 Mbps        	| 1                    	|
+| 802.11a       	| OFDM    	| Orthogonal Frequency Division Multiplexing 	| 1999 	| 5 GHz                 	| 20 MHz                     	| OFDM                                          	| 54 Mbps        	| 1                    	|
+| 802.11g       	| ERP     	| Extended Rate PHY                          	| 2003 	| 2.4 GHz               	| 20 MHz                     	| OFDM, DSSS                                    	| 54 Mbps        	| 1                    	|
+| 802.11n       	| HT      	| High Throughput PHY                        	| 2009 	| 2.4 GHz, 5 GHz        	| 20, 40, 80, 160 MHz        	| OFDM, MIMO-OFDM                               	| 600 Mbps       	| 4                    	|
+| 802.11ac      	| VHT     	| Very High Throughput PHY                   	| 2013 	| 5 GHz                 	| 20, 40, 80, 160, 80+80 MHz 	| OFDM, MIMO-OFDM                               	| 6.9 Gbps       	| 8                    	|
+| 802.11ax      	| HE      	| High Efficiency PHY                        	| 2019 	| 2.4 GHz, 5 GHz, 6 GHz 	| 20, 40, 80, 80+80, 160 MHz 	| OFDM, MIMO-OFDM, MU-MIMO, QAM, PSK, QPSK, FSK 	| 9.6 Gbps       	| 12                   	|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|            IEEE Standard           	|           802.11-prime          	|                  802.11b                  	|                   802.11a                  	|      802.11g      	|                    802.11n                    	|                    802.11ac                   	|                    802.11ax                   	|
+|:----------------------------------:	|:-------------------------------:	|:-----------------------------------------:	|:------------------------------------------:	|:-----------------:	|:---------------------------------------------:	|:---------------------------------------------:	|:---------------------------------------------:	|
+| PHY Name                           	| Direct Sequence Spread Spectrum 	| High Rate/Direct Sequence Spread Spectrum 	| Orthogonal Frequency Division Multiplexing 	| Extended Rate PHY 	| High Throughput PHY                           	| Very High Throughput PHY                      	| High Efficiency PHY                           	|
+| Full Name                          	| DSSS                            	| HR/DSSS                                   	| OFDM                                       	| ERP               	| HT                                            	| VHT                                           	| HE                                            	|
+| Year                               	| 1997                            	| 1999                                      	| 1999                                       	| 2003              	| 2009                                          	| 2013                                          	| 2019                                          	|
+| Band(s)                            	| 2.4 GHz                         	| 2.4 GHz                                   	| 5 GHz                                      	| 2.4 GHz           	| 2.4 GHz, 5 GHz                                	| 5 GHz                                         	| 2.4 GHz, 5 GHz, 6 GHz                         	|
+| Bandwidth                          	| 22 MHz                          	| 22 MHz                                    	| 20 MHz                                     	| 20 MHz            	| 20, 40, 80, 160 MHz                           	| 20, 40, 80, 160, 80+80 MHz                    	| 20, 40, 80, 80+80, 160 MHz                    	|
+| Modulation(s)                      	| ASK, PSK, QAM                   	| DSSS                                      	| OFDM                                       	| OFDM, DSSS        	| OFDM, MIMO-OFDM, MU-MIMO, QAM, PSK, QPSK, FSK 	| OFDM, MIMO-OFDM, MU-MIMO, QAM, PSK, QPSK, FSK 	| OFDM, MIMO-OFDM, MU-MIMO, QAM, PSK, QPSK, FSK 	|
+| Max. Data Rate                     	| 2 Mbps                          	| 11 Mbps                                   	| 54 Mbps                                    	| 54 Mbps           	| 600 Mbps                                      	| 6.9 Gbps                                      	| 9.6 Gbps                                      	|
+| Max. Spatial Streams               	| N/A                             	| N/A                                       	| N/A                                        	| N/A               	| 4 (2.4 GHz), 4 (5 GHz)                        	| 8                                             	| 12                                            	|
+| Recommended SNR for Max. Data Rate 	| 25 dB                           	| 25 dB                                     	| 25 dB                                      	| 25 dB             	| 25 dB                                         	| 25 dB                                         	| 25 dB                                         	|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- Los `Data Rates` varían mucho depende de la `PHY` que esté siendo usada. 
+- Los primeros `dispositivos WiFi` soportaban un máximo de 1 o 2 Mbps... Pero actualmente pueden llegar a data rates de casi 10 Gbps
+- Sin embargo, en un mundo real `casi ningún dispositivo sería capaz de llegar a ese data rate` por razones como:
+1. El medio (aire) se comparte con otros dispositivos WiFi en el mismo canal.
+2. Los `Management Frames` de 802.11 crean `overhead` lo cual también consume `airtime`.
+
+- Los `802.11 PHY` utilizan un `PHY header` (también conocidos como `campos de PPDU`) que son `prepended` al `payload` que proviene del `MAC Layer`
+- El `PHY header` contiene la información necesaria para que el `receptor` ajuste su `data rate` dependiendo sus posibilidades para así poder sincronizarse con el `transmisor`
+
+
+---
+
 ### 🟣 Utilizando `radiofrecuencias` para comunicar `datos` - `Physical Layer`
 
 **Comunmente se les llama simplemente `PHY` a las `enmiendas IEEE 802.11` que funcionan en la `physical layer 1`, y que utilizan `métodos de modulación de radiofrecuencias (b/a/g/n/ac/ax)` para lograr la `interoperabilidad` de redes wireless y así poder enviar datos a través del `wireless medium`.** <br>
@@ -1236,76 +1321,6 @@ Distancia de transmisión: La distancia entre el transmisor y el receptor tambi�
 Requerimientos de energía: Las modulaciones más complejas pueden requerir más energía para transmitir la misma cantidad de datos que una modulación más básica. Esto puede ser un factor importante a considerar en dispositivos que funcionan con batería.
 
 ---
-
-### `Symbol`
-
-
-| **Modulation** 	| **Symbols** 	| **Coding Rate**          	| **Bits per Symbol**     	| **Bit Combinations**  	| **Bits per Combination** 	| **BER per Symbol**           	| **SER per Symbol**          	| **Minimum SNR**                  	| **Data Rate**                                  	|
-|----------------	|-------------	|--------------------------	|-------------------------	|-----------------------	|--------------------------	|------------------------------	|-----------------------------	|----------------------------------	|------------------------------------------------	|
-| **BPSK**       	| 2           	| 1/2<br>3/4               	| 1<br>1.5                	| 00, 01, 10, 11        	| 2 bits                   	| 0.08<br>0.04                 	| 0.08<br>0.04                	| 9 dB<br>12 dB                    	| 6 Mbps<br>9 Mbps                               	|
-| **QPSK**       	| 4           	| 1/2<br>3/4               	| 2<br>2.25               	| 00, 01, 10, 11        	| 2 bits                   	| 0.11<br>0.07                 	| 0.11<br>0.07                	| 12 dB<br>16 dB                   	| 12 Mbps<br>18 Mbps                             	|
-| **16-QAM**     	| 16          	| 1/2<br>3/4<br>5/6        	| 4<br>4.5<br>4.8         	| 0000-<br>1111         	| 4 bits                   	| 0.15<br>0.11<br>0.09         	| 0.6<br>0.44<br>0.36         	| 18 dB<br>22 dB<br>24 dB          	| 24 Mbps<br>36 Mbps<br>48 Mbps                  	|
-| **64-QAM**     	| 64          	| 1/2<br>2/3<br>3/4<br>5/6 	| 6<br>6.67<br>7.2<br>7.2 	| 000000-<br>111111     	| 6 bits                   	| 0.21<br>0.16<br>0.13<br>0.11 	| 1.34<br>1.02<br>0.83<br>0.7 	| 21 dB<br>24 dB<br>27 dB<br>30 dB 	| 33.6 Mbps<br>44.8 Mbps<br>48 Mbps<br>72.2 Mbps 	|
-| **256-QAM**    	| 256         	| 3/4<br>5/6               	| 8.25<br>9.6             	| 00000000-<br>11111111 	| 8 bits                   	| 0.13<br>0.11                 	| 3.3<br>2.8                  	| 24 dB<br>27 dB                   	| 72 Mbps<br>86.7 Mbps                           	|
-
-En la transmisión de datos inalámbrica, un símbolo es la unidad básica de información que se transmite de un dispositivo a otro.
-
-Cada símbolo representa una combinación de valores de amplitud, fase y/o frecuencia, que se modulan para transmitir información. La elección de la técnica de modulación adecuada (por ejemplo, BPSK, QPSK, 16-QAM, etc.) determina el número de estados que se pueden representar con cada símbolo y la cantidad de bits de información que se pueden transmitir en cada símbolo.
-
-Por ejemplo, en una modulación BPSK, cada símbolo representa uno de dos estados posibles, que pueden representar los bits 0 o 1. En una modulación QPSK, cada símbolo representa uno de cuatro estados posibles, que pueden representar combinaciones de dos bits (00, 01, 10, 11). En una modulación 16-QAM, cada símbolo representa uno de 16 estados posibles, que pueden representar combinaciones de 4 bits (0000, 0001, 0010, etc.).
-
-### `Coding` AKA `Coding Rate`
-
-- [Iain Explains - `What are Channel Capacity and Code Rate?`](https://www.youtube.com/watch?v=P0WY96WBUyA)
-
-- El `coding rate` en redes inalámbricas es la **proporción de `bits de información transmitidos` en comparación con la `cantidad total de bits transmitidos`**, lo que **incluye bits redundantes para la corrección de errores.** 
-- Un `coding rate alto aumenta la confiabilidad` de la transmisión pero `disminuye la eficiencia de la transmisión`. La elección del `coding rate` depende de la calidad de la señal y otros factores para lograr un equilibrio entre la eficiencia y la confiabilidad de la transmisión.
-
-
-
-### BER y SER
-
-El Error Rate o Tasa de Error Bit (BER, por sus siglas en inglés) representa la probabilidad de que un bit se transmita incorrectamente en una transmisión de datos. El valor del BER se expresa como un número decimal entre 0 y 1, o como un porcentaje entre 0% y 100%.
-
-Por ejemplo, si la tasa de error por símbolo es de 0.08 para la modulación BPSK con una tasa de código de 1/2, significa que, en promedio, se espera que el 8% de los bits transmitidos sean recibidos de manera incorrecta.
-
-(BER y SER) se representan como un número decimal entre 0 y 1, o como un porcentaje entre 0% y 100%.
-
-Por ejemplo, si la tasa de error de bits (BER) es 10^-6, esto significa que en promedio, un bit de cada millón se transmitirá incorrectamente. Si se expresa como un porcentaje, sería 0.0001%.
-
-Si la tasa de error de símbolos (SER) es 10^-3 para una modulación QPSK, significa que en promedio, 1 de cada 1000 símbolos se transmitirá incorrectamente. Si se expresa como un porcentaje, sería 0.1%.
-
-En términos generales, cuanto más baja sea la tasa de error (ya sea BER o SER), mejor será la calidad de la transmisión. Es importante tener en cuenta que estas medidas pueden variar según los diferentes parámetros de la comunicación, como la modulación, la tasa de datos, el SNR y el tipo de codificación utilizada.
-
-
-
-
-
-![image](https://user-images.githubusercontent.com/94720207/224524309-07be4db5-af3b-45fe-8fcd-71bbb0b068a3.png)
-
-El parámetro de `coding` se refiere a la tasa de codificación `code rate` utilizada en la transmisión de datos wireless y se expresan como una fracción que indica la cantidad de bits codificados por cada símbolo transmitido. La `coding rate` es la relación entre la cantidad de bits de información transmitidos y la cantidad total de bits transmitidos, incluyendo los bits de control y corrección de errores.
-
-Por ejemplo, en el caso de "bpsk coding = 1/2", significa que se utiliza una modulación BPSK (Binary Phase Shift Keying) para transmitir los datos, y se está codificando cada bit con una longitud de código de 1, lo que resulta en una tasa de codificación de 1/2. Esto significa que por cada símbolo transmitido, se están enviando 2 bits de información.
-
-De manera similar, en el caso de "qpsk coding = 3/4", significa que se está utilizando una modulación QPSK (Quadrature Phase Shift Keying) para transmitir los datos, y se está codificando cada bit con una longitud de código de 2, lo que resulta en una tasa de codificación de 3/4. Esto significa que por cada símbolo transmitido, se están enviando 3 bits de información.
-
-![image](https://user-images.githubusercontent.com/94720207/227722433-84a79817-2966-4dc1-b95d-f3a93b0cdb95.png)
-
-En general, cuanto mayor sea la tasa de codificación, mayor será la cantidad de información que se puede transmitir en un período de tiempo determinado. Sin embargo, a medida que aumenta la tasa de codificación, también aumenta la sensibilidad de la transmisión a la interferencia y al ruido en la señal, lo que puede reducir la calidad y la confiabilidad de la transmisión.
-
-Por lo tanto, la elección de la tasa de codificación adecuada depende de las condiciones específicas de la red y del tipo de datos que se están transmitiendo, y debe ser cuidadosamente seleccionada para optimizar la eficiencia y la confiabilidad de la transmisión.
-
-
-
-
-![image](https://user-images.githubusercontent.com/94720207/227722487-4b573a45-e2ab-4df1-8dab-be08a7c428b6.png)
-
-
-
-
-![image](https://user-images.githubusercontent.com/94720207/227722554-38e475a7-6f4e-4db5-910e-11f7c4965bb7.png)
-
-
 
 
 
@@ -1404,31 +1419,6 @@ QAM es una técnica de modulación que combina dos señales portadoras en cuadra
 
 ---
 
-### `IEEE 802.11` & `PHY Modulations`
-
-En las redes WiFi, se utilizan diferentes tipos de modulación según la capacidad del canal de radio y el entorno de la red. Los estándares más antiguos como 802.11b utilizan modulaciones más básicas como ASK y PSK, mientras que los estándares más recientes como 802.11ac y 802.11ax utilizan modulaciones más complejas como QAM. La elección de la modulación adecuada es importante para optimizar la tasa de transferencia de datos y la calidad de la señal en una red inalámbrica.
-
-- Durante el `CWNA` hice una tabla que me ayudó mucho a entender los `PHY`, `Ammandments`, `Standards`. Esta es la versión simplificada:
-
-|  **IEEE Standard** 	| **PHY** 	|             **PHY (Full Name)**            	| **Year** 	|      **Band(s)**      	|        **Bandwidth**       	|                 **Modulation(s)**                 	| **Max. Data Rate** 	|
-|:------------------:	|:-------:	|:------------------------------------------:	|:--------:	|:---------------------:	|:--------------------------:	|:-------------------------------------------------:	|:------------------:	|
-| **_802.11-prime_** 	|  _DSSS_ 	|      _Direct Sequence Spread Spectrum_     	|  _1997_  	|       _2.4 GHz_       	|          _22 MHz_          	|                **_ASK, PSK, QAM_**                	|      _2 Mbps_      	|
-|     **802.11b**    	| HR/DSSS 	|  High Rate/Direct Sequence Spread Spectrum 	|   1999   	|        2.4 GHz        	|           22 MHz           	|                      **DSSS**                     	|       11 Mbps      	|
-|     **802.11a**    	|   OFDM  	| Orthogonal Frequency Division Multiplexing 	|   1999   	|         5 GHz         	|           20 MHz           	|                      **OFDM**                     	|       54 Mbps      	|
-|     **802.11g**    	|   ERP   	|              Extended Rate PHY             	|   2003   	|        2.4 GHz        	|           20 MHz           	|                   **OFDM, DSSS**                  	|       54 Mbps      	|
-|     **802.11n**    	|    HT   	|             High Throughput PHY            	|   2009   	|     2.4 GHz, 5 GHz    	|     20, 40, 80, 160 MHz    	|                **OFDM, MIMO-OFDM**                	|      600 Mbps      	|
-|    **802.11ac**    	|   VHT   	|          Very High Throughput PHY          	|   2013   	|         5 GHz         	| 20, 40, 80, 160, 80+80 MHz 	|                **OFDM, MIMO-OFDM**                	|      6.9 Gbps      	|
-|    **802.11ax**    	|    HE   	|             High Efficiency PHY            	|   2019   	| 2.4 GHz, 5 GHz, 6 GHz 	| 20, 40, 80, 80+80, 160 MHz 	| **OFDM, MIMO-OFDM, MU-MIMO, QAM, PSK, QPSK, FSK** 	|       9.6 Gbp      	|
-
-- Los `Data Rates` varían mucho depende de la `PHY` que esté siendo usada. 
-- Los primeros `dispositivos WiFi` soportaban un máximo de 1 o 2 Mbps... Pero actualmente pueden llegar a data rates de casi 10 Gbps
-- Sin embargo, en un mundo real `casi ningún dispositivo sería capaz de llegar a ese data rate` por razones como:
-1. El medio (aire) se comparte con otros dispositivos WiFi en el mismo canal.
-2. Los `Management Frames` de 802.11 crean `overhead` lo cual también consume `airtime`.
-
-- Los `802.11 PHY` utilizan un `PHY header` (también conocidos como `campos de PPDU`) que son `prepended` al `payload` que proviene del `MAC Layer`
-- El `PHY header` contiene la información necesaria para que el `receptor` ajuste su `data rate` dependiendo sus posibilidades para así poder sincronizarse con el `transmisor`
-
 
 ## 🟢 `MCS Table` - Modulation & Coding Scheme
 
@@ -1442,8 +1432,8 @@ La `MCS Table` establece la relación entre la `modulación` y la tasa de bits p
 
 `MCS` agrupa varias cosas como:
 
-1. `Modulation`
-2. `Coding Scheme`
+1. `Modulation Scheme`
+2. `Coding Rate`
 3. `Guard Interval`
 4. `Channel Width`
 
@@ -1588,7 +1578,77 @@ Por lo tanto, la elección de la técnica de modulación adecuada depende de var
 
 ### Coding Rate
 
+### `Symbol`
 
+
+| **Modulation** 	| **Symbols** 	| **Coding Rate**          	| **Bits per Symbol**     	| **Bit Combinations**  	| **Bits per Combination** 	| **BER per Symbol**           	| **SER per Symbol**          	| **Minimum SNR**                  	| **Data Rate**                                  	|
+|----------------	|-------------	|--------------------------	|-------------------------	|-----------------------	|--------------------------	|------------------------------	|-----------------------------	|----------------------------------	|------------------------------------------------	|
+| **BPSK**       	| 2           	| 1/2<br>3/4               	| 1<br>1.5                	| 00, 01, 10, 11        	| 2 bits                   	| 0.08<br>0.04                 	| 0.08<br>0.04                	| 9 dB<br>12 dB                    	| 6 Mbps<br>9 Mbps                               	|
+| **QPSK**       	| 4           	| 1/2<br>3/4               	| 2<br>2.25               	| 00, 01, 10, 11        	| 2 bits                   	| 0.11<br>0.07                 	| 0.11<br>0.07                	| 12 dB<br>16 dB                   	| 12 Mbps<br>18 Mbps                             	|
+| **16-QAM**     	| 16          	| 1/2<br>3/4<br>5/6        	| 4<br>4.5<br>4.8         	| 0000-<br>1111         	| 4 bits                   	| 0.15<br>0.11<br>0.09         	| 0.6<br>0.44<br>0.36         	| 18 dB<br>22 dB<br>24 dB          	| 24 Mbps<br>36 Mbps<br>48 Mbps                  	|
+| **64-QAM**     	| 64          	| 1/2<br>2/3<br>3/4<br>5/6 	| 6<br>6.67<br>7.2<br>7.2 	| 000000-<br>111111     	| 6 bits                   	| 0.21<br>0.16<br>0.13<br>0.11 	| 1.34<br>1.02<br>0.83<br>0.7 	| 21 dB<br>24 dB<br>27 dB<br>30 dB 	| 33.6 Mbps<br>44.8 Mbps<br>48 Mbps<br>72.2 Mbps 	|
+| **256-QAM**    	| 256         	| 3/4<br>5/6               	| 8.25<br>9.6             	| 00000000-<br>11111111 	| 8 bits                   	| 0.13<br>0.11                 	| 3.3<br>2.8                  	| 24 dB<br>27 dB                   	| 72 Mbps<br>86.7 Mbps                           	|
+
+En la transmisión de datos inalámbrica, un símbolo es la unidad básica de información que se transmite de un dispositivo a otro.
+
+Cada símbolo representa una combinación de valores de amplitud, fase y/o frecuencia, que se modulan para transmitir información. La elección de la técnica de modulación adecuada (por ejemplo, BPSK, QPSK, 16-QAM, etc.) determina el número de estados que se pueden representar con cada símbolo y la cantidad de bits de información que se pueden transmitir en cada símbolo.
+
+Por ejemplo, en una modulación BPSK, cada símbolo representa uno de dos estados posibles, que pueden representar los bits 0 o 1. En una modulación QPSK, cada símbolo representa uno de cuatro estados posibles, que pueden representar combinaciones de dos bits (00, 01, 10, 11). En una modulación 16-QAM, cada símbolo representa uno de 16 estados posibles, que pueden representar combinaciones de 4 bits (0000, 0001, 0010, etc.).
+
+### `Coding` AKA `Coding Rate`
+
+- [Iain Explains - `What are Channel Capacity and Code Rate?`](https://www.youtube.com/watch?v=P0WY96WBUyA)
+
+- El `coding rate` en redes inalámbricas es la **proporción de `bits de información transmitidos` en comparación con la `cantidad total de bits transmitidos`**, lo que **incluye bits redundantes para la corrección de errores.** 
+- Un `coding rate alto aumenta la confiabilidad` de la transmisión pero `disminuye la eficiencia de la transmisión`. La elección del `coding rate` depende de la calidad de la señal y otros factores para lograr un equilibrio entre la eficiencia y la confiabilidad de la transmisión.
+
+
+
+### BER y SER
+
+El Error Rate o Tasa de Error Bit (BER, por sus siglas en inglés) representa la probabilidad de que un bit se transmita incorrectamente en una transmisión de datos. El valor del BER se expresa como un número decimal entre 0 y 1, o como un porcentaje entre 0% y 100%.
+
+Por ejemplo, si la tasa de error por símbolo es de 0.08 para la modulación BPSK con una tasa de código de 1/2, significa que, en promedio, se espera que el 8% de los bits transmitidos sean recibidos de manera incorrecta.
+
+(BER y SER) se representan como un número decimal entre 0 y 1, o como un porcentaje entre 0% y 100%.
+
+Por ejemplo, si la tasa de error de bits (BER) es 10^-6, esto significa que en promedio, un bit de cada millón se transmitirá incorrectamente. Si se expresa como un porcentaje, sería 0.0001%.
+
+Si la tasa de error de símbolos (SER) es 10^-3 para una modulación QPSK, significa que en promedio, 1 de cada 1000 símbolos se transmitirá incorrectamente. Si se expresa como un porcentaje, sería 0.1%.
+
+En términos generales, cuanto más baja sea la tasa de error (ya sea BER o SER), mejor será la calidad de la transmisión. Es importante tener en cuenta que estas medidas pueden variar según los diferentes parámetros de la comunicación, como la modulación, la tasa de datos, el SNR y el tipo de codificación utilizada.
+
+
+
+
+
+![image](https://user-images.githubusercontent.com/94720207/224524309-07be4db5-af3b-45fe-8fcd-71bbb0b068a3.png)
+
+El parámetro de `coding` se refiere a la tasa de codificación `code rate` utilizada en la transmisión de datos wireless y se expresan como una fracción que indica la cantidad de bits codificados por cada símbolo transmitido. La `coding rate` es la relación entre la cantidad de bits de información transmitidos y la cantidad total de bits transmitidos, incluyendo los bits de control y corrección de errores.
+
+Por ejemplo, en el caso de "bpsk coding = 1/2", significa que se utiliza una modulación BPSK (Binary Phase Shift Keying) para transmitir los datos, y se está codificando cada bit con una longitud de código de 1, lo que resulta en una tasa de codificación de 1/2. Esto significa que por cada símbolo transmitido, se están enviando 2 bits de información.
+
+De manera similar, en el caso de "qpsk coding = 3/4", significa que se está utilizando una modulación QPSK (Quadrature Phase Shift Keying) para transmitir los datos, y se está codificando cada bit con una longitud de código de 2, lo que resulta en una tasa de codificación de 3/4. Esto significa que por cada símbolo transmitido, se están enviando 3 bits de información.
+
+![image](https://user-images.githubusercontent.com/94720207/227722433-84a79817-2966-4dc1-b95d-f3a93b0cdb95.png)
+
+En general, cuanto mayor sea la tasa de codificación, mayor será la cantidad de información que se puede transmitir en un período de tiempo determinado. Sin embargo, a medida que aumenta la tasa de codificación, también aumenta la sensibilidad de la transmisión a la interferencia y al ruido en la señal, lo que puede reducir la calidad y la confiabilidad de la transmisión.
+
+Por lo tanto, la elección de la tasa de codificación adecuada depende de las condiciones específicas de la red y del tipo de datos que se están transmitiendo, y debe ser cuidadosamente seleccionada para optimizar la eficiencia y la confiabilidad de la transmisión.
+
+
+
+
+![image](https://user-images.githubusercontent.com/94720207/227722487-4b573a45-e2ab-4df1-8dab-be08a7c428b6.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/94720207/227722554-38e475a7-6f4e-4db5-910e-11f7c4965bb7.png)
+
+
+
+---
 
 
 
