@@ -1209,6 +1209,51 @@ En las redes WiFi, se utilizan diferentes tipos de modulación según la capacid
 
 
 
+| **IEEE 802.11** 	| **Technology**                                       	| **Descripción**                                                                                                                            	|
+|-----------------	|------------------------------------------------------	|--------------------------------------------------------------------------------------------------------------------------------------------	|
+| **802.11**      	| Legacy                                               	| Es la versión original de la norma y define la comunicación inalámbrica básica en redes WLAN.                                              	|
+| _802.11b_       	| _Legacy - High Rate_                                 	| _Define el estándar de WLAN para operar en la banda de 2.4 GHz con una velocidad máxima de 11 Mbps._                                       	|
+| _802.11a_       	| _Legacy - 5 GHz_                                     	| _Define el estándar de WLAN para operar en la banda de 5 GHz con una velocidad máxima de 54 Mbps._                                         	|
+| **802.11d**     	| Global Harmonization                                 	| Define extensiones para admitir operación en diferentes países con diferentes regulaciones.                                                	|
+| _802.11g_       	| _Legacy - OFDM_                                      	| _Define el estándar de WLAN para operar en la banda de 2.4 GHz con una velocidad máxima de 54 Mbps._                                       	|
+| **802.11h**     	| Spectrum Mgmt                                        	| Define extensiones para admitir operación en la banda de 5 GHz y cumplir con regulaciones europeas.                                        	|
+| **802.11i**     	| Security                                             	| Define un mecanismo de seguridad mejorado mediante cifrado AES para redes WLAN.                                                            	|
+| **802.11j**     	| Japan                                                	| Define extensiones para admitir operación en Japón y cumplir con las regulaciones japonesas.                                               	|
+| **802.11e**     	| Quality of Service                                   	| Define mejoras en el control de acceso al medio para redes WLAN que requieren diferentes niveles de servicio.                              	|
+| **802.11k**     	| Radio Resource Mgmt                                  	| Define medidas de gestión de recursos y mejora de roaming para redes WLAN.                                                                 	|
+| **802.11r**     	| Fast Roaming                                         	| Define mejoras en el roaming rápido para redes WLAN.                                                                                       	|
+| **802.11y**     	| Licensed-Exempt Bands                                	| Define el uso de la banda de 3.6 GHz para redes WLAN en los EE. UU.                                                                        	|
+| _802.11n_       	| _High Throughput (HT)_                               	| _Define mejoras significativas en el rendimiento de WLAN con una velocidad máxima de 600 Mbps._                                            	|
+| **802.11w**     	| Protected Management Frames                          	| Define mejoras en la seguridad de WLAN mediante el uso de un protocolo de gestión de claves.                                               	|
+| **802.11p**     	| WAVE (Wireless Access in Vehicular Environments)     	| Define el uso de WLAN en aplicaciones de comunicaciones de vehículo a vehículo (V2V) y de vehículo a infraestructura (V2I) para redes ITS. 	|
+| **802.11z**     	| Direct Link Setup (DLS)                              	| Define un marco de trabajo para habilitar la conexión inalámbrica directa entre dispositivos WLAN.                                         	|
+| **802.11v**     	| Wireless Network Management                          	| Define mejoras en la gestión de redes WLAN, incluyendo la recuperación de fallas y la optimización de recursos.                            	|
+| **802.11u**     	| Interworking                                         	| Define el marco de trabajo para el acceso a redes WLAN mediante servicios de redes celulares.                                              	|
+| **802.11s**     	| Mesh Networking                                      	| Define el protocolo de malla inalámbrica para redes WLAN.                                                                                  	|
+| **802.11ae**    	| MAC Security Enhancements                            	| Define mejoras en la calidad de servicio para redes WLAN en aplicaciones de voz.                                                           	|
+| **802.11aa**    	| Robust Audio-Video Transport Streaming               	| Define mejoras en la calidad de video para redes WLAN.                                                                                     	|
+| _802.11ad_      	| _Extremely High Throughput (60 GHz)_                 	| _Define el uso de la banda de 60 GHz para redes WLAN con una velocidad máxima de 7 Gbps._                                                  	|
+| _802.11ac_      	| _Very High Throughput (VHT)_                         	| _Mejoras en la transmisión de datos, mayor velocidad y mejor capacidad en la banda de 5 GHz_                                               	|
+| _802.11af_      	| _TV White Spaces_                                    	| _Uso de bandas de frecuencia de televisión no utilizadas para la transmisión de datos en redes de área local_                              	|
+| _802.11ah_      	| _Sub 1 GHz_                                          	| _Espectro de frecuencia sub-1GHz para alcanzar una mayor cobertura y mejor eficiencia en consumo de energía_                               	|
+| **802.11ai**    	| Fast Initial Link Setup (FILS)                       	| Mejora en la gestión de recursos para redes de alta densidad                                                                               	|
+| **802.11aj**    	| China                                                	| Utilización de la banda de frecuencia de 45 GHz para transmisiones de alta velocidad                                                       	|
+| **802.11ak**    	| Station Information                                  	| Mejoras en la eficiencia energética y el rendimiento de la red                                                                             	|
+| **802.11aq**    	| Pre-association Service Discovery                    	| Ofrece comunicación de alta velocidad y baja latencia en redes locales inalámbricas                                                        	|
+| _802.11ax_      	| _High Efficiency (HE)_                               	| _Mayor eficiencia espectral y soporte para entornos de alta densidad_                                                                      	|
+| **802.11ay**    	| Extremely High Throughput (100 GHz)                  	| Utilización de la banda de frecuencia de 60 GHz para transmisiones de alta velocidad                                                       	|
+| **802.11ba**    	| Wake-Up Radio                                        	| Proporciona especificaciones para redes de área personal inalámbricas                                                                      	|
+| **802.11at**    	| PoE                                                  	| Mejora de la eficiencia energética y el rendimiento en la transmisión de datos                                                             	|
+| **802.11az**    	| Next-Generation Positioning (NGP)                    	| Definición de los requisitos de los sistemas de posicionamiento en interiores (IPS)                                                        	|
+| **802.11bb**    	| Light Communications                                 	| Estándar para la comunicación de dispositivos de baja tasa de bits (conocido como Wi-Fi Light)                                             	|
+| **802.11bc**    	| Multi-Gigabit Operation over 2.4 GHz and 5 GHz Bands 	| Mejora en la eficiencia energética y el rendimiento de la red mediante la utilización de redes de malla                                    	|
+| **802.11bd**    	| 60 GHz Operation for mmWave Applications             	| Utilización de la banda de frecuencia de 60 GHz para aplicaciones de alta velocidad en vehículos                                           	|
+| **802.11be**    	| WLAN Enhancements for Virtual and Augmented Reality  	| Mejoras en la eficiencia energética y la calidad de servicio en redes Wi-Fi                                                                	|
+| **802.11bf**    	| Operation in Time-Sensitive Networks (TSN)           	| Utilización de redes Wi-Fi para la detección y medición de distancias (rango fino)                                                         	|
+| **802.11bh**    	| Improved Location Accuracy                           	| Especificaciones de Wi-Fi para comunicaciones de baja energía y alta eficiencia en el Internet de las cosas (IoT)                          	|
+| **802.11bi**    	| Fine Timing Measurements                             	| Mejoras en la eficiencia energética y el rendimiento en redes Wi-Fi de alta densidad                                                       	|
+| **802.11bt**    	| Enhanced WLAN Security and Privacy                   	| Mejoras en la eficiencia energética y el rendimiento en redes Wi-Fi de baja potencia                                                       	|
+
 
 
 
