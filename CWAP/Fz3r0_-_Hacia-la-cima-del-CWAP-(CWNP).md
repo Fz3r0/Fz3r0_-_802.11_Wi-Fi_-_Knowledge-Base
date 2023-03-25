@@ -1219,6 +1219,8 @@ En cuanto a los clientes, cada cliente puede recibir las "subportadoras" que mej
 
 Existen varios factores críticos para la elección adecuada de la modulación y codificación en la transmisión inalámbrica. Por ejemplo, a medida que la complejidad y la velocidad de la modulación aumentan, se requiere una señal más fuerte y una SNR más alta para asegurar la transmisión confiable de datos. Por lo tanto, los dispositivos que utilizan modulaciones más complejas, como 64-QAM o 256-QAM, deben estar ubicados más cerca del punto de acceso o tener menos interferencia para asegurar una transmisión exitosa. Además, la elección de la codificación de canal adecuada también puede mejorar la eficiencia de la transmisión y reducir la tasa de errores de transmisión. 
 
+![image](https://user-images.githubusercontent.com/94720207/227722275-9f1c9ba5-f2c7-4895-821e-28fc9e5cef92.png)
+
 A continuación se exponen algunos factores que influyen le lección de modulación en OFDM:
 
 Señal: La calidad de la señal recibida afecta directamente la elección de la modulación. Modulaciones más complejas requieren una señal más fuerte para una transmisión efectiva de datos.
@@ -1232,6 +1234,25 @@ Interferencia en el canal: La interferencia en el canal puede afectar la calidad
 Distancia de transmisión: La distancia entre el transmisor y el receptor también es importante para determinar la elección de la modulación. Las modulaciones más complejas pueden ser efectivas a distancias cortas, pero pueden ser menos efectivas a distancias más largas.
 
 Requerimientos de energía: Las modulaciones más complejas pueden requerir más energía para transmitir la misma cantidad de datos que una modulación más básica. Esto puede ser un factor importante a considerar en dispositivos que funcionan con batería.
+
+---
+
+### `Coding` AKA `Coding Scheme` or `Coding Rate`
+
+![image](https://user-images.githubusercontent.com/94720207/227722433-84a79817-2966-4dc1-b95d-f3a93b0cdb95.png)
+
+![image](https://user-images.githubusercontent.com/94720207/227722487-4b573a45-e2ab-4df1-8dab-be08a7c428b6.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/94720207/227722554-38e475a7-6f4e-4db5-910e-11f7c4965bb7.png)
+
+
+
+
+
+
 
 ---
 
