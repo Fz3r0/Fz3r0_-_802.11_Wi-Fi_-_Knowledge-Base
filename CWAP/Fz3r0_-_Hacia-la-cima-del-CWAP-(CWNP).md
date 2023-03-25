@@ -1239,6 +1239,15 @@ Requerimientos de energía: Las modulaciones más complejas pueden requerir más
 
 ### `Symbol`
 
+
+| **Modulation** 	| **Symbols** 	| **Coding Rate**          	| **Bits per Symbol**     	| **Bit Combinations**  	| **Bits per Combination** 	| **BER per Symbol**           	| **SER per Symbol**          	| **Minimum SNR**                  	| **Data Rate**                                  	|
+|----------------	|-------------	|--------------------------	|-------------------------	|-----------------------	|--------------------------	|------------------------------	|-----------------------------	|----------------------------------	|------------------------------------------------	|
+| **BPSK**       	| 2           	| 1/2<br>3/4               	| 1<br>1.5                	| 00, 01, 10, 11        	| 2 bits                   	| 0.08<br>0.04                 	| 0.08<br>0.04                	| 9 dB<br>12 dB                    	| 6 Mbps<br>9 Mbps                               	|
+| **QPSK**       	| 4           	| 1/2<br>3/4               	| 2<br>2.25               	| 00, 01, 10, 11        	| 2 bits                   	| 0.11<br>0.07                 	| 0.11<br>0.07                	| 12 dB<br>16 dB                   	| 12 Mbps<br>18 Mbps                             	|
+| **16-QAM**     	| 16          	| 1/2<br>3/4<br>5/6        	| 4<br>4.5<br>4.8         	| 0000-<br>1111         	| 4 bits                   	| 0.15<br>0.11<br>0.09         	| 0.6<br>0.44<br>0.36         	| 18 dB<br>22 dB<br>24 dB          	| 24 Mbps<br>36 Mbps<br>48 Mbps                  	|
+| **64-QAM**     	| 64          	| 1/2<br>2/3<br>3/4<br>5/6 	| 6<br>6.67<br>7.2<br>7.2 	| 000000-<br>111111     	| 6 bits                   	| 0.21<br>0.16<br>0.13<br>0.11 	| 1.34<br>1.02<br>0.83<br>0.7 	| 21 dB<br>24 dB<br>27 dB<br>30 dB 	| 33.6 Mbps<br>44.8 Mbps<br>48 Mbps<br>72.2 Mbps 	|
+| **256-QAM**    	| 256         	| 3/4<br>5/6               	| 8.25<br>9.6             	| 00000000-<br>11111111 	| 8 bits                   	| 0.13<br>0.11                 	| 3.3<br>2.8                  	| 24 dB<br>27 dB                   	| 72 Mbps<br>86.7 Mbps                           	|
+
 En la transmisión de datos inalámbrica, un símbolo es la unidad básica de información que se transmite de un dispositivo a otro.
 
 Cada símbolo representa una combinación de valores de amplitud, fase y/o frecuencia, que se modulan para transmitir información. La elección de la técnica de modulación adecuada (por ejemplo, BPSK, QPSK, 16-QAM, etc.) determina el número de estados que se pueden representar con cada símbolo y la cantidad de bits de información que se pueden transmitir en cada símbolo.
@@ -1251,6 +1260,26 @@ Por ejemplo, en una modulación BPSK, cada símbolo representa uno de dos estado
 
 - El `coding rate` en redes inalámbricas es la **proporción de `bits de información transmitidos` en comparación con la `cantidad total de bits transmitidos`**, lo que **incluye bits redundantes para la corrección de errores.** 
 - Un `coding rate alto aumenta la confiabilidad` de la transmisión pero `disminuye la eficiencia de la transmisión`. La elección del `coding rate` depende de la calidad de la señal y otros factores para lograr un equilibrio entre la eficiencia y la confiabilidad de la transmisión.
+
+
+
+### BER y SER
+
+El Error Rate o Tasa de Error Bit (BER, por sus siglas en inglés) representa la probabilidad de que un bit se transmita incorrectamente en una transmisión de datos. El valor del BER se expresa como un número decimal entre 0 y 1, o como un porcentaje entre 0% y 100%.
+
+Por ejemplo, si la tasa de error por símbolo es de 0.08 para la modulación BPSK con una tasa de código de 1/2, significa que, en promedio, se espera que el 8% de los bits transmitidos sean recibidos de manera incorrecta.
+
+(BER y SER) se representan como un número decimal entre 0 y 1, o como un porcentaje entre 0% y 100%.
+
+Por ejemplo, si la tasa de error de bits (BER) es 10^-6, esto significa que en promedio, un bit de cada millón se transmitirá incorrectamente. Si se expresa como un porcentaje, sería 0.0001%.
+
+Si la tasa de error de símbolos (SER) es 10^-3 para una modulación QPSK, significa que en promedio, 1 de cada 1000 símbolos se transmitirá incorrectamente. Si se expresa como un porcentaje, sería 0.1%.
+
+En términos generales, cuanto más baja sea la tasa de error (ya sea BER o SER), mejor será la calidad de la transmisión. Es importante tener en cuenta que estas medidas pueden variar según los diferentes parámetros de la comunicación, como la modulación, la tasa de datos, el SNR y el tipo de codificación utilizada.
+
+
+
+
 
 ![image](https://user-images.githubusercontent.com/94720207/224524309-07be4db5-af3b-45fe-8fcd-71bbb0b068a3.png)
 
