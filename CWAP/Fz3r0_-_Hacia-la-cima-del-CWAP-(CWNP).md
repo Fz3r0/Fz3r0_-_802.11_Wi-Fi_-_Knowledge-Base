@@ -1249,18 +1249,25 @@ Por ejemplo, en una modulación BPSK, cada símbolo representa uno de dos estado
 
 - [Iain Explains - `What are Channel Capacity and Code Rate?`](https://www.youtube.com/watch?v=P0WY96WBUyA)
 
+- El `coding rate` en redes inalámbricas es la **proporción de `bits de información transmitidos` en comparación con la `cantidad total de bits transmitidos`**, lo que **incluye bits redundantes para la corrección de errores.** 
+- Un `coding rate alto aumenta la confiabilidad` de la transmisión pero `disminuye la eficiencia de la transmisión`. La elección del `coding rate` depende de la calidad de la señal y otros factores para lograr un equilibrio entre la eficiencia y la confiabilidad de la transmisión.
+
+![image](https://user-images.githubusercontent.com/94720207/224524309-07be4db5-af3b-45fe-8fcd-71bbb0b068a3.png)
+
 El parámetro de `coding` se refiere a la tasa de codificación `code rate` utilizada en la transmisión de datos wireless y se expresan como una fracción que indica la cantidad de bits codificados por cada símbolo transmitido. La `coding rate` es la relación entre la cantidad de bits de información transmitidos y la cantidad total de bits transmitidos, incluyendo los bits de control y corrección de errores.
 
 Por ejemplo, en el caso de "bpsk coding = 1/2", significa que se utiliza una modulación BPSK (Binary Phase Shift Keying) para transmitir los datos, y se está codificando cada bit con una longitud de código de 1, lo que resulta en una tasa de codificación de 1/2. Esto significa que por cada símbolo transmitido, se están enviando 2 bits de información.
 
 De manera similar, en el caso de "qpsk coding = 3/4", significa que se está utilizando una modulación QPSK (Quadrature Phase Shift Keying) para transmitir los datos, y se está codificando cada bit con una longitud de código de 2, lo que resulta en una tasa de codificación de 3/4. Esto significa que por cada símbolo transmitido, se están enviando 3 bits de información.
 
+![image](https://user-images.githubusercontent.com/94720207/227722433-84a79817-2966-4dc1-b95d-f3a93b0cdb95.png)
+
 En general, cuanto mayor sea la tasa de codificación, mayor será la cantidad de información que se puede transmitir en un período de tiempo determinado. Sin embargo, a medida que aumenta la tasa de codificación, también aumenta la sensibilidad de la transmisión a la interferencia y al ruido en la señal, lo que puede reducir la calidad y la confiabilidad de la transmisión.
 
 Por lo tanto, la elección de la tasa de codificación adecuada depende de las condiciones específicas de la red y del tipo de datos que se están transmitiendo, y debe ser cuidadosamente seleccionada para optimizar la eficiencia y la confiabilidad de la transmisión.
 
 
-![image](https://user-images.githubusercontent.com/94720207/227722433-84a79817-2966-4dc1-b95d-f3a93b0cdb95.png)
+
 
 ![image](https://user-images.githubusercontent.com/94720207/227722487-4b573a45-e2ab-4df1-8dab-be08a7c428b6.png)
 
@@ -1550,7 +1557,7 @@ Por lo tanto, la elección de la técnica de modulación adecuada depende de var
 
 ### Coding Rate
 
-![image](https://user-images.githubusercontent.com/94720207/224524309-07be4db5-af3b-45fe-8fcd-71bbb0b068a3.png)
+
 
 
 
