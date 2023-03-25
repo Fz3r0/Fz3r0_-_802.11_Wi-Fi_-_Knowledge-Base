@@ -1237,7 +1237,14 @@ Requerimientos de energía: Las modulaciones más complejas pueden requerir más
 
 ---
 
-### `Coding` AKA `Coding Scheme` or `Coding Rate`
+### `Symbol`
+
+
+
+### `Coding` AKA `Coding Rate`
+
+- [Iain Explains - `What are Channel Capacity and Code Rate?`](https://www.youtube.com/watch?v=P0WY96WBUyA)
+
 
 ![image](https://user-images.githubusercontent.com/94720207/227722433-84a79817-2966-4dc1-b95d-f3a93b0cdb95.png)
 
@@ -1374,6 +1381,7 @@ En las redes WiFi, se utilizan diferentes tipos de modulación según la capacid
 ## 🟢 `MCS Table` - Modulation & Coding Scheme
 
 - [Wireless LAN Professionals: `MCS Table and How You Can Use it`](https://youtu.be/QBiBPbME5tY)
+- [Inside Wireless: `MCS Rates`](https://youtu.be/f6zesWNDGXc)
 - [`VHT` (802.11n/ac) MCS Chart – Wave 1](https://www.wirelesstrainingsolutions.com/wireless-tools/vht-mcs-chart-wave-1/)
 
 La `MCS Table` es una herramienta esencial para **evaluar la calidad del ambiente de RF y determinar el `data rate` en las redes Wi-Fi de `2.4 GHz` y `5 GHz`. Los `dispositivos inalámbricos`, como los `AP`, los `teléfonos celulares` y las `antenas WiFi`, deben **seleccionar la `modulación` y la `codificación` adecuadas para enviar datos en un canal específico.** <br>
@@ -1663,7 +1671,8 @@ https://www.wirelesstrainingsolutions.com/understanding-ofdm-part-4-refresh/
 
 
 
-
+- [Sunny: `Bandwidth, throughput, and speed`](https://www.youtube.com/watch?v=TVpg7StOxgg)
+- [Lian Explain Signals: `How are Throughput, Bandwidth, and Data Rate Related?`](https://youtu.be/IY6fDYwC2fU)
 
 
 
