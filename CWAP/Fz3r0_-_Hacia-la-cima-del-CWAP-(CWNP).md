@@ -1900,20 +1900,28 @@ _Se puede obtener información más detallada de este método en el link que com
 
 ---
 
-## 🟢 Services Provided by 802.11 Devices
+## 🟢 `Services` Provided by `802.11 Devices`
 
 - [Tech Mike: `Wireless in all the areas`](https://techimike.com/cwna-chapter-7-wireless-in-all-the-areas/)
 
-Los dispositivos 802.11 brindan servicios que permiten comunicaciones en la Capa 1 y la Capa 2. Estos servicios son dos:
+Los 802.11 Services son servicios definidos por el estándar IEEE 802.11 para redes inalámbricas, también conocidad como Wi-Fi. **Estos servicios son una serie de funciones que permiten a los dispositivos inalámbricos comunicarse y establecer conexiones en la red.**
 
-1. SS (Station Service)
-2. DSS (Distribution System Service)
+Los dispositivos 802.11 brindan servicios que permiten comunicaciones en la Layer 1 y Layer 2. Estos servicios son dos:
 
-### SS 
+1. `SS (Station Service)`
+2. `DSS (Distribution System Service)`
 
-El SS es un conjunto de servicios que admiten MSDU entre STA dentro de un BSS. El SS está en todas las STA, incluidos los AP, las puertas de malla, los portales y los clientes. Los servicios que presta la SS son los siguientes:
+### 🟣 `SS (Station Service) `
+
+El `SS (Station Service)` es un conjunto de servicios que admiten MSDU entre STA dentro de un BSS. El SS está en todas las STA, incluidos los AP, mesh gates, portals y clients. 
+
+Los servicios que presta la SS son los siguientes:
+
+1. 
 
 
+
+### 🟣 `DSS (Distribution System Service)`
 
 
 
