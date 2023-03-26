@@ -1934,7 +1934,7 @@ Existen `2 tipos de STA` diferentes, tanto la `Client Station` como la `Access P
 
 Un "Access Point Station" es un dispositivo que funciona como punto de acceso para los dispositivos "Client Station". El punto de acceso proporciona una puerta de enlace para que los dispositivos se comuniquen de forma inalámbrica y también les permite acceder a una conexión física como Ethernet a través del "Distribution System Access Function (DSAF)". El punto de acceso mantiene una tabla de asociación de los dispositivos "Client Station" conectados y dirige el tráfico en la red.
 
-Los `10 servicios` que presta la `SS` son los siguientes:
+Los `10 servicios` que conforman la `SS` son los siguientes:
 
 1. **`Authentication`**
 2. **`Deauthentication`**
@@ -1964,8 +1964,36 @@ Los `10 servicios` que presta la `SS` son los siguientes:
 
 ### 🟣 `DSS (Distribution System Service)`
 
-El DSS (Servicio de Sistema de Distribución) se refiere a los servicios proporcionados por el sistema de distribución de la red Wi-Fi. El sistema de distribución es responsable de enrutar el tráfico entre diferentes puntos de acceso (AP) en la red. Los servicios de DSS incluyen la autenticación y la entrega de tráfico a través del sistema de distribución.
+El DSS (Distribution System Service) es un conjunto de servicios que proporciona el "Distribution System" (DS) de una red WiFi para la comunicación entre Access Points (AP), mesh gates y el portal de un "Extended Service Set" (ESS).
 
+El DS es el sistema o red a través del cual las STA con DSS (AP) se interconectan o, más específicamente, a través del cual las redes Basic Service Set (BSS) se interconectan una con otra
+
+El DS Medium (DSM) es el medio utilizado por el DS, como por ejemplo cables Ethernet (como UDP o fibra),  RF Mesh, etc.
+
+Los `10 servicios` que conforman la `DSS` son los siguientes:
+
+1. **`Service Name`**
+2. **`Service Set Identifier (SSID)`**
+3. **`Basic Service Set (BSS)`**
+4. **`Basic Service Area (BSA)`**
+5. **`Basic Service Set Identifier (BSSID)`**
+6. **`Multiple Basic Service Set Identifiers`**
+7. **`Extended Service Set (ESS)`**
+8. **`Independent Basic Service Set (IBSS)`**
+9. **`Personal Basic Service Set (PBSS)`**
+10. **`Mesh Basic Service Set (MBSS)`**
+
+| **Service Name**                           	| **Descripción**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        	|
+|--------------------------------------------	|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| **Service Set Identifier (SSID)**          	| Es el nombre lógico que se le da a una red 802.11 para identificarla. Para un roaming adecuado, el SSID y la seguridad deben ser exactamente iguales.                                                                                                                                                                                                                                                                                                                                                                  	|
+| **Basic Service Set (BSS)**                	| Consiste en un punto de acceso (AP) con una o más estaciones de cliente, que tienen conectividad L2. Cuando tienen esta conectividad L2, están asociados. Si en casa tienes un solo enrutador inalámbrico y no tienes otros puntos de acceso inalámbrico, esto se consideraría un BSS.                                                                                                                                                                                                                                 	|
+| **Basic Service Area (BSA)**               	| El área de cobertura producida por su BSS es el BSA. Es la cobertura proporcionada por un solo AP. El tamaño y la forma de esta cobertura varían según la ubicación del AP, la potencia de transmisión, la ganancia de la antena, el entorno y la sensibilidad de recepción.                                                                                                                                                                                                                                           	|
+| **Basic Service Set Identifier (BSSID)**   	| La dirección MAC de la radio de los APs es el BSSID. Cada radio de AP debe tener un BSSID único para permitir el roaming de las estaciones de clientes de un BSS a otro. De nuevo, necesitamos asegurarnos de que el SSID y la seguridad sean los mismos de BSS a BSS. Este movimiento de un AP a otro durante el proceso de roaming se llama transición de BSS. El BSSID se encuentra en el encabezado MAC 802.11.                                                                                                    	|
+| **Multiple Basic Service Set Identifiers** 	| A menudo necesitará tener múltiples SSID en un solo AP. Se recomienda mantener esto al mínimo. Lo más recomendado es limitarlo a tres si es posible. Dicho esto, cuando tenga más de uno, necesitará un identificador de BSSID L2 único. Cuando esto ocurre, el AP creará una MAC única en incrementos de su MAC codificada en hardware, cada una asignada a una red L3 vlan única. Cada SSID adicional agrega sobrecarga en forma de balizas, respuestas de sonda y otras sobrecargas de marcos de gestión y control. 	|
+| **Extended Service Set (ESS)**             	| Es cuando tiene dos o más BSS configurados de manera idéntica conectados por un medio DS. Puede pensar en esto como todos los AP y clientes que están unidos por un DSM. El área de cobertura del ESS en la que los clientes pueden comunicarse y cambiar de AP se llama área de servicio extendida (ESA). Solo porque tenga un ESS no significa que tenga un roaming garantizado.                                                                                                                                     	|
+| **Independent Basic Service Set (IBSS)**   	| Solo radios de clientes, sin APs. Los clientes se comunican directamente. También conocido como peer-to-peer o ad-hoc. Todos los clientes deben compartir el tiempo del medio y respetar el mismo canal. El primer cliente que se conecta crea el BSSID.                                                                                                                                                                                                                                                               	|
+| **Personal Basic Service Set (PBSS)**      	| Utilizado para comunicación directa entre estaciones 802.11ad en la banda de 60GHz. Un cliente asume el rol de punto de control PBSS (PCP) y sincroniza la comunicación entre todos los clientes.                                                                                                                                                                                                                                                                                                                      	|
+| **Mesh Basic Service Set (MBSS)**          	| Conjunto de APs que proporcionan distribución de malla. Los AP conectados a la red cableada son llamados puertas de enlace o "mesh gate". Los AP no conectados a la red cableada forman conexiones inalámbricas de backhaul hacia las puertas de enlace y se conocen como puntos de malla. La selección de ruta se realiza mediante el protocolo HWMP, basado en métricas como RSSI, SNR, carga del cliente y cantidad de saltos. La selección de ruta se realiza mediante MAC y no mediante IP.                       	|
 
 ![image](https://user-images.githubusercontent.com/94720207/227790313-3c22efa8-3160-4af1-b82a-21937547f973.png)
 
