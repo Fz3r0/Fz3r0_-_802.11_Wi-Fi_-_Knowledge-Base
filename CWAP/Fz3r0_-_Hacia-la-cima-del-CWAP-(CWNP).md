@@ -1919,14 +1919,37 @@ El `SS (Station Service)` o "Servicio de Estación" se refiere a los servicios p
 - El `SS (Station Service)` es un conjunto de servicios los cuales admiten `MSDU` entre `STA` dentro de un `BSS`. 
 - **El `SS` está en todas las `STA`, incluidos los `AP`, `mesh gates`, `portals` y `clients`.**
 
-Los servicios que presta la `SS` son los siguientes:
+Los `10 servicios` que presta la `SS` son los siguientes:
 
-1. 
+1. Authentication
+2. Deauthentication
+3. Data confidientality (encryption)
+4. MSDU delivery
+5. DFS - Dynamic Frequency Selection
+6. TPC - Transmit Power Control
+7. Time Synchronization with higher layers (QoS facility only)
+8. QoS traffic scheduling (QoS facility only)
+9. Radio Measurment
+10. DSE - Dynamic STA Enablement
+
+| **Service**                                                     	| **Descripción**                                                                                                                                                                                                                                                                                                                                                                                                                                                	|
+|-----------------------------------------------------------------	|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| **Authentication**                                              	| Proceso mediante el cual un dispositivo comprueba su identidad ante el punto de acceso (AP) de la red. El AP verifica las credenciales del dispositivo y le permite unirse a la red.                                                                                                                                                                                                                                                                           	|
+| **Deauthentication**                                            	| Proceso mediante el cual el AP desconecta a un dispositivo de la red. Esto puede ocurrir por razones de seguridad, como cuando un dispositivo se ha comprometido, o simplemente porque el dispositivo ha finalizado su sesión en la red.                                                                                                                                                                                                                       	|
+| **Data confidentiality (encryption)**                           	| Servicio que garantiza que los datos que se transmiten entre los dispositivos en la red no puedan ser leídos por usuarios no autorizados. Se utiliza una clave de cifrado para codificar los datos que se transmiten.                                                                                                                                                                                                                                          	|
+| **MSDU delivery**                                               	| Servicio que garantiza que los paquetes de datos se entreguen correctamente en la red.                                                                                                                                                                                                                                                                                                                                                                         	|
+| **DFS - Dynamic Frequency Selection**                           	| Servicio que permite al AP cambiar de canal de forma dinámica en función de la congestión en el canal actual.                                                                                                                                                                                                                                                                                                                                                  	|
+| **TPC - Transmit Power Control**                                	| Servicio que permite al AP ajustar la potencia de transmisión para minimizar las interferencias y maximizar la eficiencia energética.                                                                                                                                                                                                                                                                                                                          	|
+| **Time Synchronization with higher layers (QoS facility only)** 	| Servicio que permite sincronizar los relojes de los dispositivos en la red con una fuente de tiempo común. Esto es importante para garantizar que los datos se entreguen en el momento adecuado y para evitar retrasos en la red. Este servicio solo está disponible cuando se utiliza el mecanismo de Calidad de Servicio (QoS).                                                                                                                              	|
+| **QoS traffic scheduling (QoS facility only)**                  	| Servicio que garantiza que los paquetes de datos con requisitos de calidad de servicio (QoS) se entreguen antes que otros paquetes menos críticos. Esto es importante para garantizar una entrega de datos suave y sin interrupciones en aplicaciones de alta prioridad como voz y video. Este servicio solo está disponible cuando se utiliza el mecanismo de Calidad de Servicio (QoS).                                                                      	|
+| **Radio Measurement**                                           	| Servicio que permite a los dispositivos medir la calidad de la señal y el nivel de interferencia en diferentes canales. Esto es importante para seleccionar el canal más adecuado para la transmisión de datos y para evitar interferencias en la red.                                                                                                                                                                                                         	|
+| **DSE - Dynamic STA Enablement**                                	| Servicio que permite al AP activar o desactivar la funcionalidad de los dispositivos de la red. Esto puede ocurrir para ahorrar energía, mejorar la eficiencia de la red o garantizar la seguridad de la red. Por ejemplo, si un dispositivo ha estado inactivo durante un tiempo, el AP puede desactivar su funcionalidad para ahorrar energía. Cuando el dispositivo necesita volver a comunicarse en la red, el AP puede volver a activar su funcionalidad. 	|
 
 
 
 ### 🟣 `DSS (Distribution System Service)`
 
+El DSS (Servicio de Sistema de Distribución) se refiere a los servicios proporcionados por el sistema de distribución de la red Wi-Fi. El sistema de distribución es responsable de enrutar el tráfico entre diferentes puntos de acceso (AP) en la red. Los servicios de DSS incluyen la autenticación y la entrega de tráfico a través del sistema de distribución.
 
 
 ![image](https://user-images.githubusercontent.com/94720207/227790313-3c22efa8-3160-4af1-b82a-21937547f973.png)
