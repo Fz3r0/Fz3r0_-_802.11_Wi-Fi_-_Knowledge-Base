@@ -1908,8 +1908,9 @@ Los `802.11 Services` son servicios definidos por el `IEEE 802.11 Standard` para
 
 Los `dispositivos 802.11` brindan específicamente `2 servicios` que permiten comunicaciones en la `Layer 1` y `Layer 2`.
 
-1. `SS (Station Service)`
-2. `DSS (Distribution System Service)`
+1. **`SS (Station Service)`**
+2. **`DSS (Distribution System Service)`**
+3. **`PCPS (PBSS Control Point Service)`** _Fuera del alcance del CWAP_
 
 ### 🟣 `SS (Station Service) `
 
