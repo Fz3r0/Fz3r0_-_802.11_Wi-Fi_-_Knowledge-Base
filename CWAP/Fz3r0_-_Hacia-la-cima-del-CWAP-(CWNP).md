@@ -254,6 +254,8 @@ Ahora que ya se tiene el concepto visual de como se distribuyen las `sublayer 1 
 - [`WireShark Analysis`: **Layer 7 Application**](https://www.youtube.com/watch?v=L_wLexApMkA)
 - [`File Formats` & `Magic Numbers`](https://youtu.be/qm33nCV1nkA) 
 
+![image](https://user-images.githubusercontent.com/94720207/227809209-1263ebe3-035a-4373-8a29-e77bfdae2075.png)
+
 ## Funcionamiento de los Layers
 
 - Se dice que cada Layer sirve hacia el Layer de arriba y abajo de él, excepto por las 2 Layers finales (que ya no tienen nada antes/después): `Layer 1 (capa final de transmisión)` & `Layer 7 (capa final de recepción)`
@@ -2048,6 +2050,26 @@ El `Client Mode` incluye los modos `Ad-Hoc Mode` e `Infraesctucture Mode`:
 | **Ad-Hoc Mode**         	| Client   	| Todas las comunicaciones son de igual a igual y no se comunican con un AP.                                  	|
 
 
+
+
+
+
+
+
+
+
+
+
+
+---
+
+Netowrk Planes
+
+![image](https://user-images.githubusercontent.com/94720207/227808892-3b0ee027-11a3-47dd-b388-b750c2a6eaaa.png)
+
+![image](https://user-images.githubusercontent.com/94720207/227809137-3b911f8c-4ef9-4589-8422-6c99a5f0deba.png)
+
+![image](https://user-images.githubusercontent.com/94720207/227809181-4bfedb3c-416b-4231-af39-2a53d87c63fe.png)
 
 
 
