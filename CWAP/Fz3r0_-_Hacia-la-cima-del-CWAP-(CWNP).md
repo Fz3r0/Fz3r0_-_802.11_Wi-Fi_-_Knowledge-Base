@@ -1904,18 +1904,21 @@ _Se puede obtener información más detallada de este método en el link que com
 
 - [Tech Mike: `Wireless in all the areas`](https://techimike.com/cwna-chapter-7-wireless-in-all-the-areas/)
 
-Los 802.11 Services son servicios definidos por el estándar IEEE 802.11 para redes inalámbricas, también conocidad como Wi-Fi. **Estos servicios son una serie de funciones que permiten a los dispositivos inalámbricos comunicarse y establecer conexiones en la red.**
+Los `802.11 Services` son servicios definidos por el `IEEE 802.11 Standard` para redes inalámbricas, también conocidad como `WiFi`. **Estos servicios son una serie de funciones que permiten a los dispositivos inalámbricos comunicarse y establecer conexiones en la red.**
 
-Los dispositivos 802.11 brindan servicios que permiten comunicaciones en la Layer 1 y Layer 2. Estos servicios son dos:
+Los `dispositivos 802.11` brindan específicamente `2 servicios` que permiten comunicaciones en la `Layer 1` y `Layer 2`.
 
 1. `SS (Station Service)`
 2. `DSS (Distribution System Service)`
 
 ### 🟣 `SS (Station Service) `
 
-El `SS (Station Service)` es un conjunto de servicios que admiten MSDU entre STA dentro de un BSS. El SS está en todas las STA, incluidos los AP, mesh gates, portals y clients. 
+El `SS (Station Service)` o "Servicio de Estación" se refiere a los servicios proporcionados por una STA en la red Wi-Fi. Estos servicios incluyen la `autenticación`, la `asociación` y la `desasociación` de dispositivos en la red. La `STA` también proporciona `servicios de entrega de datos` a través de la red y puede `administrar el tráfico de la red`.
 
-Los servicios que presta la SS son los siguientes:
+- El `SS (Station Service)` es un conjunto de servicios los cuales admiten `MSDU` entre `STA` dentro de un `BSS`. 
+- **El `SS` está en todas las `STA`, incluidos los `AP`, `mesh gates`, `portals` y `clients`.**
+
+Los servicios que presta la `SS` son los siguientes:
 
 1. 
 
