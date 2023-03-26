@@ -1966,9 +1966,14 @@ Los `10 servicios` que conforman la `SS` son los siguientes:
 
 El DSS (Distribution System Service) es un conjunto de servicios que proporciona el "Distribution System" (DS) de una red WiFi para la comunicación entre Access Points (AP), mesh gates y el portal de un "Extended Service Set" (ESS).
 
-El DS es el sistema o red a través del cual las STA con DSS (AP) se interconectan o, más específicamente, a través del cual las redes Basic Service Set (BSS) se interconectan una con otra
+Para comprender mejor, Todos los APs de una red wireless pueden ir armando un "rompecabezas" que al final se convierte en un solo "Extended Service Set".
+
+El DS es el sistema o red a través del cual las STA con DSS (AP) se interconectan o, más específicamente, a través del cual las redes Basic Service Set (BSS) se interconectan una con otra.
 
 El DS Medium (DSM) es el medio utilizado por el DS, como por ejemplo cables Ethernet (como UDP o fibra),  RF Mesh, etc.
+
+![image](https://user-images.githubusercontent.com/94720207/227799137-f1505092-751e-45da-85c0-3c5689867f66.png)
+
 
 Los `10 servicios` que conforman la `DSS` son los siguientes:
 
@@ -1995,7 +2000,7 @@ Los `10 servicios` que conforman la `DSS` son los siguientes:
 | **Personal Basic Service Set (PBSS)**      	| Utilizado para comunicación directa entre estaciones 802.11ad en la banda de 60GHz. Un cliente asume el rol de punto de control PBSS (PCP) y sincroniza la comunicación entre todos los clientes.                                                                                                                                                                                                                                                                                                                      	|
 | **Mesh Basic Service Set (MBSS)**          	| Conjunto de APs que proporcionan distribución de malla. Los AP conectados a la red cableada son llamados puertas de enlace o "mesh gate". Los AP no conectados a la red cableada forman conexiones inalámbricas de backhaul hacia las puertas de enlace y se conocen como puntos de malla. La selección de ruta se realiza mediante el protocolo HWMP, basado en métricas como RSSI, SNR, carga del cliente y cantidad de saltos. La selección de ruta se realiza mediante MAC y no mediante IP.                       	|
 
-![image](https://user-images.githubusercontent.com/94720207/227790313-3c22efa8-3160-4af1-b82a-21937547f973.png)
+
 
 
 ![image](https://user-images.githubusercontent.com/94720207/227790252-ef2dafde-f83e-43c8-9024-f2600658ae6e.png)
