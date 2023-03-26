@@ -1696,6 +1696,45 @@ Por lo tanto, la elección de la tasa de codificación adecuada depende de las c
 ---
 
 
+### Guard Interval
+
+El GI se define como un período de tiempo que se utiliza para proporcionar una separación entre símbolos adyacentes en la transmisión de datos en una red inalámbrica. El GI se agrega como un intervalo entre los símbolos de datos transmitidos y se utiliza para proporcionar una protección contra el desvanecimiento de la señal y la interferencia.
+
+La separación entre símbolos adyacentes en la transmisión de datos en una red inalámbrica, como el Guard Interval (GI), se utiliza para ayudar a reducir los efectos del desvanecimiento de la señal y la interferencia en la transmisión de datos.
+
+El desvanecimiento de la señal ocurre cuando la intensidad de la señal inalámbrica se atenúa debido a obstáculos en el camino de la señal o la distancia entre el transmisor y el receptor. La interferencia, por otro lado, ocurre cuando hay señales inalámbricas adicionales que pueden superponerse con la señal original, causando distorsión en la señal y reduciendo su calidad.
+
+La separación entre símbolos adyacentes ayuda a reducir estos efectos de desvanecimiento e interferencia, proporcionando un tiempo muerto entre la transmisión de los símbolos de datos. Esto permite que la señal inalámbrica se recupere y se estabilice antes de la transmisión del siguiente símbolo de datos. Además, al aumentar el tiempo entre los símbolos de datos, se reduce la probabilidad de que se produzca una superposición o interferencia entre los símbolos adyacentes.
+
+En resumen, la separación entre símbolos adyacentes en la transmisión de datos en una red inalámbrica es necesaria para ayudar a reducir los efectos del desvanecimiento de la señal y la interferencia, y mejorar la calidad y la confiabilidad de la transmisión de datos en la red inalámbrica.
+
+---
+
+### Elección del Guard Interval 
+
+La elección del guard interval (GI) en una red inalámbrica 802.11 depende de varios factores, como la velocidad de transmisión de datos, la calidad de la señal inalámbrica y el entorno de la red.
+
+En general, cuanto más corto es el GI, mayor es la velocidad de transmisión de datos que se puede lograr en una red inalámbrica. Sin embargo, un GI más corto también significa menos protección contra el desvanecimiento de la señal y la interferencia, lo que puede reducir la calidad y la confiabilidad de la transmisión de datos.
+
+El AP (punto de acceso) y la STA (estación) pueden ambos establecer el GI utilizado en la transmisión de datos. En la mayoría de los casos, el AP establece el GI utilizado en la red y la STA lo sigue. Sin embargo, en algunos casos, la STA puede establecer su propio GI en la transmisión de datos.
+
+En la mayoría de los casos, el GI se establece automáticamente en función de la velocidad de transmisión de datos seleccionada. Por ejemplo, en una red inalámbrica 802.11ac, el GI se establece automáticamente en 320 ns para velocidades de transmisión de datos de 80 MHz y 160 MHz. Para velocidades de transmisión de datos de 20 MHz y 40 MHz, el GI se establece automáticamente en 800 ns.
+
+En algunos casos, es posible ajustar manualmente el GI en una red inalámbrica. Por ejemplo, algunos controladores de tarjetas de red inalámbricas permiten la configuración manual del GI utilizado en la transmisión de datos.
+
+---
+
+### Evolución del Guard Interval
+
+En las redes inalámbricas 802.11b y 802.11g, se utiliza un GI de 800 ns. Esto significa que después de cada símbolo de datos, se agrega un intervalo de tiempo de 800 ns antes de que se transmita el siguiente símbolo. En las redes inalámbricas 802.11a y 802.11n, se utilizó un GI de 400 ns, lo que permitió una transmisión de datos más rápida en comparación con las redes 802.11b y 802.11g.
+
+En la especificación 802.11ac, se introdujo el GI de 320 ns. Este intervalo de tiempo más corto permitió una mayor eficiencia en la transmisión de datos, lo que resultó en un mayor rendimiento de la red inalámbrica. El GI de 320 ns también proporcionó una mejor protección contra la interferencia y el desvanecimiento de la señal, lo que mejoró la calidad de la transmisión de datos en la red.
+
+Finalmente, en la especificación 802.11ax, se ha introducido el GI de 160 ns. Este GI aún más corto permite una mayor eficiencia en la transmisión de datos y una mayor velocidad de la red inalámbrica. El GI de 160 ns también proporciona una protección mejorada contra la interferencia y el desvanecimiento de la señal, lo que mejora aún más la calidad de la transmisión de datos en la red.
+
+En resumen, el GI en las redes inalámbricas 802.11 se ha ido reduciendo en tamaño a medida que la tecnología ha evolucionado. Esto ha permitido una mayor eficiencia y velocidad de transmisión de datos en las redes inalámbricas más modernas y avanzadas, así como una mejor protección contra la interferencia y el desvanecimiento de la señal.
+
+
 
 • Esquema de Modulación
 Define la fase y amplitud requerida para el cálculo de bits, desde BPSK hasta QPSK, 16-QAM, 64-QAM y 256-QAM.
