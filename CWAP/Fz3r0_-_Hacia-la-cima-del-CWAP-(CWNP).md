@@ -1934,7 +1934,7 @@ Existen `2 tipos de STA` diferentes, tanto la `Client Station` como la `Access P
 
 Un "Access Point Station" es un dispositivo que funciona como punto de acceso para los dispositivos "Client Station". El punto de acceso proporciona una puerta de enlace para que los dispositivos se comuniquen de forma inalámbrica y también les permite acceder a una conexión física como Ethernet a través del "Distribution System Access Function (DSAF)". El punto de acceso mantiene una tabla de asociación de los dispositivos "Client Station" conectados y dirige el tráfico en la red.
 
-Los `10 servicios` que conforman la `SS` son los siguientes:
+Los **`10 servicios`** que conforman la **`SS`** son los siguientes:
 
 1. **`Authentication`**
 2. **`Deauthentication`**
@@ -1975,18 +1975,17 @@ El DS Medium (DSM) es el medio utilizado por el DS, como por ejemplo cables Ethe
 ![image](https://user-images.githubusercontent.com/94720207/227799137-f1505092-751e-45da-85c0-3c5689867f66.png)
 
 
-Los `10 servicios` que conforman la `DSS` son los siguientes:
+Los **`9 servicios`** que conforman la **`DSS`** son los siguientes:
 
-1. **`Service Name`**
-2. **`Service Set Identifier (SSID)`**
-3. **`Basic Service Set (BSS)`**
-4. **`Basic Service Area (BSA)`**
-5. **`Basic Service Set Identifier (BSSID)`**
-6. **`Multiple Basic Service Set Identifiers`**
-7. **`Extended Service Set (ESS)`**
-8. **`Independent Basic Service Set (IBSS)`**
-9. **`Personal Basic Service Set (PBSS)`**
-10. **`Mesh Basic Service Set (MBSS)`**
+1. **`Service Set Identifier (SSID)`**
+2. **`Basic Service Set (BSS)`**
+3. **`Basic Service Area (BSA)`**
+4. **`Basic Service Set Identifier (BSSID)`**
+5. **`Multiple Basic Service Set Identifiers`**
+6. **`Extended Service Set (ESS)`**
+7. **`Independent Basic Service Set (IBSS)`**
+8. **`Personal Basic Service Set (PBSS)`**
+9. **`Mesh Basic Service Set (MBSS)`**
 
 | **Service Name**                           	| **Descripción**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        	|
 |--------------------------------------------	|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
