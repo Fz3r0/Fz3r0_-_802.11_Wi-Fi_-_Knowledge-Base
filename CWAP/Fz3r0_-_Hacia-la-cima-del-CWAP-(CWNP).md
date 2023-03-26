@@ -1700,11 +1700,17 @@ Por lo tanto, la elección de la tasa de codificación adecuada depende de las c
 
 El GI se define como un período de tiempo que se utiliza para proporcionar una separación entre símbolos adyacentes en la transmisión de datos en una red inalámbrica. El GI se agrega como un intervalo entre los símbolos de datos transmitidos y se utiliza para proporcionar una protección contra el desvanecimiento de la señal y la interferencia.
 
+![image](https://user-images.githubusercontent.com/94720207/227756891-f5129820-82fc-4dd3-9b3d-528947a7683e.png)
+
 La separación entre símbolos adyacentes en la transmisión de datos en una red inalámbrica, como el Guard Interval (GI), se utiliza para ayudar a reducir los efectos del desvanecimiento de la señal y la interferencia en la transmisión de datos.
+
+![image](https://user-images.githubusercontent.com/94720207/227756794-3daf6555-cbd7-4a57-94fd-7bce50ae086f.png)
 
 El desvanecimiento de la señal ocurre cuando la intensidad de la señal inalámbrica se atenúa debido a obstáculos en el camino de la señal o la distancia entre el transmisor y el receptor. La interferencia, por otro lado, ocurre cuando hay señales inalámbricas adicionales que pueden superponerse con la señal original, causando distorsión en la señal y reduciendo su calidad.
 
 La separación entre símbolos adyacentes ayuda a reducir estos efectos de desvanecimiento e interferencia, proporcionando un tiempo muerto entre la transmisión de los símbolos de datos. Esto permite que la señal inalámbrica se recupere y se estabilice antes de la transmisión del siguiente símbolo de datos. Además, al aumentar el tiempo entre los símbolos de datos, se reduce la probabilidad de que se produzca una superposición o interferencia entre los símbolos adyacentes.
+
+![image](https://user-images.githubusercontent.com/94720207/227756849-97d79fb8-37ca-4335-952d-998abf645c13.png)
 
 En resumen, la separación entre símbolos adyacentes en la transmisión de datos en una red inalámbrica es necesaria para ayudar a reducir los efectos del desvanecimiento de la señal y la interferencia, y mejorar la calidad y la confiabilidad de la transmisión de datos en la red inalámbrica.
 
@@ -1716,11 +1722,17 @@ La elección del guard interval (GI) en una red inalámbrica 802.11 depende de v
 
 En general, cuanto más corto es el GI, mayor es la velocidad de transmisión de datos que se puede lograr en una red inalámbrica. Sin embargo, un GI más corto también significa menos protección contra el desvanecimiento de la señal y la interferencia, lo que puede reducir la calidad y la confiabilidad de la transmisión de datos.
 
+![image](https://user-images.githubusercontent.com/94720207/227756684-2a39afbb-ba85-49ff-aed3-63bc144253a8.png)
+
 El AP (punto de acceso) y la STA (estación) pueden ambos establecer el GI utilizado en la transmisión de datos. En la mayoría de los casos, el AP establece el GI utilizado en la red y la STA lo sigue. Sin embargo, en algunos casos, la STA puede establecer su propio GI en la transmisión de datos.
 
 En la mayoría de los casos, el GI se establece automáticamente en función de la velocidad de transmisión de datos seleccionada. Por ejemplo, en una red inalámbrica 802.11ac, el GI se establece automáticamente en 320 ns para velocidades de transmisión de datos de 80 MHz y 160 MHz. Para velocidades de transmisión de datos de 20 MHz y 40 MHz, el GI se establece automáticamente en 800 ns.
 
-En algunos casos, es posible ajustar manualmente el GI en una red inalámbrica. Por ejemplo, algunos controladores de tarjetas de red inalámbricas permiten la configuración manual del GI utilizado en la transmisión de datos.
+Por ejemplo, los controladores/AP de Ruckus no tienen la opción de establecer explícitamente SGI/LGI, se deja a decisión del cliente/AP basado en el entorno. En la mayoría de los casos, los clientes negocian con la bandera SGI-False (LGI).
+
+En algunos otros casos como en la WLC de Aruba, es posible ajustar manualmente el GI en una red inalámbrica. Por ejemplo, algunos controladores de tarjetas de red inalámbricas permiten la configuración manual del GI utilizado en la transmisión de datos.
+
+![image](https://user-images.githubusercontent.com/94720207/227757109-63212fe0-b91e-40ca-bcaa-36e05aa42bc5.png)
 
 ---
 
