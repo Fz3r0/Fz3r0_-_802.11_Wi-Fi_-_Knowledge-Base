@@ -2010,19 +2010,24 @@ Los **`9 servicios`** que conforman la **`DSS`** son los siguientes:
 
 **`Client Mode` y `AP Mode` son `modos de operación` utilizados en redes inalámbricas 802.11 (Wi-Fi).**
 
-1. AP (Access Point) Mode
+### ⭕ `AP (Access Point) Mode`
+
 - El Modo de Punto de Acceso es el modo de operación por defecto de un punto de acceso Wi-Fi, el cual permite que los dispositivos clientes se conecten a la red inalámbrica y accedan a los recursos de la red cableada a través del punto de acceso. 
 - El AP se encarga de la gestión de la red, incluyendo la asignación de direcciones IP, la autenticación y el cifrado. <br><br>
 
-| **Name**                  	| **Mode** 	| **Descripción**                                                                                                                              	|
-|---------------------------	|----------	|----------------------------------------------------------------------------------------------------------------------------------------------	|
-| **Root Mode**             	| AP       	| El modo predeterminado para un AP. El AP funciona como un portal a una red cableada.                                                         	|
-| **Mesh Mode**             	| AP       	| El AP funciona como un radio de enlace de retroceso inalámbrico para un entorno de malla.                                                    	|
-| **Sensor Mode**           	| AP       	| El AP se convierte en un radio sensor, lo que le permite integrarse en un sistema de detección de intrusiones inalámbricas (WIDS).           	|
-| **Bridge Mode**           	| AP       	| El radio del AP se convierte en un puente inalámbrico.                                                                                       	|
-| **Workgroup Bridge Mode** 	| AP       	| El radio del AP se transforma en un puente de grupo de trabajo, proporcionando enlace ascendente inalámbrico para clientes 802.3 conectados. 	|
+![image](https://user-images.githubusercontent.com/94720207/227803837-ce12bd19-6c01-4aa4-8d33-7bbf501a51c4.png)
 
-2. `Client Mode`
+| **Name**                  	| **Mode** 	| **Descripción**                                                                                                                        	|
+|---------------------------	|----------	|----------------------------------------------------------------------------------------------------------------------------------------	|
+| **Root Mode**             	| AP       	| El modo predeterminado para un AP. El AP funciona como un portal hacia una red cableada (LAN).                                         	|
+| **Mesh Mode**             	| AP       	| El AP funciona como un Wireless Backhaul Radio para un entorno Mesh.                                                                   	|
+| **Sensor Mode**           	| AP       	| El AP se convierte en un radio sensor, lo que le permite integrarse en un sistema Wireless Intrusion Detection System (WIDS).          	|
+| **Bridge Mode**           	| AP       	| El radio del AP se convierte en un Bridge inalámbrico.                                                                                 	|
+| **Workgroup Bridge Mode** 	| AP       	| El radio del AP se transforma en un Working Group Bridge, proporcionando enlace ascendente inalámbrico para clientes 802.3 conectados. 	|
+
+
+### ⭕ `Client Mode`
+
 - El Modo Cliente es un modo de operación en el cual un dispositivo inalámbrico actúa como un cliente en una red Wi-Fi. 
 - En este modo, el dispositivo se conecta a un punto de acceso inalámbrico, similar a como lo hace un ordenador portátil o un teléfono móvil, y accede a los recursos de la red a través de ese punto de acceso. 
 
