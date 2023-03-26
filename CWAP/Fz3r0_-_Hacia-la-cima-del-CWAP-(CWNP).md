@@ -1912,6 +1912,8 @@ Los `dispositivos 802.11` brindan específicamente `2 servicios` que permiten co
 2. **`DSS (Distribution System Service)`**
 3. **`PCPS (PBSS Control Point Service)`** _Fuera del alcance del CWAP_
 
+- Nota: El `PCPS` funciona para redes `personal basic service set (PBSS)` las cuales están **fuera del alcance del `CWAP`** y redes de alta densidad.
+
 ### 🟣 `SS (Station Service) `
 
 El `SS (Station Service)` o "Servicio de Estación" se refiere a los servicios proporcionados por una STA en la red Wi-Fi. Estos servicios incluyen la `autenticación`, la `asociación` y la `desasociación` de dispositivos en la red. La `STA` también proporciona `servicios de entrega de datos` a través de la red y puede `administrar el tráfico de la red`.
