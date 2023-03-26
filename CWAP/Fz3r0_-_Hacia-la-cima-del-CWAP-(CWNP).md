@@ -1921,18 +1921,31 @@ El `SS (Station Service)` o "Servicio de Estación" se refiere a los servicios p
 - El `SS (Station Service)` es un conjunto de servicios los cuales admiten `MSDU` entre `STA` dentro de un `BSS`. 
 - **El `SS` está en todas las `STA`, incluidos los `AP`, `mesh gates`, `portals` y `clients`.**
 
+Existen `2 tipos de STA` diferentes, tanto la `Client Station` como la `Access Point Station` se consideran como `STA (Station)` en el `802.11 Standard`. La `STA` es el **término genérico utilizado para referirse a cualquier dispositivo que pueda conectarse a una red inalámbrica y que tenga la capacidad de transmitir y recibir datos de forma inalámbrica.**
+
+1. **`Client Station`** 
+    - Se refiere a **cualquier dispositivo** que se conecta a una red inalámbrica, **pero NO actúa como AP**. 
+    - Es decir, tiene una conexión de nivel 2 con el AP y puede utilizar la red inalámbrica para comunicarse con otros dispositivos en la red. 
+    - Cuando un dispositivo "Client Station" se conecta a un punto de acceso, se considera "asociado" <br><br>
+3. `AP Station`
+
+
+"Client Station" . . Es decir, tiene una conexión de nivel 2 con el punto de acceso y puede utilizar la red inalámbrica para comunicarse con otros dispositivos en la red.
+
+Un "Access Point Station" es un dispositivo que funciona como punto de acceso para los dispositivos "Client Station". El punto de acceso proporciona una puerta de enlace para que los dispositivos se comuniquen de forma inalámbrica y también les permite acceder a una conexión física como Ethernet a través del "Distribution System Access Function (DSAF)". El punto de acceso mantiene una tabla de asociación de los dispositivos "Client Station" conectados y dirige el tráfico en la red.
+
 Los `10 servicios` que presta la `SS` son los siguientes:
 
-1. Authentication
-2. Deauthentication
-3. Data confidientality (encryption)
-4. MSDU delivery
-5. DFS - Dynamic Frequency Selection
-6. TPC - Transmit Power Control
-7. Time Synchronization with higher layers (QoS facility only)
-8. QoS traffic scheduling (QoS facility only)
-9. Radio Measurment
-10. DSE - Dynamic STA Enablement
+1. **`Authentication`**
+2. **`Deauthentication`**
+3. **`Data confidientality (encryption)`**
+4. **`MSDU delivery`**
+5. **`DFS - Dynamic Frequency Selection`**
+6. **`TPC - Transmit Power Control`**
+7. **`Time Synchronization with higher layers (QoS facility only)`**
+8. **`QoS traffic scheduling (QoS facility only)`**
+9. **`Radio Measurment`**
+10. **`DSE - Dynamic STA Enablement`**
 
 | **Service**                                                     	| **Descripción**                                                                                                                                                                                                                                                                                                                                                                                                                                                	|
 |-----------------------------------------------------------------	|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
