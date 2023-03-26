@@ -311,6 +311,13 @@ Ahora que ya se tiene el concepto visual de como se distribuyen las `sublayer 1 
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223580395-cd80622a-5239-4151-8cf0-fbd77cf0a12a.png" alt="Encapsula" height=427px/> </a> </p> 
 
+### IEEE 802.11 Frame Structure
+
+- [IEEE 802.11 MAC Frame](https://www.geeksforgeeks.org/ieee-802-11-mac-frame/)
+
+![image](https://user-images.githubusercontent.com/94720207/227808549-e7246deb-16a2-48ef-91ff-96224c99fae4.png)
+
+
 ### Layer 1: `Physical Layer Frame`
 
 - En `Layer 1 (Physical Layer)`, un frame se refiere a un `conjunto de bits` que se transmiten en la red en una única transmisión. 
