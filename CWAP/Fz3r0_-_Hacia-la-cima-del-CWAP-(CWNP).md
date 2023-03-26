@@ -1879,6 +1879,77 @@ _Se puede obtener información más detallada de este método en el link que com
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+## 🟢 Services Provided by 802.11 Devices
+
+- [Tech Mike: `Wireless in all the areas`](https://techimike.com/cwna-chapter-7-wireless-in-all-the-areas/)
+
+Los dispositivos 802.11 brindan servicios que permiten comunicaciones en la Capa 1 y la Capa 2. Estos servicios son dos:
+
+1. SS (Station Service)
+2. DSS (Distribution System Service)
+
+### SS 
+
+El SS es un conjunto de servicios que admiten MSDU entre STA dentro de un BSS. El SS está en todas las STA, incluidos los AP, las puertas de malla, los portales y los clientes. Los servicios que presta la SS son los siguientes:
+
+
+
+
+
+![image](https://user-images.githubusercontent.com/94720207/227790313-3c22efa8-3160-4af1-b82a-21937547f973.png)
+
+
+![image](https://user-images.githubusercontent.com/94720207/227790252-ef2dafde-f83e-43c8-9024-f2600658ae6e.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 https://www.wirelesstrainingsolutions.com/understanding-ofdm-part-4-refresh/
 
 
