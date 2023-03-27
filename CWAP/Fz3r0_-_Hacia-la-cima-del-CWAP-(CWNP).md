@@ -1757,6 +1757,19 @@ En resumen, el GI en las redes inalámbricas 802.11 se ha ido reduciendo en tama
 
 
 
+
+
+[The List](https://clients.mikealbano.com/)
+
+![image](https://user-images.githubusercontent.com/94720207/227822924-a04952b2-71d7-4e24-86fe-b933fed24a08.png)
+
+
+
+
+
+
+
+
 • Esquema de Modulación
 Define la fase y amplitud requerida para el cálculo de bits, desde BPSK hasta QPSK, 16-QAM, 64-QAM y 256-QAM.
 
