@@ -185,6 +185,7 @@ Por ejemplo, en hacking y cyber-seguridad ya he realizado writeups donde podemos
 ### Modelo OSI "original"
 
 - [OSI/IEC Reference Model - Second Edition 1994](https://standards.iso.org/ittf/PubliclyAvailableStandards/s020269_ISO_IEC_7498-1_1994(E).zip)
+- [Sunny - OSI Model](https://www.youtube.com/watch?v=nFnLPGk8WjA)
 
 El `OSI model` original se basa en `7 layers`, para las alturas de este curso ya se debe tener muy bien comprendido para que sirve cada capa, a grandes rasgos es el siguiente:  
 
@@ -334,11 +335,14 @@ Ahora que ya se tiene el concepto visual de como se distribuyen las `sublayer 1 
 
 ## `Layer 4` Transport
 
-- La Capa 4 del modelo OSI es la capa de transporte, y su función principal es proporcionar un medio para que los procesos de aplicaciones en diferentes dispositivos puedan establecer, mantener y terminar conexiones de comunicación. 
-- En esta capa se encuentran **2 protocolos principales**: `TCP` y `UDP`.
+- [Sunny - TCP vs. UDP](https://www.youtube.com/watch?v=SLY4Ud53UGs)
 
-    - `Propoprcionar un Medio (Lógico)` _(Hablando de la capa 4 de transporte)_: Similar a un cable (medio físico), la capa de transporte utiliza un medio pero a nivel de software (lógico) para transmitir datos.
-    - Este medio en realidad son un conjunto de servicios y protocolos que permiten a los procesos de aplicaciones en diferentes dispositivos establecer y gestionar una conexión de comunicación extremo a extremo.
+La Capa 4 del modelo OSI es la capa de transporte, y su función principal es proporcionar un medio para que los procesos de aplicaciones en diferentes dispositivos puedan establecer, mantener y terminar conexiones de comunicación. <br>
+
+En esta capa se encuentran **2 protocolos principales**: `TCP` y `UDP`.
+
+- La `Layer 4 Transport` sirve para **`Propoprcionar un Medio (Lógico)`**, es decir, **similar a un cable (medio físico), la capa de transporte utiliza un medio pero a nivel de software (lógico) para transmitir datos.**
+- Este medio en realidad son un conjunto de servicios y protocolos que permiten a los procesos de aplicaciones en diferentes dispositivos establecer y gestionar una conexión de comunicación extremo a extremo.
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223029378-5c82410f-0388-4e63-8fe1-1c968da26008.png" alt="Transport" height=300px/> </a> </p> 
 
