@@ -2026,6 +2026,8 @@ Los **`9 servicios`** que conforman la **`DSS`** son los siguientes:
 
 ![image](https://user-images.githubusercontent.com/94720207/227803837-ce12bd19-6c01-4aa4-8d33-7bbf501a51c4.png)
 
+![image](https://user-images.githubusercontent.com/94720207/227820777-2fecc6ff-f2ea-4bf9-a9e4-a50cb1d7e94d.png)
+
 | **Name**                  	| **Mode** 	| **Descripción**                                                                                                                        	|
 |---------------------------	|----------	|----------------------------------------------------------------------------------------------------------------------------------------	|
 | **Root Mode**             	| AP       	| El modo predeterminado para un AP. El AP funciona como un portal hacia una red cableada (LAN).                                         	|
@@ -2043,6 +2045,9 @@ Los **`9 servicios`** que conforman la **`DSS`** son los siguientes:
 El `Client Mode` incluye los modos `Ad-Hoc Mode` e `Infraesctucture Mode`:
 
 ![image](https://user-images.githubusercontent.com/94720207/227801827-6ff3cbbe-a14e-4824-afa6-d85ba75af6a6.png)
+
+
+
 
 | **Name**                	| **Mode** 	| **Descripción**                                                                                             	|
 |-------------------------	|----------	|-------------------------------------------------------------------------------------------------------------	|
