@@ -1561,6 +1561,10 @@ Esto significa que, en la comunicación entre ambos extremos, **solo se pueden u
 
 - `IMPORTANTE`: No siempre se utilizan todas las antenas de un sistema MIMO para transmitir o recibir datos en un momento dado!!!! La selección de las antenas se realiza dinámicamente para aprovechar las mejores condiciones del canal inalámbrico en tiempo real. La selección de las antenas MIMO se basa en una combinación de factores técnicos y de las condiciones del canal, y puede variar dinámicamente para optimizar la capacidad y la velocidad de transmisión en tiempo real.
 
+Generalmente en la actualidad, los dispositivos WiFi tienen entre 1 y 2 spatial streams y solo los dispositivos de gama alta llegan a los 3 spatial streams. A partir de ahí, solo dispositivos muy especializados soportan más de 3 spatial streams:
+
+![image](https://user-images.githubusercontent.com/94720207/227837455-f92241dc-be14-431a-8223-16a61b172312.png)
+
 Ahora, podemos saber lo que en realidad se refieren esas diviones de `spatial streams` en la MCS table, y todo depende de la combinación de ambas antenas durante la tranmisión. Es decir, las etiquetas `1 spatial stream`, `2 spatial stream`, `3 spatial stream`, etc., se refieren a la **cantidad de streams que se pueden transmitir simultáneamente utilizando una `determinada configuración de antenas MIMO` (`2x2`, `3x3`, `4x4`, etc...).**
 
 ![image](https://user-images.githubusercontent.com/94720207/224517178-f31b1ee0-8fac-4f3f-9eea-2b9c0f3e22ff.png)
@@ -1785,7 +1789,39 @@ Tiempo de espera o pausa entre cada transmisión de paquete. 802.11n tiene 400ns
 • SNR mínimo y RSSI
 Determina el SNR mínimo y el RSSI requerido para un índice MSC específico.
 
+
+[Darrell DeRosia - Understanding WLAN Capacity Limits](https://youtu.be/HRhZniqyey8)
+
+
 ![image](https://user-images.githubusercontent.com/94720207/224523058-f4960b76-873a-4b03-aa7d-c8151efb2ee4.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/94720207/227836656-f81869d9-0ca7-4ade-9191-5261af2f1029.png)
+
+
+
+![image](https://user-images.githubusercontent.com/94720207/227836776-cfeca7f8-8fbc-452b-8ebb-c64882fbe548.png)
+
+
+![image](https://user-images.githubusercontent.com/94720207/227836811-f605dd5c-2aab-4aa3-90ba-e461053b83d4.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### `Bandwith`
