@@ -1932,16 +1932,26 @@ El `SS (Station Service)` o "Servicio de Estación" se refiere a los servicios p
 
 Existen `2 tipos de STA` diferentes, tanto la `Client Station` como la `Access Point Station` se consideran como `STA (Station)` en el `802.11 Standard`. La `STA` es el **término genérico utilizado para referirse a cualquier dispositivo que pueda conectarse a una red inalámbrica y que tenga la capacidad de transmitir y recibir datos de forma inalámbrica.**
 
+- [Programming esp8266-wifi - AP Mode & STA Mode](https://www.embedded-robotics.com/esp8266-wifi/)
+
 1. **`Client Station`** 
     - Se refiere a **cualquier dispositivo** que se conecta a una red inalámbrica, **pero NO actúa como AP**. 
     - Es decir, tiene una conexión de nivel 2 con el AP y puede utilizar la red inalámbrica para comunicarse con otros dispositivos en la red. 
     - Cuando un dispositivo "Client Station" se conecta a un punto de acceso, se considera "asociado" <br><br>
+
+![image](https://user-images.githubusercontent.com/94720207/227821492-297e7ad0-e314-429c-aea1-03a1bdb93fc7.png)
+
+
+
 3. `AP Station`
 
 
 "Client Station" . . Es decir, tiene una conexión de nivel 2 con el punto de acceso y puede utilizar la red inalámbrica para comunicarse con otros dispositivos en la red.
 
 Un "Access Point Station" es un dispositivo que funciona como punto de acceso para los dispositivos "Client Station". El punto de acceso proporciona una puerta de enlace para que los dispositivos se comuniquen de forma inalámbrica y también les permite acceder a una conexión física como Ethernet a través del "Distribution System Access Function (DSAF)". El punto de acceso mantiene una tabla de asociación de los dispositivos "Client Station" conectados y dirige el tráfico en la red.
+
+![image](https://user-images.githubusercontent.com/94720207/227821618-bde5645a-97ec-44ab-a39e-2629f88eb2e3.png)
+
 
 Los **`10 servicios`** que conforman la **`SS`** son los siguientes:
 
