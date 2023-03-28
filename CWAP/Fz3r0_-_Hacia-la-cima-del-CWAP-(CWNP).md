@@ -136,9 +136,22 @@ La `ruta Abruzzi del K2` es un camino lleno de peligros y desafíos que ponen a 
 
  _"K2, avanzar a morir!"_
 
+---
 
 
-## `Wireless Analysis Professional` : `CWAP Engineering`
+<!-- 
+
+FIN DE CAPITULO :D
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br><br><br>
+
+
+
+## 🟢 `Wireless Analysis Professional` : `CWAP Engineering`
 
 Un ingeniero `CWAP (Certified Wireless Analysis Professional)` debe tener una amplia gama de habilidades para **diseñar, implementar, solucionar problemas y asegurar el rendimiento de las redes inalámbricas.** <br>
 
@@ -148,16 +161,23 @@ Un ingeniero `CWAP (Certified Wireless Analysis Professional)` debe tener una am
 
 3. Otra habilidad clave para un ingeniero `CWAP` es la **capacidad de solucionar problemas de conectividad y rendimiento en tiempo real. Para ello, deben utilizar herramientas de monitoreo de red en tiempo real, como AirMagnet o Ekahau, que les permiten detectar problemas de conectividad, interferencias, problemas de autenticación y otros problemas de rendimiento.** <br>
 
-4. Por último, un ingeniero `CWAP` debe tener una sólida comprensión de la seguridad de las redes inalámbricas, incluyendo la autenticación, el cifrado y la prevención de intrusiones. Esto les permite diseñar e implementar redes seguras que cumplan con los requisitos de privacidad y seguridad de los usuarios. <br>
+4. Por último, un ingeniero `CWAP` debe tener una **sólida comprensión de la seguridad de las redes inalámbricas, incluyendo la autenticación, el cifrado y la prevención de intrusiones. Esto les permite diseñar e implementar redes seguras que cumplan con los requisitos de privacidad y seguridad de los usuarios.** <br>
 
 **El ingeniero `CWAP` debe ser capaz de diseñar, implementar, solucionar problemas y asegurar el rendimiento de las redes inalámbricas, utilizando herramientas especializadas y conocimientos avanzados en tecnologías inalámbricas, protocolos y seguridad de redes. Estas habilidades les permiten ofrecer soluciones eficaces y de alta calidad a las organizaciones que utilizan redes inalámbricas.** <br>
 
+<div align="center">
+
 ![image](https://media.tenor.com/C2ZnZj6Gl-gAAAAM/anime-dragon-ball.gif)
 
+ </div>
 
-### 🟢 Conocimiento Requerido para `CWAP-402`
+---
 
-- El examen está dividido de la siguiente manera:
+### 🟣 Conocimiento Requerido para `CWAP-402`
+
+- [CWAP® - Certified Wireless Analysis Professional - Current version: CWAP-404 released in September 2021](https://www.cwnp.com/certifications/cwap)
+
+La tabla presentada muestra los la manera en la que el examen `CWAP-402` está dividido, según fuentes oficiales de `CWNP`
 
 <div align="center">
   
@@ -172,9 +192,11 @@ Un ingeniero `CWAP (Certified Wireless Analysis Professional)` debe tener una am
  
 </div>
 
-## `CWAP`: Objetivos
+---
 
-- El Ingeniero CWAP debe asegurarse que el troubleshooting se está llevando a cabo con todos los tipos de anlálisis y poder realizar los siguientes pasos:
+### 🟣 `CWAP`: `Objetivos`
+
+El Ingeniero CWAP debe asegurarse que el troubleshooting se está llevando a cabo con todos los tipos de anlálisis y poder realizar los siguientes pasos:
 
 1. Definir el problema
 2. Determinar la escala del problema 
@@ -184,12 +206,10 @@ Un ingeniero `CWAP (Certified Wireless Analysis Professional)` debe tener una am
 6. Seleccionar los pasos apropiados para remediar el problema
 7. Documentar el problema y resolución 
 
-- El Ingeniero CWAP debe ser experto en aplicar y comprender los conocimientos respecto a los **PHY Technologies** como son: `PHY headers`, `Preambles`, `Training Fields`, `Frame Aggregation`, `Data Rates`, etc.
-- Entender por completo el `Frame` y `Frame Aggregation`
- 
-     - Frame Aggregation: `A-MSDU` & `A-MPDU` 
+El Ingeniero CWAP debe ser experto en aplicar y comprender los conocimientos respecto a los **PHY Technologies** como son: `PHY headers`, `Preambles`, `Training Fields`, `Frame Aggregation`, `Data Rates`, etc. <br>
+Entender por completo el `Frame` y `Frame Aggregation` (`A-MSDU` & `A-MPDU`)
 
-## El truco del `Modelo OSI` para `Wireless`
+## 🟢 Modelo OSI para el CWAP, by Fz3r0
 
 Antes que nada, quiero destacar que tanto para CWNA como CWAP no se utliza el `modelo TCP/IP`, sino que se basa en el `modelo OSI`, aunque no totalmente como lo conocemos... <br>
 
@@ -201,7 +221,7 @@ Por ejemplo, en hacking y cyber-seguridad ya he realizado writeups donde podemos
 
 ---
 
-### Modelo OSI "original"
+### `Modelo OSI "Original"`
 
 - [OSI/IEC Reference Model - Second Edition 1994](https://standards.iso.org/ittf/PubliclyAvailableStandards/s020269_ISO_IEC_7498-1_1994(E).zip)
 - [Sunny - OSI Model](https://www.youtube.com/watch?v=nFnLPGk8WjA)
