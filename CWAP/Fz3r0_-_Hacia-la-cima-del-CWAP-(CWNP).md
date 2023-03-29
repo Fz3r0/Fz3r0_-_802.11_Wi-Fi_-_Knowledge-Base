@@ -2181,10 +2181,113 @@ Netowrk Planes
 
 
 
+| Plano      	| Propósito                                                    	| Ejemplos                                                                           	| Protocolos comunes                               	| Protocolos de Wi-Fi 802.11 comunes (palabra clave)                                                                                                                                                                                         	|
+|------------	|--------------------------------------------------------------	|------------------------------------------------------------------------------------	|--------------------------------------------------	|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| Control    	| Protocolos de control de red y soluciones específicas Wi-Fi  	| Protocolos de enrutamiento y conmutación, RRM, ARM, LWAPP, CAPWAP                  	| STP, OSPF, BGP, RADIUS, EAP, 802.1x, 802.11s     	| 802.11d (regulaciones), 802.11k (roaming asistido), 802.11r (roaming rápido), 802.11v (gestión de dispositivos), 802.11w (protección de administración)                                                                                    	|
+| Gestión    	| Administración y monitoreo de dispositivos y configuraciones 	| Configuración y monitoreo de WLAN, actualizaciones de firmware, controlador de red 	| SNMP, DHCP, Telnet, SSH, HTTP, TFTP, FTP, Syslog 	| 802.11e (calidad de servicio), 802.11h (regulaciones), 802.11n (MIMO), 802.11u (acceso a red), 802.11w (protección de administración)                                                                                                      	|
+| Datos      	| Transferencia de datos de los usuarios                       	| Acceso de los usuarios a la red, transferencia de datos y recursos                 	| TCP, UDP, HTTP, DNS, FTP, SMTP, POP3, IMAP       	| 802.11a (banda de 5 GHz), 802.11b (banda de 2.4 GHz), 802.11g (banda de 2.4 GHz), 802.11n (MIMO), 802.11ac (banda de 5 GHz)                                                                                                                	|
+|            	|                                                              	|                                                                                    	|                                                  	|                                                                                                                                                                                                                                            	|
+| Plane      	| Purpose                                                      	| Examples                                                                           	| Common Control Protocols                         	| Common 802.11 Wi-Fi Protocols (keyword)                                                                                                                                                                                                    	|
+| Control    	| Network control protocols and specific Wi-Fi solutions       	| Routing and switching protocols, RRM, ARM, LWAPP, CAPWAP                           	| STP, OSPF, BGP, RADIUS, EAP, 802.1x, 802.11s     	| 802.11d (regulations), 802.11k (assisted roaming), 802.11r (fast roaming), 802.11v (device management), 802.11w (management protection)                                                                                                    	|
+| Management 	| Device management and configuration monitoring               	| WLAN configuration and monitoring, firmware updates, network controller            	| SNMP, DHCP, Telnet, SSH, HTTP, TFTP, FTP, Syslog 	| 802.11e (quality of service), 802.11h (regulations), 802.11n (MIMO), 802.11u (network access), 802.11w (management protection)                                                                                                             	|
+| Data       	| User data transfer                                           	| User access to the network, data and resource transfer                             	| TCP, UDP, HTTP, DNS, FTP, SMTP, POP3, IMAP       	| 802.11a (5 GHz band), 802.11b (2.4 GHz band), 802.11g (2.4 GHz band), 802.11n (MIMO), 802.11ac (5 GHz band)                                                                                                                                	|
+|            	|                                                              	|                                                                                    	|                                                  	|                                                                                                                                                                                                                                            	|
+| Plane      	| Purpose                                                      	| Examples                                                                           	| Common Protocols                                 	| Common 802.11 Wi-Fi Protocols (Keyword)                                                                                                                                                                                                    	|
+| Control    	| Network control protocols and Wi-Fi specific solutions       	| Routing and switching protocols, RRM, ARM, LWAPP, CAPWAP                           	| STP, OSPF, BGP, RADIUS, EAP, 802.1x, 802.11s     	| 802.11d (Regulations), 802.11k (Assisted Roaming), 802.11r (Fast Roaming), 802.11v (Device Management), 802.11w (Management Protection), 802.11u (Interworking), 802.11z (Direct Link Setup), 802.11aa (Robust Audio Video Transport)      	|
+| Management 	| WLAN devices and configurations management and monitoring    	| WLAN configuration and monitoring, firmware updates, network controller            	| SNMP, DHCP, Telnet, SSH, HTTP, TFTP, FTP, Syslog 	| 802.11e (Quality of Service), 802.11h (Regulations), 802.11k (Assisted Roaming), 802.11s (Mesh Networking), 802.11u (Interworking), 802.11w (Management Protection), 802.11y (3650 MHz Operation), 802.11ac2 (5Gbps PHY), 802.11ax (OFDMA) 	|
+| Data       	| User data transfer                                           	| User access to the network, data and resource transfer                             	| TCP, UDP, HTTP, DNS, FTP, SMTP, POP3, IMAP       	| 802.11e (Quality of Service), 802.11h (Regulations), 802.11k (Assisted Roaming), 802.11s (Mesh Networking), 802.11u (Interworking), 802.11w (Management Protection), 802.11z (Direct Link Setup), 802.11ac2 (5Gbps PHY), 802.11ax (OFDMA)  	|
 
 
 
 
+
+Los planos de control, gestión y datos son planos conceptuales que sirven para la operación de las redes, incluyendo las redes Wi-Fi 802.11. Cada plano tiene un propósito específico y se enfoca en diferentes tipos de comunicación.
+
+El plano de control se encarga de los protocolos de control de red, como los protocolos de enrutamiento y conmutación. También incluye soluciones específicas para redes Wi-Fi, como la gestión de recursos de radio (RRM) y la gestión automatizada de radio (ARM), que permiten que la red inalámbrica funcione de manera eficiente.
+
+El plano de gestión se enfoca en la administración y monitoreo de dispositivos, como la configuración y monitoreo de WLAN. En este plano se configura y monitorea el hardware y software de la red, se realizan actualizaciones de firmware, y se garantiza el cumplimiento de políticas de seguridad, entre otras tareas.
+
+El plano de datos es responsable de la transferencia de datos de los usuarios. Es el plano donde los usuarios acceden a la red y utilizan los recursos para realizar sus tareas. Aunque a los usuarios les importa principalmente este plano, es importante que los administradores de red monitoreen y controlen el flujo de datos para garantizar una experiencia de usuario satisfactoria.
+
+Es importante destacar que los planos de control y gestión impactan directamente en el funcionamiento del plano de datos. Por ejemplo, la gestión de recursos de radio (RRM) mencionada anteriormente en el plano de control, permite que la red Wi-Fi ajuste automáticamente la configuración de la red, para optimizar el rendimiento y evitar interferencias.
+
+Además, los administradores de red deben entender cómo los diferentes planos interactúan entre sí. Por ejemplo, el plano de gestión es responsable de la configuración del hardware, software y los puntos de acceso (AP), que se utilizan en el plano de datos para la transferencia de datos. El controlador de red, que se encuentra en el plano de gestión, es responsable de la configuración y monitoreo de los AP y sus comunicaciones en el plano de control.
+
+
+
+
+
+
+
+
+There can be cases where a Wi-Fi protocol may be relevant to more than one plane in the Wi-Fi network architecture. For example, the 802.11k protocol, which is used for assisted roaming, may be relevant for both the control and data planes.
+
+In the control plane, 802.11k can be used to assist with network management by providing information on neighboring access points, signal quality, and other metrics that can help optimize the network. In the data plane, 802.11k can be used to help clients roam between access points in a more efficient and seamless manner, which can improve the user experience.
+
+So, it is possible that some protocols may appear on multiple planes in the Wi-Fi network architecture table because they serve a purpose across different aspects of the network.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"The control plane, management plane and data plane are conceptual planes that include different types of communications within networks. 
+
+The control Plane is about network control protocols, for example, routing protocols and switching protocols, along with WLAN solutions like radio resource management (RRM) and automated radio management (ARM).
+
+The management Plane is focused on managing the devices and monitoring them, such as WLAN configuration and monitoring. 
+
+The data plane is focused on user data trasnfer. 
+
+The users care about the data plane, but the control and management frames allow the network administrators to ensure that the users get the performance they requiere out of the data plane. 
+
+Consider RRM as an example and how it relates to the different planes. In the control plane, RRM operates. In the management plane, RRM is configured. In the user plane, data is sent on a WLANN that uses RRM for radio configuration management. In the end, that which occurs in the control and management planes impacts the data plane fucntionality and performance. 
+
+As other example, in the control plane, APs are controlled by a controller through some protocol such as Lightwight Access Point Protocol (LWAPP) or control and provisioning of wireless access points (CAPWAP). They are configured in the management plane through the controller interface. Users utilize these APS to trasnfer data. 
+
+Dividing the network into control, magament, and data planes helps to understand how the network works and how it si managed and operated. In some cases, each plane is configured for specific interfaces, VLANs, or IP subnets. While this configuration is not ubiquitous, it is common. For example, the management plane of a switch may be and a definied management subnet. This allow to only mahcine participating in that management VLAN to access the configuration interface. "
+
+
+El plano de control, plano de gestión y plano de datos son planos conceptuales que incluyen diferentes tipos de comunicaciones dentro de las redes.
+
+El plano de control se refiere a los protocolos de control de red, como por ejemplo, los protocolos de enrutamiento y conmutación, junto con las soluciones WLAN como la gestión de recursos de radio (RRM) y la gestión automatizada de radio (ARM).
+
+El plano de gestión se enfoca en la gestión y monitoreo de dispositivos, como la configuración y monitoreo de WLAN.
+
+El plano de datos se enfoca en la transferencia de datos de usuario.
+
+Aunque a los usuarios les importa el plano de datos, los marcos de control y gestión permiten a los administradores de red asegurarse de que los usuarios obtengan el rendimiento que requieren del plano de datos.
+
+Considere el RRM como ejemplo y cómo se relaciona con los diferentes planos. En el plano de control, RRM opera. En el plano de gestión, RRM se configura. En el plano de usuario, los datos se envían en una WLAN que utiliza RRM para la gestión de configuración de radio. En última instancia, lo que ocurre en los planos de control y gestión afecta la funcionalidad y el rendimiento del plano de datos.
+
+Como otro ejemplo, en el plano de control, los puntos de acceso (AP) son controlados por un controlador a través de algún protocolo como el Protocolo Ligero de Punto de Acceso (LWAPP) o el Control y aprovisionamiento de puntos de acceso inalámbricos (CAPWAP). Se configuran en el plano de gestión a través de la interfaz del controlador. Los usuarios utilizan estos AP para transferir datos.
+
+La división de la red en planos de control, gestión y datos ayuda a comprender cómo funciona la red y cómo se administra y opera. En algunos casos, cada plano se configura para interfaces específicas, VLAN o subredes IP. Si bien esta configuración no es ubicua, es común. Por ejemplo, el plano de gestión de un switch puede ser y una subred de gestión definida. Esto permite que solo las máquinas que participan en esa VLAN de gestión accedan a la interfaz de configuración.
 
 
 
