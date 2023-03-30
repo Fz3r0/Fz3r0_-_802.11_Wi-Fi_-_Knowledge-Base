@@ -238,6 +238,10 @@ El `OSI model` original se basa en `7 layers`, para las alturas de este curso ya
 |   **2**   	|   **Data Link**  	|               Frame              	| Transfiere datos entre dispositivos de red y maneja la dirección física, la corrección de errores y el control de flujo.                               	|
 |   **1**   	|   **Physical**   	|                Bit               	| Convierte los datos a un formato que se puede transmitir por la red física y maneja los medios, la señal y la transmisión de datos.                    	|
 
+![image](https://user-images.githubusercontent.com/94720207/228987616-e7b59209-5fff-4e1e-b9b2-5c2cf81051d2.png)
+
+- [networkwalks-summary-cheatsheets](https://networkwalks.com/networkwalks-summary-cheatsheets/)
+
 ---
 
 ### Modelo OSI "Fz3r0 WiFi Custom"
