@@ -209,6 +209,19 @@ El Ingeniero CWAP debe asegurarse que el troubleshooting se está llevando a cab
 El Ingeniero CWAP debe ser experto en aplicar y comprender los conocimientos respecto a los **PHY Technologies** como son: `PHY headers`, `Preambles`, `Training Fields`, `Frame Aggregation`, `Data Rates`, etc. <br>
 Entender por completo el `Frame` y `Frame Aggregation` (`A-MSDU` & `A-MPDU`)
 
+---
+
+
+<!-- 
+
+FIN DE CAPITULO :D
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br><br><br>
+
 ## 🟢 Modelo OSI para el CWAP, by Fz3r0
 
 Antes que nada, quiero destacar que tanto para CWNA como CWAP no se utliza el `modelo TCP/IP`, sino que se basa en el `modelo OSI`, aunque no totalmente como lo conocemos... <br>
