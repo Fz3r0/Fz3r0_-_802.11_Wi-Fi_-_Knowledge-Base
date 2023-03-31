@@ -221,7 +221,7 @@ Por ejemplo, en hacking y cyber-seguridad ya he realizado writeups donde podemos
 
 ---
 
-### `Modelo OSI "Original"`
+### 🟣 `Modelo OSI "Original"`
 
 - [OSI/IEC Reference Model - Second Edition 1994](https://standards.iso.org/ittf/PubliclyAvailableStandards/s020269_ISO_IEC_7498-1_1994(E).zip)
 - [Sunny - OSI Model](https://www.youtube.com/watch?v=nFnLPGk8WjA)
@@ -238,13 +238,13 @@ El `OSI model` original se basa en `7 layers`, para las alturas de este curso ya
 |   **2**   	|   **Data Link**  	|               Frame              	| Transfiere datos entre dispositivos de red y maneja la dirección física, la corrección de errores y el control de flujo.                               	|
 |   **1**   	|   **Physical**   	|                Bit               	| Convierte los datos a un formato que se puede transmitir por la red física y maneja los medios, la señal y la transmisión de datos.                    	|
 
-![image](https://user-images.githubusercontent.com/94720207/228987616-e7b59209-5fff-4e1e-b9b2-5c2cf81051d2.png)
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228987616-e7b59209-5fff-4e1e-b9b2-5c2cf81051d2.png" alt="Modelo OSI" height=820px/> </a> </p> 
 
 - [networkwalks-summary-cheatsheets](https://networkwalks.com/networkwalks-summary-cheatsheets/)
 
 ---
 
-### Modelo OSI "Fz3r0 WiFi Custom"
+### 🟣 Modelo OSI "Fz3r0 WiFi Custom"
 
 - En este modelo se agregan las sublayers correspondientes de las que tanto se hablan en el curso, donde `layer 1` y `layer 2` se convierten en una especia de `sub-layers`. 
 - La `MAC sublayer` existe tanto el `layer 1` como en `layer 2`, pero para fines prácticos que se ven más adelante durante `Encapsulation` y `Frame Aggregation` el truco está en plasmarlo en una tabla esas 3 capas como `sublayers`: <br>
@@ -272,7 +272,9 @@ La manera más páctica que encontré de representarlo en una tabla, y de hecho,
 
 Sin embargo, para que se comprenda al 100% como "baja" la `MAC Sublayer` desde `layer 2` hacia la `layer 1`, la mejor manera es representarlo en una tabla donde se deben combinar celdas para poder detallar con exactitud a lo que me refiero: 
 
-![image](https://user-images.githubusercontent.com/94720207/227751705-c561fa0f-16ed-4785-9f53-f8dfe6ceecaa.png)
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/227751705-c561fa0f-16ed-4785-9f53-f8dfe6ceecaa.png" alt="Modelo OSI" height=320px/> </a> </p> 
+
+
 
 Ahora que ya se tiene el concepto visual de como se distribuyen las `sublayer 1 - PHY`, `sublayer 2 lower - MAC` y `sublayer 2 upper - LLC`, es así como se vería el modelo OSI completo (sin embargo, siempre utilizaré la tabla que presenté anteriormente para fines prácticos):
 
@@ -298,9 +300,35 @@ Ahora que ya se tiene el concepto visual de como se distribuyen las `sublayer 1 
 - [`WireShark Analysis`: **Layer 7 Application**](https://www.youtube.com/watch?v=L_wLexApMkA)
 - [`File Formats` & `Magic Numbers`](https://youtu.be/qm33nCV1nkA) 
 
-![image](https://user-images.githubusercontent.com/94720207/227809209-1263ebe3-035a-4373-8a29-e77bfdae2075.png)
+La certificación CWAP (Certified Wireless Analysis Professional) se centra en la comprensión y la resolución de problemas en redes inalámbricas, y por lo tanto, se enfoca principalmente en las capas más bajas del modelo OSI (las capas físicas, de enlace de datos y de red). La certificación CWAP está diseñada para evaluar las habilidades de los profesionales de redes inalámbricas en áreas como la planificación, el diseño, la implementación, la resolución de problemas y la optimización de redes inalámbricas. <br>
 
-## Funcionamiento de los Layers
+Las capas superiores del modelo OSI (capas de sesión, presentación y aplicación) se centran en la comunicación entre aplicaciones y procesos en diferentes dispositivos de red, y no están directamente relacionadas con las redes inalámbricas. 
+
+**Por lo tanto, la certificación CWAP no incluye estas capas superiores, ya que no son relevantes para la evaluación de las habilidades de los profesionales de redes inalámbricas.** <br>
+
+Sin embargo, es importante tener en cuenta que el modelo OSI es solo un modelo de referencia y que en la práctica, los diferentes protocolos y tecnologías de red pueden implementarse de manera diferente y no necesariamente seguir el modelo OSI de manera estricta. Por lo tanto, los profesionales de redes inalámbricas también pueden necesitar tener conocimientos y habilidades en las capas superiores del modelo OSI, dependiendo de las necesidades específicas de su trabajo.
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/227809209-1263ebe3-035a-4373-8a29-e77bfdae2075.png" alt="Modelo OSI" height=270px/> </a> </p> 
+
+El modelo OSI (Open Systems Interconnection) es un modelo de referencia para la comunicación de redes de computadoras que se divide en siete capas. Las capas se agrupan en dos secciones: la sección inferior, que consta de las capas físicas y de enlace de datos, y la sección superior, que consta de las capas de red, transporte, sesión, presentación y aplicación.
+
+Las capas superiores, también conocidas como "upper layers", son las capas 5, 6 y 7. Estas capas se centran en la comunicación entre aplicaciones y procesos en diferentes dispositivos de red.
+
+### La Capa 5 - Capa de Sesión: 
+
+Esta capa se encarga de establecer, mantener y terminar sesiones de comunicación entre dispositivos. También controla la sincronización de datos y la recuperación de errores en la comunicación. La capa de sesión proporciona servicios que permiten que las aplicaciones se comuniquen a través de la red, como la autenticación, la autorización y la gestión de permisos de acceso.
+
+### La Capa 6 - Capa de Presentación: 
+
+Esta capa se encarga de la representación de datos y de la gestión de formatos y codificaciones. Su objetivo es garantizar que los datos se presenten de la manera adecuada, independientemente del formato en que se envíen. La capa de presentación realiza tareas como la conversión de formatos de datos, la compresión y la encriptación de datos.
+
+### La Capa 7 - Capa de Aplicación: 
+
+Esta capa es la capa más alta del modelo OSI y se encarga de proporcionar servicios de red a las aplicaciones del usuario final. La capa de aplicación proporciona una interfaz entre la red y las aplicaciones, permitiendo que las aplicaciones accedan a los servicios de red, como el correo electrónico, la transferencia de archivos y el acceso a bases de datos.
+
+---
+
+### 🟣 Funcionamiento de los Layers
 
 - Se dice que cada Layer sirve hacia el Layer de arriba y abajo de él, excepto por las 2 Layers finales (que ya no tienen nada antes/después): `Layer 1 (capa final de transmisión)` & `Layer 7 (capa final de recepción)`
 - Mientras los datos se mueven por las capas del Modelo OSI, se van `encapsulando` y `decapsulando`
