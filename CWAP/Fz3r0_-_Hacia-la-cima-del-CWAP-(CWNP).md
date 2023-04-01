@@ -2276,13 +2276,24 @@ A continuación se presenta los pasos de cómo se combinan los diferentes planos
 
 ---
 
-### Ejemplo de Protocolos en un solo Network Plane
+### Ejemplo de Protocolos que solo operan en un solo Network Plane
 
-A continuación te presento algunos ejemplos de protocolos que operan en un solo plano de networking:
-Plano de Control:
+Es importante entender que los diferentes protocolos de red están diseñados para cumplir diferentes funciones y objetivos específicos en una red. Por lo tanto, **no todos los protocolos necesitan operar en los tres planos de networking (control, gestión y datos) para cumplir sus objetivos.** <br>
+
+Como ya dije en el bloque anterior, el protocolo SSH combina los tres planos de networking para garantizar una conexión segura y confiable entre dos dispositivos. El plano de control se utiliza para autenticar y establecer la conexión segura, el plano de datos se utiliza para transmitir los datos entre los dispositivos y el plano de gestión se utiliza para monitorear y administrar la conexión. <br>
+
+Sin embargo, algunos protocolos solo operan en un solo plano de networking porque su función se limita a ese plano. Por ejemplo, DHCP se utiliza solo en el plano de control para asignar automáticamente direcciones IP a dispositivos en una red local. En el plano de datos, otros protocolos como TCP y UDP se utilizan para garantizar la transmisión confiable de datos. <br>
+
+A continuación se presentan algunos ejemplos de protocolos que operan en un solo plano de networking:
+
+### Protocolos únicos de Control Plane
+
 1.	DHCP (Dynamic Host Configuration Protocol): DHCP opera en el plano de control y se utiliza para asignar direcciones IP automáticamente a dispositivos en una red local.
 2.	ICMP (Internet Control Message Protocol): ICMP es un protocolo utilizado en el plano de control para monitorear y diagnosticar el estado de la red. ICMP se utiliza para enviar mensajes de error y control de flujo.
 3.	BGP (Border Gateway Protocol): BGP es un protocolo de enrutamiento utilizado en el plano de control que se utiliza para intercambiar información de enrutamiento entre routers en diferentes sistemas autónomos.
+
+### Protocolos únicos de Data Plane
+
 Plano de Datos:
 1.	TCP (Transmission Control Protocol): TCP opera en el plano de datos y se utiliza para garantizar que los datos se transmitan de manera confiable y sin errores. TCP se utiliza en aplicaciones como navegadores web y correo electrónico.
 2.	UDP (User Datagram Protocol): UDP es otro protocolo utilizado en el plano de datos que se utiliza para la transmisión de datos a alta velocidad. UDP se utiliza comúnmente en aplicaciones de video y voz sobre IP.
