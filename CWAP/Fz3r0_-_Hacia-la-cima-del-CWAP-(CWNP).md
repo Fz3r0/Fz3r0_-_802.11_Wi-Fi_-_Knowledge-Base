@@ -243,21 +243,21 @@ FIN DE CAPITULO :D
 
 
 
-# 👹 `CANTO I`: Fundamentos Avanzados Wireless + Fz3r0 💀 Bonus
+# 👹 `CANTO I`: Fundamentos de Wireless Networking 802.11
 
-En este capítulo se repasan los fundamentos de IEEE 802.11 Wireless que son esenciales para cursar la certificación CWAP. Aunque estos conocimientos ya fueron adquiridos durante el CWNA, es crucial revisarlos y profundizar en su comprensión. De lo contrario, cualquier captura de tráfico wireless o análisis de espectro sería una mera recopilación de números y colores sin sentido. <br>
+En este Capítulo se repasan los fundamentos de `IEEE 802.11 Wireless (WiFi)` que son esenciales para cursar la certificación `CWAP`. Aunque estos conocimientos ya fueron adquiridos durante el `CWNA`, es crucial revisarlos y profundizar en su comprensión. De lo contrario, cualquier captura de tráfico wireless o análisis de espectro sería una mera recopilación de números, letras y colores sin sentido. <br>
 
-Es por eso que en este capítulo, me esfuerzo por llevar a fondo en cada uno de los temas necesarios para una comprensión completa. Incluyo imágenes, tablas, analogías y otras fuentes externas que me han ayudado a mí personalmente a entender todos estos conceptos y procesos del tráfico de networking tanto wired como wireless. Además, como bonus especial, también incluiré ejemplos de IEEE 802.3 Ethernet, algo que no se cubre en el CWAP ya que solo se enfoca a wireless, pero que a mi parecer es de gran ayuda para una comprensión más profunda ya que en la mayoría de los casos reales y prácticos, una red Wireless está conectada a una red Ethernet. <br>
+Es por eso que en este Capítulo, me esfuerzo por llevar a fondo en cada uno de los temas necesarios para una comprensión completa. Incluyo imágenes, tablas, analogías y fuentes adicionales que me han ayudado a mí personalmente a entender todos estos conceptos y procesos del tráfico de Networking tanto `Wired` como `Wireless`. Además, como Bonus especial, también incluiré ejemplos de `IEEE 802.3 Ethernet`, algo que no se cubre en el `CWAP` ya que solo se enfoca a Wireless y da por hecho que se comprende Ethernet al 100%, pero que a mi parecer es de gran ayuda para una comprensión aún más profunda y relacionarla directamente con los temas de Wireless, ya que **en la mayoría de los casos reales y prácticos, una red Wireless está conectada a una red Ethernet.** <br>
 
-De hecho, muchos de los conceptos y temas que se explican en este capítulo no son abordados de manera tan clara en el CWNA. Por lo tanto, aconsejo repasar y comprender a la perfección todos estos temas, ya que no solo son de gran ayuda para el CWAP, sino que también será útil para cualquier certificación wireless, incluyendo Seguridad Ofensiva y Hacking. <br>
+Debido a la importancia de estos fundamentos para tener una base sólida para la comprensión del `CWAP`, aconsejo repasar y comprender a la perfección todos estos temas, ya que no solo son de gran ayuda para el `CWAP`, sino que también será útil para cualquier certificación wireless, incluyendo Seguridad Ofensiva y Hacking. <br>
 
 El `CANTO I` se divide de la siguiente manera:
 
-1. `Protocolos y Comunicaciones`
-2. `El Protocolo 802.11`
-3. `Utilizando Radio-Frecuencias (RF) para comunicarse`
-4. `Fundamentos de Network Frames`
-5. `Métodos de Troubleshooting`
+1. ⭕ `Protocolos y Comunicaciones`
+2. ⭕ `El Protocolo 802.11`
+3. ⭕ `Utilizando Radio-Frecuencias (RF) para comunicarse`
+4. ⭕ `Fundamentos de Network Frames`
+5. ⭕ `Métodos de Troubleshooting`
 
 ## 🟢 `Protocolos` y `Comunicaciones`
 
