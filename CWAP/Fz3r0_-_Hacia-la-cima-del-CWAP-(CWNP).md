@@ -2241,7 +2241,11 @@ Los planos de control, gestión y datos son planos conceptuales que sirven para 
 
 El plano de control se encarga de los protocolos de control de red, como los protocolos de routing & switching. También incluye soluciones específicas para redes Wi-Fi, como la gestión de recursos de radio (RRM) y la gestión automatizada de radio (ARM), que permiten que la red inalámbrica funcione de manera eficiente.
 
+### Management Plane
+
 El plano de gestión se enfoca en la administración y monitoreo de dispositivos, como la configuración y monitoreo de WLAN. En este plano se configura y monitorea el hardware y software de la red, se realizan actualizaciones de firmware, y se garantiza el cumplimiento de políticas de seguridad, entre otras tareas.
+
+### Data Plane
 
 El plano de datos es responsable de la transferencia de datos de los usuarios. Es el plano donde los usuarios acceden a la red y utilizan los recursos para realizar sus tareas. Aunque a los usuarios les importa principalmente este plano, es importante que los administradores de red monitoreen y controlen el flujo de datos para garantizar una experiencia de usuario satisfactoria.
 
@@ -2249,6 +2253,44 @@ Es importante destacar que los planos de control y gestión impactan directament
 
 Además, los administradores de red deben entender cómo los diferentes planos interactúan entre sí. Por ejemplo, el plano de gestión es responsable de la configuración del hardware, software y los puntos de acceso (AP), que se utilizan en el plano de datos para la transferencia de datos. El controlador de red, que se encuentra en el plano de gestión, es responsable de la configuración y monitoreo de los AP y sus comunicaciones en el plano de control.
 
+---
+
+### Ejemplo de SSH utilizado en los 3 Network Planes
+
+El protocolo SSH (Secure Shell) es un excelente ejemplo de cómo se combinan los planos de networking para funcionar juntos. <br>
+
+El plano de datos se encarga de transmitir los datos a través de la red de un dispositivo a otro. En el caso de SSH, los datos que se transmiten son los comandos y las respuestas que se ingresan en la terminal. El plano de control se encarga de administrar y controlar el acceso a la red. En SSH, el plano de control se utiliza para autenticar al usuario y establecer una conexión segura entre el cliente y el servidor. Por último, el plano de gestión se encarga de monitorear y administrar el rendimiento y la disponibilidad de la red. En SSH, el plano de gestión se utiliza para configurar y monitorear la conexión SSH. <br>
+
+A continuación se presenta los pasos de cómo se combinan los diferentes planos de networking en el proceso de SSH:
+
+1.	Autenticación y establecimiento de conexión (Plano de Control):
+    - 	El cliente SSH se comunica con el servidor SSH para establecer una conexión segura.
+    -	El servidor SSH verifica la identidad del cliente SSH utilizando un método de autenticación, como una contraseña o una clave pública.
+    -	Si el cliente SSH es autenticado correctamente, se establece una conexión segura entre el cliente y el servidor a través del protocolo de cifrado SSH. <br>
+2.	Transmisión de datos (Plano de Datos):
+    -	Después de que se establece la conexión segura, el cliente SSH puede enviar comandos y solicitudes al servidor SSH a través de la conexión segura.
+    -	El servidor SSH procesa las solicitudes del cliente y envía las respuestas a través de la conexión segura.
+3.	Monitoreo y administración de la conexión (Plano de Gestión):
+•	Durante la sesión SSH, el servidor y el cliente monitorean constantemente el rendimiento de la conexión para asegurarse de que la conexión se mantenga estable y confiable.
+•	El servidor SSH puede administrar la conexión SSH para establecer límites de tiempo y cerrar la conexión en caso de inactividad o malfuncionamiento.
+
+---
+
+### Ejemplo de Protocolos en un solo Network Plane
+
+A continuación te presento algunos ejemplos de protocolos que operan en un solo plano de networking:
+Plano de Control:
+1.	DHCP (Dynamic Host Configuration Protocol): DHCP opera en el plano de control y se utiliza para asignar direcciones IP automáticamente a dispositivos en una red local.
+2.	ICMP (Internet Control Message Protocol): ICMP es un protocolo utilizado en el plano de control para monitorear y diagnosticar el estado de la red. ICMP se utiliza para enviar mensajes de error y control de flujo.
+3.	BGP (Border Gateway Protocol): BGP es un protocolo de enrutamiento utilizado en el plano de control que se utiliza para intercambiar información de enrutamiento entre routers en diferentes sistemas autónomos.
+Plano de Datos:
+1.	TCP (Transmission Control Protocol): TCP opera en el plano de datos y se utiliza para garantizar que los datos se transmitan de manera confiable y sin errores. TCP se utiliza en aplicaciones como navegadores web y correo electrónico.
+2.	UDP (User Datagram Protocol): UDP es otro protocolo utilizado en el plano de datos que se utiliza para la transmisión de datos a alta velocidad. UDP se utiliza comúnmente en aplicaciones de video y voz sobre IP.
+3.	RTP (Real-time Transport Protocol): RTP es un protocolo utilizado en el plano de datos que se utiliza para la transmisión de datos en tiempo real, como video y audio.
+Plano de Gestión:
+1.	SNMP (Simple Network Management Protocol): SNMP opera en el plano de gestión y se utiliza para monitorear y administrar dispositivos de red como routers, switches y servidores.
+2.	RMON (Remote Network Monitoring): RMON es otro protocolo utilizado en el plano de gestión que se utiliza para monitorear y recopilar información de tráfico de red en dispositivos de red.
+3.	NetFlow: NetFlow es un protocolo utilizado en el plano de gestión que se utiliza para recopilar información de tráfico de red en routers y switches de red.
 
 
 
