@@ -223,9 +223,13 @@ FIN DE CAPITULO :D
 
 <br><br><br>
 
-# CANTO I: Fundamentos de CWAP + Fz3r0 Bonus
+# `CANTO I`: Fundamentos Avanzados Wireless + Fz3r0 Bonus
 
-En este
+En este capítulo se repasan los fundamentos de IEEE 802.11 Wireless que son esenciales para cursar la certificación CWAP. Aunque estos conocimientos ya fueron adquiridos durante el CWNA, es crucial revisarlos y profundizar en su comprensión. De lo contrario, cualquier captura de tráfico wireless o análisis de espectro sería una mera recopilación de números y colores sin sentido. <br>
+
+Es por eso que en este capítulo, me esfuerzo por llevar a fondo en cada uno de los temas necesarios para una comprensión completa. Incluyo imágenes, tablas, analogías y otras fuentes externas que me han ayudado a mí personalmente a entender todos estos conceptos y procesos del tráfico de networking tanto wired como wireless. Además, como bonus especial, también incluiré ejemplos de IEEE 802.3 Ethernet, algo que no se cubre en el CWAP ya que solo se enfoca a wireless, pero que a mi parecer es de gran ayuda para una comprensión más profunda ya que en la mayoría de los casos reales y prácticos, una red Wireless está conectada a una red Ethernet. <br>
+
+De hecho, muchos de los conceptos y temas que se explican en este capítulo no son abordados de manera tan clara en el CWNA. Por lo tanto, aconsejo repasar y comprender a la perfección todos estos temas, ya que no solo son de gran ayuda para el CWAP, sino que también será útil para cualquier certificación wireless, incluyendo Seguridad Ofensiva y Hacking. <br>
 
 ## 🟢 Modelo OSI para el CWAP, by Fz3r0
 
