@@ -110,6 +110,7 @@ Los escaladores que se aventuran en esta ruta ponen sus vidas en juego con cada 
 
 ---
 
+
 ### 🟣 `Bottleneck` & `Serarc` = Examen CWAP-404 @ Pearson Veu
 
 El `Bottleneck` es una sección crítica de la `Abruzzi Spur`, esta zona es un corredor estrecho de hielo y roca que se encuentra a una altitud de casi 8.000 metros. Es un lugar donde el aire es escaso y el peligro es constante, lo que la convierte en un desafío extremadamente difícil para los escaladores que intentan llegar a la cima. <br>
@@ -128,7 +129,7 @@ Al lograr pasar la Serarc, el camino a la cima son tan solo unos cortos pasosa l
 
 ### 🟣 `Cima del K2` = `Certifcación como Ingeniero CWAP-404`
 
-Al superar los todos los obstáculos, solo hay que dar unos pasos más hacia la cima y disfrutar la de vista de los Himalaya, para después seguir con el siguiente reto...
+Al superar los todos los obstáculos, solo hay que dar unos pasos más hacia la cima "La Cresta de la Cumbre (The Summit Ridge)", el ultimo emuje... y disfrutar la de vista de los Himalaya, para después seguir con el siguiente reto...
 
 La `ruta Abruzzi del K2` es un camino lleno de peligros y desafíos que ponen a prueba la resistencia física y mental de los alpinistas. Desde el `base camp` hasta la `cima del K2`, la ruta está plagada de peligros mortales. A pesar de esto, aquellos que logran completar la ruta pueden considerarse verdaderos héroes, capaces de enfrentar lo inimaginable y triunfar sobre él. <br> 
 
@@ -221,6 +222,10 @@ FIN DE CAPITULO :D
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
 
 <br><br><br>
+
+# CANTO I: Fundamentos de CWAP + Fz3r0 Bonus
+
+En este
 
 ## 🟢 Modelo OSI para el CWAP, by Fz3r0
 
