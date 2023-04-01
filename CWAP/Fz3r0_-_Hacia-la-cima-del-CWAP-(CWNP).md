@@ -223,6 +223,26 @@ FIN DE CAPITULO :D
 
 <br><br><br>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 👹 `CANTO I`: Fundamentos Avanzados Wireless + Fz3r0 💀 Bonus
 
 En este capítulo se repasan los fundamentos de IEEE 802.11 Wireless que son esenciales para cursar la certificación CWAP. Aunque estos conocimientos ya fueron adquiridos durante el CWNA, es crucial revisarlos y profundizar en su comprensión. De lo contrario, cualquier captura de tráfico wireless o análisis de espectro sería una mera recopilación de números y colores sin sentido. <br>
@@ -241,7 +261,28 @@ El `CANTO I` se divide de la siguiente manera:
 
 ## 🟢 `Protocolos` y `Comunicaciones`
 
+En informática, un protocolo es un método definido para la comunicación entre dispositivos. El protocolo funciona porque ambos dispositivos entienden cómo enviar y recibir mensajes basados en el protocolo establecido.
 
+Algunos ejemplos de protocolos incluyen:
+
+- 802.3 - Ethernet (ETHII)
+- 802.11 - WiFi
+- 802.15.4 - IoT inalámbrico de baja velocidad
+- 6LoWPAN - IoT basado en IPv6 y 802.15.4
+- IP - Protocolo de Internet
+- TCP - Protocolo de Control de Transmisión 
+- SSH - Secure Shell
+- HTTP - Hypertext Transfer Protocol 
+- ¡y muchos más!
+
+A continuación comparto una tabla donde se puede entender más en que capa se podrían encontrar varios protocolos utilizados comunmente:
+
+
+
+
+El modelo OSI, es un marco de trabajo de redes utilizado para describir y entender los protocolos de redes actuales. El modelo OSI no se implementa como un protocolo de comunicaciones en sí mismo, pero nos proporciona el lenguaje utilizado para explicar y comprender los protocolos.
+
+Es importante destacar que la elección del protocolo adecuado depende de las necesidades específicas de la aplicación y los dispositivos que se utilizarán en la comunicación. Los protocolos están en constante evolución para adaptarse a las necesidades cambiantes del mercado. Es esencial mantenerse actualizado con los protocolos más recientes y sus características para garantizar la mejor experiencia de comunicación posible.
 
 ## 🟢 `Modelo OSI` para el `CWAP`, by `Fz3r0 💀` 
 
