@@ -309,6 +309,8 @@ El resultado final es sencillo:
 
 Esto se puede visualizar así:
 
+![image](https://user-images.githubusercontent.com/94720207/229313916-c727db5a-1785-48d8-a687-be6793b49a84.png)
+
 #### Layers en `OSI original`
 
 2. Layer 2 - `Data Link`
@@ -324,12 +326,22 @@ Es importante solo recordar que "El sublayer MAC, también es parte del sublayer
 
 ---
 
-### 🟣 `Modelo OSI "Original"`
+### 🟣 ISO/IEC 7498-1:1994 Information technology - Open Systems Interconnection (OSI) -- Basic Reference Model: The basic model
 
 - [OSI/IEC Reference Model - Second Edition 1994](https://standards.iso.org/ittf/PubliclyAvailableStandards/s020269_ISO_IEC_7498-1_1994(E).zip)
 - [Sunny - OSI Model](https://www.youtube.com/watch?v=nFnLPGk8WjA)
 
-El `OSI model` original se basa en `7 layers`, para las alturas de este curso ya se debe tener muy bien comprendido para que sirve cada capa, a grandes rasgos es el siguiente:  
+El modelo OSI (Open Systems Interconnection) es un modelo de referencia para la comunicación de datos entre sistemas abiertos, es decir, sistemas que están diseñados para comunicarse con otros sistemas de manera estándar y no necesariamente están basados en una tecnología específica. Fue desarrollado por la Organización Internacional de Normalización (ISO) en la década de 1980 y se compone de siete capas, cada una de las cuales tiene una función específica en la comunicación de datos.
+
+El modelo OSI proporciona una forma estandarizada y estructurada de dividir el proceso de comunicación de datos en capas lógicas, lo que facilita la comprensión y el diseño de sistemas de comunicación. Cada capa del modelo OSI tiene una función bien definida y se comunica con las capas adyacentes para lograr la transferencia de datos a través de una red. La ventaja de este modelo es que permite la interoperabilidad entre sistemas de diferentes fabricantes y tecnologías, ya que todos ellos siguen las mismas normas y estándares para la comunicación de datos.
+
+El ISO/IEC (International Organization for Standardization/International Electrotechnical Commission) es un organismo internacional que se dedica a establecer estándares en diversos campos, incluyendo la tecnología de la información y las comunicaciones.
+
+El modelo OSI fue desarrollado por la Organización Internacional de Normalización (ISO) en 1984 y formalmente publicado en 1985 como el estándar ISO/IEC 7498-1. El ISO y la Comisión Electrotécnica Internacional (IEC) a menudo colaboran en el desarrollo de estándares técnicos, y es por eso que el modelo OSI también se conoce como ISO/IEC 7498-1.
+
+Las diferentes versiones del modelo OSI han surgido a medida que se han desarrollado nuevas tecnologías y necesidades de comunicación. Por ejemplo, el modelo OSI originalmente solo tenía siete capas, pero posteriormente se agregó una octava capa (la capa de gestión de red) para abordar la administración de redes. Además, se han desarrollado modelos más específicos para aplicaciones y dispositivos específicos, como el modelo de referencia TCP/IP, que es ampliamente utilizado en Internet.
+
+El `OSI model` originalmente se basa en `7 layers`, a grandes rasgos estos son los layers y la función de cada uno: 
 
 | **Layer** 	|     **Name**     	|   **Protocol Data Unit (PDU)**   	|                                                                       **Función**                                                                      	|
 |:---------:	|:----------------:	|:--------------------------------:	|:------------------------------------------------------------------------------------------------------------------------------------------------------:	|
