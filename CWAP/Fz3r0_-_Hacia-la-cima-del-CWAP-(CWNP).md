@@ -223,7 +223,7 @@ FIN DE CAPITULO :D
 
 <br><br><br>
 
-# `CANTO I`: Fundamentos Avanzados Wireless + Fz3r0 Bonus
+# 👹 `CANTO I`: Fundamentos Avanzados Wireless + Fz3r0 💀 Bonus
 
 En este capítulo se repasan los fundamentos de IEEE 802.11 Wireless que son esenciales para cursar la certificación CWAP. Aunque estos conocimientos ya fueron adquiridos durante el CWNA, es crucial revisarlos y profundizar en su comprensión. De lo contrario, cualquier captura de tráfico wireless o análisis de espectro sería una mera recopilación de números y colores sin sentido. <br>
 
@@ -231,15 +231,48 @@ Es por eso que en este capítulo, me esfuerzo por llevar a fondo en cada uno de 
 
 De hecho, muchos de los conceptos y temas que se explican en este capítulo no son abordados de manera tan clara en el CWNA. Por lo tanto, aconsejo repasar y comprender a la perfección todos estos temas, ya que no solo son de gran ayuda para el CWAP, sino que también será útil para cualquier certificación wireless, incluyendo Seguridad Ofensiva y Hacking. <br>
 
-## 🟢 Modelo OSI para el CWAP, by Fz3r0
+El `CANTO I` se divide de la siguiente manera:
 
-Antes que nada, quiero destacar que tanto para CWNA como CWAP no se utliza el `modelo TCP/IP`, sino que se basa en el `modelo OSI`, aunque no totalmente como lo conocemos... <br>
+1. `Protocolos y Comunicaciones`
+2. `El Protocolo 802.11`
+3. `Utilizando Radio-Frecuencias (RF) para comunicarse`
+4. `Fundamentos de Network Frames`
+5. `Métodos de Troubleshooting`
 
-Al principio es algo confuso cuando mencionan los cursos de `CWNP` (u otros cursos y certificaciones) cuando dicen "no estamos usando el modelo OSI, solo hacemos referencia para que se comprenda el concepto" y a partir de eso se dan explicaciones de X o Y cosa... pero después de todo para eso es el modelo... simplemente es una referencia! <br> 
+## 🟢 `Protocolos` y `Comunicaciones`
 
-Por ejemplo, en hacking y cyber-seguridad ya he realizado writeups donde podemos hacer `packet tampering` e inyectarlos a la red sin importarnos para nada la estructura del `modelo OSI`. Básicamente puedo inyectar HEX random y los paquetes/frames se transmiten sin importar que estén completamente mal-formados sin respetar el modelo por capas. <br>
 
-**El truco que he encontrado para comprender al 100% el proceso de transmisión que se llevará a cabo y será el pan de cada día de esta certificación consiste en "añadir un sublayer al modelo original".** Pero ¿A qué me refiero con esto?
+
+## 🟢 `Modelo OSI` para el `CWAP`, by `Fz3r0 💀` 
+
+Antes que nada, quisiera destacar que tanto para los cursos de CWNA como CWAP, no se utiliza el modelo TCP/IP, sino que se basa en el modelo OSI, aunque no completamente como lo conocemos.
+
+Al principio, puede resultar confuso cuando se mencionan los cursos de CWNP (además de otras certificaciones de Networking) y se dice: "no estamos usando el modelo OSI, solo hacemos referencia para que se comprenda el concepto". A partir de ahí, se dan explicaciones sobre X o Y cosa. Sin embargo, en definitiva, el modelo es simplemente una referencia. Es decir, del modelo OSI se toman ejemplos tomando su estructura base de 7 layers, pero existe una estructura un poco más compleja dentro de esas 7 capas. Además, no siempre se tiene que seguir exactamente la misma regla para todas las posibilidades que nos ofrece el Networking en general.
+
+Por ejemplo, en hacking y ciberseguridad, he realizado writeups en los que se puede hacer tampering de paquetes e inyectarlos a la red sin importar la estructura del modelo OSI. Básicamente, puedo inyectar HEX random y los paquetes/frames se transmiten sin importar que estén completamente malformados y sin respetar el modelo por capas.
+
+El truco que he encontrado para comprender completamente el proceso de transmisión que se llevará a cabo y que será esencial para esta certificación consiste en "añadir un sublayer al modelo original". ¿A qué me refiero con esto? Es muy fácil:
+
+- El modelo OSI se divide en siete capas o `7 layers`, cada una con una función específica. Pero para comprender mejor el proceso de transmisión, es útil agregar un sublayer adicional en `Layer 2 Data Link` que se centra en la transmisión de datos a través del medio físico, lo cual también convierte `Layer 1 Physical` en otro sublayer.
+
+El resultado final es sencillo:
+
+- En lugar de 2 "layers", se tendrán 3 "sublayers", ya que se convierte Layer 1 y Layer 2 en sublayers.
+
+Esto se puede visualizar así:
+
+#### Layers en `OSI original`
+
+2. Layer 2 - `Data Link`
+1. Layer 1 - `Physical`
+
+#### Layers en `OSI Fz3r0 Custom`
+
+2. Upper Sublayer 2 - `LLC`
+2. Lower Sublayer 2 - `MAC`
+1. Sublayer 1 - `PHY`
+
+Es importante solo recordar que "El sublayer MAC, también es parte del sublayer PHY", explicaré más a detalle este proceso en el siguiente bloque.
 
 ---
 
