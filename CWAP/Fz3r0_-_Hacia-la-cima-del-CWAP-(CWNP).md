@@ -277,10 +277,17 @@ Algunos ejemplos de protocolos incluyen:
 
 A continuación comparto una tabla donde se puede entender más en que capa se podrían encontrar varios protocolos utilizados comunmente:
 
+| **Layer** 	|     **Name**     	|   **Protocol Data Unit (PDU)**   	|                                                **Protocolos**                                                	|
+|:---------:	|:----------------:	|:--------------------------------:	|:------------------------------------------------------------------------------------------------------------:	|
+|   **7**   	|  **Application** 	|               Data               	|             HTTP, FTP, SMTP, POP3, IMAP, SSH, Telnet, DNS, DHCP, SNMP, SIP, RTP, RTSP, XMPP, SMB             	|
+|   **6**   	| **Presentation** 	|               Data               	|              SSL, TLS, MIME, ASCII, JPEG, MPEG, PGP, ZIP, XML, JSON, XDR, ASN.1, SMB, AFP, SMB2              	|
+|   **5**   	|    **Session**   	|               Data               	|        RPC, NetBIOS, SAP, PPTP, AppleTalk, SSH, SSL, TLS, SIP, SMPP, LDAP, NFS, SQL, iSCSI, BGP, FTPS        	|
+|   **4**   	|   **Transport**  	| Segment (TCP) <br>Datagram (UDP) 	|                                  TCP, UDP, SCTP, ICMP, IGMP, GRE, MPLS, QUIC                                 	|
+|   **3**   	|    **Network**   	|              Packet              	|     IP, ICMP, 6LoWPAN, ARP, RARP, OSPF, BGP, EIGRP, IS-IS, PIM, IGMP, IPv6, MPLS, ATM, Frame Relay, LISP     	|
+|   **2**   	|   **Data Link**  	|               Frame              	| Ethernet (ETH), Token Ring, FDDI, ATM, PPP, HDLC, Frame Relay, MPLS, 802.11 Wi-Fi, Bluetooth, ZigBee, DOCSIS 	|
+|   **1**   	|   **Physical**   	|                Bit               	|       USB, Ethernet, ATM, SONET, 802.11 Wi-Fi, Bluetooth, RS-232, RS-422, RS-485, T1/E1, HDMI, VGA, NFC      	|
 
-
-
-El modelo OSI, es un marco de trabajo de redes utilizado para describir y entender los protocolos de redes actuales. El modelo OSI no se implementa como un protocolo de comunicaciones en sí mismo, pero nos proporciona el lenguaje utilizado para explicar y comprender los protocolos.
+La tabla anterior está basada en el `OSI Model`, este modelo es un marco de trabajo de redes utilizado para describir y entender los protocolos de redes actuales. El modelo OSI no se implementa como un protocolo de comunicaciones en sí mismo, pero nos proporciona el lenguaje utilizado para explicar y comprender los protocolos.
 
 Es importante destacar que la elección del protocolo adecuado depende de las necesidades específicas de la aplicación y los dispositivos que se utilizarán en la comunicación. Los protocolos están en constante evolución para adaptarse a las necesidades cambiantes del mercado. Es esencial mantenerse actualizado con los protocolos más recientes y sus características para garantizar la mejor experiencia de comunicación posible.
 
