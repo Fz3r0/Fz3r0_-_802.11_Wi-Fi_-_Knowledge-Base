@@ -121,6 +121,8 @@ En la cima del `Bottleneck` se encuentra su majestuosa `serac`, es ahí donde se
 
 Se dice que es en el `Bottleneck` donde tu vida deja de estar en tus manos... <br>
 
+- [Vista de la serac del Bottleneck desde Camp 4](https://youtu.be/jB3D99ZyB8A)
+
 **El Bottleneck es el Día-D del examen para el `CWAP`, el punto de no retorno.**
 
 ![image](https://user-images.githubusercontent.com/94720207/225210926-c1e5788f-3f22-42af-994b-350232c730fb.png)
@@ -1368,6 +1370,115 @@ En las redes WiFi, se utilizan diferentes tipos de modulación según la capacid
 | 802.11n       	| HT      	| High Throughput PHY                        	| 2009 	| 2.4 GHz, 5 GHz        	| 20, 40, 80, 160 MHz        	| OFDM, MIMO-OFDM                               	| 600 Mbps       	| 4                    	|
 | 802.11ac      	| VHT     	| Very High Throughput PHY                   	| 2013 	| 5 GHz                 	| 20, 40, 80, 160, 80+80 MHz 	| OFDM, MIMO-OFDM                               	| 6.9 Gbps       	| 8                    	|
 | 802.11ax      	| HE      	| High Efficiency PHY                        	| 2019 	| 2.4 GHz, 5 GHz, 6 GHz 	| 20, 40, 80, 80+80, 160 MHz 	| OFDM, MIMO-OFDM, MU-MIMO, QAM, PSK, QPSK, FSK 	| 9.6 Gbps       	| 12                   	|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|            **IEEE Standard**           	|                      **802.11-prime**                     	|                       **802.11b**                      	|                           **802.11a**                           	|                     **802.11g**                     	|                                               **802.11n**                                              	|                                          **802.11ac**                                         	|                                             **802.11ax**                                             	|
+|:--------------------------------------:	|:---------------------------------------------------------:	|:------------------------------------------------------:	|:---------------------------------------------------------------:	|:---------------------------------------------------:	|:------------------------------------------------------------------------------------------------------:	|:---------------------------------------------------------------------------------------------:	|:----------------------------------------------------------------------------------------------------:	|
+|      **Wifi Alliance Identifier**      	|                    _Prime_ (Unofficial)                   	|                  _WiFi 1_ (Unofficial)                 	|                      _WiFi 2_ (Unofficial)                      	|                _WiFi 3_ (Unofficial)                	|                                               **WiFi 4**                                               	|                                           **WiFi 5**                                          	|                                              **WiFi 6**                                              	|
+|                 **PHY**                	|                          **DSSS**                         	|                       **HR/DSSS**                      	|                             **OFDM**                            	|                       **ERP**                       	|                                                 **HT**                                                 	|                                            **VHT**                                            	|                                                **HE**                                                	|
+|              **PHY Name**              	|              Direct Sequence Spread Spectrum              	|        High Rate/Direct Sequence Spread Spectrum       	|            Orthogonal Frequency Division Multiplexing           	|                  Extended Rate PHY                  	|                                           High Throughput PHY                                          	|                                    Very High Throughput PHY                                   	|                                          High Efficiency PHY                                         	|
+|                **Year**                	|                            1997                           	|                          1999                          	|                               1999                              	|                         2003                        	|                                                  2009                                                  	|                                              2013                                             	|                                                 2019                                                 	|
+|               **Band(s)**              	|                          2.4 GHz                          	|                         2.4 GHz                        	|                              5 GHz                              	|                       2.4 GHz                       	|                                          · 2.4 GHz<br>· 5 GHz                                          	|                                             5 GHz                                             	|                                    · 2.4 GHz<br>· 5 GHz<br>· 6 GHz                                   	|
+|              **Bandwidth**             	|                           22 MHz                          	|                         22 MHz                         	|                              20 MHz                             	|                        20 MHz                       	|                                           20, 40, 80, 160 MHz                                          	|                                   20, 40, 80, 160, 80+80 MHz                                  	|                                      20, 40, 80, 80+80, 160 MHz                                      	|
+|            **Modulation(s)**           	|                  · ASK<br>· PSK<br>· QAM                  	|                          DSSS                          	|                               OFDM                              	|                      OFDM, DSSS                     	|                              OFDM, MIMO-OFDM, MU-MIMO, QAM, PSK, QPSK, FSK                             	|                         OFDM, MIMO-OFDM, MU-MIMO, QAM, PSK, QPSK, FSK                         	|                             OFDM, MIMO-OFDM, MU-MIMO, QAM, PSK, QPSK, FSK                            	|
+|            **Max Data Rate**           	|                           2 Mbps                          	|                         11 Mbps                        	|                             54 Mbps                             	|                       54 Mbps                       	|                                             600 Mbps (4x4)                                             	|                                         6.9 Gbps (8x8)                                        	|                                            9.6 Gbps (8x8)                                            	|
+|      **Spatial Streams Available**     	|                             1                             	|                            1                           	|                             1, 2, 4                             	|                         1, 2                        	|                                               1, 2, 3, 4                                               	|                                         1, 2, 3, 4, 8                                         	|                                          1, 2, 4, 8, 12, 16                                          	|
+| **Recommended SNR for Max. Data Rate** 	|                           25 dB                           	|                          25 dB                         	|                              25 dB                              	|                        25 dB                        	|                                                  25 dB                                                 	|                                             25 dB                                             	|                                                 25 dB                                                	|
+|           **Guard Interval**           	|                            N/A                            	|                           N/A                          	|                              800 ns                             	|                        800 ns                       	|                                             800 ns / 400 ns                                            	|                                    800 ns / 400 ns / 160 ns                                   	|                           800 ns / 400 ns / 200 ns / 100 ns / 50 ns / 25 ns                          	|
+|          **Max. Coding Rate**          	|                             -                             	|                            -                           	|               · 64-QAM \| 3/4 <br>· 256-QAM \| 5/6              	|         · 64-QAM \| 3/4 <br>· 256-QAM \| 5/6        	| 64-QAM \| 5/6 or 256-QAM \| 5/6 for 1 or 2 spatial streams, 1024-QAM \| 5/6 for 3 to 8 spatial streams 	| 1024-QAM \| 5/6 for 1 or 2 spatial streams, 4096-QAM \| 3/4 or 5/6 for 3 to 8 spatial streams 	|                           1024-QAM \| 5/6 or 3/4 for 1 to 8 spatial streams                          	|
+|                **MIMO**                	|                             -                             	|                            -                           	|                                -                                	|                          -                          	|                                              2x2, 3x3, 4x4                                             	|                                         2x2, 4x4, 8x8                                         	|                                         2x2, 4x4, 8x8, 16x16                                         	|
+|               **Aggreg**               	|                             -                             	|                            -                           	|                                -                                	|                          -                          	|                                             A-MSDU, A-MPDU                                             	|                                         A-MSDU, A-MPDU                                        	|                                            A-MSDU, A-MPDU                                            	|
+|              **Security**              	|                          WEP, WPA                         	|                        WEP, WPA                        	|                          WEP, WPA, WPA2                         	|                    WEP, WPA, WPA2                   	|                                          WEP, WPA, WPA2, WPA3                                          	|                                      WEP, WPA, WPA2, WPA3                                     	| WEP, WPA, WPA2, WPA3, WPA3-Personal, WPA3-Enterprise, Enhanced Open, OWE, Dragonfly, WPA3-Transition 	|
+|           **Authentication**           	|                        Open, Shared                       	|                      Open, Shared                      	|                            802.1X/EAP                           	|               Open, Shared, 802.1X/EAP              	|                                             802.1X/EAP, PSK                                            	|                                      802.1X/EAP, PSK, SAE                                     	|                                       802.1X/EAP, PSK, SAE, DPP                                      	|
+|             **Encription**             	|                    RC4, TKIP, AES-CCMP                    	|                   RC4, TKIP, AES-CCMP                  	|                             AES-CCMP                            	|                    AES-CCMP, TKIP                   	|                                  AES-CCMP, TKIP, WEP-40/104, GCMP-128                                  	|                                       AES-CCMP, GCMP-128                                      	|                                     AES-CCMP, GCMP-128, TKIP, BIP                                    	|
+|            **Enhancements**            	|                             -                             	|                            -                           	|                                -                                	|                          -                          	|                            LDPC, STBC, MLD, TxBF, RIFS, HT-Delayed Block Ack                           	|                                                                                               	|                                                                                                      	|
+|  **Extra Info & Features of the PHY**  	| Legacy PHY with low data rates but immune to interference 	| High data rates using DSSS with backward compatibility 	| Higher data rates with more robustness and reduced interference 	| Introduced shorter slot times and frame aggregation 	| Introduced MIMO technology for increased throughput and range                                          	| Introduced MU-MIMO, beamforming, and wider channels for higher throughput                     	| Introduced Uplink and Downlink OFDMA, Target Wake Time, and spatial reuse for better efficiency      	|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
