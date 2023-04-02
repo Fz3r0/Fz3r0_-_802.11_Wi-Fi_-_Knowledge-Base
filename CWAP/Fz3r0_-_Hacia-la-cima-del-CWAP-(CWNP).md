@@ -2636,3 +2636,90 @@ https://www.wirelesstrainingsolutions.com/understanding-ofdm-part-4-refresh/
 
 
 - [OFDM Frame Structure](https://rfmw.em.keysight.com/wireless/helpfiles/89600b/webhelp/Subsystems/wlan-ofdm/Content/ofdm_80211-overview.htm)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- 
+
+data rate en ethernet
+
+
+El cálculo del data rate en un cable Ethernet de cobre a 1 gigabit (Gb) se puede hacer utilizando la siguiente ecuación:
+
+Data rate = Ancho de banda x Eficiencia del código x Número de pares de hilos x Nivel de señalización
+
+Donde:
+
+Ancho de banda = 1 gigabit por segundo (Gbps) en este caso, ya que se trata de una conexión Ethernet de 1 Gb.
+Eficiencia del código = 0.8 para Ethernet, lo que significa que el 80% del ancho de banda se puede utilizar para datos útiles.
+Número de pares de hilos = 4 para cables Ethernet Cat 6, que tienen cuatro pares de hilos.
+Nivel de señalización = 2, lo que significa que se utiliza la señalización de 1000BASE-T para transmitir datos a 1 Gbps.
+Sustituyendo los valores en la ecuación, obtenemos:
+
+Data rate = 1 Gbps x 0.8 x 4 x 2
+Data rate = 6.4 Gbps
+
+Entonces, el data rate para una conexión Ethernet de cobre a 1 Gb utilizando un cable Cat 6 y una interfaz de red de 1 Gb en la computadora cliente es de 6.4 Gbps. Es importante tener en cuenta que este es el data rate teórico máximo y que el rendimiento real puede variar debido a factores como la interferencia electromagnética, la longitud del cable y la calidad de los componentes.
+
+
+Claro, para incluir la longitud del cable en el cálculo, debemos tener en cuenta la atenuación de la señal a lo largo del cable. La atenuación es la disminución de la intensidad de la señal a medida que se propaga a través del cable y depende de la longitud del cable y de la frecuencia de la señal.
+
+La ecuación para calcular la atenuación es:
+
+Atenuación = 20 log (Longitud del cable / (10^(5/10)))
+
+Donde la longitud del cable está en metros y el resultado de la ecuación está en decibelios (dB).
+
+Para incluir la atenuación en la ecuación del data rate, debemos multiplicar la eficiencia del código por un factor adicional que tenga en cuenta la atenuación. Este factor se llama margen de atenuación y se define como la diferencia entre la potencia de la señal transmitida y la potencia mínima de la señal recibida para lograr una tasa de error de bit (BER) aceptable.
+
+El margen de atenuación se puede calcular como:
+
+Margen de atenuación = Potencia de señal transmitida - Potencia mínima de señal recibida
+
+La potencia de señal transmitida se puede calcular a partir de la ecuación de la potencia:
+
+Potencia de señal = (Voltaje de señal)^2 / (2 * Impedancia del cable)
+
+Para un cable Ethernet de cobre, la impedancia típica es de 100 ohmios y el voltaje de señal es de 1 voltio pico a pico.
+
+La potencia mínima de señal recibida se define como la relación señal-ruido (SNR) mínima necesaria para lograr un BER aceptable. Para Ethernet, el BER aceptable es de 10^-12, lo que significa que no más de 1 bit de cada 1 billón debe ser erróneo. La relación SNR mínima para lograr este BER es de aproximadamente 12 dB.
+
+Sustituyendo los valores, tenemos:
+
+Potencia de señal transmitida = (1 Vpp)^2 / (2 * 100 ohmios) = 5 mW
+
+Potencia mínima de señal recibida = 12 dB + Atenuación
+
+Margen de atenuación = 5 mW - 10^((12 dB + Atenuación) / 10)
+
+Finalmente, la ecuación completa para el data rate con una longitud de cable de 80 metros es:
+
+Data rate = Ancho de banda x Eficiencia del código x Número de pares de hilos x Nivel de señalización x Margen de atenuación
+
+Sustituyendo los valores, tenemos:
+
+Atenuación = 20 log (80 m / (10^(5/10))) = 9.53 dB
+
+Potencia mínima de señal recibida = 12 dB + 9.53 dB = 21.53 dB
+
+Margen de atenuación = 5 mW - 10^((21.53 dB) / 10) = 0.72 mW
+
+Data rate = 1 Gbps x 0.8 x 4 x 2 x 0.72 mW / 5 mW = 0.459 Gbps
+
+Por lo tanto, el data rate real con una longitud de cable de 80 metros es de aproximadamente 0.459 Gbps, mucho menor que el data rate teórico máximo de 6.4 Gbps
