@@ -2606,66 +2606,105 @@ https://www.wirelesstrainingsolutions.com/understanding-ofdm-part-4-refresh/
 data rate en ethernet
 
 
-El cálculo del data rate en un cable Ethernet de cobre a 1 gigabit (Gb) se puede hacer utilizando la siguiente ecuación:
+La fórmula para calcular el data rate posible de un cable Ethernet Cat 6 de cobre es:
 
-Data rate = Ancho de banda x Eficiencia del código x Número de pares de hilos x Nivel de señalización
+Data rate (Mbps) = (velocidad de transmisión / longitud del cable) x factor de corrección
 
 Donde:
 
-Ancho de banda = 1 gigabit por segundo (Gbps) en este caso, ya que se trata de una conexión Ethernet de 1 Gb.
-Eficiencia del código = 0.8 para Ethernet, lo que significa que el 80% del ancho de banda se puede utilizar para datos útiles.
-Número de pares de hilos = 4 para cables Ethernet Cat 6, que tienen cuatro pares de hilos.
-Nivel de señalización = 2, lo que significa que se utiliza la señalización de 1000BASE-T para transmitir datos a 1 Gbps.
-Sustituyendo los valores en la ecuación, obtenemos:
+Velocidad de transmisión: es la velocidad nominal de transmisión del cable Ethernet Cat 6, que en este caso es de 1 Gbps (1,000 Mbps).
+Longitud del cable: es la longitud total del cable Ethernet Cat 6, medida en metros. En este caso, la longitud es de 80 metros.
+Factor de corrección: es un factor que se utiliza para ajustar el cálculo del data rate en función de la calidad del cable, la interferencia y otros factores que pueden afectar la velocidad de transmisión. El factor de corrección para un cable Ethernet Cat 6 de cobre es de 0.8.
+Sustituyendo los valores conocidos en la fórmula, obtenemos:
 
-Data rate = 1 Gbps x 0.8 x 4 x 2
-Data rate = 6.4 Gbps
+Data rate (Mbps) = (1,000 Mbps / 80 metros) x 0.8
+Data rate (Mbps) = 10,000 / 80 x 0.8
+Data rate (Mbps) = 125 Mbps
 
-Entonces, el data rate para una conexión Ethernet de cobre a 1 Gb utilizando un cable Cat 6 y una interfaz de red de 1 Gb en la computadora cliente es de 6.4 Gbps. Es importante tener en cuenta que este es el data rate teórico máximo y que el rendimiento real puede variar debido a factores como la interferencia electromagnética, la longitud del cable y la calidad de los componentes.
+Por lo tanto, el data rate posible de un cable Ethernet Cat 6 de cobre con una longitud de 80 metros es de 125 Mbps. Es importante tener en cuenta que este cálculo es una estimación y que otros factores, como el equipo de red utilizado, también pueden afectar la velocidad real de transmisión.
 
 
-Claro, para incluir la longitud del cable en el cálculo, debemos tener en cuenta la atenuación de la señal a lo largo del cable. La atenuación es la disminución de la intensidad de la señal a medida que se propaga a través del cable y depende de la longitud del cable y de la frecuencia de la señal.
 
-La ecuación para calcular la atenuación es:
 
-Atenuación = 20 log (Longitud del cable / (10^(5/10)))
+Carlos Villalobos
+Escribe la formula completa para calcular el data rate posible de un cable ethernet cat 7 de cobre, con una longitud de 80 metros
+La fórmula para calcular el data rate posible de un cable Ethernet Cat 7 de cobre es similar a la fórmula para un cable Cat 6, pero con algunas diferencias en los valores utilizados:
 
-Donde la longitud del cable está en metros y el resultado de la ecuación está en decibelios (dB).
+Data rate (Mbps) = (velocidad de transmisión / longitud del cable) x factor de corrección
 
-Para incluir la atenuación en la ecuación del data rate, debemos multiplicar la eficiencia del código por un factor adicional que tenga en cuenta la atenuación. Este factor se llama margen de atenuación y se define como la diferencia entre la potencia de la señal transmitida y la potencia mínima de la señal recibida para lograr una tasa de error de bit (BER) aceptable.
+Donde:
 
-El margen de atenuación se puede calcular como:
+Velocidad de transmisión: es la velocidad nominal de transmisión del cable Ethernet Cat 7, que en este caso es de 10 Gbps (10,000 Mbps).
+Longitud del cable: es la longitud total del cable Ethernet Cat 7, medida en metros. En este caso, la longitud es de 80 metros.
+Factor de corrección: es un factor que se utiliza para ajustar el cálculo del data rate en función de la calidad del cable, la interferencia y otros factores que pueden afectar la velocidad de transmisión. El factor de corrección para un cable Ethernet Cat 7 de cobre es de 0.7.
+Sustituyendo los valores conocidos en la fórmula, obtenemos:
 
-Margen de atenuación = Potencia de señal transmitida - Potencia mínima de señal recibida
+Data rate (Mbps) = (10,000 Mbps / 80 metros) x 0.7
+Data rate (Mbps) = 125,000 / 80 x 0.7
+Data rate (Mbps) = 2,187.5 Mbps
 
-La potencia de señal transmitida se puede calcular a partir de la ecuación de la potencia:
+Por lo tanto, el data rate posible de un cable Ethernet Cat 7 de cobre con una longitud de 80 metros es de 2,187.5 Mbps. Es importante tener en cuenta que este cálculo es una estimación y que otros factores, como el equipo de red utilizado, también pueden afectar la velocidad real de transmisión.
 
-Potencia de señal = (Voltaje de señal)^2 / (2 * Impedancia del cable)
 
-Para un cable Ethernet de cobre, la impedancia típica es de 100 ohmios y el voltaje de señal es de 1 voltio pico a pico.
+Para calcular el data rate posible de un cable Ethernet Cat 7 de cobre con una longitud de 80 metros teniendo en cuenta las variables de ruido, atenuación, potencia y otras, podemos utilizar la fórmula de capacidad de canal de Shannon-Hartley, que tiene en cuenta estas variables. La fórmula es la siguiente:
 
-La potencia mínima de señal recibida se define como la relación señal-ruido (SNR) mínima necesaria para lograr un BER aceptable. Para Ethernet, el BER aceptable es de 10^-12, lo que significa que no más de 1 bit de cada 1 billón debe ser erróneo. La relación SNR mínima para lograr este BER es de aproximadamente 12 dB.
+C = B x log2(1 + S/N)
 
-Sustituyendo los valores, tenemos:
+Donde:
 
-Potencia de señal transmitida = (1 Vpp)^2 / (2 * 100 ohmios) = 5 mW
+C es la capacidad del canal, medida en bits por segundo (bps).
+B es el ancho de banda del canal, que en el caso de Ethernet Cat 7 es de 600 MHz.
+S es la potencia de la señal, medida en watts.
+N es la densidad espectral de ruido, medida en watts por hertz.
+Para calcular la capacidad del canal, necesitamos determinar los valores de S, N y B. Estos valores dependen de las características del cable Ethernet y del entorno en el que se encuentra instalado.
 
-Potencia mínima de señal recibida = 12 dB + Atenuación
+Para determinar el valor de S, podemos utilizar la potencia de transmisión de la fuente y la atenuación del cable. La atenuación del cable depende de la frecuencia de la señal y de la longitud del cable, y se puede calcular utilizando una tabla de atenuación para el tipo de cable Ethernet Cat 7 utilizado.
 
-Margen de atenuación = 5 mW - 10^((12 dB + Atenuación) / 10)
+Para determinar el valor de N, debemos considerar el nivel de ruido en el entorno y la sensibilidad del receptor. El nivel de ruido puede ser causado por fuentes externas, como otros dispositivos electrónicos cercanos, y por fuentes internas, como el propio cable Ethernet y sus conectores. La sensibilidad del receptor depende del equipo utilizado para la transmisión y recepción de datos.
 
-Finalmente, la ecuación completa para el data rate con una longitud de cable de 80 metros es:
+Por último, para determinar el valor de B, debemos considerar el ancho de banda del canal disponible para la transmisión de datos. Este ancho de banda puede ser afectado por la interferencia y el ruido en el entorno.
 
-Data rate = Ancho de banda x Eficiencia del código x Número de pares de hilos x Nivel de señalización x Margen de atenuación
+En resumen, la fórmula para calcular el data rate posible de un cable Ethernet Cat 7 de cobre con una longitud de 80 metros considerando las variables de ruido, atenuación, potencia y otras, es la siguiente:
 
-Sustituyendo los valores, tenemos:
+C = B x log2(1 + (Ptx x Gtx x Arx x L / (N x B)))
 
-Atenuación = 20 log (80 m / (10^(5/10))) = 9.53 dB
+Donde:
 
-Potencia mínima de señal recibida = 12 dB + 9.53 dB = 21.53 dB
+C es la capacidad del canal, medida en bits por segundo (bps).
+B es el ancho de banda del canal, que en el caso de Ethernet Cat 7 es de 600 MHz.
+Ptx es la potencia de transmisión de la fuente, medida en watts.
+Gtx es la ganancia de la antena de transmisión.
+Arx es la sensibilidad del receptor, medida en watts por bit.
+L es la longitud del cable Ethernet Cat 7, medida en metros.
+N es la densidad espectral de ruido, medida en watts por hertz.
+Es importante tener en cuenta que la determinación de los valores de Ptx, Gtx, Arx, L, y N dependerá del entorno específico en el que se encuentra instalado el cable Ethernet Cat 7.
 
-Margen de atenuación = 5 mW - 10^((21.53 dB) / 10) = 0.72 mW
+--- 
 
-Data rate = 1 Gbps x 0.8 x 4 x 2 x 0.72 mW / 5 mW = 0.459 Gbps
+Ejemplo 
 
-Por lo tanto, el data rate real con una longitud de cable de 80 metros es de aproximadamente 0.459 Gbps, mucho menor que el data rate teórico máximo de 6.4 Gbps
+Supongamos que tenemos un cable Ethernet Cat 7 de cobre con una longitud de 80 metros que se encuentra instalado en un entorno con un nivel de ruido de 0.1 nW/Hz y una sensibilidad del receptor de 1.5 x 10^-11 W/bit. La potencia de transmisión de la fuente es de 0.1 W y la ganancia de la antena de transmisión es de 5 dB.
+
+Para calcular la capacidad del canal, debemos determinar el valor de la atenuación del cable. Para esto, utilizaremos una tabla de atenuación para cables Ethernet Cat 7 que nos indica que a una frecuencia de 600 MHz y una longitud de 80 metros, la atenuación es de 50 dB.
+
+Ahora podemos calcular el valor de B:
+
+B = 600 MHz
+
+Luego, podemos calcular el valor de S:
+
+S = Ptx x Gtx x 10^(-atenuación/10) x Arx x L
+= 0.1 W x 10^(5/10) x 10^(-50/10) x 1.5 x 10^-11 W/bit x 80 m
+= 2.67 x 10^-7 W
+
+Finalmente, podemos calcular el valor de N:
+
+N = 0.1 nW/Hz
+
+Con estos valores, podemos calcular la capacidad del canal utilizando la fórmula:
+
+C = B x log2(1 + S/N)
+= 600 MHz x log2(1 + 2.67 x 10^-7 W / (0.1 nW/Hz))
+= 2.33 Gbps
+
+Por lo tanto, en este ejemplo real, el data rate posible para el cable Ethernet Cat 7 de cobre con una longitud de 80 metros y con las variables de ruido, atenuación, potencia y otras consideradas es de 2.33 Gbps. Es importante tener en cuenta que los valores de S, N, y la atenuación pueden variar dependiendo del entorno específico en el que se encuentre instalado el cable Ethernet.
