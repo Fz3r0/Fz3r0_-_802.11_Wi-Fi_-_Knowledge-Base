@@ -1738,6 +1738,8 @@ QAM es una técnica de modulación que combina dos señales portadoras en cuadra
 - [Inside Wireless: `MCS Rates`](https://youtu.be/f6zesWNDGXc)
 - [`VHT` (802.11n/ac) MCS Chart – Wave 1](https://www.wirelesstrainingsolutions.com/wireless-tools/vht-mcs-chart-wave-1/)
 
+La `MCS Table` se creó justo con la `IEEE 802.11n (HT)` para poder calcular facilmente el posible `data rate` de una transmisión WiFi usando `OFDM Modulation Scheme`. _(Esto debido a que antes de 802.11n era mucho más fácil saber el data rate ya que había pocas combinaciones posibles, como ya mostré en mi super tabla del IEEE 802.11)_
+
 La `MCS Table` es una herramienta esencial para **evaluar la calidad del ambiente de RF y determinar el `data rate` en las redes Wi-Fi de `2.4 GHz` y `5 GHz`. Los `dispositivos inalámbricos`, como los `AP`, los `teléfonos celulares` y las `antenas WiFi`, deben **seleccionar la `modulación` y la `codificación` adecuadas para enviar datos en un canal específico.** <br>
 
 La `MCS Table` establece la relación entre la `modulación` y la tasa de bits por segundo o `bit rate`, teniendo en cuenta la calidad del canal, la interferencia y otros factores. Además, la elección adecuada de la modulación y codificación es fundamental para optimizar la eficiencia y la confiabilidad de la transmisión inalámbrica, ya que una modulación y codificación más robusta pueden aumentar la tasa de transmisión pero también la posibilidad de errores de transmisión. En resumen, la MCS Table es una herramienta valiosa para garantizar la máxima eficiencia y fiabilidad de las redes inalámbricas. <br>
@@ -1790,6 +1792,14 @@ Antes de aprender a leer la `MCS Table`, hay que identificar exactamente `cada p
 ### **`Spatial Streams`**
 
 Los `spatial streams` son una técnica utilizada en los estándares inalámbricos `IEEE 802.11n` y IEEE `802.11ac` (y posteriores...) que permite `transmitir y recibir varios flujos de datos simultáneamente` mediante la `utilización de múltiples antenas`. <br>
+
+- **La mayoría de clientes hoy en día (Smartphones, PCs, Laptops, Smartwatch, IoT, etc) utilizan entre 1 y 2 Spatial Streams. Existen dispositivos de alta gama que soportan hasta 3 o incluso algunos pocos soportan 4 Spatial Streams, sin embargo, son los menos. _(Esto por diferentes factores, por ejemplo, el alto consumo de batería que representa cada spatial stream)_** 
+- **Por otro lado, si hay APs que soportan 4x4 o más (4 spatial streams), pero incluso hay APs gama alta que soportan solo hasta 3x3. Todo depende el vendor y el modelo, cosa que se puede verificar en la datasheet**.
+
+    - [Ejemplo de `R650` de `Commscope Ruckus`](https://www.commscope.com/globalassets/digizuite/61773-ds-ruckus-r650.pdf)
+
+![image](https://user-images.githubusercontent.com/94720207/231288342-ff5ed64e-65e3-4642-b3ab-79043befadbf.png)
+
 
 Cada `spatial stream` se puede pensar como **una vía separada para transmitir datos**, lo que **aumenta la capacidad del sistema inalámbrico** y **mejora la velocidad de transmisión**.
 
