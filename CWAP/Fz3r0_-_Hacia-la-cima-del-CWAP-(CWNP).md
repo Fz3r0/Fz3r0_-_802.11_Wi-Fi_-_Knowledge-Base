@@ -1793,13 +1793,19 @@ Antes de aprender a leer la `MCS Table`, hay que identificar exactamente `cada p
 
 Los `spatial streams` son una técnica utilizada en los estándares inalámbricos `IEEE 802.11n` y IEEE `802.11ac` (y posteriores...) que permite `transmitir y recibir varios flujos de datos simultáneamente` mediante la `utilización de múltiples antenas`. <br>
 
+**`Nota:`** **Cada Spatial Stream DUPLICA el `data rate` aunque el `bandwith` permaneza igual, es decir, si se utiliza `20 MHz` con un `data rate` de `100 Mbps`, agregar un Spatial Stream subiría el `data rate` a `200 Mbps`.** _(Con sus respectivas variables, pero solo para ponerlo como un ejemplo claro)_
+
 - **La mayoría de clientes hoy en día (Smartphones, PCs, Laptops, Smartwatch, IoT, etc) utilizan entre 1 y 2 Spatial Streams. Existen dispositivos de alta gama que soportan hasta 3 o incluso algunos pocos soportan 4 Spatial Streams, sin embargo, son los menos. _(Esto por diferentes factores, por ejemplo, el alto consumo de batería que representa cada spatial stream)_** 
+
+    - [Ejemplo de "The List"](https://clients.mikealbano.com/)
+
+![image](https://user-images.githubusercontent.com/94720207/231289567-0b41e230-cce2-46f4-b020-241882b149ec.png)
+
 - **Por otro lado, si hay APs que soportan 4x4 o más (4 spatial streams), pero incluso hay APs gama alta que soportan solo hasta 3x3. Todo depende el vendor y el modelo, cosa que se puede verificar en la datasheet**.
 
     - [Ejemplo de `R650` de `Commscope Ruckus`](https://www.commscope.com/globalassets/digizuite/61773-ds-ruckus-r650.pdf)
 
 ![image](https://user-images.githubusercontent.com/94720207/231288342-ff5ed64e-65e3-4642-b3ab-79043befadbf.png)
-
 
 Cada `spatial stream` se puede pensar como **una vía separada para transmitir datos**, lo que **aumenta la capacidad del sistema inalámbrico** y **mejora la velocidad de transmisión**.
 
