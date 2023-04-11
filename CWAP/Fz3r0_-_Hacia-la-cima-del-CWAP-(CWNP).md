@@ -2724,3 +2724,130 @@ C = B x log2(1 + S/N)
 = 2.33 Gbps
 
 Por lo tanto, en este ejemplo real, el data rate posible para el cable Ethernet Cat 7 de cobre con una longitud de 80 metros y con las variables de ruido, atenuación, potencia y otras consideradas es de 2.33 Gbps. Es importante tener en cuenta que los valores de S, N, y la atenuación pueden variar dependiendo del entorno específico en el que se encuentre instalado el cable Ethernet.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 👹 `CANTO II`: Protocol Analysis
+
+En primer lugar, quiero destacar que para todo este capítulo y basicamente para todo el curso de CWAP utilizaré la mayoría de veces ejemplos y laboratorios con `Wireshark`, en específico utilizando mi mod de profile y OUI `Blackshark by Fz3r0`. En la literatura oficial del CWAP utilizan ejemplos de otras herramientas como XXXXXXXXXXX aunque también incluyen Wireshark, sin embargo, es mi herramienta preferida de análisis de paquetes (packets) y tramas (frames).
+
+Los protocolos inalámbricos 802.11 son significativamente diferentes de los protocolos Ethernet inalámbricos 802.3 y requieren herramientas adicionales para diagnósticos y un conjunto de habilidades adicional para implementarlos y comprender cómo se están utilizando.
+
+La captura de todas las tramas ayuda a obtener una visión más completa de la actividad en la red inalámbrica y a identificar posibles problemas. En redes 802.11 WiFi se necesita tener en cuenta diferentes variables y conceptos a considerar al capturar 802.11 Frames. Por ejemplo: 
+
+- Que se capturen todfos los tipos de frames 802.11, en lugar de por ejemplo, solo las tramas de management o data.  
+- Elegir las herramientas tanto de Hardware como de Software indicados, incluso drivers y sistemas operativos compatibles. 
+- Elegir la banda y canal adecuados, utilizando herramientas como el espectro radioeléctrico, logs o herramientas de monitoreo. 
+- Sincronizar el reloj del dispositivo de captura para evitar desincronizaciones, 
+- Etc...
+
+Sin duda, la captura de frames en redes inalámbricas WiFi es más compleja que en redes cableadas Ethernet debido a la naturaleza inalámbrica y a los desafíos técnicos asociados. Por lo tanto, es fundamental contar con un conjunto de habilidades y herramientas adecuadas para garantizar una captura y análisis preciso de los frames 802.11, y de esto se trata este capítulo ¡Allá vamos!
+
+El `CANTO II` se divide de la siguiente manera:
+
+1. ⭕ `Capturando 802.11 Frames like a Sir!`
+2. ⭕ `Configuración de Parámetros en Wireshark`
+3. ⭕ `Utilizando Radio-Frecuencias (RF) para comunicarse`
+4. ⭕ `Fundamentos de Network Frames`
+5. ⭕ `Métodos de Troubleshooting`
+
+
+
+
+
+
+
+
+
+
+
+
+## 🟢 Capturar `802.11 Frames`
+
