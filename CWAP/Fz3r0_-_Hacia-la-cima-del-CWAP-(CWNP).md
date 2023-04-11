@@ -2818,9 +2818,19 @@ Por lo tanto, en este ejemplo real, el data rate posible para el cable Ethernet 
 
 En primer lugar, quiero destacar que para todo este capítulo y basicamente para todo el curso de CWAP utilizaré la mayoría de veces ejemplos y laboratorios con `Wireshark`, en específico utilizando mi mod de profile y OUI `Blackshark by Fz3r0`. En la literatura oficial del CWAP utilizan ejemplos de otras herramientas como XXXXXXXXXXX aunque también incluyen Wireshark, sin embargo, es mi herramienta preferida de análisis de paquetes (packets) y tramas (frames).
 
-Los protocolos inalámbricos 802.11 son significativamente diferentes de los protocolos Ethernet inalámbricos 802.3 y requieren herramientas adicionales para diagnósticos y un conjunto de habilidades adicional para implementarlos y comprender cómo se están utilizando.
+![image](https://user-images.githubusercontent.com/94720207/231305756-4bea1b6a-9c73-4333-94e2-0f737cd0980c.png)
 
-La captura de todas las tramas ayuda a obtener una visión más completa de la actividad en la red inalámbrica y a identificar posibles problemas. En redes 802.11 WiFi se necesita tener en cuenta diferentes variables y conceptos a considerar al capturar 802.11 Frames. Por ejemplo: 
+Personalmente considero que antes del CWAP es fundamental tener un buen background de conocimiento y experiencia en la captura y análisis de tráfico Ethernet 802.3 antes de intentar adentrarse en el análisis de redes inalámbricas. Si no se cuenta con estas habilidades, yo recomiendo revisar cursos de Wireshark impartidos por expertos en la materia como David Bombal y Chris Greer. Ambos son reconocidos en la comunidad de Wireshark por su amplia experiencia y conocimiento en la herramienta de análisis de red, y han impartido numerosos cursos y talleres sobre el tema. 
+
+`Chris Greer` es un experto en redes y análisis de tráfico de red, además de ser el fundador de la empresa Packet Pioneer. Chris ha sido un usuario activo de Wireshark desde sus primeras versiones. Es un instructor y orador reconocido a nivel internacional que ha capacitado a miles de profesionales en el uso de Wireshark y técnicas de análisis de tráfico de red en todo el mundo. Para mi es el gran gurú y una de mis grandes inspiraciones por las cuales actualmente realizo análsis de tráfico en redes Ethernet y WiFi. Yo lo llamo Chris "The Megalodon" Greer.
+
+![image](https://user-images.githubusercontent.com/94720207/231304586-ab25cfa5-ffa3-4879-bc49-7b968b163dd3.png)
+
+David Bombal es uno de los expertos en redes más respetados y reconocidos a nivel mundial, y es conocido por sus habilidades en la enseñanza de tecnologías de redes complejas en un lenguaje simple y accesible. Ha enseñado a miles de estudiantes en todo el mundo sobre redes, seguridad y Wireshark a través de sus cursos en línea, y ha publicado varios libros técnicos. También es un instructor de certificación de Cisco Certified Network Associate (CCNA) y un Certified Cisco Systems Instructor (CCSI). Su enfoque en la enseñanza es enriquecedor y práctico, y su conocimiento y experiencia son invaluables para aquellos que buscan aprender sobre tecnologías de redes y Wireshark. Creo que si alguien algún día lee esto... sabrá perfectamente quien en este señor, máximo respeto y fuente de inspiración ¡Vámos Bombal!
+
+![image](https://user-images.githubusercontent.com/94720207/231305004-3098efac-a6e8-4a97-8f3d-0b29e6a887e3.png)
+
+Los protocolos inalámbricos 802.11 son significativamente diferentes y un poco más complicados que los protocolos Ethernet inalámbricos 802.3 y requieren herramientas adicionales para diagnósticos y un conjunto de habilidades adicional para implementarlos y comprender cómo se están utilizando. En redes 802.11 WiFi se necesita tener en cuenta diferentes variables y conceptos a considerar al capturar. Por ejemplo: 
 
 - Que se capturen todfos los tipos de frames 802.11, en lugar de por ejemplo, solo las tramas de management o data.  
 - Elegir las herramientas tanto de Hardware como de Software indicados, incluso drivers y sistemas operativos compatibles. 
