@@ -2863,12 +2863,23 @@ El `CANTO II` se divide de la siguiente manera:
 
 ## 🟢 `Capturando 802.11 Frames like a Sir!`
 
-Como se ha indicado anteriormente, las comunicaciones 802.11, aunque similares, no son iguales a las comunicaciones 802.3. No hay un puerto de gestión en un switch al que pueda conectarse y simplemente capturar cada trama que se envía al medio.
+Como ya se ha mencionado, las comunicaciones 802.11 Wireless y las 802.3 Ethernet, aunque similares, no son iguales. Por ejemplo, no hay un puerto solo del plano de `management` en un switch al cual conectarse y simplemente capturar cada `frame` que se envía al medio.
 
-El tráfico inalámbrico no se segmenta utilizando un switch como en Ethernet 802.3. Se segmenta utilizando una frecuencia diferente, más comúnmente llamada "un canal". Las transmisiones están en el aire y no están contenidas dentro de un conjunto conocido de cables, switches y routers.
+El tráfico inalámbrico no se segmenta utilizando un switch como en Ethernet 802.3, pero si se puede segmentar, por ejemplo utilizando una frecuencia diferente, más comúnmente llamada "un canal". En Wireless las transmisiones están en el aire "volando" y no están contenidas dentro de un conjunto de cables, switches y routers. **Este es el claro ejemplo de la diferencia entre una `LAN (Ethernet / IEEE 802.3)` y una `WLAN (WiFi / IEEE 802.11)`**
 
-Para capturar transmisiones inalámbricas, debe tener software de análisis de protocolo y un adaptador de red inalámbrico que funcione con el software. El adaptador inalámbrico debe estar en "modo monitor". El modo monitor significa que el adaptador inalámbrico se ha configurado para capturar el tráfico que está destinado a cualquier dirección MAC y no solo a la suya. Esto se logra mediante el uso de un controlador requerido que funciona no solo con el adaptador sino también con su software de análisis de protocolo.
+Para capturar transmisiones inalámbricas o `802.11 Frames`, se debe utilizar software de análisis de protocolo o `Protocol Analyzer` y un adaptador de red inalámbrico o `Network Adapter` que funcione con el software, es decir, `hardware` y `software` capaz de capturar y procesar la captura de 802.11 Frames. 
+
+El `Network Adapter` debe estar en `Monitor Mode`. El modo monitor significa que el adaptador inalámbrico se ha configurado para **capturar el tráfico que está destinado a cualquier dirección MAC y no solo a la suya.** Esto se logra mediante el uso de un `driver` requerido que funciona no solo con el adaptador sino también con su software de análisis de protocolo.
 
 ### 🟢 `Monitor Mode` & `Promiscous Mode`
 
 Es importante entender que `Monitor Mode` y `Promiscous Mode` no son los mismos conceptos. 
+
+
+
+
+
+
+### 🟢 Capturando un `canal a la vez` VS `varios canales`
+
+
