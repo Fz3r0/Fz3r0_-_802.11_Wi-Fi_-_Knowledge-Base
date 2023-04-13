@@ -2900,6 +2900,16 @@ En otras palabras, si queremos capturar todos los frames que se envían en una r
 
 ### 🟢 Capturando un `canal a la vez` VS `varios canales`
 
+### Un canal a la vez
+
+![image](https://user-images.githubusercontent.com/94720207/231618666-175ef23b-319f-439b-a847-3291a52a8a6d.png)
+
+![image](https://user-images.githubusercontent.com/94720207/231618740-2935df7d-d73b-4ffb-b356-0762f412a73b.png)
+
+
+
+---
+
 [WLAN Pi](https://www.wlanpi.com/)
 
 ![image](https://user-images.githubusercontent.com/94720207/231618221-3cbb95ba-60dc-4daf-9d5d-697b77a35037.png)
