@@ -2892,12 +2892,11 @@ Por ejemplo en Apple MAC-OS es posible poner wireshark en `Monitor Mode` sin nec
 
 ### ⭕ Promiscuous Mode
 
-Es un modo en el que un adaptador de red inalámbrico o cableado se configura para capturar todos los paquetes que se envían en la red, independientemente de si están destinados al adaptador o no. Esto significa que, en el Promiscuous Mode, se pueden capturar paquetes que no están destinados a nuestro dispositivo, lo que es útil para el análisis de red. Sin embargo, a diferencia de Monitor Mode, Promiscuous Mode no garantiza la captura de paquetes de la red inalámbrica, ya que no puede acceder directamente al medio inalámbrico.
+Este modo básicamente se debe tener encendido siempre que se quiera capturar frames, ya sea `Ethernet` o `WiFi`. Es un modo en el que un adaptador de red inalámbrico o cableado se configura para capturar todos los paquetes que se envían en la red, independientemente de si están destinados al adaptador o no. Esto significa que, en el Promiscuous Mode, se pueden capturar paquetes que no están destinados a nuestro dispositivo, lo que es útil para el análisis de red. Sin embargo, a diferencia de Monitor Mode, Promiscuous Mode no garantiza la captura de paquetes de la red inalámbrica, ya que no puede acceder directamente al medio inalámbrico.
 
 En otras palabras, si queremos capturar todos los frames que se envían en una red inalámbrica, necesitamos usar un adaptador de red inalámbrico WiFi 802.11 en Monitor Mode. Por otro lado, si queremos capturar todos los paquetes que se envían en una red cableada Ethernet 802.3, podemos usar un adaptador de red cableado en Promiscuous Mode. Sin embargo, si queremos capturar todos los paquetes que se envían en una red mixta inalámbrica y cableada, necesitaríamos usar tanto un adaptador de red inalámbrico en Monitor Mode como un adaptador de red cableado en Promiscuous Mode para asegurarnos de capturar todos los paquetes.
 
-
-
+![image](https://user-images.githubusercontent.com/94720207/231615038-3a046e6c-d072-454d-b200-5a265c54ac12.png)
 
 ### 🟢 Capturando un `canal a la vez` VS `varios canales`
 
