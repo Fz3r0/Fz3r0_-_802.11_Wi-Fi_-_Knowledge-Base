@@ -2900,4 +2900,25 @@ En otras palabras, si queremos capturar todos los frames que se envían en una r
 
 ### 🟢 Capturando un `canal a la vez` VS `varios canales`
 
+[WLAN Pi](https://www.wlanpi.com/)
+
+![image](https://user-images.githubusercontent.com/94720207/231618221-3cbb95ba-60dc-4daf-9d5d-697b77a35037.png)
+
+![image](https://user-images.githubusercontent.com/94720207/231618319-3e113b89-2ae1-4ffb-b072-3ef824eb0146.png)
+
+![image](https://user-images.githubusercontent.com/94720207/231618403-a6a35d10-e198-49e5-a487-2f0a7a2cefdd.png)
+
+[Hack5 WiFi Coconut](https://www.youtube.com/watch?v=GIVrzoeWb3M) **14 Canales al mismo tiempo**
+
+![image](https://user-images.githubusercontent.com/94720207/231617593-24fb8805-0b48-4abd-86f1-01e44f58e9f0.png)
+
+![image](https://user-images.githubusercontent.com/94720207/231617663-accd3bf7-3a4d-4dd0-bdd6-321c348b8edf.png)
+
+![image](https://user-images.githubusercontent.com/94720207/231618067-bb8c2cf9-60da-481b-8795-2ab943e637bc.png)
+
+Setups encontrados en los confines de Internerd:
+
+![image](https://user-images.githubusercontent.com/94720207/231617810-ebc01ba7-3e0b-4625-8ebe-67c37ceb6d13.png)
+
+
 
