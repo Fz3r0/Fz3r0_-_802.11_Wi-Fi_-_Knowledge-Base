@@ -2100,6 +2100,8 @@ Determina el SNR mínimo y el RSSI requerido para un índice MSC específico.
 
 ### `Bandwith`
 
+[10: Understanding TCP Throughput | Learn Wireshark @ SF22US (Kary Rogers)](https://www.youtube.com/watch?v=1eJHqyyjHqk)
+
 - La tasa de transmisión de datos se le llama "data transmission rate" o "data transfer rate" en inglés. También puede ser conocida como "data rate", "bit rate" o "throughput".
 
 ### `Analogía de la carretera`
