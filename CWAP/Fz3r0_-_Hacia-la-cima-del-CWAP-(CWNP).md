@@ -263,7 +263,38 @@ El `CANTO I` se divide de la siguiente manera:
 
 ## 🟢 `Protocolos` y `Comunicaciones`
 
-En informática, un protocolo es un método definido para la comunicación entre dispositivos. El protocolo funciona porque ambos dispositivos entienden cómo enviar y recibir mensajes basados en el protocolo establecido.
+Para entender al 100% el concepto de "`protocolo`" solo se deben comprender 2 sencillos conceptos, las últimas 3 definiciones en el `diccionario RAE` y la `analogía del saludo`.
+
+- `Protocolo`:
+
+````
+3. m. Conjunto de reglas establecidas por norma o por costumbre para ceremonias y actos oficiales o solemnes.
+
+4. m. Secuencia detallada de un proceso de actuación científica, técnica, médica, etc.
+
+5. m. En Informática - Conjunto de reglas que se establecen en el proceso de comunicación entre dos sistemas. <<<-----| Ojito!!!
+````
+
+- **El `saludo scout` VS `saludo Príncipe del rap` VS un `saludo elegante`**:
+
+    - `Saludo Scout`: "Solo un verdadero guerrero es capaz de quitarse el escudo para saludar a alguien que se merece un verdadero saludo". (Los guerreros usan el escudo en la mano izquierda y las armas en la mano derecha. Para mostrar confianza en alguien, bajan su escudo y saludan con la mano izquierda).
+    - `Saludo Formal`: La mano se da como saludo después de una presentación o de un encuentro con una persona conocida. También se utiliza, además de como saludo, como fórmula de cortesía para una despedida. Se da la mano al despedirse de otra persona.
+    - `Saludo Príncipe del Rap`: "Hey!!! Pssssssst!"
+
+![image](https://user-images.githubusercontent.com/94720207/233407213-1b8e97d4-93fa-42e2-9cc6-33402c66c5d4.png)
+
+![image](https://media.tenor.com/LnaJl4hOYMkAAAAC/handshake-will-smith.gif)
+
+El `protocolo` en este casoes **la manera que vamos a "saludar"**, ¡todo depende de la persona, el momento y situación! Si estoy frente un Scout o un Guerrero tendré que saludar con la `mano izquierda`, si estoy frente a mi amigo puedo hacer el saludo del `príncipe del rap`, pero si estoy frente al CEO de mi trabajo debo saludarle formalmente con la `mano derecha`. 
+
+
+
+
+### `Protocolos` de `Networking`
+
+En informática y networking, un protocolo es un **método definido para la comunicación entre dispositivos**. El protocolo funciona porque ambos dispositivos **entienden cómo enviar y recibir mensajes basados en el protocolo establecido.**
+
+Es decir, justo como `la analogía de los saludos` pasa con un protocolo de networking, por ejemplo, cuando `Ana` se quiere comunicar con `Bob` a través de un `correo electrónico` que utiliza el protocolo `SMTP` (Simple Mail Transfer Prtocol). En este caso, tanto el dispositivo de `Ana` como `Bob` deben saber como "escribir", "leer", "recibir" y "enviar" este tipo de `paquetes`, así ambos lados podrán comunicar su mensaje, así como recibir y entender la respuesta del otro lado, en este caso, un correo electrónico. 
 
 Algunos ejemplos de protocolos incluyen:
 
