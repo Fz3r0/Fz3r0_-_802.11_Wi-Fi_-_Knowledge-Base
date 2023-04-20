@@ -277,24 +277,31 @@ Para entender al 100% el concepto de "`protocolo`" solo se deben comprender 2 se
 
 - **El `saludo scout` VS `saludo Príncipe del rap` VS un `saludo elegante`**:
 
-    - `Saludo Scout`: "Solo un verdadero guerrero es capaz de quitarse el escudo para saludar a alguien que se merece un verdadero saludo". (Los guerreros usan el escudo en la mano izquierda y las armas en la mano derecha. Para mostrar confianza en alguien, bajan su escudo y saludan con la mano izquierda).
+    - `Saludo Scout`: Los Scouts acostumbran saludar con la mano izquierda entrelazando los dedos ya que "Solo un verdadero guerrero es capaz de quitarse el escudo para saludar a alguien que se merece un verdadero saludo". (Los guerreros usan el escudo en la mano izquierda y las armas en la mano derecha. Para mostrar confianza en alguien, bajan su escudo y saludan con la mano izquierda).
     - `Saludo Formal`: La mano se da como saludo después de una presentación o de un encuentro con una persona conocida. También se utiliza, además de como saludo, como fórmula de cortesía para una despedida. Se da la mano al despedirse de otra persona.
     - `Saludo Príncipe del Rap`: "Hey!!! Pssssssst!"
 
-![image](https://user-images.githubusercontent.com/94720207/233407213-1b8e97d4-93fa-42e2-9cc6-33402c66c5d4.png)
+![image](https://user-images.githubusercontent.com/94720207/233407213-1b8e97d4-93fa-42e2-9cc6-33402c66c5d4.png) ![image](https://media.tenor.com/LnaJl4hOYMkAAAAC/handshake-will-smith.gif)
 
-![image](https://media.tenor.com/LnaJl4hOYMkAAAAC/handshake-will-smith.gif)
-
-El `protocolo` en este casoes **la manera que vamos a "saludar"**, ¡todo depende de la persona, el momento y situación! Si estoy frente un Scout o un Guerrero tendré que saludar con la `mano izquierda`, si estoy frente a mi amigo puedo hacer el saludo del `príncipe del rap`, pero si estoy frente al CEO de mi trabajo debo saludarle formalmente con la `mano derecha`. 
-
-
-
+El `protocolo` simplemente es **la manera que vamos a "saludar"**, yo acabo de dar **3 protocolos diferentes de "slaudar"** ¡todo depende de la persona, el momento y situación! Si estoy frente un Scout tendré que saludar con la `mano izquierda`, si estoy frente a mi amigo puedo hacer el saludo del `príncipe del rap`, pero si estoy frente al CEO de mi trabajo debo saludarle formalmente con la `mano derecha`, es decir: **hay diferentes protocolos de saludo y ambos lados deben saber identificar cuándo utilizar cada uno de ellos.** 
 
 ### `Protocolos` de `Networking`
 
-En informática y networking, un protocolo es un **método definido para la comunicación entre dispositivos**. El protocolo funciona porque ambos dispositivos **entienden cómo enviar y recibir mensajes basados en el protocolo establecido.**
+En informática y networking, un protocolo es un **método definido para la comunicación entre dispositivos**. El protocolo funciona porque **ambos dispositivos entienden cómo enviar y recibir mensajes basados en el protocolo establecido.**
 
-Es decir, justo como `la analogía de los saludos` pasa con un protocolo de networking, por ejemplo, cuando `Ana` se quiere comunicar con `Bob` a través de un `correo electrónico` que utiliza el protocolo `SMTP` (Simple Mail Transfer Prtocol). En este caso, tanto el dispositivo de `Ana` como `Bob` deben saber como "escribir", "leer", "recibir" y "enviar" este tipo de `paquetes`, así ambos lados podrán comunicar su mensaje, así como recibir y entender la respuesta del otro lado, en este caso, un correo electrónico. 
+Es decir, justo como `la analogía de los saludos de mano` pasa con un protocolo de networking, por ejemplo, cuando `Ana` se quiere comunicar con `Bob` a través de un `correo electrónico` que utiliza el protocolo `SMTP` (Simple Mail Transfer Prtocol). En este caso, tanto el dispositivo de `Ana` como `Bob` deben saber como "escribir", "leer", "procesar", "recibir" y "enviar" este tipo de `paquetes`, así ambos lados podrán comunicar su mensaje, así como recibir y entender la respuesta del otro lado, en este caso, un correo electrónico. 
+
+Para ser más claro, hay que recordar que la parte lógica en la informática son solo `1` y `0`, o mejor dicho `sistema binario`. El `protocolo` no es más que la manera que se le dará sentido a esos 1 y 0 en ambos lados de la comunicación.
+
+Por ejemplo, esta es la representación hexadecimal (la manera simplificada de leer binarios) de un paquete con "x" protocolo de red, frente a otro paquete con "y" protocolo de red. A simple vista a nosotros como humanos quizás no tenga mucho sentido, pero en realidad tienen diferencias clave para que un sistema identifique que son 2 protocolos diferentes, con experiencia, incluso los paquetes vistos desde hexadecimal cobrarán muchísimo sentido. 
+
+**Paquete con protocolo `ARP`:** <br><br>
+![image](https://user-images.githubusercontent.com/94720207/233413236-c0387074-b2dd-4e54-99ac-734958559979.png)
+
+**Paquete con protocolo `DHCP`:** <br><br>
+![image](https://user-images.githubusercontent.com/94720207/233414000-4066dfbe-ec7e-4292-a8ba-2621010bf690.png)
+
+
 
 Algunos ejemplos de protocolos incluyen:
 
