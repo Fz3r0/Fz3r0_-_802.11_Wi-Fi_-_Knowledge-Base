@@ -2981,5 +2981,7 @@ Setups encontrados en los confines de Internerd:
 
 ![image](https://user-images.githubusercontent.com/94720207/231617810-ebc01ba7-3e0b-4625-8ebe-67c37ceb6d13.png)
 
+https://wiki.wireshark.org/SampleCaptures sample captures
+
 
 
