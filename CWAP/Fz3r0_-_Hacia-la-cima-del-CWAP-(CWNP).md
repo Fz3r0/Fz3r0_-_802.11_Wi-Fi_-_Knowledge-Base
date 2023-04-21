@@ -287,7 +287,14 @@ El `protocolo` simplemente es **la manera que vamos a "saludar"**, yo acabo de d
 
 ### `Protocolos` de `Networking`
 
-En informática y networking, un protocolo es un **método definido para la comunicación entre dispositivos**. El protocolo funciona porque **ambos dispositivos entienden cómo enviar y recibir mensajes basados en el protocolo establecido.**
+- [CompTia: What Is a Network Protocol, and How Does It Work?](https://www.comptia.org/content/guides/what-is-a-network-protocol#:~:text=A%20network%20protocol%20is%20an,internal%20processes%2C%20structure%20or%20design.)
+- [TechTarget: Network Protocol](https://www.techtarget.com/searchnetworking/definition/protocol)
+
+En informática y networking, un `protocolo` es un **método definido para la comunicación entre dispositivos**. El protocolo funciona porque **ambos dispositivos entienden cómo enviar y recibir mensajes basados en el protocolo establecido.**
+
+- La definición de `CompTia` cita:
+
+**_"Un protocolo de red es un conjunto establecido de reglas que determinan cómo se transmite la información entre diferentes dispositivos en la misma red. Básicamente, permite que los dispositivos conectados se comuniquen entre sí, independientemente de las diferencias en sus procesos internos, estructura o diseño."_**
 
 Es decir, justo como `la analogía de los saludos de mano` pasa con un protocolo de networking, por ejemplo, cuando `Ana` se quiere comunicar con `Bob` a través de un `correo electrónico` que utiliza el protocolo `SMTP` (Simple Mail Transfer Prtocol). En este caso, tanto el dispositivo de `Ana` como `Bob` deben saber como "escribir", "leer", "procesar", "recibir" y "enviar" este tipo de `paquetes`, así ambos lados podrán comunicar su mensaje, así como recibir y entender la respuesta del otro lado, en este caso, un correo electrónico. 
 
@@ -300,8 +307,6 @@ Por ejemplo, esta es la representación hexadecimal (la manera simplificada de l
 
 **Paquete con protocolo `DHCP`:** <br><br>
 ![image](https://user-images.githubusercontent.com/94720207/233414000-4066dfbe-ec7e-4292-a8ba-2621010bf690.png)
-
-
 
 Algunos ejemplos de protocolos incluyen:
 
@@ -333,30 +338,36 @@ Es importante destacar que la elección del protocolo adecuado depende de las ne
 
 ## 🟢 `Modelo OSI` para el `CWAP`, by `Fz3r0 💀` 
 
-Antes que nada, quisiera destacar que tanto para los cursos de CWNA como CWAP, no se utiliza el modelo TCP/IP, sino que se basa en el modelo OSI, aunque no completamente como lo conocemos.
+Antes que nada, quisiera destacar que tanto para las certificaciones de `CWNP` como lo es el `CWAP`, **NO se utiliza el `Modelo TCP/IP`**, sino que **se basa en el `Modelo OSI`**, sin embargo, se utiliza únicamente como referencia _(¡Hay que recordar que el `OSI Model` es un modelo de referencia!)_.
 
-Al principio, puede resultar confuso cuando se mencionan los cursos de CWNP (además de otras certificaciones de Networking) y se dice: "no estamos usando el modelo OSI, solo hacemos referencia para que se comprenda el concepto". A partir de ahí, se dan explicaciones sobre X o Y cosa. Sin embargo, en definitiva, el modelo es simplemente una referencia. Es decir, del modelo OSI se toman ejemplos tomando su estructura base de 7 layers, pero existe una estructura un poco más compleja dentro de esas 7 capas. Además, no siempre se tiene que seguir exactamente la misma regla para todas las posibilidades que nos ofrece el Networking en general.
+![image](https://user-images.githubusercontent.com/94720207/233547224-ea09d28c-e72f-44e9-8242-fd61dc2b8da4.png)
 
-Por ejemplo, en hacking y ciberseguridad, he realizado writeups en los que se puede hacer tampering de paquetes e inyectarlos a la red sin importar la estructura del modelo OSI. Básicamente, puedo inyectar HEX random y los paquetes/frames se transmiten sin importar que estén completamente malformados y sin respetar el modelo por capas.
+Al principio, puede resultar confuso cuando se mencionan los cursos de CWNP _(además de otras certificaciones de Networking)_ cosas como: 
 
-El truco que he encontrado para comprender completamente el proceso de transmisión que se llevará a cabo y que será esencial para esta certificación consiste en "añadir un sublayer al modelo original". ¿A qué me refiero con esto? Es muy fácil:
+- _"...No estamos usando el modelo OSI, solo hacemos referencia para que se comprenda el concepto..."_. 
 
-- El modelo OSI se divide en siete capas o `7 layers`, cada una con una función específica. Pero para comprender mejor el proceso de transmisión, es útil agregar un sublayer adicional en `Layer 2 Data Link` que se centra en la transmisión de datos a través del medio físico, lo cual también convierte `Layer 1 Physical` en otro sublayer.
+A partir de ahí se de una explicación de X o Y tecnología o proceso de comunicación... ¡Pero! quizás en otro curso u otra tecnología pareciera que el modelo OSI se comportara un poco diferente en ciertos layers y ya no toma mucho sentido lo aprendido antes ¡¿Por qué ocurre esto?! 
+
+Es porque el modelo OSI solo es una referencia y no son leyes inamovibles. Por ejemplo, el modelo OSI consta de 7 layers, pero existe una estructura un poco más compleja dentro de esas 7 capas, donde quizás para detallar una capa más a fondo pareciere que se pueden sacar más capas; u otras capas no existen y no son utilizadas en determinado escenario... Es decir, no siempre se tiene que seguir exactamente la misma regla para todas las posibilidades que nos ofrece el Networking en general, por ejemplo, un red Wireless no funcionará igual que una red cableada fisicamente, sin embargo ambos tienen Layer 1 y Layer 2, pero para lograr comprender cómo realmente funciona desde la raíz, debemos ir más allá de el báscio `Layer 1` y `Layer 2`, o únicamente de `7 Layers` del `Modelo OSI "tradicional"`
+
+El _"truco"_ que he encontrado para comprender completamente el proceso de transmisión Wireless y que será esencial para esta certificación consiste en **"añadir un sublayer al modelo original"**. ¿A qué me refiero con esto? Es muy fácil:
+
+- El modelo OSI se divide en siete capas o `7 layers`, cada una con una función específica. Pero para comprender mejor el proceso de transmisión, es bastante útil agregar un sublayer adicional en `Layer 2 Data Link` que se centra en la transmisión de datos a través del medio físico, lo cual también convierte `Layer 1 Physical` en otro `sublayer`.
 
 El resultado final es sencillo:
 
-- En lugar de 2 "layers", se tendrán 3 "sublayers", ya que se convierte Layer 1 y Layer 2 en sublayers.
+- En lugar de 2 "layers", se tendrán 3 "sublayers", ya que se convierte Layer 1 y Layer 2 en en total de 3 sublayers _(en lugar de solo 2 layers)_.
 
 Esto se puede visualizar así:
 
 ![image](https://user-images.githubusercontent.com/94720207/229313916-c727db5a-1785-48d8-a687-be6793b49a84.png)
 
-#### Layers en `OSI original`
+### Layers en `OSI original`
 
 2. Layer 2 - `Data Link`
 1. Layer 1 - `Physical`
 
-#### Layers en `OSI Fz3r0 Custom`
+### Layers en `OSI Fz3r0 Custom`
 
 2. Upper Sublayer 2 - `LLC`
 2. Lower Sublayer 2 - `MAC`
