@@ -2972,7 +2972,7 @@ Para un mejor entendimiento hice una sencilla tabla para identificar y darse una
 Ejemplos de dispositivos para capturar en un solo canal:
 
 
-Existen sistemas denominados `Muli-Sensor Wireless Overlay System`, los cuales pueden capturar en diferentes canales al mismo tiempo gracias al uso de múltiples interfaces (radios), siempre que se implemente y configure correctamente.
+
 
 ### Un canal a la vez
 
@@ -3014,6 +3014,43 @@ Setups encontrados en los confines de Internerd:
 ![image](https://user-images.githubusercontent.com/94720207/231617810-ebc01ba7-3e0b-4625-8ebe-67c37ceb6d13.png)
 
 https://wiki.wireshark.org/SampleCaptures sample captures
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Opciones para capturar frames 802.11
+
+Básicamente se divide en 3 ocpiones, aunque hoy en día hay también ocpiones más híbridas y con diferentes alcances:
+
+1. `Mobile`
+2. `Infrastructure`
+3. `Dsitributed`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
