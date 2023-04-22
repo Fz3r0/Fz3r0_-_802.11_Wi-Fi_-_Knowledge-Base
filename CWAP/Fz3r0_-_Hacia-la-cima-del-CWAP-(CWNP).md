@@ -3062,6 +3062,9 @@ Setups encontrados en los confines de Internerd:
 
 ![image](https://user-images.githubusercontent.com/94720207/231617810-ebc01ba7-3e0b-4625-8ebe-67c37ceb6d13.png)
 
+![image](https://user-images.githubusercontent.com/94720207/233807729-6c0cd857-e134-4760-b47f-4b4bf80e0c2e.png)
+
+
 https://wiki.wireshark.org/SampleCaptures sample captures
 
 
@@ -3079,6 +3082,8 @@ Básicamente los dispositivos o posibilidades para capturar frames 802.11 WiFi s
 Esta opción implica el uso de dispositivos móviles, como laptops con Linux y adaptadores USB Wi-Fi, como el popular adaptador Alfa. Estos dispositivos se pueden utilizar para capturar tráfico Wi-Fi mientras se desplazan por una red inalámbrica. La captura de tráfico móvil es flexible y portátil, lo que permite la captura de tráfico en diferentes ubicaciones de la red inalámbrica. Además, no se requiere una inversión significativa en hardware especializado, ya que muchos dispositivos móviles están equipados con adaptadores Wi-Fi integrados. 
 
 Sin embargo, la captura de tráfico móvil puede ser limitada en términos de alcance y capacidad, ya que los no todos los disposiitvos móviles no están diseñados específicamente para esta tarea, lleva mucho tiempo de preparación y configuración, también en ocasiones hay que pelear con drivers y demás obstáculos...
+
+![image](https://user-images.githubusercontent.com/94720207/233807666-0ebb4985-ecf7-418a-84f4-a567cdee458c.png)
 
 Lograr dominar por completo esta alternativa es bastante gratificante y lleva a aprender mucho del tema, incluso para comenzar a desarrollar nuestras propias antenas WiFi o Sniffers, por ejemplo para proyectos de Raspberri Pi de APs, Sniffers WiFi o hasta herramientas de penetración como deautenticadores. En este write-up se utiliza mucho este enfoque para los laboratorios y ejemplos. 
 
