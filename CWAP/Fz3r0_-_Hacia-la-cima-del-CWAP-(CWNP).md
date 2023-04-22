@@ -2969,6 +2969,17 @@ El `Network Adapter` debe estar en `Monitor Mode`. El modo monitor significa que
 
 Es importante entender que `Monitor Mode` y `Promiscous Mode` no son los mismos conceptos. 
 
+### ⭕ Promiscuous Mode
+
+Este modo básicamente se debe tener encendido siempre que se quiera capturar frames, ya sea `Ethernet` o `WiFi`. Es un modo en el que un adaptador de red inalámbrico o cableado se configura para capturar todos los paquetes que se envían en la red, independientemente de si están destinados al adaptador o no. Esto significa que, en el Promiscuous Mode, se pueden capturar paquetes que no están destinados a nuestro dispositivo, lo que es útil para el análisis de red. Sin embargo, a diferencia de Monitor Mode, Promiscuous Mode no garantiza la captura de paquetes de la red inalámbrica, ya que no puede acceder directamente al medio inalámbrico.
+
+En otras palabras, si queremos capturar todos los frames que se envían en una red inalámbrica, necesitamos usar un adaptador de red inalámbrico WiFi 802.11 en Monitor Mode. Por otro lado, si queremos capturar todos los paquetes que se envían en una red cableada Ethernet 802.3, podemos usar un adaptador de red cableado en Promiscuous Mode. Sin embargo, si queremos capturar todos los paquetes que se envían en una red mixta inalámbrica y cableada, necesitaríamos usar tanto un adaptador de red inalámbrico en Monitor Mode como un adaptador de red cableado en Promiscuous Mode para asegurarnos de capturar todos los paquetes.
+
+**El modo promiscuo en una captura de paquetes permite a un dispositivo "escuchar" todo el tráfico que pasa por una interfaz Ethernet, aunque no esté dirigido específicamente a ese dispositivo o aunque no se pertenezca a esa subnet o VLAN, mientras haya tráfico pasando por esa interfaz Ethernet se podrá escuchar. Sin embargo, no se puede usar el modo promiscuo para capturar tráfico unicast entre dos dispositivos que no son el dispositivo en modo promiscuo, ya que el tráfico no se transmite directamente por la interfaz donde se está escuchando, sino que en otras 2 interfaces aparte que están transmitiendo unicast ya sea por medio de un switch o directamente peer-to-peer (punto a punto).**
+
+- Para capturar Ethernet 802.3 solo es necesario conectar el cable ethernet a la interfaz, encender `promiscous mode` y ya se podrá capturar tráfico ¡Así de fácil!
+- Para capturar WiFi 802.11 es un poco más complejo y además de necesitar herramientras de hardware adicional, también se deben confgurar los drivers para una función diferente, como el `Monitor Mode`
+
 ### ⭕ Monitor Mode 
 
 Es un modo especial en el que un adaptador de red inalámbrico se configura para capturar todo el tráfico de la red inalámbrica, incluyendo los paquetes dirigidos a direcciones MAC que no sean la del adaptador en sí. 
@@ -2983,12 +2994,6 @@ Por ejemplo en Apple MAC-OS es posible poner wireshark en `Monitor Mode` sin nec
 
 ![image](https://blog.packet-foo.com/wp-content/uploads/2019/04/WiresharkMonitorModeCheckboxWorks.gif)
 
-
-### ⭕ Promiscuous Mode
-
-Este modo básicamente se debe tener encendido siempre que se quiera capturar frames, ya sea `Ethernet` o `WiFi`. Es un modo en el que un adaptador de red inalámbrico o cableado se configura para capturar todos los paquetes que se envían en la red, independientemente de si están destinados al adaptador o no. Esto significa que, en el Promiscuous Mode, se pueden capturar paquetes que no están destinados a nuestro dispositivo, lo que es útil para el análisis de red. Sin embargo, a diferencia de Monitor Mode, Promiscuous Mode no garantiza la captura de paquetes de la red inalámbrica, ya que no puede acceder directamente al medio inalámbrico.
-
-En otras palabras, si queremos capturar todos los frames que se envían en una red inalámbrica, necesitamos usar un adaptador de red inalámbrico WiFi 802.11 en Monitor Mode. Por otro lado, si queremos capturar todos los paquetes que se envían en una red cableada Ethernet 802.3, podemos usar un adaptador de red cableado en Promiscuous Mode. Sin embargo, si queremos capturar todos los paquetes que se envían en una red mixta inalámbrica y cableada, necesitaríamos usar tanto un adaptador de red inalámbrico en Monitor Mode como un adaptador de red cableado en Promiscuous Mode para asegurarnos de capturar todos los paquetes.
 
 ![image](https://user-images.githubusercontent.com/94720207/231615038-3a046e6c-d072-454d-b200-5a265c54ac12.png)
 
