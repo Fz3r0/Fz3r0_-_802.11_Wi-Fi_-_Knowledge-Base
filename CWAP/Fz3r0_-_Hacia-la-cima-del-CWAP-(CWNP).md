@@ -3082,10 +3082,19 @@ Sin embargo, la captura de tráfico móvil puede ser limitada en términos de al
 
 Lograr dominar por completo esta alternativa es bastante gratificante y lleva a aprender mucho del tema, incluso para comenzar a desarrollar nuestras propias antenas WiFi o Sniffers, por ejemplo para proyectos de Raspberri Pi de APs, Sniffers WiFi o hasta herramientas de penetración como deautenticadores. En este write-up se utiliza mucho este enfoque para los laboratorios y ejemplos. 
 
+### Accesibilidad de captura mobil:
+
+Esta es la mas accesible, aunque también se puede hacer bastante costosa dependiendo del alcance. Es decir, se puede invertir en una siple RaspBerry, una antena USB que soporte modo monitor y listo, por unos cientos de dólares ya se tiene el dispositivo listo para capturar frames 802.11 y exportarlos en .pcap. Sin embargo, también se pueden hacer proyectos complejos y utilizar computadoras de gama alta para lograr complejos sistemas de captura o incluso hacking. ¡Sky is the limit!
+
 ### Captura de tráfico Wi-Fi mediante infraestructura 
 
-Esta opción implica el uso de dispositivos de red inalámbrica, como los access points Ruckus y la plataforma SmartZone. Estos dispositivos están diseñados para ofrecer conectividad Wi-Fi a los usuarios, pero también pueden recopilar información sobre la actividad de la red inalámbrica y los dispositivos conectados. Además, se pueden configurar para permitir la captura de tráfico de manera centralizada, lo que facilita la gestión y el análisis de la información. Algunas de las ventajas de la captura de tráfico Wi-Fi mediante infraestructura son su escalabilidad, ya que se pueden agregar más dispositivos de red inalámbrica según sea necesario, y su eficiencia, ya que los dispositivos de red inalámbrica están diseñados específicamente para esta tarea. Sin embargo, la captura de tráfico mediante infraestructura puede ser costosa, ya que se requiere la inversión en dispositivos de red inalámbrica especializados.
+Esta opción implica el uso de dispositivos de red inalámbrica profesional, por ejemplo infraestructura como `Ruckus Networks` o `Ubiquiti` permiten la captura de tráfico desde sus `Access Points` al mismo tiempo que funcionan para distribuir la red inalámbrica a sus clientes. En este Writeup utilizaré casi siempre ejemplos de `Access Points Ruckus` y la plataforma de `Wireless Controller SmartZone` ya que son los dispoiticos que tengo experiencia y la fortuna de tener acceso a ellos gracias a mi trabajo y fueron de mucha ayuda para capturar tráfico 802.11, por ejemplo, para capturar eventos de roaming en diferentes canales ya que se puede capturar en varios APs al mismo tiempo, aunque estén en diferentes canales. 
 
+Estos dispositivos están diseñados para ofrecer conectividad Wi-Fi a los usuarios, pero también pueden recopilar información sobre la actividad de la red inalámbrica y los dispositivos conectados. Además, se pueden configurar para permitir la captura de tráfico de manera centralizada, lo que facilita la gestión y el análisis de la información. Algunas de las ventajas de la captura de tráfico Wi-Fi mediante infraestructura son su escalabilidad, ya que se pueden agregar más dispositivos de red inalámbrica según sea necesario, y su eficiencia, ya que los dispositivos de red inalámbrica están diseñados específicamente para esta tarea. 
+
+### Accesibilidad de Captura mediante Infraestructura
+
+La captura de tráfico mediante infraestructura puede ser costosa, ya que se requiere la inversión en dispositivos de red inalámbrica especializados. Sin embargo, soluciones como APs ubiquiti stand alone o Ruckus unleashed podría funcionar para capturar a manera de infraestructura. 
 
 
 ### Captura de tráfico Wi-Fi distribuido: 
