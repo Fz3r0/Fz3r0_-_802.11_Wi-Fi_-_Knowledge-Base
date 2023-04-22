@@ -2951,11 +2951,43 @@ En otras palabras, si queremos capturar todos los frames que se envían en una r
 
 ### 🟢 Capturando un `canal a la vez` VS `varios canales`
 
+Es muy importante comprender que solo se puede capturar en un canal a la vez con un adaptador 802.11. **Para capturar más de un canal al mismo tiempo, se deben utilizar múltiples adaptadores y software que permita capturar con varios adaptadores al mismo tiempo.** Se puede escanear un canal con un único adaptador, pero esto no es lo mismo que capturar en varios canales simultáneamente. El escaneo simplemente captura lo que hay en ese momento en el canal. 
+
+Este límite se impone porque la radio solo puede sintonizarse en un canal específico en un momento dado y, por lo tanto, solo puede capturar tramas del canal sintonizado. Dependiendo del escenario de resolución de problemas, puede ser aceptable capturar en cada canal durante un período y luego analizar los datos agregados. Este último método se utiliza principalmente para resolver problemas de rendimiento o validar configuraciones de seguridad. **Para un análisis efectivo de roaming, se requieren típicamente múltiples adaptadores.**
+
+Para un mejor entendimiento hice una sencilla tabla para identificar y darse una idea de cada escenario:
+
+| **Escenario de Análisis**                                    	| **Canales Involucrados** 	| **Antenas Necesarias** 	|
+|--------------------------------------------------------------	|--------------------------	|------------------------	|
+| **Análsis de tráfico en un AP**                              	| 1                        	| 1                      	|
+| **Búsqueda de retransmisiones en un canal**                  	| 1                        	| 1                      	|
+| **Análisis de log-in en un SSID**                            	| 1                        	| 1                      	|
+| **Búsqueda de Beacons en un canal**                          	| 1                        	| 1                      	|
+| **Búsqueda de Beacons en canales 2.4 GHz: 1, 6 y 11**        	| 3                        	| 1 _Hopping_            	|
+| **Búsqueda de Beacons en todo el espectro 2.4 GHz**          	| 14                       	| 1 _Hopping_            	|
+| **Análisis de Roaming entre 2 APs (en diferentes canales)**  	| 2                        	| 2                      	|
+| **Análsiis de Roaming entre 3 APs (en diferentes canales)**  	| 3                        	| 3                      	|
+| **Análsiis de todo lo que ocurre en el espectro de 2.4 GHz** 	| 14                       	| 14                     	|
+
+Ejemplos de dispositivos para capturar en un solo canal:
+
+
+Existen sistemas denominados `Muli-Sensor Wireless Overlay System`, los cuales pueden capturar en diferentes canales al mismo tiempo gracias al uso de múltiples interfaces (radios), siempre que se implemente y configure correctamente.
+
 ### Un canal a la vez
 
 ![image](https://user-images.githubusercontent.com/94720207/231618666-175ef23b-319f-439b-a847-3291a52a8a6d.png)
 
 ![image](https://user-images.githubusercontent.com/94720207/231618740-2935df7d-d73b-4ffb-b356-0762f412a73b.png)
+
+
+
+
+
+
+
+
+
 
 
 
