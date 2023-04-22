@@ -3066,16 +3066,6 @@ https://wiki.wireshark.org/SampleCaptures sample captures
 
 
 
-
-
-
-
-
-
-
-
-
-
 ## Opciones para capturar frames 802.11
 
 Básicamente los dispositivos o posibilidades para capturar frames 802.11 WiFi se dividen en 3 _(aunque también existen soluciones más híbridas y modulares que uno puede modificar a placer)_
@@ -3084,11 +3074,25 @@ Básicamente los dispositivos o posibilidades para capturar frames 802.11 WiFi s
 2. `Infrastructure`
 3. `Distributed`
 
-### Mobile
+### Captura de tráfico Wi-Fi móvil 
 
-### Distributed
+Esta opción implica el uso de dispositivos móviles, como laptops con Linux y adaptadores USB Wi-Fi, como el popular adaptador Alfa. Estos dispositivos se pueden utilizar para capturar tráfico Wi-Fi mientras se desplazan por una red inalámbrica. La captura de tráfico móvil es flexible y portátil, lo que permite la captura de tráfico en diferentes ubicaciones de la red inalámbrica. Además, no se requiere una inversión significativa en hardware especializado, ya que muchos dispositivos móviles están equipados con adaptadores Wi-Fi integrados. 
 
-Existen sistemas denominados `Muli-Sensor Wireless Overlay System`, los cuales pueden capturar en diferentes canales al mismo tiempo gracias al uso de múltiples interfaces (radios), siempre que se implemente y configure correctamente.
+Sin embargo, la captura de tráfico móvil puede ser limitada en términos de alcance y capacidad, ya que los no todos los disposiitvos móviles no están diseñados específicamente para esta tarea, lleva mucho tiempo de preparación y configuración, también en ocasiones hay que pelear con drivers y demás obstáculos...
+
+Lograr dominar por completo esta alternativa es bastante gratificante y lleva a aprender mucho del tema, incluso para comenzar a desarrollar nuestras propias antenas WiFi o Sniffers, por ejemplo para proyectos de Raspberri Pi de APs, Sniffers WiFi o hasta herramientas de penetración como deautenticadores. En este write-up se utiliza mucho este enfoque para los laboratorios y ejemplos. 
+
+### Captura de tráfico Wi-Fi mediante infraestructura 
+
+Esta opción implica el uso de dispositivos de red inalámbrica, como los access points Ruckus y la plataforma SmartZone. Estos dispositivos están diseñados para ofrecer conectividad Wi-Fi a los usuarios, pero también pueden recopilar información sobre la actividad de la red inalámbrica y los dispositivos conectados. Además, se pueden configurar para permitir la captura de tráfico de manera centralizada, lo que facilita la gestión y el análisis de la información. Algunas de las ventajas de la captura de tráfico Wi-Fi mediante infraestructura son su escalabilidad, ya que se pueden agregar más dispositivos de red inalámbrica según sea necesario, y su eficiencia, ya que los dispositivos de red inalámbrica están diseñados específicamente para esta tarea. Sin embargo, la captura de tráfico mediante infraestructura puede ser costosa, ya que se requiere la inversión en dispositivos de red inalámbrica especializados.
+
+
+
+### Captura de tráfico Wi-Fi distribuido: 
+
+Esta opción implica el uso de sensores especializados como los denominados `Muli-Sensor Wireless Overlay System`, los cuales pueden capturar en diferentes canales al mismo tiempo gracias al uso de múltiples interfaces (radios), siempre que se implemente y configure correctamente. 
+
+Estos sensores se pueden colocar en varios puntos de la red inalámbrica para capturar tráfico de manera distribuida y permitir un análisis detallado de la actividad de la red inalámbrica. La captura de tráfico distribuido permite la captura de tráfico en diferentes ubicaciones de la red inalámbrica y permite un análisis detallado de la actividad de la red inalámbrica. 
 
 Por ejemplo, en el libro del `CWAP`muestran el [`Savvius Omnipliance Ultra`](https://www.ctctechnologies.com/catalog/savvius-omnipliance-ultra/)
 
@@ -3108,7 +3112,11 @@ Sus capacidades son:
 - Obtener visibilidad instantánea del tráfico hacia o desde cualquier dirección IP
 - Ver las peores transacciones de red por todas las métricas o métricas individuales, recuentos de transacciones y lista de transacciones en una interfaz basada en navegador.
 
+### **`Accesibilidad y Costo`: 
 
+La configuración y gestión de los sensores especializados pueden ser más complejas y costosas que cualquier otra opción, como las capturas de tráfico mediante infraestructura o móvil.**
+
+---
 
 ### Software: Omnipeek VS Wireshark
 
