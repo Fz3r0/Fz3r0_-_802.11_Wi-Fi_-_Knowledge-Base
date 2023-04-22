@@ -3005,9 +3005,15 @@ Ejemplos de dispositivos para capturar en un solo canal:
 
 ![image](https://user-images.githubusercontent.com/94720207/231617593-24fb8805-0b48-4abd-86f1-01e44f58e9f0.png)
 
+![image](https://user-images.githubusercontent.com/94720207/233764252-a2b1f82e-eefa-4459-891c-b6688d68c9f6.png)
+
+
 ![image](https://user-images.githubusercontent.com/94720207/231617663-accd3bf7-3a4d-4dd0-bdd6-321c348b8edf.png)
 
 ![image](https://user-images.githubusercontent.com/94720207/231618067-bb8c2cf9-60da-481b-8795-2ab943e637bc.png)
+
+![image](https://user-images.githubusercontent.com/94720207/233764245-2d7d5535-c8d3-4791-87c7-5d6cd6bda656.png)
+
 
 Setups encontrados en los confines de Internerd:
 
