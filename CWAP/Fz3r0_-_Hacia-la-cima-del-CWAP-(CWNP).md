@@ -3043,8 +3043,33 @@ Básicamente los dispositivos o posibilidades para capturar frames 802.11 WiFi s
 
 ### Mobile
 
+### Distributed
+
+Existen sistemas denominados `Muli-Sensor Wireless Overlay System`, los cuales pueden capturar en diferentes canales al mismo tiempo gracias al uso de múltiples interfaces (radios), siempre que se implemente y configure correctamente.
+
+Por ejemplo, en el libro del `CWAP`muestran el [`Savvius Omnipliance Ultra`](https://www.ctctechnologies.com/catalog/savvius-omnipliance-ultra/)
+
+![image](https://user-images.githubusercontent.com/94720207/233794545-45b4d5dc-3d94-4067-a948-d6c115e29c4e.png)
+
+![image](https://user-images.githubusercontent.com/94720207/233794294-0ded40af-45ec-4f95-a541-5a2608d22e34.png)
+
+`Omnipliance Ultra` combina `Savvius Spotlight` para monitoreo de red con el analizador `Savvius Omnipliance` _(Es un protocol Analyzer similar a `Wireshark`, más adelante se mencionan más a detalle)_ para captura y análisis de datos de paquetes. Omnipliance Ultra captura datos de paquetes de red y realiza monitoreo en tiempo real de hasta 20 Gbps con hasta 128 TB de almacenamiento.
+
+_"Omnipliance Ultra es la solución de monitoreo y análisis de rendimiento de una sola caja más poderosa y completa disponible. Con Omnipliance Ultra, todo lo que necesita para reducir el tiempo medio de resolución (MTTR) de problemas de red está incluido."_
+
+Sus capacidades son:
+
+- Mostrar proactivamente las transacciones de menor rango desde toda la red hasta un servidor individual
+- Navegar fluidamente en tiempo real hasta 20 Gbps de tráfico de red
+- Establecer umbrales de alerta por características y por segmento de red
+- Obtener visibilidad instantánea del tráfico hacia o desde cualquier dirección IP
+- Ver las peores transacciones de red por todas las métricas o métricas individuales, recuentos de transacciones y lista de transacciones en una interfaz basada en navegador.
 
 
+
+### Software: Omnipeek VS Wireshark
+
+https://www.youtube.com/watch?v=U_zzdl7xV7I
 
 
 
