@@ -2911,6 +2911,16 @@ Acrylic WiFi Analyzer se utiliza para monitorear y analizar la calidad de la se�
 
 Tipo de Licencia: `$$$$`
 
+### TCPdump & T-Shark
+
+`Tcpdump` y `TShark` son herramientas de `línea de comandos` para capturar y analizar el tráfico de red. Ambos son parte del conjunto de herramientas `libpcap`, que es una biblioteca utilizada para capturar paquetes de red.
+
+- `Tcpdump` es una herramienta que se utiliza principalmente para capturar y analizar paquetes de red en sistemas Unix y Linux. Es una herramienta de línea de comandos que muestra el contenido de los paquetes capturados en la pantalla, lo que la hace útil para usuarios avanzados y administradores de sistemas que trabajan en una interfaz de línea de comandos.
+
+- `TShark`, es la versión de línea de comandos de `Wireshark`. Al igual que Wireshark, TShark puede capturar y analizar paquetes de red en tiempo real o desde un archivo previamente capturado. TShark tiene la capacidad de decodificar y analizar una amplia variedad de protocolos de red, y también puede filtrar y analizar paquetes específicos utilizando una variedad de criterios, como dirección IP de origen y destino, número de puerto, tipo de protocolo y mucho más.
+
+Ambas herramientas son muy útiles para monitorear y analizar el tráfico de red en tiempo real o para analizar capturas de paquetes previamente capturadas. Tcpdump es más adecuado para usuarios avanzados o administradores de sistemas que prefieren trabajar en una interfaz de línea de comandos, mientras que TShark es una buena opción para aquellos que prefieren trabajar con la potencia y versatilidad de Wireshark desde la línea de comandos.
+
 ## Capturando y Analizando: 802.3 Ethernet VS 802.11 WiFi
 
 Si bien he mencionado que es fundamental tener experiencia en cuanto a la captura y análisis de tráfico Ethernet 802.3 antes de estudiar la captura WiFi, también es fundamental saber que los protocolos inalámbricos 802.11 son significativamente diferentes y más complejos que los protocolos Ethernet 802.3, por ello, requieren herramientas adicionales para diagnósticos y un conjunto de habilidades adicional para implementarlos y comprender cómo se están utilizando. En redes 802.11 WiFi se necesita tener en cuenta diferentes variables y conceptos a considerar al capturar tráfico inalámbrico. Por ejemplo: 
