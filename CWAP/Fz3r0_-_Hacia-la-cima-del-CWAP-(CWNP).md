@@ -3094,13 +3094,13 @@ Esta opción implica el uso de dispositivos de red inalámbrica profesional, por
 
 ![image](https://user-images.githubusercontent.com/94720207/233806039-c4baf586-8984-494e-a563-e682c4d64165.png)
 
-![image](https://user-images.githubusercontent.com/94720207/233805815-91b28a53-e0ce-459e-bcb0-0af56964fdc7.png)
-
-![image](https://user-images.githubusercontent.com/94720207/233805834-e5559fa7-19f5-4c15-ae77-b6aa08e51393.png)
-
 ![image](https://user-images.githubusercontent.com/94720207/233806071-77f2b6ac-fe0b-4cc5-8406-6f87ada30c97.png)
 
 ![image](https://user-images.githubusercontent.com/94720207/233806077-c995b5d2-a51c-4c96-bed1-e7e32b3bb70f.png)
+
+![image](https://user-images.githubusercontent.com/94720207/233805815-91b28a53-e0ce-459e-bcb0-0af56964fdc7.png)
+
+![image](https://user-images.githubusercontent.com/94720207/233805834-e5559fa7-19f5-4c15-ae77-b6aa08e51393.png)
 
 Estos dispositivos están diseñados para ofrecer conectividad Wi-Fi a los usuarios, pero también pueden recopilar información sobre la actividad de la red inalámbrica y los dispositivos conectados. Además, se pueden configurar para permitir la captura de tráfico de manera centralizada, lo que facilita la gestión y el análisis de la información. Algunas de las ventajas de la captura de tráfico Wi-Fi mediante infraestructura son su escalabilidad, ya que se pueden agregar más dispositivos de red inalámbrica según sea necesario, y su eficiencia, ya que los dispositivos de red inalámbrica están diseñados específicamente para esta tarea. 
 
