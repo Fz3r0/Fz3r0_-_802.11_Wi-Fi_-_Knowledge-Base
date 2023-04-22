@@ -3237,9 +3237,8 @@ Hay antenas que funcionan caaaasi con plug and play, son las que más recomiendo
 
 4. Ahora solo la debo poner en modo `Monitor`:
 
-    - Nota: puedo probar primero con ciertos comandos y después ponerla en modo monitor:
+![image](https://user-images.githubusercontent.com/94720207/233811882-c3b08fcf-375c-4070-89c6-f74c862d453f.png)
 
-![image](https://user-images.githubusercontent.com/94720207/233811569-63743ebd-e21b-4f65-8c13-9554b3787ae2.png)
 
 
 
