@@ -3223,7 +3223,24 @@ Hay antenas que funcionan caaaasi con plug and play, son las que más recomiendo
 
 ### Panda
 
+1. Primero lanzaré lo siguientes comandos para revisar mis configuraciones actuales:
+
 ![image](https://user-images.githubusercontent.com/94720207/233811007-3357c207-d1d8-4846-9845-e51889099799.png)
+
+2. Ahora solo conecto el usb y selecciono enviar a la VM de Parrot la interfaz recién conectada:
+
+![image](https://user-images.githubusercontent.com/94720207/233811281-ec0a37bf-b2c1-4836-8b8a-4dc882647916.png)
+
+3. Si vuelvo a revisar mis configuraciones y dispositivos ya veré la Panda detectada:
+
+![image](https://user-images.githubusercontent.com/94720207/233811418-bbf73b8b-84d3-430d-b8b2-8238cad4471b.png)
+
+4. Ahora solo la debo poner en modo `Monitor`:
+
+    - Nota: puedo probar primero con ciertos comandos y después ponerla en modo monitor:
+
+![image](https://user-images.githubusercontent.com/94720207/233811569-63743ebd-e21b-4f65-8c13-9554b3787ae2.png)
+
 
 
 
