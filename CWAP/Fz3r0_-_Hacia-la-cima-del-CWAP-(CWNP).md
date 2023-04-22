@@ -3247,12 +3247,18 @@ Bonus: Cambiar de canal
 
 ![image](https://user-images.githubusercontent.com/94720207/233812022-9c62ae8e-a828-4d50-9a24-15433774fa36.png)
 
-- En este punto ya puedo capturar, auditar y hacer análisis Wireless, por ejemplo aquí hay una captura de todo un proceso de handshake hecho para mi laboratorio de `Ataque con frames CTS`:
+- En este punto ya puedo capturar, auditar y hacer análisis Wireless, por ejemplo aquí hay una captura de todo un proceso de handshake hecho para mi laboratorio de [`Ataque con frames CTS`](https://github.com/Fz3r0/WiFi-CTS-Frame-Attack-802.11-Frame):
 
+![image](https://user-images.githubusercontent.com/94720207/233812248-b84bcc3b-3e17-4e12-a63a-fd180a2b016c.png)
 
+### Desventajas de Panda
 
+Existen 2 grandes desventajas que he encontrado de esta tarjeta, que a pesar de sus facilidades de "plug-and-play", carecen de 2 cosas:
 
+1. `No Captura FCS` - Los `FCS` o `Frame Check Sequence` son importantes en la captura de WiFi, además de para la certificación `CWAP`, si bien ayuda muchísimo a la captura de frames 802.11, le falta este gran detalle. 
+2. `No captura 5 GHz` - Esta inetrface solo es compatible con la banda 2.4 GHz, exsite la versión para ambas bandas! pero tiene el mismo problema del FCS :(
 
+---
 
 ### Alfa
 
