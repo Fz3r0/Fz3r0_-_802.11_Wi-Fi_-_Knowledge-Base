@@ -3035,12 +3035,13 @@ https://wiki.wireshark.org/SampleCaptures sample captures
 
 ## Opciones para capturar frames 802.11
 
-Básicamente se divide en 3 ocpiones, aunque hoy en día hay también ocpiones más híbridas y con diferentes alcances:
+Básicamente los dispositivos o posibilidades para capturar frames 802.11 WiFi se dividen en 3 _(aunque también existen soluciones más híbridas y modulares que uno puede modificar a placer)_
 
 1. `Mobile`
 2. `Infrastructure`
-3. `Dsitributed`
+3. `Distributed`
 
+### Mobile
 
 
 
