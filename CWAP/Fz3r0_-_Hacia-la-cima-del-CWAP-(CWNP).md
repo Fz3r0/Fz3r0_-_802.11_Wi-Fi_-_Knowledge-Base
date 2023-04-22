@@ -3214,6 +3214,13 @@ Para llevar el aprendizaje más allá compartiré 2 laboratorios que hice con di
 
 Hay antenas que funcionan caaaasi con plug and play, son las que más recomiendo para aprender a capturar y empezar en este mundillo... He probado con las siguientes antenas con Parrot versión 2023 y han funcionado bien, en ocasiones con una que otra limitante:
 
+### Laboratorio Fz3r0
+
+### Linux Parrot Security Specs
+
+![image](https://user-images.githubusercontent.com/94720207/233811214-ddc89822-2263-468f-b714-c75fa1f63840.png)
+
+
 ### Panda
 
 ![image](https://user-images.githubusercontent.com/94720207/233811007-3357c207-d1d8-4846-9845-e51889099799.png)
