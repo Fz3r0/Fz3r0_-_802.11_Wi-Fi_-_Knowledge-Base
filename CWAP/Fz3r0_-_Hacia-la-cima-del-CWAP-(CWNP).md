@@ -3239,6 +3239,17 @@ Hay antenas que funcionan caaaasi con plug and play, son las que más recomiendo
 
 ![image](https://user-images.githubusercontent.com/94720207/233811882-c3b08fcf-375c-4070-89c6-f74c862d453f.png)
 
+5. Ahora puedo incluso auditar la red WiFi, como se ha visto en certificaciones de Seguridad Ofensiva y Hacking Ético como el CWSP
+
+![image](https://user-images.githubusercontent.com/94720207/233812126-d04de7c7-d211-4208-b6c8-b331833c54b2.png)
+
+Bonus: Cambiar de canal
+
+![image](https://user-images.githubusercontent.com/94720207/233812022-9c62ae8e-a828-4d50-9a24-15433774fa36.png)
+
+- En este punto ya puedo capturar, auditar y hacer análisis Wireless, por ejemplo aquí hay una captura de todo un proceso de handshake hecho para mi laboratorio de `Ataque con frames CTS`:
+
+
 
 
 
