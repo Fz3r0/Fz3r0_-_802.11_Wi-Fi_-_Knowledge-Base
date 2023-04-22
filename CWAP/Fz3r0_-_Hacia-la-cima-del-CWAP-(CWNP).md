@@ -86,7 +86,13 @@ Personalmente recomiendo el `Cisco CCNA`, `CompTIA Network+` y `Ruckus ICX Imple
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/226111039-0910d2b0-e838-4ce5-801e-3afdcc3b9a98.png" alt="CWAP" height=165px/> </a>   </p> 
 
-#### 5. ✅ `Protocol Analysis` (ej. `Wireshark`, `TCP Dump`)
+#### 5. `Wireless Security`
+
+![image](https://user-images.githubusercontent.com/94720207/233810517-2e58c417-596a-4da2-aac9-30319f8e8951.png)
+
+![image](https://user-images.githubusercontent.com/94720207/233810526-1fcf5679-58ef-4e38-a025-463402730205.png)
+
+#### 6. ✅ `Protocol Analysis` (ej. `Wireshark`, `TCP Dump`)
 
 - Wireshark es una herramienta de análisis de tráfico de red gratuita y de código abierto que permite capturar y examinar el tráfico de red en tiempo real. Con Wireshark, es posible analizar el tráfico de redes cableadas e inalámbricas para solucionar problemas y detectar fallos de seguridad.
 - También existen otros tipos de analizadores de protocolos, pero este writeup se centrará en `Wireshark` y en específico mi porpia modificación y perfil llamado `The BlackShark`  <br> <br> 
@@ -3209,6 +3215,9 @@ Para llevar el aprendizaje más allá compartiré 2 laboratorios que hice con di
 Hay antenas que funcionan caaaasi con plug and play, son las que más recomiendo para aprender a capturar y empezar en este mundillo... He probado con las siguientes antenas con Parrot versión 2023 y han funcionado bien, en ocasiones con una que otra limitante:
 
 ### Panda
+
+![image](https://user-images.githubusercontent.com/94720207/233811007-3357c207-d1d8-4846-9845-e51889099799.png)
+
 
 
 ### Alfa
