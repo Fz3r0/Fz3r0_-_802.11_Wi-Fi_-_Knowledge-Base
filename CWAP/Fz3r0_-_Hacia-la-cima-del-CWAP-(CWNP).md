@@ -3092,11 +3092,23 @@ Esta es la mas accesible, aunque también se puede hacer bastante costosa depend
 
 Esta opción implica el uso de dispositivos de red inalámbrica profesional, por ejemplo infraestructura como `Ruckus Networks` o `Ubiquiti` permiten la captura de tráfico desde sus `Access Points` al mismo tiempo que funcionan para distribuir la red inalámbrica a sus clientes. En este Writeup utilizaré casi siempre ejemplos de `Access Points Ruckus` y la plataforma de `Wireless Controller SmartZone` ya que son los dispoiticos que tengo experiencia y la fortuna de tener acceso a ellos gracias a mi trabajo y fueron de mucha ayuda para capturar tráfico 802.11, por ejemplo, para capturar eventos de roaming en diferentes canales ya que se puede capturar en varios APs al mismo tiempo, aunque estén en diferentes canales. 
 
+![image](https://user-images.githubusercontent.com/94720207/233806039-c4baf586-8984-494e-a563-e682c4d64165.png)
 
+![image](https://user-images.githubusercontent.com/94720207/233805815-91b28a53-e0ce-459e-bcb0-0af56964fdc7.png)
+
+![image](https://user-images.githubusercontent.com/94720207/233805834-e5559fa7-19f5-4c15-ae77-b6aa08e51393.png)
+
+![image](https://user-images.githubusercontent.com/94720207/233806071-77f2b6ac-fe0b-4cc5-8406-6f87ada30c97.png)
+
+![image](https://user-images.githubusercontent.com/94720207/233806077-c995b5d2-a51c-4c96-bed1-e7e32b3bb70f.png)
 
 Estos dispositivos están diseñados para ofrecer conectividad Wi-Fi a los usuarios, pero también pueden recopilar información sobre la actividad de la red inalámbrica y los dispositivos conectados. Además, se pueden configurar para permitir la captura de tráfico de manera centralizada, lo que facilita la gestión y el análisis de la información. Algunas de las ventajas de la captura de tráfico Wi-Fi mediante infraestructura son su escalabilidad, ya que se pueden agregar más dispositivos de red inalámbrica según sea necesario, y su eficiencia, ya que los dispositivos de red inalámbrica están diseñados específicamente para esta tarea. 
 
-![image](https://user-images.githubusercontent.com/94720207/233803838-a00ae6ab-d364-49d1-9fa6-febc6d9be51d.png)
+![image](https://user-images.githubusercontent.com/94720207/233806582-ec4d01aa-4b5c-452b-812d-9c4aec2c356d.png)
+
+![image](https://user-images.githubusercontent.com/94720207/233806228-1f59d894-d5a6-4a24-ac49-ad5c126a862c.png)
+
+![image](https://user-images.githubusercontent.com/94720207/233806496-4e20d835-5a2b-426d-a975-9a9be8db1b4d.png)
 
 Ruckus permite tanto la captura remota donde se guarda un .pcap de máximo 20mb en la memoria del AP para posterioprmente ser descargada, como poder hacer un stream en tiempo real haciendo una conexión remota entre AP y Wireshark, haciendo de esta capacidad algo increíblemente útil para el troubleshooting de la red tanto 802.11 como 802.3 ya que también, permite capturar desde la interfaz Ethernet. 
 
@@ -3119,17 +3131,12 @@ Por ejemplo, en el libro del `CWAP`muestran el [`Savvius Omnipliance Ultra`](htt
 
 ![image](https://user-images.githubusercontent.com/94720207/233794294-0ded40af-45ec-4f95-a541-5a2608d22e34.png)
 
-`Omnipliance Ultra` combina `Savvius Spotlight` para monitoreo de red con el analizador `Savvius Omnipliance` _(Es un protocol Analyzer similar a `Wireshark`, más adelante se mencionan más a detalle)_ para captura y análisis de datos de paquetes. Omnipliance Ultra captura datos de paquetes de red y realiza monitoreo en tiempo real de hasta 20 Gbps con hasta 128 TB de almacenamiento.
+`Omnipliance Ultra` combina `Savvius Spotlight` para monitoreo de red con el analizador `Savvius Omnipliance` _(Es un protocol Analyzer similar a `Wireshark`)_ para captura y análisis de datos de paquetes. Omnipliance Ultra captura datos de paquetes de red y realiza monitoreo en tiempo real de hasta 20 Gbps con hasta 128 TB de almacenamiento.
 
 _"Omnipliance Ultra es la solución de monitoreo y análisis de rendimiento de una sola caja más poderosa y completa disponible. Con Omnipliance Ultra, todo lo que necesita para reducir el tiempo medio de resolución (MTTR) de problemas de red está incluido."_
 
-Sus capacidades son:
+![image](https://user-images.githubusercontent.com/94720207/233805689-00d95c85-5868-45c1-86ae-fecbd52b27dd.png)
 
-- Mostrar proactivamente las transacciones de menor rango desde toda la red hasta un servidor individual
-- Navegar fluidamente en tiempo real hasta 20 Gbps de tráfico de red
-- Establecer umbrales de alerta por características y por segmento de red
-- Obtener visibilidad instantánea del tráfico hacia o desde cualquier dirección IP
-- Ver las peores transacciones de red por todas las métricas o métricas individuales, recuentos de transacciones y lista de transacciones en una interfaz basada en navegador.
 
 ### **`Accesibilidad y Costo`: 
 
