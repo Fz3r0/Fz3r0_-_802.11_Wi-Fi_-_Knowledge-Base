@@ -33,14 +33,17 @@ _por @ **Fz3r0 💀** (CWNA)_
 
 ## 🟢 `Introducción`
 
-
 La certificación **`CWAP (Certified Wireless Analysis Professional)`**, otorgada por la prestigiosa organización **`CWNP (Certified Wireless Network Professional)`**, representa una credencial de alto nivel en el ámbito de las redes inalámbricas. Diseñada específicamente para aquellos profesionales que buscan demostrar su competencia en el análisis avanzado y resolución de problemas en entornos de redes inalámbricas, esta certificación implica un conocimiento profundo de los protocolos de red, la seguridad de la red inalámbrica y el diseño de redes inalámbricas de alto rendimiento. <br>
 
 Los profesionales que buscan obtener la certificación `CWAP` deben demostrar un amplio conocimiento de los principios y técnicas de análisis de redes inalámbricas, protocolos, así como habilidades para resolver problemas complejos y mejorar tanto rendimiento como la seguridad de redes inalámbricas. <br>
 
 Los temas abordados en la certificación `CWAP` incluyen la **captura y análisis de tráfico inalámbrico, análisis de espectro, la identificación y solución de problemas de cobertura y rendimiento, el análisis de interferencias y la aplicación de soluciones de seguridad inalámbrica**. A través de la certificación `CWAP`, los profesionales pueden demostrar su experiencia en la gestión y optimización de redes inalámbricas avanzadas y su capacidad para abordar los desafíos de análisis y resolución de problemas en entornos de red inalámbrica complejos. <br>
 
-En este writeup, abordaré el camino hacia la certificación `CWAP`, cubriendo todos los temas incluidos en el plan de estudios oficial de `CWNP`. Además, profundizaré en temas que no se abordan en detalle en la documentación oficial, brindando una comprensión completa de los desafíos y soluciones en el análisis avanzado de redes inalámbricas. También incluyo mis propios laboratorios de análisis que realicé a lo largo de mi travesía: hacia la cima del CWAP. <br><br>
+En este writeup, abordaré el camino hacia la certificación `CWAP`, cubriendo TODOS los temas incluidos en el plan de estudios oficial de `CWNP`. Pero no solo eso... La intención es abordar y profundizar temas que no se abordan en detalle en la documentación oficial, brindando una comprensión completa de los desafíos y soluciones en el análisis avanzado de redes inalámbricas. 
+
+También incluyo mis propios laboratorios de análisis, así como laboratorios adicionales los cuales llevan mucho más allá del alcance del CWAP, como lo son packet forging y packet tampering con Scappy o laboratorios de Pentesting y Hacking Ético de WiFi con herramientas como que también incluyo en mi wireup "Hacia el infierno del". 
+
+**Este documento es una bitácora personal que he decidido hacer pública de mi travesía: hacia la cima del CWAP.** <br><br>
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/225515551-3de68463-c5b1-4573-8a22-bfa77fd7e834.png" alt="CWAP" height=165px/> </a>   </p> 
 
