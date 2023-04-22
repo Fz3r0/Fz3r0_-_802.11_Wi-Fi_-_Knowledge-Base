@@ -3162,13 +3162,18 @@ Por ejemplo, en el libro del `CWAP`muestran el [`Savvius Omnipliance Ultra`](htt
 
 ![image](https://user-images.githubusercontent.com/94720207/233794545-45b4d5dc-3d94-4067-a948-d6c115e29c4e.png)
 
+![image](https://user-images.githubusercontent.com/94720207/233805689-00d95c85-5868-45c1-86ae-fecbd52b27dd.png)
+
 ![image](https://user-images.githubusercontent.com/94720207/233794294-0ded40af-45ec-4f95-a541-5a2608d22e34.png)
 
 `Omnipliance Ultra` combina `Savvius Spotlight` para monitoreo de red con el analizador `Savvius Omnipliance` _(Es un protocol Analyzer similar a `Wireshark`)_ para captura y análisis de datos de paquetes. Omnipliance Ultra captura datos de paquetes de red y realiza monitoreo en tiempo real de hasta 20 Gbps con hasta 128 TB de almacenamiento.
 
 _"Omnipliance Ultra es la solución de monitoreo y análisis de rendimiento de una sola caja más poderosa y completa disponible. Con Omnipliance Ultra, todo lo que necesita para reducir el tiempo medio de resolución (MTTR) de problemas de red está incluido."_
 
-![image](https://user-images.githubusercontent.com/94720207/233805689-00d95c85-5868-45c1-86ae-fecbd52b27dd.png)
+![image](https://user-images.githubusercontent.com/94720207/233809521-ee135227-50aa-43ff-9dd3-5c7e172195ac.png)
+
+
+![image](https://user-images.githubusercontent.com/94720207/233809155-2752609e-8321-4185-8e0b-5baba56255e6.png)
 
 
 ### **`Accesibilidad y Costo`: 
