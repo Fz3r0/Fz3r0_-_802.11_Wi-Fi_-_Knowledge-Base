@@ -2868,6 +2868,29 @@ Por lo tanto, en este ejemplo real, el data rate posible para el cable Ethernet 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 👹 `CANTO II`: Protocol Analysis
 
 En primer lugar, quiero destacar que para todo este capítulo y básicamente para todo el curso de `CWAP`, el `Software` que utilizaré como `Sniffer` / `Protocol Analyzer` para ejemplos y laboratorios será `Wireshark`, en específico utilizando mi mod de profile y OUI `Blackshark by Fz3r0`. En la literatura oficial del `CWAP` utilizan ejemplos de otras herramientas como `Omnipeek`, sin embargo, además que es mi herramienta preferida de análisis de paquetes (packets) y tramas (frames), esta herramienta es de código abierto y al alcance de todo mundo de manera gratuita.
@@ -3163,6 +3186,30 @@ https://www.youtube.com/watch?v=U_zzdl7xV7I
 
 
 
+
+
+
+
+## Instalacion de Drivers
+
+En la documentación del CWAP solo dan un ejemplo de instalación de Drivers en Omnipeek apliance, que honestamente es solo darle Next y funciona en un Windows común y corriente, recordemos que Omnipeek no es una herramienta al alcance de cualquiera, estas facilidades y automatización cuestan en la cartera...
+
+En mi experiencia personal he probado con diferentes antenas que venden en mercados como Amazon y son las que usan en foros de Internet, sin embargo, varias tienen algunos trucos para hacerlas funcionar y en ocasiones esto puede generar un dolor de cabeza. Aconsejo este par de videos de David Bombal para entender más a fondo estas problemáticas: 
+
+
+Para llevar el aprendizaje más allá compartiré 2 laboratorios que hice con diferentes antenas la primera con Panda Wireless y la segunda con Alfa
+
+
+### Panda
+
+
+### Alfa
+
+https://miloserdov.org/?p=5493
+
+Realizaré el paso a paso de la instalación de estos drivers para dar un ejemplo real, elegí esta antena ya que si bien es de las mejores actualmente para capturar tráfico 2.4ghz como 5ghz, también es de las más complicadas para hacerlas funcionar debido a problemas con nuevos drivers y headers de Linux. 
+
+Personalmente esta antena me generó muchos problemas al principio, a pesar que es parrot pareciera que funciona plug and play como pasa con la Panda
 
 
 
