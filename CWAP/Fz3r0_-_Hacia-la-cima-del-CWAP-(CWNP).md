@@ -2867,11 +2867,13 @@ Por lo tanto, en este ejemplo real, el data rate posible para el cable Ethernet 
 
 # 👹 `CANTO II`: Protocol Analysis
 
-En primer lugar, quiero destacar que para todo este capítulo y basicamente para todo el curso de CWAP utilizaré la mayoría de veces ejemplos y laboratorios con `Wireshark`, en específico utilizando mi mod de profile y OUI `Blackshark by Fz3r0`. En la literatura oficial del CWAP utilizan ejemplos de otras herramientas como XXXXXXXXXXX aunque también incluyen Wireshark, sin embargo, es mi herramienta preferida de análisis de paquetes (packets) y tramas (frames).
+En primer lugar, quiero destacar que para todo este capítulo y básicamente para todo el curso de `CWAP`, el `Software` que utilizaré como `Sniffer` / `Protocol Analyzer` para ejemplos y laboratorios será `Wireshark`, en específico utilizando mi mod de profile y OUI `Blackshark by Fz3r0`. En la literatura oficial del `CWAP` utilizan ejemplos de otras herramientas como `Omnipeek`, sin embargo, además que es mi herramienta preferida de análisis de paquetes (packets) y tramas (frames), esta herramienta es de código abierto y al alcance de todo mundo de manera gratuita.
+
+[BlackShark v4.0 by Fz3r0]()
 
 ![image](https://user-images.githubusercontent.com/94720207/231305756-4bea1b6a-9c73-4333-94e2-0f737cd0980c.png)
 
-Personalmente, considero que antes del CWAP es fundamental tener un buen background de conocimiento y experiencia en la captura y análisis de tráfico Ethernet 802.3 antes de siquiera intentar adentrarse en el análisis de redes inalámbricas. Si no se cuenta con estas habilidades, recomiendo revisar cursos de Wireshark impartidos por expertos en la materia como David Bombal y Chris Greer. Ambos son reconocidos en la comunidad de Wireshark por su amplia experiencia y conocimiento en la herramienta de análisis de red que además cuentan con numerosos cursos y talleres sobre el tema en linea. 
+Personalmente, considero que antes de cursar un `CWAP` **es fundamental tener un buen background de conocimiento y experiencia en la captura y análisis de tráfico Ethernet 802.3 antes de siquiera intentar adentrarse en el análisis de redes inalámbricas** y entender la tranmsisión y comunicación de protocolos comunes vistos desde una red cableada como `ethII`, `TCP/UDP`, `http/https`, `telnet/ssh`, `ping = ARP + ICMP`, `decodificar imágenes`, `desencriptar tráfico`, etc. Si no se cuenta con estas habilidades, recomiendo revisar cursos de `Wireshark` impartidos por expertos en la materia como `David Bombal` y `Chris Greer`. Ambos son reconocidos en la comunidad de `Wireshark` por su amplia experiencia y conocimiento en la herramienta de análisis de red que además cuentan con numerosos cursos y talleres sobre el tema en linea, varios de esos cursos son gratuitos. 
 
 `Chris Greer` es un experto en redes y análisis de tráfico de red, además de ser el fundador de la empresa Packet Pioneer. Chris ha sido un usuario activo de Wireshark desde sus primeras versiones y es un instructor y orador reconocido a nivel internacional que ha capacitado a miles de profesionales en el uso de Wireshark y técnicas de análisis de tráfico de red. Para mi es el gran gurú y una de mis grandes inspiraciones por las cuales actualmente realizo análsis de tráfico en redes Ethernet y WiFi. Yo lo llamo Chris "The Megalodon" Greer, un experto analista con que nunca se le escapará la presa, el megalodón es el tiburón más grande que ha existido, considerado uno de los depredadores más grandes y poderosos que haya existido en la Tierra.
 
@@ -2881,9 +2883,37 @@ Personalmente, considero que antes del CWAP es fundamental tener un buen backgro
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/231305004-3098efac-a6e8-4a97-8f3d-0b29e6a887e3.png" alt="encoding" height=200px/> </a> </p> 
 
+## `Protocol Analysers` & `Sniffers`
 
+Un `protocol analyzer` (analizador de protocolos) y un `sniffer` (olfateador) son herramientas de software que se utilizan para analizar y monitorear el tráfico de red. **Aunque a menudo se usan indistintamente, hay una sutil diferencia entre ellos.**
 
-Los protocolos inalámbricos 802.11 son significativamente diferentes y más complejos que los protocolos Ethernet inalámbricos 802.3, por ello, requieren herramientas adicionales para diagnósticos y un conjunto de habilidades adicional para implementarlos y comprender cómo se están utilizando. En redes 802.11 WiFi se necesita tener en cuenta diferentes variables y conceptos a considerar al capturar tráfico inalámbrico. Por ejemplo: 
+- **Un `sniffer` se enfoca en capturar y analizar paquetes de red en tiempo real. Mientras que un `protocol analyzer` se centra en analizar el tráfico de red que se ha capturado previamente. Es decir, un `protocol analyzer` se utiliza para analizar y estudiar los paquetes de red que ya han sido capturados y almacenados.**
+
+Existen varias herramientas y posibilidades en el mercado para realizar estas tareas, por ejemplo:
+
+### Wireshark
+
+`Wireshark` es una herramienta de software de `código abierto` que se utiliza para analizar el tráfico de red en tiempo real y también para analizar los paquetes de red capturados anteriormente. Es decir, Wireshark es capaz de realizar tanto la función de un sniffer como la de un protocol analyzer. Wireshark es una de las herramientas de análisis de red más populares y ampliamente utilizadas, debido a su facilidad de uso y su capacidad para analizar una amplia variedad de protocolos de red.
+
+Tipo de Licencia: `Código Abierto` :) 
+
+### Omnipeek
+
+Omnipeek es otra herramienta de análisis de red que es utilizada para monitorear, analizar y solucionar problemas de red. Ofrece una amplia variedad de características, incluyendo la capacidad de analizar el tráfico de red en tiempo real, visualizar la topología de red y realizar análisis detallados de protocolos. Omnipeek también es capaz de analizar una amplia variedad de protocolos de red.
+
+Tipo de Licencia: `$$$$`
+
+### Acrylic WiFi Analyzer & Acrylic WiFi Capture
+
+Acrylic WiFi Analyzer y Acrylic WiFi Capture son herramientas de software que se enfocan en el análisis de redes inalámbricas, ambas dentro de la Suite de Acrylic pero en realidad son 2 software por separado. 
+
+Acrylic WiFi Analyzer se utiliza para monitorear y analizar la calidad de la señal, el rendimiento de la red y la seguridad de las redes Wi-Fi. Acrylic WiFi Capture, por otro lado, es una herramienta de captura de paquetes que permite a los usuarios capturar y analizar paquetes de red inalámbricos en tiempo real. Ambas herramientas son útiles para diagnosticar problemas en redes Wi-Fi.
+
+Tipo de Licencia: `$$$$`
+
+## Capturando y Analizando: 802.3 Ethernet VS 802.11 WiFi
+
+Si bien he mencionado que es fundamental tener experiencia en cuanto a la captura y análisis de tráfico Ethernet 802.3 antes de estudiar la captura WiFi, también es fundamental saber que los protocolos inalámbricos 802.11 son significativamente diferentes y más complejos que los protocolos Ethernet 802.3, por ello, requieren herramientas adicionales para diagnósticos y un conjunto de habilidades adicional para implementarlos y comprender cómo se están utilizando. En redes 802.11 WiFi se necesita tener en cuenta diferentes variables y conceptos a considerar al capturar tráfico inalámbrico. Por ejemplo: 
 
 - Que se capturen todfos los tipos de frames 802.11, en lugar de por ejemplo, solo las tramas de management o data.  
 - Elegir las herramientas tanto de Hardware como de Software indicados, incluso drivers y sistemas operativos compatibles. 
