@@ -3199,6 +3199,9 @@ En mi experiencia personal he probado con diferentes antenas que venden en merca
 
 Para llevar el aprendizaje más allá compartiré 2 laboratorios que hice con diferentes antenas la primera con Panda Wireless y la segunda con Alfa
 
+### Antenas/Drivers que yo recomiendo
+
+Hay antenas que funcionan caaaasi con plug and play, son las que más recomiendo para aprender a capturar y empezar en este mundillo... He probado con las siguientes antenas con Parrot versión 2023 y han funcionado bien, en ocasiones con una que otra limitante:
 
 ### Panda
 
