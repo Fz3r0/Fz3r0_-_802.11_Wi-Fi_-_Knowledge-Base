@@ -3490,9 +3490,11 @@ Driver: https://github.com/aircrack-ng/rtl8812au
 
 https://secwiki.org/w/Npcap/WiFi_adapters
 
-![image](https://user-images.githubusercontent.com/94720207/233826597-1274ff3a-f244-4a25-ae38-95d9cf6acc54.png)
+![image](https://user-images.githubusercontent.com/94720207/233827035-6a9069da-db18-4f8b-b40d-22ff26196667.png)
 
+- Hice el intento hombre!!
 
+![image](https://user-images.githubusercontent.com/94720207/233827184-13b744cf-1e2e-40db-b8b4-791e424eb99a.png)
 
 drivers y demas epxlicaco0nes 
 
