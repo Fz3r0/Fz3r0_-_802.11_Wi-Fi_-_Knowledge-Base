@@ -3282,12 +3282,27 @@ Personalmente esta antena me generó muchos problemas al principio, a pesar que 
 
 ![image](https://user-images.githubusercontent.com/94720207/233813077-44a38f21-1ff0-4dde-8406-8f96d91fe3c5.png)
 
-Ahora viene el verdadero problema, muchos no se dan cuenta que en realidad hasta este momento aún no funciona correctamente esta tarjeta... Falta una cosa muy importante... 
+- Incluso puedo auditar la red:
+
+![image](https://user-images.githubusercontent.com/94720207/233814176-308fba70-0f4c-4f59-ae99-494c2ce4656a.png)
+
+Ahora viene el verdadero problema, muchos no se dan cuenta que en realidad hasta este momento aún no funciona correctamente esta tarjeta... Falta una cosa muy importante:
 
 - **IMPORTANTE: ¡En este momento no se pueden capturar `Control Frames`, donde si incluyen por ejemplo los `ACKs`!**
 
 Mucha gente en la red no se da cuenta de este gran problema ya que solo la utilizan para laboratorios básicos de Cyber-Seguridad como hacer ataques de De-Autenticación _(Para esto no se necesitan control frames)_ , pero si se revisan las capturas nunca se encontrarán Control Frames, lo mismo pasa lanzando un ataque de de autenticación, que aunque funciona, nunca se reciben ACKs como se muestra en esta pantalla:
 
+![image](https://user-images.githubusercontent.com/94720207/233814350-06ad8742-a514-4b64-9108-0375acde8c66.png)
+
+Esto se puede hacer mas claro si se captura el ataque de deautenticación, donde en wireshark al tratar de filtrar ya sea Control Frames o ACK Frames no se encuentra nada, así me di cuenta que no se pueden capturar 802.11 Control Frames con el driver que funciona "plug-and-play" en Parrot, ni que decir otras distros de Linux que no sirve al conectar. 
+
+
+
+### Instalación Alfa funcionando 2023 Real no Fake papu Pro
+
+Debido a los problemas que trae esta interfaz para funcionar bien y la falta de documentación online, tomé como reto para entender bien este bloque de dirvers lograr instalar y hacer funcionar bien esta antena, ya que es bastante buena, de las mas recientes y se pude capturar 802.11n/ac (2.4 GHz & 5 GHz). 
+
+Un agradecimiento a "" que fue el único que realmente logró hacer funcionar esta tarjeta, ya que hay otros tutoriales e isntrucciones en la red que no sirven al 100%, así que tomé su información y lo adapté a mi experiencia, ya que les aseguro se enocntrarán documentación que no funcionará en la red y todas estas problemáticas las resume el libro de CWAP como: _"La instalación de drivers en modo Monitor que sean compatbles con el sistema es escencial"_ o una cantaleta similar :P, hay que recordar que en el libro de usan generalmente herramientas de ricos como Omnipeek y no herramientas para simples mortales. 
 
 
 
