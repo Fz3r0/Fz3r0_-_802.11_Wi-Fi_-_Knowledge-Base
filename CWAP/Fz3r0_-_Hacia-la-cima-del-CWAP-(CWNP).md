@@ -3278,6 +3278,18 @@ Personalmente esta antena me generó muchos problemas al principio, a pesar que 
 
 ![image](https://user-images.githubusercontent.com/94720207/233812955-2e1fa96f-3b70-438e-9033-88f406cfc446.png)
 
+3. También la puedo poner en modo monitor y hasta aquí pareciera que todo va bien!!!
+
+![image](https://user-images.githubusercontent.com/94720207/233813077-44a38f21-1ff0-4dde-8406-8f96d91fe3c5.png)
+
+Ahora viene el verdadero problema, muchos no se dan cuenta que en realidad hasta este momento aún no funciona correctamente esta tarjeta... Falta una cosa muy importante... 
+
+- **IMPORTANTE: ¡En este momento no se pueden capturar `Control Frames`, donde si incluyen por ejemplo los `ACKs`!**
+
+Mucha gente en la red no se da cuenta de este gran problema ya que solo la utilizan para laboratorios básicos de Cyber-Seguridad como hacer ataques de De-Autenticación _(Para esto no se necesitan control frames)_ , pero si se revisan las capturas nunca se encontrarán Control Frames, lo mismo pasa lanzando un ataque de de autenticación, que aunque funciona, nunca se reciben ACKs como se muestra en esta pantalla:
+
+
+
 
 
 
