@@ -3375,17 +3375,26 @@ sudo apt remove realtek-rtl88xxau-dkms
 
 4. Descargar el Driver:
 
+    - IMPORTANTE: Este paso es crítico ya que los Drivers oficiales dan error, pero funcionan los de el siguiente repositiorio:
+
 ````sh
-git clone https://github.com/aircrack-ng/rtl8814au && cd rtl8814au
+git clone https://github.com/morrownr/8814au && cd 8814au 
 ````
 
-![image](https://user-images.githubusercontent.com/94720207/233818665-6c966895-9f46-4653-8735-52697416dd7e.png)
+![image](https://user-images.githubusercontent.com/94720207/233818938-56c1baac-73e0-43d4-b3f6-acedfabf526c.png)
 
 5. Instale el controlador como un módulo DKMS, lo que significa que al actualizar el kernel, no es necesario volver a compilar manualmente el controlador para la nueva versión del kernel. Esto se hará automáticamente por el módulo DKMS. Además, tenga en cuenta que el comando make es innecesario ya que la compilación es realizada por el módulo DKMS.
 
 ````sh
-sudo make dkms_install
+sudo ./install-driver.sh
 ````
+
+![image](https://user-images.githubusercontent.com/94720207/233818971-42fbd8b3-6ee4-4332-87bc-79d74ae587eb.png)
+
+- En algún momento solicitará el reinicio _Es opcionar cambiar el archivo de configuración_
+
+![image](https://user-images.githubusercontent.com/94720207/233819004-feafccee-ed6e-449e-b324-3a9ae10181fd.png)
+
 
 
 
