@@ -3296,7 +3296,13 @@ Mucha gente en la red no se da cuenta de este gran problema ya que solo la utili
 
 Esto se puede hacer mas claro si se captura el ataque de deautenticación, donde en wireshark al tratar de filtrar ya sea Control Frames o ACK Frames no se encuentra nada, así me di cuenta que no se pueden capturar 802.11 Control Frames con el driver que funciona "plug-and-play" en Parrot, ni que decir otras distros de Linux que no sirve al conectar. 
 
+En este ejemplo no utilizo ningñun filtro y veo en su mayoría solo Beacons (Management Frames):
 
+![image](https://user-images.githubusercontent.com/94720207/233814691-8d8f07b4-5791-46b4-b4f5-591cbf81694c.png)
+
+Si trato de filtrar por Control Frames o ACKs no se verá nada:
+
+Es por eso que la instalación de Drivers quie funcionen bien en Alfa es algo cansado, sin embargo, logré hacerlo funcionar y documenté el proceso:
 
 ### Instalación Alfa funcionando 2023 Real no Fake papu Pro
 
