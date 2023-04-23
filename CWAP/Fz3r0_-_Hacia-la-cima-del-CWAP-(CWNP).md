@@ -3365,7 +3365,17 @@ A continuación explico el proceso de instalación que me funcióno a mediados d
 
 ![image](https://user-images.githubusercontent.com/94720207/233817553-66f47236-db9a-400a-adea-5ea3a1b70387.png)
 
-3. 
+3. Si no se necesita el controlador realtek-rtl88xxau-dkms que ahora soporta los chipsets RTL8812AU/21AU de otras tarjetas Alfa, entonces hay que desinstalarlo, de lo contrario podría generar conflictos. Personalmente recomiendo borrarlo y en caso de tener otras tarjetas guardar 2 states diferentes de la Máquina Virtual. 
+
+````sh
+sudo apt remove realtek-rtl88xxau-dkms
+````
+
+![image](https://user-images.githubusercontent.com/94720207/233818385-b4784f90-c419-41c1-ad0d-4037409a7af7.png)
+
+4. Instalar las dependencias necesarias: 
+
+
 
 
 
