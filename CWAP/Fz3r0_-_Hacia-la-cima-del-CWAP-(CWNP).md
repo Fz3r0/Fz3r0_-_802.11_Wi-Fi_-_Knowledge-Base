@@ -3488,6 +3488,9 @@ Driver: https://github.com/aircrack-ng/rtl8812au
      It's described further down, READ THE README!
 ````
 
+https://secwiki.org/w/Npcap/WiFi_adapters
+
+![image](https://user-images.githubusercontent.com/94720207/233826597-1274ff3a-f244-4a25-ae38-95d9cf6acc54.png)
 
 
 
