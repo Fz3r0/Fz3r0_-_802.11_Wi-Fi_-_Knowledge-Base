@@ -3516,6 +3516,8 @@ drivers y demas epxlicaco0nes
 https://www.aircrack-ng.org/doku.php?id=compatibility_drivers_old
 
 
+https://blog.finchsec.com/awus036axml-part1 la de wifi 6 alfa
+
 
 
 
