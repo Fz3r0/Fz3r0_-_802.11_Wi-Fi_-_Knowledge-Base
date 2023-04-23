@@ -3450,4 +3450,45 @@ sudo sh -c "echo '2' > /sys/module/8814au/parameters/rtw_switch_usb_mode"
 
 
 
+### Comandos Básicos
+
+````sh
+# Buscar el nombre de la interfaz Wireless
+iw dev
+
+### Detener los programas conflictivos
+systemctl stop NetworkManager && airmon-ng check kill && systemctl start NetworkManager
+
+### Reiniciar Network Manager
+systemctl restart NetworkManager
+````
+
+![image](https://user-images.githubusercontent.com/94720207/233819814-ab1b8d25-e746-408a-8c7c-d95ddf653568.png)
+
+### Modo Monitor
+
+````sh
+ip link set wlan0 down && iw wlan0 set monitor control && ip link set wlan0 up
+````
+
+![image](https://user-images.githubusercontent.com/94720207/233820109-f6979e76-7e0c-46ca-afc0-7daad5457708.png)
+
+- Resultado, ahora puedo hacer channel hopping incluso dual, de 2.4 y 5 GHz lo que antes no se podía: 
+
+![image](https://user-images.githubusercontent.com/94720207/233820218-2fe6195e-5ad8-49b2-86bc-902a06e38bfc.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
