@@ -3491,7 +3491,9 @@ Driver: https://github.com/aircrack-ng/rtl8812au
 
 
 
+drivers y demas epxlicaco0nes 
 
+https://www.aircrack-ng.org/doku.php?id=compatibility_drivers_old
 
 
 
