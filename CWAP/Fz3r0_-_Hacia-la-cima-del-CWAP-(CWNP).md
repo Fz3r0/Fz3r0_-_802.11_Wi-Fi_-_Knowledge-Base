@@ -3399,6 +3399,25 @@ sudo ./install-driver.sh
 
 ![image](https://user-images.githubusercontent.com/94720207/233819132-fd6c64c3-5b22-4202-a484-743d81bfef23.png)
 
+
+
+Ahora si, viene la prueba de fuego y revisar si puedo capturar Control Frames, pero para eso hice también una guía detallada de como utilizar la Alpha 1900 en 2023
+
+![image](https://user-images.githubusercontent.com/94720207/233819441-9d9df029-89b3-445a-aa17-e853a5d2dc5e.png)
+
+Mismo problema
+
+![image](https://user-images.githubusercontent.com/94720207/233819481-c9f346c9-7145-4217-a601-9971cdd352c3.png)
+
+Eso es porque por el momento tampoco esta´soportada la suite de Aircrack para este driver, es necesario adaptarse a los comando `ip` e `iw` 
+
+### Cómo utilizar la Alfa 1900 en 2023
+
+Nuevamente comparto este excelente portal donde viene una cheatsheet increíble de cómo utilizar esta tarjeta en Kali Linux, que se adapta a mi parrot
+
+- [Linux Wi-Fi Cheat Sheet: Tips and Troubleshooting](https://miloserdov.org/?p=4819)
+
+
 How to set Alfa AWUS1900 into monitor mode
 The main thing to learn by now is to use the “ip” and “iw” commands instead of “ifconfig” and “iwconfig” – this applies to all Wi-Fi adapters.
 
@@ -3417,15 +3436,6 @@ Switch usb3.0 => usb2.0
 
 1
 sudo sh -c "echo '2' > /sys/module/8814au/parameters/rtw_switch_usb_mode"
-
-Ahora si, viene la prueba de fuego y revisar si puedo capturar Control Frames, pero para eso hice también una guía detallada de como utilizar la Alpha 1900 en 2023
-
-### Cómo utilizar la Alfa 1900 en 2023
-
-Nuevamente comparto este excelente portal donde viene una cheatsheet increíble de cómo utilizar esta tarjeta en Kali Linux, que se adapta a mi parrot
-
-- [Linux Wi-Fi Cheat Sheet: Tips and Troubleshooting](https://miloserdov.org/?p=4819)
-
 
 
 
