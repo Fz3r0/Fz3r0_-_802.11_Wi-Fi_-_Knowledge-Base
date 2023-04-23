@@ -3201,7 +3201,31 @@ https://www.youtube.com/watch?v=U_zzdl7xV7I
 
 
 
-## Instalacion de Drivers
+## Instalacion de Drivers para Modo Monitor
+
+Para el análisis de protocolo y la catpura de 802.11 WiFi Frames se comienza determinando cuáles serán las herramientas tanto de Hardware y Software que se utilizarán. Existen muchas opciones como ya se ha visto, pero caalquiera sea la combinación siempre de basa en 3 cosas:
+
+1. El sistema operativo que se está utilizando
+2. El software de análisis de protocolo y los drivers para la interfaz WiFi
+3. El hardware requerido
+
+### El sistema operativo que se está utilizando
+
+Es importante seleccionar herramientas de software que sean compatibles con el sistema operativo utilizado para la captura de tráfico de red inalámbrica, como Windows, Linux o macOS.
+
+- `Microsoft Windows`: Es muy limitado para la captura de tráfico 802.11, existen herramientas que facilitan mucho la captura en Windows, pero normalmente son costosas. 
+- `Apple Mac OS`: Una gran ventaja de Mac OS es que puede capturar tráfico y ponerse en modo monitor de fábrica sin realizar ninguna configuración adicional.
+- `Linux`: Linux se tienen muchísimas herramientas y opciones para analizar, capturar e inyectar tráfico 802.11. Pero en ocasiones las configuraciones requeridas no son tán simples como podría serlo en Windows o Mac OS. 
+- `Raspberry PI`: Otra gran opción muy similar a Linux, pero un poco más complejo aún por la necesidad de aún mas equipo. 
+- `Android`: Personalmente no recomiendo capturar tráfico con las pocas herramientas que existen en Android ya que no están a la altura de sus contra partes mencionadas anteriormente. 
+
+**En este documento procuro utilizar ejemplos tanto de Windows, Linux y Mac OS ya que tengo acceso a los 3. Sin embargo, para las prácticas y laboratorios de instalación de drivers utilizaré especificamente Linux Parrot Security basado en Debian.**
+
+### El software de análisis de protocolo y los drivers para la interfaz WiFi 
+
+Es necesario elegir software de análisis de protocolo y controladores de dispositivos inalámbricos que sean compatibles con el hardware de la interfaz WiFi utilizada para la captura de tráfico.
+
+El hardware requerido: El hardware necesario puede variar dependiendo del tipo de análisis y captura que se desee realizar, pero puede incluir dispositivos como puntos de acceso inalámbricos (AP), sistemas distribuidos, antenas USB, tarjetas de red inalámbricas, y computadoras con capacidad de procesamiento y almacenamiento suficiente para manejar grandes cantidades de datos capturados.
 
 En la documentación del CWAP solo dan un ejemplo de instalación de Drivers en Omnipeek apliance, que honestamente es solo darle Next y funciona en un Windows común y corriente, recordemos que Omnipeek no es una herramienta al alcance de cualquiera, estas facilidades y automatización cuestan en la cartera...
 
