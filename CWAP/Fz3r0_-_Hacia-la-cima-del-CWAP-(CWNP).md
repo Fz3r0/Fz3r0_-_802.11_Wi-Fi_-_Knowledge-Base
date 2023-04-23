@@ -3319,6 +3319,12 @@ Debido a los problemas que trae esta interfaz para funcionar bien y la falta de 
 
 Un agradecimiento a "" que fue el único que realmente logró hacer funcionar esta tarjeta, ya que hay otros tutoriales e isntrucciones en la red que no sirven al 100%, así que tomé su información y lo adapté a mi experiencia, ya que les aseguro se enocntrarán documentación que no funcionará en la red y todas estas problemáticas las resume el libro de CWAP como: _"La instalación de drivers en modo Monitor que sean compatbles con el sistema es escencial"_ o una cantaleta similar :P, hay que recordar que en el libro de usan generalmente herramientas de ricos como Omnipeek y no herramientas para simples mortales. 
 
+1. Este es esl Status antes de empezar:
+
+![image](https://user-images.githubusercontent.com/94720207/233816190-ae8db6ef-ea5d-4a78-b647-32397cae3305.png)
+
+
+
 
 
 
