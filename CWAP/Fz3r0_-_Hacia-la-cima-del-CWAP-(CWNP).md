@@ -3395,6 +3395,37 @@ sudo ./install-driver.sh
 
 ![image](https://user-images.githubusercontent.com/94720207/233819004-feafccee-ed6e-449e-b324-3a9ae10181fd.png)
 
+6. Este es el status al terminar y haber reiniciado, se ve exactamente igual que antes en realidad...
+
+![image](https://user-images.githubusercontent.com/94720207/233819132-fd6c64c3-5b22-4202-a484-743d81bfef23.png)
+
+How to set Alfa AWUS1900 into monitor mode
+The main thing to learn by now is to use the “ip” and “iw” commands instead of “ifconfig” and “iwconfig” – this applies to all Wi-Fi adapters.
+
+For details, see the article: Linux Wi-Fi Cheat Sheet: Tips and Troubleshooting.
+
+USB2.0/3.0 mode switch
+Initial it will use USB2.0 mode which will limit 5G 11ac throughput (USB2.0 bandwidth only 480Mbps => throughput around 240Mbps). When modprobe add following options will let it switch to USB3.0 mode at initial driver:
+
+1
+options 8814au rtw_switch_usb_mode=1
+Switch usb2.0 => usb3.0
+
+1
+sudo sh -c "echo '1' > /sys/module/8814au/parameters/rtw_switch_usb_mode"
+Switch usb3.0 => usb2.0
+
+1
+sudo sh -c "echo '2' > /sys/module/8814au/parameters/rtw_switch_usb_mode"
+
+Ahora si, viene la prueba de fuego y revisar si puedo capturar Control Frames, pero para eso hice también una guía detallada de como utilizar la Alpha 1900 en 2023
+
+### Cómo utilizar la Alfa 1900 en 2023
+
+Nuevamente comparto este excelente portal donde viene una cheatsheet increíble de cómo utilizar esta tarjeta en Kali Linux, que se adapta a mi parrot
+
+- [Linux Wi-Fi Cheat Sheet: Tips and Troubleshooting](https://miloserdov.org/?p=4819)
+
 
 
 
