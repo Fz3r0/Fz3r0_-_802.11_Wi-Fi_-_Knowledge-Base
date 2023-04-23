@@ -3258,6 +3258,8 @@ Existen 2 grandes desventajas que he encontrado de esta tarjeta, que a pesar de 
 1. `No Captura FCS` - Los `FCS` o `Frame Check Sequence` son importantes en la captura de WiFi, además de para la certificación `CWAP`, si bien ayuda muchísimo a la captura de frames 802.11, le falta este gran detalle. 
 2. `No captura 5 GHz` - Esta inetrface solo es compatible con la banda 2.4 GHz, exsite la versión para ambas bandas! pero tiene el mismo problema del FCS :(
 
+![image](https://user-images.githubusercontent.com/94720207/233812366-5d05e17b-5b21-41c8-8de4-576047742794.png)
+
 ---
 
 ### Alfa
