@@ -3479,7 +3479,14 @@ ip link set wlan0 down && iw wlan0 set monitor control && ip link set wlan0 up
 
 
 
+---
 
+Driver: https://github.com/aircrack-ng/rtl8812au
+
+````
+* Use "ip" and "iw" instead of "ifconfig" and "iwconfig"
+     It's described further down, READ THE README!
+````
 
 
 
