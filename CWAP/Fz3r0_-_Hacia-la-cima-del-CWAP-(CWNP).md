@@ -3223,6 +3223,12 @@ Hay antenas que funcionan caaaasi con plug and play, son las que más recomiendo
 
 ### Panda
 
+![image](https://user-images.githubusercontent.com/94720207/233815231-a89c72ba-610e-4910-81a3-d9e6bf50c2d0.png)
+
+![image](https://user-images.githubusercontent.com/94720207/233815326-1b0f4699-03f0-4ae0-87aa-4a7531b9125f.png)
+
+
+
 1. Primero lanzaré lo siguientes comandos para revisar mis configuraciones actuales:
 
 ![image](https://user-images.githubusercontent.com/94720207/233811007-3357c207-d1d8-4846-9845-e51889099799.png)
@@ -3264,6 +3270,7 @@ Existen 2 grandes desventajas que he encontrado de esta tarjeta, que a pesar de 
 
 ### Alfa
 
+
 https://miloserdov.org/?p=5493
 
 Realizaré el paso a paso de la instalación de estos drivers para dar un ejemplo real, elegí esta antena ya que si bien es de las mejores actualmente para capturar tráfico 2.4ghz como 5ghz, también es de las más complicadas para hacerlas funcionar debido a problemas con nuevos drivers y headers de Linux. 
@@ -3296,11 +3303,13 @@ Mucha gente en la red no se da cuenta de este gran problema ya que solo la utili
 
 Esto se puede hacer mas claro si se captura el ataque de deautenticación, donde en wireshark al tratar de filtrar ya sea Control Frames o ACK Frames no se encuentra nada, así me di cuenta que no se pueden capturar 802.11 Control Frames con el driver que funciona "plug-and-play" en Parrot, ni que decir otras distros de Linux que no sirve al conectar. 
 
-En este ejemplo no utilizo ningñun filtro y veo en su mayoría solo Beacons (Management Frames):
+En este ejemplo no utilizo ningñun filtro y veo en su mayoría solo Beacons (Management Frames). [_La captura se puede descargar de aquí_](https://github.com/Fz3r0/Fz3r0_-_BlackShark/files/11302660/fz3r0_CWAP_alfa.zip)
 
 ![image](https://user-images.githubusercontent.com/94720207/233814691-8d8f07b4-5791-46b4-b4f5-591cbf81694c.png)
 
-Si trato de filtrar por Control Frames o ACKs no se verá nada:
+Si trato de filtrar por Control Frames (Donde se incluyen los ACKs) no se verá nada:
+
+![image](https://user-images.githubusercontent.com/94720207/233815430-32db336a-9ecd-4909-a35b-d58e42bb53e7.png)
 
 Es por eso que la instalación de Drivers quie funcionen bien en Alfa es algo cansado, sin embargo, logré hacerlo funcionar y documenté el proceso:
 
