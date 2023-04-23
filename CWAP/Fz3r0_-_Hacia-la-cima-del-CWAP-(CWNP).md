@@ -3272,7 +3272,11 @@ Personalmente esta antena me generó muchos problemas al principio, a pesar que 
 
 ![image](https://user-images.githubusercontent.com/94720207/233812880-07b5fbf1-158d-445e-b8bb-a4b61980df9d.png)
 
-![image](https://user-images.githubusercontent.com/94720207/233812814-50975784-be94-45c3-9398-8fdda7826bb3.png)
+2. Ahora la conecto y la reconoce plug and play muy similar a la Panda
+
+    - OJO!!! Esto solo lo hace con Parrot, por ejemplo en Kali Linux u otra distro en ocasiones no se muestra nada y hay que instalar el driver desde 0, de todos modos es lo que se temrinará haciendo en este caso también.  
+
+![image](https://user-images.githubusercontent.com/94720207/233812955-2e1fa96f-3b70-438e-9033-88f406cfc446.png)
 
 
 
