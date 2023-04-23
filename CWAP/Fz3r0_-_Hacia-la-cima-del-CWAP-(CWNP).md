@@ -3337,13 +3337,27 @@ Si trato de filtrar por Control Frames (Donde se incluyen los ACKs) no se verá 
 
 Es por eso que la instalación de Drivers quie funcionen bien en Alfa es algo cansado, sin embargo, logré hacerlo funcionar y documenté el proceso:
 
-### Instalación Alfa funcionando 2023 Real no Fake papu Pro
+### Instalación Alfa RTL8814AU chipset (Alfa AWUS1900) <br> _(funcionando 2023 Real no Fake papu Pro)_
 
 Debido a los problemas que trae esta interfaz para funcionar bien y la falta de documentación online, tomé como reto para entender bien este bloque de dirvers lograr instalar y hacer funcionar bien esta antena, ya que es bastante buena, de las mas recientes y se pude capturar 802.11n/ac (2.4 GHz & 5 GHz). 
 
-Un agradecimiento a "" que fue el único que realmente logró hacer funcionar esta tarjeta, ya que hay otros tutoriales e isntrucciones en la red que no sirven al 100%, así que tomé su información y lo adapté a mi experiencia, ya que les aseguro se enocntrarán documentación que no funcionará en la red y todas estas problemáticas las resume el libro de CWAP como: _"La instalación de drivers en modo Monitor que sean compatbles con el sistema es escencial"_ o una cantaleta similar :P, hay que recordar que en el libro de usan generalmente herramientas de ricos como Omnipeek y no herramientas para simples mortales. 
+- **Un agradecimiento al equipo de [miloserdov.com](https://miloserdov.org/) que fue el único que realmente logró hacer funcionar esta tarjeta de manera correcta, además que es un increíble portal con muchos laboratorios y documentación en cuanto a hacking y pentesting.**
 
-1. Este es esl Status antes de empezar:
+Existen online otros tutoriales e isntrucciones que no sirven al 100%, la misma historia pasa con otras tarjetas ¿Ahora te das cuenta de la problemática de los drivers en la vida real? Constantemente se actualizan los sistemas y las tarjetas y hay que estar al día en ello así que como laboratorio decidí hacer funcionar estos drivers e interface con mi sistema operativo Linux Custom y adaptaré este tutorial a mi experiencia, ya que les aseguro se enocntrarán documentación que no funcionará en la red y todas estas problemáticas las resume el libro de CWAP como: _"La instalación de drivers en modo Monitor que sean compatbles con el sistema es escencial"_ , hay que recordar que en el libro de usan generalmente herramientas como Omnipeek y no herramientas para simples mortales y tampoco se adentran en este tipo de instalaciones y configuraciones. 
+
+Anteriormente, el controlador `realtek-rtl88xxau-dkms` tenía soporte para el chipset `RTL8814AU` y para que estas tarjetas inalámbricas funcionaran, era suficiente instalar el controlador especificado. En `Kali Linux` o `Parrot Security`, esto se podía hacer directamente desde el repositorio predeterminado, en otras distribuciones era necesario compilarlo. 
+
+- **¡Pero ahora el soporte para el chipset `RTL8814AU` se ha deshabilitado en el controlador `realtek-rtl88xxau-dkms`!** 
+
+Se ha creado un controlador separado para este chipset, que puede entrar en conflicto con el `RTL8814AU`. Estos cambios son recientes, por lo que **las instrucciones antiguas para instalar el controlador para la Alfa AWUS1900 no funcionan.**
+
+![image](https://user-images.githubusercontent.com/94720207/233818107-361f5495-26d3-4fe8-8d20-90f527bb1baa.png)
+
+A continuación explico el proceso de instalación que me funcióno a mediados del 2023:
+
+### Proceso de instalación:
+
+1. Este es el Status antes de empezar:
 
 ![image](https://user-images.githubusercontent.com/94720207/233817491-55369a91-6ed9-40ad-a224-d638286980a2.png)
 
