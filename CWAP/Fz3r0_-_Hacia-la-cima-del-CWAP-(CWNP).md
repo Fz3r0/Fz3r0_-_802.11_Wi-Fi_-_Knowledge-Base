@@ -3345,7 +3345,13 @@ Un agradecimiento a "" que fue el único que realmente logró hacer funcionar es
 
 1. Este es esl Status antes de empezar:
 
-![image](https://user-images.githubusercontent.com/94720207/233816190-ae8db6ef-ea5d-4a78-b647-32397cae3305.png)
+![image](https://user-images.githubusercontent.com/94720207/233817491-55369a91-6ed9-40ad-a224-d638286980a2.png)
+
+2. Reviso que todo esté full update y upgrade: 
+
+![image](https://user-images.githubusercontent.com/94720207/233817553-66f47236-db9a-400a-adea-5ea3a1b70387.png)
+
+3. 
 
 
 
