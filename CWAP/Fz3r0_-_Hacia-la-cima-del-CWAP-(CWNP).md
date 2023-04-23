@@ -3270,6 +3270,9 @@ Realizaré el paso a paso de la instalación de estos drivers para dar un ejempl
 
 Personalmente esta antena me generó muchos problemas al principio, a pesar que es parrot pareciera que funciona plug and play como pasa con la Panda
 
+![image](https://user-images.githubusercontent.com/94720207/233812814-50975784-be94-45c3-9398-8fdda7826bb3.png)
+
+
 
 
 
