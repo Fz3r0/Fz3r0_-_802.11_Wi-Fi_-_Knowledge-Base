@@ -3201,15 +3201,26 @@ https://www.youtube.com/watch?v=U_zzdl7xV7I
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 ## Instalacion de Drivers para Modo Monitor
 
 Para el análisis de protocolo y la catpura de 802.11 WiFi Frames se comienza determinando cuáles serán las herramientas tanto de Hardware y Software que se utilizarán. Existen muchas opciones como ya se ha visto, pero caalquiera sea la combinación siempre de basa en 3 cosas:
 
-1. El sistema operativo que se está utilizando
-2. El software de análisis de protocolo y los drivers para la interfaz WiFi
-3. El hardware requerido
+1. ⭕ El sistema operativo que se está utilizando
+2. ⭕ El software de análisis de protocolo y los drivers para la interfaz WiFi
+3. ⭕ El hardware requerido
 
-### El sistema operativo que se está utilizando
+### ⭕ El sistema operativo que se está utilizando
 
 Es importante seleccionar herramientas de software que sean compatibles con el sistema operativo utilizado para la captura de tráfico de red inalámbrica, como Windows, Linux o macOS.
 
@@ -3221,11 +3232,13 @@ Es importante seleccionar herramientas de software que sean compatibles con el s
 
 **En este documento procuro utilizar ejemplos tanto de Windows, Linux y Mac OS ya que tengo acceso a los 3. Sin embargo, para las prácticas y laboratorios de instalación de drivers utilizaré especificamente Linux Parrot Security basado en Debian.**
 
-### El software de análisis de protocolo y los drivers para la interfaz WiFi 
+### ⭕ El software de análisis de protocolo y los drivers para la interfaz WiFi 
 
 Es necesario elegir software de análisis de protocolo y controladores de dispositivos inalámbricos que sean compatibles con el hardware de la interfaz WiFi utilizada para la captura de tráfico.
 
-El hardware requerido: El hardware necesario puede variar dependiendo del tipo de análisis y captura que se desee realizar, pero puede incluir dispositivos como puntos de acceso inalámbricos (AP), sistemas distribuidos, antenas USB, tarjetas de red inalámbricas, y computadoras con capacidad de procesamiento y almacenamiento suficiente para manejar grandes cantidades de datos capturados.
+### ⭕ El hardware requerido 
+
+El hardware necesario puede variar dependiendo del tipo de análisis y captura que se desee realizar, pero puede incluir dispositivos como puntos de acceso inalámbricos (AP), sistemas distribuidos, antenas USB, tarjetas de red inalámbricas, y computadoras con capacidad de procesamiento y almacenamiento suficiente para manejar grandes cantidades de datos capturados.
 
 En la documentación del CWAP solo dan un ejemplo de instalación de Drivers en Omnipeek apliance, que honestamente es solo darle Next y funciona en un Windows común y corriente, recordemos que Omnipeek no es una herramienta al alcance de cualquiera, estas facilidades y automatización cuestan en la cartera...
 
@@ -3234,11 +3247,39 @@ En mi experiencia personal he probado con diferentes antenas que venden en merca
 
 Para llevar el aprendizaje más allá compartiré 2 laboratorios que hice con diferentes antenas la primera con Panda Wireless y la segunda con Alfa
 
-### Antenas/Drivers que yo recomiendo
 
-Hay antenas que funcionan caaaasi con plug and play, son las que más recomiendo para aprender a capturar y empezar en este mundillo... He probado con las siguientes antenas con Parrot versión 2023 y han funcionado bien, en ocasiones con una que otra limitante:
+## Laboratorio  de Drivers Fz3r0
 
-### Laboratorio Fz3r0
+Este laboratiorio lo hice solo para entender por completo y vivir la experiencia del dolor de cabeza que suelen ser los drivers en caso de querer construir un sniffer a la medida del tipo `Mobile` por ejemplo con un sistema Linux o RaspBerry Pi, también los comparo con otros métodos de captura donde no tuve que instalar ningún driver por ejemplo con otros sistemas `Mobile` como Mac OS, o sistemas de infraestructura como `Ruckus Commscope`. 
+
+Durante mis estudios no tuve acceso a sistemas `Distributed` como sensores dedicados de Omnipeek, sin embargo, siendo que son sistemas de gama alta y licenciados, tienen soporte directo con el proveedor por lo cual la instalación de drivers no representa un reto y pueden ser utilizados en cualquier sistema Windows. 
+
+### Hardware utilizado
+
+### PC1 - Windows 11
+
+### PC2 - Windows 11
+
+### PC3 - Macbook Pro
+
+### VM1 - Parrot-Sec Custom (Debian)
+
+### VM2 - Kali Linux (Debian)
+
+### Antenas
+
+
+---
+
+## Adaptadores WiFi recomendados para capturar 802.11 Frames en 2023
+
+Después de las pruebas relaizadas en el laboratorio y con la documentación reciente encontrada en linea, realicé esta tabla donde están las antenas más recomendadas para capturar sin tanto problema. Toda esta información se basa en mi experiencia en el laboratorio anterior y conforme experiencia de otros usuarios en la red, aunque me limitaré a recomendar solo unas cuantas antenas. 
+
+### El driver es más importante que la antena o la marca
+
+Tal cual dijo David Bombal y me pude dar cuenta comprando antenas chinas baratas... es que lo importante es fijarse en el driver, el driver combinado con el sistemas operativo es lo que logrará la mejor captura posible. Actualmente, he notado que el driver Atheros ha sido infalible, tal cual se ha mencionado en la red... Pero también es cierto que existen drivers nuevos como el `alfa` que es soportado para capturar incluso WiFi6. 
+
+
 
 
 | **Adaptador**              | **Tipo**            | **Driver**      | **Bandas**    | **MIMO**        | **Ventajas**                                                                                                                                                                     | **Desventajas**                                                                                                  | **Calificación** |
