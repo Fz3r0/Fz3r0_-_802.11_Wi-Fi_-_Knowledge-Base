@@ -3701,6 +3701,9 @@ Es importante tener en cuenta que al estar cerca de un cliente con problemas, la
 
 
 
+![image](https://user-images.githubusercontent.com/94720207/234726924-5e3f7412-212b-4b07-a7e3-6b7d2f533ad9.png)
+
+https://excalidraw.com/#json=xS5Bo1G9lryzwggIarbuo,MXn_QfQ4MqyQcjlNgkhsSw
 
 
 
