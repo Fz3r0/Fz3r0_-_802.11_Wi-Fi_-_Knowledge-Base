@@ -3658,7 +3658,7 @@ https://blog.finchsec.com/awus036axml-part1 la de wifi 6 alfa
 
 ---
 
-## 🟢 Selección de Dispositivos de Captura
+## 🟢 Selección de `Dispositivos de Captura`
 
 Como ya se ha mencionado anteriormente, se tienen 3 tipos de sistemas que se pueden utilizar para capturar IEEE 802.11 Wireless frames:
 
@@ -3683,7 +3683,20 @@ En caso de captura con `Infraestructure AKA AP-based Analysis` todo depende del 
 
 
 
-## Seleccionar Ubicación de Captura
+## 🟢 Selección `Ubicación de Captura`
+
+Para realizar una captura de tráfico deseado dentro del alcance de recepción, es importante seleccionar cuidadosamente las ubicaciones óptimas desde las cuales llevar a cabo esta tarea. Una estrategia común es capturar cerca de los clientes que presentan problemas o comportamientos sospechosos, o en escenarios de pruebas de penetración, cerca de los clientes y redes que se desean atacar para explotar vulnerabilidades o crear puntos de acceso malintencionados.
+
+Algunas áreas de donde se pueda llevar a cabo en análisis, es posible que requieran de autorización previa o escolta para poder llevar a cabo la captura de tráfico, al igual que sucede cuando se realizan `site surveys on-site` para el diseño de redes inalámbricas. En algunos casos, también puede ser necesario el uso de equipos de seguridad especiales como cascos o arnés.
+
+En cuanto a la elección de la ubicación para la captura de tráfico, es recomendable estar cerca de los dispositivos que presentan problemas, ya que esto permite exponer las herramientas de captura a los mismos problemas que está experimentando el dispositivo del cliente. Al monitorear en la ubicación inmediata del cliente, se pueden detectar problemas en la capa 1 o capa 2 de manera más rápida que si se recopila información desde una ubicación más cercana al punto de acceso.
+
+Es importante tener en cuenta que al estar cerca de un cliente con problemas, la captura de tráfico se asemejará más a la experiencia del usuario, lo que puede resultar en una mejor comprensión y resolución del problema.
+
+![image](https://user-images.githubusercontent.com/94720207/234725586-83ef4c86-e443-4a57-98ae-000924cafea3.png)
+
+
+
 
 
 
