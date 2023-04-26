@@ -31,6 +31,19 @@ _por @ **Fz3r0 💀** (CWNA)_
 ### [🟢 `Introducción`]()
 - [🚨 Importante]()
 
+_En La Divina Comedia, un "canto" es una sección poética de la obra que se utiliza para describir una parte específica del viaje del protagonista, Dante, a través del Infierno, el Purgatorio y el Paraíso. Cada canto está compuesto por un número variable de versos, en tercetos (tres versos que riman entre sí)._
+
+_El Canto I es el primer canto de La Divina Comedia, que sirve como una introducción a la obra y establece el tono y la temática de la misma. En este canto, Dante se encuentra en un bosque oscuro y siente miedo y confusión. Se le aparece el poeta romano Virgilio, quien le ofrece guiarlo a través del Infierno y del Purgatorio. Juntos, comienzan su viaje épico a través de la otra vida._
+
+![image](https://user-images.githubusercontent.com/94720207/234685859-bead24ce-ff5c-4432-9195-b1caf89b19a1.png)
+
+<span align="center"> <p align="center"> ΟΠΟΙΟΣ ΜΠΑΙΝΕΙ ΕΔΩ ΝΑ ΠΑΡΑΤΑ ΚΑΘΕ ΕΛΠΙΔΑ </p> </span> 
+<span align="center"> <h3 align="center">   </h3> </span>  
+<span align="center"> <p align="center"> _A mitad del camino de la vida,_ </p> </span>   
+<span align="center"> <p align="center"> _en una selva oscura me encontraba_ </p> </span>     
+<span align="center"> <p align="center"> _porque mi ruta había extraviado..._ </p> </span>   
+<span align="center"> <p align="center"> _Abandonad, los que aquí entráis, toda esperanza..._ </p> </span>
+
 ## 🟢 `Introducción`
 
 La certificación **`CWAP (Certified Wireless Analysis Professional)`**, otorgada por la prestigiosa organización **`CWNP (Certified Wireless Network Professional)`**, representa una credencial de alto nivel en el ámbito de las redes inalámbricas. Diseñada específicamente para aquellos profesionales que buscan demostrar su competencia en el análisis avanzado y resolución de problemas en entornos de redes inalámbricas, esta certificación implica un conocimiento profundo de los protocolos de red, la seguridad de la red inalámbrica y el diseño de redes inalámbricas de alto rendimiento. <br>
