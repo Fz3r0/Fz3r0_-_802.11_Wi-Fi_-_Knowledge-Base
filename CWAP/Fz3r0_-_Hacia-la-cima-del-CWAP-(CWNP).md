@@ -2963,6 +2963,11 @@ Ambas herramientas son muy útiles para monitorear y analizar el tráfico de red
 - https://www.wireshark.org/docs/dfref/w/wlan.html
 - https://www.wireshark.org/docs/dfref/w/wlan_radio.html
 
+### Wireshark Sourcecode & About
+
+- https://gitlab.com/wireshark/wireshark/-/tree/master
+- [About Wireshark](https://www.wireshark.org/about.html)
+
 ## Capturando y Analizando: 802.3 Ethernet VS 802.11 WiFi
 
 Si bien he mencionado que es fundamental tener experiencia en cuanto a la captura y análisis de tráfico Ethernet 802.3 antes de estudiar la captura WiFi, también es fundamental saber que los protocolos inalámbricos 802.11 son significativamente diferentes y más complejos que los protocolos Ethernet 802.3, por ello, requieren herramientas adicionales para diagnósticos y un conjunto de habilidades adicional para implementarlos y comprender cómo se están utilizando. En redes 802.11 WiFi se necesita tener en cuenta diferentes variables y conceptos a considerar al capturar tráfico inalámbrico. Por ejemplo: 
