@@ -3649,9 +3649,23 @@ https://blog.finchsec.com/awus036axml-part1 la de wifi 6 alfa
 
 Como ya se ha mencionado anteriormente, se tienen 3 tipos de sistemas que se pueden utilizar para capturar IEEE 802.11 Wireless frames:
 
-1. `Mobile`
-2. `Infraestructure`
-3. `Distributed`
+1. `Mobile Protocol Analysis`
+2. `Infraestructure AKA AP-based Analysis`
+3. `Distributed Overlay analysis`
+
+En el caso de los antenas utilizadas en `Mobile` pueden existir una amplia gama y cada vendor tendrá sus props y sus contras, tal cual se vió durante el `Laboratiorio de Drivers Fz3r0`. Esto también incluye el soporte de banda `2.4 GHz` y `5 GHz`, `Bandwith`, `MIMO`, `Spatial Streams`, etc... Cada una de estas cualidades de cada adaptador y sus antenas, le darán capacidades adicionales o limitarán a los dispositivos a capturar ya sea todo el tráfico posible o quizás solo una parte. 
+
+- **Por ejemplo, una antena de `2.4 GHz` no puede capturar tráfico `5 GHz`, lo mismo pasa si el adaptador no soporta `MIMO` o no todas las `PHY` son compatibles. Si una antena y adaptador donde se está capturando solo tiene la capacidad de `1x1:1` podrá captruar tráfico, pero no verá todo el panorama completo y solo será capaz de capturar `1 spatial stream`.**
+
+En caso de captura con `Infraestructure AKA AP-based Analysis` todo depende del AP que se está capturando, por ejemplo comparando un `Ruckus R850` y un `Ruckus R300`, ambos pueden capturar frames 802.11 por infraestructura, pero el `R850` es de gama alta con capacidad incluso de WiFi6, mientras que el `R300` tiene menos capacidades. Es por ello que el `R850` podrá capturar aún más que el `R300`. Sin embargo, algo curioso es que el `R300` puede capturar `FCS - Frame Check Sequence` y los `R850` no.  REVIUSAR BIEN ESTOOOO CUAL ERA CUAL 
+
+- **En caso de Ruckus, al momento de capturar 802.11 los clientes pueden seguir conectados sin problemas y el servicio sigue funcionando, algo que lo hace demasiado poderoso en comparación a otros vendors, los cuales deben desconectar a los clientes para poner sus APs en `Monitor Mode` y capturar `802.11 frames`.**
+
+**Una ventaja abismal entre `Infraestructure AKA AP-based Analysis` y `Distributed Overlay analysis` frente a `Mobile Protocol Analysis` es que estos se pueden hacer de manera remota, justo en sitio del problema y la ubicación de la red misma, sin embargo, esto solo está al alcance de empresas que pueden costear estos servicios e infraestructura. No obstante, para hacer el mejor análisis posible, los más profesional y completo sería combinar los 3 métodos de captura. 
+
+
+
+## Seleccionar Ubicación de Captura
 
 
 
