@@ -3265,6 +3265,14 @@ Para el análisis de protocolo y la catpura de 802.11 WiFi Frames se comienza de
 2. ⭕ El software de análisis de protocolo y los drivers para la interfaz WiFi
 3. ⭕ El hardware requerido
 
+En el análisis de protocolos, existen herramientas que solo son compatibles con ciertos sistemas operativos, como Windows, Linux y Mac OS. Un dato importante es que Mac OS tiene la ventaja de permitir la captura nativa de tramas 802.11 sin la necesidad de controladores adicionales.
+
+La elección del hardware, software, drivers y sistema operativo dependerá del presupuesto y de las necesidades específicas en ese momento. Al utilizar software y hardware con licencia, es necesario seguir los pasos de cada proveedor para obtener la licencia y utilizar la tecnología. Algunos software solo admiten versiones antiguas de Java, mientras que otros solo tienen soporte web y pueden variar en su compatibilidad con diferentes navegadores.
+
+En caso de utilizar captura por método `infraestructure` o `distributed` hay que tomar en cuenta que los APs o infraestructura involucrada soporte la captura de frames 802.11, además que todo tenga su firmware correcto para su funcionamiento. 
+
+Es importante tener en cuenta cada uno de estos puntos al elegir la combinación adecuada de hardware, drivers, software y sistema operativo para garantizar la compatibilidad y el funcionamiento adecuado según las necesidades y según el método de captura deseado. 
+
 ### ⭕ El sistema operativo que se está utilizando
 
 Es importante seleccionar herramientas de software que sean compatibles con el sistema operativo utilizado para la captura de tráfico de red inalámbrica, como Windows, Linux o macOS.
