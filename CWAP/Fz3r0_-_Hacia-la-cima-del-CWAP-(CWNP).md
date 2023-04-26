@@ -3564,3 +3564,62 @@ https://blog.finchsec.com/awus036axml-part1 la de wifi 6 alfa
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PHY
+
+802.11 Radio information 
+
+
+
+El campo "802.11 radio information" que aparece en los frames capturados en modo monitor en Wireshark no está en el contenido de los frames de manera explícita en formato HEX, sino que es información que se obtiene de las capas físicas y de enlace de la red inalámbrica.
+
+Cuando un adaptador de red está en modo monitor, es capaz de capturar todas las tramas que se transmiten a través del medio inalámbrico en un determinado canal. El adaptador de red recibe estas tramas y las transfiere a Wireshark para su análisis y decodificación.
+
+La información contenida en el campo "802.11 radio information" es información que se obtiene de las señales inalámbricas transmitidas por los dispositivos de la red, como el nivel de señal, la frecuencia del canal, la modulación utilizada, la velocidad de transmisión, entre otros.
+
+Es importante tener en cuenta que esta información no se transmite en el cuerpo del frame de manera explícita, sino que se obtiene a partir del análisis de las señales de radio. Por lo tanto, la capacidad de capturar y analizar esta información depende de la capacidad del adaptador de red y de la calidad de la señal recibida.
+
+
+
+
+El frame contiene información que se utiliza para transportar los datos, como la dirección de origen y destino, la información de control, el contenido de los datos, entre otros. Sin embargo, la información que se muestra en el campo "802.11 radio information" en Wireshark no se transmite explícitamente en el cuerpo del frame.
+
+En cambio, esta información se obtiene a partir del análisis de las señales de radio que se utilizan para transmitir el frame. Cada vez que se transmite una señal de radio, esta contiene información sobre la frecuencia, la potencia, la modulación, entre otros parámetros que se utilizan para transmitir la señal. Estos parámetros se pueden analizar y utilizar para determinar información adicional sobre la transmisión.
+
+Por ejemplo, el nivel de señal (RSSI) se puede medir midiendo la potencia de la señal recibida. La relación señal-ruido (SNR) se puede calcular midiendo la relación entre la potencia de la señal recibida y el nivel de ruido en el canal. La duración de la transmisión se puede medir midiendo el tiempo que dura la señal de radio transmitida... Es decir, este cáclulo lo hace directamente el software, no es que viaje por el aire con la demás información.
+
+es importante tener en cuenta que algunos de los parámetros que se muestran en el campo "802.11 radio information" se basan en información que se transmite en la señal de radio. Por ejemplo, la frecuencia y el canal en el que se está transmitiendo la señal se transmiten en la señal de radio y se pueden obtener directamente de la señal capturada por el adaptador de red en modo monitor.
+
+
+Otros parámetros, como el SNR, la potencia de la señal, la modulación, entre otros, se obtienen a partir del análisis de las señales de radio. Estos parámetros no se transmiten explícitamente en la señal de radio, pero se pueden calcular a partir de la información contenida en la señal, como la forma de onda, el patrón de modulación, entre otros.
+
+El campo "802.11 radio information" en Wireshark es un conjunto de datos que se muestra en la sección de detalles de los frames capturados en modo monitor en redes inalámbricas 802.11. Esta información se obtiene de la capa física de la red, es decir, de las señales de radio que se transmiten entre los dispositivos de la red inalámbrica.
+
+El campo "802.11 radio information" incluye información como el canal utilizado para la transmisión, la tasa de transmisión, la modulación utilizada, el nivel de señal recibido (RSSI), la relación señal-ruido (SNR), la calidad de la señal (Signal Quality), el tiempo de duración de la transmisión (Duration), entre otros.
+
+La información contenida en este campo puede ser muy útil para analizar el rendimiento de la red inalámbrica, detectar problemas de interferencia, identificar dispositivos en la red, entre otros. Sin embargo, es importante tener en cuenta que esta información no se transmite explícitamente en el cuerpo del frame, sino que se obtiene a partir del análisis de las señales de radio.
+
