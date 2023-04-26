@@ -2953,6 +2953,16 @@ Tipo de Licencia: `$$$$`
 
 Ambas herramientas son muy útiles para monitorear y analizar el tráfico de red en tiempo real o para analizar capturas de paquetes previamente capturadas. Tcpdump es más adecuado para usuarios avanzados o administradores de sistemas que prefieren trabajar en una interfaz de línea de comandos, mientras que TShark es una buena opción para aquellos que prefieren trabajar con la potencia y versatilidad de Wireshark desde la línea de comandos.
 
+## Biblia de Wireshark y Cheatsheets
+
+![image](https://user-images.githubusercontent.com/94720207/234449297-dd2981e3-6404-43d7-b73c-cad60706ebc8.png)
+
+- [Wireshark Filter Manual Page - Wireshark display filter syntax and reference](https://www.wireshark.org/docs/man-pages/wireshark-filter.html)
+- [Wireshark - Where to Start?](https://www.wireshark.org/docs/)
+- [Display Filter Reference](https://www.wireshark.org/docs/dfref/)
+- https://www.wireshark.org/docs/dfref/w/wlan.html
+- https://www.wireshark.org/docs/dfref/w/wlan_radio.html
+
 ## Capturando y Analizando: 802.3 Ethernet VS 802.11 WiFi
 
 Si bien he mencionado que es fundamental tener experiencia en cuanto a la captura y análisis de tráfico Ethernet 802.3 antes de estudiar la captura WiFi, también es fundamental saber que los protocolos inalámbricos 802.11 son significativamente diferentes y más complejos que los protocolos Ethernet 802.3, por ello, requieren herramientas adicionales para diagnósticos y un conjunto de habilidades adicional para implementarlos y comprender cómo se están utilizando. En redes 802.11 WiFi se necesita tener en cuenta diferentes variables y conceptos a considerar al capturar tráfico inalámbrico. Por ejemplo: 
@@ -3623,3 +3633,14 @@ El campo "802.11 radio information" incluye información como el canal utilizado
 
 La información contenida en este campo puede ser muy útil para analizar el rendimiento de la red inalámbrica, detectar problemas de interferencia, identificar dispositivos en la red, entre otros. Sin embargo, es importante tener en cuenta que esta información no se transmite explícitamente en el cuerpo del frame, sino que se obtiene a partir del análisis de las señales de radio.
 
+
+
+### Radiotap Header
+
+- [Display Filter Reference: IEEE 802.11 Radiotap Capture header](https://www.wireshark.org/docs/dfref/r/radiotap.html)
+
+
+### 802.11 Radio Information
+
+
+- [Display Filter Reference: 802.11 radio information](https://www.wireshark.org/docs/dfref/w/wlan_radio.html)
