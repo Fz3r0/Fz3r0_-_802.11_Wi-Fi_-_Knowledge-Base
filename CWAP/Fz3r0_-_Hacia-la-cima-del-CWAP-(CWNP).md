@@ -3253,7 +3253,7 @@ https://www.youtube.com/watch?v=U_zzdl7xV7I
 
 
 
-## Instalacion de Drivers para Modo Monitor
+## 🟢 Instalacion de Drivers para Modo Monitor
 
 Para el análisis de protocolo y la catpura de 802.11 WiFi Frames se comienza determinando cuáles serán las herramientas tanto de Hardware y Software que se utilizarán. Existen muchas opciones como ya se ha visto, pero caalquiera sea la combinación siempre de basa en 3 cosas:
 
@@ -3270,12 +3270,17 @@ Es importante seleccionar herramientas de software que sean compatibles con el s
 - `Linux`: Linux se tienen muchísimas herramientas y opciones para analizar, capturar e inyectar tráfico 802.11. Pero en ocasiones las configuraciones requeridas no son tán simples como podría serlo en Windows o Mac OS. 
 - `Raspberry PI`: Otra gran opción muy similar a Linux, pero un poco más complejo aún por la necesidad de aún mas equipo. 
 - `Android`: Personalmente no recomiendo capturar tráfico con las pocas herramientas que existen en Android ya que no están a la altura de sus contra partes mencionadas anteriormente. 
+- `Sistemas Operativos de Propietario`: Si se están usando sistemas de captura de `infraestructura` o `distribuido` es muy probable que utilicemos directamente los Sistemas Operativos del fabricante, por ejemplo, en caso de Ruckus Smartzone estaríamos usando la UI basada en web, mientras que el sistema operativo y las entrañas de SmartZone trabajan con bases de Unix, cosa que no importa realmente mucho, ya que en este tipo de soluciones es muy fácil trabajar con sus drivers ya que son sistemas licenciados y con soporte. 
 
-**En este documento procuro utilizar ejemplos tanto de Windows, Linux y Mac OS ya que tengo acceso a los 3. Sin embargo, para las prácticas y laboratorios de instalación de drivers utilizaré especificamente Linux Parrot Security basado en Debian.**
+**En este documento procuro utilizar ejemplos de `mobile` tanto de Windows, Linux y Mac OS ya que tengo acceso a los 3. Sin embargo, para las prácticas y laboratorios de instalación de drivers utilizaré especificamente Linux Parrot Security basado en Debian. Además, también utilizo `infraestructura` de Ruckus Smartzone. Durante mis estudios no tuve acceso a un sistemas `distributed` como sensores dedicados a la captura.**
 
 ### ⭕ El software de análisis de protocolo y los drivers para la interfaz WiFi 
 
-Es necesario elegir software de análisis de protocolo y controladores de dispositivos inalámbricos que sean compatibles con el hardware de la interfaz WiFi utilizada para la captura de tráfico.
+Ya hubo anteriormente una sección enfocada directamente a los `protocol analyzers` y `sniffers`, es importante elegir el que sea compatible tanto con los adaptadores WiFi como con los drivers que vayamos a utilizar, ya que esto asegura que la herramienta de captura pueda aprovechar al máximo la capacidad del adaptador WiFi y el driver para capturar todos los paquetes de red necesarios para el análisis profesional.
+
+Una herramienta de captura que no sea compatible con el adaptador WiFi o el driver podría perder paquetes importantes durante la captura, lo que puede afectar la calidad y la integridad de los datos capturados. Además, la herramienta de captura puede tener dificultades para decodificar correctamente los paquetes capturados si no es compatible con los formatos y protocolos específicos utilizados por el adaptador y el driver.
+
+**El driver del adaptador puede influir en la cantidad de tipos de frames que se pueden capturar durante una captura 802.11.** Por ejemplo, algunos drivers pueden estar diseñados para capturar solo paquetes de datos, mientras que otros pueden capturar paquetes de control y gestión, lo que permite una captura más completa de la red inalámbrica.
 
 ### ⭕ El hardware requerido 
 
@@ -3283,13 +3288,28 @@ El hardware necesario puede variar dependiendo del tipo de análisis y captura q
 
 En la documentación del CWAP solo dan un ejemplo de instalación de Drivers en Omnipeek apliance, que honestamente es solo darle Next y funciona en un Windows común y corriente, recordemos que Omnipeek no es una herramienta al alcance de cualquiera, estas facilidades y automatización cuestan en la cartera...
 
-En mi experiencia personal he probado con diferentes antenas que venden en mercados como Amazon y son las que usan en foros de Internet, sin embargo, varias tienen algunos trucos para hacerlas funcionar y en ocasiones esto puede generar un dolor de cabeza. Aconsejo este par de videos de David Bombal para entender más a fondo estas problemáticas: 
+En mi experiencia personal, he probado con diferentes antenas que venden en mercados como Amazon y son las que usan en foros de Internet, sin embargo, varias tienen algunos trucos para hacerlas funcionar y en ocasiones esto puede generar un dolor de cabeza. Aconsejo este par de videos de David Bombal para entender más a fondo estas problemáticas: 
 
 
 Para llevar el aprendizaje más allá compartiré 2 laboratorios que hice con diferentes antenas la primera con Panda Wireless y la segunda con Alfa
 
 
-## Laboratorio  de Drivers Fz3r0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 🟢 Laboratorio  de Drivers Fz3r0
 
 Este laboratiorio lo hice solo para entender por completo y vivir la experiencia del dolor de cabeza que suelen ser los drivers en caso de querer construir un sniffer a la medida del tipo `Mobile` por ejemplo con un sistema Linux o RaspBerry Pi, también los comparo con otros métodos de captura donde no tuve que instalar ningún driver por ejemplo con otros sistemas `Mobile` como Mac OS, o sistemas de infraestructura como `Ruckus Commscope`. 
 
@@ -3312,11 +3332,11 @@ Durante mis estudios no tuve acceso a sistemas `Distributed` como sensores dedic
 
 ---
 
-## Adaptadores WiFi recomendados para capturar 802.11 Frames en 2023
+### Adaptadores WiFi recomendados para capturar 802.11 Frames en 2023
 
 Después de las pruebas relaizadas en el laboratorio y con la documentación reciente encontrada en linea, realicé esta tabla donde están las antenas más recomendadas para capturar sin tanto problema. Toda esta información se basa en mi experiencia en el laboratorio anterior y conforme experiencia de otros usuarios en la red, aunque me limitaré a recomendar solo unas cuantas antenas. 
 
-### El driver es más importante que la antena o la marca
+- **El driver es más importante que la antena o la marca**
 
 Tal cual dijo David Bombal y me pude dar cuenta comprando antenas chinas baratas... es que lo importante es fijarse en el driver, el driver combinado con el sistemas operativo es lo que logrará la mejor captura posible. Actualmente, he notado que el driver Atheros ha sido infalible, tal cual se ha mencionado en la red... Pero también es cierto que existen drivers nuevos como el `alfa` que es soportado para capturar incluso WiFi6. 
 
