@@ -2923,33 +2923,59 @@ Un `protocol analyzer` (analizador de protocolos) y un `sniffer` (olfateador) so
 
 Existen varias herramientas y posibilidades en el mercado para realizar estas tareas, por ejemplo:
 
-### Wireshark
+### ⭕ Wireshark
 
 `Wireshark` es una herramienta de software de `código abierto` que se utiliza para analizar el tráfico de red en tiempo real y también para analizar los paquetes de red capturados anteriormente. Es decir, Wireshark es capaz de realizar tanto la función de un sniffer como la de un protocol analyzer. Wireshark es una de las herramientas de análisis de red más populares y ampliamente utilizadas, debido a su facilidad de uso y su capacidad para analizar una amplia variedad de protocolos de red.
 
 Tipo de Licencia: `Código Abierto` :) 
 
-### Omnipeek
+![image](https://user-images.githubusercontent.com/94720207/234611476-e2e9201a-e86d-46d3-bfe1-55809c095372.png)
+
+![image](https://user-images.githubusercontent.com/94720207/234611540-570c0d4a-3738-4564-a90d-c34fbc010756.png)
+
+![image](https://user-images.githubusercontent.com/94720207/234611750-55c8b13f-6fd5-4b98-a913-1880a8040528.png)
+
+
+### ⭕ Omnipeek
 
 Omnipeek es otra herramienta de análisis de red que es utilizada para monitorear, analizar y solucionar problemas de red. Ofrece una amplia variedad de características, incluyendo la capacidad de analizar el tráfico de red en tiempo real, visualizar la topología de red y realizar análisis detallados de protocolos. Omnipeek también es capaz de analizar una amplia variedad de protocolos de red.
 
 Tipo de Licencia: `$$$$`
 
-### Acrylic WiFi Analyzer & Acrylic WiFi Capture
+![image](https://user-images.githubusercontent.com/94720207/234612267-994a88d8-8591-4336-b848-81d5e296a553.png)
 
-Acrylic WiFi Analyzer y Acrylic WiFi Capture son herramientas de software que se enfocan en el análisis de redes inalámbricas, ambas dentro de la Suite de Acrylic pero en realidad son 2 software por separado. 
+![image](https://user-images.githubusercontent.com/94720207/234612435-9ad31469-3318-409d-85b5-8e517574ba4b.png)
 
-Acrylic WiFi Analyzer se utiliza para monitorear y analizar la calidad de la señal, el rendimiento de la red y la seguridad de las redes Wi-Fi. Acrylic WiFi Capture, por otro lado, es una herramienta de captura de paquetes que permite a los usuarios capturar y analizar paquetes de red inalámbricos en tiempo real. Ambas herramientas son útiles para diagnosticar problemas en redes Wi-Fi.
+![image](https://user-images.githubusercontent.com/94720207/234612515-46323d26-6629-4e32-8d83-d0d34d6383d7.png)
+
+
+### ⭕ Acrylic WiFi Analyzer & Acrylic WiFi Capture
+
+Acrylic WiFi Analyzer es una herramienta de software que se enfoca en el análisis de redes inalámbricas, en realidad esta herramienta es una Suite con varios módulos integrados.
+
+Acrylic WiFi Analyzer se utiliza para monitorear y analizar la calidad de la señal, el rendimiento de la red y la seguridad de las redes Wi-Fi, tiene también un módulo de packet capture que permite a los usuarios capturar y analizar paquetes de red inalámbricos en tiempo real. Ambas herramientas son útiles para diagnosticar problemas en redes Wi-Fi.
 
 Tipo de Licencia: `$$$$`
 
-### TCPdump & T-Shark
+![image](https://user-images.githubusercontent.com/94720207/234612758-b5beb709-51da-4f23-b0c2-891fdbb74b2a.png)
+
+![image](https://user-images.githubusercontent.com/94720207/234613663-1f847780-b1ad-47c6-8d6e-78333157fe8a.png)
+
+![image](https://user-images.githubusercontent.com/94720207/234613950-5ed6b5d4-1f56-4d37-8587-57c24effc599.png)
+
+
+### ⭕ TCPdump & T-Shark
 
 `Tcpdump` y `TShark` son herramientas de `línea de comandos` para capturar y analizar el tráfico de red. Ambos son parte del conjunto de herramientas `libpcap`, que es una biblioteca utilizada para capturar paquetes de red.
 
 - `Tcpdump` es una herramienta que se utiliza principalmente para capturar y analizar paquetes de red en sistemas Unix y Linux. Es una herramienta de línea de comandos que muestra el contenido de los paquetes capturados en la pantalla, lo que la hace útil para usuarios avanzados y administradores de sistemas que trabajan en una interfaz de línea de comandos.
 
+![image](https://user-images.githubusercontent.com/94720207/234615030-4b670af8-7100-450c-a70e-c2bad253933a.png)
+
+
 - `TShark`, es la versión de línea de comandos de `Wireshark`. Al igual que Wireshark, TShark puede capturar y analizar paquetes de red en tiempo real o desde un archivo previamente capturado. TShark tiene la capacidad de decodificar y analizar una amplia variedad de protocolos de red, y también puede filtrar y analizar paquetes específicos utilizando una variedad de criterios, como dirección IP de origen y destino, número de puerto, tipo de protocolo y mucho más.
+
+![image](https://user-images.githubusercontent.com/94720207/234615446-f9526c13-63e1-444c-b6e7-9c29534f7dc1.png)
 
 Ambas herramientas son muy útiles para monitorear y analizar el tráfico de red en tiempo real o para analizar capturas de paquetes previamente capturadas. Tcpdump es más adecuado para usuarios avanzados o administradores de sistemas que prefieren trabajar en una interfaz de línea de comandos, mientras que TShark es una buena opción para aquellos que prefieren trabajar con la potencia y versatilidad de Wireshark desde la línea de comandos.
 
@@ -3636,7 +3662,7 @@ El campo "802.11 radio information" en Wireshark es un conjunto de datos que se 
 
 El campo "802.11 radio information" incluye información como el canal utilizado para la transmisión, la tasa de transmisión, la modulación utilizada, el nivel de señal recibido (RSSI), la relación señal-ruido (SNR), la calidad de la señal (Signal Quality), el tiempo de duración de la transmisión (Duration), entre otros.
 
-La información contenida en este campo puede ser muy útil para analizar el rendimiento de la red inalámbrica, detectar problemas de interferencia, identificar dispositivos en la red, entre otros. Sin embargo, es importante tener en cuenta que esta información no se transmite explícitamente en el cuerpo del frame, sino que se obtiene a partir del análisis de las señales de radio.
+La información contenida en este campo puede ser muy útil para analizar el rendimiento de la red inalámbrica, detectar problemas de interferencia, identificar dispositivos en la red, entre otros. Sin embargo, es importante tener en cuenta que esta  información no se transmite explícitamente en el cuerpo del frame, sino que se obtiene a partir del análisis de las señales de radio.
 
 
 
