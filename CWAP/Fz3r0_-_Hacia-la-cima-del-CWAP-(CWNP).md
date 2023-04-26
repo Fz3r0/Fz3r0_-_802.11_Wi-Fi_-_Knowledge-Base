@@ -3631,6 +3631,16 @@ https://blog.finchsec.com/awus036axml-part1 la de wifi 6 alfa
 
 
 
+---
+
+## 🟢 Selección de Dispositivos de Captura
+
+Como ya se ha mencionado anteriormente, se tienen 3 tipos de sistemas que se pueden utilizar para capturar IEEE 802.11 Wireless frames:
+
+1. `Mobile`
+2. `Infraestructure`
+3. `Distributed`
+
 
 
 
