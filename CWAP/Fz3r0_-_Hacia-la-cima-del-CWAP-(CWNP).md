@@ -3659,6 +3659,9 @@ En el caso de los antenas utilizadas en `Mobile` pueden existir una amplia gama 
 
 En caso de captura con `Infraestructure AKA AP-based Analysis` todo depende del AP que se está capturando, por ejemplo comparando un `Ruckus R850` y un `Ruckus R300`, ambos pueden capturar frames 802.11 por infraestructura, pero el `R850` es de gama alta con capacidad incluso de WiFi6, mientras que el `R300` tiene menos capacidades. Es por ello que el `R850` podrá capturar aún más que el `R300`. Sin embargo, algo curioso es que el `R300` puede capturar `FCS - Frame Check Sequence` y los `R850` no.  REVIUSAR BIEN ESTOOOO CUAL ERA CUAL 
 
+- [Ruckus R320 Datasheet](https://webresources.ruckuswireless.com/datasheets/r320/ds-ruckus-r320.pdf)
+- [Ruckus R850 Datasheet](https://www.commscope.com/globalassets/digizuite/458063-ds-ruckus-r850.pdf)
+
 ![image](https://user-images.githubusercontent.com/94720207/234682042-d0a6c5dd-87d9-4286-b110-e554ddc3852a.png)
 
 - **En caso de Ruckus, al momento de capturar 802.11 los clientes pueden seguir conectados sin problemas y el servicio sigue funcionando, algo que lo hace demasiado poderoso en comparación a otros vendors, los cuales deben desconectar a los clientes para poner sus APs en `Monitor Mode` y capturar `802.11 frames`.**
