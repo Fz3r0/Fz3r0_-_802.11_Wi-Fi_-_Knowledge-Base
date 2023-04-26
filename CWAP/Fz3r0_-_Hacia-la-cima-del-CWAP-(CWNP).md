@@ -3659,6 +3659,8 @@ En el caso de los antenas utilizadas en `Mobile` pueden existir una amplia gama 
 
 En caso de captura con `Infraestructure AKA AP-based Analysis` todo depende del AP que se está capturando, por ejemplo comparando un `Ruckus R850` y un `Ruckus R300`, ambos pueden capturar frames 802.11 por infraestructura, pero el `R850` es de gama alta con capacidad incluso de WiFi6, mientras que el `R300` tiene menos capacidades. Es por ello que el `R850` podrá capturar aún más que el `R300`. Sin embargo, algo curioso es que el `R300` puede capturar `FCS - Frame Check Sequence` y los `R850` no.  REVIUSAR BIEN ESTOOOO CUAL ERA CUAL 
 
+![image](https://user-images.githubusercontent.com/94720207/234682042-d0a6c5dd-87d9-4286-b110-e554ddc3852a.png)
+
 - **En caso de Ruckus, al momento de capturar 802.11 los clientes pueden seguir conectados sin problemas y el servicio sigue funcionando, algo que lo hace demasiado poderoso en comparación a otros vendors, los cuales deben desconectar a los clientes para poner sus APs en `Monitor Mode` y capturar `802.11 frames`.**
 
 **Una ventaja abismal entre `Infraestructure AKA AP-based Analysis` y `Distributed Overlay analysis` frente a `Mobile Protocol Analysis` es que estos se pueden hacer de manera remota, justo en sitio del problema y la ubicación de la red misma, sin embargo, esto solo está al alcance de empresas que pueden costear estos servicios e infraestructura. No obstante, para hacer el mejor análisis posible, los más profesional y completo sería combinar los 3 métodos de captura. 
