@@ -3701,19 +3701,24 @@ Es importante tener en cuenta que al estar cerca de un cliente con problemas, la
 
 
 
+
+
+- Si varios clientes tienen problemas, sería mejor capturar cerca del AP donde todos estén conectados, además de capturar cerca de los clientes. Al capturar en ambas ubicaciones, cerca de los clientes y cerca del AP, es posible que pueda encontrar una solución más rápida que capturando desde solo una ubicación.
+- Si todos los clientes de un AP en particular tienen problemas y reiniciar el AP no resuelve el problema, capturar más cerca del AP puede revelar un problema constante causado por el AP.
+
+El tipo de problemas que se informen por parte del cliente, nos puede guiar en la selección de las ubicaciones de captura: 
+
+- **Si solo un cliente tiene problemas, capture cerca de él.** 
+- **Si varios clientes informan problemas, se debe capturar cerca del AP y de algunos, si no de todos los clientes, hasta encontrar la fuente del problema.**
+- **Los problemas persistentes se diagnostican más rápidamente que los intermitentes.**
+
+A veces, la primera captura brindará las respuestas que estamos buscando. Cuando no... puede ser necesario capturar desde otras ubicaciones o durante períodos más largos de tiempo, o incluso al mismo tiempo con diferentes herramientas. 
+
+Se pueden utilizar múltiples métodos de captura cuando estén disponibles y también capturar desde diferentes ubicaciones, hasta que se diagnostique el problema... pero...  ¡No todos los problemas se resolverán con la captura de paquetes! No se pueden resolver los problemas de WiFi capturando 802.11 frames en el aire mientras que los switches de lis IDFs están en el suelo, llenos de telarañas y los cables comidos por serpientes. ¡Una captura nunca mostrará eso! Hay que ser objetivos en los escenarios que se requiere una captura realmente. 
+
 ![image](https://user-images.githubusercontent.com/94720207/234729826-49f212c8-9450-478b-8460-535c732e8b6d.png)
 
-Si varios clientes tienen problemas, es posible que desee capturar desde un área cercana al punto de acceso (AP), además de capturar cerca de los clientes. Al capturar en ambas ubicaciones, cerca de los clientes y cerca del AP, es posible que pueda encontrar una solución más rápida que capturando desde solo una ubicación.
 
-Si todos los clientes de un AP en particular tienen problemas y reiniciar el AP no resuelve el problema, capturar más cerca del AP puede revelar un problema constante causado por el AP.
-
-En última instancia, la captura cerca de los clientes, cerca del AP o ambas, se decide caso por caso. El tipo de problemas que se informen debe guiarlo en la selección de las ubicaciones de captura. Si solo un cliente tiene problemas, capture cerca de él. Si varios clientes informan problemas, debe capturar cerca del AP y de algunos, si no de todos los clientes, hasta encontrar la fuente del problema.
-
-A veces, la primera captura brindará las respuestas que busca. Cuando no lo haga, puede ser necesario capturar desde otras ubicaciones o durante períodos más largos.
-
-Los problemas persistentes se diagnostican más rápidamente que los intermitentes.
-
-Se deben utilizar múltiples métodos de captura y captura desde diferentes ubicaciones, cuando estén disponibles, hasta que se diagnostique el problema. ¡No todos los problemas se resolverán con la captura de paquetes! No se pueden resolver los problemas de WiFi capturando tramas en el aire mientras que los switches en las áreas están en el suelo, llenos de telarañas y los cables comidos por serpientes. ¡Una captura nunca mostrará eso!
 
 
 ![image](https://user-images.githubusercontent.com/94720207/234726924-5e3f7412-212b-4b07-a7e3-6b7d2f533ad9.png)
