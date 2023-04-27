@@ -3635,7 +3635,14 @@ https://secwiki.org/w/Npcap/WiFi_adapters
 
 ![image](https://user-images.githubusercontent.com/94720207/233827035-6a9069da-db18-4f8b-b40d-22ff26196667.png)
 
-- Hice el intento hombre!!
+
+
+- RTL
+
+![image](https://user-images.githubusercontent.com/94720207/234780343-172f9125-8099-49b9-8421-07714f7f5aea.png)
+
+
+### Atheros
 
 ![image](https://user-images.githubusercontent.com/94720207/233827184-13b744cf-1e2e-40db-b8b4-791e424eb99a.png)
 
