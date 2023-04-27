@@ -3657,6 +3657,50 @@ https://blog.finchsec.com/awus036axml-part1 la de wifi 6 alfa
 
 
 
+
+
+
+
+## Comparación entre varias antenas
+
+### Panda:
+
+beacon airpwn
+
+![image](https://user-images.githubusercontent.com/94720207/234749014-0c7a50eb-53d5-4c61-8926-16bf26f7268f.png)
+
+---
+
+### Atheros
+
+![image](https://user-images.githubusercontent.com/94720207/234749869-4488f725-a05e-4df5-8e05-ab94fbb376c3.png)
+
+---
+
+### Alfa 1900
+
+![image](https://user-images.githubusercontent.com/94720207/234750675-7d174888-0b07-4f2b-9152-a59a9d2b74bb.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 
 ## 🟢 Selección de `Dispositivos de Captura`
