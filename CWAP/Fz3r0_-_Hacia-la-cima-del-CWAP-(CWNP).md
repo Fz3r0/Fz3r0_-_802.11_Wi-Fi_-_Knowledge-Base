@@ -3730,6 +3730,11 @@ En el caso de los antenas utilizadas en `Mobile` pueden existir una amplia gama 
 
 - **Por ejemplo, una antena de `2.4 GHz` no puede capturar tráfico `5 GHz`, lo mismo pasa si el adaptador no soporta `MIMO` o no todas las `PHY` son compatibles. Si una antena y adaptador donde se está capturando solo tiene la capacidad de `1x1:1` podrá captruar tráfico, pero no verá todo el panorama completo y solo será capaz de capturar `1 spatial stream`.**
 
+- [Alfa - AWUS036AXML - Triband 802.11b/a/g/n/ac/ax](https://www.alfa.com.tw/products/awus036axml?variant=39754360684616)
+- [Panda Wireless - PAU06](http://www.pandawireless.com/panda300mbpsant.htm)
+
+![image](https://user-images.githubusercontent.com/94720207/234764690-2d2d103f-c885-4c6d-8ffe-2aa95803b4bb.png)
+
 En caso de captura con `Infraestructure AKA AP-based Analysis` todo depende del AP que se está capturando, por ejemplo comparando un `Ruckus R850` y un `Ruckus R300`, ambos pueden capturar frames 802.11 por infraestructura, pero el `R850` es de gama alta con capacidad incluso de WiFi6, mientras que el `R300` tiene menos capacidades. Es por ello que el `R850` podrá capturar aún más que el `R300`. Sin embargo, algo curioso es que el `R300` puede capturar `FCS - Frame Check Sequence` y los `R850` no.  REVIUSAR BIEN ESTOOOO CUAL ERA CUAL 
 
 - [Ruckus R320 Datasheet](https://webresources.ruckuswireless.com/datasheets/r320/ds-ruckus-r320.pdf)
@@ -3739,7 +3744,9 @@ En caso de captura con `Infraestructure AKA AP-based Analysis` todo depende del 
 
 - **En caso de Ruckus, al momento de capturar 802.11 los clientes pueden seguir conectados sin problemas y el servicio sigue funcionando, algo que lo hace demasiado poderoso en comparación a otros vendors, los cuales deben desconectar a los clientes para poner sus APs en `Monitor Mode` y capturar `802.11 frames`.**
 
-**Una ventaja abismal entre `Infraestructure AKA AP-based Analysis` y `Distributed Overlay analysis` frente a `Mobile Protocol Analysis` es que estos se pueden hacer de manera remota, justo en sitio del problema y la ubicación de la red misma, sin embargo, esto solo está al alcance de empresas que pueden costear estos servicios e infraestructura. No obstante, para hacer el mejor análisis posible, los más profesional y completo sería combinar los 3 métodos de captura. 
+**Una ventaja abismal entre `Infraestructure AKA AP-based Analysis` y `Distributed Overlay analysis` frente a `Mobile Protocol Analysis` es que estos se pueden hacer de manera remota, justo en sitio del problema y la ubicación de la red misma, además, tenemos capacidades de captura de PHY bastante complejas como el ejemplo del `Ruckus R850` que tiene capacidades de `8x8:8` y `WiFi 6 802.11ax` cosa que ningún adaptador al alcance de cualquier persona pueda capturar, sin embargo, esto solo está al alcance de empresas que pueden costear estos servicios e infraestructura. 
+
+- **Para hacer el mejor análisis posible y en caso de ser necesario, lo mejor sería combinar los 3 métodos de captura desde diferentes lugares.**
 
 
 
