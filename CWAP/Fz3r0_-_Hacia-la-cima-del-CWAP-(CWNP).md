@@ -3649,6 +3649,17 @@ https://blog.finchsec.com/awus036axml-part1 la de wifi 6 alfa
 
 
 
+coparacion beacon:
+
+![image](https://user-images.githubusercontent.com/94720207/234753754-d08ed189-fbdd-4255-8337-977edd8842ac.png)
+
+comparación beacon 2:
+
+![image](https://user-images.githubusercontent.com/94720207/234755626-f99e73be-e753-43fe-bcd1-4784bed34e73.png)
+
+
+
+
 
 
 
