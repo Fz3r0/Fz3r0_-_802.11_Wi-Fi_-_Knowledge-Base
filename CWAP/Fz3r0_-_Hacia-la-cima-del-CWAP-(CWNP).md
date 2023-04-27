@@ -3658,6 +3658,10 @@ comparación beacon 2:
 ![image](https://user-images.githubusercontent.com/94720207/234755626-f99e73be-e753-43fe-bcd1-4784bed34e73.png)
 
 
+comparacion 3:
+
+![image](https://user-images.githubusercontent.com/94720207/234758726-04e31b24-ff0b-4f5b-81c4-e04efb1c001a.png)
+
 
 
 
@@ -3749,15 +3753,7 @@ En cuanto a la elección de la ubicación para la captura de tráfico, es recome
 
 Es importante tener en cuenta que al estar cerca de un cliente con problemas, la captura de tráfico se asemejará más a la experiencia del usuario, lo que puede resultar en una mejor comprensión y resolución del problema.
 
-![image](https://user-images.githubusercontent.com/94720207/234725586-83ef4c86-e443-4a57-98ae-000924cafea3.png)
-
-
-
-
-
-
-
-
+![image](https://user-images.githubusercontent.com/94720207/234759952-af986f6b-a9d2-47ae-bcbc-3306547c74bc.png)
 
 - Si varios clientes tienen problemas, sería mejor capturar cerca del AP donde todos estén conectados, además de capturar cerca de los clientes. Al capturar en ambas ubicaciones, cerca de los clientes y cerca del AP, es posible que pueda encontrar una solución más rápida que capturando desde solo una ubicación.
 - Si todos los clientes de un AP en particular tienen problemas y reiniciar el AP no resuelve el problema, capturar más cerca del AP puede revelar un problema constante causado por el AP.
@@ -3767,6 +3763,8 @@ El tipo de problemas que se informen por parte del cliente, nos puede guiar en l
 - **Si solo un cliente tiene problemas, capture cerca de él.** 
 - **Si varios clientes informan problemas, se debe capturar cerca del AP y de algunos, si no de todos los clientes, hasta encontrar la fuente del problema.**
 - **Los problemas persistentes se diagnostican más rápidamente que los intermitentes.**
+
+![image](https://user-images.githubusercontent.com/94720207/234760156-5005e9fa-7aa0-4a9c-84cd-64460c4a4411.png)
 
 A veces, la primera captura brindará las respuestas que estamos buscando. Cuando no... puede ser necesario capturar desde otras ubicaciones o durante períodos más largos de tiempo, o incluso al mismo tiempo con diferentes herramientas. 
 
