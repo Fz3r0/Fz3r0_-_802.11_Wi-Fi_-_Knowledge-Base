@@ -3800,6 +3800,13 @@ https://excalidraw.com/#json=xS5Bo1G9lryzwggIarbuo,MXn_QfQ4MqyQcjlNgkhsSw
 
 
 
+## Selección `Tiempo de Captura`
+
+![image](https://user-images.githubusercontent.com/94720207/234778168-e385cfd2-b5b8-4900-83c0-9c3913e93ecf.png)
+
+
+
+
 
 
 
