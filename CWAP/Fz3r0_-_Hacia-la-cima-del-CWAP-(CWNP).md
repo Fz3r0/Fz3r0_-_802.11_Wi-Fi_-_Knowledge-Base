@@ -3662,6 +3662,13 @@ comparacion 3:
 
 ![image](https://user-images.githubusercontent.com/94720207/234758726-04e31b24-ff0b-4f5b-81c4-e04efb1c001a.png)
 
+comparación 4, el beacon tal cual :
+
+![image](https://user-images.githubusercontent.com/94720207/234769138-2204dee7-873f-435c-9e66-e823a7d2d168.png)
+
+comparando ahora que sabemos las diferencias el HEX
+
+![image](https://user-images.githubusercontent.com/94720207/234774176-f482d198-147d-4981-ad85-e982bfb20efe.png)
 
 
 
