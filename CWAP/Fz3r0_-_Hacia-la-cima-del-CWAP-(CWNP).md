@@ -3645,6 +3645,16 @@ https://www.aircrack-ng.org/doku.php?id=compatibility_drivers_old
 
 https://blog.finchsec.com/awus036axml-part1 la de wifi 6 alfa
 
+![image](https://user-images.githubusercontent.com/94720207/235054553-73144374-6192-4ff1-92da-51b9db789da3.png)
+
+Atheros AR9271 chipset inside the ALFA Network AWUS036NHA.
+![image](https://user-images.githubusercontent.com/94720207/235055186-124bdf31-52d9-4106-a40f-0397ed16bc47.png)
+
+
+
+awud 036h
+![image](https://user-images.githubusercontent.com/94720207/235054228-6020bc7a-b690-468c-8122-5082f440a429.png)
+
 
 
 ![image](https://user-images.githubusercontent.com/94720207/235052181-a15ed182-2cb8-47d4-a9ec-ea7ef3fd6a21.png)
