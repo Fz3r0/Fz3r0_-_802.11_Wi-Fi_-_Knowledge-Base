@@ -3647,6 +3647,11 @@ https://blog.finchsec.com/awus036axml-part1 la de wifi 6 alfa
 
 
 
+![image](https://user-images.githubusercontent.com/94720207/235052181-a15ed182-2cb8-47d4-a9ec-ea7ef3fd6a21.png)
+
+![image](https://user-images.githubusercontent.com/94720207/235052791-fdd70788-2187-460c-88fc-2394268d7d74.png)
+
+
 ---
 ---
 ---
@@ -3658,6 +3663,10 @@ clear;echo -e "\033[31m[+] Fz3r0 💀 Wireless IEEE 802.11 (WiFi) Adapter Valida
 ````
 
 ![image](https://user-images.githubusercontent.com/94720207/235034361-e7c072fd-467e-436c-a206-8af4f808ad82.png)
+
+
+
+
 
 
 
