@@ -354,6 +354,7 @@ mkdir -p Fz3r0_TCP_Encapsulation/TCP-Packet/{1_Ethernet_II__________________LAYE
 ![image](https://user-images.githubusercontent.com/94720207/235337250-4077c941-1bcd-4bf7-bba2-7e5fa421bd67.png)
 
 
+![image](https://user-images.githubusercontent.com/94720207/235367839-6ef2147c-4cf9-4a80-8f0d-871ab4a8029d.png)
 
 En este ejemplo estoy buscando tanto el `destination IP Address`, `destination port` y la `data` misma de la transmisión, **¡Así es, los datos mismos de una transmisión se pueden ver al capturar datos!**, con los conocimientos adecuados y en caso que no estén los datos encriptados, se podrían leer a simple vista al saber usar el analizador de protocolo, sólo hay que saber qué buscar, dónde buscar, cómo buscar, cúando buscar, cuánto buscar, cada cuanto, etc, etc...
 
@@ -504,6 +505,27 @@ Sin embargo, para que se comprenda al 100% como "baja" la `MAC Sublayer` desde `
 Ahora que ya se tiene el concepto visual de como se distribuyen las `sublayer 1 - PHY`, `sublayer 2 lower - MAC` y `sublayer 2 upper - LLC`, es así como se vería el modelo OSI completo (sin embargo, siempre utilizaré la tabla que presenté anteriormente para fines prácticos):
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/227752796-9110c821-c5c2-4424-b39e-7247fc0b0954.png" alt="Modelo OSI"/> </a> </p> 
+
+
+Ahora, lo mismo pasa en un escenario real, por ejemplo al visitar una página `http` donde el `payload` sea un archivo `password.txt`, este va a seguir siendo un paquete `TCP` justo como el ejemplo anterior, pero visto desde `Baclkshark`
+
+````sh
+python3 -m http.server 666
+````
+
+1. Hago un `HTTP Server` en python3, utilizando el directorio de `CWAP` donde tengo un archivo `.txt`
+
+![image](https://user-images.githubusercontent.com/94720207/235366670-4813c8df-4e5f-40c8-b7e2-86391bf49d2d.png)
+
+2. Si entro desde mi otra PC puedo ver el servicio desde cualquier explorador y puedo descargar el `.txt`
+
+![image](https://user-images.githubusercontent.com/94720207/235366956-edce3a71-d5a2-47c3-9cbe-c1c028c08416.png)
+
+- Es en el momento desde que se da click a la URL así como en el momento que se descarga el archivo cuando se crea tráfico TCP
+- Si yo pusiera un `sniffer` a escuchar el tráfico entre las 2 PCs, podrá capturar ese tráfico HTTP
+
+
+
 
 
 
