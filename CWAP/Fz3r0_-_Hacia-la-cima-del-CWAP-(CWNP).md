@@ -58,17 +58,17 @@ FIN DE CAPITULO :D
 
 # 👹 `CANTO I`: Introducción al CWAP 
 
-La certificación **`CWAP (Certified Wireless Analysis Professional)`**, otorgada por la prestigiosa organización **`CWNP (Certified Wireless Network Professional)`**, representa una credencial de alto nivel en el ámbito de las `Wireless Networks`. Diseñada específicamente para aquellos profesionales que buscan demostrar su competencia en el análisis avanzado y resolución de problemas en entornos de redes inalámbricas, esta certificación implica un conocimiento profundo de `Wireless Network Protocols`, `Wireless Network Security` y el diseño de redes inalámbricas de alto rendimiento. <br>
+La certificación **`CWAP (Certified Wireless Analysis Professional)`**, otorgada por la prestigiosa organización **`CWNP (Certified Wireless Network Professional)`**, representa una credencial de alto nivel en el ámbito de las `Wireless Networks`. Diseñada específicamente para aquellos profesionales que buscan demostrar su competencia en el **análisis avanzado y resolución de problemas en entornos de redes inalámbricas**, esta certificación implica un conocimiento profundo de `Wireless Network Protocols`, `Wireless Network Security` y el diseño de `High-Performance Wireless Networks`. <br>
 
 - Los profesionales que buscan obtener la certificación `CWAP` deben demostrar un amplio conocimiento de los principios y técnicas de análisis de redes inalámbricas, protocolos, así como habilidades para resolver problemas complejos y mejorar tanto rendimiento como la seguridad de redes inalámbricas. 
 
 Los temas abordados en la certificación `CWAP` incluyen la **captura y análisis de tráfico inalámbrico, análisis de espectro, la identificación y solución de problemas de cobertura y rendimiento, el análisis de interferencias y la aplicación de soluciones de seguridad inalámbrica**. A través de la certificación `CWAP`, los profesionales pueden demostrar su experiencia en la gestión y optimización de redes inalámbricas avanzadas y su capacidad para abordar los desafíos de análisis y resolución de problemas en entornos de red inalámbrica complejos. <br>
 
-En este writeup, abordaré el camino hacia la certificación `CWAP`, cubriendo **TODOS** los temas incluidos en el plan de estudios oficial de `CWNP`. Pero no solo eso, la intención es abordar y profundizar temas que no se presentan a detalle en la documentación oficial, brindando una comprensión completa de los desafíos y soluciones en el análisis avanzado de redes inalámbricas. 
+En este writeup, abordaré el camino hacia la certificación `CWAP`, cubriendo **TODOS** los temas incluidos en el plan de estudios oficial de `CWNP`. ¡Pero no solo eso! la intención es abordar y profundizar temas que no se presentan en la documentación oficial, brindando una comprensión completa de los desafíos y soluciones en el análisis avanzado de redes inalámbricas y un panorame más amplio en cuanto al conocimiento requerido. 
 
-También incluyo mis propios laboratorios de prácticas y análisis, así como **laboratorios adicionales los cuales llevan mucho más allá del alcance del CWAP**, como lo son packet forging y packet tampering con Scappy o laboratorios de Pentesting y Hacking Ético de WiFi con herramientas como que también incluyo en mi wireup "Hacia el infierno del". 
+También incluyo mis propios laboratorios de prácticas, análisis y laboratorios, en los cuales no solo incluyo temas relacionados con análisis de protocolos y de espectro, sino también temas como packet forging y packet tampering con Scappy o laboratorios de Pentesting y Hacking Ético de redes 802.11.
 
-**Este documento es una bitácora personal que he decidido hacer pública de mi expedición: `hacia la cima del CWAP`.** <br><br>
+**Este documento es una bitácora de mi expedición: `hacia la cima del CWAP`. 🗻** <br><br>
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/225515551-3de68463-c5b1-4573-8a22-bfa77fd7e834.png" alt="CWAP" height=165px/> </a>   </p> 
 
@@ -321,6 +321,32 @@ Por ejemplo, esta es la representación hexadecimal (la manera simplificada de l
 
 **Paquete con protocolo `DHCP`:** <br><br>
 ![image](https://user-images.githubusercontent.com/94720207/233414000-4066dfbe-ec7e-4292-a8ba-2621010bf690.png)
+
+### Protocol Analysis
+
+A mi me gusta explicar y visualizar los protocolos y su análisis como si estuviera desplazándome por directorios y subdirectorios de una Computadora, cualquier sistema operativo ya sea PC, smartphone, IoT se basa en la misma estructura básica se directorios y subdirectorios, por ejemplo: 
+
+- `C:\Users\Fz3r0\Documents\Rockstar Games\Red Dead Redemption 2\Settings`
+
+En este caso ya sabemos que debemos desplazarnos hacia esa subcarpeta en específico en caso que quisiera buscar el archivo de `settings` del `Red Dead Redemption 2` que se encuentra dentro de `mis Documentos` de mi user `Fz3r0`... Y de hecho, si utilizara el comando `tree` dentro de la terminal, se vería algo así:
+
+![image](https://user-images.githubusercontent.com/94720207/235332002-a375f8bc-a782-4e11-8aeb-5a178e74bd8b.png)
+
+Algo muy similar pasa con los protocolos y la manera que son representados en un analizador de protocolo, solo hay que imaginar una estructura de directorios, por ejemplo, hice el siguiente script que simula un básico `TCP Packet`:
+
+![image](https://user-images.githubusercontent.com/94720207/235333998-59eda085-3509-4316-85a5-9aa698f192dc.png)
+
+En este ejemplo estoy buscando tanto el `destination IP Address`, `destination port` y la `data` misma de la transmisión, **¡Así es, los datos mismos de una transmisión se pueden ver al capturar datos!**, con los conocimientos adecuados y en caso que no estén los datos encriptados, se podrían leer a simple vista al saber usar el analizador de protocolo, sólo hay que saber qué buscar, dónde buscar, cómo buscar, cúando buscar, cuánto buscar, cada cuanto, etc, etc...
+
+- Fz3r0 Nerd Fact: En una captura con Wireshark de tráfico Ethernet, generalmente no se puede ver nada relacionado con la capa física (layer 1) del modelo OSI, ya que la NIC (tarjeta de interfaz de red) es la que se encarga de transmitir y recibir los bits en el medio físico, y esta operación es transparente al sistema operativo y a Wireshark.
+
+Sin embargo, algunos adaptadores de red permiten la captura de paquetes en la capa física y son conocidos como "sniffers de nivel 1". En el caso de Ethernet, esto implicaría capturar tramas Ethernet completas, incluyendo los bits de sincronización, preámbulo y otros detalles de la capa física. No obstante, esto no es común en la mayoría de las aplicaciones de captura de paquetes, y Wireshark no tiene soporte para este tipo de captura.
+
+
+
+
+
+
 
 Algunos ejemplos de protocolos incluyen:
 
