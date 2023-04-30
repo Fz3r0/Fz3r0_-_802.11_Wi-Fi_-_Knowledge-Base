@@ -324,25 +324,36 @@ Por ejemplo, esta es la representación hexadecimal (la manera simplificada de l
 
 ### Protocol Analysis
 
-A mi me gusta explicar y visualizar los protocolos y su análisis como si estuviera desplazándome por directorios y subdirectorios de una Computadora, cualquier sistema operativo ya sea PC, smartphone, IoT se basa en la misma estructura básica se directorios y subdirectorios, por ejemplo: 
+A mi me gusta explicar y visualizar los protocolos y su análisis como si estuviera desplazándome por directorios y subdirectorios de una Computadora, cualquier sistema operativo ya sea PC, smartphone, IoT se basa en la misma estructura básica se directorios y subdirectorios.
+
+Hice este ejemplo simulando mi PC con directorios, subdirectorios y archivos:
+
+````sh
+mkdir -p /home/Fz3r0_Tree_encapuslation/Fz3r0_Usuario/{Escritorio,Documentos/{Archivos_personales,Trabajo},Descargas,Imágenes/{Familia,Vacaciones},Música,Programas,Juegos/Fzero} && sudo touch /home/Fz3r0_Tree_encapuslation/Fz3r0_Usuario/Documentos/Archivos_personales/{acta_nacimiento.txt,password_secreto.txt} && sudo touch /home/Fz3r0_Tree_encapuslation/Fz3r0_Usuario/Imágenes/Familia/{foto1.jpg,foto2.jpg} && sudo touch /home/Fz3r0_Tree_encapuslation/Fz3r0_Usuario/Imágenes/Vacaciones/{playa.jpg,montaña.jpg} && sudo touch /home/Fz3r0_Tree_encapuslation/Fz3r0_Usuario/Juegos/Fzero/{Fzero_jp_snes_rom.sfc,easter_egg.txt} && clear && echo "[+] Fz3r0 Tree Encapsulation Directory Simulator v1.0" && echo "" && tree /home/Fz3r0_Tree_encapuslation/Fz3r0_Usuario/
+````
+
+![image](https://user-images.githubusercontent.com/94720207/235337651-d11a759f-b327-48ca-aaf2-e0a1bcc314fe.png)
+
+
+En el ejemplo anterior si yo quisiera buscar
+
+
 
 - `C:\Users\Fz3r0\Documents\Rockstar Games\Red Dead Redemption 2\Settings`
 
 En este caso ya sabemos que debemos desplazarnos hacia esa subcarpeta en específico en caso que quisiera buscar el archivo de `settings` del `Red Dead Redemption 2` que se encuentra dentro de `mis Documentos` de mi user `Fz3r0`... Y de hecho, si utilizara el comando `tree` dentro de la terminal, se vería algo así:
 
-![image](https://user-images.githubusercontent.com/94720207/235332002-a375f8bc-a782-4e11-8aeb-5a178e74bd8b.png)
+
 
 Algo muy similar pasa con los protocolos y la manera que son representados en un analizador de protocolo, solo hay que imaginar una estructura de directorios, por ejemplo, hice el siguiente script que simula un básico `TCP Packet`:
 
 ````sh
-mkdir Fz3r0_TCP_Encapsulation && cd Fz3r0_TCP_Encapsulation && mkdir TCP-Packet && cd TCP-Packet && mkdir -p \
-1_Ethernet_II__________________LAYER-2-DATA-LINK/{1_Preamble,2_Destination_Address,3_Source_Address,4_Type} \
-2_IPv4_________________________LAYER-3-NETWORK/{1_Version/{1_Version_Number,2_Header_Length,3_Service_Type,4_Total_Length},2_Header_Length/{1_Length,2_Reserved_Bits,3_Fragment_Offset},3_Differentiated_Services/{1_DSCP,2_ECN},4_Total_Length,5_Identification,6_Flags,7_Fragment_Offset,8_Time_to_Live,9_Protocol,10_Header_Checksum,11_Source_Address/{source_ip.txt},12_Destination_Address/{destination_ip.txt}} \
-3_TCP__________________________LAYER-4-TRANSPORT/{1_Source_Port/{source_port.txt},2_Destination_Port/{destination_port.txt},3_Sequence_Number/{sequence_number.txt},4_Acknowledgment_Number/{acknowledgment_number.txt},5_Data_Offset,6_Reserved_Bits,7_Control_Bits/{urg_bit.txt,ack_bit.txt,psh_bit.txt,rst_bit.txt,syn_bit.txt,fin_bit.txt},8_Window_Size/{window_size.txt},9_Checksum,10_Urgent_Pointer} \
-4_DATA_________________________LAYERS-5-6-7-DATA/{1_Message/{message.txt}} && cd .. && clear && echo "[+] Fz3r0 TCP Packet Encapsulation Directory Simulator v1.0" && echo "" && tree
+mkdir -p Fz3r0_TCP_Encapsulation/TCP-Packet/{1_Ethernet_II__________________LAYER-2-DATA-LINK/{1_Preamble,2_Destination_Address,3_Source_Address,4_Type},2_IPv4_________________________LAYER-3-NETWORK/{1_Version/{1_Version_Number,2_Header_Length,3_Service_Type,4_Total_Length},2_Header_Length/{1_Length,2_Reserved_Bits,3_Fragment_Offset},3_Differentiated_Services/{1_DSCP,2_ECN},4_Total_Length,5_Identification,6_Flags,7_Fragment_Offset,8_Time_to_Live,9_Protocol,10_Header_Checksum,11_Source_Address,12_Destination_Address},3_TCP__________________________LAYER-4-TRANSPORT/{1_Source_Port,2_Destination_Port,3_Sequence_Number,4_Acknowledgment_Number,5_Data_Offset,6_Reserved_Bits,7_Control_Bits/{urg_bit.txt,ack_bit.txt,psh_bit.txt,rst_bit.txt,syn_bit.txt,fin_bit.txt},8_Window_Size,9_Checksum,10_Urgent_Pointer},4_DATA_________________________LAYERS-5-6-7-DATA/1_Message} && touch Fz3r0_TCP_Encapsulation/TCP-Packet/2_IPv4_________________________LAYER-3-NETWORK/11_Source_Address/source_ip.txt Fz3r0_TCP_Encapsulation/TCP-Packet/2_IPv4_________________________LAYER-3-NETWORK/12_Destination_Address/destination_ip.txt Fz3r0_TCP_Encapsulation/TCP-Packet/3_TCP__________________________LAYER-4-TRANSPORT/1_Source_Port/source_port.txt Fz3r0_TCP_Encapsulation/TCP-Packet/3_TCP__________________________LAYER-4-TRANSPORT/2_Destination_Port/destination_port.txt Fz3r0_TCP_Encapsulation/TCP-Packet/3_TCP__________________________LAYER-4-TRANSPORT/7_Control_Bits/urg_bit.txt Fz3r0_TCP_Encapsulation/TCP-Packet/3_TCP__________________________LAYER-4-TRANSPORT/7_Control_Bits/ack_bit.txt Fz3r0_TCP_Encapsulation/TCP-Packet/3_TCP__________________________LAYER-4-TRANSPORT/7_Control_Bits/psh_bit.txt Fz3r0_TCP_Encapsulation/TCP-Packet/3_TCP__________________________LAYER-4-TRANSPORT/7_Control_Bits/rst_bit.txt Fz3r0_TCP_Encapsulation/TCP-Packet/3_TCP__________________________LAYER-4-TRANSPORT/7_Control_Bits/syn_bit.txt Fz3r0_TCP_Encapsulation/TCP-Packet/3_TCP__________________________LAYER-4-TRANSPORT/7_Control_Bits/fin_bit.txt Fz3r0_TCP_Encapsulation/TCP-Packet/3_TCP__________________________LAYER-4-TRANSPORT/8_Window_Size/window_size && touch Fz3r0_TCP_Encapsulation/TCP-Packet/4_DATA_________________________LAYERS-5-6-7-DATA/1_Message/Fz3r0_PaSSwOrd_Ultra_Secret.txt && touch Fz3r0_TCP_Encapsulation/TCP-Packet/1_Ethernet_II__________________LAYER-2-DATA-LINK/2_Destination_Address/destination_MAC.txt && touch Fz3r0_TCP_Encapsulation/TCP-Packet/1_Ethernet_II__________________LAYER-2-DATA-LINK/3_Source_Address/source_MAC.txt && clear && echo "[+] Fz3r0 TCP Packet Encapsulation Directory Simulator v1.0" && echo "" && tree Fz3r0_TCP_Encapsulation && cd Fz3r0_TCP_Encapsulation
 ````
 
-![image](https://user-images.githubusercontent.com/94720207/235333998-59eda085-3509-4316-85a5-9aa698f192dc.png)
+![image](https://user-images.githubusercontent.com/94720207/235337250-4077c941-1bcd-4bf7-bba2-7e5fa421bd67.png)
+
+
 
 En este ejemplo estoy buscando tanto el `destination IP Address`, `destination port` y la `data` misma de la transmisión, **¡Así es, los datos mismos de una transmisión se pueden ver al capturar datos!**, con los conocimientos adecuados y en caso que no estén los datos encriptados, se podrían leer a simple vista al saber usar el analizador de protocolo, sólo hay que saber qué buscar, dónde buscar, cómo buscar, cúando buscar, cuánto buscar, cada cuanto, etc, etc...
 
