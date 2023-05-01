@@ -4031,6 +4031,18 @@ FIN DE CAPITULO :D
 
 ## 🟢 Selección `Tiempo de Captura`
 
+Algunos problemas pueden ocurrir ocasionalmente, mientras que otros duran períodos de tiempo más largos y son persistentes. Si el problema que se está diagnosticando ocurre en los mismos periodos de tiempo una y otra vez, es en esos momentos cuando se debe realizar la captura de Frames 802.11. Si el problema es persistente, se puede realizar la captura en cualquier momento prácticmenete para diagnosticar el problema, mientras se realice en la ventana de tiempo de la incidencia. 
+
+Capturar una cantidad adecuada de tiempo revela rápidamente los beneficios de una solución de monitoreo superpuesta dedicada 24/7. Tal solución debería permitirle acceder a los registros o panel de control y ver capturas, posiblemente tanto del protocolo como del espectro, en cualquier momento del pasado almacenado. Es importante tener en cuenta que el sistema puede almacenar una ventana de tiempo histórico limitada, pero siempre y cuando sea inclusiva de las últimas 24-48 horas, suele ser suficiente para "regresar en el tiempo" al momento en que ocurrió el problema y ver la actividad que se produjo en el entorno en ese momento.
+
+Además, es fundamental tener conocimientos técnicos sólidos para realizar una captura y un análisis adecuados de los datos capturados. Es importante asegurarse de tener las herramientas adecuadas y la experiencia necesaria para interpretar los resultados de la captura de tramas y poder realizar un diagnóstico preciso del problema.
+
+- [Saavius Omnipeek - Network Analysis Software - Datasheet](https://www.neox-networks.com/downloads/savvius_omnipeek_datasheet_nxen.pdf)
+
+![image](https://user-images.githubusercontent.com/94720207/235541896-48eae023-0fd7-4d41-8ab9-1256c647b803.png)
+
+
+
 ![image](https://user-images.githubusercontent.com/94720207/234778168-e385cfd2-b5b8-4900-83c0-9c3913e93ecf.png)
 
 
