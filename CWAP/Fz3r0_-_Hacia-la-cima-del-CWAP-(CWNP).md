@@ -3865,10 +3865,12 @@ En cuanto a la elección de la ubicación para la captura de tráfico, es recome
 
 Es importante tener en cuenta que al estar cerca de un cliente con problemas, la captura de tráfico se asemejará más a la experiencia del usuario, lo que puede resultar en una mejor comprensión y resolución del problema.
 
-![image](https://user-images.githubusercontent.com/94720207/234759952-af986f6b-a9d2-47ae-bcbc-3306547c74bc.png)
+![image](https://user-images.githubusercontent.com/94720207/235498840-78e3608e-f511-4d69-a433-5dbad29662d8.png)
 
 - Si varios clientes tienen problemas, sería mejor capturar cerca del AP donde todos estén conectados, además de capturar cerca de los clientes. Al capturar en ambas ubicaciones, cerca de los clientes y cerca del AP, es posible que pueda encontrar una solución más rápida que capturando desde solo una ubicación.
 - Si todos los clientes de un AP en particular tienen problemas y reiniciar el AP no resuelve el problema, capturar más cerca del AP puede revelar un problema constante causado por el AP.
+
+![image](https://user-images.githubusercontent.com/94720207/235499059-135e3fcd-f3d3-4c87-becc-0d1ff39a7dec.png)
 
 El tipo de problemas que se informen por parte del cliente, nos puede guiar en la selección de las ubicaciones de captura: 
 
@@ -3876,7 +3878,7 @@ El tipo de problemas que se informen por parte del cliente, nos puede guiar en l
 - **Si varios clientes informan problemas, se debe capturar cerca del AP y de algunos, si no de todos los clientes, hasta encontrar la fuente del problema.**
 - **Los problemas persistentes se diagnostican más rápidamente que los intermitentes.**
 
-![image](https://user-images.githubusercontent.com/94720207/234760156-5005e9fa-7aa0-4a9c-84cd-64460c4a4411.png)
+![image](https://user-images.githubusercontent.com/94720207/235499381-1cfbf252-8bc1-40c2-983b-29a039990f7a.png)
 
 A veces, la primera captura brindará las respuestas que estamos buscando. Cuando no... puede ser necesario capturar desde otras ubicaciones o durante períodos más largos de tiempo, o incluso al mismo tiempo con diferentes herramientas. 
 
@@ -3887,6 +3889,8 @@ Se pueden utilizar múltiples métodos de captura cuando estén disponibles y ta
 También no hay que olvidar que nos podemos basar en otras herramientas como `logs`, `error messages` y un `análisis profundo de configuraciones`. Por ejemplo revisar dispositivos `layer 3` y sus configuraciones como `firewalls` o `routers`, o dispositivos `layer 2` como `switches`, incluso el mismo medio que suele ser cableado ya sea por `cobre` o `fibra` utilizando el estándar `IEEE Ethernet 802.3`.
 
 Las capturas no solo deben ser desde diferentes ubicaciones, sino también desde diferentes canales utilizados alrededor de esa área, ya sean dispositrivos propios o quizás dispositivos ajenos como otras antenas, rogues u otros clientes. Si tenemos problemas en un `SS - Service Set`, debemos fijar manualmente el analizador en ese mismo canal o canales utilizados por los `APs` y `STAs`.
+
+![image](https://user-images.githubusercontent.com/94720207/235500146-bf845370-d424-4378-991d-5daaa9ef1ada.png)
 
 Si se trabaja en 2,4 GHz, se puede bloquear el analizador en un solo canal, pero aún es posible ver el tráfico transmitido en canales adyacentes superpuestos, siempre y cuando el dispositivo receptor esté lo suficientemente cerca de las radios transmisoras. Al examinar tramas, se pueden observar dos canales en un análisis de trama capturada:
 
@@ -3956,13 +3960,15 @@ Al solucionar problemas de roaming, es útil tener múltiples adaptadores, cada 
     - Se necesitarán 3 adaptadores para capturar: CH 1, CH 6, CH 11.
     - Esto permitirá capturar todo el proceso de roaming incluso si el cliente se mueve entre los 3 AP que utilizan diferentes canales. 
     
-- * _Si solo se está capturando en un canal, la solución de problemas de roaming llevará más tiempo y será mucho más difícil._
+- _*Si solo se está capturando en un canal, la solución de problemas de roaming llevará más tiempo y será mucho más difícil._
 
 En cuanto a la ubicación, si se captura con un solo dispositivo usando varios adaptadores, colocarlo entre los APs (relativamente centrado en RF) hará que sea probable capturar los eventos de roaming entre esos 2 AP. Si se usan varios dispositivos de captura con varios adaptadores cada uno, pueden colocarse de manera distribuida muy cerca de los APs en cuestión ya sean 2, 3, 4, etc... y las múltiples capturas se pueden combinar para ver lo que ven los diferentes APs, lo que debería incluir transmisiones relacionadas con el roaming.
 
-- **Para obtener los mejores resultados, se debe intentar tener los radios utilizados en la captura de frames 802.11 lo más cerca posible de los dispositivos que transmiten los frames 802.11 y en los mismos canal(es). Esto puede o no ser posible según el método de captura disponible: móvil, infraestructura o distribuido. Por ejemplo, con infraestructura se podrían tomar diferentes APs al mismo tiempo para capturar exactamente en su ubicación**
+![image](https://user-images.githubusercontent.com/94720207/235501677-bfa14270-f9ea-4f8c-84dc-49c0b3fe3264.png)
 
-![image](https://user-images.githubusercontent.com/94720207/235491427-64327ca9-7127-4a01-9c9b-df458d84c34f.png)
+**Para obtener los mejores resultados, se debe intentar tener los radios utilizados en la captura de frames 802.11 lo más cerca posible de los dispositivos que transmiten los frames 802.11 y en los mismos canal(es). Esto puede o no ser posible según el método de captura disponible: móvil, infraestructura o distribuido. Por ejemplo, con infraestructura se podrían tomar diferentes APs al mismo tiempo para capturar exactamente en su ubicación**
+
+![image](https://user-images.githubusercontent.com/94720207/235499638-39ee673a-9d09-4c23-803e-5c7bf3713fcf.png)
 
 Es posible que se necesite capturar desde muchas ubicaciones de clientes para obtener la mejor información para su diagnóstico. Para determinar el mejor lugar desde el cual capturar, se deberán tomar algunas decisiones como:
 
