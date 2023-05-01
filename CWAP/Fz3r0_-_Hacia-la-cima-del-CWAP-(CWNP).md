@@ -3905,7 +3905,7 @@ Si la trama se está transmitiendo en un canal adyacente superpuesto, **se puede
 
 ---
 
-### `Fz3r0 Blackshark Filter`: 2.4 GHz Channel & Adjacent Channel Capture + Malformed & Undecoded Packets
+### ☠️ 🦈 `Fz3r0 Blackshark Filter`: 2.4 GHz Channel & Adjacent Channel Capture + Malformed & Undecoded Packets
 
 - Este filtro es utilizado para filtrar el canal real y el canal donde se capturó el frame, para asi poder comprarar, muy útil para ponerlo en la lista ;)
 
@@ -3992,6 +3992,10 @@ Conocer los AP en la ruta de roaming y sus canales es necesario para un mejor an
 
 ![image](https://user-images.githubusercontent.com/94720207/235513875-b70e4239-282f-40ae-ada8-d1d28b8366ab.png)
 
+- https://excalidraw.com/#json=KTbDCxXrfHfjQCLblq_FK,2N9NxWjVlDCTbmXZ--BHlA
+- https://excalidraw.com/#json=08JAHCru-VuxDt7ig9cfl,2Lw9YhsKBtoVVYGt4dn08Q
+- https://excalidraw.com/#json=uNNI-dc6NyvE9S7JiGmK7,78IrP7RAIpDpeAzLiII1eA
+
 La ubicación de la captura de paquetes 802.11 frames es muy importante para exponer los mismos problemas que experimenta el dispositivo del cliente, lo que permite una mejor comprensión y resolución del problema y siempre hay que tener en cuenta las bases que se expusieron en este bloque:
 
 1. **Es recomendable estar cerca de los dispositivos que presentan problemas para detectarlos de manera más rápida.** 
@@ -4004,23 +4008,28 @@ La ubicación de la captura de paquetes 802.11 frames es muy importante para exp
 
 Hay que tener siempre presente que cada escenario será un mundo diferente y con estos conceptos hay que saber improvisar sobre la marcha y utilizar el sentido común, la experiencia y saber identificar la necesidad del momento para diagnosticar cuál será la mejor ubicación para capturar. 
 
-
-
 ---
 
+<!-- 
 
+FIN DE CAPITULO :D
 
-https://excalidraw.com/#json=KTbDCxXrfHfjQCLblq_FK,2N9NxWjVlDCTbmXZ--BHlA
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-https://excalidraw.com/#json=08JAHCru-VuxDt7ig9cfl,2Lw9YhsKBtoVVYGt4dn08Q
+ -->
 
-https://excalidraw.com/#json=uNNI-dc6NyvE9S7JiGmK7,78IrP7RAIpDpeAzLiII1eA
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
 
+<br>
+<br>
+<br>
 
-
-
-
-## Selección `Tiempo de Captura`
+## 🟢 Selección `Tiempo de Captura`
 
 ![image](https://user-images.githubusercontent.com/94720207/234778168-e385cfd2-b5b8-4900-83c0-9c3913e93ecf.png)
 
