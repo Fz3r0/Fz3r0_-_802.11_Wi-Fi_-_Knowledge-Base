@@ -3707,6 +3707,8 @@ https://secwiki.org/w/Npcap/WiFi_adapters
 
 drivers y demas epxlicaco0nes 
 
+[ALFA AWUS036NHA: Does it have Atheros AR9271 chipset or AR9271L, and what is the difference anyway?](https://www.youtube.com/watch?v=zeRh_9IRVi8)
+
 https://www.aircrack-ng.org/doku.php?id=compatibility_drivers_old
 
 
