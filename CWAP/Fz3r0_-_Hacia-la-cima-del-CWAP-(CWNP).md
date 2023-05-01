@@ -3890,10 +3890,10 @@ Las capturas no solo deben ser desde diferentes ubicaciones, sino también desde
 
 Si se trabaja en 2,4 GHz, se puede bloquear el analizador en un solo canal, pero aún es posible ver el tráfico transmitido en canales adyacentes superpuestos, siempre y cuando el dispositivo receptor esté lo suficientemente cerca de las radios transmisoras. Al examinar tramas, se pueden observar dos canales en un análisis de trama capturada:
 
-1. El primer canal que se ve es el canal en el que el adaptador estaba cuando capturó la trama.
-2. El segundo canal, que se ve en el cuerpo de la trama, es el canal en el que la trama indica que fue transmitida.
+1. **El primer canal que se ve es el canal en el que el adaptador estaba cuando capturó la trama.**
+2. **El segundo canal, que se ve en el cuerpo de la trama, es el canal en el que la trama indica que fue transmitida.**
 
-Si la trama se está transmitiendo en un canal adyacente superpuesto, se puede corregir el problema ajustando el plan de uso de canales en la configuración del AP o controlador inalámbrico.
+Si la trama se está transmitiendo en un canal adyacente superpuesto, **se puede corregir el problema ajustando el plan de uso de canales en la configuración del AP o controlador inalámbrico.**
 
 ---
 
@@ -3945,20 +3945,44 @@ wlan.ds.current_channel == 11
 _ws.malformed
 _ws.expert.group == "Malformed"
 ````
+---
+
+Antes de comenzar la captura, es importante determinar el mejor método de captura, las mejores ubicaciones para la captura y si se fijará en un canal específico o se escanearán todos los canales mientras se captura.
+
+Al solucionar problemas de roaming, es útil tener múltiples adaptadores, cada uno fijo en un canal utilizado por un AP diferente en el área dentro de la banda que se está analizando. Por ejemplo:
+
+- Si hay 3 APs que utilizan la banda de 2,4 GHz en el área de captura:
+    - Cada AP está en un canal diferente: CH 1, CH 6, CH 11.
+    - Se necesitarán 3 adaptadores para capturar: CH 1, CH 6, CH 11.
+    - Esto permitirá capturar todo el proceso de roaming incluso si el cliente se mueve entre los 3 AP que utilizan diferentes canales. 
+    
+- * _Si solo se está capturando en un canal, la solución de problemas de roaming llevará más tiempo y será mucho más difícil._
+
+En cuanto a la ubicación, si se captura con un solo dispositivo usando varios adaptadores, colocarlo entre los APs (relativamente centrado en RF) hará que sea probable capturar los eventos de roaming entre esos 2 AP. Si se usan varios dispositivos de captura con varios adaptadores cada uno, pueden colocarse de manera distribuida muy cerca de los APs en cuestión ya sean 2, 3, 4, etc... y las múltiples capturas se pueden combinar para ver lo que ven los diferentes APs, lo que debería incluir transmisiones relacionadas con el roaming.
+
+- **Para obtener los mejores resultados, se debe intentar tener los radios utilizados en la captura de frames 802.11 lo más cerca posible de los dispositivos que transmiten los frames 802.11 y en los mismos canal(es). Esto puede o no ser posible según el método de captura disponible: móvil, infraestructura o distribuido. Por ejemplo, con infraestructura se podrían tomar diferentes APs al mismo tiempo para capturar exactamente en su ubicación**
+
+![image](https://user-images.githubusercontent.com/94720207/235491427-64327ca9-7127-4a01-9c9b-df458d84c34f.png)
+
+Es posible que se necesite capturar desde muchas ubicaciones de clientes para obtener la mejor información para su diagnóstico. Para determinar el mejor lugar desde el cual capturar, se deberán tomar algunas decisiones como:
+
+- El tipo de tramas que se necesitan capturar.
+- Alcance de captura de BSS o ESS (uno o varios AP).
+- Captura para un STA o AP específico.
+- Captura para varios AP y escenarios de roaming.
+- Captura para un grupo de STAs o APs.
+
+
+
+
+
+
 
 ---
 
 
 
-
-
-
-
----
-
-![image](https://user-images.githubusercontent.com/94720207/234726924-5e3f7412-212b-4b07-a7e3-6b7d2f533ad9.png)
-
-https://excalidraw.com/#json=xS5Bo1G9lryzwggIarbuo,MXn_QfQ4MqyQcjlNgkhsSw
+https://excalidraw.com/#json=KTbDCxXrfHfjQCLblq_FK,2N9NxWjVlDCTbmXZ--BHlA
 
 
 
