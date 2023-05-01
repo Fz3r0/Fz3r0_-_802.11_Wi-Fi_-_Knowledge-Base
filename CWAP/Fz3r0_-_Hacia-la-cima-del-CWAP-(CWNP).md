@@ -4039,7 +4039,9 @@ Además, es fundamental tener conocimientos técnicos sólidos para realizar una
 
 - [Saavius Omnipeek - Network Analysis Software - Datasheet](https://www.neox-networks.com/downloads/savvius_omnipeek_datasheet_nxen.pdf)
 
-![image](https://user-images.githubusercontent.com/94720207/235541896-48eae023-0fd7-4d41-8ab9-1256c647b803.png)
+![image](https://user-images.githubusercontent.com/94720207/235543278-4f827624-c587-4107-ad2c-514d26224206.png)
+
+
 
 
 
