@@ -3884,8 +3884,52 @@ Se pueden utilizar múltiples métodos de captura cuando estén disponibles y ta
 
 ![image](https://user-images.githubusercontent.com/94720207/234729826-49f212c8-9450-478b-8460-535c732e8b6d.png)
 
+También no hay que olvidar que nos podemos basar en otras herramientas como `logs`, `error messages` y un `análisis profundo de configuraciones`. Por ejemplo revisar dispositivos `layer 3` y sus configuraciones como `firewalls` o `routers`, o dispositivos `layer 2` como `switches`, incluso el mismo medio que suele ser cableado ya sea por `cobre` o `fibra` utilizando el estándar `IEEE Ethernet 802.3`.
+
+Las capturas no solo deben ser desde diferentes ubicaciones, sino también desde diferentes canales utilizados alrededor de esa área, ya sean dispositrivos propios o quizás dispositivos ajenos como otras antenas, rogues u otros clientes. Si tenemos problemas en un `SS - Service Set`, debemos fijar manualmente el analizador en ese mismo canal o canales utilizados por los `APs` y `STAs`.
+
+---
+
+### `Fz3r0 Blackshark Filter`: 2.4 GHz Channel & Adjacent Channel Capture
+
+- Este filtro es utilizado para filtrar el canal real y el canal donde se capturó el frame, para asi poder comprarar, muy útil para ponerlo en la lista ;)
+
+````py
+## Fz3r0 Blackshark v4.0 - Standalone Filter for CWAP
+
+## - Filtrar por el canal en donde se está capturando (Este es el filtro que normalmente se utiliza)
+wlan_radio.channel
+wlan_radio.channel == 1
+wlan.ds.current_channel == 6
+wlan.ds.current_channel == 11
+
+## - Canal real de AP / Antena - Visto desde un Beacon Frame en el Body
+wlan.ds.current_channel
+wlan.ds.current_channel == 1
+wlan.ds.current_channel == 6
+wlan.ds.current_channel == 11
+````
+
+**Ejemplo:**
+
+- [Fz3r0_Adjacent_Channel_CWAP (PCAP)](https://github.com/Fz3r0/Fz3r0_-_BlackShark/files/11363588/Fz3r0_Adjacent_Channel_CWAP.zip)
+- Estoy capturando en `Channel 5`, pero mi red `Fz3r0_Air_PWN` está en `Channel 6`, pero como hacen `overlap` puedo capturar ambos, sin embargo, el `Radiotap Header` marca `Channel 5` ya que aquí capturé, pero... 
+
+![image](https://user-images.githubusercontent.com/94720207/235409105-d8de9088-570f-4798-8e2a-635760745be6.png)
+
+- ...pero en realidad ese SSID yo lo hice en el `Channel 6`, y yo estoy seguro haberlo configurado en ese canal, esto se puede ver en el body del `Beacon Frame`:
+
+![image](https://user-images.githubusercontent.com/94720207/235409429-2bba6ea8-5321-4bd8-846c-c657b69a3bdd.png)
 
 
+---
+
+
+
+
+
+
+---
 
 ![image](https://user-images.githubusercontent.com/94720207/234726924-5e3f7412-212b-4b07-a7e3-6b7d2f533ad9.png)
 
