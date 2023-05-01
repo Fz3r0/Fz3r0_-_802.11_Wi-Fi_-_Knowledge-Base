@@ -3964,9 +3964,11 @@ Al solucionar problemas de roaming, es útil tener múltiples adaptadores, cada 
     
 - _*Si solo se está capturando en un canal, la solución de problemas de roaming llevará más tiempo y será mucho más difícil._
 
+![image](https://user-images.githubusercontent.com/94720207/235501677-bfa14270-f9ea-4f8c-84dc-49c0b3fe3264.png)
+
 En cuanto a la ubicación, si se captura con un solo dispositivo usando varios adaptadores, colocarlo entre los APs (relativamente centrado en RF) hará que sea probable capturar los eventos de roaming entre esos 2 AP. Si se usan varios dispositivos de captura con varios adaptadores cada uno, pueden colocarse de manera distribuida muy cerca de los APs en cuestión ya sean 2, 3, 4, etc... y las múltiples capturas se pueden combinar para ver lo que ven los diferentes APs, lo que debería incluir transmisiones relacionadas con el roaming.
 
-![image](https://user-images.githubusercontent.com/94720207/235501677-bfa14270-f9ea-4f8c-84dc-49c0b3fe3264.png)
+![image](https://user-images.githubusercontent.com/94720207/235510744-feaed8ca-70d7-4d8a-a9a2-5a6bff12bb2a.png)
 
 **Para obtener los mejores resultados, se debe intentar tener los radios utilizados en la captura de frames 802.11 lo más cerca posible de los dispositivos que transmiten los frames 802.11 y en los mismos canal(es). Esto puede o no ser posible según el método de captura disponible: móvil, infraestructura o distribuido. Por ejemplo, con infraestructura se podrían tomar diferentes APs al mismo tiempo para capturar exactamente en su ubicación**
 
@@ -3974,7 +3976,7 @@ En cuanto a la ubicación, si se captura con un solo dispositivo usando varios a
 
 Es posible que se necesite capturar desde muchas ubicaciones de clientes para obtener la mejor información para su diagnóstico. Para determinar el mejor lugar desde el cual capturar, se deberán tomar algunas decisiones como:
 
-- El tipo de tramas que se necesitan capturar.
+- El tipo de 802.11 Frames que se necesitan capturar.
 - Alcance de captura de BSS o ESS (uno o varios AP).
 - Captura para un STA o AP específico.
 - Captura para varios AP y escenarios de roaming.
@@ -3992,6 +3994,7 @@ Es posible que se necesite capturar desde muchas ubicaciones de clientes para ob
 
 https://excalidraw.com/#json=KTbDCxXrfHfjQCLblq_FK,2N9NxWjVlDCTbmXZ--BHlA
 
+https://excalidraw.com/#json=08JAHCru-VuxDt7ig9cfl,2Lw9YhsKBtoVVYGt4dn08Q
 
 
 
