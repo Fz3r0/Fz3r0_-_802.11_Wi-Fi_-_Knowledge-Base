@@ -3857,6 +3857,8 @@ En caso de captura con `Infraestructure AKA AP-based Analysis` todo depende del 
 
 ## 🟢 Selección `Ubicación de Captura`
 
+Para llevar a cabo una captura de tráfico de manera efectiva, es importante seleccionar cuidadosamente tanto los canales como las ubicaciones óptimas desde las cuales llevar a cabo esta tarea.
+
 Para realizar una captura de tráfico deseado dentro del alcance de recepción, es importante seleccionar cuidadosamente las ubicaciones óptimas desde las cuales llevar a cabo esta tarea. Una estrategia común es capturar cerca de los clientes que presentan problemas o comportamientos sospechosos, o en escenarios de pruebas de penetración, cerca de los clientes y redes que se desean atacar para explotar vulnerabilidades o crear puntos de acceso malintencionados.
 
 Algunas áreas de donde se pueda llevar a cabo en análisis, es posible que requieran de autorización previa o escolta para poder llevar a cabo la captura de tráfico, al igual que sucede cuando se realizan `site surveys on-site` para el diseño de redes inalámbricas. En algunos casos, también puede ser necesario el uso de equipos de seguridad especiales como cascos o arnés.
@@ -3982,11 +3984,25 @@ Es posible que se necesite capturar desde muchas ubicaciones de clientes para ob
 - Captura para varios AP y escenarios de roaming.
 - Captura para un grupo de STAs o APs.
 
+También se determinará qué áreas físicas proporcionarán la mejor perspectiva de los paquetes: el lado del cliente o el lado del AP de las conversaciones. Se deberá determinar si es necesario solo un lado de la conversación o ambos lados. Se deberá saber si la captura es para diseñar, solucionar problemas o establecer una línea base de la red.
+
+- **Al analizar el tráfico de un cliente inalámbrico, se deberá mover junto con el cliente para aumentar la probabilidad de capturar todo lo que el cliente transmite y recibe.**
+
+Conocer los AP en la ruta de roaming y sus canales es necesario para un mejor análisis de los problemas de roaming. Se deberían usar varios adaptadores, cada uno bloqueado en los canales apropiados para capturar y solucionar problemas de roaming, como se discutió anteriormente. Los problemas localizados se diagnostican más fácilmente. Los problemas que abarcan toda la empresa requerirán diagnósticos en varios lugares, tanto estacionarios como móviles.
+
 ![image](https://user-images.githubusercontent.com/94720207/235513875-b70e4239-282f-40ae-ada8-d1d28b8366ab.png)
 
+La ubicación de la captura de paquetes 802.11 frames es muy importante para exponer los mismos problemas que experimenta el dispositivo del cliente, lo que permite una mejor comprensión y resolución del problema y siempre hay que tener en cuenta las bases que se expusieron en este bloque:
 
+1. **Es recomendable estar cerca de los dispositivos que presentan problemas para detectarlos de manera más rápida.** 
+2. **Si varios clientes presentan problemas, es mejor capturar cerca del punto de acceso y algunos, si no de todos los clientes, para encontrar la fuente del problema.**
+3. **Los problemas persistentes se diagnostican más rápidamente que los intermitentes.** 
+4. **Aunque no todos los problemas se resolverán con la captura de paquetes, se pueden utilizar otras herramientas como logs, mensajes de error y un análisis profundo de configuraciones.** 
+5. **Es recomendable capturar desde diferentes ubicaciones y canales utilizados en esa área para obtener una perspectiva más completa del problema.** 
+6. **El análisis de tramas capturadas en diferentes canales puede revelar información valiosa sobre la ubicación de dispositivos transmisores y receptores.**
+7. **Se recomienda capturar con diferentes métodos de ser posible, por ejemplo `mobile` e `infraestructura`**
 
-
+Hay que tener siempre presente que cada escenario será un mundo diferente y con estos conceptos hay que saber improvisar sobre la marcha y utilizar el sentido común, la experiencia y saber identificar la necesidad del momento para diagnosticar cuál será la mejor ubicación para capturar. 
 
 
 
