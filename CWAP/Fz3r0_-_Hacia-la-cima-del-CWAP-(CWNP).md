@@ -3888,9 +3888,16 @@ También no hay que olvidar que nos podemos basar en otras herramientas como `lo
 
 Las capturas no solo deben ser desde diferentes ubicaciones, sino también desde diferentes canales utilizados alrededor de esa área, ya sean dispositrivos propios o quizás dispositivos ajenos como otras antenas, rogues u otros clientes. Si tenemos problemas en un `SS - Service Set`, debemos fijar manualmente el analizador en ese mismo canal o canales utilizados por los `APs` y `STAs`.
 
+Si se trabaja en 2,4 GHz, se puede bloquear el analizador en un solo canal, pero aún es posible ver el tráfico transmitido en canales adyacentes superpuestos, siempre y cuando el dispositivo receptor esté lo suficientemente cerca de las radios transmisoras. Al examinar tramas, se pueden observar dos canales en un análisis de trama capturada:
+
+1. El primer canal que se ve es el canal en el que el adaptador estaba cuando capturó la trama.
+2. El segundo canal, que se ve en el cuerpo de la trama, es el canal en el que la trama indica que fue transmitida.
+
+Si la trama se está transmitiendo en un canal adyacente superpuesto, se puede corregir el problema ajustando el plan de uso de canales en la configuración del AP o controlador inalámbrico.
+
 ---
 
-### `Fz3r0 Blackshark Filter`: 2.4 GHz Channel & Adjacent Channel Capture
+### `Fz3r0 Blackshark Filter`: 2.4 GHz Channel & Adjacent Channel Capture + Malformed & Undecoded Packets
 
 - Este filtro es utilizado para filtrar el canal real y el canal donde se capturó el frame, para asi poder comprarar, muy útil para ponerlo en la lista ;)
 
@@ -3913,7 +3920,7 @@ wlan.ds.current_channel == 11
 **Ejemplo:**
 
 - [Fz3r0_Adjacent_Channel_CWAP (PCAP)](https://github.com/Fz3r0/Fz3r0_-_BlackShark/files/11363588/Fz3r0_Adjacent_Channel_CWAP.zip)
-- Estoy capturando en `Channel 5`, pero mi red `Fz3r0_Air_PWN` está en `Channel 6`, pero como hacen `overlap` puedo capturar ambos, sin embargo, el `Radiotap Header` marca `Channel 5` ya que aquí capturé, pero... 
+- Estoy capturando en `Channel 5`, pero mi red `Fz3r0_Air_PWN` está en `Channel 6`, pero como hacen `overlap` puedo capturar ambos, sin embargo, el `Radiotap Header` (en otros softwares viene como `Network Media Info`) marca `Channel 5` ya que aquí capturé, pero... 
 
 ![image](https://user-images.githubusercontent.com/94720207/235409105-d8de9088-570f-4798-8e2a-635760745be6.png)
 
@@ -3921,8 +3928,26 @@ wlan.ds.current_channel == 11
 
 ![image](https://user-images.githubusercontent.com/94720207/235409429-2bba6ea8-5321-4bd8-846c-c657b69a3bdd.png)
 
+- Si simplemente se detecta la trama mientras el adaptador está en un canal adyacente superpuesto y se observa que el AP está en un canal correcto y no se detecta ninguna interferencia superpuesta, se puede eliminar este problema potencial y asumir que la trama estaba corrupta y mal interpretada (decodificada incorrectamente).
+
+![image](https://user-images.githubusercontent.com/94720207/235479568-a79c41e2-aed7-4ab6-b5a2-50cf00b313ee.png)
+
+- Puedes encontrarse tanto errores `malformed packets` como de `undecoded`, incluso ambos en un mismo paquete:
+
+![image](https://user-images.githubusercontent.com/94720207/235481033-025aca27-1d43-49c6-929b-f132ae6564f3.png)
+
+- En el siguiente filtro se muestra como filtrar `malformed packets`:
+
+````py
+## Fz3r0 Blackshark v4.0 - Standalone Filter for CWAP
+
+## - Filtrar por Malformed Packets en un Beacon Frame
+_ws.malformed
+_ws.expert.group == "Malformed"
+````
 
 ---
+
 
 
 
