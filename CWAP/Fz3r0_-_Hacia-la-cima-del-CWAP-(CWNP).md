@@ -3982,6 +3982,8 @@ Es posible que se necesite capturar desde muchas ubicaciones de clientes para ob
 - Captura para varios AP y escenarios de roaming.
 - Captura para un grupo de STAs o APs.
 
+![image](https://user-images.githubusercontent.com/94720207/235513875-b70e4239-282f-40ae-ada8-d1d28b8366ab.png)
+
 
 
 
@@ -3996,7 +3998,7 @@ https://excalidraw.com/#json=KTbDCxXrfHfjQCLblq_FK,2N9NxWjVlDCTbmXZ--BHlA
 
 https://excalidraw.com/#json=08JAHCru-VuxDt7ig9cfl,2Lw9YhsKBtoVVYGt4dn08Q
 
-
+https://excalidraw.com/#json=uNNI-dc6NyvE9S7JiGmK7,78IrP7RAIpDpeAzLiII1eA
 
 
 
