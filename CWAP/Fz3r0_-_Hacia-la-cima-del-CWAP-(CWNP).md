@@ -3897,6 +3897,8 @@ Si se trabaja en 2,4 GHz, se puede bloquear el analizador en un solo canal, pero
 1. **El primer canal que se ve es el canal en el que el adaptador estaba cuando capturó la trama.**
 2. **El segundo canal, que se ve en el cuerpo de la trama, es el canal en el que la trama indica que fue transmitida.**
 
+![image](https://user-images.githubusercontent.com/94720207/235506651-c1ed3b20-dec7-4f96-ba10-00cd2b360897.png)
+
 Si la trama se está transmitiendo en un canal adyacente superpuesto, **se puede corregir el problema ajustando el plan de uso de canales en la configuración del AP o controlador inalámbrico.**
 
 ---
