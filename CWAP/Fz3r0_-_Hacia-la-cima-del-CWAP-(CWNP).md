@@ -3997,11 +3997,40 @@ Además, es fundamental tener conocimientos técnicos sólidos para realizar una
 
 ![image](https://user-images.githubusercontent.com/94720207/235543278-4f827624-c587-4107-ad2c-514d26224206.png)
 
+Es importante que antes de empezar cualquier tipo de captura, ya sea corta o larga, se sincronice el `timestamp` de los dispositivos de captura con el mismo `servidor NTP` que se utiliza para sincronizar la red. Esto es fundamental porque la captura de frames deberá ser combinada con otras capturas, registros de servicios y de depuración, tanto inalámbricos como alámbricos. Si los timestamps no están sincronizados, se dificulta la tarea de combinación y análisis de los datos. Por lo tanto, **es necesario asegurarse de que todos los dispositivos de captura estén sincronizados con el mismo `servidor NTP` para poder combinar y analizar los datos de manera efectiva.**
+
+ - **Al proceso de recopilación y combinación de datos de varias fuentes en un solo lugar o conjunto de datos coherente se le llama `collation`.**
+
+El `collation` se refiere a la necesidad de **recopilar y combinar los datos capturados de diferentes dispositivos y registros de servicios** para analizar el rendimiento y solucionar problemas de la red. Al sincronizar los `timestamp` en todos los dispositivos de captura con el mismo `servidor NTP`, se facilita la tarea de `collation` de los datos capturados y se obtiene una imagen más clara y precisa del rendimiento de la red.
+
+- **En `Blackshark` existen columnas con el timestamp desde la fecha hasta millonésimas de segundos por default, además del delta:**
+
+![image](https://user-images.githubusercontent.com/94720207/235801050-277a2046-0906-4192-b850-0ffdb57c69b6.png)
+
+
 
 
 
 
 ![image](https://user-images.githubusercontent.com/94720207/234778168-e385cfd2-b5b8-4900-83c0-9c3913e93ecf.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
