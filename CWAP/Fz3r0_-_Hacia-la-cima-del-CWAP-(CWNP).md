@@ -3995,9 +3995,13 @@ Además, es fundamental tener conocimientos técnicos sólidos para realizar una
 
 - [Saavius Omnipeek - Network Analysis Software - Datasheet](https://www.neox-networks.com/downloads/savvius_omnipeek_datasheet_nxen.pdf)
 
-![image](https://user-images.githubusercontent.com/94720207/235543278-4f827624-c587-4107-ad2c-514d26224206.png)
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/235543278-4f827624-c587-4107-ad2c-514d26224206.png" alt="TCP vs UDP" height=680px/> </a> </p> 
 
 Es importante que antes de empezar cualquier tipo de captura, ya sea corta o larga, se sincronice el `timestamp` de los dispositivos de captura con el mismo `servidor NTP` que se utiliza para sincronizar la red. Esto es fundamental porque la captura de frames deberá ser combinada con otras capturas, registros de servicios y de depuración, tanto inalámbricos como alámbricos. Si los timestamps no están sincronizados, se dificulta la tarea de combinación y análisis de los datos. Por lo tanto, **es necesario asegurarse de que todos los dispositivos de captura estén sincronizados con el mismo `servidor NTP` para poder combinar y analizar los datos de manera efectiva.**
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/235807462-bd034955-d372-4599-84aa-e931c481ba8b.png" alt="TCP vs UDP" height=200px/> </a> </p> 
+
+
 
  - **Al proceso de recopilación y combinación de datos de varias fuentes en un solo lugar o conjunto de datos coherente se le llama `collation`.**
 
@@ -4005,7 +4009,27 @@ El `collation` se refiere a la necesidad de **recopilar y combinar los datos cap
 
 - **En `Blackshark` existen columnas con el timestamp desde la fecha hasta millonésimas de segundos por default, además del delta:**
 
-![image](https://user-images.githubusercontent.com/94720207/235801050-277a2046-0906-4192-b850-0ffdb57c69b6.png)
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/235801050-277a2046-0906-4192-b850-0ffdb57c69b6.png" alt="TCP vs UDP" height=680px/> </a> </p> 
+
+Un problema común es el fallo de autenticación o `Authentication Failure`. Aunque esto puede suceder en cualquier momento en que los usuarios o dispositivos intenten conectarse, los momentos críticos son el inicio de los turnos y el regreso de las pausas de comida. Es importante capturar durante estos picos de autenticación para encontrar la fuente de los problemas de autenticación que afectan a múltiples usuarios.
+
+- Si solo una persona o dispositivo tiene problemas para conectarse, es probable que el problema se deba al dispositivo o al usuario. Para capturar estos frames, necesitarás estar cerca del usuario o dispositivo en el momento en que intentan conectarse. Este diagnóstico suele completarse en cuestión de segundos.
+- ¡Recuerda! Se recomienda capturar cerca del cliente si solo un cliente tiene problemas de autenticación, pero es mejor capturar cerca del AP y analizar ambas capturas. La mayoría de las veces será suficiente estar cerca del cliente.
+
+Cuando se utiliza `PSK`, **la causa más probable de que un solo usuario o dispositivo no pueda autenticarse es el uso de la PSK incorrecta**. Para saber como verificar esto, hice un pequeño laboratorio e inicié sesión sesión en la red `Fz3r0_Air_PWN`: 
+
+1. `Primer Intento`: Se escribe la **contraseña incorrecta**
+2. `Segundo Intento`: Contraseña correcta: `godzilla2000`
+- [Fz3r0_Fail_Auth+Good_Auth.pcap]()
+
+````py
+## Fz3r0 Air Shark Filter
+
+# Papu pro full 4-way-handsjake process
+!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol)
+````
+
+
 
 
 
@@ -4013,6 +4037,40 @@ El `collation` se refiere a la necesidad de **recopilar y combinar los datos cap
 
 
 ![image](https://user-images.githubusercontent.com/94720207/234778168-e385cfd2-b5b8-4900-83c0-9c3913e93ecf.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4085,6 +4143,8 @@ La información contenida en este campo puede ser muy útil para analizar el ren
 
 
 ### 802.11 Radio Information
+
+
 
 
 - [Display Filter Reference: 802.11 radio information](https://www.wireshark.org/docs/dfref/w/wlan_radio.html)
