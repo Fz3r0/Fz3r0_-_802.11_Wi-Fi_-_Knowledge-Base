@@ -4040,7 +4040,7 @@ Cuando se utiliza `PSK`, **la causa más probable de que un solo usuario o dispo
 
 Si analizo exactamente el `timestamp` me puedo dar cuenta con exactitud en qué momento ha intentado hacer log-in, además de saber exactamente en el segundo que logró hacer login, con una presición de millonésimas de segundo, las cuales se pueden incrementar aún más: 
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/235818099-b4aed1e7-13fe-4271-a199-5f63c089b01f.png" alt="TCP vs UDP" height=680px/> </a> </p> 
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/235818099-b4aed1e7-13fe-4271-a199-5f63c089b01f.png" alt="TCP vs UDP" height=620px/> </a> </p> 
 
 
 
