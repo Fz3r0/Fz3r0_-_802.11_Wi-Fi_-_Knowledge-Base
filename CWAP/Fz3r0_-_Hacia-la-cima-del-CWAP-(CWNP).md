@@ -4043,6 +4043,15 @@ Si analizo exactamente el `timestamp` me puedo dar cuenta con exactitud en qué 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/235818099-b4aed1e7-13fe-4271-a199-5f63c089b01f.png" alt="TCP vs UDP" height=620px/> </a> </p> 
 
 
+````py
+## Buscar por protocolo DHCP
+DHCP
+
+## Buscar por un ID de transacción DHCP
+dhcp.id == 0x53078034
+````
+
+![image](https://user-images.githubusercontent.com/94720207/235826778-698facfc-6ba3-444a-a196-e946fdd3cfe7.png)
 
 
 
