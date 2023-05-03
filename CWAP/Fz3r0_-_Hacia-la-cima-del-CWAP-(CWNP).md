@@ -4018,16 +4018,29 @@ Un problema común es el fallo de autenticación o `Authentication Failure`. Aun
 
 Cuando se utiliza `PSK`, **la causa más probable de que un solo usuario o dispositivo no pueda autenticarse es el uso de la PSK incorrecta**. Para saber como verificar esto, hice un pequeño laboratorio e inicié sesión sesión en la red `Fz3r0_Air_PWN`: 
 
-1. `Primer Intento`: Se escribe la **contraseña incorrecta**
-2. `Segundo Intento`: Contraseña correcta: `godzilla2000`
-- [Fz3r0_Fail_Auth+Good_Auth.pcap]()
+- [Fz30_AuthFail_Authgood.zip](https://github.com/Fz3r0/Fz3r0_-_BlackShark/files/11378786/Fz30_AuthFail_Authgood.zip)
 
 ````py
+
 ## Fz3r0 Air Shark Filter
 
 # Papu pro full 4-way-handsjake process
 !wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol)
 ````
+
+![image](https://user-images.githubusercontent.com/94720207/235817360-92b62c5d-cf6b-43f5-9387-0ef0d8dea731.png)
+
+1. `Primer Intento`: Se escribe la **contraseña incorrecta**
+    - Se escribe un `PSK` incorrecto `askjdha6786sadasdqa23423` una sola vez, automáticamente el dispositivo trata de autenticar varias veces al AP, pero este lo deautentica una y otra vez ya que la contraseña es incorrecta.
+    - Se puede ver muy claramente que el `4-way-handshake` no está completo y solo están los mensajes `1` y `2` 
+
+2. `Segundo Intento`: Contraseña correcta: `godzilla2000`
+    - Al escribir bien el `PSK` correcto se tiene acceso a la red y tráfico de Internet sin problemas.
+    - En la captura se ve un único intento y los `4` mensajes del `4-way-handshake`
+
+Si analizo exactamente el `timestamp` me puedo dar cuenta con exactitud en qué momento ha intentado hacer log-in, además de saber exactamente en el segundo que logró hacer login, con una presición de millonésimas de segundo, las cuales se pueden incrementar aún más: 
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/235818099-b4aed1e7-13fe-4271-a199-5f63c089b01f.png" alt="TCP vs UDP" height=680px/> </a> </p> 
 
 
 
