@@ -4042,6 +4042,39 @@ Si analizo exactamente el `timestamp` me puedo dar cuenta con exactitud en qué 
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/235818099-b4aed1e7-13fe-4271-a199-5f63c089b01f.png" alt="TCP vs UDP" height=620px/> </a> </p> 
 
+Cuando se utiliza la `autenticación 802.1X`, **existen varias posibles causas de falla en la autenticación** a diferencia con PSK WPA2. De cualquier modo, con cualquier método de autenticación, **la ventana de tiempo que se requiere para capturar los `802.11 frames` necesarios para el diagnóstico de `autenticación` es muy corto, una cuestión de segundos.**
+
+- Los problemas simples pueden ser considerados como aquellos que no tienen muchas ramificaciones, es decir: **O funcionan o no funcionan**, como la `autenticación`, son fácilmente diagnosticadas. Solo es necesario conoces respecto al `Frame Exchange` de un proceso de autenticación y buscar por el proceso en un `.pcap` durante un corto periodo de captura. Se puede comparar la información durante la autenticación con lo que se encuentra en la captura, lo que le permite identificar rápidamente el problema.
+
+Los problemas que se prolongan durante períodos más largos de tiempo, también tomarán más tiempo para diagnosticar. ¿Qué sucede si los usuarios se quejan de que la red es lenta? ¡El clásico reporte de que "la red es lenta"! En realidad esto es muy abstracto y puede tener demasiadas variables y ramificaciones... 
+
+- Primero, se debe definir "lento" y compilar diferentes variables, por ejemplo:
+    
+    - Conocer la capacidad de la red
+    - Utilización del tiempo de aire
+    - Tipos de clientes
+    - Protocolos utilizados
+    - Ancho de banda del enlace a Internet del ISP
+    - Ancho de banda Ethernet
+    - Versiones de MIMO admitidas
+    - Cualquier limitación en los perfiles de RF de los puntos de acceso
+    - Varias otras piezas de información que podrían definir "lento"....
+
+- **Una vez que sepamos para qué está diseñada la red, se pueden empezar a ejecutar capturas de `frames 802.11` para ver qué está sucediendo en el espacio.**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ````py
 ## Buscar por protocolo DHCP
