@@ -3143,82 +3143,6 @@ Por ejemplo en Apple MAC-OS es posible poner wireshark en `Monitor Mode` sin nec
 
 ![image](https://user-images.githubusercontent.com/94720207/231615038-3a046e6c-d072-454d-b200-5a265c54ac12.png)
 
-### 🟢 Capturando un `canal a la vez` VS `varios canales`
-
-Es muy importante comprender que solo se puede capturar en un canal a la vez con un adaptador 802.11. **Para capturar más de un canal al mismo tiempo, se deben utilizar múltiples adaptadores y software que permita capturar con varios adaptadores al mismo tiempo.** Se puede escanear un canal con un único adaptador, pero esto no es lo mismo que capturar en varios canales simultáneamente. El escaneo simplemente captura lo que hay en ese momento en el canal. 
-
-Este límite se impone porque la radio solo puede sintonizarse en un canal específico en un momento dado y, por lo tanto, solo puede capturar tramas del canal sintonizado. Dependiendo del escenario de resolución de problemas, puede ser aceptable capturar en cada canal durante un período y luego analizar los datos agregados. Este último método se utiliza principalmente para resolver problemas de rendimiento o validar configuraciones de seguridad. **Para un análisis efectivo de roaming, se requieren típicamente múltiples adaptadores.**
-
-Para un mejor entendimiento hice una sencilla tabla para identificar y darse una idea de cada escenario:
-
-| **Escenario de Análisis**                                    	| **Canales Involucrados** 	| **Antenas Necesarias** 	|
-|--------------------------------------------------------------	|--------------------------	|------------------------	|
-| **Análsis de tráfico en un AP**                              	| 1                        	| 1                      	|
-| **Búsqueda de retransmisiones en un canal**                  	| 1                        	| 1                      	|
-| **Análisis de log-in en un SSID**                            	| 1                        	| 1                      	|
-| **Búsqueda de Beacons en un canal**                          	| 1                        	| 1                      	|
-| **Búsqueda de Beacons en canales 2.4 GHz: 1, 6 y 11**        	| 3                        	| 1 _Hopping_            	|
-| **Búsqueda de Beacons en todo el espectro 2.4 GHz**          	| 14                       	| 1 _Hopping_            	|
-| **Análisis de Roaming entre 2 APs (en diferentes canales)**  	| 2                        	| 2                      	|
-| **Análsiis de Roaming entre 3 APs (en diferentes canales)**  	| 3                        	| 3                      	|
-| **Análsiis de todo lo que ocurre en el espectro de 2.4 GHz** 	| 14                       	| 14                     	|
-
-Ejemplos de dispositivos para capturar en un solo canal:
-
-
-
-
-### Un canal a la vez
-
-![image](https://user-images.githubusercontent.com/94720207/231618666-175ef23b-319f-439b-a847-3291a52a8a6d.png)
-
-![image](https://user-images.githubusercontent.com/94720207/231618740-2935df7d-d73b-4ffb-b356-0762f412a73b.png)
-
-
-
-
-
-
-
-
-
-
-
-
----
-
-[WLAN Pi](https://www.wlanpi.com/)
-
-![image](https://user-images.githubusercontent.com/94720207/231618221-3cbb95ba-60dc-4daf-9d5d-697b77a35037.png)
-
-![image](https://user-images.githubusercontent.com/94720207/231618319-3e113b89-2ae1-4ffb-b072-3ef824eb0146.png)
-
-![image](https://user-images.githubusercontent.com/94720207/231618403-a6a35d10-e198-49e5-a487-2f0a7a2cefdd.png)
-
-[Hack5 WiFi Coconut](https://www.youtube.com/watch?v=GIVrzoeWb3M) **14 Canales al mismo tiempo**
-
-![image](https://user-images.githubusercontent.com/94720207/231617593-24fb8805-0b48-4abd-86f1-01e44f58e9f0.png)
-
-![image](https://user-images.githubusercontent.com/94720207/233764252-a2b1f82e-eefa-4459-891c-b6688d68c9f6.png)
-
-
-![image](https://user-images.githubusercontent.com/94720207/231617663-accd3bf7-3a4d-4dd0-bdd6-321c348b8edf.png)
-
-![image](https://user-images.githubusercontent.com/94720207/231618067-bb8c2cf9-60da-481b-8795-2ab943e637bc.png)
-
-![image](https://user-images.githubusercontent.com/94720207/233764245-2d7d5535-c8d3-4791-87c7-5d6cd6bda656.png)
-
-
-Setups encontrados en los confines de Internerd:
-
-![image](https://user-images.githubusercontent.com/94720207/231617810-ebc01ba7-3e0b-4625-8ebe-67c37ceb6d13.png)
-
-![image](https://user-images.githubusercontent.com/94720207/233807729-6c0cd857-e134-4760-b47f-4b4bf80e0c2e.png)
-
-
-https://wiki.wireshark.org/SampleCaptures sample captures
-
-
 
 ## Opciones para capturar frames 802.11
 
@@ -4173,6 +4097,79 @@ FIN DE CAPITULO :D
 
 
 
+## 🟢 Capturando un `canal a la vez` VS `varios canales`
+
+Es muy importante comprender que solo se puede capturar en un canal a la vez con un adaptador 802.11. **Para capturar más de un canal al mismo tiempo, se deben utilizar múltiples adaptadores y software que permita capturar con varios adaptadores al mismo tiempo.** Se puede escanear un canal con un único adaptador, pero esto no es lo mismo que capturar en varios canales simultáneamente. El escaneo simplemente captura lo que hay en ese momento en el canal. 
+
+Este límite se impone porque la radio solo puede sintonizarse en un canal específico en un momento dado y, por lo tanto, solo puede capturar tramas del canal sintonizado. Dependiendo del escenario de resolución de problemas, puede ser aceptable capturar en cada canal durante un período y luego analizar los datos agregados. Este último método se utiliza principalmente para resolver problemas de rendimiento o validar configuraciones de seguridad. **Para un análisis efectivo de roaming, se requieren típicamente múltiples adaptadores.**
+
+Para un mejor entendimiento hice una sencilla tabla para identificar y darse una idea de cada escenario:
+
+| **Escenario de Análisis**                                    	| **Canales Involucrados** 	| **Antenas Necesarias** 	|
+|--------------------------------------------------------------	|--------------------------	|------------------------	|
+| **Análsis de tráfico en un AP**                              	| 1                        	| 1                      	|
+| **Búsqueda de retransmisiones en un canal**                  	| 1                        	| 1                      	|
+| **Análisis de log-in en un SSID**                            	| 1                        	| 1                      	|
+| **Búsqueda de Beacons en un canal**                          	| 1                        	| 1                      	|
+| **Búsqueda de Beacons en canales 2.4 GHz: 1, 6 y 11**        	| 3                        	| 1 _Hopping_            	|
+| **Búsqueda de Beacons en todo el espectro 2.4 GHz**          	| 14                       	| 1 _Hopping_            	|
+| **Análisis de Roaming entre 2 APs (en diferentes canales)**  	| 2                        	| 2                      	|
+| **Análsiis de Roaming entre 3 APs (en diferentes canales)**  	| 3                        	| 3                      	|
+| **Análsiis de todo lo que ocurre en el espectro de 2.4 GHz** 	| 14                       	| 14                     	|
+
+Ejemplos de dispositivos para capturar en un solo canal:
+
+
+
+
+### Un canal a la vez
+
+![image](https://user-images.githubusercontent.com/94720207/231618666-175ef23b-319f-439b-a847-3291a52a8a6d.png)
+
+![image](https://user-images.githubusercontent.com/94720207/231618740-2935df7d-d73b-4ffb-b356-0762f412a73b.png)
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+[WLAN Pi](https://www.wlanpi.com/)
+
+![image](https://user-images.githubusercontent.com/94720207/231618221-3cbb95ba-60dc-4daf-9d5d-697b77a35037.png)
+
+![image](https://user-images.githubusercontent.com/94720207/231618319-3e113b89-2ae1-4ffb-b072-3ef824eb0146.png)
+
+![image](https://user-images.githubusercontent.com/94720207/231618403-a6a35d10-e198-49e5-a487-2f0a7a2cefdd.png)
+
+[Hack5 WiFi Coconut](https://www.youtube.com/watch?v=GIVrzoeWb3M) **14 Canales al mismo tiempo**
+
+![image](https://user-images.githubusercontent.com/94720207/231617593-24fb8805-0b48-4abd-86f1-01e44f58e9f0.png)
+
+![image](https://user-images.githubusercontent.com/94720207/233764252-a2b1f82e-eefa-4459-891c-b6688d68c9f6.png)
+
+
+![image](https://user-images.githubusercontent.com/94720207/231617663-accd3bf7-3a4d-4dd0-bdd6-321c348b8edf.png)
+
+![image](https://user-images.githubusercontent.com/94720207/231618067-bb8c2cf9-60da-481b-8795-2ab943e637bc.png)
+
+![image](https://user-images.githubusercontent.com/94720207/233764245-2d7d5535-c8d3-4791-87c7-5d6cd6bda656.png)
+
+
+Setups encontrados en los confines de Internerd:
+
+![image](https://user-images.githubusercontent.com/94720207/231617810-ebc01ba7-3e0b-4625-8ebe-67c37ceb6d13.png)
+
+![image](https://user-images.githubusercontent.com/94720207/233807729-6c0cd857-e134-4760-b47f-4b4bf80e0c2e.png)
+
+
 
 
 
@@ -4367,7 +4364,7 @@ La información contenida en este campo puede ser muy útil para analizar el ren
 
 
 
-
+https://wiki.wireshark.org/SampleCaptures
 
 
 
