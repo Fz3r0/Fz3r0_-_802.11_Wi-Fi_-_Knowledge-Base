@@ -3349,6 +3349,7 @@ Después de las pruebas relaizadas en el laboratorio y con la documentación rec
 
 Tal cual dijo David Bombal y me pude dar cuenta comprando antenas chinas baratas... es que lo importante es fijarse en el driver, el driver combinado con el sistemas operativo es lo que logrará la mejor captura posible. Actualmente, he notado que el driver Atheros ha sido infalible, tal cual se ha mencionado en la red... Pero también es cierto que existen drivers nuevos como el `alfa` que es soportado para capturar incluso WiFi6. 
 
+- https://github.com/morrownr/USB-WiFi/issues/87 drivers para wifi6
 
 
 
