@@ -4110,21 +4110,23 @@ Los problemas que se prolongan durante períodos más largos de tiempo, también
     - Varias otras piezas de información que podrían definir "lento"....
 
 - **Una vez que sepamos para qué está diseñada la red, se pueden empezar a ejecutar capturas de `frames 802.11` para ver qué está sucediendo en el espacio.**
-- **En escenarios que requieran capturas prolongadas, resulta conveniente emplear infraestructura y métodos de captura distribuidos. De lo contrario, se podría requerir mucho tiempo en el lugar utilizando un método móvil para diagnosticar el problema.**
+- **En escenarios que requieran `capturas prolongadas`, resulta conveniente emplear métodos `infraestructure` y `distributed`. De lo contrario, se podría requerir mucho tiempo en el lugar utilizando un método `Mobile` para diagnosticar el problema.**
 
 ![image](https://user-images.githubusercontent.com/94720207/234778168-e385cfd2-b5b8-4900-83c0-9c3913e93ecf.png)
 
+Al solucionar problemas de red, es una buena práctica **"ir trabajando de abajo-hacia-arriba"**. Esto significa que se debe comenzar el diagnóstico en la capa más baja del modelo OSI y avanzar hacia la cima. Si no se detecta un problema en `Layer 1`, como una cámara inalámbrica u otra fuente de interferencia que esté saturando el medio, se debe pasar a analizar `Layer 2` y realizar una captura de `Frames 802.11`. 
 
+- **En algunos casos, el problema NO está relacionado con `WiFi`**, sino con `DNS`, `DHCP` o el `Firewall`. Algunos problemas se pueden solucionar rápidamente, mientras que otros pueden requerir mucho tiempo para diagnosticar.
 
+Si se determina que el problema está en la red Ethernet cableada, puede ser necesario mostrar y explicar la captura al administrador de red cableada. Un problema común en el lado LAN cableado que se atribuye erróneamente a WiFi es **la falta de `IP Addresses` en el ámbito de `DHCP`.**
 
+- Una captura inalámbrica mostrará el `Probe Request`, la `Probe Response` y el `Authentication Exchange`. Después de estos eventos, se debe observar una `DHCP Request` desde el cliente inalámbrico seguida de una `DHCP Response` desde el `DHCP Server`:
 
+- Si el servidor no está disponible, no habrá respuesta:
 
+- Si el servidor está disponible pero no hay direcciones IP disponibles, se verá una respuesta negativa de DHCP:
 
-
-
-
-
-
+La captura inalámbrica de este proceso es muy similar a la de un proceso de DHCP de una estación cableada, con la adición de las transmisiones del punto de acceso para la gestión del medio inalámbrico. Un administrador de red con cable debería poder ver esto y resolver el problema en el lado con cable de la red. El diagnóstico de este problema lleva solo unos momentos más que el diagnóstico de una falla de autenticación.
 
 
 ````py
@@ -4137,6 +4139,26 @@ dhcp.id == 0x53078034
 
 ![image](https://user-images.githubusercontent.com/94720207/235826778-698facfc-6ba3-444a-a196-e946fdd3cfe7.png)
 
+---
+
+<!-- 
+
+FIN DE CAPITULO :D
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
 
 
 
