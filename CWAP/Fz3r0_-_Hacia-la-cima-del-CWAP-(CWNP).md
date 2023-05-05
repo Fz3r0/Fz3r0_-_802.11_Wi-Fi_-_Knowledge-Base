@@ -4074,10 +4074,11 @@ Cuando se utiliza `PSK`, **la causa más probable de que un solo usuario o dispo
 ## Fz3r0 Air Shark Filter
 
 # Papu pro full 4-way-handsjake process
-!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol)
+!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 ||  wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol)
 ````
 
-![image](https://user-images.githubusercontent.com/94720207/235817360-92b62c5d-cf6b-43f5-9387-0ef0d8dea731.png)
+![image](https://user-images.githubusercontent.com/94720207/236555643-93622105-4f90-451c-862a-28032bb689f3.png)
+
 
 1. `Primer Intento`: Se escribe la **contraseña incorrecta**
     - Se escribe un `PSK` incorrecto `askjdha6786sadasdqa23423` una sola vez, automáticamente el dispositivo trata de autenticar varias veces al AP, pero este lo deautentica una y otra vez ya que la contraseña es incorrecta.
@@ -4116,18 +4117,7 @@ Los problemas que se prolongan durante períodos más largos de tiempo, también
 
 Al solucionar problemas de red, es una buena práctica **"ir trabajando de abajo-hacia-arriba"**. Esto significa que se debe comenzar el diagnóstico en la capa más baja del modelo OSI y avanzar hacia la cima. Si no se detecta un problema en `Layer 1`, como una cámara inalámbrica u otra fuente de interferencia que esté saturando el medio, se debe pasar a analizar `Layer 2` y realizar una captura de `Frames 802.11`. 
 
-- **En algunos casos, el problema NO está relacionado con `WiFi`**, sino con `DNS`, `DHCP` o el `Firewall`. Algunos problemas se pueden solucionar rápidamente, mientras que otros pueden requerir mucho tiempo para diagnosticar.
-
-Si se determina que el problema está en la red Ethernet cableada, puede ser necesario mostrar y explicar la captura al administrador de red cableada. Un problema común en el lado LAN cableado que se atribuye erróneamente a WiFi es **la falta de `IP Addresses` en el ámbito de `DHCP`.**
-
-- Una captura inalámbrica mostrará el `Probe Request`, la `Probe Response` y el `Authentication Exchange`. Después de estos eventos, se debe observar una `DHCP Request` desde el cliente inalámbrico seguida de una `DHCP Response` desde el `DHCP Server`:
-
-- Si el servidor no está disponible, no habrá respuesta:
-
-- Si el servidor está disponible pero no hay direcciones IP disponibles, se verá una respuesta negativa de DHCP:
-
-La captura inalámbrica de este proceso es muy similar a la de un proceso de DHCP de una estación cableada, con la adición de las transmisiones del punto de acceso para la gestión del medio inalámbrico. Un administrador de red con cable debería poder ver esto y resolver el problema en el lado con cable de la red. El diagnóstico de este problema lleva solo unos momentos más que el diagnóstico de una falla de autenticación.
-
+- **En algunos casos, el problema NO está relacionado con `WiFi`**, sino con `DNS`, `DHCP` o el `Firewall`. Algunos problemas se pueden solucionar rápidamente, mientras que otros pueden requerir mucho tiempo para diagnosticar. Es por eso que también es importante saber capturar en Ethernet 802.3, por ejemplo saber revisar si existió un proceso completo de DHCP:
 
 ````py
 ## Buscar por protocolo DHCP
@@ -4138,6 +4128,23 @@ dhcp.id == 0x53078034
 ````
 
 ![image](https://user-images.githubusercontent.com/94720207/235826778-698facfc-6ba3-444a-a196-e946fdd3cfe7.png)
+
+Si se determina que el problema está en la red Ethernet cableada, puede ser necesario mostrar y explicar la captura al administrador de red cableada. Un problema común en el lado LAN cableado que se atribuye erróneamente a WiFi es **la falta de `IP Addresses` en el ámbito de `DHCP`. Esto también se puede capturar Wireless (es importante realizer `IEEE 802.11 Desencrypt`)**
+
+![image](https://user-images.githubusercontent.com/94720207/236560285-c8a257cd-70cf-4e45-9d2f-206b20d0d116.png)
+
+- Una captura inalámbrica mostrará el `Probe Request`, la `Probe Response` y el `Authentication Exchange`. Después de estos eventos, se debe observar una `DHCP Request` desde el cliente inalámbrico seguida de una `DHCP Response` desde el `DHCP Server`:
+
+![image](https://user-images.githubusercontent.com/94720207/236561376-fe126a40-0734-4294-9a21-905bc564b202.png)
+
+- Si el servidor no está disponible, no habrá respuesta
+
+- Si el servidor está disponible pero no hay direcciones IP disponibles, se verá una respuesta negativa de DHCP
+
+La captura inalámbrica de este proceso es muy similar a la de un proceso de DHCP de una estación cableada, con la adición de las transmisiones del punto de acceso para la gestión del medio inalámbrico. Un administrador de red con cable debería poder ver esto y resolver el problema en el lado con cable de la red. El diagnóstico de este problema lleva solo unos momentos más que el diagnóstico de una falla de autenticación.
+
+
+
 
 ---
 
