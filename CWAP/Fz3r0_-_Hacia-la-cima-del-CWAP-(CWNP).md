@@ -4110,7 +4110,9 @@ Los problemas que se prolongan durante períodos más largos de tiempo, también
     - Varias otras piezas de información que podrían definir "lento"....
 
 - **Una vez que sepamos para qué está diseñada la red, se pueden empezar a ejecutar capturas de `frames 802.11` para ver qué está sucediendo en el espacio.**
+- **En escenarios que requieran capturas prolongadas, resulta conveniente emplear infraestructura y métodos de captura distribuidos. De lo contrario, se podría requerir mucho tiempo en el lugar utilizando un método móvil para diagnosticar el problema.**
 
+![image](https://user-images.githubusercontent.com/94720207/234778168-e385cfd2-b5b8-4900-83c0-9c3913e93ecf.png)
 
 
 
@@ -4140,7 +4142,7 @@ dhcp.id == 0x53078034
 
 
 
-![image](https://user-images.githubusercontent.com/94720207/234778168-e385cfd2-b5b8-4900-83c0-9c3913e93ecf.png)
+
 
 
 
