@@ -4239,7 +4239,9 @@ Para capturar los 3 adaptadores con `Blackshark` solo se tienen que seleccionar 
 
 ![image](https://user-images.githubusercontent.com/94720207/236648188-47889586-7905-4e73-9cfd-c1f77c85ef9d.png)
 
-Y se podría ver la captura de cada adaptador en su canal:
+**Y se podría ver la captura de cada adaptador en su canal en un mismo archivo `.pcap`. Como nota curiosa notar como el Delta y Los tiempos están sumamente pegados el uno del otro, incluso el Delta marca negativos!!! Esto es porque al capturar al mismo tiempo hay frames que podrían llegar a la misma millonésima de segundo, esto ya es cuestión de aleatoriedad:**
+
+![image](https://user-images.githubusercontent.com/94720207/236649240-b2ec7114-df07-40ae-8caa-222224adc397.png)
 
 
 
