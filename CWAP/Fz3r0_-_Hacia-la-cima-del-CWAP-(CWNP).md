@@ -667,7 +667,8 @@ En esta capa se encuentran **2 protocolos principales**: `TCP` y `UDP`.
 ### `TCP` - Transmission Control Protocol
 
 - `TCP`: Protocolo orientado a conexión y confiable. `Connection-oriented and Reliable`
-- Proporciona un canal de comunicación extremo a extremo que garantiza que los datos enviados sean recibidos en el orden correcto y sin errores `ACK`, `Checksum`, `Seq`, etc. 
+- Proporciona 
+de comunicación extremo a extremo que garantiza que los datos enviados sean recibidos en el orden correcto y sin errores `ACK`, `Checksum`, `Seq`, etc. 
 - Para lograr esto, TCP establece una conexión entre dos dispositivos antes de enviar datos `3-way-handshake`. 
 - Los datos se envían en segmentos y se espera que el receptor confirme la recepción de cada segmento. 
 - Si un segmento no se recibe correctamente, TCP lo retransmite hasta que el receptor lo confirma. 
@@ -4265,52 +4266,48 @@ Y también se pueden contruír adaptadores custom:
 
 ![image](https://user-images.githubusercontent.com/94720207/236649892-93d12bbd-b0e7-48c1-bdb0-0e3def64457b.png)
 
+---
 
-### Selección correcta de canales de captura
+### ❓ Selección correcta de canales de captura
 
 - **¿Cómo decide uno qué hacer? ¿escanear todos los canales, un conjunto de canales o un solo canal?**
 
 La elección debe basarse en las razones por las que se están capturando tramas. Por ejemplo, si una estación tiene problemas para conectarse, es posible que desee escanear todos los canales para capturar cualquier "solicitud de sondeo" de esa estación. Podría estar buscando SSID incorrectos. Al escanear todos los canales, se podrá recopilar más información sobre la forma en que esta estación intenta conectarse. También se debe decidir escanear solo los canales utilizados por los AP que se encuentran dentro de ese espacio para diagnosticar el problema de conectividad. También se podría decidir escanear solo el canal utilizado por el AP que se encuentra físicamente más cerca de la estación con problemas de conectividad. No hay una respuesta absoluta.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Para un mejor entendimiento hice una sencilla tabla para identificar y darse una idea de cada escenario:
+- **Para un mejor entendimiento hice una sencilla tabla para identificar y darse una idea de cada escenario:**
 
 | **Escenario de Análisis**                                    	| **Canales Involucrados** 	| **Antenas Necesarias** 	|
 |--------------------------------------------------------------	|--------------------------	|------------------------	|
 | **Análsis de tráfico en un AP**                              	| 1                        	| 1                      	|
 | **Búsqueda de retransmisiones en un canal**                  	| 1                        	| 1                      	|
 | **Análisis de log-in en un SSID**                            	| 1                        	| 1                      	|
+| **Análisis de log-in en todos los SSID y/o canales**         	| 2 - 14                    | 2 - 14                  |
 | **Búsqueda de Beacons en un canal**                          	| 1                        	| 1                      	|
 | **Búsqueda de Beacons en canales 2.4 GHz: 1, 6 y 11**        	| 3                        	| 1 _Hopping_            	|
 | **Búsqueda de Beacons en todo el espectro 2.4 GHz**          	| 14                       	| 1 _Hopping_            	|
 | **Análisis de Roaming entre 2 APs (en diferentes canales)**  	| 2                        	| 2                      	|
 | **Análsiis de Roaming entre 3 APs (en diferentes canales)**  	| 3                        	| 3                      	|
 | **Análsiis de todo lo que ocurre en el espectro de 2.4 GHz** 	| 14                       	| 14                     	|
+| **Análisis o Auditoría de 10 Canales en la Banda de 5 GHz** 	 | 10                       	| 10                     	|
+| **Análisis o Auditoría de 25 Canales en la Banda de 5 GHz** 	 | 25                       	| 25                     	|
 
-Ejemplos de dispositivos para capturar en un solo canal:
+---
+
+### ⭕ Varios Canales con `Infraestructure` o `Dynamic`
+
+Como se ha mencionado antes estos métodos no son los más accesibles, pero si son mucho más sencillos y presentan ventajas frente a los mobile. En este caso en su mayoría de veces no hay que pensar tanto y hacer tantas configuraciones como en sistemas custom, en cambio, ya todo está preparado para catpurar con un par de clicks. 
+
+- En caso de `Infraestructure` como `Ruckus Smartzone` solo basta tener acceso al Dashboard y empezar la captura con todos los APs involucrados simultáneamente, incluso se puede crear una configuración avanzada donde se pueda hacer stream de todos los APs requeridos en tiempo real, sin importar la cantidad de canales o la banda.
+
+**En el siguiente ejemplo se capturan 5 canales diferentes de la banda 5 GHz, los cuales se encuentran como vecinos y así poder capturar todos los eventos de esa red, incluyendo todos los eventos de roaming y autenticación:**
+
+![image](https://user-images.githubusercontent.com/94720207/236650658-128c558d-7c54-4c65-a84e-72151aab2c48.png)
 
 
 
 
-### Un canal a la vez
 
-![image](https://user-images.githubusercontent.com/94720207/231618666-175ef23b-319f-439b-a847-3291a52a8a6d.png)
+
 
 
 
@@ -4335,23 +4332,10 @@ Ejemplos de dispositivos para capturar en un solo canal:
 
 ![image](https://user-images.githubusercontent.com/94720207/231618403-a6a35d10-e198-49e5-a487-2f0a7a2cefdd.png)
 
-[Hack5 WiFi Coconut](https://www.youtube.com/watch?v=GIVrzoeWb3M) **14 Canales al mismo tiempo**
-
-![image](https://user-images.githubusercontent.com/94720207/231617593-24fb8805-0b48-4abd-86f1-01e44f58e9f0.png)
-
-![image](https://user-images.githubusercontent.com/94720207/233764252-a2b1f82e-eefa-4459-891c-b6688d68c9f6.png)
 
 
-![image](https://user-images.githubusercontent.com/94720207/231617663-accd3bf7-3a4d-4dd0-bdd6-321c348b8edf.png)
-
-![image](https://user-images.githubusercontent.com/94720207/231618067-bb8c2cf9-60da-481b-8795-2ab943e637bc.png)
-
-![image](https://user-images.githubusercontent.com/94720207/233764245-2d7d5535-c8d3-4791-87c7-5d6cd6bda656.png)
 
 
-Setups encontrados en los confines de Internerd:
-
-![image](https://user-images.githubusercontent.com/94720207/231617810-ebc01ba7-3e0b-4625-8ebe-67c37ceb6d13.png)
 
 
 ---
