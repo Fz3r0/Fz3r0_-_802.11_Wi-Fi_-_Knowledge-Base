@@ -4536,3 +4536,37 @@ https://wiki.wireshark.org/SampleCaptures
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WiFi beacon pollution, overhead per SSID
+
+![image](https://user-images.githubusercontent.com/94720207/236646936-83418391-38a4-4d86-b337-c5459ded967b.png)
+
+
+
+
+
+
