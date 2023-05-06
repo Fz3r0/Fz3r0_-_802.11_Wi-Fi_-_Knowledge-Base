@@ -4108,9 +4108,12 @@ Este límite se impone porque la radio solo puede sintonizarse en un canal espec
 
 ### Capturando en un solo canal
 
-Si se desea examinar lo que se ha capturado para un solo canal después de capturar en todos o en varios canales, se puede aplicar un filtro de canal a la vista después de guardar la captura. Por otro lado, cuando se escanea un solo canal, independientemente de la banda, se recopila la mayor cantidad de información posible sobre el uso de ese canal en ese espacio.
+- Cuando se escanean un solo canal, se pierde tráfico transmitido en todos los demás canales. Es decir, si se captura en el Channel 6 de 2.4 GHz, se perderá información de los canales: 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14.
+- Ojo!!! No se perderán todos los frames en realidad de los demás canales, hay que recordar que en caso que algún canal adyacente haga ACI, se podrán capturar frames de ese canal, con sus respectivas pérdidas y retransmisiones por el hecho de ser interferencia, esto solo puede pasar en la banda de 2.4 GHz o en caso que el bandwith del 5 GHz haga overlap, como puede pasar con 40, 80 y 160 MHz.
+- Cuando se escanea un solo canal, independientemente de la banda, se recopila la mayor cantidad de información posible sobre el uso de ese canal específico en ese espacio.
+- **Para este tipo de captura solo se necesita `1 adaptador`**
 
-Este es mi comando one-liner para poner el adaptador en modo monitor, incluyendo la selección de canal para un solo adaptador _(Ojo!!! Recordar que estando en canal 6 también se capturan canales con interferencia ACI, es **por eso se puede capturar el `CH 5` desde el `CH 6`**)_:
+Configuración de adaptador para hacer capturar `1 solo canal` incluyendo la selección de canal para un solo adaptador:.
 
 ````sh
 # Activando Monitor Mode en un adaptador Fresh (wlan0) 
@@ -4122,6 +4125,13 @@ clear; airmon-ng start wlan0; iwconfig wlan0mon channel 6 && ifconfig wlan0mon d
 Utilizando armon-ng con la flag `-c` se puede ajustar la auditoría de red inalámbrica al canal deseado _(de caso contrario se utiliza el default o el que se ajustó al poner `Monitor Mode`, en mi caso CH 6)_, pero el truco del padrino ;) es también utilizarlo para capturar con wireshark. Con esta técnica se puede guardar por un lado el archivo .pcap, por otro el .cap, además de auditar la red desde las 2 plataformas (aircrack-ng + Blackshark) utilizando el canal 6 como canal fijo. 
 
 ![image](https://user-images.githubusercontent.com/94720207/236628039-fa60e710-7207-4d90-86f9-ffeae60aab32.png)
+
+La captura en `Blackshark` se ve así:
+
+- [Same Channel Capture PCAP](https://github.com/Fz3r0/Fz3r0_-_BlackShark/files/11412513/fz3r0_same_channel.zip)
+
+![image](https://user-images.githubusercontent.com/94720207/236629193-8a2b429a-b42a-4aed-8de4-b17fa53b77b6.png)
+
 
 
 ### Capturando con Channel Hopping
