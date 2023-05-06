@@ -4108,26 +4108,28 @@ Este límite se impone porque la radio solo puede sintonizarse en un canal espec
 
 - [USB WiFi Adapters that are supported with Linux in-kernel drivers](https://github.com/morrownr/USB-WiFi/blob/main/home/USB_WiFi_Adapters_that_are_supported_with_Linux_in-kernel_drivers.md)
 
-### Capturando en un solo canal
+---
+
+### ⭕ Capturando en un solo canal
 
 - Cuando se escanean un solo canal, se pierde tráfico transmitido en todos los demás canales. Es decir, si se captura en el Channel 6 de 2.4 GHz, se perderá información de los canales: 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14.
 - Ojo!!! No se perderán todos los frames en realidad de los demás canales, hay que recordar que en caso que algún canal adyacente haga ACI, se podrán capturar frames de ese canal, con sus respectivas pérdidas y retransmisiones por el hecho de ser interferencia, esto solo puede pasar en la banda de 2.4 GHz o en caso que el bandwith del 5 GHz haga overlap, como puede pasar con 40, 80 y 160 MHz.
 - Cuando se escanea un solo canal, independientemente de la banda, se recopila la mayor cantidad de información posible sobre el uso de ese canal específico en ese espacio.
 - **Para este tipo de captura solo se necesita `1 adaptador`**
 
-**Ejemplos de adaptadores que capturan 1 solo canal en banda 2.4 GHz:**
+**📡 Ejemplos de adaptadores que capturan 1 solo canal en banda 2.4 GHz:**
 
 ![image](https://user-images.githubusercontent.com/94720207/236634132-fd794d85-66ec-4554-aa92-00441d301fa4.png)
 
-**Ejemplos de adaptadores que capturan 1 solo canal en banda 2.4 GHz y 5 GHz:**
+**📡 Ejemplos de adaptadores que capturan 1 solo canal en banda 2.4 GHz y 5 GHz:**
 
 ![image](https://user-images.githubusercontent.com/94720207/236634900-c009c869-6122-4ac2-b7b0-c9d4f33790fc.png)
 
-**Ejemplos de adaptadores que capturan 1 solo canal en banda 2.4 GHz, 5 GHz y 5.9GHz (WiFi6):**
+**📡 Ejemplos de adaptadores que capturan 1 solo canal en banda 2.4 GHz, 5 GHz y 5.9GHz (WiFi6):**
 
 ![image](https://user-images.githubusercontent.com/94720207/236635148-1e64a36d-7080-4167-9dff-c06d69ab02e9.png)
 
-Configuración de adaptador para hacer capturar `1 solo canal` incluyendo la selección de canal para un solo adaptador:.
+**⚙️ Configuración de adaptador para hacer capturar `1 solo canal` incluyendo la selección de canal para un solo adaptador:.**
 
 ````sh
 # Activando Monitor Mode en un adaptador Fresh (wlan0) 
@@ -4146,9 +4148,9 @@ La captura en `Blackshark` se ve así:
 
 ![image](https://user-images.githubusercontent.com/94720207/236629193-8a2b429a-b42a-4aed-8de4-b17fa53b77b6.png)
 
+---
 
-
-### Capturando con Channel Hopping
+### ⭕ Capturando un Canal con Channel Hopping
 
 - Cuando se escanean varios canales, se pierde tráfico transmitido en los canales que no se están escaneando durante el tiempo que se dedica a un solo canal mientras se ciclan por los diferentes canales. Es decir, si el ciclo dura 3 segundos por canal, dedicará 3 segundos en pasar por cada canal, en caso de 2.4 GHz recorrer los 14 canales llevaría 42 segundos para regresar al mismo canal, perdiendo toda esa ventana de captura. 
 - Con esta técnica se recopila cierta información sobre todos los canales que se están escaneando y aunque no sea toda puede ser muy útil para tareas de auditorías de seguridad de red, pentesting, scanning y routing.
@@ -4163,7 +4165,7 @@ Utilizando `armon-ng` por default la auditoría hace `Channel Hopping` y de hech
 
 ![image](https://user-images.githubusercontent.com/94720207/236587738-a5745acb-e3ec-4633-9177-26cf60d92d17.png)
 
-Por ejemplo, haciendo channel hopping cada 500ms:
+⚙️ **Configuración haciendo Channel Hopping cada 500ms:**
 
 - [channel hopping capture .PCAP](https://github.com/Fz3r0/Fz3r0_-_BlackShark/files/11410825/channel_hopping_capture.zip)
 
@@ -4177,9 +4179,9 @@ En Wireshark puedo ver los Beacons de **diferentes SSIDs en diferentes canales**
 
 ![image](https://user-images.githubusercontent.com/94720207/236589174-b498a2bd-d932-4dcd-8e5f-3c1691cb89d0.png)
 
+---
 
-
-### Capturando en múltiples canales específicos 
+### ⭕ Capturando múltiples canales específicos 
 
 - Cuando se requiere analizar el comportamiento de múltiples canales específicos simultáneamente, se debe capturar en cada canal utilizando varios adaptadores para capturar en cada canal al mismo tiempo, lo que aumenta el costo y la complejidad de la configuración.
 - Capturar en múltiples canales específicos es necesario para analizar problemas de roaming y en otros casos para analizar canales específicos con alta densidad de tráfico o simplemente porque conocemos los canales específicos que se utilizan en la red que se analizará. Por ejemplo si nuestra red es una 2.4 GHz que utiliza únicamente los canales 1, 6, y 11 sabemos que debemos atacar estos canales principalmente, en esta caso se necesitaría utilizar 3 adaptadores, uno en cada canal respectivo. 
@@ -4189,13 +4191,13 @@ En Wireshark puedo ver los Beacons de **diferentes SSIDs en diferentes canales**
 - Capturar en varios canales simultáneamente requiere más recursos de hardware, como CPU y memoria, lo que puede afectar el rendimiento del sistema.
 - La captura en varios canales simultáneamente produce una cantidad mayor de datos, lo que puede requerir más tiempo para analizar y puede aumentar la posibilidad de perder información importante.
 
-Para capturar en múltiples canales se deben utilizar múltiples adaptadores y software que permita capturar con varios adaptadores al mismo tiempo. A continuación, se muestra un ejemplo de configuración para capturar en los canales 1, 6 y 11 utilizando tres adaptadores diferentes:
+**📡 Para capturar en múltiples canales se deben utilizar múltiples adaptadores y software que permita capturar con varios adaptadores al mismo tiempo. A continuación, se muestra un ejemplo de configuración para capturar en los canales 1, 6 y 11 utilizando tres adaptadores diferentes:
 
-También existen configuraciones Custom más elegantes:
+![image](https://user-images.githubusercontent.com/94720207/233807729-6c0cd857-e134-4760-b47f-4b4bf80e0c2e.png)
 
-Este ejemplo en específico es mi antena Fz3r0 para capturar 3 canales con los Adaptadores chinos baratos pero con Chipset Atheros ;) 
+**📡 Este ejemplo en específico es mi antena Fz3r0 para capturar 3 canales con los Adaptadores chinos baratos pero con Chipset Atheros 😉** 
 
-- Mi one-liner para poner en monitor 3 adaptadores simultáneos, cada uno en nu respectivo canal (1,6,11), incluyendo un MAC spoofing de MACs consecutivas y validación es el siguiente: 
+**⚙️ Mi one-liner para poner en monitor 3 adaptadores simultáneos, cada uno en nu respectivo canal (1,6,11), incluyendo un MAC spoofing de MACs consecutivas y validación es el siguiente:** 
 
 ````sh
 # Triple encendido de Adaptadores desde 0 (wlan0) 
@@ -4209,7 +4211,9 @@ Para capturar con airodump desde varios adaptadores hayq ue separarlos por coma 
 airodump-ng wlan0mon,wlan1mon,wlan2mon
 ````
 
-### Capturando en todos los canales
+---
+
+### ⭕ Capturando en todos los canales
 
 - El mayor problema de esta técnica es la gran cantidad de información que se puede llegar a capturar, en una zona con alta densidad de APs en diferentes canales y clientes podría llegar a ser abrumante, también se necesita mayor cantidad de Memoria RAM en el dispositivo que esté capturando ya que el rate de captura y el buffer será más elevado que con menos canales o un solo canal. 
 - La gran ventaja es que cuando se escanean todos los canales y cuanto más tiempo se dedica al escaneo, más probable es que se encuentren problemas e incidencias de seguridad no solo en los canales que se están utilizando, sino en todos los canales activos en el espacio aéreo.
@@ -4272,7 +4276,7 @@ Ejemplos de dispositivos para capturar en un solo canal:
 
 ![image](https://user-images.githubusercontent.com/94720207/231618666-175ef23b-319f-439b-a847-3291a52a8a6d.png)
 
-![image](https://user-images.githubusercontent.com/94720207/231618740-2935df7d-d73b-4ffb-b356-0762f412a73b.png)
+
 
 
 
@@ -4313,7 +4317,7 @@ Setups encontrados en los confines de Internerd:
 
 ![image](https://user-images.githubusercontent.com/94720207/231617810-ebc01ba7-3e0b-4625-8ebe-67c37ceb6d13.png)
 
-![image](https://user-images.githubusercontent.com/94720207/233807729-6c0cd857-e134-4760-b47f-4b4bf80e0c2e.png)
+
 
 
 
