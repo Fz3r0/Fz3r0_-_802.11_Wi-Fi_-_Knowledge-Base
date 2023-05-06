@@ -4256,15 +4256,15 @@ Para capturar los 3 adaptadores con `Blackshark` solo se tienen que seleccionar 
 
 Para este método se pueden fabricar adaptadores custom que utilicen hubs usb y varios adaptadores:
 
-También existen adaptadores especializados construídos específicamente para este propósito como el WiFi pumpkin:
+También existen adaptadores especializados construídos específicamente para este propósito como el `WiFi Coconut` de `Hak5`:
 
 ![image](https://user-images.githubusercontent.com/94720207/236649853-a4f59d2a-095e-4a82-8c58-91a018bf6c61.png)
+![image](https://user-images.githubusercontent.com/94720207/236649882-659a49f6-0aab-42aa-aac3-8e5505086e65.png)
 
+Y también se pueden contruír adaptadores custom:
 
+![image](https://user-images.githubusercontent.com/94720207/236649892-93d12bbd-b0e7-48c1-bdb0-0e3def64457b.png)
 
-
-
-Este es mi comando para poner varios adaptadores en modo monitor, incluyendo la selección de canales para tres adaptadores en los canales 1, 6 y 11:
 
 ### Selección correcta de canales de captura
 
