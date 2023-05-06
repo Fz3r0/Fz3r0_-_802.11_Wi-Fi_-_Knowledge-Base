@@ -4108,6 +4108,11 @@ Este límite se impone porque la radio solo puede sintonizarse en un canal espec
 
 ### Capturando en un solo canal
 
+Este es mi comando para poner el adaptador en modo monitor, incluyendo la selección de canal para un solo adaptador:
+
+````sh
+````
+
 ![image](https://user-images.githubusercontent.com/94720207/236589278-f7f86485-786e-402b-a781-50ec0d710210.png)
 
 
@@ -4148,14 +4153,18 @@ En Wireshark puedo ver los Beacons de **diferentes SSIDs en diferentes canales**
 
 ### Capturando en todos los canales
 
+- El mayor problema de esta técnica es la gran cantidad de información que se puede llegar a capturar, en una zona con alta densidad de APs en diferentes canales y clientes podría llegar a ser abrumante, también se necesita mayor cantidad de Memoria RAM en el dispositivo que esté capturando ya que el rate de captura y el buffer será más elevado que con menos canales o un solo canal. 
+- La gran ventaja es que cuando se escanean todos los canales y cuanto más tiempo se dedica al escaneo, más probable es que se encuentren problemas e incidencias de seguridad no solo en los canales que se están utilizando, sino en todos los canales activos en el espacio aéreo.
+- Por ejemplo, quizás un cliente se está tratando de conectar a un SSID incorrecto en una red completamente ajena a la nuestra, que port alguna razón, hace interferencia dentro del espacio geográfico de nuestra señal WiFi. En este escenario de puede capturar el intento de autenticación que hará a un SSID ajeno. 
+- Otro ejemplo, es para capturar 4-way-handshakes en todos los canales y SSIDs disponibles de manera simultánea. 
 
+Para este método se pueden fabricar adaptadores custom que utilicen hubs usb y varios adaptadores:
 
-
-  El problema es que se escanean todos los canales y cuanto más tiempo se dedica al escaneo, más probable es que se encuentren problemas e incidencias de seguridad no solo en los canales que se están utilizando, sino en todos los canales activos en el espacio aéreo.
+También existen adaptadores especializados construídos específicamente para este propósito como el WiFi pumpkin:
 
 Si se desea examinar lo que se ha capturado para un solo canal después de capturar en todos o en varios canales, se puede aplicar un filtro de canal a la vista después de guardar la captura. Por otro lado, cuando se escanea un solo canal, independientemente de la banda, se recopila la mayor cantidad de información posible sobre el uso de ese canal en ese espacio.
 
-Este es mi comando para poner el adaptador en modo monitor, incluyendo la selección de canal para un solo adaptador:
+
 
 Este es mi comando para poner varios adaptadores en modo monitor, incluyendo la selección de canales para tres adaptadores en los canales 1, 6 y 11:
 
