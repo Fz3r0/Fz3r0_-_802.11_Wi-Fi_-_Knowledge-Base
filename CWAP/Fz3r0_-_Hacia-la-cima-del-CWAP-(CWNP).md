@@ -4197,7 +4197,16 @@ En Wireshark puedo ver los Beacons de **diferentes SSIDs en diferentes canales**
 
 **📡 Este ejemplo en específico es mi antena Fz3r0 para capturar 3 canales con los Adaptadores chinos baratos pero con Chipset Atheros 😉** 
 
-**⚙️ Mi one-liner para poner en monitor 3 adaptadores simultáneos, cada uno en nu respectivo canal (1,6,11), incluyendo un MAC spoofing de MACs consecutivas y validación es el siguiente:** 
+- **⚙️ Primero utilizo mi one-liner validador Less is more GOD, por el momento veo los 3 adaptadores pero aún no están en modo monitor**
+
+````sh
+# GODs combined
+clear;echo -e "\033[31m[+] Fz3r0 💀 Wireless IEEE 802.11 (WiFi) Adapter Validator v1.0\033[0m";echo -e "\033[31m[+] Twitter: @Fz3r0_OPs | Github: Fz3r0\033[0m";echo "" && echo -e "\033[32m$(airmon-ng)\033[0m" && echo -e ""; echo -e "\033[32m$(iw dev)\033[0m"
+````
+
+![image](https://user-images.githubusercontent.com/94720207/236647686-269be5b2-57b6-4fe9-b8b6-28b511fa7f6c.png)
+
+- **⚙️ Después uso mi one-liner triple monitor:**
 
 ````sh
 # Triple encendido de Adaptadores desde 0 (wlan0) 
@@ -4205,11 +4214,34 @@ En Wireshark puedo ver los Beacons de **diferentes SSIDs en diferentes canales**
 clear;airmon-ng check kill && airmon-ng start wlan0; airmon-ng start wlan1; airmon-ng start wlan2 && iwconfig wlan0mon channel 1 && iwconfig wlan1mon channel 6 && iwconfig wlan2mon channel 11 && ifconfig wlan0mon down; ifconfig wlan1mon down; ifconfig wlan2mon down && macchanger --mac=f0:f0:f0:00:00:00 wlan0mon && macchanger --mac=f0:f0:f0:00:00:01 wlan1mon && macchanger --mac=f0:f0:f0:00:00:02 wlan2mon && ifconfig wlan0mon up; ifconfig wlan1mon up; ifconfig wlan2mon up && clear; echo -e "\033[31m[+] AIR-SHARK by Fz3r0 💀 - Wireless IEEE 802.11 (WiFi) Adapter Validator v1.0\033[0m";echo -e "\033[31m[+] Twitter: @Fz3r0_OPs | Github: Fz3r0\033[0m";echo "";echo -e "\033[97m[*] MULTIPLE WIRELESS CHANNEL MONITOR & CAPTURE\033[0m";echo ""; echo -e "\033[97m[*] TRIPLE WLAN ADAPTER START - [CHANNEL 1 | CHANNEL 6 | CHANNEL 11] - @ 2.4 GHz\033[0m";echo "";echo -e "\033[97m--- SYSTEM:\033[0m";echo "";echo -e "\033[32m$(uname -a)\033[0m" && echo "";echo -e "\033[97m--- WIRELESS ADAPTERS & MODE:\033[0m"; echo -e "\033[32m$(airmon-ng)\033[0m"; echo ""; iwconfig 2>/dev/null | grep -vE 'eth|lo' | grep -v 'no wireless extensions';iw dev
 ````
 
-Para capturar con airodump desde varios adaptadores hayq ue separarlos por coma "," recomiendo hacer fijado el canal deseado para cada una, como lo compartí en mi one-liner anterior:
+**⚙️ Mi one-liner para poner en monitor 3 adaptadores simultáneos, cada uno en nu respectivo canal (1,6,11), incluyendo un MAC spoofing de MACs consecutivas y validación es el siguiente:** 
 
 ````sh
+# Triple encendido de Adaptadores desde 0 (wlan0) 
+# [Channels: 1, 6, 11]
+clear;airmon-ng check kill && airmon-ng start wlan0; airmon-ng start wlan1; airmon-ng start wlan2 && iwconfig wlan0mon channel 1 && iwconfig wlan1mon channel 6 && iwconfig wlan2mon channel 11 && ifconfig wlan0mon down; ifconfig wlan1mon down; ifconfig wlan2mon down && macchanger --mac=f0:f0:f0:00:00:00 wlan0mon && macchanger --mac=f0:f0:f0:00:00:01 wlan1mon && macchanger --mac=f0:f0:f0:00:00:02 wlan2mon && ifconfig wlan0mon up; ifconfig wlan1mon up; ifconfig wlan2mon up && clear; echo -e "\033[31m[+] AIR-SHARK by Fz3r0 💀 - Wireless IEEE 802.11 (WiFi) Adapter Validator v1.0\033[0m";echo -e "\033[31m[+] Twitter: @Fz3r0_OPs | Github: Fz3r0\033[0m";echo "";echo -e "\033[97m[*] MULTIPLE WIRELESS CHANNEL MONITOR & CAPTURE\033[0m";echo ""; echo -e "\033[97m[*] TRIPLE WLAN ADAPTER START - [CHANNEL 1 | CHANNEL 6 | CHANNEL 11] - @ 2.4 GHz\033[0m";echo "";echo -e "\033[97m--- SYSTEM:\033[0m";echo "";echo -e "\033[32m$(uname -a)\033[0m" && echo "";echo -e "\033[97m--- WIRELESS ADAPTERS & MODE:\033[0m"; echo -e "\033[32m$(airmon-ng)\033[0m"; echo ""; iwconfig 2>/dev/null | grep -vE 'eth|lo' | grep -v 'no wireless extensions';iw dev
+````
+![image](https://user-images.githubusercontent.com/94720207/236647969-ea6302e1-013b-4604-83f8-32705a6ecb38.png)
+
+Para capturar con airodump desde varios adaptadores hayq ue separarlos por coma "," recomiendo hacer fijado el canal deseado para cada una, como lo compartí en mi one-liner anterior. BONUS: También está el comando para hacer Channel Hopping con 3 adaptadores:
+
+````sh
+# 3 Adaptadores capturando CH 1, 6 y 11
+airodump-ng wlan0mon,wlan1mon,wlan2mon -c 1,6,11
+
+# Channel Hooping con 3 Adaptadores
 airodump-ng wlan0mon,wlan1mon,wlan2mon
 ````
+
+![image](https://user-images.githubusercontent.com/94720207/236648230-7accd246-1e58-42f1-afad-3973c79d56dc.png)
+
+Para capturar los 3 adaptadores con `Blackshark` solo se tienen que seleccionar las 3, así de sencillo:
+
+![image](https://user-images.githubusercontent.com/94720207/236648188-47889586-7905-4e73-9cfd-c1f77c85ef9d.png)
+
+Y se podría ver la captura de cada adaptador en su canal:
+
+
 
 ---
 
