@@ -4106,12 +4106,26 @@ Este límite se impone porque la radio solo puede sintonizarse en un canal espec
 
 - **En ocasiones, se necesita capturar en `un solo canal`, en otras ocasiones `todos los canales` y en otras se requiere `un grupo específico de canales`... todas estas técnicas tienen sus respectivos problemas:**
 
+- [USB WiFi Adapters that are supported with Linux in-kernel drivers](https://github.com/morrownr/USB-WiFi/blob/main/home/USB_WiFi_Adapters_that_are_supported_with_Linux_in-kernel_drivers.md)
+
 ### Capturando en un solo canal
 
 - Cuando se escanean un solo canal, se pierde tráfico transmitido en todos los demás canales. Es decir, si se captura en el Channel 6 de 2.4 GHz, se perderá información de los canales: 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14.
 - Ojo!!! No se perderán todos los frames en realidad de los demás canales, hay que recordar que en caso que algún canal adyacente haga ACI, se podrán capturar frames de ese canal, con sus respectivas pérdidas y retransmisiones por el hecho de ser interferencia, esto solo puede pasar en la banda de 2.4 GHz o en caso que el bandwith del 5 GHz haga overlap, como puede pasar con 40, 80 y 160 MHz.
 - Cuando se escanea un solo canal, independientemente de la banda, se recopila la mayor cantidad de información posible sobre el uso de ese canal específico en ese espacio.
 - **Para este tipo de captura solo se necesita `1 adaptador`**
+
+**Ejemplos de adaptadores que capturan 1 solo canal en banda 2.4 GHz:**
+
+![image](https://user-images.githubusercontent.com/94720207/236634132-fd794d85-66ec-4554-aa92-00441d301fa4.png)
+
+**Ejemplos de adaptadores que capturan 1 solo canal en banda 2.4 GHz y 5 GHz:**
+
+![image](https://user-images.githubusercontent.com/94720207/236634900-c009c869-6122-4ac2-b7b0-c9d4f33790fc.png)
+
+**Ejemplos de adaptadores que capturan 1 solo canal en banda 2.4 GHz, 5 GHz y 5.9GHz (WiFi6):**
+
+![image](https://user-images.githubusercontent.com/94720207/236635148-1e64a36d-7080-4167-9dff-c06d69ab02e9.png)
 
 Configuración de adaptador para hacer capturar `1 solo canal` incluyendo la selección de canal para un solo adaptador:.
 
