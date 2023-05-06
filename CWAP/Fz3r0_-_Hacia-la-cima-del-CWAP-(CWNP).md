@@ -4108,15 +4108,35 @@ Este límite se impone porque la radio solo puede sintonizarse en un canal espec
 
 ### Capturando en un solo canal
 
+![image](https://user-images.githubusercontent.com/94720207/236589278-f7f86485-786e-402b-a781-50ec0d710210.png)
+
+
 ### Capturando con Channel Hopping
 
 - Cuando se escanean varios canales, se pierde tráfico transmitido en los canales que no se están escaneando durante el tiempo que se dedica a un solo canal mientras se ciclan por los diferentes canales. Es decir, si el ciclo dura 3 segundos por canal, dedicará 3 segundos en pasar por cada canal, en caso de 2.4 GHz recorrer los 14 canales llevaría 42 segundos para regresar al mismo canal, perdiendo toda esa ventana de captura. 
 - Con esta técnica se recopila cierta información sobre todos los canales que se están escaneando y aunque no sea toda puede ser muy útil para tareas de auditorías de seguridad de red, pentesting, scanning y routing.
 - **Para este tipo de captura solo se necesita `1 adaptador`**
 
+Configuración de adaptador para hacer `Channel Hopping` (En realidad es la misma que capturar 1 solo canal)
+
+![image](https://user-images.githubusercontent.com/94720207/236589255-2552be03-60c1-412e-a3b6-87227db47740.png)
+
+
 Utilizando `armon-ng` por default la auditoría hace `Channel Hopping` y de hecho es muy útil para auditar la red en consola, pero el truco del padrino ;) es también utilizarlo para capturar con wireshark. Con esta técnica se puede guardar por un lado el archivo `.pcap`, por otro el `.cap`, además de auditar la red desde las 2 plataformas (`aircrack-ng` + `Blackshark`) mientras se realiza `channel hopping` con la capacidad de modificar el tiempo entre cada `hop`
 
 ![image](https://user-images.githubusercontent.com/94720207/236587738-a5745acb-e3ec-4633-9177-26cf60d92d17.png)
+
+Por ejemplo, haciendo channel hopping cada 500ms:
+
+````sh
+airodump-ng wlan0mon -f 500
+````
+
+![image](https://user-images.githubusercontent.com/94720207/236588774-b3f1106b-ea2a-47e8-a982-9b46777ebd67.png)
+
+En Wireshark puedo ver los Beacons de **diferentes SSIDs en diferentes canales**, pero ojo!!! recordemos que NO son simultáneos, es con `Channel Hopping`:
+
+![image](https://user-images.githubusercontent.com/94720207/236589174-b498a2bd-d932-4dcd-8e5f-3c1691cb89d0.png)
 
 
 
