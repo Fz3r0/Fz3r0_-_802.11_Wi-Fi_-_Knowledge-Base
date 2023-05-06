@@ -4104,6 +4104,60 @@ Es muy importante comprender que solo se puede capturar en un canal a la vez con
 
 Este límite se impone porque la radio solo puede sintonizarse en un canal específico en un momento dado y, por lo tanto, solo puede capturar tramas del canal sintonizado. Dependiendo del escenario de resolución de problemas, puede ser aceptable capturar en cada canal durante un período y luego analizar los datos agregados. Este último método se utiliza principalmente para resolver problemas de rendimiento o validar configuraciones de seguridad. **Para un análisis efectivo de roaming, se requieren típicamente múltiples adaptadores.**
 
+- **En ocasiones, se necesita capturar en `un solo canal`, en otras ocasiones `todos los canales` y en otras se requiere `un grupo específico de canales`... todas estas técnicas tienen sus respectivos problemas:**
+
+### Capturando en un solo canal
+
+### Capturando con Channel Hopping
+
+- Cuando se escanean varios canales, se pierde tráfico transmitido en los canales que no se están escaneando durante el tiempo que se dedica a un solo canal mientras se ciclan por los diferentes canales. Es decir, si el ciclo dura 3 segundos por canal, dedicará 3 segundos en pasar por cada canal, en caso de 2.4 GHz recorrer los 14 canales llevaría 42 segundos para regresar al mismo canal, perdiendo toda esa ventana de captura. 
+- Con esta técnica se recopila cierta información sobre todos los canales que se están escaneando y aunque no sea toda puede ser muy útil para tareas de auditorías de seguridad de red, pentesting, scanning y routing.
+- **Para este tipo de captura solo se necesita `1 adaptador`**
+
+Utilizando `armon-ng` por default la auditoría hace `Channel Hopping` y de hecho es muy útil para auditar la red en consola, pero el truco del padrino ;) es también utilizarlo para capturar con wireshark. Con esta técnica se puede guardar por un lado el archivo `.pcap`, por otro el `.cap`, además de auditar la red desde las 2 plataformas (`aircrack-ng` + `Blackshark`) mientras se realiza `channel hopping` con la capacidad de modificar el tiempo entre cada `hop`
+
+![image](https://user-images.githubusercontent.com/94720207/236587738-a5745acb-e3ec-4633-9177-26cf60d92d17.png)
+
+
+
+### Capturando en múltiples canales específicos 
+
+
+
+### Capturando en todos los canales
+
+
+
+
+  El problema es que se escanean todos los canales y cuanto más tiempo se dedica al escaneo, más probable es que se encuentren problemas e incidencias de seguridad no solo en los canales que se están utilizando, sino en todos los canales activos en el espacio aéreo.
+
+Si se desea examinar lo que se ha capturado para un solo canal después de capturar en todos o en varios canales, se puede aplicar un filtro de canal a la vista después de guardar la captura. Por otro lado, cuando se escanea un solo canal, independientemente de la banda, se recopila la mayor cantidad de información posible sobre el uso de ese canal en ese espacio.
+
+Este es mi comando para poner el adaptador en modo monitor, incluyendo la selección de canal para un solo adaptador:
+
+Este es mi comando para poner varios adaptadores en modo monitor, incluyendo la selección de canales para tres adaptadores en los canales 1, 6 y 11:
+
+¿Cómo decide uno qué hacer? ¿escanear todos los canales, un conjunto de canales o un solo canal?
+
+La elección debe basarse en las razones por las que se están capturando tramas. Por ejemplo, si una estación tiene problemas para conectarse, es posible que desee escanear todos los canales para capturar cualquier "solicitud de sondeo" de esa estación. Podría estar buscando SSID incorrectos. Al escanear todos los canales, se podrá recopilar más información sobre la forma en que esta estación intenta conectarse. También se debe decidir escanear solo los canales utilizados por los AP que se encuentran dentro de ese espacio para diagnosticar el problema de conectividad. También se podría decidir escanear solo el canal utilizado por el AP que se encuentra físicamente más cerca de la estación con problemas de conectividad. No hay una respuesta absoluta.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Para un mejor entendimiento hice una sencilla tabla para identificar y darse una idea de cada escenario:
 
 | **Escenario de Análisis**                                    	| **Canales Involucrados** 	| **Antenas Necesarias** 	|
