@@ -4128,6 +4128,8 @@ Utilizando `armon-ng` por default la auditoría hace `Channel Hopping` y de hech
 
 Por ejemplo, haciendo channel hopping cada 500ms:
 
+- [channel hopping capture .PCAP](https://github.com/Fz3r0/Fz3r0_-_BlackShark/files/11410825/channel_hopping_capture.zip)
+
 ````sh
 airodump-ng wlan0mon -f 500
 ````
