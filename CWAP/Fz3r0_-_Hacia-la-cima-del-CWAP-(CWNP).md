@@ -4108,12 +4108,20 @@ Este límite se impone porque la radio solo puede sintonizarse en un canal espec
 
 ### Capturando en un solo canal
 
-Este es mi comando para poner el adaptador en modo monitor, incluyendo la selección de canal para un solo adaptador:
+Si se desea examinar lo que se ha capturado para un solo canal después de capturar en todos o en varios canales, se puede aplicar un filtro de canal a la vista después de guardar la captura. Por otro lado, cuando se escanea un solo canal, independientemente de la banda, se recopila la mayor cantidad de información posible sobre el uso de ese canal en ese espacio.
+
+Este es mi comando one-liner para poner el adaptador en modo monitor, incluyendo la selección de canal para un solo adaptador _(Ojo!!! Recordar que estando en canal 6 también se capturan canales con interferencia ACI, es **por eso se puede capturar el `CH 5` desde el `CH 6`**)_:
 
 ````sh
+# Activando Monitor Mode en un adaptador Fresh (wlan0) 
+clear; airmon-ng start wlan0; iwconfig wlan0mon channel 6 && ifconfig wlan0mon down; macchanger --mac=f0:f0:f0:f0:f0:f0 wlan0mon; ifconfig wlan0mon up && clear; echo -e "\033[31m[+] Fz3r0 💀 Wireless IEEE 802.11 (WiFi) Adapter Validator v1.0\033[0m"; echo -e "\033[31m[+] Twitter: @Fz3r0_OPs | Github: Fz3r0\033[0m"; echo ""; echo -e "\033[97m--- SYSTEM:\033[0m"; echo ""; echo -e "\033[32m$(uname -a)\033[0m"; echo ""; echo -e "\033[97m--- USB ADAPTERS & DRIVERS:\033[0m"; echo ""; if iwconfig 2>/dev/null | grep -q 'Mode:Monitor'; then printf "\033[32mWLAN Interface Status:%25s\nMonitor Mode:%33s\033[0m" "Present" "Active"; elif iwconfig 2>/dev/null | grep -q 'no wireless'; then echo -e "\033[31mWLAN Interface Status:%25s\n%s\033[0m" "Not Present" "No WLAN interface detected"; else echo -e "\033[31mWLAN Interface Status:%20s\nMonitor Mode:%33s\033[0m" "Present" "Inactive"; fi && echo "" ; echo -e "\033[32m$(airmon-ng)\033[0m"; echo ""; echo -e "\033[97m--- PHYSICAL INTERFACES:\033[0m"; echo ""; echo -e "\033[36m$(ifconfig)\033[0m"; echo ""; echo -e "\033[97m--- WIRELESS ADAPTERS & MODE:\033[0m"; echo ""; iwconfig 2>/dev/null | grep -vE 'eth|lo' | grep -v 'no wireless extensions'; iw dev
 ````
 
 ![image](https://user-images.githubusercontent.com/94720207/236589278-f7f86485-786e-402b-a781-50ec0d710210.png)
+
+Utilizando armon-ng con la flag `-c` se puede ajustar la auditoría de red inalámbrica al canal deseado _(de caso contrario se utiliza el default o el que se ajustó al poner `Monitor Mode`, en mi caso CH 6)_, pero el truco del padrino ;) es también utilizarlo para capturar con wireshark. Con esta técnica se puede guardar por un lado el archivo .pcap, por otro el .cap, además de auditar la red desde las 2 plataformas (aircrack-ng + Blackshark) utilizando el canal 6 como canal fijo. 
+
+![image](https://user-images.githubusercontent.com/94720207/236628039-fa60e710-7207-4d90-86f9-ffeae60aab32.png)
 
 
 ### Capturando con Channel Hopping
@@ -4162,13 +4170,15 @@ Para este método se pueden fabricar adaptadores custom que utilicen hubs usb y 
 
 También existen adaptadores especializados construídos específicamente para este propósito como el WiFi pumpkin:
 
-Si se desea examinar lo que se ha capturado para un solo canal después de capturar en todos o en varios canales, se puede aplicar un filtro de canal a la vista después de guardar la captura. Por otro lado, cuando se escanea un solo canal, independientemente de la banda, se recopila la mayor cantidad de información posible sobre el uso de ese canal en ese espacio.
+
 
 
 
 Este es mi comando para poner varios adaptadores en modo monitor, incluyendo la selección de canales para tres adaptadores en los canales 1, 6 y 11:
 
-¿Cómo decide uno qué hacer? ¿escanear todos los canales, un conjunto de canales o un solo canal?
+### Selección correcta de canales de captura
+
+- **¿Cómo decide uno qué hacer? ¿escanear todos los canales, un conjunto de canales o un solo canal?**
 
 La elección debe basarse en las razones por las que se están capturando tramas. Por ejemplo, si una estación tiene problemas para conectarse, es posible que desee escanear todos los canales para capturar cualquier "solicitud de sondeo" de esa estación. Podría estar buscando SSID incorrectos. Al escanear todos los canales, se podrá recopilar más información sobre la forma en que esta estación intenta conectarse. También se debe decidir escanear solo los canales utilizados por los AP que se encuentran dentro de ese espacio para diagnosticar el problema de conectividad. También se podría decidir escanear solo el canal utilizado por el AP que se encuentra físicamente más cerca de la estación con problemas de conectividad. No hay una respuesta absoluta.
 
