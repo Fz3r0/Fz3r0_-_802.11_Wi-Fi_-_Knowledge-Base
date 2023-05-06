@@ -4258,6 +4258,8 @@ Para este método se pueden fabricar adaptadores custom que utilicen hubs usb y 
 
 También existen adaptadores especializados construídos específicamente para este propósito como el WiFi pumpkin:
 
+![image](https://user-images.githubusercontent.com/94720207/236649853-a4f59d2a-095e-4a82-8c58-91a018bf6c61.png)
+
 
 
 
