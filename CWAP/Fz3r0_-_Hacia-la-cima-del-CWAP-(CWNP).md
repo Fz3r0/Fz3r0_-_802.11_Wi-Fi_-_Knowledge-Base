@@ -4181,7 +4181,33 @@ En Wireshark puedo ver los Beacons de **diferentes SSIDs en diferentes canales**
 
 ### Capturando en múltiples canales específicos 
 
+- Cuando se requiere analizar el comportamiento de múltiples canales específicos simultáneamente, se debe capturar en cada canal utilizando varios adaptadores para capturar en cada canal al mismo tiempo, lo que aumenta el costo y la complejidad de la configuración.
+- Capturar en múltiples canales específicos es necesario para analizar problemas de roaming y en otros casos para analizar canales específicos con alta densidad de tráfico o simplemente porque conocemos los canales específicos que se utilizan en la red que se analizará. Por ejemplo si nuestra red es una 2.4 GHz que utiliza únicamente los canales 1, 6, y 11 sabemos que debemos atacar estos canales principalmente, en esta caso se necesitaría utilizar 3 adaptadores, uno en cada canal respectivo. 
+- Un agran ventaja es que permite observar el comportamiento de los dispositivos en diferentes canales de manera simultánea, lo que mejora la resolución temporal y proporciona una imagen más precisa de lo que está sucediendo en la red Wi-Fi.
+- También se puede obtener más información sobre el uso y la congestión en cada canal, lo que es útil para identificar problemas de rendimiento y congestión. Además que ayuda a analizar la información de varias antenas o SSIDs en un mismo archivo de análisis _(O separar y filtrar la información a palcer)_ .
+- Uno de los usos más comunes es para tener una mayor precisión en análisis de roaming. Capturando en múltiples canales se pueden observar los eventos de roaming en diferentes canales, lo que permite un análisis más preciso del comportamiento de roaming. Por ejemplo, se puede observar si un dispositivo se conecta a un AP que está emitiendo en un canal diferente del que estaba antes.
+- Capturar en varios canales simultáneamente requiere más recursos de hardware, como CPU y memoria, lo que puede afectar el rendimiento del sistema.
+- La captura en varios canales simultáneamente produce una cantidad mayor de datos, lo que puede requerir más tiempo para analizar y puede aumentar la posibilidad de perder información importante.
 
+Para capturar en múltiples canales se deben utilizar múltiples adaptadores y software que permita capturar con varios adaptadores al mismo tiempo. A continuación, se muestra un ejemplo de configuración para capturar en los canales 1, 6 y 11 utilizando tres adaptadores diferentes:
+
+También existen configuraciones Custom más elegantes:
+
+Este ejemplo en específico es mi antena Fz3r0 para capturar 3 canales con los Adaptadores chinos baratos pero con Chipset Atheros ;) 
+
+- Mi one-liner para poner en monitor 3 adaptadores simultáneos, cada uno en nu respectivo canal (1,6,11), incluyendo un MAC spoofing de MACs consecutivas y validación es el siguiente: 
+
+````sh
+# Triple encendido de Adaptadores desde 0 (wlan0) 
+# [Channels: 1, 6, 11]
+clear;airmon-ng check kill && airmon-ng start wlan0; airmon-ng start wlan1; airmon-ng start wlan2 && iwconfig wlan0mon channel 1 && iwconfig wlan1mon channel 6 && iwconfig wlan2mon channel 11 && ifconfig wlan0mon down; ifconfig wlan1mon down; ifconfig wlan2mon down && macchanger --mac=f0:f0:f0:00:00:00 wlan0mon && macchanger --mac=f0:f0:f0:00:00:01 wlan1mon && macchanger --mac=f0:f0:f0:00:00:02 wlan2mon && ifconfig wlan0mon up; ifconfig wlan1mon up; ifconfig wlan2mon up && clear; echo -e "\033[31m[+] AIR-SHARK by Fz3r0 💀 - Wireless IEEE 802.11 (WiFi) Adapter Validator v1.0\033[0m";echo -e "\033[31m[+] Twitter: @Fz3r0_OPs | Github: Fz3r0\033[0m";echo "";echo -e "\033[97m[*] MULTIPLE WIRELESS CHANNEL MONITOR & CAPTURE\033[0m";echo ""; echo -e "\033[97m[*] TRIPLE WLAN ADAPTER START - [CHANNEL 1 | CHANNEL 6 | CHANNEL 11] - @ 2.4 GHz\033[0m";echo "";echo -e "\033[97m--- SYSTEM:\033[0m";echo "";echo -e "\033[32m$(uname -a)\033[0m" && echo "";echo -e "\033[97m--- WIRELESS ADAPTERS & MODE:\033[0m"; echo -e "\033[32m$(airmon-ng)\033[0m"; echo ""; iwconfig 2>/dev/null | grep -vE 'eth|lo' | grep -v 'no wireless extensions';iw dev
+````
+
+Para capturar con airodump desde varios adaptadores hayq ue separarlos por coma "," recomiendo hacer fijado el canal deseado para cada una, como lo compartí en mi one-liner anterior:
+
+````sh
+airodump-ng wlan0mon,wlan1mon,wlan2mon
+````
 
 ### Capturando en todos los canales
 
