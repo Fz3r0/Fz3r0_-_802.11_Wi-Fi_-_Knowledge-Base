@@ -3165,6 +3165,14 @@ Lograr dominar por completo esta alternativa es bastante gratificante y lleva a 
 
 ![image](https://user-images.githubusercontent.com/94720207/233803737-3c33f13c-1bc0-42c9-a793-8501b28e5d37.png)
 
+También existen soluciones pre-fabricadas, DIY u otras basadas en dispositivos como Raspberry PI como el `WLAN PI`
+
+![image](https://user-images.githubusercontent.com/94720207/236651136-2ecf1dfb-d49d-40bd-b56e-640e4df4bbaf.png)
+
+Este tipo de soluciones también se pueden reproducir de manera casera:
+
+![image](https://user-images.githubusercontent.com/94720207/236651111-5e8c934b-4a6a-4a0c-b313-5e46bd5fd098.png)
+
 ### Accesibilidad de captura mobil:
 
 Esta es la mas accesible, aunque también se puede hacer bastante costosa dependiendo del alcance. Es decir, se puede invertir en una siple RaspBerry, una antena USB que soporte modo monitor y listo, por unos cientos de dólares ya se tiene el dispositivo listo para capturar frames 802.11 y exportarlos en .pcap. Sin embargo, también se pueden hacer proyectos complejos y utilizar computadoras de gama alta para lograr complejos sistemas de captura o incluso hacking. ¡Sky is the limit!
