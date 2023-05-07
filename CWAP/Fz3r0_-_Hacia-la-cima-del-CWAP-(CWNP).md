@@ -35,7 +35,12 @@ _En La Divina Comedia, un "canto" es una sección poética de la obra que se uti
 
 _El Canto I es el primer canto de La Divina Comedia, que sirve como una introducción a la obra y establece el tono y la temática de la misma. En este canto, Dante se encuentra en un bosque oscuro y siente miedo y confusión. Se le aparece el poeta romano Virgilio, quien le ofrece guiarlo a través del Infierno y del Purgatorio. Juntos, comienzan su viaje épico a través de la otra vida._
 
-![image](https://user-images.githubusercontent.com/94720207/234685859-bead24ce-ff5c-4432-9195-b1caf89b19a1.png)
+
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/236698579-225d09fe-1b68-4967-b59a-7adf7697784a.png" alt="Encapsula" height=550px/> </a> </p> 
+
+
+
 
 <span align="center"> <p align="center"> ΟΠΟΙΟΣ ΜΠΑΙΝΕΙ ΕΔΩ ΝΑ ΠΑΡΑΤΑ ΚΑΘΕ ΕΛΠΙΔΑ </p> </span> 
 <span align="center"> <h3 align="center">   </h3> </span>  
