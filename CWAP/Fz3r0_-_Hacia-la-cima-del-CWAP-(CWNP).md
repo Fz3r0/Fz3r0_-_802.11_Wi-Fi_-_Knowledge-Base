@@ -4204,7 +4204,14 @@ En Wireshark puedo ver los Beacons de **diferentes SSIDs en diferentes canales**
 
 ![image](https://user-images.githubusercontent.com/94720207/233807729-6c0cd857-e134-4760-b47f-4b4bf80e0c2e.png)
 
+**📡 Simular ocurre con los sistemas de Raspberry:** 
+
+![image](https://user-images.githubusercontent.com/94720207/236657000-50dccd44-915a-4efc-982d-db4937b7200a.png)
+
+
 **📡 Este ejemplo en específico es mi antena Fz3r0 para capturar 3 canales con los Adaptadores chinos baratos pero con Chipset Atheros 😉** 
+
+
 
 - **⚙️ Primero utilizo mi one-liner validador Less is more GOD, por el momento veo los 3 adaptadores pero aún no están en modo monitor**
 
