@@ -3266,19 +3266,23 @@ https://www.youtube.com/watch?v=U_zzdl7xV7I
 
 Para el análisis de protocolo y la catpura de 802.11 WiFi Frames se comienza determinando cuáles serán las herramientas tanto de Hardware y Software que se utilizarán. Existen muchas opciones como ya se ha visto, pero caalquiera sea la combinación siempre de basa en 3 cosas:
 
-1. ⭕ El sistema operativo que se está utilizando
-2. ⭕ El software de análisis de protocolo y los drivers para la interfaz WiFi
-3. ⭕ El hardware requerido
+1. ⭕ El `Sistema Operativo` que se está utilizando
+2. ⭕ El `Software` requerido: `Protocol Analyzer` & `Drivers`
+3. ⭕ El `Hardware` requerido: Adaptadores, Antenas, Computadora, Access Points, WLC, etc
 
-En el análisis de protocolos, existen herramientas que solo son compatibles con ciertos sistemas operativos, como Windows, Linux y Mac OS. Un dato importante es que Mac OS tiene la ventaja de permitir la captura nativa de tramas 802.11 sin la necesidad de controladores adicionales.
+En el análisis de protocolos, existen herramientas que solo son compatibles con ciertos sistemas operativos, como `Windows`, `Linux` y `Mac OS`. Existen `Protocol Analyzers` que solo funcionan en `Windos`, pero no en `Linux` o `MacOS`, y viceversa. En caso de `Infraestructure` o `Distributed` pueden incluso a utilizar sus propios Sistemas Operativos, muchos de ellos basados en `Unix`.
 
-La elección del hardware, software, drivers y sistema operativo dependerá del presupuesto y de las necesidades específicas en ese momento. Al utilizar software y hardware con licencia, es necesario seguir los pasos de cada proveedor para obtener la licencia y utilizar la tecnología. Algunos software solo admiten versiones antiguas de Java, mientras que otros solo tienen soporte web y pueden variar en su compatibilidad con diferentes navegadores.
+- **Un dato importante es que `Mac OS` tiene la ventaja de permitir la captura nativa de `802.11 Frames` sin la necesidad de `Drivers` adicionales.**
 
-En caso de utilizar captura por método `infraestructure` o `distributed` hay que tomar en cuenta que los APs o infraestructura involucrada soporte la captura de frames 802.11, además que todo tenga su firmware correcto para su funcionamiento. 
+La elección del `hardware`, `software`, `drivers` y `sistema operativo` **dependerá del presupuesto y de las necesidades específicas en ese momento**. Al utilizar software y hardware con **licencia**, es necesario seguir los pasos de cada proveedor para obtener la licencia y utilizar la tecnología. Algunos software solo admiten versiones antiguas de Java, mientras que otros solo tienen soporte web y pueden variar en su compatibilidad con diferentes navegadores.
+
+En caso de utilizar captura por método `infraestructure` o `distributed` hay que tomar en cuenta que los APs o infraestructura involucrada soporte la captura de frames 802.11, además que todo tenga su firmware correcto para su funcionamiento. En caso de `Ruckus Commscope` que es el utilizado en este `Writeup` es compatible tanto en implementación centralizada con `WLC SmartZone` como independiente con `Ruckus Unleashed`.
 
 Es importante tener en cuenta cada uno de estos puntos al elegir la combinación adecuada de hardware, drivers, software y sistema operativo para garantizar la compatibilidad y el funcionamiento adecuado según las necesidades y según el método de captura deseado. 
 
-### ⭕ El sistema operativo que se está utilizando
+---
+
+### ⭕ El `Sistema Operativo` que se está utilizando
 
 Es importante seleccionar herramientas de software que sean compatibles con el sistema operativo utilizado para la captura de tráfico de red inalámbrica, como Windows, Linux o macOS.
 
@@ -3289,7 +3293,9 @@ Es importante seleccionar herramientas de software que sean compatibles con el s
 - `Android`: Personalmente no recomiendo capturar tráfico con las pocas herramientas que existen en Android ya que no están a la altura de sus contra partes mencionadas anteriormente. 
 - `Sistemas Operativos de Propietario`: Si se están usando sistemas de captura de `infraestructura` o `distribuido` es muy probable que utilicemos directamente los Sistemas Operativos del fabricante, por ejemplo, en caso de Ruckus Smartzone estaríamos usando la UI basada en web, mientras que el sistema operativo y las entrañas de SmartZone trabajan con bases de Unix, cosa que no importa realmente mucho, ya que en este tipo de soluciones es muy fácil trabajar con sus drivers ya que son sistemas licenciados y con soporte. 
 
-**En este documento procuro utilizar ejemplos de `mobile` tanto de Windows, Linux y Mac OS ya que tengo acceso a los 3. Sin embargo, para las prácticas y laboratorios de instalación de drivers utilizaré especificamente Linux Parrot Security basado en Debian. Además, también utilizo `infraestructura` de Ruckus Smartzone. Durante mis estudios no tuve acceso a un sistemas `distributed` como sensores dedicados a la captura.**
+**En este documento procuro utilizar ejemplos de `mobile` tanto de Windows, Linux y Mac OS ya que tengo acceso a los 3. Sin embargo, para las prácticas y laboratorios de instalación de drivers utilizaré especificamente Linux Parrot Security basado en Debian. Además, también utilizo `infraestructure` de Ruckus Smartzone. Durante mis estudios no tuve acceso a un sistemas `distributed` como sensores dedicados a la captura.**
+
+---
 
 ### ⭕ El software de análisis de protocolo y los drivers para la interfaz WiFi 
 
@@ -3298,6 +3304,8 @@ Ya hubo anteriormente una sección enfocada directamente a los `protocol analyze
 Una herramienta de captura que no sea compatible con el adaptador WiFi o el driver podría perder paquetes importantes durante la captura, lo que puede afectar la calidad y la integridad de los datos capturados. Además, la herramienta de captura puede tener dificultades para decodificar correctamente los paquetes capturados si no es compatible con los formatos y protocolos específicos utilizados por el adaptador y el driver.
 
 **El driver del adaptador puede influir en la cantidad de tipos de frames que se pueden capturar durante una captura 802.11.** Por ejemplo, algunos drivers pueden estar diseñados para capturar solo paquetes de datos, mientras que otros pueden capturar paquetes de control y gestión, lo que permite una captura más completa de la red inalámbrica.
+
+---
 
 ### ⭕ El hardware requerido 
 
@@ -3328,9 +3336,9 @@ Para llevar el aprendizaje más allá compartiré 2 laboratorios que hice con di
 
 ## 🟢 Laboratorio  de Drivers Fz3r0
 
-Este laboratiorio lo hice solo para entender por completo y vivir la experiencia del dolor de cabeza que suelen ser los drivers en caso de querer construir un sniffer a la medida del tipo `Mobile` por ejemplo con un sistema Linux o RaspBerry Pi, también los comparo con otros métodos de captura donde no tuve que instalar ningún driver por ejemplo con otros sistemas `Mobile` como Mac OS, o sistemas de infraestructura como `Ruckus Commscope`. 
+Este laboratiorio lo hice solo para entender por completo y vivir la experiencia del dolor de cabeza que suelen ser los drivers en caso de querer construir un sniffer a la medida del tipo `Mobile`, por ejemplo con un sistema Linux o RaspBerry Pi, también los comparo con otros métodos de captura donde no tuve que instalar ningún driver por ejemplo con otros sistemas `Mobile` como Mac OS, o sistemas de infraestructura como `Ruckus Commscope`. 
 
-Durante mis estudios no tuve acceso a sistemas `Distributed` como sensores dedicados de Omnipeek, sin embargo, siendo que son sistemas de gama alta y licenciados, tienen soporte directo con el proveedor por lo cual la instalación de drivers no representa un reto y pueden ser utilizados en cualquier sistema Windows. 
+_Durante mis estudios no tuve acceso a sistemas `Distributed` como sensores dedicados de `Omnipeek`, sin embargo, siendo que son sistemas de gama alta y licenciados, tienen soporte directo con el proveedor por lo cual la instalación de drivers no representa un reto complejo y pueden ser utilizados en cualquier sistema Windows con una instalación sencilla._ 
 
 ### Hardware utilizado
 
