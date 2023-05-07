@@ -5,13 +5,23 @@
 #
 
     # - Estre script enlista y lo guarda en variable todos los adaptadores 802.11 WiFi del sistema
-
     # - También genera un one-liner separado con comas sin espacios
-
     # - La finalidad es tener 2 diferentes tipo de variables (lista y one-liner) para usarlo con diferentes objetivos:
-
     # - Los objetivos particulares pueden ser la necesidad de ejecutar comandos linux o enlistar detalles que necesitan los nombres exactos de los adaptadores. 
 
+        ### Ejemplo: 
+    
+        ### ❯ python3 Fz3r0_Black_WiFizard_v1.0.py
+        ### 
+        ### Adaptadores WiFi encontrados:
+        ### 
+        ### Adaptador 1: wlan0
+        ### Adaptador 2: wlan1
+        ### Adaptador 3: wlan2
+        ### 
+        ### One-Liner string: wlan0,wlan1,wlan2
+        ### 
+    
 import subprocess
 
 #
