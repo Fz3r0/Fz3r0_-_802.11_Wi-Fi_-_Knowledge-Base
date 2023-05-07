@@ -15,12 +15,10 @@ Y ARRANCAN!!!
 _Writeup y bitácora para la certificación **CWAP-402** de **CWNP (Certified Wireless Network Professional)**_ <br>
 _por @ **Fz3r0 💀** (CWNA)_
 
-
+<br><br><br>
 
 ## 🗂️ `ÍNDICE`
 
-
- 
 ### [🟢 `Introducción`]()
 - [🚨 Importante]()
 
@@ -37,7 +35,7 @@ _El Canto I es el primer canto de La Divina Comedia, que sirve como una introduc
 
 
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/236698579-225d09fe-1b68-4967-b59a-7adf7697784a.png" alt="Encapsula" height=550px/> </a> </p> 
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/236698579-225d09fe-1b68-4967-b59a-7adf7697784a.png" alt="Encapsula" height=520px/> </a> </p> 
 
 
 
