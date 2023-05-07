@@ -4077,9 +4077,6 @@ Si se determina que el problema está en la red Ethernet cableada, puede ser nec
 
 La captura inalámbrica de este proceso es muy similar a la de un proceso de DHCP de una estación cableada, con la adición de las transmisiones del punto de acceso para la gestión del medio inalámbrico. Un administrador de red con cable debería poder ver esto y resolver el problema en el lado con cable de la red. El diagnóstico de este problema lleva solo unos momentos más que el diagnóstico de una falla de autenticación.
 
-
-
-
 ---
 
 <!-- 
@@ -4100,12 +4097,6 @@ FIN DE CAPITULO :D
 <br>
 <br>
 <br>
-
-
-
-
-
-
 
 ## 🟢 Capturando un `canal a la vez` VS `varios canales`
 
@@ -4318,44 +4309,39 @@ Como se ha mencionado antes estos métodos no son los más accesibles, pero si s
 
 ![image](https://user-images.githubusercontent.com/94720207/236650658-128c558d-7c54-4c65-a84e-72151aab2c48.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ---
 
-[WLAN Pi](https://www.wlanpi.com/)
+<!-- 
 
-![image](https://user-images.githubusercontent.com/94720207/231618221-3cbb95ba-60dc-4daf-9d5d-697b77a35037.png)
+FIN DE CAPITULO :D
 
-![image](https://user-images.githubusercontent.com/94720207/231618319-3e113b89-2ae1-4ffb-b072-3ef824eb0146.png)
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-![image](https://user-images.githubusercontent.com/94720207/231618403-a6a35d10-e198-49e5-a487-2f0a7a2cefdd.png)
+ -->
 
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
 
-
-
-
-
-
----
+<br>
+<br>
+<br>
 
 ## Capturando en Escenarios con roaming
+
+
+
+
+
+
+
+
+
+
+
 
 
 ![image](https://user-images.githubusercontent.com/94720207/236647132-f6c643ea-93c9-41ec-a472-03d260033d00.png)
