@@ -112,11 +112,15 @@ Personalmente recomiendo el `Cisco CCNA`, `CompTIA Network+` y `Ruckus ICX Imple
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/226111039-0910d2b0-e838-4ce5-801e-3afdcc3b9a98.png" alt="CWAP" height=165px/> </a>   </p> 
 
-### 5. `Wireless Security`
+### 5. ✅ `Wireless Security` (ej. `CWNP: CWSP`,  `Offensive Security: OSWP`)
 
-![image](https://user-images.githubusercontent.com/94720207/233810517-2e58c417-596a-4da2-aac9-30319f8e8951.png)
+- Se recomienda tener conocimientos básicos a intermedios de `Wireless Security` antes de cursar `CWAP`
+- `CWAP` puede ir de la mano con otras certificaciones de `Wireless Security` como el `CWSP` y el `OSWP`
+- El examen CWAP cubre temas avanzados de seguridad inalámbrica y es un paso hacia otras certificaciones relacionadas con la seguridad inalámbrica.
+- El CWAP aborda el análisis de Frames 802.11 enfocados a Sucurity, lo que es esencial para detectar y solucionar vulnerabilidades en la red inalámbrica.
 
-![image](https://user-images.githubusercontent.com/94720207/233810526-1fcf5679-58ef-4e38-a025-463402730205.png)
+![image](https://user-images.githubusercontent.com/94720207/236709020-8995daab-5a30-45f8-b42e-a02bb93d4e68.png)
+
 
 ### 6. ✅ `Protocol Analysis` (ej. `Wireshark`, `TCP Dump`)
 
