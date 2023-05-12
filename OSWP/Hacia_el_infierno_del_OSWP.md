@@ -96,8 +96,6 @@ El `Network Adapter` debe estar en `Monitor Mode`. El modo monitor significa que
 
 Es importante entender que `Monitor Mode` y `Promiscous Mode` no son los mismos conceptos. Para la captura de `Ethernet` solo necesita activar `Promiscous Mode`, sin embargo, para capturar `WiFi` es más complejo y se necesita utilizar tanto `Monitor Mode` y `Promiscous Mode`.
 
----
-
 ### ⭕ `Promiscous Mode`
 
 **Este modo se debe tener encendido siempre que se quiera capturar frames, ya sea `Ethernet` o `WiFi`** _(De hecho los sniffers como Wireshark lo tienen activado por default)_. Es un modo en el que un adaptador de red `inalámbrico` o `cableado` se configura para capturar todos los paquetes que se envían en la red, **independientemente de si están destinados al adaptador o no.** Esto significa que, **en el `Promiscuous Mode`, se pueden capturar paquetes que no están destinados a nuestro dispositivo**, lo que es útil para el análisis de red. 
@@ -199,17 +197,19 @@ clear;airmon-ng start wlan0; airmon-ng start wlan1; airmon-ng start wlan2 && iwc
 clear;airmon-ng start wlan0mon; airmon-ng start wlan1mon; airmon-ng start wlan2mon && iwconfig wlan0mon channel 6 && iwconfig wlan1mon channel 6 && iwconfig wlan2mon channel 6 && ifconfig wlan0mon down; ifconfig wlan1mon down; ifconfig wlan2mon down && macchanger --mac=f0:f0:f0:00:00:00 wlan0mon && macchanger --mac=f0:f0:f0:00:00:01 wlan1mon && macchanger --mac=f0:f0:f0:00:00:02 wlan2mon && ifconfig wlan0mon up; ifconfig wlan1mon up; ifconfig wlan2mon up && clear; echo -e "\033[31m[+] AIR-SHARK by Fz3r0 💀 - Wireless IEEE 802.11 (WiFi) Adapter Validator v1.0\033[0m";echo -e "\033[31m[+] Twitter: @Fz3r0_OPs | Github: Fz3r0\033[0m";echo "";echo -e "\033[97m[*] MULTIPLE WIRELESS CHANNEL MONITOR & CAPTURE\033[0m";echo ""; echo -e "\033[97m[*] TRIPLE WLAN ADAPTER START - [CHANNEL 6 | CHANNEL 6 | CHANNEL 6] - @ 2.4 GHz\033[0m";echo "";echo -e "\033[97m--- SYSTEM:\033[0m";echo "";echo -e "\033[32m$(uname -a)\033[0m" && echo "";echo -e "\033[97m--- WIRELESS ADAPTERS & MODE:\033[0m"; echo -e "\033[32m$(airmon-ng)\033[0m"; echo ""; iwconfig 2>/dev/null | grep -vE 'eth|lo' | grep -v 'no wireless extensions';iw dev
 ````
 
+---
 
+<div align="center">
 
+┌═════════════════════┐<br>
+| [█ █ █   << BACK TO TOP >>   █ █ █](https://github.com/Fz3r0/Fz3r0_-_BlackShark/blob/main/OSWP/Hacia_el_infierno_del_OSWP.md#%EF%B8%8F-%C3%ADndice)                |<br>
+└═════════════════════┘<br>
 
+ </div> 
 
-
-
-
+<br><br><br>
 
 ## 💀 `Fz3r0 Cheatsheet`: Validation 
-
-
 
 ### ❓📡 Verification: `x1 Adapter`
 
@@ -259,6 +259,16 @@ echo -e "\033[31m[+] AIR-SHARK by Fz3r0 💀 - Wireless IEEE 802.11 (WiFi) Adapt
 ### ❓📖 Verification: `Full Bibles`
 
 ---
+
+<div align="center">
+
+┌═════════════════════┐<br>
+| [█ █ █   << BACK TO TOP >>   █ █ █](https://github.com/Fz3r0/Fz3r0_-_BlackShark/blob/main/OSWP/Hacia_el_infierno_del_OSWP.md#%EF%B8%8F-%C3%ADndice)                |<br>
+└═════════════════════┘<br>
+
+ </div> 
+
+<br><br><br>
 
 
 
