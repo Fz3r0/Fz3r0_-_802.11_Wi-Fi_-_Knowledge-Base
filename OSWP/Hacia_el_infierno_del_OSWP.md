@@ -272,28 +272,50 @@ echo -e "\033[31m[+] AIR-SHARK by Fz3r0 💀 - Wireless IEEE 802.11 (WiFi) Adapt
 
 
 
-### Comenzar: `Audit`
+## 💀 `Fz3r0 Cheatsheet`: WLAN Audit
 
 ````sh
+## Comenzar Auditoría en Channel Default
+airodump-ng wlan0mon
+
 ## Comenzar Auditoría en channel 6
 airodump-ng wlan0mon -c 6
 
-## Comenzar Auditoría en Channel Default
-airodump-ng wlan0mon
+## Comenzar Auditoría en channel 1,6,11 en varios adaptadores
+airodump-ng wlan0mon,wlan1mon,wlan2mon -c 1,6,11
 ````
 
 ---
 
-### Channel Selection: `x3 Adapters`
+<div align="center">
 
+┌═════════════════════┐<br>
+| [█ █ █   << BACK TO TOP >>   █ █ █](https://github.com/Fz3r0/Fz3r0_-_BlackShark/blob/main/OSWP/Hacia_el_infierno_del_OSWP.md#%EF%B8%8F-%C3%ADndice)                |<br>
+└═════════════════════┘<br>
+
+ </div> 
+
+<br><br><br>
+
+---
+
+## 💀 `Fz3r0 Cheatsheet`: Channel Selection
+
+- Channel Selection: `x1 Adapter`
 
 ````sh
 # Cambiar Canales a 3 Adaptadores (Necesario que estén en Monitor): Channels: 1,6,11 [Incluye MAC Spoofing por 01,02,03]
 iwconfig wlan0mon channel 1 && iwconfig wlan1mon channel 6 && iwconfig wlan2mon channel 11 && clear;echo -e "\033[31m[+] Fz3r0 💀 Wireless IEEE 802.11 (WiFi) Adapter Validator v1.0\033[0m";echo -e "\033[31m[+] Twitter: @Fz3r0_OPs | Github: Fz3r0\033[0m";echo "";echo -e "\033[97m[*] MULTIPLE WIRELESS CHANNEL MONITOR & CAPTURE\033[0m";echo -e "\033[97m[*] TRIPLE WLAN ADAPTER START - [CHANNEL 1 | CHANNEL 6 | CHANNEL 11] - @ 2.4 GHz\033[0m";echo "";echo -e "\033[97m--- SYSTEM:\033[0m";echo "";echo -e "\033[32m$(uname -a)\033[0m" && echo "";echo -e "\033[97m--- WIRELESS ADAPTERS & MODE:\033[0m";echo "";iwconfig 2>/dev/null | grep -vE 'eth|lo' | grep -v 'no wireless extensions';iw dev
+````
 
+- Channel Selection: `x3 Adaptes` - Channels: `1`,`6`,`11`
+
+````sh
 # Cambiar Canales a 3 Adaptadores (Necesario que estén en Monitor): Todos Channel 6 [Incluye MAC Spoofing por 01,02,03]
 iwconfig wlan0mon channel 6 && iwconfig wlan1mon channel 6 && iwconfig wlan2mon channel 6 && clear;echo -e "\033[31m[+] Fz3r0 💀 Wireless IEEE 802.11 (WiFi) Adapter Validator v1.0\033[0m";echo -e "\033[31m[+] Twitter: @Fz3r0_OPs | Github: Fz3r0\033[0m";echo "";echo -e "\033[97m[*] MULTIPLE WIRELESS CHANNEL MONITOR & CAPTURE\033[0m";echo -e "\033[97m[*] TRIPLE WLAN ADAPTER START - [CHANNEL 6 + CHANNEL 6 + CHANNEL 6] - @ 2.4 GHz\033[0m";echo "";echo -e "\033[97m--- SYSTEM:\033[0m";echo "";echo -e "\033[32m$(uname -a)\033[0m" && echo "";echo -e "\033[97m--- WIRELESS ADAPTERS & MODE:\033[0m";echo "";iwconfig 2>/dev/null | grep -vE 'eth|lo' | grep -v 'no wireless extensions';iw dev
 ````
+
+## 💀 `Fz3r0 Cheatsheet`: Band Selection
 
 ---
 
