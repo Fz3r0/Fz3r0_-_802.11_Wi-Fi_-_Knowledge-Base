@@ -129,6 +129,11 @@ Hay que recordar que, el tráfico WiFi en el aire puede ser capturado por cualqu
 
 ## 💀 `Fz3r0 Cheatsheet`: Monitor Mode
 
+````sh
+# Monitor Mode: airmon
+airmon-ng start wlan0
+````
+
 ### 🕵️📡 Monitor Mode Activation: `x1 Adapter`
 
 ````sh
@@ -191,9 +196,11 @@ clear;airmon-ng start wlan0mon; airmon-ng start wlan1mon; airmon-ng start wlan2m
 
 
 
-## 🟢 `Fz3r0 Cheatsheet`: Validation 
+## 💀 `Fz3r0 Cheatsheet`: Validation 
 
-### Verification @ Fz3r0 💀: `One Adapter`
+
+
+### ❓📡 Verification: `x1 Adapter`
 
 ````sh
 ## [+] Fz3r0 Wireless IEEE 802.11 (WiFi) Validation v1.0 : opcion con Bus /002/002 (Default)
@@ -209,7 +216,7 @@ clear; echo -e "\033[31m[+] Fz3r0 💀 Wireless IEEE 802.11 (WiFi) Adapter Valid
 
 ---
 
-### Verification @ Fz3r0 💀: `Multiple Adapters`
+### ❓📡📡📡 Verification: `Multiple Adapters`
 
 ````sh
 # [+] Fz3r0 Wireless IEEE 802.11 (WiFi) Validation v1.0 : Physical Adapters
@@ -221,7 +228,7 @@ clear;echo -e "\033[31m[+] Fz3r0 💀 Wireless IEEE 802.11 (WiFi) Adapter Valida
 
 ---
 
-### Verification @ Fz3r0: `Less is More`
+### ❓✅ Verification: `Less is More`
 
 ````sh
 # armon-ng GOD: Muestra las interfaces corto y claro I
@@ -238,6 +245,9 @@ echo -e "\033[31m[+] AIR-SHARK by Fz3r0 💀 - Wireless IEEE 802.11 (WiFi) Adapt
 ````
 ---
 
+### ❓📖 Verification: `Full Bibles`
+
+---
 
 
 
