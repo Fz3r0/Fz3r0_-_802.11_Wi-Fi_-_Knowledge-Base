@@ -1058,6 +1058,207 @@ podcast wifi hacking basics https://www.youtube.com/watch?v=1x31YZ7DVCM
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# CANTO IV: Contraseñas PSK inseguras & vulnerables
+
+Las contraseñas PSK (Pre-Shared Key) son contraseñas compartidas que se utilizan para cifrar el tráfico de red en las redes WiFi que utilizan el protocolo WPA o WPA2. Una contraseña PSK insegura y vulnerable es aquella que es fácil de adivinar o de crackear mediante herramientas automatizadas, como diccionarios o wordlists. Por esta razón, es importante crear contraseñas PSK fuertes y seguras, que contengan una combinación de caracteres, números, símbolos y letras mayúsculas y minúsculas, para que sean más difíciles de adivinar o crackear.
+
+Las wordlists son listas de palabras, nombres y combinaciones de caracteres que se utilizan para realizar ataques de fuerza bruta o diccionario en contraseñas. Algunas de estas wordlists son públicas y se pueden descargar de sitios web o de bases de datos filtradas, como la base de datos RockYou que fue filtrada en 2009 y contenía más de 32 millones de contraseñas.
+
+Existen herramientas automatizadas, como Crunch o Cewl, que permiten crear wordlists personalizadas a partir de patrones y reglas específicas, como la combinación de palabras, números y símbolos, o la inclusión de palabras de un idioma determinado.
+
+**Las contraseñas de redes WiFi se pueden vulnerar si son débiles o vulnerables a ataques de fuerza bruta, diccionario, rainbow table, database, etc.** 
+
+- Las redes WEP son las más vulnerables, ya que este tipo de cifrado se puede vulnerar fácilmente con herramientas automatizadas. 
+- Las redes WPA y WPA2 también pueden ser vulnerables si se utilizan contraseñas débiles o si el atacante tiene acceso a las bases de datos de contraseñas filtradas. 
+- Las redes WPA3 y 802.1X son más seguras, ya que utilizan métodos de autenticación más avanzados, pero también pueden ser vulnerables si se utilizan contraseñas débiles o si el atacante tiene acceso a los servidores de autenticación. 
+
+**Es importante utilizar contraseñas fuertes y seguras y mantener siempre actualizado el firmware y la seguridad de la red WiFi.**
+
+## Fz3r0 Cyber-Weapons: Stupid Password Generator v1.0
+
+Este programa es un script de bash que genera una lista de cinco contraseñas "estúpidas" y vulnerables para ser utilizadas en pruebas de seguridad. El objetivo es crear contraseñas débiles que puedan ser fácilmente adivinadas por un atacante que intente un ataque de fuerza bruta.
+
+Por default, las contraseñas se generan a partir de las primeras 10,000 líneas del archivo de texto "rockyou.txt". La lista RockYou.txt es una de las wordlists más populares y utilizadas en el mundo de la ciberseguridad. Contiene más de 32 millones de contraseñas en texto plano, que fueron filtradas en 2009 después de que un hacker lograra acceder a la base de datos de la empresa RockYou, que ofrecía servicios de juegos y aplicaciones en línea.
+
+- El script selecciona las contraseñas que tienen **10 o más caracteres** y las muestra en la consola. _(Ya que las contraseñas WPA2 solicitan un mínimo de 10 caracteres)_
+- Estos valores pueden ser modificados manualmente dentro del script. 
+
+---
+
+### Stupid Password Generator v1.0: `Bash Version`:
+
+````sh
+#!/bin/bash
+
+    # Github:   Fz3r0
+
+    # Twitter:  @Fz3r0_OPs
+
+    # Youtube:  @Fz3r0_OPs
+
+counter=0
+clear
+echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-"
+echo ""
+echo "              Generador de Passwords Estúpidos v1.0 by Fz3r0"
+echo ""
+echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-"
+echo ""
+echo "[+] Este script genera Passwords vulnerables, filtrados, públicos y estúpidos."
+echo ""
+echo "[+] ¡No utlizar ninguno de estos Passwords en Producción!" 
+echo ""
+echo "[+] ¡Esta herramienta está hecha para probar ataques de fuerza bruta!"
+echo ""
+echo "[+] Los Passwords generados tienen 10 o más caracteres (Perfectos para WPA2)"
+echo ""
+echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-"
+echo ""
+echo "    5 PASSWORDS ESTÚPIDOS QUE UTILIZA TU TÍO EL BORRACHO SON:"
+echo ""
+#Obtenemos las primeras 10000 lineas del archivo rockyou.txt
+head -10000 /usr/share/wordlists/rockyou.txt | shuf | while read line; do
+    # Verificamos si la línea tiene 10 o más caracteres
+    if [[ ${#line} -ge 10 ]]; then
+        #Imprimimos la linea
+        echo $line
+        #Incrementamos el contador en 1
+        counter=$((counter+1))
+        #Verificamos si el contador ha alcanzado 5
+        if [[ $counter -eq 5 ]]; then
+            #Salimos del ciclo
+            break
+        fi
+    fi
+done
+````
+
+---
+
+### Stupid Password Generator v1.0: `Python Version`:
+
+````py
+#!/usr/bin/env python3
+
+# Github:   Fz3r0
+# Twitter: @Fz3r0_OPs
+# Youtube: @Fz3r0_OPs
+
+import random
+
+counter = 0
+print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-")
+print("")
+print("              Generador de Passwords Estúpidos v1.0 by Fz3r0")
+print("")
+print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-")
+print("")
+print("[+] Este script genera Passwords vulnerables, filtrados, públicos y estúpidos.")
+print("")
+print("[+] ¡No utlizar ninguno de estos Passwords en Producción!")
+print("")
+print("[+] ¡Esta herramienta está hecha para probar ataques de fuerza bruta!")
+print("")
+print("[+] Los Passwords generados tienen 10 o más caracteres (Perfectos para WPA2)")
+print("")
+print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-")
+print("")
+print("    5 PASSWORDS ESTÚPIDOS QUE UTILIZA TU TÍO EL BORRACHO SON:")
+print("")
+# Abrimos el archivo rockyou.txt y obtenemos las primeras 10000 líneas
+with open('/usr/share/wordlists/rockyou.txt', 'r', encoding='latin-1') as f:
+    lines = f.readlines()[:10000]
+    # Iteramos sobre las líneas del archivo
+    for line in random.sample(lines, len(lines)):
+        # Eliminamos los espacios en blanco al inicio y al final de la línea
+        line = line.strip()
+        # Verificamos si la línea tiene 10 o más caracteres
+        if len(line) >= 10:
+            # Imprimimos la línea
+            print(line)
+            # Incrementamos el contador en 1
+            counter += 1
+            # Verificamos si el contador ha alcanzado 5
+            if counter == 5:
+                # Salimos del ciclo
+                break
+
+````
+
+---
+
+### Stupid Password Generator: `PoC`
+
+````java
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-
+
+              Generador de Passwords Estúpidos v1.0 by Fz3r0
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-
+
+[+] Este script genera Passwords vulnerables, filtrados, públicos y estúpidos.
+
+[+] ¡No utlizar ninguno de estos Passwords en Producción!
+
+[+] ¡Esta herramienta está hecha para probar ataques de fuerza bruta!
+
+[+] Los Passwords generados tienen 10 o más caracteres (Perfectos para WPA2)
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-
+
+    5 PASSWORDS ESTÚPIDOS QUE UTILIZA TU TÍO EL BORRACHO SON:
+
+iloveyou23
+ilovemymum
+soccergirl
+friends4ever
+abcdefghij
+````
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Ataques y Vulneración de WLANs - `WPA/WPA2 (PSK)`
 
 ### Captura Pasiva de Frames + Explotación de WLAN
@@ -3158,138 +3359,7 @@ mdns ipv4 sin retry
 
 
 
-## Generador de passwords estupidos
 
-El programa es un script de bash que genera una lista de cinco contraseñas "estúpidas" y vulnerables para ser utilizadas en pruebas de seguridad. El objetivo es crear contraseñas débiles que puedan ser fácilmente adivinadas por un atacante que intente un ataque de fuerza bruta.
-
-Por default, las contraseñas se generan a partir de las primeras 10,000 líneas del archivo de texto "rockyou.txt" que contiene una lista de contraseñas filtradas y públicas. El script selecciona las contraseñas que tienen 10 o más caracteres y las muestra en la consola. Estos valores pueden ser modificados manualmente dentro del script. 
-
-## Bash Version:
-
-````sh
-#!/bin/bash
-
-    # Github:   Fz3r0
-
-    # Twitter:  @Fz3r0_OPs
-
-    # Youtube:  @Fz3r0_OPs
-
-counter=0
-clear
-echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-"
-echo ""
-echo "              Generador de Passwords Estúpidos v1.0 by Fz3r0"
-echo ""
-echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-"
-echo ""
-echo "[+] Este script genera Passwords vulnerables, filtrados, públicos y estúpidos."
-echo ""
-echo "[+] ¡No utlizar ninguno de estos Passwords en Producción!" 
-echo ""
-echo "[+] ¡Esta herramienta está hecha para probar ataques de fuerza bruta!"
-echo ""
-echo "[+] Los Passwords generados tienen 10 o más caracteres (Perfectos para WPA2)"
-echo ""
-echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-"
-echo ""
-echo "    5 PASSWORDS ESTÚPIDOS QUE UTILIZA TU TÍO EL BORRACHO SON:"
-echo ""
-#Obtenemos las primeras 10000 lineas del archivo rockyou.txt
-head -10000 /usr/share/wordlists/rockyou.txt | shuf | while read line; do
-    # Verificamos si la línea tiene 10 o más caracteres
-    if [[ ${#line} -ge 10 ]]; then
-        #Imprimimos la linea
-        echo $line
-        #Incrementamos el contador en 1
-        counter=$((counter+1))
-        #Verificamos si el contador ha alcanzado 5
-        if [[ $counter -eq 5 ]]; then
-            #Salimos del ciclo
-            break
-        fi
-    fi
-done
-````
-
-## Python version
-
-````py
-#!/usr/bin/env python3
-
-# Github:   Fz3r0
-# Twitter: @Fz3r0_OPs
-# Youtube: @Fz3r0_OPs
-
-import random
-
-counter = 0
-print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-")
-print("")
-print("              Generador de Passwords Estúpidos v1.0 by Fz3r0")
-print("")
-print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-")
-print("")
-print("[+] Este script genera Passwords vulnerables, filtrados, públicos y estúpidos.")
-print("")
-print("[+] ¡No utlizar ninguno de estos Passwords en Producción!")
-print("")
-print("[+] ¡Esta herramienta está hecha para probar ataques de fuerza bruta!")
-print("")
-print("[+] Los Passwords generados tienen 10 o más caracteres (Perfectos para WPA2)")
-print("")
-print("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-")
-print("")
-print("    5 PASSWORDS ESTÚPIDOS QUE UTILIZA TU TÍO EL BORRACHO SON:")
-print("")
-# Abrimos el archivo rockyou.txt y obtenemos las primeras 10000 líneas
-with open('/usr/share/wordlists/rockyou.txt', 'r', encoding='latin-1') as f:
-    lines = f.readlines()[:10000]
-    # Iteramos sobre las líneas del archivo
-    for line in random.sample(lines, len(lines)):
-        # Eliminamos los espacios en blanco al inicio y al final de la línea
-        line = line.strip()
-        # Verificamos si la línea tiene 10 o más caracteres
-        if len(line) >= 10:
-            # Imprimimos la línea
-            print(line)
-            # Incrementamos el contador en 1
-            counter += 1
-            # Verificamos si el contador ha alcanzado 5
-            if counter == 5:
-                # Salimos del ciclo
-                break
-
-````
-
-
-### PoC
-
-````java
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-
-
-              Generador de Passwords Estúpidos v1.0 by Fz3r0
-
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-
-
-[+] Este script genera Passwords vulnerables, filtrados, públicos y estúpidos.
-
-[+] ¡No utlizar ninguno de estos Passwords en Producción!
-
-[+] ¡Esta herramienta está hecha para probar ataques de fuerza bruta!
-
-[+] Los Passwords generados tienen 10 o más caracteres (Perfectos para WPA2)
-
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-
-
-    5 PASSWORDS ESTÚPIDOS QUE UTILIZA TU TÍO EL BORRACHO SON:
-
-iloveyou23
-ilovemymum
-soccergirl
-friends4ever
-abcdefghij
-````
 
 
 
