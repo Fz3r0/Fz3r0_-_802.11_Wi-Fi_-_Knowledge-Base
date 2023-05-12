@@ -2455,13 +2455,23 @@ Ok, this is solved now. On v10.41 it will be able to work in both modes. Default
 
 
 
-## Ataque a redes sin clientes
+## 💀 `Ataque`: PMKID / RSN (WLANs sin clientes)
 
-- PMKID 
-- RSN
+En una WLAN protegida por una `PSK`, el `AP` y `STA` que se conectan a el comparten una `clave secreta` conocida como **`Pairwise Master Key (PMK)`**. 
 
+- La `PMK` se utiliza para **encriptar las comunicaciones entre el `AP` y las `STA` que se conectan a él.
 
-1. A) Una forma de obtener el RSN PMKID de las redes es `betetrcap`:
+En un ataque `PMKID/RSN`, el atacante busca obtener la `PMK` de la `WLAN` **sin necesidad de conectarse a ella**. 
+
+- El ataque funciona explotando una debilidad en el protocolo de autenticación `RSN (Robust Security Network)` _(utilizado en las redes inalámbricas modernas)_. En particular, el ataque explota el hecho de que **algunos `AP`** responden a solicitudes de autenticación **sin requerir la presentación de un cliente válido.** Esto permite al atacante enviar solicitudes de autenticación falsas que contienen una serie de valores específicos que provocan que el punto de acceso envíe de vuelta un PMKID (identificador de PMK) que contiene información sobre la PMK de la red inalámbrica.
+
+**Una vez que el atacante ha obtenido el `PMKID`, puede intentar romper la PSK y obtener la PMK real. Esto se hace utilizando herramientas de cracking de contraseñas que utilizan técnicas como el diccionario y la fuerza bruta para probar diferentes combinaciones de contraseñas hasta que se encuentre la correcta.**
+
+---
+
+### 🥷 Métodos para obtener `PMKID`
+
+1. **`betterrcap`**: 
 
 ````sh
 # **** Tener el adaptador en monitor
@@ -2478,7 +2488,7 @@ wifi.assoc all
     # En este punto el .pac ya tendrá lso hashed del RSN PMKID
 ````
 
-1. B) Otra forma de obtener el RSN PMKID de las redes es `hcxdumptool`:
+2. **`hcxdumptool`**
 
 ````sh
 # 1. Realizar una captura desde hcxdumptool
