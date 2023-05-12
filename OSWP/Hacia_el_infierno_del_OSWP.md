@@ -2355,9 +2355,36 @@ xerosploit
 
 
 
-## Evil Twin Attack
+
+
+
+
+
+
+# 👹 `CANTO V`: Evil Twin Attack
+
+El ataque **`Evil Twin`** es un tipo de ataque que se lleva a cabo en redes WiFi `IEEE 802.11`, en el cual **un atacante crea una red falsa que se parece a una red legítima para engañar a los usuarios y hacer que se conecten a ella. Una vez que los usuarios se conectan a la red falsa, el atacante puede interceptar y manipular el tráfico de Internet que pasa a través de ella.**
+
+- En un `manual setup` de ataque `Evil Twin`, **el atacante crea su propia red WiFi falsa desde cero**, utilizando herramientas para crear su propio `AP`, `DHCP server`, `portal cautivo`, `routing interno`, `base de datos SQL`, entre otros **componentes necesarios para proveer Internet al cliente**.
+- **Existen herramientas automatizadas que simplifican la creación del ataque "Evil Twin".** Estas herramientas incluyen programas como Airgeddon, Fluxion y Wifiphisher, que automatizan gran parte del proceso de creación del ataque, desde la creación del AP y la red falsa hasta la captura y manipulación del tráfico de Internet.
+
+**Una vez que los usuarios se conectan a esta red falsa, el atacante puede llevar a cabo diferentes tipos de ataques,** como `phishing`, `Man-in-the-Middle (MiTM)`, `Packet Inyection`, `suplantación de identidad`, `denegación de servicio (DoS)`, y `redireccionamiento de tráfico a páginas maliciosas`.
+
+Con este tipo de ataques en realidad no se está atacando directamente a la red que se está "clonado", sino que se está tratando de engañar a la víctima. Aunque hay casos donde si se ataca también a la WLAN original en caso que se necesite hacer `Deauthentication Attack`.
+
+Se podría decir que este tipo de ataque podría "vulnerar" de cierta manera casi cualquier tipo de seguridad, aunque no crackeando hashes como con otras técnicas, sino obteniendo directamente la información del usuario en caso que caiga en la trampa. Aunque de manera directa no vulnera ninguna seguridad, sino utiliza al usuario mismo para obtener la contraseña de por ejemplo un portal con **`WPA2 Enterprise 802.1X`**
+
+- **`Evil Twin` se utiliza para obtener contraseñas que no pueden ser obtenidas tán fácilmente o que no pueden ser crackeadas, para ataques de Ingeniería Social y Phishing y también para hacer MiTM para sniffing de tráfico o redireccionamiento a páginas maliciosas. Incluso ataques más avanzados pueden llevar a un foothold para crear reverseshell en alguna máquina víctima.**  
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/0a364031-b1cc-4bde-b2d3-f18e5ddad5e8)
+
+---
+
+### Ejemplos
 
 - [Evil Twin Attack con airgeddon](https://diegoaltf4.com/evil-twin/)
+
+## Evil Twin Attack: `Manual Full Process`
 
 La idea de este ataque es montar todo uin "servicio" de WiFi, donde incluye el AP, el servidor DHCP y la salida a Internet...
 
