@@ -565,9 +565,9 @@ El 4-way handshake en 802.11 es un proceso que se utiliza para establecer una co
 | **7**     | **Disassociation**            | La estación o el AP pueden enviar un frame de disociación para indicar que la conexión se ha desconectado.                                                                                                                                                                                                                                                            |
 | **8**     | **Deauthentication**          | Este frame se utiliza para desautenticar a una estación de la red. Puede ser enviado por el AP o por otra estación de la red para forzar a la estación a desconectarse. El frame contiene información sobre el motivo de la desautenticación.                                                                                                                         |
 
-### 🦈👿 `Fz3r0` BlackShark Filter
+## 🦈👿 `Fz3r0` BlackShark Filter `4-way-handshake`
 
-- **`Filtro:`**
+- **`Filtro:` Supreme Victory Perfect**
 
 ````sh
 # Papu pro full 4-way-handsjake process
@@ -575,6 +575,149 @@ El 4-way handshake en 802.11 es un proceso que se utiliza para establecer una co
 ````
 
 - **`Ejemplo:`**
+
+---
+
+### 🦈👿 `Fz3r0` BlackShark Filters `4-way-handshake` ALL
+
+- **Full Handshake + Data + Actions + Retry + Probes + Beacons**
+
+````py
+wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 8 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 32 || wlan.fc.type_subtype == 13
+````
+
+---
+
+- **Full - Sin Data**
+
+````py
+wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 8 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 13
+````
+
+---
+
+- **Full - Sin Data & Sin Retry**
+
+````py
+!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 8 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 13)
+````
+
+---
+
+- **Sin Beacon**
+
+````py
+wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 32 || wlan.fc.type_subtype == 13
+````
+
+---
+
+- **Sin Beacon & Sin Retry**
+
+````py
+!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 32 || wlan.fc.type_subtype == 13)
+````
+
+---
+
+- **`KILLER!!!` Sin Beacon & Sin Data & Sin Retry**
+
+````py
+!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 13)
+````
+
+---
+
+- **`ULTRA COMBO!!!`  Sin Probes - `IT'S DANGEROUS!!!`**
+
+````py
+!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 13)
+````
+
+---
+
+- **`ULTRA COMBO!!!`  Sin Probes PERO SI CON DATA (login fail and good data analyze) - `IT'S DANGEROUS!!!`**
+
+````py
+!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 13 || wlan.fc.type_subtype == 32)
+````
+
+---
+
+- **`SUPREME VICTORY PERFECT!!!` Sin Probes & Sin Actions - `IT'S DANGEROUS!!!`**
+
+````py
+!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 ||  wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol)
+````
+
+---
+
+- **`SUPREME VICTORY!!!` con DHCP incluido - `IT'S DANGEROUS!!!`**
+
+````py
+!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 ||  wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol) or (dhcp || dhcpv6)
+````
+
+---
+
+- **`KILLER!!!` Very Clean: Solo Authentication, Association, Action y 4-way-handshake**
+
+---
+
+````py
+!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 11 || eapol || wlan.fc.type_subtype == 13)
+````
+
+---
+
+- **`KILLER!!!` Very Clean: Solo Authentication, Association, Action y 4-way-handshake con Data**
+
+---
+
+````py
+!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 11 || eapol || wlan.fc.type_subtype == 32 || wlan.fc.type_subtype == 13)
+````
+
+---
+
+- **Solo 4-way-Handshake**
+
+````py
+!wlan.fc.retry == 1 && eapol
+````
+
+---
+
+- **4-way-Handshake: Message 1**
+
+````py
+wlan_rsna_eapol.keydes.msgnr == 1
+````
+
+---
+
+- **4-way-Handshake: Message 2**
+
+````py
+wlan_rsna_eapol.keydes.msgnr == 2
+````
+
+---
+
+- **4-way-Handshake: Message 3**
+
+````py
+wlan_rsna_eapol.keydes.msgnr == 3
+````
+
+---
+
+- **4-way-Handshake: Message 4**
+
+````py
+wlan_rsna_eapol.keydes.msgnr == 4
+````
+
 
 ---
 
@@ -727,145 +870,9 @@ wlan.fc.type_subtype == 10
 | **12-13**     | **Invalid element, i.e., an element defined in this standard for which the content does not meet the specifications in Clause 9**     | El punto de acceso ha detectado un elemento inválido en el marco enviado por la estación.                                                                                                                     |
 | **14**        | **Message integrity code (MIC) failure**                                                                                              | El punto de acceso ha detectado una falla en el código de integridad de mensaje (MIC) en el marco enviado por la estación. Esto podría deberse a un intento de ataque de tipo "man-in-the-middle".            |
 | **15**        | **4-way handshake timeout**                                                                                                           | El proceso de autenticación y asociación ha                                                                                                                                                                   |
-## 💀 `4-Way-Handshake`: Fz3r0 BlackShark Cheatsheet
 
-- **Full Handshake + Data + Actions + Retry + Probes + Beacons**
 
-````py
-wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 8 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 32 || wlan.fc.type_subtype == 13
-````
 
----
-
-- **Full - Sin Data**
-
-````py
-wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 8 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 13
-````
-
----
-
-- **Full - Sin Data & Sin Retry**
-
-````py
-!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 8 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 13)
-````
-
----
-
-- **Sin Beacon**
-
-````py
-wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 32 || wlan.fc.type_subtype == 13
-````
-
----
-
-- **Sin Beacon & Sin Retry**
-
-````py
-!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 32 || wlan.fc.type_subtype == 13)
-````
-
----
-
-- **`KILLER!!!` Sin Beacon & Sin Data & Sin Retry**
-
-````py
-!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 13)
-````
-
----
-
-- **`ULTRA COMBO!!!`  Sin Probes - `IT'S DANGEROUS!!!`**
-
-````py
-!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 13)
-````
-
----
-
-- **`ULTRA COMBO!!!`  Sin Probes PERO SI CON DATA (login fail and good data analyze) - `IT'S DANGEROUS!!!`**
-
-````py
-!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 13 || wlan.fc.type_subtype == 32)
-````
-
----
-
-- **`SUPREME VICTORY PERFECT!!!` Sin Probes & Sin Actions - `IT'S DANGEROUS!!!`**
-
-````py
-!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 ||  wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol)
-````
-
----
-
-- **`SUPREME VICTORY!!!` con DHCP incluido - `IT'S DANGEROUS!!!`**
-
-````py
-!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 ||  wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol) or (dhcp || dhcpv6)
-````
-
----
-
-- **`KILLER!!!` Very Clean: Solo Authentication, Association, Action y 4-way-handshake**
-
----
-
-````py
-!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 11 || eapol || wlan.fc.type_subtype == 13)
-````
-
----
-
-- **`KILLER!!!` Very Clean: Solo Authentication, Association, Action y 4-way-handshake con Data**
-
----
-
-````py
-!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 11 || eapol || wlan.fc.type_subtype == 32 || wlan.fc.type_subtype == 13)
-````
-
----
-
-- **Solo 4-way-Handshake**
-
-````py
-!wlan.fc.retry == 1 && eapol
-````
-
----
-
-- **4-way-Handshake: Message 1**
-
-````py
-wlan_rsna_eapol.keydes.msgnr == 1
-````
-
----
-
-- **4-way-Handshake: Message 2**
-
-````py
-wlan_rsna_eapol.keydes.msgnr == 2
-````
-
----
-
-- **4-way-Handshake: Message 3**
-
-````py
-wlan_rsna_eapol.keydes.msgnr == 3
-````
-
----
-
-- **4-way-Handshake: Message 4**
-
-````py
-wlan_rsna_eapol.keydes.msgnr == 4
-````
 
 ---
 
@@ -2844,16 +2851,15 @@ wifiphisher
     #  [*] GET request from 10.0.0.57 for http://detectportal.firefox.com/canonical.html                                          [*] GET request from 10.0.0.57 for http://www.msftconnecttest.com/connecttest.txt                                            
     #  [*] GET request from 10.0.0.57 for http://detectportal.firefox.com/canonical.html                                          [*] GET request from 10.0.0.57 for http://detectportal.firefox.com/canonical.html             
     
-# 5. Regresar el internet que fue deshabilitado de los adaptadores
-systemctl start NetworkManager.service
-                                                                                      
+# 5. Salir de esa pantalla dando ESCAPE, se mostrará lo capturado que fue escrito por la víctima
 
+                                                                                     
 ````
 
 
 ### Ataque tipo MiTM Evil Twin: (Routeando Internet al Cliente)
 
-- Revisar que haya Internet en el atacante usando `systemctl start NetworkManager.service` ya que el cliente pensará que se conectó a una red pública
+- Revisar que SI haya Internet en el atacante usando `systemctl start NetworkManager.service`.
 
 ````sh
 # 1. Capturar Redes alrededor (Aquí debemos elegir al objetivo que vamos a clonar para el ataque)
