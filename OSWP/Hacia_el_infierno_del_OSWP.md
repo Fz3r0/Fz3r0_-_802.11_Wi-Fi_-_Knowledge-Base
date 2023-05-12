@@ -27,43 +27,9 @@ _por @ **Fz3r0 💀** (CWNA)_
 
 
 
-# Fz3r0 - El camino al OSWA
-_(Offensive Security Wireless Attacks)_
-
-## Índice
-
-- Fz3r0: The Black Air (Cheatsheet hyper-resumido)
-
-- Laboratiorio Fz3r0
-
-    - PC
-    - Sistema Operativo
-    - Antenas WiFi
-    - Router WiFi
-
-- Cyber-Weapons & Tools
-
-- Aircrack NG Cheatsheets
-
-
-- Direccionamiento IP 
-
-- Interfaces de Red
-
-    - Cambiando el nombre largo de la WLAN0 en parrot
-
-- Modo Monitor _(Promiscuo o escucha)_
-
-    - Configurando ALFA en modo monitor
-    - Eliminar los errores iniciales y Procesos Conflictivos
-
-- MACchanger | MAC Spoofing 
-- Modo Monitor
-
 ## AVISO: Antes de montar cualquier cosa!!!
 
-- Este laboratorio utiliza adaptadoras Wireless muy específicos para lo que se necesita hacer...
-- Después de yo personalmente probar varios adaptadores, llevarme las manos a la cabeza y no entender por qué con unas ocurrían unos problemas de todo tipo con unos y con otros... puedo resumir lo siguiente:
+- Para estos laboratiorios recomiendo personalmente el Driver Atheros 
 
     - SOLO USAR LOS SIGUIENTES MODELOS EN ESPECÍFICO DE ADAPTADORES WIRELESS POR EL MOMENTO (INICIOS 2023), LOS DEMÁS TRAERÁS UN DETALLE U OTRO:
 
@@ -75,9 +41,6 @@ _(Offensive Security Wireless Attacks)_
 - Hay cientos y cientos de foros y páginas con soluciones a medias, pero al final nunca queda al 100%...
 - Advertidos están!
 
-#### Problemas de otras antenas
-
-- No capturan ciertos Frames (Alfa 1900 no captura Control Frames, cuando por fin lo logré, seguñian faltando varios ACKs).
 
 
 
@@ -129,10 +92,28 @@ _(Offensive Security Wireless Attacks)_
 
 
 
+---
 
+<!-- 
 
+FIN DE CAPITULO :D
 
-## 4-Way-Handshake Process
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
+
+## 💀 4-Way-Handshake Process
 
 El 4-way handshake en 802.11 es un proceso que se utiliza para establecer una conexión segura entre una estación (STA) y un punto de acceso (AP) en una red WiFi. El proceso consta de cuatro frames de control de gestión 802.11, que se utilizan para autenticar y asociar una estación con un punto de acceso, y para establecer una clave de cifrado compartida entre ellos. A continuación, se describe cada uno de los cuatro frames implicados en el proceso de 4-way handshake
 
