@@ -2455,7 +2455,28 @@ Ok, this is solved now. On v10.41 it will be able to work in both modes. Default
 
 
 
-## 💀 `Ataque`: PMKID / RSN (WLANs sin clientes)
+---
+
+<!-- 
+
+FIN DE CAPITULO :D
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
+
+## 💀⚔️ Ataque: `PMKID` (WLANs sin clientes)
 
 En una WLAN protegida por una `PSK`, el `AP` y `STA` que se conectan a el comparten una `clave secreta` conocida como **`Pairwise Master Key (PMK)`**. 
 
@@ -2469,7 +2490,7 @@ En un ataque `PMKID/RSN`, el atacante busca obtener la `PMK` de la `WLAN` **sin 
 
 ---
 
-### 🥷 Métodos para obtener `PMKID`
+### 🥷🕵️ Métodos para obtener `PMKID`
 
 1. **`betterrcap`**: 
 
@@ -2497,6 +2518,10 @@ wifi.assoc all
 # --enable_status=1 
 hcxdumptool -1 wlan0mon -o Fz3r0_RSN_PMKID --enable_status=1
 ````
+
+---
+
+### 🗡️🎩 Cracking: `PMKID`
 
 2. Crackear los hashes con `hcxdumptool`
 
