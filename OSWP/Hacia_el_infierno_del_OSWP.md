@@ -113,9 +113,11 @@ FIN DE CAPITULO :D
 <br>
 <br>
 
-## 💀 4-Way-Handshake Process
+# 👹 `CANTO II`: 4-Way-Handshake Process
 
 El 4-way handshake en 802.11 es un proceso que se utiliza para establecer una conexión segura entre una estación (STA) y un punto de acceso (AP) en una red WiFi. El proceso consta de cuatro frames de control de gestión 802.11, que se utilizan para autenticar y asociar una estación con un punto de acceso, y para establecer una clave de cifrado compartida entre ellos. A continuación, se describe cada uno de los cuatro frames implicados en el proceso de 4-way handshake
+
+- **Pasos del `4-Way-Handshake` con una `WLAN` con `WPA2`:**
 
 | **Paso**  | **Frame**                     | **Descripción**                                                                                                                                                                                                                                                                                                                                                       |
 |---------- |-----------------------------  |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  |
@@ -129,7 +131,121 @@ El 4-way handshake en 802.11 es un proceso que se utiliza para establecer una co
 | **7**     | **Disassociation**            | La estación o el AP pueden enviar un frame de disociación para indicar que la conexión se ha desconectado.                                                                                                                                                                                                                                                            |
 | **8**     | **Deauthentication**          | Este frame se utiliza para desautenticar a una estación de la red. Puede ser enviado por el AP o por otra estación de la red para forzar a la estación a desconectarse. El frame contiene información sobre el motivo de la desautenticación.                                                                                                                         |
 
-### Deauthentication Code
+### 🦈👿 `Fz3r0` BlackShark Filter
+
+- **`Filtro:`**
+
+````sh
+# Papu pro full 4-way-handsjake process
+!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 ||  wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol)
+````
+
+- **`Ejemplo:`**
+
+---
+
+### ⭕ Probe Request
+
+https://notasinalambricas.wordpress.com/tag/probe-request/
+
+- Se pueden ver generados por el cliente al monitorear la red
+- Sirven para que la STA solicite al AP autenticación
+- El probe Request es sepondido por el AP con un Probe Response
+
+````py
+# Probe Request Wireshark filter
+wlan.fc.type_subtype == 4
+````
+
+---
+
+### ⭕ Probe Response
+
+https://notasinalambricas.wordpress.com/tag/probe-response/
+
+- La respuesta desde un AP a un Probe Request de una STA
+- Este paquete de respuesta desde al AP hacia la STA, le dice a la STA "Si aquí estoy (AP)"
+- Eso genera que la STA haga un Association Request, para así lograr asociarse a la WLAN. 
+
+````py
+# Probe Response Wireshark filter
+wlan.fc.type_subtype == 5
+````
+---
+
+### ⭕ Association Request
+
+https://mrncciew.com/2014/10/28/802-11-mgmt-association-reqresponse/
+
+- Enviado de la STA hacia el AP, una vez que la STA sabe que el AP está presente con el ESSID y más info solicitado (que obtine de un Beacon)
+
+````py
+# Association Request Wireshark filter
+wlan.fc.type_subtype == 0
+````
+
+---
+
+### ⭕ Association Response
+
+https://mrncciew.com/2014/10/28/802-11-mgmt-association-reqresponse/
+
+- El AP responde a la asosiación de la STA hacie el AP
+
+````py
+# Association Request Wireshark filter
+wlan.fc.type_subtype == 1
+````
+
+---
+
+### ⭕ Beacon
+
+- El frame que envia constantemente un AP a manera de Broadcast para anunciar sus ESSIDs disponibles o incluso ocultas
+- Este frame tiene todos los detalles necesarios para que una STA pueda autenticarse y enviar Association Request
+
+````py
+# Beacon Wireshark filter
+wlan.fc.type_subtype == 8
+````
+
+---
+
+### ⭕ Authentications
+
+- Enviado 
+
+````py
+# Authentication Wireshark filter
+wlan.fc.type_subtype == 11
+````
+
+---
+
+### ⭕ De-Authentications
+
+- [De-Authentication Attack Wikipedia](https://en.wikipedia.org/wiki/Wi-Fi_deauthentication_attack)
+- Después de un frame de-authentication va aislado y genera un frame De-Association
+
+````py
+# De-Authentications Wireshark filter
+wlan.fc.type_subtype == 12
+````
+
+---
+
+### ⭕ DisAssosiations
+
+- 
+
+````py
+# DisAssosiations Wireshark filter
+wlan.fc.type_subtype == 10
+````
+
+---
+
+### ❌ Deauthentication Code
 
 | **Code**      | **Motivo en el Frame**                                                                | **Descripción y posibles causas**                                                                                                                             |
 |-----------    |------------------------------------------------------------------------------------   |-------------------------------------------------------------------------------------------------------------------------------------------------------------  |
@@ -154,7 +270,9 @@ El 4-way handshake en 802.11 es un proceso que se utiliza para establecer una co
 | **19**        | **Cipher suite rejected by AP**                                                       | El AP ha rechazado la suite de cifrado seleccionada por la estación.                                                                                          |
 | **20**        | **TP-Link SAFE: client making too much association attempts**                         | La estación ha intentado asociarse con el AP demasiadas veces en un período                                                                                   |
 
-### Dissasociation Code
+---
+
+### ❌ Dissasociation Code
 
 - https://mrncciew.com/2014/10/11/802-11-mgmt-deauth-disassociation-frames/
 
@@ -175,109 +293,7 @@ El 4-way handshake en 802.11 es un proceso que se utiliza para establecer una co
 | **12-13**     | **Invalid element, i.e., an element defined in this standard for which the content does not meet the specifications in Clause 9**     | El punto de acceso ha detectado un elemento inválido en el marco enviado por la estación.                                                                                                                     |
 | **14**        | **Message integrity code (MIC) failure**                                                                                              | El punto de acceso ha detectado una falla en el código de integridad de mensaje (MIC) en el marco enviado por la estación. Esto podría deberse a un intento de ataque de tipo "man-in-the-middle".            |
 | **15**        | **4-way handshake timeout**                                                                                                           | El proceso de autenticación y asociación ha                                                                                                                                                                   |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Probe Request
-
-https://notasinalambricas.wordpress.com/tag/probe-request/
-
-- Se pueden ver generados por el cliente al monitorear la red
-- Sirven para que la STA solicite al AP autenticación
-- El probe Request es sepondido por el AP con un Probe Response
-
-````py
-# Probe Request Wireshark filter
-wlan.fc.type_subtype == 4
-````
-
-### Probe Response
-
-https://notasinalambricas.wordpress.com/tag/probe-response/
-
-- La respuesta desde un AP a un Probe Request de una STA
-- Este paquete de respuesta desde al AP hacia la STA, le dice a la STA "Si aquí estoy (AP)"
-- Eso genera que la STA haga un Association Request, para así lograr asociarse a la WLAN. 
-
-````py
-# Probe Response Wireshark filter
-wlan.fc.type_subtype == 5
-````
-
-### Association Request
-
-https://mrncciew.com/2014/10/28/802-11-mgmt-association-reqresponse/
-
-- Enviado de la STA hacia el AP, una vez que la STA sabe que el AP está presente con el ESSID y más info solicitado (que obtine de un Beacon)
-
-````py
-# Association Request Wireshark filter
-wlan.fc.type_subtype == 0
-````
-
-### Association Response
-
-https://mrncciew.com/2014/10/28/802-11-mgmt-association-reqresponse/
-
-- El AP responde a la asosiación de la STA hacie el AP
-
-````py
-# Association Request Wireshark filter
-wlan.fc.type_subtype == 1
-````
-
-### Beacon
-
-- El frame que envia constantemente un AP a manera de Broadcast para anunciar sus ESSIDs disponibles o incluso ocultas
-- Este frame tiene todos los detalles necesarios para que una STA pueda autenticarse y enviar Association Request
-
-````py
-# Beacon Wireshark filter
-wlan.fc.type_subtype == 8
-````
-
-### Authentications
-
-- Enviado 
-
-````py
-# Authentication Wireshark filter
-wlan.fc.type_subtype == 11
-````
-
-### De-Authentications
-
-- [De-Authentication Attack Wikipedia](https://en.wikipedia.org/wiki/Wi-Fi_deauthentication_attack)
-- Después de un frame de-authentication va aislado y genera un frame De-Association
-
-````py
-# De-Authentications Wireshark filter
-wlan.fc.type_subtype == 12
-````
-
-### DisAssosiations
-
-- 
-
-````py
-# DisAssosiations Wireshark filter
-wlan.fc.type_subtype == 10
-````
-
----
-
-## 4-Way-Handshake Fz3r0 BlackShark Cheatsheet
+## 💀 `4-Way-Handshake`: Fz3r0 BlackShark Cheatsheet
 
 - **Full Handshake + Data + Actions + Retry + Probes + Beacons**
 
@@ -285,11 +301,15 @@ wlan.fc.type_subtype == 10
 wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 8 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 32 || wlan.fc.type_subtype == 13
 ````
 
+---
+
 - **Full - Sin Data**
 
 ````py
 wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 8 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 13
 ````
+
+---
 
 - **Full - Sin Data & Sin Retry**
 
@@ -297,11 +317,15 @@ wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype =
 !wlan.fc.retry == 1 && (wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 8 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 13)
 ````
 
+---
+
 - **Sin Beacon**
 
 ````py
 wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 32 || wlan.fc.type_subtype == 13
 ````
+
+---
 
 - **Sin Beacon & Sin Retry**
 
@@ -309,11 +333,15 @@ wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype =
 !wlan.fc.retry == 1 && (wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 32 || wlan.fc.type_subtype == 13)
 ````
 
+---
+
 - **`KILLER!!!` Sin Beacon & Sin Data & Sin Retry**
 
 ````py
 !wlan.fc.retry == 1 && (wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 13)
 ````
+
+---
 
 - **`ULTRA COMBO!!!`  Sin Probes - `IT'S DANGEROUS!!!`**
 
@@ -321,11 +349,15 @@ wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype =
 !wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 13)
 ````
 
+---
+
 - **`ULTRA COMBO!!!`  Sin Probes PERO SI CON DATA (login fail and good data analyze) - `IT'S DANGEROUS!!!`**
 
 ````py
 !wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol || wlan.fc.type_subtype == 13 || wlan.fc.type_subtype == 32)
 ````
+
+---
 
 - **`SUPREME VICTORY PERFECT!!!` Sin Probes & Sin Actions - `IT'S DANGEROUS!!!`**
 
@@ -333,25 +365,35 @@ wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype =
 !wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 ||  wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol)
 ````
 
+---
+
 - **`SUPREME VICTORY!!!` con DHCP incluido - `IT'S DANGEROUS!!!`**
 
 ````py
 !wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 ||  wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol) or (dhcp || dhcpv6)
 ````
 
+---
+
 - **`KILLER!!!` Very Clean: Solo Authentication, Association, Action y 4-way-handshake**
 
+---
 
 ````py
 !wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 11 || eapol || wlan.fc.type_subtype == 13)
 ````
 
+---
+
 - **`KILLER!!!` Very Clean: Solo Authentication, Association, Action y 4-way-handshake con Data**
 
+---
 
 ````py
 !wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 11 || eapol || wlan.fc.type_subtype == 32 || wlan.fc.type_subtype == 13)
 ````
+
+---
 
 - **Solo 4-way-Handshake**
 
@@ -359,11 +401,15 @@ wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype =
 !wlan.fc.retry == 1 && eapol
 ````
 
+---
+
 - **4-way-Handshake: Message 1**
 
 ````py
 wlan_rsna_eapol.keydes.msgnr == 1
 ````
+
+---
 
 - **4-way-Handshake: Message 2**
 
@@ -371,11 +417,15 @@ wlan_rsna_eapol.keydes.msgnr == 1
 wlan_rsna_eapol.keydes.msgnr == 2
 ````
 
+---
+
 - **4-way-Handshake: Message 3**
 
 ````py
 wlan_rsna_eapol.keydes.msgnr == 3
 ````
+
+---
 
 - **4-way-Handshake: Message 4**
 
@@ -384,6 +434,27 @@ wlan_rsna_eapol.keydes.msgnr == 4
 ````
 
 ---
+
+<!-- 
+
+FIN DE CAPITULO :D
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
+
+
 
 
 
