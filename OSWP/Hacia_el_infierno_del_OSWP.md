@@ -18,8 +18,17 @@ _por @ **Fz3r0 💀** (CWNA)_
 
 ## 🗂️ `ÍNDICE`
 
+### 👹 `CANTO I`: Introducción
 
+### 👹 `CANTO II`: Monitor Mode
+- ⭕ [**Promiscous Mode**]()
+- ⭕ [**Monitor Mode**]() <br><br>
+- 💀📝 [**`Fz3r0 Cheatsheet`: Monitor Mode**]()
+    - 🕵️📡 [Monitor Mode Activation: `x1 Adapter`]()
+    - 🕵️📡 [Monitor Mode Activation: `x3 Adapters`]() <br><br>
+- 💀📝 [**`Fz3r0 Cheatsheet`: Validation**]()
 
+### CANTO III: Monitor Mode
 
 
 
