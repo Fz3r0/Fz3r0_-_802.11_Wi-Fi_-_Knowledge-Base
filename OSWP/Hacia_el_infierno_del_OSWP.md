@@ -2488,11 +2488,19 @@ En un ataque `PMKID/RSN`, el atacante busca obtener la `PMK` de la `WLAN` **sin 
 
 **Una vez que el atacante ha obtenido el `PMKID`, puede intentar romper la PSK y obtener la PMK real. Esto se hace utilizando herramientas de cracking de contraseñas que utilizan técnicas como el diccionario y la fuerza bruta para probar diferentes combinaciones de contraseñas hasta que se encuentre la correcta.**
 
+---
+
 ### 💣💥 Alcances del Ataque
 
 - Solo funciona para WLANs con `WPA` o `WPA2`
 - **NO** funciona para `WPA3` o `WEP` o `WPA2 Enterprise 802.1X`
 - **NO** funciona en todos los AP o Routers, solo los que tienen función de itinerancia habilitada. 
+
+---
+
+### 📽️ 📖 Ejemplos:
+
+- [Auditoria inalámbrica PMKID con Airgeddon](https://www.youtube.com/watch?v=A-ccvywjOKc)
 
 ---
 
