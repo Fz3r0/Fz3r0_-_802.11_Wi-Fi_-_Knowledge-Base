@@ -454,6 +454,102 @@ FIN DE CAPITULO :D
 <br>
 <br>
 
+## Desencriptar y MiTM de tráfico 802.11
+
+[airdecap-ng: MITM en el aire y sin dejar huella](https://www.flu-project.com/2012/09/airdecap-ng-mitm-en-el-aire-y-sin-dejar_30.html#:~:text=airdecap%2Dng%20es%20una%20de,sido%20capturado%20mediante%20airodump%2Dng.)
+
+Los frames 802.11 van encriptados en el aire, no es como en ethernet como ya se ha visto en CWNA. Por ejemplo, en 802.3 podría sniffear y ver en clartext sin problemas tráfico HTTP o Telnet, pero en WiFi, incluso ese tráfico irá encriptado. Para ver este tráfico y lograr desencriptarlo se pueden utilizar algunas técnicas divertidas. 
+
+Nota: El concepto de "MiTM" aquí no es tan representativo como por ejemplo en Ethernet, aquí uno no se pone "enmedio" del tráfico y lo deja pasar como ya he puesto en writeups como atacando a infra Cisco, en 802.11 en realidad se "escucha el aire" que es algo diferente... pero al final de cuentas, si podría considerarse un tipo de MiTM ya que estamos escuchando "el todo" (sin la necesidad física de ponerse enmedio... hasta parece filosofía, pero el concepto se entiende lol)
+
+- Importante: **Lo que hace que esos frames estén encriptados no es más ni menos que la PSK (password) que se proporciona para entrar a la red, es lo único que se necesita para desencriptar el tráfico**
+- Importante2: **El tráfico sin contraseñas como una red WiFi `Open` viajará el tráfico sin encriptar, en este caso, se podría ver el tráfico sin problemas ya que por default wireshark trae la opción de `802.11 decrypt`, o se puede activar manualmente.** 
+
+---
+
+### Desencritpar tráfico con `wireshark`
+
+- [How To Decrypt WPA2 with Wireshark](https://www.youtube.com/watch?v=RnfXiAYqsuc)
+
+1. Una vez teniendo la PSK, por ejemplo: `godzilla2000` ir a:
+
+    - `edit` > `preferences` > `protocols` > `IEEE 802.11` > `Decryption Keys` > `Edit`
+
+2. En la ventana WEP & WPA Decryption Keys agrego con "+" una nueva: `wpa-pwd` + `godzilla2000`    
+
+    - OJO!!! revisar que el checkbox de arriba `enable decryption` esté prendido
+
+3. Listo!!! Todos los frames que pertenecen a ese SSID podrán ser vistos en plain text, o mejor dicho, como se verían en 802.3 Ethernet ya que por ejemplo un HTTPS seguirá encritpado por el SSL que traía su encapsulamiento anterior. 
+
+**Filtrar tráfic0 802.11 Desecriptado:**
+
+````java
+wlan.fc.protected == 0
+````
+
+**Filtrar tráfic0 802.11 Desecriptado:**
+
+````java
+wlan.fc.protected == 1
+````
+
+---
+
+### Desencriptar tráfico con `airdecap`
+
+````sh
+
+# Este proceso es bastante sencillo, solo es necesario el PSK que previamente ya fue obtenido via OSINT, cracking, exploting, etc...
+
+# 1. Lanzar el comando y especificar el archivo .pcap o .cap capturado anteriormente:
+
+# Opción .cap
+airdecap-ng -e 'Fz3r0_Air_PWN' -p godzilla2000 Fz3r0_WiFi_Log-01.cap
+
+# Opción .pcap
+airdecap-ng -e 'Fz3r0_Air_PWN' -p godzilla2000 Fz3r0_4-way-handshake_2-STAs.pcap
+
+    ## Resultado:
+
+    ## Total number of stations seen           26
+    ## Total number of packets read         11369
+    ## Total number of WEP data packets         0
+    ## Total number of WPA data packets      3390
+    ## Number of plaintext data packets         0
+    ## Number of decrypted WEP  packets         0
+    ## Number of corrupted WEP  packets         0
+    ## Number of decrypted WPA  packets        26  <<<---- 802.11 WPA Frames desencriptados ;)
+    ## Number of bad TKIP (WPA) packets         0
+    ## Number of bad CCMP (WPA) packets         0
+
+# 2. Se genera automáticamente un archivo .cap/.pcap adicional que pueda ser leído con la herramienta de preferencia, eliminará los frames que no fueron desencriptados:
+
+    # Ej. "Fz3r0_4-way-handshake_2-STAs-dec.pcap" (notar el final "-dec.pcap") 
+
+````
+
+---
+
+<!-- 
+
+FIN DE CAPITULO :D
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
+
+
 
 
 
@@ -1348,6 +1444,7 @@ python2 setup.py install
 
 
 
+
 ## 802.11 Wireless WPA/WPA2 PSK Cracking
 
 La mayoría de herramientas de hoy en día pueden lograr crackear el PSK sin necesidad de extraer el hccap, sin embargo, esto se puede usar para tener accesible lo equivalente al `hash` (aunque no es lo mismo), el cual pudiera usar para crackear el password con `john` o `hashcat`, pero también hay otras maneras que revisaré. 
@@ -1762,78 +1859,131 @@ cowpatty -d fz3r0_genpmk_rainbow_table.genpmk -r Fz3r0_4-way-handshake_2-STAs.pc
 
 
 
-## Desencriptar y MiTM de tráfico 802.11
 
-[airdecap-ng: MITM en el aire y sin dejar huella](https://www.flu-project.com/2012/09/airdecap-ng-mitm-en-el-aire-y-sin-dejar_30.html#:~:text=airdecap%2Dng%20es%20una%20de,sido%20capturado%20mediante%20airodump%2Dng.)
 
-Los frames 802.11 van encriptados en el aire, no es como en ethernet como ya se ha visto en CWNA. Por ejemplo, en 802.3 podría sniffear y ver en clartext sin problemas tráfico HTTP o Telnet, pero en WiFi, incluso ese tráfico irá encriptado. Para ver este tráfico y lograr desencriptarlo se pueden utilizar algunas técnicas divertidas. 
 
-Nota: El concepto de "MiTM" aquí no es tan representativo como por ejemplo en Ethernet, aquí uno no se pone "enmedio" del tráfico y lo deja pasar como ya he puesto en writeups como atacando a infra Cisco, en 802.11 en realidad se "escucha el aire" que es algo diferente... pero al final de cuentas, si podría considerarse un tipo de MiTM ya que estamos escuchando "el todo" (sin la necesidad física de ponerse enmedio... hasta parece filosofía, pero el concepto se entiende lol)
 
-- Importante: **Lo que hace que esos frames estén encriptados no es más ni menos que la PSK (password) que se proporciona para entrar a la red, es lo único que se necesita para desencriptar el tráfico**
+---
 
-- Importante2: **El tráfico sin contraseñas como una red WiFi `Open` viajará el tráfico sin encriptar, en este caso, se podría ver el tráfico sin problemas ya que por default wireshark trae la opción de `802.11 decrypt`, o se puede activar manualmente.** 
+<!-- 
 
-### Desencriptar tráfico con `airdecap`
+FIN DE CAPITULO :D
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
+
+## 💀⚔️ Ataque: `PMKID` (WLANs sin clientes)
+
+En una WLAN protegida por una `PSK`, el `AP` y `STA` que se conectan a el comparten una `clave secreta` conocida como **`Pairwise Master Key (PMK)`**. 
+
+- La `PMK` se utiliza para **encriptar las comunicaciones entre el `AP` y las `STA` que se conectan a él.
+
+En un ataque `PMKID/RSN`, el atacante busca obtener la `PMK` de la `WLAN` **sin necesidad de conectarse a ella**. 
+
+- El ataque funciona explotando una debilidad en el protocolo de autenticación `RSN (Robust Security Network)` _(utilizado en las redes inalámbricas modernas)_. En particular, el ataque explota el hecho de que **algunos `AP`** responden a solicitudes de autenticación **sin requerir la presentación de un cliente válido.** Esto permite al atacante enviar solicitudes de autenticación falsas que contienen una serie de valores específicos que provocan que el punto de acceso envíe de vuelta un PMKID (identificador de PMK) que contiene información sobre la PMK de la red inalámbrica.
+
+**Una vez que el atacante ha obtenido el `PMKID`, puede intentar romper la PSK y obtener la PMK real. Esto se hace utilizando herramientas de cracking de contraseñas que utilizan técnicas como el diccionario y la fuerza bruta para probar diferentes combinaciones de contraseñas hasta que se encuentre la correcta.**
+
+---
+
+### 💣💥 Alcances del Ataque
+
+- Solo funciona para WLANs con `WPA` o `WPA2`
+- **NO** funciona para `WPA3` o `WEP` o `WPA2 Enterprise 802.1X`
+- **NO** funciona en todos los AP o Routers, solo los que tienen función de itinerancia habilitada. 
+
+---
+
+### 📽️ 📖 Ejemplos:
+
+- [Auditoria inalámbrica PMKID con Airgeddon](https://www.youtube.com/watch?v=A-ccvywjOKc)
+
+---
+
+### 🥷🕵️ Métodos para obtener `PMKID`
+
+1. **`betterrcap`**: 
 
 ````sh
+# **** Tener el adaptador en monitor
 
-# Este proceso es bastante sencillo, solo es necesario el PSK que previamente ya fue obtenido via OSINT, cracking, exploting, etc...
+# 1. Ejecutar Bettercap en ese adaptador
+bettercap -iface wlan0mon
 
-# 1. Lanzar el comando y especificar el archivo .pcap o .cap capturado anteriormente:
+# 2. Dentro de Bettercap ejecutar el reconocimiento de red
+wifi.recon on
 
-# Opción .cap
-airdecap-ng -e 'Fz3r0_Air_PWN' -p godzilla2000 Fz3r0_WiFi_Log-01.cap
+# 3. Ejecutar el assoc para todas las redes (Se ejecutará e irá guardando un archivo .pcap)
+wifi.assoc all 
 
-# Opción .pcap
-airdecap-ng -e 'Fz3r0_Air_PWN' -p godzilla2000 Fz3r0_4-way-handshake_2-STAs.pcap
-
-    ## Resultado:
-
-    ## Total number of stations seen           26
-    ## Total number of packets read         11369
-    ## Total number of WEP data packets         0
-    ## Total number of WPA data packets      3390
-    ## Number of plaintext data packets         0
-    ## Number of decrypted WEP  packets         0
-    ## Number of corrupted WEP  packets         0
-    ## Number of decrypted WPA  packets        26  <<<---- 802.11 WPA Frames desencriptados ;)
-    ## Number of bad TKIP (WPA) packets         0
-    ## Number of bad CCMP (WPA) packets         0
-
-# 2. Se genera automáticamente un archivo .cap/.pcap adicional que pueda ser leído con la herramienta de preferencia, eliminará los frames que no fueron desencriptados:
-
-    # Ej. "Fz3r0_4-way-handshake_2-STAs-dec.pcap" (notar el final "-dec.pcap") 
-
+    # En este punto el .pac ya tendrá lso hashed del RSN PMKID
 ````
 
-### Desencritpar tráfico con `wireshark`
+2. **`hcxdumptool`**
 
-- [How To Decrypt WPA2 with Wireshark](https://www.youtube.com/watch?v=RnfXiAYqsuc)
-
-1. Una vez teniendo la PSK, por ejemplo: `godzilla2000` ir a:
-
-    - `edit` > `preferences` > `protocols` > `IEEE 802.11` > `Decryption Keys` > `Edit`
-
-2. En la ventana WEP & WPA Decryption Keys agrego con "+" una nueva: `wpa-pwd` + `godzilla2000`    
-
-    - OJO!!! revisar que el checkbox de arriba `enable decryption` esté prendido
-
-3. Listo!!! Todos los frames que pertenecen a ese SSID podrán ser vistos en plain text, o mejor dicho, como se verían en 802.3 Ethernet ya que por ejemplo un HTTPS seguirá encritpado por el SSL que traía su encapsulamiento anterior. 
-
-**Filtrar tráfic0 802.11 Desecriptado:**
-
-````java
-wlan.fc.protected == 0
-````
-
-**Filtrar tráfic0 802.11 Desecriptado:**
-
-````java
-wlan.fc.protected == 1
+````sh
+# 1. Realizar una captura desde hcxdumptool
+# -i = interface
+# -o = output
+# --enable_status=1 
+hcxdumptool -1 wlan0mon -o Fz3r0_RSN_PMKID --enable_status=1
 ````
 
 ---
+
+### 🗡️🎩 Cracking: `PMKID`
+
+2. Crackear los hashes con `hcxdumptool`
+
+````sh
+# 1. Primero mostrar los hashes de la captura y guardarlos en un archivo
+# -z Nombre de archivo de hashes
+hcxdumptool -z Fz3r0_Hashes Fz3r0_RSN_PMKID
+
+# 2. Una vez guardados se pueden ver con un simple cat y poderlos empezar a crackear
+cat Fz3r0_Hashes
+
+# 3. Opción con john: Guárdame este fierrito, Crack it!
+john --wordlist=/usr/share/wordlists/rockyou.txt Fz3r0_Hashes
+
+# - Revisar la DB de john
+john --show Fz3r0_Hashes
+
+# 3. Opción con Hashcat: Guárdame este fierrito, Crack it!
+hashcat --example-hashes | grep "16800" -C 2
+
+hashcat -m 16800 -a 0 Fz3r0_Hashes /usr/share/wordlists/rockyou.txt
+
+hashcat -m 16800 --show Fz3r0_Hashes
+````
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1852,6 +2002,36 @@ https://wifipumpkin3.github.io/
 
 
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1932,6 +2112,27 @@ cp /root/bettercap-wifi-handshakes.pcap ./fz3r0_bettercap_4-way-handshake_captur
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Xerosploit
 
 Xerosploit is a penetration testing toolkit whose goal is to perform man in the middle attacks for testing purposes. It brings various modules that allow to realise efficient attacks, and also allows to carry out denial of service attacks and port scanning. Powered by bettercap and nmap.
@@ -1956,11 +2157,85 @@ python3 install.py
 xerosploit
 ````
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Funny Attacks con xerosploit
 
 ````sh
 
 ````
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2455,111 +2730,8 @@ Ok, this is solved now. On v10.41 it will be able to work in both modes. Default
 
 
 
----
 
-<!-- 
 
-FIN DE CAPITULO :D
-
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
- -->
-
-<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
-
-<br>
-<br>
-<br>
-
-## 💀⚔️ Ataque: `PMKID` (WLANs sin clientes)
-
-En una WLAN protegida por una `PSK`, el `AP` y `STA` que se conectan a el comparten una `clave secreta` conocida como **`Pairwise Master Key (PMK)`**. 
-
-- La `PMK` se utiliza para **encriptar las comunicaciones entre el `AP` y las `STA` que se conectan a él.
-
-En un ataque `PMKID/RSN`, el atacante busca obtener la `PMK` de la `WLAN` **sin necesidad de conectarse a ella**. 
-
-- El ataque funciona explotando una debilidad en el protocolo de autenticación `RSN (Robust Security Network)` _(utilizado en las redes inalámbricas modernas)_. En particular, el ataque explota el hecho de que **algunos `AP`** responden a solicitudes de autenticación **sin requerir la presentación de un cliente válido.** Esto permite al atacante enviar solicitudes de autenticación falsas que contienen una serie de valores específicos que provocan que el punto de acceso envíe de vuelta un PMKID (identificador de PMK) que contiene información sobre la PMK de la red inalámbrica.
-
-**Una vez que el atacante ha obtenido el `PMKID`, puede intentar romper la PSK y obtener la PMK real. Esto se hace utilizando herramientas de cracking de contraseñas que utilizan técnicas como el diccionario y la fuerza bruta para probar diferentes combinaciones de contraseñas hasta que se encuentre la correcta.**
-
----
-
-### 💣💥 Alcances del Ataque
-
-- Solo funciona para WLANs con `WPA` o `WPA2`
-- **NO** funciona para `WPA3` o `WEP` o `WPA2 Enterprise 802.1X`
-- **NO** funciona en todos los AP o Routers, solo los que tienen función de itinerancia habilitada. 
-
----
-
-### 📽️ 📖 Ejemplos:
-
-- [Auditoria inalámbrica PMKID con Airgeddon](https://www.youtube.com/watch?v=A-ccvywjOKc)
-
----
-
-### 🥷🕵️ Métodos para obtener `PMKID`
-
-1. **`betterrcap`**: 
-
-````sh
-# **** Tener el adaptador en monitor
-
-# 1. Ejecutar Bettercap en ese adaptador
-bettercap -iface wlan0mon
-
-# 2. Dentro de Bettercap ejecutar el reconocimiento de red
-wifi.recon on
-
-# 3. Ejecutar el assoc para todas las redes (Se ejecutará e irá guardando un archivo .pcap)
-wifi.assoc all 
-
-    # En este punto el .pac ya tendrá lso hashed del RSN PMKID
-````
-
-2. **`hcxdumptool`**
-
-````sh
-# 1. Realizar una captura desde hcxdumptool
-# -i = interface
-# -o = output
-# --enable_status=1 
-hcxdumptool -1 wlan0mon -o Fz3r0_RSN_PMKID --enable_status=1
-````
-
----
-
-### 🗡️🎩 Cracking: `PMKID`
-
-2. Crackear los hashes con `hcxdumptool`
-
-````sh
-# 1. Primero mostrar los hashes de la captura y guardarlos en un archivo
-# -z Nombre de archivo de hashes
-hcxdumptool -z Fz3r0_Hashes Fz3r0_RSN_PMKID
-
-# 2. Una vez guardados se pueden ver con un simple cat y poderlos empezar a crackear
-cat Fz3r0_Hashes
-
-# 3. Opción con john: Guárdame este fierrito, Crack it!
-john --wordlist=/usr/share/wordlists/rockyou.txt Fz3r0_Hashes
-
-# - Revisar la DB de john
-john --show Fz3r0_Hashes
-
-# 3. Opción con Hashcat: Guárdame este fierrito, Crack it!
-hashcat --example-hashes | grep "16800" -C 2
-
-hashcat -m 16800 -a 0 Fz3r0_Hashes /usr/share/wordlists/rockyou.txt
-
-hashcat -m 16800 --show Fz3r0_Hashes
-````
 
 
 
@@ -2573,6 +2745,29 @@ hashcat -m 16800 --show Fz3r0_Hashes
 ````sh
 
 ````
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## WPS Attacks
@@ -2589,6 +2784,26 @@ https://gist.github.com/s4vitar/3b42532d7d78bafc824fb28a95c8a5eb
 
 
 ## DSTIKE deauther reloj
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2619,6 +2834,18 @@ ip.version == 4
 mdns ipv4 sin retry
 
 !(tcp.analysis.flags && !tcp.analysis.window_update && !tcp.analysis.keep_alive && !tcp.analysis.keep_alive_ack) && !(dns.retransmission == 1  || tcp.analysis.retransmission) && mdns && ip.version == 4
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
