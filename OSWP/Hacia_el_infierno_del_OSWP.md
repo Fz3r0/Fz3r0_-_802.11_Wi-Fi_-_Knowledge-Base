@@ -2901,7 +2901,30 @@ wifiphisher
 
 ---
 
-### Ataque de acceso con `Instagram`
+### Ataque Phishing & Ingeniería Social `Redes Sociales`
+
+- Revisar que SI haya Internet en el atacante usando `systemctl start NetworkManager.service`.
+
+**Es necesario descargar la plantilla deseada de: https://github.com/wifiphisher**
+
+1. Específicamente se debe usar el repositorio de: https://github.com/wifiphisher/extra-phishing-pages
+2. Descargar todo ese repositorio clonando por completo (para tener todas las plantillas) 
+````sh
+`git clone https://github.com/wifiphisher/extra-phishing-pages.git && cd extra-phishing-pages`
+````
+4. copiar lo descargado a: `/usr/lib/python3/dist-packages/wifiphisher/data/phishing-pages`
+````sh
+cp -r /home/fz3r0/Documents/CWAP/extra-phishing-pages/* /usr/lib/python3/dist-packages/wifiphisher/data/phishing-pages/
+````
+5. `Modo Automático`: **Ahora solo es necesario hacer el ataque como en cualquiera de los anteriores, simplemente se agregarán los nuevos escenarios y URLS** 
+
+---
+
+### Ataque Phishing & Ingeniería Social `Redes Sociales`: Manual
+
+
+
+
 
 
 
