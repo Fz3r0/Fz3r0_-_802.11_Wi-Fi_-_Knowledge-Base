@@ -317,7 +317,40 @@ iwconfig wlan0mon channel 6 && iwconfig wlan1mon channel 6 && iwconfig wlan2mon 
 
 ## 💀 `Fz3r0 Cheatsheet`: Band Selection
 
+````sh
+# Opción 1: iwconfig
+iwconfig wlan0mon channel 6
+
+# Opción 2: iwconfig (auto)
+iwconfig eth0 channel auto
+
+# Opción 3: iw
+iw dev wlan0mon set channel 6
+````
+
 ---
+
+###
+
+````sh
+freq/channel
+              Set the operating frequency or channel in the device. A value below 1000 indicates a channel number,  a  value  greater  than
+              1000 is a frequency in Hz. You may append the suffix k, M or G to the value (for example, "2.46G" for 2.46 GHz frequency), or
+              add enough '0'.
+              Channels are usually numbered starting at 1, and you may use iwlist(8) to get the total number of channels, list  the  avail‐
+              able frequencies, and display the current frequency as a channel. Depending on regulations, some frequencies/channels may not
+              be available.
+              When using Managed mode, most often the Access Point dictates the channel and the driver may refuse the setting of  the  fre‐
+              quency.  In  Ad-Hoc mode, the frequency setting may only be used at initial cell creation, and may be ignored when joining an
+              existing cell.
+              You may also use off or auto to let the card pick up the best channel (when supported).
+              Examples :
+                   iwconfig eth0 freq 2422000000
+                   iwconfig eth0 freq 2.422G
+                   iwconfig eth0 channel 3
+                   iwconfig eth0 channel auto
+````
+
 
 ### MAC Spoofing: `3 Adapters`
 
@@ -328,12 +361,31 @@ ifconfig wlan0mon down; ifconfig wlan1mon down; ifconfig wlan2mon down && maccha
 
 ---
 
+### Tc Power & Gain
+
+````sh
+txpower
+              For cards supporting multiple transmit powers, sets the transmit power in dBm. If W is the power in Watt, the power in dBm is
+              P = 30 + 10.log(W).  If the value is postfixed by mW, it will be automatically converted to dBm.
+              In addition, on and off enable and disable the radio, and auto and fixed enable and disable power control (if those  features
+              are available).
+              Examples :
+                   iwconfig eth0 txpower 15
+                   iwconfig eth0 txpower 30mW
+                   iwconfig eth0 txpower auto
+                   iwconfig eth0 txpower off
+````
+
+---
+
 ### Full lists & Bibles
 
 ````sh
-
-
 iw list
+
+iw list god
+
+
 lsusb -D /dev/bus/usb/002/002
 
 # Script para decirme tal cual si está activo el modo monitor (Solo un Adaptador)
