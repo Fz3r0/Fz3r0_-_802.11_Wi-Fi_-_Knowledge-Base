@@ -141,6 +141,12 @@ Hay que recordar que, el tráfico WiFi en el aire puede ser capturado por cualqu
 ````sh
 # Monitor Mode: airmon
 airmon-ng start wlan0
+
+# Monitor Mode: iw
+iw wlan0 set monitor control
+
+# Monitor Mode: iwconfig
+iwconfig wlan0 mode monitor
 ````
 
 ### 🕵️📡 Monitor Mode Activation: `x1 Adapter`
@@ -3562,7 +3568,7 @@ la repsuesta  alos problemas?
 
 
 
-
+https://linuxhint.com/monitor_mode_kali_linux/
 
 
 
