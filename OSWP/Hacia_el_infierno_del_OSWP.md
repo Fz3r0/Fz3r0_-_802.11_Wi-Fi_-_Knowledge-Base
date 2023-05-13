@@ -3092,7 +3092,7 @@ para cargar https
 sslstrip -f -p -k
 ettercap -p -u -T -q -i at0
 
-## Evil Twin con EvilTrust
+## `Evil Twin` @ `eviltrust`
 
 - [Evil Trust](https://github.com/s4vitar/evilTrust)
 
@@ -3102,6 +3102,17 @@ ettercap -p -u -T -q -i at0
 
 
 
+---
+
+<div align="center">
+
+┌═════════════════════┐<br>
+| [█ █ █   << BACK TO TOP >>   █ █ █](https://github.com/Fz3r0/Fz3r0_-_BlackShark/blob/main/OSWP/Hacia_el_infierno_del_OSWP.md#%EF%B8%8F-%C3%ADndice)                |<br>
+└═════════════════════┘<br>
+
+ </div> 
+
+<br><br><br>
 
 ## Evil Twin con Airgeddon
 
@@ -3152,8 +3163,17 @@ Ok, this is solved now. On v10.41 it will be able to work in both modes. Default
 
 ````
 
+---
 
+<div align="center">
 
+┌═════════════════════┐<br>
+| [█ █ █   << BACK TO TOP >>   █ █ █](https://github.com/Fz3r0/Fz3r0_-_BlackShark/blob/main/OSWP/Hacia_el_infierno_del_OSWP.md#%EF%B8%8F-%C3%ADndice)                |<br>
+└═════════════════════┘<br>
+
+ </div> 
+
+<br><br><br>
 
 ## `Evil Twin` @ `wifiphisher`
 
@@ -3319,7 +3339,19 @@ wifiphisher -e "Fz3r0-Free-Internet" -p instagram-login -kN
     ## [!] Closing    
 ````
 
+---
 
+<div align="center">
+
+┌═════════════════════┐<br>
+| [█ █ █   << BACK TO TOP >>   █ █ █](https://github.com/Fz3r0/Fz3r0_-_BlackShark/blob/main/OSWP/Hacia_el_infierno_del_OSWP.md#%EF%B8%8F-%C3%ADndice)                |<br>
+└═════════════════════┘<br>
+
+ </div> 
+
+<br><br><br>
+
+## `Evil Twin` @ `wifipumpkin3`
 
 
 
