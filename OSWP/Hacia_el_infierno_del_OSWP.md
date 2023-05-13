@@ -301,6 +301,19 @@ airodump-ng wlan0mon,wlan1mon,wlan2mon -c 1,6,11
 
 ## 💀 `Fz3r0 Cheatsheet`: Channel Selection
 
+- Basics
+
+````sh
+# Opción 1: iwconfig
+iwconfig wlan0mon channel 6
+
+# Opción 2: iwconfig (auto)
+iwconfig eth0 channel auto
+
+# Opción 3: iw
+iw dev wlan0mon set channel 6
+````
+
 - Channel Selection: `x1 Adapter`
 
 ````sh
@@ -315,7 +328,8 @@ iwconfig wlan0mon channel 1 && iwconfig wlan1mon channel 6 && iwconfig wlan2mon 
 iwconfig wlan0mon channel 6 && iwconfig wlan1mon channel 6 && iwconfig wlan2mon channel 6 && clear;echo -e "\033[31m[+] Fz3r0 💀 Wireless IEEE 802.11 (WiFi) Adapter Validator v1.0\033[0m";echo -e "\033[31m[+] Twitter: @Fz3r0_OPs | Github: Fz3r0\033[0m";echo "";echo -e "\033[97m[*] MULTIPLE WIRELESS CHANNEL MONITOR & CAPTURE\033[0m";echo -e "\033[97m[*] TRIPLE WLAN ADAPTER START - [CHANNEL 6 + CHANNEL 6 + CHANNEL 6] - @ 2.4 GHz\033[0m";echo "";echo -e "\033[97m--- SYSTEM:\033[0m";echo "";echo -e "\033[32m$(uname -a)\033[0m" && echo "";echo -e "\033[97m--- WIRELESS ADAPTERS & MODE:\033[0m";echo "";iwconfig 2>/dev/null | grep -vE 'eth|lo' | grep -v 'no wireless extensions';iw dev
 ````
 
-## 💀 `Fz3r0 Cheatsheet`: Band Selection
+## 💀 `Fz3r0 Cheatsheet`: Band & Frequency Selection
+
 
 ````sh
 # Opción 1: iwconfig
@@ -328,27 +342,17 @@ iwconfig eth0 channel auto
 iw dev wlan0mon set channel 6
 ````
 
+
 ---
 
 ###
 
 ````sh
-freq/channel
-              Set the operating frequency or channel in the device. A value below 1000 indicates a channel number,  a  value  greater  than
-              1000 is a frequency in Hz. You may append the suffix k, M or G to the value (for example, "2.46G" for 2.46 GHz frequency), or
-              add enough '0'.
-              Channels are usually numbered starting at 1, and you may use iwlist(8) to get the total number of channels, list  the  avail‐
-              able frequencies, and display the current frequency as a channel. Depending on regulations, some frequencies/channels may not
-              be available.
-              When using Managed mode, most often the Access Point dictates the channel and the driver may refuse the setting of  the  fre‐
-              quency.  In  Ad-Hoc mode, the frequency setting may only be used at initial cell creation, and may be ignored when joining an
-              existing cell.
-              You may also use off or auto to let the card pick up the best channel (when supported).
-              Examples :
-                   iwconfig eth0 freq 2422000000
-                   iwconfig eth0 freq 2.422G
-                   iwconfig eth0 channel 3
-                   iwconfig eth0 channel auto
+
+iwconfig eth0 freq 2422000000
+iwconfig eth0 freq 2.422G
+iwconfig eth0 channel 3
+iwconfig eth0 channel auto
 ````
 
 
