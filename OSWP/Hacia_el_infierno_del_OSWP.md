@@ -27,6 +27,16 @@ _por @ **Fz3r0 💀** (CWNA)_
     - 🕵️📡 [Monitor Mode Activation: `x1 Adapter`]()
     - 🕵️📡 [Monitor Mode Activation: `x3 Adapters`]() <br><br>
 - 💀📝 [**`Fz3r0 Cheatsheet`: Validation**]()
+    - ❓📡 [Validation: `x1 Adapter`]() 
+    - ❓📡 [Validation: `Multiple Adapters`]()
+    - ❓✅ [Validation: `Less is More`]()
+    - ❓📖 [Validation: `Full Bibles`]() <br><br> 
+- 💀📝 [**`Fz3r0 Cheatsheet`: WLAN Audit**]()
+    - 🥷🔎 [WLAN Audit: `x1 Adapter`]() 
+    - 🥷🔎 [WLAN Audit: `x3 Adapters`]() <br><br>  
+- 💀📝 [**`Fz3r0 Cheatsheet`: Channel Selection**]()
+    - ⚟📡 [Channel Selection: `x1 Adapter`]() 
+    - ⚟📡 [Channel Selection: `x3 Adapters`]() <br><br>  
 
 ### CANTO III: Monitor Mode
 
