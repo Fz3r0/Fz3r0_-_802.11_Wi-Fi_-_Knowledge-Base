@@ -2380,7 +2380,16 @@ FIN DE CAPITULO :D
 
 ## 💀⚔️ Ataque: `PMKID` (WLANs sin clientes)
 
-En una WLAN protegida por una `PSK`, el `AP` y `STA` que se conectan a el comparten una `clave secreta` conocida como **`Pairwise Master Key (PMK)`**. 
+`PMKID Attack` es un tipo de ataque descubierto por los autores de `hashcat` en 2018. Este ataque no solo se basa en un solo paquete, sino que **no requiere que ningún cliente esté conectado al `AP` objetivo, sino solo la comunicación entre el `atacante` y el `AP`**. 
+
+- Se descubrió que muchos routers modernos agregan un campo opcional al final del `primer frame EAPOL` enviado por el propio AP cuando alguien se está asociando, llamado Red de Seguridad Robusta `RSN (Robust Security Network)`, que incluye algo llamado **`Pairwise Master Key (PMK)`**. Según se explica en la publicación original, el `PMKID` se deriva utilizando datos que son conocidos para nosotros.
+
+Es decir, en una WLAN protegida por una `PSK`, el `AP` y `STA` que se conectan a el comparten una `clave secreta` conocida como **`Pairwise Master Key (PMK)`**:
+
+````java
+# PMKID se compone de:
+PMKID = HMAC-SHA1-128(PMK, "PMK Name" | MAC_AP | MAC_STA)
+````
 
 - La `PMK` se utiliza para **encriptar las comunicaciones entre el `AP` y las `STA` que se conectan a él.
 
@@ -2400,8 +2409,10 @@ En un ataque `PMKID/RSN`, el atacante busca obtener la `PMK` de la `WLAN` **sin 
 
 ---
 
-### 📽️ 📖 Ejemplos:
+### 📽️ 📖 Recursos:
 
+- [Hacktricks: PMKID](https://book.hacktricks.xyz/generic-methodologies-and-resources/pentesting-wifi#pmkid)
+- [PWNing WPA/WPA2 networks with Bettercap and the PMKID client-less attack.](https://www.evilsocket.net/2019/02/13/Pwning-WiFi-networks-with-bettercap-and-the-PMKID-client-less-attack/)
 - [Auditoria inalámbrica PMKID con Airgeddon](https://www.youtube.com/watch?v=A-ccvywjOKc)
 
 ---
@@ -3781,3 +3792,4 @@ https://linuxhint.com/monitor_mode_kali_linux/
 ###
 
 - (S4vitar OSWP preparación)[ttps://s4vitar.github.io/oswp-preparacion/#]
+- https://book.hacktricks.xyz/generic-methodologies-and-resources/pentesting-wifi
