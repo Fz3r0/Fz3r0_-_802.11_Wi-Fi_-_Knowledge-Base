@@ -34,12 +34,27 @@ _por @ **Fz3r0 💀** (CWNA)_
     - ❓📡 [Validation: `Multiple Adapters`]()
     - ❓✅ [Validation: `Less is More`]()
     - ❓📖 [Validation: `Full Bibles`]() <br><br> 
-- 💀📝 [**`Fz3r0 Cheatsheet`: WLAN Audit**]()
-    - 🥷🔎 [WLAN Audit: `x1 Adapter`]() 
-    - 🥷🔎 [WLAN Audit: `x3 Adapters`]() <br><br>  
 - 💀📝 [**`Fz3r0 Cheatsheet`: Channel Selection**]()
     - ⚟📡 [Channel Selection: `x1 Adapter`]() 
     - ⚟📡 [Channel Selection: `x3 Adapters`]() <br><br>  
+- 💀📝 [**`Fz3r0 Cheatsheet`: Band Selection**]()
+    - 📻📡 [Channel Selection: `x1 Adapter`]() 
+    - 📻📡 [Channel Selection: `x3 Adapters`]() <br><br>  
+- 💀📝 [**`Fz3r0 Cheatsheet`: IEEE Standard Selection**]()
+    - 👨‍🚀📡 [Channel Selection: `x1 Adapter`]() 
+    - 👨‍🚀📡 [Channel Selection: `x3 Adapters`]() <br><br>  
+- 💀📝 [**`Fz3r0 Cheatsheet`: Tx Gain Adjust**]()
+    - 🎚️📡 [Channel Selection: `x1 Adapter`]() 
+    - 🎚️📡 [Channel Selection: `x3 Adapters`]() <br><br>  
+- 💀📝 [**`Fz3r0 Cheatsheet`: MAC Spoofing**]()
+    - 🥸♻️ [WLAN Audit: `x1 Adapter`]() 
+    - 🥸♻️ [WLAN Audit: `x3 Adapters`]() <br><br>  
+- 💀📝 [**`Fz3r0 Cheatsheet`: WLAN Passive Audit**]()
+    - 🥷🔎 [WLAN Audit: `x1 Adapter`]() 
+    - 🥷🔎 [WLAN Audit: `x3 Adapters`]() <br><br>  
+
+
+
 
 ### CANTO III: Monitor Mode
 
