@@ -93,7 +93,8 @@ iwlist modulation
 
 
 
-
+SEE ALSO
+       ifconfig(8), iwspy(8), iwlist(8), iwevent(8), iwpriv(8), wireless(7).
 
 
 
@@ -375,6 +376,21 @@ iwconfig eth0 channel auto
 
 # Opción 3: iw
 iw dev wlan0mon set channel 6
+
+# Validation: Available Channels
+iwlist wlan0mon frequency
+
+    # Channel 01 : 2.412 GHz
+    # Channel 02 : 2.417 GHz
+    # Channel 03 : 2.422 GHz
+    # Channel 04 : 2.427 GHz
+    # Channel 05 : 2.432 GHz
+    # Channel 06 : 2.437 GHz
+    # Channel 07 : 2.442 GHz
+    # Channel 08 : 2.447 GHz
+    # Channel 09 : 2.452 GHz
+    # Channel 10 : 2.457 GHz
+    # Channel 11 : 2.462 GHz
 ````
 
 - Channel Selection: `x1 Adapter`
