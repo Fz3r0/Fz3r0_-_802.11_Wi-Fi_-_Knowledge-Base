@@ -23,6 +23,9 @@ _por @ **Fz3r0 💀** (CWNA)_
 ### 👹 `CANTO II`: Monitor Mode
 - ⭕ [**Promiscous Mode**]()
 - ⭕ [**Monitor Mode**]() <br><br>
+- 💀📝 [**`Fz3r0 Cheatsheet`: ON/OFF Adapter & Network Services**]()
+    - 🕵️📡 [ON/OFF Adapter: `x1 Adapter`]()
+    - 🕵️📡 [ON/OFF Adapter: `x3 Adapters`]() <br><br>
 - 💀📝 [**`Fz3r0 Cheatsheet`: Monitor Mode**]()
     - 🕵️📡 [Monitor Mode Activation: `x1 Adapter`]()
     - 🕵️📡 [Monitor Mode Activation: `x3 Adapters`]() <br><br>
@@ -133,6 +136,33 @@ Hay que recordar que, el tráfico WiFi en el aire puede ser capturado por cualqu
 
 ![image](https://user-images.githubusercontent.com/94720207/231614242-d43e9592-73e2-4a22-9417-b8d8e630fdd6.png)
 
+---
+
+<div align="center">
+
+┌═════════════════════┐<br>
+| [█ █ █   << BACK TO TOP >>   █ █ █](https://github.com/Fz3r0/Fz3r0_-_BlackShark/blob/main/OSWP/Hacia_el_infierno_del_OSWP.md#%EF%B8%8F-%C3%ADndice)                |<br>
+└═════════════════════┘<br>
+
+ </div> 
+
+<br><br><br>
+
+## 💀 `Fz3r0 Cheatsheet`: ON/OFF Adapter & Network Services
+
+````sh
+# Opcional para kill
+airmon-ng check kill
+
+# Opcional para tener internet
+systemctl stop NetworkManager.service
+
+# Opcional para detener wpa_suplicant
+systemctl stop wpa_suplicant.service
+
+# Opcional para detener Network manager
+systemctl start NetworkManager.service
+````
 
 ---
 
@@ -145,6 +175,7 @@ Hay que recordar que, el tráfico WiFi en el aire puede ser capturado por cualqu
  </div> 
 
 <br><br><br>
+
 
 ## 💀 `Fz3r0 Cheatsheet`: Monitor Mode
 
@@ -162,12 +193,6 @@ iwconfig wlan0 mode monitor
 ### 🕵️📡 Monitor Mode Activation: `x1 Adapter`
 
 ````sh
-# Opcional para kill
-airmon-ng check kill
-
-# Opcional para tener internet
-systemctl start NetworkManager.service
-
 # Activando Monitor Mode en un adaptador Fresh (wlan0) 
 clear; airmon-ng start wlan0; iwconfig wlan0mon channel 6 && ifconfig wlan0mon down; macchanger --mac=f0:f0:f0:f0:f0:f0 wlan0mon; ifconfig wlan0mon up && clear; echo -e "\033[31m[+] Fz3r0 💀 Wireless IEEE 802.11 (WiFi) Adapter Validator v1.0\033[0m"; echo -e "\033[31m[+] Twitter: @Fz3r0_OPs | Github: Fz3r0\033[0m"; echo ""; echo -e "\033[97m--- SYSTEM:\033[0m"; echo ""; echo -e "\033[32m$(uname -a)\033[0m"; echo ""; echo -e "\033[97m--- USB ADAPTERS & DRIVERS:\033[0m"; echo ""; if iwconfig 2>/dev/null | grep -q 'Mode:Monitor'; then printf "\033[32mWLAN Interface Status:%25s\nMonitor Mode:%33s\033[0m" "Present" "Active"; elif iwconfig 2>/dev/null | grep -q 'no wireless'; then echo -e "\033[31mWLAN Interface Status:%25s\n%s\033[0m" "Not Present" "No WLAN interface detected"; else echo -e "\033[31mWLAN Interface Status:%20s\nMonitor Mode:%33s\033[0m" "Present" "Inactive"; fi && echo "" ; echo -e "\033[32m$(airmon-ng)\033[0m"; echo ""; echo -e "\033[97m--- PHYSICAL INTERFACES:\033[0m"; echo ""; echo -e "\033[36m$(ifconfig)\033[0m"; echo ""; echo -e "\033[97m--- WIRELESS ADAPTERS & MODE:\033[0m"; echo ""; iwconfig 2>/dev/null | grep -vE 'eth|lo' | grep -v 'no wireless extensions'; iw dev
 
@@ -186,12 +211,6 @@ clear; airmon-ng start wlan0; iwconfig wlan0 channel 6 && ifconfig wlan0 down; m
 - Triple encendido con **diferentes** canales `1,6,11`
 
 ````sh
-# Opcional para kill
-airmon-ng check kill
-
-# Opcional para tener internet
-systemctl start NetworkManager.service
-
 # Triple encendido de Adaptadores desde 0 (wlan0) 
 # [Channels: 1, 6, 11]
 clear;airmon-ng start wlan0; airmon-ng start wlan1; airmon-ng start wlan2 && iwconfig wlan0mon channel 1 && iwconfig wlan1mon channel 6 && iwconfig wlan2mon channel 11 && ifconfig wlan0mon down; ifconfig wlan1mon down; ifconfig wlan2mon down && macchanger --mac=f0:f0:f0:00:00:00 wlan0mon && macchanger --mac=f0:f0:f0:00:00:01 wlan1mon && macchanger --mac=f0:f0:f0:00:00:02 wlan2mon && ifconfig wlan0mon up; ifconfig wlan1mon up; ifconfig wlan2mon up && clear; echo -e "\033[31m[+] AIR-SHARK by Fz3r0 💀 - Wireless IEEE 802.11 (WiFi) Adapter Validator v1.0\033[0m";echo -e "\033[31m[+] Twitter: @Fz3r0_OPs | Github: Fz3r0\033[0m";echo "";echo -e "\033[97m[*] MULTIPLE WIRELESS CHANNEL MONITOR & CAPTURE\033[0m";echo ""; echo -e "\033[97m[*] TRIPLE WLAN ADAPTER START - [CHANNEL 1 | CHANNEL 6 | CHANNEL 11] - @ 2.4 GHz\033[0m";echo "";echo -e "\033[97m--- SYSTEM:\033[0m";echo "";echo -e "\033[32m$(uname -a)\033[0m" && echo "";echo -e "\033[97m--- WIRELESS ADAPTERS & MODE:\033[0m"; echo -e "\033[32m$(airmon-ng)\033[0m"; echo ""; iwconfig 2>/dev/null | grep -vE 'eth|lo' | grep -v 'no wireless extensions';iw dev
@@ -299,6 +318,9 @@ airodump-ng wlan0mon -c 6
 
 ## Comenzar Auditoría en channel 1,6,11 en varios adaptadores
 airodump-ng wlan0mon,wlan1mon,wlan2mon -c 1,6,11
+
+## Audit con hcxdumptool
+hcxdumptool --do_rcascan -i wlan0mon
 ````
 
 ---
@@ -3617,6 +3639,86 @@ la repsuesta  alos problemas?
 
 
 https://linuxhint.com/monitor_mode_kali_linux/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## WiFi co Hashcat PMKID
+
+### Recursos
+
+- [New attack on WPA/WPA2 using PMKID](https://hashcat.net/forum/thread-7717.html)
+- [Cracking WPA/WPA2 with hashcat](https://hashcat.net/wiki/doku.php?id=cracking_wpawpa2)
+
+### Obtener PMKID
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
