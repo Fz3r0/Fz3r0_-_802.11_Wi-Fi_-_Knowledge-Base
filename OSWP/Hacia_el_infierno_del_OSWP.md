@@ -26,9 +26,13 @@ _por @ **Fz3r0 💀** (CWNA)_
 - 💀📝 [**`Fz3r0 Cheatsheet`: ON/OFF Adapter & Network Services**]()
     - 🕵️📡 [ON/OFF Adapter: `x1 Adapter`]()
     - 🕵️📡 [ON/OFF Adapter: `x3 Adapters`]() <br><br>
-- 💀📝 [**`Fz3r0 Cheatsheet`: Monitor Mode**]()
+- 💀📝 [**`Fz3r0 Cheatsheet`: Adapter Modes**]()
     - 🕵️📡 [Monitor Mode Activation: `x1 Adapter`]()
-    - 🕵️📡 [Monitor Mode Activation: `x3 Adapters`]() <br><br>
+    - 🕵️📡 [Monitor Mode Activation: `x3 Adapters`]() 
+    - 🕵️📡 [Managed Mode Activation: `x1 Adapter`]()
+    - 🕵️📡 [Managed Mode Activation: `x3 Adapters`]() 
+    - 🕵️📡 [Ad-Hoc Mode Activation: `x1 Adapter`]()
+    - 🕵️📡 [Ad-Hoc Mode Activation: `x3 Adapters`]() <br><br>
 - 💀📝 [**`Fz3r0 Cheatsheet`: Validation**]()
     - ❓📡 [Validation: `x1 Adapter`]() 
     - ❓📡 [Validation: `Multiple Adapters`]()
@@ -43,6 +47,12 @@ _por @ **Fz3r0 💀** (CWNA)_
 - 💀📝 [**`Fz3r0 Cheatsheet`: IEEE Standard Selection**]()
     - 👨‍🚀📡 [Channel Selection: `x1 Adapter`]() 
     - 👨‍🚀📡 [Channel Selection: `x3 Adapters`]() <br><br>  
+- 💀📝 [**`Fz3r0 Cheatsheet`: Modulation**]()
+    - 👨‍🚀📡 [Modulation: `x1 Adapter`]() 
+    - 👨‍🚀📡 [Modulation: `x3 Adapters`]() <br><br>  
+- 💀📝 [**`Fz3r0 Cheatsheet`: Data Rate Adjust**]()
+    - 👨‍🚀📡 [Data Rate Adjust: `x1 Adapter`]() 
+    - 👨‍🚀📡 [Data Rate Adjust: `x3 Adapters`]() <br><br>  
 - 💀📝 [**`Fz3r0 Cheatsheet`: Tx Gain Adjust**]()
     - 🎚️📡 [Channel Selection: `x1 Adapter`]() 
     - 🎚️📡 [Channel Selection: `x3 Adapters`]() <br><br>  
@@ -59,7 +69,7 @@ _por @ **Fz3r0 💀** (CWNA)_
 ### CANTO III: Monitor Mode
 
 
-
+iwlist modulation
 
 
 ## AVISO: Antes de montar cualquier cosa!!!
@@ -456,6 +466,14 @@ iw list
 lsusb -D /dev/bus/usb/002/002
 lsusb | grep -E "^Bus (00[2-9]|[1-9][0-9]*)"
 lsusb -D /dev/bus/usb/002/002 2>/dev/null | grep "iManufacturer" | awk '{print "Vendor:........ "$3}'
+````
+
+## Data Rate
+
+````
+                   iwconfig eth0 rate 11M
+                   iwconfig eth0 rate auto
+                   iwconfig eth0 rate 5.5M auto
 ````
 
 
