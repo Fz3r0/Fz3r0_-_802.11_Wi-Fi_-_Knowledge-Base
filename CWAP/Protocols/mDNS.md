@@ -36,27 +36,29 @@ _por @ **Fz3r0 💀**_
 
 El protocolo mDNS (Multicast DNS) es un protocolo de descubrimiento de servicios utilizado en redes locales. 
 
-- **Su objetivo principal es permitir a los dispositivos descubrir y comunicarse entre sí sin necesidad de una infraestructura de servidor DNS (Domain Name System) centralizada.**  
+- **Su objetivo principal es permitir a los dispositivos descubrir y comunicarse entre sí dentro de la `red local` _(dentro del segmento `link.local`)_ sin necesidad de una infraestructura dedicada de servidor `DNS (Domain Name System)` centralizada.**  
 
-En lugar de utilizar servidores DNS tradicionales, mDNS utiliza el envío de paquetes de tipo multicast para permitir que los dispositivos anuncien y descubran servicios disponibles en la red local.
+En lugar de utilizar `servidores DNS` tradicionales, ¡cosa que sería descabellado en una casa común y corriente!, **`mDNS` utiliza el envío de paquetes de tipo `multicast` para permitir que los dispositivos anuncien y descubran servicios disponibles en la `red local`.** Por eso este protocolo se ha vuelto muy utilizado en ambientes de redes caseras para facilitar el uso de dispositivos como `Chromecast` o `Apple TV`, ya que **cualquier smartphone los puede controlar sin necesidad de ninguna configuración previa por parte del usuario**. _(De ahí uno de sus sinónimos `"Zero-Conf"`)_
 
-El protocolo mDNS se basa en la resolución de nombres mediante el uso de nombres de host y el sufijo especial **`.local`**. Los dispositivos que implementan `mDNS` **anuncian sus servicios enviando mensajes de `Anouncment` a una dirección multicast específica `224.0.0.251`. Estos mensajes contienen información sobre los servicios que ofrecen y cómo acceder a ellos.
+El protocolo `mDNS` se basa en la resolución de nombres mediante el uso de nombres de host y el sufijo especial **`.local`**. Los dispositivos que implementan `mDNS` **anuncian sus servicios enviando mensajes de `Anouncment` a una dirección multicast específica `224.0.0.251`. Estos mensajes contienen información sobre los servicios que ofrecen y cómo acceder a ellos.
 
-- **Cuando un dispositivo quiere descubrir servicios en la red local, envía consultas mDNS a la misma dirección multicast `224.0.0.251`. Los dispositivos que ofrecen servicios responden a estas consultas anunciando sus servicios y proporcionando la información necesaria para acceder a ellos.
+- **Cuando un dispositivo quiere descubrir servicios en la red local, envía consultas `mDNS` a la misma dirección multicast `224.0.0.251`. 
+- **Los dispositivos que ofrecen servicios _(como una Chromecast)_ responden a estas consultas anunciando sus servicios y proporcionando la información necesaria para acceder a ellos.**
 
 ---
 
 ### Puntos clave de los mDNS:
 
 - `mDNS (Multicast DNS` es un protocolo `multicast` de descubrimiento de servicios en redes locales.
-- Permite que los dispositivos descubran y se comuniquen entre sí sin un servidor DNS centralizado.
+- Permite que los dispositivos descubran y se comuniquen entre sí sin un servidor `DNS` centralizado.
 - Utiliza el puerto `UDP` `5353` para la comunicación.
 - Los anuncios y consultas se envían y reciben a través de la **dirección multicast** `IPv4 224.0.0.251` y la **dirección multicast** `IPv6 FF02::FB`.
 - Opera en `Layer 2 Data Link` y `Layer 3 Network` del modelo OSI.
 - Se basa en mensajes `DNS` para la **resolución de nombres**.
 - **Se utiliza principalmente en redes locales pequeñas y domésticas.**
-- Facilita la detección automática de servicios y recursos en la red sin configuraciones manuales. Esto lo convierte en un protocolo cómodo, sin embargo, ** NO ES TAN EFICIENTE**
-- Los dispositivos envían y reciben paquetes en el puerto 5353 para descubrir y comunicarse entre sí.
+- Facilita la detección automática de servicios y recursos en la red sin configuraciones manuales. Esto lo convierte en un protocolo cómodo, sin embargo, **NO ES TAN EFICIENTE**
+
+### Ventajas y Desventajas del protocolo mDNS
 
 ## CANTO III: Diferentes nombres para mDNS
 
@@ -92,6 +94,14 @@ Cuando un celular se conecta a una red, utiliza el protocolo mDNS para buscar y 
 
 ### mDNS Technical Frame Exchange
 
+### Fz3r0 Cheatsheet: mDNS
+
+````java
+# mDNS wireshark filter: by Port
+udp port 5353
+
+
+````
 
 ## Recursos y Fuentes
 
