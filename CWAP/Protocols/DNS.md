@@ -69,7 +69,7 @@ _por @ **Fz3r0 💀**_
 
 ## `Laboratiorio`: DNS
 
-### `Laboratiorio`: Setup Inicial
+### `Laboratiorio DNS`: Parte 1 - Setup Inicial
 
 El ejercicio es muy sencillo, solo basta de 2 pasos:
 
@@ -110,7 +110,24 @@ Ahora que ya tengo el setup listo, ¡Es hora de capturar en `Blackshark`!
 
 ---
 
-### Laboratiorio: DNS con Wireshark 
+### `Laboratiorio DNS`: Parte 2 - Captura con Wireshark
+
+`Recordatorio`: Antes de empezar la captura hay que borrar el `DNS cache` con el `ipconfig /flushdns`.
+
+1. `Paso 1` - Comenzar a capturar en Wireshark
+2. `Paso 2` - Hacer el proceso de ping para resolver alguna dirección
+3. `Paso 3` - Guardar el `.pcap` para su análisis. 
+
+---
+
+### `Laboratiorio DNS`: Parte 3 - Análisis con Wireshark
+
+`Recordatorio`: Antes de empezar la captura hay que borrar el `DNS cache` con el `ipconfig /flushdns`.
+
+1. `Paso 1` - Comenzar a capturar en Wireshark
+2. `Paso 2` - Hacer el proceso de ping para resolver alguna dirección
+3. `Paso 3` - Guardar el `.pcap` para su análisis. 
+
 
 
 
