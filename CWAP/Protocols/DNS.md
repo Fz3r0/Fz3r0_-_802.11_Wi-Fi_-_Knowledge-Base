@@ -37,9 +37,45 @@ _por @ **Fz3r0 💀**_
 
 ---
 
-### Puntos clave del DNS:
+### Componentes del DNS
+
+
+Para la operación práctica del sistema DNS se utilizan tres componentes principales:
+
+1. DNS Client
+2. DNS Server
+3. Authoritative Zone
+
+### DNS Client
+
+Un programa cliente DNS es un fostware que se ejecuta en la computadora del usuario y genera peticiones DNS de resolución de nombres a un servidor DNS. Por lo general vienen instalador por default en cualquier tipo de dispositivo de red como `smartphones`, `tablets`, `PCs`, `IoT`, etc. Y por lo general un usuario no suele configurarlo manualmente, sino que suele ser otorgapo via `DHCP` justo con la `IP Address`, `Gateway Address` y `Subnet Mask`.
+
+### DNS Server
+
+Es el software ejecutado dentro de otra máquinma que contesta las peticiones de los clientes. Los servidores recursivos tienen la capacidad de reenviar la petición a otro servidor si no disponen de la dirección solicitada. Es decir, **un servidor DNS puede depender de otos servidores DNS.** 
+
+Authoritative Server
+
+Es una parte del espacio de nombre de dominios sobre la que es responsable un servidor DNS, que puede tener autoridad sobre varias zonas. (Por ejemplo: subdominio.Wikipedia.ORG, subdominio.COM, etc.)
 
 ---
+
+## Operación del DNS en la vida real
+
+
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a594d0a5-ed5b-4f0d-ac30-28afe2f069b1)
+
+
+
+
+
+
+
+
+
+
+
 
 ### Ventajas y Desventajas del protocolo mDNS
 
@@ -52,6 +88,15 @@ _por @ **Fz3r0 💀**_
 ### Consideraciones a tomar con DNS en redes Wireless 802.11 (WiFi)
 
 ---
+
+
+
+
+
+
+
+
+
 
 
 ## CATNO IV: Frame Exchange de DNS
@@ -237,3 +282,4 @@ ipconfig /displaydns
 - [GNS3 Talks: Easy DNS Server for GNS3 Topologies: Dnsmasq Docker Appliance Part 2](https://www.youtube.com/watch?v=sTEKHzfX5Fc)
 - [Configuración de DNS con Dnsmasq y Ubuntu Server (video)](https://www.youtube.com/watch?v=uV-OauHhKgA)
 - [DNS Config on a Cisco Roputer - The Role of DNS within the Network | Lab Session in GNS3 | CCNA 200-301](https://www.youtube.com/watch?v=RYrnRZtjAxo)
+- [Wikipedia: Tipos de registros DNS](https://es.wikipedia.org/wiki/Anexo:Tipos_de_registros_DNS)
