@@ -108,3 +108,5 @@ udp port 5353
 - [Tall Paul Tech - Multicast Domain Name System (mDNS)](https://youtu.be/v8poeqoeRgE)
 - [Networking Institute - Multicast DNS(mDNS) Wireshark Introduction](https://youtu.be/srVklzhATXE)
 - [Alberto Lopez - ¿Qué es el DNS (Sistema de Nombres de Dominio)? Servidor y servicio DNS](https://www.youtube.com/watch?v=SRfU9meXlC8)
+- [IETF - Multicast Considerations over IEEE 802 Wireless Media
+RFC 9119](https://datatracker.ietf.org/doc/rfc9119/)
