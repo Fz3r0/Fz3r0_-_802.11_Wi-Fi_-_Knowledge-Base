@@ -106,7 +106,19 @@ ipconfig /flushdns
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/e520f1c5-dfa9-4879-9c8a-07fd55696fe2)
 
-Ahora que ya tengo el setup listo, ¡Es hora de capturar en `Blackshark`!
+OJO!!! Se puede utilizar tanto `IPv4` como `IPv6`, normalmente en un escenario real con Internet casero sea muy probable todo responda con `IPv6` en caso de hacer peticiones al `DNS` público, ya sea el que nos proporciona el `ISP`, o los siempre usados de Google `8.8.8.8` & `8.8.4.4` o CloudFlare `1.1.1.1` & `1.0.0.1`
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/67ccb513-2df0-42ad-9595-4e290ddcd2e4)
+
+Esto es importante, ya que el query cambia según el tipo de direccionamiento, eso se puede notar en los querys, más adelante se explica esto a detalle: 
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/74428777-b5db-4d3c-b0b1-583c7b811a2c)
+
+- En caso de querer desactivar el o activar `IPv6` como hice en este laboratorio solo se debe desactivar de las propiedades del sistema: 
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/844824ff-2079-42c4-b55d-6941a9c0c8fb)
+
+- **Ahora que ya tengo el setup listo, ¡Es hora de capturar en `Blackshark`!**
 
 ---
 
@@ -115,18 +127,18 @@ Ahora que ya tengo el setup listo, ¡Es hora de capturar en `Blackshark`!
 `Recordatorio`: Antes de empezar la captura hay que borrar el `DNS cache` con el `ipconfig /flushdns`.
 
 1. `Paso 1` - Comenzar a capturar en Wireshark
-2. `Paso 2` - Hacer el proceso de ping para resolver alguna dirección
+2. `Paso 2` - Hacer el proceso de ping _(Laboratiorio Parte 1)_ para resolver alguna dirección
 3. `Paso 3` - Guardar el `.pcap` para su análisis. 
 
 ---
 
 ### `Laboratiorio DNS`: Parte 3 - Análisis con Wireshark
 
-`Recordatorio`: Antes de empezar la captura hay que borrar el `DNS cache` con el `ipconfig /flushdns`.
+Al realizar el proceso de la Parte 2, solo es necesario abrir `Wireshark` y comenzar a revisar por filtros, frame exchanges y análisis más a fondo: 
 
-1. `Paso 1` - Comenzar a capturar en Wireshark
-2. `Paso 2` - Hacer el proceso de ping para resolver alguna dirección
-3. `Paso 3` - Guardar el `.pcap` para su análisis. 
+
+
+
 
 
 
@@ -194,6 +206,8 @@ Ahora que ya tengo el setup listo, ¡Es hora de capturar en `Blackshark`!
 
 ## Cheatsheet
 
+### Comandos de Windows CMD: DNS
+
 ````bat
 :: Mostrar la ayuda del ipconfig
 ipconfig /?
@@ -206,6 +220,7 @@ ipconfig /flushdns
 ipconfig /displaydns
 ````
 
+### Filtros Wireshark DNS
 
 
 
@@ -218,3 +233,7 @@ ipconfig /displaydns
 ## Recursos y Fuentes
 
 - [Ivan Rodriguez - DNS con WireShark](https://www.youtube.com/watch?v=VEw2BqWzKOY)
+- [GNS3 Talks: Easy DNS Server for GNS3 Topologies: Dnsmasq Docker Appliance Part 1](https://www.youtube.com/watch?v=86MIuxQ-LtI)
+- [GNS3 Talks: Easy DNS Server for GNS3 Topologies: Dnsmasq Docker Appliance Part 2](https://www.youtube.com/watch?v=sTEKHzfX5Fc)
+- [Configuración de DNS con Dnsmasq y Ubuntu Server (video)](https://www.youtube.com/watch?v=uV-OauHhKgA)
+- [DNS Config on a Cisco Roputer - The Role of DNS within the Network | Lab Session in GNS3 | CCNA 200-301](https://www.youtube.com/watch?v=RYrnRZtjAxo)
