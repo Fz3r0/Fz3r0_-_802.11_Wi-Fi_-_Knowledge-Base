@@ -10,7 +10,7 @@ ejemplo centrar:
 
  -->
 
-# Protocols from hell: `mDNS` <br> `Multicast DNS` 📡🦈💀 <br>  
+# Protocols from hell: `DNS` <br> `Domain Name Service` 📡🦈💀 <br>  
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/7c94fd0b-296e-4884-a604-c6db7c386ca6) <br>
 _Writeup y análisis de Protocolo para Seguridad y Troubleshooting**_ <br>
