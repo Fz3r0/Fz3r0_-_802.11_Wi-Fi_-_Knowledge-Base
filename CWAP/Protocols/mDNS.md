@@ -31,6 +31,7 @@ _por @ **Fz3r0 💀**_
 
 
 
+
 ## mDNS
 
 El protocolo mDNS (Multicast DNS) es un protocolo de descubrimiento de servicios utilizado en redes locales. 
@@ -42,6 +43,8 @@ En lugar de utilizar servidores DNS tradicionales, mDNS utiliza el envío de paq
 El protocolo mDNS se basa en la resolución de nombres mediante el uso de nombres de host y el sufijo especial **`.local`**. Los dispositivos que implementan `mDNS` **anuncian sus servicios enviando mensajes de `Anouncment` a una dirección multicast específica `224.0.0.251`. Estos mensajes contienen información sobre los servicios que ofrecen y cómo acceder a ellos.
 
 - **Cuando un dispositivo quiere descubrir servicios en la red local, envía consultas mDNS a la misma dirección multicast `224.0.0.251`. Los dispositivos que ofrecen servicios responden a estas consultas anunciando sus servicios y proporcionando la información necesaria para acceder a ellos.
+
+---
 
 ### Puntos clave de los mDNS:
 
@@ -78,7 +81,7 @@ La explicación sencilla de cómo funcionan los mDNS con por ejemplo, una Chrome
 
 Cuando un celular se conecta a una red, utiliza el protocolo mDNS para buscar y descubrir dispositivos disponibles en esa red. La Chromecast, en este caso, anuncia sus servicios mediante anuncios mDNS.
 
-Aquí está el proceso detallado:
+**Este es el proceso en alto nivel para explicarlo sencillamente:**
 
 1. La Chromecast, desde el instante que se se conecta a la red, envía anuncios mDNS anunciando sus servicios disponibles, en su query incluye sus servicios `_googlecast._tcp.local`.
 2. El celular envía una consulta multicast utilizando `mDNS` para buscar servicios específicos, como `_googlecast._tcp.local`.
@@ -86,3 +89,12 @@ Aquí está el proceso detallado:
 4. El celular, al recibir los anuncios `mDNS` de la `Chromecast`, obtiene información sobre la Chromecast, como su `dirección IP`, `nombre de host` y los `servicios` que ofrece.
 5. Con esta información, el celular sabe que existe una Chromecast en la red y tiene la dirección IP necesaria para **comunicarse directamente con ella.** Es decir: Para lo único que se usan los `mDNS` es para descubrir, después el tráfico es `unicast`
 6. **A partir de ese momento, el celular puede establecer una conexión con la Chromecast utilizando su dirección IP y utilizarla para enviar contenido o controlarla.**
+
+### mDNS Technical Frame Exchange
+
+
+## Recursos y Fuentes
+
+- [Tall Paul Tech - Multicast Domain Name System (mDNS)](https://youtu.be/v8poeqoeRgE)
+- [Networking Institute - Multicast DNS(mDNS) Wireshark Introduction](https://youtu.be/srVklzhATXE)
+- [Alberto Lopez - ¿Qué es el DNS (Sistema de Nombres de Dominio)? Servidor y servicio DNS](https://www.youtube.com/watch?v=SRfU9meXlC8)
