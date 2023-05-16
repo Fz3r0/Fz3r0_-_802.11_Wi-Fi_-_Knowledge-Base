@@ -60,6 +60,16 @@ El protocolo `mDNS` se basa en la resolución de nombres mediante el uso de nomb
 
 ### Ventajas y Desventajas del protocolo mDNS
 
+---
+
+### Consideraciones a tomar con mDNS en redes Empresariales y Alta Densidad
+
+---
+
+### Consideraciones a tomar con mDNS en redes Wireless 802.11 (WiFi)
+
+---
+
 ## CANTO III: Diferentes nombres para mDNS
 
 En ocasiones existen confusiones de este protcolo ya que diferentes vendors lo llaman de diferente manera, pero la finalidad siempre es muy similar en cuanto al descubrimiento de un servicio o dispositivo se refiere. 
