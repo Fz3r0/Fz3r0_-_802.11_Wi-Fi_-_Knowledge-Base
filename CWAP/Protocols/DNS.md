@@ -67,47 +67,127 @@ _por @ **Fz3r0 💀**_
 
 
 
-### Laboratiorio
+## `Laboratiorio`: DNS
 
-1. Lanzar un ping a cualquer URL
+### `Laboratiorio`: Setup Inicial
+
+El ejercicio es muy sencillo, solo basta de 2 pasos:
+
+1. Lanzar un ping a cualquer URL _(de preferencia IPv4 para que sea más sencilla la lectura, pero puede ser también IPv6)_
 
     - De esta manera se activará nuestro cliente DNS. 
     - Esto pasa porque los clientes Web necesitan "traducir" un simple string en una `IP Address.` 
     - Este es un proceso `transpartente`, que quiere decir que el usuario no se da cuenta de su ejecución por detrás. 
-    - 
+
 En el comando se puede notar como inmediatamente después de la URL muestra la IP, esto porque el protocolo DNS ya ha resuelto ese Dominio: 
+
+````bat
+:: Lanza ping a github.com
+ping github.com
+````
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/1cbf9b13-1524-472b-a95e-f39d3d5321c9)
 
+2. Si revisaemos el `cache DNS` de nuestro sistema se puede encontrar el registro:
 
-3. 
+````bat
+:: Muestra el contenido de la memoria caché de resolución DNS
+ipconfig /displaydns
+````
 
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/3a5373f2-a083-430a-90ea-a678be58f8c3)
 
+- En caso de querer borrar el `DNS Cache` para poder resolver nuevamente la URL y no leerla directamente de nuestro registro, solo hay que hacer un flush. 
 
+````bat
+:: Purga la memoria caché del DNS
+ipconfig /flushdns
+````
 
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/e520f1c5-dfa9-4879-9c8a-07fd55696fe2)
 
+Ahora que ya tengo el setup listo, ¡Es hora de capturar en `Blackshark`!
 
+---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Laboratiorio: DNS con Wireshark 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Cheatsheet
+
+````bat
+:: Mostrar la ayuda del ipconfig
+ipconfig /?
+
+:: Purga la memoria caché del DNS
+ipconfig /flushdns
+
+
+:: Muestra el contenido de la memoria caché de resolución DNS
+ipconfig /displaydns
+````
 
 
 
