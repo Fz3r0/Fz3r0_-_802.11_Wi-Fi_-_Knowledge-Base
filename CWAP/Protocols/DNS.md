@@ -94,7 +94,7 @@ Es una parte del espacio de nombre de dominios sobre la que es responsable un se
 
 
 
-
+## rDNS - Búsqueda DNS inversa
 
 
 
@@ -283,3 +283,4 @@ ipconfig /displaydns
 - [Configuración de DNS con Dnsmasq y Ubuntu Server (video)](https://www.youtube.com/watch?v=uV-OauHhKgA)
 - [DNS Config on a Cisco Roputer - The Role of DNS within the Network | Lab Session in GNS3 | CCNA 200-301](https://www.youtube.com/watch?v=RYrnRZtjAxo)
 - [Wikipedia: Tipos de registros DNS](https://es.wikipedia.org/wiki/Anexo:Tipos_de_registros_DNS)
+- [rDNS - Búsqueda DNS inversa](https://es.wikipedia.org/wiki/B%C3%BAsqueda_DNS_inversa)
