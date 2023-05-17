@@ -91,16 +91,34 @@ Estos vendors implementan el protocolo mDNS en sus dispositivos y servicios para
 
 La explicación sencilla de cómo funcionan los mDNS con por ejemplo, una Chromecast es la siguiente: 
 
-Cuando un celular se conecta a una red, utiliza el protocolo mDNS para buscar y descubrir dispositivos disponibles en esa red. La Chromecast, en este caso, anuncia sus servicios mediante anuncios mDNS.
+Voy a proporcionarte una descripción paso a paso del proceso de descubrimiento y reproducción de video entre un celular y un Chromecast, utilizando mDNS y otros protocolos relevantes. Sin embargo, ten en cuenta que la descripción será una representación simplificada y puede haber variaciones dependiendo de las implementaciones específicas de los dispositivos y las configuraciones de red. Aquí está el proceso general:
 
-**Este es el proceso en alto nivel para explicarlo sencillamente:**
+1. El celular, que está en la misma red local que el Chromecast, envía una consulta mDNS de tipo A para buscar dispositivos Chromecast en la red. La consulta se envía a la dirección multicast 224.0.0.251 con el nombre de dominio "_googlecast._tcp.local".
+2. El Chromecast, al recibir la consulta mDNS, responde con un mensaje mDNS de anuncio que contiene su nombre de dominio completo y su dirección IP. El mensaje de anuncio es enviado directamente al celular que realizó la consulta.
+3. El celular, ahora con la dirección IP del Chromecast, establece una conexión TCP con el Chromecast utilizando la dirección IP y un puerto específico para la comunicación.
+4. El celular envía una solicitud de reproducción de video al Chromecast a través de la conexión TCP establecida. La solicitud puede incluir detalles como la URL del video a reproducir.
+5. El Chromecast, al recibir la solicitud de reproducción, procesa la solicitud y establece una conexión UDP con el celular para transmitir el video.
+6. El Chromecast envía paquetes de video a través de la conexión UDP al celular, que los recibe y reproduce en su pantalla.
+7. En cuanto a los tipos de paquetes y protocolos utilizados en este proceso, aquí tienes una descripción general:
 
-1. La Chromecast, desde el instante que se se conecta a la red, envía anuncios mDNS anunciando sus servicios disponibles, en su query incluye sus servicios `_googlecast._tcp.local`.
-2. El celular envía una consulta multicast utilizando `mDNS` para buscar servicios específicos, como `_googlecast._tcp.local`.
-3. Estos anuncios son recibidos por **TODOS** los dispositivos en la red que estén escuchando en la dirección multicast correspondiente `224.0.0.251`. Es decir, prácticamente cualquier `Smartphone`, `PC`, `Macbook`, `IoT` o cualquier dispositivo moderno con aplicaciones multimedia como `Youtube`, `Netflix`, `Impresoras`, `Multimedia`, etc, etc...
-4. El celular, al recibir los anuncios `mDNS` de la `Chromecast`, obtiene información sobre la Chromecast, como su `dirección IP`, `nombre de host` y los `servicios` que ofrece.
-5. Con esta información, el celular sabe que existe una Chromecast en la red y tiene la dirección IP necesaria para **comunicarse directamente con ella.** Es decir: Para lo único que se usan los `mDNS` es para descubrir, después el tráfico es `unicast`
-6. **A partir de ese momento, el celular puede establecer una conexión con la Chromecast utilizando su dirección IP y utilizarla para enviar contenido o controlarla.**
+### Proceso de descubrimiento y tranmsisión:
+
+1. Descubrimiento mDNS:
+    1. Celular: Envía una consulta mDNS de tipo A con el nombre de dominio "_googlecast._tcp.local" (paquete mDNS de tipo PTR).
+    2. Chromecast: Responde con un mensaje mDNS de anuncio que contiene el nombre de dominio completo y la dirección IP del Chromecast.
+
+2. Establecimiento de conexión TCP:
+    1. Celular: Establece una conexión TCP con el Chromecast utilizando la dirección IP y un puerto específico.
+    2. Chromecast: Responde la conexión TCP y los dispositivos hacen handshake. 
+
+3. Reproducción de video:
+    1. Celular: Envía una solicitud de reproducción de video al Chromecast a través de la conexión TCP establecida (paquete TCP).
+    2. Chromecast: Procesa la solicitud y establece una conexión UDP con el celular.
+    3. Chromecast: Envía paquetes de video a través de la conexión UDP al celular (paquetes UDP).
+
+En cuanto al tráfico posterior al descubrimiento y reproducción, el envío de video en sí mismo generalmente utiliza UDP, ya que este protocolo es adecuado para transmitir datos en tiempo real, como el video. Sin embargo, ten en cuenta que otros protocolos pueden estar involucrados en la comunicación adicional, como TCP para el control de la reproducción, intercambio de metadatos, etc. La combinación de protocolos utilizados dependerá de la implementación específica y los requisitos del servicio o aplicación que se está utilizando.
+
+Es importante mencionar que esta descripción es una simplificación y puede haber variaciones en el proceso real según las implementaciones específicas y las configuraciones de red utilizadas.
 
 ### mDNS Technical Frame Exchange
 
