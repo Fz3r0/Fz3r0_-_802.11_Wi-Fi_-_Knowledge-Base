@@ -183,7 +183,13 @@ Al realizar el proceso de la Parte 2, solo es necesario abrir `Wireshark` y come
 
 1. Analizando el DNS Query realizado desde la PC hacia el DNS server, una opción para aislar el frame exchange es con el `Transaction ID`
 
+- **Punto de vista desde `Client` - `DNS Query`**
+
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/ac7d4e64-1be2-47fd-9a55-a28fedff6a79)
+
+- **Punto de vista desde `Server` - `DNS Response`**
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/3d6afdee-851a-4b19-8b1d-8e19119f5786)
 
 2. Si quiero ver un `Transaction ID` en particular seguido de algún otro tipo de tráfico referente a esa IP una idea podría ser esta: 
 
