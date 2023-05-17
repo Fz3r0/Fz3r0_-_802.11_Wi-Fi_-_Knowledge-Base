@@ -183,6 +183,11 @@ Al realizar el proceso de la Parte 2, solo es necesario abrir `Wireshark` y come
 
 1. Analizando el DNS Query realizado desde la PC hacia el DNS server, una opción para aislar el frame exchange es con el `Transaction ID`
 
+````java
+# Filtrar por un DNS Transaction ID en particular
+dns.id == 0x72ca
+````
+
 - **Punto de vista desde `Client` - `DNS Query`**
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/ac7d4e64-1be2-47fd-9a55-a28fedff6a79)
