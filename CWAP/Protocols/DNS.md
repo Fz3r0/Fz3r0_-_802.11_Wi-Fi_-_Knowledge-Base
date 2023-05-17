@@ -281,6 +281,14 @@ ipconfig /flushdns
 
 :: Muestra el contenido de la memoria caché de resolución DNS
 ipconfig /displaydns
+
+
+
+:: Entrar a linea de comando de nslookup (dentro se puede escribir un domain name)
+nslookup
+
+:: Muestra el resgistro DNS para 1.1.1.1
+nslookup google.com
 ````
 
 ### Filtros Wireshark DNS
