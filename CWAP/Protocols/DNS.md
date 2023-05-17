@@ -165,6 +165,7 @@ Esto es importante, ya que el query cambia según el tipo de direccionamiento, e
 
 - **Ahora que ya tengo el setup listo, ¡Es hora de capturar en `Blackshark`!**
 
+
 ---
 
 ### `Laboratiorio DNS`: Parte 2 - Captura con Wireshark
@@ -174,6 +175,7 @@ Esto es importante, ya que el query cambia según el tipo de direccionamiento, e
 1. `Paso 1` - Comenzar a capturar en Wireshark
 2. `Paso 2` - Hacer el proceso de ping _(Laboratiorio Parte 1)_ para resolver alguna dirección
 3. `Paso 3` - Guardar el `.pcap` para su análisis. 
+- [Descargar `.pcap` de ejemplo `DNS Lab IPv4` & `DNS Lab IPv4 + IPv6`](https://github.com/Fz3r0/Fz3r0_-_BlackShark/files/11493982/Fz3r0_DNS_Lab.zip)
 
 ---
 
