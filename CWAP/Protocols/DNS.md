@@ -271,6 +271,16 @@ ipconfig /displaydns
 
 ### Filtros Wireshark DNS
 
+````java
+# Transaction ID única de DNS
+dns.id == 0x72ca
+
+# DNS Type A (IPv4 Address)
+dns.qry.type == 1
+
+# DNA Cass IN
+dns.qry.class == 0x0001
+````
 
 
 
