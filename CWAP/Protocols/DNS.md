@@ -181,9 +181,23 @@ Esto es importante, ya que el query cambia según el tipo de direccionamiento, e
 
 Al realizar el proceso de la Parte 2, solo es necesario abrir `Wireshark` y comenzar a revisar por filtros, frame exchanges y análisis más a fondo: 
 
-1. Analizando el DNS Query realizado desde la PC hacia el DNS server:
+1. Analizando el DNS Query realizado desde la PC hacia el DNS server, una opción para aislar el frame exchange es con el `Transaction ID`
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/ac7d4e64-1be2-47fd-9a55-a28fedff6a79)
+
+2. Si quiero ver un `Transaction ID` en particular seguido de algún otro tipo de tráfico referente a esa IP una idea podría ser esta: 
+
+````java
+# Filtrar por una IP (ya sea src o dst) con una Transaction ID en específico, pero también por protocolo icmp
+(ip.addr == 192.168.1.67 &&  dns.id == 0x72ca) or icmp
+````
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/56ca5d4a-26e8-480d-8977-6d9a38e91cee)
+
+- Esto equivale exactamente al proceso de ping del laboratiorio:
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a0c822fb-2ed0-4d81-b3a7-ed7e85dba63b)
+
 
 
 
