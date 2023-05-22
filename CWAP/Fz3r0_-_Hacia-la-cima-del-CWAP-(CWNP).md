@@ -4421,7 +4421,54 @@ FIN DE CAPITULO :D
 
 
 
+---
 
+<!-- 
+
+FIN DE CAPITULO :D
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
+
+# 👹 `CANTO III`: Physical Layer = PHY
+
+El término `PHY` se utiliza comúnmente como una abreviatura de `physical layer` en el ámbito de las redes y las telecomunicaciones. La capa física o `physical layer` es la capa más baja en el modelo de referencia OSI y se encarga de **la transmisión y recepción de señales físicas a través del medio de comunicación, como cables o el aire en el caso de las redes inalámbricas.**
+
+La `physical layer` es fundamental para un análisis 802.11 completo y de hecho muchos olvidan esta capa, hay que recordar que el WiFi se basa principalmente en las capas 1 y 2 del modelo OSI. La `physical layer` es responsable de cosas como:
+
+- Modulación de la señal
+- Potencia de transmisión
+- Ancho de banda
+- Frecuencia
+- Codificación
+- y otros aspectos relacionados con la transmisión y recepción de datos... 
+
+Un ingeniero CWAP necesita entender y analizar estos parámetros físicos para diagnosticar problemas de rendimiento, interferencias, cobertura deficiente y otros problemas relacionados con las redes inalámbricas.
+
+La palabra `PHY` en sí misma se refiere a la capa física en general, pero en el contexto de las redes inalámbricas, **se utiliza más comúnmente para hacer referencia a las especificaciones y estándares de comunicación física inalámbrica, como el estándar `IEEE 802.11` como:**
+
+- 802.11a
+- 802.11b
+- 802.11g
+- 802.11n
+- 802.11ac
+- 802.11ax
+
+Estos estándares definen aspectos técnicos como las frecuencias utilizadas, las tasas de transmisión, los métodos de modulación, las técnicas de acceso al medio y otros detalles relacionados con la transmisión inalámbrica.
+
+## 🟢 Selección `Tiempo de Captura`
 
 
 
