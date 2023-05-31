@@ -262,7 +262,7 @@ FIN DE CAPITULO :D
 
 
 
-# 👹 `CANTO II`: Fundamentos de IEEE 802.11 para CWAP
+# 👹 `CANTO II`: Teoría del Protocolo `IEEE 802.11`
 
 Es necesario tener ya bien fundamentado el conocmiento en cuanto al protocolo `IEEE 802.11 Wireless (WiFi)`, los conocimientos adquiridos durante el CWNA son esenciales para cursar la certificación `CWAP`. Es crucial revisar estos temas nuevamente y profundizar aún más en ellos. De lo contrario, cualquier captura de tráfico wireless o análisis de espectro sería una mera recopilación de números, letras y colores sin sentido. <br>
 
@@ -272,15 +272,7 @@ Además, como Bonus especial, también incluiré ejemplos de `IEEE 802.3 Etherne
 
 Debido a la importancia de estos fundamentos para tener una base sólida para la comprensión del `CWAP`, aconsejo repasar y comprender a la perfección todos estos temas, ya que no solo son de gran ayuda para el `CWAP`, sino que también será útil para cualquier certificación wireless, incluyendo Seguridad Ofensiva y Hacking. <br>
 
-El `CANTO I` se divide de la siguiente manera:
-
-1. ⭕ `Protocolos y Comunicaciones`
-2. ⭕ `El Protocolo 802.11`
-3. ⭕ `Utilizando Radio-Frecuencias (RF) para comunicarse`
-4. ⭕ `Fundamentos de Network Frames`
-5. ⭕ `Métodos de Troubleshooting`
-
-## 🟢 `Protocolos` y `Comunicaciones`
+## 💀 `Protocolos` y `Comunicaciones`
 
 Para entender al 100% el concepto de "`protocolo`" solo se deben comprender 2 sencillos conceptos, las últimas 3 definiciones en el `diccionario RAE` y la `analogía del saludo`.
 
@@ -304,7 +296,9 @@ Para entender al 100% el concepto de "`protocolo`" solo se deben comprender 2 se
 
 El `protocolo` simplemente es **la manera que vamos a "saludar"**, yo acabo de dar **3 protocolos diferentes de "slaudar"** ¡todo depende de la persona, el momento y situación! Si estoy frente un Scout tendré que saludar con la `mano izquierda`, si estoy frente a mi amigo puedo hacer el saludo del `príncipe del rap`, pero si estoy frente al CEO de mi trabajo debo saludarle formalmente con la `mano derecha`, es decir: **hay diferentes protocolos de saludo y ambos lados deben saber identificar cuándo utilizar cada uno de ellos.** 
 
-### `Protocolos` de `Networking`
+---
+
+### 🟢`Protocolos` de `Networking`
 
 - [CompTia: What Is a Network Protocol, and How Does It Work?](https://www.comptia.org/content/guides/what-is-a-network-protocol#:~:text=A%20network%20protocol%20is%20an,internal%20processes%2C%20structure%20or%20design.)
 - [TechTarget: Network Protocol](https://www.techtarget.com/searchnetworking/definition/protocol)
@@ -342,7 +336,8 @@ Por ejemplo, esta es la representación hexadecimal (la manera simplificada de l
 **Paquete con protocolo `DHCP`:** <br><br>
 ![image](https://user-images.githubusercontent.com/94720207/233414000-4066dfbe-ec7e-4292-a8ba-2621010bf690.png)
 
-### Protocol Analysis
+
+## 💀 Protocol Analysis
 
 A mi me gusta explicar y visualizar los protocolos y su análisis como si estuviera desplazándome por directorios y subdirectorios de una Computadora, cualquier sistema operativo ya sea PC, smartphone, IoT se basa en la misma estructura básica se directorios y subdirectorios.
 
@@ -418,7 +413,7 @@ La tabla anterior está basada en el `OSI Model`, este modelo es un marco de tra
 
 Es importante destacar que la elección del protocolo adecuado depende de las necesidades específicas de la aplicación y los dispositivos que se utilizarán en la comunicación. Los protocolos están en constante evolución para adaptarse a las necesidades cambiantes del mercado. Es esencial mantenerse actualizado con los protocolos más recientes y sus características para garantizar la mejor experiencia de comunicación posible.
 
-## 🟢 `Modelo OSI` para el `CWAP`, by `Fz3r0 💀` 
+## 💀 `Modelo OSI` para el `CWAP`, by `Fz3r0 💀` 
 
 Antes que nada, quisiera destacar que tanto para las certificaciones de `CWNP` como lo es el `CWAP`, **NO se utiliza el `Modelo TCP/IP`**, sino que **se basa en el `Modelo OSI`**, sin embargo, se utiliza únicamente como referencia _(¡Hay que recordar que el `OSI Model` es un modelo de referencia!)_.
 
@@ -459,7 +454,7 @@ Es importante solo recordar que "El sublayer MAC, también es parte del sublayer
 
 ---
 
-### 🟣 ISO/IEC 7498-1:1994 Information technology - Open Systems Interconnection (OSI) -- Basic Reference Model: The basic model
+### 🟢 ISO/IEC 7498-1:1994 Information technology - Open Systems Interconnection (OSI) -- Basic Reference Model: The basic model
 
 - [OSI/IEC Reference Model - Second Edition 1994](https://standards.iso.org/ittf/PubliclyAvailableStandards/s020269_ISO_IEC_7498-1_1994(E).zip)
 - [Sunny - OSI Model](https://www.youtube.com/watch?v=nFnLPGk8WjA)
@@ -492,7 +487,7 @@ El `OSI model` originalmente se basa en `7 layers`, a grandes rasgos estos son l
 
 ---
 
-### 🟣 Modelo OSI "Fz3r0 WiFi Custom"
+### 🟢 Modelo OSI "Fz3r0 WiFi Custom"
 
 - En este modelo se agregan las sublayers correspondientes de las que tanto se hablan en el curso, donde `layer 1` y `layer 2` se convierten en una especia de `sub-layers`. 
 - La `MAC sublayer` existe tanto el `layer 1` como en `layer 2`, pero para fines prácticos que se ven más adelante durante `Encapsulation` y `Frame Aggregation` el truco está en plasmarlo en una tabla esas 3 capas como `sublayers`: <br>
@@ -546,10 +541,7 @@ python3 -m http.server 666
 - Es en el momento desde que se da click a la URL así como en el momento que se descarga el archivo cuando se crea tráfico TCP
 - Si yo pusiera un `sniffer` a escuchar el tráfico entre las 2 PCs, podrá capturar ese tráfico HTTP
 
-
-
-
-
+---
 
 ### 💀 `Fz3r0 Pro Tip:`
 
