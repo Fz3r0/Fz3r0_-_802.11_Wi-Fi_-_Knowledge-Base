@@ -322,7 +322,9 @@ En informática y networking, un `protocolo` es un **método definido para la co
 - Cada protocolo representa capas específicas del `Modelo OSI` o `Modelo TCP/IP` y opera según la funcionalidad de esa capa.
 - Los protocolos basados en `TCP` y `UDP` operan en `Network Ports` específicos.
 
-Es decir, justo como `la analogía de los saludos de mano` pasa con un protocolo de networking, por ejemplo, cuando `Ana` se quiere comunicar con `Bob` a través de un `correo electrónico` que utiliza el protocolo `SMTP` (Simple Mail Transfer Prtocol), no importa que `Ana` esté usando un `Apple iphone con IOS` y `Bob` esté usando una `PC Laptop con Microsoft Windows 10`. En este caso, tanto el dispositivo de `Ana` como `Bob` deben saber como "escribir", "leer", "procesar", "recibir" y "enviar" este tipo de `paquetes SMTP` de `e-mail`, así ambos lados podrán comunicar su mensaje, así como recibir y entender la respuesta del otro lado, en este caso, un correo electrónico.  
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/6518b37e-6e0a-45dc-a881-f29f5fd2767a)
+
+Es decir, justo como `la analogía de los saludos de mano` pasa con un protocolo de networking, por ejemplo, cuando `Ana` se quiere comunicar con `Bob` a través de un `correo electrónico` que utiliza el protocolo **`SMTP Port: 587`** _(Simple Mail Transfer Prtocol)_, no importa que `Ana` esté usando un `Apple iphone con IOS` y `Bob` esté usando una `PC Laptop con Microsoft Windows 10`. En este caso, tanto el dispositivo de `Ana` como `Bob` deben saber como "escribir", "leer", "procesar", "recibir" y "enviar" este tipo de `paquetes SMTP` de `e-mail`, así ambos lados podrán comunicar su mensaje, así como recibir y entender la respuesta del otro lado, en este caso, un correo electrónico.  
 
 Para ser más claro, hay que recordar que la parte lógica en la informática son solo `1` y `0`, o mejor dicho `sistema binario`. El `protocolo` no es más que la manera que se le dará sentido a esos 1 y 0 en ambos lados de la comunicación y ambos dispositivos sabrán identificar cada una de esas representaciones binarias en una serie de paquetes encapsulados en las diferentes capas del Modelo OSI.
 
@@ -399,6 +401,8 @@ Algunos ejemplos de protocolos incluyen:
 - ¡y muchos más!
 
 A continuación comparto una tabla donde se puede entender más en que capa se podrían encontrar varios protocolos utilizados comunmente:
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/125cd381-fef4-4fe2-a7e6-34060326a745)
 
 | **Layer** 	|     **Name**     	|   **Protocol Data Unit (PDU)**   	|                                                **Protocolos**                                                	|
 |:---------:	|:----------------:	|:--------------------------------:	|:------------------------------------------------------------------------------------------------------------:	|
