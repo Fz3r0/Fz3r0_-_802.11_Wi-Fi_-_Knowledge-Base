@@ -19,7 +19,7 @@ _por @ **Fz3r0 💀** (CWNA)_
 
 ## 🗂️ `ÍNDICE`
 
-### [🟢 `Introducción`]()
+### [🟢 `Introducción`](
 - [🚨 Importante]()
 
 ### [🏔️ `La analogía del CWAP y una expedición al K2`]() 
@@ -315,11 +315,24 @@ En informática y networking, un `protocolo` es un **método definido para la co
 
 **_"Un protocolo de red es un conjunto establecido de reglas que determinan cómo se transmite la información entre diferentes dispositivos en la misma red. Básicamente, permite que los dispositivos conectados se comuniquen entre sí, independientemente de las diferencias en sus procesos internos, estructura o diseño."_**
 
-Es decir, justo como `la analogía de los saludos de mano` pasa con un protocolo de networking, por ejemplo, cuando `Ana` se quiere comunicar con `Bob` a través de un `correo electrónico` que utiliza el protocolo `SMTP` (Simple Mail Transfer Prtocol). En este caso, tanto el dispositivo de `Ana` como `Bob` deben saber como "escribir", "leer", "procesar", "recibir" y "enviar" este tipo de `paquetes`, así ambos lados podrán comunicar su mensaje, así como recibir y entender la respuesta del otro lado, en este caso, un correo electrónico. 
+- En Try Hack Me encontré una definición que me gusta mucho, tradicide dice: 
 
-Para ser más claro, hay que recordar que la parte lógica en la informática son solo `1` y `0`, o mejor dicho `sistema binario`. El `protocolo` no es más que la manera que se le dará sentido a esos 1 y 0 en ambos lados de la comunicación.
+**_"Un protocolo de red es un conjunto predefinido de reglas y procesos que determinan cómo se transmite la información entre dispositivos, como dispositivos de usuario final, dispositivos de red y servidores. El objetivo fundamental de todos los protocolos es permitir que las máquinas se conecten y se comuniquen de manera fluida, independientemente de las diferencias en su diseño interno, estructura, lógica u operación. En analogía, un protocolo de red es como un "idioma común" que ayuda a que la comunicación sea posible entre personas con diferentes idiomas nativos y de diversas partes del mundo."_**
 
-Por ejemplo, esta es la representación hexadecimal (la manera simplificada de leer binarios) de un paquete con "x" protocolo de red, frente a otro paquete con "y" protocolo de red. A simple vista a nosotros como humanos quizás no tenga mucho sentido, pero en realidad tienen diferencias clave para que un sistema identifique que son 2 protocolos diferentes, con experiencia, incluso los paquetes vistos desde hexadecimal cobrarán muchísimo sentido. 
+- Cada protocolo representa capas específicas del `Modelo OSI` o `Modelo TCP/IP` y opera según la funcionalidad de esa capa.
+- Los protocolos basados en `TCP` y `UDP` operan en `Network Ports` específicos.
+
+Es decir, justo como `la analogía de los saludos de mano` pasa con un protocolo de networking, por ejemplo, cuando `Ana` se quiere comunicar con `Bob` a través de un `correo electrónico` que utiliza el protocolo `SMTP` (Simple Mail Transfer Prtocol), no importa que `Ana` esté usando un `Apple iphone con IOS` y `Bob` esté usando una `PC Laptop con Microsoft Windows 10`. En este caso, tanto el dispositivo de `Ana` como `Bob` deben saber como "escribir", "leer", "procesar", "recibir" y "enviar" este tipo de `paquetes SMTP` de `e-mail`, así ambos lados podrán comunicar su mensaje, así como recibir y entender la respuesta del otro lado, en este caso, un correo electrónico.  
+
+Para ser más claro, hay que recordar que la parte lógica en la informática son solo `1` y `0`, o mejor dicho `sistema binario`. El `protocolo` no es más que la manera que se le dará sentido a esos 1 y 0 en ambos lados de la comunicación y ambos dispositivos sabrán identificar cada una de esas representaciones binarias en una serie de paquetes encapsulados en las diferentes capas del Modelo OSI.
+
+Por ejemplo, esta es la representación binaria de un paquete de protocolo `DHCP Offer` visto con Wireshark, para un simple humano es demasiado dificil identificar esto, pero no lo es para una sistema informático. Sin embargo, herramientas como Wireshark facilitan su entendimiento:
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/caa69fa4-b8ac-4ba9-8c8f-b4be79b99acd)
+
+Por ejemplo, esta es la representación hexadecimal (la manera simplificada de leer binarios para un humano) de un paquete con "x" protocolo de red, frente a otro paquete con "y" protocolo de red. A simple vista a nosotros como humanos quizás no tenga mucho sentido muy similar al binario, pero en realidad tienen diferencias clave para que un sistema identifique que son 2 protocolos diferentes. 
+
+- A diferencia del sistema binario o de bits, con experiencia, incluso los paquetes vistos desde hexadecimal cobrarán muchísimo sentido y podrán ser leídos por un buen analista. O ya los más locos pueden hacer troubleshooting directamento viendo hacia los bits 1 y 0. 
 
 **Paquete con protocolo `ARP`:** <br><br>
 ![image](https://user-images.githubusercontent.com/94720207/233413236-c0387074-b2dd-4e54-99ac-734958559979.png)
