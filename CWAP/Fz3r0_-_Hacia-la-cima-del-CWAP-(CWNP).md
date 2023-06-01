@@ -75,7 +75,50 @@ También incluyo mis propios laboratorios de prácticas, análisis y laboratorio
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/225515551-3de68463-c5b1-4573-8a22-bfa77fd7e834.png" alt="CWAP" height=165px/> </a>   </p> 
 
-## 🚨☢️ `Importante` ☢️🚨
+---
+
+### 🟢 Perfil de un `Wireless Analysis Professional` - `CWAP Engineer`
+
+Un ingeniero `CWAP (Certified Wireless Analysis Professional)` debe tener una amplia gama de habilidades para **diseñar, implementar, solucionar problemas y asegurar el rendimiento de las redes inalámbricas.** <br>
+
+1. Debe estar capacitado para **realizar un `análisis exhaustivo de la red inalámbrica`, incluyendo el análisis de tráfico, la identificación de interferencias, el diagnóstico de problemas de conectividad y la resolución de problemas de rendimiento. Para ello, deben utilizar `herramientas de captura de tráfico` y `análisis de protocolos`, como Wireshark, y `herramientas de análisis de espectro`, como los `analizadores de espectro Wi-Fi`.** <br><br>
+
+2. Debe ser capaz de **diseñar e implementar redes inalámbricas seguras y de alto rendimiento, considerando factores como la cobertura, la capacidad, la interferencia, la calidad de servicio, la compatibilidad con los dispositivos cliente y la seguridad de la red**. Además, deben estar familiarizados con las últimas tecnologías y normas de la industria, como Wi-Fi 6, 802.11ac Wave 2, WPA3, entre otras.** <br><br>
+
+3. Tener la capacidad de **realizar `troubleshooting` de conectividad y rendimiento en tiempo real. Para ello, deben utilizar herramientas de monitoreo de red en tiempo real, que les permiten detectar problemas de conectividad, interferencias, problemas de autenticación y otros problemas de rendimiento.** <br>
+
+4. Debe tener una **sólida comprensión de la seguridad de las redes inalámbricas, incluyendo la autenticación, el cifrado y la prevención de intrusiones. Esto les permite diseñar e implementar redes seguras que cumplan con los requisitos de privacidad y seguridad de los usuarios.** <br>
+
+**El ingeniero `CWAP` debe ser capaz de diseñar, implementar, solucionar problemas y asegurar el rendimiento de las redes inalámbricas, utilizando herramientas especializadas y conocimientos avanzados en tecnologías inalámbricas, protocolos y seguridad de redes. Estas habilidades les permiten ofrecer soluciones eficaces y de alta calidad a las organizaciones que utilizan redes inalámbricas, incluyendo las tecnologías más recientes.** <br>
+
+<div align="center">
+
+![image](https://media.tenor.com/C2ZnZj6Gl-gAAAAM/anime-dragon-ball.gif)
+
+ </div>
+
+---
+
+### 🟢 Conocimiento Requerido para `CWAP-402`
+
+- [CWAP® - Certified Wireless Analysis Professional - Current version: CWAP-404 released in September 2021](https://www.cwnp.com/certifications/cwap)
+
+La tabla presentada muestra los la manera en la que el examen `CWAP-402` está dividido, según fuentes oficiales de `CWNP`
+
+<div align="center">
+  
+|     **Conocimiento CWAP**     	| **Porcentaje** 	|                                                                                                                                                                                                                             **Descripción**                                                                                                                                                                                                                             	|
+|:-----------------------------:	|:--------------:	|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:	|
+| **Protocol Analysis**         	|     **15%**    	| Se centra en el análisis y comprensión de los protocolos utilizados en redes inalámbricas, incluyendo el análisis de tramas y paquetes, y la comprensión de los diferentes campos de los encabezados de los protocolos.                                                                                                                                                                                                                                                 	|
+| **Spectrum Analysis**         	|     **10%**    	| Cubre la comprensión de los conceptos básicos de la espectroscopia y el uso de herramientas y equipos para analizar y solucionar problemas relacionados con el espectro en redes inalámbricas.                                                                                                                                                                                                                                                                          	|
+| **PHY Layers & Technologies** 	|     **10%**    	| Se enfoca en los diferentes tipos de tecnologías y técnicas utilizadas en las capas físicas (PHY) de redes inalámbricas, incluyendo las diferentes modulaciones, técnicas de codificación y características de antena.                                                                                                                                                                                                                                                  	|
+| **MAC Sublayers & Functions** 	|     **25%**    	| Cubre las diferentes subcapas y funciones de la capa de control de acceso al medio (MAC) en redes inalámbricas, incluyendo la comprensión de los diferentes métodos de acceso al medio, la planificación de canal y la gestión de tráfico.                                                                                                                                                                                                                              	|
+| **WLAN Medium Access**        	|     **10%**    	| Se centra en la comprensión de los diferentes mecanismos y técnicas utilizados para el acceso al medio en redes inalámbricas, incluyendo el protocolo de acceso múltiple por detección de portadora con evitación de colisiones (CSMA/CA).                                                                                                                                                                                                                              	|
+| **802.11 Frame Exchanges**    	|     **30%**    	| Cubre la comprensión detallada de los diferentes tipos de tramas y paquetes utilizados en redes inalámbricas, como overhead y payload. También se enfoca en el proceso de autenticación, asociación y roaming . Se cubre en detalle el proceso de transmisión y recepción de tramas y paquetes en redes inalámbricas, incluyendo los diferentes modos de operación de AP y STA, y el uso de los diferentes tipos de frames para el control y la transferencia de datos. 	|
+ 
+</div>
+
+## 🚨☢️ `Importante`: Antes de tomar el CWAP ☢️🚨
 
 **Para presentar el examen de certificación `CWAP`, es necesario tener acreditado el examen `CWNA` y que éste se encuentre vigente.** El `CWNA` es un requisito previo para poder presentar el examen `CWAP`, ya que **se considera una base fundamental en cuanto a los conocimientos y habilidades necesarios para entender y manejar el protocolo de redes inalámbricas `IEEE 802.11`.** <br>
 
@@ -172,62 +215,6 @@ La `ruta Abruzzi del K2` es un camino lleno de peligros y desafíos que ponen a 
 **La hazaña de superar la ruta completa del `K2` es una demostración de la fuerza y la determinación humana y un recordatorio de que, con suficiente dedicación y perseverancia, no hay nada que el ser humano no pueda superar.** <br> 
 
  _"K2, avanzar a morir!"_
-
----
-
-
-<!-- 
-
-FIN DE CAPITULO :D
-
- -->
-
-<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
-
-<br><br><br>
-
-
-
-## 🟢 Perfil de un `Wireless Analysis Professional` - `CWAP Engineer`
-
-Un ingeniero `CWAP (Certified Wireless Analysis Professional)` debe tener una amplia gama de habilidades para **diseñar, implementar, solucionar problemas y asegurar el rendimiento de las redes inalámbricas.** <br>
-
-1. Debe estar capacitado para **realizar un `análisis exhaustivo de la red inalámbrica`, incluyendo el análisis de tráfico, la identificación de interferencias, el diagnóstico de problemas de conectividad y la resolución de problemas de rendimiento. Para ello, deben utilizar `herramientas de captura de tráfico` y `análisis de protocolos`, como Wireshark, y `herramientas de análisis de espectro`, como los `analizadores de espectro Wi-Fi`.** <br><br>
-
-2. Debe ser capaz de **diseñar e implementar redes inalámbricas seguras y de alto rendimiento, considerando factores como la cobertura, la capacidad, la interferencia, la calidad de servicio, la compatibilidad con los dispositivos cliente y la seguridad de la red**. Además, deben estar familiarizados con las últimas tecnologías y normas de la industria, como Wi-Fi 6, 802.11ac Wave 2, WPA3, entre otras.** <br><br>
-
-3. Tener la capacidad de **realizar `troubleshooting` de conectividad y rendimiento en tiempo real. Para ello, deben utilizar herramientas de monitoreo de red en tiempo real, que les permiten detectar problemas de conectividad, interferencias, problemas de autenticación y otros problemas de rendimiento.** <br>
-
-4. Debe tener una **sólida comprensión de la seguridad de las redes inalámbricas, incluyendo la autenticación, el cifrado y la prevención de intrusiones. Esto les permite diseñar e implementar redes seguras que cumplan con los requisitos de privacidad y seguridad de los usuarios.** <br>
-
-**El ingeniero `CWAP` debe ser capaz de diseñar, implementar, solucionar problemas y asegurar el rendimiento de las redes inalámbricas, utilizando herramientas especializadas y conocimientos avanzados en tecnologías inalámbricas, protocolos y seguridad de redes. Estas habilidades les permiten ofrecer soluciones eficaces y de alta calidad a las organizaciones que utilizan redes inalámbricas, incluyendo las tecnologías más recientes.** <br>
-
-<div align="center">
-
-![image](https://media.tenor.com/C2ZnZj6Gl-gAAAAM/anime-dragon-ball.gif)
-
- </div>
-
----
-
-### 🟢 Conocimiento Requerido para `CWAP-402`
-
-- [CWAP® - Certified Wireless Analysis Professional - Current version: CWAP-404 released in September 2021](https://www.cwnp.com/certifications/cwap)
-
-La tabla presentada muestra los la manera en la que el examen `CWAP-402` está dividido, según fuentes oficiales de `CWNP`
-
-<div align="center">
-  
-|     **Conocimiento CWAP**     	| **Porcentaje** 	|                                                                                                                                                                                                                             **Descripción**                                                                                                                                                                                                                             	|
-|:-----------------------------:	|:--------------:	|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:	|
-| **Protocol Analysis**         	|     **15%**    	| Se centra en el análisis y comprensión de los protocolos utilizados en redes inalámbricas, incluyendo el análisis de tramas y paquetes, y la comprensión de los diferentes campos de los encabezados de los protocolos.                                                                                                                                                                                                                                                 	|
-| **Spectrum Analysis**         	|     **10%**    	| Cubre la comprensión de los conceptos básicos de la espectroscopia y el uso de herramientas y equipos para analizar y solucionar problemas relacionados con el espectro en redes inalámbricas.                                                                                                                                                                                                                                                                          	|
-| **PHY Layers & Technologies** 	|     **10%**    	| Se enfoca en los diferentes tipos de tecnologías y técnicas utilizadas en las capas físicas (PHY) de redes inalámbricas, incluyendo las diferentes modulaciones, técnicas de codificación y características de antena.                                                                                                                                                                                                                                                  	|
-| **MAC Sublayers & Functions** 	|     **25%**    	| Cubre las diferentes subcapas y funciones de la capa de control de acceso al medio (MAC) en redes inalámbricas, incluyendo la comprensión de los diferentes métodos de acceso al medio, la planificación de canal y la gestión de tráfico.                                                                                                                                                                                                                              	|
-| **WLAN Medium Access**        	|     **10%**    	| Se centra en la comprensión de los diferentes mecanismos y técnicas utilizados para el acceso al medio en redes inalámbricas, incluyendo el protocolo de acceso múltiple por detección de portadora con evitación de colisiones (CSMA/CA).                                                                                                                                                                                                                              	|
-| **802.11 Frame Exchanges**    	|     **30%**    	| Cubre la comprensión detallada de los diferentes tipos de tramas y paquetes utilizados en redes inalámbricas, como overhead y payload. También se enfoca en el proceso de autenticación, asociación y roaming . Se cubre en detalle el proceso de transmisión y recepción de tramas y paquetes en redes inalámbricas, incluyendo los diferentes modos de operación de AP y STA, y el uso de los diferentes tipos de frames para el control y la transferencia de datos. 	|
- 
-</div>
 
 ---
 
