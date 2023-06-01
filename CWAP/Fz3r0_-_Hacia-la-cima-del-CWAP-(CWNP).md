@@ -4462,7 +4462,99 @@ La palabra `PHY` en sí misma se refiere a la capa física en general, pero en e
 
 Estos estándares definen aspectos técnicos como las frecuencias utilizadas, las tasas de transmisión, los métodos de modulación, las técnicas de acceso al medio y otros detalles relacionados con la transmisión inalámbrica.
 
-## 🟢 Selección `Tiempo de Captura`
+## 🟢 `PHY Layer`: Services
+
+Las comunicaciones `Wireless 802.11` son similares a las comunicaciones encontradas en `Ethernet 802.3` en el sentido de que utilizan `Frames` en la `MAC Sublayer` de la `Data Link Layer 1` y utilizan servicios y señalización `PHY` en la `Physical Layer 1 (PHY)`. Sin embargo, debido a la naturaleza ilimitada y compartida del medio utilizado por WiFi, que son `Radiofrencuencias (RF)` en el aire, existen algunas diferencias con Ethernet.
+
+Muchas personas asumen que lo único que necesitan entender acerca de la transmisión inalámbrica es la `contención / contention` y el `ruido / noise`, pero esto no es cierto.
+
+- **El uso de las sublayers `MAC` y `PHY` en las comunicaciones WiFi está definido dentro del `estándar 802 en la parte 11 : MAC & PHY Specifications`, también conocido como `802.11-2020` en su versión más reciente.**
+
+Existen muchas funciones en la capa física que se necesitan comprender para ser un `CWAP Engineer` exitoso. Los `PHY Services` se explican en la `cláusula 9 de 802.11-2020`, especificaciones de `PHY Services` y los detalles de las `PHY Operations` para cada `PHY` específico se definen en las `cláusulas 15 a 23`, que incluyen:
+
+- **`DSSS PHY**`
+- **`HR/DSSS PHY**`
+- **`OFDM PHY**`
+- **`ERP PHY**`
+- **`HT PHY**`
+- **`VHT PHY**`
+- **`HE PHY**`
+- **`DMG PHY**`
+- **`TVHT PHY**`
+- **`S1G PHY**`
+
+Para entender el funcionamiento de un `PHY` específico, es necesario comprender los `PHY Services` definidos en la `cláusula 8` y los detalles del PHY en la **cláusula correspondiente.** Por ejemplo, el `PHY VHT = 802.11ac : WiFi5` se encuentra en la `cláusula 21 del estándar 802.11-2020`. Para entenderlo completamente, es necesario comprender los `PHY Services` definidos en la `cláusula 8` y los detalles específicos del `PHY `definidos en la `cláusula 21`.
+
+- Según el estándar `802.11-2020`:
+
+    - Los servicios `PHY` proporcionados a la `MAC Layer` se describen en esta cláusula. Se definen diferentes `PHY` como parte de este estándar. Cada `PHY` puede consistir en las siguientes funciones de protocolo:
+
+        - a) Una función que define un **método para mapear los `MPDU` en un formato de enmarcado adecuado para enviar y recibir datos de usuario e información de gestión entre dos o más `STAs`** (Estaciones de Trabajo Inalámbricas).
+        - b) Una función que **define las características y un método para transmitir y recibir datos a través de un medio inalámbrico entre dos o más STAs.**
+
+La siguiente sección de este CANTO III se revisan más a detalle los servicios especificados en la cláusula 8 y utilizados en los servicios WiFi.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
