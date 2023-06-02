@@ -4462,7 +4462,7 @@ La palabra `PHY` en sí misma se refiere a la capa física en general, pero en e
 
 Estos estándares definen aspectos técnicos como las frecuencias utilizadas, las tasas de transmisión, los métodos de modulación, las técnicas de acceso al medio y otros detalles relacionados con la transmisión inalámbrica.
 
-## 🟢 `PHY Layer`: Services
+## 💀 `PHY Layer`: Services
 
 Las comunicaciones `Wireless 802.11` son similares a las comunicaciones encontradas en `Ethernet 802.3` en el sentido de que utilizan `Frames` en la `MAC Sublayer` de la `Data Link Layer 1` y utilizan servicios y señalización `PHY` en la `Physical Layer 1 (PHY)`. Sin embargo, debido a la naturaleza ilimitada y compartida del medio utilizado por WiFi, que son `Radiofrencuencias (RF)` en el aire, existen algunas diferencias con Ethernet.
 
@@ -4472,16 +4472,16 @@ Muchas personas asumen que lo único que necesitan entender acerca de la transmi
 
 Existen muchas funciones en la capa física que se necesitan comprender para ser un `CWAP Engineer` exitoso. Los `PHY Services` se explican en la `cláusula 9 de 802.11-2020`, especificaciones de `PHY Services` y los detalles de las `PHY Operations` para cada `PHY` específico se definen en las `cláusulas 15 a 23`, que incluyen:
 
-- **`DSSS PHY**`
-- **`HR/DSSS PHY**`
-- **`OFDM PHY**`
-- **`ERP PHY**`
-- **`HT PHY**`
-- **`VHT PHY**`
-- **`HE PHY**`
-- **`DMG PHY**`
-- **`TVHT PHY**`
-- **`S1G PHY**`
+- **`DSSS PHY`**
+- **`HR/DSSS PHY`**
+- **`OFDM PHY`**
+- **`ERP PHY`**
+- **`HT PHY`**
+- **`VHT PHY`**
+- **`HE PHY`**
+- **`DMG PHY`**
+- **`TVHT PHY`**
+- **`S1G PHY`**
 
 Para entender el funcionamiento de un `PHY` específico, es necesario comprender los `PHY Services` definidos en la `cláusula 8` y los detalles del PHY en la **cláusula correspondiente.** Por ejemplo, el `PHY VHT = 802.11ac : WiFi5` se encuentra en la `cláusula 21 del estándar 802.11-2020`. Para entenderlo completamente, es necesario comprender los `PHY Services` definidos en la `cláusula 8` y los detalles específicos del `PHY `definidos en la `cláusula 21`.
 
@@ -4494,7 +4494,22 @@ Para entender el funcionamiento de un `PHY` específico, es necesario comprender
 
 La siguiente sección de este CANTO III se revisan más a detalle los servicios especificados en la cláusula 8 y utilizados en los servicios WiFi.
 
+---
 
+### 🟢 `PHY Services` a fondo!
+
+
+Cuando una STA necesita transmitir, prepara la transmisión comenzando en la parte superior del modelo OSI y pasa la información a través de varias capas y subcapas, formateándola y encriptándola en el proceso. Cuando esa información llega a la capa 2, se le agrega la información de la subcapa MAC, como la dirección MAC. La subcapa MAC se refiere a los tramas 802.11 como la Unidad de Datos del Protocolo MAC o MPDU que se pasará a la capa PHY. Cuando se recibe un trama, cambiando la direccionalidad de los tramas, estos viajan hacia arriba en el modelo OSI en lugar de hacia abajo. La capa física se refiere al trama MAC (MPDU) como una Unidad de Datos del Servicio de la Capa Física o PSDU. Ambos términos son correctos.
+
+- El término que debes usar para describir la carga útil encapsulada debe reflejar la subcapa desde la cual se recibe el tráfico y la dirección de recepción.
+
+Las transmisiones deben ser referidas como MSDU a medida que pasan a través de la subcapa MAC de la Capa 2 y se convierten en un MPDU, y como PSDU al pasar por la Capa PHY.
+Puede ser confuso, solo recuerda: ambos términos se refieren a las cargas útiles de la capa 3 en adelante, ya que están encapsuladas en la transmisión o recepción por la Capa 1 y la Capa 2.
+Cuando la Capa PHY recibe el MPDU de la subcapa MAC, se agregan el preámbulo adecuado y el Encabezado PHY a los materiales para crear la Unidad de Datos del Protocolo de la Capa Física o PPDU. La Capa MAC se comunica con la Capa PHY a través de "primitivas" a través de un Punto de Acceso de Servicio (SAP).
+
+- Primitivas: Un conjunto de "comandos instructivos" o "instrucciones fundamentales".
+
+Cuando la subcapa MAC indica que así se haga, la Capa PHY prepara los MPDU para la transmisión. La Capa PHY también pasa los tramas recibidos a la subcapa MAC al recibirlos del medio inalámbrico y determinar que el trama está destinado a la estación local.
 
 
 
