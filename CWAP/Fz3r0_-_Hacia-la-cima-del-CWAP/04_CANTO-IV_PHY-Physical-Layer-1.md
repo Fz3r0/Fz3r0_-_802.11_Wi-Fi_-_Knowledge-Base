@@ -60,8 +60,13 @@ La siguiente sección de este CANTO III se revisan más a detalle los servicios 
 
 ### 🟢 `PHY Services` a fondo!
 
+Cuando una `STA` necesita transmitir, prepara la transmisión comenzando en la parte superior del `OSI Model` y pasa la información a través de varios `Layers` y `Sublayers`, formateándola y encriptándola en el proceso. Cuando esa información llega a `Layer 2`, se le agrega la información de la `MAC Sublayer`, como la `MAC Address`. La `MAC Sublayer` se refiere a los `802.11 Frames` como la `MAC Protocol Data Unit - MPDU` que se pasará a la `PHY Layer 1`. 
 
-Cuando una STA necesita transmitir, prepara la transmisión comenzando en la parte superior del modelo OSI y pasa la información a través de varias capas y subcapas, formateándola y encriptándola en el proceso. Cuando esa información llega a la capa 2, se le agrega la información de la subcapa MAC, como la dirección MAC. La subcapa MAC se refiere a los tramas 802.11 como la Unidad de Datos del Protocolo MAC o MPDU que se pasará a la capa PHY. Cuando se recibe un trama, cambiando la direccionalidad de los tramas, estos viajan hacia arriba en el modelo OSI en lugar de hacia abajo. La capa física se refiere al trama MAC (MPDU) como una Unidad de Datos del Servicio de la Capa Física o PSDU. Ambos términos son correctos.
+    - **Es decir, en `MAC Layer 2` al `PDU` se le denomina `MPDU`** 
+
+Cuando se recibe un frame, cambiando la direccionalidad de los frames, estos viajan hacia arriba en el modelo OSI en lugar de hacia abajo. En `PHY Layer 1` el `MPDU` que viene de arriba se le denomina `Protocol Service Data Unit - PSDU`. Ambos términos son correctos.
+
+    - **Es decir, en `PHY Sublayer` al `PDU` se le denomina `PPDU` el cual contiene el `MPDU` como su `payload`** 
 
 - El término que debes usar para describir la carga útil encapsulada debe reflejar la subcapa desde la cual se recibe el tráfico y la dirección de recepción.
 
