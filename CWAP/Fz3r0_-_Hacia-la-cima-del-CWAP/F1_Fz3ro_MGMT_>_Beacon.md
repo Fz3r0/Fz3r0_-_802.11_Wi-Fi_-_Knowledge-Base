@@ -19,6 +19,8 @@ Los valores por default de un Beacon Frame son los siguientes:
 - **`1 TU` = 1024 microsegundos**
 - **`Beacon interval`  = 100 TU** (100 x 1024 microsegundos o 102.4 milisegundos)
 
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/88424fcf-e9cf-4889-801a-69fbaa74c44a)
+
 ## Beacon Frame: `Frame Format`
 
 Este es el Frame Format de un Beacon Frame:
@@ -28,6 +30,8 @@ Este es el Frame Format de un Beacon Frame:
 ## Beacon Frame: `Frame Body`
 
 - En la sección del `Frame Body`, hay algunos **campos obligatorios** y algunos **campos opcionales**. 
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/1c129e19-63c3-465a-9423-f48420682ea6)
 
 Aquí están los campos obligatorios en un `Beacon Frame`:
 
