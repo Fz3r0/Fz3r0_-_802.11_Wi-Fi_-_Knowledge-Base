@@ -74,6 +74,8 @@ wlan.fixed.timestamp == 2078442701205
 - `Beacon` 
 - `Probe Response`    
 
+**Ejemplo:**
+
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f5f9fcbb-cbf5-4056-90aa-a1c79f16eabd)
 
 ---
@@ -96,6 +98,8 @@ wlan.fixed.beacon == 100
 **Este campo se encuentra en los Frames:**
 
 - `Beacon` 
+
+**Ejemplo:**
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/89935078-04ed-49dc-88ae-fbd0b8c2d053)
 
@@ -164,6 +168,8 @@ wlan.fixed.capabilities.reserved6 == 0
 
 - `Beacon` 
 
+**Ejemplo:**
+
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/0aa3320b-1965-4f1f-b1d5-d8a16d1fbe90)
 
 ---
@@ -193,19 +199,52 @@ wlan.ssid == "Fz3r0"
 
 - `Beacon` 
 
+**Ejemplo:**
+
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a812eca5-92b9-44e7-b4cf-92ff23422491)
 
+---
+
+<br><br>
+
+## `Supported Rates` - 8 byte
+
+**BlackShark Filter:**
+
+````py
+### Supported Data Rate = 24mbps
+wlan.supported_rates == 0xb0
+
+### Supported Data Rate = 36mbps
+wlan.supported_rates == 0x48
+
+### Supported Data Rate = 24mbps
+wlan.supported_rates == 0x60
+
+### Supported Data Rate = 24mbps
+wlan.supported_rates == 0x6c
+````
+
+**Descripción:**
+
+- Es un campo de `8 octetos` donde **cada octeto describe una `Data Rate` soportada.** 
+- Tiene los campos `Element ID`, `Length` y `Supported Rates`. 
+- El `AP` debe establecer al menos un rate obligatorio y cualquier `STA` que desee unirse a la celda debe ser copatible con los `Basic Rates`. 
+
+**Este campo se encuentra en los Frames:**
+
+- `Beacons`
+- `Probe Requests`
+- `Probe Responses`
+- `Association Request`
+- `Re-Association Requests`
+- `Re-Association Response`
+
+**Ejemplo:**
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/5329371d-b715-4f37-95d3-becc9d7be761)
 
 
-
-
-| **Beacon Field**             | **Lenght** | **Descripción**                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-|------------------------------|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **`Timestamp`**              | `8 byte`   | Un valor que representa el tiempo en el que el AP ha estado activo, que es el número de **microsegundos que el AP ha estado en funcionamiento**.<br> <br>Cuando el timestamp alcanza su máximo (2^64 microsegundos o ~580,000 años), se reinicia a 0. <br><br>Este campo se encuentra en los Frames: `Beacon` & `Probe Response`                                                                                                                                                           |
-| **`Beacon Interval`**        | `2 byte`   | Este campo representa el número de `Time Units (TU)` entre los tiempos de `Target Beacon Trasmission Times (TBTT)`.<br><br>El **valor default** es `100 TU` (102.4 milisegundos).                                                                                                                                                                                                                                                                                                          |
-| **`Capability Information`** | `2 byte`   | Este campo contiene una serie de **subcampos** que se utilizan para indicar las capacidades opcionales solicitadas o anunciadas.                                                                                                                                                                                                                                                                                                                                                           |
-| **`SSID`**                   | _Variable_ | El ID del elemento es `0` para el `Information Element (IE)` de `SSID`. <br><br>El `SSID` puede tener un **máximo de 32 caracteres**. <br><br>Este campo se encuentra en los Frames: `Beacons`, `Probe Requests`, `Probe Responses`, `Association Request` & `Re-Association Requests`.                                                                                                                                                                                                    |
-| **`Supported Rates`**        | `8 byte`   | Es un campo de `8 octetos` donde **cada octeto describe una `Data Rate` soportada.** <br><br>Tiene los campos `Element ID`, `Length` y `Supported Rates`. <br><br>El `AP` debe establecer al menos un rate obligatorio y cualquier `STA` que desee unirse a la celda debe ser copatible con los `Basic Rates`. <br><br>Este campo se encuentra en los Frames: `Beacons`, `Probe Requests`, `Probe Responses`, `Association Request`, `Re-Association Requests` & `Re-Association Response` |
 
 ## Recursos
 
