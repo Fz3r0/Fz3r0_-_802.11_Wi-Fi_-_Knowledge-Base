@@ -1,5 +1,13 @@
 # Management Frames: `Beacon`
 
+## Fz3r0 Lab: `Beacon Frame`
+
+Los PCAPs utilizados para los ejemplos de este bloque son los siguientes:
+
+- [`PCAP1` - **Fz3r0 Beacon Frame** - Ruckus R850 - 2.4 GHz Channel 11 - ESS Centralized Controller](https://github.com/Fz3r0/Fz3r0_-_BlackShark/files/11779892/Beacon_Fz3r0_CH_11.zip)
+
+## Beacon Frames
+
 Los `Beacon Frames` son utilizados por los `APs` (y `STAs` en una `IBSS`) para **comunicar a través del área de servicio las características de la conexión ofrecida a los miembros de una `WLAN` dentro de la celda de cobertura del `AP`. Esta información es utilizada por los clientes que intentan conectarse a la red, así como por los clientes que ya están asociados al `BSS`.**
 
 - Las Beacon Frames se envían periódicamente en un momento llamado `Target Beacon Transmission Time (TBTT).`
@@ -9,9 +17,13 @@ Los valores por default de un Beacon Frame son los siguientes:
 - **`1 TU` = 1024 microsegundos**
 - **`Beacon interval`  = 100 TU** (100 x 1024 microsegundos o 102.4 milisegundos)
 
+## Beacon Frame: `Frame Format`
+
 Este es el Frame Format de un Beacon Frame:
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/2ac8ca5b-c2c8-4fe2-9fea-764ff9e57f77)
+
+## Beacon Frame: `Frame Body`
 
 - En la sección del `Frame Body`, hay algunos **campos obligatorios** y algunos **campos opcionales**. 
 
