@@ -104,7 +104,56 @@ wlan.fixed.beacon == 100
 **BlackShark Filter:**
 
 ````py
+## Capabilities
+wlan.fixed.capabilities == 0x1511
 
+### ESS capabilites 
+wlan.fixed.capabilities.ess == 1
+
+### IBSSS status
+wlan.fixed.capabilities.ibss == 0
+
+### Reserved 1
+wlan.fixed.capabilities.reserved1 == 0
+
+### Reserved 2
+wlan.fixed.capabilities.reserved2 == 0
+
+### Privacy 
+wlan.fixed.capabilities.privacy == 1
+
+### Short Preamble
+wlan.fixed.capabilities.short_preamble == 0
+
+### Reserved 3
+wlan.fixed.capabilities.reserved3 == 0
+
+### Reserved 4
+wlan.fixed.capabilities.reserved4 == 0
+
+### Spectrum Management
+wlan.fixed.capabilities.spec_man == 1
+
+### QoS
+wlan.fixed.capabilities.qos == 0
+
+### Short Slot Time
+wlan.fixed.capabilities.short_slot_time == 1
+
+### Automatic Power Save Delivery
+wlan.fixed.capabilities.apsd == 0
+
+### Radio Measurement
+wlan.fixed.capabilities.radio_measurement == 1
+
+### EPD
+wlan.fixed.capabilities.epd == 0
+
+### Reserved 5
+wlan.fixed.capabilities.reserved5 == 0
+
+### Reserved 6
+wlan.fixed.capabilities.reserved6 == 0
 ````
 
 **Descripción**
