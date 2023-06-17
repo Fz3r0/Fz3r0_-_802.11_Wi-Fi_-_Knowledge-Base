@@ -4,7 +4,7 @@
 
 Los PCAPs utilizados para los ejemplos de este bloque son los siguientes:
 
-- [`PCAP1` - **Fz3r0 Beacon Frame** - Ruckus R850 - 2.4 GHz Channel 11 - ESS Centralized Controller](https://github.com/Fz3r0/Fz3r0_-_BlackShark/files/11779892/Beacon_Fz3r0_CH_11.zip)
+- [`PCAP1` - **Fz3r0 Beacon Frame** - Ruckus R850 - 2.4 GHz Channel 11 - WPA2 - ESS Centralized Controller](https://github.com/Fz3r0/Fz3r0_-_BlackShark/files/11779892/Beacon_Fz3r0_CH_11.zip)
 
 ## Beacon Frames
 
