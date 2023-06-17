@@ -158,10 +158,42 @@ wlan.fixed.capabilities.reserved6 == 0
 
 **Descripción**
 
+- Este campo contiene una serie de **subcampos** que se utilizan para indicar las capacidades opcionales solicitadas o anunciadas.   
 
 **Este campo se encuentra en los Frames:**
 
+- `Beacon` 
 
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/0aa3320b-1965-4f1f-b1d5-d8a16d1fbe90)
+
+---
+
+<br><br>
+
+## `SSID` - _Variable_
+
+**BlackShark Filter:**
+
+````py
+### Tag Number
+wlan.tag.number == 0
+
+### Tag Lenght
+wlan.tag.length == 5
+
+### SSID
+wlan.ssid == "Fz3r0"
+````
+
+**Descripción**
+
+- Este campo contiene una serie de **subcampos** que se utilizan para indicar las capacidades opcionales solicitadas o anunciadas.   
+
+**Este campo se encuentra en los Frames:**
+
+- `Beacon` 
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a812eca5-92b9-44e7-b4cf-92ff23422491)
 
 
 
