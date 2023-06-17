@@ -7,6 +7,9 @@ Los PCAPs utilizados para los ejemplos de este bloque son los siguientes:
 - [`PCAP1` - **Fz3r0 Beacon** - Ruckus R850 - 2.4 GHz Ch 11 - WPA2 - ESS Centralized WLC - 1mb Data Rate Legacy Compatible](https://github.com/Fz3r0/Fz3r0_-_BlackShark/files/11779892/Beacon_Fz3r0_CH_11.zip)
 - [`PCAP2` - **Fz3r0 Beacon** - Ruckus R850 - 5 GHz Ch 60 - WPA2 - ESS Centralized WLC - 24mb Data Rate OFDM Only](https://github.com/Fz3r0/Fz3r0_-_BlackShark/files/11779906/Beacon_Fz3r0_CH_60.zip)
 
+---
+
+<br><br>
 
 ## Beacon Frames
 
@@ -21,19 +24,37 @@ Los valores por default de un Beacon Frame son los siguientes:
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/88424fcf-e9cf-4889-801a-69fbaa74c44a)
 
+---
+
+<br><br>
+
 ## Beacon Frame: `Frame Format`
 
 Este es el Frame Format de un Beacon Frame:
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/2ac8ca5b-c2c8-4fe2-9fea-764ff9e57f77)
 
+---
+
+<br><br>
+
 ## Beacon Frame: `Frame Body`
 
 - En la sección del `Frame Body`, hay algunos **campos obligatorios** y algunos **campos opcionales**. 
 
+Estos son los campos obligatorios en un `Beacon Frame`:
+
+1. **`Timestamp`** (8 byte)
+2. **`Beacon Interval`** (2 byte)
+3. **`Capability info`** (2 byte)
+4. **`SSID`** (variable size)
+5. **`Supported Rates`** (variable size)
+
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/1c129e19-63c3-465a-9423-f48420682ea6)
 
-Aquí están los campos obligatorios en un `Beacon Frame`:
+---
+
+<br><br>
 
 ## `Timestamp` - 8 byte
 
@@ -54,6 +75,10 @@ wlan.fixed.timestamp == 2078442701205
 - `Probe Response`    
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f5f9fcbb-cbf5-4056-90aa-a1c79f16eabd)
+
+---
+
+<br><br>
 
 ## `Beacon Interval` - 2 byte
 
