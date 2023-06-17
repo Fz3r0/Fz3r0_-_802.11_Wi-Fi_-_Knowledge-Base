@@ -1,3 +1,9 @@
+# Hacia la cima del `CWAP-402`: <br> `Certified Wireless Analysis Professional` 📡🔍🦈  
+
+![image](https://user-images.githubusercontent.com/94720207/226141680-289c202f-47d7-48d8-b61a-950372a58da0.png)
+
+<br><br><br>
+
 # 👹 `CANTO I`: Introducción
 
 La certificación **`CWAP (Certified Wireless Analysis Professional)`**, otorgada por la prestigiosa organización **`CWNP (Certified Wireless Network Professional)`**, representa una credencial de alto nivel en el ámbito de las `Wireless Networks`. Diseñada específicamente para aquellos profesionales que buscan demostrar su competencia en el **análisis avanzado y resolución de problemas en entornos de redes inalámbricas**, esta certificación implica un conocimiento profundo de `Wireless Network Protocols`, `Wireless Network Security` y `High-Performance Wireless Network Design`. <br>
