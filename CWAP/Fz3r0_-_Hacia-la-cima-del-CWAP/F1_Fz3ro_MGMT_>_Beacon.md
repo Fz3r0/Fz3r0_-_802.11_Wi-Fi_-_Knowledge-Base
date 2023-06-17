@@ -35,6 +35,64 @@ Este es el Frame Format de un Beacon Frame:
 
 Aquí están los campos obligatorios en un `Beacon Frame`:
 
+## `Timestamp` - 8 byte
+
+**BlackShark Filter:**
+
+````py
+wlan.fixed.timestamp == 2078442701205
+````
+
+**Descripción**
+
+- Un valor que representa el tiempo en el que el AP ha estado activo, que es el número de **microsegundos que el AP ha estado en funcionamiento**.
+- Cuando el timestamp alcanza su máximo (2^64 microsegundos o ~580,000 años), se reinicia a 0. 
+
+**Este campo se encuentra en los Frames:**
+
+- `Beacon` 
+- `Probe Response`    
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f5f9fcbb-cbf5-4056-90aa-a1c79f16eabd)
+
+## `Beacon Interval` - 2 byte
+
+**BlackShark Filter:**
+
+````py
+wlan.fixed.beacon == 100
+````
+
+**Descripción**
+
+- Este campo representa el número de `Time Units (TU)` entre los tiempos de `Target Beacon Trasmission Times (TBTT)`.
+- El **valor default** es `100 TU` (102.4 milisegundos) = **`0.102400 segundos`**
+
+**Este campo se encuentra en los Frames:**
+
+- `Beacon` 
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/89935078-04ed-49dc-88ae-fbd0b8c2d053)
+
+### `Capability Information` - 2 byte
+
+**BlackShark Filter:**
+
+````py
+
+````
+
+**Descripción**
+
+
+**Este campo se encuentra en los Frames:**
+
+
+
+
+
+
+
 | **Beacon Field**             | **Lenght** | **Descripción**                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |------------------------------|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **`Timestamp`**              | `8 byte`   | Un valor que representa el tiempo en el que el AP ha estado activo, que es el número de **microsegundos que el AP ha estado en funcionamiento**.<br> <br>Cuando el timestamp alcanza su máximo (2^64 microsegundos o ~580,000 años), se reinicia a 0. <br><br>Este campo se encuentra en los Frames: `Beacon` & `Probe Response`                                                                                                                                                           |
