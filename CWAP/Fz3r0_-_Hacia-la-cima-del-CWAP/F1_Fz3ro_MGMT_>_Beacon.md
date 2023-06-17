@@ -218,10 +218,10 @@ wlan.supported_rates == 0xb0
 ### Supported Data Rate = 36mbps
 wlan.supported_rates == 0x48
 
-### Supported Data Rate = 24mbps
+### Supported Data Rate = 48mbps
 wlan.supported_rates == 0x60
 
-### Supported Data Rate = 24mbps
+### Supported Data Rate = 54mbps
 wlan.supported_rates == 0x6c
 ````
 
