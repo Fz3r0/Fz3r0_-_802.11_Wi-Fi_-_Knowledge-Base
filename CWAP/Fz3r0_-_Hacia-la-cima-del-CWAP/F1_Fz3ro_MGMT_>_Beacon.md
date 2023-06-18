@@ -913,23 +913,31 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 ### Descripción:
 
-- El elemento ERP (Información de ERP, por sus siglas en inglés) consta de 3 bytes y está presente solo en redes de 2.4 GHz que admiten 802.11g. 
-- Se encuentra en los marcos de baliza y respuestas de sondeo. 
-- En el contexto de la ERP, se utiliza la modulación OFDM (Orthogonal Frequency Division Multiplexing) para lograr tasas de datos más altas y una mejor eficiencia espectral en comparación con el estándar 802.11b, que utiliza la modulación DSSS (Direct Sequence Spread Spectrum). 
+- El elemento ERP "Enhanced Rate PHY" o "Física de Tasa Mejorada" consta de 3 bytes y **está presente solo en redes de 2.4 GHz que admiten 802.11g**. 
+- Se refiere a un conjunto de mejoras y modificaciones introducidas en el estándar 802.11 para admitir tasas de datos más altas y una mayor eficiencia en la transmisión de datos. 
+- El modo ERP permite tasas de datos más altas, como las especificadas en el estándar 802.11g, que utiliza modulación OFDM en comparación con las tasas más bajas del estándar 802.11b, que utiliza modulación DSSS.  
 - La capa física ERP se utiliza en redes Wi-Fi que admiten el estándar 802.11g y permite tasas de datos más rápidas y una mayor capacidad de transmisión.
  
-El bit no-ERP_Present se establece en 1 en las siguientes condiciones:
+Cuando el bit `no-ERP_Present` se establece en `1` en las siguientes condiciones:
 
-1. Una estación no-ERP (802.11 heredado o 802.11b) se asocia a la célula.
-2. Se detecta una célula vecina que permite solo tasas de datos no-ERP.
+1. Una estación no-ERP (802.11 heredado o 802.11b) se asocia a la celda.
+2. Se detecta una celda vecina que permite solo tasas de datos no-ERP.
 3. Se recibe cualquier otro marco de administración (excepto solicitud de sondeo) de una célula vecina que admite solo tasas de datos no-ERP.
 
 ### Disponible en Frames:
 
-- 
+- `Beacons` _solo 2.4 GHz_
+- `Probe Response` _solo 2.4 GHz_
+
+### Fz3r0 Troubleshooting Tip!!!:
+
+**Filtrar estos beacons con `1` permite saber si hay alguna red alrededor soportando legacy, lo que puede significar data rates reducidos u otras singularidades. Por ejemplo, redes sin `OFDM Only` con un dispositivo/cliente que esté utilizando 802.11b DSSS está asociado a ese AP**
 
 ### Ejemplo:
 
+
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a1a59a93-2904-4930-983e-8e95e41f8691)
 
 
 
