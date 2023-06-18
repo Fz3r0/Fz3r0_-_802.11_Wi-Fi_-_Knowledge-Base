@@ -612,6 +612,60 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
+## `Country Information` - _Variable_
+
+### BlackShark Filter:
+
+````py
+### Tag Number
+wlan.tag.number == 7
+
+### Lenght
+wlan.tag.length == 36
+
+### Country Code
+wlan.country_info.code == "MX"
+
+### Enviorment
+wlan.country_info.environment == 32
+
+### First Channel Number (Principal en caso de 40MHz o más)
+wlan.country_info.fnm.fcn == 36
+
+### Maximum Transmit Power Level
+wlan.country_info.fnm.mtpl == 23
+
+````
+
+---
+
+### Descripción:
+
+- Cada país tiene organismos reguladores que limitan los canales o niveles de potencia permitidos en su dominio regulatorio. 
+- Este campo define el país de operación junto con los canales permitidos y la potencia máxima de transmisión. 
+- Este campo no es obligatorio en un Beacon.
+
+---
+
+### Ejemplo:
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/e7202c08-398d-4440-afbf-75cbafa0df67)
+
+
+
+---
+
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
 
 
 
@@ -626,6 +680,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 
 
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/ca62fcbd-ac2e-4858-8cb5-e50b999a1410)
 
 
 
@@ -636,7 +691,8 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 
 
-Espero que esta traducción sea de ayuda.
+Country
+
 
 
 
