@@ -550,13 +550,25 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 ````py
 ### Tag Number
-wlan.tag.number == 3
+wlan.tag.number == 5
 
-### Tag Lenght
-wlan.tag.length == 1
+### Lenght
+wlan.tag.length == 4
 
-### Current Channel
-wlan.ds.current_channel == 60
+### DTIM Count
+wlan.tim.dtim_count == 0
+
+### DTIM Period
+wlan.tim.dtim_period == 1
+
+### Multicast Pendientes
+wlan.tim.bmapctl.multicast == 0
+
+### Bitmap Control Offset
+wlan.tim.bmapctl.offset == 0x00
+
+### Partial Virtual Bitmap
+wlan.tim.partial_virtual_bitmap == 00
 ````
 
 ---
@@ -568,14 +580,18 @@ wlan.ds.current_channel == 60
 - El `AP` utiliza el `Delivery Traffic Indication Map (DTIM)` para informar a la celda si tiene `broadcast frames` o `multicast frames` almacenadas en búfer. 
 - **El `DTIM` no está presente en todas los `Beacons` y todos los `TIMs`. En ocasiones puede variar, por ejemplo, cada 3 Beacons.**
 
+---
+
 ### Campos TIM:
 
-- Element ID (1 byte): Identificador del elemento.
+- `Element ID` (1 byte): Identificador del elemento.
 - Length (4 byte): Longitud del campo.
 - DTIM Count (1 byte): Cantidad de marcos de baliza (incluido el actual) antes del próximo DTIM. **El valor `0` indica que el `TIM actual` es un `DTIM`**.
 - DTIM Period (1 byte): Número de intervalos de Beacons entre DTIM sucesivos.
 - Bitmap Control (1 byte): Si el primer bit es 1, indica que hay datos multidifusión/difusión almacenados en búfer en el AP. Si el primer bit es 0, no hay datos multidifusión/difusión en el AP.
 - Partial Virtual Bitmap (1-251 byte): Representa las estaciones en modo de bajo consumo de energía para las cuales el AP tiene tráfico almacenado en búfer.
+
+---
 
 ### Ejemplo:
 
