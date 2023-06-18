@@ -384,6 +384,63 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
+---
+
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
+
+## `DS Parameter` - 2 byte
+
+**BlackShark Filter:**
+
+````py
+### Tag Number
+wlan.tag.number == 3
+
+### Tag Lenght
+wlan.tag.length == 1
+
+### Current Channel
+wlan.ds.current_channel == 60
+````
+
+**Descripción:**
+
+- El `DS Parameter` indica **el conjunto de canales permitidos para su uso en la red.**
+- `DS` es la abreviatura de `Distribution System`. 
+- `DS` se refiere al `sistema de distribución` que proporciona conectividad entre las `STA` móviles (por ejemplo, dispositivos cliente) y los `AP` en una red inalámbrica. 
+- Este parámetro está presente en los `Beacon Frames` generados por `STA` que utilizan `PHY` según lo definido en las `cláusulas 15, 18 o 19` del estándar `IEEE 802.11`. 
+- También puede estar presente si la `Beacon Frames` se envía utilizando una de las tasas definidas en alguna de estas cláusulas. 
+- El Tag number es su identificador específico. 
+
+**Fz3r0 Troubleshooting Tip!!!:**
+
+**Cuando un Beacon tiene este campo opcional se puede saber el canal real en el que se encuentra ese AP, no corresponde al canal en el que se está capturando. Esto es importante en la red 2.4 para identificar interferencias ACI, ya que si por ejemplo estoy en `canal 11` podría cpaturar interferencias de canales alrededor, como `9` y `10`**
+
+**Ejemplo:**
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/eafdb15e-db4e-44c7-8c27-1a6cbb715d8c)
+
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
 
 
 
@@ -412,7 +469,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 FH parameter set: 
 
-DS Parameter (2 byte): Este parámetro está presente en los marcos de baliza generados por estaciones que utilizan PHY (capa física) según lo definido en las cláusulas 15, 18 o 19 del estándar IEEE 802.11. También puede estar presente si la baliza se envía utilizando una de las tasas definidas en alguna de estas cláusulas. El DS Parameter indica el conjunto de canales permitidos para su uso en la red.
+DS Parameter (2 byte): 
 
 CF Parameter (8 byte): El parámetro CF (Control Frame) se utiliza en conjunción con el PCF (Point Coordination Function) que es parte del estándar IEEE 802.11. Sin embargo, en la práctica, este parámetro no se utiliza comúnmente en redes reales, ya que el PCF no es ampliamente implementado.
 
