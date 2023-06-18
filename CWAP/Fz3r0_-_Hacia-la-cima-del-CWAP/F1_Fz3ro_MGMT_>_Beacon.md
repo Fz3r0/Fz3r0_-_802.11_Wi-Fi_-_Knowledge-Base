@@ -101,9 +101,13 @@ Estos son los campos obligatorios en un `Beacon Frame`:
 
 ---
 
-### Ejemplo:
+### Ejemplo 1: `Ruckus R850` + `SmartZone`
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/1c129e19-63c3-465a-9423-f48420682ea6)
+
+### Ejemplo 2: `Telmex Generic Home Wi-Fi Router`
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/8fd599f5-5773-440f-97c8-608bec4977ab)
 
 ---
 
