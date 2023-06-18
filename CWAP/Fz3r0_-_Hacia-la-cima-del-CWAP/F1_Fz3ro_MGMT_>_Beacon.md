@@ -713,11 +713,153 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 - Al seguir el patrón de salto de frecuencia definido en la tabla, las estaciones pueden cambiar rápidamente entre frecuencias para mitigar las interferencias y mejorar la robustez de la comunicación.
 - la técnica de salto de frecuencia es menos común en las redes inalámbricas modernas, ya que ha sido reemplazada en gran medida por otras técnicas más eficientes y avanzadas, como la modulación OFDM utilizada en los estándares Wi-Fi más recientes.
 
+---
+
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
+
+## 14 - `Power Constraint` - 3 byte
+
+### BlackShark Filter:
+
+````py
+### Tag Number
+wlan.tag.number == 32
+
+### Lenght
+wlan.tag.length == 1
+
+---
+
+### Local Power Constraint
+wlan.powercon.local == 0
+````
+
+---
+
+### Descripción:
+
+- Este elemento está relacionado con el estándar 802.11h. 
+- Se aplica a las bandas UNII2 y UNII-2 extendida (CH52,56,60,64 y CH100-139) donde el espectro se utiliza para otros fines, como el radar de aeropuertos civiles y el radar meteorológico. Para evitar interferencias con esos sistemas, el punto de acceso (AP) debe operar a la potencia máxima especificada por estos campos de restricción.
+- El estándar 802.11h es una extensión del estándar IEEE 802.11 que se enfoca en la implementación de mecanismos de mitigación de interferencias, gestión dinámica de canales y mejoramiento de la coexistencia de redes inalámbricas.
+- El objetivo principal del 802.11h es permitir una operación más eficiente y confiable de las redes Wi-Fi en entornos donde se comparte el espectro con otros sistemas, como el radar de aeropuertos y otras aplicaciones gubernamentales.
+
 ### Disponible en Frames:
 
-- 
+- `Beacons`
+- `Probe Requests`
+- `Association Request`
 
 ### Ejemplo:
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/19af10d1-2e74-42b0-abc6-d665f0e757b4)
+
+---
+
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
+
+## 15 - `Channel Switch` - 6 byte
+
+### BlackShark Filter:
+
+````py
+
+````
+
+---
+
+### Descripción:
+
+- Esto también está relacionado con el estándar 802.11h. 
+- Cuando se detecta una explosión de radar, todas las estaciones deben abandonar el canal afectado. El punto de acceso (AP) puede configurarse para anunciar a la célula cuál será el siguiente canal.
+
+---
+
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+## 16 - `Quiet` - 8 byte
+
+### BlackShark Filter:
+
+````py
+
+````
+
+---
+
+### Descripción:
+
+- Otro elemento relacionado con el estándar 802.11h. 
+- Permite que un punto de acceso (AP) solicite un tiempo de silencio durante el cual ninguna estación debe transmitir con el fin de realizar pruebas en el canal para detectar la presencia de radares.
+
+---
+
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+ 
+ ## 17 - `IBSS DFS` - _Variable_
+
+### BlackShark Filter:
+
+````py
+
+````
+
+---
+
+### Descripción:
+
+- Utilizado con el estándar 802.11h en una red de Servicio Básico Independiente (IBSS, por sus siglas en inglés).
+
+---
+
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
