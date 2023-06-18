@@ -517,6 +517,84 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
+## `IBSS parameter` - 4 byte
+
+### BlackShark Filter:
+
+````py
+
+````
+
+---
+
+### Descripción:
+
+- Este parámetro está presente solo en los `Beacon Frames` generados por `STAs` en redes `IBSS (Independent Basic Service Set)` o redes `ad-hoc`. 
+- El `IBSS` parameter proporciona **información específica sobre la configuración y características de la red `ad-hoc`, como el `operation mode` y las `capabilities` admitidas.
+
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
+
+## `TIM (Traffic Indication Map)` - 2 byte
+
+### BlackShark Filter:
+
+````py
+### Tag Number
+wlan.tag.number == 3
+
+### Tag Lenght
+wlan.tag.length == 1
+
+### Current Channel
+wlan.ds.current_channel == 60
+````
+
+---
+
+### Descripción:
+
+- Presente solo en los `Beacon Frames` generados por `APs`. 
+- El elemento `TIM` contiene información útil para las estaciones en modo de bajo consumo de energía. 
+- El `AP` utiliza el `Delivery Traffic Indication Map (DTIM)` para informar a la celda si tiene `broadcast frames` o `multicast frames` almacenadas en búfer. 
+- **El `DTIM` no está presente en todas los `Beacons` y todos los `TIMs`.**
+
+### Campos TIM:
+
+- Element ID (1 byte): Identificador del elemento.
+- Length (4 byte): Longitud del campo.
+- DTIM Count (1 byte): Cantidad de marcos de baliza (incluido el actual) antes del próximo DTIM. **El valor `0` indica que el `TIM actual` es un `DTIM`**.
+- DTIM Period (1 byte): Número de intervalos de Beacons entre DTIM sucesivos.
+- Bitmap Control (1 byte): Si el primer bit es 1, indica que hay datos multidifusión/difusión almacenados en búfer en el AP. Si el primer bit es 0, no hay datos multidifusión/difusión en el AP.
+- Partial Virtual Bitmap (1-251 byte): Representa las estaciones en modo de bajo consumo de energía para las cuales el AP tiene tráfico almacenado en búfer.
+
+### Ejemplo:
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/b25024c4-006b-4561-b23a-1c87ba4ede7a)
+
+
+---
+
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
 
 
 
@@ -541,15 +619,8 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 
 
-FH parameter set: 
 
-DS Parameter (2 byte): 
-
-CF Parameter (8 byte): 
-
-IBSS parameter (4 byte): Este parámetro está presente solo en los marcos de baliza generados por estaciones en redes IBSS (Independent Basic Service Set) o redes ad-hoc. El IBSS parameter proporciona información específica sobre la configuración y características de la red ad-hoc, como el modo de operación y las capacidades admitidas.
-
-
+Espero que esta traducción sea de ayuda.
 
 
 
