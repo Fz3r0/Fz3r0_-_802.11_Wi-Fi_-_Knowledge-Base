@@ -123,11 +123,11 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-# Frame Body: `Mandatory Fields`
+# Beacon Frame Body: `Mandatory Fields`
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/df5d86c3-ff5a-4453-9554-c6b4e5b29067)
 
-## `Timestamp` - 8 byte
+## 01 - `Timestamp` - 8 byte
 
 ### BlackShark Filter:
 
@@ -169,7 +169,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## `Beacon Interval` - 2 byte
+## 02 - `Beacon Interval` - 2 byte
 
 ### BlackShark Filter:
 
@@ -210,7 +210,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## `Capability Information` - 2 byte
+## 03 - `Capability Information` - 2 byte
 
 ### BlackShark Filter:
 
@@ -295,7 +295,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## `SSID` - _Variable_
+## 04 - `SSID` - _Variable_
 
 ### BlackShark Filter:
 
@@ -350,7 +350,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## `Supported Rates` - 8 byte
+## 05 - `Supported Rates` - 8 byte
 
 ### BlackShark Filter:
 
@@ -403,7 +403,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-# Frame Body: `Optional Fields`
+# Beacon Frame Body: `Optional Fields`
 
 ### Ejemplo 1: Ruckus
 
@@ -413,7 +413,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/13c894cb-21ba-4f70-8c5f-f4982ad1331c)
 
-## `FH parameter set` - _Variable_
+## 06 - `FH parameter set` - _Variable_
 
 ### BlackShark Filter:
 
@@ -442,7 +442,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## `DS Parameter` - 2 byte
+## 07 - `DS Parameter` - 2 byte
 
 ### BlackShark Filter:
 
@@ -490,7 +490,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## `CF Parameter (8 byte)` - 2 byte
+## 08 - `CF Parameter (8 byte)` - 2 byte
 
 ### BlackShark Filter:
 
@@ -517,7 +517,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## `IBSS parameter` - 4 byte
+## 09 - `IBSS parameter` - 4 byte
 
 ### BlackShark Filter:
 
@@ -544,7 +544,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## `TIM (Traffic Indication Map)` - 2 byte
+## 10 - `TIM (Traffic Indication Map)` - 2 byte
 
 ### BlackShark Filter:
 
@@ -612,7 +612,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## `Country Information` - _Variable_
+## 11 - `Country Information` - _Variable_
 
 ### BlackShark Filter:
 
@@ -651,7 +651,35 @@ wlan.country_info.fnm.mtpl == 23
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/e7202c08-398d-4440-afbf-75cbafa0df67)
 
+---
 
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
+
+## 12 - `FH Parameters` - _Variable_
+
+### BlackShark Filter:
+
+````py
+
+````
+
+---
+
+### Descripción:
+
+- Utilizado en STAs legacy FH y ya no utilizado en OFDM o estándares nuevos como Wi-Fi 4,5,6 (802.11n/ac/ax)
+- El campo "FH Parameters" se refiere a los parámetros relacionados con la técnica de salto de frecuencia o `Frequency Hopping`
+- Sin embargo, en los estándares más recientes de IEEE 802.11, como Wi-Fi 4 (802.11n), Wi-Fi 5 (802.11ac) y Wi-Fi 6 (802.11ax), el uso de salto de frecuencia se ha vuelto menos común y ha sido reemplazado por otras técnicas de acceso al medio más eficientes como el `OFDM Schema`
 
 ---
 
@@ -667,6 +695,29 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
+## 13 - `FH Pattern table` - _Variable_
+
+### BlackShark Filter:
+
+````py
+
+````
+
+---
+
+### Descripción:
+
+- Utilizado en STAs legacy FH y ya no utilizado en OFDM o estándares nuevos como Wi-Fi 4,5,6 (802.11n/ac/ax)
+- Se refiere a una estructura de datos que contiene la información detallada sobre los patrones de salto de frecuencia utilizados por las estaciones heredadas que implementan la técnica de salto de frecuencia (FH).
+- La tabla de patrones FH permite a las estaciones heredadas coordinar y sincronizar sus saltos de frecuencia para evitar colisiones y asegurar una comunicación eficiente y confiable. 
+- Al seguir el patrón de salto de frecuencia definido en la tabla, las estaciones pueden cambiar rápidamente entre frecuencias para mitigar las interferencias y mejorar la robustez de la comunicación.
+- la técnica de salto de frecuencia es menos común en las redes inalámbricas modernas, ya que ha sido reemplazada en gran medida por otras técnicas más eficientes y avanzadas, como la modulación OFDM utilizada en los estándares Wi-Fi más recientes.
+
+### Disponible en Frames:
+
+- 
+
+### Ejemplo:
 
 
 
@@ -678,6 +729,62 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## `Supported Rates` - 8 byte
+
+### BlackShark Filter:
+
+````py
+
+````
+
+---
+
+### Descripción:
+
+- 
+
+### Disponible en Frames:
+
+- 
+
+### Ejemplo:
 
 
 
