@@ -906,7 +906,28 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 ### BlackShark Filter:
 
 ````py
+### Tag Number
+wlan.tag.number == 42
 
+### Lenght
+wlan.tag.length == 1
+
+---
+
+### ERP info
+wlan.erp_info == 0x00
+
+### ERP bit present or not (T-Shoot hot papi, set to 1)
+wlan.erp_info.erp_present == 0
+
+### Use Protection
+wlan.erp_info.use_protection == 0
+
+### Barker Preamble Mode
+wlan.erp_info.barker_preamble_mode == 0
+
+### Reserved
+wlan.erp_info.reserved == 0x00
 ````
 
 ---
@@ -935,10 +956,48 @@ Cuando el bit `no-ERP_Present` se establece en `1` en las siguientes condiciones
 
 ### Ejemplo:
 
-
-
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a1a59a93-2904-4930-983e-8e95e41f8691)
 
+---
+
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
+
+## `Extended Supported Rates` - _Variable_
+
+### BlackShark Filter:
+
+````py
+
+````
+
+---
+
+### Descripción:
+
+- El elemento Extended Supported Rates (Tasas de Soporte Extendidas) especifica las tasas de datos admitidas que no se incluyen en el elemento Supported Rates (Tasas Admitidas). Solo es necesario si hay más de 8 tasas de datos admitidas en la red. Este elemento se utiliza para proporcionar información adicional sobre las tasas de datos que son compatibles con la red, pero que no se incluyeron en el elemento Supported Rates debido a limitaciones de espacio.
+
+### Disponible en Frames:
+
+- 
+
+### Ejemplo:
+
+
+
+
+Extended Capabilities:
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/e9405321-e517-418a-89ea-45447ffac973)
 
 
 
@@ -998,6 +1057,29 @@ Cuando el bit `no-ERP_Present` se establece en `1` en las siguientes condiciones
 
 
 
+
+
+
+
+
+
+
+
+
+
+---
+
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
 
 ## `Supported Rates` - 8 byte
 
