@@ -563,10 +563,10 @@ wlan.ds.current_channel == 60
 
 ### Descripción:
 
+- El `TIM` permite a las STAs en `modo de bajo consumo de energía` saber si hay datos `multicast` o `broadcast` almacenados en `Buffer` en el `AP`. Esto les permite "despertar" (`wake-up`) de su modo de bajo consumo y recibir los datos correspondientes cuando sea necesario. 
 - Presente solo en los `Beacon Frames` generados por `APs`. 
-- El elemento `TIM` contiene información útil para las estaciones en modo de bajo consumo de energía. 
 - El `AP` utiliza el `Delivery Traffic Indication Map (DTIM)` para informar a la celda si tiene `broadcast frames` o `multicast frames` almacenadas en búfer. 
-- **El `DTIM` no está presente en todas los `Beacons` y todos los `TIMs`.**
+- **El `DTIM` no está presente en todas los `Beacons` y todos los `TIMs`. En ocasiones puede variar, por ejemplo, cada 3 Beacons.**
 
 ### Campos TIM:
 
