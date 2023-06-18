@@ -680,18 +680,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 
 
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/ca62fcbd-ac2e-4858-8cb5-e50b999a1410)
 
-
-
-
-
-
-
-
-
-
-Country
 
 
 
