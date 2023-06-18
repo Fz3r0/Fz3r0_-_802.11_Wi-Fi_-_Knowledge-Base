@@ -405,7 +405,13 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 # Frame Body: `Optional Fields`
 
+### Ejemplo 1: Ruckus
+
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a0d3dc35-88fa-4354-b62d-2c0102dfd3de)
+
+### Ejemplo 2: Telmex
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/13c894cb-21ba-4f70-8c5f-f4982ad1331c)
 
 ## `FH parameter set` - _Variable_
 
