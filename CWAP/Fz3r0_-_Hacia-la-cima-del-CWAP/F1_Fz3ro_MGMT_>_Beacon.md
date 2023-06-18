@@ -9,9 +9,31 @@ Los PCAPs utilizados para los ejemplos de este bloque son los siguientes:
 
 ---
 
-<br><br>
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
 
 ## Beacon Frames
+
+**BlackShark Filter:**
+
+````py
+## Opción 1
+wlan.fc.type_subtype == 8
+
+## Opción 2
+wlan.fc.type_subtype == 0x0008
+````
+
+**Descripción:**
 
 Los `Beacon Frames` son utilizados por los `APs` (y `STAs` en una `IBSS`) para **comunicar a través del área de servicio las características de la conexión ofrecida a los miembros de una `WLAN` dentro de la celda de cobertura del `AP`. Esta información es utilizada por los clientes que intentan conectarse a la red, así como por los clientes que ya están asociados al `BSS`.**
 
@@ -26,7 +48,17 @@ Los valores por default de un Beacon Frame son los siguientes:
 
 ---
 
-<br><br>
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
 
 ## Beacon Frame: `Frame Format`
 
@@ -36,7 +68,17 @@ Este es el Frame Format de un Beacon Frame:
 
 ---
 
-<br><br>
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
 
 ## Beacon Frame: `Frame Body`
 
@@ -54,7 +96,17 @@ Estos son los campos obligatorios en un `Beacon Frame`:
 
 ---
 
-<br><br>
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
 
 ## `Timestamp` - 8 byte
 
@@ -64,7 +116,7 @@ Estos son los campos obligatorios en un `Beacon Frame`:
 wlan.fixed.timestamp == 2078442701205
 ````
 
-**Descripción**
+**Descripción:**
 
 - Un valor que representa el tiempo en el que el AP ha estado activo, que es el número de **microsegundos que el AP ha estado en funcionamiento**.
 - Cuando el timestamp alcanza su máximo (2^64 microsegundos o ~580,000 años), se reinicia a 0. 
@@ -80,7 +132,17 @@ wlan.fixed.timestamp == 2078442701205
 
 ---
 
-<br><br>
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
 
 ## `Beacon Interval` - 2 byte
 
@@ -103,7 +165,21 @@ wlan.fixed.beacon == 100
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/89935078-04ed-49dc-88ae-fbd0b8c2d053)
 
-### `Capability Information` - 2 byte
+---
+
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
+
+## `Capability Information` - 2 byte
 
 **BlackShark Filter:**
 
@@ -174,7 +250,17 @@ wlan.fixed.capabilities.reserved6 == 0
 
 ---
 
-<br><br>
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
 
 ## `SSID` - _Variable_
 
@@ -205,7 +291,17 @@ wlan.ssid == "Fz3r0"
 
 ---
 
-<br><br>
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
 
 ## `Supported Rates` - 8 byte
 
@@ -245,6 +341,31 @@ wlan.supported_rates == 0x6c
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/5329371d-b715-4f37-95d3-becc9d7be761)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
 
 ## Recursos
 
