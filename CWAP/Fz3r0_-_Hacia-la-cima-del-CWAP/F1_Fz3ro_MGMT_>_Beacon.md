@@ -972,7 +972,68 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## `Extended Supported Rates` - _Variable_
+## 20 - `Extended Supported Rates` - _Variable_
+
+### BlackShark Filter:
+
+````py
+### Tag Number
+wlan.tag.number == 50
+
+### Lenght
+wlan.tag.length == 4
+
+---
+
+### Extended Supported Rate = 6 Mbps
+wlan.extended_supported_rates == 0x0c
+
+### Extended Supported Rate = 9 Mbps
+wlan.extended_supported_rates == 0x12
+
+### Extended Supported Rate = 12 Mbps
+wlan.extended_supported_rates == 0x18
+
+### Extended Supported Rate = 48 Mbps
+wlan.extended_supported_rates == 0x60
+````
+
+---
+
+### Descripción:
+
+- El elemento Extended Supported Rates (Tasas de Soporte Extendidas) especifica las tasas de datos admitidas que no se incluyen en el elemento Supported Rates (Tasas Admitidas).
+- Solo es necesario si hay más de 8 tasas de datos admitidas en la red. 
+- Este elemento se utiliza para proporcionar información adicional sobre las tasas de datos que son compatibles con la red, pero que no se incluyeron en el elemento Supported Rates debido a limitaciones de espacio.
+
+### Disponible en Frames:
+
+- `Beacons`
+- `Probe Requests`
+- `Probe Responses`
+- `Association Request`
+- `Re-Association Requests`
+- `Re-Association Response`
+
+### Ejemplo:
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/eee57624-cf29-4225-8fd7-3127afb70cf5)
+
+---
+
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
+
+## `Supported Rates` - 8 byte
 
 ### BlackShark Filter:
 
@@ -984,13 +1045,68 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 ### Descripción:
 
-- El elemento Extended Supported Rates (Tasas de Soporte Extendidas) especifica las tasas de datos admitidas que no se incluyen en el elemento Supported Rates (Tasas Admitidas). Solo es necesario si hay más de 8 tasas de datos admitidas en la red. Este elemento se utiliza para proporcionar información adicional sobre las tasas de datos que son compatibles con la red, pero que no se incluyeron en el elemento Supported Rates debido a limitaciones de espacio.
+- 
 
 ### Disponible en Frames:
 
 - 
 
 ### Ejemplo:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
