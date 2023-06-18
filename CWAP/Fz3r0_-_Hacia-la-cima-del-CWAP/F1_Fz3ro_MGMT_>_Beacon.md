@@ -748,10 +748,10 @@ wlan.powercon.local == 0
 
 ### Descripción:
 
-- Este elemento está relacionado con el estándar 802.11h. 
+- Este elemento está relacionado con el estándar **`802.11h`**. 
 - Se aplica a las bandas UNII2 y UNII-2 extendida (CH52,56,60,64 y CH100-139) donde el espectro se utiliza para otros fines, como el radar de aeropuertos civiles y el radar meteorológico. Para evitar interferencias con esos sistemas, el punto de acceso (AP) debe operar a la potencia máxima especificada por estos campos de restricción.
-- El estándar 802.11h es una extensión del estándar IEEE 802.11 que se enfoca en la implementación de mecanismos de mitigación de interferencias, gestión dinámica de canales y mejoramiento de la coexistencia de redes inalámbricas.
-- El objetivo principal del 802.11h es permitir una operación más eficiente y confiable de las redes Wi-Fi en entornos donde se comparte el espectro con otros sistemas, como el radar de aeropuertos y otras aplicaciones gubernamentales.
+- El estándar **`802.11h`** es una extensión del estándar IEEE 802.11 que se enfoca en la implementación de mecanismos de mitigación de interferencias, gestión dinámica de canales y mejoramiento de la coexistencia de redes inalámbricas.
+- El objetivo principal del **`802.11h`** es permitir una operación más eficiente y confiable de las redes Wi-Fi en entornos donde se comparte el espectro con otros sistemas, como el radar de aeropuertos y otras aplicaciones gubernamentales.
 
 ### Disponible en Frames:
 
@@ -789,7 +789,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 ### Descripción:
 
-- Esto también está relacionado con el estándar 802.11h. 
+- Esto también está relacionado con el estándar **`802.11h`**. 
 - Cuando se detecta una explosión de radar, todas las estaciones deben abandonar el canal afectado. El punto de acceso (AP) puede configurarse para anunciar a la célula cuál será el siguiente canal.
 
 ---
@@ -812,7 +812,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 ### Descripción:
 
-- Otro elemento relacionado con el estándar 802.11h. 
+- Otro elemento relacionado con el estándar **`802.11h`**. 
 - Permite que un punto de acceso (AP) solicite un tiempo de silencio durante el cual ninguna estación debe transmitir con el fin de realizar pruebas en el canal para detectar la presencia de radares.
 
 ---
@@ -835,7 +835,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 ### Descripción:
 
-- Utilizado con el estándar 802.11h en una red de Servicio Básico Independiente (IBSS, por sus siglas en inglés).
+- Utilizado con el estándar **`802.11h`** en una red de Servicio Básico Independiente (IBSS, por sus siglas en inglés).
 
 ---
 
@@ -845,7 +845,90 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
  -->
 
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
 
+<br>
+<br>
+<br>
+
+## 18 - `TPC Report` - 4 byte
+
+### BlackShark Filter:
+
+````py
+### Tag Number
+wlan.tag.number == 32
+
+### Lenght
+wlan.tag.length == 1
+
+---
+
+### Local Power Constraint
+wlan.powercon.local == 0
+````
+
+---
+
+### Descripción:
+
+- Este elemento también está relacionado con el estándar **`802.11h`**. 
+- El elemento `Transmit Power Control (TPC) Report` (Informe de Control de Potencia Transmitida, por sus siglas en inglés) contiene información sobre la `Transmit Power` & `Link Margin`, y generalmente se envía en respuesta a un `TPC Request` transmitida. 
+
+### Disponible en Frames:
+
+- `Beacons`
+- `Probe Requests`
+- `Probe Responses`
+- `Association Request`
+- `Association Response`
+
+### Ejemplo:
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/b7898423-3f88-474d-9d80-84e005cb9cee)
+
+---
+
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
+
+## 19 - `ERP Information` - 3 byte
+
+### BlackShark Filter:
+
+````py
+
+````
+
+---
+
+### Descripción:
+
+- El elemento ERP (Información de ERP, por sus siglas en inglés) consta de 3 bytes y está presente solo en redes de 2.4 GHz que admiten 802.11g. 
+- Se encuentra en los marcos de baliza y respuestas de sondeo. 
+- En el contexto de la ERP, se utiliza la modulación OFDM (Orthogonal Frequency Division Multiplexing) para lograr tasas de datos más altas y una mejor eficiencia espectral en comparación con el estándar 802.11b, que utiliza la modulación DSSS (Direct Sequence Spread Spectrum). 
+- La capa física ERP se utiliza en redes Wi-Fi que admiten el estándar 802.11g y permite tasas de datos más rápidas y una mayor capacidad de transmisión.
+ 
+El bit no-ERP_Present se establece en 1 en las siguientes condiciones:
+
+1. Una estación no-ERP (802.11 heredado o 802.11b) se asocia a la célula.
+2. Se detecta una célula vecina que permite solo tasas de datos no-ERP.
+3. Se recibe cualquier otro marco de administración (excepto solicitud de sondeo) de una célula vecina que admite solo tasas de datos no-ERP.
+
+### Disponible en Frames:
+
+- 
+
+### Ejemplo:
 
 
 
