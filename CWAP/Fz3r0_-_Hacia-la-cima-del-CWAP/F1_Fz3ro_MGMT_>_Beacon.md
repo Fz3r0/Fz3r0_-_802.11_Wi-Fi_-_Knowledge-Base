@@ -108,6 +108,8 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
+# Frame Body: `Mandatory Fields`
+
 ## `Timestamp` - 8 byte
 
 **BlackShark Filter:**
@@ -341,10 +343,80 @@ wlan.supported_rates == 0x6c
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/5329371d-b715-4f37-95d3-becc9d7be761)
 
 
+---
+
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
+
+# Frame Body: `Optional Fields`
+
+## `FH parameter set` - _Variable_
+
+**BlackShark Filter:**
+
+````py
+
+````
+
+**Descripción:**
+
+- Este parámetro se utiliza en `STA legacy` que utilizan la `Frequency Hopping (FH)`. 
+- El conjunto de parámetros `FH` proporciona información específica sobre la configuración y características del `Frequency Hopping (FH)` utilizado por estas estaciones.
+
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FH parameter set: 
+
+DS Parameter (2 byte): Este parámetro está presente en los marcos de baliza generados por estaciones que utilizan PHY (capa física) según lo definido en las cláusulas 15, 18 o 19 del estándar IEEE 802.11. También puede estar presente si la baliza se envía utilizando una de las tasas definidas en alguna de estas cláusulas. El DS Parameter indica el conjunto de canales permitidos para su uso en la red.
+
+CF Parameter (8 byte): El parámetro CF (Control Frame) se utiliza en conjunción con el PCF (Point Coordination Function) que es parte del estándar IEEE 802.11. Sin embargo, en la práctica, este parámetro no se utiliza comúnmente en redes reales, ya que el PCF no es ampliamente implementado.
+
+IBSS parameter (4 byte): Este parámetro está presente solo en los marcos de baliza generados por estaciones en redes IBSS (Independent Basic Service Set) o redes ad-hoc. El IBSS parameter proporciona información específica sobre la configuración y características de la red ad-hoc, como el modo de operación y las capacidades admitidas.
 
 
 
