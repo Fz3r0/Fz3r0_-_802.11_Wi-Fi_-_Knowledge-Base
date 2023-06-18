@@ -33,6 +33,8 @@ wlan.fc.type_subtype == 8
 wlan.fc.type_subtype == 0x0008
 ````
 
+---
+
 **Descripción:**
 
 Los `Beacon Frames` son utilizados por los `APs` (y `STAs` en una `IBSS`) para **comunicar a través del área de servicio las características de la conexión ofrecida a los miembros de una `WLAN` dentro de la celda de cobertura del `AP`. Esta información es utilizada por los clientes que intentan conectarse a la red, así como por los clientes que ya están asociados al `BSS`.**
@@ -43,6 +45,10 @@ Los valores por default de un Beacon Frame son los siguientes:
 
 - **`1 TU` = 1024 microsegundos**
 - **`Beacon interval`  = 100 TU** (100 x 1024 microsegundos o 102.4 milisegundos)
+
+---
+
+### Ejemplo:
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/88424fcf-e9cf-4889-801a-69fbaa74c44a)
 
@@ -92,6 +98,10 @@ Estos son los campos obligatorios en un `Beacon Frame`:
 4. **`SSID`** (variable size)
 5. **`Supported Rates`** (variable size)
 
+---
+
+### Ejemplo:
+
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/1c129e19-63c3-465a-9423-f48420682ea6)
 
 ---
@@ -110,25 +120,33 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 # Frame Body: `Mandatory Fields`
 
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/df5d86c3-ff5a-4453-9554-c6b4e5b29067)
+
 ## `Timestamp` - 8 byte
 
-**BlackShark Filter:**
+### BlackShark Filter:
 
 ````py
 wlan.fixed.timestamp == 2078442701205
 ````
 
-**Descripción:**
+---
+
+### Descripción:
 
 - Un valor que representa el tiempo en el que el AP ha estado activo, que es el número de **microsegundos que el AP ha estado en funcionamiento**.
 - Cuando el timestamp alcanza su máximo (2^64 microsegundos o ~580,000 años), se reinicia a 0. 
 
-**Este campo se encuentra en los Frames:**
+---
+
+### Disponible en Frames:
 
 - `Beacon` 
 - `Probe Response`    
 
-**Ejemplo:**
+---
+
+### Ejemplo:
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f5f9fcbb-cbf5-4056-90aa-a1c79f16eabd)
 
@@ -148,22 +166,28 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 ## `Beacon Interval` - 2 byte
 
-**BlackShark Filter:**
+### BlackShark Filter:
 
 ````py
 wlan.fixed.beacon == 100
 ````
 
-**Descripción**
+---
+
+### Descripción:
 
 - Este campo representa el número de `Time Units (TU)` entre los tiempos de `Target Beacon Trasmission Times (TBTT)`.
 - El **valor default** es `100 TU` (102.4 milisegundos) = **`0.102400 segundos`**
 
-**Este campo se encuentra en los Frames:**
+---
+
+### Disponible en Frames:
 
 - `Beacon` 
 
-**Ejemplo:**
+---
+
+### Ejemplo:
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/89935078-04ed-49dc-88ae-fbd0b8c2d053)
 
@@ -183,7 +207,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 ## `Capability Information` - 2 byte
 
-**BlackShark Filter:**
+### BlackShark Filter:
 
 ````py
 ## Capabilities
@@ -238,7 +262,9 @@ wlan.fixed.capabilities.reserved5 == 0
 wlan.fixed.capabilities.reserved6 == 0
 ````
 
-**Descripción**
+---
+
+### Descripción:
 
 - Este campo contiene una serie de **subcampos** que se utilizan para indicar las capacidades opcionales solicitadas o anunciadas.   
 
@@ -246,7 +272,7 @@ wlan.fixed.capabilities.reserved6 == 0
 
 - `Beacon` 
 
-**Ejemplo:**
+### Ejemplo:
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/0aa3320b-1965-4f1f-b1d5-d8a16d1fbe90)
 
@@ -266,7 +292,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 ## `SSID` - _Variable_
 
-**BlackShark Filter:**
+### BlackShark Filter:
 
 ````py
 ### Tag Number
@@ -279,15 +305,29 @@ wlan.tag.length == 5
 wlan.ssid == "Fz3r0"
 ````
 
-**Descripción**
+---
 
-- Este campo contiene una serie de **subcampos** que se utilizan para indicar las capacidades opcionales solicitadas o anunciadas.   
+### Descripción:
 
-**Este campo se encuentra en los Frames:**
+- Este campo contiene una serie de **subcampos** que se utilizan para indicar las capacidades opcionales solicitadas o anunciadas. 
+- Se identifica mediante un número de etiqueta (tag number) igual a 0. 
+- La longitud del campo SSID puede tener un máximo de 32 caracteres, aunque es importante destacar que el SSID puede configurarse para ser oculto, lo que implica que no se transmiten en los `Beacon Frame` _(Pero si en probes, es por eso ocultar el SSID no necesariamente es seguro)._
+- **Cuando un dispositivo cliente busca redes inalámbricas disponibles, escanea los `Beacon Frames` y analiza los campos `SSID` para encontrar una red con un nombre específico o para descubrir las redes visibles en su entorno. Al conectarse a una red, el dispositivo debe proporcionar el SSID correcto y coincidente para establecer la conexión con éxito.**
+- El SSID desempeña un papel fundamental en la identificación y configuración de redes inalámbricas, permitiendo a los dispositivos distinguir y conectarse a la red deseada.  
 
-- `Beacon` 
+---
 
-**Ejemplo:**
+### Disponible en Frames:
+
+- `Beacon frames`
+- `probe requests`
+- `probe responses`
+- `association requests`
+- `reassociation requests`
+
+---
+
+### Ejemplo:
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a812eca5-92b9-44e7-b4cf-92ff23422491)
 
@@ -307,7 +347,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 ## `Supported Rates` - 8 byte
 
-**BlackShark Filter:**
+### BlackShark Filter:
 
 ````py
 ### Supported Data Rate = 24mbps
@@ -323,13 +363,15 @@ wlan.supported_rates == 0x60
 wlan.supported_rates == 0x6c
 ````
 
-**Descripción:**
+---
+
+### Descripción:
 
 - Es un campo de `8 octetos` donde **cada octeto describe una `Data Rate` soportada.** 
 - Tiene los campos `Element ID`, `Length` y `Supported Rates`. 
 - El `AP` debe establecer al menos un rate obligatorio y cualquier `STA` que desee unirse a la celda debe ser copatible con los `Basic Rates`. 
 
-**Este campo se encuentra en los Frames:**
+### Disponible en Frames:
 
 - `Beacons`
 - `Probe Requests`
@@ -338,10 +380,9 @@ wlan.supported_rates == 0x6c
 - `Re-Association Requests`
 - `Re-Association Response`
 
-**Ejemplo:**
+### Ejemplo:
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/5329371d-b715-4f37-95d3-becc9d7be761)
-
 
 ---
 
@@ -359,18 +400,24 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 # Frame Body: `Optional Fields`
 
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a0d3dc35-88fa-4354-b62d-2c0102dfd3de)
+
 ## `FH parameter set` - _Variable_
 
-**BlackShark Filter:**
+### BlackShark Filter:
 
 ````py
 
 ````
 
-**Descripción:**
+---
+
+### Descripción:
 
 - Este parámetro se utiliza en `STA legacy` que utilizan la `Frequency Hopping (FH)`. 
 - El conjunto de parámetros `FH` proporciona información específica sobre la configuración y características del `Frequency Hopping (FH)` utilizado por estas estaciones.
+
+---
 
 <!-- 
 
@@ -386,7 +433,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 ## `DS Parameter` - 2 byte
 
-**BlackShark Filter:**
+### BlackShark Filter:
 
 ````py
 ### Tag Number
@@ -399,7 +446,9 @@ wlan.tag.length == 1
 wlan.ds.current_channel == 60
 ````
 
-**Descripción:**
+---
+
+### Descripción:
 
 - El `DS Parameter` indica **el conjunto de canales permitidos para su uso en la red.**
 - `DS` es la abreviatura de `Distribution System`. 
@@ -408,13 +457,15 @@ wlan.ds.current_channel == 60
 - También puede estar presente si la `Beacon Frames` se envía utilizando una de las tasas definidas en alguna de estas cláusulas. 
 - El Tag number es su identificador específico. 
 
-**Fz3r0 Troubleshooting Tip!!!:**
+### Fz3r0 Troubleshooting Tip!!!:
 
 **Cuando un Beacon tiene este campo opcional se puede saber el canal real en el que se encuentra ese AP, no corresponde al canal en el que se está capturando. Esto es importante en la red 2.4 para identificar interferencias ACI, ya que si por ejemplo estoy en `canal 11` podría cpaturar interferencias de canales alrededor, como `9` y `10`**
 
-**Ejemplo:**
+### Ejemplo:
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/eafdb15e-db4e-44c7-8c27-1a6cbb715d8c)
+
+---
 
 <!-- 
 
@@ -430,13 +481,15 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 ## `CF Parameter (8 byte)` - 2 byte
 
-**BlackShark Filter:**
+### BlackShark Filter:
 
 ````py
 
 ````
 
-**Descripción:**
+---
+
+### Descripción:
 
 - El parámetro `CF (Control Frame)` se utiliza en conjunción con el `PCF (Point Coordination Function)` que es parte del estándar `IEEE 802.11`. 
 - Sin embargo, en la práctica, **este parámetro NO se utiliza comúnmente en redes reales**, ya que el `PCF` no es ampliamente implementado.
