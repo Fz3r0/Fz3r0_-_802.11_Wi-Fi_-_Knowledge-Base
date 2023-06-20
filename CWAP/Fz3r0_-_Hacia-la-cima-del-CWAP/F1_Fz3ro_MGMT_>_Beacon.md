@@ -1346,6 +1346,11 @@ En esta captura se puede ver un contreo de `0 STA` & `19% de Airtime/Channel Uti
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f6c195af-3d80-45eb-aa84-c06b980f2e3a)
 
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/e12e3ef1-5c1c-4b8e-9a37-c69482957836)
+
+
+
+
 
 
 
