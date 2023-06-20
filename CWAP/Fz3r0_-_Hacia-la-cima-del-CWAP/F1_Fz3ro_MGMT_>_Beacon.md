@@ -1342,11 +1342,46 @@ En esta captura se puede ver un contreo de `0 STA` & `19% de Airtime/Channel Uti
 
 ---
 
-### Ejemplo 3 - AirTime Full & No Clients
+<!-- 
 
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f6c195af-3d80-45eb-aa84-c06b980f2e3a)
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
 
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/e12e3ef1-5c1c-4b8e-9a37-c69482957836)
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
+
+## `Supported Rates` - 8 byte
+
+### BlackShark Filter:
+
+````py
+
+````
+
+---
+
+### Descripción:
+
+- 
+
+### Disponible en Frames:
+
+- 
+
+### Ejemplo:
+
+
+
+
+
+
+
+
+
 
 
 
