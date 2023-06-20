@@ -1060,7 +1060,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## `RSN Information` - 8 byte
+## 21 - `RSN Information` - 8 byte
 
 ### BlackShark Filter:
 
@@ -1135,7 +1135,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## `QBSS Load Element 802.11e` - _Variable_
+## 22 - `QBSS Load Element 802.11e` - _Variable_
 
 ### BlackShark Filter:
 
