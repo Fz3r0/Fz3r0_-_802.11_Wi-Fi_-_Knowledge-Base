@@ -1309,6 +1309,8 @@ if /i "%repeat%"=="S" (
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/44057770-ad2b-4311-9c50-62121d6da692)
 
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/616023a3-b65f-46b5-b338-75baa6d7f75d)
+
 - [PCAP - Channel/AirTime Utilization 2.4 & 5 GHz same time]()
 
 #### 2.4 GHz - SSID `FULL clientes` | `Fz3r0 AP`
