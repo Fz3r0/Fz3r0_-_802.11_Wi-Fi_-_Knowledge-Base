@@ -1307,14 +1307,17 @@ if /i "%repeat%"=="S" (
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/50d1ff83-36d7-451b-a7e4-718ea7eddeee)
 
-- 2.4 GHz
+- 2.4 GHz - SSID FULL clientes | Fz3r0 AP
 
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f94e26d2-4c3f-49e5-9796-e4be2bdc3905)
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/515fe5d0-4212-413e-bda8-c263d38054b3)
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/2bab65ed-4f61-4170-84eb-d46e3af5d259)
 
-- 5 GHz
+- 5 GHz - SSID FULL clientes | Fz3r0 AP
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/2f296289-ac69-492f-ae32-e70768435649)
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/481d948b-bbdf-493e-98d1-71f9826b3052)
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/b3684f40-6643-4f88-9378-27d7344f2319)
+
+- 2.4 GHz - SSID vacío de clientes | Fz3r0 AP
 
 
 
