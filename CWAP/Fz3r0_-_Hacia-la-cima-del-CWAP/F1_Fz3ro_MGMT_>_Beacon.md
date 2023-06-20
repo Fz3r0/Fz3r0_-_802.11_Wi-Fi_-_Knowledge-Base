@@ -1128,6 +1128,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 
 
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/4dea8353-0745-4253-8513-c805fa35b288)
 
 ````bat
 @echo off
