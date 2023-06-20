@@ -1342,7 +1342,9 @@ En esta captura se puede ver un contreo de `0 STA` & `19% de Airtime/Channel Uti
 
 ---
 
-### Ejemplo 3 - 2.4 GHz example
+### Ejemplo 3 - AirTime Full & No Clients
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f6c195af-3d80-45eb-aa84-c06b980f2e3a)
 
 
 
