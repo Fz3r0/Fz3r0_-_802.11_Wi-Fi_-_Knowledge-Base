@@ -1297,10 +1297,30 @@ if /i "%repeat%"=="S" (
 
 ---
 
-### Ejemplo:
+### Ejemplo 1 - Low Utilization & Few Clients:
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/aef2aa18-50d4-4875-9ae4-943fb4ddfbad)
 
+---
+
+### Ejemplo 2 - 2.4 & 5 GHz example | same AP & same time
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/50d1ff83-36d7-451b-a7e4-718ea7eddeee)
+
+- 2.4 GHz
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f94e26d2-4c3f-49e5-9796-e4be2bdc3905)
+
+- 5 GHz
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/2f296289-ac69-492f-ae32-e70768435649)
+
+
+
+
+---
+
+### Ejemplo 3 - 2.4 GHz example
 
 
 
