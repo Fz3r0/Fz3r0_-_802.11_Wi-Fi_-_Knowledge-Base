@@ -1307,6 +1307,8 @@ if /i "%repeat%"=="S" (
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/50d1ff83-36d7-451b-a7e4-718ea7eddeee)
 
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/44057770-ad2b-4311-9c50-62121d6da692)
+
 - [PCAP - Channel/AirTime Utilization 2.4 & 5 GHz same time]()
 
 #### 2.4 GHz - SSID `FULL clientes` | `Fz3r0 AP`
@@ -1326,6 +1328,16 @@ En esta captura se puede ver un contreo de `0 STA` & `19% de Airtime/Channel Uti
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a6bfb7d6-f271-4140-8af3-e282031b1c6b)
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a14ce244-7425-46e3-bc2d-bc238a8c731a)
 
+#### Resultados
+
+- Si se comparan por ejemplo los 2 Beacons de 5 GHz donde uno tiene `0 clientes` y el otro tiene `87 clientes` se puede ver que ambos tienen exactamente el `mismo utilization`.
+- Esto es debido a que ambos utilizan la misma celda y el mismo aire!!! He ahí la respuesta!:<br><br>
+
+    - **A pesar que un SSID tenga 0 clientes, al compartir la celda con un SSID en el mismo canal que tiene 87 clientes, también es afectado por ese `AirTime/Channel Utilization`!!!** :
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/50d1ff83-36d7-451b-a7e4-718ea7eddeee)
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/44057770-ad2b-4311-9c50-62121d6da692)
 
 
 
