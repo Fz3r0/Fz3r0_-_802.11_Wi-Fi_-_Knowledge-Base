@@ -414,6 +414,20 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/13c894cb-21ba-4f70-8c5f-f4982ad1331c)
 
+---
+
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
+
 ## 06 - `FH parameter set` - _Variable_
 
 ### BlackShark Filter:
@@ -1075,16 +1089,39 @@ wlan.rsn.capabilities.preauth == 0
 
 - El campo RSN (Robust Secure Network) contiene información relacionada con la seguridad y la autenticación de la red.
 - Este campo proporciona detalles sobre los **cifrados utilizados, los algoritmos de autenticación admitidos y otras capacidades relacionadas con la seguridad de la red.**
--  
+- En un beacon, el campo RSN permite a los clientes y otros dispositivos obtener información sobre las medidas de seguridad implementadas en la red Wi-Fi.
+
+---
 
 ### Disponible en Frames:
 
-- 
+- `Beacon`
+- `Probe response`
+- `Association request`
+- `Association response` 
+- `Reassociation request` 
+- `Reassociation response` 
+- `Authentication`
+- `Deauthentication`
+- `Disassociation`
 
 ### Ejemplo 1 - `WPA2 - AES - PSK`:
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f4b7d5be-f468-4570-ae99-c527e5f833ec)
 
+---
+
+<!-- 
+
+CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
+
+ -->
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
 
 
 
