@@ -1338,11 +1338,7 @@ En esta captura se puede ver un contreo de `0 STA` & `19% de Airtime/Channel Uti
     - **A pesar que un SSID tenga 0 clientes, al compartir la celda con un SSID en el mismo canal que tiene 87 clientes, también es afectado por ese `AirTime/Channel Utilization`!!!** :
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f204e243-e648-4404-b72c-4a37f8630114)
-
-
-
-
-
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/43a666af-e6f2-4302-a2da-bbd567602db5)
 
 ---
 
