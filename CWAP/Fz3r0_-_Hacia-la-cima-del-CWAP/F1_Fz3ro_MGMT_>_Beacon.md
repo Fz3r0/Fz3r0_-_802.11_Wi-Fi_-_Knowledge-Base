@@ -1123,24 +1123,55 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
+## `QBSS Load Element 802.11e` - _Variable_
 
+### BlackShark Filter:
 
+````py
 
+````
 
+---
 
+### Descripción:
 
+- Este elemento se utiliza solo cuando se admite QoS y a menudo se denomina elemento de carga QBSS.
+- Proporciona información sobre la carga de la celda desde el punto de vista del punto de acceso (AP).
 
+Tiene los siguientes subcampos:
 
+1. `Station Count`: Cuántas estaciones están actualmente asociadas.
+2. `Channel Utilization`: Porcentaje de tiempo que el AP percibió que el medio estaba ocupado (normalizado de 0 a 255).
+3. `Available Admission Capacity`: Indica la capacidad disponible para admitir nuevas estaciones en la celda BSS.
+ 
+Ejemplo de Admission Capacity:
 
+````py
+## Resultado de Ejemplo
+available admission capacity: 23437 [*32us]
+````
 
+- El valor 23437 representa la cantidad de unidades de tiempo disponibles, y se multiplica por 32 microsegundos (32us). 
+- Esto significa que **la capacidad de admisión disponible en la célula BSS es de `23437` * `32us` = `749,984 microsegundos`**.
+- Este valor se utiliza para determinar la cantidad de tiempo disponible para admitir nuevas estaciones en la célula BSS.<br><br>
+    - **Cuanto mayor sea este valor, más capacidad habrá disponible para aceptar nuevas conexiones. Es un indicador importante para gestionar el acceso y la capacidad de la red inalámbrica.**
 
+Estos subcampos brindan información valiosa sobre la carga y la capacidad del punto de acceso y pueden ser utilizados por los dispositivos cliente para tomar decisiones relacionadas con la selección de la red y la asignación de recursos."
 
+---
 
 ### External Info & Labs
 
 - [Cisco - QBSS Load element](https://dot11zen.blogspot.com/2017/04/qbss-load-element_5.html)
 
-### Tshooting
+---
+
+### Fz3r0 Troubleshooting Tips!
+
+- **Este campo es muy útil para hacer troubleshooting de airtime utilization y capacidad en el AP.**
+- Se pueden llegar a detemrinar problemas de interferencia o alta utilización en el AP, por ejemplo, por muchos clientes conectados y utilizando el medio. 
+
+---
 
 ### Linux
 
@@ -1155,8 +1186,6 @@ sudo iw dev wlp3s0 scan
 ### Fz3r0 QBSSS Scripts
 
 1. `batch script`
-
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/4dea8353-0745-4253-8513-c805fa35b288)
 
 ````bat
 @echo off
@@ -1246,6 +1275,35 @@ if /i "%repeat%"=="S" (
     goto :preguntar_repetir
 )
 ````
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/4dea8353-0745-4253-8513-c805fa35b288)
+
+---
+
+### Disponible en Frames:
+
+- `Beacon`
+
+---
+
+### Ejemplo:
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/aef2aa18-50d4-4875-9ae4-943fb4ddfbad)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
