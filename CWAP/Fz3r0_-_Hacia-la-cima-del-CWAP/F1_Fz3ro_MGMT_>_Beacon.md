@@ -1039,7 +1039,34 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 ### BlackShark Filter:
 
 ````py
+### Tag Number
+wlan.tag.number == 48
 
+### Lenght
+wlan.tag.length == 20
+
+---
+
+### RSN Version
+wlan.rsn.version == 1
+
+### Group Cipher Suite Type
+wlan.rsn.gcs.type == 4
+
+### Pairwise Cipher Suite Type
+wlan.rsn.pcs.type == 4
+
+### Authentication Key Management (AKM)
+wlan.rsn.akms.type == psk
+wlan.rsn.akms.type == 2
+
+---
+
+### RSN Capabilities
+wlan.rsn.capabilities == 0x0000
+
+### RSN Pre-Auth Capabilities
+wlan.rsn.capabilities.preauth == 0
 ````
 
 ---
@@ -1054,7 +1081,8 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 ### Ejemplo:
 
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/33dc8f52-608a-46cb-baca-98cde2ba31c6)
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f4b7d5be-f468-4570-ae99-c527e5f833ec)
+
 
 
 
