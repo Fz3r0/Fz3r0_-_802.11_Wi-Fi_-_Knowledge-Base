@@ -1129,7 +1129,94 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 
 
+````bat
+@echo off
 
+rem '=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-'
+rem '                                                                                                        '
+rem '                        Fz3r0 - Wireless 802.11 (Wi-Fi) AirTime Calculator v1.0                         '
+rem '                                                                                                        '
+rem '    Github :  Fz3r0                                                                                     '
+rem '    Twitter: @Fz3r0_OPs                                                                                 '
+rem '    Youtube: @Fz3r0_OPs                                                                                 '
+rem '                                                                                                        '
+rem ' Instrucciones:                                                                                         '
+rem '                                                                                                        '
+rem '     1. En un Frame Capture 802.11 donde se esté analizando un Beacon, buscar el Tagged Parameter:      '
+rem '        QBSSS Load Element 802.11e                                                                      '
+rem '                                                                                                        '
+rem '     2. Dentro de este elemento se podrá encontrar el campo "Channel Utilization" que da un valor 0-255 '
+rem '        Filtro: wlan.qbss.cu                                                                            '
+rem '                                                                                                        '
+rem '     3. Insertar el valor entre 0 y 255 que da el valor de wlan.qbss.cu en el programa                  '
+rem '        Filtro: wlan.qbss.cu                                                                            '
+rem '                                                                                                        '
+rem ' Troubleshooting Hint:                                                                                  '
+rem '                                                                                                        '
+rem '     -  En caso que el resultado sea alto & con POCAS estaciones asociadas:                             '
+rem '     >  Normalmente es por interferencia Wi-Fi (o no WI-FI)                                             '
+rem '                                                                                                        '
+rem '     -  En caso que el resultado sea alto & con MUCHAS estaciones asociadas:                            '
+rem '     >  Normalmente es por capacidad al limite del AP                                                   '
+rem '                                                                                                        '
+rem '=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-'
+
+rem Titulo:
+echo.                                                     
+echo.   
+echo Fz3r0 - Wireless 802.11 (Wi-Fi) AirTime Calculator v1.0
+echo.  
+echo Github :  Fz3r0
+echo Twitter: @Fz3r0_OPs
+echo Youtube: @Fz3r0_OPs
+echo. 
+echo.  
+
+setlocal enabledelayedexpansion
+
+:inicio
+rem Solicitar al usuario que ingrese el valor del airtime utilization
+set /p utilization=Ingresa el valor entre 0 y 255 obtenido en el QSS Load Element 802.11e (Channel Utilization): 
+echo.
+
+rem Validar que el valor ingresado esté dentro del rango válido
+if %utilization% LSS 0 (
+    echo El valor ingresado esta por debajo del rango valido.
+    echo.
+    goto :preguntar_repetir
+)
+if %utilization% GTR 255 (
+    echo El valor ingresado esta por encima del rango valido.
+    echo.
+    goto :preguntar_repetir
+)
+
+rem Calcular el porcentaje del airtime utilization
+set /a percentage=(%utilization% * 100) / 255
+
+rem Mostrar el resultado al usuario
+echo El airtime utilization es: !percentage!%%
+echo.
+
+:preguntar_repetir
+rem Preguntar al usuario si desea ingresar otro valor
+set /p repeat=?Deseas ingresar otro valor? (S/N): 
+echo.
+
+rem Validar la respuesta del usuario
+if /i "%repeat%"=="S" (
+    goto :inicio
+) else if /i "%repeat%"=="N" (
+    echo Adios. 
+    echo.
+    pause
+    exit
+) else (
+    echo Respuesta invalida. Por favor, ingresa S para si o N para no.
+    echo.
+    goto :preguntar_repetir
+)
+````
 
 
 
