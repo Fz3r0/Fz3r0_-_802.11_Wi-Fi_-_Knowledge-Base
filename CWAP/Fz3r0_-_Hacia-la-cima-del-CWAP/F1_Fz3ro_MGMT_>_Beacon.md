@@ -1314,6 +1314,7 @@ if /i "%repeat%"=="S" (
 - 5 GHz
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/2f296289-ac69-492f-ae32-e70768435649)
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/481d948b-bbdf-493e-98d1-71f9826b3052)
 
 
 
