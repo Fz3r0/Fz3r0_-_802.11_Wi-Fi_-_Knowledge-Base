@@ -1073,13 +1073,15 @@ wlan.rsn.capabilities.preauth == 0
 
 ### Descripción:
 
-- RSN (Robust Secure Network)
+- El campo RSN (Robust Secure Network) contiene información relacionada con la seguridad y la autenticación de la red.
+- Este campo proporciona detalles sobre los **cifrados utilizados, los algoritmos de autenticación admitidos y otras capacidades relacionadas con la seguridad de la red.**
+-  
 
 ### Disponible en Frames:
 
 - 
 
-### Ejemplo:
+### Ejemplo 1 - `WPA2 - AES - PSK`:
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f4b7d5be-f468-4570-ae99-c527e5f833ec)
 
