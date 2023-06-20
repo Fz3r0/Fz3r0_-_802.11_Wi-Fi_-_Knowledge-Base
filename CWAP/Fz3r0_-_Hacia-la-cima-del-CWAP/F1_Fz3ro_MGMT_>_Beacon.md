@@ -1128,6 +1128,34 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 
 
+
+
+
+
+
+
+
+
+### External Info & Labs
+
+- [Cisco - QBSS Load element](https://dot11zen.blogspot.com/2017/04/qbss-load-element_5.html)
+
+### Tshooting
+
+### Linux
+
+- Comando `iw`
+````sh
+# Linux QBSSS Load Element 802.11e
+sudo iw dev wlp3s0 scan
+````
+
+---
+
+### Fz3r0 QBSSS Scripts
+
+1. `batch script`
+
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/4dea8353-0745-4253-8513-c805fa35b288)
 
 ````bat
