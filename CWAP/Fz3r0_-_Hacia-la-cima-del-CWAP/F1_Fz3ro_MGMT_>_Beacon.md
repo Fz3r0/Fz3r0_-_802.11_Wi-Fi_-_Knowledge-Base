@@ -1309,17 +1309,22 @@ if /i "%repeat%"=="S" (
 
 - [PCAP - Channel/AirTime Utilization 2.4 & 5 GHz same time]()
 
-- 2.4 GHz - SSID FULL clientes | Fz3r0 AP
+#### 2.4 GHz - SSID `FULL clientes` | `Fz3r0 AP`
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/515fe5d0-4212-413e-bda8-c263d38054b3)
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/2bab65ed-4f61-4170-84eb-d46e3af5d259)
 
-- 5 GHz - SSID FULL clientes | Fz3r0 AP
+####  5 GHz - SSID `FULL clientes` | `Fz3r0 AP`
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/2f296289-ac69-492f-ae32-e70768435649)
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/b3684f40-6643-4f88-9378-27d7344f2319)
 
-- 2.4 GHz - SSID vacío de clientes | Fz3r0 AP
+####  5 GHz - SSID `vacío de clientes & oculto` | `Fz3r0 AP`
+
+En esta captura se puede ver un contreo de `0 STA` & `19% de Airtime/Channel Utilization`. Esto debido a que el otro SSID es quien está ocupando ese aire en esa celda. 
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a6bfb7d6-f271-4140-8af3-e282031b1c6b)
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a14ce244-7425-46e3-bc2d-bc238a8c731a)
 
 
 
