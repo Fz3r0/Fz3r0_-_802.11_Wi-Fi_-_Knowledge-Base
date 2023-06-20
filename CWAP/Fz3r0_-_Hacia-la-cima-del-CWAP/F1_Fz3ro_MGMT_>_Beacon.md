@@ -815,6 +815,12 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
  -->
 
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
+
 ## 16 - `Quiet` - 8 byte
 
 ### BlackShark Filter:
@@ -837,7 +843,13 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
 
  -->
- 
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
+
+<br>
+<br>
+<br>
+
  ## 17 - `IBSS DFS` - _Variable_
 
 ### BlackShark Filter:
