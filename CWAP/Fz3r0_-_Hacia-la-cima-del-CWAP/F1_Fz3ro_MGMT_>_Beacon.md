@@ -1316,19 +1316,19 @@ if /i "%repeat%"=="S" (
 #### 2.4 GHz - SSID `FULL clientes` | `Fz3r0 AP`
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/515fe5d0-4212-413e-bda8-c263d38054b3)
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/2bab65ed-4f61-4170-84eb-d46e3af5d259)
-
+<p align="center"> <img src="https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/2bab65ed-4f61-4170-84eb-d46e3af5d259" alt="center" height=220px/> </a></p> 
 ####  5 GHz - SSID `FULL clientes` | `Fz3r0 AP`
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/2f296289-ac69-492f-ae32-e70768435649)
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/b3684f40-6643-4f88-9378-27d7344f2319)
+<p align="center"> <img src="https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/b3684f40-6643-4f88-9378-27d7344f2319" alt="center" height=220px/></a></p> 
+
 
 ####  5 GHz - SSID `vacío de clientes & oculto` | `Fz3r0 AP`
 
 En esta captura se puede ver un contreo de `0 STA` & `19% de Airtime/Channel Utilization`. Esto debido a que el otro SSID es quien está ocupando ese aire en esa celda. 
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a6bfb7d6-f271-4140-8af3-e282031b1c6b)
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a14ce244-7425-46e3-bc2d-bc238a8c731a)
+<p align="center"> <img src="https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a14ce244-7425-46e3-bc2d-bc238a8c731a" alt="center" height=220px/></a></p> 
 
 #### Resultados
 
@@ -1337,8 +1337,10 @@ En esta captura se puede ver un contreo de `0 STA` & `19% de Airtime/Channel Uti
 
     - **A pesar que un SSID tenga 0 clientes, al compartir la celda con un SSID en el mismo canal que tiene 87 clientes, también es afectado por ese `AirTime/Channel Utilization`!!!** :
 
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f204e243-e648-4404-b72c-4a37f8630114)
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/43a666af-e6f2-4302-a2da-bbd567602db5)
+
+<p align="center"> <img src="https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f204e243-e648-4404-b72c-4a37f8630114" alt="center" /> </a></p> 
+<p align="center"> <img src="https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/43a666af-e6f2-4302-a2da-bbd567602db5" alt="center" /> </a></p> 
+
 
 ---
 
