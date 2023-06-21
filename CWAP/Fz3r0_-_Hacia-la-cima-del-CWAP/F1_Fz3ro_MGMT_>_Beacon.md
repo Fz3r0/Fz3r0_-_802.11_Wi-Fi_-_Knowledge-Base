@@ -1287,7 +1287,10 @@ if /i "%repeat%"=="S" (
     goto :preguntar_repetir
 )
 ````
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/4dea8353-0745-4253-8513-c805fa35b288)
+
+- PoC:
+
+<p align="center"> <img src="https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/4dea8353-0745-4253-8513-c805fa35b288" alt="center" height=500px/></a></p> 
 
 ---
 
