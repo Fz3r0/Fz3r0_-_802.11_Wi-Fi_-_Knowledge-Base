@@ -342,6 +342,9 @@ airodump-ng wlan0mon
 ## Comenzar Auditoría en channel 6
 airodump-ng wlan0mon -c 6
 
+## Auditoria en 5 GHz (b y g son 2.4)
+airodump-ng wlan0 --band=a
+
 ## Comenzar Auditoría en channel 1,6,11 en varios adaptadores
 airodump-ng wlan0mon,wlan1mon,wlan2mon -c 1,6,11
 
