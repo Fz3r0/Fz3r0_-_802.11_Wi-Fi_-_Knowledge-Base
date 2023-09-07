@@ -13,3 +13,32 @@ Welcome to the BadFi
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/0ba0a076-990b-4365-9f4a-63e306044b29)
 
 ---
+
+[IT Humor and Memes](https://www.facebook.com/photo/?fbid=10231729876696337&set=gm.24477470491852071&idorvanity=3227683947257367)
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/8e291f31-7741-4179-af70-21ecb1aaaf78)
+
+---
+
+[](https://www.facebook.com/photo/?fbid=6244681988941148&set=gm.23931316696467456&idorvanity=3227683947257367)
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/ce362494-b94e-41ba-b07a-2f56f39895fc)
+
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/00ba97a6-4f1d-459b-ab2c-2d9b12f1d342)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f8fcb786-013b-4c56-82c5-8be8d101c0e9)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/53c6031e-c927-4cd9-a605-2a1b847d96ff)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/09ab3271-5371-4e61-8092-faadeee7ad91)
+
+
