@@ -47,5 +47,16 @@ Welcome to the BadFi
 
 ---
 
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/453b4b96-6608-47d5-8dfe-02d08d0c7465)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/857f9e61-6f6e-4c77-8a12-9261ba70c394)
+
+---
+
+
+
+
 
 
