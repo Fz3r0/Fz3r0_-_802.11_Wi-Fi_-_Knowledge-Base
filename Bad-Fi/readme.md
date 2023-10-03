@@ -1,4 +1,6 @@
-Welcome to the BadFi
+# Welcome to the Bad-Fi!!! 💩📡🤢📡🤮
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a16fcbc7-343e-4826-b84d-b8263cb35743)
 
 ---
 
