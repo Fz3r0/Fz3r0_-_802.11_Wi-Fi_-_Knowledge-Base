@@ -25,7 +25,7 @@ El Wi-Fi, el arte de conectar el mundo de forma inalámbrica, ¡se merece algo m
 Prepárense para reír, sentir vergüenza ajena y tal vez incluso derramar una lágrima por el estado de la red moderna. Bienvenidos a Bad-Fi, donde ponemos en el centro de atención lo peor de lo peor y celebramos a los cómicos involuntarios del mundo del Wi-Fi. ¡Agarren las palomitas de maíz, porque esto va a ser un viaje lleno de baches! 📡😂 #MalasConfiguracionesWiFi
 
 
-## Bad-Fi: Wi-Fi Analyzers
+## Bad-Fi: Wi-Fi Analyzers & Monitoring
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a16fcbc7-343e-4826-b84d-b8263cb35743)
 
