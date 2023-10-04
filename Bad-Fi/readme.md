@@ -1,5 +1,29 @@
 # Welcome to the Bad-Fi!!! 💩📡🤢📡🤮
 
+_by Fz3r0_
+
+## English:
+
+Prepare yourself for a hilarious journey into the chaotic, mind-boggling world of Wi-Fi gone wild! We're here to expose the dark underbelly of wireless networking, where good intentions go to die and common sense takes a vacation.
+
+In this corner of the internet, we proudly present a spectacle of bad practices, horrendous configurations, laughable designs, and an all-around lack of standardization that will make your head spin faster than a buffering YouTube video. I mean, let's be real, not even a basic Wi-Fi tutorial on YouTube would endorse the shenanigans we're about to unveil. It's as if the engineer responsible for these disasters didn't even bother with the fundamentals.
+
+Wi-Fi, the art of wirelessly connecting the world, deserves better! But alas, it has fallen victim to the creative (and sometimes downright absurd) minds of those who dare to defy logic in the name of connectivity. Join us as we explore these masterpieces of mayhem that threaten to turn the airwaves into a chaotic battlefield.
+
+Get ready to laugh, cringe, and maybe even shed a tear for the state of modern networking. Welcome to the Bad-Fi, where we shine a spotlight on the worst of the worst and celebrate the unintentional comedians of the Wi-Fi world. Grab your popcorn, because it's going to be a bumpy ride! 📡😂 #BadFiBlunders
+
+## Español
+
+¡Bienvenidos a Bad-Fi!!!!!
+
+¡Prepárense para un hilarante viaje al caótico y desconcertante mundo del Wi-Fi descontrolado! Estamos aquí para exponer el lado oscuro de la conectividad inalámbrica, donde las buenas intenciones se desvanecen y el sentido común se toma un descanso.
+
+En este rincón de internet, presentamos con orgullo un espectáculo de malas prácticas, configuraciones horrendas, diseños risibles y una falta total de estandarización que hará que su cabeza gire más rápido que un video de YouTube en proceso de carga. Quiero decir, seamos sinceros, ni siquiera un tutorial básico de Wi-Fi en YouTube respaldaría las travesuras que estamos a punto de revelar. Parece que el ingeniero responsable de estos desastres ni siquiera se molestó en entender lo fundamental.
+
+El Wi-Fi, el arte de conectar el mundo de forma inalámbrica, ¡se merece algo mejor! Pero, lamentablemente, ha caído víctima de las mentes creativas (y a veces totalmente absurdas) de aquellos que se atreven a desafiar la lógica en nombre de la conectividad. Únanse a nosotros mientras exploramos estas obras maestras del caos que amenazan con convertir las ondas del aire en un campo de batalla caótico.
+
+Prepárense para reír, sentir vergüenza ajena y tal vez incluso derramar una lágrima por el estado de la red moderna. Bienvenidos a Bad-Fi, donde ponemos en el centro de atención lo peor de lo peor y celebramos a los cómicos involuntarios del mundo del Wi-Fi. ¡Agarren las palomitas de maíz, porque esto va a ser un viaje lleno de baches! 📡😂 #MalasConfiguracionesWiFi
+
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a16fcbc7-343e-4826-b84d-b8263cb35743)
 
 ---
