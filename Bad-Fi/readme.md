@@ -124,6 +124,12 @@
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/d61595bc-abef-4475-b6a7-2a0904c6ca65)
 
 
+---
+
+## Bad-Fi: Configs
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/bade57e4-91fa-4a8a-9eaf-03c5f5148434)
+
 
 
 
