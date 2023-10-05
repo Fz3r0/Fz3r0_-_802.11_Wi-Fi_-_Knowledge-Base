@@ -38,6 +38,15 @@ Prepárense para reír, sentir vergüenza ajena y tal vez incluso derramar una l
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a16fcbc7-343e-4826-b84d-b8263cb35743)
 
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/b7d0d0fd-b429-48e5-bf91-366aec4ef64e)
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/61bc0e33-4a4e-4f99-8755-bdf5c76f0188)
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/85ef6871-da74-4827-87dd-ded33ecfe2b3)
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/7b00eb2a-847c-46bc-98e7-4a660c4d3b5e)
+
+
 ---
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/40152010-43e4-48a3-8527-5317eece5008)
@@ -177,7 +186,101 @@ Prepárense para reír, sentir vergüenza ajena y tal vez incluso derramar una l
 
 
 
+
+
+
+
+
+
 ## Bad-Fi: Desgin
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/c29940b7-66e3-4290-89a2-51b685a6e758)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/7164e5ea-bcc5-4b33-8ff5-d34dbddc6d8c)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/82e7dcef-e189-4291-865b-804ad94b1f96)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/c8f1396a-8690-45ce-a592-af427543cfb8)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/b12f8110-5a4b-478f-9b41-c6370d7cb985)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/3243ea8a-e71d-46f9-801f-961975421514)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/6af919ba-8503-4f26-920a-b1c66b95e9c9)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/1ef85c5b-24f6-4295-b356-e44e1b7dfe10)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/938da15a-97e5-4439-8954-95560e526360)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/c9e9f821-a4b8-4b30-a87f-40c2038f8a27)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/6b6332f9-1203-43d7-a7f2-3b3f165e1e85)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/5767dfec-ff88-492d-9958-20b8765029ed)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/9a9ea247-4ffd-473e-8787-8ac941c06771)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/d4bf60ab-8621-4eba-85f1-b743bfd37fa0)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f6b8c8de-580c-43ef-a918-96df7b76767f)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/e80d411c-41f2-498e-bf93-9969151007a3)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/370bc084-075b-4dff-bbe4-46be9cb17a14)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/02d27e23-baad-4c75-87de-75a0f36e9dcc)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a75b66b4-0cb4-42bf-b607-83684a9513c4)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/2923127d-e827-4bc4-a938-ce65ced73f8d)
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/685d987f-93b8-471d-b79a-fcf6ee342c8d)
+
+
+
+
+
+
+
+
 
 
 
@@ -186,10 +289,27 @@ Prepárense para reír, sentir vergüenza ajena y tal vez incluso derramar una l
 
 ## Bad-Fi: Wired & Infraestructure
 
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/fd22f780-63fb-4838-89e9-6f393a59c94d)
+
+---
+
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/63601dc7-4400-4f38-acbf-a7542f838396)
 
 ---
 
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/32a098e5-2fc4-46cf-8c84-7a5569273c74)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f2476cba-5a2d-454a-b2fa-3e9df512e4c1)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/50f30fa2-5fa4-45ba-bccf-8d723ff8be1f)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f4a9097b-3db5-4fb6-9756-b8cd1551194c)
 
 
 
