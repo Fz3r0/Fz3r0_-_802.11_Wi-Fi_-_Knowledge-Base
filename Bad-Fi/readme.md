@@ -274,8 +274,16 @@ Prepárense para reír, sentir vergüenza ajena y tal vez incluso derramar una l
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/685d987f-93b8-471d-b79a-fcf6ee342c8d)
 
+---
 
 
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f2476cba-5a2d-454a-b2fa-3e9df512e4c1)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/50f30fa2-5fa4-45ba-bccf-8d723ff8be1f)
+
+---
 
 
 
@@ -299,13 +307,6 @@ Prepárense para reír, sentir vergüenza ajena y tal vez incluso derramar una l
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/32a098e5-2fc4-46cf-8c84-7a5569273c74)
 
----
-
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f2476cba-5a2d-454a-b2fa-3e9df512e4c1)
-
----
-
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/50f30fa2-5fa4-45ba-bccf-8d723ff8be1f)
 
 ---
 
