@@ -2,6 +2,8 @@
 
 _by Fz3r0_
 
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/162b5b8d-88aa-4cca-9442-8276a60e7643)
+
 ## English:
 
 Welcome to the Bad-Fi!!!
