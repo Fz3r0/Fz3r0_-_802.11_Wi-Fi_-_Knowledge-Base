@@ -12,11 +12,11 @@ Welcome to the Bad-Fi!!!
 
 Prepare yourself for a hilarious journey into the chaotic, mind-boggling world of Wi-Fi gone wild! This repo is here to expose the dark underbelly of wireless networking, where good intentions go to die and common sense takes a vacation.
 
-In this corner of the internet, we (unproudly) present a spectacle of bad practices, horrendous configurations, laughable designs, and an all-around lack of standardization and shenenigans that will make your head spin faster than a buffering YouTube video. It's as if the engineer responsible for these disasters didn't even bother with the fundamentals watching a Youtube tutorial.
+In this corner of the internet, we (unproudly) present a spectacle of bad practices, horrendous configurations, laughable designs, and an all-around lack of standardization and shenenigans that will make your head spin more than a Windows update in process. It's as if the engineer responsible for these disasters didn't even bother with the fundamentals watching a Youtube tutorial.
 
-Wi-Fi, the art of wirelessly connecting the world, deserves better! But alas, it has fallen victim to the creative (and sometimes downright absurd) minds of those who dare to defy logic in the name of connectivity. Join us as we explore these masterpieces of mayhem that threaten to turn the airwaves into a chaotic battlefield.
+Wi-Fi, the art of wirelessly connecting the world, deserves better! But alas, it has fallen victim to the "creative" (and sometimes downright absurd) minds of those who dare to defy logic in the name of connectivity. Join us as we explore these masterpieces of mayhem that threaten to turn the airwaves into a chaotic battlefield.
 
-Get ready to laugh, cringe, and maybe even shed a tear for the state of modern networking. Welcome to the Bad-Fi, where we shine a spotlight on the worst of the worst and celebrate the unintentional comedians of the Wi-Fi world. Grab your popcorn, because it's going to be a bumpy ride! 
+Get ready to laugh, cringe, and maybe even shed a tear for the state of modern networking. Welcome to the Bad-Fi!, where we shine a spotlight on the worst of the worst and celebrate the unintentional comedians of the Wi-Fi world. Grab your popcorn, because it's going to be a bumpy ride! 
 
 💩📡🤢📡🤮
 
@@ -24,13 +24,13 @@ Get ready to laugh, cringe, and maybe even shed a tear for the state of modern n
 
 ¡¡¡Bienvenidos a Bad-Fi!!!
 
-¡Prepárense para un hilarante viaje al caótico y desconcertante mundo del Wi-Fi descontrolado! Este repositorio está aquí para exponer el lado oscuro de la conectividad inalámbrica, donde las buenas prácticas se desvanecen y el sentido común se toma un descanso.
+¡Prepárense para un hilarante viaje al caótico y desconcertante mundo del Wi-Fi que se ha ido al demonio! Este repositorio está aquí para exponer el lado oscuro de la conectividad inalámbrica, donde las buenas prácticas se desvanecen y el sentido común se toma un descanso.
 
-En este rincón de internet, presentamos (no-orgullosamente) un espectáculo de malas prácticas, configuraciones horrendas, diseños risibles y una falta general de estandarización y jocosidades que harán que tu cabeza gire más rápido que un video de YouTube en proceso de carga. Es como si el ingeniero responsable de estos desastres ni siquiera se hubiera molestado en seguir un tutorial de YouTube sobre los fundamentos.
+En este rincón de internet, presentamos (no-orgullosamente) un espectáculo de malas prácticas, configuraciones horrendas, diseños risibles y una falta general de estandarización y jocosidades que harán que tu cabeza gire más que una actualización de Windows en proceso de carga. Es como si el ingeniero responsable de estos desastres ni siquiera se hubiera molestado en seguir un tutorial de YouTube sobre los fundamentos.
 
-El Wi-Fi, el arte de conectar el mundo de forma inalámbrica, ¡se merece algo mejor! Pero, lamentablemente, ha caído víctima de las mentes creativas (y a veces totalmente absurdas) de aquellos que se atreven a desafiar la lógica en nombre de la conectividad. Únanse a nosotros mientras exploramos estas obras maestras del caos que amenazan con convertir las ondas del aire en un campo de batalla caótico.
+El Wi-Fi, el arte de conectar el mundo de forma inalámbrica, ¡se merece algo mejor! Pero, lamentablemente, ha caído víctima de las mentes "creativas" (y a veces totalmente absurdas) de aquellos que se atreven a desafiar la lógica en nombre de la conectividad. Únanse a nosotros mientras exploramos estas obras maestras del caos que amenazan con convertir las ondas del aire en un campo de batalla caótico.
 
-Prepárense para reír, sentir vergüenza ajena y tal vez incluso derramar una lágrima por el estado de la red moderna. Bienvenidos a Bad-Fi, donde se expone lo peor de lo peor y celebramos a los cómicos involuntarios del mundo del Wi-Fi. ¡Agarren las palomitas de maíz, porque esto va a ser un viaje lleno de baches! 
+Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrima por el estado de la red moderna. ¡Bienvenidos a Bad-Fi!, donde se expone lo peor de lo peor y celebramos a los cómicos involuntarios del mundo del Wi-Fi. ¡Vayan por unas palomitas de maíz, porque esto va a ser un viaje lleno de baches! 
 
 💩📡🤢📡🤮
 
