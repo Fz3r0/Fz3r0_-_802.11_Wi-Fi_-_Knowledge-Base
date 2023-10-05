@@ -175,6 +175,11 @@ Prepárense para reír, sentir vergüenza ajena y tal vez incluso derramar una l
 
 
 
+## Bad-Fi: Wired & Infraestructure
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/63601dc7-4400-4f38-acbf-a7542f838396)
+
+---
 
 
 
