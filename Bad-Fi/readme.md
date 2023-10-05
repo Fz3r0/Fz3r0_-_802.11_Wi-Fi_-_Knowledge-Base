@@ -4,7 +4,7 @@ _by Fz3r0_
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/162b5b8d-88aa-4cca-9442-8276a60e7643)
 
-_"El **`Wi-Fi`** es como un cuadro de **Bob Ross**, donde el diseño, planeación, configuración e implementación se mezcla en una armonía perfecta. Pero en `**Bad-Fi`**, es como si **Bob Atroz** agarrara los pinceles y pintara el caos en cada rincón de la red."_
+_"El **`Wi-Fi`** es como un cuadro de **Bob Ross**, donde el diseño, planeación, configuración e implementación se mezcla en una armonía perfecta. Pero en **`Bad-Fi`**, es como si **Bob Atroz** agarrara los pinceles y pintara el caos en cada rincón de la red."_
 
 ## English:
 
