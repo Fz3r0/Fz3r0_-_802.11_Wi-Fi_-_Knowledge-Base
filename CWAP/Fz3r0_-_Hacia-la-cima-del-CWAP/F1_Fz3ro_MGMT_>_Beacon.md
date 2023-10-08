@@ -25,10 +25,10 @@ Los `Beacon Frames` son utilizados por los `APs` (y `STAs` en una `IBSS`) para *
 
 - Las Beacon Frames se envían periódicamente en un momento llamado `Target Beacon Transmission Time (TBTT).`
 
-Los valores por default de un Beacon Frame son los siguientes:
+Los valores por default de un TBTT en un Beacon Frame son los siguientes:
 
-- **`1 TU` = 1024 microsegundos**
-- **`Beacon interval`  = 100 TU** (100 x 1024 microsegundos o 102.4 milisegundos)
+- **`1 TU` = 1024 [Microsegundos] = [102.4 Milisegundos] = 0.102400 [Segundos]**
+- **`Beacon interval`  = 100 TU** _(100 x 1024 microsegundos ó 102.4 milisegundos)_
 
 ## 🧪 Ejemplo:
 
