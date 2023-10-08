@@ -16,7 +16,7 @@ En este writeup, incluyo los demas de estudio y mi camino hacia la certificació
 
 También incluyo mis propios laboratorios de prácticas, análisis y laboratorios, en los cuales no solo incluyo temas relacionados con análisis de protocolos y de espectro, sino también temas como packet forging y packet tampering con Scappy o laboratorios de Pentesting y Hacking Ético de redes 802.11, útil para otras certificaciones de Wireless 802.11.
 
-**Este documento es una bitácora de mi expedición: `hacia la cima del CWAP`. 🗻** <br><br>
+**Este documento es la bitácora de mi expedición: `hacia la cima del CWAP`. 🗻** <br><br>
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/225515551-3de68463-c5b1-4573-8a22-bfa77fd7e834.png" alt="CWAP" height=165px/> </a>   </p> 
 
