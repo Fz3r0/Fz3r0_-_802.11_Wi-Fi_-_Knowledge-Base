@@ -8,7 +8,7 @@ Además, como Bonus especial, también incluiré ejemplos de `IEEE 802.3 Etherne
 
 Debido a la importancia de estos fundamentos para tener una base sólida para la comprensión del `CWAP`, aconsejo repasar y comprender a la perfección todos estos temas, ya que no solo son de gran ayuda para el `CWAP`, sino que también será útil para cualquier certificación wireless, incluyendo Seguridad Ofensiva y Hacking. <br>
 
-## 💀 `Protocolos` y `Comunicaciones`
+## 💀 ¿Qué es un `protocolo`?
 
 Para entender al 100% el concepto de "`protocolo`" solo se deben comprender 2 sencillos conceptos, las últimas 3 definiciones en el `diccionario RAE` y la `analogía del saludo`.
 
@@ -22,19 +22,21 @@ Para entender al 100% el concepto de "`protocolo`" solo se deben comprender 2 se
 5. m. En Informática - Conjunto de reglas que se establecen en el proceso de comunicación entre dos sistemas. <<<-----| Ojito!!!
 ````
 
-- **El `saludo scout` VS `saludo Príncipe del rap` VS un `saludo elegante`**:
+### El `saludo scout` VS `saludo Príncipe del rap` VS un `saludo elegante`**:
 
-    - `Saludo Scout`: Los Scouts acostumbran saludar con la mano izquierda entrelazando los dedos ya que "Solo un verdadero guerrero es capaz de quitarse el escudo para saludar a alguien que se merece un verdadero saludo". (Los guerreros usan el escudo en la mano izquierda y las armas en la mano derecha. Para mostrar confianza en alguien, bajan su escudo y saludan con la mano izquierda).
-    - `Saludo Formal`: La mano se da como saludo después de una presentación o de un encuentro con una persona conocida. También se utiliza, además de como saludo, como fórmula de cortesía para una despedida. Se da la mano al despedirse de otra persona.
-    - `Saludo Príncipe del Rap`: "Hey!!! Pssssssst!"
+Una analogía para entender cómo funiona un `protocolo` se podría resumir en un **saludo de mano entre 2 personas.** 
+
+- `Saludo Formal`: La mano derecha se da como saludo después de una presentación o de un encuentro con una persona conocida. También se utiliza, además de como saludo, como fórmula de cortesía para una despedida. Se da la mano al despedirse de otra persona. <br><br> Desde la antigüedad se utiliza la mano derecha ya que representa el quitarse el arma para saludar a alguien. 
+- `Saludo Scout`: Los Scouts acostumbran saludar con la mano izquierda entrelazando los dedos ya que "Solo un verdadero guerrero es capaz de quitarse el escudo para saludar a alguien que se merece un verdadero saludo". (Los guerreros usan el escudo en la mano izquierda y las armas en la mano derecha. Para mostrar confianza en alguien, bajan su escudo y saludan con la mano izquierda).
+- `Saludo Príncipe del Rap`: "Hey!!! Pssssssst!"
 
 ![image](https://user-images.githubusercontent.com/94720207/233407213-1b8e97d4-93fa-42e2-9cc6-33402c66c5d4.png) ![image](https://media.tenor.com/LnaJl4hOYMkAAAAC/handshake-will-smith.gif)
 
-El `protocolo` simplemente es **la manera que vamos a "saludar"**, yo acabo de dar **3 protocolos diferentes de "slaudar"** ¡todo depende de la persona, el momento y situación! Si estoy frente un Scout tendré que saludar con la `mano izquierda`, si estoy frente a mi amigo puedo hacer el saludo del `príncipe del rap`, pero si estoy frente al CEO de mi trabajo debo saludarle formalmente con la `mano derecha`, es decir: **hay diferentes protocolos de saludo y ambos lados deben saber identificar cuándo utilizar cada uno de ellos.** 
+El `protocolo` simplemente es **la manera que vamos a "saludar" para que la persona del otro lado entienda nuestras intenciones y pueda responder de la misma manera**, yo acabo de dar **3 protocolos diferentes de "slaudar"** ¡todo depende de la persona, el momento y situación! Si estoy frente un Scout tendré que saludar con la `mano izquierda`, si estoy frente a mi amigo puedo hacer el saludo del `príncipe del rap`, pero si estoy frente al CEO de mi trabajo debo saludarle formalmente con la `mano derecha`, es decir: 
 
----
+- **Hay diferentes protocolos de saludo y ambos lados deben saber identificar cuándo y cómo utilizar cada uno de ellos para que exista entendimiento y buena comunicación mutua.**
 
-### 🟢 `Protocolos` de `Networking`
+## 🟢 `Protocolos` de `Networking`
 
 - [CompTia: What Is a Network Protocol, and How Does It Work?](https://www.comptia.org/content/guides/what-is-a-network-protocol#:~:text=A%20network%20protocol%20is%20an,internal%20processes%2C%20structure%20or%20design.)
 - [TechTarget: Network Protocol](https://www.techtarget.com/searchnetworking/definition/protocol)
