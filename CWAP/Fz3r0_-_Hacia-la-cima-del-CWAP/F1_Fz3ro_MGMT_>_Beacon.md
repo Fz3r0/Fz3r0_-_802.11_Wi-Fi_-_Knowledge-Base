@@ -19,7 +19,7 @@ wlan.fc.type_subtype == 8
 wlan.fc.type_subtype == 0x0008
 ````
 
-## Beacon Frames: Descripción
+## 📡 Beacon Frames: Descripción
 
 Los `Beacon Frames` son utilizados por los `APs` (y `STAs` en una `IBSS`) para **comunicar a través del área de servicio las características de la conexión ofrecida a los miembros de una `WLAN` dentro de la celda de cobertura del `AP`. Esta información es utilizada por los clientes que intentan conectarse a la red, así como por los clientes que ya están asociados al `BSS`.**
 
@@ -30,23 +30,9 @@ Los valores por default de un Beacon Frame son los siguientes:
 - **`1 TU` = 1024 microsegundos**
 - **`Beacon interval`  = 100 TU** (100 x 1024 microsegundos o 102.4 milisegundos)
 
-### Ejemplo:
+## 🧪 Ejemplo:
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/88424fcf-e9cf-4889-801a-69fbaa74c44a)
-
----
-
-<!-- 
-
-CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
-
- -->
-
-<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=110px/> </a> </p> 
-
-<br>
-<br>
-<br>
 
 ## Beacon Frame: `Frame Format`
 
