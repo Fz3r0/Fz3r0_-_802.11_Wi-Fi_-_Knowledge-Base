@@ -15,19 +15,7 @@ https://www.nwexam.com/exam-store/cwap-404-cwnp-wireless-analysis-professional-c
 _Writeup y bitácora para la certificación **CWAP-402** de **CWNP (Certified Wireless Network Professional)**_ <br>
 _por @ **Fz3r0 💀** (CWNA)_
 
-<br><br><br>
-
-## 🗂️ `ÍNDICE`
-
-### [🟢 `Introducción`](
-- [🚨 Importante]()
-
-### [🏔️ `La analogía del CWAP y una expedición al K2`]() 
-- [🟣 Bottleneck & Serarc = Examen CWAP-404 @ Pearson Veu]()
-- [🟣 Cima del K2 = Certifcación como Ingeniero CWAP-404]()
-
-### [🟢 `Introducción`]()
-- [🚨 Importante]()
+---
 
 _En La Divina Comedia, un "canto" es una sección poética de la obra que se utiliza para describir una parte específica del viaje del protagonista, Dante, a través del Infierno, el Purgatorio y el Paraíso. Cada canto está compuesto por un número variable de versos, en tercetos (tres versos que riman entre sí)._
 
@@ -48,6 +36,21 @@ _El Canto I es el primer canto de La Divina Comedia, que sirve como una introduc
 <span align="center"> <p align="center"> _Abandonad, los que aquí entráis, toda esperanza..._ </p> </span>
 
 ---
+
+
+# 🗂️ `ÍNDICE`
+
+### [🟢 `Introducción`](
+- [🚨 Importante]()
+
+### [🏔️ `La analogía del CWAP y una expedición al K2`]() 
+- [🟣 Bottleneck & Serarc = Examen CWAP-404 @ Pearson Veu]()
+- [🟣 Cima del K2 = Certifcación como Ingeniero CWAP-404]()
+
+### [🟢 `Introducción`]()
+- [🚨 Importante]()
+
+
 
 <!-- 
 
