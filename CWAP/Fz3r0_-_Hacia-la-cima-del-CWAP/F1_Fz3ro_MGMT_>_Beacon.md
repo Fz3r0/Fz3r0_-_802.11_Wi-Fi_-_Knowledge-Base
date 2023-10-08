@@ -10,6 +10,8 @@ Los PCAPs utilizados para los ejemplos de este bloque son los siguientes:
 ## 🦈⚫ `BlackShark Filter`: Beacon Frames (802.11)
 
 ````py
+### BlackShark Filter: Beacon Frames (802.11)
+
 ## Opción 1
 wlan.fc.type_subtype == 8
 
