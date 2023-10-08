@@ -34,11 +34,17 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 
 💩📡🤢📡🤮
 
+
+
 ## Bad-Fi: Wi-Fi Analyzers & Monitoring
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a16fcbc7-343e-4826-b84d-b8263cb35743)
 
+---
+
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/b7d0d0fd-b429-48e5-bf91-366aec4ef64e)
+
+---
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/7b00eb2a-847c-46bc-98e7-4a660c4d3b5e)
 
@@ -52,10 +58,11 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 
 ---
 
-
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/ce362494-b94e-41ba-b07a-2f56f39895fc)
 
+---
 
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/09ab3271-5371-4e61-8092-faadeee7ad91)
 
 ---
 
@@ -63,14 +70,27 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 
 
 
----
-
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f4beb760-8320-4675-acd8-973846231436)
 
 
 
 
----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Bad-Fi: Configs
 
@@ -87,7 +107,28 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Bad-Fi: Spectrums
+
+
+
+
+
+
 
 
 
@@ -101,7 +142,7 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 
 ## Bad-Fi: Desgin
 
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/09ab3271-5371-4e61-8092-faadeee7ad91)
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f4beb760-8320-4675-acd8-973846231436)
 
 ---
 
@@ -295,6 +336,20 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Bad-Fi: Wired & Infraestructure
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/fd22f780-63fb-4838-89e9-6f393a59c94d)
@@ -306,7 +361,6 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 ---
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/32a098e5-2fc4-46cf-8c84-7a5569273c74)
-
 
 ---
 
