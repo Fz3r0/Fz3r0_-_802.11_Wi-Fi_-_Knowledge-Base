@@ -194,6 +194,10 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 
 ## Bad-Fi: Desgin
 
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a3e84e28-aee3-4593-a4b8-859d3d0f9cc1)
+
+---
+
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/c29940b7-66e3-4290-89a2-51b685a6e758)
 
 ---
