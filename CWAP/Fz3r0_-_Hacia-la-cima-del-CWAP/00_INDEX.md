@@ -20,7 +20,7 @@ _por @ **Fz3r0 💀** (CWNA)_
 
 <span align="center"> <h1 align="center"> ÍNDICE </h1> </span>  
 
-### [🟢 `Introducción`](
+### [🟢 `Introducción`]()
 - [🚨 Importante]()
 
 ### [🏔️ `La analogía del CWAP y una expedición al K2`]() 
