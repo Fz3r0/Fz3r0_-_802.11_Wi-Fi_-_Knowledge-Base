@@ -22,7 +22,7 @@ Para entender al 100% el concepto de "`protocolo`" solo se deben comprender 2 se
 5. m. En Informática - Conjunto de reglas que se establecen en el proceso de comunicación entre dos sistemas. <<<-----| Ojito!!!
 ````
 
-### El `saludo scout` VS `saludo Príncipe del rap` VS un `saludo elegante`**:
+### 👋 Analogía: `Saludo Formal` VS `Saludo scout` VS `saludo Príncipe del rap`
 
 Una analogía para entender cómo funiona un `protocolo` se podría resumir en un **saludo de mano entre 2 personas.** 
 
@@ -36,20 +36,24 @@ El `protocolo` simplemente es **la manera que vamos a "saludar" para que la pers
 
 - **Hay diferentes protocolos de saludo y ambos lados deben saber identificar cuándo y cómo utilizar cada uno de ellos para que exista entendimiento y buena comunicación mutua.**
 
-## 🟢 `Protocolos` de `Networking`
+## 💀 Definición: `Protocolos` de `Networking`
+
+Algunos ejemplos de definiciones de Protocolos de Networking son:
 
 - [CompTia: What Is a Network Protocol, and How Does It Work?](https://www.comptia.org/content/guides/what-is-a-network-protocol#:~:text=A%20network%20protocol%20is%20an,internal%20processes%2C%20structure%20or%20design.)
 - [TechTarget: Network Protocol](https://www.techtarget.com/searchnetworking/definition/protocol)
 
-En informática y networking, un `protocolo` es un **método definido para la comunicación entre dispositivos**. El protocolo funciona porque **ambos dispositivos entienden cómo enviar y recibir mensajes basados en el protocolo establecido.**
+En Informática y Networking, un `protocolo` es un **método definido para la comunicación entre dispositivos**. El protocolo funciona porque **ambos dispositivos entienden cómo enviar y recibir mensajes basados en el protocolo establecido.**
 
-- La definición de `CompTia` cita:
+La definición de `CompTia` cita:
 
-**_"Un protocolo de red es un conjunto establecido de reglas que determinan cómo se transmite la información entre diferentes dispositivos en la misma red. Básicamente, permite que los dispositivos conectados se comuniquen entre sí, independientemente de las diferencias en sus procesos internos, estructura o diseño."_**
+- **_"Un protocolo de red es un conjunto establecido de reglas que determinan cómo se transmite la información entre diferentes dispositivos en la misma red. Básicamente, permite que los dispositivos conectados se comuniquen entre sí, independientemente de las diferencias en sus procesos internos, estructura o diseño."_**
 
-- En Try Hack Me encontré una definición que me gusta mucho, tradicide dice: 
+En `Try Hack Me` se comparte una definición que me gusta mucho, tradicide dice: 
 
-**_"Un protocolo de red es un conjunto predefinido de reglas y procesos que determinan cómo se transmite la información entre dispositivos, como dispositivos de usuario final, dispositivos de red y servidores. El objetivo fundamental de todos los protocolos es permitir que las máquinas se conecten y se comuniquen de manera fluida, independientemente de las diferencias en su diseño interno, estructura, lógica u operación. En analogía, un protocolo de red es como un "idioma común" que ayuda a que la comunicación sea posible entre personas con diferentes idiomas nativos y de diversas partes del mundo."_**
+- **_"Un protocolo de red es un conjunto predefinido de reglas y procesos que determinan cómo se transmite la información entre dispositivos, como dispositivos de usuario final, dispositivos de red y servidores. El objetivo fundamental de todos los protocolos es permitir que las máquinas se conecten y se comuniquen de manera fluida, independientemente de las diferencias en su diseño interno, estructura, lógica u operación. En analogía, un protocolo de red es como un "idioma común" que ayuda a que la comunicación sea posible entre personas con diferentes idiomas nativos y de diversas partes del mundo."_**
+
+Puntos importantes a tomar en cuenta:
 
 - Cada protocolo representa capas específicas del `Modelo OSI` o `Modelo TCP/IP` y opera según la funcionalidad de esa capa.
 - Los protocolos basados en `TCP` y `UDP` operan en `Network Ports` específicos.
@@ -57,6 +61,8 @@ En informática y networking, un `protocolo` es un **método definido para la co
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/6518b37e-6e0a-45dc-a881-f29f5fd2767a)
 
 Es decir, justo como `la analogía de los saludos de mano` pasa con un protocolo de networking, por ejemplo, cuando `Ana` se quiere comunicar con `Bob` a través de un `correo electrónico` que utiliza el protocolo **`SMTP Port: 587`** _(Simple Mail Transfer Prtocol)_, no importa que `Ana` esté usando un `Apple iphone con IOS` y `Bob` esté usando una `PC Laptop con Microsoft Windows 10`. En este caso, tanto el dispositivo de `Ana` como `Bob` deben saber como "escribir", "leer", "procesar", "recibir" y "enviar" este tipo de `paquetes SMTP` de `e-mail`, así ambos lados podrán comunicar su mensaje, así como recibir y entender la respuesta del otro lado, en este caso, un correo electrónico.  
+
+## 💀 Análisis de diferentes protocolos
 
 Para ser más claro, hay que recordar que la parte lógica en la informática son solo `1` y `0`, o mejor dicho `sistema binario`. El `protocolo` no es más que la manera que se le dará sentido a esos 1 y 0 en ambos lados de la comunicación y ambos dispositivos sabrán identificar cada una de esas representaciones binarias en una serie de paquetes encapsulados en las diferentes capas del Modelo OSI.
 
