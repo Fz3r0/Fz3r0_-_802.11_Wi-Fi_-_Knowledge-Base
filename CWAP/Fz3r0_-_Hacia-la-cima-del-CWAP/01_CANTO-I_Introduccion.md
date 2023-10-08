@@ -16,13 +16,11 @@ En este writeup, incluyo los demas de estudio y mi camino hacia la certificació
 
 También incluyo mis propios laboratorios de prácticas, análisis y laboratorios, en los cuales no solo incluyo temas relacionados con análisis de protocolos y de espectro, sino también temas como packet forging y packet tampering con Scappy o laboratorios de Pentesting y Hacking Ético de redes 802.11, útil para otras certificaciones de Wireless 802.11.
 
-**Este documento es la bitácora de mi expedición: `hacia la cima del CWAP`. 🗻** <br><br>
+**Este repositorio representa la bitácora de mi expedición: `hacia la cima del CWAP`. 🗻** <br><br>
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/225515551-3de68463-c5b1-4573-8a22-bfa77fd7e834.png" alt="CWAP" height=165px/> </a>   </p> 
 
----
-
-### 🟢 Perfil de un `Wireless Analysis Professional` - `CWAP Engineer`
+## 💀 Perfil de un `Wireless Analysis Professional` - `CWAP Engineer`
 
 Un ingeniero `CWAP (Certified Wireless Analysis Professional)` debe tener una amplia gama de habilidades para **diseñar, implementar, solucionar problemas y asegurar el rendimiento de las redes inalámbricas.** <br>
 
@@ -42,9 +40,7 @@ Un ingeniero `CWAP (Certified Wireless Analysis Professional)` debe tener una am
 
  </div>
 
----
-
-### 🟢 Conocimiento Requerido para `CWAP-402`
+## 🟢 Conocimiento Requerido para `CWAP-402`
 
 - [CWAP® - Certified Wireless Analysis Professional - Current version: CWAP-404 released in September 2021](https://www.cwnp.com/certifications/cwap)
 
@@ -117,7 +113,7 @@ Personalmente recomiendo el `Cisco CCNA`, `CompTIA Network+` y `Ruckus ICX Imple
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/226084984-53d0035a-6285-4c8c-8849-1d8d0df7343b.png" alt="CWAP" height=90px/> </a>   </p> <br>
 
-## 🏔️ La analogía del `CWAP` y una expedición al `K2` 
+# 🏔️ La analogía del `CWAP` y una expedición al `K2` 
 
 **La manera en la que he ajustado mi mente, cuerpo y espíritu para lograr la motivación y disciplina que representa estudiar esta certificación y documentar en este repositorio todos los recursos necesarios para salir adelante con el reto, fue imaginarlo como escalar el `K2` por la ruta `Abruzzi Spur`:**
 
@@ -133,9 +129,7 @@ Los escaladores que se aventuran en esta ruta ponen sus vidas en juego con cada 
  
 - **Cursar el `CWAP` es como intentar llegar a la cima del `K2` por la `Abruzzi Spur`, no es una certificación para principiantes y aún a los expertos puede representar un gran reto.**
 
----
-
-### 🟣 `Bottleneck` & `Serarc` = Examen CWAP-404 @ Pearson Veu
+## 🟣 `Bottleneck` & `Serarc` = Examen CWAP-404 @ Pearson Veu
 
 El `Bottleneck` es una sección crítica de la `Abruzzi Spur`, esta zona es un corredor estrecho de hielo y roca que se encuentra a una altitud de casi 8.000 metros. Es un lugar donde el aire es escaso y el peligro es constante, lo que la convierte en un desafío extremadamente difícil para los escaladores que intentan llegar a la cima. <br>
 
@@ -151,7 +145,7 @@ Se dice que es en el `Bottleneck` es donde tu vida deja de estar en tus manos...
 
 ![image](https://user-images.githubusercontent.com/94720207/225210926-c1e5788f-3f22-42af-994b-350232c730fb.png)
 
-### 🟣 `Cima del K2` = `Certifcación como Ingeniero CWAP-404`
+## 🟣 `Cima del K2` = `Certifcación como Ingeniero CWAP-404`
 
 Al superar los todos los obstáculos, solo hay que dar unos pasos más hacia la cima "The Summit Ridge" o simplemente, "el último emuje"... y disfrutar la de vista de los Himalaya, ¡para después seguir con el siguiente reto!
 
@@ -159,7 +153,7 @@ La `ruta Abruzzi del K2` es un camino lleno de peligros y desafíos que ponen a 
 
 **La hazaña de superar la ruta completa del `K2` es una demostración de la fuerza y la determinación humana y un recordatorio de que, con suficiente dedicación y perseverancia, no hay nada que el ser humano no pueda superar.** <br> 
 
- _"K2, avanzar a morir!"_
+ **_"¡K2! - avanzar a morir!"_**
 
 ---
 
