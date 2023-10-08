@@ -27,8 +27,8 @@ Los `Beacon Frames` son utilizados por los `APs` (y `STAs` en una `IBSS`) para *
 
 Los valores por default de un TBTT en un Beacon Frame son `100 TU`:
 
-- **`1 TU` = 1024 [Microsegundos] = [102.4 Milisegundos]**
-- **`Beacon interval`  = 100 TU** | 100 x 1024 microsegundos = `102.4 Milisegundos` ó = `0.102400 Segundos`
+- **`1 TU` = 1024 [Microsegundos]**
+- **`Beacon interval`  = 100 TU's** || 100 x 1024 microsegundos = `102.4 Milisegundos` ó = `0.102400 Segundos`
 
 ## 🧪 Ejemplo:
 
