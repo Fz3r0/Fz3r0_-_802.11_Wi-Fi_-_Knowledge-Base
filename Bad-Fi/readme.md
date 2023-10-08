@@ -55,13 +55,6 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/ce362494-b94e-41ba-b07a-2f56f39895fc)
 
----
-
-
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/09ab3271-5371-4e61-8092-faadeee7ad91)
-
----
-
 
 
 ---
@@ -74,22 +67,7 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f4beb760-8320-4675-acd8-973846231436)
 
----
 
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/1a093ff2-7653-496c-b79f-43549a2ccc37)
-
----
-
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/6fe38e83-57b5-4c0c-85b6-cbd24c7bc9a1)
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/cc48bd8f-f870-4284-b865-33ac75fb6f8a)
-
----
-
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/46b95f6b-6b3c-4350-a56b-dacc83d2c0e0)
-
----
-
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/d61595bc-abef-4475-b6a7-2a0904c6ca65)
 
 
 ---
@@ -122,6 +100,25 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 
 
 ## Bad-Fi: Desgin
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/09ab3271-5371-4e61-8092-faadeee7ad91)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/1a093ff2-7653-496c-b79f-43549a2ccc37)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/6fe38e83-57b5-4c0c-85b6-cbd24c7bc9a1)
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/cc48bd8f-f870-4284-b865-33ac75fb6f8a)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/46b95f6b-6b3c-4350-a56b-dacc83d2c0e0)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/d61595bc-abef-4475-b6a7-2a0904c6ca65)
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/ec593259-90f4-4b59-9d68-3d78ee348869)
 
