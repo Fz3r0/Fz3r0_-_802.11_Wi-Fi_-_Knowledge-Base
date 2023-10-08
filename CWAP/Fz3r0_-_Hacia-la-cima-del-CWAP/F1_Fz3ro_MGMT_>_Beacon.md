@@ -1,6 +1,4 @@
-# Management Frames: `Beacon`
-
-## Fz3r0 Lab: `Beacon Frame`
+# Management Frames (802.11): `Beacon`
 
 Los PCAPs utilizados para los ejemplos de este bloque son los siguientes:
 
@@ -9,23 +7,7 @@ Los PCAPs utilizados para los ejemplos de este bloque son los siguientes:
 - [`PCAP3` - **Infinitum Beacon** - Telmex Home Generic - 2.4 GHz Ch 6 - WPA2 - ESS Home WLAN - 6mb Data Rate](https://github.com/Fz3r0/Fz3r0_-_BlackShark/files/11780434/Infinitum_Beacon_2.4GHz.zip)
 - [`PCAP4` - **Public Beacon** - Ruckus H510 - 5 GHz - 802.1X - ESS Centralized WLC](https://github.com/Fz3r0/Fz3r0_-_BlackShark/files/11782465/Ruckus.H510.Public.Network.802.1x.RSN.zip)
 
----
-
-<!-- 
-
-CAMBIO DE BLOQUE --------------------------------------------------------------------------------------------------
-
- -->
-
-<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/228101704-c07ced92-e331-446c-aa7e-5d00018e2429.gif" alt="Encapsula" height=60px/> </a> </p> 
-
-<br>
-<br>
-<br>
-
-## Beacon Frames
-
-**BlackShark Filter:**
+## 🦈⚫😈 `BlackShark Filter`: Beacon Frames (802.11)
 
 ````py
 ## Opción 1
@@ -35,9 +17,7 @@ wlan.fc.type_subtype == 8
 wlan.fc.type_subtype == 0x0008
 ````
 
----
-
-**Descripción:**
+## Beacon Frames: Descripción
 
 Los `Beacon Frames` son utilizados por los `APs` (y `STAs` en una `IBSS`) para **comunicar a través del área de servicio las características de la conexión ofrecida a los miembros de una `WLAN` dentro de la celda de cobertura del `AP`. Esta información es utilizada por los clientes que intentan conectarse a la red, así como por los clientes que ya están asociados al `BSS`.**
 
@@ -47,8 +27,6 @@ Los valores por default de un Beacon Frame son los siguientes:
 
 - **`1 TU` = 1024 microsegundos**
 - **`Beacon interval`  = 100 TU** (100 x 1024 microsegundos o 102.4 milisegundos)
-
----
 
 ### Ejemplo:
 
