@@ -17,7 +17,9 @@ Los PCAPs utilizados para los ejemplos de este bloque son los siguientes:
 #                                                     #
 #######################################################
 
+   #
    # ALL Beacon Frames:
+   #
 
 ## Opción 1
 wlan.fc.type_subtype == 8
@@ -25,7 +27,11 @@ wlan.fc.type_subtype == 8
 ## Opción 2
 wlan.fc.type_subtype == 0x0008
 
+#######################################################
+
+   #
    # Beacon Frames - Mandatory Fields:
+   #
 
 ## 01 - Timestamp - 8 byte
 wlan.fixed.timestamp == 2078442701205
@@ -102,6 +108,9 @@ wlan.ssid == "Fz3r0"
 ### Hidden SSID (Wildcard)
 wlan.ssid == ""
 
+#######################################################
+
+   #
 
 ````
 
