@@ -29,6 +29,80 @@ wlan.fc.type_subtype == 0x0008
 
 ## 01 - Timestamp - 8 byte
 wlan.fixed.timestamp == 2078442701205
+
+## 02 - Beacon Interval - 2 byte
+wlan.fixed.beacon == 100
+
+## 03 - Capability Information - 2 byte
+
+   # NOTA: 1 = SI / 0 = NO
+
+   ### ALL Capabilities / HEX code combination
+   wlan.fixed.capabilities == 0x1511
+
+   ### ESS capabilites 
+   wlan.fixed.capabilities.ess == 1
+
+   ### IBSSS status
+   wlan.fixed.capabilities.ibss == 0
+
+   ### Reserved 1
+   wlan.fixed.capabilities.reserved1 == 0
+
+   ### Reserved 2
+   wlan.fixed.capabilities.reserved2 == 0
+
+   ### Privacy 
+   wlan.fixed.capabilities.privacy == 1
+
+   ### Short Preamble
+   wlan.fixed.capabilities.short_preamble == 0
+
+   ### Reserved 3
+   wlan.fixed.capabilities.reserved3 == 0
+
+   ### Reserved 4
+   wlan.fixed.capabilities.reserved4 == 0
+
+   ### Spectrum Management
+   wlan.fixed.capabilities.spec_man == 1
+
+   ### QoS
+   wlan.fixed.capabilities.qos == 0
+
+   ### Short Slot Time
+   wlan.fixed.capabilities.short_slot_time == 1
+
+   ### Automatic Power Save Delivery
+   wlan.fixed.capabilities.apsd == 0
+
+   ### Radio Measurement
+   wlan.fixed.capabilities.radio_measurement == 1
+
+   ### EPD
+   wlan.fixed.capabilities.epd == 0
+
+   ### Reserved 5
+   wlan.fixed.capabilities.reserved5 == 0
+
+   ### Reserved 6
+   wlan.fixed.capabilities.reserved6 == 0
+
+## 04 - SSID - _Variable Size_
+
+### Tag Number
+wlan.tag.number == 0
+
+### Tag Lenght
+wlan.tag.length == 5
+
+### SSID
+wlan.ssid == "Fz3r0"
+
+### Hidden SSID (Wildcard)
+wlan.ssid == ""
+
+
 ````
 
 ## 📡 Beacon Frames: Descripción
@@ -154,6 +228,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 ### BlackShark Filter:
 
 ````py
+## 02 - Beacon Interval - 2 byte
 wlan.fixed.beacon == 100
 ````
 
@@ -195,7 +270,11 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 ### BlackShark Filter:
 
 ````py
-## Capabilities
+## 03 - Capability Information - 2 byte
+
+   # NOTA: 1 = SI / 0 = NO
+
+### ALL Capabilities / HEX code combination
 wlan.fixed.capabilities == 0x1511
 
 ### ESS capabilites 
@@ -245,6 +324,23 @@ wlan.fixed.capabilities.reserved5 == 0
 
 ### Reserved 6
 wlan.fixed.capabilities.reserved6 == 0
+
+## 📡 04 - `SSID` - _Variable_
+
+### BlackShark Filter:
+
+````py
+### Tag Number
+wlan.tag.number == 0
+
+### Tag Lenght
+wlan.tag.length == 5
+
+### SSID
+wlan.ssid == "Fz3r0"
+
+### Hidden SSID (Wildcard)
+wlan.ssid == ""
 ````
 
 ---
@@ -280,6 +376,8 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 ### BlackShark Filter:
 
 ````py
+## 04 - SSID - _Variable Size_
+
 ### Tag Number
 wlan.tag.number == 0
 
