@@ -54,7 +54,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## Beacon Frame: `Frame Body`
+## 📡 Beacon Frame: `Frame Body`
 
 - En la sección del `Frame Body`, hay algunos **campos obligatorios** y algunos **campos opcionales**. 
 
@@ -90,7 +90,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-# Beacon Frame Body: `Mandatory Fields`
+# 📡🕵️ Beacon Frame Body: `Mandatory Fields`
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/df5d86c3-ff5a-4453-9554-c6b4e5b29067)
 
@@ -136,7 +136,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## 02 - `Beacon Interval` - 2 byte
+## 📡 02 - `Beacon Interval` - 2 byte
 
 ### BlackShark Filter:
 
@@ -177,7 +177,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## 03 - `Capability Information` - 2 byte
+## 📡 03 - `Capability Information` - 2 byte
 
 ### BlackShark Filter:
 
@@ -262,7 +262,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## 04 - `SSID` - _Variable_
+## 📡 04 - `SSID` - _Variable_
 
 ### BlackShark Filter:
 
@@ -275,6 +275,9 @@ wlan.tag.length == 5
 
 ### SSID
 wlan.ssid == "Fz3r0"
+
+### Hidden SSID (Wildcard)
+wlan.ssid == ""
 ````
 
 ---
@@ -317,7 +320,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## 05 - `Supported Rates` - 8 byte
+## 📡 05 - `Supported Rates` - 8 byte
 
 ### BlackShark Filter:
 
@@ -370,7 +373,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-# Beacon Frame Body: `Optional Fields`
+# 📡🕵️  Beacon Frame Body: `Optional Fields`
 
 ### Ejemplo 1: Ruckus
 
@@ -394,7 +397,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## 06 - `FH parameter set` - _Variable_
+## 📡 06 - `FH parameter set` - _Variable_
 
 ### BlackShark Filter:
 
@@ -423,7 +426,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## 07 - `DS Parameter` - 2 byte
+## 📡 07 - `DS Parameter` - 2 byte
 
 ### BlackShark Filter:
 
@@ -471,7 +474,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## 08 - `CF Parameter (8 byte)` - 2 byte
+## 📡 08 - `CF Parameter (8 byte)` - 2 byte
 
 ### BlackShark Filter:
 
@@ -498,7 +501,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## 09 - `IBSS parameter` - 4 byte
+## 📡 09 - `IBSS parameter` - 4 byte
 
 ### BlackShark Filter:
 
@@ -525,7 +528,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## 10 - `TIM (Traffic Indication Map)` - 2 byte
+## 📡 10 - `TIM (Traffic Indication Map)` - 2 byte
 
 ### BlackShark Filter:
 
@@ -593,7 +596,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## 11 - `Country Information` - _Variable_
+## 📡 11 - `Country Information` - _Variable_
 
 ### BlackShark Filter:
 
@@ -646,7 +649,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## 12 - `FH Parameters` - _Variable_
+## 📡 12 - `FH Parameters` - _Variable_
 
 ### BlackShark Filter:
 
@@ -676,7 +679,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## 13 - `FH Pattern table` - _Variable_
+## 📡 13 - `FH Pattern table` - _Variable_
 
 ### BlackShark Filter:
 
@@ -708,7 +711,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## 14 - `Power Constraint` - 3 byte
+## 📡 14 - `Power Constraint` - 3 byte
 
 ### BlackShark Filter:
 
@@ -758,7 +761,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## 15 - `Channel Switch` - 6 byte
+## 📡 15 - `Channel Switch` - 6 byte
 
 ### BlackShark Filter:
 
@@ -787,7 +790,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## 16 - `Quiet` - 8 byte
+## 📡 16 - `Quiet` - 8 byte
 
 ### BlackShark Filter:
 
@@ -816,7 +819,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
- ## 17 - `IBSS DFS` - _Variable_
+ ## 📡 17 - `IBSS DFS` - _Variable_
 
 ### BlackShark Filter:
 
@@ -844,7 +847,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## 18 - `TPC Report` - 4 byte
+## 📡 18 - `TPC Report` - 4 byte
 
 ### BlackShark Filter:
 
@@ -894,7 +897,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## 19 - `ERP Information` - 3 byte
+## 📡 19 - `ERP Information` - 3 byte
 
 ### BlackShark Filter:
 
@@ -965,7 +968,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## 20 - `Extended Supported Rates` - _Variable_
+## 📡 20 - `Extended Supported Rates` - _Variable_
 
 ### BlackShark Filter:
 
@@ -1026,7 +1029,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## 21 - `RSN Information` - 8 byte
+## 📡 21 - `RSN Information` - 8 byte
 
 ### BlackShark Filter:
 
@@ -1101,7 +1104,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 <br>
 <br>
 
-## 22 - `QBSS Load Element 802.11e` - _Variable_
+## 📡 22 - `QBSS Load Element 802.11e` - _Variable_
 
 ### BlackShark Filter:
 
