@@ -94,6 +94,10 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 
 ## Bad-Fi: Configs
 
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f68130db-6888-48b4-bf90-d4c232febe13)
+
+---
+
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/b3fce175-a2ae-45fb-8c29-1e77413230ad)
 
 ---
