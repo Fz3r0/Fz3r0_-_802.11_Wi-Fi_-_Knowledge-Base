@@ -33,19 +33,19 @@ wlan.fc.type_subtype == 0x0008
 #   Beacon Frames - MANDATORY Fields:   #
 #########################################
 
-    ###  01. Timestamp (8 byte)
-    ###  02. Beacon Interval (2 byte)
-    ###  03. Capability info (2 byte)
-    ###  04. SSID (variable size)
-    ###  05. Supported Rates (variable size)
+    ###  01 [+] Timestamp         (8 byte)
+    ###  02 [+] Beacon Interval   (2 byte)
+    ###  03 [+] Capability info   (2 byte)
+    ###  04 [+] SSID              (variable size)*
+    ###  05 [+] Supported Rates   (variable size)*
 
-## 01 - Timestamp - 8 byte
+## [+] 01 - Timestamp - 8 byte >>>
 wlan.fixed.timestamp == 2078442701205
 
-## 02 - Beacon Interval - 2 byte
+## [+] 02 - Beacon Interval - 2 byte
 wlan.fixed.beacon == 100
 
-## 03 - Capability Information - 2 byte
+## [+] 03 - Capability Information - 2 byte
 
    # NOTA: 1 = SI / 0 = NO
 
@@ -100,7 +100,7 @@ wlan.fixed.beacon == 100
    ### Reserved 6
    wlan.fixed.capabilities.reserved6 == 0
 
-## 04 - SSID - _Variable Size_
+## [+] 04 - SSID - _Variable Size_
 
 ### Tag Number
 wlan.tag.number == 0
@@ -113,6 +113,8 @@ wlan.ssid == "Fz3r0"
 
 ### Hidden SSID (Wildcard)
 wlan.ssid == ""
+
+## 05 - Supported Rates - _Variable Size_
 
 #########################################################
 
