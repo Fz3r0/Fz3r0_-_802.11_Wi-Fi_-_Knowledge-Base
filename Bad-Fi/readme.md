@@ -24,7 +24,7 @@ Get ready to laugh, cringe, and maybe even shed a tear for the state of modern n
 
 ¡¡¡Bienvenidos a Bad-Fi!!!
 
-¡Prepárense para un hilarante viaje al caótico y desconcertante mundo del Wi-Fi que se ha ido al demonio! Este repositorio está aquí para exponer el lado oscuro de la conectividad inalámbrica, donde las buenas prácticas se desvanecen y el sentido común se toma un descanso.
+¡Prepárense para un hilarante viaje al caótico y desconcertante mundo del Wi-Fi que se ha ido al demonio! Este repositorio se hizo para exponer el lado oscuro de la conectividad inalámbrica, donde las buenas prácticas no existen y el sentido común se toma un descanso.
 
 En este rincón de internet, presentamos (no-orgullosamente) un espectáculo de malas prácticas, configuraciones horrendas, diseños risibles y una falta general de estandarización y jocosidades que harán que tu cabeza gire más que una actualización de Windows en proceso de carga. Es como si el ingeniero responsable de estos desastres ni siquiera se hubiera molestado en seguir un tutorial de YouTube sobre los fundamentos.
 
