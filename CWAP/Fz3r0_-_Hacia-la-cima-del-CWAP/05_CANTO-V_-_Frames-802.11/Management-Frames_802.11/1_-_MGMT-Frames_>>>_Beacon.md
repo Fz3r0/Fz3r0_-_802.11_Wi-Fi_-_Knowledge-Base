@@ -17,9 +17,9 @@ Los PCAPs utilizados para los ejemplos de este bloque son los siguientes:
 #                                                       #
 #########################################################
 
-##########################
-#   ALL Beacon Frames:   #
-##########################
+#########################################################
+#                  ALL Beacon Frames:                   #
+#########################################################
 
 ## Opción 1
 wlan.fc.type_subtype == 8
@@ -28,22 +28,22 @@ wlan.fc.type_subtype == 8
 wlan.fc.type_subtype == 0x0008
 
 #########################################################
-
-#########################################
-#   Beacon Frames - MANDATORY Fields:   #
-#########################################
-
-    ###  01 [+] Timestamp         (8 byte)
-    ###  02 [+] Beacon Interval   (2 byte)
-    ###  03 [+] Capability info   (2 byte)
-    ###  04 [+] SSID              (variable size)*
-    ###  05 [+] Supported Rates   (variable size)*
+#           Beacon Frames - MANDATORY Fields:           #
+#*******************************************************#
+#        -  01 [+] Timestamp         (8 byte)           #
+#        -  02 [+] Beacon Interval   (2 byte)           #
+#        -  03 [+] Capability info   (2 byte)           #
+#        -  04 [+] SSID              (variable size)*   #
+#        -  05 [+] Supported Rates   (variable size)*   #
+#########################################################
 
 ## [+] 01 - Timestamp - 8 byte >>>
 wlan.fixed.timestamp == 2078442701205
 
 ## [+] 02 - Beacon Interval - 2 byte
-wlan.fixed.beacon == 100
+
+   ## Beacon Interval
+   wlan.fixed.beacon == 100
 
 ## [+] 03 - Capability Information - 2 byte
 
@@ -102,25 +102,50 @@ wlan.fixed.beacon == 100
 
 ## [+] 04 - SSID - _Variable Size_
 
-### Tag Number
-wlan.tag.number == 0
+   ### Tag Number
+   wlan.tag.number == 0
 
-### Tag Lenght
-wlan.tag.length == 5
+   ### Tag Lenght
+   wlan.tag.length == 5
 
-### SSID
-wlan.ssid == "Fz3r0"
+   ### SSID
+   wlan.ssid == "Fz3r0"
 
-### Hidden SSID (Wildcard)
-wlan.ssid == ""
+   ### Hidden SSID (Wildcard)
+   wlan.ssid == ""
 
-## 05 - Supported Rates - _Variable Size_
+## [+] 05 - Supported Rates - _Variable Size_
+
+### All Supported Rates
+wlan.supported_rates
+
+   ### Supported Data Rate   =   12 Mbps
+   wlan.supported_rates == 0x98
+
+   ### Supported Data Rate   =   18 Mbps
+   wlan.supported_rates == 0x24
+
+   ### Supported Data Rate   =   24 Mbps
+   wlan.supported_rates == 0x30
+
+   ### Supported Data Rate   =   36 Mbps
+   wlan.supported_rates == 0x48
+
+   ### Supported Data Rate   =   48 Mbps
+   wlan.supported_rates == 0x60
+
+   ### Supported Data Rate   =   54 Mbps
+   wlan.supported_rates == 0x6c
 
 #########################################################
-
-#########################################
-#   Beacon Frames - OPTIONAL Fields:    #
-#########################################
+#            Beacon Frames - OPTIONAL Fields:           #
+#*******************************************************#
+#        -  01 [+] Timestamp         (8 byte)           #
+#        -  02 [+] Beacon Interval   (2 byte)           #
+#        -  03 [+] Capability info   (2 byte)           #
+#        -  04 [+] SSID              (variable size)*   #
+#        -  05 [+] Supported Rates   (variable size)*   #
+#########################################################
 
 ````
 
