@@ -153,7 +153,7 @@ wlan.supported_rates
 
 Los `Beacon Frames` son utilizados por los `APs` (y `STAs` en una `IBSS`) para **comunicar a través del área de servicio las características de la conexión ofrecida a los miembros de una `WLAN` dentro de la celda de cobertura del `AP`. Esta información es utilizada por los clientes que intentan conectarse a la red, así como por los clientes que ya están asociados al `BSS`.**
 
-- Los `Beacon Frames` se utilizan para descubrir la WLAN de modo: **`Passive Scanning`**
+- Los `Beacon Frames` se utilizan para descubrir la WLAN de modo: **`Passive Scanning`** _([Passive Scanning, Active Scanning & Roaming](https://www.youtube.com/watch?v=HPJonmd8z1c))_
 
 Las Beacon Frames se envían periódicamente en un momento llamado `Target Beacon Transmission Time (TBTT).`
 
