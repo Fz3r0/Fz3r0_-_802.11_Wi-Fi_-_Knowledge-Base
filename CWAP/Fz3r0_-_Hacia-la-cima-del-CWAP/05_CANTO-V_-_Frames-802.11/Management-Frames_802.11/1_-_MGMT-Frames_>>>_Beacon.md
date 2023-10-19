@@ -1,5 +1,16 @@
 # 📡💊 Management Frames (802.11): `Beacon`
 
+Los `Beacon Frames` son utilizados por los `APs` (y `STAs` en una `IBSS`) para **comunicar a través del área de servicio las características de la conexión ofrecida a los miembros de una `WLAN` dentro de la celda de cobertura del `AP`. Esta información es utilizada por los clientes que intentan conectarse a la red, así como por los clientes que ya están asociados al `BSS`.**
+
+- Los `Beacon Frames` se utilizan para descubrir la WLAN de modo: **`Passive Scanning`** _([Passive Scanning, Active Scanning & Roaming](https://www.youtube.com/watch?v=HPJonmd8z1c))_
+
+Las Beacon Frames se envían periódicamente en un momento llamado `Target Beacon Transmission Time (TBTT).`
+
+- Los valores por default de un TBTT en un Beacon Frame son `100 TU`:
+
+    - **`1 TU` = 1024 [Microsegundos]**
+    - **`Beacon interval`  = 100 TU's** || 100 x 1024 microsegundos = `102.4 Milisegundos` ó = `0.102400 Segundos`
+
 Los PCAPs utilizados para los ejemplos de este bloque son los siguientes:
 
 - [`PCAP1` - **Fz3r0 Beacon** - Ruckus R850 - 2.4 GHz Ch 11 - WPA2 - ESS Centralized WLC - 1mb Data Rate Legacy Compatible](https://github.com/Fz3r0/Fz3r0_-_BlackShark/files/11779892/Beacon_Fz3r0_CH_11.zip)
@@ -149,18 +160,7 @@ wlan.supported_rates
 
 ````
 
-## 📡 Beacon Frames: Descripción
 
-Los `Beacon Frames` son utilizados por los `APs` (y `STAs` en una `IBSS`) para **comunicar a través del área de servicio las características de la conexión ofrecida a los miembros de una `WLAN` dentro de la celda de cobertura del `AP`. Esta información es utilizada por los clientes que intentan conectarse a la red, así como por los clientes que ya están asociados al `BSS`.**
-
-- Los `Beacon Frames` se utilizan para descubrir la WLAN de modo: **`Passive Scanning`** _([Passive Scanning, Active Scanning & Roaming](https://www.youtube.com/watch?v=HPJonmd8z1c))_
-
-Las Beacon Frames se envían periódicamente en un momento llamado `Target Beacon Transmission Time (TBTT).`
-
-- Los valores por default de un TBTT en un Beacon Frame son `100 TU`:
-
-    - **`1 TU` = 1024 [Microsegundos]**
-    - **`Beacon interval`  = 100 TU's** || 100 x 1024 microsegundos = `102.4 Milisegundos` ó = `0.102400 Segundos`
 
 ## 🧪 Ejemplo:
 
