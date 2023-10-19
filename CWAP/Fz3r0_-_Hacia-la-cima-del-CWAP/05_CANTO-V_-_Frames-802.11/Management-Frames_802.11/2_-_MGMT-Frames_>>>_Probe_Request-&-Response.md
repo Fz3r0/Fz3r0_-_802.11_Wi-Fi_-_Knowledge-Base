@@ -163,7 +163,24 @@ wlan.supported_rates
 
 Los `Probe Request & Response` 
 
+Descubrir la red escaneando todos los posibles canales y escuchando por `Beacon Frames` desde nuestro dispositrivo no se considera muy eficiente _(`Passive Scanning`)_. Para mejorar este proceso de descubrimiento, las `STA` a menudo utilizan `Active Scanning`.
 
+- Los **`Probe Request`** se utilizan para descubrir la WLAN de modo: **`Active Scanning`**
+- Los **`Probe Response`** simplemente es la respuesta desde un AP que escucho por el Probe Request enviado desde una STA. 
+
+En el `Active Scanning`, las `STA` aún recorren cada canal uno por uno, pero en lugar de escuchar pasivamente las señales en esa frecuencia, la `STA` envía un `Probe Request` preguntando qué red está disponible en ese canal.
+
+- NOTA: Las `STA` deben tener aprendida la red previamente. 
+
+Los `Probe Request` se envían a la dirección `Broadcast`: 
+
+- `DA (Destination Address)` :: `FF:FF:FF:FF:FF:FF`.
+
+Una vez que se envía un `Probe Request`, la `STA` inicia un temporizador llamado `ProbeTimer Countdown` y espera respuestas (`Probe Response`) de un posible AP en el área. Cuando el temporizador del `ProbeTimer Countdown` termina, la `STA` procesa la respuesta que ha recibido. Si no se reciben respuestas, la `STA` pasa al siguiente canal y repite el proceso de descubrimiento.
+
+Las `STA` que envían `Probe Request` pueden especificar el `SSID` que están buscando, a esto se le llama `Directed Probe Request`. Luego, solo los APs _(o IBSSS STAs)_ que admitan ese SSID responderán. El valor del SSID también se puede establecer en 0 (es decir, el campo del SSID está presente pero vacío).
+
+- **Esto se llama `Wildcard SSID` o `Null Probe Request`.**
 
 
 
