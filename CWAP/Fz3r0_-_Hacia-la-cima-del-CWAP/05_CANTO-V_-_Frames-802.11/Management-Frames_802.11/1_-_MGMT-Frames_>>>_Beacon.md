@@ -153,12 +153,14 @@ wlan.supported_rates
 
 Los `Beacon Frames` son utilizados por los `APs` (y `STAs` en una `IBSS`) para **comunicar a través del área de servicio las características de la conexión ofrecida a los miembros de una `WLAN` dentro de la celda de cobertura del `AP`. Esta información es utilizada por los clientes que intentan conectarse a la red, así como por los clientes que ya están asociados al `BSS`.**
 
-- Las Beacon Frames se envían periódicamente en un momento llamado `Target Beacon Transmission Time (TBTT).`
+- Los `Beacon Frames` se utilizan para descubrir la WLAN de modo: **`Passive Scanning`**
 
-Los valores por default de un TBTT en un Beacon Frame son `100 TU`:
+Las Beacon Frames se envían periódicamente en un momento llamado `Target Beacon Transmission Time (TBTT).`
 
-- **`1 TU` = 1024 [Microsegundos]**
-- **`Beacon interval`  = 100 TU's** || 100 x 1024 microsegundos = `102.4 Milisegundos` ó = `0.102400 Segundos`
+- Los valores por default de un TBTT en un Beacon Frame son `100 TU`:
+
+    - **`1 TU` = 1024 [Microsegundos]**
+    - **`Beacon interval`  = 100 TU's** || 100 x 1024 microsegundos = `102.4 Milisegundos` ó = `0.102400 Segundos`
 
 ## 🧪 Ejemplo:
 
