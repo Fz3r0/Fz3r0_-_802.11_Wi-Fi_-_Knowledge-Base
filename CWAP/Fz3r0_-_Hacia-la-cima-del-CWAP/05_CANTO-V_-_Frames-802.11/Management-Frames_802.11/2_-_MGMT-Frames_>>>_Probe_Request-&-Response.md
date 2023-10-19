@@ -1,4 +1,4 @@
-# 📡💊 Management Frames (802.11): `Probe Request & Probe Response`
+# 📡💊 Management Frames (802.11): `Probe Request & Response`
 
 Los PCAPs utilizados para los ejemplos de este bloque son los siguientes:
 
