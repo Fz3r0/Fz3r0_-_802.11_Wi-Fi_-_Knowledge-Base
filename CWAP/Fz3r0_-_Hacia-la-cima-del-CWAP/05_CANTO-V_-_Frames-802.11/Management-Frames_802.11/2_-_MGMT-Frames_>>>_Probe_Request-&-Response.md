@@ -161,9 +161,7 @@ wlan.supported_rates
 
 ## 📡 Probe Request & Response Frames: Descripción
 
-Los `Probe Request & Response` 
-
-Descubrir la red escaneando todos los posibles canales y escuchando por `Beacon Frames` desde nuestro dispositrivo no se considera muy eficiente _(`Passive Scanning`)_. Para mejorar este proceso de descubrimiento, las `STA` a menudo utilizan `Active Scanning`.
+Descubrir la red escaneando todos los posibles canales y escuchando por `Beacon Frames` desde nuestro dispositrivo no se considera muy eficiente _(`Passive Scanning`)_. Para mejorar este proceso de descubrimiento, las `STA` a menudo utilizan `Active Scanning` y para este proceso se unas los Frames `Probe Request` & `Probe Response`.
 
 - Los **`Probe Request`** se utilizan para descubrir la WLAN de modo: **`Active Scanning`**
 - Los **`Probe Response`** simplemente es la respuesta desde un AP que escucho por el Probe Request enviado desde una STA. 
