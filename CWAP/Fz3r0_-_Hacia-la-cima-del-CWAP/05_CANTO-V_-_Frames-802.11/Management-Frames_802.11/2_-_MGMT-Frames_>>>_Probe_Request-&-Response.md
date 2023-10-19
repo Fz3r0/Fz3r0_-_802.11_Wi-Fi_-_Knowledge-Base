@@ -2,7 +2,7 @@
 
 Descubrir la red escaneando todos los posibles canales y escuchando por `Beacon Frames` desde nuestro dispositrivo no se considera muy eficiente _(`Passive Scanning`)_. Para mejorar este proceso de descubrimiento, las `STA` a menudo utilizan `Active Scanning` y para este proceso se unas los Frames `Probe Request` & `Probe Response`.
 
-- Los **`Probe Request`** se utilizan para descubrir la WLAN de modo: **`Active Scanning`**
+- Los **`Probe Request`** se utilizan para descubrir la WLAN de modo: **`Active Scanning`** _([Passive Scanning, Active Scanning & Roaming](https://www.youtube.com/watch?v=HPJonmd8z1c))_
 - Los **`Probe Response`** simplemente es la respuesta desde un AP que escucho por el Probe Request enviado desde una STA. 
 
 En el `Active Scanning`, las `STA` aún recorren cada canal uno por uno, pero en lugar de escuchar pasivamente las señales en esa frecuencia, la `STA` envía un `Probe Request` preguntando qué red está disponible en ese canal.
