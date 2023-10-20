@@ -142,6 +142,9 @@ while True:
         break
 ````
 
+![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/272d3c44-1eb6-4c1d-91ae-eb88a02cd736)
+
+
 ## 📡 Probe Request & Response Frames: Descripción
 
 
