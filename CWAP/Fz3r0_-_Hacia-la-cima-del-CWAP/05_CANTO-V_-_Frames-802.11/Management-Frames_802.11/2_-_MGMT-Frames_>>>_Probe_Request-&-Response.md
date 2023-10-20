@@ -115,127 +115,31 @@ wlan.ra == 44:e5:17:06:e4:60
 # Fz3r0: ACKs + Action Frames!!! + Todo lo anterior - ambos lados STA<-->AP (Supreme Victory + Ultra Ultra Ultra!!!)
 # 
 !wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 ||  wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol) || (wlan.fc.type_subtype == 4 && wlan.ta == 44:E5:17:06:E4:60) || (wlan.fc.type_subtype == 5 && wlan.ta == 50:4e:dc:90:2e:b8 && wlan.ra == 44:e5:17:06:e4:60) || (wlan.fc.type_subtype == 0x001d && wlan.ra == 50:4e:dc:90:2e:b8 || wlan.fc.type_subtype == 0x001d && wlan.ra == 44:E5:17:06:E4:60) || (wlan.fc.type_subtype == 0x001d && wlan.ta == 44:E5:17:06:E4:60 || wlan.fc.type_subtype == 0x001d && wlan.ta == 50:4e:dc:90:2e:b8) || (wlan.fc.type_subtype == 0x000d && wlan.ta == 44:E5:17:06:E4:60 || wlan.fc.type_subtype == 0x000d && wlan.ta == 50:4e:dc:90:2e:b8)
+````
 
-##########################################################################
-#                         Probe Request Fields:                          #
-#************************************************************************#
-#        -  01 [+] Timestamp         (8 byte)                            #
-#        -  02 [+] Beacon Interval   (2 byte)                            #
-#        -  03 [+] Capability info   (2 byte)           #
-#        -  04 [+] SSID              (variable size)*   #
-#        -  05 [+] Supported Rates   (variable size)*   #
-##########################################################################
+## Generador de Filtro Super Pro Entre STA y AP específicos
 
-## [+] 01 - Timestamp - 8 byte >>>
-wlan.fixed.timestamp == 2078442701205
-
-## [+] 02 - Beacon Interval - 2 byte
-
-   ## Beacon Interval
-   wlan.fixed.beacon == 100
-
-## [+] 03 - Capability Information - 2 byte
-
-   # NOTA: 1 = SI / 0 = NO
-
-   ### ALL Capabilities / HEX code combination
-   wlan.fixed.capabilities == 0x1511
-
-   ### ESS capabilites 
-   wlan.fixed.capabilities.ess == 1
-
-   ### IBSSS status
-   wlan.fixed.capabilities.ibss == 0
-
-   ### Reserved 1
-   wlan.fixed.capabilities.reserved1 == 0
-
-   ### Reserved 2
-   wlan.fixed.capabilities.reserved2 == 0
-
-   ### Privacy 
-   wlan.fixed.capabilities.privacy == 1
-
-   ### Short Preamble
-   wlan.fixed.capabilities.short_preamble == 0
-
-   ### Reserved 3
-   wlan.fixed.capabilities.reserved3 == 0
-
-   ### Reserved 4
-   wlan.fixed.capabilities.reserved4 == 0
-
-   ### Spectrum Management
-   wlan.fixed.capabilities.spec_man == 1
-
-   ### QoS
-   wlan.fixed.capabilities.qos == 0
-
-   ### Short Slot Time
-   wlan.fixed.capabilities.short_slot_time == 1
-
-   ### Automatic Power Save Delivery
-   wlan.fixed.capabilities.apsd == 0
-
-   ### Radio Measurement
-   wlan.fixed.capabilities.radio_measurement == 1
-
-   ### EPD
-   wlan.fixed.capabilities.epd == 0
-
-   ### Reserved 5
-   wlan.fixed.capabilities.reserved5 == 0
-
-   ### Reserved 6
-   wlan.fixed.capabilities.reserved6 == 0
-
-## [+] 04 - SSID - _Variable Size_
-
-   ### Tag Number
-   wlan.tag.number == 0
-
-   ### Tag Lenght
-   wlan.tag.length == 5
-
-   ### SSID
-   wlan.ssid == "Fz3r0"
-
-   ### Hidden SSID (Wildcard)
-   wlan.ssid == ""
-
-## [+] 05 - Supported Rates - _Variable Size_
-
-### All Supported Rates
-wlan.supported_rates
-
-   ### Supported Data Rate   =   12 Mbps
-   wlan.supported_rates == 0x98
-
-   ### Supported Data Rate   =   18 Mbps
-   wlan.supported_rates == 0x24
-
-   ### Supported Data Rate   =   24 Mbps
-   wlan.supported_rates == 0x30
-
-   ### Supported Data Rate   =   36 Mbps
-   wlan.supported_rates == 0x48
-
-   ### Supported Data Rate   =   48 Mbps
-   wlan.supported_rates == 0x60
-
-   ### Supported Data Rate   =   54 Mbps
-   wlan.supported_rates == 0x6c
-
-#########################################################
-#            Beacon Frames - OPTIONAL Fields:           #
-#*******************************************************#
-#        -  01 [+] Timestamp         (8 byte)           #
-#        -  02 [+] Beacon Interval   (2 byte)           #
-#        -  03 [+] Capability info   (2 byte)           #
-#        -  04 [+] SSID              (variable size)*   #
-#        -  05 [+] Supported Rates   (variable size)*   #
-#########################################################
-
+````py
+while True:
+    print("Este script te ayudará a generar un filtro de Wireshark para capturar paquetes entre una STA (cliente) y un AP (Access Point).")
+    mac_sta = input("¿Cuál es la MAC de la STA (cliente, dispositivo móvil, laptop, tablet, etc)? ")
+    mac_ap = input("¿Cuál es la MAC del AP (Access Point, Antena, Módem Wi-Fi casero, etc)? ")
+    
+    filter_text = f"""
+        !wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 || wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol) ||
+        (wlan.fc.type_subtype == 4 && wlan.ta == {mac_sta}) ||
+        (wlan.fc.type_subtype == 5 && wlan.ta == {mac_ap} && wlan.ra == {mac_sta}) ||
+        (wlan.fc.type_subtype == 0x001d && wlan.ra == {mac_ap} || wlan.fc.type_subtype == 0x001d && wlan.ra == {mac_sta}) ||
+        (wlan.fc.type_subtype == 0x000d && wlan.ta == {mac_sta} || wlan.fc.type_subtype == 0x000d && wlan.ta == {mac_ap})
+    """
+    
+    print("\nCopia el siguiente filtro y pégalo en Wireshark:\n")
+    print(filter_text)
+    
+    another_filter = input("¿Deseas generar otro filtro? (Y/N): ")
+    
+    if another_filter.strip().lower() != 'y':
+        break
 ````
 
 ## 📡 Probe Request & Response Frames: Descripción
