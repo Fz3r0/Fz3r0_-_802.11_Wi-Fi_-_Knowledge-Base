@@ -23,7 +23,7 @@ Las `STA` que envían `Probe Request` pueden especificar el `SSID` que están bu
 
 Los PCAPs utilizados para los ejemplos de este bloque son los siguientes:
 
-- [`PCAP1` - **Fz3r0 Beacon** - Ruckus R850 - 2.4 GHz Ch 11 - WPA2 - ESS Centralized WLC - 1mb Data Rate Legacy Compatible](https://github.com/Fz3r0/Fz3r0_-_BlackShark/files/11779892/Beacon_Fz3r0_CH_11.zip)
+[Fz3r0_-_Probe-Request+Response_-_Full-Auth-Process.zip](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/files/13050282/Fz3r0_-_Probe-Request%2BResponse_-_Full-Auth-Process.zip)
 
 ## 🦈 `BlackShark Filter`: Probe Request & Probe Response (802.11)
 
