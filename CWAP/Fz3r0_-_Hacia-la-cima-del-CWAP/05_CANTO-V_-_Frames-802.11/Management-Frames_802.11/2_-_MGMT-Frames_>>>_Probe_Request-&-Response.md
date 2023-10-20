@@ -243,24 +243,8 @@ wlan.supported_rates
 
 ## 🧪 Ejemplo:
 
-- STA de Laboratorio:
+![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/80012542-e8e7-4eaa-882f-b37c254bb47c)
 
-````py
-# STA (Probe Request Transmiter/Source): Fz3r0 PC Wi-Fi Adapter:
-## MAC :: 44:E5:17:06:E4:60
-wlan.ta == 44:e5:17:06:e4:60
-````
-
-![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/820468c4-c0fd-485c-af19-0d2a704db96d)
-
-- AP de Laboratorio:
-
-````py
-# AP (Probe Response Transmiter/Source): AP - Telmex Casero:
-## MAC :: 50:4e:dc:90:2e:b8
-wlan.ta == 50:4e:dc:90:2e:b8
-````
-![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/5dd3de9a-8a76-4e81-80f6-5ed2b7edb6d5)
 
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/88424fcf-e9cf-4889-801a-69fbaa74c44a)
