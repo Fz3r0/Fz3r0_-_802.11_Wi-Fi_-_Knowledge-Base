@@ -261,6 +261,14 @@ wlan.supported_rates
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/bbad67e2-6f8e-4b27-9ee8-68152e0972f1)
 
+### Action Frame Durante Auth
+
+La aparición de un "action frame" entre un EAPOL (Extensible Authentication Protocol over LAN) message 1 de 4 y un EAPOL message 2 de 4 no es una coincidencia. En un proceso de autenticación WPA/WPA2 (Wi-Fi Protected Access) o WPA3, los mensajes EAPOL son parte integral de la autenticación entre una estación (STA) y un punto de acceso (AP). Los mensajes EAPOL se utilizan para negociar y establecer una clave de cifrado compartida que se utilizará para proteger la comunicación entre la STA y el AP.
+
+Los "action frames" en este contexto se utilizan para gestionar y coordinar la autenticación, el intercambio de claves y otros aspectos del proceso de autenticación. Pueden indicar que se están llevando a cabo acciones específicas relacionadas con la autenticación y la seguridad, como la solicitud de un mensaje EAPOL, la aprobación o confirmación de un mensaje EAPOL, entre otros.
+
+Por lo tanto, no es una coincidencia que haya "action frames" entre EAPOL message 1 de 4 y EAPOL message 2 de 4. Estos "action frames" están directamente relacionados con el proceso de autenticación y seguridad en una red Wi-Fi protegida. Su presencia indica que la red está gestionando y coordinando adecuadamente la autenticación entre la STA y el AP, lo que es esencial para garantizar una conexión segura.
+
 ## Beacon Frame: `Frame Format`
 
 Este es el Frame Format de un Beacon Frame:
