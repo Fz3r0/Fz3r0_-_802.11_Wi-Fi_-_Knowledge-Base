@@ -23,7 +23,7 @@ Las `STA` que envían `Probe Request` pueden especificar el `SSID` que están bu
 
 Los PCAPs utilizados para los ejemplos de este bloque son los siguientes:
 
-[Fz3r0_|_Probe Request & Probe Response_Full Authentication Process | PSK/WPA2](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/files/13050282/Fz3r0_-_Probe-Request%2BResponse_-_Full-Auth-Process.zip)
+- [Fz3r0_|_Probe Request & Probe Response_Full Authentication Process | PSK/WPA2](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/files/13050282/Fz3r0_-_Probe-Request%2BResponse_-_Full-Auth-Process.zip)
 
 ## 🦈 `BlackShark Filter`: Probe Request & Probe Response (802.11)
 
