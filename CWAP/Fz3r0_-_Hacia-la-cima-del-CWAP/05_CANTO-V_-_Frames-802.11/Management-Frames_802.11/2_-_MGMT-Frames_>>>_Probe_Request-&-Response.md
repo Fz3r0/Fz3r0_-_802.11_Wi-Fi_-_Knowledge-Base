@@ -166,6 +166,9 @@ while True:
 
 ## 🧪 Ejemplo:
 
+![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/989c63fb-2fe8-4432-ac56-2b8c0b5b3dc8)
+
+
 ![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/bbad67e2-6f8e-4b27-9ee8-68152e0972f1)
 
 ### Action Frame Durante Auth
@@ -323,6 +326,7 @@ CAMBIO DE BLOQUE ---------------------------------------------------------------
 
 ## Recursos
 
-[CWNE#153 (Rasika Nayanajith) - 802.11 Mgmt : Probe Request & Response Frame](https://mrncciew.com/2014/10/27/cwap-802-11-probe-requestresponse/)
+- [CWNE#153 (Rasika Nayanajith) - 802.11 Mgmt : Probe Request & Response Frame](https://mrncciew.com/2014/10/27/cwap-802-11-probe-requestresponse/)
+- [Ruckus Association Process](https://youtu.be/WoUKXm9iG7k?si=S388zx4nq4NzA9qr)
 
 
