@@ -243,9 +243,7 @@ wlan.supported_rates
 
 ## 🧪 Ejemplo:
 
-![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/80012542-e8e7-4eaa-882f-b37c254bb47c)
-
-
+![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/2758cea7-bdd6-4a94-9375-5ef1f3da23c7)
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/88424fcf-e9cf-4889-801a-69fbaa74c44a)
 
