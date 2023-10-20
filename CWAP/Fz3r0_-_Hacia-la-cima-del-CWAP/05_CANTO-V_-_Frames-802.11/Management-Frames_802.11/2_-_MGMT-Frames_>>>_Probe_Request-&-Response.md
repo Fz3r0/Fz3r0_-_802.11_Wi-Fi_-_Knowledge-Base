@@ -243,7 +243,7 @@ wlan.supported_rates
 
 ## 🧪 Ejemplo:
 
-![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/62a10aac-1c26-43f3-9d17-0e04f48ee390)
+![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/2d0fe58e-49f1-48da-a227-cb27dc8588b9)
 
 ## Beacon Frame: `Frame Format`
 
