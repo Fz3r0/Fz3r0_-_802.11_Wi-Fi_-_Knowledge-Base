@@ -86,6 +86,12 @@ wlan.ra == 44:e5:17:06:e4:60
 ## Salida Fácil: Filtrar solo la conversación entre AP <--> STA (Ajustar Receiver Address RA | Transmitter Address TA)
 !wlan.fc.retry == 1 && (wlan.ta == 50:4e:dc:90:2e:b8 || wlan.ta == 44:E5:17:06:E4:60 || wlan.ra == 50:4e:dc:90:2e:b8 || wlan.ra == 44:E5:17:06:E4:60)
 
+## ACKs ida y vuelta
+(wlan.fc.type_subtype == 0x001d && wlan.ta == 44:E5:17:06:E4:60 || wlan.fc.type_subtype == 0x001d && wlan.ta == 50:4e:dc:90:2e:b8)
+
+## Action Frames ida y vuelta
+(wlan.fc.type_subtype == 0x000d && wlan.ta == 44:E5:17:06:E4:60 || wlan.fc.type_subtype == 0x000d && wlan.ta == 50:4e:dc:90:2e:b8)
+
 # Fz3r0: Super command for searching specific Probe Request & Response Between STA <--> AP  || SUPREME VICTORY
     ## Se deben cambiar 3 direcciones en total para que funcione
     ## 1. Probe Request   ::   wlan.TA(transmiter) (STA)
@@ -106,8 +112,9 @@ wlan.ra == 44:e5:17:06:e4:60
 #  +
 # Fz3r0: 4-way-handshake Authentication Process (SUPREME VICTORY PERFECT!!! Sin Probes & Sin Actions - IT'S DANGEROUS!!!)
 #  +
-# Fz3r0: ACKs!!! + Todo lo anterior - ambos lados STA<-->AP (Ultra Ultra Ultra!!!)
-!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 ||  wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol) || (wlan.fc.type_subtype == 4 && wlan.ta == 44:E5:17:06:E4:60) || (wlan.fc.type_subtype == 5 && wlan.ta == 50:4e:dc:90:2e:b8 && wlan.ra == 44:e5:17:06:e4:60) || (wlan.fc.type_subtype == 0x001d && wlan.ra == 50:4e:dc:90:2e:b8 || wlan.fc.type_subtype == 0x001d && wlan.ra == 44:E5:17:06:E4:60)
+# Fz3r0: ACKs + Action Frames!!! + Todo lo anterior - ambos lados STA<-->AP (Supreme Victory + Ultra Ultra Ultra!!!)
+# 
+!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 ||  wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol) || (wlan.fc.type_subtype == 4 && wlan.ta == 44:E5:17:06:E4:60) || (wlan.fc.type_subtype == 5 && wlan.ta == 50:4e:dc:90:2e:b8 && wlan.ra == 44:e5:17:06:e4:60) || (wlan.fc.type_subtype == 0x001d && wlan.ra == 50:4e:dc:90:2e:b8 || wlan.fc.type_subtype == 0x001d && wlan.ra == 44:E5:17:06:E4:60) || (wlan.fc.type_subtype == 0x001d && wlan.ta == 44:E5:17:06:E4:60 || wlan.fc.type_subtype == 0x001d && wlan.ta == 50:4e:dc:90:2e:b8) || (wlan.fc.type_subtype == 0x000d && wlan.ta == 44:E5:17:06:E4:60 || wlan.fc.type_subtype == 0x000d && wlan.ta == 50:4e:dc:90:2e:b8)
 
 ##########################################################################
 #                         Probe Request Fields:                          #
