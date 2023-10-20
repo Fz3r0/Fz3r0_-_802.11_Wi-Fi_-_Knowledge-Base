@@ -40,30 +40,65 @@ Los PCAPs utilizados para los ejemplos de este bloque son los siguientes:
 ##########################################################################
 
 ## Opción 1
-wlan.fc.type_subtype == 8
+wlan.fc.type_subtype == 4
 
 ## Opción 2
-wlan.fc.type_subtype == 0x0008
+wlan.fc.type_subtype == 0x0004
 
 ##########################################################################
 #                      ALL Probe Response Frames:                        #
 ##########################################################################
 
+## Opción 1
+wlan.fc.type_subtype == 5
 
+## Opción 2
+wlan.fc.type_subtype == 0x0005 
 
+##########################################################################
+#              ALL Probe Request + Probe Response Frames:                #
+##########################################################################
 
+## Opción 1
+(wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5) && !wlan.fc.retry ==1
 
+## Opción 2
+(wlan.fc.type_subtype == 0x0004 || wlan.fc.type_subtype == 0x0005) && !wlan.fc.retry ==1
 
+##########################################################################
+#     Specific STA <--> AP :: Probe Request + Probe Response Frames:     #
+##########################################################################
 
-#########################################################
-#           Beacon Frames - MANDATORY Fields:           #
-#*******************************************************#
-#        -  01 [+] Timestamp         (8 byte)           #
-#        -  02 [+] Beacon Interval   (2 byte)           #
+## Ejemplo    ::    STA(Request) <--> AP(Response)
+
+# STA (Probe Request Transmiter/Source): Fz3r0 PC Wi-Fi Adapter:
+## MAC :: 44:E5:17:06:E4:60
+wlan.ta == 44:e5:17:06:e4:60
+
+# AP (Probe Response Transmiter/Source): AP - Telmex Casero:
+## MAC :: 50:4e:dc:90:2e:b8
+wlan.ta == 50:4e:dc:90:2e:b8
+
+# STA (Probe Response Receiver/Destination): Fz3r0 PC Wi-Fi Adapter:
+## MAC :: 44:E5:17:06:E4:60
+wlan.ra == 44:e5:17:06:e4:60
+
+# Fz3r0: Super command for searching specific Probe Request & Response Between STA <--> AP  || SUPREME VICTORY
+    ## Se deben cambiar 3 direcciones en total para que funcione
+    ## 1. Probe Request   ::   wlan.TA(transmiter) (STA)
+    ## 2. Probe Response  ::   wlan.TA(transmiter) (AP)
+    ## 3. Probe Response  ::   wlan.RA(receiver)   (STA)
+(wlan.fc.type_subtype == 4 && wlan.ta == 44:E5:17:06:E4:60) || (wlan.fc.type_subtype == 5 && wlan.ta == 50:4e:dc:90:2e:b8 && wlan.ra == 44:e5:17:06:e4:60) && !wlan.fc.retry ==1
+
+##########################################################################
+#                         Probe Request Fields:                          #
+#************************************************************************#
+#        -  01 [+] Timestamp         (8 byte)                            #
+#        -  02 [+] Beacon Interval   (2 byte)                            #
 #        -  03 [+] Capability info   (2 byte)           #
 #        -  04 [+] SSID              (variable size)*   #
 #        -  05 [+] Supported Rates   (variable size)*   #
-#########################################################
+##########################################################################
 
 ## [+] 01 - Timestamp - 8 byte >>>
 wlan.fixed.timestamp == 2078442701205
@@ -197,6 +232,26 @@ wlan.supported_rates
 
 
 ## 🧪 Ejemplo:
+
+- STA de Laboratorio:
+
+````py
+# STA (Probe Request Transmiter/Source): Fz3r0 PC Wi-Fi Adapter:
+## MAC :: 44:E5:17:06:E4:60
+wlan.ta == 44:e5:17:06:e4:60
+````
+
+![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/820468c4-c0fd-485c-af19-0d2a704db96d)
+
+- AP de Laboratorio:
+
+````py
+# AP (Probe Response Transmiter/Source): AP - Telmex Casero:
+## MAC :: 50:4e:dc:90:2e:b8
+wlan.ta == 50:4e:dc:90:2e:b8
+````
+![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/5dd3de9a-8a76-4e81-80f6-5ed2b7edb6d5)
+
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/88424fcf-e9cf-4889-801a-69fbaa74c44a)
 
