@@ -91,6 +91,16 @@ wlan.ra == 44:e5:17:06:e4:60
 (wlan.fc.type_subtype == 4 && wlan.ta == 44:E5:17:06:E4:60) || (wlan.fc.type_subtype == 5 && wlan.ta == 50:4e:dc:90:2e:b8 && wlan.ra == 44:e5:17:06:e4:60) && !wlan.fc.retry ==1
 
 ##########################################################################
+#    Specific STA <--> AP :: Probe Request & Response + Authentication   #
+##########################################################################
+
+# Fz3r0: Super command for searching specific Probe Request & Response Between STA <--> AP  || SUPREME VICTORY
+#  +
+# Fz3r0: 4-way-handshake Authentication Process (SUPREME VICTORY PERFECT!!! Sin Probes & Sin Actions - IT'S DANGEROUS!!!)
+!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 ||  wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol) || (wlan.fc.type_subtype == 4 && wlan.ta == 44:E5:17:06:E4:60) || (wlan.fc.type_subtype == 5 && wlan.ta == 50:4e:dc:90:2e:b8 && wlan.ra == 44:e5:17:06:e4:60)
+
+
+##########################################################################
 #                         Probe Request Fields:                          #
 #************************************************************************#
 #        -  01 [+] Timestamp         (8 byte)                            #
