@@ -889,6 +889,18 @@ wlan.fc.type_subtype == 4 || wlan.fc.type_subtype == 5 || wlan.fc.type_subtype =
 
 ---
 
+- **`SUPREME VICTORY PERFECT!!!` Sin Probes & Sin Actions - `IT'S DANGEROUS!!!`** + Specific Probes ()
+
+````py
+    ## Se deben cambiar 3 direcciones en total para que funcione
+    ## 1. Probe Request   ::   wlan.TA(transmiter) (STA)
+    ## 2. Probe Response  ::   wlan.TA(transmiter) (AP)
+    ## 3. Probe Response  ::   wlan.RA(receiver)   (STA)
+!wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 ||  wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol) || (wlan.fc.type_subtype == 4 && wlan.ta == 44:E5:17:06:E4:60) || (wlan.fc.type_subtype == 5 && wlan.ta == 50:4e:dc:90:2e:b8 && wlan.ra == 44:e5:17:06:e4:60)
+````
+
+---
+
 - **`SUPREME VICTORY!!!` con DHCP incluido - `IT'S DANGEROUS!!!`**
 
 ````py
