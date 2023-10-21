@@ -19,7 +19,7 @@ _por @ **Fz3r0 💀** (CWNA)_
 
 <br><br>
 
-# 💀 `Fz3r0 Cheatsheet`: Monitor Mode
+# 💀 Fz3r0 Cheatsheet: `Monitor Mode` _for 802.11 Wi-Fi adapters_
 
 ## 🕵️📡 Monitor Mode Activation: `Basics`
 
