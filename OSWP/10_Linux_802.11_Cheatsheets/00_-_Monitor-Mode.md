@@ -103,6 +103,8 @@ airmon-ng stop wlan0mon;airmon-ng stop wlan1mon;airmon-ng stop wlan2mon && /etc/
 
 ## 
 
+## 🕵️📡 Monitor Mode Activation: `x1 Adapter` :: `Bash Script`
+
 ````sh
 #!/bin/bash
 
