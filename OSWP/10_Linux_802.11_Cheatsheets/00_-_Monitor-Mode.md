@@ -241,13 +241,53 @@ iwconfig wlan12mon channel 13
 iwconfig wlan13mon channel 14
 
 # Desactiva todos los adaptadores (Para config limpia de MAC)
-ifconfig wlan0mon down
+iwconfig wlan0mon down
+iwconfig wlan1mon down
+iwconfig wlan2mon down
+iwconfig wlan3mon down
+iwconfig wlan4mon down
+iwconfig wlan5mon down
+iwconfig wlan6mon down
+iwconfig wlan7mon down
+iwconfig wlan8mon down
+iwconfig wlan9mon down
+iwconfig wlan10mon down
+iwconfig wlan11mon down
+iwconfig wlan12mon down
+iwconfig wlan13mon down
 
-# Cambia la dirección MAC de la interfaz WLAN0MON a "f0:f0:f0:f0:f0:f0"
-macchanger --mac=f0:f0:f0:f0:f0:f0 wlan0mon
+# Cambia la dirección MAC de los adaptadores
+macchanger --mac=f0:01:f0:f0:f0:f0 wlan0mon
+macchanger --mac=f0:02:f0:f0:f0:f0 wlan1mon
+macchanger --mac=f0:03:f0:f0:f0:f0 wlan2mon
+macchanger --mac=f0:04:f0:f0:f0:f0 wlan3mon
+macchanger --mac=f0:05:f0:f0:f0:f0 wlan4mon
+macchanger --mac=f0:06:f0:f0:f0:f0 wlan5mon
+macchanger --mac=f0:07:f0:f0:f0:f0 wlan6mon
+macchanger --mac=f0:08:f0:f0:f0:f0 wlan7mon
+macchanger --mac=f0:09:f0:f0:f0:f0 wlan8mon
+macchanger --mac=f0:10:f0:f0:f0:f0 wlan9mon
+macchanger --mac=f0:11:f0:f0:f0:f0 wlan10mon
+macchanger --mac=f0:12:f0:f0:f0:f0 wlan11mon
+macchanger --mac=f0:13:f0:f0:f0:f0 wlan12mon
+macchanger --mac=f0:14:f0:f0:f0:f0 wlan13mon
 
-# Activa la interfaz WLAN0MON
+# Activa los adaptadores con la nueva MAC
 ifconfig wlan0mon up
+ifconfig wlan1mon up
+ifconfig wlan2mon up
+ifconfig wlan3mon up
+ifconfig wlan4mon up
+ifconfig wlan5mon up
+ifconfig wlan6mon up
+ifconfig wlan7mon up
+ifconfig wlan8mon up
+ifconfig wlan9mon up
+ifconfig wlan10mon up
+ifconfig wlan11mon up
+ifconfig wlan12mon up
+ifconfig wlan13mon up
+ifconfig wlan14mon up
 
 # Limpia la pantalla nuevamente
 clear
