@@ -307,16 +307,6 @@ echo ""
 echo -e "\033[97m--- USB ADAPTERS & DRIVERS:\033[0m"
 echo ""
 
-# Comprueba si la interfaz WLAN0MON está en modo monitor y muestra el estado
-if iwconfig 2>/dev/null | grep -q 'Mode:Monitor'; then
-    printf "\033[32mWLAN Interface Status:%25s\nMonitor Mode:%33s\033[0m" "Present" "Active"
-elif iwconfig 2>/dev/null | grep -q 'no wireless'; then
-    echo -e "\033[31mWLAN Interface Status:%25s\n%s\033[0m" "Not Present" "No WLAN interface detected"
-else
-    echo -e "\033[31mWLAN Interface Status:%20s\nMonitor Mode:%33s\033[0m" "Present" "Inactive"
-fi
-echo ""
-
 # Imprime información de airmon-ng
 echo -e "\033[32m$(airmon-ng)\033[0m"
 echo ""
