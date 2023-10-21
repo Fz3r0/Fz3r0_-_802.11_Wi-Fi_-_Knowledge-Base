@@ -204,87 +204,90 @@ iwconfig 2>/dev/null | grep -vE 'eth|lo' | grep -v 'no wireless extensions'
 # Limpia la pantalla
 clear
 
+# Muestra letrero de esperar
+This shit is working, wait a sec plz
+
 # Inicia el modo monitor en 14 Adaptadores (quitar "#")
-airmon-ng start wlan0
-airmon-ng start wlan1
-airmon-ng start wlan2
-airmon-ng start wlan3
-airmon-ng start wlan4
-airmon-ng start wlan5
-airmon-ng start wlan6
-airmon-ng start wlan7
-airmon-ng start wlan8
-airmon-ng start wlan9
-airmon-ng start wlan10
-airmon-ng start wlan11
-airmon-ng start wlan12
-airmon-ng start wlan13
-airmon-ng start wlan14
+airmon-ng start wlan0 2>/dev/null
+airmon-ng start wlan1 2>/dev/null
+airmon-ng start wlan2 2>/dev/null
+airmon-ng start wlan3 2>/dev/null
+airmon-ng start wlan4 2>/dev/null
+airmon-ng start wlan5 2>/dev/null
+airmon-ng start wlan6 2>/dev/null
+airmon-ng start wlan7 2>/dev/null
+airmon-ng start wlan8 2>/dev/null
+airmon-ng start wlan9 2>/dev/null
+airmon-ng start wlan10 2>/dev/null
+airmon-ng start wlan11 2>/dev/null
+airmon-ng start wlan12 2>/dev/null
+airmon-ng start wlan13 2>/dev/null
+airmon-ng start wlan14 2>/dev/null
 
 # Configura la adaptadores del canal 1 al 14 (Todos en 2.4 GHz)
-iwconfig wlan0mon channel 1
-iwconfig wlan1mon channel 2
-iwconfig wlan2mon channel 3
-iwconfig wlan3mon channel 4
-iwconfig wlan4mon channel 5
-iwconfig wlan5mon channel 6
-iwconfig wlan6mon channel 7
-iwconfig wlan7mon channel 8
-iwconfig wlan8mon channel 9
-iwconfig wlan9mon channel 10
-iwconfig wlan10mon channel 11
-iwconfig wlan11mon channel 12
-iwconfig wlan12mon channel 13
-iwconfig wlan13mon channel 14
+iwconfig wlan0mon channel 1 2>/dev/null
+iwconfig wlan1mon channel 2 2>/dev/null
+iwconfig wlan2mon channel 3 2>/dev/null
+iwconfig wlan3mon channel 4 2>/dev/null
+iwconfig wlan4mon channel 5 2>/dev/null
+iwconfig wlan5mon channel 6 2>/dev/null
+iwconfig wlan6mon channel 7 2>/dev/null
+iwconfig wlan7mon channel 8 2>/dev/null
+iwconfig wlan8mon channel 9 2>/dev/null
+iwconfig wlan9mon channel 10 2>/dev/null
+iwconfig wlan10mon channel 11 2>/dev/null
+iwconfig wlan11mon channel 12 2>/dev/null
+iwconfig wlan12mon channel 13 2>/dev/null
+iwconfig wlan13mon channel 14 2>/dev/null
 
 # Desactiva todos los adaptadores (Para config limpia de MAC)
-iwconfig wlan0mon down
-iwconfig wlan1mon down
-iwconfig wlan2mon down
-iwconfig wlan3mon down
-iwconfig wlan4mon down
-iwconfig wlan5mon down
-iwconfig wlan6mon down
-iwconfig wlan7mon down
-iwconfig wlan8mon down
-iwconfig wlan9mon down
-iwconfig wlan10mon down
-iwconfig wlan11mon down
-iwconfig wlan12mon down
-iwconfig wlan13mon down
+iwconfig wlan0mon down 2>/dev/null
+iwconfig wlan1mon down 2>/dev/null
+iwconfig wlan2mon down 2>/dev/null
+iwconfig wlan3mon down 2>/dev/null
+iwconfig wlan4mon down 2>/dev/null
+iwconfig wlan5mon down 2>/dev/null
+iwconfig wlan6mon down 2>/dev/null
+iwconfig wlan7mon down 2>/dev/null
+iwconfig wlan8mon down 2>/dev/null
+iwconfig wlan9mon down 2>/dev/null
+iwconfig wlan10mon down 2>/dev/null
+iwconfig wlan11mon down 2>/dev/null
+iwconfig wlan12mon down 2>/dev/null
+iwconfig wlan13mon down 2>/dev/null
 
 # Cambia la dirección MAC de los adaptadores
-macchanger --mac=f0:01:f0:f0:f0:f0 wlan0mon
-macchanger --mac=f0:02:f0:f0:f0:f0 wlan1mon
-macchanger --mac=f0:03:f0:f0:f0:f0 wlan2mon
-macchanger --mac=f0:04:f0:f0:f0:f0 wlan3mon
-macchanger --mac=f0:05:f0:f0:f0:f0 wlan4mon
-macchanger --mac=f0:06:f0:f0:f0:f0 wlan5mon
-macchanger --mac=f0:07:f0:f0:f0:f0 wlan6mon
-macchanger --mac=f0:08:f0:f0:f0:f0 wlan7mon
-macchanger --mac=f0:09:f0:f0:f0:f0 wlan8mon
-macchanger --mac=f0:10:f0:f0:f0:f0 wlan9mon
-macchanger --mac=f0:11:f0:f0:f0:f0 wlan10mon
-macchanger --mac=f0:12:f0:f0:f0:f0 wlan11mon
-macchanger --mac=f0:13:f0:f0:f0:f0 wlan12mon
-macchanger --mac=f0:14:f0:f0:f0:f0 wlan13mon
+macchanger --mac=f0:01:f0:f0:f0:f0 wlan0mon 2>/dev/null
+macchanger --mac=f0:02:f0:f0:f0:f0 wlan1mon 2>/dev/null
+macchanger --mac=f0:03:f0:f0:f0:f0 wlan2mon 2>/dev/null
+macchanger --mac=f0:04:f0:f0:f0:f0 wlan3mon 2>/dev/null
+macchanger --mac=f0:05:f0:f0:f0:f0 wlan4mon 2>/dev/null
+macchanger --mac=f0:06:f0:f0:f0:f0 wlan5mon 2>/dev/null
+macchanger --mac=f0:07:f0:f0:f0:f0 wlan6mon 2>/dev/null
+macchanger --mac=f0:08:f0:f0:f0:f0 wlan7mon 2>/dev/null
+macchanger --mac=f0:09:f0:f0:f0:f0 wlan8mon 2>/dev/null
+macchanger --mac=f0:10:f0:f0:f0:f0 wlan9mon 2>/dev/null
+macchanger --mac=f0:11:f0:f0:f0:f0 wlan10mon 2>/dev/null
+macchanger --mac=f0:12:f0:f0:f0:f0 wlan11mon 2>/dev/null
+macchanger --mac=f0:13:f0:f0:f0:f0 wlan12mon 2>/dev/null
+macchanger --mac=f0:14:f0:f0:f0:f0 wlan13mon 2>/dev/null
 
 # Activa los adaptadores con la nueva MAC
-ifconfig wlan0mon up
-ifconfig wlan1mon up
-ifconfig wlan2mon up
-ifconfig wlan3mon up
-ifconfig wlan4mon up
-ifconfig wlan5mon up
-ifconfig wlan6mon up
-ifconfig wlan7mon up
-ifconfig wlan8mon up
-ifconfig wlan9mon up
-ifconfig wlan10mon up
-ifconfig wlan11mon up
-ifconfig wlan12mon up
-ifconfig wlan13mon up
-ifconfig wlan14mon up
+ifconfig wlan0mon up 2>/dev/null
+ifconfig wlan1mon up 2>/dev/null
+ifconfig wlan2mon up 2>/dev/null
+ifconfig wlan3mon up 2>/dev/null
+ifconfig wlan4mon up 2>/dev/null
+ifconfig wlan5mon up 2>/dev/null
+ifconfig wlan6mon up 2>/dev/null
+ifconfig wlan7mon up 2>/dev/null
+ifconfig wlan8mon up 2>/dev/null
+ifconfig wlan9mon up 2>/dev/null
+ifconfig wlan10mon up 2>/dev/null
+ifconfig wlan11mon up 2>/dev/null
+ifconfig wlan12mon up 2>/dev/null
+ifconfig wlan13mon up 2>/dev/null
+ifconfig wlan14mon up 2>/dev/null
 
 # Limpia la pantalla nuevamente
 clear
