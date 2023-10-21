@@ -19,7 +19,9 @@ _por @ **Fz3r0 💀** (CWNA)_
 
 <br><br>
 
-# 💀 Fz3r0 Cheatsheet: `Monitor Mode` _for 802.11 Wi-Fi adapters_
+# 💀 Fz3r0 Cheatsheet: `Monitor Mode`
+
+Scripts para configurar adaptadores Wi-Fi en `monitor mode` en kernels Linux basados en Debian.
 
 ## 🕵️📡 Monitor Mode Activation: `Basics`
 
