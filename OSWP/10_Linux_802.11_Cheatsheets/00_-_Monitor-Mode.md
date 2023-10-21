@@ -199,6 +199,105 @@ iwconfig 2>/dev/null | grep -vE 'eth|lo' | grep -v 'no wireless extensions'
 
 
 
+## 🕹️🕵️📡 Monitor Mode Activation: `x1 Adapter` :: `Bash Script`
+
+````sh
+#!/bin/bash
+
+# Limpia la pantalla
+clear
+
+# Inicia el modo monitor en 14 Adaptadores (quitar "#")
+airmon-ng start wlan0
+airmon-ng start wlan1
+airmon-ng start wlan2
+airmon-ng start wlan3
+airmon-ng start wlan4
+airmon-ng start wlan5
+airmon-ng start wlan6
+airmon-ng start wlan7
+airmon-ng start wlan8
+airmon-ng start wlan9
+airmon-ng start wlan10
+airmon-ng start wlan11
+airmon-ng start wlan12
+airmon-ng start wlan13
+airmon-ng start wlan14
+
+# Configura la adaptadores del canal 1 al 14 (Todos en 2.4 GHz)
+iwconfig wlan0mon channel 1
+iwconfig wlan1mon channel 2
+iwconfig wlan2mon channel 3
+iwconfig wlan3mon channel 4
+iwconfig wlan4mon channel 5
+iwconfig wlan5mon channel 6
+iwconfig wlan6mon channel 7
+iwconfig wlan7mon channel 8
+iwconfig wlan8mon channel 9
+iwconfig wlan9mon channel 10
+iwconfig wlan10mon channel 11
+iwconfig wlan11mon channel 12
+iwconfig wlan12mon channel 13
+iwconfig wlan13mon channel 14
+
+# Desactiva todos los adaptadores (Para config limpia de MAC)
+ifconfig wlan0mon down
+
+# Cambia la dirección MAC de la interfaz WLAN0MON a "f0:f0:f0:f0:f0:f0"
+macchanger --mac=f0:f0:f0:f0:f0:f0 wlan0mon
+
+# Activa la interfaz WLAN0MON
+ifconfig wlan0mon up
+
+# Limpia la pantalla nuevamente
+clear
+
+# Fz3r0 Info
+echo -e "\033[31m[+] Fz3r0 💀 Wireless IEEE 802.11 (WiFi) Adapter Validator v1.0\033[0m"
+echo -e "\033[31m[+] Twitter: @Fz3r0_OPs | Github: Fz3r0\033[0m"
+echo ""
+
+# Imprime información del sistema
+echo -e "\033[97m--- SYSTEM:\033[0m"
+echo ""
+echo -e "\033[32m$(uname -a)\033[0m"
+echo ""
+
+# Imprime información de adaptadores USB y controladores
+echo -e "\033[97m--- USB ADAPTERS & DRIVERS:\033[0m"
+echo ""
+
+# Comprueba si la interfaz WLAN0MON está en modo monitor y muestra el estado
+if iwconfig 2>/dev/null | grep -q 'Mode:Monitor'; then
+    printf "\033[32mWLAN Interface Status:%25s\nMonitor Mode:%33s\033[0m" "Present" "Active"
+elif iwconfig 2>/dev/null | grep -q 'no wireless'; then
+    echo -e "\033[31mWLAN Interface Status:%25s\n%s\033[0m" "Not Present" "No WLAN interface detected"
+else
+    echo -e "\033[31mWLAN Interface Status:%20s\nMonitor Mode:%33s\033[0m" "Present" "Inactive"
+fi
+echo ""
+
+# Imprime información de airmon-ng
+echo -e "\033[32m$(airmon-ng)\033[0m"
+echo ""
+
+# Imprime información de las interfaces físicas
+echo -e "\033[97m--- PHYSICAL INTERFACES:\033[0m"
+echo ""
+echo -e "\033[36m$(ifconfig)\033[0m"
+echo ""
+
+# Imprime información de adaptadores inalámbricos y su modo
+echo -e "\033[97m--- WIRELESS ADAPTERS & MODE:\033[0m"
+echo ""
+iwconfig 2>/dev/null | grep -vE 'eth|lo' | grep -v 'no wireless extensions'
+
+````
+
+
+
+
+
 
 
 
