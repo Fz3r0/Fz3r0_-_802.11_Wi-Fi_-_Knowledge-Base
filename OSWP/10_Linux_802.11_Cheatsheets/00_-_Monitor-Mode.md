@@ -77,6 +77,11 @@ clear;airmon-ng start wlan0mon; airmon-ng start wlan1mon; airmon-ng start wlan2m
 
 ---
 
+saber la wlan utilizada
+ifconfig -a | awk '/wlan/ {print $1}'
+
+
+
 
 
 <br><br><br>
