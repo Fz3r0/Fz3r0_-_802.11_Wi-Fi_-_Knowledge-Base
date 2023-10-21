@@ -75,6 +75,39 @@ clear;airmon-ng start wlan0; airmon-ng start wlan1; airmon-ng start wlan2 && iwc
 clear;airmon-ng start wlan0mon; airmon-ng start wlan1mon; airmon-ng start wlan2mon && iwconfig wlan0mon channel 6 && iwconfig wlan1mon channel 6 && iwconfig wlan2mon channel 6 && ifconfig wlan0mon down; ifconfig wlan1mon down; ifconfig wlan2mon down && macchanger --mac=f0:f0:f0:00:00:00 wlan0mon && macchanger --mac=f0:f0:f0:00:00:01 wlan1mon && macchanger --mac=f0:f0:f0:00:00:02 wlan2mon && ifconfig wlan0mon up; ifconfig wlan1mon up; ifconfig wlan2mon up && clear; echo -e "\033[31m[+] AIR-SHARK by Fz3r0 💀 - Wireless IEEE 802.11 (WiFi) Adapter Validator v1.0\033[0m";echo -e "\033[31m[+] Twitter: @Fz3r0_OPs | Github: Fz3r0\033[0m";echo "";echo -e "\033[97m[*] MULTIPLE WIRELESS CHANNEL MONITOR & CAPTURE\033[0m";echo ""; echo -e "\033[97m[*] TRIPLE WLAN ADAPTER START - [CHANNEL 6 | CHANNEL 6 | CHANNEL 6] - @ 2.4 GHz\033[0m";echo "";echo -e "\033[97m--- SYSTEM:\033[0m";echo "";echo -e "\033[32m$(uname -a)\033[0m" && echo "";echo -e "\033[97m--- WIRELESS ADAPTERS & MODE:\033[0m"; echo -e "\033[32m$(airmon-ng)\033[0m"; echo ""; iwconfig 2>/dev/null | grep -vE 'eth|lo' | grep -v 'no wireless extensions';iw dev
 ````
 
+## 📡🔛↩️ Apagar / Reiniciar Adaptador
+
+````sh
+# Detener la Interfaz 'wlan'
+airmon-ng stop wlan0
+
+# Siempre hacer un restart al final que ya se haya parado (depende del Linux el comando):
+
+# Opcion 1
+service network-manager restart
+# Opcion 2
+/etc/init.d/networking restart
+````
+
+## 📡🔛↩️ Apagar / Reiniciar Adaptador: `FULL`
+
+````sh
+## Nota: Este es un reinicio completo de interfaz, así que vuelve el nombre de wlan0mon a > wlan0
+
+# x1 Adapter Restart
+airmon-ng stop wlan0mon && /etc/init.d/networking restart; iwconfig
+
+# x3 Adapter Restart
+airmon-ng stop wlan0mon;airmon-ng stop wlan1mon;airmon-ng stop wlan2mon && /etc/init.d/networking restart; iwconfig
+````
+
+
+
+
+
+
+
+
 ---
 
 saber la wlan utilizada
