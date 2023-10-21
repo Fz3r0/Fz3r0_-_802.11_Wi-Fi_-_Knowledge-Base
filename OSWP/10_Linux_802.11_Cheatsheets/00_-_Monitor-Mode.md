@@ -196,10 +196,7 @@ iwconfig 2>/dev/null | grep -vE 'eth|lo' | grep -v 'no wireless extensions'
 
 ````
 
-
-
-
-## 🕹️🕵️📡 Monitor Mode Activation: `x1 Adapter` :: `Bash Script`
+## 🕹️🕵️📡 Monitor Mode Activation: `FZ3R0 COCONUT 14-ch` :: `Bash Script`
 
 ````sh
 #!/bin/bash
