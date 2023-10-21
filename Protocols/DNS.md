@@ -326,6 +326,7 @@ dns.qry.class == 0x0001
 
 ## Recursos y Fuentes
 
+- [How DNS Work CloudFlare](https://www.cloudflare.com/learning/dns/what-is-dns/)
 - [Ivan Rodriguez - DNS con WireShark](https://www.youtube.com/watch?v=VEw2BqWzKOY)
 - [GNS3 Talks: Easy DNS Server for GNS3 Topologies: Dnsmasq Docker Appliance Part 1](https://www.youtube.com/watch?v=86MIuxQ-LtI)
 - [GNS3 Talks: Easy DNS Server for GNS3 Topologies: Dnsmasq Docker Appliance Part 2](https://www.youtube.com/watch?v=sTEKHzfX5Fc)
