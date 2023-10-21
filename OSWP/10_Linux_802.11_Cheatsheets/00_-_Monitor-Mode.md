@@ -19,7 +19,9 @@ _por @ **Fz3r0 💀** (CWNA)_
 
 <br><br>
 
-## 💀 `Fz3r0 Cheatsheet`: Monitor Mode
+# 💀 `Fz3r0 Cheatsheet`: Monitor Mode
+
+## 🕵️📡 Monitor Mode Activation: `Basics`
 
 ````sh
 # Monitor Mode: airmon
@@ -32,7 +34,7 @@ iw wlan0 set monitor control
 iwconfig wlan0 mode monitor
 ````
 
-### 🕵️📡 Monitor Mode Activation: `x1 Adapter`
+## 🕵️📡 Monitor Mode Activation: `x1 Adapter`
 
 ````sh
 # Activando Monitor Mode en un adaptador Fresh (wlan0) 
@@ -41,16 +43,16 @@ clear; airmon-ng start wlan0; iwconfig wlan0mon channel 6 && ifconfig wlan0mon d
 # Activando Monitor Mode en un adaptador ya en Monitor Mode (wlan0mon) 
 clear; airmon-ng start wlan0mon; iwconfig wlan0mon channel 6 && ifconfig wlan0mon down; macchanger --mac=f0:f0:f0:f0:f0:f0 wlan0mon; ifconfig wlan0mon up && clear; echo -e "\033[31m[+] Fz3r0 💀 Wireless IEEE 802.11 (WiFi) Adapter Validator v1.0\033[0m"; echo -e "\033[31m[+] Twitter: @Fz3r0_OPs | Github: Fz3r0\033[0m"; echo ""; echo -e "\033[97m--- SYSTEM:\033[0m"; echo ""; echo -e "\033[32m$(uname -a)\033[0m"; echo ""; echo -e "\033[97m--- USB ADAPTERS & DRIVERS:\033[0m"; echo ""; if iwconfig 2>/dev/null | grep -q 'Mode:Monitor'; then printf "\033[32mWLAN Interface Status:%25s\nMonitor Mode:%33s\033[0m" "Present" "Active"; elif iwconfig 2>/dev/null | grep -q 'no wireless'; then echo -e "\033[31mWLAN Interface Status:%25s\n%s\033[0m" "Not Present" "No WLAN interface detected"; else echo -e "\033[31mWLAN Interface Status:%20s\nMonitor Mode:%33s\033[0m" "Present" "Inactive"; fi && echo "" ; echo -e "\033[32m$(airmon-ng)\033[0m"; echo ""; echo -e "\033[97m--- PHYSICAL INTERFACES:\033[0m"; echo ""; echo -e "\033[36m$(ifconfig)\033[0m"; echo ""; echo -e "\033[97m--- WIRELESS ADAPTERS & MODE:\033[0m"; echo ""; iwconfig 2>/dev/null | grep -vE 'eth|lo' | grep -v 'no wireless extensions'; iw dev
 
-# Activando Monitor Mode en un adaptador Fresh (wlan0) = TP-Link (Siempre se llama wlan0) 
+# Activando Monitor Mode en un adaptador Fresh (wlan0) = TP-Link (o cualquier adaptador que siempre se llame wlan0) 
 # Primero instalar driver: apt install -y realtek-rtl8188eus-dkms
 clear; airmon-ng start wlan0; iwconfig wlan0 channel 6 && ifconfig wlan0 down; macchanger --mac=f0:f0:f0:f0:f0:f0 wlan0; ifconfig wlan0 up && clear; echo -e "\033[31m[+] Fz3r0 💀 Wireless IEEE 802.11 (WiFi) Adapter Validator v1.0\033[0m"; echo -e "\033[31m[+] Twitter: @Fz3r0_OPs | Github: Fz3r0\033[0m"; echo ""; echo -e "\033[97m--- SYSTEM:\033[0m"; echo ""; echo -e "\033[32m$(uname -a)\033[0m"; echo ""; echo -e "\033[97m--- USB ADAPTERS & DRIVERS:\033[0m"; echo ""; if iwconfig 2>/dev/null | grep -q 'Mode:Monitor'; then printf "\033[32mWLAN Interface Status:%25s\nMonitor Mode:%33s\033[0m" "Present" "Active"; elif iwconfig 2>/dev/null | grep -q 'no wireless'; then echo -e "\033[31mWLAN Interface Status:%25s\n%s\033[0m" "Not Present" "No WLAN interface detected"; else echo -e "\033[31mWLAN Interface Status:%20s\nMonitor Mode:%33s\033[0m" "Present" "Inactive"; fi && echo "" ; echo -e "\033[32m$(airmon-ng)\033[0m"; echo ""; echo -e "\033[97m--- PHYSICAL INTERFACES:\033[0m"; echo ""; echo -e "\033[36m$(ifconfig)\033[0m"; echo ""; echo -e "\033[97m--- WIRELESS ADAPTERS & MODE:\033[0m"; echo ""; iwconfig 2>/dev/null | grep -vE 'eth|lo' | grep -v 'no wireless extensions'; iw dev
 ````
 
 ---
 
-### 🕵️📡📡📡 Monitor Mode Activation: `x3 Adapters`
+## 🕵️📡📡📡 Monitor Mode Activation: `x3 Adapters`
 
-- Triple encendido con **diferentes** canales `1,6,11`
+### Triple encendido con **diferentes** canales `1,6,11`
 
 ````sh
 # Triple encendido de Adaptadores desde 0 (wlan0) 
@@ -61,8 +63,7 @@ clear;airmon-ng start wlan0; airmon-ng start wlan1; airmon-ng start wlan2 && iwc
 # [Channels: 1, 6, 11]
 clear;airmon-ng start wlan0mon; airmon-ng start wlan1mon; airmon-ng start wlan2mon && iwconfig wlan0mon channel 1 && iwconfig wlan1mon channel 6 && iwconfig wlan2mon channel 11 && ifconfig wlan0mon down; ifconfig wlan1mon down; ifconfig wlan2mon down && macchanger --mac=f0:f0:f0:00:00:00 wlan0mon && macchanger --mac=f0:f0:f0:00:00:01 wlan1mon && macchanger --mac=f0:f0:f0:00:00:02 wlan2mon && ifconfig wlan0mon up; ifconfig wlan1mon up; ifconfig wlan2mon up && clear; echo -e "\033[31m[+] AIR-SHARK by Fz3r0 💀 - Wireless IEEE 802.11 (WiFi) Adapter Validator v1.0\033[0m";echo -e "\033[31m[+] Twitter: @Fz3r0_OPs | Github: Fz3r0\033[0m";echo "";echo -e "\033[97m[*] MULTIPLE WIRELESS CHANNEL MONITOR & CAPTURE\033[0m";echo ""; echo -e "\033[97m[*] TRIPLE WLAN ADAPTER START - [CHANNEL 1 | CHANNEL 6 | CHANNEL 11] - @ 2.4 GHz\033[0m";echo "";echo -e "\033[97m--- SYSTEM:\033[0m";echo "";echo -e "\033[32m$(uname -a)\033[0m" && echo "";echo -e "\033[97m--- WIRELESS ADAPTERS & MODE:\033[0m"; echo -e "\033[32m$(airmon-ng)\033[0m"; echo ""; iwconfig 2>/dev/null | grep -vE 'eth|lo' | grep -v 'no wireless extensions';iw dev
 ````
-
-- Triple encendido con **mismos** canales `6,6,6`
+### Triple encendido con **mismos** canales `6,6,6`
 
 ````sh
 # Triple encendido de Adaptadores desde 0 (wlan0) 
