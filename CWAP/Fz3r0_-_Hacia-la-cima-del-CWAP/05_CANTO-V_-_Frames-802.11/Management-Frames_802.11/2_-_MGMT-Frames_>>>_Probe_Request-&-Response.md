@@ -7,7 +7,8 @@ Descubrir la red escaneando todos los posibles canales y escuchando por `Beacon 
 
 En el `Active Scanning`, las `STA` aún recorren cada canal uno por uno, pero en lugar de escuchar pasivamente las señales en esa frecuencia, la `STA` envía un `Probe Request` preguntando qué red está disponible en ese canal.
 
-- NOTA: Las `STA` deben tener aprendida la red previamente. 
+- NOTA: Las `STA` no necesariamente deben saber qué WLANs hay alrededor, ya que envían el probe `EMPTY`.
+- Estos probes se envían de manera `Broadcast` y todos los APs cercanos respondarán ese probe, después será desición de la STA cuál AP le conviene más. 
 
 Los `Probe Request` se envían a la dirección `Broadcast`: 
 
