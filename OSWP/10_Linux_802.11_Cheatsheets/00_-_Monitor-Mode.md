@@ -101,8 +101,6 @@ airmon-ng stop wlan0mon && /etc/init.d/networking restart; iwconfig
 airmon-ng stop wlan0mon;airmon-ng stop wlan1mon;airmon-ng stop wlan2mon && /etc/init.d/networking restart; iwconfig
 ````
 
-## 
-
 ## 🕵️📡 Monitor Mode Activation: `x1 Adapter` :: `Bash Script`
 
 ````sh
