@@ -205,7 +205,14 @@ iwconfig 2>/dev/null | grep -vE 'eth|lo' | grep -v 'no wireless extensions'
 clear
 
 # Muestra letrero de esperar
-This shit is working, wait a sec plz
+# Fz3r0 Info
+echo -e "\033[31m[+] Fz3r0 💀 Wireless IEEE 802.11 (WiFi) Adapter Validator v1.0\033[0m"
+echo -e "\033[31m[+] Twitter: @Fz3r0_OPs | Github: Fz3r0\033[0m"
+echo ""
+
+# Imprime información del sistema
+echo -e "Wait a moment, this shit is working..."
+
 
 # Inicia el modo monitor en 14 Adaptadores (quitar "#")
 airmon-ng start wlan0 2>/dev/null
