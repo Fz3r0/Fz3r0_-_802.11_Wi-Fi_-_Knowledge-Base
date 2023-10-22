@@ -103,7 +103,10 @@ wlan.ra == 44:e5:17:06:e4:60
 !wlan.fc.retry == 1 && (wlan.ta == 30:45:96:d7:f2:3e || wlan.ta == 44:E5:17:06:E4:60 || wlan.ra == 30:45:96:d7:f2:3e || wlan.ra == 44:E5:17:06:E4:60) && !(wlan.ta == c0:25:67:ce:d3:e9 || wlan.ra == c0:25:67:ce:d3:e9) && !(wlan.ta == c0:25:67:ce:d3:ea || wlan.ra == c0:25:67:ce:d3:ea)
 
 ````
-````ps
+
+## Powershell: Script Para obtener conversación AP <---> STA
+
+````ps1
 function Create-WiresharkFilter {
     Clear-Host
     Write-Host "Generador de Filtros Wireshark" -ForegroundColor Cyan
