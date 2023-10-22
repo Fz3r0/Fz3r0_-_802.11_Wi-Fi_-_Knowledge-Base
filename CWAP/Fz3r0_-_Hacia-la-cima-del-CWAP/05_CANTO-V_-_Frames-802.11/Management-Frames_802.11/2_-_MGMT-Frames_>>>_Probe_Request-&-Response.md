@@ -28,6 +28,14 @@ Los PCAPs utilizados para los ejemplos de este bloque son los siguientes:
 
 ## 🦈 `BlackShark Filter`: Probe Request & Probe Response (802.11)
 
+````
+# last lab filter
+## conversación AP y STA solamente
+!wlan.fc.retry == 1 && (wlan.ta == 30:45:96:d7:f2:3e || wlan.ta == 44:E5:17:06:E4:60 || wlan.ra == 30:45:96:d7:f2:3e || wlan.ra == 44:E5:17:06:E4:60)
+````
+
+
+
 ````py
 
 ##########################################################################
