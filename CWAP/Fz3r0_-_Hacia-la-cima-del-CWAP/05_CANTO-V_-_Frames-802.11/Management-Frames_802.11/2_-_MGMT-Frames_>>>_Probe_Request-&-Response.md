@@ -92,8 +92,63 @@ wlan.ta == 50:4e:dc:90:2e:b8
 ## MAC :: 44:E5:17:06:E4:60
 wlan.ra == 44:e5:17:06:e4:60
 
+# APs Rogues / BSSIDs aledaños
+## c0:25:67:ce:d3:ea
+## c0:25:67:ce:d3:e9
+
 ## Salida Fácil: Filtrar solo la conversación entre AP <--> STA (Ajustar Receiver Address RA | Transmitter Address TA)
 !wlan.fc.retry == 1 && (wlan.ta == 50:4e:dc:90:2e:b8 || wlan.ta == 44:E5:17:06:E4:60 || wlan.ra == 50:4e:dc:90:2e:b8 || wlan.ra == 44:E5:17:06:E4:60)
+
+## Salida Fácil y Efectiva (SUPREME VICTORY!!!): Filtrar solo la conversación entre AP <--> STA && Sacar a todos los demás APs a la redonda ya sea RA/TA
+!wlan.fc.retry == 1 && (wlan.ta == 30:45:96:d7:f2:3e || wlan.ta == 44:E5:17:06:E4:60 || wlan.ra == 30:45:96:d7:f2:3e || wlan.ra == 44:E5:17:06:E4:60) && !(wlan.ta == c0:25:67:ce:d3:e9 || wlan.ra == c0:25:67:ce:d3:e9) && !(wlan.ta == c0:25:67:ce:d3:ea || wlan.ra == c0:25:67:ce:d3:ea)
+
+````
+````ps
+function Create-WiresharkFilter {
+    Clear-Host
+    Write-Host "Generador de Filtros Wireshark" -ForegroundColor Cyan
+    Write-Host "----------------------------------" -ForegroundColor Cyan
+
+    $STA = Read-Host "Introduce la MAC de la STA"
+    $AP = Read-Host "Introduce la MAC del AP"
+    
+    $AdjacentMacs = @()  # Lista para almacenar MACs adyacentes
+    
+    do {
+        $Adjacent = Read-Host "Introduce la MAC del AP/STA adyacente (si no hay más, presiona Enter)"
+        if ($Adjacent) {
+            $AdjacentMacs += $Adjacent
+        }
+    } while ($Adjacent)
+
+    $Filter = "!wlan.fc.retry == 1 && (wlan.ta == $AP || wlan.ta == $STA || wlan.ra == $AP || wlan.ra == $STA)"
+    
+
+!wlan.fc.retry == 1 && (wlan.ta == $AP || wlan.ta == $STA || wlan.ra == $AP || wlan.ra == $STA) && !(wlan.ta == $mac || wlan.ra == $mac) && !(wlan.ta == $mac || wlan.ra == $mac)
+
+
+    foreach ($mac in $AdjacentMacs) {
+        $Filter += " && !(wlan.ta == $mac || wlan.ra == $mac) && !(wlan.ta == $mac || wlan.ra == $mac)"
+    }
+
+    Write-Host "----------------------------------" -ForegroundColor Cyan
+    Write-Host "El filtro es:" -ForegroundColor Yellow
+    Write-Host $Filter
+    Write-Host "----------------------------------" -ForegroundColor Cyan
+}
+
+do {
+    Create-WiresharkFilter
+    $choice = Read-Host "¿Desea generar otro filtro? (S/N)"
+} while ($choice -eq "S" -or $choice -eq "s")
+````
+
+
+
+````py
+##########################################################################
+#       Specific STA <--> AP :: Probe Request + Response granular:       #
+##########################################################################
 
 ## ACKs ida y vuelta
 (wlan.fc.type_subtype == 0x001d && wlan.ta == 44:E5:17:06:E4:60 || wlan.fc.type_subtype == 0x001d && wlan.ta == 50:4e:dc:90:2e:b8)
@@ -124,6 +179,13 @@ wlan.ra == 44:e5:17:06:e4:60
 # Fz3r0: ACKs + Action Frames!!! + Todo lo anterior - ambos lados STA<-->AP (Supreme Victory + Ultra Ultra Ultra!!!)
 # 
 !wlan.fc.retry == 1 && (wlan.fc.type_subtype == 0 || wlan.fc.type_subtype == 1 || wlan.fc.type_subtype == 2 || wlan.fc.type_subtype == 3 ||  wlan.fc.type_subtype == 11 || wlan.fc.type_subtype == 12 || wlan.fc.type_subtype == 10 || eapol) || (wlan.fc.type_subtype == 4 && wlan.ta == 44:E5:17:06:E4:60) || (wlan.fc.type_subtype == 5 && wlan.ta == 50:4e:dc:90:2e:b8 && wlan.ra == 44:e5:17:06:e4:60) || (wlan.fc.type_subtype == 0x001d && wlan.ra == 50:4e:dc:90:2e:b8 || wlan.fc.type_subtype == 0x001d && wlan.ra == 44:E5:17:06:E4:60) || (wlan.fc.type_subtype == 0x001d && wlan.ta == 44:E5:17:06:E4:60 || wlan.fc.type_subtype == 0x001d && wlan.ta == 50:4e:dc:90:2e:b8) || (wlan.fc.type_subtype == 0x000d && wlan.ta == 44:E5:17:06:E4:60 || wlan.fc.type_subtype == 0x000d && wlan.ta == 50:4e:dc:90:2e:b8)
+````
+
+## Generador de filtros para STA <--> AP específicos
+
+### BATCH (WINDOWS)
+
+````BAT
 ````
 
 ## Generador de Filtro Super Pro Entre STA y AP específicos
