@@ -58,6 +58,15 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 
 ---
 
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/85a05c25-18a0-4671-aaee-697536ffa7f8)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a0c877b9-7a23-406c-922a-9575632580d9)
+
+---
+
 ![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/67fc9587-3678-48ba-a9e7-9d00737fdb6d)
 
 ---
@@ -69,6 +78,7 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/ce362494-b94e-41ba-b07a-2f56f39895fc)
 
 ---
+
 
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/09ab3271-5371-4e61-8092-faadeee7ad91)
@@ -116,13 +126,7 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/bade57e4-91fa-4a8a-9eaf-03c5f5148434)
 
----
 
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/85a05c25-18a0-4671-aaee-697536ffa7f8)
-
----
-
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a0c877b9-7a23-406c-922a-9575632580d9)
 
 
 
