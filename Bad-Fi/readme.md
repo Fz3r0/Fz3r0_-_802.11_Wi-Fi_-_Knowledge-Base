@@ -394,6 +394,11 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f4a9097b-3db5-4fb6-9756-b8cd1551194c)
 
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/6d079d98-722b-4d2f-a1f9-d2fa3aa7d6f9)
+
+---
 
 
 
