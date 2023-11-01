@@ -83,23 +83,6 @@ iwconfig wlan0mon channel 14 && clear;echo -e "\033[31m[+] Fz3r0 💀 Wireless I
 
 ````
 
-## 💀 `Fz3r0 Cheatsheet`: Band & Frequency Selection
-
-
-````sh
-# Opción 1: iwconfig
-iwconfig wlan0mon channel 6
-
-# Opción 2: iwconfig (auto)
-iwconfig eth0 channel auto
-
-# Opción 3: iw
-iw dev wlan0mon set channel 6
-````
-
-
----
-
 ## Frequency Selection & Validation
 
 ### Frequency Validation
