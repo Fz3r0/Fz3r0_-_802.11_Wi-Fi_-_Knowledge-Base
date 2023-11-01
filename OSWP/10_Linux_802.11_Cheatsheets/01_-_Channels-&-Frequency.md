@@ -36,11 +36,9 @@ iwconfig wlan0mon channel auto
 iw dev wlan0mon set channel 6
 ````
 
-- Channel Selection: `x1 Adapter` @ `2.4 ghZ`
+## Channel Selection: `x1 Adapter` @ `2.4 ghZ`
 
 ````sh
-# Cambiar Canales a 1 Adaptador (Necesario que estén en Monitor) [Incluye MAC Spoofing]
-
 ## CHANNEL :: [ 01 ] 
 iwconfig wlan0mon channel 1 && clear;echo -e "\033[31m[+] Fz3r0 💀 Wireless IEEE 802.11 (WiFi) Channel Selector v1.0\033[0m";echo -e "\033[31m[+] Twitter: @Fz3r0_OPs | Github: Fz3r0\033[0m";echo "";echo -e "\033[97m[*] SINGLE WIRELESS CHANNEL SELECTION\033[0m";echo -e "\033[97m[*] SINGLE ADAPTER START - [ CHANNEL 1 ] - @ 2.4 GHz\033[0m";echo "";echo -e "\033[97m--- SYSTEM:\033[0m";echo "";echo -e "\033[32m$(uname -a)\033[0m" && echo "";echo -e "\033[97m--- WIRELESS ADAPTERS & MODE:\033[0m";echo "";iwconfig 2>/dev/null | grep -vE 'eth|lo' | grep -v 'no wireless extensions';iw dev
 
