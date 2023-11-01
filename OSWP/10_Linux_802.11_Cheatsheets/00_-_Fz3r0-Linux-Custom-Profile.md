@@ -31,21 +31,9 @@
 
     - `sudo apt update && sudo apt full-upgrade -y`
 
-llave tplink
-
-- vamos bombal
-
-https://www.youtube.com/watch?v=tYnjMiTTdms&t=1s
-
-- en lugar de descargar el de bombal, bajar el mas nuevo:
-
-https://github.com/aircrack-ng/rtl8188eus/issues/180
-
----    
-
 ## Keyboard Shortcuts
 
-### Window Manager (sxhkdrc)
+### Window Manager `sxhkdrc`
 
 - `super` + `1,2,3---9` ............................. Cambiar de WorkSpace
 
@@ -83,7 +71,7 @@ https://github.com/aircrack-ng/rtl8188eus/issues/180
 
 ---
 
-### Pre-Selector (sxhkdrc)
+### Pre-Selector `sxhkdrc`
 
 - `super` + `ctrl` + `alt` + `U-D-L-R` .............. Pre-Selector amarillo
 
@@ -95,7 +83,7 @@ https://github.com/aircrack-ng/rtl8188eus/issues/180
 
 ---
 
-### Kitty Manager:
+### `Kitty` Manager
 
 - `ctrl` + shift + enter = nueva ventana de kitty
 
