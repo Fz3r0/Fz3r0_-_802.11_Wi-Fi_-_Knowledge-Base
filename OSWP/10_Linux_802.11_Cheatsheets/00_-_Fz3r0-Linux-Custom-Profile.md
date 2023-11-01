@@ -16,9 +16,6 @@
 - `rofi` ............................................ Search Manager
 - `ranger` .......................................... Buscador  
 
----
-
-
 ## update y upgrade
 
 - **Siempre como root y NUNCA usar apt upgrade!!**
