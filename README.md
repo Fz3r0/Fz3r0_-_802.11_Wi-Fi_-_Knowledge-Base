@@ -1,6 +1,12 @@
-# Fz3r0 - 802.11 WiFi knowledge
+# Fz3r0 - 802.11 Wi-Fi knowledge
 
-En construcción...
+_En construcción..._
+
+## Fz3r0 802.11 Wireless Cheatsheets & Bibles
+- Scripts y Comandos (Linux & Windows)
+    - Modo Monitor
+    - Selección de Canal
+    - Scripts para generar filtros 
 
 ## 802.11 WiFi history
 - History of Wireless Local Area Networks
@@ -224,11 +230,7 @@ En construcción...
 - 802.11 Tools lists (HW)
 - 802.11 Tools lists (SW)
 
-## Fz3r0 802.11 Wireless Cheatsheets & Bibles
-- Scripts y Comandos (Linux & Windows)
-    - Modo Monitor
-    - Selección de Canal
-    - Scripts para generar filtros 
+
 
 ## Resources & Education
 
