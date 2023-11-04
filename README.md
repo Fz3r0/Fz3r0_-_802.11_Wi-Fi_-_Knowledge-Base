@@ -6,6 +6,8 @@ _En construcción..._
 
 ## 802.11 WiFi history
 
+_The one who know about the past can build the future. Building the future, and keeping the past alive – are one and the same thing._
+
 ### Global History of Network Communications & Wi-Fi
 
 - History of Wireless Local Area Networks
