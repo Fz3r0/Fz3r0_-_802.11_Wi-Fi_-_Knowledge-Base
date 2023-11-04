@@ -9,8 +9,18 @@ En construcción...
 
 ## 802.11 Standards, Organizations & Regulations
 - FCC: Federal Communications Commission
+- ITU: International Telecommunication Union Radiocommunication Sector
+- IEEE: Institute of Electrical and Electronics Engineers
+- IETF: Internet Engineering Task Force
+- Wi-Fi Alliance
+- ISO: International Organization for Standardization
 
 ## Radio Frequency (RF) Theory
+- Communications Fundamentals
+- Communication Terminology
+- Understanding Carrier Signals
+- Understanding Keying Methods
+- MIMO Technology: HT and VHT
 
 ## Radio Frequency (RF) Measurements & Mathematics
 
@@ -27,13 +37,42 @@ En construcción...
 
 ## 802.11 Protocol & PHY
 - Fz3r0 802.11 Protocol, PHy Table
-- MIMO Technology: HT and VHT
-- 802.11b
-- 802.11a
-- 802.11g
-- 802.11n
-- 802.11ac
-- 802.11ax: High Efficiency (HE)
+- Original IEEE 802.11 Standard
+- IEEE 802.11-2020 Ratified Amendments (PHY)
+    - 802.11b
+    - 802.11a
+    - 802.11g
+    - 802.11n
+    - 802.11ac
+    - 802.11ax: High Efficiency (HE)
+- IEEE 802.11-2020 Ratified Amendments (Others)
+    - 802.11d-2001 
+    - 802.11e-2005 
+    - 802.11g-2003 
+    - 802.11h-2003 
+    - 802.11i-2004 
+    - 802.11j-2004 
+    - 802.11k-2008 
+    - 802.11n-2009 
+    - 802.11p-2010 
+    - 802.11r-2008 
+    - 802.11s-2011 
+    - 802.11u-2011 
+    - 802.11v-2011 
+    - 802.11w-2009 
+    - 802.11y-2008 
+    - 802.11z-2010 
+    - 802.11aa-2012 
+    - 802.11ac-2013 
+    - 802.11ad-2012 
+    - 802.11ae-2012 
+    - 802.11af-2014 
+    - 802.11ah-2016 
+    - 802.11ai-2016 
+    - 802.11aj-2018 
+    - 802.11ak-2018 
+    - 802.11aq-2018 
+
 
 ## 802.11 WiFi Regulation & Legislation
 - Wireless Standards and Organizations
@@ -43,6 +82,7 @@ En construcción...
 - Reglaciones en Mexico redes inalambricas
 
 ## 802.11 Design
+- LAN Core, Distribution & Access
 - WLAN Design Concepts
 - Wireless LAN Topologies
 - 802.11 WLAN Network Architecture
