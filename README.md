@@ -186,7 +186,7 @@ _The one who know about the past can build the future. Building the future, and 
 
 ### Spread Spectrum
 
-- [Spread Spectrum](https://es.wikipedia.org/wiki/Espectro_ensanchado](https://en.wikipedia.org/wiki/Spread_spectrum)
+- [Spread Spectrum](https://en.wikipedia.org/wiki/Spread_spectrum)
 - [Spread Spectrum Modulation & Demodulation | Video Demo](https://www.youtube.com/watch?app=desktop&v=68Nua8gKdRU)
 - [Espectro Expandido (Spread Spectrum) - Fundamentos de Telecomunicaciones](https://www.youtube.com/watch?v=h1Hp451xtIA)
 
