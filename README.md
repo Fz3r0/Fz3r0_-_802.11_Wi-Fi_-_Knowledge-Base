@@ -63,6 +63,7 @@ _En construcción..._
 
 ## IEEE 802.11 Amandments & PHY
 - Fz3r0 802.11 Protocol, PHy Table
+- [IEEE 802.11 amendments Official Excel List](https://standards.ieee.org/wp-content/uploads/import/governance/patcom/xls-files/ieee-802.11-amendments.xlsx)
 - Original IEEE 802.11 Standard
 - IEEE 802.11-2020 Ratified Amendments (PHY)
     - 802.11b
