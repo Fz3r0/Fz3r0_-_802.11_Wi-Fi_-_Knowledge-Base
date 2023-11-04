@@ -2,11 +2,7 @@
 
 _En construcción..._
 
-## Fz3r0 802.11 Wireless Cheatsheets & Bibles
-- Scripts y Comandos (Linux & Windows)
-    - Modo Monitor
-    - Selección de Canal
-    - Scripts para generar filtros 
+
 
 ## 802.11 WiFi history
 
@@ -164,6 +160,17 @@ _En construcción..._
     - 802.11F
     - 802.11T 
 
+## Networking Models: OSI & TCP/IP
+- [OSI Model]()
+- [Fz3r0 Extended OSI Model for 802.11 CWAP]()
+- [TCP/IP Model]()
+
+## Encapsulation & Decapsulation
+
+## 802.11 PHY (Layer 1) & MAC (Layer 2) Technologies
+- 802.11 Layer 1: Physical (PHY) | Frame Formats and Technologies
+- 802.11 Layer 2: Medium Access (MAC) | Frame Formats and Technologies
+
 ## Radio Frequency (RF) Theory
 - What Is a Radio Frequency Signal?
 - Radio Frequency Characteristics
@@ -283,23 +290,40 @@ _En construcción..._
 - WLAN Deployment & Vertical Markets
 
 ## 802.11 Analisis & Troubleshooting
-- RF Analysis Tools
-    - Protocol Analyzers
-    - Wi-Fi Analyzers
-    - Spectrum Analyzers 
-- WLAN Troubleshooting
-- 802.11 Physical (PHY) Layer Frame Formats and Technologies
-- 802.11 MAC Layer Frame Formats and Technologies
+
+### RF Analysis Tools
+- Protocol Analyzers
+- Wi-Fi Analyzers
+- Spectrum Analyzers 
+
+### Fz3r0 802.11 Adapter & Traffic Filter Scripts
+- Fz3r0 Linux Build & Shortcuts
+- Monitor Mode
+- Channel Selection
+- Scripts para generar filtros 
+
+### 802.11 Protocol Frame Analysis
+- Management Frames
+- Control Frames
+- Data Frames
+
+### 802.11 Frame Exchange Analysis
+- BSS Association, Transition & Security Exchanged
+- Medium Access Methods & QoS Frame Exchanged
+
+### WLAN Troubleshooting
+
+
 - 802.11 Protocol Analysis
-    - Management Frames
-    - Control Frames
-    - Data Frames
+
 - 802.11 Operation and Frame Exchanges
 - Spectrum Analysis 
 - MCS Table
 - Beacon Overhead Calculation
 - WiFi Analyzers
 - Ekahau
+
+## Fz3r0: The BlackShark for 802.11
 
 ## 802.11 Security
 - 802.11 Network Security Architecture
