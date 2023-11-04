@@ -6,11 +6,18 @@ _En construcción..._
 
 ## 802.11 WiFi history
 
-_The one who know about the past can build the future. Building the future, and keeping the past alive – are one and the same thing._
+_The one who knows the past can build the future. Building the future, and keeping the past alive – are one and the same thing._
 
-### Global History of Network Communications & Wi-Fi
+### History of Network Communications & Internet
+
+- [Conectando al Mundo: La Historia de las Redes](https://www.youtube.com/watch?v=Mz2gjthKtPo) `video`
+- [Historia y Evolución de las redes](https://www.youtube.com/watch?v=BkmQAXhTi9w)
+
+### History of Wireless Local Area Networks (WLANs) & Wi-Fi
 
 - History of Wireless Local Area Networks
+- [Overview of Wireless History](https://www.youtube.com/watch?v=CHbiQTskK9Q)
+- [History of Wireless Communication](https://www.youtube.com/watch?v=PU6JO8KPRs0)
 - [Hedy Lamarr (Hedwig Eva Maria Kiesler), inventora del Wi-Fi (Spread Spectrum)](https://es.wikipedia.org/wiki/Hedy_Lamarr)
 - [George Carl Johann Antheil, co-inventor del Wi-Fi (Spread Spectrum)](https://es.wikipedia.org/wiki/George_Antheil)
 - [History of WLANs | WLPC Wireless LAN Weekly EP 48](https://www.youtube.com/watch?v=QN3Dnl3WoE4)
@@ -21,15 +28,11 @@ _The one who know about the past can build the future. Building the future, and 
 - [2003 : Wi-Fi Evolution to 802.11g | 54mbps @ 2.4ghz]()
 - [2007 : Wi-Fi Evolution to 802.11n | 5 GHz]()
 - [Actual Wi-Fi | Giga & 10Giga | 802.11ac/ax/be | 5 & 6 GHz]()
-- Historia de Wi-Fi e internet en Mexico
-- [Historia y Evolución de las redes](https://www.youtube.com/watch?v=BkmQAXhTi9w)
-- [Overview of Wireless History](https://www.youtube.com/watch?v=CHbiQTskK9Q)
-- [History of Wireless Communication](https://www.youtube.com/watch?v=PU6JO8KPRs0)
-- [Historia del WiFi - est. 1997]()
 
 ### Historia de Redes, Internet, Telecomunicaciones y Radiodifusión en México
 
 - [Telecomunicaciones y Radiodifusión en México @ UNAM](http://derecho.posgrado.unam.mx/site_cpd/public/publis_cpd/telecomyradiodifenMX.pdf)
+- Historia de Wi-Fi e internet en Mexico
 - [Ley de Vias Generales de comunicacion 1940]()
 - [La historia de Telmex]()
 - [La historia del Internet en México]()
