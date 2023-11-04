@@ -18,58 +18,6 @@ En construcción...
     - SCT: Secretaría de Comunicaciones y Transportes
     - DOF: Diario Oficial de la Federación
 
-## Radio Frequency (RF) Theory
-- What Is a Radio Frequency Signal?
-- Radio Frequency Characteristics
-    - Wavelength 
-    - Frequency 
-    - Amplitude 
-    - Phase
-- Radio Frequency Behaviors
-    - Wave Propagation 87
-    - Absorption 88
-    - Reflection 89
-    - Scattering 91
-    - Refraction 91
-    - Diffraction 92
-    - Loss (Attenuation) 94
-    - Free Space Path Loss 96
-    - Multipath 98
-    - Gain (Amplification) 101
-- Communications Fundamentals
-- Communication Terminology
-- Understanding Carrier Signals
-- Understanding Keying Methods
-- MIMO Technology: HT and VHT
-
-## Components of RF Communications
-- Transmitter 
-- Antenna 
-- Receiver 
-- Intentional Radiator 
-- Equivalent Isotropically Radiated Power 
-
-## Radio Frequency (RF) Measurements & Mathematics
-- Units of Power and Comparison 115
-    - Watt 116
-    - Milliwatt 117
-    - Decibel 117
-    - Decibels Relative to an Isotropic Radiator (dBi) 120
-    - Decibels Relative to a Half-Wave Dipole Antenna (dBd) 120
-    - Decibels Relative to 1 Milliwatt (dBm) 121
-    - Inverse Square Law 122
-
-## 802.11 Protocol Theory
-- Radio Frequency (RF) Technologies
-- Wireless Networks and Spread Spectrum Technologies
-- RF Hardware and Functions 
-- 802.11 Features and Functions
-- 802.11 Medium Access
-- 802.11 MAC
-- Wireless LAN Hardware and Software 
-- Radio Frequency Signal & Antenna Concepts
-- Wireless LAN Hardware and Software
-
 ## IEEE 802.11 Amandments & PHY
 - Fz3r0 802.11 Protocol, PHy Table
 - Original IEEE 802.11 Standard
@@ -120,6 +68,105 @@ En construcción...
     - 802.11F
     - 802.11T 
 
+## Radio Frequency (RF) Theory
+- What Is a Radio Frequency Signal?
+- Radio Frequency Characteristics
+    - Wavelength 
+    - Frequency 
+    - Amplitude 
+    - Phase
+- Radio Frequency Behaviors
+    - Wave Propagation 
+    - Absorption 
+    - Reflection 
+    - Scattering 
+    - Refraction 
+    - Diffraction 
+    - Loss (Attenuation) 
+    - Free Space Path Loss 
+    - Multipath 
+    - Gain (Amplification) 
+- Communications Fundamentals
+- Communication Terminology
+- Understanding Carrier Signals
+- Understanding Keying Methods
+- MIMO Technology: HT and VHT
+
+## Components of RF Communications
+- Transmitter 
+- Antenna 
+- Receiver 
+- Intentional Radiator 
+- Equivalent Isotropically Radiated Power
+
+## Radio Frequency (RF) Measurements & Mathematics
+- Units of Power and Comparison 
+    - Watt
+    - Milliwatt 
+    - Decibel
+    - Decibels Relative to an Isotropic Radiator (dBi) 
+    - Decibels Relative to a Half-Wave Dipole Antenna (dBd)
+    - Decibels Relative to 1 Milliwatt (dBm)
+    - Inverse Square Law 
+- RF Mathematics
+    - Rule of 10s and 3s
+    - RF Math Summary
+- Noise Floor
+- Signal-to-Noise Ratio
+    - Signal-to-Interference-Plus-Noise Ratio
+- Received Signal Strength Indicator
+- Link Budget
+    - Fade Margin/System Operating Margin 
+
+## Antenna Concepts & Antenna RF signals
+- Azimuth and Elevation Charts (Antenna Radiation Envelopes) 150
+- Interpreting Polar Charts 152
+- Beamwidth 155
+- Antenna Types 157
+    - Omnidirectional Antennas 158
+    - Downtilt Omnidirectional Antennas 161
+    - Semidirectional Antennas 162
+    - Highly Directional Antennas 164
+    - Sector Antennas 166
+- Antenna Arrays 167
+- Visual Line of Sight 169
+- RF Line of Sight 169
+- Fresnel Zone 170
+- Earth Bulge 174
+- Antenna Polarization 175
+- Antenna Diversity 176
+- Multiple-Input, Multiple-Output 177
+    - MIMO Antennas 178
+- Antenna Connection and Installation 179
+    - Voltage Standing Wave Ratio 179
+    - Signal Loss 181
+    - Antenna Mounting 181
+- Antenna Accessories 187
+    - Cables 188
+    - Connectors 188
+    - Splitters 189
+    - Amplifiers 189
+    - Attenuators 190
+    - Lightning Arrestors 191
+    - Grounding Rods and Wires 192
+- Antenna Regulatory Compliance
+
+## Wireless Networks and Spread Spectrum Technologies
+
+
+## 802.11 Protocol Theory
+- Radio Frequency (RF) Technologies
+- Wireless Networks and Spread Spectrum Technologies
+- RF Hardware and Functions 
+- 802.11 Features and Functions
+- 802.11 Medium Access
+- 802.11 MAC
+- Wireless LAN Hardware and Software 
+- Radio Frequency Signal & Antenna Concepts
+- Wireless LAN Hardware and Software
+
+
+
 ## 802.11 WiFi Regulation & Legislation
 - Wireless Standards and Organizations
 - 802.11 IEEE Standards
@@ -129,8 +176,11 @@ En construcción...
 
 ## 802.11 Design
 - LAN Core, Distribution & Access
-- WLAN Design Concepts
 - Wireless LAN Topologies
+
+
+- WLAN Design Concepts
+
 - 802.11 WLAN Network Architecture
 - Power over Ethernet (PoE)
 - Define Specifications for the WLAN 
