@@ -26,14 +26,38 @@ En construcción...
     - Amplitude 
     - Phase
 - Radio Frequency Behaviors
-
+    - Wave Propagation 87
+    - Absorption 88
+    - Reflection 89
+    - Scattering 91
+    - Refraction 91
+    - Diffraction 92
+    - Loss (Attenuation) 94
+    - Free Space Path Loss 96
+    - Multipath 98
+    - Gain (Amplification) 101
 - Communications Fundamentals
 - Communication Terminology
 - Understanding Carrier Signals
 - Understanding Keying Methods
 - MIMO Technology: HT and VHT
 
+## Components of RF Communications
+- Transmitter 
+- Antenna 
+- Receiver 
+- Intentional Radiator 
+- Equivalent Isotropically Radiated Power 
+
 ## Radio Frequency (RF) Measurements & Mathematics
+- Units of Power and Comparison 115
+    - Watt 116
+    - Milliwatt 117
+    - Decibel 117
+    - Decibels Relative to an Isotropic Radiator (dBi) 120
+    - Decibels Relative to a Half-Wave Dipole Antenna (dBd) 120
+    - Decibels Relative to 1 Milliwatt (dBm) 121
+    - Inverse Square Law 122
 
 ## 802.11 Protocol Theory
 - Radio Frequency (RF) Technologies
@@ -119,6 +143,10 @@ En construcción...
 - WLAN Deployment & Vertical Markets
 
 ## 802.11 Analisis & Troubleshooting
+- RF Analysis Tools
+    - Protocol Analyzers
+    - Wi-Fi Analyzers
+    - Spectrum Analyzers 
 - WLAN Troubleshooting
 - 802.11 Physical (PHY) Layer Frame Formats and Technologies
 - 802.11 MAC Layer Frame Formats and Technologies
