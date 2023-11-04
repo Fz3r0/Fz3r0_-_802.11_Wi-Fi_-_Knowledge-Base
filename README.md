@@ -153,7 +153,6 @@ En construcción...
 
 ## Wireless Networks and Spread Spectrum Technologies
 
-
 ## 802.11 Protocol Theory
 - Radio Frequency (RF) Technologies
 - Wireless Networks and Spread Spectrum Technologies
@@ -165,8 +164,6 @@ En construcción...
 - Radio Frequency Signal & Antenna Concepts
 - Wireless LAN Hardware and Software
 
-
-
 ## 802.11 WiFi Regulation & Legislation
 - Wireless Standards and Organizations
 - 802.11 IEEE Standards
@@ -177,10 +174,7 @@ En construcción...
 ## 802.11 Design
 - LAN Core, Distribution & Access
 - Wireless LAN Topologies
-
-
 - WLAN Design Concepts
-
 - 802.11 WLAN Network Architecture
 - Power over Ethernet (PoE)
 - Define Specifications for the WLAN 
