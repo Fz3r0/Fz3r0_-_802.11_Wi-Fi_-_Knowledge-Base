@@ -183,14 +183,25 @@ _The one who know about the past can build the future. Building the future, and 
 - 802.11 Layer 2: Medium Access (MAC) | Frame Formats and Technologies
 
 ## Radio Frequency (RF) Theory
-- [pread Spectrum](https://es.wikipedia.org/wiki/Espectro_ensanchado)
+
+### Spread Spectrum
+
+- [Spread Spectrum](https://es.wikipedia.org/wiki/Espectro_ensanchado](https://en.wikipedia.org/wiki/Spread_spectrum)
+- [Spread Spectrum Modulation & Demodulation | Video Demo](https://www.youtube.com/watch?app=desktop&v=68Nua8gKdRU)
+- [Espectro Expandido (Spread Spectrum) - Fundamentos de Telecomunicaciones](https://www.youtube.com/watch?v=h1Hp451xtIA)
+
+### Radio Frequency Signal
+
 - What Is a Radio Frequency Signal?
 - Radio Frequency Characteristics
     - Wavelength 
     - Frequency 
     - Amplitude 
     - Phase
-- Radio Frequency Behaviors
+
+### Radio Frequency Behaviors
+
+- Radio Frequency 
     - Wave Propagation 
     - Absorption 
     - Reflection 
