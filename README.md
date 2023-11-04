@@ -61,11 +61,22 @@ _En construcción..._
     - SCT: Secretaría de Comunicaciones y Transportes
     - DOF: Diario Oficial de la Federación
 
+## IEEE 802 Standard
+- IEEE 802: Overview & Architecture
+- IEEE 802.1: Bridging & Management
+- IEEE 802.3: Ethernet
+- IEEE 802.11: Wireless LANs
+- IEEE 802.15: Wireless Specialty Networks (WSN)
+- IEEE 802.16: Broadband Wireless MANs
+- IEEE 802.19: Wireless Coexistence
+- IEEE 802.21: Media Independent Handover Services
+- IEEE 802.22: Wireless Regional Area Networks
+
 ## IEEE 802.11 Amandments & PHY
 - Fz3r0 802.11 Protocol, PHy Table
 - [IEEE 802.11 amendments Official Excel List](https://standards.ieee.org/wp-content/uploads/import/governance/patcom/xls-files/ieee-802.11-amendments.xlsx)
-- Original IEEE 802.11 Standard
 - IEEE 802.11-2020 Ratified Amendments (PHY)
+    - IEEE 802.11 pRIME - Original  Standard
     - 802.11b
     - [**802.11a**-1999](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11a) **(WiFi2)** _**OFDM**: (due 5GHz) on U-NII band | no communication with legacy tech | now Clause-17_
     - [**802.11g**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11g) **(WiFi3)** _**Evolution of ERP**: ERP-OFDM & ERP-DSSS/CCK > for higher data rates_
