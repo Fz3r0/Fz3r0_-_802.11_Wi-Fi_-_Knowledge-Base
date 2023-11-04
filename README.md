@@ -9,7 +9,16 @@ _En construcción..._
 ### Global History of Network Communications & Wi-Fi
 
 - History of Wireless Local Area Networks
-- History of WiFi in the world
+- [Hedy Lamarr (Hedwig Eva Maria Kiesler), inventora del Wi-Fi (Spread Spectrum)](https://es.wikipedia.org/wiki/Hedy_Lamarr)
+- [George Carl Johann Antheil, co-inventor del Wi-Fi (Spread Spectrum)](https://es.wikipedia.org/wiki/George_Antheil)
+- [History of WLANs | WLPC Wireless LAN Weekly EP 48](https://www.youtube.com/watch?v=QN3Dnl3WoE4)
+- [A History of Wireless Standards: Wi-Fi Back to Basics @ Extreme Networks](https://www.extremenetworks.com/resources/blogs/a-history-of-wireless-standards-wi-fi-back-to-basics)
+- [1970 : ALOHAnet - The first Wireless Network :: ALOHA random access, and experimental ultra high frequency (UHF)](https://en.wikipedia.org/wiki/ALOHAnet)
+- [1997 : Standardisation of WiFi @ IEEE](https://standards.ieee.org/beyond-standards/the-evolution-of-wi-fi-technology-and-standards/)
+- [1999 : Creation of Wi-Fi Alliance | Wi-Fi logo | Public Wi-Fi 802.11b](https://www.gregennis.net/wifi-fun-facts-2/the-early-history-of-the-wi-fi-logo)
+- [2003 : Wi-Fi Evolution to 802.11g | 54mbps @ 2.4ghz]()
+- [2007 : Wi-Fi Evolution to 802.11n | 5 GHz]()
+- [Actual Wi-Fi | Giga & 10Giga | 802.11ac/ax/be | 5 & 6 GHz]()
 - Historia de Wi-Fi e internet en Mexico
 - [Historia y Evolución de las redes](https://www.youtube.com/watch?v=BkmQAXhTi9w)
 - [Overview of Wireless History](https://www.youtube.com/watch?v=CHbiQTskK9Q)
@@ -172,6 +181,7 @@ _En construcción..._
 - 802.11 Layer 2: Medium Access (MAC) | Frame Formats and Technologies
 
 ## Radio Frequency (RF) Theory
+- [pread Spectrum](https://es.wikipedia.org/wiki/Espectro_ensanchado)
 - What Is a Radio Frequency Signal?
 - Radio Frequency Characteristics
     - Wavelength 
