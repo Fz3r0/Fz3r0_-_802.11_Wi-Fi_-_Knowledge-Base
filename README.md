@@ -14,6 +14,9 @@ En construcción...
 - IETF: Internet Engineering Task Force
 - Wi-Fi Alliance
 - ISO: International Organization for Standardization
+- Regulaciones en México de Wi-Fi
+    - SCT: Secretaría de Comunicaciones y Transportes
+    - DOF: Diario Oficial de la Federación
 
 ## Radio Frequency (RF) Theory
 - What Is a Radio Frequency Signal?
