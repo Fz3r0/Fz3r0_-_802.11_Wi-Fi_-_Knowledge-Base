@@ -72,8 +72,8 @@ _En construcción..._
 - IEEE 802.21: Media Independent Handover Services
 - IEEE 802.22: Wireless Regional Area Networks
 
-## IEEE 802.11 Amandments & PHY
-- Fz3r0 802.11 Protocol, PHy Table
+## IEEE 802.11 Amandments
+- [Fz3r0 802.11 Amandments Table]()
 - [IEEE 802.11 amendments Official Excel List](https://standards.ieee.org/wp-content/uploads/import/governance/patcom/xls-files/ieee-802.11-amendments.xlsx)
 - IEEE 802.11-2020 Ratified Amendments (PHY [Wi-Fi])
     - IEEE 802.11 pRIME - Original  Standard
