@@ -12,10 +12,47 @@ _En construcción..._
 - History of Wireless Local Area Networks
 - History of WiFi in the world
 - Historia de Wi-Fi e internet en Mexico
+- [Historia y Evolución de las redes](https://www.youtube.com/watch?v=BkmQAXhTi9w)
+- [Overview of Wireless History](https://www.youtube.com/watch?v=CHbiQTskK9Q)
+- [History of Wireless Communication](https://www.youtube.com/watch?v=PU6JO8KPRs0)
+- [Historia del WiFi - est. 1997]()
+- [Telecomunicaciones y Radiodifusión en México @ UNAM](http://derecho.posgrado.unam.mx/site_cpd/public/publis_cpd/telecomyradiodifenMX.pdf)
 
 ## 802.11 Standards, Organizations & Regulations
+- [**Internet Governance:** IGF, NRO, IANA, ICANN, IETF, ISOC](https://en.wikipedia.org/wiki/Internet_governance)
+- [**Regulatory Bodies _Regulatory Domains:**_ ETSI, FCC, TELEC, KCC]() _regulates communications within & from USA_
 - FCC: Federal Communications Commission
-- ITU: International Telecommunication Union Radiocommunication Sector
+- ITU: International Telecommunication Union 
+    - [ITU - International Telecommunication Union](https://www.itu.int/en/Pages/default.aspx)
+    - [ITU - International Telecommunication Union @ Wikipedia](https://en.wikipedia.org/wiki/International_Telecommunication_Union) _Wiki_
+- ITU-R: International Telecommunication Union Radiocommunication Sector
+    - [ITU Members connect the world!](https://www.youtube.com/watch?v=EBPiWhp4KG4) _@ ITU youtube_
+    - [ITU- R - Official Web](https://www.itu.int/es/ITU-R/Pages/default.aspx) _One of the three sectors (divisions) of the ITU_
+    - [ITU- R - Radiocommunication Sector @ Wikipedia](https://en.wikipedia.org/wiki/ITU-R)
+    - ITU-R: The 5 Administrative Regions
+        - [Region A: **CITEL** The Americas Inter-American Telecommunication Commission](www.citel.oas.org) 
+        - [Region B: **CEPT** Western Europe European Conference of Postal and Telecommunications Administrations](www.cept.org) 
+        - [Region C: **RCC** Eastern Europe and Northern Asia Regional Commonwealth in the field of Communications](www.en.rcc.org.ru) 
+        - [Region D: **ATU** Africa African Telecommunications Union](www.atu-uat.org) 
+        - [Region E: **APT** Asia and Australasia Asia-Pacific Telecommunity](www.aptsec.org)
+    - ITU-R: The 3 Regulatory Regions
+        - [Australia Australian Communications and Media Authority (ACMA)
+        - [Japan Association of Radio Industries and Businesses (ARIB)
+        - [United States Federal Communications Commission (FCC)
+    - [ITU- R - Standardization Sector @ Wikipedia ](https://en.wikipedia.org/wiki/ITU-T)
+    - [ITU- D - Development Sector @ Wikipedia ](https://en.wikipedia.org/wiki/ITU-D)
+- ISOC: Internet Society
+    - [Internet Standards Organizations (ISOC, IAB, IESG, IETF, IRSG, IRTF)](http://www.tcpipguide.com/free/t_InternetStandardsOrganizationsISOCIABIESGIETFIRSGI.htm)
+    - [Internet Society (ISOC)](https://www.internetsociety.org/)
+    - [Internet Society (ISOC) @ Wiki](https://es.wikipedia.org/wiki/Internet_Society)
+    - [ISOC Hierarchy](https://user-images.githubusercontent.com/94720207/179373677-22b265ed-3217-4f70-88c2-4701ce3e7380.png)
+        - [**IAB** - Internet Architecture Board]()
+        - [**ICANN** - Internet Corporation for Assigned Names and Numbers ]()
+        - [**IESG** - Internet Engineering Steering Group]() 
+        - [**IRTF** - Internet Research Task Force]()- 
+        - [**IETF** - Internet Engineering Task Force](https://www.ietf.org/) _Create Standards | RFC_
+   - [How **IAB** Manage the protocol values done by **IANA**?](http://www.tcpipguide.com/free/t_InternetStandardsOrganizationsISOCIABIESGIETFIRSGI-3.htm)
+- [**IANA** – Internet Assigned Number Authority]() _DNS, Domain Names & IPs Authority Assignments_
 - IEEE: Institute of Electrical and Electronics Engineers
 - IETF: Internet Engineering Task Force
 - Wi-Fi Alliance
