@@ -85,16 +85,20 @@ _En construcción..._
     - [802.11ax-2021]() **(WiFi6)** _**HE & OFDMA**: High Efficiency WLAN amendment. Big PHY enhancement including high density_
     - [802.11be-2023](https://en.wikipedia.org/wiki/IEEE_802.11be) **(WiFi7)** _EHT: Extremely High Throughput | Full lvl up!_
 - IEEE 802.11-2020 Ratified Amendments (PHY [NON Wi-Fi])
-
+    - [**802.11ad**-2012]() _**DMG**: Uses MGWS, GCMP, CCMP | 60 GHz in WiGig Networks_ 
+    - [**802.11af**-2014]() _**TVWS**: Allows the use of **wireless in the TV white space** (TVWS)_
+    - [**802.11ah**-2016]() _**Wi-Fi HaLow**: Use of **Wi-Fi in frequencies below 1 GHz** | IoT & M2M Communications_
 
 - IEEE 802.11-2020 Ratified Amendments (Country Specific)
     - [**802.11d**-2001](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11d) _**Country Code** Information on Beacons & Probes_
     - [**802.11j**-2004](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11j) _**802.11a PHY & MAC enhancements for Japan** PHY for Japanese 4.9 GHz and 5 GHz operation_     
     - [**802.11y**-2008](https://standards.ieee.org/ieee/802.11y/3915/) _**802.11a PHY & MAC enhancements for USA** MAC & PHY support for operation in the 3650-3700 MHz band in the United States._
+    - [**802.11aj**-2018]() _**CMMW**: support for operating in the Chinese 45 GHz band_
 
 - IEEE 802.11-2020 Ratified Amendments (Vehicular Communication)
     - [**802.11p**-2010](https://en.wikipedia.org/wiki/IEEE_802.11p) _**WAVE & ITS** wireless access in vehicular environments (WAVE). Required to support intelligent transportation systems (ITS)._ ()
     - [**802.11bd**-2022](https://standards.ieee.org/ieee/802.11bd/7451/) _**V2X** next generation vehicle-to-everything (V2X) communication in the 5.9 GHz & 60 GHz bands._ 
+
 - IEEE 802.11-2020 Ratified Amendments (Roaming)
     - [**802.11k**-2008](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11k) _**RRM**: TPC, client & channel stats, neighbor report | helps roaming ;)_
     - [**802.11r**-2008](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11r) _**BSS transition (FT) / Fast Secure Roaming** | CKM, PKC, OKC, fast session resumption_
@@ -102,29 +106,37 @@ _En construcción..._
     - [**802.11i**-2004](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11i) _**RSN Authentication** | now Clause-12 | WiFi alliance: **WPA2**_
     - [**802.11u**-2011]() _**WIEN**: Wireless Interworking with External Networks | Hotspot 2.0, Passpoint & BYOD_
     - [**802.11w**-2009](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11w) _**Robust Management Frames**: Protect wireless frames VS DoS attacks | CCMP, BIP, CMAC_
+
+- IEEE 802.11-2020 Ratified Amendments (Mesh Wireless Networking)
+    - [**802.11s**-2011]() _**MPS**: AP act as portal for devices to a WDS. AKA Mesh Master Gateway._
+    - [**802.11z**-2010]() _**DLS**: allow operation with non-DLS-capable APs (not used on Enterprises)_
+
 - IEEE 802.11-2020 Ratified Amendments (Battery Savers, Efficience & Performance)
     - [**802.11v**-2011](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11v) _**WNM**: info exchange for WiFi performance improvement & WNM-Sleep mode_
     - [802.11ba-2021](https://standards.ieee.org/ieee/802.11ba/6896/) _WUR: Increase battery life of devices (p.e battery powered IoT devices)_
 - IEEE 802.11-2020 Ratified Amendments (QoS)
+    - [**802.11aa**-2012]() _**GCR**: QoS enhancements for robust audio & video streaming_
     - [**802.11ae**-2012]() _**QMF**: Enable QMF | Enhancements to QoS management frames_
+
+
 - IEEE 802.11-2020 Ratified Amendments (Channel Detection & Hopping)
     - [**802.11h**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11h) _**DFS, TPC**: DFS events detect & avoid interference (5 GHz satellite & radars) | now Clause-11.8 & 11.9_
 
-    
+
+
+
+
     - [**802.11e**-2005](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11e) _**VoWLAN**: QoS Grandpa & WiFi cert WMM Grandma')_
 
-    - [**802.11p**-2010](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11p) _**ITS** & **WAVE** = for high-speed vehicles_
-    - [**802.11s**-2011]() _**MPS**: AP act as portal for devices to a WDS...AKA Mesh Master Gateway ;)_
-    - [**802.11z**-2010]() _**DLS**: allow operation with non-DLS-capable APs (not used on Enterprises)_
+
+
     - [**802.11v**-2011]()
     - [**802.11u**-2011]()
     - [**802.11s**-2011]()
-    - [**802.11aa**-2012]() _**GCR**: QoS enhancements for robust audio & video streaming_
-    - [**802.11ad**-2012]() _**DMG**: Uses MGWS, GCMP, CCMP | 60 GHz in WiGig Networks_
-    - [**802.11af**-2014]() _Allows the use of **wireless in the TV white space** (TVWS)_
-    - [**802.11ah**-2016]() _Use of **Wi-Fi in frequencies below 1 GHz** | IoT & M2M Communications | WiFi Alliance: **Wi-Fi HaLow**_
+
+
     - [**802.11ai**-2016 ](https://mrncciew.com/2023/09/25/fils-fast-initial-link-setup/) _**FILS**: High-density environments for users association to robust network_
-    - [802.11aj-2018]() _CMMW: support for operating in the Chinese 45 GHz band_
+
     - [802.11ak-2018]() _GLK: Enhancement for 802.11 bridged links. Simplify AP to Wireless STA_
     - [802.11aq-2018]() _Delivery of network service info prior to the association of STA to the network_
     - [802.11az-2018](https://standards.ieee.org/ieee/802.11az/7226/) _Improves physical location tracking & positioning, energy efficiency | SmartBuiding & IoT_
