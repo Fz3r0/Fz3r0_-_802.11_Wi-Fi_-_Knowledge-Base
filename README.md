@@ -9,6 +9,9 @@ _En construcción..._
     - Scripts para generar filtros 
 
 ## 802.11 WiFi history
+
+### Global History of Network Communications & Wi-Fi
+
 - History of Wireless Local Area Networks
 - History of WiFi in the world
 - Historia de Wi-Fi e internet en Mexico
@@ -16,7 +19,15 @@ _En construcción..._
 - [Overview of Wireless History](https://www.youtube.com/watch?v=CHbiQTskK9Q)
 - [History of Wireless Communication](https://www.youtube.com/watch?v=PU6JO8KPRs0)
 - [Historia del WiFi - est. 1997]()
+
+### Historia de Redes, Internet, Telecomunicaciones y Radiodifusión en México
+
 - [Telecomunicaciones y Radiodifusión en México @ UNAM](http://derecho.posgrado.unam.mx/site_cpd/public/publis_cpd/telecomyradiodifenMX.pdf)
+- [Ley de Vias Generales de comunicacion 1940]()
+- [La historia de Telmex]()
+- [La historia del Internet en México]()
+- [Ley Federal de Radio y Comunicación]()
+- [Reforma Constitucional de Telecomunicaciones 2013]()
 
 ## 802.11 Standards, Organizations & Regulations
 - [**Internet Governance:** IGF, NRO, IANA, ICANN, IETF, ISOC](https://en.wikipedia.org/wiki/Internet_governance)
@@ -58,6 +69,9 @@ _En construcción..._
 - Wi-Fi Alliance
 - ISO: International Organization for Standardization
 - Regulaciones en México de Wi-Fi
+    - [IFT: Instituto Federal de Telecomunicaciones](https://www.ift.org.mx/espectro-radioelectrico#:~:text=En%20este%20sentido%2C%20la%20Unidad,y%20la%20Comunicaci%C3%B3n%20V%C3%ADa%20Sat%C3%A9lite.)
+    - [Unidad de Espectro Radioeléctrico del IFT]()
+    - [Ley Federal de Telecomunicaciones y Radiodifusión](https://www.ucol.mx/content/cms/13/file/federal/LEY_FED_DE_TELECOMUNICACIONES.pdf)
     - SCT: Secretaría de Comunicaciones y Transportes
     - DOF: Diario Oficial de la Federación
 
