@@ -98,7 +98,7 @@ _En construcción..._
     - [**802.11ad**-2012]() _**DMG**: Uses MGWS, GCMP, CCMP | 60 GHz in WiGig Networks_
     - [**802.11af**-2014]() _Allows the use of **wireless in the TV white space** (TVWS)_
     - [**802.11ah**-2016]() _Use of **Wi-Fi in frequencies below 1 GHz** | IoT & M2M Communications | WiFi Alliance: **Wi-Fi HaLow**_
-    - [**802.11ai**-2016 ]() _**FILS**: High-density environments for users association to robust network_
+    - [**802.11ai**-2016 ](https://mrncciew.com/2023/09/25/fils-fast-initial-link-setup/) _**FILS**: High-density environments for users association to robust network_
     - [802.11aj-2018]() _CMMW: support for operating in the Chinese 45 GHz band_
     - [802.11ak-2018]() _GLK: Enhancement for 802.11 bridged links. Simplify AP to Wireless STA_
     - [802.11aq-2018]() _Delivery of network service info prior to the association of STA to the network_
