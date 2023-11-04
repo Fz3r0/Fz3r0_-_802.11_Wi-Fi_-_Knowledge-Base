@@ -16,6 +16,14 @@ En construcción...
 - ISO: International Organization for Standardization
 
 ## Radio Frequency (RF) Theory
+- What Is a Radio Frequency Signal?
+- Radio Frequency Characteristics
+    - Wavelength 
+    - Frequency 
+    - Amplitude 
+    - Phase
+- Radio Frequency Behaviors
+
 - Communications Fundamentals
 - Communication Terminology
 - Understanding Carrier Signals
@@ -35,7 +43,7 @@ En construcción...
 - Radio Frequency Signal & Antenna Concepts
 - Wireless LAN Hardware and Software
 
-## 802.11 Protocol & PHY
+## IEEE 802.11 Amandments & PHY
 - Fz3r0 802.11 Protocol, PHy Table
 - Original IEEE 802.11 Standard
 - IEEE 802.11-2020 Ratified Amendments (PHY)
@@ -72,7 +80,18 @@ En construcción...
     - 802.11aj-2018 
     - 802.11ak-2018 
     - 802.11aq-2018 
-
+- IEEE 802.11 Draft Amendments
+    - 802.11ax (High Efficiency) 
+    - 802.11ay (Next-Generation 60 GHz) 
+    - 802.11az (Next-Generation Positioning) 
+    - 802.11ba (Wake-Up Radio) 
+    - 802.11bb (Light Communications) 
+    - 802.11bc (Enhanced Broadcast Service) 
+    - 802.11bd (Enhancements for Next-Generation V2X) 
+    - 802.11be (Extremely High Throughput) 
+- IEEE 802.11 Defunct Amendments
+    - 802.11F
+    - 802.11T 
 
 ## 802.11 WiFi Regulation & Legislation
 - Wireless Standards and Organizations
