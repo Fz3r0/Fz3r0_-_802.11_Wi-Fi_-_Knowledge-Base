@@ -71,7 +71,7 @@ _En construcción..._
     - [**802.11n**-2009](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11n) **(WiFi4)** _**MIMO**: MIMO antenas with OFDM tech (no more multipath) & moar throughput!_
     - [**802.11ac**-2013](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11ac) **(WiFi5)** _**VHT**, **MU-MIMO**, **Beamforming**: Enhancements below 6 GHz (only for 5GHz) | moar ALL!_
     - [802.11ax-2021]() **(WiFi6)** _**HE & OFDMA**: High Efficiency WLAN amendment. Big PHY enhancement including high density_
-    - [802.11be - TBA...](https://en.wikipedia.org/wiki/IEEE_802.11be) **(WiFi7)** _EHT: Extremely High Throughput | Full lvl up!_
+    - [802.11be-2023](https://en.wikipedia.org/wiki/IEEE_802.11be) **(WiFi7)** _EHT: Extremely High Throughput | Full lvl up!_
 - IEEE 802.11-2020 Ratified Amendments (Others)
     - [**802.11d**-2001](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11d) _**Country Code** Information on Beacons & Probes_
     - [**802.11h**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11h) _**DFS, TPC**: detect & avoid interference (5 GHz satellite & radars) | now Clause-11.8 & 11.9_
