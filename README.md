@@ -100,7 +100,7 @@ _The one who knows the past can build the future. Building the future, and keepi
     - SCT: Secretaría de Comunicaciones y Transportes
     - DOF: Diario Oficial de la Federación
 
-## IEEE 802 Standard
+## IEEE 802 Standards
 - IEEE 802: Overview & Architecture
 - IEEE 802.1: Bridging & Management
 - IEEE 802.3: Ethernet
@@ -219,17 +219,19 @@ _The one who knows the past can build the future. Building the future, and keepi
 
 ### Radio Frequency Behaviors
 
-- Radio Frequency 
-    - Wave Propagation 
-    - Absorption 
-    - Reflection 
-    - Scattering 
-    - Refraction 
-    - Diffraction 
-    - Loss (Attenuation) 
-    - Free Space Path Loss 
-    - Multipath 
-    - Gain (Amplification) 
+- Wave Propagation 
+- Absorption 
+- Reflection 
+- Scattering 
+- Refraction 
+- Diffraction 
+- Loss (Attenuation) 
+- Free Space Path Loss 
+- Multipath 
+- Gain (Amplification)
+
+### Carrier Signals & Data transsmission using RF
+
 - Communications Fundamentals
 - Communication Terminology
 - Understanding Carrier Signals
@@ -263,36 +265,36 @@ _The one who knows the past can build the future. Building the future, and keepi
     - Fade Margin/System Operating Margin 
 
 ## Antenna Concepts & Antenna RF signals
-- Azimuth and Elevation Charts (Antenna Radiation Envelopes) 150
-- Interpreting Polar Charts 152
-- Beamwidth 155
-- Antenna Types 157
-    - Omnidirectional Antennas 158
-    - Downtilt Omnidirectional Antennas 161
-    - Semidirectional Antennas 162
-    - Highly Directional Antennas 164
-    - Sector Antennas 166
-- Antenna Arrays 167
-- Visual Line of Sight 169
-- RF Line of Sight 169
-- Fresnel Zone 170
-- Earth Bulge 174
-- Antenna Polarization 175
+- Azimuth and Elevation Charts (Antenna Radiation Envelopes) 
+- Interpreting Polar Charts
+- Beamwidth
+- Antenna Types 
+    - Omnidirectional Antennas 
+    - Downtilt Omnidirectional Antennas
+    - Semidirectional Antennas 
+    - Highly Directional Antennas 
+    - Sector Antennas 
+- Antenna Arrays 
+- Visual Line of Sight
+- RF Line of Sight 
+- Fresnel Zone
+- Earth Bulge
+- Antenna Polarization 
 - Antenna Diversity 176
-- Multiple-Input, Multiple-Output 177
-    - MIMO Antennas 178
-- Antenna Connection and Installation 179
-    - Voltage Standing Wave Ratio 179
-    - Signal Loss 181
-    - Antenna Mounting 181
-- Antenna Accessories 187
-    - Cables 188
-    - Connectors 188
-    - Splitters 189
-    - Amplifiers 189
-    - Attenuators 190
-    - Lightning Arrestors 191
-    - Grounding Rods and Wires 192
+- Multiple-Input, Multiple-Output 
+    - MIMO Antennas 
+- Antenna Connection and Installation 
+    - Voltage Standing Wave Ratio 
+    - Signal Loss 
+    - Antenna Mounting
+- Antenna Accessories 
+    - Cables 
+    - Connectors 
+    - Splitters
+    - Amplifiers 
+    - Attenuators 
+    - Lightning Arrestors 
+    - Grounding Rods and Wires 
 - Antenna Regulatory Compliance
 
 ## Wireless Networks and Spread Spectrum Technologies
