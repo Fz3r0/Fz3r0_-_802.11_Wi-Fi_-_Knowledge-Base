@@ -3,24 +3,37 @@
 En construcción...
 
 ## 802.11 WiFi history
+- History of Wireless Local Area Networks
 - History of WiFi in the world
 - Historia de Wi-Fi e internet en Mexico
 
+## 802.11 Standards, Organizations & Regulations
+- FCC: Federal Communications Commission
+
+## Radio Frequency (RF) Theory
+
+## Radio Frequency (RF) Measurements & Mathematics
+
 ## 802.11 Protocol Theory
 - Radio Frequency (RF) Technologies
+- Wireless Networks and Spread Spectrum Technologies
 - RF Hardware and Functions 
-- 802.11 Features and Functions 
+- 802.11 Features and Functions
+- 802.11 Medium Access
+- 802.11 MAC
 - Wireless LAN Hardware and Software 
-- Antenna Concepts
+- Radio Frequency Signal & Antenna Concepts
 - Wireless LAN Hardware and Software
 
-## 802.11 Standards & PHY
+## 802.11 Protocol & PHY
+- Fz3r0 802.11 Protocol, PHy Table
+- MIMO Technology: HT and VHT
 - 802.11b
 - 802.11a
 - 802.11g
 - 802.11n
 - 802.11ac
-- 802.11ax
+- 802.11ax: High Efficiency (HE)
 
 ## 802.11 WiFi Regulation & Legislation
 - Wireless Standards and Organizations
@@ -30,15 +43,21 @@ En construcción...
 - Reglaciones en Mexico redes inalambricas
 
 ## 802.11 Design
-- 802.11 Network Architecture
-- Define Specifications for the WLAN 25%
+- WLAN Design Concepts
+- Wireless LAN Topologies
+- 802.11 WLAN Network Architecture
+- Power over Ethernet (PoE)
+- Define Specifications for the WLAN 
 - Network Design, Installation, and Management
 - Design the WLAN 
 - Deploy the WLAN 
 - Validate and Optimize the WLAN
-- How to Perform Site Surveys
+- Site Surveys & Validation
+- Bring Your Own Device (BYOD) and Guest Access
+- WLAN Deployment & Vertical Markets
 
 ## 802.11 Analisis & Troubleshooting
+- WLAN Troubleshooting
 - 802.11 Physical (PHY) Layer Frame Formats and Technologies
 - 802.11 MAC Layer Frame Formats and Technologies
 - 802.11 Protocol Analysis
@@ -53,6 +72,7 @@ En construcción...
 - Ekahau
 
 ## 802.11 Security
+- 802.11 Network Security Architecture
 - Wireless LAN Security
 - WLAN Discovery Techniques
 - Intrusion and Attack Techniques
