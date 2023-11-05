@@ -388,11 +388,11 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 
 ## Bad-Fi: Wired & Infraestructure
 
-![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/8e358fdf-6102-4061-a77d-1b1494a87762)
+![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/fd22f780-63fb-4838-89e9-6f393a59c94d)
 
 ---
 
-![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/fd22f780-63fb-4838-89e9-6f393a59c94d)
+![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/8e358fdf-6102-4061-a77d-1b1494a87762)
 
 ---
 
@@ -412,6 +412,9 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 
 ---
 
+![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/bad66205-00ea-4f50-bf84-0c5117e95048)
+
+---
 
 
 
