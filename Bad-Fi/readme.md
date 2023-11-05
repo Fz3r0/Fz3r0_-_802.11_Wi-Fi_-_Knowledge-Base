@@ -222,6 +222,11 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 
 ---
 
+![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/f745450d-d86b-47cc-b4a9-552aa8d7191f)
+![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/8fa8e6b3-a3d5-458a-8bb8-8fbee1ba9ce0)
+
+---
+
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/2f0d6447-41e4-46a9-b05d-b8cfcfab51af)
 
 --- 
