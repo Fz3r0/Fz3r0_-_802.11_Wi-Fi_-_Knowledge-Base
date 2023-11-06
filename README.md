@@ -317,6 +317,27 @@ _The one who knows the past can build the future. Building the future, and keepi
 - WiFi aliance
 - Reglaciones en Mexico redes inalambricas
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 802.11 Design
 - LAN Core, Distribution & Access
 - Wireless LAN Topologies
@@ -332,17 +353,76 @@ _The one who knows the past can build the future. Building the future, and keepi
 - Bring Your Own Device (BYOD) and Guest Access
 - WLAN Deployment & Vertical Markets
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 802.11 Analisis & Troubleshooting
 
 ### RF Analysis Tools
-- Protocol Analyzers
-- Wi-Fi Analyzers
-- Spectrum Analyzers 
+- Protocol Analyzers & Frame Capture
+    - Wireshark
+    - BlackShark
+    - 
+- Spectrum Analyzers
+    - Metageek
+- WLAN Scanners & Discovery Tools
+    - Wi-Fi Analyzer Android
+    - Wi-Fi Analyzer Windows 
 
-### Fz3r0 802.11 Adapter & Traffic Filter Scripts
+### 802.11 Tables & Calculations for Analytics
+- MCS Table for Wi-Fi Data Rate Calculation
+- Beacon Overhead Calculation
+- Airtime Calculation
+
+### 802.11 Frame Capture Techniques
+- Movile Frame Capture
+- Infraestructure Frame Capture
+- Sensor Dedicated Frame Capture
+
+### Fz3r0 802.11 Adapter Cheatsheets
 - Fz3r0 Linux Build & Shortcuts
 - Monitor Mode
 - Channel Selection
+
+### Fz3r0 Filters & Scripts
 - Scripts para generar filtros 
 
 ### 802.11 Protocol Frame Analysis
@@ -350,23 +430,15 @@ _The one who knows the past can build the future. Building the future, and keepi
 - Control Frames
 - Data Frames
 
-### 802.11 Frame Exchange Analysis
+### 802.11 Operation & Frame Exchange Analysis
 - BSS Association, Transition & Security Exchanged
 - Medium Access Methods & QoS Frame Exchanged
 
-### WLAN Troubleshooting
-
-
 - 802.11 Protocol Analysis
 
-- 802.11 Operation and Frame Exchanges
-- Spectrum Analysis 
-- MCS Table
-- Beacon Overhead Calculation
-- WiFi Analyzers
-- Ekahau
-
 ## Fz3r0: The BlackShark for 802.11
+
+### WLAN Troubleshooting
 
 ## 802.11 Security
 - 802.11 Network Security Architecture
