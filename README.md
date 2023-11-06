@@ -1,19 +1,19 @@
-# Fz3r0 - 802.11 Wi-Fi knowledge
+802.11 Wireless (Wi-Fi) Knowledge Base <br> _by Fz3r0_ 💀🎩
 
 _En construcción..._
 
 
 
-## 802.11 WiFi history
+## 📡📜🧑‍🏫 802.11 WiFi History
 
 _The one who knows the past can build the future. Building the future, and keeping the past alive – are one and the same thing._
 
-### History of Network Communications & Internet
+### ⭕ History of Network Communications & Internet
 
 - [Conectando al Mundo: La Historia de las Redes](https://www.youtube.com/watch?v=Mz2gjthKtPo) `video`
 - [Historia y Evolución de las redes](https://www.youtube.com/watch?v=BkmQAXhTi9w)
 
-### History of Wireless Local Area Networks (WLANs) & Wi-Fi
+### ⭕ History of Wireless Local Area Networks (WLANs) & Wi-Fi
 
 - History of Wireless Local Area Networks
 - [Overview of Wireless History](https://www.youtube.com/watch?v=CHbiQTskK9Q)
@@ -29,7 +29,7 @@ _The one who knows the past can build the future. Building the future, and keepi
 - [2007 : Wi-Fi Evolution to 802.11n | 5 GHz]()
 - [Actual Wi-Fi | Giga & 10Giga | 802.11ac/ax/be | 5 & 6 GHz]()
 
-### Historia de Redes, Internet, Telecomunicaciones y Radiodifusión en México
+### ⭕ Historia de Redes, Internet, Telecomunicaciones y Radiodifusión en México
 
 - [Telecomunicaciones y Radiodifusión en México @ UNAM](http://derecho.posgrado.unam.mx/site_cpd/public/publis_cpd/telecomyradiodifenMX.pdf)
 - Historia de Wi-Fi e internet en Mexico
@@ -41,7 +41,7 @@ _The one who knows the past can build the future. Building the future, and keepi
 
 ## 802.11 Standards, Organizations & Regulations
 
-### Internet Governance
+### ⭕ Internet Governance
 
 - [**Internet Governance:** IGF, NRO, IANA, ICANN, IETF, ISOC](https://en.wikipedia.org/wiki/Internet_governance)
 - [IGF]()
