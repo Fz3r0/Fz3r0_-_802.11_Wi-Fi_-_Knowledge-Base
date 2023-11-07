@@ -69,3 +69,5 @@ b.  **NOTE** during installation you will be warned that the private key on the 
 17.  One obvious last step if you used DNS as a SAN or FQDN, don't forget to add the DNS record to your internal DNS server.
 
 18. Done.
+
+https://community.ruckuswireless.com/t5/ZoneDirector/Complete-SSL-Certificate-Import-Guide-by-an-Idiot/m-p/6744
