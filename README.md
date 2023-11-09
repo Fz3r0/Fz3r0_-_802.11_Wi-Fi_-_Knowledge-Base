@@ -9,7 +9,7 @@ _IEEE Standard for Information Technology—Telecommunications and Information E
 - **[IEEE 802.11-2020 Preview: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications](https://thewifiofthings.com/wp-content/uploads/2021/08/802.11-2020-Preview.pdf)**
 - **[IEEE 802.11-2020 **FULL**: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications](https://ieeexplore.ieee.org/document/9363693)**
 
-## 📜📖❓ IEEE 802.11 Wi-Fi: Definitions, Acronyms & Abbreviations
+## 📜📖❓ 802.11 Wireless: Definitions, Acronyms & Abbreviations
 
 ### ⭕ 802.11 Wi-Fi: Definitions
 
@@ -17,12 +17,12 @@ _IEEE Standard for Information Technology—Telecommunications and Information E
 - [Fz3r0 Networking Definitions]()
 - [Fz3r0 IEEE 802.11 Wireless / Wi-Fi definitions]()
 
-### ⭕ 802.11 Wi-Fi: Acronyms & Abbreviations
+### ⭕ 802.11 Wireless: Acronyms & Abbreviations
 
 - [IEEE: 802.11 Acronyms & Abbreviations](https://ieeexplore.ieee.org/document/5769885) _`$$$`_
 - [Wireless Dictionary of Acronyms & Abbreviations @ IWPC: The International Wireless Industry Consortium](https://www.iwpc.org/dictionary.aspx)
 
-## 📡🏺🧑‍🏫 802.11 WiFi History
+## 📡🏺🧑‍🏫 History of Wireless Networks & Wi-Fi
 
 _The one who knows the past can build the future. Building the future, and keeping the past alive – are one and the same thing._
 
