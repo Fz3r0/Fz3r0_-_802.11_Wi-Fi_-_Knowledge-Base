@@ -212,34 +212,35 @@ _The one who knows the past can build the future. Building the future, and keepi
 - [Fz3r0 Extended OSI Model for 802.11 CWAP]()
 - [TCP/IP Model]()
 
-## Encapsulation & Decapsulation
+## 💊✉️🪆 Encapsulation & Decapsulation
 
-## 802.11 Layers Technologies - PHY (Layer 1) & MAC ( Layer 2) 
+## 🪆🛜⚙️ 802.11 Layers Technologies - PHY (Layer 1) & MAC ( Layer 2) 
 
+### ⭕ 802.11 Layer 1: Physical (PHY) | Frame Formats and Technologies
+_The PHY services provided to the MAC. The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. 
+Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx using management info | B) Characteristics & Method to Tx & Rx data through WM (Wireless Medium). The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. _
 
+### ⭕ 802.11 PHY Functional Entities _(AKA PHY Functions)_
 
-### 802.11 Layer 1: Physical (PHY) | Frame Formats and Technologies
-_The PHY services provided to the MAC. Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx using management info | B) Characteristics & Method to Tx & Rx data through WM (Wireless Medium)_
+- PHY Function
+- Layer Management Function
 
-- 802.11 PHY Functional Entities _(AKA PHY Functions)_
-    - PHY Function
-    - Layer Management Function
+### ⭕ DS SAP Specification
+- DS SAP Specification Overview
+- SAP Primitives
 
-- 802.11 PHY Header AKA `Radiotap Header`
-    - Example1 
+### ⭕ 802.11 Primitives _(Instructions & Data directly understandable)_
+- Primitive Category: Supports Peer-to-Peer Interacions
+- Primitive Category: Have local significance & support Sublayer-toS-ublayer Interacions
+- [802.11b DSSS PHY-SAP Primitives](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/b8fe1268-24f5-4802-b5d0-5ed0c63f04d4)
 
-- 802.11 Primitives _(Instructions & Data directly understandable)_
-    - Primitive Category: Supports Peer-to-Peer Interacions
-    - Primitive Category: Have local significance & support Sublayer-toS-ublayer Interacions
-    - [802.11b DSSS PHY-SAP Primitives](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/b8fe1268-24f5-4802-b5d0-5ed0c63f04d4)
-
-- 802.11 PHY Operation & Services Specifications = Clause 8 802.11-2020
-    - Clause PHT: DSSS
-    - Clause PHT: HR/DSSS
-    - Clause PHT: OFDM
-    - Clause PHT: ERP
-    - Clause PHT: HT
-    - Clause 21 :: VHT :: 802.11ac :: DSSS
+### ⭕ 802.11 PHY Services Specifications = Clause 8 802.11-2020
+- Clause PHT: DSSS
+- Clause PHT: HR/DSSS
+- Clause PHT: OFDM
+- Clause PHT: ERP
+- Clause PHT: HT
+- Clause 21 :: VHT :: 802.11ac :: DSSS
         
 ### 802.11 Layer 2: Medium Access (MAC) | Frame Formats and Technologies
 
