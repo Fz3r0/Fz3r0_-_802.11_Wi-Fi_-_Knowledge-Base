@@ -219,8 +219,16 @@ _The one who knows the past can build the future. Building the future, and keepi
 
 
 ### 802.11 Layer 1: Physical (PHY) | Frame Formats and Technologies
+_The PHY services provided to the MAC. Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx using management info | B) Characteristics & Method to Tx & Rx data through WM (Wireless Medium)_
 
-- 802.11 PHY Services = Clause 8 802.11-2020
+- 802.11 PHY Functional Entities _(AKA PHY Functions)_
+    - PHY Function
+    - Layer Management Function
+
+- 802.11 Primitives _(Instructions & Data directly understandable)_
+    - Primitive Category:  
+
+- 802.11 PHY Operation & Services Specifications = Clause 8 802.11-2020
     - Clause PHT: DSSS
     - Clause PHT: HR/DSSS
     - Clause PHT: OFDM
