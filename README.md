@@ -3,7 +3,11 @@ _by Fz3r0_ 💀🎩
 
 _👷👷👷 En construcción...  //  Under construction 👷👷👷_
 
+## 802.11 Wi-Fi: Definitions, Acronyms & Abbreviations
 
+### ⭕ 802.11 Wi-Fi: Definitions
+
+- [IEEE Standards Dictionary Online](https://ieeexplore.ieee.org/browse/standards/dictionary?activeStatus=true)
 
 ## 📡📜🧑‍🏫 802.11 WiFi History
 
