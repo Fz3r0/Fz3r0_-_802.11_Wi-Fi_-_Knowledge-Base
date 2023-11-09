@@ -231,7 +231,7 @@ _The PHY services provided to the MAC. Each PHY consists of 2 protocol functions
 - 802.11 Primitives _(Instructions & Data directly understandable)_
     - Primitive Category: Supports Peer-to-Peer Interacions
     - Primitive Category: Have local significance & support Sublayer-toS-ublayer Interacions
-    - ![802.11b DSSS PHY-SAP Primitives](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/b8fe1268-24f5-4802-b5d0-5ed0c63f04d4)
+    - [802.11b DSSS PHY-SAP Primitives](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/b8fe1268-24f5-4802-b5d0-5ed0c63f04d4)
 
 - 802.11 PHY Operation & Services Specifications = Clause 8 802.11-2020
     - Clause PHT: DSSS
