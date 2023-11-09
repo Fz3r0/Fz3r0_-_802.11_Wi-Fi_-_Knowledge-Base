@@ -197,9 +197,24 @@ _The one who knows the past can build the future. Building the future, and keepi
 
 ## Encapsulation & Decapsulation
 
-## 802.11 PHY (Layer 1) & MAC (Layer 2) Technologies
-- 802.11 Layer 1: Physical (PHY) | Frame Formats and Technologies
-- 802.11 Layer 2: Medium Access (MAC) | Frame Formats and Technologies
+## 802.11 Layers Technologies - PHY (Layer 1) & MAC ( Layer 2) 
+
+### IEEE Std 802.11™‐2020 (Revision of IEEE Std 802.11‐2016)
+_IEEE Standard for Information Technology—Telecommunications and Information Exchange between Systems Local and Metropolitan Area Networks—Specific Requirements Part 11: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications_
+- [IEEE 802.11-2020 Preview: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications](https://thewifiofthings.com/wp-content/uploads/2021/08/802.11-2020-Preview.pdf)
+- [IEEE 802.11-2020 **FULL**: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications](https://ieeexplore.ieee.org/document/9363693)
+
+### 802.11 Layer 1: Physical (PHY) | Frame Formats and Technologies
+
+- 802.11 PHY Services = Clause 8 802.11-2020
+    - Clause PHT: DSSS
+    - Clause PHT: HR/DSSS
+    - Clause PHT: OFDM
+    - Clause PHT: ERP
+    - Clause PHT: HT
+    - Clause 21 :: VHT :: 802.11ac :: DSSS
+        
+### 802.11 Layer 2: Medium Access (MAC) | Frame Formats and Technologies
 
 ## Radio Frequency (RF) Theory
 
