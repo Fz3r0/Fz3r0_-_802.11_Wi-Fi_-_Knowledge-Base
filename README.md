@@ -1,7 +1,7 @@
 # 📡🛜 802.11 Wireless (Wi-Fi) Knowledge Base 🛜📡  
 _by Fz3r0_ 💀🎩
 
-_En construcción..._
+_👷👷👷 En construcción...  //  Under construction 👷👷👷_
 
 
 
