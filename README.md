@@ -59,6 +59,33 @@ _The one who knows the past can build the future. Building the future, and keepi
 
 ## 802.11 Standards, Organizations & Regulations
 
+### ⭕ Internet Organizations 
+
+- [List of Internet Organizations](https://en.wikipedia.org/wiki/List_of_Internet_organizations)
+
+#### 🟩 Standards development and broad-based advocacy and educational organizations
+
+- IAB (Internet Architecture Board)
+- ICANN (Internet Corporation for Assigned Names and Numbers)
+- IANA (Internet Assigned Numbers Authority)
+- IESG (Internet Engineering Steering Group)
+- IETF (Internet Engineering Task Force)
+- IRTF (Internet Research Task Force)
+- ISOC (Internet Society)
+- NANOG (North American Network Operators' Group)
+- NRO (Number Resource Organization)
+- W3C (World Wide Web Consortium)
+- OTF (Open Technology Fund)
+- EFF (Electronic Frontier Foundation)
+
+#### 🟩 Regional Internet Registries (RIRs)
+
+- AfriNIC (African Network Information Centre)
+- ARIN (American Registry for Internet Numbers)
+- APNIC (Asia-Pacific Network Information Centre)
+- LACNIC (Latin America and Caribbean Network Information Centre)
+- RIPE (Réseaux IP Européens Network Coordination Centre)
+
 ### ⭕ Internet Governance
 
 - [**Internet Governance:**](https://en.wikipedia.org/wiki/Internet_governance)
@@ -119,6 +146,7 @@ _The one who knows the past can build the future. Building the future, and keepi
 - [**IANA** – Internet Assigned Number Authority]() _DNS, Domain Names & IPs Authority Assignments_
 
 ### ⭕ IETF: Internet Engineering Task Force
+
 ### ⭕ Wi-Fi Alliance
 ### ⭕ ISO: International Organization for Standardization
 
