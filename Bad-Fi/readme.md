@@ -201,6 +201,10 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 
 ---
 
+![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/edd7e088-26c2-4e38-8d0a-bf652ab75cbc)
+
+---
+
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/966125de-4ceb-471a-91cd-ecf1a10f5cc8)
 
 ---
