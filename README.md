@@ -3,12 +3,6 @@ _by Fz3r0_ 💀🎩
 
 _👷👷👷 En construcción...  //  Under construction 👷👷👷_
 
-## 👑📡🛰️ IEEE Std 802.11™‐2020 (Revision of IEEE Std 802.11‐2016)
-_IEEE Standard for Information Technology—Telecommunications and Information Exchange between Systems Local and Metropolitan Area Networks—Specific Requirements Part 11: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications | Revision 2020_
-
-- **[IEEE 802.11-2020 Preview: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications](https://thewifiofthings.com/wp-content/uploads/2021/08/802.11-2020-Preview.pdf)**
-- **[IEEE 802.11-2020 **FULL**: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications](https://ieeexplore.ieee.org/document/9363693)**
-
 ## 📜📖❓ 802.11 Wireless: Definitions, Acronyms & Abbreviations
 
 ### ⭕ 802.11 Wi-Fi: Definitions
@@ -161,8 +155,17 @@ _The one who knows the past can build the future. Building the future, and keepi
 - DOF: Diario Oficial de la Federación
 
 ### ⭕ IEEE: Institute of Electrical and Electronics Engineers
+_IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. IEEE and its members inspire a global community through its highly cited publications, conferences, technology standards, and professional and educational activities._
+- [IEEE: Institute of Electrical and Electronics Engineers](https://en.wikipedia.org/wiki/Institute_of_Electrical_and_Electronics_Engineers) _`Wiki`_
+- [About IEEE](https://www.ieee.org/about/) _`Official`_
+- [IEEE at a Glance](https://www.ieee.org/about/at-a-glance.html#:~:text=IEEE%20is%20the%20world's%20largest,and%20professional%20and%20educational%20activities.) _`Official`_
+- [What is IEEE? @ University of Maine](https://umaine.edu/ieee/what-is-ieee/) _`text`_
+- [IEEE: Institute of Electrical and Electronics Engineers @ TechTarget](https://www.techtarget.com/whatis/definition/IEEE-Institute-of-Electrical-and-Electronics-Engineers) _`text`_
+- [¿Qué es y a qué se dedica la IEEE?](https://www.youtube.com/watch?v=fgHKggNGazs) _`video`_
+- [Beneficios de la membresía a la IEEE](https://www.youtube.com/watch?v=qXcsZl7WqXY) _`video`_
+- [Joining the IEEE](https://www.ieee.org/membership/join/index.html?WT.mc_id=hc_join) _`Official`_
 
-## IEEE 802 Standards
+## 👑 IEEE 802 Standards
 - IEEE 802: Overview & Architecture
 - IEEE 802.1: Bridging & Management
 - IEEE 802.3: Ethernet
@@ -173,9 +176,11 @@ _The one who knows the past can build the future. Building the future, and keepi
 - IEEE 802.21: Media Independent Handover Services
 - IEEE 802.22: Wireless Regional Area Networks
 
-## IEEE 802.11 Amandments
-- [Fz3r0 802.11 Amandments Table]()
-- [IEEE 802.11 amendments Official Excel List](https://standards.ieee.org/wp-content/uploads/import/governance/patcom/xls-files/ieee-802.11-amendments.xlsx)
+## 👑📡🛰️ IEEE Std 802.11™‐2020 (Revision of IEEE Std 802.11‐2016)
+_IEEE Standard for Information Technology—Telecommunications and Information Exchange between Systems Local and Metropolitan Area Networks—Specific Requirements Part 11: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications | Revision 2020_
+
+- **[IEEE 802.11-2020 Preview: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications](https://thewifiofthings.com/wp-content/uploads/2021/08/802.11-2020-Preview.pdf)**
+- **[IEEE 802.11-2020 **FULL**: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications](https://ieeexplore.ieee.org/document/9363693)**
 
 ### IEEE 802.11-2020 Ratified Amendments (PHY ["Traditional" Wi-Fi])
 - IEEE 802.11 pRIME - Original  Standard
