@@ -61,21 +61,29 @@ _The one who knows the past can build the future. Building the future, and keepi
 
 ### ⭕ Internet Governance
 
-- [**Internet Governance:** IGF, NRO, IANA, ICANN, IETF, ISOC](https://en.wikipedia.org/wiki/Internet_governance)
-- [IGF]()
+- [**Internet Governance:**](https://en.wikipedia.org/wiki/Internet_governance)
+    - [Internet Governance Member: IGF]()
+    - [Internet Governance Member: NRO]()
+    - [Internet Governance Member: IANA]()
+    - [Internet Governance Member: ICANN]()
+    - [Internet Governance Member: IETF]()
+    - [Internet Governance Member: ISOC]()
 
-### Regulatory Bodies & Regulatory Domains
+### ⭕ Regulatory Bodies & Regulatory Domains
 
 - [**Regulatory Bodies _Regulatory Domains:**_ ETSI, FCC, TELEC, KCC]() _regulates communications within & from USA_
+    - [Regulatory Body: ETSI]()
+    - [Regulatory Body: FCC - Federal Communications Commission]()
+    - [Regulatory Body: TELEC]()
+    - [Regulatory Body: KCC]()
 
+### ⭕ FCC: Federal Communications Commission
 
-### FCC: Federal Communications Commission
-
-### ITU: International Telecommunication Union 
+### ⭕ ITU: International Telecommunication Union 
 - [ITU - International Telecommunication Union](https://www.itu.int/en/Pages/default.aspx)
 - [ITU - International Telecommunication Union @ Wikipedia](https://en.wikipedia.org/wiki/International_Telecommunication_Union) _Wiki_
 
-### ITU-R: International Telecommunication Union Radiocommunication Sector
+#### 🟩 ITU-R: International Telecommunication Union Radiocommunication Sector
 - [ITU Members connect the world!](https://www.youtube.com/watch?v=EBPiWhp4KG4) _@ ITU youtube_
 - [ITU- R - Official Web](https://www.itu.int/es/ITU-R/Pages/default.aspx) _One of the three sectors (divisions) of the ITU_
 - [ITU- R - Radiocommunication Sector @ Wikipedia](https://en.wikipedia.org/wiki/ITU-R) <br><br>
@@ -91,32 +99,40 @@ _The one who knows the past can build the future. Building the future, and keepi
         - [United States Federal Communications Commission (FCC)
 - [ITU- R - Standardization Sector @ Wikipedia ](https://en.wikipedia.org/wiki/ITU-T)
 
-### ITU-D: International Telecommunication Union Development Sector
+#### 🟩 ITU-D: International Telecommunication Union Development Sector
 
 - [ITU- D - Development Sector @ Wikipedia ](https://en.wikipedia.org/wiki/ITU-D)
 
-### ISOC: Internet Society
+### ⭕ ISOC: Internet Society
 - [Internet Standards Organizations (ISOC, IAB, IESG, IETF, IRSG, IRTF)](http://www.tcpipguide.com/free/t_InternetStandardsOrganizationsISOCIABIESGIETFIRSGI.htm)
 - [Internet Society (ISOC)](https://www.internetsociety.org/)
 - [Internet Society (ISOC) @ Wiki](https://es.wikipedia.org/wiki/Internet_Society)
+
+#### 🟩 ISOC Hierarchy
 - [ISOC Hierarchy](https://user-images.githubusercontent.com/94720207/179373677-22b265ed-3217-4f70-88c2-4701ce3e7380.png)
-        - [**IAB** - Internet Architecture Board]()
-        - [**ICANN** - Internet Corporation for Assigned Names and Numbers ]()
-        - [**IESG** - Internet Engineering Steering Group]() 
-        - [**IRTF** - Internet Research Task Force]()- 
-        - [**IETF** - Internet Engineering Task Force](https://www.ietf.org/) _Create Standards | RFC_
-   - [How **IAB** Manage the protocol values done by **IANA**?](http://www.tcpipguide.com/free/t_InternetStandardsOrganizationsISOCIABIESGIETFIRSGI-3.htm)
+    - [**IAB** - Internet Architecture Board]()
+    - [**ICANN** - Internet Corporation for Assigned Names and Numbers ]()
+    - [**IESG** - Internet Engineering Steering Group]() 
+    - [**IRTF** - Internet Research Task Force]()- 
+    - [**IETF** - Internet Engineering Task Force](https://www.ietf.org/) _Create Standards | RFC_
+- [How **IAB** Manage the protocol values done by **IANA**?](http://www.tcpipguide.com/free/t_InternetStandardsOrganizationsISOCIABIESGIETFIRSGI-3.htm)
 - [**IANA** – Internet Assigned Number Authority]() _DNS, Domain Names & IPs Authority Assignments_
-- IEEE: Institute of Electrical and Electronics Engineers
-- IETF: Internet Engineering Task Force
-- Wi-Fi Alliance
-- ISO: International Organization for Standardization
-- Regulaciones en México de Wi-Fi
-    - [IFT: Instituto Federal de Telecomunicaciones](https://www.ift.org.mx/espectro-radioelectrico#:~:text=En%20este%20sentido%2C%20la%20Unidad,y%20la%20Comunicaci%C3%B3n%20V%C3%ADa%20Sat%C3%A9lite.)
-    - [Unidad de Espectro Radioeléctrico del IFT]()
-    - [Ley Federal de Telecomunicaciones y Radiodifusión](https://www.ucol.mx/content/cms/13/file/federal/LEY_FED_DE_TELECOMUNICACIONES.pdf)
-    - SCT: Secretaría de Comunicaciones y Transportes
-    - DOF: Diario Oficial de la Federación
+
+### ⭕ IETF: Internet Engineering Task Force
+### ⭕ Wi-Fi Alliance
+### ⭕ ISO: International Organization for Standardization
+
+
+
+
+### ⭕ Regulaciones y Organizaciones Mexicanas
+- [IFT: Instituto Federal de Telecomunicaciones](https://www.ift.org.mx/espectro-radioelectrico#:~:text=En%20este%20sentido%2C%20la%20Unidad,y%20la%20Comunicaci%C3%B3n%20V%C3%ADa%20Sat%C3%A9lite.)
+- [Unidad de Espectro Radioeléctrico del IFT]()
+- [Ley Federal de Telecomunicaciones y Radiodifusión](https://www.ucol.mx/content/cms/13/file/federal/LEY_FED_DE_TELECOMUNICACIONES.pdf)
+- SCT: Secretaría de Comunicaciones y Transportes
+- DOF: Diario Oficial de la Federación
+
+### ⭕ IEEE: Institute of Electrical and Electronics Engineers
 
 ## IEEE 802 Standards
 - IEEE 802: Overview & Architecture
