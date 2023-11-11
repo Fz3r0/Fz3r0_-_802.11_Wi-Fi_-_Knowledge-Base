@@ -8,6 +8,7 @@ _👷👷👷 En construcción...  //  Under construction 👷👷👷_
 ### ⭕ 802.11 Wi-Fi: Definitions
 
 - [IEEE: 802.11 Standards Dictionary Online](https://ieeexplore.ieee.org/browse/standards/dictionary?activeStatus=true)
+- [Agilent Technologies: Wireless Dictionary](https://ftp.unpad.ac.id/orari/library/library-ref-eng/ref-eng-1/physical/voip/wireless/dictionary.pdf)
 - [Fz3r0 Networking Definitions]()
 - [Fz3r0 IEEE 802.11 Wireless / Wi-Fi definitions]()
 
