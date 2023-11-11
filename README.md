@@ -110,14 +110,23 @@ PSINet
 UUNet
 
 ### ⭕ Internet Governance
+_Internet governance consists of a system of laws, rules, policies and practices that dictate how its board members manage and oversee the affairs of any internet related-regulatory body._
 
-- [**Internet Governance:**](https://en.wikipedia.org/wiki/Internet_governance)
-    - [Internet Governance Member: IGF]()
-    - [Internet Governance Member: NRO]()
-    - [Internet Governance Member: IANA]()
+- [**Internet Governance & Members**](https://en.wikipedia.org/wiki/Internet_governance)
+    - [IGF (Internet Governance Forum) :: Group for policy dialogue on issues of Internet governance](https://en.wikipedia.org/wiki/Internet_Governance_Forum)
+    - [NRO (Number Resource Organization) :: Unincorporated organization uniting the 5 RIRs](https://en.wikipedia.org/wiki/Regional_Internet_registry#Number_Resource_Organization)
+    - [IANA (Internet Assigned Numbers Authority) :: IPs, DNS, Protocols, Time Zone](https://en.wikipedia.org/wiki/Internet_Assigned_Numbers_Authority)
     - [Internet Governance Member: ICANN]()
     - [Internet Governance Member: IETF]()
     - [Internet Governance Member: ISOC]()
+
+### ⭕ RIR: Regional Internet registry
+
+- AFRINIC The African Network Information Centre serves Africa.
+- ARIN The American Registry for Internet Numbers serves Antarctica, Canada, parts of the Caribbean, and the United States.
+- APNIC The Asia Pacific Network Information Centre serves East Asia, Oceania, South Asia, and Southeast Asia.
+- LACNIC The Latin America and Caribbean Network Information Centre serves most of the Caribbean and all of Latin America.
+- RIPE NCC Réseaux IP Européens Network Coordination Centre serves Europe, Central Asia, Russia, and West Asia.
 
 ### ⭕ Regulatory Bodies & Regulatory Domains
 
