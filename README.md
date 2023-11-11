@@ -200,7 +200,9 @@ _IEEE Standard for Information Technology—Telecommunications and Information E
 - **[IEEE 802.11-2020 Preview: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications](https://thewifiofthings.com/wp-content/uploads/2021/08/802.11-2020-Preview.pdf)**
 - **[IEEE 802.11-2020 **FULL**: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications](https://ieeexplore.ieee.org/document/9363693)**
 
-### 🛰️📡🏆 IEEE 802.11-2020 Ratified Amendments `PHY` _("Traditional" Wi-Fi WLANs)_
+## 🛰️📡🏆 IEEE 802.11-2020 Ratified Amendments
+
+### 📡🏆 IEEE 802.11-2020 Ratified Amendments `PHY` _("Traditional" Wi-Fi WLANs)_
 _The original standard was published in 1997, revised in 1999 with MIB changes, and reaffirmed in 2003._
 - [Diferentes protocolos de Wi-Fi y velocidades de datos @ Intel](https://www.intel.la/content/www/xl/es/support/articles/000005725/wireless/legacy-intel-wireless-products.html) _`tabla`_ <br><br>
 - [**802.11 "Prime"**] - 1997 - Original  Standard() **(WiFi0)** _**DSSS** or **FHSS**: Original  Standard for the use un DS for Wi-Fi in the 2.4 GHz Band(Amendment 1)_
@@ -213,10 +215,11 @@ _The original standard was published in 1997, revised in 1999 with MIB changes, 
 - [**802.11ax**-2021]() **(WiFi6)** _**HE & OFDMA**: High Efficiency WLAN amendment. Big PHY enhancement including high density_
 - [**802.11be**-2023](https://en.wikipedia.org/wiki/IEEE_802.11be) **(WiFi7)** _EHT: Extremely High Throughput | Full lvl up!_
 
-### 🛰️📡🏆 IEEE 802.11-2020 Ratified Amendments `PHY` _(NON-WiFi WLANs)_
+### 📡🏆 IEEE 802.11-2020 Ratified Amendments `PHY` _(NON-WiFi WLANs)_
 - [**802.11ad**-2012]() _**DMG**: Uses MGWS, GCMP, CCMP | 60 GHz in WiGig Networks_ 
 - [**802.11af**-2014]() _**TVWS**: Allows the use of **wireless in the TV white space** (TVWS)_
 - [**802.11ah**-2016]() _**Wi-Fi HaLow**: Use of **Wi-Fi in frequencies below 1 GHz** | IoT & M2M Communications_
+- [**802.11ay**-2021](https://en.wikipedia.org/wiki/IEEE_802.11ay) _256-QAM added. faster speeds & longer range, above 45 GH | TV & Monitor Connectivity_
 
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments (Country Specific Technology & Config)
 - [**802.11d**-2001](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11d) _**Country Code** Information on Beacons & Probes | Specification for operation in additional regulatory domains (Amendment 3)_
@@ -232,7 +235,9 @@ _The original standard was published in 1997, revised in 1999 with MIB changes, 
 - [**802.11k**-2008](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11k) _**RRM**: TPC, client & channel stats, neighbor report | helps roaming ;)_
 - [**802.11r**-2008](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11r) _**BSS transition (FT) / Fast Secure Roaming** | CKM, PKC, OKC, fast session resumption_
 - [**802.11u**-2011](https://en.wikipedia.org/wiki/IEEE_802.11u) _Wi-Fi Certified Passpoint AKA Hotspot 2.0 | Network discovery & selection for mobile devices_
-- [**802.11ai**-2016 ](https://mrncciew.com/2023/09/25/fils-fast-initial-link-setup/) _**FILS**: High-density environments for users association to robust network_
+- [**802.11v**-2011](https://en.wikipedia.org/wiki/IEEE_802.11v-2011) _Network assisted Roaming (APs send info messages to associated STAs) | Network assisted Power Savings (longer sleep states)_
+- [**802.11ai**-2016](https://mrncciew.com/2023/09/25/fils-fast-initial-link-setup/) _**FILS**: High-density environments for users association to robust network_
+- [**802.11aq**-2018](https://www.fiercewireless.com/wireless/ieee-releases-802-11aq-to-better-detect-wlan-availability) _Delivery of network service info prior to the association of STA to the network. Offer the STA ability to make informed decisions about which network to connect to._
 
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments (Security)
 - [**802.11i**-2004](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11i) _**RSN Authentication** | WiFi alliance: **WPA2** | (MAC Security Enhancements (Amendment 6)_
@@ -244,39 +249,32 @@ _The original standard was published in 1997, revised in 1999 with MIB changes, 
 - [**802.11z**-2010]() _**DLS**: allow operation with non-DLS-capable APs (not used on Enterprises)_
 
 ### 🤖📡IEEE 802.11-2020 Ratified Amendments (Battery Savers, Efficience & Performance)
-- [**802.11v**-2011](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11v) _**WNM**: info exchange for WiFi performance improvement & WNM-Sleep mode_
+
+- [802.11az-2018](https://standards.ieee.org/ieee/802.11az/7226/) _Improves physical location tracking & positioning, energy efficiency | SmartBuiding & IoT_
 - [802.11ba-2021](https://standards.ieee.org/ieee/802.11ba/6896/) _WUR: Increase battery life of devices (p.e battery powered IoT devices)_
+
 
 ### 🤖📡IEEE 802.11-2020 Ratified Amendments (QoS)
 - [**802.11e**-2005](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11e) _**Voice over WLAN y streaming multimedia QoS.** | MAC Quality of Service Enhancements (Amendment 8)_
 - [**802.11aa**-2012]() _**GCR**: QoS enhancements for robust audio & video streaming_
 - [**802.11ae**-2012]() _**QMF**: Enable QMF | Enhancements to QoS management frames_
 
-
 ### IEEE 802.11-2020 Ratified Amendments (Channel Detection & Hopping)
 - [**802.11h**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11h) _**DFS, TPC**: Enforces DFS events detect & avoid interference (5 GHz satellite & radars) | Meet Regulations in Europe | (Amendment 5)
 
+### 🤖📡IEEE 802.11-2020 Ratified Amendments (Wi-Fi Bridge Links)
+- [**802.11ak**-2018](https://www.businesswire.com/news/home/20180717005217/en/IEEE-Publishes-802.11ak%E2%84%A2-2018-Standard-Amendment-Enabling-WiFi%C2%AE-Transit-Links-in-Bridged-Networks) _GLK: 802.11 Wireless working as 802.3 Ethernet by providing internal connections as transit links within IEEE 802.1Q bridged networks. AKA Trunking_
 
+
+
+    
 
 
 
     
     
-    - _**VoWLAN**: QoS Grandpa & WiFi cert WMM Grandma')_
-
-
-
-    - [**802.11v**-2011]()
-
-    - [**802.11s**-2011]()
-
-
     
-
-    - [802.11ak-2018]() _GLK: Enhancement for 802.11 bridged links. Simplify AP to Wireless STA_
-    - [802.11aq-2018]() _Delivery of network service info prior to the association of STA to the network_
-    - [802.11az-2018](https://standards.ieee.org/ieee/802.11az/7226/) _Improves physical location tracking & positioning, energy efficiency | SmartBuiding & IoT_
-    - [802.11ay-2021](https://en.wikipedia.org/wiki/IEEE_802.11ay) _256-QAM added. faster speeds & longer range, above 45 GH | TV & Monitor Connectivity_
+    
 - IEEE 802.11 Draft Amendments
     - 802.11bb (Light Communications) 
     - 802.11bc (Enhanced Broadcast Service) 
