@@ -184,15 +184,18 @@ _Set of rules and policies providing the end user with configurations of country
 
 
 ## 👑 IEEE 802 Standards
+_The most widely used IEEE 802 standards are for Ethernet, Bridging and Virtual Bridged LANs Wireless LAN, Wireless PAN, Wireless MAN, Wireless Coexistence, Media Independent Handover Services, and Wireless RAN with a dedicated Working Group providing focus for each area. IEEE 802 also coordinates with other national and international standards bodies, including ISO which has published certain IEEE 802 standards as international standards._
+
+- [IEEE 802 50th Aniversary, a look back](https://standards.ieee.org/featured/ieee-802/#:~:text=The%20most%20widely%20used%20IEEE,providing%20focus%20for%20each%20area.)
 - IEEE 802: Overview & Architecture
-- IEEE 802.1: Bridging & Management
-- IEEE 802.3: Ethernet
-- IEEE 802.11: Wireless LANs
-- IEEE 802.15: Wireless Specialty Networks (WSN)
-- IEEE 802.16: Broadband Wireless MANs
-- IEEE 802.19: Wireless Coexistence
-- IEEE 802.21: Media Independent Handover Services
-- IEEE 802.22: Wireless Regional Area Networks
+    - IEEE 802.1: Bridging & Management
+    - IEEE 802.3: Ethernet
+    - IEEE 802.11: Wireless LANs
+    - IEEE 802.15: Wireless Specialty Networks (WSN)
+    - IEEE 802.16: Broadband Wireless MANs
+    - IEEE 802.19: Wireless Coexistence
+    - IEEE 802.21: Media Independent Handover Services
+    - IEEE 802.22: Wireless Regional Area Networks
 
 ## 👑📡🛰️ IEEE Std 802.11™‐2020 (Revision of IEEE Std 802.11‐2016)
 _IEEE Standard for Information Technology—Telecommunications and Information Exchange between Systems Local and Metropolitan Area Networks—Specific Requirements Part 11: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications | Revision 2020_
