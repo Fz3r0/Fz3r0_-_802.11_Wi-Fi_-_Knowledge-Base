@@ -51,13 +51,14 @@ _The one who knows the past can build the future. Building the future, and keepi
 - [Ley Federal de Radio y Comunicación]()
 - [Reforma Constitucional de Telecomunicaciones 2013]()
 
-## Internet, Networking, Wireless & Telecomunication `Organizations`
+## 🌎♻️🧙‍♂️ Internet, Networking, Wireless & Telecomunication `Organizations`
 
-### ⭕ Internet Organizations 
+### 🧙‍♂️ Internet Organizations 
+_List of Internet organizations, or organizations that play or played a key role in the evolution of the Internet by developing recommendations, standards, and technology; deploying infrastructure and services; and addressing other major issues._
 
 - [List of Internet Organizations](https://en.wikipedia.org/wiki/List_of_Internet_organizations)
 
-### ⭕ Internet Governance
+### 🧙‍♂️ Internet Governance
 _Internet governance consists of a system of laws, rules, policies and practices that dictate how its board members manage and oversee the affairs of any internet related-regulatory body._
 
 - [**Internet Governance & Members**](https://en.wikipedia.org/wiki/Internet_governance)
@@ -68,7 +69,7 @@ _Internet governance consists of a system of laws, rules, policies and practices
     - [IETF (Internet Engineering Task Force) :: Technical standards for TCP/IP protocol suite](https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force)
     - [ISOC (Internet Society) :: Non-Profit Internet development, infrastructure, accessibility & standards for the world](https://en.wikipedia.org/wiki/Internet_Society)
 
-### ⭕ RIR: Regional Internet registry
+### 🧙‍♂️ RIR: Regional Internet registry
 _Organization that manages the allocation and registration of Internet number resources within a region of the world._
 
 - AFRINIC (African Network Information Centre) :: Africa
@@ -77,7 +78,7 @@ _Organization that manages the allocation and registration of Internet number re
 - LACNIC (Latin America and Caribbean Network Information Centre) :: most of the Caribbean, Latin America
 - RIPE NCC (Réseaux IP Européens Network Coordination Centre) :: Europe, Central Asia, Russia, West Asia
 
-### ⭕ ITU: International Telecommunication Union 
+### 🧙‍♂️ ITU: International Telecommunication Union 
 - [ITU - International Telecommunication Union](https://www.itu.int/en/Pages/default.aspx)
 - [ITU - International Telecommunication Union @ Wikipedia](https://en.wikipedia.org/wiki/International_Telecommunication_Union) _Wiki_
 
@@ -101,7 +102,7 @@ _Organization that manages the allocation and registration of Internet number re
 
 - [ITU- D - Development Sector @ Wikipedia ](https://en.wikipedia.org/wiki/ITU-D)
 
-### ⭕ ISOC: Internet Society
+### 🧙‍♂️ ISOC: Internet Society
 - [Internet Standards Organizations (ISOC, IAB, IESG, IETF, IRSG, IRTF)](http://www.tcpipguide.com/free/t_InternetStandardsOrganizationsISOCIABIESGIETFIRSGI.htm)
 - [Internet Society (ISOC)](https://www.internetsociety.org/)
 - [Internet Society (ISOC) @ Wiki](https://es.wikipedia.org/wiki/Internet_Society)
@@ -116,17 +117,17 @@ _Organization that manages the allocation and registration of Internet number re
 - [How **IAB** Manage the protocol values done by **IANA**?](http://www.tcpipguide.com/free/t_InternetStandardsOrganizationsISOCIABIESGIETFIRSGI-3.htm)
 - [**IANA** – Internet Assigned Number Authority]() _DNS, Domain Names & IPs Authority Assignments_
 
-### ⭕ IETF: Internet Engineering Task Force
+### 🧙‍♂️ IETF: Internet Engineering Task Force
 
 
-## Internet, Networking, Wireless & Telecomunication `Standards`
+## 🌎♻️🫅 Internet, Networking, Wireless & Telecomunication `Standards`
 
-### ⭕ ISO: International Organization for Standardization
+### 🫅 ISO: International Organization for Standardization
 
-### ⭕ Wi-Fi Alliance
+### 🫅 Wi-Fi Alliance
 
 
-### ⭕ IEEE: Institute of Electrical and Electronics Engineers
+### 🫅 IEEE: Institute of Electrical and Electronics Engineers
 _IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. IEEE and its members inspire a global community through its highly cited publications, conferences, technology standards, and professional and educational activities._
 - [IEEE: Institute of Electrical and Electronics Engineers](https://en.wikipedia.org/wiki/Institute_of_Electrical_and_Electronics_Engineers) _`Wiki`_
 - [About IEEE](https://www.ieee.org/about/) _`Official`_
@@ -138,10 +139,10 @@ _IEEE is the world's largest technical professional organization dedicated to ad
 - [Joining the IEEE](https://www.ieee.org/membership/join/index.html?WT.mc_id=hc_join) _`Official`_
 
 
-## Internet, Networking, Wireless & Telecomunication `Regulations`
+## 🌎♻️👮 Internet, Networking, Wireless & Telecomunication `Regulations`
 
 
-### ⭕ Regulatory Domains AKA Regulotory Bodies (Wireless)
+### 👮 Regulatory Domains AKA Regulotory Bodies (Wireless)
 _Set of rules and policies providing the end user with configurations of country code, calibration channel, and output power settings for a **wireless** device set up in a specific area_
 
 - [Regulatory Domains in WIFI @ Leo Tech Talk](https://www.youtube.com/watch?app=desktop&v=rcuGjndqicw) _`video`_
@@ -151,9 +152,9 @@ _Set of rules and policies providing the end user with configurations of country
     - [Regulatory Body: TELEC]()
     - [Regulatory Body: KCC]()
 
-### FCC Federal Communications Commission
+### 👮 FCC Federal Communications Commission
 
-### ⭕ Regulaciones y Organizaciones Mexicanas
+### 👮 Regulaciones y Organizaciones Mexicanas
 - [IFT: Instituto Federal de Telecomunicaciones](https://www.ift.org.mx/espectro-radioelectrico#:~:text=En%20este%20sentido%2C%20la%20Unidad,y%20la%20Comunicaci%C3%B3n%20V%C3%ADa%20Sat%C3%A9lite.)
 - [Unidad de Espectro Radioeléctrico del IFT]()
 - [Ley Federal de Telecomunicaciones y Radiodifusión](https://www.ucol.mx/content/cms/13/file/federal/LEY_FED_DE_TELECOMUNICACIONES.pdf)
