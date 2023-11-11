@@ -125,7 +125,10 @@ _Organization that manages the allocation and registration of Internet number re
 ### 🫅 ISO: International Organization for Standardization
 
 ### 🫅 Wi-Fi Alliance
+_Non-profit organization that owns the Wi-Fi trademark. Manufacturers may use the trademark to brand products certified for Wi-Fi interoperability. _
 
+- [](https://www.wi-fi.org/) _`official`_
+- [Wi-Fi Alliance](https://en.wikipedia.org/wiki/Wi-Fi_Alliance) _`Wiki`_
 
 ### 🫅 IEEE: Institute of Electrical and Electronics Engineers
 _IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. IEEE and its members inspire a global community through its highly cited publications, conferences, technology standards, and professional and educational activities._
@@ -225,6 +228,7 @@ _IEEE Standard for Information Technology—Telecommunications and Information E
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments (Roaming & Association)
 - [**802.11k**-2008](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11k) _**RRM**: TPC, client & channel stats, neighbor report | helps roaming ;)_
 - [**802.11r**-2008](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11r) _**BSS transition (FT) / Fast Secure Roaming** | CKM, PKC, OKC, fast session resumption_
+- [**802.11u**-2011](https://en.wikipedia.org/wiki/IEEE_802.11u) _Wi-Fi Certified Passpoint AKA Hotspot 2.0 | Network discovery & selection for mobile devices_
 - [**802.11ai**-2016 ](https://mrncciew.com/2023/09/25/fils-fast-initial-link-setup/) _**FILS**: High-density environments for users association to robust network_
 
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments (Security)
@@ -257,7 +261,7 @@ _IEEE Standard for Information Technology—Telecommunications and Information E
 
 
     - [**802.11v**-2011]()
-    - [**802.11u**-2011]()
+
     - [**802.11s**-2011]()
 
 
