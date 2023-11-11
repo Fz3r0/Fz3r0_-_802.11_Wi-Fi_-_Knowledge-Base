@@ -202,8 +202,9 @@ _IEEE Standard for Information Technology—Telecommunications and Information E
 
 ### 🛰️📡🏆 IEEE 802.11-2020 Ratified Amendments `PHY` _("Traditional" Wi-Fi WLANs)_
 _The original standard was published in 1997, revised in 1999 with MIB changes, and reaffirmed in 2003._
-- 802.11 "Prime" - 1997 - Original  Standard
-- [**802.11b**-1999]() **(WiFi1)** _**DSSS**: Higher-Speed Physical Layer Extension in the 2.4 GHz Band(Amendment 2)_
+- [Diferentes protocolos de Wi-Fi y velocidades de datos @ Intel](https://www.intel.la/content/www/xl/es/support/articles/000005725/wireless/legacy-intel-wireless-products.html) _`tabla`_ <br><br>
+- [**802.11 "Prime"**] - 1997 - Original  Standard() **(WiFi0)** _**DSSS** or **FHSS**: Original  Standard for the use un DS for Wi-Fi in the 2.4 GHz Band(Amendment 1)_
+- [**802.11b**-1999]() **(WiFi1)** _**HR-DSSS**: Higher-Speed Physical Layer Extension in the 2.4 GHz Band(Amendment 2)_
 - [**802.11a**-1999](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11a) **(WiFi2)** _**OFDM**: High-speed Physical Layer in the 5 GHz Band (Amendment 1)_
 - [**802.11g**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11g) **(WiFi3)** _**ERP**: ERP-OFDM & ERP-DSSS/CCK > for higher data rates_
 - [**802.11n**-2009](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11n) **(WiFi4)** _**MIMO**: MIMO antenas with OFDM tech (no more multipath) & moar throughput!_
