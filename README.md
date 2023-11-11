@@ -51,7 +51,7 @@ _The one who knows the past can build the future. Building the future, and keepi
 - [Ley Federal de Radio y Comunicación]()
 - [Reforma Constitucional de Telecomunicaciones 2013]()
 
-## 802.11 Standards, Organizations & Regulations
+## Internet, Networking, Wireless & Telecomunication `Organizations`
 
 ### ⭕ Internet Organizations 
 
@@ -119,30 +119,9 @@ _Organization that manages the allocation and registration of Internet number re
 ### ⭕ IETF: Internet Engineering Task Force
 
 
+## Internet, Networking, Wireless & Telecomunication `Standards`
+
 ### ⭕ ISO: International Organization for Standardization
-
-
-
-
-
-### ⭕ Regulatory Domains AKA Regulotory Bodies (Wireless)
-_Set of rules and policies providing the end user with configurations of country code, calibration channel, and output power settings for a **wireless** device set up in a specific area_
-
-- [Regulatory Domains in WIFI @ Leo Tech Talk](https://www.youtube.com/watch?app=desktop&v=rcuGjndqicw) _`video`_
-- [**Regulatory Bodies/Domains**](https://shop.chulo.co.uk/blog/what-is-regulatory-domain.html)
-    - [Regulatory Body: ETSI]()
-    - [Regulatory Body: FCC - Federal Communications Commission]()
-    - [Regulatory Body: TELEC]()
-    - [Regulatory Body: KCC]()
-
-### ⭕ FCC: Federal Communications Commission
-
-### ⭕ Regulaciones y Organizaciones Mexicanas
-- [IFT: Instituto Federal de Telecomunicaciones](https://www.ift.org.mx/espectro-radioelectrico#:~:text=En%20este%20sentido%2C%20la%20Unidad,y%20la%20Comunicaci%C3%B3n%20V%C3%ADa%20Sat%C3%A9lite.)
-- [Unidad de Espectro Radioeléctrico del IFT]()
-- [Ley Federal de Telecomunicaciones y Radiodifusión](https://www.ucol.mx/content/cms/13/file/federal/LEY_FED_DE_TELECOMUNICACIONES.pdf)
-- SCT: Secretaría de Comunicaciones y Transportes
-- DOF: Diario Oficial de la Federación
 
 ### ⭕ Wi-Fi Alliance
 
@@ -157,6 +136,48 @@ _IEEE is the world's largest technical professional organization dedicated to ad
 - [¿Qué es y a qué se dedica la IEEE?](https://www.youtube.com/watch?v=fgHKggNGazs) _`video`_
 - [Beneficios de la membresía a la IEEE](https://www.youtube.com/watch?v=qXcsZl7WqXY) _`video`_
 - [Joining the IEEE](https://www.ieee.org/membership/join/index.html?WT.mc_id=hc_join) _`Official`_
+
+
+## Internet, Networking, Wireless & Telecomunication `Regulations`
+
+
+### ⭕ Regulatory Domains AKA Regulotory Bodies (Wireless)
+_Set of rules and policies providing the end user with configurations of country code, calibration channel, and output power settings for a **wireless** device set up in a specific area_
+
+- [Regulatory Domains in WIFI @ Leo Tech Talk](https://www.youtube.com/watch?app=desktop&v=rcuGjndqicw) _`video`_
+- [**Regulatory Bodies/Domains**](https://shop.chulo.co.uk/blog/what-is-regulatory-domain.html)
+    - [Regulatory Body: ETSI]()
+    - [Regulatory Body: FCC - Federal Communications Commission]()
+    - [Regulatory Body: TELEC]()
+    - [Regulatory Body: KCC]()
+
+### FCC Federal Communications Commission
+
+### ⭕ Regulaciones y Organizaciones Mexicanas
+- [IFT: Instituto Federal de Telecomunicaciones](https://www.ift.org.mx/espectro-radioelectrico#:~:text=En%20este%20sentido%2C%20la%20Unidad,y%20la%20Comunicaci%C3%B3n%20V%C3%ADa%20Sat%C3%A9lite.)
+- [Unidad de Espectro Radioeléctrico del IFT]()
+- [Ley Federal de Telecomunicaciones y Radiodifusión](https://www.ucol.mx/content/cms/13/file/federal/LEY_FED_DE_TELECOMUNICACIONES.pdf)
+- SCT: Secretaría de Comunicaciones y Transportes
+- DOF: Diario Oficial de la Federación
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### ⭕ FCC: Federal Communications Commission
+
+
+
+
 
 ## 👑 IEEE 802 Standards
 - IEEE 802: Overview & Architecture
