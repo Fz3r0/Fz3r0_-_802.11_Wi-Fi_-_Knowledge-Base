@@ -116,11 +116,12 @@ _Internet governance consists of a system of laws, rules, policies and practices
     - [IGF (Internet Governance Forum) :: Group for policy dialogue on issues of Internet governance](https://en.wikipedia.org/wiki/Internet_Governance_Forum)
     - [NRO (Number Resource Organization) :: Unincorporated organization uniting the 5 RIRs](https://en.wikipedia.org/wiki/Regional_Internet_registry#Number_Resource_Organization)
     - [IANA (Internet Assigned Numbers Authority) :: IPs, DNS, Protocols, Time Zone](https://en.wikipedia.org/wiki/Internet_Assigned_Numbers_Authority)
-    - [Internet Governance Member: ICANN]()
-    - [Internet Governance Member: IETF]()
-    - [Internet Governance Member: ISOC]()
+    - [ICANN (Internet Corporation for Assigned Names & Numbers) :: DNS Registries, namespaces & numerical spaces of the Internet](https://en.wikipedia.org/wiki/ICANN)
+    - [IETF (Internet Engineering Task Force) :: Technical standards for TCP/IP protocol suite](https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force)
+    - [ISOC (Internet Society) :: Non-Profit Internet development, infrastructure, accessibility & standards for the world](https://en.wikipedia.org/wiki/Internet_Society)
 
 ### ⭕ RIR: Regional Internet registry
+_Organization that manages the allocation and registration of Internet number resources within a region of the world._
 
 - AFRINIC The African Network Information Centre serves Africa.
 - ARIN The American Registry for Internet Numbers serves Antarctica, Canada, parts of the Caribbean, and the United States.
