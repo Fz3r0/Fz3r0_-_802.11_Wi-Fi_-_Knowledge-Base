@@ -26,6 +26,8 @@ _The one who knows the past can build the future. Building the future, and keepi
 - [Conectando al Mundo: La Historia de las Redes](https://www.youtube.com/watch?v=Mz2gjthKtPo) `video`
 - [Historia y Evolución de las redes](https://www.youtube.com/watch?v=BkmQAXhTi9w)
 
+---
+
 ### 🏺 History of Wireless Local Area Networks (WLANs) & Wi-Fi
 
 - History of Wireless Local Area Networks
@@ -41,6 +43,8 @@ _The one who knows the past can build the future. Building the future, and keepi
 - [2003 : Wi-Fi Evolution to 802.11g | 54mbps @ 2.4ghz]()
 - [2007 : Wi-Fi Evolution to 802.11n | OFDM 2.4 & 5 GHz]()
 - [Actual Wi-Fi | Giga & 10Giga | 802.11ac/ax/be | 5 & 6 GHz]()
+
+---
 
 ### 🏺 Historia de Redes, Internet, Telecomunicaciones y Radiodifusión en México
 
