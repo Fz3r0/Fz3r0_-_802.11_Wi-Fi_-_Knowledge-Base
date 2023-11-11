@@ -63,6 +63,8 @@ _List of Internet organizations, or organizations that play or played a key role
 
 - [List of Internet Organizations](https://en.wikipedia.org/wiki/List_of_Internet_organizations)
 
+---
+
 ### 🧙‍♂️🌎 Internet Governance
 _Internet governance consists of a system of laws, rules, policies and practices that dictate how its board members manage and oversee the affairs of any internet related-regulatory body._
 
@@ -76,6 +78,8 @@ _Internet governance consists of a system of laws, rules, policies and practices
 - [IETF (Internet Engineering Task Force) :: Technical standards for TCP/IP protocol suite](https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force)
 - [ISOC (Internet Society) :: Non-Profit Internet development, infrastructure, accessibility & standards for the world](https://en.wikipedia.org/wiki/Internet_Society)
 
+---
+
 ### 🧙‍♂️🌎 RIR: Regional Internet registry
 _Organization that manages the allocation and registration of Internet number resources within a region of the world._
 
@@ -84,6 +88,8 @@ _Organization that manages the allocation and registration of Internet number re
 - APNIC (Asia Pacific Network Information Centre) :: East Asia, Oceania, South Asia, Southeast Asia
 - LACNIC (Latin America and Caribbean Network Information Centre) :: most of the Caribbean, Latin America
 - RIPE NCC (Réseaux IP Européens Network Coordination Centre) :: Europe, Central Asia, Russia, West Asia
+
+---
 
 ### 🧙‍♂️🌎 ITU: International Telecommunication Union 
 - [ITU - International Telecommunication Union](https://www.itu.int/en/Pages/default.aspx)
@@ -111,6 +117,8 @@ _Organization that manages the allocation and registration of Internet number re
 
 - [ITU- D - Development Sector @ Wikipedia ](https://en.wikipedia.org/wiki/ITU-D)
 
+---
+
 ### 🧙‍♂️🌎 ISOC: Internet Society
 - [Internet Standards Organizations (ISOC, IAB, IESG, IETF, IRSG, IRTF)](http://www.tcpipguide.com/free/t_InternetStandardsOrganizationsISOCIABIESGIETFIRSGI.htm)
 - [Internet Society (ISOC)](https://www.internetsociety.org/)
@@ -126,20 +134,26 @@ _Organization that manages the allocation and registration of Internet number re
 - [How **IAB** Manage the protocol values done by **IANA**?](http://www.tcpipguide.com/free/t_InternetStandardsOrganizationsISOCIABIESGIETFIRSGI-3.htm)
 - [**IANA** – Internet Assigned Number Authority]() _DNS, Domain Names & IPs Authority Assignments_
 
+---
+
 ### 🧙‍♂️🌎 IETF: Internet Engineering Task Force
 
 
 ## 🌎♻️🫅 Internet, Networking, Wireless & Telecomunication `Standards`
 
-### 🫅 ISO: International Organization for Standardization
+### 🫅🌎 ISO: International Organization for Standardization
 
-### 🫅 Wi-Fi Alliance
+---
+
+### 🫅🛜 Wi-Fi Alliance
 _Non-profit organization that owns the Wi-Fi trademark. Manufacturers may use the trademark to brand products certified for Wi-Fi interoperability. _
 
 - [](https://www.wi-fi.org/) _`official`_
 - [Wi-Fi Alliance](https://en.wikipedia.org/wiki/Wi-Fi_Alliance) _`Wiki`_
 
-### 🫅 IEEE: Institute of Electrical and Electronics Engineers
+---
+
+### 🫅🪖 IEEE: Institute of Electrical and Electronics Engineers
 _IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. IEEE and its members inspire a global community through its highly cited publications, conferences, technology standards, and professional and educational activities._
 - [IEEE: Institute of Electrical and Electronics Engineers](https://en.wikipedia.org/wiki/Institute_of_Electrical_and_Electronics_Engineers) _`Wiki`_
 - [About IEEE](https://www.ieee.org/about/) _`Official`_
@@ -153,16 +167,19 @@ _IEEE is the world's largest technical professional organization dedicated to ad
 
 ## 🌎♻️👮 Internet, Networking, Wireless & Telecomunication `Regulations`
 
+- [Regulatory Domains in WIFI @ Leo Tech Talk](https://www.youtube.com/watch?app=desktop&v=rcuGjndqicw) _`video`_
+- [**Regulatory Bodies/Domains**](https://shop.chulo.co.uk/blog/what-is-regulatory-domain.html)
+
+---
 
 ### 👮 Regulatory Domains AKA Regulotory Bodies (Wireless)
 _Set of rules and policies providing the end user with configurations of country code, calibration channel, and output power settings for a **wireless** device set up in a specific area_
+- [Regulatory Body: ETSI]()
+- [Regulatory Body: FCC - Federal Communications Commission]()
+- [Regulatory Body: TELEC]()
+- [Regulatory Body: KCC]()
 
-- [Regulatory Domains in WIFI @ Leo Tech Talk](https://www.youtube.com/watch?app=desktop&v=rcuGjndqicw) _`video`_
-- [**Regulatory Bodies/Domains**](https://shop.chulo.co.uk/blog/what-is-regulatory-domain.html)
-    - [Regulatory Body: ETSI]()
-    - [Regulatory Body: FCC - Federal Communications Commission]()
-    - [Regulatory Body: TELEC]()
-    - [Regulatory Body: KCC]()
+---
 
 ### 👮 FCC Federal Communications Commission
 
@@ -175,36 +192,24 @@ _Set of rules and policies providing the end user with configurations of country
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-### ⭕ FCC: Federal Communications Commission
-
-
-
-
-
 ## 👑 IEEE 802 Standards
 _The most widely used IEEE 802 standards are for Ethernet, Bridging and Virtual Bridged LANs Wireless LAN, Wireless PAN, Wireless MAN, Wireless Coexistence, Media Independent Handover Services, and Wireless RAN with a dedicated Working Group providing focus for each area. IEEE 802 also coordinates with other national and international standards bodies, including ISO which has published certain IEEE 802 standards as international standards._
 
 - [IEEE 802 50th Aniversary, a look back](https://standards.ieee.org/featured/ieee-802/#:~:text=The%20most%20widely%20used%20IEEE,providing%20focus%20for%20each%20area.)
 - IEEE 802: Overview & Architecture
-    - IEEE 802.1: Bridging & Management
-    - IEEE 802.3: Ethernet
-    - IEEE 802.11: Wireless LANs
-    - IEEE 802.15: Wireless Specialty Networks (WSN)
-    - IEEE 802.16: Broadband Wireless MANs
-    - IEEE 802.19: Wireless Coexistence
-    - IEEE 802.21: Media Independent Handover Services
-    - IEEE 802.22: Wireless Regional Area Networks
+
+---
+
+### 👑🪖 IEEE 802 Standards: List
+
+- IEEE 802.1: Bridging & Management
+- IEEE 802.3: Ethernet
+- IEEE 802.11: Wireless LANs
+- IEEE 802.15: Wireless Specialty Networks (WSN)
+- IEEE 802.16: Broadband Wireless MANs
+- IEEE 802.19: Wireless Coexistence
+- IEEE 802.21: Media Independent Handover Services
+- IEEE 802.22: Wireless Regional Area Networks
 
 ## 👑📡🛰️ IEEE Std 802.11™‐2020 (Revision of IEEE Std 802.11‐2016)
 _IEEE Standard for Information Technology—Telecommunications and Information Exchange between Systems Local and Metropolitan Area Networks—Specific Requirements Part 11: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications | Revision 2020_
@@ -233,15 +238,21 @@ _The original standard was published in 1997, revised in 1999 with MIB changes, 
 - [**802.11ah**-2016]() _**Wi-Fi HaLow**: Use of **Wi-Fi in frequencies below 1 GHz** | IoT & M2M Communications_
 - [**802.11ay**-2021](https://en.wikipedia.org/wiki/IEEE_802.11ay) _256-QAM added. faster speeds & longer range, above 45 GH | TV & Monitor Connectivity_
 
+---
+
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments (Country Specific Technology & Config)
 - [**802.11d**-2001](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11d) _**Country Code** Information on Beacons & Probes | Specification for operation in additional regulatory domains (Amendment 3)_
 - [**802.11j**-2004](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11j) _**802.11a PHY & MAC enhancements for Japan** 4.9 GHz & 5 GHz operation (Amendment 7)_     
 - [**802.11y**-2008](https://standards.ieee.org/ieee/802.11y/3915/) _**802.11a PHY & MAC enhancements for USA** MAC & PHY support for operation in the 3650-3700 MHz band in the United States._
 - [**802.11aj**-2018]() _**CMMW**: support for operating in the Chinese 45 GHz band_
 
+---
+
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments (Vehicular Communication)
 - [**802.11p**-2010](https://en.wikipedia.org/wiki/IEEE_802.11p) _**WAVE & ITS** wireless access in vehicular environments (WAVE). Required to support intelligent transportation systems (ITS)._ ()
 - [**802.11bd**-2022](https://standards.ieee.org/ieee/802.11bd/7451/) _**V2X** next generation vehicle-to-everything (V2X) communication in the 5.9 GHz & 60 GHz bands._ 
+
+---
 
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments (Roaming & Association)
 - [**802.11k**-2008](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11k) _**RRM**: TPC, client & channel stats, neighbor report | helps roaming ;)_
@@ -251,28 +262,39 @@ _The original standard was published in 1997, revised in 1999 with MIB changes, 
 - [**802.11ai**-2016](https://mrncciew.com/2023/09/25/fils-fast-initial-link-setup/) _**FILS**: High-density environments for users association to robust network_
 - [**802.11aq**-2018](https://www.fiercewireless.com/wireless/ieee-releases-802-11aq-to-better-detect-wlan-availability) _Delivery of network service info prior to the association of STA to the network. Offer the STA ability to make informed decisions about which network to connect to._
 
+---
+
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments (Security)
 - [**802.11i**-2004](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11i) _**RSN Authentication** | WiFi alliance: **WPA2** | (MAC Security Enhancements (Amendment 6)_
 - [**802.11u**-2011]() _**WIEN**: Wireless Interworking with External Networks | Hotspot 2.0, Passpoint & BYOD_
 - [**802.11w**-2009](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11w) _**Robust Management Frames**: Protect wireless frames VS DoS attacks | CCMP, BIP, CMAC_
 
+---
+
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments (Mesh Wireless Networking)
 - [**802.11s**-2011]() _**MPS**: AP act as portal for devices to a WDS. AKA Mesh Master Gateway._
 - [**802.11z**-2010]() _**DLS**: allow operation with non-DLS-capable APs (not used on Enterprises)_
+
+---
 
 ### 🤖📡IEEE 802.11-2020 Ratified Amendments (Battery Savers, Efficience & Performance)
 
 - [802.11az-2018](https://standards.ieee.org/ieee/802.11az/7226/) _Improves physical location tracking & positioning, energy efficiency | SmartBuiding & IoT_
 - [802.11ba-2021](https://standards.ieee.org/ieee/802.11ba/6896/) _WUR: Increase battery life of devices (p.e battery powered IoT devices)_
 
+---
 
 ### 🤖📡IEEE 802.11-2020 Ratified Amendments (QoS)
 - [**802.11e**-2005](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11e) _**Voice over WLAN y streaming multimedia QoS.** | MAC Quality of Service Enhancements (Amendment 8)_
 - [**802.11aa**-2012]() _**GCR**: QoS enhancements for robust audio & video streaming_
 - [**802.11ae**-2012]() _**QMF**: Enable QMF | Enhancements to QoS management frames_
 
+---
+
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments (Channel Detection & Hopping)
 - [**802.11h**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11h) _**DFS, TPC**: Enforces DFS events detect & avoid interference (5 GHz satellite & radars) | Meet Regulations in Europe | (Amendment 5)
+
+---
 
 ### 🤖📡IEEE 802.11-2020 Ratified Amendments (Wi-Fi Bridge Links)
 - [**802.11ak**-2018](https://www.businesswire.com/news/home/20180717005217/en/IEEE-Publishes-802.11ak%E2%84%A2-2018-Standard-Amendment-Enabling-WiFi%C2%AE-Transit-Links-in-Bridged-Networks) _GLK: 802.11 Wireless working as 802.3 Ethernet by providing internal connections as transit links within IEEE 802.1Q bridged networks. AKA Trunking_
