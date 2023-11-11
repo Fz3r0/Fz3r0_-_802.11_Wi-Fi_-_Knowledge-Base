@@ -310,7 +310,9 @@ Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx usi
 - [802.11 Primitives (Wireless Access Methods and Physical Layer Specifications)](https://grouper.ieee.org/groups/802/11/Documents/DocumentArchives/1995_docs/1195038_scan.pdf) _`pdf`_
     - Primitive Category: Supports Peer-to-Peer Interacions
     - Primitive Category: Have local significance & support Sublayer-toS-ublayer Interacions
-- [802.11b DSSS PHY-SAP Primitives](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/b8fe1268-24f5-4802-b5d0-5ed0c63f04d4)
+- [802.11b HR-DSSS PHY-SAP Primitives](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/b8fe1268-24f5-4802-b5d0-5ed0c63f04d4)
+- [802.11a OFDM PHY-SAP Primitives](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/ce89b303-ad56-45d2-a944-1d71c81ff0f2)
+
 
 ### ⭕ 802.11 PHY Services Specifications = Clause 8 802.11-2020
 - Clause PHT: DSSS
