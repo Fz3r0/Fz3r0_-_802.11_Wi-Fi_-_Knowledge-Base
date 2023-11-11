@@ -289,9 +289,7 @@ _The original standard was published in 1997, revised in 1999 with MIB changes, 
 
 ## 💊✉️🪆 Encapsulation & Decapsulation
 
-## 🪆🛜⚙️ 802.11 Layers Technologies - PHY (Layer 1) & MAC ( Layer 2) 
-
-### ⭕ 802.11 Layer 1: Physical (PHY) | Frame Formats and Technologies
+## 🪆🛜⚙️ 802.11 Layer 1: Physical (PHY) | Frame Formats and Technologies
 _The PHY services provided to the MAC. The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. 
 Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx using management info | B) Characteristics & Method to Tx & Rx data through WM (Wireless Medium). The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. _
 
@@ -304,9 +302,10 @@ Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx usi
 - DS SAP Specification Overview
 - SAP Primitives
 
-### ⭕ 802.11 Primitives _(Instructions & Data directly understandable)_
-- Primitive Category: Supports Peer-to-Peer Interacions
-- Primitive Category: Have local significance & support Sublayer-toS-ublayer Interacions
+### ⭕ 802.11 Primitives _(Instructions & Data directly understandable by STAs)_
+- [802.11 Primitives (Wireless Access Methods and Physical Layer Specifications)](https://grouper.ieee.org/groups/802/11/Documents/DocumentArchives/1995_docs/1195038_scan.pdf) _`pdf`_
+    - Primitive Category: Supports Peer-to-Peer Interacions
+    - Primitive Category: Have local significance & support Sublayer-toS-ublayer Interacions
 - [802.11b DSSS PHY-SAP Primitives](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/b8fe1268-24f5-4802-b5d0-5ed0c63f04d4)
 
 ### ⭕ 802.11 PHY Services Specifications = Clause 8 802.11-2020
@@ -316,8 +315,10 @@ Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx usi
 - Clause PHT: ERP
 - Clause PHT: HT
 - Clause 21 :: VHT :: 802.11ac :: DSSS
+
+
         
-### 802.11 Layer 2: Medium Access (MAC) | Frame Formats and Technologies
+## 🪆🛜⚙️ 802.11 Layer 2: Medium Access (MAC) | Frame Formats and Technologies
 
 ## Radio Frequency (RF) Theory
 
