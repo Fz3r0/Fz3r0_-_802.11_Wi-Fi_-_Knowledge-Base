@@ -88,26 +88,26 @@ _The one who knows the past can build the future. Building the future, and keepi
 
 #### 🟩 Research and education organizations
 
-Merit (Merit Network, Inc.)
-NLR (National LambdaRail)
-Internet2 (aka University Corporation for Advanced Internet Development)
+- Merit (Merit Network, Inc.)
+- NLR (National LambdaRail)
+- Internet2 (aka University Corporation for Advanced Internet Development)
 
 #### 🟩 Accessibility and affordability initiatives
 
-Internet.org
-Alliance for Affordable Internet
+- Internet.org
+- Alliance for Affordable Internet
 
 #### 🟩 Commercial organizations
 _Commercial organizations that made early and significant contributions to the development of the Internet or services available on the Internet:_
 
 #### 🟩 Historical organizations
 
-Advanced Network and Services (ANS)
-DARPA (U.S. Defense Advanced Research Projects Agency)
-InterNIC
-NSF (U.S. National Science Foundation)
-PSINet
-UUNet
+- Advanced Network and Services (ANS)
+- DARPA (U.S. Defense Advanced Research Projects Agency)
+- InterNIC
+- NSF (U.S. National Science Foundation)
+- PSINet
+- UUNet
 
 ### ⭕ Internet Governance
 _Internet governance consists of a system of laws, rules, policies and practices that dictate how its board members manage and oversee the affairs of any internet related-regulatory body._
@@ -123,21 +123,11 @@ _Internet governance consists of a system of laws, rules, policies and practices
 ### ⭕ RIR: Regional Internet registry
 _Organization that manages the allocation and registration of Internet number resources within a region of the world._
 
-- AFRINIC The African Network Information Centre serves Africa.
-- ARIN The American Registry for Internet Numbers serves Antarctica, Canada, parts of the Caribbean, and the United States.
-- APNIC The Asia Pacific Network Information Centre serves East Asia, Oceania, South Asia, and Southeast Asia.
-- LACNIC The Latin America and Caribbean Network Information Centre serves most of the Caribbean and all of Latin America.
-- RIPE NCC Réseaux IP Européens Network Coordination Centre serves Europe, Central Asia, Russia, and West Asia.
-
-### ⭕ Regulatory Bodies & Regulatory Domains
-
-- [**Regulatory Bodies _Regulatory Domains:**_ ETSI, FCC, TELEC, KCC]() _regulates communications within & from USA_
-    - [Regulatory Body: ETSI]()
-    - [Regulatory Body: FCC - Federal Communications Commission]()
-    - [Regulatory Body: TELEC]()
-    - [Regulatory Body: KCC]()
-
-### ⭕ FCC: Federal Communications Commission
+- AFRINIC (African Network Information Centre) :: Africa
+- ARIN (American Registry for Internet Numbers) :: Antarctica, Canada, parts of the Caribbean, United States
+- APNIC (Asia Pacific Network Information Centre) :: East Asia, Oceania, South Asia, Southeast Asia
+- LACNIC (Latin America and Caribbean Network Information Centre) :: most of the Caribbean, Latin America
+- RIPE NCC (Réseaux IP Européens Network Coordination Centre) :: Europe, Central Asia, Russia, West Asia
 
 ### ⭕ ITU: International Telecommunication Union 
 - [ITU - International Telecommunication Union](https://www.itu.int/en/Pages/default.aspx)
@@ -180,11 +170,24 @@ _Organization that manages the allocation and registration of Internet number re
 
 ### ⭕ IETF: Internet Engineering Task Force
 
-### ⭕ Wi-Fi Alliance
+
 ### ⭕ ISO: International Organization for Standardization
 
 
 
+
+
+### ⭕ Regulatory Domains AKA Regulotory Bodies (Wireless)
+_Set of rules and policies providing the end user with configurations of country code, calibration channel, and output power settings for a **wireless** device set up in a specific area_
+
+- [Regulatory Domains in WIFI @ Leo Tech Talk](https://www.youtube.com/watch?app=desktop&v=rcuGjndqicw) _`video`_
+- [**Regulatory Bodies/Domains**](https://shop.chulo.co.uk/blog/what-is-regulatory-domain.html)
+    - [Regulatory Body: ETSI]()
+    - [Regulatory Body: FCC - Federal Communications Commission]()
+    - [Regulatory Body: TELEC]()
+    - [Regulatory Body: KCC]()
+
+### ⭕ FCC: Federal Communications Commission
 
 ### ⭕ Regulaciones y Organizaciones Mexicanas
 - [IFT: Instituto Federal de Telecomunicaciones](https://www.ift.org.mx/espectro-radioelectrico#:~:text=En%20este%20sentido%2C%20la%20Unidad,y%20la%20Comunicaci%C3%B3n%20V%C3%ADa%20Sat%C3%A9lite.)
@@ -192,6 +195,9 @@ _Organization that manages the allocation and registration of Internet number re
 - [Ley Federal de Telecomunicaciones y Radiodifusión](https://www.ucol.mx/content/cms/13/file/federal/LEY_FED_DE_TELECOMUNICACIONES.pdf)
 - SCT: Secretaría de Comunicaciones y Transportes
 - DOF: Diario Oficial de la Federación
+
+### ⭕ Wi-Fi Alliance
+
 
 ### ⭕ IEEE: Institute of Electrical and Electronics Engineers
 _IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. IEEE and its members inspire a global community through its highly cited publications, conferences, technology standards, and professional and educational activities._
