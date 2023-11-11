@@ -259,7 +259,7 @@ _The original standard was published in 1997, revised in 1999 with MIB changes, 
 - [**802.11aa**-2012]() _**GCR**: QoS enhancements for robust audio & video streaming_
 - [**802.11ae**-2012]() _**QMF**: Enable QMF | Enhancements to QoS management frames_
 
-### IEEE 802.11-2020 Ratified Amendments (Channel Detection & Hopping)
+### 🤖📡 IEEE 802.11-2020 Ratified Amendments (Channel Detection & Hopping)
 - [**802.11h**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11h) _**DFS, TPC**: Enforces DFS events detect & avoid interference (5 GHz satellite & radars) | Meet Regulations in Europe | (Amendment 5)
 
 ### 🤖📡IEEE 802.11-2020 Ratified Amendments (Wi-Fi Bridge Links)
@@ -267,22 +267,14 @@ _The original standard was published in 1997, revised in 1999 with MIB changes, 
 
 
 
-    
+        
+## IEEE 802.11 Draft Amendments (2020 revised)
+- 802.11bb (Light Communications) 
+- 802.11bc (Enhanced Broadcast Service)
 
-
-
-    
-    
-    
-    
-- IEEE 802.11 Draft Amendments
-    - 802.11bb (Light Communications) 
-    - 802.11bc (Enhanced Broadcast Service) 
-
-    - 802.11be (Extremely High Throughput) 
-- IEEE 802.11 Defunct Amendments
-    - 802.11F
-    - 802.11T 
+## IEEE 802.11 Defunct Amendments
+- 802.11F
+- 802.11T 
 
 ## Networking Models: OSI & TCP/IP
 - [OSI Model]()
