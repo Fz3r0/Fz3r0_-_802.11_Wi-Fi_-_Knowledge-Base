@@ -200,7 +200,7 @@ _IEEE Standard for Information Technology—Telecommunications and Information E
 - **[IEEE 802.11-2020 Preview: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications](https://thewifiofthings.com/wp-content/uploads/2021/08/802.11-2020-Preview.pdf)**
 - **[IEEE 802.11-2020 **FULL**: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications](https://ieeexplore.ieee.org/document/9363693)**
 
-### 🛰️📡🏆 IEEE 802.11-2020 Ratified Amendments `PHY` _("Traditional" Wi-Fi)_
+### 🛰️📡🏆 IEEE 802.11-2020 Ratified Amendments `PHY` _("Traditional" Wi-Fi WLANs)_
 - IEEE 802.11 pRIME - Original  Standard
 - 802.11b
 - [**802.11a**-1999](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11a) **(WiFi2)** _**OFDM**: (due 5GHz) on U-NII band | no communication with legacy tech | now Clause-17_
@@ -210,7 +210,7 @@ _IEEE Standard for Information Technology—Telecommunications and Information E
 - [802.11ax-2021]() **(WiFi6)** _**HE & OFDMA**: High Efficiency WLAN amendment. Big PHY enhancement including high density_
 - [802.11be-2023](https://en.wikipedia.org/wiki/IEEE_802.11be) **(WiFi7)** _EHT: Extremely High Throughput | Full lvl up!_
 
-### 🛰️📡🏆 IEEE 802.11-2020 Ratified Amendments `PHY` _("NON-Traditional" Wi-Fi)_
+### 🛰️📡🏆 IEEE 802.11-2020 Ratified Amendments `PHY` _(NON-WiFi WLANs)_
 - [**802.11ad**-2012]() _**DMG**: Uses MGWS, GCMP, CCMP | 60 GHz in WiGig Networks_ 
 - [**802.11af**-2014]() _**TVWS**: Allows the use of **wireless in the TV white space** (TVWS)_
 - [**802.11ah**-2016]() _**Wi-Fi HaLow**: Use of **Wi-Fi in frequencies below 1 GHz** | IoT & M2M Communications_
