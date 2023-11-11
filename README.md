@@ -57,58 +57,6 @@ _The one who knows the past can build the future. Building the future, and keepi
 
 - [List of Internet Organizations](https://en.wikipedia.org/wiki/List_of_Internet_organizations)
 
-#### 🟩 Standards development and broad-based advocacy and educational organizations
-
-- IAB (Internet Architecture Board)
-- ICANN (Internet Corporation for Assigned Names and Numbers)
-- IANA (Internet Assigned Numbers Authority)
-- IESG (Internet Engineering Steering Group)
-- IETF (Internet Engineering Task Force)
-- IRTF (Internet Research Task Force)
-- ISOC (Internet Society)
-- NANOG (North American Network Operators' Group)
-- NRO (Number Resource Organization)
-- W3C (World Wide Web Consortium)
-- OTF (Open Technology Fund)
-- EFF (Electronic Frontier Foundation)
-
-#### 🟩 Regional Internet Registries (RIRs)
-
-- AfriNIC (African Network Information Centre)
-- ARIN (American Registry for Internet Numbers)
-- APNIC (Asia-Pacific Network Information Centre)
-- LACNIC (Latin America and Caribbean Network Information Centre)
-- RIPE (Réseaux IP Européens Network Coordination Centre)
-
-#### 🟩 Regional Internet Registries (RIRs)
-
-- Internet Governance Forum
-- World Summit on the Information Society
-- Working Group on Internet Governance
-
-#### 🟩 Research and education organizations
-
-- Merit (Merit Network, Inc.)
-- NLR (National LambdaRail)
-- Internet2 (aka University Corporation for Advanced Internet Development)
-
-#### 🟩 Accessibility and affordability initiatives
-
-- Internet.org
-- Alliance for Affordable Internet
-
-#### 🟩 Commercial organizations
-_Commercial organizations that made early and significant contributions to the development of the Internet or services available on the Internet:_
-
-#### 🟩 Historical organizations
-
-- Advanced Network and Services (ANS)
-- DARPA (U.S. Defense Advanced Research Projects Agency)
-- InterNIC
-- NSF (U.S. National Science Foundation)
-- PSINet
-- UUNet
-
 ### ⭕ Internet Governance
 _Internet governance consists of a system of laws, rules, policies and practices that dictate how its board members manage and oversee the affairs of any internet related-regulatory body._
 
