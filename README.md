@@ -59,18 +59,20 @@ _List of Internet organizations, or organizations that play or played a key role
 
 - [List of Internet Organizations](https://en.wikipedia.org/wiki/List_of_Internet_organizations)
 
-### 🧙‍♂️ Internet Governance
+### 🧙‍♂️🌎 Internet Governance
 _Internet governance consists of a system of laws, rules, policies and practices that dictate how its board members manage and oversee the affairs of any internet related-regulatory body._
 
-- [**Internet Governance & Members**](https://en.wikipedia.org/wiki/Internet_governance)
-    - [IGF (Internet Governance Forum) :: Group for policy dialogue on issues of Internet governance](https://en.wikipedia.org/wiki/Internet_Governance_Forum)
-    - [NRO (Number Resource Organization) :: Unincorporated organization uniting the 5 RIRs](https://en.wikipedia.org/wiki/Regional_Internet_registry#Number_Resource_Organization)
-    - [IANA (Internet Assigned Numbers Authority) :: IPs, DNS, Protocols, Time Zone](https://en.wikipedia.org/wiki/Internet_Assigned_Numbers_Authority)
-    - [ICANN (Internet Corporation for Assigned Names & Numbers) :: DNS Registries, namespaces & numerical spaces of the Internet](https://en.wikipedia.org/wiki/ICANN)
-    - [IETF (Internet Engineering Task Force) :: Technical standards for TCP/IP protocol suite](https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force)
-    - [ISOC (Internet Society) :: Non-Profit Internet development, infrastructure, accessibility & standards for the world](https://en.wikipedia.org/wiki/Internet_Society)
+- [**Internet Governance**](https://en.wikipedia.org/wiki/Internet_governance)
 
-### 🧙‍♂️ RIR: Regional Internet registry
+#### 🟩 Internet Governance Members
+- [IGF (Internet Governance Forum) :: Group for policy dialogue on issues of Internet governance](https://en.wikipedia.org/wiki/Internet_Governance_Forum)
+- [NRO (Number Resource Organization) :: Unincorporated organization uniting the 5 RIRs](https://en.wikipedia.org/wiki/Regional_Internet_registry#Number_Resource_Organization)
+- [IANA (Internet Assigned Numbers Authority) :: IPs, DNS, Protocols, Time Zone](https://en.wikipedia.org/wiki/Internet_Assigned_Numbers_Authority)
+- [ICANN (Internet Corporation for Assigned Names & Numbers) :: DNS Registries, namespaces & numerical spaces of the Internet](https://en.wikipedia.org/wiki/ICANN)
+- [IETF (Internet Engineering Task Force) :: Technical standards for TCP/IP protocol suite](https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force)
+- [ISOC (Internet Society) :: Non-Profit Internet development, infrastructure, accessibility & standards for the world](https://en.wikipedia.org/wiki/Internet_Society)
+
+### 🧙‍♂️🌎 RIR: Regional Internet registry
 _Organization that manages the allocation and registration of Internet number resources within a region of the world._
 
 - AFRINIC (African Network Information Centre) :: Africa
@@ -79,7 +81,7 @@ _Organization that manages the allocation and registration of Internet number re
 - LACNIC (Latin America and Caribbean Network Information Centre) :: most of the Caribbean, Latin America
 - RIPE NCC (Réseaux IP Européens Network Coordination Centre) :: Europe, Central Asia, Russia, West Asia
 
-### 🧙‍♂️ ITU: International Telecommunication Union 
+### 🧙‍♂️🌎 ITU: International Telecommunication Union 
 - [ITU - International Telecommunication Union](https://www.itu.int/en/Pages/default.aspx)
 - [ITU - International Telecommunication Union @ Wikipedia](https://en.wikipedia.org/wiki/International_Telecommunication_Union) _Wiki_
 
@@ -87,23 +89,25 @@ _Organization that manages the allocation and registration of Internet number re
 - [ITU Members connect the world!](https://www.youtube.com/watch?v=EBPiWhp4KG4) _@ ITU youtube_
 - [ITU- R - Official Web](https://www.itu.int/es/ITU-R/Pages/default.aspx) _One of the three sectors (divisions) of the ITU_
 - [ITU- R - Radiocommunication Sector @ Wikipedia](https://en.wikipedia.org/wiki/ITU-R) <br><br>
-- ITU-R: The 5 Administrative Regions
-    - [Region A: **CITEL** The Americas Inter-American Telecommunication Commission](www.citel.oas.org) 
-    - [Region B: **CEPT** Western Europe European Conference of Postal and Telecommunications Administrations](www.cept.org) 
-    - [Region C: **RCC** Eastern Europe and Northern Asia Regional Commonwealth in the field of Communications](www.en.rcc.org.ru) 
-    - [Region D: **ATU** Africa African Telecommunications Union](www.atu-uat.org) 
-    - [Region E: **APT** Asia and Australasia Asia-Pacific Telecommunity](www.aptsec.org)
-- ITU-R: The 3 Regulatory Regions
-        - [Australia Australian Communications and Media Authority (ACMA)
-        - [Japan Association of Radio Industries and Businesses (ARIB)
-        - [United States Federal Communications Commission (FCC)
+
+#### 🔶 ITU-R: The 5 Administrative Regions
+- [Region A: **CITEL** The Americas Inter-American Telecommunication Commission](www.citel.oas.org) 
+- [Region B: **CEPT** Western Europe European Conference of Postal and Telecommunications Administrations](www.cept.org) 
+- [Region C: **RCC** Eastern Europe and Northern Asia Regional Commonwealth in the field of Communications](www.en.rcc.org.ru) 
+- [Region D: **ATU** Africa African Telecommunications Union](www.atu-uat.org) 
+- [Region E: **APT** Asia and Australasia Asia-Pacific Telecommunity](www.aptsec.org)
+
+#### 🔶 ITU-R: The 3 Regulatory Regions
+- [Australia Australian Communications and Media Authority (ACMA)
+- [Japan Association of Radio Industries and Businesses (ARIB)
+- [United States Federal Communications Commission (FCC)
 - [ITU- R - Standardization Sector @ Wikipedia ](https://en.wikipedia.org/wiki/ITU-T)
 
 #### 🟩 ITU-D: International Telecommunication Union Development Sector
 
 - [ITU- D - Development Sector @ Wikipedia ](https://en.wikipedia.org/wiki/ITU-D)
 
-### 🧙‍♂️ ISOC: Internet Society
+### 🧙‍♂️🌎 ISOC: Internet Society
 - [Internet Standards Organizations (ISOC, IAB, IESG, IETF, IRSG, IRTF)](http://www.tcpipguide.com/free/t_InternetStandardsOrganizationsISOCIABIESGIETFIRSGI.htm)
 - [Internet Society (ISOC)](https://www.internetsociety.org/)
 - [Internet Society (ISOC) @ Wiki](https://es.wikipedia.org/wiki/Internet_Society)
@@ -118,7 +122,7 @@ _Organization that manages the allocation and registration of Internet number re
 - [How **IAB** Manage the protocol values done by **IANA**?](http://www.tcpipguide.com/free/t_InternetStandardsOrganizationsISOCIABIESGIETFIRSGI-3.htm)
 - [**IANA** – Internet Assigned Number Authority]() _DNS, Domain Names & IPs Authority Assignments_
 
-### 🧙‍♂️ IETF: Internet Engineering Task Force
+### 🧙‍♂️🌎 IETF: Internet Engineering Task Force
 
 
 ## 🌎♻️🫅 Internet, Networking, Wireless & Telecomunication `Standards`
