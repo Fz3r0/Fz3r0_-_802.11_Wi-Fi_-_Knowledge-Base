@@ -243,6 +243,7 @@ _The original standard was published in 1997, revised in 1999 with MIB changes, 
 - [**802.11af**-2014]() _**TVWS**: Allows the use of **wireless in the TV white space** (TVWS)_
 - [**802.11ah**-2016]() _**Wi-Fi HaLow**: Use of **Wi-Fi in frequencies below 1 GHz** | IoT & M2M Communications_
 - [**802.11ay**-2021](https://en.wikipedia.org/wiki/IEEE_802.11ay) _256-QAM added. faster speeds & longer range, above 45 GH | TV & Monitor Connectivity_
+- [**802.11bb**-2023](https://www.railwayinnovationhub.com/aprobado-el-primer-estandar-lifi-ieee-802-11bb/) _**Li-Fi**: Wireless Communication using light waves._
 
 ---
 
@@ -313,7 +314,7 @@ _The original standard was published in 1997, revised in 1999 with MIB changes, 
 
         
 ## IEEE 802.11 Draft Amendments (2020 revised)
-- 802.11bb (Light Communications) 
+
 - 802.11bc (Enhanced Broadcast Service)
 
 ## IEEE 802.11 Defunct Amendments
