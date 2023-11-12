@@ -218,11 +218,17 @@ _IEEE Standard for Information Technology—Telecommunications and Information E
 - **[IEEE 802.11-2020 **FULL**: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications](https://ieeexplore.ieee.org/document/9363693)**
 
 ## 🛰️📡🏆 IEEE 802.11-2020 Ratified Amendments
+_The original standard was published in 1997, revised in 1999 with MIB changes, and reaffirmed in 2003._
+- [Diferentes protocolos de Wi-Fi y velocidades de datos @ Intel](https://www.intel.la/content/www/xl/es/support/articles/000005725/wireless/legacy-intel-wireless-products.html) _`tabla`_
+- [IEEE 802.11](https://en.wikipedia.org/wiki/IEEE_802.11) _`Wiki`_
+- [OFFICIAL IEEE 802.11 WORKING GROUP PROJECT TIMELINES - 2023-10-27](https://www.ieee802.org/11/Reports/802.11_Timelines.htm) 
+- [IEEE 802.11 Standard and Amendments @ WiFi WIZARD of Oz](https://wifiwizardofoz.com/802-11-standard-and-amendments/)
+
+---
 
 ### 📡🏆 IEEE 802.11-2020 Ratified Amendments `PHY` _("Traditional" Wi-Fi WLANs)_
-_The original standard was published in 1997, revised in 1999 with MIB changes, and reaffirmed in 2003._
-- [Diferentes protocolos de Wi-Fi y velocidades de datos @ Intel](https://www.intel.la/content/www/xl/es/support/articles/000005725/wireless/legacy-intel-wireless-products.html) _`tabla`_ <br><br>
-- [**802.11 "Prime"**] **WiFi0** _**DSSS** or **FHSS**: Original 802.11 Standard | DS for Wi-Fi in the 2.4 GHz Band `1997 original`_
+
+- [**802.11 "Prime"**]() **WiFi0** _**DSSS** or **FHSS**: Original 802.11 Standard | DS for Wi-Fi in the 2.4 GHz Band `1997 original`_
 - [**802.11b**-1999]() **WiFi1** _**HR-DSSS**: Higher-Speed Physical Layer Extension in the 2.4 GHz Band(Amendment 2)_
 - [**802.11a**-1999](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11a) **WiFi2** _**OFDM**: High-speed Physical Layer in the 5 GHz Band (Amendment 1)_
 - [**802.11g**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11g) **WiFi3** _**ERP**: ERP-OFDM & ERP-DSSS/CCK | Further Higher Data Rate Extension in the 2.4 GHz Band
@@ -240,7 +246,7 @@ _The original standard was published in 1997, revised in 1999 with MIB changes, 
 
 ---
 
-### 🤖📡 IEEE 802.11-2020 Ratified Amendments (Country Specific Technology & Config)
+### 🤖📡 IEEE 802.11-2020 Ratified Amendments `Country Specific`
 - [**802.11d**-2001](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11d) _**Country Code** Information on Beacons & Probes | Specification for operation in additional regulatory domains (Amendment 3)_
 - [**802.11j**-2004](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11j) _**802.11a PHY & MAC enhancements for Japan** 4.9 GHz & 5 GHz operation (Amendment 7)_     
 - [**802.11y**-2008](https://standards.ieee.org/ieee/802.11y/3915/) _**802.11a PHY & MAC enhancements for USA** MAC & PHY support for operation in the 3650-3700 MHz band in the United States._
@@ -248,13 +254,26 @@ _The original standard was published in 1997, revised in 1999 with MIB changes, 
 
 ---
 
-### 🤖📡 IEEE 802.11-2020 Ratified Amendments (Vehicular Communication)
-- [**802.11p**-2010](https://en.wikipedia.org/wiki/IEEE_802.11p) _**WAVE & ITS** wireless access in vehicular environments (WAVE). Required to support intelligent transportation systems (ITS)._ ()
-- [**802.11bd**-2022](https://standards.ieee.org/ieee/802.11bd/7451/) _**V2X** next generation vehicle-to-everything (V2X) communication in the 5.9 GHz & 60 GHz bands._ 
+### 🤖📡 IEEE 802.11-2020 Ratified Amendments `Channel Detection & Hopping`
+- [**802.11h**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11h) _**DFS, TPC**: Enforces DFS events detect & avoid interference (5 GHz satellite & radars) | Meet Regulations in Europe | (Amendment 5)
 
 ---
 
-### 🤖📡 IEEE 802.11-2020 Ratified Amendments (Roaming & Association)
+### 🤖📡 IEEE 802.11-2020 Ratified Amendments `Security`
+- [**802.11i**-2004](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11i) _**RSN Authentication** | WiFi alliance: **WPA2** | (MAC Security Enhancements (Amendment 6)_
+- [**802.11u**-2011]() _**WIEN**: Wireless Interworking with External Networks | Hotspot 2.0, Passpoint & BYOD_
+- [**802.11w**-2009](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11w) _**Robust Management Frames**: Protect wireless frames VS DoS attacks | CCMP, BIP, CMAC_
+
+---
+
+### 🤖📡IEEE 802.11-2020 Ratified Amendments `QoS`
+- [**802.11e**-2005](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11e) _**Voice over WLAN y streaming multimedia QoS.** | MAC Quality of Service Enhancements (Amendment 8)_
+- [**802.11aa**-2012]() _**GCR**: QoS enhancements for robust audio & video streaming_
+- [**802.11ae**-2012]() _**QMF**: Enable QMF | Enhancements to QoS management frames_
+
+---
+
+### 🤖📡 IEEE 802.11-2020 Ratified Amendments `Roaming` & `Association`
 - [**802.11k**-2008](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11k) _**RRM**: TPC, client & channel stats, neighbor report | helps roaming ;)_
 - [**802.11r**-2008](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11r) _**BSS transition (FT) / Fast Secure Roaming** | CKM, PKC, OKC, fast session resumption_
 - [**802.11u**-2011](https://en.wikipedia.org/wiki/IEEE_802.11u) _Wi-Fi Certified Passpoint AKA Hotspot 2.0 | Network discovery & selection for mobile devices_
@@ -264,40 +283,31 @@ _The original standard was published in 1997, revised in 1999 with MIB changes, 
 
 ---
 
-### 🤖📡 IEEE 802.11-2020 Ratified Amendments (Security)
-- [**802.11i**-2004](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11i) _**RSN Authentication** | WiFi alliance: **WPA2** | (MAC Security Enhancements (Amendment 6)_
-- [**802.11u**-2011]() _**WIEN**: Wireless Interworking with External Networks | Hotspot 2.0, Passpoint & BYOD_
-- [**802.11w**-2009](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11w) _**Robust Management Frames**: Protect wireless frames VS DoS attacks | CCMP, BIP, CMAC_
+### 🤖📡 IEEE 802.11-2020 Ratified Amendments `Vehicular`
+- [**802.11p**-2010](https://en.wikipedia.org/wiki/IEEE_802.11p) _**WAVE & ITS** wireless access in vehicular environments (WAVE). Required to support intelligent transportation systems (ITS)._ ()
+- [**802.11bd**-2022](https://standards.ieee.org/ieee/802.11bd/7451/) _**V2X** next generation vehicle-to-everything (V2X) communication in the 5.9 GHz & 60 GHz bands._ 
 
 ---
 
-### 🤖📡 IEEE 802.11-2020 Ratified Amendments (Mesh Wireless Networking)
+### 🤖📡 IEEE 802.11-2020 Ratified Amendments `Mesh Wireless Networking`
 - [**802.11s**-2011]() _**MPS**: AP act as portal for devices to a WDS. AKA Mesh Master Gateway._
 - [**802.11z**-2010]() _**DLS**: allow operation with non-DLS-capable APs (not used on Enterprises)_
 
 ---
 
-### 🤖📡IEEE 802.11-2020 Ratified Amendments (Battery Savers, Efficience & Performance)
+### 🤖📡IEEE 802.11-2020 Ratified Amendments (Wi-Fi Bridge Links)
+- [**802.11ak**-2018](https://www.businesswire.com/news/home/20180717005217/en/IEEE-Publishes-802.11ak%E2%84%A2-2018-Standard-Amendment-Enabling-WiFi%C2%AE-Transit-Links-in-Bridged-Networks) _GLK: 802.11 Wireless working as 802.3 Ethernet by providing internal connections as transit links within IEEE 802.1Q bridged networks. AKA Trunking_
+
+---
+
+### 🤖📡IEEE 802.11-2020 Ratified Amendments `Battery Savers`, `Efficience` & `Performance`
 
 - [802.11az-2018](https://standards.ieee.org/ieee/802.11az/7226/) _Improves physical location tracking & positioning, energy efficiency | SmartBuiding & IoT_
 - [802.11ba-2021](https://standards.ieee.org/ieee/802.11ba/6896/) _WUR: Increase battery life of devices (p.e battery powered IoT devices)_
 
----
 
-### 🤖📡IEEE 802.11-2020 Ratified Amendments (QoS)
-- [**802.11e**-2005](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11e) _**Voice over WLAN y streaming multimedia QoS.** | MAC Quality of Service Enhancements (Amendment 8)_
-- [**802.11aa**-2012]() _**GCR**: QoS enhancements for robust audio & video streaming_
-- [**802.11ae**-2012]() _**QMF**: Enable QMF | Enhancements to QoS management frames_
 
----
 
-### 🤖📡 IEEE 802.11-2020 Ratified Amendments (Channel Detection & Hopping)
-- [**802.11h**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11h) _**DFS, TPC**: Enforces DFS events detect & avoid interference (5 GHz satellite & radars) | Meet Regulations in Europe | (Amendment 5)
-
----
-
-### 🤖📡IEEE 802.11-2020 Ratified Amendments (Wi-Fi Bridge Links)
-- [**802.11ak**-2018](https://www.businesswire.com/news/home/20180717005217/en/IEEE-Publishes-802.11ak%E2%84%A2-2018-Standard-Amendment-Enabling-WiFi%C2%AE-Transit-Links-in-Bridged-Networks) _GLK: 802.11 Wireless working as 802.3 Ethernet by providing internal connections as transit links within IEEE 802.1Q bridged networks. AKA Trunking_
 
 
 
