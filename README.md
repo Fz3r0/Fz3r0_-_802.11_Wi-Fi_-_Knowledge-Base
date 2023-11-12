@@ -228,47 +228,47 @@ _The original standard was published in 1997, revised in 1999 with MIB changes, 
 
 ### 📡🏆 IEEE 802.11-2020 Ratified Amendments `PHY` _("Traditional" Wi-Fi WLANs)_
 
-- [**802.11 "Prime"**]() **WiFi0** _**DSSS** or **FHSS**: Original 802.11 Standard | DS for Wi-Fi in the 2.4 GHz Band `1997 original`_
-- [**802.11b**-1999]() **WiFi1** _**HR-DSSS**: Higher-Speed Physical Layer Extension in the 2.4 GHz Band(Amendment 2)_
-- [**802.11a**-1999](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11a) **WiFi2** _**OFDM**: High-speed Physical Layer in the 5 GHz Band (Amendment 1)_
+- [**802.11 "Prime"**]() `1997 original` **WiFi0** :: **DSSS** or **FHSS** : Original 802.11 Standard | DS for Wi-Fi in the 2.4 GHz Band 
+- [**802.11b**-1999]() `1999->`**`2007`** _`Amendment 2`_ **WiFi1** :: **HR-DSSS** : Higher-Speed Physical Layer Extension in the 2.4 GHz Band 
+- [**802.11a**-1999](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11a) `1999->`**`2007`** _`Amendment 2`_ **WiFi2** :: **OFDM** : High-speed Physical Layer in the 5 GHz Band 
 - [**802.11g**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11g) **WiFi3** _**ERP**: ERP-OFDM & ERP-DSSS/CCK | Further Higher Data Rate Extension in the 2.4 GHz Band
-(Amendment 4)_
+_`1999->**2007**`Amendment 4)_
 - [**802.11n**-2009](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11n) **WiFi4** _**MIMO**: MIMO antenas with OFDM tech (no more multipath) & moar throughput!_
 - [**802.11ac**-2013](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11ac) **WiFi5** _**VHT**, **MU-MIMO**, **Beamforming**: Enhancements below 6 GHz (only for 5GHz) | moar ALL!_
 - [**802.11ax**-2021]() **WiFi6** _**HE & OFDMA**: High Efficiency WLAN amendment. Big PHY enhancement including high density_
 - [**802.11be**-2023](https://en.wikipedia.org/wiki/IEEE_802.11be) **WiFi7** _EHT: Extremely High Throughput | Full lvl up!_
 
 ### 📡🏆 IEEE 802.11-2020 Ratified Amendments `PHY` _(NON-WiFi WLANs)_
-- [**802.11ad**-2012]() _**DMG**: Uses MGWS, GCMP, CCMP | 60 GHz in WiGig Networks_ 
-- [**802.11af**-2014]() _**TVWS**: Allows the use of **wireless in the TV white space** (TVWS)_
-- [**802.11ah**-2016]() _**Wi-Fi HaLow**: Use of **Wi-Fi in frequencies below 1 GHz** | IoT & M2M Communications_
-- [**802.11ay**-2021](https://en.wikipedia.org/wiki/IEEE_802.11ay) _256-QAM added. faster speeds & longer range, above 45 GH | TV & Monitor Connectivity_
-- [**802.11bb**-2023](https://www.railwayinnovationhub.com/aprobado-el-primer-estandar-lifi-ieee-802-11bb/) _**Li-Fi**: Wireless Communication using light waves._
+- [**802.11ad**-2012]() **DMG**: Uses MGWS, GCMP, CCMP | 60 GHz in WiGig Networks
+- [**802.11af**-2014]() **TVWS**: Allows the use of **wireless in the TV white space** (TVWS)
+- [**802.11ah**-2016]() **Wi-Fi HaLow**: Use of **Wi-Fi in frequencies below 1 GHz** | IoT & M2M Communications
+- [**802.11ay**-2021](https://en.wikipedia.org/wiki/IEEE_802.11ay) 256-QAM added. faster speeds & longer range, above 45 GH | TV & Monitor Connectivity
+- [**802.11bb**-2023](https://www.railwayinnovationhub.com/aprobado-el-primer-estandar-lifi-ieee-802-11bb/) **Li-Fi**: Wireless Communication using light waves
 
 ---
 
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments `Country Specific`
-- [**802.11d**-2001](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11d) _**Country Code** Information on Beacons & Probes | Specification for operation in additional regulatory domains (Amendment 3)_
-- [**802.11j**-2004](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11j) _**802.11a PHY & MAC enhancements for Japan** 4.9 GHz & 5 GHz operation (Amendment 7)_     
-- [**802.11y**-2008](https://standards.ieee.org/ieee/802.11y/3915/) _**802.11a PHY & MAC enhancements for USA** MAC & PHY support for operation in the 3650-3700 MHz band in the United States._
+- [**802.11d**-2001](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11d) **Country Code** Information on Beacons & Probes | Specification for operation in additional regulatory domains _`1999->**2007**`Amendment 3)_
+- [**802.11j**-2004](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11j) **802.11a PHY & MAC enhancements for Japan** 4.9 GHz & 5 GHz operation _`1999->**2007**`Amendment 7)_
+- [**802.11y**-2008](https://standards.ieee.org/ieee/802.11y/3915/) **802.11a PHY & MAC enhancements for USA** MAC & PHY support for operation in the 3650-3700 MHz band in the United States._
 - [**802.11aj**-2018]() _**CMMW**: support for operating in the Chinese 45 GHz band_
 
 ---
 
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments `Channel Detection & Hopping`
-- [**802.11h**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11h) _**DFS, TPC**: Enforces DFS events detect & avoid interference (5 GHz satellite & radars) | Meet Regulations in Europe | (Amendment 5)
+- [**802.11h**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11h) _**DFS, TPC**: Enforces DFS events detect & avoid interference (5 GHz satellite & radars) | Meet Regulations in Europe | _`1999->**2007**`Amendment 5)_
 
 ---
 
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments `Security`
-- [**802.11i**-2004](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11i) _**RSN Authentication** | WiFi alliance: **WPA2** | (MAC Security Enhancements (Amendment 6)_
+- [**802.11i**-2004](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11i) _**RSN Authentication** | WiFi alliance: **WPA2** | (MAC Security Enhancements _`1999->**2007**`Amendment 6)_
 - [**802.11u**-2011]() _**WIEN**: Wireless Interworking with External Networks | Hotspot 2.0, Passpoint & BYOD_
 - [**802.11w**-2009](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11w) _**Robust Management Frames**: Protect wireless frames VS DoS attacks | CCMP, BIP, CMAC_
 
 ---
 
 ### 🤖📡IEEE 802.11-2020 Ratified Amendments `QoS`
-- [**802.11e**-2005](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11e) _**Voice over WLAN y streaming multimedia QoS.** | MAC Quality of Service Enhancements (Amendment 8)_
+- [**802.11e**-2005](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11e) _**Voice over WLAN y streaming multimedia QoS.** | MAC Quality of Service Enhancements _`1999->**2007**`Amendment 8)_
 - [**802.11aa**-2012]() _**GCR**: QoS enhancements for robust audio & video streaming_
 - [**802.11ae**-2012]() _**QMF**: Enable QMF | Enhancements to QoS management frames_
 
