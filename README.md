@@ -320,7 +320,12 @@ _The original standard was published in 1997, revised in 1999 with MIB changes, 
 - 802.11F
 - 802.11T 
 
-## Networking Models: OSI & TCP/IP
+## 🌎 Networking Models: OSI & TCP/IP
+
+- [The TCP/IP & OSI Models @ Global Knowledge](https://mochieng.files.wordpress.com/2012/04/wp_nw_tcp-ip1.pdf)
+
+### OSI Model
+
 - [OSI Model]()
 - [Fz3r0 Extended OSI Model for 802.11 CWAP]()
 - [TCP/IP Model]()
