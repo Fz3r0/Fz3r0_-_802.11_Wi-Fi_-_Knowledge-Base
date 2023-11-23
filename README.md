@@ -567,6 +567,9 @@ Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx usi
     - Wi-Fi Analyzer Windows 
 
 ### 802.11 Tables & Calculations for Analytics
+- [5 GHz Channel Allocation (Primary-Seconday Pairs)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/cd37bd93-4aed-4fe1-af66-af4ba75559bf) `Image`
+
+
 - MCS Table for Wi-Fi Data Rate Calculation
 - Beacon Overhead Calculation
 - Airtime Calculation
