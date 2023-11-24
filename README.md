@@ -332,6 +332,10 @@ _The original standard was published in 1997, revised in 1999 with MIB changes, 
 
 ## 💊✉️🪆 Encapsulation & Decapsulation
 
+### 802.11 Encapsulation
+
+### 80.11 Frame Aggregation
+
 ## 🪆🛜⚙️ 802.11 Layer 1: Physical (PHY) | Frame Formats and Technologies
 _The PHY services provided to the MAC. The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. 
 Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx using management info | B) Characteristics & Method to Tx & Rx data through WM (Wireless Medium). The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. _
@@ -555,16 +559,28 @@ Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx usi
 
 ## 802.11 Analysis & Troubleshooting
 
+### Wireless 802.11 Troubleshooting Methodologies
+
+- CWNA Troubleshooting Methodology
+- [CWAP Troubleshooting Methodology](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/e8b2b696-12ee-4f7a-b8d2-024b89137eed)
+
+---
+
 ### RF Analysis Tools
-- Protocol Analyzers & Frame Capture
-    - Wireshark
-    - BlackShark
-    - 
-- Spectrum Analyzers
-    - Metageek
-- WLAN Scanners & Discovery Tools
-    - Wi-Fi Analyzer Android
-    - Wi-Fi Analyzer Windows 
+
+#### Protocol Analyzers & Frame Capture
+- Wireshark
+- BlackShark
+- 
+
+#### Spectrum Analyzers
+- Metageek
+
+#### WLAN Scanners & Discovery Tools
+- Wi-Fi Analyzer Android
+- Wi-Fi Analyzer Windows 
+
+---
 
 ### 802.11 Tables & Calculations for Analytics
 - [5 GHz Channel Allocation (Primary-Seconday Pairs)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/cd37bd93-4aed-4fe1-af66-af4ba75559bf) `Image`
@@ -626,6 +642,12 @@ Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx usi
 
 
 ## Resources & Education
+
+## Wireless Certifications
+
+### Analysis
+
+- CWAP CWNP
 
 
 
