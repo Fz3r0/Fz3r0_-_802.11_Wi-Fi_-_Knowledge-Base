@@ -222,8 +222,8 @@ _The original standard was published in_ **`1997`**, _revised in_ **`1999`** _wi
 Revision 1 Publcication: **`2007`** :: _incomporates revision of IEEE Std: `1999`_ <br>
 Revision 2 Publcication: **`2012`** :: _incomporates revision of IEEE Std: `2007`_ <br>
 Revision 3 Publcication: **`2016`** :: _incomporates revision of IEEE Std: `2012`_ <br>
-Revision 4 Publcication: **`2020`** :: _incomporates revision of IEEE Std: `2016`_ <br>
-Revision 5 Publcication: **`2024 ???`** :: _incomporates revision of IEEE Std: `2020 ???`_ `2023 prediction`<br>
+>>> Revision 4 Publcication: **`2020`** :: _incomporates revision of IEEE Std: `2016`_ <<< <br>
+_Revision 5 Publcication: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 ???` prediction: this will include 802.11ax & 802.11be_ <br>
 
 - [IEEE 802.11 Ratified Amandments Timeline](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/50f113ce-0f74-4017-9704-1d80660d65cd) _`tabla`_
 - [IEEE 802.11 Ratified Amandments & Standards Timeline](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/db2d576f-e0f4-4c58-a048-0a6d9cd5e421) _`tabla`_
