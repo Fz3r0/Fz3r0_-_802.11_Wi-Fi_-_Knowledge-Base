@@ -218,12 +218,12 @@ _IEEE Standard for Information Technology—Telecommunications and Information E
 - **[IEEE 802.11-2020 **FULL**: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications](https://ieeexplore.ieee.org/document/9363693)**
 
 ## 🛰️📡🏆 IEEE 802.11-2020 Ratified Amendments
-_The original standard was published in `1997`, revised in `1999` with MIB changes, and reaffirmed in `2003`_ <br>
-Revision 1 Publcication: **`2007`** :: _incomporates revision for: `1999`_ <br>
-Revision 2 Publcication: **`2012`** :: _incomporates revision for: `2007`_ <br>
-Revision 3 Publcication: **`2016`** :: _incomporates revision for: `2012`_ <br>
-Revision 4 Publcication: **`2021`** :: _incomporates revision for: `2016`_ <br>
-Revision 5 Publcication: **`2024`** :: _incomporates revision for: `2021`_ <br>
+_The original standard was published in_ **`1997`**, _revised in_ **`1999`** _with MIB changes, and reaffirmed in_ **`2003`** <br>
+Revision 1 Publcication: **`2007`** :: _incomporates revision of IEEE Std: `1999`_ <br>
+Revision 2 Publcication: **`2012`** :: _incomporates revision of IEEE Std: `2007`_ <br>
+Revision 3 Publcication: **`2016`** :: _incomporates revision of IEEE Std: `2012`_ <br>
+Revision 4 Publcication: **`2020`** :: _incomporates revision of IEEE Std: `2016`_ <br>
+Revision 5 Publcication: **`2024 ???`** :: _incomporates revision of IEEE Std: `2020 ???`_ `2023 prediction`<br>
 
 - [IEEE 802.11 Ratified Amandments Timeline](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/50f113ce-0f74-4017-9704-1d80660d65cd) _`tabla`_
 - [IEEE 802.11 Ratified Amandments & Standards Timeline](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/db2d576f-e0f4-4c58-a048-0a6d9cd5e421) _`tabla`_
