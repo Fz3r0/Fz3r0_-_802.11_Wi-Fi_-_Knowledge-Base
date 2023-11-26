@@ -190,9 +190,19 @@ _Set of rules and policies providing the end user with configurations of country
 - SCT: Secretaría de Comunicaciones y Transportes
 - DOF: Diario Oficial de la Federación
 
+## 🫅🛜 Wi-Fi Alliance: Certifications
 
+### 🫅🛜 Wi-Fi Alliance: Certification Program
 
-## 👑 IEEE 802 Standards
+- 2.4/5/6GHz Wi-Fi
+- WiGig () The first version of WiGig is IEEE 802.11ad, and a newer version IEEE 802.11ay was released in 2021
+- Wi-Fi Direct
+- WPA Wi-Fi Protected Access: security mechanism based on IEEE 802.11i | Wi-Fi Alliance started to certify from 2003.
+- IBSS with Wi-Fi Protected Setup
+- Wi-Fi Passpoint
+- 
+
+## 👑 IEEE: 802 Standards
 _The most widely used IEEE 802 standards are for Ethernet, Bridging and Virtual Bridged LANs Wireless LAN, Wireless PAN, Wireless MAN, Wireless Coexistence, Media Independent Handover Services, and Wireless RAN with a dedicated Working Group providing focus for each area. IEEE 802 also coordinates with other national and international standards bodies, including ISO which has published certain IEEE 802 standards as international standards._
 
 - [IEEE 802 50th Aniversary, a look back](https://standards.ieee.org/featured/ieee-802/#:~:text=The%20most%20widely%20used%20IEEE,providing%20focus%20for%20each%20area.)
