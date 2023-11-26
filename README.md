@@ -5,24 +5,24 @@ _👷👷👷 En construcción...  //  Under construction 👷👷👷_
 
 ## 📜📖❓ 802.11 Wireless: Definitions, Acronyms & Abbreviations
 
-### ⭕ 802.11 Wi-Fi: Definitions
+### ⭕ Wi-Fi Definition
+_Wi-Fi is not an abbreviation for “wireless fidelity”; the name was created by a marketing firm hired by WECA and chosen for its pleasing sound and similarity to “hi-fi” (high-fidelity)._
+- [Wi-Fi Definition @ Britanica](https://www.britannica.com/technology/Wi-Fi)
 
+### ⭕ 802.11 Wi-Fi: Definitions
 - [IEEE: 802.11 Standards Dictionary Online](https://ieeexplore.ieee.org/browse/standards/dictionary?activeStatus=true)
 - [Agilent Technologies: Wireless Dictionary](https://ftp.unpad.ac.id/orari/library/library-ref-eng/ref-eng-1/physical/voip/wireless/dictionary.pdf)
 - [Fz3r0 Networking Definitions]()
 - [Fz3r0 IEEE 802.11 Wireless / Wi-Fi definitions]()
 
 ### ⭕ 802.11 Wireless: Acronyms & Abbreviations
-
 - [IEEE: 802.11 Acronyms & Abbreviations](https://ieeexplore.ieee.org/document/5769885) _`$$$`_
 - [Wireless Dictionary of Acronyms & Abbreviations @ IWPC: The International Wireless Industry Consortium](https://www.iwpc.org/dictionary.aspx)
 
 ## 📡🏺🧑‍🏫 History of Wireless Networks & Wi-Fi
-
 _The one who knows the past can build the future. Building the future, and keeping the past alive – are one and the same thing._
 
 ### 🏺 History of Network Communications & Internet
-
 - [Evolution of Computer Networks @ University of Notre Dame](https://www3.nd.edu/~dwang5/courses/spring21/pdf/evolution.pdf) _`educational resource`_
 - [Conectando al Mundo: La Historia de las Redes](https://www.youtube.com/watch?v=Mz2gjthKtPo) _`video`_
 - [Historia y Evolución de las redes](https://www.youtube.com/watch?v=BkmQAXhTi9w) _`video`_
@@ -32,7 +32,6 @@ _The one who knows the past can build the future. Building the future, and keepi
 ---
 
 ### 🏺 History of Wireless Local Area Networks (WLANs) & Wi-Fi
-
 - History of Wireless Local Area Networks
 - [Overview of Wireless History](https://www.youtube.com/watch?v=CHbiQTskK9Q)
 - [History of Wireless Communication](https://www.youtube.com/watch?v=PU6JO8KPRs0)
@@ -53,7 +52,6 @@ _The one who knows the past can build the future. Building the future, and keepi
 ---
 
 ### 🏺 Historia de Redes, Internet, Telecomunicaciones y Radiodifusión en México
-
 - [Telecomunicaciones y Radiodifusión en México @ UNAM](http://derecho.posgrado.unam.mx/site_cpd/public/publis_cpd/telecomyradiodifenMX.pdf)
 - Historia de Wi-Fi e internet en Mexico
 - [Ley de Vias Generales de comunicacion 1940]()
@@ -203,7 +201,6 @@ _Set of rules and policies providing the end user with configurations of country
 ## 🫅🛜 Wi-Fi Alliance: Certifications
 
 ### 🫅🛜 Wi-Fi Alliance: Certification Program
-
 - 2.4/5/6GHz Wi-Fi
 - WiGig () The first version of WiGig is IEEE 802.11ad, and a newer version IEEE 802.11ay was released in 2021
 - Wi-Fi Direct
