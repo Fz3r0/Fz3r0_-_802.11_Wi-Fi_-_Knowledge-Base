@@ -270,8 +270,8 @@ _Revision 5 Publcication: **`2024`** ???_ :: _incomporates revision of IEEE Std:
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments `Security`
 - [**802.11i**-2004](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11i) `r1.2004->`**`2007`** _`Amendment 6`_ **RSN Authentication** | Wi-Fi alliance: **WPA2** | MAC Security Enhancements 
 - [**802.11w**-2009](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11w) `r2.2009->`**`2012`** _`Amendment 4` **Robust Management Frames** :: Protect wireless frames VS DoS attacks | CCMP, BIP, CMAC
-- [**802.11u**-2011]() _**WIEN**: Wireless Interworking with External Networks | Hotspot 2.0, Passpoint & BYOD_
-- 
+- [**802.11u**-2011](https://en.wikipedia.org/wiki/IEEE_802.11u) `r2.2011->`**`2012`** _`Amendment 9`_ **Hotspot 2.0** AKA Wi-Fi Certified Passpoint | **WIEN** :: Network discovery & selection for mobile devices
+  
 ---
 
 ### 🤖📡IEEE 802.11-2020 Ratified Amendments `QoS`
@@ -285,7 +285,6 @@ _Revision 5 Publcication: **`2024`** ???_ :: _incomporates revision of IEEE Std:
 - [**802.11k**-2008](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11k) `r2.2008->`**`2012`** _`Amendment 1`_ **RRM** :: TPC, client & channel stats, neighbor report | helps roaming
 - [**802.11r**-2008](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11r) `r2.2008->`**`2012`** _`Amendment 2`_ **BSS transition (FT) / Fast Secure Roaming** :: CKM, PKC, OKC, fast session resumption
 - [**802.11v**-2011](https://en.wikipedia.org/wiki/IEEE_802.11v-2011) `r2.20011->`**`2012`** _`Amendment 8`_ Network assisted Roaming (APs send info messages to associated STAs) | Network assisted Power Savings (longer sleep states)
-- [**802.11u**-2011](https://en.wikipedia.org/wiki/IEEE_802.11u) `r2.2011->`**`2012`** _`Amendment 9`_ **Hotspot 2.0** AKA Wi-Fi Certified Passpoint :: Network discovery & selection for mobile devices
 - [**802.11ai**-2016](https://mrncciew.com/2023/09/25/fils-fast-initial-link-setup/) `r4.2016->`**`2020`** _`Amendment 1`_ ***FILS** Fast Initial Link Setup :: High-density environments for users association to robust network
 - [**802.11aq**-2018](https://www.fiercewireless.com/wireless/ieee-releases-802-11aq-to-better-detect-wlan-availability) _Delivery of network service info prior to the association of STA to the network. Offer the STA ability to make informed decisions about which network to connect to._
 
