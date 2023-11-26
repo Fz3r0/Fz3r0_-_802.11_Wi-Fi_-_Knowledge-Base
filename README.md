@@ -355,9 +355,9 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 
 ## 💊✉️🪆 Encapsulation & Decapsulation
 
-### 802.11 Encapsulation
+### 💊 802.11 Encapsulation
 
-### 80.11 Frame Aggregation
+## 💊🚛🚢 80.11 Frame Aggregation
 
 ## 🪆🛜⚙️ 802.11 Layer 1: Physical (PHY) | Frame Formats and Technologies
 _The PHY services provided to the MAC. The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. 
