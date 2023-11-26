@@ -240,7 +240,7 @@ _Revision 5 Publcication: **`2024`** ???_ :: _incomporates revision of IEEE Std:
 - [**802.11b**-1999]() `r1.1999->`**`2007`** _`Amendment 1`_ **WiFi1** :: **HR-DSSS** : Higher-Speed Physical Layer Extension in the 2.4 GHz Band 
 - [**802.11a**-1999](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11a) `r1.1999->`**`2007`** _`Amendment 2`_ **WiFi2** :: **OFDM** : High-speed Physical Layer @ 5 GHz
 - [**802.11g**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11g) `r1.2003->`**`2007`** _`Amendment 4`_ **WiFi3** :: **ERP**-OFDM & **ERP**-DSSS/CCK : Further Higher Data Rate Extension @ 2.4 GHz
-- [**802.11n**-2009](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11n) `r2.2009->`**`2012`** _`Amendment 5`_ **WiFi4** :: **MIMO**-OFDM : MIMO antenas with OFDM tech | Enhancements for Higher Throughput_
+- [**802.11n**-2009](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11n) `r2.2009->`**`2012`** _`Amendment 5`_ **WiFi4** :: **MIMO**-OFDM : MIMO antenas with OFDM tech | Higher Throughput
 - [**802.11ac**-2013](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11ac) `r3.2013->`**`2016`** _`Amendment 4` **WiFi5** :: **VHT**, **MU-MIMO**, **Beamforming** : Enhancements below 6 GHz (only for 5GHz)
 - [**802.11ax**-2021]() **WiFi6** _**HE & OFDMA**: High Efficiency WLAN amendment. Big PHY enhancement including high density_
 - [**802.11be**-2023](https://en.wikipedia.org/wiki/IEEE_802.11be) **WiFi7** _EHT: Extremely High Throughput | Full lvl up!_
