@@ -242,14 +242,14 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 - [**802.11g**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11g) `r1.2003->`**`2007`** _`Amendment 4`_ **Wi-Fi 3** :: **ERP**-OFDM & **ERP**-DSSS/CCK : Further Higher Data Rate Extension @ 2.4 GHz
 - [**802.11n**-2009](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11n) `r2.2009->`**`2012`** _`Amendment 5`_ **Wi-Fi 4** :: **MIMO**-OFDM : MIMO antenas with OFDM tech | Higher Throughput
 - [**802.11ac**-2013](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11ac) `r3.2013->`**`2016`** _`Amendment 4`_ **Wi-Fi 5** :: **VHT**, **MU-MIMO**, **Beamforming** : Enhancements below 6 GHz (only for 5GHz)
-- [**802.11ax**-2021](https://en.wikipedia.org/wiki/Wi-Fi_6) `r5.2021->`**`????`** _`Amendment 1`_ **Wi-Fi 6** :: **HE & OFDMA** High Efficiency WLAN | Throughput & High Density Enhancements
+- [**802.11ax**-2021](https://en.wikipedia.org/wiki/Wi-Fi_6) `r5.2021->`**`<<DRAFT>>`** _`Amendment 1`_ **Wi-Fi 6** :: **HE & OFDMA** High Efficiency WLAN | Throughput & High Density Enhancements
 - [**802.11be**-2023](https://en.wikipedia.org/wiki/IEEE_802.11be) `r5.2023->`**`<<DRAFT>>`** _`Amendment 8`_ **Wi-Fi 7** :: **EHT** Extremely High Throughput | Wi-Fi 7 lvl up!!!
 
 ### 📡🏆 IEEE 802.11-2020 Ratified Amendments `PHY` _(NON-WiFi WLANs)_
 - [**802.11ad**-2012](https://en.wikipedia.org/wiki/IEEE_802.11ad) `r3.2012->`**`2016`** _`Amendment 3`_ **DMG** :: Uses MGWS, GCMP, CCMP | VHT @ 60 GHz in WiGig Networks
 - [**802.11af**-2013](https://en.wikipedia.org/wiki/IEEE_802.11af) `r3.2013->`**`2016`** _`Amendment 5`_ **TVWS** :: Allows the use of wireless in the TV white space (TVWS)
 - [**802.11ah**-2016](https://en.wikipedia.org/wiki/IEEE_802.11ah) `r4.2016->`**`2020`** _`Amendment 2`_ **Wi-Fi HaLow** :: Use of Wi-Fi in frequencies below 1 GHz | IoT & M2M Communications
-- [**802.11ay**-2021](https://en.wikipedia.org/wiki/IEEE_802.11ay) `r5.2021->`**`????`** _`Amendment 2`_ Faster speeds & longer range, above 45 GH | TV & Monitor Connectivity
+- [**802.11ay**-2021](https://en.wikipedia.org/wiki/IEEE_802.11ay) `r5.2021->`**`<<DRAFT>>`** _`Amendment 2`_ Faster speeds & longer range, above 45 GH | TV & Monitor Connectivity
 - [**802.11bb**-2023](https://www.railwayinnovationhub.com/aprobado-el-primer-estandar-lifi-ieee-802-11bb/) `r5.2023->`**`????`** _`Amendment 5`_ **Li-Fi** :: Wireless Communication using light waves
 
 ---
@@ -308,23 +308,34 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 ---
 
 ### 🤖📡IEEE 802.11-2020 Ratified Amendments `Battery Savers`, `Efficience` & `Performance`
-- [802.11ba-2021](https://standards.ieee.org/ieee/802.11ba/6896/) `r5.2021->`**`????`** _`Amendment 3`_ **WUR** Defined Wake Up Radio :: Increase battery life of devices (ex. powered IoT devices)
-- [802.11az-2023](https://standards.ieee.org/ieee/802.11az/7226/) `r5.2023->`**`????`** _`Amendment 4`_ :: Improves physical location tracking & positioning, energy efficiency | SmartBuiding & IoT_
-- [802.11bc-2023](https://arxiv.org/abs/2104.11811) `r5.2023->`**`????`** _`Amendment 5`_ **Enhanced Broadcast Service** :: data rate control based on broadcast ACK 
+- [802.11ba-2021](https://standards.ieee.org/ieee/802.11ba/6896/) `r5.2021->`**`<<DRAFT>>`** _`Amendment 3`_ **WUR** Defined Wake Up Radio :: Increase battery life of devices (ex. powered IoT devices)
+- [802.11az-2023](https://standards.ieee.org/ieee/802.11az/7226/) `r5.2023->`**`<<DRAFT>>`** _`Amendment 4`_ :: Improves physical location tracking & positioning, energy efficiency | SmartBuiding & IoT_
+- [802.11bc-2023](https://arxiv.org/abs/2104.11811) `r5.2023->`**`<<DRAFT>>`** _`Amendment 5`_ **Enhanced Broadcast Service** :: data rate control based on broadcast ACK 
 
+---
+
+### 🤖📡IEEE 802.11-2020 Ratified Amendments `Sensing` :: `Movement Detection` & `Distance Meassurement`
+- [**802.11bf**-2023](https://www.xataka.com/privacidad/wi-fi-802-11bf-asi-nuevo-estandar-que-podra-detectar-movimiento-medir-distancias-funcion-senal) `r5.2023->`**`<<DRAFT>>`** _`Amendment 9`_ **SENS** WLAN sensing :: Movement detection & Distance using signal 
 
 
 
 
 ## IEEE 802.11 Draft Amendments (2023 revised)
-- [802.11ba-2021](https://standards.ieee.org/ieee/802.11ba/6896/) `r5.2021->`**`????`** _`Amendment 3`_ **WUR** :: Increase battery life of devices (ex. powered IoT devices)
-- [802.11az-2023](https://standards.ieee.org/ieee/802.11az/7226/) `r5.2023->`**`????`** _`Amendment 4`_ :: Improves physical location tracking & positioning, energy efficiency | SmartBuiding & IoT_
+- [802.11ba-2021](https://standards.ieee.org/ieee/802.11ba/6896/) `r5.2021->`**`<<DRAFT>>`** _`Amendment 3`_ **WUR** :: Increase battery life of devices (ex. powered IoT devices)
+- [802.11az-2023](https://standards.ieee.org/ieee/802.11az/7226/) `r5.2023->`**`<<DRAFT>>`** _`Amendment 4`_ :: Improves physical location tracking & positioning, energy efficiency | SmartBuiding & IoT_
 
+
+
+- [**802.11bf**-2023](https://www.xataka.com/privacidad/wi-fi-802-11bf-asi-nuevo-estandar-que-podra-detectar-movimiento-medir-distancias-funcion-senal) `r5.2023->`**`<<DRAFT>>`** _`Amendment 9`_ **SENS** WLAN sensing :: Movement detection & Distance using signal 
+- [**802.11bh**-2023](https://datatracker.ietf.org/meeting/112/materials/slides-112-madinas-ieee-80211bhbi-update-01) `r5.2023->`**`<<DRAFT>>`** _`Amendment 10`_ **Random MAC** :: Randomized and Changing MAC Addresses
+- [**802.11bi**-2023](https://datatracker.ietf.org/meeting/112/materials/slides-112-madinas-ieee-80211bhbi-update-01) `r5.2023->`**`<<DRAFT>>`** _`Amendment 11`_ **Enhanced Data Privacy** :: 
+- [**802.11me**-2023](https://wballiance.com/new-anqp-elements-guidelines-whitepaper/) `r5.2023->`**`<<DRAFT>>`** _`Amendment 12`_ **ANQP** Access Network Query Protocol :: important part in furthering the adoption of Passpoint & WBA OpenRoaming
 
 
 ## IEEE 802.11 Defunct Amendments
 - 802.11F
 - 802.11T 
+- [**802.11bg**]()  **unassigned** :: likely to avoid confusion by combining 802.11b/g
 
 ## 🌎 Networking Models: OSI & TCP/IP
 
