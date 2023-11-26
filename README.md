@@ -223,7 +223,7 @@ Revision 1 Publcication: **`2007`** :: _incomporates revision of IEEE Std: `1999
 Revision 2 Publcication: **`2012`** :: _incomporates revision of IEEE Std: `2007`_ <br>
 Revision 3 Publcication: **`2016`** :: _incomporates revision of IEEE Std: `2012`_ <br>
 Revision 4 Publcication: **`2020`** :: _incomporates revision of IEEE Std: `2016`_ <<< actual <br>
-_Revision 5 Publcication: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 ???` prediction: this will include 802.11ax & 802.11be_ <br>
+_Revision 5 Publcication: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 ???` this will include 802.11ax & 802.11be_ <br>
 
 - [IEEE 802.11 Ratified Amandments Timeline](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/50f113ce-0f74-4017-9704-1d80660d65cd) _`tabla`_
 - [IEEE 802.11 Ratified Amandments & Standards Timeline](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/db2d576f-e0f4-4c58-a048-0a6d9cd5e421) _`tabla`_
@@ -256,9 +256,9 @@ _Revision 5 Publcication: **`2024`** ???_ :: _incomporates revision of IEEE Std:
 
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments `Country Specific`
 - [**802.11d**-2001](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11d) `r1.2001->`**`2007`** _`Amendment 3`_ **Country Code** :: Information on Beacons & Probes for operation in additional regulatory domains 
-- [**802.11j**-2004](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11j) `r1.2004->`**`2007`** _`Amendment 7`_ **802.11a PHY & MAC enhancements for Japan** :: 4.9 GHz & 5 GHz operation
-- [**802.11y**-2008](https://standards.ieee.org/ieee/802.11y/3915/) `r2.2008->`**`2012`** _`Amendment 3`_ **802.11a PHY & MAC enhancements for USA** MAC & PHY support for operation in the 3650-3700 MHz band in the United States.
-- [**802.11aj**-2018](https://www.everythingrf.com/news/details/6101-IEEE-Approves-802-11-aj-Standard-for-Increased-High-Bandwidth-Wireless-LAN-Capacity-in-China) `r4.2016->`**`2020`** _`Amendment 2`_ **CMMW** :: support for operating in the Chinese 45 GHz band
+- [**802.11j**-2004](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11j) `r1.2004->`**`2007`** _`Amendment 7`_ **802.11a PHY & MAC ++ for Japan** :: MAC & PHY @  4.9 GHz & 5 GHz operation
+- [**802.11y**-2008](https://standards.ieee.org/ieee/802.11y/3915/) `r2.2008->`**`2012`** _`Amendment 3`_ **802.11a PHY & MAC ++ for USA** :: MAC & PHY @ 3650-3700 MHz band operation
+- [**802.11aj**-2018](https://www.everythingrf.com/news/details/6101-IEEE-Approves-802-11-aj-Standard-for-Increased-High-Bandwidth-Wireless-LAN-Capacity-in-China) `r4.2016->`**`2020`** _`Amendment 2`_ **CMMW** | **PHY & MAC ++ for China** :: MAC & PHY @ 45 GHz band operation
 
 ---
 
