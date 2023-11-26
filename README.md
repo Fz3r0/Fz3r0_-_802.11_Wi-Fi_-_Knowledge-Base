@@ -242,7 +242,7 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 - [**802.11g**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11g) `r1.2003->`**`2007`** _`Amendment 4`_ **Wi-Fi 3** :: **ERP**-OFDM & **ERP**-DSSS/CCK : Further Higher Data Rate Extension @ 2.4 GHz
 - [**802.11n**-2009](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11n) `r2.2009->`**`2012`** _`Amendment 5`_ **Wi-Fi 4** :: **MIMO**-OFDM : MIMO antenas with OFDM tech | Higher Throughput
 - [**802.11ac**-2013](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11ac) `r3.2013->`**`2016`** _`Amendment 4`_ **Wi-Fi 5** :: **VHT**, **MU-MIMO**, **Beamforming** : Enhancements below 6 GHz (only for 5GHz)
-- [**802.11ax**-2021](https://en.wikipedia.org/wiki/Wi-Fi_6) `r5.2021->`**`<<DRAFT>>`** _`Amendment 1`_ **Wi-Fi 6** :: **HE & OFDMA** High Efficiency WLAN | Throughput & High Density Enhancements
+- [**802.11ax**-2021](https://en.wikipedia.org/wiki/Wi-Fi_6) `r5.2021->`**`<<DRAFT>>`** _`Amendment 1`_ **Wi-Fi 6** :: **HE & OFDMA** High Efficiency | More Throughput | High Density
 - [**802.11be**-2023](https://en.wikipedia.org/wiki/IEEE_802.11be) `r5.2023->`**`<<DRAFT>>`** _`Amendment 8`_ **Wi-Fi 7** :: **EHT** Extremely High Throughput | Wi-Fi 7 lvl up!!!
 
 ### 📡🏆 IEEE 802.11-2020 Ratified Amendments `PHY` _(NON-WiFi WLANs)_
@@ -269,8 +269,8 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments `Security`
 - [**802.11i**-2004](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11i) `r1.2004->`**`2007`** _`Amendment 6`_ **RSN Authentication** | Wi-Fi alliance: **WPA2** | MAC Security Enhancements 
-- [**802.11w**-2009](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11w) `r2.2009->`**`2012`** _`Amendment 4` **Robust Management Frames** :: Protect wireless frames VS DoS attacks | CCMP, BIP, CMAC
-- [**802.11u**-2011](https://en.wikipedia.org/wiki/IEEE_802.11u) `r2.2011->`**`2012`** _`Amendment 9`_ **Hotspot 2.0** AKA Wi-Fi Certified Passpoint | **WIEN** :: Network discovery & selection for mobile devices
+- [**802.11w**-2009](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11w) `r2.2009->`**`2012`** _`Amendment 4`_ **Robust Management Frames** :: Protect wireless frames VS DoS attacks | CCMP, BIP, CMAC
+- [**802.11u**-2011](https://en.wikipedia.org/wiki/IEEE_802.11u) `r2.2011->`**`2012`** _`Amendment 9`_ **Hotspot 2.0** AKA Wi-Fi Certified Passpoint | **WIEN** :: Network discovery & selection
 - [**802.11bh**-2023](https://datatracker.ietf.org/meeting/112/materials/slides-112-madinas-ieee-80211bhbi-update-01) `r5.2023->`**`<<DRAFT>>`** _`Amendment 10`_ **Random MAC** :: Randomized and Changing MAC Addresses
 - [**802.11bi**-2023](https://datatracker.ietf.org/meeting/112/materials/slides-112-madinas-ieee-80211bhbi-update-01) `r5.2023->`**`<<DRAFT>>`** _`Amendment 11`_ **Enhanced Data Privacy** :: 
 - [**802.11me**-2023](https://wballiance.com/new-anqp-elements-guidelines-whitepaper/) `r5.2023->`**`<<DRAFT>>`** _`Amendment 12`_ **ANQP** Access Network Query Protocol :: important part in furthering the adoption of Passpoint & WBA OpenRoaming
@@ -287,8 +287,8 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments `Roaming` & `Association`
 - [**802.11k**-2008](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11k) `r2.2008->`**`2012`** _`Amendment 1`_ **RRM** :: TPC, client & channel stats, neighbor report | helps roaming
 - [**802.11r**-2008](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11r) `r2.2008->`**`2012`** _`Amendment 2`_ **BSS transition (FT) / Fast Secure Roaming** :: CKM, PKC, OKC, fast session resumption
-- [**802.11v**-2011](https://en.wikipedia.org/wiki/IEEE_802.11v-2011) `r2.20011->`**`2012`** _`Amendment 8`_ Network assisted Roaming (APs send info messages to associated STAs) | Network assisted Power Savings (longer sleep states)
-- [**802.11ai**-2016](https://mrncciew.com/2023/09/25/fils-fast-initial-link-setup/) `r4.2016->`**`2020`** _`Amendment 1`_ **FILS** Fast Initial Link Setup :: High-density environments for users association to robust network
+- [**802.11v**-2011](https://en.wikipedia.org/wiki/IEEE_802.11v-2011) `r2.20011->`**`2012`** _`Amendment 8`_ Network Assisted Roaming APs -> STA info | Assisted Power Savings (longer sleep states)
+- [**802.11ai**-2016](https://mrncciew.com/2023/09/25/fils-fast-initial-link-setup/) `r4.2016->`**`2020`** _`Amendment 1`_ **FILS** Fast Initial Link Setup :: High-density & Robust Network Association
 - [**802.11aq**-2018](https://www.fiercewireless.com/wireless/ieee-releases-802-11aq-to-better-detect-wlan-availability) `r4.2018->`**`2020`** _`Amendment 5`_ Pre-Association Discovery | APs -> STA info for associatios desicions
 
 ---
