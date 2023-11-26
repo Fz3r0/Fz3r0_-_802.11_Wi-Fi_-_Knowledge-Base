@@ -222,7 +222,7 @@ _The original standard was published in_ **`1997`**, _revised in_ **`1999`** _wi
 Revision 1 Publcication: **`2007`** :: _incomporates revision of IEEE Std: `1999`_ <br>
 Revision 2 Publcication: **`2012`** :: _incomporates revision of IEEE Std: `2007`_ <br>
 Revision 3 Publcication: **`2016`** :: _incomporates revision of IEEE Std: `2012`_ <br>
-Revision 4 Publcication: **`2020`** :: _incomporates revision of IEEE Std: `2016`_ <<< <br>
+Revision 4 Publcication: **`2020`** :: _incomporates revision of IEEE Std: `2016`_ <<< actual <br>
 _Revision 5 Publcication: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 ???` prediction: this will include 802.11ax & 802.11be_ <br>
 
 - [IEEE 802.11 Ratified Amandments Timeline](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/50f113ce-0f74-4017-9704-1d80660d65cd) _`tabla`_
@@ -241,13 +241,13 @@ _Revision 5 Publcication: **`2024`** ???_ :: _incomporates revision of IEEE Std:
 - [**802.11a**-1999](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11a) `r1.1999->`**`2007`** _`Amendment 2`_ **WiFi2** :: **OFDM** : High-speed Physical Layer @ 5 GHz
 - [**802.11g**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11g) `r1.2003->`**`2007`** _`Amendment 4`_ **WiFi3** :: **ERP**-OFDM & **ERP**-DSSS/CCK : Further Higher Data Rate Extension @ 2.4 GHz
 - [**802.11n**-2009](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11n) `r2.2009->`**`2012`** _`Amendment 5`_ **WiFi4** :: **MIMO**-OFDM : MIMO antenas with OFDM tech | Enhancements for Higher Throughput_
-- [**802.11ac**-2013](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11ac) **WiFi5** _**VHT**, **MU-MIMO**, **Beamforming**: Enhancements below 6 GHz (only for 5GHz) | moar ALL!_
+- [**802.11ac**-2013](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11ac) `r3.2013->`**`2016`** _`Amendment 4` **WiFi5** :: **VHT**, **MU-MIMO**, **Beamforming** : Enhancements below 6 GHz (only for 5GHz)
 - [**802.11ax**-2021]() **WiFi6** _**HE & OFDMA**: High Efficiency WLAN amendment. Big PHY enhancement including high density_
 - [**802.11be**-2023](https://en.wikipedia.org/wiki/IEEE_802.11be) **WiFi7** _EHT: Extremely High Throughput | Full lvl up!_
 
 ### 📡🏆 IEEE 802.11-2020 Ratified Amendments `PHY` _(NON-WiFi WLANs)_
-- [**802.11ad**-2012]() **DMG**: Uses MGWS, GCMP, CCMP | 60 GHz in WiGig Networks
-- [**802.11af**-2014]() **TVWS**: Allows the use of **wireless in the TV white space** (TVWS)
+- [**802.11ad**-2012](https://en.wikipedia.org/wiki/IEEE_802.11ad) `r3.2012->`**`2016`** _`Amendment 3` **DMG** :: Uses MGWS, GCMP, CCMP | VHT @ 60 GHz in WiGig Networks
+- [**802.11af**-2013](https://en.wikipedia.org/wiki/IEEE_802.11af) `r3.2013->`**`2016`** _`Amendment 5` **TVWS** :: Allows the use of wireless in the TV white space (TVWS)
 - [**802.11ah**-2016]() **Wi-Fi HaLow**: Use of **Wi-Fi in frequencies below 1 GHz** | IoT & M2M Communications
 - [**802.11ay**-2021](https://en.wikipedia.org/wiki/IEEE_802.11ay) 256-QAM added. faster speeds & longer range, above 45 GH | TV & Monitor Connectivity
 - [**802.11bb**-2023](https://www.railwayinnovationhub.com/aprobado-el-primer-estandar-lifi-ieee-802-11bb/) **Li-Fi**: Wireless Communication using light waves
@@ -269,23 +269,23 @@ _Revision 5 Publcication: **`2024`** ???_ :: _incomporates revision of IEEE Std:
 
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments `Security`
 - [**802.11i**-2004](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11i) `r1.2004->`**`2007`** _`Amendment 6`_ **RSN Authentication** | Wi-Fi alliance: **WPA2** | MAC Security Enhancements 
-- [**802.11u**-2011]() _**WIEN**: Wireless Interworking with External Networks | Hotspot 2.0, Passpoint & BYOD_
 - [**802.11w**-2009](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11w) `r2.2009->`**`2012`** _`Amendment 4` **Robust Management Frames** :: Protect wireless frames VS DoS attacks | CCMP, BIP, CMAC
-
+- [**802.11u**-2011]() _**WIEN**: Wireless Interworking with External Networks | Hotspot 2.0, Passpoint & BYOD_
+- 
 ---
 
 ### 🤖📡IEEE 802.11-2020 Ratified Amendments `QoS`
 - [**802.11e**-2005](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11e) `r1.2005->`**`2007`** _`Amendment 8`_ **Voice over WLAN y streaming multimedia QoS.** | MAC Quality of Service Enhancements 
-- [**802.11aa**-2012]() _**GCR**: QoS enhancements for robust audio & video streaming_
-- [**802.11ae**-2012]() _**QMF**: Enable QMF | Enhancements to QoS management frames_
+- [**802.11ae**-2012](https://support.accessagility.com/hc/wifi-glossary-802.11ae) `r3.2012->`**`2016`** _`Amendment 1` **QMF** :: Defines new QoS Management Frame (QMF) (not used on voice)
+- [**802.11aa**-2012](https://home.agh.edu.pl/~kks/802.11aa-2-CR.pdf) `r3.2012->`**`2016`** _`Amendment 2` :: QoS enhancements for robust audio & video streaming
 
 ---
 
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments `Roaming` & `Association`
 - [**802.11k**-2008](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11k) `r2.2008->`**`2012`** _`Amendment 1`_ **RRM** :: TPC, client & channel stats, neighbor report | helps roaming
 - [**802.11r**-2008](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11r) `r2.2008->`**`2012`** _`Amendment 2`_ **BSS transition (FT) / Fast Secure Roaming** | CKM, PKC, OKC, fast session resumption
-- [**802.11u**-2011](https://en.wikipedia.org/wiki/IEEE_802.11u) `r2.2011->`**`2012`** _`Amendment 9`_ **Hotspot 2.0** AKA Wi-Fi Certified Passpoint :: Network discovery & selection for mobile devices
 - [**802.11v**-2011](https://en.wikipedia.org/wiki/IEEE_802.11v-2011) `r2.20011->`**`2012`** _`Amendment 8`_ Network assisted Roaming (APs send info messages to associated STAs) | Network assisted Power Savings (longer sleep states)
+- [**802.11u**-2011](https://en.wikipedia.org/wiki/IEEE_802.11u) `r2.2011->`**`2012`** _`Amendment 9`_ **Hotspot 2.0** AKA Wi-Fi Certified Passpoint :: Network discovery & selection for mobile devices
 - [**802.11ai**-2016](https://mrncciew.com/2023/09/25/fils-fast-initial-link-setup/) _**FILS**: High-density environments for users association to robust network_
 - [**802.11aq**-2018](https://www.fiercewireless.com/wireless/ieee-releases-802-11aq-to-better-detect-wlan-availability) _Delivery of network service info prior to the association of STA to the network. Offer the STA ability to make informed decisions about which network to connect to._
 
@@ -298,9 +298,9 @@ _Revision 5 Publcication: **`2024`** ???_ :: _incomporates revision of IEEE Std:
 ---
 
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments `Mesh Wireless Networking`
-- [**802.11s**-2011]() `r2.2011->`**`2012`** _`Amendment 10` **MPS** :: AP act as portal for devices to a WDS. AKA Mesh Master Gateway
 - [**802.11z**-2010]() `r2.2009->`**`2012`** _`Amendment 7`_ **DLS**: Extensions to Direct-Link Setup (DLS) (not used on Enterprises)
-
+- [**802.11s**-2011]() `r2.2011->`**`2012`** _`Amendment 10` **MPS** :: AP act as portal for devices to a WDS. AKA Mesh Master Gateway
+  
 ---
 
 ### 🤖📡IEEE 802.11-2020 Ratified Amendments (Wi-Fi Bridge Links)
