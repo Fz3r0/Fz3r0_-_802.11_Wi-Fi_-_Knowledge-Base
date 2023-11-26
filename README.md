@@ -47,7 +47,8 @@ _The one who knows the past can build the future. Building the future, and keepi
     - [`2003` :: Wi-Fi Evolution to 802.11g | 54mbps @ 2.4ghz]()
     - [`2007` :: Wi-Fi Evolution to 802.11n | OFDM 2.4 & 5 GHz]()
     - [`2016` :: Wi-Fi Evolution to 802.11ac | OFDM 2.4 & 5 GHz]()
-    - [`2024` :: Actual Wi-Fi -| Giga & 10Giga | 802.11ax/be | 5 & 6 GHz]()
+    - [`2020` :: Actual Wi-Fi | OFDM 2.4 & 5 GHz]()
+    - [`2024 -->` :: Actual Wi-Fi & Future Transition | Giga & 10Giga | 802.11ax/be | 5 & 6 GHz]()
 
 ---
 
