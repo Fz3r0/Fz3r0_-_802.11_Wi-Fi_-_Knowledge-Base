@@ -236,18 +236,18 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 ---
 
 ### 📡🏆 IEEE 802.11-2020 Ratified Amendments `PHY` _("Traditional" Wi-Fi WLANs)_
-- [**802.11 "Prime"**]() `1997 original` **WiFi0** :: **DSSS** or **FHSS** : Original 802.11 Standard | DS for Wi-Fi in the 2.4 GHz Band 
-- [**802.11b**-1999]() `r1.1999->`**`2007`** _`Amendment 1`_ **WiFi1** :: **HR-DSSS** : Higher-Speed Physical Layer Extension in the 2.4 GHz Band 
-- [**802.11a**-1999](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11a) `r1.1999->`**`2007`** _`Amendment 2`_ **WiFi2** :: **OFDM** : High-speed Physical Layer @ 5 GHz
-- [**802.11g**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11g) `r1.2003->`**`2007`** _`Amendment 4`_ **WiFi3** :: **ERP**-OFDM & **ERP**-DSSS/CCK : Further Higher Data Rate Extension @ 2.4 GHz
-- [**802.11n**-2009](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11n) `r2.2009->`**`2012`** _`Amendment 5`_ **WiFi4** :: **MIMO**-OFDM : MIMO antenas with OFDM tech | Higher Throughput
-- [**802.11ac**-2013](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11ac) `r3.2013->`**`2016`** _`Amendment 4` **WiFi5** :: **VHT**, **MU-MIMO**, **Beamforming** : Enhancements below 6 GHz (only for 5GHz)
-- [**802.11ax**-2021](https://en.wikipedia.org/wiki/Wi-Fi_6) `r5.2021->`**`????`** _`Amendment 1`_ **WiFi6** :: **HE & OFDMA** High Efficiency WLAN | Throughput & High Density Enhancements
-- [**802.11be**-2023](https://en.wikipedia.org/wiki/IEEE_802.11be) **WiFi7** _EHT: Extremely High Throughput | Full lvl up!_
+- [**802.11 "Prime"**]() `1997 original` **Wi-Fi 0** :: **DSSS** or **FHSS** : Original 802.11 Standard | DS for Wi-Fi in the 2.4 GHz Band 
+- [**802.11b**-1999]() `r1.1999->`**`2007`** _`Amendment 1`_ **Wi-Fi 1** :: **HR-DSSS** : Higher-Speed Physical Layer Extension in the 2.4 GHz Band 
+- [**802.11a**-1999](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11a) `r1.1999->`**`2007`** _`Amendment 2`_ **Wi-Fi 2** :: **OFDM** : High-speed Physical Layer @ 5 GHz
+- [**802.11g**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11g) `r1.2003->`**`2007`** _`Amendment 4`_ **Wi-Fi 3** :: **ERP**-OFDM & **ERP**-DSSS/CCK : Further Higher Data Rate Extension @ 2.4 GHz
+- [**802.11n**-2009](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11n) `r2.2009->`**`2012`** _`Amendment 5`_ **Wi-Fi 4** :: **MIMO**-OFDM : MIMO antenas with OFDM tech | Higher Throughput
+- [**802.11ac**-2013](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11ac) `r3.2013->`**`2016`** _`Amendment 4`_ **Wi-Fi 5** :: **VHT**, **MU-MIMO**, **Beamforming** : Enhancements below 6 GHz (only for 5GHz)
+- [**802.11ax**-2021](https://en.wikipedia.org/wiki/Wi-Fi_6) `r5.2021->`**`????`** _`Amendment 1`_ **Wi-Fi 6** :: **HE & OFDMA** High Efficiency WLAN | Throughput & High Density Enhancements
+- [**802.11be**-2023](https://en.wikipedia.org/wiki/IEEE_802.11be) `r5.2023->`**`<<DRAFT>>`** _`Amendment 8`_ **Wi-Fi 7** :: **EHT** Extremely High Throughput | Wi-Fi 7 lvl up!!!
 
 ### 📡🏆 IEEE 802.11-2020 Ratified Amendments `PHY` _(NON-WiFi WLANs)_
-- [**802.11ad**-2012](https://en.wikipedia.org/wiki/IEEE_802.11ad) `r3.2012->`**`2016`** _`Amendment 3` **DMG** :: Uses MGWS, GCMP, CCMP | VHT @ 60 GHz in WiGig Networks
-- [**802.11af**-2013](https://en.wikipedia.org/wiki/IEEE_802.11af) `r3.2013->`**`2016`** _`Amendment 5` **TVWS** :: Allows the use of wireless in the TV white space (TVWS)
+- [**802.11ad**-2012](https://en.wikipedia.org/wiki/IEEE_802.11ad) `r3.2012->`**`2016`** _`Amendment 3`_ **DMG** :: Uses MGWS, GCMP, CCMP | VHT @ 60 GHz in WiGig Networks
+- [**802.11af**-2013](https://en.wikipedia.org/wiki/IEEE_802.11af) `r3.2013->`**`2016`** _`Amendment 5`_ **TVWS** :: Allows the use of wireless in the TV white space (TVWS)
 - [**802.11ah**-2016](https://en.wikipedia.org/wiki/IEEE_802.11ah) `r4.2016->`**`2020`** _`Amendment 2`_ **Wi-Fi HaLow** :: Use of Wi-Fi in frequencies below 1 GHz | IoT & M2M Communications
 - [**802.11ay**-2021](https://en.wikipedia.org/wiki/IEEE_802.11ay) `r5.2021->`**`????`** _`Amendment 2`_ Faster speeds & longer range, above 45 GH | TV & Monitor Connectivity
 - [**802.11bb**-2023](https://www.railwayinnovationhub.com/aprobado-el-primer-estandar-lifi-ieee-802-11bb/) `r5.2023->`**`????`** _`Amendment 5`_ **Li-Fi** :: Wireless Communication using light waves
@@ -276,8 +276,8 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 
 ### 🤖📡IEEE 802.11-2020 Ratified Amendments `QoS`
 - [**802.11e**-2005](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11e) `r1.2005->`**`2007`** _`Amendment 8`_ **Voice over WLAN y streaming multimedia QoS.** | MAC Quality of Service Enhancements 
-- [**802.11ae**-2012](https://support.accessagility.com/hc/wifi-glossary-802.11ae) `r3.2012->`**`2016`** _`Amendment 1` **QMF** :: Defines new QoS Management Frame (QMF) (not used on voice)
-- [**802.11aa**-2012](https://home.agh.edu.pl/~kks/802.11aa-2-CR.pdf) `r3.2012->`**`2016`** _`Amendment 2` :: QoS enhancements for robust audio & video streaming
+- [**802.11ae**-2012](https://support.accessagility.com/hc/wifi-glossary-802.11ae) `r3.2012->`**`2016`** _`Amendment 1`_ **QMF** :: Defines new QoS Management Frame (QMF) (not used on voice)
+- [**802.11aa**-2012](https://home.agh.edu.pl/~kks/802.11aa-2-CR.pdf) `r3.2012->`**`2016`** _`Amendment 2`_ :: QoS enhancements for robust audio & video streaming
 
 ---
 
@@ -285,14 +285,14 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 - [**802.11k**-2008](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11k) `r2.2008->`**`2012`** _`Amendment 1`_ **RRM** :: TPC, client & channel stats, neighbor report | helps roaming
 - [**802.11r**-2008](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11r) `r2.2008->`**`2012`** _`Amendment 2`_ **BSS transition (FT) / Fast Secure Roaming** :: CKM, PKC, OKC, fast session resumption
 - [**802.11v**-2011](https://en.wikipedia.org/wiki/IEEE_802.11v-2011) `r2.20011->`**`2012`** _`Amendment 8`_ Network assisted Roaming (APs send info messages to associated STAs) | Network assisted Power Savings (longer sleep states)
-- [**802.11ai**-2016](https://mrncciew.com/2023/09/25/fils-fast-initial-link-setup/) `r4.2016->`**`2020`** _`Amendment 1`_ ***FILS** Fast Initial Link Setup :: High-density environments for users association to robust network
-- [**802.11aq**-2018](https://www.fiercewireless.com/wireless/ieee-releases-802-11aq-to-better-detect-wlan-availability) _Delivery of network service info prior to the association of STA to the network. Offer the STA ability to make informed decisions about which network to connect to._
+- [**802.11ai**-2016](https://mrncciew.com/2023/09/25/fils-fast-initial-link-setup/) `r4.2016->`**`2020`** _`Amendment 1`_ **FILS** Fast Initial Link Setup :: High-density environments for users association to robust network
+- [**802.11aq**-2018](https://www.fiercewireless.com/wireless/ieee-releases-802-11aq-to-better-detect-wlan-availability) `r4.2018->`**`2020`** _`Amendment 5`_ Pre-Association Discovery | APs -> STA info for associatios desicions
 
 ---
 
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments `Vehicular`
 - [**802.11p**-2010](https://en.wikipedia.org/wiki/IEEE_802.11p) `r2.2009->`**`2012`** _`Amendment 6`_ **WAVE & ITS** :: Wireless access in vehicular environments (WAVE). Required to support intelligent transportation systems (ITS)
-- [**802.11bd**-2022](https://standards.ieee.org/ieee/802.11bd/7451/) _**V2X** next generation vehicle-to-everything (V2X) communication in the 5.9 GHz & 60 GHz bands._ 
+- [**802.11bd**-2022](https://standards.ieee.org/ieee/802.11bd/7451/) `r5.2023->`**`<<DRAFT>>`** _`Amendment 7`_ **V2X** :: next generation vehicle-to-everything (V2X) communication in the 5.9 GHz & 60 GHz bands 
 
 ---
 
@@ -308,15 +308,14 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 ---
 
 ### 🤖📡IEEE 802.11-2020 Ratified Amendments `Battery Savers`, `Efficience` & `Performance`
-- [802.11ba-2021](https://standards.ieee.org/ieee/802.11ba/6896/) `r5.2021->`**`????`** _`Amendment 3`_ **WUR** :: Increase battery life of devices (ex. powered IoT devices)
+- [802.11ba-2021](https://standards.ieee.org/ieee/802.11ba/6896/) `r5.2021->`**`????`** _`Amendment 3`_ **WUR** Defined Wake Up Radio :: Increase battery life of devices (ex. powered IoT devices)
 - [802.11az-2023](https://standards.ieee.org/ieee/802.11az/7226/) `r5.2023->`**`????`** _`Amendment 4`_ :: Improves physical location tracking & positioning, energy efficiency | SmartBuiding & IoT_
-- [802.11bc-2023]([https://standards.ieee.org/ieee/802.11az/7226/](https://arxiv.org/abs/2104.11811)) `r5.2023->`**`????`** _`Amendment 5`_ **Enhanced Broadcast Service** :: data rate control based on broadcast ACK 
+- [802.11bc-2023](https://arxiv.org/abs/2104.11811) `r5.2023->`**`????`** _`Amendment 5`_ **Enhanced Broadcast Service** :: data rate control based on broadcast ACK 
 
 
 
 
 
-        
 ## IEEE 802.11 Draft Amendments (2023 revised)
 - [802.11ba-2021](https://standards.ieee.org/ieee/802.11ba/6896/) `r5.2021->`**`????`** _`Amendment 3`_ **WUR** :: Increase battery life of devices (ex. powered IoT devices)
 - [802.11az-2023](https://standards.ieee.org/ieee/802.11az/7226/) `r5.2023->`**`????`** _`Amendment 4`_ :: Improves physical location tracking & positioning, energy efficiency | SmartBuiding & IoT_
