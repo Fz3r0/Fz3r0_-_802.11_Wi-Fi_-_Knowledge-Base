@@ -22,7 +22,7 @@ _Wi-Fi is not an abbreviation for “wireless fidelity”; the name was created 
 ## 📡🏺🧑‍🏫 History of Wireless Networks & Wi-Fi
 _The one who knows the past can build the future. Building the future, and keeping the past alive – are one and the same thing._
 
-### 🏺 History of Network Communications & Internet
+### 🏺🌐 History of Network Communications & Internet
 - [Evolution of Computer Networks @ University of Notre Dame](https://www3.nd.edu/~dwang5/courses/spring21/pdf/evolution.pdf) _`educational resource`_
 - [Conectando al Mundo: La Historia de las Redes](https://www.youtube.com/watch?v=Mz2gjthKtPo) _`video`_
 - [Historia y Evolución de las redes](https://www.youtube.com/watch?v=BkmQAXhTi9w) _`video`_
@@ -31,7 +31,7 @@ _The one who knows the past can build the future. Building the future, and keepi
 
 ---
 
-### 🏺 History of Wireless Local Area Networks (WLANs) & Wi-Fi
+### 🏺📡 History of Wireless Local Area Networks (WLANs) & Wi-Fi
 - History of Wireless Local Area Networks
 - [Overview of Wireless History](https://www.youtube.com/watch?v=CHbiQTskK9Q)
 - [History of Wireless Communication](https://www.youtube.com/watch?v=PU6JO8KPRs0)
@@ -51,7 +51,7 @@ _The one who knows the past can build the future. Building the future, and keepi
 
 ---
 
-### 🏺 Historia de Redes, Internet, Telecomunicaciones y Radiodifusión en México
+### 🏺🇲🇽 Historia de Redes, Internet, Telecomunicaciones y Radiodifusión en México
 - [Telecomunicaciones y Radiodifusión en México @ UNAM](http://derecho.posgrado.unam.mx/site_cpd/public/publis_cpd/telecomyradiodifenMX.pdf)
 - Historia de Wi-Fi e internet en Mexico
 - [Ley de Vias Generales de comunicacion 1940]()
@@ -180,7 +180,7 @@ _IEEE is the world's largest technical professional organization dedicated to ad
 
 ---
 
-### 👮 Regulatory Domains AKA Regulotory Bodies (Wireless)
+### 👮📡 Regulatory Domains AKA Regulotory Bodies (Wireless)
 _Set of rules and policies providing the end user with configurations of country code, calibration channel, and output power settings for a **wireless** device set up in a specific area_
 - [Regulatory Body: ETSI]()
 - [Regulatory Body: FCC - Federal Communications Commission]()
@@ -189,9 +189,9 @@ _Set of rules and policies providing the end user with configurations of country
 
 ---
 
-### 👮 FCC Federal Communications Commission
+### 👮🇺🇸 FCC Federal Communications Commission
 
-### 👮 Regulaciones y Organizaciones Mexicanas
+### 👮🇲🇽 Regulaciones y Organizaciones Mexicanas
 - [IFT: Instituto Federal de Telecomunicaciones](https://www.ift.org.mx/espectro-radioelectrico#:~:text=En%20este%20sentido%2C%20la%20Unidad,y%20la%20Comunicaci%C3%B3n%20V%C3%ADa%20Sat%C3%A9lite.)
 - [Unidad de Espectro Radioeléctrico del IFT]()
 - [Ley Federal de Telecomunicaciones y Radiodifusión](https://www.ucol.mx/content/cms/13/file/federal/LEY_FED_DE_TELECOMUNICACIONES.pdf)
