@@ -311,14 +311,14 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 ---
 
 ### 🤖📡IEEE 802.11-2020 Ratified Amendments `Battery Savers`, `Efficience` & `Performance`
-- [**802.11ba**-2021](https://standards.ieee.org/ieee/802.11ba/6896/) `r5.2021->`**`<<DRAFT>>`** _`Amendment 3`_ **WUR** Defined Wake Up Radio :: Increase battery life of devices (ex. powered IoT devices)
+- [**802.11ba**-2021](https://standards.ieee.org/ieee/802.11ba/6896/) `r5.2021->`**`<<DRAFT>>`** _`Amendment 3`_ **WUR** Defined Wake Up Radio :: Increase battery life of devices 
 - [**802.11bc**-2023](https://arxiv.org/abs/2104.11811) `r5.2023->`**`<<DRAFT>>`** _`Amendment 5`_ **Enhanced Broadcast Service** :: data rate control based on broadcast ACK 
 
 ---
 
 ### 🤖📡IEEE 802.11-2020 Ratified Amendments `Location Tracking`, `Movement Detection` & `Distance Meassurement`
-- [**802.11az**-2023](https://standards.ieee.org/ieee/802.11az/7226/) `r5.2023->`**`<<DRAFT>>`** _`Amendment 4`_ :: Improves physical location tracking & positioning, energy efficiency | SmartBuiding & IoT_
-- [**802.11bf**-2023](https://www.xataka.com/privacidad/wi-fi-802-11bf-asi-nuevo-estandar-que-podra-detectar-movimiento-medir-distancias-funcion-senal) `r5.2023->`**`<<DRAFT>>`** _`Amendment 9`_ **SENS** WLAN sensing :: Movement detection & Distance using signal 
+- [**802.11az**-2023](https://standards.ieee.org/ieee/802.11az/7226/) `r5.2023->`**`<<DRAFT>>`** _`Amendment 4`_ :: Physical location tracking & positioning, energy efficiency | SmartBuiding & IoT
+- [**802.11bf**-2023](https://www.xataka.com/privacidad/wi-fi-802-11bf-asi-nuevo-estandar-que-podra-detectar-movimiento-medir-distancias-funcion-senal) `r5.2023->`**`<<DRAFT>>`** _`Amendment 9`_ **SENS** WLAN sensing :: Movement detection & Distance using RF signal 
 
 ## 🛰️📡🗒️ IEEE 802.11 `Draft` Amendments (2023 revised)
 - [**802.11ax**-2021](https://en.wikipedia.org/wiki/Wi-Fi_6) `r5.2021->`**`<<DRAFT>>`** _`Amendment 1`_ **Wi-Fi 6** :: **HE & OFDMA** High Efficiency WLAN | Throughput & High Density Enhancements
