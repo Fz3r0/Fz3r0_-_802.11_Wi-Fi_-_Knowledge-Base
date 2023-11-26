@@ -217,7 +217,7 @@ _IEEE Standard for Information Technology—Telecommunications and Information E
 - **[IEEE 802.11-2020 Preview: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications](https://thewifiofthings.com/wp-content/uploads/2021/08/802.11-2020-Preview.pdf)**
 - **[IEEE 802.11-2020 **FULL**: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications](https://ieeexplore.ieee.org/document/9363693)**
 
-## 🛰️📡🏆 IEEE 802.11-2020 Ratified Amendments
+## 🛰️📡🏆 IEEE 802.11-2020 `Ratified` Amendments
 _The original standard was published in_ **`1997`**, _revised in_ **`1999`** _with MIB changes, and reaffirmed in_ **`2003`** <br>
 Revision 1 Publication: **`2007`** :: _incomporates revision of IEEE Std: `1999`_ <br>
 Revision 2 Publication: **`2012`** :: _incomporates revision of IEEE Std: `2007`_ <br>
@@ -231,7 +231,7 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 - [OFFICIAL IEEE 802.11 WORKING GROUP PROJECT TIMELINES - 2023-10-27](https://www.ieee802.org/11/Reports/802.11_Timelines.htm) 
 - [Diferentes protocolos de Wi-Fi y velocidades de datos @ Intel](https://www.intel.la/content/www/xl/es/support/articles/000005725/wireless/legacy-intel-wireless-products.html) _`tabla`_
 - [IEEE 802.11](https://en.wikipedia.org/wiki/IEEE_802.11) _`Wiki`_
-- [IEEE 802.11 Standard and Amendments @ WiFi WIZARD of Oz](https://wifiwizardofoz.com/802-11-standard-and-amendments/)
+- [IEEE 802.11 Standard and Amendments @ WiFi WIZARD of Oz](https://wifiwizardofoz.com/802-11-standard-and-amendments/) _`lista + info`_
 
 ---
 
@@ -320,10 +320,7 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 - [**802.11az**-2023](https://standards.ieee.org/ieee/802.11az/7226/) `r5.2023->`**`<<DRAFT>>`** _`Amendment 4`_ :: Improves physical location tracking & positioning, energy efficiency | SmartBuiding & IoT_
 - [**802.11bf**-2023](https://www.xataka.com/privacidad/wi-fi-802-11bf-asi-nuevo-estandar-que-podra-detectar-movimiento-medir-distancias-funcion-senal) `r5.2023->`**`<<DRAFT>>`** _`Amendment 9`_ **SENS** WLAN sensing :: Movement detection & Distance using signal 
 
-
-
-
-## IEEE 802.11 Draft Amendments (2023 revised)
+## 🛰️📡🗒️ IEEE 802.11 `Draft` Amendments (2023 revised)
 - [**802.11ax**-2021](https://en.wikipedia.org/wiki/Wi-Fi_6) `r5.2021->`**`<<DRAFT>>`** _`Amendment 1`_ **Wi-Fi 6** :: **HE & OFDMA** High Efficiency WLAN | Throughput & High Density Enhancements
 - [**802.11ay**-2021](https://en.wikipedia.org/wiki/IEEE_802.11ay) `r5.2021->`**`<<DRAFT>>`** _`Amendment 2`_ Faster speeds & longer range, above 45 GH | TV & Monitor Connectivity
 - [**802.11ba**-2021](https://standards.ieee.org/ieee/802.11ba/6896/) `r5.2021->`**`<<DRAFT>>`** _`Amendment 3`_ **WUR** :: Increase battery life of devices (ex. powered IoT devices)
@@ -337,8 +334,7 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 - [**802.11bi**-2023](https://datatracker.ietf.org/meeting/112/materials/slides-112-madinas-ieee-80211bhbi-update-01) `r5.2023->`**`<<DRAFT>>`** _`Amendment 11`_ **Enhanced Data Privacy** :: 
 - [**802.11me**-2023](https://wballiance.com/new-anqp-elements-guidelines-whitepaper/) `r5.2023->`**`<<DRAFT>>`** _`Amendment 12`_ **ANQP** Access Network Query Protocol :: important part in furthering the adoption of Passpoint & WBA OpenRoaming
 
-
-## IEEE 802.11 Defunct Amendments
+## 🪦⚰️📡 IEEE 802.11 `Defunct` Amendments
 - [**802.11F**](https://standards.ieee.org/ieee/802.11F/1171/) **Withdrawn in 2006** :: multi-vendor Access Point (AP) interoperability within the DS
 - [**802.11T**](https://en-academic.com/dic.nsf/enwiki/1333888) **Withdrawn in 2008** :: **WPP** Wireless Performance Prediction 
 - [**802.11bg**]()  **unassigned** :: likely to avoid confusion by combining 802.11b/g
