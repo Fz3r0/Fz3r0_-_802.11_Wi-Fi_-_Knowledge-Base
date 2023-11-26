@@ -339,8 +339,8 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 
 
 ## IEEE 802.11 Defunct Amendments
-- 802.11F
-- 802.11T 
+- [**802.11F**](https://standards.ieee.org/ieee/802.11F/1171/) **Withdrawn in 2006** :: multi-vendor Access Point (AP) interoperability within the DS
+- [**802.11T**](https://en-academic.com/dic.nsf/enwiki/1333888) **Withdrawn in 2008** :: **WPP** Wireless Performance Prediction 
 - [**802.11bg**]()  **unassigned** :: likely to avoid confusion by combining 802.11b/g
 
 ## 🌎 Networking Models: OSI & TCP/IP
