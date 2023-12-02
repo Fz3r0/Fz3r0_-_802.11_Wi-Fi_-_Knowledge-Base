@@ -254,8 +254,8 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 ---
 
 ### 📡🏆 IEEE 802.11-2020 Ratified Amendments `PHY` _("Traditional" Wi-Fi WLANs)_
-- [**802.11 "Prime"**]() `1997 original` **Wi-Fi 0** :: **DSSS** or **FHSS** : Original 802.11 Standard | DS for Wi-Fi in the 2.4 GHz Band 
-- [**802.11b**-1999]() `r1.1999->`**`2007`** _`Amendment 1`_ **Wi-Fi 1** :: **HR-DSSS** : 2.4 GHz 
+- [**802.11 "Prime"**]() `1997 original` **Wi-Fi 0** :: **`DSSS`** or **`FHSS`** : Original 802.11 Standard | DS for Wi-Fi : 2.4 GHz
+- [**802.11b**-1999]() `r1.1999->`**`2007`** _`Amendment 1`_ **Wi-Fi 1** :: **`HR-DSSS`** : 2.4 GHz 
 - [**802.11a**-1999](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11a) `r1.1999->`**`2007`** _`Amendment 2`_ **Wi-Fi 2** :: **`OFDM`** : 5 GHz
 - [**802.11g**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11g) `r1.2003->`**`2007`** _`Amendment 4`_ **Wi-Fi 3** :: **`ERP`**-OFDM & **ERP**-DSSS/CCK : 2.4 GHz
 - [**802.11n**-2009](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11n) `r2.2009->`**`2012`** _`Amendment 5`_ **Wi-Fi 4** :: **`MIMO`**-OFDM : 2.4 & 5 GHz
