@@ -281,7 +281,7 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 ---
 
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments `Channel Detection & Hopping`
-- [**802.11h**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11h) `r1.2003->`**`2007`** _`Amendment 5`_ **DFS, TPC** :: Enforces DFS events detect & avoid interference (5 GHz satellite & radars) | Meet Regulations in Europe
+- [**802.11h**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11h) `r1.2003->`**`2007`** _`Amendment 5`_ **DFS, TPC** :: Enforces DFS events - detect & avoid interference (5 GHz satellite & radars)
 
 ---
 
