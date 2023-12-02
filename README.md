@@ -232,7 +232,7 @@ _The most widely used IEEE 802 standards are for Ethernet, Bridging and Virtual 
 ### 👑🪖 IEEE 802 Standards: List
 
 - IEEE 802.1: Bridging & Management
-- IEEE 802.3: Ethernet
+- [IEEE 802.3: Ethernet](https://en.wikipedia.org/wiki/IEEE_802.3) _Full List_
 - IEEE 802.11: Wireless LANs
 - IEEE 802.15: Wireless Specialty Networks (WSN)
 - IEEE 802.16: Broadband Wireless MANs
