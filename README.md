@@ -537,11 +537,11 @@ Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx usi
 
 
 
+# 802.11 Design
 
-## 802.11 Design
-
-## Best Practices
+## Design Best Practices
 - [Bigger Aint Always Better @ Bad-Fi](https://badfi.com/blog/2016/1/25/bigger-aint-always-better) `best practices`
+
 
 ## 802.11 WLAN Network Architecture
 - STA :: MAC & PHY inside ::
@@ -549,10 +549,26 @@ Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx usi
 - QoS-STA
 - AP
 
+
 ## 802.11 WLAN Service Sets
 - [Wireless LAN 802.11 Service Sets](https://networklessons.com/cisco/ccna-200-301/wireless-lan-802-11-service-sets)
 
 ### BSS: Basic Service Set
+_The basic building block of an 802.11 Network_
+- BSS
+
+### IBSS: Independent Basic Service Set
+_(Less used & not so good...) Independent basic building block of an 802.11 Network_
+- IBSSS
+- Ad-Hoc
+- Peer-to-Peer
+
+#### BSSID: Basic Service Set Identifier
+_Identifier very similar to a MAC Address to diferentiate one BSS from another_
+- BSSID
+
+#### BSA: Basic Service Area
+- BSSA
 
 
 ## More
