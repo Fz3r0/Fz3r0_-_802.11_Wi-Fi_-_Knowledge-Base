@@ -242,8 +242,7 @@ Revision 3 Publication: **`2016`** :: _incomporates revision of IEEE Std: `2012`
 Revision 4 Publication: **`2020`** :: _incomporates revision of IEEE Std: `2016`_ <<< **actual** <br>
 _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 ???` this will include Drafts 2020 -> ???_ <br>
 
-- [Comparison of IEEE 802.11 PHY (physical layer) standards](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/fcf66648-dd65-4d30-92fa-f2d961766cc3) _`tabla-1`_
-- [Comparison of IEEE 802.11 PHY (physical layer) standards II](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/7db02bcf-e465-46e5-b420-ddab1a565945) _`tabla-2`_
+- [Comparison of IEEE 802.11 PHY (physical layer) standards](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/7db02bcf-e465-46e5-b420-ddab1a565945) _`tabla`_
 - [IEEE 802.11 Ratified Amandments Timeline](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/50f113ce-0f74-4017-9704-1d80660d65cd) _`tabla`_
 - [IEEE 802.11 Ratified Amandments & Standards Timeline](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/db2d576f-e0f4-4c58-a048-0a6d9cd5e421) _`tabla`_
 - [IEEE 802.11 Alphabet Soup](https://wifivitae.com/2021/11/30/80211-soup/) _`tabla + info`_
