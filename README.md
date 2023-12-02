@@ -596,25 +596,38 @@ Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx usi
 - [Bigger Aint Always Better @ Bad-Fi](https://badfi.com/blog/2016/1/25/bigger-aint-always-better) `best practices`
 
 
-## 802.11 WLAN Network Architecture
+## Components of 802.11 WLAN Network Architecture
+_The IEEE 802.11 architecture consists of several components that interact to provide a WLAN that supports STA mobility transparently to upper layers._
+- [Components of 802.11 WLAN Network Architecture]()
+
+### 802.11 Basic Components & Devices
 - STA :: MAC & PHY inside ::
-- AP-STA
 - QoS-STA
+- AP-STA
 - AP
 
+---
 
-## 802.11 WLAN Service Sets
+### 802.11 WLAN Service Sets
 - [Wireless LAN 802.11 Service Sets](https://networklessons.com/cisco/ccna-200-301/wireless-lan-802-11-service-sets)
 
-### BSS: Basic Service Set
+#### BSS: Basic Service Set
 _The basic building block of an 802.11 Network_
 - BSS
 
-### IBSS: Independent Basic Service Set
-_(Less used & not so good...) Independent basic building block of an 802.11 Network_
-- IBSSS
-- Ad-Hoc
-- Peer-to-Peer
+#### IBSS: Independent Basic Service Set
+_Most basic type of IEEE 802.11 LAN. No APs or Routers :: Ad-Hoc & Peer-to-Peer devices_
+- [Introduction of Independent Basic Service Set (IBSS)](https://www.geeksforgeeks.org/introduction-of-independent-basic-service-set-ibss/) `Info`
+
+#### PBSS: Personal Basic Service Set
+_Similar to the IBSS, the PBSS is a type of IEEE 802.11 LAN in which STAs communicate directly with each other._
+
+#### DS: Distribution System
+
+#### ESS: Extended Service Set
+
+#### Area: 
+
 
 #### BSSID: Basic Service Set Identifier
 _Identifier very similar to a MAC Address to diferentiate one BSS from another_
@@ -623,6 +636,13 @@ _Identifier very similar to a MAC Address to diferentiate one BSS from another_
 #### BSA: Basic Service Area
 - BSSA
 
+#### LAN + WLAN: Integration with non-IEEE-802.11 LANs
+
+#### RSNA: Robust security network association
+
+#### QoS BSS
+
+---
 
 ## More
 - LAN Core, Distribution & Access
