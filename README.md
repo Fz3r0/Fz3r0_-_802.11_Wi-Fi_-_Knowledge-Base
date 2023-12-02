@@ -372,29 +372,36 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 
 ---
 
-### `1983`: Arpanet Reference Model `RFC 871` _legacy_ 
+### `1983`: Arpanet Reference Model `RFC 871` :: 3 Layers | _legacy_ 
 - [RFC 871: A perspective on the Arpanet Reference Model](https://www.rfc-editor.org/rfc/rfc871.html)
 
 ---
 
-### `1989`: Internet Standard `RFC 1122` _Legacy_
+### `1989`: Internet Standard `RFC 1122` :: 4 Layers | _Legacy_
 - [RFC 1122: Requirements for Internet Hosts -- Communication Layers](https://www.rfc-editor.org/rfc/rfc1122.html)
 
 ---
 
-### `2000`: Internet Model `Cisco Academy`
+### `2000`: Internet Model `Cisco Academy` :: 4 Layers
 [Internet model](https://books.google.com.mx/books?id=JVAk7r6jHF4C&redir_esc=y)
 
 ---
 
-### TCP/IP Model
+### TCP/IP Model :: 5 Layers
 - [TCP/IP Model](https://en.wikipedia.org/wiki/Internet_protocol_suite) :: All models : _`Wiki`_
-- - [TCP/IP Model](https://en.wikipedia.org/wiki/Internet_protocol_suite) :: All models : _`Table`_ 
+- [TCP/IP Model](https://en.wikipedia.org/wiki/Internet_protocol_suite) :: All models : _`Table`_ 
 - [TCP/IP Model @ Fortinet](https://www.fortinet.com/resources/cyberglossary/tcp-ip-model-vs-osi-model) :: _5 Layers_
+
+#### TCP/IP Model Versions
+- [TCP/IP: 5-layer reference model]() Kozierok, Comer :: `4 + 1 Layers`
+- [TCP/IP: 5-layer reference model]() Tanenbaum :: `5 Layers`
+- [TCP/IP: 5-layer reference model]() Forouzan, Kurose :: `5 Layers`
+- [TCP/IP: 5-layer reference model]() Stallings :: `5 Layers`
+
 
 ---
 
-### `1983` - `1994`: OSI model `ISO/IEC 7498-1:1994`
+### `1983` - `1994`: OSI model `ISO/IEC 7498-1:1994` :: 7 Layers
 - [OSI Model](https://en.wikipedia.org/wiki/OSI_model) _`Wiki`_
 - [History of the OSI Model and its origins](https://blog.domotz.com/know-your-networks/history-of-the-osi-model/) _`Information`_
 - `1983` - Basic Reference Model for Open Systems Interconnection
