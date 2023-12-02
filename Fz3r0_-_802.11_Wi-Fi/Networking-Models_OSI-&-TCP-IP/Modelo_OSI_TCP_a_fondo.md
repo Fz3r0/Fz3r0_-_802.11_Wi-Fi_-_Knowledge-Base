@@ -31,9 +31,9 @@ Esto se puede visualizar así:
 
 ### Layers en `OSI Fz3r0 Custom`
 
-2. Upper Sublayer 2 - `LLC`
-2. Lower Sublayer 2 - `MAC`
-1. Sublayer 1 - `PHY`
+2. Upper Sublayer 2 - **`LLC`** _(Baja relevancia para análisis)_
+2. Lower Sublayer 2 - **`MAC`**
+1. Sublayer 1 - **`PHY`**
 
 Es importante solo recordar que "El sublayer MAC, también es parte del sublayer PHY", explicaré más a detalle este proceso en el siguiente bloque.
 
