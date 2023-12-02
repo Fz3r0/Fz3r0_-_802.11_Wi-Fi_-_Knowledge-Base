@@ -543,11 +543,22 @@ Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx usi
 ## Best Practices
 - [Bigger Aint Always Better @ Bad-Fi](https://badfi.com/blog/2016/1/25/bigger-aint-always-better) `best practices`
 
+## 802.11 WLAN Network Architecture
+- STA :: MAC & PHY inside ::
+- AP-STA
+- QoS-STA
+- AP
+
+## 802.11 WLAN Service Sets
+- [Wireless LAN 802.11 Service Sets](https://networklessons.com/cisco/ccna-200-301/wireless-lan-802-11-service-sets)
+
+### BSS: Basic Service Set
+
+
 ## More
 - LAN Core, Distribution & Access
 - Wireless LAN Topologies
 - WLAN Design Concepts
-- 802.11 WLAN Network Architecture
 - Power over Ethernet (PoE)
 - Define Specifications for the WLAN 
 - Network Design, Installation, and Management
