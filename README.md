@@ -40,15 +40,16 @@ _The one who knows the past can build the future. Building the future, and keepi
 - [History of WLANs | WLPC Wireless LAN Weekly EP 48](https://www.youtube.com/watch?v=QN3Dnl3WoE4)
 - [A History of Wireless Standards: Wi-Fi Back to Basics @ Extreme Networks](https://www.extremenetworks.com/resources/blogs/a-history-of-wireless-standards-wi-fi-back-to-basics) <br><br>
 
-### 🗓️📡 Wi-Fi 802.11 Timeline
+---
 
+### 🗓️📡 Wi-Fi 802.11 Timeline
 - [`1942` :: Spread Spectrum Invention by Hedy Lamarr & George Carl Johann Anthei](https://patents.google.com/patent/US2292387A/en) _`U.S. Patent 2,292,387`_
 - [`1970` :: ALOHAnet - The first Wireless Network :: ALOHA random access & experimental UHF](https://en.wikipedia.org/wiki/ALOHAnet)
 - [`1997` :: Standardisation of WiFi @ IEEE](https://standards.ieee.org/beyond-standards/the-evolution-of-wi-fi-technology-and-standards/)
 - [`1999` :: Creation of Wi-Fi Alliance | Wi-Fi logo | Public Wi-Fi 802.11b @ 2.4 GHz](https://www.gregennis.net/wifi-fun-facts-2/the-early-history-of-the-wi-fi-logo)
-- [`2003` :: Wi-Fi Evolution to 802.11g | 54mbps @ 2.4ghz]()
-- [`2007` :: Wi-Fi Evolution to 802.11n | OFDM 2.4 & 5 GHz]()
-- [`2016` :: Wi-Fi Evolution to 802.11ac | OFDM 2.4 & 5 GHz]()
+- [`2003` :: Wi-Fi Evolution to 802.11g | 54mbps @ 2.4ghz](https://en.wikipedia.org/wiki/IEEE_802.11g-2003)
+- [`2009` :: Wi-Fi Evolution to 802.11n | OFDM 2.4 & 5 GHz](https://en.wikipedia.org/wiki/IEEE_802.11n-2009)
+- [`2014` :: Wi-Fi Evolution to 802.11ac | OFDM 2.4 & 5 GHz](https://es.wikipedia.org/wiki/IEEE_802.11ac)
 - [`2020` :: Actual Wi-Fi | OFDM 2.4 & 5 GHz]()
 - [`2024 -->` :: Actual Wi-Fi & Future Transition | Giga & 10Giga | 802.11ax/be | 5 & 6 GHz]()
 
