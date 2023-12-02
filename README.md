@@ -357,15 +357,32 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 - [**802.11T**](https://en-academic.com/dic.nsf/enwiki/1333888) **Withdrawn in 2008** :: **WPP** Wireless Performance Prediction 
 - [**802.11bg**]()  **unassigned** :: likely to avoid confusion by combining 802.11b/g
 
-## 🌎 Networking Models: OSI & TCP/IP
+## 🌎 Networking Models
 
-- [The TCP/IP & OSI Models @ Global Knowledge](https://mochieng.files.wordpress.com/2012/04/wp_nw_tcp-ip1.pdf)
+- [All Networking Models Compared](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/6cc880c6-1e1f-4f14-be09-005120bbd8db) `table`
+- [The TCP/IP & OSI Models compared@ Global Knowledge](https://mochieng.files.wordpress.com/2012/04/wp_nw_tcp-ip1.pdf)
+
+### `1983`: Arpanet Reference Model `RFC 871` _legacy_ 
+- [RFC 871: A perspective on the Arpanet Reference Model](https://www.rfc-editor.org/rfc/rfc871.html)
+
+### `1989`: Internet Standard `RFC 1122` _Legacy_
+- [RFC 1122: Requirements for Internet Hosts -- Communication Layers](https://www.rfc-editor.org/rfc/rfc1122.html)
+
+### `2007`: Internet model `Cisco Academy`
+[Internet model](https://books.google.com.mx/books?id=JVAk7r6jHF4C&redir_esc=y)
 
 ### OSI Model
-
 - [OSI Model]()
 - [Fz3r0 Extended OSI Model for 802.11 CWAP]()
-- [TCP/IP Model]()
+
+### TCP/IP Model
+- [TCP/IP Model](https://en.wikipedia.org/wiki/Internet_protocol_suite) :: All models : _`Wiki`_
+- - [TCP/IP Model](https://en.wikipedia.org/wiki/Internet_protocol_suite) :: All models : _`Table`_ 
+- [TCP/IP Model @ Fortinet](https://www.fortinet.com/resources/cyberglossary/tcp-ip-model-vs-osi-model) :: _5 Layers_
+
+### DoD Model _(Legacy)_
+
+
 
 ## 💊✉️🪆 Encapsulation & Decapsulation
 
