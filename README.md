@@ -538,6 +538,11 @@ Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx usi
 
 
 ## 802.11 Design
+
+## Best Practices
+- [Bigger Aint Always Better @ Bad-Fi](https://badfi.com/blog/2016/1/25/bigger-aint-always-better) `best practices`
+
+## More
 - LAN Core, Distribution & Access
 - Wireless LAN Topologies
 - WLAN Design Concepts
