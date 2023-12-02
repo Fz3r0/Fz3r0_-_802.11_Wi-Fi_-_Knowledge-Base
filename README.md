@@ -291,7 +291,7 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 - [**802.11u**-2011](https://en.wikipedia.org/wiki/IEEE_802.11u) `r2.2011->`**`2012`** _`Amendment 9`_ **Hotspot 2.0** AKA Wi-Fi Certified Passpoint | **WIEN** :: Network discovery & selection
 - [**802.11bh**-2023](https://datatracker.ietf.org/meeting/112/materials/slides-112-madinas-ieee-80211bhbi-update-01) `r5.2023->`**`<<DRAFT>>`** _`Amendment 10`_ **Random MAC** :: Randomized and Changing MAC Addresses
 - [**802.11bi**-2023](https://datatracker.ietf.org/meeting/112/materials/slides-112-madinas-ieee-80211bhbi-update-01) `r5.2023->`**`<<DRAFT>>`** _`Amendment 11`_ **Enhanced Data Privacy** :: 
-- [**802.11me**-2023](https://wballiance.com/new-anqp-elements-guidelines-whitepaper/) `r5.2023->`**`<<DRAFT>>`** _`Amendment 12`_ **ANQP** Access Network Query Protocol :: important part in furthering the adoption of Passpoint & WBA OpenRoaming
+- [**802.11me**-2023](https://wballiance.com/new-anqp-elements-guidelines-whitepaper/) `r5.2023->`**`<<DRAFT>>`** _`Amendment 12`_ **ANQP** Access Network Query Protocol :: For Passpoint & WBA OpenRoaming
   
 ---
 
