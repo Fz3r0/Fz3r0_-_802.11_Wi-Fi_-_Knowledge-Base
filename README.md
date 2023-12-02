@@ -603,8 +603,9 @@ Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx usi
 
 ### Wireless 802.11 Troubleshooting Methodologies
 
-- CWNA Troubleshooting Methodology
-- [CWAP Troubleshooting Methodology](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/e8b2b696-12ee-4f7a-b8d2-024b89137eed)
+- [CWNA: Troubleshooting Methodology](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/00e059e9-cd95-4f8c-8c8d-3a4ae111acd6)
+- [CWAP: Troubleshooting Methodology](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/e8b2b696-12ee-4f7a-b8d2-024b89137eed)
+- [WLAN Pros: Troubleshooting Best Practices](https://wlanprofessionals.com/wireless-troubleshooting-best-practices/)
 
 ---
 
