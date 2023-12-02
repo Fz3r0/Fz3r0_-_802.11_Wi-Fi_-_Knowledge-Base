@@ -688,6 +688,11 @@ Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx usi
 
 ## Wireless Certifications
 
+### CWNA: 
+
+### CWAP:
+- [CWAP Engineer Profile]()
+
 ### Analysis
 
 - CWAP CWNP
