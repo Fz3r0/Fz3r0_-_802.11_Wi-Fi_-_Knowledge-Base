@@ -145,6 +145,14 @@ _United Nations specialized agency that promotes the shared global use of the ra
 ---
 
 ### 🌎🎖️ IETF: Internet Engineering Task Force
+_(1986) It's the premiere standards development organization (SDO) for the Internet. The IETF makes voluntary standards that are often adopted by Internet users, network operators, and equipment vendors, and it thus helps shape the trajectory of the development of the Internet._
+- [Introduction to the IETF](https://www.ietf.org/about/introduction/) _`Official`_
+- [IETF: Internet Engineering Task Force](https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force) _`Wiki`_
+
+#### 🎖️ RFCs: 
+_RFC documents contain technical specifications and organizational notes for the Internet.'Internet Standard', 'Proposed Standard', 'Best Current Practice' BCP, 'Informational', 'Experimental' or 'Historic'._
+- [RFCs @ IETF](https://www.ietf.org/standards/rfcs/) _`Official`_
+- [RFC List @ RFC Editor](https://www.rfc-editor.org/rfc/) _`RFC Editor`_
 
 
 ## 🌎♻️🫅 Internet, Networking, Wireless & Telecomunication `Standards`
