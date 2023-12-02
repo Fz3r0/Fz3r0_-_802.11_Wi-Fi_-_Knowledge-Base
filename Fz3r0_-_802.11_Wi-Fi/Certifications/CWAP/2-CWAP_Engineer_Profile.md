@@ -18,7 +18,9 @@
 
 2. `Analyzing` & `Optimizing`: Analizar y optimizar el rendimiento de una red WLAN existente.
 
-3. `Future Problems`: Revisar el diseño, documentación y comportamiento de la red WLAN para resolver futuros problemas potenciales. 
+3. `Future Problems`: Revisar el diseño, documentación y comportamiento de la red WLAN para resolver futuros problemas potenciales.
+
+4. `Explaining 802.11 Protocol`: Capacidad de explicar a una persona que no tiene conocimientos profundos de 802.11 cuáles son los problemas y cómo resolverlos.  
 
 ---
 
