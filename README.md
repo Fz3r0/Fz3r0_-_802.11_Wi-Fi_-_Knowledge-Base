@@ -66,14 +66,32 @@ _The one who knows the past can build the future. Building the future, and keepi
 
 ### 🏺🇲🇽 Historia de Redes, Internet, Telecomunicaciones y Radiodifusión en México
 _Close your eyes... I remember..._
-- [El día que México se conectó a Internet por primera vez](https://tecscience.tec.mx/es/tecnologia/primera-conexion-internet-en-mexico/) _close your eyes..._
-- [Telecomunicaciones y Radiodifusión en México @ UNAM](http://derecho.posgrado.unam.mx/site_cpd/public/publis_cpd/telecomyradiodifenMX.pdf)
-- Historia de Wi-Fi e internet en Mexico
-- [Ley de Vias Generales de comunicacion 1940]()
+- [La historia de cómo México se conectó por primera vez a Internet: una carrera de tropiezos y maravillas entre la UNAM y el ITESM](https://www.xataka.com.mx/historia-de-la-tecnologia/historia-mexico-su-primera-conexion-a-internet-odisea-unam-itesm-satelites-viajes-camion)
+- [La evolución de Internet en México y su impacto en el ámbito educativo (De 1986 a 2006)](https://www.fergut.com/la-evolucion-de-internet-en-mexico-y-su-impacto-en-el-ambito-educativo-de-1986-a-2006/)
 - [La historia de Telmex - La primera empresa de Telecomunicaciones en México](https://www.youtube.com/watch?v=b5b5Tn1jBe0) _`video`_
-- [La historia del Internet en México]()
 - [Ley Federal de Radio y Comunicación]()
-- [Reforma Constitucional de Telecomunicaciones 2013]()
+- [Telecomunicaciones y Radiodifusión en México @ UNAM](http://derecho.posgrado.unam.mx/site_cpd/public/publis_cpd/telecomyradiodifenMX.pdf)
+
+#### 🏺🇲🇽 Timeline
+- [`1940`: Ley de Vias Generales de comunicacion]()
+- [`1984`: `Telepac` la primera red comercial que funcionaba con protocolo `X.25` (dependía directamente de Telmex)]()
+- [`1985`: Lanzamiento del Sistema Satelital Morelos - `Morelos-1` & `Morelos-2`](https://es.wikipedia.org/wiki/Sistema_Satelital_Morelos)
+- [`1986`: El primer acercamiento con el Internet :: Conexión entre `TEC de Monterrey` <=> `Universidad de Texas <<BITNET>>`](https://conecta.tec.mx/es/noticias/nacional/institucion/en-el-tec-mexico-se-conecto-por-primera-vez-la-internet-75anostec))
+- [`1988`: Se pleanea la conexión entre ITESM Edo Mex, UNAM CU y NCAR USA para conectar con la NSF y la NASA `via satélite`]()
+- [`1988`: 12/Oct/1988 El día que México se conectó a Internet por primera vez :: Conexión entre `TEC de Monterrey` <=> `Universidad de Texas <<THENET>>`](https://tecscience.tec.mx/es/tecnologia/primera-conexion-internet-en-mexico/) _close your eyes..._
+- [`1989`: 25/Abr/1989 La UNAM termina de instalar una antena para conectar `RedUNAM` con `NSFNet`]()
+- [`1989`: 20/Jul/1989 Primera conexión satelital a Internet :: Se realiza con éxito la primer prueba de conexión entre `RedUNAM` con `NSFNet`]() _"este primer mensaje es un pequeño paso para nosotros y es un gran paso para la universidad"_
+- [`1992`: Se Inaugura la Red Integral de Telecomunicaciones de la UNAM que conecta varias Universidades :: 13 nodos, 500km fibra, 12 enlaces satelitales]()
+- [`1994`: Se hace comercial `RedUNAM` - Primer abastecedor Comercial de servicios de Internet en México - `UNAM`]()
+- [`1994`: Se crea la `Red Nacional de Tecnología (RNT)` - Segundo abastecedor Comercial de servicios de Internet en México]()
+- [`1995`: Se nombra oficialmente al ITESM como Centro de Información de Redes en México (NIC-México)]()
+- [`1995`: El 1995 es considerado como "el año de Internet en México"]()
+- [`1996`: Mi primer contacto con Internet con 9 añitos : Gracias a Paco que estudiaba la preparatoria y su conexión al ITESM :)]()
+- [`1996`: Primeras páginas de Internet de Instituciones Oficiales Mexicanas como: Cámara de Diputados, la Cámara de Senadores de México, PEMEX, CJF]()
+- [`1997`: México acumula 150 ISPs al rededor del país]()
+- [`1998`: Primer ciberactivismo en México :: Matanza de Acteal ¡Stop War!](https://www.xataka.com.mx/legislacion-y-derechos/stop-the-war-in-mexico-o-como-la-matanza-de-acteal-provoco-uno-de-los-primeros-casos-de-ciberactivismo-de-la-historia)
+- [`2013`: Reforma Constitucional de Telecomunicaciones 2013]()
+- [`2023`: En México hay un total de 80.6 millones de personas conectadas, de las cuales un 95% usa el smartphone para ello]()
 
 ---
 
