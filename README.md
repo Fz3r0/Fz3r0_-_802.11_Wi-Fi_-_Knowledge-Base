@@ -404,17 +404,19 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 
 ---
 
-### TCP/IP Model :: 5 Layers
+### TCP/IP Model :: 4 & 5 Layers
 - [TCP/IP Model](https://en.wikipedia.org/wiki/Internet_protocol_suite) :: All models : _`Wiki`_
 - [TCP/IP Model](https://en.wikipedia.org/wiki/Internet_protocol_suite) :: All models : _`Table`_ 
-- [TCP/IP Model @ Fortinet](https://www.fortinet.com/resources/cyberglossary/tcp-ip-model-vs-osi-model) :: _5 Layers_
+- [TCP/IP Model @ Fortinet](https://www.fortinet.com/resources/cyberglossary/tcp-ip-model-vs-osi-model) :: _`5 Layers`_
+- [TCP/IP Model @ AVG](https://www.avg.com/en/signal/what-is-tcp-ip#:~:text=There%20are%20four%20layers%20of,internet%2C%20transport%2C%20and%20application.) _`4 Layers`_
 
 #### TCP/IP Model Versions
-- [TCP/IP: 5-layer reference model]() Kozierok, Comer :: `4 + 1 Layers`
-- [TCP/IP: 5-layer reference model]() Tanenbaum :: `5 Layers`
-- [TCP/IP: 5-layer reference model]() Forouzan, Kurose :: `5 Layers`
-- [TCP/IP: 5-layer reference model]() Stallings :: `5 Layers`
-
+- [`1981` :: Computer Networks](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Computer%20Networks.pdf) **Andrew S. Tanenbaum** & **David J. Wetherall** :: `5 Layers`
+- [`1985` :: Data and Computer Communications](https://nibmehub.com/opac-service/pdf/read/Data%20and%20computer%20communications%20by%20Stallings-%20William-compressed.pdf) **William Stallings** :: `5 Layers`
+- [`1998` :: Internetworking with TCP/IP Volume One](https://www.amazon.com/Internetworking-TCP-IP-One-6th/dp/013608530X) **Douglas Comer** :: `4 + 1 Layers`
+- [`1999` :: TCP/IP Protocol Suite](https://www.amazon.com.mx/Tcp-Protocol-Suite-Behrouz-Forouzan/dp/0073376043) **Behrouz A. Forouzan** :: `5 Layers`
+- [`2000` :: Computer Networking: A Top-down Approach](https://www.ucg.ac.me/skladiste/blog_44233/objava_64433/fajlovi/Computer%20Networking%20_%20A%20Top%20Down%20Approach,%207th,%20converted.pdf) **Jim Kurose** :: `5 Layers`
+- [`2005` :: The TCP/IP Guide: A Comprehensive, Illustrated Internet Protocols Reference](https://www.amazon.com/TCP-Guide-Comprehensive-Illustrated-Protocols/dp/159327047X) **Charles M. Kozierok** :: `5 Layers`
 
 ---
 
