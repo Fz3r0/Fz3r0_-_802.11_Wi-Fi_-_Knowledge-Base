@@ -43,14 +43,22 @@ _The one who knows the past can build the future. Building the future, and keepi
 ---
 
 ### 🗓️📡 Wi-Fi 802.11 Timeline
+- [802.11 Timeline](https://evanmccann.net/blog/wifi-101/origins-and-history)
 - [`1942` :: Spread Spectrum Invention by Hedy Lamarr & George Carl Johann Anthei](https://patents.google.com/patent/US2292387A/en) _`U.S. Patent 2,292,387`_
 - [`1970` :: ALOHAnet - The first Wireless Network :: ALOHA random access & experimental UHF](https://en.wikipedia.org/wiki/ALOHAnet)
-- [`1997` :: Standardisation of WiFi @ IEEE](https://standards.ieee.org/beyond-standards/the-evolution-of-wi-fi-technology-and-standards/)
-- [`1999` :: Creation of Wi-Fi Alliance | Wi-Fi logo | Public Wi-Fi 802.11b @ 2.4 GHz](https://www.gregennis.net/wifi-fun-facts-2/the-early-history-of-the-wi-fi-logo)
-- [`2003` :: Wi-Fi Evolution to 802.11g | 54mbps @ 2.4ghz](https://en.wikipedia.org/wiki/IEEE_802.11g-2003)
-- [`2009` :: Wi-Fi Evolution to 802.11n | OFDM 2.4 & 5 GHz](https://en.wikipedia.org/wiki/IEEE_802.11n-2009)
-- [`2014` :: Wi-Fi Evolution to 802.11ac | OFDM 2.4 & 5 GHz](https://es.wikipedia.org/wiki/IEEE_802.11ac)
-- [`2020` :: Actual Wi-Fi | OFDM 2.4 & 5 GHz]()
+- [`1986` :: 802.4L working group begins investigating a wireless standard Token Ring based]()
+- [`1990` :: WaveLAN by NCR & 802.11 committee was formed Wireless alternative to Ethernet & Token Ring for PCs]()
+- [`1997` :: Standardisation of WiFi :: 1st version of IEEE 802.11 standard is ratified](https://standards.ieee.org/beyond-standards/the-evolution-of-wi-fi-technology-and-standards/)
+- [`1998` :: First Consumer Wi-Fi Products on Market _(Expensive & Rare)_](https://standards.ieee.org/beyond-standards/the-evolution-of-wi-fi-technology-and-standards/)
+- [`2003` :: Wi-Fi 802.11b (11mbps) & 802.11a (54mbps) Ratified](https://en.wikipedia.org/wiki/IEEE_802.11g-2003)
+- [`1999` :: Apple introduced iBook & AirPort :: 1st major consumer 802.11b products]()
+- [`1999` :: WECA re-brands 802.11 as Wi-Fi & certifies it's 1st products & becomes "Wi-Fi Alliance"]()
+- [`2003` :: Wi-Fi 802.11 802.11g Ratified | 54mbps @ 2.4ghz](https://en.wikipedia.org/wiki/IEEE_802.11g-2003)
+- [`2009` :: Wi-Fi 802.11 802.11n Ratified | OFDM 2.4 & 5 GHz](https://en.wikipedia.org/wiki/IEEE_802.11n-2009)
+- [`2014` :: Wi-Fi 802.11 802.11ac Ratified | OFDM 2.4 & 5 GHz](https://es.wikipedia.org/wiki/IEEE_802.11ac)
+- [`2017` :: First draft og 802.11ax Wi-Fi 6 is published :: Manufacturers begin to make Wi-Fi 6 devices]()
+- [`2018` :: Wi-Fi alliance re-names existing Wi-Fi Standards Wi-Fi1/2/3/4/5/6 | 802.11b/a/g/n/ac/ax]()
+- [`2020` :: Actual Ratiferd 802.11b/a/g/n/ac Wi-Fi 6E | OFDM 2.4, 5 & 6 GHz]()
 - [`2024 -->` :: Actual Wi-Fi & Future Transition | Giga & 10Giga | 802.11ax/be | 5 & 6 GHz]()
 
 ---
@@ -63,6 +71,11 @@ _The one who knows the past can build the future. Building the future, and keepi
 - [La historia del Internet en México]()
 - [Ley Federal de Radio y Comunicación]()
 - [Reforma Constitucional de Telecomunicaciones 2013]()
+
+---
+
+### 802.11 Wi-Fi Wireless Early & Legacy Devices
+- [Early 2000s Linksys Wi-Fi Gear `802.11b`](https://www.youtube.com/watch?v=LvLPz72IvAM)
 
 ## 🌎♻️🧙‍♂️ Internet, Networking, Wireless & Telecomunication `Organizations`
 
