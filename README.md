@@ -630,8 +630,9 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 - [**`AP`** = Access Point STA](https://en.wikipedia.org/wiki/Wireless_access_point) :: Networking device that allows other Wi-Fi devices to connect to a network `Act as an AP`
 
 ### 🟣 `Client Mode`
-- Client Mode: **Infrastructure Mode**
-- Client Mode: **Ad-Hoc Mode**  
+- [Wireless LAN two **modes**: `Ad-Hoc` vs `Infrastructure` @ Sunny](https://www.youtube.com/watch?v=SLSOZokbFfM) `Video`
+- [Client Mode: **`Infrastructure Mode`**](https://www.lifewire.com/infrastructure-mode-in-wireless-networking-816539) :: Device that needs an AP to connect to the Network
+- [Client Mode: **`Ad-Hoc Mode`**](https://www.ii.pwr.edu.pl/~kano/course/module8/8.1.3.2/8.1.3.2.html#:~:text=An%20ad%20hoc%20wireless%20network,device%20to%20connect%20to%20it.) :: 2 wireless devices communicate in a peer-to-peer (P2P) manner without using APs
 
 ### 🟣 `AP Mode`
 - AP Mode: **Root Mode**
