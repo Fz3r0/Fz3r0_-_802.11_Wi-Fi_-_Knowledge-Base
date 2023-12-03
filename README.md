@@ -12,6 +12,7 @@ _Wi-Fi is not an abbreviation for “wireless fidelity”; the name was created 
 ### ⭕ 802.11 Wi-Fi: Definitions
 - [IEEE: 802.11 Standards Dictionary Online](https://ieeexplore.ieee.org/browse/standards/dictionary?activeStatus=true)
 - [Agilent Technologies: Wireless Dictionary](https://ftp.unpad.ac.id/orari/library/library-ref-eng/ref-eng-1/physical/voip/wireless/dictionary.pdf)
+- [PC Mag - Encyclopedia](https://www.pcmag.com/encyclopedia)
 - [Fz3r0 Networking Definitions]()
 - [Fz3r0 IEEE 802.11 Wireless / Wi-Fi definitions]()
 
@@ -624,8 +625,8 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 ---
 
 ### SS (Station Services): Type of STAs
-- [Client STA // **`STA`**]() :: MAC & PHY inside tu use 802.11 (Does not act as AP)
-- [Access Point STA // **`AP`**]() :: MAC & PHY inside tu use 802.11 (Act as an AP)
+- [**`STA`** = Client STA](https://www.pcmag.com/encyclopedia/term/sta) :: MAC & PHY inside tu use 802.11 (Does not act as AP)
+- [**`AP`** = Access Point STA](https://www.pcmag.com/encyclopedia/term/access-point) :: MAC & PHY inside tu use 802.11 (Act as an AP)
 
 ### 🟣 `Client Mode`
 - Client Mode: **Infrastructure Mode**
