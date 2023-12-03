@@ -655,11 +655,14 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 - [Client Mode: **`Ad-Hoc Mode`**](https://www.ii.pwr.edu.pl/~kano/course/module8/8.1.3.2/8.1.3.2.html#:~:text=An%20ad%20hoc%20wireless%20network,device%20to%20connect%20to%20it.) :: 2 wireless devices communicate in a peer-to-peer (P2P) manner without using APs
 
 ### 🟣 `AP Mode`
-- AP Mode: **Root Mode**
-- AP Mode: **Mesh Mode**
-- AP Mode: **Sensor Mode**
-- AP Mode: **Bridge Mode**
-- AP Mode: **Workgroup Bridge Mode** 
+- [Cisco Wireless AP Modes](https://networklessons.com/cisco/ccna-200-301/cisco-wireless-ap-modes)
+- [AP Mode: **`Root Mode`** _AKA Hotspot Mode_](http://webhelp.zyxel.com/wohView/help_docs/NWA5123-AC_V4.22_AAZY/Book/Wireless/h_Wireless.htm) The Radio acts as an AP to bring Wi-Fi connectivity to STAs & also supports the wireless connections with other APs (in repeater mode)
+- [AP Mode: **`Mesh Mode`** (Gateway / Repeaters)](https://documentation.meraki.com/MR/Wi-Fi_Basics_and_Best_Practices/Wireless_Mesh_Networking) Multiple APs (with/without Eth connections) communicate over wireless interfaces to form a single network
+- [AP Mode: **`Bridge Mode`**]() AP becomes a dedicated point-to-point or point-to-multipoint bridge (Trunk Link). _Still a Mesh WLAN_
+- [AP Mode: **Workgroup Bridge Mode**](https://www.cisco.com/c/en/us/td/docs/routers/access/wireless/software/guide/RolesWGB.html) Device associates to another AP as a client & provides a network connection for the equipment connected to its Ethernet port
+- [AP Mode: **`Monitor Mode`**]() Check for IDS events, Rogues APs, Determine Position
+- [AP Mode: **`Sensor Mode`** / **`Sniffer Mode`**]() Dedicates its time to receive 802.11 wireless frames
+
 
 ### 802.11 SS (Station Services): Services
 [1. **`Authentication`**]
