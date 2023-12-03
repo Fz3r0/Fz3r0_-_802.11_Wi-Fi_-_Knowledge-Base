@@ -66,6 +66,8 @@ _The one who knows the past can build the future. Building the future, and keepi
 
 ### 🏺🇲🇽 Historia de Redes, Internet, Telecomunicaciones y Radiodifusión en México
 _Close your eyes... I remember..._
+- [Historia de las Telecomunicaciones en México](https://es.wikipedia.org/wiki/Historia_de_las_telecomunicaciones_en_M%C3%A9xico) _Wiki_
+- [Internet en México](https://es.wikipedia.org/wiki/Internet_en_M%C3%A9xico) _Wiki_
 - [La historia de cómo México se conectó por primera vez a Internet: una carrera de tropiezos y maravillas entre la UNAM y el ITESM](https://www.xataka.com.mx/historia-de-la-tecnologia/historia-mexico-su-primera-conexion-a-internet-odisea-unam-itesm-satelites-viajes-camion)
 - [La evolución de Internet en México y su impacto en el ámbito educativo (De 1986 a 2006)](https://www.fergut.com/la-evolucion-de-internet-en-mexico-y-su-impacto-en-el-ambito-educativo-de-1986-a-2006/)
 - [La primera computadora que enlazó a México y Latinoamérica a Internet](https://conecta.tec.mx/es/noticias/nacional/institucion/la-primera-computadora-que-enlazo-mexico-y-latinoamerica-internet#:~:text=El%2012%20de%20octubre%20de,.mty.itesm.mx.) _`MicroVAX II, IPv4 131.178.1.1 DNS: mnetv1.mty.itesm.mx/`_
@@ -74,6 +76,11 @@ _Close your eyes... I remember..._
 - [Telecomunicaciones y Radiodifusión en México @ UNAM](http://derecho.posgrado.unam.mx/site_cpd/public/publis_cpd/telecomyradiodifenMX.pdf)
 
 #### 🏺🇲🇽 Timeline
+- [`1851`: Se tiende cableado de la primer red de Telégrafos en México entre Naucalpan Edo. Mex. y Puebla]()
+- [`1880`: El servicio de telégrafos se centraliza y las autoridades federales quedan a cargo del servicio]()
+- [`1885`: las líneas de telégrafo se construyen de manera paralela a las vías de ferrocarril de México]()
+- [`1878`; Primer línea telefónica en México :: Castillo de Chapultepec <=> Palacio Nacional]()
+- [`1902`: La radiotelegrafía se introduce en México. (transmisión de datos "morse" 1/0 por medio de ondas electromagnéticas]()
 - [`1940`: Ley de Vias Generales de comunicacion]()
 - [`1984`: `Telepac` la primera red comercial que funcionaba con protocolo `X.25` (dependía directamente de Telmex)]()
 - [`1985`: Lanzamiento del Sistema Satelital Morelos - `Morelos-1` & `Morelos-2`](https://es.wikipedia.org/wiki/Sistema_Satelital_Morelos)
@@ -85,7 +92,7 @@ _Close your eyes... I remember..._
 - [`1992`: Se Inaugura la Red Integral de Telecomunicaciones de la UNAM que conecta varias Universidades :: 13 nodos, 500km fibra, 12 enlaces satelitales]()
 - [`1994`: Se hace comercial `RedUNAM` - Primer abastecedor Comercial de servicios de Internet en México - `UNAM`]()
 - [`1994`: Se crea la `Red Nacional de Tecnología (RNT)` - Segundo abastecedor Comercial de servicios de Internet en México]()
-- [`1995`: Se nombra oficialmente al ITESM como Centro de Información de Redes en México (NIC-México)]()
+- [`1995`: Se nombra oficialmente al ITESM como Centro de Información de Redes en México (NIC-México) | Asigna direcciones `.mx`]()
 - [`1995`: El 1995 es considerado como "el año de Internet en México"]()
 - [`1996`: Mi primer contacto con Internet con 9 añitos : Gracias a Paco que estudiaba la preparatoria y su conexión al ITESM :)]()
 - [`1996`: Primeras páginas de Internet de Instituciones Oficiales Mexicanas como: Cámara de Diputados, la Cámara de Senadores de México, PEMEX, CJF]()
