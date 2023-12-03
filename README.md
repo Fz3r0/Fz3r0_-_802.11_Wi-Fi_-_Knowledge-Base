@@ -608,9 +608,20 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 
 ---
 
-### 802.11 SS (Station Services): Type of STAs
+### SS (Station Services): Type of STAs
 - [Client STA // **`STA`**]() :: MAC & PHY inside tu use 802.11 (Does not act as AP)
 - [Access Point STA // **`AP`**]() :: MAC & PHY inside tu use 802.11 (Act as an AP)
+
+### 🟣 `Client Mode`
+- Client Mode: **Infrastructure Mode**
+- Client Mode: **Ad-Hoc Mode**  
+
+### 🟣 `AP Mode`
+- AP Mode: **Root Mode**
+- AP Mode: **Mesh Mode**
+- AP Mode: **Sensor Mode**
+- AP Mode: **Bridge Mode**
+- AP Mode: **Workgroup Bridge Mode** 
 
 ### 802.11 SS (Station Services): Services
 [1. **`Authentication`**]
@@ -626,7 +637,8 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 
 ---
 
-### 802.11 WLAN Service Sets
+### DSS (Distribution System Service)
+- [**`DSS`**: Distribution System Service](https://user-images.githubusercontent.com/94720207/227799137-f1505092-751e-45da-85c0-3c5689867f66.png)
 - [Wireless LAN 802.11 Service Sets](https://networklessons.com/cisco/ccna-200-301/wireless-lan-802-11-service-sets)
 
 #### BSS: Basic Service Set
@@ -646,6 +658,7 @@ _Similar to the IBSS, the PBSS is a type of IEEE 802.11 LAN in which STAs commun
 
 #### Area: 
 
+#### SSID: Service Set Identifier
 
 #### BSSID: Basic Service Set Identifier
 _Identifier very similar to a MAC Address to diferentiate one BSS from another_
@@ -654,11 +667,17 @@ _Identifier very similar to a MAC Address to diferentiate one BSS from another_
 #### BSA: Basic Service Area
 - BSSA
 
-#### LAN + WLAN: Integration with non-IEEE-802.11 LANs
-
 #### RSNA: Robust security network association
 
-#### QoS BSS
+#### LAN + WLAN: Integration with non-IEEE-802.11 LANs
+
+
+
+
+
+## Network Planes
+
+
 
 ---
 
