@@ -77,6 +77,7 @@ _Close your eyes... I remember..._
 - [La evolución de Internet en México y su impacto en el ámbito educativo (De 1986 a 2006)](https://www.fergut.com/la-evolucion-de-internet-en-mexico-y-su-impacto-en-el-ambito-educativo-de-1986-a-2006/)
 - [La historia de Telmex - La primera empresa de Telecomunicaciones en México](https://www.youtube.com/watch?v=b5b5Tn1jBe0) _`video`_
 - [La historia de Telmex - Timeline](https://historiadetelmex-zorro13.blogspot.com/2010/12/historia-de-telefonos-de-mexico.html) _`timeline`_
+- [LA historia de Internet en México - Una línea en el tiempo](https://lineadetiempo.net/la-historia-del-internet-en-mexico-una-linea-del-tiempo/)
 - [La primer llamada telefónica en México](https://devenir.devenir.com.mx/18-de-junio-de-1878-primera-llamada-telefonica-en-mexico/)
 - [Ley Federal de Radio y Comunicación]()
 - [Telecomunicaciones y Radiodifusión en México @ UNAM](http://derecho.posgrado.unam.mx/site_cpd/public/publis_cpd/telecomyradiodifenMX.pdf)
