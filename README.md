@@ -649,34 +649,35 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 - [**`STA`** = Client STA](https://en.wikipedia.org/wiki/Station_(networking)) :: Any device containing IEEE 802.11 MAC & PHY interface to the WM `Does NOT act as AP`
 - [**`AP`** = Access Point STA](https://en.wikipedia.org/wiki/Wireless_access_point) :: Networking device that allows other Wi-Fi devices to connect to a network `Act as an AP`
 
-### 🟣 `Client Mode`
+### 🟣 `Client Modes`
 - [Wireless LAN two **modes**: `Ad-Hoc` vs `Infrastructure` @ Sunny](https://www.youtube.com/watch?v=SLSOZokbFfM) `Video`
-- [Client Mode: **`Infrastructure Mode`**](https://www.lifewire.com/infrastructure-mode-in-wireless-networking-816539) :: Device that needs an AP to connect to the Network
-- [Client Mode: **`Ad-Hoc Mode`**](https://www.ii.pwr.edu.pl/~kano/course/module8/8.1.3.2/8.1.3.2.html#:~:text=An%20ad%20hoc%20wireless%20network,device%20to%20connect%20to%20it.) :: 2 wireless devices communicate in a peer-to-peer (P2P) manner without using APs
+    - [**`Infrastructure Mode`**](https://www.lifewire.com/infrastructure-mode-in-wireless-networking-816539) :: Device that needs an AP to connect to the Network
+    - [**`Ad-Hoc Mode`**](https://www.ii.pwr.edu.pl/~kano/course/module8/8.1.3.2/8.1.3.2.html#:~:text=An%20ad%20hoc%20wireless%20network,device%20to%20connect%20to%20it.) :: 2 wireless devices communicate in a peer-to-peer (P2P) manner without using APs
 
-### 🟣 `AP Mode`
+### 🟣 `AP Modes`
 - [`Cisco` Wireless AP Modes](https://networklessons.com/cisco/ccna-200-301/cisco-wireless-ap-modes)
 - [`Aruba` Instant On AP Modes](https://www.arubainstanton.com/techdocs/en/content/get-started/ap-conf-mode.htm)
 - [`Commscope` - Wi-Fi Bridges and Wi-Fi Mesh: What’s the Difference?](https://www.commscope.com/blog/2018/wi-fi-bridges-and-wi-fi-mesh-whats-the-difference/)
-- [AP Mode: **`Root Mode`**](http://webhelp.zyxel.com/wohView/help_docs/NWA5123-AC_V4.22_AAZY/Book/Wireless/h_Wireless.htm) The Radio acts as an AP to bring Wi-Fi connectivity to STAs & also supports the wireless connections with other APs (in repeater mode)
-- [AP Mode: **`Mesh Mode`** (Gateway / Repeaters)](https://documentation.meraki.com/MR/Wi-Fi_Basics_and_Best_Practices/Wireless_Mesh_Networking) Multiple APs (with/without Eth connections) communicate over wireless interfaces to form a single network
-- [AP Mode: **`Bridge Mode`**]() dedicated ethernet P2P replacement that can nearly match wired speeds across great distances but cannot communicate with clients
-- [AP Mode: **`Workgroup Bridge Mode`**](https://www.cisco.com/c/en/us/td/docs/routers/access/wireless/software/guide/RolesWGB.html) Device associates to another AP as a client & provides a network connection for the equipment connected to its Ethernet port
-- [AP Mode: **`Monitor Mode`**]() Check for IDS events, Rogues APs, Determine Position
-- [AP Mode: **`Sensor Mode`** / **`Sniffer Mode`**]() Dedicates its time to receive 802.11 wireless frames
-
+    - [**`Root Mode`**](http://webhelp.zyxel.com/wohView/help_docs/NWA5123-AC_V4.22_AAZY/Book/Wireless/h_Wireless.htm) Radio acts as AP & bring Wi-Fi connectivity to STAs (supports connections with other APs in repeater mode)
+    - [**`Repeater Mode`**]()
+    - [**`Mesh Mode`** (Gateway / Repeaters)](https://documentation.meraki.com/MR/Wi-Fi_Basics_and_Best_Practices/Wireless_Mesh_Networking) Multiple APs (with/without Eth connections) communicate over wireless interfaces to form a single network
+    - [**`Bridge Mode`**]() dedicated ethernet P2P replacement that can nearly match wired speeds across great distances but cannot communicate with clients
+    - [**`Workgroup Bridge Mode`**](https://www.cisco.com/c/en/us/td/docs/routers/access/wireless/software/guide/RolesWGB.html) Device associates to another AP as a client & provides a network connection for the equipment connected to its Ethernet port
+    - [**`Monitor Mode`**]() Check for IDS events, Rogues APs, Determine Position
+    - [**`Sensor Mode`** / **`Sniffer Mode`**]() Dedicates its time to receive 802.11 wireless frames
+    - [**`Rogue Detector Mode`**]()
 
 ### 802.11 SS (Station Services): Services
-[1. **`Authentication`**]
-[2. **`Deauthentication`**]
-[3. **`Data confidientality (encryption)`**]
-[4. **`MSDU delivery`**]
-[5. **`DFS - Dynamic Frequency Selection`**]
-[6. **`TPC - Transmit Power Control`**]
-[7. **`Time Synchronization with higher layers (QoS facility only)`**]
-[8. **`QoS traffic scheduling (QoS facility only)`**]
-[9. **`Radio Measurment`**]
-[10. **`DSE - Dynamic STA Enablement`**]
+- [**`Authentication`**]
+- [**`Deauthentication`**]
+- [**`Data confidientality (encryption)`**]
+- [**`MSDU delivery`**]
+- [**`DFS - Dynamic Frequency Selection`**]
+- [**`TPC - Transmit Power Control`**]
+- [**`Time Synchronization with higher layers (QoS facility only)`**]
+- [**`QoS traffic scheduling (QoS facility only)`**]
+- [**`Radio Measurment`**]
+- [**`DSE - Dynamic STA Enablement`**]
 
 ---
 
