@@ -79,7 +79,7 @@ _Close your eyes... I remember..._
 - [Telecomunicaciones y Radiodifusión en México @ UNAM](http://derecho.posgrado.unam.mx/site_cpd/public/publis_cpd/telecomyradiodifenMX.pdf)
 
 #### 🏺🇲🇽 Timeline
-- [`1851`: Se tiende cableado de la primer red de Telégrafos en México entre Naucalpan Edo. Mex. y Puebla]()
+- [`1851`: Se tiende cableado de la primer red de Telégrafos en México entre Naucalpan Edo. Mex. y Puebla](https://www.gob.mx/siap/articulos/inauguracion-de-la-primera-linea-telegrafica-en-mexico#:~:text=Un%205%20de%20noviembre%20de,el%20poblado%20de%20Nopalucan%2C%20Puebla.)
 - [`1878`; Primer línea telefónica en México :: Castillo de Chapultepec <=> Palacio Nacional]()
 - [`1880`: El servicio de telégrafos se centraliza y las autoridades federales quedan a cargo del servicio]()
 - [`1881`: (Psdte. Manual Gonáles) Se expide la primera ley que establece la reglamentación del servicio de ferrocarriles, telégrafos y teléfonos]()
