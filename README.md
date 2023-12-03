@@ -534,7 +534,7 @@ Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx usi
 - Understanding Keying Methods
 - MIMO Technology: HT and VHT
 
-## Components of RF Communications
+## ⚙️🔩🛰️ Components of RF Communications
 - Transmitter 
 - Antenna 
 - Receiver 
@@ -633,28 +633,28 @@ Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx usi
 - [Bigger Aint Always Better @ Bad-Fi](https://badfi.com/blog/2016/1/25/bigger-aint-always-better) `best practices`
 
 
-## Components of 802.11 WLAN Network Architecture
+## ⚙️🏗️🛰️ Components of 802.11 WLAN Network Architecture
 _The IEEE 802.11 architecture consists of several components that interact to provide a WLAN that supports STA mobility transparently to upper layers._
 - [Components of 802.11 WLAN Network Architecture]()
 - [`Fz3r0`: Services Provided by 802.11 Devices](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/802.11_Design/802.11_Network_Architecture/Services-Provided-by-802.11-Devices.md)
 
-### 802.11 Services: The 3 Categories
+### 🤳🏾🛜📡 802.11 Services: The 3 Categories
 - [1. **`SS`**: Station Service]()
 - [2. **`DSS`**: Distribution System Service]()
 - [3. **`PCPS`**: BSS Control Point Service__(CWAP out of Scope_)]()
 
 ---
 
-### SS (Station Services): Type of STAs
+### 🤳🏾📡 SS (Station Services): Type of STAs
 - [**`STA`** = Client STA](https://en.wikipedia.org/wiki/Station_(networking)) :: Any device containing IEEE 802.11 MAC & PHY interface to the WM `Does NOT act as AP`
 - [**`AP`** = Access Point STA](https://en.wikipedia.org/wiki/Wireless_access_point) :: Networking device that allows other Wi-Fi devices to connect to a network `Act as an AP`
 
-### 🟣 `Client Modes`
+### 🟣🤳🏾 `Client Modes`
 - [Wireless LAN two **modes**: `Ad-Hoc` vs `Infrastructure` @ Sunny](https://www.youtube.com/watch?v=SLSOZokbFfM) `Video`
     - [**`Infrastructure Mode`**](https://www.lifewire.com/infrastructure-mode-in-wireless-networking-816539) :: Device that needs an AP to connect to the Network
     - [**`Ad-Hoc Mode`**](https://www.ii.pwr.edu.pl/~kano/course/module8/8.1.3.2/8.1.3.2.html#:~:text=An%20ad%20hoc%20wireless%20network,device%20to%20connect%20to%20it.) :: 2 wireless devices communicate in a peer-to-peer (P2P) manner without using APs
 
-### 🟣 `AP Modes`
+### 🟣📡 `AP Modes`
 - [`Cisco` Wireless AP Modes](https://networklessons.com/cisco/ccna-200-301/cisco-wireless-ap-modes)
 - [`Aruba` Instant On AP Modes](https://www.arubainstanton.com/techdocs/en/content/get-started/ap-conf-mode.htm)
 - [`Commscope` - Wi-Fi Bridges and Wi-Fi Mesh: What’s the Difference?](https://www.commscope.com/blog/2018/wi-fi-bridges-and-wi-fi-mesh-whats-the-difference/)
@@ -667,7 +667,7 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
     - [**`Sensor Mode`** / **`Sniffer Mode`**]() Dedicates its time to receive 802.11 wireless frames
     - [**`Rogue Detector Mode`**]()
 
-### 802.11 SS (Station Services): Services
+### 🟣🛜 802.11 SS (Station Services): Services
 - [**`Authentication`**]
 - [**`Deauthentication`**]
 - [**`Data confidientality (encryption)`**]
@@ -681,7 +681,7 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 
 ---
 
-### DSS (Distribution System Service)
+### 🏘️📡🖧 DSS (Distribution System Service)
 - [**`DSS`**: Distribution System Service](https://user-images.githubusercontent.com/94720207/227799137-f1505092-751e-45da-85c0-3c5689867f66.png)
 - [Wireless LAN 802.11 Service Sets](https://networklessons.com/cisco/ccna-200-301/wireless-lan-802-11-service-sets)
 
