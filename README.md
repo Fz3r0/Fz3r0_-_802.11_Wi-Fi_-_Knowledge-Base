@@ -98,7 +98,7 @@ https://www.milenio.com/cultura/como-llego-el-internet-a-mexico]()
 - [`1985`: Lanzamiento del Sistema Satelital Morelos - `Morelos-1` & `Morelos-2`](https://es.wikipedia.org/wiki/Sistema_Satelital_Morelos)
 - [`1986`: El primer acercamiento con el Internet :: Conexión entre `TEC de Monterrey` <=> `Universidad de Texas <<BITNET>>`](https://conecta.tec.mx/es/noticias/nacional/institucion/en-el-tec-mexico-se-conecto-por-primera-vez-la-internet-75anostec))
 - [`1988`: Se pleanea la conexión entre ITESM Edo Mex, UNAM CU y NCAR USA para conectar con la NSF y la NASA `via satélite`]()
-- [`1988`: 12/Oct/1988 El día que México (y LATAM) se conectó a Internet por primera vez (Protocolo IPv4) :: Conexión entre `TEC de Monterrey` <=> `Universidad de Texas <<THENET>>`](https://tecscience.tec.mx/es/tecnologia/primera-conexion-internet-en-mexico/) _close your eyes..._
+- [`1988`: 12/Oct/1988 El día que México (y LATAM) se conectó a Internet por primera vez (Protocolo IPv4) :: Conexión entre `TEC de Monterrey` <=> `Universidad de Texas <<THENET>>`](https://tecscience.tec.mx/es/tecnologia/primera-conexion-internet-en-mexico/) _leyenda: Texas->TEC "Nos deben unas cervezas"_
 - [`1989`: 25/Abr/1989 La UNAM termina de instalar una antena para conectar `RedUNAM` con `NSFNet`]()
 - [`1989`: 20/Jul/1989 Primera conexión satelital a Internet :: Se realiza con éxito la primer prueba de conexión entre `RedUNAM` con `NSFNet`]() _"este primer mensaje es un pequeño paso para nosotros y es un gran paso para la universidad"_
 - [`1992`: Se Inaugura la Red Integral de Telecomunicaciones de la UNAM que conecta varias Universidades :: 13 nodos, 500km fibra, 12 enlaces satelitales]()
