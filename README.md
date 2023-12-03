@@ -75,12 +75,14 @@ _Close your eyes... I remember..._
 - [La evolución del internet doméstico en México: de los inicios a la actualidad](https://www.jentel.mx/2023/04/10/la-evolucion-del-internet-domestico-en-mexico-de-los-inicios-a-la-actualidad/)
 - [La evolución de Internet en México y su impacto en el ámbito educativo (De 1986 a 2006)](https://www.fergut.com/la-evolucion-de-internet-en-mexico-y-su-impacto-en-el-ambito-educativo-de-1986-a-2006/)
 - [La historia de Telmex - La primera empresa de Telecomunicaciones en México](https://www.youtube.com/watch?v=b5b5Tn1jBe0) _`video`_
+- [La primer llamada telefónica en México](https://devenir.devenir.com.mx/18-de-junio-de-1878-primera-llamada-telefonica-en-mexico/)
 - [Ley Federal de Radio y Comunicación]()
 - [Telecomunicaciones y Radiodifusión en México @ UNAM](http://derecho.posgrado.unam.mx/site_cpd/public/publis_cpd/telecomyradiodifenMX.pdf)
 
 #### 🏺🇲🇽 Timeline
-- [`1851`: Se tiende cableado de la primer red de Telégrafos en México entre Naucalpan Edo. Mex. y Puebla](https://www.gob.mx/siap/articulos/inauguracion-de-la-primera-linea-telegrafica-en-mexico#:~:text=Un%205%20de%20noviembre%20de,el%20poblado%20de%20Nopalucan%2C%20Puebla.)
-- [`1878`; Primer línea telefónica en México :: Castillo de Chapultepec <=> Palacio Nacional]()
+- [`1851`: Se tiende cableado de la primer linea de Telégrafos entre CDMX y Nopalucan, Puebla](https://www.gob.mx/siap/articulos/inauguracion-de-la-primera-linea-telegrafica-en-mexico#:~:text=Un%205%20de%20noviembre%20de,el%20poblado%20de%20Nopalucan%2C%20Puebla.)
+- [`1852`: Se extiende la red Telégrafos hasta Veracruz](https://www.gob.mx/siap/articulos/inauguracion-de-la-primera-linea-telegrafica-en-mexico#:~:text=Un%205%20de%20noviembre%20de,el%20poblado%20de%20Nopalucan%2C%20Puebla.)
+- [`1878`: (Pdte. Porfirio Diaz) Primer linea y llamada telefónica en México :: Castillo de Chapultepec <=> Palacio Nacional](https://devenir.devenir.com.mx/18-de-junio-de-1878-primera-llamada-telefonica-en-mexico/) _"Que sea para acortar distancias y no para alargar los chismes"_
 - [`1880`: El servicio de telégrafos se centraliza y las autoridades federales quedan a cargo del servicio]()
 - [`1881`: (Psdte. Manual Gonáles) Se expide la primera ley que establece la reglamentación del servicio de ferrocarriles, telégrafos y teléfonos]()
 - [`1882`: La Compañía `Telefónica Mexicana` fue el proveedor único, hasta que en 1905]()
