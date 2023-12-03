@@ -599,12 +599,30 @@ Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx usi
 ## Components of 802.11 WLAN Network Architecture
 _The IEEE 802.11 architecture consists of several components that interact to provide a WLAN that supports STA mobility transparently to upper layers._
 - [Components of 802.11 WLAN Network Architecture]()
+- [`Fz3r0`: Services Provided by 802.11 Devices](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/802.11_Design/802.11_Network_Architecture/Services-Provided-by-802.11-Devices.md)
 
-### 802.11 Basic Components & Devices
-- STA :: MAC & PHY inside ::
-- QoS-STA
-- AP-STA
-- AP
+### 802.11 Services: The 3 Categories
+- [1. **`SS`**: Station Service]()
+- [2. **`DSS`**: Distribution System Service]()
+- [3. **`PCPS`**: BSS Control Point Service__(CWAP out of Scope_)]()
+
+---
+
+### 802.11 SS (Station Services): Type of STAs
+- [Client STA // **`STA`**]() :: MAC & PHY inside tu use 802.11 (Does not act as AP)
+- [Access Point STA // **`AP`**]() :: MAC & PHY inside tu use 802.11 (Act as an AP)
+
+### 802.11 SS (Station Services): Services
+[1. **`Authentication`**]
+[2. **`Deauthentication`**]
+[3. **`Data confidientality (encryption)`**]
+[4. **`MSDU delivery`**]
+[5. **`DFS - Dynamic Frequency Selection`**]
+[6. **`TPC - Transmit Power Control`**]
+[7. **`Time Synchronization with higher layers (QoS facility only)`**]
+[8. **`QoS traffic scheduling (QoS facility only)`**]
+[9. **`Radio Measurment`**]
+[10. **`DSE - Dynamic STA Enablement`**]
 
 ---
 
