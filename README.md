@@ -65,10 +65,12 @@ _The one who knows the past can build the future. Building the future, and keepi
 ---
 
 ### 🏺🇲🇽 Historia de Redes, Internet, Telecomunicaciones y Radiodifusión en México
+_Close your eyes... I remember..._
+- [El día que México se conectó a Internet por primera vez](https://tecscience.tec.mx/es/tecnologia/primera-conexion-internet-en-mexico/) _close your eyes..._
 - [Telecomunicaciones y Radiodifusión en México @ UNAM](http://derecho.posgrado.unam.mx/site_cpd/public/publis_cpd/telecomyradiodifenMX.pdf)
 - Historia de Wi-Fi e internet en Mexico
 - [Ley de Vias Generales de comunicacion 1940]()
-- [La historia de Telmex]()
+- [La historia de Telmex - La primera empresa de Telecomunicaciones en México](https://www.youtube.com/watch?v=b5b5Tn1jBe0) _`video`_
 - [La historia del Internet en México]()
 - [Ley Federal de Radio y Comunicación]()
 - [Reforma Constitucional de Telecomunicaciones 2013]()
