@@ -51,7 +51,7 @@ _The one who knows the past can build the future. Building the future, and keepi
 - [`1997` :: Standardisation of WiFi :: 1st version of IEEE 802.11 standard is ratified](https://standards.ieee.org/beyond-standards/the-evolution-of-wi-fi-technology-and-standards/)
 - [`1998` :: First Consumer Wi-Fi Products on Market _(Expensive & Rare)_](https://standards.ieee.org/beyond-standards/the-evolution-of-wi-fi-technology-and-standards/)
 - [`2003` :: Wi-Fi 802.11b (11mbps) & 802.11a (54mbps) Ratified](https://en.wikipedia.org/wiki/IEEE_802.11g-2003)
-- [`1999` :: Apple introduced iBook & AirPort :: 1st major consumer 802.11b products]()
+- [`1999` :: Apple introduced iBook & AirPort :: 1st major consumer 802.11b products](https://wifinowglobal.com/news-and-blog/how-a-meeting-with-steve-jobs-in-1998-gave-birth-to-wi-fi/)
 - [`1999` :: WECA re-brands 802.11 as Wi-Fi & certifies it's 1st products & becomes "Wi-Fi Alliance"]()
 - [`2003` :: Wi-Fi 802.11 802.11g Ratified | 54mbps @ 2.4ghz](https://en.wikipedia.org/wiki/IEEE_802.11g-2003)
 - [`2009` :: Wi-Fi 802.11 802.11n Ratified | OFDM 2.4 & 5 GHz](https://en.wikipedia.org/wiki/IEEE_802.11n-2009)
