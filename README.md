@@ -382,35 +382,41 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 - [**802.11T**](https://en-academic.com/dic.nsf/enwiki/1333888) **Withdrawn in 2008** :: **WPP** Wireless Performance Prediction 
 - [**802.11bg**]()  **unassigned** :: likely to avoid confusion by combining 802.11b/g
 
-## 🌎 Networking Models
+## 🌎↕️🖧 Networking Models
 
 - [All Networking Models Compared](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/6cc880c6-1e1f-4f14-be09-005120bbd8db) `table`
 - [The TCP/IP & OSI Models compared@ Global Knowledge](https://mochieng.files.wordpress.com/2012/04/wp_nw_tcp-ip1.pdf)
 
 ---
 
-### `1983`: Arpanet Reference Model `RFC 871` :: 3 Layers | _legacy_ 
+### ↕️🖧 `1982`: DOD Internet Architecture Model :: 4 Layers _(Legacy)_
+- [DARPA - United State’s Department of Defense (DOD) Model](https://nemmanuel027.medium.com/history-of-tcp-ip-and-dod-model-5cf695ce1967)
+- [The DoD internet architecture model](https://www.sciencedirect.com/science/article/abs/pii/0376507583900429)
+
+---
+
+### ↕️🖧 `1983`: Arpanet Reference Model `RFC 871` :: 3 Layers | _legacy_ 
 - [RFC 871: A perspective on the Arpanet Reference Model](https://www.rfc-editor.org/rfc/rfc871.html)
 
 ---
 
-### `1989`: Internet Standard `RFC 1122` :: 4 Layers | _Legacy_
+### ↕️🖧 `1989`: Internet Standard `RFC 1122` :: 4 Layers | _Legacy_
 - [RFC 1122: Requirements for Internet Hosts -- Communication Layers](https://www.rfc-editor.org/rfc/rfc1122.html)
 
 ---
 
-### `2000`: Internet Model `Cisco Academy` :: 4 Layers
+### ↕️🖧 `2000`: Internet Model `Cisco Academy` :: 4 Layers
 [Internet model](https://books.google.com.mx/books?id=JVAk7r6jHF4C&redir_esc=y)
 
 ---
 
-### TCP/IP Model :: 4 & 5 Layers
+### ↕️🔬🌎 `1981` - `2005` : TCP/IP Model :: 4 & 5 Layers
 - [TCP/IP Model](https://en.wikipedia.org/wiki/Internet_protocol_suite) :: All models : _`Wiki`_
 - [TCP/IP Model](https://en.wikipedia.org/wiki/Internet_protocol_suite) :: All models : _`Table`_ 
 - [TCP/IP Model @ Fortinet](https://www.fortinet.com/resources/cyberglossary/tcp-ip-model-vs-osi-model) :: _`5 Layers`_
 - [TCP/IP Model @ AVG](https://www.avg.com/en/signal/what-is-tcp-ip#:~:text=There%20are%20four%20layers%20of,internet%2C%20transport%2C%20and%20application.) _`4 Layers`_
 
-#### TCP/IP Model Versions
+### ↕️🖧 TCP/IP Model Versions
 - [`1981` :: Computer Networks](https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Computer%20Networks.pdf) **Andrew S. Tanenbaum** & **David J. Wetherall** :: `5 Layers`
 - [`1985` :: Data and Computer Communications](https://nibmehub.com/opac-service/pdf/read/Data%20and%20computer%20communications%20by%20Stallings-%20William-compressed.pdf) **William Stallings** :: `5 Layers`
 - [`1998` :: Internetworking with TCP/IP Volume One](https://www.amazon.com/Internetworking-TCP-IP-One-6th/dp/013608530X) **Douglas Comer** :: `4 + 1 Layers`
@@ -420,7 +426,7 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 
 ---
 
-### `1983` - `1994`: OSI model `ISO/IEC 7498-1:1994` :: 7 Layers
+### ↕️🫅🌎 `1983` - `1994` : OSI model `ISO/IEC 7498-1:1994` :: 7 Layers
 - [OSI Model](https://en.wikipedia.org/wiki/OSI_model) _`Wiki`_
 - [History of the OSI Model and its origins](https://blog.domotz.com/know-your-networks/history-of-the-osi-model/) _`Information`_
 - `1983` - Basic Reference Model for Open Systems Interconnection
@@ -431,7 +437,7 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 
 
 
-### DoD Model _(Legacy)_
+
 
 
 
