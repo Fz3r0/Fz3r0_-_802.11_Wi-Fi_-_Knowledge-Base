@@ -77,10 +77,15 @@ _Close your eyes... I remember..._
 
 #### 🏺🇲🇽 Timeline
 - [`1851`: Se tiende cableado de la primer red de Telégrafos en México entre Naucalpan Edo. Mex. y Puebla]()
-- [`1880`: El servicio de telégrafos se centraliza y las autoridades federales quedan a cargo del servicio]()
-- [`1885`: las líneas de telégrafo se construyen de manera paralela a las vías de ferrocarril de México]()
 - [`1878`; Primer línea telefónica en México :: Castillo de Chapultepec <=> Palacio Nacional]()
+- [`1880`: El servicio de telégrafos se centraliza y las autoridades federales quedan a cargo del servicio]()
+- [`1881`: (Psdte. Manual Gonáles) Se expide la primera ley que establece la reglamentación del servicio de ferrocarriles, telégrafos y teléfonos]()
+- [`1882`: La Compañía `Telefónica Mexicana` fue el proveedor único, hasta que en 1905]()
+- [`1883`: Primer conferencia telefónica internacional entre interlocutores :: Matamoros, Tamaulipas y Brownsville, Texas]()
+- [`1885`: las líneas de telégrafo se construyen de manera paralela a las vías de ferrocarril de México]()
 - [`1902`: La radiotelegrafía se introduce en México. (transmisión de datos "morse" 1/0 por medio de ondas electromagnéticas]()
+- [`1905`: La Compañía Mexicana `Telefónica Ericsson` inició sus operaciones]()
+- [`1916`: (Pdte. V. Carranza) Se expide decreto donde se prohibe explotar estaciones radiotelegráficas sin autorización del Gobierno]()
 - [`1940`: Ley de Vias Generales de comunicacion]()
 - [`1984`: `Telepac` la primera red comercial que funcionaba con protocolo `X.25` (dependía directamente de Telmex)]()
 - [`1985`: Lanzamiento del Sistema Satelital Morelos - `Morelos-1` & `Morelos-2`](https://es.wikipedia.org/wiki/Sistema_Satelital_Morelos)
