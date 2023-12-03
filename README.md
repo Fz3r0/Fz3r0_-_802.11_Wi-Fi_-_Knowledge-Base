@@ -76,7 +76,8 @@ _The one who knows the past can build the future. Building the future, and keepi
 ---
 
 ### 802.11 Wi-Fi Wireless Early & Legacy Devices
-- [Early 2000s Linksys Wi-Fi Gear `802.11b`](https://www.youtube.com/watch?v=LvLPz72IvAM)
+- [`1998` - **InTalk WR1200**: First 802.11 Access Point `802.11b`](https://www.pcmag.com/encyclopedia/term/access-point)
+- [`2000` - **Linksys** Early 2000s  Wi-Fi Gear `802.11b`](https://www.youtube.com/watch?v=LvLPz72IvAM)
 
 ## 🌎♻️🧙‍♂️ Internet, Networking, Wireless & Telecomunication `Organizations`
 
@@ -625,8 +626,8 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 ---
 
 ### SS (Station Services): Type of STAs
-- [**`STA`** = Client STA](https://www.pcmag.com/encyclopedia/term/sta) :: MAC & PHY inside tu use 802.11 (Does not act as AP)
-- [**`AP`** = Access Point STA](https://www.pcmag.com/encyclopedia/term/access-point) :: MAC & PHY inside tu use 802.11 (Act as an AP)
+- [**`STA`** = Client STA](https://en.wikipedia.org/wiki/Station_(networking)) :: Any device containing IEEE 802.11 MAC & PHY interface to the WM `Does NOT act as AP`
+- [**`AP`** = Access Point STA](https://en.wikipedia.org/wiki/Wireless_access_point) :: Networking device that allows other Wi-Fi devices to connect to a network `Act as an AP`
 
 ### 🟣 `Client Mode`
 - Client Mode: **Infrastructure Mode**
