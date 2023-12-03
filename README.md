@@ -76,6 +76,7 @@ _Close your eyes... I remember..._
 - [La evolución del internet doméstico en México: de los inicios a la actualidad](https://www.jentel.mx/2023/04/10/la-evolucion-del-internet-domestico-en-mexico-de-los-inicios-a-la-actualidad/)
 - [La evolución de Internet en México y su impacto en el ámbito educativo (De 1986 a 2006)](https://www.fergut.com/la-evolucion-de-internet-en-mexico-y-su-impacto-en-el-ambito-educativo-de-1986-a-2006/)
 - [La historia de Telmex - La primera empresa de Telecomunicaciones en México](https://www.youtube.com/watch?v=b5b5Tn1jBe0) _`video`_
+- [La historia de Telmex - Timeline](https://historiadetelmex-zorro13.blogspot.com/2010/12/historia-de-telefonos-de-mexico.html) _`timeline`_
 - [La primer llamada telefónica en México](https://devenir.devenir.com.mx/18-de-junio-de-1878-primera-llamada-telefonica-en-mexico/)
 - [Ley Federal de Radio y Comunicación]()
 - [Telecomunicaciones y Radiodifusión en México @ UNAM](http://derecho.posgrado.unam.mx/site_cpd/public/publis_cpd/telecomyradiodifenMX.pdf)
@@ -106,12 +107,14 @@ https://www.milenio.com/cultura/como-llego-el-internet-a-mexico]()
 - [`1994`: Se hace comercial `RedUNAM` - Primer abastecedor Comercial de servicios de Internet en México - `UNAM`]()
 - [`1994`: Se crea la `Red Nacional de Tecnología (RNT)` - Segundo abastecedor Comercial de servicios de Internet en México]()
 - [`1995`: Se nombra oficialmente al ITESM como Centro de Información de Redes en México (NIC-México) | Asigna direcciones `.mx`]()
-- [`1995`: Entre 1995 y 1996 Telmex 1er ISP que ofrece conexiones a internet a través de dial-up (teléfono)]()
+- [`1995`: `Uninet` :: Entre 1995 y 1996 Telmex 1er ISP que ofrece conexiones a internet a través de dial-up (teléfono)](https://historiadetelmex-zorro13.blogspot.com/2010/12/historia-de-telefonos-de-mexico.html)
 - [`1995`: El 1995 es considerado como "el año de Internet en México"]()
+- [`1996`: Se funda `Infinitum de Telmex` :: Se binda servicio Dial-Up `Prodigy Infinitum`](https://es-academic.com/dic.nsf/eswiki/607297)
 - [`1996`: Mi primer contacto con Internet con 9 añitos : Gracias a Paco que estudiaba la preparatoria y su conexión al ITESM :)]()
 - [`1996`: Primeras páginas de Internet de Instituciones Oficiales Mexicanas como: Cámara de Diputados, la Cámara de Senadores de México, PEMEX, CJF]()
 - [`1997`: México acumula 150 ISPs al rededor del país]()
 - [`1998`: Primer ciberactivismo en México :: Matanza de Acteal ¡Stop War!](https://www.xataka.com.mx/legislacion-y-derechos/stop-the-war-in-mexico-o-como-la-matanza-de-acteal-provoco-uno-de-los-primeros-casos-de-ciberactivismo-de-la-historia)
+- [`2001`: Telmex lanza al mercado `Banda Ancha Infinitum`](https://realestatemarket.com.mx/articulos/infraestructura-y-construccion/11214-20-anos-de-desarrollo-tecnologico#:~:text=En%201996%20lanzamos%20al%20mercado,brecha%20digital%20en%20el%20pa%C3%ADs.)
 - [`2013`: Reforma Constitucional de Telecomunicaciones 2013]()
 - [`2023`: En México hay un total de 80.6 millones de personas conectadas, de las cuales un 95% usa el smartphone para ello via inalámbirca]()
 
