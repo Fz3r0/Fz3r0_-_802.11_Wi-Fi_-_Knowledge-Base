@@ -677,21 +677,21 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 
 ### 🟣🤳🏾 `Client Modes`
 - [Wireless LAN two **modes**: `Ad-Hoc` vs `Infrastructure` @ Sunny](https://www.youtube.com/watch?v=SLSOZokbFfM) `Video`
-    - [**`Infrastructure Mode`**](https://www.lifewire.com/infrastructure-mode-in-wireless-networking-816539) :: Device that needs an AP to connect to the Network
-    - [**`Ad-Hoc Mode`**](https://www.ii.pwr.edu.pl/~kano/course/module8/8.1.3.2/8.1.3.2.html#:~:text=An%20ad%20hoc%20wireless%20network,device%20to%20connect%20to%20it.) :: 2 wireless devices communicate in a peer-to-peer (P2P) manner without using APs
+    - 🤳🏾[**`Infrastructure Mode`**](https://www.lifewire.com/infrastructure-mode-in-wireless-networking-816539) :: Device that needs an AP to connect to the Network
+    - 🤳🏾[**`Ad-Hoc Mode`**](https://www.ii.pwr.edu.pl/~kano/course/module8/8.1.3.2/8.1.3.2.html#:~:text=An%20ad%20hoc%20wireless%20network,device%20to%20connect%20to%20it.) :: 2 wireless devices communicate in a peer-to-peer (P2P) manner without using APs
 
 ### 🟣📡 `AP Modes`
 - [`Cisco` Wireless AP Modes](https://networklessons.com/cisco/ccna-200-301/cisco-wireless-ap-modes)
 - [`Aruba` Instant On AP Modes](https://www.arubainstanton.com/techdocs/en/content/get-started/ap-conf-mode.htm)
-- [`Commscope` - Wi-Fi Bridges and Wi-Fi Mesh: What’s the Difference?](https://www.commscope.com/blog/2018/wi-fi-bridges-and-wi-fi-mesh-whats-the-difference/)
-    - [**`Root Mode`**](http://webhelp.zyxel.com/wohView/help_docs/NWA5123-AC_V4.22_AAZY/Book/Wireless/h_Wireless.htm) Radio acts as AP & bring Wi-Fi connectivity to STAs (supports connections with other APs in repeater mode)
-    - [**`Repeater Mode`**]()
-    - [**`Mesh Mode`** (Gateway / Repeaters)](https://documentation.meraki.com/MR/Wi-Fi_Basics_and_Best_Practices/Wireless_Mesh_Networking) Multiple APs (with/without Eth connections) communicate over wireless interfaces to form a single network
-    - [**`Bridge Mode`**]() dedicated ethernet P2P replacement that can nearly match wired speeds across great distances but cannot communicate with clients
-    - [**`Workgroup Bridge Mode`**](https://www.cisco.com/c/en/us/td/docs/routers/access/wireless/software/guide/RolesWGB.html) Device associates to another AP as a client & provides a network connection for the equipment connected to its Ethernet port
-    - [**`Monitor Mode`**]() Check for IDS events, Rogues APs, Determine Position
-    - [**`Sensor Mode`** / **`Sniffer Mode`**]() Dedicates its time to receive 802.11 wireless frames
-    - [**`Rogue Detector Mode`**]()
+- [`Commscope` - Wi-Fi Bridges and Wi-Fi Mesh: What’s the Difference?](https://www.commscope.com/blog/2018/wi-fi-bridges-and-wi-fi-mesh-whats-the-difference/)<br><br>
+    - 📡[**`Root Mode`**](http://webhelp.zyxel.com/wohView/help_docs/NWA5123-AC_V4.22_AAZY/Book/Wireless/h_Wireless.htm) Radio acts as AP & bring Wi-Fi connectivity to STAs (supports connections with other APs in repeater mode)
+    - 📡[**`Repeater Mode`**]()
+    - 📡[**`Mesh Mode`** (Gateway / Repeaters)](https://documentation.meraki.com/MR/Wi-Fi_Basics_and_Best_Practices/Wireless_Mesh_Networking) Multiple APs (with/without Eth connections) communicate over wireless interfaces to form a single network
+    - 📡[**`Bridge Mode`**]() dedicated ethernet P2P replacement that can nearly match wired speeds across great distances but cannot communicate with clients
+    - 📡[**`Workgroup Bridge Mode`**](https://www.cisco.com/c/en/us/td/docs/routers/access/wireless/software/guide/RolesWGB.html) Device associates to another AP as a client & provides a network connection for the equipment connected to its Ethernet port
+    - 📡[**`Monitor Mode`**]() Check for IDS events, Rogues APs, Determine Position
+    - 📡[**`Sensor Mode`** / **`Sniffer Mode`**]() Dedicates its time to receive 802.11 wireless frames
+    - 📡[**`Rogue Detector Mode`**]()
 
 ### 🟣🛜 802.11 SS (Station Services): Services
 - [**`Authentication`**]
@@ -708,42 +708,23 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 ---
 
 ### 🏘️📡🖧 DSS (Distribution System Service)
+- [Wireless LAN 802.11 Service Sets](https://networklessons.com/cisco/ccna-200-301/wireless-lan-802-11-service-sets)<br><br>
 - [**`DSS`**: Distribution System Service](https://user-images.githubusercontent.com/94720207/227799137-f1505092-751e-45da-85c0-3c5689867f66.png)
-- [Wireless LAN 802.11 Service Sets](https://networklessons.com/cisco/ccna-200-301/wireless-lan-802-11-service-sets)
+    - 🖧[**`BSS`**: Basic Service Set]() The basic building block of an 802.11 Network
+    - 🖧[**`IBSS`**: Independent Basic Service Set](https://www.geeksforgeeks.org/introduction-of-independent-basic-service-set-ibss/) Most basic type of IEEE 802.11 LAN. No APs or Routers :: Ad-Hoc & Peer-to-Peer devices
+    - 🖧[**`PBSS`**: Personal Basic Service Set]() Similar to the IBSS, the PBSS is a type of IEEE 802.11 LAN in which STAs communicate directly with each other
+    - 🖧[**`DS`**: Distribution System]()
+    - 🖧[**`ESS`**: Extended Service Set]()
+    - 🖧[**`SSID`**: Service Set Identifier]()
+    - 🖧[**`BSSID`**: Basic Service Set Identifier]() Identifier very similar to a MAC Address to diferentiate one BSS from another
+    - 🖧[**`BSA`**: Basic Service Area]()
+    - 🖧[**`BSSA`**]()
+    - 🖧[**`LAN`** + **`WLAN`**: Integration with non-IEEE-802.11 LANs]()
 
-#### BSS: Basic Service Set
-_The basic building block of an 802.11 Network_
-- BSS
-
-#### IBSS: Independent Basic Service Set
-_Most basic type of IEEE 802.11 LAN. No APs or Routers :: Ad-Hoc & Peer-to-Peer devices_
-- [Introduction of Independent Basic Service Set (IBSS)](https://www.geeksforgeeks.org/introduction-of-independent-basic-service-set-ibss/) `Info`
-
-#### PBSS: Personal Basic Service Set
-_Similar to the IBSS, the PBSS is a type of IEEE 802.11 LAN in which STAs communicate directly with each other._
-
-#### DS: Distribution System
-
-#### ESS: Extended Service Set
-
-#### Area: 
-
-#### SSID: Service Set Identifier
-
-#### BSSID: Basic Service Set Identifier
-_Identifier very similar to a MAC Address to diferentiate one BSS from another_
-- BSSID
-
-#### BSA: Basic Service Area
-- BSSA
 
 #### RSNA: Robust security network association
 
-#### LAN + WLAN: Integration with non-IEEE-802.11 LANs
-
-
-
-
+#### Area:
 
 ## Network Planes
 
