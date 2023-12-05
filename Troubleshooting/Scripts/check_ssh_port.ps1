@@ -14,3 +14,21 @@ try {
 } finally {
     $tcpClient.Close()
 }
+
+## Al mismo tiempo revisar el puertos de google que http este abierto
+
+# Dirección IP y puertos HTTP/HTTPS
+$ipGoogle = "172.217.168.206"
+$puertosHTTP = @(80, 443)
+
+foreach ($puerto in $puertosHTTP) {
+    try {
+        $tcpClient = New-Object System.Net.Sockets.TcpClient
+        $tcpClient.Connect($ipGoogle, $puerto)
+        Write-Host "La conexión al puerto $puerto en $ipGoogle está abierta."
+    } catch {
+        Write-Host "La conexión al puerto $puerto en $ipGoogle está cerrada o no disponible."
+    } finally {
+        $tcpClient.Close()
+    }
+}
