@@ -657,6 +657,8 @@ Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx usi
 
 ## Design Best Practices
 - [Bigger Aint Always Better @ Bad-Fi](https://badfi.com/blog/2016/1/25/bigger-aint-always-better) `best practices`
+- [The WiSE Article Series: Interference from Non-WiFi Sources, Part 1 @ CWNP](https://www.cwnp.com/the-wise-article-series-interference-from-non-wifi-sources-part-1/)
+- [The WiSE Article Series: Interference from Non-WiFi Sources, Part 2 @ CWNP](https://www.cwnp.com/the-wise-article-series-interference-from-non-wifi-sources-part-2/)
 
 
 ## ⚙️🏗️🛰️ Components of 802.11 WLAN Network Architecture
