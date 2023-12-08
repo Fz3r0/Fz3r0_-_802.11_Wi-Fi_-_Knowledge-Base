@@ -8,7 +8,7 @@ _Networking & Wireless terminology, covering definitions, acronyms, and abbrevia
 
 ## ⭕ `Networking`: Definitions & Acronyms
 - [Networking Acronyms: Extensive List of Computer Related Acronyms](https://www.activexperts.com/admin/network-acronyms/)
-- [Computer Networking Acronyms/](https://networkencyclopedia.com/computer-networking-acronyms/)
+- [Computer Networking Acronyms](https://networkencyclopedia.com/computer-networking-acronyms/)
 - [List of Information Technology (IT) initialisms](https://en.wikipedia.org/wiki/List_of_information_technology_initialisms)
 
 ## ⭕ `802.11 Wireless`: Definitions
