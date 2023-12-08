@@ -710,11 +710,12 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 ---
 
 ### 🏘️📡🖧 DSS (Distribution System Service)
-- [Wireless LAN 802.11 Service Sets](https://networklessons.com/cisco/ccna-200-301/wireless-lan-802-11-service-sets)<br><br>
+- [Wireless LAN 802.11 Service Sets @ Wi-Fi Professionals](https://www.wifi-professionals.com/2019/03/802-11-topologies-aka-service-sets)<br><br>
 - [**`DSS`**: Distribution System Service](https://user-images.githubusercontent.com/94720207/227799137-f1505092-751e-45da-85c0-3c5689867f66.png)
     - 🖧[**`BSS`**: Basic Service Set]() The basic building block of an 802.11 Network
     - 🖧[**`IBSS`**: Independent Basic Service Set](https://www.geeksforgeeks.org/introduction-of-independent-basic-service-set-ibss/) Most basic type of IEEE 802.11 LAN. No APs or Routers :: Ad-Hoc & Peer-to-Peer devices
     - 🖧[**`PBSS`**: Personal Basic Service Set]() Similar to the IBSS, the PBSS is a type of IEEE 802.11 LAN in which STAs communicate directly with each other
+    - 🖧[**`MBSS`**: Mesh Basic Service Set]() Bridge wireless traffic from one AP to another. Multiple radios: TxRx between APs (CH1) & BSS for client STAs (CH2)
     - 🖧[**`DS`**: Distribution System]()
     - 🖧[**`ESS`**: Extended Service Set]()
     - 🖧[**`SSID`**: Service Set Identifier]()
@@ -891,7 +892,9 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 
 - CWAP CWNP
 
+## Resources
 
+- [wifi-professionals](https://www.wifi-professionals.com/)
 
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/e8dd78fc-101b-4e45-aeac-f23a0794962e)
