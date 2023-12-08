@@ -22,7 +22,7 @@ _Networking & Wireless terminology, covering definitions, acronyms, and abbrevia
 - [IEEE: 802.11 Acronyms & Abbreviations](https://ieeexplore.ieee.org/document/5769885) _`$$$`_
 - [Wireless Dictionary of Acronyms & Abbreviations @ IWPC: The International Wireless Industry Consortium](https://www.iwpc.org/dictionary.aspx)
 
-## ⭕ Wi-Fi Definition
+## ⭕ `Wi-Fi`: Definition
 _Wi-Fi is not an abbreviation for “wireless fidelity”; the name was created by a marketing firm hired by WECA and chosen for its pleasing sound and similarity to “hi-fi” (high-fidelity)._
 - [Wi-Fi Definition @ Britanica](https://www.britannica.com/technology/Wi-Fi)
 
