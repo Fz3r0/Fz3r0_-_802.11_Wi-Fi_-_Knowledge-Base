@@ -458,8 +458,15 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 ---
 
 ### 💀🎩🫅Fz3r0 Extended OSI Model for 802.11 Deep Analysis
+_En Wireless 802.11 los layers más importantes son los 1 & 2, pero también son relevantes 3 & 4, en menores de los casos son de capas superiores ya que salen del scope de las funciones 802.11_
 
-- []()
+- [💀🎩 Fz3r0 Extended OSI Model for 802.11 Deep Analysis](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)<br><br>
+    - [**`Layer 7`** :: **`Application`** :: **PDU** = Data :: _No Sub-Layers_](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)  
+    - [**`Layer 6`** :: **`Presentation`** :: **PDU** = Data :: _No Sub-Layers_](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)
+    - [**`Layer 5`** :: **`Session**` :: **PDU** = Data :: _No Sub-Layers_](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)
+    - [**`Layer 4`** :: **`Transport**` :: **PDU** = TCP:Segment / UDP:Datagram :: _No Sub-Layers_](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)
+    - [**`Layer 3`** :: **`Network**` :: **PDU** = Packet :: _No Sub-Layers_](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)
+    - [**`Layer 2`** :: **`Network**` :: **PDU** = Packet :: _No Sub-Layers_](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md) 
 
 
 ## 🌎♻️👮 Internet, Networking, Wireless & Telecomunication `Regulations`
