@@ -473,9 +473,12 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 - [History of the OSI Model and its origins](https://blog.domotz.com/know-your-networks/history-of-the-osi-model/) _`Information`_
 - [`1983` - Basic Reference Model for Open Systems Interconnection](https://ieeexplore.ieee.org/document/1457043)
 - [`1994` - Modelo OSI: ISO/IEC 7498-1:1994 - 30 años del Modelo sin cambios](https://ipmoguide.com/modelo-osi-iso-iec-7498-11994/)
-- [Fz3r0 Extended OSI Model for 802.11 CWAP]()
 
----
+### 💀🎩🫅Fz3r0 Extended OSI Model for 802.11 Deep Analysis
+
+- []()
+
+
 
 
 
