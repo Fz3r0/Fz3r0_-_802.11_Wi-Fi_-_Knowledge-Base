@@ -18,7 +18,7 @@ _Networking & Wireless terminology, covering definitions, acronyms, and abbrevia
 - [Fz3r0 Networking Definitions]()
 - [Fz3r0 IEEE 802.11 Wireless / Wi-Fi definitions]()
 
-## ⭕ `802.11`: Acronyms & Abbreviations
+## ⭕ `802.11 Wireless`: Acronyms & Abbreviations
 - [IEEE: 802.11 Acronyms & Abbreviations](https://ieeexplore.ieee.org/document/5769885) _`$$$`_
 - [Wireless Dictionary of Acronyms & Abbreviations @ IWPC: The International Wireless Industry Consortium](https://www.iwpc.org/dictionary.aspx)
 
