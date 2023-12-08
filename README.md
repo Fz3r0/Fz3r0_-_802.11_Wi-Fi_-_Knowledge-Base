@@ -20,10 +20,13 @@ _Wi-Fi is not an abbreviation for “wireless fidelity”; the name was created 
 - [IEEE: 802.11 Acronyms & Abbreviations](https://ieeexplore.ieee.org/document/5769885) _`$$$`_
 - [Wireless Dictionary of Acronyms & Abbreviations @ IWPC: The International Wireless Industry Consortium](https://www.iwpc.org/dictionary.aspx)
 
-## 📡🏺🧑‍🏫 History of Networking, Wireless Networks & Wi-Fi
+# 📡🏺🧑‍🏫 History of Networking, Wireless Networks & Wi-Fi
 _Knowing our history anchors us in the present & paves the way for a purposeful future. Mistakes become lessons, successes the stepping stones for our journey ahead: The one who knows the past can build the future. "Building the future, and keeping the past alive – are one and the same thing."_
 
-### 🏺🌐 History of Network Communications & Internet
+## 🏺🌐 History of Network Communications & Internet
+- [Telegraphy](https://en.wikipedia.org/wiki/Telegraphy) Long-distance transmission of messages where the sender uses symbolic codes, known to the recipient
+- [El telégrafo: El único medio de comunicación que funciona... ¡cuando todo cae!](https://www.youtube.com/watch?v=v5XhNLaAtF8)  _`video`_
+- [Código morse y el telégrafo](https://es.wikipedia.org/wiki/C%C3%B3digo_morse)
 - [Evolution of Computer Networks @ University of Notre Dame](https://www3.nd.edu/~dwang5/courses/spring21/pdf/evolution.pdf) _`educational resource`_
 - [Conectando al Mundo: La Historia de las Redes](https://www.youtube.com/watch?v=Mz2gjthKtPo) _`video`_
 - [Historia y Evolución de las redes](https://www.youtube.com/watch?v=BkmQAXhTi9w) _`video`_
@@ -33,12 +36,14 @@ _Knowing our history anchors us in the present & paves the way for a purposeful 
 
 ### 🗓️ 🌐 Networking & Internet `Timeline`
 
+[`1965` :: Two computers at MIT Lincoln Lab communicate with one another using packet-switching technology]()
+[`1968` :: Beranek and Newman, Inc. (BBN) unveils the final version of the Interface Message Processor (IMP) specifications. BBN wins ARPANET contract]()
 [`1969` :: Spread Spectrum Invention by Hedy Lamarr & George Carl Johann Anthei](https://patents.google.com/patent/US2292387A/en) _`U.S. Patent 2,292,387`_
 
----
-
-### 🏺📡 History of Wireless Local Area Networks (WLANs) & Wi-Fi
-- History of Wireless Local Area Networks
+## 🏺📡 History of Wireless Local Area Networks (WLANs) & Wi-Fi
+- [Radiotelegrahy | Telegrafía sin hilos](https://es.wikipedia.org/wiki/Telegraf%C3%ADa_sin_hilos)
+- [The Titanic & Radio Telegraph](https://www.sciencemuseum.org.uk/objects-and-stories/titanic-marconi-and-wireless-telegraph)
+- [NIST and the Titanic: How the Sinking of the Ship Improved Wireless Communications for Navigating the Sea](https://www.nist.gov/blogs/taking-measure/nist-and-titanic-how-sinking-ship-improved-wireless-communications-navigating)
 - [Overview of Wireless History](https://www.youtube.com/watch?v=CHbiQTskK9Q)
 - [History of Wireless Communication](https://www.youtube.com/watch?v=PU6JO8KPRs0)
 - [Hedy Lamarr (Hedwig Eva Maria Kiesler), inventora del Wi-Fi (Spread Spectrum)](https://es.wikipedia.org/wiki/Hedy_Lamarr)
@@ -65,9 +70,11 @@ _Knowing our history anchors us in the present & paves the way for a purposeful 
 - [`2020` :: Actual Ratiferd 802.11b/a/g/n/ac Wi-Fi 6E | OFDM 2.4, 5 & 6 GHz]()
 - [`2024 -->` :: Actual Wi-Fi & Future Transition | Giga & 10Giga | 802.11ax/be | 5 & 6 GHz]()
 
----
+### 802.11 Wi-Fi Wireless Early & Legacy Devices
+- [`1998` - **InTalk WR1200**: First 802.11 Access Point `802.11b`](https://www.pcmag.com/encyclopedia/term/access-point)
+- [`2000` - **Linksys** Early 2000s  Wi-Fi Gear `802.11b`](https://www.youtube.com/watch?v=LvLPz72IvAM)
 
-### 🏺🇲🇽 Historia de Redes, Internet, Telecomunicaciones y Radiodifusión en México
+## 🏺🇲🇽 Historia de Redes, Internet, Telecomunicaciones y Radiodifusión en México
 _Close your eyes... I remember..._
 - [Historia de las Telecomunicaciones en México](https://es.wikipedia.org/wiki/Historia_de_las_telecomunicaciones_en_M%C3%A9xico) _Wiki_
 - [La historia del Internet en México @ Gloria Koenigsberger | UNAM](https://www.fis.unam.mx/~gloria/g.koenigsberger_inicios_internet_libro.pdf) _`libro`_
@@ -85,7 +92,7 @@ _Close your eyes... I remember..._
 - [Ley Federal de Radio y Comunicación]()
 - [Telecomunicaciones y Radiodifusión en México @ UNAM](http://derecho.posgrado.unam.mx/site_cpd/public/publis_cpd/telecomyradiodifenMX.pdf)
 
-#### 🏺🇲🇽 Timeline
+### 🏺🇲🇽 Timeline
 - [`1851`: Se tiende cableado de la primer linea de Telégrafos entre CDMX y Nopalucan, Puebla](https://www.gob.mx/siap/articulos/inauguracion-de-la-primera-linea-telegrafica-en-mexico#:~:text=Un%205%20de%20noviembre%20de,el%20poblado%20de%20Nopalucan%2C%20Puebla.)
 - [`1852`: Se extiende la red Telégrafos hasta Veracruz](https://www.gob.mx/siap/articulos/inauguracion-de-la-primera-linea-telegrafica-en-mexico#:~:text=Un%205%20de%20noviembre%20de,el%20poblado%20de%20Nopalucan%2C%20Puebla.)
 - [`1878`: (Pdte. Porfirio Diaz) Primer linea y llamada telefónica en México :: Castillo de Chapultepec <=> Palacio Nacional](https://devenir.devenir.com.mx/18-de-junio-de-1878-primera-llamada-telefonica-en-mexico/) _"Que sea para acortar distancias y no para alargar los chismes"_
@@ -122,11 +129,7 @@ https://www.milenio.com/cultura/como-llego-el-internet-a-mexico]()
 - [`2013`: Reforma Constitucional de Telecomunicaciones 2013]()
 - [`2023`: En México hay un total de 80.6 millones de personas conectadas, de las cuales un 95% usa el smartphone para ello via inalámbirca]()
 
----
 
-### 802.11 Wi-Fi Wireless Early & Legacy Devices
-- [`1998` - **InTalk WR1200**: First 802.11 Access Point `802.11b`](https://www.pcmag.com/encyclopedia/term/access-point)
-- [`2000` - **Linksys** Early 2000s  Wi-Fi Gear `802.11b`](https://www.youtube.com/watch?v=LvLPz72IvAM)
 
 ## 🌎♻️🧙‍♂️ Internet, Networking, Wireless & Telecomunication `Organizations`
 
