@@ -47,6 +47,7 @@ _Knowing our history anchors us in the present & paves the way for a purposeful 
 - [Hedy Lamarr (Hedwig Eva Maria Kiesler), inventora del Wi-Fi (Spread Spectrum)](https://es.wikipedia.org/wiki/Hedy_Lamarr)
 - [George Carl Johann Antheil, co-inventor del Wi-Fi (Spread Spectrum)](https://es.wikipedia.org/wiki/George_Antheil)
 - [History of WLANs | WLPC Wireless LAN Weekly EP 48](https://www.youtube.com/watch?v=QN3Dnl3WoE4)
+- [https://www.cablefree.net/wireless-technology/history-of-wifi-technology/](https://www.cablefree.net/wireless-technology/history-of-wifi-technology/) _`timeline`_
 - [A History of Wireless Standards: Wi-Fi Back to Basics @ Extreme Networks](https://www.extremenetworks.com/resources/blogs/a-history-of-wireless-standards-wi-fi-back-to-basics) <br><br>
 
 ### 🗓️📡 Wi-Fi 802.11 `Timeline`
@@ -71,6 +72,7 @@ _Knowing our history anchors us in the present & paves the way for a purposeful 
 ### 802.11 Wi-Fi Wireless Early & Legacy Devices
 - [`1998` - **InTalk WR1200**: First 802.11 Access Point `802.11b`](https://www.pcmag.com/encyclopedia/term/access-point)
 - [`2000` - **Linksys** Early 2000s  Wi-Fi Gear `802.11b`](https://www.youtube.com/watch?v=LvLPz72IvAM)
+- [`2006` - **D-Link DPH-540**: 'first' clamshell Wi-Fi VoIP phone](https://www.theregister.com/2006/03/14/d-link_dph-540_voip_phone/)
 
 ## 🏺🇲🇽 Historia de Redes, Internet, Telecomunicaciones y Radiodifusión en México
 _Close your eyes... I remember..._
