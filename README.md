@@ -3,7 +3,14 @@ _by Fz3r0_ 💀🎩
 
 _👷👷👷 En construcción...  //  Under construction 👷👷👷_
 
-## 📜📖❓ 802.11 Wireless: Definitions, Acronyms & Abbreviations
+## 📜📖❓ Networking & Wireless: Definitions, Acronyms & Abbreviations
+
+### ⭕ Networking
+- [Networking Acronyms: Extensive List of Computer Related Acronyms](https://www.activexperts.com/admin/network-acronyms/)
+- [https://networkencyclopedia.com/computer-networking-acronyms/](https://networkencyclopedia.com/computer-networking-acronyms/)
+- [List of information technology initialisms](https://en.wikipedia.org/wiki/List_of_information_technology_initialisms)
+
+---
 
 ### ⭕ Wi-Fi Definition
 _Wi-Fi is not an abbreviation for “wireless fidelity”; the name was created by a marketing firm hired by WECA and chosen for its pleasing sound and similarity to “hi-fi” (high-fidelity)._
