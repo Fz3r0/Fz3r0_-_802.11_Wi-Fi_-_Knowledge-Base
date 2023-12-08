@@ -790,6 +790,10 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 
 ## 802.11 Analysis & Troubleshooting
 
+## Spectrum Analysis `layer 1`:`PHY`
+
+## Protocol Analysis `layer 2`>`MAC` & `layers 3-7`
+
 ### Wireless 802.11 Troubleshooting Methodologies
 
 - [CWNA: Troubleshooting Methodology](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/00e059e9-cd95-4f8c-8c8d-3a4ae111acd6)
