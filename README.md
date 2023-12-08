@@ -20,7 +20,7 @@ _Wi-Fi is not an abbreviation for “wireless fidelity”; the name was created 
 - [IEEE: 802.11 Acronyms & Abbreviations](https://ieeexplore.ieee.org/document/5769885) _`$$$`_
 - [Wireless Dictionary of Acronyms & Abbreviations @ IWPC: The International Wireless Industry Consortium](https://www.iwpc.org/dictionary.aspx)
 
-## 📡🏺🧑‍🏫 History of Wireless Networks & Wi-Fi
+## 📡🏺🧑‍🏫 History of Networking, Wireless Networks & Wi-Fi
 _The one who knows the past can build the future. Building the future, and keeping the past alive – are one and the same thing._
 
 ### 🏺🌐 History of Network Communications & Internet
@@ -29,6 +29,11 @@ _The one who knows the past can build the future. Building the future, and keepi
 - [Historia y Evolución de las redes](https://www.youtube.com/watch?v=BkmQAXhTi9w) _`video`_
 - [History of Computer Networking @ javat point](https://www.javatpoint.com/history-of-computer-networking) _`timeline`_
 - [A Brief History of the Internet & Related Networks @ Internet Society](https://www.internetsociety.org/internet/history-internet/brief-history-internet-related-networks/) _`info`_
+- [https://www.livescience.com/20727-internet-history.html](https://www.livescience.com/20727-internet-history.html) _`timeline`_
+
+### 🗓️ 🌐 Networking & Internet `Timeline`
+
+[`1969` :: Spread Spectrum Invention by Hedy Lamarr & George Carl Johann Anthei](https://patents.google.com/patent/US2292387A/en) _`U.S. Patent 2,292,387`_
 
 ---
 
@@ -41,9 +46,7 @@ _The one who knows the past can build the future. Building the future, and keepi
 - [History of WLANs | WLPC Wireless LAN Weekly EP 48](https://www.youtube.com/watch?v=QN3Dnl3WoE4)
 - [A History of Wireless Standards: Wi-Fi Back to Basics @ Extreme Networks](https://www.extremenetworks.com/resources/blogs/a-history-of-wireless-standards-wi-fi-back-to-basics) <br><br>
 
----
-
-### 🗓️📡 Wi-Fi 802.11 Timeline
+### 🗓️📡 Wi-Fi 802.11 `Timeline`
 - [802.11 Timeline](https://evanmccann.net/blog/wifi-101/origins-and-history)
 - [`1942` :: Spread Spectrum Invention by Hedy Lamarr & George Carl Johann Anthei](https://patents.google.com/patent/US2292387A/en) _`U.S. Patent 2,292,387`_
 - [`1970` :: ALOHAnet - The first Wireless Network :: ALOHA random access & experimental UHF](https://en.wikipedia.org/wiki/ALOHAnet)
