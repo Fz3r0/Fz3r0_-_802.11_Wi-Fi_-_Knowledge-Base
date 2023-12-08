@@ -35,10 +35,8 @@ _Knowing our history anchors us in the present & paves the way for a purposeful 
 - [https://www.livescience.com/20727-internet-history.html](https://www.livescience.com/20727-internet-history.html) _`timeline`_
 
 ### 🗓️ 🌐 Networking & Internet `Timeline`
-
-[`1965` :: Two computers at MIT Lincoln Lab communicate with one another using packet-switching technology]()
-[`1968` :: Beranek and Newman, Inc. (BBN) unveils the final version of the Interface Message Processor (IMP) specifications. BBN wins ARPANET contract]()
-[`1969` :: Spread Spectrum Invention by Hedy Lamarr & George Carl Johann Anthei](https://patents.google.com/patent/US2292387A/en) _`U.S. Patent 2,292,387`_
+- [`1965` :: Two computers at MIT Lincoln Lab communicate with one another using packet-switching technology]()
+- [`1968` :: Beranek and Newman, Inc. (BBN) unveils the final version of the Interface Message Processor (IMP) specifications. BBN wins ARPANET contract]()
 
 ## 🏺📡 History of Wireless Local Area Networks (WLANs) & Wi-Fi
 - [Radiotelegrahy | Telegrafía sin hilos](https://es.wikipedia.org/wiki/Telegraf%C3%ADa_sin_hilos)
