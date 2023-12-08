@@ -3,7 +3,7 @@ _by Fz3r0_ 💀🎩
 
 _👷👷👷 En construcción...  //  Under construction 👷👷👷_
 
-# 📜📖❓ Networking & Wireless: `Definitions`, `Acronyms` & `Abbreviations`
+# 📜📖❓ `Definitions`, `Acronyms` & `Abbreviations`
 _Networking & Wireless terminology, covering definitions, acronyms, and abbreviations. From computer-related acronyms to clarifying Wi-Fi's origin, IEEE 802.11 standards with insights from various sources._
 
 ## ⭕ `Networking`: Definitions & Acronyms
