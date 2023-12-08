@@ -220,58 +220,13 @@ _RFC documents contain technical specifications and organizational notes for the
 - [RFC List @ RFC Editor](https://www.rfc-editor.org/rfc/) _`RFC Editor`_
 
 
-## 🌎♻️🫅 Internet, Networking, Wireless & Telecomunication `Standards`
+# 🌎♻️🫅 Internet, Networking, Wireless & Telecomunication `Standards` & `Regulations`
 
-### 🫅🌎 ISO: International Organization for Standardization
-
----
-
-### 🫅🛜 Wi-Fi Alliance
+## 🫅🛜 Wi-Fi Alliance
 _Non-profit organization that owns the Wi-Fi trademark. Manufacturers may use the trademark to brand products certified for Wi-Fi interoperability. _
 
 - [](https://www.wi-fi.org/) _`official`_
 - [Wi-Fi Alliance](https://en.wikipedia.org/wiki/Wi-Fi_Alliance) _`Wiki`_
-
----
-
-### 🫅🪖 IEEE: Institute of Electrical and Electronics Engineers
-_IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. IEEE and its members inspire a global community through its highly cited publications, conferences, technology standards, and professional and educational activities._
-- [IEEE: Institute of Electrical and Electronics Engineers](https://en.wikipedia.org/wiki/Institute_of_Electrical_and_Electronics_Engineers) _`Wiki`_
-- [About IEEE](https://www.ieee.org/about/) _`Official`_
-- [IEEE at a Glance](https://www.ieee.org/about/at-a-glance.html#:~:text=IEEE%20is%20the%20world's%20largest,and%20professional%20and%20educational%20activities.) _`Official`_
-- [What is IEEE? @ University of Maine](https://umaine.edu/ieee/what-is-ieee/) _`text`_
-- [IEEE: Institute of Electrical and Electronics Engineers @ TechTarget](https://www.techtarget.com/whatis/definition/IEEE-Institute-of-Electrical-and-Electronics-Engineers) _`text`_
-- [¿Qué es y a qué se dedica la IEEE?](https://www.youtube.com/watch?v=fgHKggNGazs) _`video`_
-- [Beneficios de la membresía a la IEEE](https://www.youtube.com/watch?v=qXcsZl7WqXY) _`video`_
-- [Joining the IEEE](https://www.ieee.org/membership/join/index.html?WT.mc_id=hc_join) _`Official`_
-
-
-## 🌎♻️👮 Internet, Networking, Wireless & Telecomunication `Regulations`
-
-- [Regulatory Domains in WIFI @ Leo Tech Talk](https://www.youtube.com/watch?app=desktop&v=rcuGjndqicw) _`video`_
-- [**Regulatory Bodies/Domains**](https://shop.chulo.co.uk/blog/what-is-regulatory-domain.html)
-
----
-
-### 👮📡 Regulatory Domains AKA Regulotory Bodies (Wireless)
-_Set of rules and policies providing the end user with configurations of country code, calibration channel, and output power settings for a **wireless** device set up in a specific area_
-- [Regulatory Body: ETSI]()
-- [Regulatory Body: FCC - Federal Communications Commission]()
-- [Regulatory Body: TELEC]()
-- [Regulatory Body: KCC]()
-
----
-
-### 👮🇺🇸 FCC Federal Communications Commission
-
-### 👮🇲🇽 Regulaciones y Organizaciones Mexicanas
-- [IFT: Instituto Federal de Telecomunicaciones](https://www.ift.org.mx/espectro-radioelectrico#:~:text=En%20este%20sentido%2C%20la%20Unidad,y%20la%20Comunicaci%C3%B3n%20V%C3%ADa%20Sat%C3%A9lite.)
-- [Unidad de Espectro Radioeléctrico del IFT]()
-- [Ley Federal de Telecomunicaciones y Radiodifusión](https://www.ucol.mx/content/cms/13/file/federal/LEY_FED_DE_TELECOMUNICACIONES.pdf)
-- SCT: Secretaría de Comunicaciones y Transportes
-- DOF: Diario Oficial de la Federación
-
-## 🫅🛜 Wi-Fi Alliance: Certifications
 
 ### 🫅🛜 Wi-Fi Alliance: Certification Program
 - 2.4/5/6GHz Wi-Fi
@@ -282,11 +237,20 @@ _Set of rules and policies providing the end user with configurations of country
 - Wi-Fi Passpoint
 - 
 
-## 👑 IEEE: 802 Standards
-_The most widely used IEEE 802 standards are for Ethernet, Bridging and Virtual Bridged LANs Wireless LAN, Wireless PAN, Wireless MAN, Wireless Coexistence, Media Independent Handover Services, and Wireless RAN with a dedicated Working Group providing focus for each area. IEEE 802 also coordinates with other national and international standards bodies, including ISO which has published certain IEEE 802 standards as international standards._
 
-- [IEEE 802 50th Aniversary, a look back](https://standards.ieee.org/featured/ieee-802/#:~:text=The%20most%20widely%20used%20IEEE,providing%20focus%20for%20each%20area.)
-- IEEE 802: Overview & Architecture
+
+
+
+## 🫅🪖 IEEE: Institute of Electrical and Electronics Engineers
+_IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. IEEE and its members inspire a global community through its highly cited publications, conferences, technology standards, and professional and educational activities._
+- [IEEE: Institute of Electrical and Electronics Engineers](https://en.wikipedia.org/wiki/Institute_of_Electrical_and_Electronics_Engineers) _`Wiki`_
+- [About IEEE](https://www.ieee.org/about/) _`Official`_
+- [IEEE at a Glance](https://www.ieee.org/about/at-a-glance.html#:~:text=IEEE%20is%20the%20world's%20largest,and%20professional%20and%20educational%20activities.) _`Official`_
+- [What is IEEE? @ University of Maine](https://umaine.edu/ieee/what-is-ieee/) _`text`_
+- [IEEE: Institute of Electrical and Electronics Engineers @ TechTarget](https://www.techtarget.com/whatis/definition/IEEE-Institute-of-Electrical-and-Electronics-Engineers) _`text`_
+- [¿Qué es y a qué se dedica la IEEE?](https://www.youtube.com/watch?v=fgHKggNGazs) _`video`_
+- [Beneficios de la membresía a la IEEE](https://www.youtube.com/watch?v=qXcsZl7WqXY) _`video`_
+- [Joining the IEEE](https://www.ieee.org/membership/join/index.html?WT.mc_id=hc_join) _`Official`_
 
 ---
 
@@ -301,7 +265,9 @@ _The most widely used IEEE 802 standards are for Ethernet, Bridging and Virtual 
 - IEEE 802.21: Media Independent Handover Services
 - IEEE 802.22: Wireless Regional Area Networks
 
-## 👑📡🛰️ IEEE Std 802.11™‐2020 (Revision of IEEE Std 802.11‐2016)
+---
+
+### 👑📡🛰️ IEEE Std 802.11™‐2020 (Revision of IEEE Std 802.11‐2016)
 _IEEE Standard for Information Technology—Telecommunications and Information Exchange between Systems Local and Metropolitan Area Networks—Specific Requirements Part 11: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications | Revision 2020_
 
 - **[IEEE 802.11-2020 Preview: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications](https://thewifiofthings.com/wp-content/uploads/2021/08/802.11-2020-Preview.pdf)**
@@ -430,8 +396,10 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 - [**802.11T**](https://en-academic.com/dic.nsf/enwiki/1333888) **Withdrawn in 2008** :: **WPP** Wireless Performance Prediction 
 - [**802.11bg**]()  **unassigned** :: likely to avoid confusion by combining 802.11b/g
 
-## 🌎↕️🖧 Networking Models
 
+## 🫅🌎 ISO: International Organization for Standardization & other Nwteorking Models
+
+### 🌎↕️🖧 Networking Models
 - [All Networking Models Compared](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/6cc880c6-1e1f-4f14-be09-005120bbd8db) `table`
 - [The TCP/IP & OSI Models compared@ Global Knowledge](https://mochieng.files.wordpress.com/2012/04/wp_nw_tcp-ip1.pdf)
 
@@ -474,9 +442,51 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 - [`1983` - Basic Reference Model for Open Systems Interconnection](https://ieeexplore.ieee.org/document/1457043)
 - [`1994` - Modelo OSI: ISO/IEC 7498-1:1994 - 30 años del Modelo sin cambios](https://ipmoguide.com/modelo-osi-iso-iec-7498-11994/)
 
+---
+
 ### 💀🎩🫅Fz3r0 Extended OSI Model for 802.11 Deep Analysis
 
 - []()
+
+
+## 🌎♻️👮 Internet, Networking, Wireless & Telecomunication `Regulations`
+
+- [Regulatory Domains in WIFI @ Leo Tech Talk](https://www.youtube.com/watch?app=desktop&v=rcuGjndqicw) _`video`_
+- [**Regulatory Bodies/Domains**](https://shop.chulo.co.uk/blog/what-is-regulatory-domain.html)
+
+---
+
+### 👮📡 Regulatory Domains AKA Regulotory Bodies (Wireless)
+_Set of rules and policies providing the end user with configurations of country code, calibration channel, and output power settings for a **wireless** device set up in a specific area_
+- [Regulatory Body: ETSI]()
+- [Regulatory Body: FCC - Federal Communications Commission]()
+- [Regulatory Body: TELEC]()
+- [Regulatory Body: KCC]()
+
+---
+
+### 👮🇺🇸 FCC Federal Communications Commission
+
+### 👮🇲🇽 Regulaciones y Organizaciones Mexicanas
+- [IFT: Instituto Federal de Telecomunicaciones](https://www.ift.org.mx/espectro-radioelectrico#:~:text=En%20este%20sentido%2C%20la%20Unidad,y%20la%20Comunicaci%C3%B3n%20V%C3%ADa%20Sat%C3%A9lite.)
+- [Unidad de Espectro Radioeléctrico del IFT]()
+- [Ley Federal de Telecomunicaciones y Radiodifusión](https://www.ucol.mx/content/cms/13/file/federal/LEY_FED_DE_TELECOMUNICACIONES.pdf)
+- SCT: Secretaría de Comunicaciones y Transportes
+- DOF: Diario Oficial de la Federación
+
+
+
+## 👑 IEEE: 802 Standards
+_The most widely used IEEE 802 standards are for Ethernet, Bridging and Virtual Bridged LANs Wireless LAN, Wireless PAN, Wireless MAN, Wireless Coexistence, Media Independent Handover Services, and Wireless RAN with a dedicated Working Group providing focus for each area. IEEE 802 also coordinates with other national and international standards bodies, including ISO which has published certain IEEE 802 standards as international standards._
+
+- [IEEE 802 50th Aniversary, a look back](https://standards.ieee.org/featured/ieee-802/#:~:text=The%20most%20widely%20used%20IEEE,providing%20focus%20for%20each%20area.)
+- IEEE 802: Overview & Architecture
+
+---
+
+
+
+
 
 
 
