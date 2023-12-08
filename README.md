@@ -3,10 +3,10 @@ _by Fz3r0_ 💀🎩
 
 _👷👷👷 En construcción...  //  Under construction 👷👷👷_
 
-# 📜📖❓ Networking & Wireless: Definitions, Acronyms & Abbreviations
+# 📜📖❓ Networking & Wireless: <br> `Definitions`, `Acronyms` & `Abbreviations`
 _Networking & Wireless terminology, covering definitions, acronyms, and abbreviations. From computer-related acronyms to clarifying Wi-Fi's origin, IEEE 802.11 standards with insights from various sources._
 
-## ⭕ Networking Definitions & Acronyms
+## ⭕ `Networking`: Definitions & Acronyms
 - [Networking Acronyms: Extensive List of Computer Related Acronyms](https://www.activexperts.com/admin/network-acronyms/)
 - [https://networkencyclopedia.com/computer-networking-acronyms/](https://networkencyclopedia.com/computer-networking-acronyms/)
 - [List of information technology initialisms](https://en.wikipedia.org/wiki/List_of_information_technology_initialisms)
@@ -15,14 +15,14 @@ _Networking & Wireless terminology, covering definitions, acronyms, and abbrevia
 _Wi-Fi is not an abbreviation for “wireless fidelity”; the name was created by a marketing firm hired by WECA and chosen for its pleasing sound and similarity to “hi-fi” (high-fidelity)._
 - [Wi-Fi Definition @ Britanica](https://www.britannica.com/technology/Wi-Fi)
 
-## ⭕ 802.11 Wi-Fi: Definitions
+## ⭕ `802.11 Wireless`: Definitions
 - [IEEE: 802.11 Standards Dictionary Online](https://ieeexplore.ieee.org/browse/standards/dictionary?activeStatus=true)
 - [Agilent Technologies: Wireless Dictionary](https://ftp.unpad.ac.id/orari/library/library-ref-eng/ref-eng-1/physical/voip/wireless/dictionary.pdf)
 - [PC Mag - Encyclopedia](https://www.pcmag.com/encyclopedia)
 - [Fz3r0 Networking Definitions]()
 - [Fz3r0 IEEE 802.11 Wireless / Wi-Fi definitions]()
 
-### ⭕ 802.11 Wireless: Acronyms & Abbreviations
+### ⭕ `802.11`: Acronyms & Abbreviations
 - [IEEE: 802.11 Acronyms & Abbreviations](https://ieeexplore.ieee.org/document/5769885) _`$$$`_
 - [Wireless Dictionary of Acronyms & Abbreviations @ IWPC: The International Wireless Industry Consortium](https://www.iwpc.org/dictionary.aspx)
 
