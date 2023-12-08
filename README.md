@@ -715,9 +715,9 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 - [WLAN Basic Architecture @ CWNP](https://www.youtube.com/watch?v=QLqgmMFCKnU) _`video`_ <br><br>
 - [**`DSS`**: Distribution System Service](https://user-images.githubusercontent.com/94720207/227799137-f1505092-751e-45da-85c0-3c5689867f66.png)
     - 🖧[**`BSS`**: Basic Service Set]() The basic building block of an 802.11 Network
+    - 🖧[**`QBSS`**: QOS basic service set]() Simply QoS implementation in a BSS | Every new enterprise APs will have QoS capabilities
     - 🖧[**`IBSS`**: Independent Basic Service Set](https://www.geeksforgeeks.org/introduction-of-independent-basic-service-set-ibss/) Most basic type of IEEE 802.11 LAN. No APs or Routers :: Ad-Hoc & Peer-to-Peer devices
     - 🖧[**`PBSS`**: Personal Basic Service Set]() Similar to the IBSS, the PBSS is a type of IEEE 802.11 LAN in which STAs communicate directly with each other
-    - 🖧[**`QBSS`**: QOS basic service set]() Simply QoS implementation in a BSS | Every new enterprise APs will have QoS capabilities
     - 🖧[**`MBSS`**: Mesh Basic Service Set]() Bridge wireless traffic from one AP to another. Multiple radios: TxRx between APs (CH1) & BSS for client STAs (CH2)
     - 🖧[**`DS`**: Distribution System](https://www.cbtnuggets.com/blog/technology/networking/8-components-of-a-802-11-wireless-service-set) Data from AP -> LAN/Mesh/etc. Usually an ethernet network | **logical**
     - 🖧[**`DSM`**: Distribution System Media](https://www.cbtnuggets.com/blog/technology/networking/8-components-of-a-802-11-wireless-service-set) Data from AP -> LAN/Mesh/etc. Usually an ethernet network | **physical**
@@ -726,11 +726,6 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
     - 🖧[**`BSSID`**: Basic Service Set Identifier](https://www.cbtnuggets.com/blog/technology/networking/8-components-of-a-802-11-wireless-service-set) Identifier very similar to a MAC Address to diferentiate one BSS from another
     - 🖧[**`BSA`**: Basic Service Area](https://www.wifi-professionals.com/2019/03/802-11-topologies-aka-service-sets) Physical area which is covered by one access point | AP Cell
     - 🖧[**`LAN`** + **`WLAN`**: Integration with non-IEEE-802.11 LANs]()
-
-
-#### RSNA: Robust security network association
-
-#### Area:
 
 ## Network Planes
 
