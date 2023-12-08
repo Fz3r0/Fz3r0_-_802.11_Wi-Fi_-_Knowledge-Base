@@ -710,18 +710,21 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 ---
 
 ### 🏘️📡🖧 DSS (Distribution System Service)
-- [Wireless LAN 802.11 Service Sets @ Wi-Fi Professionals](https://www.wifi-professionals.com/2019/03/802-11-topologies-aka-service-sets)<br><br>
+- [Wireless LAN 802.11 Service Sets @ Wi-Fi Professionals](https://www.wifi-professionals.com/2019/03/802-11-topologies-aka-service-sets)
+- [8 Components of a 802.11 Wireless Service Set](https://www.cbtnuggets.com/blog/technology/networking/8-components-of-a-802-11-wireless-service-set)
+- [WLAN Basic Architecture @ CWNP](https://www.youtube.com/watch?v=QLqgmMFCKnU) _`video`_ <br><br>
 - [**`DSS`**: Distribution System Service](https://user-images.githubusercontent.com/94720207/227799137-f1505092-751e-45da-85c0-3c5689867f66.png)
     - 🖧[**`BSS`**: Basic Service Set]() The basic building block of an 802.11 Network
     - 🖧[**`IBSS`**: Independent Basic Service Set](https://www.geeksforgeeks.org/introduction-of-independent-basic-service-set-ibss/) Most basic type of IEEE 802.11 LAN. No APs or Routers :: Ad-Hoc & Peer-to-Peer devices
     - 🖧[**`PBSS`**: Personal Basic Service Set]() Similar to the IBSS, the PBSS is a type of IEEE 802.11 LAN in which STAs communicate directly with each other
+    - 🖧[**`QBSS`**: QOS basic service set]() Simply QoS implementation in a BSS | Every new enterprise APs will have QoS capabilities
     - 🖧[**`MBSS`**: Mesh Basic Service Set]() Bridge wireless traffic from one AP to another. Multiple radios: TxRx between APs (CH1) & BSS for client STAs (CH2)
-    - 🖧[**`DS`**: Distribution System]()
-    - 🖧[**`ESS`**: Extended Service Set]()
-    - 🖧[**`SSID`**: Service Set Identifier]()
-    - 🖧[**`BSSID`**: Basic Service Set Identifier]() Identifier very similar to a MAC Address to diferentiate one BSS from another
-    - 🖧[**`BSA`**: Basic Service Area]()
-    - 🖧[**`BSSA`**]()
+    - 🖧[**`DS`**: Distribution System](https://www.cbtnuggets.com/blog/technology/networking/8-components-of-a-802-11-wireless-service-set) Data from AP -> LAN/Mesh/etc. Usually an ethernet network | **logical**
+    - 🖧[**`DSM`**: Distribution System Media](https://www.cbtnuggets.com/blog/technology/networking/8-components-of-a-802-11-wireless-service-set) Data from AP -> LAN/Mesh/etc. Usually an ethernet network | **physical**
+    - 🖧[**`ESS`**: Extended Service Set](https://www.cbtnuggets.com/blog/technology/networking/8-components-of-a-802-11-wireless-service-set) 2 or more BSS connected via distribution system medium (i.e LAN infrastructure & SmarZone Controller) | Centralized Network
+    - 🖧[**`SSID`** or **`ESSID`**: (Extended) Service Set Identifier](https://www.cbtnuggets.com/blog/technology/networking/8-components-of-a-802-11-wireless-service-set) Logical (human read) name of the network | 2 or more APs: Every SSID will have its own BSSID
+    - 🖧[**`BSSID`**: Basic Service Set Identifier](https://www.cbtnuggets.com/blog/technology/networking/8-components-of-a-802-11-wireless-service-set) Identifier very similar to a MAC Address to diferentiate one BSS from another
+    - 🖧[**`BSA`**: Basic Service Area](https://www.wifi-professionals.com/2019/03/802-11-topologies-aka-service-sets) Physical area which is covered by one access point | AP Cell
     - 🖧[**`LAN`** + **`WLAN`**: Integration with non-IEEE-802.11 LANs]()
 
 
