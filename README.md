@@ -21,7 +21,7 @@ _Wi-Fi is not an abbreviation for “wireless fidelity”; the name was created 
 - [Wireless Dictionary of Acronyms & Abbreviations @ IWPC: The International Wireless Industry Consortium](https://www.iwpc.org/dictionary.aspx)
 
 ## 📡🏺🧑‍🏫 History of Networking, Wireless Networks & Wi-Fi
-_The one who knows the past can build the future. Building the future, and keeping the past alive – are one and the same thing._
+_Knowing our history anchors us in the present & paves the way for a purposeful future. Mistakes become lessons, successes the stepping stones for our journey ahead: The one who knows the past can build the future. "Building the future, and keeping the past alive – are one and the same thing."_
 
 ### 🏺🌐 History of Network Communications & Internet
 - [Evolution of Computer Networks @ University of Notre Dame](https://www3.nd.edu/~dwang5/courses/spring21/pdf/evolution.pdf) _`educational resource`_
