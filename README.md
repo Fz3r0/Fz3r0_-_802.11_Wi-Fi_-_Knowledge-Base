@@ -220,7 +220,8 @@ _RFC documents contain technical specifications and organizational notes for the
 - [RFC List @ RFC Editor](https://www.rfc-editor.org/rfc/) _`RFC Editor`_
 
 
-# 🌎♻️🫅 Internet, Networking, Wireless & Telecomunication `Standards` & `Regulations`
+# 🌎🔧🫅 Internet, Networking, Wireless & Telecomunication `Standards` & `Regulations`
+_Networking organizations, certifications, standards (particularly IEEE 802.11) & wireless regulations used for wireless connectivity around the world_ 📡
 
 ## 🫅🛜 Wi-Fi Alliance
 _Non-profit organization that owns the Wi-Fi trademark. Manufacturers may use the trademark to brand products certified for Wi-Fi interoperability. _
