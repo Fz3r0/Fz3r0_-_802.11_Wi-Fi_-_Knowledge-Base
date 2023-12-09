@@ -553,34 +553,34 @@ _The most widely used IEEE 802 standards are for Ethernet, Bridging and Virtual 
 
 
 
-## 🪆🛜⚙️ 802.11 Layer 1: Physical (PHY) | _for `Spectrum Analysis`_
+# 🪆🛜⚙️ 802.11 Layer 1: Physical (PHY) <br> _for `Spectrum Analysis`_
 _The PHY services provided to the MAC. The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. 
 Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx using management info | B) Characteristics & Method to Tx & Rx data through WM (Wireless Medium). The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. _
 
-### ⭕ Radiotap Header / PPI (Per-Packet Information)
-_Data that is NOT present in a frame, but is intepreted coming from Layer 1 (spectrum). additional information (Meta-Information) that is added to each 802.11 frame when capturing frames with an analysis application interpreted by PHY layer 1 spectrum . these are not part of the standard 802.11 frame format, but are additional information added at the time of capture to provide supplementary data about the frames captured_
+## ⭕ Radiotap Header / PPI (Per-Packet Information)
+_Data that is NOT present in a frame, but is intepreted coming from Layer 1 (spectrum). Additional information (Meta-Information) that is added to each 802.11 frame when capturing frames with an analysis application interpreted/calculated because the PHY layer 1 spectrum throught drivers/adapters. These are not part of the standard 802.11 frame format, but are additional information added at the time of capture to provide supplementary data about the frames captured_
 - [PPI: PPI (Per-Packet Information) @ Wireshark](https://wiki.wireshark.org/PPI#:~:text=PPI%20(Per%2DPacket%20Information)&text=Each%20PPI%20packet%20header%20is,field%20headers%20are%20little%2Dendian.)
 - [Radiotap Headers @ Wi-Fi Nigel](https://wifinigel.blogspot.com/2013/11/what-are-radiotap-headers.html)
  
 
-### ⭕ 802.11 PHY Functional Entities _(AKA PHY Functions)_
+## ⭕ 802.11 PHY Functional Entities _(AKA PHY Functions)_
 
 - PHY Function
 - Layer Management Function
 
-### ⭕ DS SAP Specification
+## ⭕ DS SAP Specification
 - DS SAP Specification Overview
 - SAP Primitives
 
-### ⭕ 802.11 Primitives _(Instructions & Data directly understandable by STAs)_
+## ⭕ 802.11 Primitives 
+_Instructions & Data directly understandable by STAs, not present on 802.11 Frames (PCAPs)_
 - [802.11 Primitives (Wireless Access Methods and Physical Layer Specifications)](https://grouper.ieee.org/groups/802/11/Documents/DocumentArchives/1995_docs/1195038_scan.pdf) _`pdf`_
     - Primitive Category: Supports Peer-to-Peer Interacions
     - Primitive Category: Have local significance & support Sublayer-toS-ublayer Interacions
 - [802.11b HR-DSSS PHY-SAP Primitives](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/b8fe1268-24f5-4802-b5d0-5ed0c63f04d4)
 - [802.11a OFDM PHY-SAP Primitives](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/ce89b303-ad56-45d2-a944-1d71c81ff0f2)
 
-
-### ⭕ 802.11 PHY Services Specifications = Clause 8 802.11-2020
+## ⭕ 802.11 PHY Services Specifications = Clause 8 802.11-2020
 - Clause PHT: DSSS
 - Clause PHT: HR/DSSS
 - Clause PHT: OFDM
