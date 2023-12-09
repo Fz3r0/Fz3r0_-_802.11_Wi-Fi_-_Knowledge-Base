@@ -477,9 +477,10 @@ _En Wireless 802.11 los layers más importantes son los 1 & 2, pero también son
     - [**`Layer 5`** :: **`Session`** :: **PDU** = _**`Data`**_ :: _No Sub-Layers_](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)
     - [**`Layer 4`** :: **`Transport`** :: **PDU** = TCP:**`Segment`** / UDP:**`Datagram`** :: _No Sub-Layers_](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)
     - [**`Layer 3`** :: **`Network`** :: **PDU** = **`Packet`** :: IPv4 & IPv6 ::_No Sub-Layers_](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)
-    - [**`Layer 2`** :: **`Data Link`** **UPPER sublayer** :: **PDU** = Data Link **`Frame`** :: Sub-Layer - `Upper` = **`LLC`** > **LPDU**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)
-    - [**`Layer 2`** :: **`Data Link`** **LOWER sublayer** :: **PDU** = Data Link **`Frame`** :: Sub-Layer - `Lower` = **`MAC`** > **MPDU**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)
-    - [**`Layer 1`** :: **`Physical`** **UPPER/LOWER (MAC)** :: **PDU** = Physical Layer **`Frame`** = **`PHY`** > **PPDU**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)
+    - [**`Layer 2`** :: **`Data Link`** :: **PDU** = Data Link **`Frame`** :: Sub-Layer=`Upper` = **`LLC`** > **LPDU**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)
+    - [**`Layer 2`** :: **`Data Link`** :: **PDU** = Data Link **`Frame`** :: Sub-Layer=`Lower` = **`MAC`** > **MPDU**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)
+    - [**`Layer 1`** :: **`Physical`** :: **PDU** = Physical Layer **`Frame`** :: Sub-Layer=`Upper` = **`PLCP`** > **PPDU**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289)
+    - [**`Layer 1`** :: **`Physical`** ** :: **PDU** = Physical Layer **`Frame`** :: Sub-Layer - `Lower` = **`PMD`** > **1/0 @ RF air**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289)
     - [**`Transmission Medium`** :: Radio (Air RF), Optical, Coaxial, Twisted Pair](https://en.wikipedia.org/wiki/Transmission_medium)
 
 
@@ -558,10 +559,12 @@ _The PHY services provided to the MAC. The function of the PHY is to provide a m
 Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx using management info | B) Characteristics & Method to Tx & Rx data through WM (Wireless Medium). The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. _
 
 ## ⭕ Radiotap Header / PPI (Per-Packet Information) / Pseudo-Header
-_Data that is NOT present in a frame, but is intepreted coming from Layer 1 (spectrum). Additional information (Meta-Information) that is added to each 802.11 frame when capturing frames with an analysis application interpreted/calculated because the PHY layer 1 spectrum throught drivers/adapters. These are not part of the standard 802.11 frame format, but are additional information added at the time of capture to provide supplementary data about the frames captured_
+_Data that is NOT present in a frame, but is intepreted coming from the PHY-Layer 1 (spectrum). Additional information (Meta-Information) that is added to each 802.11 frame when capturing frames with an analysis application interpreted/calculated because the PHY layer 1 spectrum throught drivers/adapters. These are not part of the standard 802.11 frame format, but are additional information added at the time of capture to provide supplementary data about the frames captured_
 - [PPI: PPI (Per-Packet Information) @ Wireshark](https://wiki.wireshark.org/PPI#:~:text=PPI%20(Per%2DPacket%20Information)&text=Each%20PPI%20packet%20header%20is,field%20headers%20are%20little%2Dendian.)
 - [Radiotap Headers @ Wi-Fi Nigel](https://wifinigel.blogspot.com/2013/11/what-are-radiotap-headers.html)
- 
+
+## ⭕ 802.11 PHY: `Sub-Layers`
+_Datalink = LLC & MAC | Physical = PLCP & PMD_
 
 ## ⭕ 802.11 PHY Functional Entities _(AKA PHY Functions)_
 
