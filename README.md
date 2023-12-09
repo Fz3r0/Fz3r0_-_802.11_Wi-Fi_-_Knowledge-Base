@@ -553,9 +553,15 @@ _The most widely used IEEE 802 standards are for Ethernet, Bridging and Virtual 
 
 
 
-## 🪆🛜⚙️ 802.11 Layer 1: Physical (PHY) | Frame Formats and Technologies
+## 🪆🛜⚙️ 802.11 Layer 1: Physical (PHY) | _for `Spectrum Analysis`_
 _The PHY services provided to the MAC. The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. 
 Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx using management info | B) Characteristics & Method to Tx & Rx data through WM (Wireless Medium). The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. _
+
+### ⭕ Radiotap Header / PPI (Per-Packet Information)
+_Data that is NOT present in a frame, but is intepreted coming from Layer 1 (spectrum). additional information (Meta-Information) that is added to each 802.11 frame when capturing frames with an analysis application interpreted by PHY layer 1 spectrum . these are not part of the standard 802.11 frame format, but are additional information added at the time of capture to provide supplementary data about the frames captured_
+- [PPI: PPI (Per-Packet Information) @ Wireshark](https://wiki.wireshark.org/PPI#:~:text=PPI%20(Per%2DPacket%20Information)&text=Each%20PPI%20packet%20header%20is,field%20headers%20are%20little%2Dendian.)
+- [Radiotap Headers @ Wi-Fi Nigel](https://wifinigel.blogspot.com/2013/11/what-are-radiotap-headers.html)
+ 
 
 ### ⭕ 802.11 PHY Functional Entities _(AKA PHY Functions)_
 
@@ -584,7 +590,7 @@ Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx usi
 
 
         
-## 🪆🛜⚙️ 802.11 Layer 2: Medium Access (MAC) | Frame Formats and Technologies
+## 🪆🛜⚙️ 802.11 Layer 2: Medium Access (MAC) `Frame Analysis`
 
 ## Radio Frequency (RF) Theory
 
