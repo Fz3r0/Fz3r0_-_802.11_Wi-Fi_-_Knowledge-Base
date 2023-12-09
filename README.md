@@ -793,7 +793,9 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
     - 🖧[**`LAN`** + **`WLAN`**: Integration with non-IEEE-802.11 LANs]()
 
 ## Network Planes
-
+- [Control, Management & Data Plane: Wireless Networks](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/802.11_Design/802.11_Network_Architecture/Network_Planes/Wireless_Control-Management-%26-Data-Planes.md)
+    - [Control Plane]() Controlled by a controller :: Data :: LWAPP or CAPWAP
+    - 
 
 
 ---
