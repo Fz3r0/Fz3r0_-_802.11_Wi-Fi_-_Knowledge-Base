@@ -26,7 +26,7 @@ _Networking & Wireless terminology, covering definitions, acronyms, and abbrevia
 _Wi-Fi is not an abbreviation for “wireless fidelity”; the name was created by a marketing firm hired by WECA and chosen for its pleasing sound and similarity to “hi-fi” (high-fidelity)._
 - [Wi-Fi Definition @ Britanica](https://www.britannica.com/technology/Wi-Fi)
 
-# 📡🏺🧑‍🏫 History of Networking, Wireless Networks & Wi-Fi
+# 📡🏺🧑‍🏫 History: Networking, Wireless Networks & Wi-Fi
 _Knowing our history anchors us in the present & paves the way for a purposeful future. Mistakes become lessons, successes the stepping stones for our journey ahead: The one who knows the past can build the future. "Building the future, and keeping the past alive – are one and the same thing."_
 
 ## 🏺🌐 History of Network Communications & Internet
