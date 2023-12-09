@@ -772,7 +772,7 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
     - 🖧[**`DSM`**: Distribution System Media](https://www.cbtnuggets.com/blog/technology/networking/8-components-of-a-802-11-wireless-service-set) `Infrestructure` Data from AP -> LAN/Mesh/etc. Usually an ethernet network | **physical**
     - 🖧[**`ESS`**: Extended Service Set](https://www.cbtnuggets.com/blog/technology/networking/8-components-of-a-802-11-wireless-service-set) `Infrestructure` 2 or more BSS connected via distribution system medium (i.e LAN infrastructure & SmarZone Controller) | Centralized Network
     - 🖧[**`SSID`** or **`ESSID`**: (Extended) Service Set Identifier](https://www.cbtnuggets.com/blog/technology/networking/8-components-of-a-802-11-wireless-service-set) `Infrestructure` Logical (human read) name of the network | 2 or more APs: Every SSID will have its own BSSID
-    - 🖧[**`BSSID`**: Basic Service Set Identifier](https://www.cbtnuggets.com/blog/technology/networking/8-components-of-a-802-11-wireless-service-set) `Infrestructure` Identifier very similar to a MAC Address to diferentiate one BSS from another
+    - 🖧[**`BSSID`**: Basic Service Set Identifier](https://www.cbtnuggets.com/blog/technology/networking/8-components-of-a-802-11-wireless-service-set) `Independent` & `Infrestructure` Identifier very similar to a MAC Address to diferentiate one BSS from another
     - 🖧[**`BSA`**: Basic Service Area](https://www.wifi-professionals.com/2019/03/802-11-topologies-aka-service-sets) `Infrestructure` Physical area which is covered by one access point | AP Cell
     - 🖧[**`LAN`** + **`WLAN`**: Integration with non-IEEE-802.11 LANs]()
 
