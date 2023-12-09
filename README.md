@@ -135,7 +135,17 @@ https://www.milenio.com/cultura/como-llego-el-internet-a-mexico]()
 - [`2013`: Reforma Constitucional de Telecomunicaciones 2013]()
 - [`2023`: En México hay un total de 80.6 millones de personas conectadas, de las cuales un 95% usa el smartphone para ello via inalámbirca]()
 
+## Redes de Fibra Óptica en México
+- [Cronología e Historia de la fibra óptica en las telecomunicaciones en México](https://fibrasopticasdemexico.com/fibra-optica-en-telecomunicaciones/)
 
+### `Timeline`: Fibra Óptica en México
+- [`1991`: Telmex comienza a desplegar fibra óptica en México]()
+- [`1992`: Se inaugura la Red Integral de Telecomunicaciones en la UNAM : (500km de FO)]()
+
+## Satélites Artificiales de México
+- [Satélites artificiales de México](https://es.wikipedia.org/wiki/Sat%C3%A9lites_artificiales_de_M%C3%A9xico)
+
+### `Timeline`: Satélites Artificiales de México
 
 # 🌎♻️🧙‍♂️ Internet, Networking, Wireless & Telecomunication `Organizations`
 
