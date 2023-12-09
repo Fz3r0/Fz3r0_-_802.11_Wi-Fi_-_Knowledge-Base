@@ -565,7 +565,14 @@ _Data that is NOT present in a frame, but is intepreted coming from the PHY-Laye
 - [Radiotap Headers @ Wi-Fi Nigel](https://wifinigel.blogspot.com/2013/11/what-are-radiotap-headers.html)
 
 ## ⭕ 802.11 PHY: `Sub-Layers`
-_Datalink = LLC & MAC | Physical = PLCP & PMD_
+_Physical = PLCP & PMD (Datalink = LLC & MAC)_
+- [802.11 Layer 1 & Layer 2: Sub-Layers - `PLCP`(**upper**) & `PMD`(**lower**)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289) _`diagram`_<br><br>
+
+### 🔝↕️🛜 `PLCP`: Physical Layer Convergence Procedure `Upper`
+_Acts as a bridge between MAC & PMD Sublayer | Takes frames from MAC & adds PHY Preamble & Header <pre-header|MAC|>_
+- [PLCP: Physical Layer Convergence Procedure @ Telecom Trainer](https://www.telecomtrainer.com/plcp-physical-layer-convergence-procedure/#:~:text=The%20Physical%20Layer%20Convergence%20Procedure,access%20control%20(MAC)%20layer.) 
+
+### 🔝↕️🛜 `PMD`: Physical Medium Dependant `Lower`
 
 ## ⭕ 802.11 PHY Functional Entities _(AKA PHY Functions)_
 
