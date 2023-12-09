@@ -542,6 +542,7 @@ _The most widely used IEEE 802 standards are for Ethernet, Bridging and Virtual 
 ## 💊🚛🚢 80.11 Frame Aggregation
 
 ## 🛣️🚇🏎️`BandWidth`, `Throughput` & `Data Rate`
+- [Differences: `BandWidth`, `Throughput` & `Data Rate`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/272a7cf3-5a9f-4a02-892a-f3c8d56cab68) _`Diagram`_
 
 
 
