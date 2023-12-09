@@ -531,11 +531,26 @@ _The most widely used IEEE 802 standards are for Ethernet, Bridging and Virtual 
 
 
 
-## 💊✉️🪆 Encapsulation & Decapsulation
+# 💊✉️🪆 Encapsulation
 
-### 💊 802.11 Encapsulation
+## Elemental Concepts: Encapsulation
+- [Packet / Frame Header]()
+- [Overhead]()
+
+## 💊✉️🪆 802.11 Encapsulation & Decapsulation
 
 ## 💊🚛🚢 80.11 Frame Aggregation
+
+## 🛣️🚇🏎️`BandWidth`, `Throughput` & `Data Rate`
+
+
+
+
+
+
+
+
+
 
 ## 🪆🛜⚙️ 802.11 Layer 1: Physical (PHY) | Frame Formats and Technologies
 _The PHY services provided to the MAC. The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. 
