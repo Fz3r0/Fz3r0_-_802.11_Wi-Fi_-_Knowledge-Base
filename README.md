@@ -74,7 +74,8 @@
 
 <!-- PORTADA Y BANNER -->
 
-# `INDEX`: IEEE 802.11 Wireless (Wi-Fi) Knowledge Base
+# `INDEX`:
+_IEEE 802.11 Wireless (Wi-Fi) Knowledge Base_ <br><br>
 ### 🏁🎬 `Introduction`
 - `whoami` **_Fz3r0@root_**
 - `Contact`
