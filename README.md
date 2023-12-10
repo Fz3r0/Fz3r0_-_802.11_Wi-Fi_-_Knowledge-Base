@@ -1014,9 +1014,19 @@ _Software that can capture and display network packets in a readable format, all
 ### The BlackShark :: by Fz3r0
 _My own modification, filters, profiles, colors, for Wireshark_
 
+## Protocol Analysis: `802.11 Frame Capture Options`
+_There are basically 3 different options to capture 802.11 traffic & communications. At the end, it mostly depends on the resources and needs_
+### Mobile
+### Infrastructure
+### Distributed
 
-## Protocol Analysis: `Packet Capture`
-- [Monitor Mode]()
+## `Monitor Mode` & `Promiscous Mode`
+- [`Promiscous Mode` & `Monitor Mode`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md#-monitor-mode--promiscous-mode)
+    -[`Promiscous Mode`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md#-promiscous-mode)
+    -[`Monitor Mode`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md#-promiscous-mode)
+
+### Monitor Mode: `Drivers`
+
 
 
 
