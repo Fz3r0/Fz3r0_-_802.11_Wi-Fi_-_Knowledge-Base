@@ -239,7 +239,7 @@ https://www.milenio.com/cultura/como-llego-el-internet-a-mexico]()
 
 ### 🗓️🛰️ `Timeline`: Satélites Artificiales de México
 
-# 🌎♻️🧙‍♂️ Internet, Networking & Wireless `Organizations`
+# 🌎♻️🧙‍♂️ Internet, Networking & Wireless: `Organizations`
 
 ## 🌎🏭 Internet Organizations 
 _List of Internet organizations, or organizations that play or played a key role in the evolution of the Internet by developing recommendations, standards, and technology; deploying infrastructure and services; and addressing other major issues._
@@ -321,21 +321,38 @@ _United Nations specialized agency that promotes the shared global use of the ra
 - [How **IAB** Manage the protocol values done by **IANA**?](http://www.tcpipguide.com/free/t_InternetStandardsOrganizationsISOCIABIESGIETFIRSGI-3.htm)
 - [**IANA** – Internet Assigned Number Authority]() _DNS, Domain Names & IPs Authority Assignments_
 
----
+# 🌎🚦👮 Internet, Networking & Wireless: `Regulations`
+- [Regulatory Domains in WIFI @ Leo Tech Talk](https://www.youtube.com/watch?app=desktop&v=rcuGjndqicw) _`video`_
+- [**Regulatory Bodies/Domains**](https://shop.chulo.co.uk/blog/what-is-regulatory-domain.html)
 
-### 🌎🎖️ IETF: Internet Engineering Task Force
+## 👮📡 Regulatory Domains AKA Regulotory Bodies (Wireless)
+_Set of rules and policies providing the end user with configurations of country code, calibration channel, and output power settings for a **wireless** device set up in a specific area_
+- [Regulatory Body: ETSI]()
+- [Regulatory Body: FCC - Federal Communications Commission]()
+- [Regulatory Body: TELEC]()
+- [Regulatory Body: KCC]()
+
+## 👮🇺🇸 FCC Federal Communications Commission
+
+## 👮🇲🇽 Regulaciones y Organizaciones Mexicanas
+- [IFT: Instituto Federal de Telecomunicaciones](https://www.ift.org.mx/espectro-radioelectrico#:~:text=En%20este%20sentido%2C%20la%20Unidad,y%20la%20Comunicaci%C3%B3n%20V%C3%ADa%20Sat%C3%A9lite.)
+- [Unidad de Espectro Radioeléctrico del IFT]()
+- [Ley Federal de Telecomunicaciones y Radiodifusión](https://www.ucol.mx/content/cms/13/file/federal/LEY_FED_DE_TELECOMUNICACIONES.pdf)
+- SCT: Secretaría de Comunicaciones y Transportes
+- DOF: Diario Oficial de la Federación
+
+# 🌎🔧🫅 Internet, Networking & Wireless: `Standards` 
+_Networking organizations, certifications, standards (particularly IEEE 802.11) & wireless regulations used for wireless connectivity around the world_ 📡
+
+## 🌎🎖️ `IETF`: Internet Engineering Task Force
 _(1986) It's the premiere standards development organization (SDO) for the Internet. The IETF makes voluntary standards that are often adopted by Internet users, network operators, and equipment vendors, and it thus helps shape the trajectory of the development of the Internet._
 - [Introduction to the IETF](https://www.ietf.org/about/introduction/) _`Official`_
 - [IETF: Internet Engineering Task Force](https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force) _`Wiki`_
 
-#### 🎖️ RFCs: 
+### 🎖️ IETF: `RFCs - Request For Comments` 
 _RFC documents contain technical specifications and organizational notes for the Internet.'Internet Standard', 'Proposed Standard', 'Best Current Practice' BCP, 'Informational', 'Experimental' or 'Historic'._
 - [RFCs @ IETF](https://www.ietf.org/standards/rfcs/) _`Official`_
 - [RFC List @ RFC Editor](https://www.rfc-editor.org/rfc/) _`RFC Editor`_
-
-
-# 🌎🔧🫅 Internet, Networking, Wireless & Telecomunication `Standards` & `Regulations`
-_Networking organizations, certifications, standards (particularly IEEE 802.11) & wireless regulations used for wireless connectivity around the world_ 📡
 
 ## 🫅🛜 Wi-Fi Alliance
 _Non-profit organization that owns the Wi-Fi trademark. Manufacturers may use the trademark to brand products certified for Wi-Fi interoperability. _
@@ -351,10 +368,6 @@ _Non-profit organization that owns the Wi-Fi trademark. Manufacturers may use th
 - IBSS with Wi-Fi Protected Setup
 - Wi-Fi Passpoint
 - 
-
-
-
-
 
 ## 🫅🪖 IEEE: Institute of Electrical and Electronics Engineers
 _IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. IEEE and its members inspire a global community through its highly cited publications, conferences, technology standards, and professional and educational activities._
@@ -577,35 +590,6 @@ _En Wireless 802.11 los layers más importantes son los 1 & 2, pero también son
     - [**`Layer 1`** :: **`Physical`** :: **PDU** = Physical Layer **`Frame`** :: Sub-Layer=`Upper` = **`PLCP`** > **PPDU**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289)
     - [**`Layer 1`** :: **`Physical`** ** :: **PDU** = Physical Layer **`Frame`** :: Sub-Layer - `Lower` = **`PMD`** > **1/0 @ RF air**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289)
     - [**`Transmission Medium`** :: Radio (Air RF), Optical, Coaxial, Twisted Pair](https://en.wikipedia.org/wiki/Transmission_medium)
-
-
-
-## 🌎♻️👮 Internet, Networking, Wireless & Telecomunication `Regulations`
-
-- [Regulatory Domains in WIFI @ Leo Tech Talk](https://www.youtube.com/watch?app=desktop&v=rcuGjndqicw) _`video`_
-- [**Regulatory Bodies/Domains**](https://shop.chulo.co.uk/blog/what-is-regulatory-domain.html)
-
----
-
-### 👮📡 Regulatory Domains AKA Regulotory Bodies (Wireless)
-_Set of rules and policies providing the end user with configurations of country code, calibration channel, and output power settings for a **wireless** device set up in a specific area_
-- [Regulatory Body: ETSI]()
-- [Regulatory Body: FCC - Federal Communications Commission]()
-- [Regulatory Body: TELEC]()
-- [Regulatory Body: KCC]()
-
----
-
-### 👮🇺🇸 FCC Federal Communications Commission
-
-### 👮🇲🇽 Regulaciones y Organizaciones Mexicanas
-- [IFT: Instituto Federal de Telecomunicaciones](https://www.ift.org.mx/espectro-radioelectrico#:~:text=En%20este%20sentido%2C%20la%20Unidad,y%20la%20Comunicaci%C3%B3n%20V%C3%ADa%20Sat%C3%A9lite.)
-- [Unidad de Espectro Radioeléctrico del IFT]()
-- [Ley Federal de Telecomunicaciones y Radiodifusión](https://www.ucol.mx/content/cms/13/file/federal/LEY_FED_DE_TELECOMUNICACIONES.pdf)
-- SCT: Secretaría de Comunicaciones y Transportes
-- DOF: Diario Oficial de la Federación
-
-
 
 
 
