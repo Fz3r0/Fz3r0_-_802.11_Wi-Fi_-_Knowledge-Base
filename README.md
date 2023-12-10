@@ -6,12 +6,12 @@
 _👷👷👷 En construcción...  //  Under construction... 👷👷👷_
 
 # `INDEX`
-- `Introduction`<br><br>
-- 📖❓ **`Definitions`, `Acronyms` & `Abbreviations`**
-    - `Networking`: Definitions & Acronyms
-    - `802.11 Wireless`: Definitions & Acronyms
-    - `Wi-Fi`: Definition
-- 📡🏺🧑‍🏫 History: `Internet`, `Networking` & `Wireless`
+###`Introduction`
+### 📖❓ **`Definitions`, `Acronyms` & `Abbreviations`**
+- `Networking`: Definitions & Acronyms
+- `802.11 Wireless`: Definitions & Acronyms
+- `Wi-Fi`: Definition
+### 📡🏺🧑‍🏫 History: `Internet`, `Networking` & `Wireless`
 
 # 📖❓ `Definitions`, `Acronyms` & `Abbreviations`
 _Networking & Wireless terminology, covering definitions, acronyms, and abbreviations. From computer-related acronyms to clarifying Wi-Fi's origin, IEEE 802.11 standards with insights from various sources._
