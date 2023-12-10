@@ -984,6 +984,7 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 
 ## 🦈🕵️💊 Protocol Analysis :: `Layer 2`:`MAC` & `layers 3-7`
 _Process of capturing, decoding, and interpreting network communicatios (data packets that travel across a network). Network protocol analysis tools (Software like Wireshark) can capture and display these packets in a readable format, allowing you to examine the details of each packet and how they interact with each other._
+- [**`Fz3r0`**: Protocol Analysis](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md)
 - [Analyze and Troubleshoot 802.11 Wireless Sniffing @ Cisco](https://www.cisco.com/c/en/us/support/docs/wireless-mobility/80211/200527-Fundamentals-of-802-11-Wireless-Sniffing.html) _`Complete Guide`_
 - [Best Practices for Monitoring and Troubleshooting 802.11ac Networks](https://networking.report/Resources/Whitepapers/1d1514d9-48e2-41f9-ab28-04ba3b04868a_Best%20Practices%20for%20Monitoring%20and%20Troubleshooting%20802.11ac%20Networks.pdf) _`White paper`_
 - [Protocol Analysis: How do you analyze network performance and identify bottlenecks?](https://www.linkedin.com/advice/0/how-do-you-analyze-network-performance)
@@ -991,14 +992,16 @@ _Process of capturing, decoding, and interpreting network communicatios (data pa
 ## Protocol Analysis: `Tools`
 _Software that can capture and display network packets in a readable format, allowing you to examine the details of each packet and how they interact with each other. Some of them can make expert reports._
 
-### 🦈🖥️📊 `Protocol Analyzers`
+### 🦈🖥️📊 `Protocol Analyzers` or `Sniffers`
 - Wireshark
+- T-Shark
 - BlackShark
-- Tcpdump
+- TCPdump
 - NMAP & NPCAP library
 - Omnipeek
 - AirMagnet Wi-Fi Analzyer Pro
 - CommView (& CommView for Wi-Fi)
+- Acrylic Wi-Fi Analyzer & Acrylic Wi-Fi Capture
 - Motorola Air Defence
 - Wi-Fi Pilot
 - NetScout
@@ -1007,6 +1010,10 @@ _Software that can capture and display network packets in a readable format, all
 - [Channelyzer :: Metageek](https://www.metageek.com/chanalyzer/)
 - [Mojo Packets :: Peter Mackenzee](https://www.youtube.com/watch?v=r4fMGfiF9Jo) _discontinued_
 - [Packets :: Arista Networks](https://packets.arista.com/site/portal?fallbackUrl=..%2Fupload%2Fupload)
+
+### The BlackShark :: by Fz3r0
+_My own modification, filters, profiles, colors, for Wireshark_
+
 
 ## Protocol Analysis: `Packet Capture`
 - [Monitor Mode]()
