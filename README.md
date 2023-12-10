@@ -131,6 +131,7 @@ _Knowing our history anchors us in the present & paves the way for a purposeful 
 - [`1969`: 29/Oct: First 4 nodes of ARPANET connected. `LO` The first Internet message. `LOGIN` 2 hours later after a crash]()
 
 ## 🏺📡 History: `Radio` & `Wireless Communications`
+- [History of Wireless Communications](https://www.microwavejournal.com/articles/24759-history-of-wireless-communications) `timeline`
 - [Invention of Radio, discovery of electromagnetic waves & development of radio communication](https://en.wikipedia.org/wiki/Invention_of_radio)
 - [Radiotelegrahy | Telegrafía sin hilos](https://es.wikipedia.org/wiki/Telegraf%C3%ADa_sin_hilos)
 - [The Titanic & Radio Telegraph](https://www.sciencemuseum.org.uk/objects-and-stories/titanic-marconi-and-wireless-telegraph)
@@ -147,6 +148,7 @@ _Knowing our history anchors us in the present & paves the way for a purposeful 
 - [Wi-Fi Origins & History](https://evanmccann.net/blog/wifi-101/origins-and-history) _`timeline`_
   
 ### 🗓️📡 Timeline: `Radio` & `Wireless Communications`
+- [`1807`: French mathematician Jean Baptiste Joseph Fourier discovered Fourier’s theorem](https://www.britannica.com/biography/David-Hughes)
 - [`1879`: David Hughes produced for the 1st time without understanding their electromagnetic nature](https://www.britannica.com/biography/David-Hughes)
 - [`1885`: Between 1885-1889 Heinrich Hertz produced `electromagnetic waves` & measured their length & velocity](https://www.britannica.com/biography/Heinrich-Hertz)
 - [`1903`: Nikola Tesla patented a system where the transmitter & receiver switch synchronously between two channels]()
