@@ -2,6 +2,8 @@
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/31a9f57c-c4c1-4831-b997-784ac5db2140)
 
+_🚧🏗️ Under Construction 🏗️🚧 /// 🚧🏗️ En Construcción 🏗️🚧_ 
+
 <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
                                BIENVENID@ AL INFIERNO 
