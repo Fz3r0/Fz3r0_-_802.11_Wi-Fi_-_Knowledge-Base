@@ -531,7 +531,7 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 - [**802.11bg**]()  **unassigned** :: likely to avoid confusion by combining 802.11b/g
 
 
-## 🫅🌎 ISO: International Organization for Standardization & other Nwteorking Models
+## 🫅🌎 Networking Models: `OSI model (ISO/IEC)` & `TCP/IP`
 
 ### 🌎↕️🖧 Networking Models
 - [All Networking Models Compared](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/6cc880c6-1e1f-4f14-be09-005120bbd8db) `table`
