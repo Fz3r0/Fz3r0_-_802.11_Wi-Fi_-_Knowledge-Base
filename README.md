@@ -690,7 +690,19 @@ _Instructions & Data directly understandable by STAs, not present on 802.11 Fram
 # 🪆🛜⚙️ Frame Exchanges: `Association`, `Transition (Roaming)`, `Security`
 _Most common issues to torubleshoot are Connectivity Problems, this means: STAs/Clients either can't connect, can't maintain it's connection, it's not roaming well between APs, it can't connect to the SSID, and so on... Understanding this kind of Frame Exchanges help to analyze step by step the process for BSS Discovery & Joining, Analyze Roaming Behavior, etc_
 
-## IEEE 802.11: `State Machine`
+## 🪪🔐🔁 IEEE 802.11: `State Machine`
+- [802.11 State Machine :: `Diagram 1`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/c8715d19-fe2f-42e6-914a-144d3fb4e70d) _`diagram`_
+- [802.11 State Machine :: `Diagram 2`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/5826a51b-eb23-4fba-bdeb-73ba23295819)
+- [Understanding 802.11 State Machine @ Aruba Networks](https://blogs.arubanetworks.com/industries/understanding-802-11-state-machine/)
+- [802.11 State Machine @ Noticias Inalámbricas](https://notasinalambricas.wordpress.com/tag/802-11-state-machine/) _`español`_
+- [Los 4 pasos/estados de la máquina de estados, ¡En 2 minutos!](https://www.youtube.com/watch?v=u3dkoPrdOdE) _`video`_
+- [802.11 Frame Exchanges](https://howiwifi.com/2020/07/16/802-11-frame-exchanges/)
+
+### 🔐🪪🔓 802.11 State Machine: `4 States`
+- [**`State 1 >`** ****]()
+- [**`State 2 >`**]()
+- [**`State 3 >`**]()
+- [**`State 4 >`**]()
 
 
 
@@ -1179,6 +1191,7 @@ _There are basically 3 different options to capture 802.11 traffic & communicati
 
 - [wifi-professionals](https://www.wifi-professionals.com/)
 - [Telecom Trainer](https://www.telecomtrainer.com/)
+- [How I Wi-Fi](https://howiwifi.com/)
 
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/e8dd78fc-101b-4e45-aeac-f23a0794962e)
