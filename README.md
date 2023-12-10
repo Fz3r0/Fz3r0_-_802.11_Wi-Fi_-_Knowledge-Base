@@ -46,22 +46,28 @@ _Knowing our history anchors us in the present & paves the way for a purposeful 
 - [`1968`: BBN unveils final version of the Interface Message Processor (IMP), the Packet Switch which the ARPANET was made out]()
 - [`1969`: 29/Oct: First 4 nodes of ARPANET connected. `LO` The first Internet message. `LOGIN` 2 hours later after a crash]()
 
-## 🏺📡 History of Wireless Local Area Networks (WLANs) & Wi-Fi
+## 🏺📡 History of `Radio` & `Wireless Communications`
+- [Invention of Radio, discovery of electromagnetic waves & development of radio communication](https://en.wikipedia.org/wiki/Invention_of_radio)
 - [Radiotelegrahy | Telegrafía sin hilos](https://es.wikipedia.org/wiki/Telegraf%C3%ADa_sin_hilos)
 - [The Titanic & Radio Telegraph](https://www.sciencemuseum.org.uk/objects-and-stories/titanic-marconi-and-wireless-telegraph)
 - [NIST and the Titanic: How the Sinking of the Ship Improved Wireless Communications for Navigating the Sea](https://www.nist.gov/blogs/taking-measure/nist-and-titanic-how-sinking-ship-improved-wireless-communications-navigating)
 - [Overview of Wireless History](https://www.youtube.com/watch?v=CHbiQTskK9Q)
 - [History of Wireless Communication](https://www.youtube.com/watch?v=PU6JO8KPRs0)
+- [Hedy Lamarr's 101st Birthday Google Doodle](https://www.youtube.com/watch?v=Z0gu2QhV1dc) _`video`_
 - [Hedy Lamarr (Hedwig Eva Maria Kiesler), inventora del Wi-Fi (Spread Spectrum)](https://es.wikipedia.org/wiki/Hedy_Lamarr)
 - [George Carl Johann Antheil, co-inventor del Wi-Fi (Spread Spectrum)](https://es.wikipedia.org/wiki/George_Antheil)
 - [History of WLANs | WLPC Wireless LAN Weekly EP 48](https://www.youtube.com/watch?v=QN3Dnl3WoE4)
 - [https://www.cablefree.net/wireless-technology/history-of-wifi-technology/](https://www.cablefree.net/wireless-technology/history-of-wifi-technology/) _`timeline`_
-- [A History of Wireless Standards: Wi-Fi Back to Basics @ Extreme Networks](https://www.extremenetworks.com/resources/blogs/a-history-of-wireless-standards-wi-fi-back-to-basics) <br><br>
-
-### 🗓️📡 Wi-Fi 802.11 `Timeline`
-- [802.11 Timeline](https://evanmccann.net/blog/wifi-101/origins-and-history)
-- [`1942` :: Spread Spectrum Invention by Hedy Lamarr & George Carl Johann Anthei](https://patents.google.com/patent/US2292387A/en) _`U.S. Patent 2,292,387`_
-- [`1970` :: ALOHAnet - The first Wireless Network :: ALOHA random access & experimental UHF](https://en.wikipedia.org/wiki/ALOHAnet)
+- [A History of Wireless Standards: Wi-Fi Back to Basics @ Extreme Networks](https://www.extremenetworks.com/resources/blogs/a-history-of-wireless-standards-wi-fi-back-to-basics)
+- [The History of Wi-Fi @ EyeNetworks](https://eyenetworks.no/en/wi-fi-history/)
+- [Wi-Fi Origins & History](https://evanmccann.net/blog/wifi-101/origins-and-history) _`timeline`_
+  
+### 🗓️📡 Timeline: `Radio` & `Wireless Communications`
+- [`1879`: David Hughes produced for the 1st time without understanding their electromagnetic nature](https://www.britannica.com/biography/David-Hughes)
+- [`1885`: Between 1885-1889 Heinrich Hertz produced `electromagnetic waves` & measured their length & velocity](https://www.britannica.com/biography/Heinrich-Hertz)
+- [`1903`: Nikola Tesla patented a system where the transmitter & receiver switch synchronously between two channels]()
+- [`1942`: Spread Spectrum Invention by Hedy Lamarr & George Carl Johann Anthei](https://patents.google.com/patent/US2292387A/en) _`U.S. Patent 2,292,387`_
+- [`1970`: ALOHAnet - The first Wireless Network using MAC :: ALOHA random access & experimental UHF](https://en.wikipedia.org/wiki/ALOHAnet)
 - [`1986` :: 802.4L working group begins investigating a wireless standard Token Ring based]()
 - [`1990` :: WaveLAN by NCR & 802.11 committee was formed Wireless alternative to Ethernet & Token Ring for PCs]()
 - [`1997` :: Standardisation of WiFi :: 1st version of IEEE 802.11 standard is ratified](https://standards.ieee.org/beyond-standards/the-evolution-of-wi-fi-technology-and-standards/)
@@ -78,9 +84,11 @@ _Knowing our history anchors us in the present & paves the way for a purposeful 
 - [`2024 -->` :: Actual Wi-Fi & Future Transition | Giga & 10Giga | 802.11ax/be | 5 & 6 GHz]()
 
 ### 802.11 Wi-Fi Wireless Early & Legacy Devices
-- [`1998` - **InTalk WR1200**: First 802.11 Access Point `802.11b`](https://www.pcmag.com/encyclopedia/term/access-point)
-- [`2000` - **Linksys** Early 2000s  Wi-Fi Gear `802.11b`](https://www.youtube.com/watch?v=LvLPz72IvAM)
-- [`2006` - **D-Link DPH-540**: 'first' clamshell Wi-Fi VoIP phone](https://www.theregister.com/2006/03/14/d-link_dph-540_voip_phone/)
+- [`1998`: **InTalk WR1200**: First 802.11 Access Point `802.11b`](https://www.pcmag.com/encyclopedia/term/access-point)
+- [`1999`: **iBook** & **AirPort** :: Steve Jobs introduces WiFi to the masses](https://www.youtube.com/watch?v=3iTNWZF2m3o) _`video`_
+- [`2000`: **Linksys** Early 2000s  Wi-Fi Gear `802.11b`](https://www.youtube.com/watch?v=LvLPz72IvAM)
+- [`2006`: **D-Link DPH-540**: 'first' clamshell Wi-Fi VoIP phone](https://www.theregister.com/2006/03/14/d-link_dph-540_voip_phone/)
+- [`2023`: **Ruckus R770 Wi-Fi 7 Access Point**: 1st enterprise-class Wi-Fi 7 AP](https://www.youtube.com/watch?v=M4C4Xrmiy_Y) _`video`_
 
 ## 🏺🇲🇽 Historia de Redes, Internet, Telecomunicaciones y Radiodifusión en México
 _Close your eyes... I remember..._
