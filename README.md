@@ -1,11 +1,9 @@
 # 📡🛜 IEEE 802.11 Wireless (Wi-Fi) Knowledge Base 🛜📡  
 ![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/31a9f57c-c4c1-4831-b997-784ac5db2140)
 ---
+_2022-2023 by Fz3r0 :: 👷👷👷 En construcción...  //  Under construction... 👷👷👷_
 
-
-_👷👷👷 En construcción...  //  Under construction... 👷👷👷_
-
-# `INDEX`
+# `INDEX`: IEEE 802.11 Wireless (Wi-Fi) Knowledge Base
 ### 🏁🎬 `Introduction`
 - `whoami` **_Fz3r0@root_**
 - `Contact`
