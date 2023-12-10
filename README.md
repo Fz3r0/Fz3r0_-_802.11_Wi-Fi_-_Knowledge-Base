@@ -1,11 +1,12 @@
 # 📡🛜 802.11 Wireless (Wi-Fi) Knowledge Base 🛜📡  
+_by Fz3r0_ 💀🎩
 ![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/31a9f57c-c4c1-4831-b997-784ac5db2140)
 ---
-_by Fz3r0_ 💀🎩
+
 
 _👷👷👷 En construcción...  //  Under construction... 👷👷👷_
 
-# 📜📖❓ `Definitions`, `Acronyms` & `Abbreviations`
+# 📖❓ `Definitions`, `Acronyms` & `Abbreviations`
 _Networking & Wireless terminology, covering definitions, acronyms, and abbreviations. From computer-related acronyms to clarifying Wi-Fi's origin, IEEE 802.11 standards with insights from various sources._
 
 ## ⭕📖 `Networking`: Definitions & Acronyms
