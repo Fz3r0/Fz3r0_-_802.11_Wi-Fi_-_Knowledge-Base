@@ -559,20 +559,20 @@ _The most widely used IEEE 802 standards are for Ethernet, Bridging and Virtual 
 _The PHY services provided to the MAC. The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. 
 Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx using management info | B) Characteristics & Method to Tx & Rx data through WM (Wireless Medium). The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. _
 
-## ⭕ Radiotap Header / PPI (Per-Packet Information) / Pseudo-Header
+## 🔝📡🗂️ Radiotap Header / PPI (Per-Packet Information) / Pseudo-Header
 _Data that is NOT present in a frame, but is intepreted coming from the PHY-Layer 1 (spectrum). Additional information (Meta-Information) that is added to each 802.11 frame when capturing frames with an analysis application interpreted/calculated because the PHY layer 1 spectrum throught drivers/adapters. These are not part of the standard 802.11 frame format, but are additional information added at the time of capture to provide supplementary data about the frames captured_
 - [PPI: PPI (Per-Packet Information) @ Wireshark](https://wiki.wireshark.org/PPI#:~:text=PPI%20(Per%2DPacket%20Information)&text=Each%20PPI%20packet%20header%20is,field%20headers%20are%20little%2Dendian.)
 - [Radiotap Headers @ Wi-Fi Nigel](https://wifinigel.blogspot.com/2013/11/what-are-radiotap-headers.html)
 
-## ⭕ 802.11 PHY: `Sub-Layers`
+## 1️⃣↕️🛜 802.11 PHY: `Sub-Layers`
 _Physical = PLCP & PMD (Datalink = LLC & MAC)_
 - [802.11 Layer 1 & Layer 2: Sub-Layers - `PLCP`(**upper**) & `PMD`(**lower**)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289) _`diagram`_<br><br>
 
-### 🔝↕️🛜 `PLCP`: Physical Layer Convergence Procedure `Upper`
+### ⬆️↕️🛜 `PLCP`: Physical Layer Convergence Procedure `Upper`
 _Acts as a bridge between MAC & PMD Sublayer | Takes frames from MAC & adds PHY Preamble & Header <pre-header|MAC|>_
 - [PLCP: Physical Layer Convergence Procedure @ Telecom Trainer](https://www.telecomtrainer.com/plcp-physical-layer-convergence-procedure/#:~:text=The%20Physical%20Layer%20Convergence%20Procedure,access%20control%20(MAC)%20layer.) 
 
-### 🔝↕️🛜 `PMD`: Physical Medium Dependant `Lower`
+### ⬇️↕️🛜 `PMD`: Physical Medium Dependant `Lower`
 
 ## ⭕ 802.11 PHY Functional Entities _(AKA PHY Functions)_
 
