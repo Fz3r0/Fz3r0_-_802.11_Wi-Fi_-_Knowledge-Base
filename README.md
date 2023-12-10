@@ -623,14 +623,7 @@ _En Wireless 802.11 los layers más importantes son los 1 & 2, pero también son
 
 
 
-
-
-
-
-
-
-
-# 🪆🛜⚙️ 802.11 Layer 1: Physical (PHY) <br> _for `Spectrum Analysis`_
+# 🪆🛜⚙️ 802.11 Layer 1: Physical (PHY) :: `Spectrum`
 _The PHY services provided to the MAC. The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. 
 Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx using management info | B) Characteristics & Method to Tx & Rx data through WM (Wireless Medium). The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. _
 
@@ -689,8 +682,75 @@ _Instructions & Data directly understandable by STAs, not present on 802.11 Fram
 - Clause 21 :: VHT :: 802.11ac :: DSSS
 
 
+
+
         
-## 🪆🛜⚙️ 802.11 Layer 2: Medium Access (MAC) `Frame Analysis`
+# 🪆🛜⚙️ Frame Exchanges: `Association`, `Transition (Roaming)`, `Security`
+_Most common issues to torubleshoot are Connectivity Problems, this means: STAs/Clients either can't connect, can't maintain it's connection, it's not roaming well between APs, it can't connect to the SSID, and so on... Understanding this kind of Frame Exchanges help to analyze step by step the process for BSS Discovery & Joining, Analyze Roaming Behavior, etc_
+
+## IEEE 802.11: `State Machine`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 🪆🛜⚙️ 802.11 Layer 2: Medium Access (MAC) :: `PCAP`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Radio Frequency (RF) Theory
 
