@@ -20,8 +20,10 @@ _Networking & Wireless terminology, covering definitions, acronyms, and abbrevia
 - [Wireless Dictionary of Acronyms & Abbreviations @ IWPC: The International Wireless Industry Consortium](https://www.iwpc.org/dictionary.aspx)
 
 ## ⭕📖 `Wi-Fi`: Definition
-_Wi-Fi is not an abbreviation for “wireless fidelity”; the name was created by a marketing firm hired by WECA and chosen for its pleasing sound and similarity to “hi-fi” (high-fidelity)._
+_Wi-Fi is not an abbreviation for “wireless fidelity”; the name was created by a marketing firm hired by WECA and chosen for its pleasing sound and similarity to “hi-fi” (high-fidelity). The name is often written as WiFi, Wifi, or wifi, but these are not approved by the Wi-Fi Alliance._
 - [Wi-Fi Definition @ Britanica](https://www.britannica.com/technology/Wi-Fi)
+- [wifi / Wi-Fi :: Wiki](https://es.wikipedia.org/wiki/Wifi) _español_
+- [wifi / Wi-Fi :: Wiki](https://en.wikipedia.org/wiki/Wi-Fi) _english_
 
 # 📡🏺🧑‍🏫 History: `Internet`, `Networking` & `Wireless`
 _Knowing our history anchors us in the present & paves the way for a purposeful future. Mistakes become lessons, successes the stepping stones for our journey ahead: The one who knows the past can build the future. "Building the future, and keeping the past alive – are one and the same thing."_
