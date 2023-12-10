@@ -910,11 +910,17 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 
 
 
-## 802.11 Analysis & Troubleshooting
+# 802.11 Analysis & Troubleshooting
 
 ## Spectrum Analysis `layer 1`:`PHY`
 
-## Protocol Analysis `layer 2`>`MAC` & `layers 3-7`
+## 🦈🕵️💊 Protocol Analysis :: `Layer 2`:`MAC` & `layers 3-7`
+_Process of capturing, decoding, and interpreting the data packets that travel across a network. Network protocol analysis tools (Software like Wireshark) can capture and display these packets in a readable format, allowing you to examine the details of each packet and how they interact with each other._
+- [Protocol Analysis: How do you analyze network performance and identify bottlenecks?](https://www.linkedin.com/advice/0/how-do-you-analyze-network-performance)
+
+## Protocol Analysis: Tools
+
+
 
 ### Wireless 802.11 Troubleshooting Methodologies
 
