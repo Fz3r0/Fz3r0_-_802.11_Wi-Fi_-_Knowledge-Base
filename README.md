@@ -568,12 +568,13 @@ _Data that is NOT present in a frame, but is intepreted coming from the PHY-Laye
 ## 1️⃣↕️🛜 802.11 PHY: `Sub-Layers`
 _Physical = PLCP & PMD (Datalink = LLC & MAC)_
 - [802.11 PHY Layers @ CWAP Techtarget](https://media.techtarget.com/searchMobileComputing/downloads/CWAP_ch8.pdf) _`doc`_
-- [802.11 Layer 1 & Layer 2: Sub-Layers - `PLCP`(**upper**) & `PMD`(**lower**)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289) _`diagram`_<br><br>
+- [802.11 Layer 1 & Layer 2: Sub-Layers - `PLCP`(**upper**) & `PMD`(**lower**)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289) _`diagram`
 
 ### ⬆️↕️🛜 `PLCP`: Physical Layer Convergence Procedure `Upper`
 _Acts as a bridge between MAC & PMD Sublayer | Takes frames from MAC & adds PHY Preamble & Header <pre-header|MAC|>. The MAC layer communicates with the Physical Layer Convergence
-Protocol (PLCP) sublayer via primitives (a set of “instructive commands” or “fundamental instructions”) through a service access point (SAP)._
-- [PLCP: Physical Layer Convergence Procedure @ Telecom Trainer](https://www.telecomtrainer.com/plcp-physical-layer-convergence-procedure/#:~:text=The%20Physical%20Layer%20Convergence%20Procedure,access%20control%20(MAC)%20layer.) 
+Protocol (PLCP) sublayer via primitives (a set of “instructive commands” or “fundamental instructions”) through a service access point (SAP). PLCP is handled by the NIC or Wi-Fi adapter implementation, not the OS. Wether it's done: hardware, firmware / microcode, driver running on host, etc._
+- [PLCP: Physical Layer Convergence Procedure @ Telecom Trainer](https://www.telecomtrainer.com/plcp-physical-layer-convergence-procedure/#:~:text=The%20Physical%20Layer%20Convergence%20Procedure,access%20control%20(MAC)%20layer.)
+- [Where does the PLCP sublayer layer actually reside?](https://www.youtube.com/watch?v=thcg9Dn2QL0) _`video`_
 
 ### ⬇️↕️🛜 `PMD`: Physical Medium Dependant `Lower`
 _PMDs further help to define the physical layer of computer network protocols. PMDs define the details of transmission and reception of individual bits (1/0s) on a physical medium. In Wireless 802.11 scenario, PMD Transmits & Recieve data over Wireless Medium. Converts 1/0 provided by the PLCP into RF signal. The PLCP and PMD sublayers communicate via primitives, through a SAP, to govern the transmission and reception
