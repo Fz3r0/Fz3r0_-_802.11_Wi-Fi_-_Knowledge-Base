@@ -38,10 +38,13 @@ _Knowing our history anchors us in the present & paves the way for a purposeful 
 - [History of Computer Networking @ javat point](https://www.javatpoint.com/history-of-computer-networking) _`timeline`_
 - [A Brief History of the Internet & Related Networks @ Internet Society](https://www.internetsociety.org/internet/history-internet/brief-history-internet-related-networks/) _`info`_
 - [https://www.livescience.com/20727-internet-history.html](https://www.livescience.com/20727-internet-history.html) _`timeline`_
+- [La transmisión del primer mensaje @ ICANN](https://www.icann.org/es/blogs/details/the-first-message-transmission-29-10-2019-es)
 
 ### 🗓️🌐 Timeline: `Network Communications` & `Internet` 
-- [`1965` :: Two computers at MIT Lincoln Lab communicate with one another using packet-switching technology]()
-- [`1968` :: Beranek and Newman, Inc. (BBN) unveils the final version of the Interface Message Processor (IMP) specifications. BBN wins ARPANET contract]()
+- [`1961`: Initial concept that developed into the World Wide Web (WWW) by Leonard Kleinrock: ARPANET]()
+- [`1965`: Two computers at MIT Lincoln Lab communicate with one another using packet-switching technology]()
+- [`1968`: BBN unveils final version of the Interface Message Processor (IMP), the Packet Switch which the ARPANET was made out]()
+- [`1969`: 29/Oct: First 4 nodes of ARPANET connected. `LO` The first Internet message. `LOGIN` 2 hours later after a crash]()
 
 ## 🏺📡 History of Wireless Local Area Networks (WLANs) & Wi-Fi
 - [Radiotelegrahy | Telegrafía sin hilos](https://es.wikipedia.org/wiki/Telegraf%C3%ADa_sin_hilos)
