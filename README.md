@@ -7,7 +7,7 @@ _👷👷👷 En construcción...  //  Under construction... 👷👷👷_
 
 # `INDEX`
 ### 🏁🎬 `Introduction`
-- `whoami`: **_Fz3r0@root_**
+- `whoami` **_Fz3r0@root_**
 - `Contact`
 ### 📖❓ **`Definitions`, `Acronyms` & `Abbreviations`**
 - `Networking`: Definitions & Acronyms
