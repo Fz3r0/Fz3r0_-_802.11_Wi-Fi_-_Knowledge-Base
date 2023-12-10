@@ -79,7 +79,7 @@ _🚧🏗️ Under Construction 🏗️🚧 /// 🚧🏗️ En Construcción �
 # 📡🗂️ `INDEX` 🗂️📡</h1>
 
 ### 🏁🎬 `Introduction`
-- `whoami` **_Fz3r0@root_**
+- `whoami` **_root@Fz3r0💀_**
 - `Contact`
 ### 📖❓ **`Definitions`, `Acronyms` & `Abbreviations`**
 - `Networking`: Definitions & Acronyms
