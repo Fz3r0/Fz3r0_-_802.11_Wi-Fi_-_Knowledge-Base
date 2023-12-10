@@ -239,7 +239,7 @@ https://www.milenio.com/cultura/como-llego-el-internet-a-mexico]()
 
 ### `Timeline`: Satélites Artificiales de México
 
-# 🌎♻️🧙‍♂️ Internet, Networking, Wireless & Telecomunication `Organizations`
+# 🌎♻️🧙‍♂️ Internet, Networking & Wireless `Organizations`
 
 ## 🌎🏭 Internet Organizations 
 _List of Internet organizations, or organizations that play or played a key role in the evolution of the Internet by developing recommendations, standards, and technology; deploying infrastructure and services; and addressing other major issues._
