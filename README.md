@@ -6,7 +6,9 @@
 _👷👷👷 En construcción...  //  Under construction... 👷👷👷_
 
 # `INDEX`
-### `Introduction`
+### 🏁🎬 `Introduction`
+- `whoami` _Fz3r0@root_
+- `Contact` **@**
 ### 📖❓ **`Definitions`, `Acronyms` & `Abbreviations`**
 - `Networking`: Definitions & Acronyms
 - `802.11 Wireless`: Definitions & Acronyms
