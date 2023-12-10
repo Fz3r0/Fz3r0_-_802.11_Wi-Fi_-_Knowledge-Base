@@ -8,6 +8,7 @@ _Networking & Wireless terminology, covering definitions, acronyms, and abbrevia
 
 ## ⭕ `Networking`: Definitions & Acronyms
 - [Networking Acronyms: Extensive List of Computer Related Acronyms](https://www.activexperts.com/admin/network-acronyms/)
+- [Networking & Wi-Fi Acronyms @ EXFO](https://www.exfo.com/en/resources/glossary/)
 - [Computer Networking Acronyms](https://networkencyclopedia.com/computer-networking-acronyms/)
 - [List of Information Technology (IT) initialisms](https://en.wikipedia.org/wiki/List_of_information_technology_initialisms)
 
@@ -566,16 +567,22 @@ _Data that is NOT present in a frame, but is intepreted coming from the PHY-Laye
 
 ## 1️⃣↕️🛜 802.11 PHY: `Sub-Layers`
 _Physical = PLCP & PMD (Datalink = LLC & MAC)_
+- [802.11 PHY Layers @ CWAP Techtarget](https://media.techtarget.com/searchMobileComputing/downloads/CWAP_ch8.pdf) _`doc`_
 - [802.11 Layer 1 & Layer 2: Sub-Layers - `PLCP`(**upper**) & `PMD`(**lower**)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289) _`diagram`_<br><br>
 
 ### ⬆️↕️🛜 `PLCP`: Physical Layer Convergence Procedure `Upper`
-_Acts as a bridge between MAC & PMD Sublayer | Takes frames from MAC & adds PHY Preamble & Header <pre-header|MAC|>_
+_Acts as a bridge between MAC & PMD Sublayer | Takes frames from MAC & adds PHY Preamble & Header <pre-header|MAC|>. The MAC layer communicates with the Physical Layer Convergence
+Protocol (PLCP) sublayer via primitives (a set of “instructive commands” or “fundamental instructions”) through a service access point (SAP)._
 - [PLCP: Physical Layer Convergence Procedure @ Telecom Trainer](https://www.telecomtrainer.com/plcp-physical-layer-convergence-procedure/#:~:text=The%20Physical%20Layer%20Convergence%20Procedure,access%20control%20(MAC)%20layer.) 
 
 ### ⬇️↕️🛜 `PMD`: Physical Medium Dependant `Lower`
+_PMDs further help to define the physical layer of computer network protocols. PMDs define the details of transmission and reception of individual bits (1/0s) on a physical medium. In Wireless 802.11 scenario, PMD Transmits & Recieve data over Wireless Medium. Converts 1/0 provided by the PLCP into RF signal. The PLCP and PMD sublayers communicate via primitives, through a SAP, to govern the transmission and reception
+functions._
+- [PMD: Physical Medium Dependent @ Telecom Trainer](https://www.telecomtrainer.com/pmd-physical-medium-dependent/) _`Full Info`_
+- [PMD: Physical medium dependent](https://en.wikipedia.org/wiki/Physical_medium_dependent) _`Wiki`_
+- [PMD layer @ keysight](https://rfmw.em.keysight.com/wireless/helpfiles/n7617a/pmd_layer.htm) _`Diagram`_
 
 ## ⭕ 802.11 PHY Functional Entities _(AKA PHY Functions)_
-
 - PHY Function
 - Layer Management Function
 
@@ -981,6 +988,7 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 ## Resources
 
 - [wifi-professionals](https://www.wifi-professionals.com/)
+- [Telecom Trainer](https://www.telecomtrainer.com/)
 
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/e8dd78fc-101b-4e45-aeac-f23a0794962e)
