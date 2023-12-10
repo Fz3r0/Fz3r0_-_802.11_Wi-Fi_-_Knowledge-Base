@@ -664,8 +664,7 @@ _Physical = PLCP & PMD (Datalink = LLC & MAC)_
 ---
 
 ### ⬆️↕️🛜 `PLCP`: Physical Layer Convergence Procedure :: Sublayer > `Upper`
-_Acts as a bridge between MAC & PMD Sublayer | Takes frames from MAC & adds PHY Preamble & Header <pre-header|MAC|>. The MAC layer communicates with the Physical Layer Convergence
-Protocol (PLCP) sublayer via primitives (a set of “instructive commands” or “fundamental instructions”) through a service access point (SAP). PLCP is handled by the NIC or Wi-Fi adapter implementation, not the OS. Wether it's done: hardware, firmware / microcode, driver running on host, etc._
+_Also Known As: Physical Layer Convergence Protocol (depends the 802.11 version). Acts as a bridge between MAC & PMD Sublayer | When Tx = Takes frames from MAC & adds extra information to the bits (PHY Preamble & Header <pre-header|MAC|>) | When Rx = Strip off the PHY Preamble and Header (That's why this data is not seen by protocol analyzers). The MAC layer communicates with the Physical Layer Convergence Protocol (PLCP) sublayer via primitives (a set of “instructive commands” or “fundamental instructions”) through a Service Access Point (SAP). PLCP is handled by the NIC or Wi-Fi adapter implementation, not the OS, wether it's done: hardware, firmware / microcode, driver running on host, etc._
 - [PLCP: Physical Layer Convergence Procedure @ Telecom Trainer](https://www.telecomtrainer.com/plcp-physical-layer-convergence-procedure/#:~:text=The%20Physical%20Layer%20Convergence%20Procedure,access%20control%20(MAC)%20layer.)
 - [Where does the PLCP sublayer layer actually reside?](https://www.youtube.com/watch?v=thcg9Dn2QL0) _`video`_
 
