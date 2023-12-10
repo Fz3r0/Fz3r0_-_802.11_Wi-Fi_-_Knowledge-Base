@@ -268,7 +268,7 @@ _Internet governance consists of a system of laws, rules, policies and practices
 ---
 
 ### 🌎📧 RIR: Regional Internet registry
-_Organization that manages the allocation and registration of Internet number resources within a region of the world._
+_"The Five RIRs". Organizations that manages the allocation and registration of Internet number resources within a region of the world. Internet number resources include IP addresses & Autonomous System (AS) numbers. The regional Internet registries are informally liaised through the unincorporated Number Resource Organization (NRO), which is a coordinating body to act on matters of global importance._
 
 - AFRINIC (African Network Information Centre) :: Africa
 - ARIN (American Registry for Internet Numbers) :: Antarctica, Canada, parts of the Caribbean, United States
