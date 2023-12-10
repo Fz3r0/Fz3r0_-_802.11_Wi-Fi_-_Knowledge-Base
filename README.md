@@ -27,10 +27,10 @@ _Networking & Wireless terminology, covering definitions, acronyms, and abbrevia
 _Wi-Fi is not an abbreviation for “wireless fidelity”; the name was created by a marketing firm hired by WECA and chosen for its pleasing sound and similarity to “hi-fi” (high-fidelity)._
 - [Wi-Fi Definition @ Britanica](https://www.britannica.com/technology/Wi-Fi)
 
-# 📡🏺🧑‍🏫 History: Networking, Wireless Networks & Wi-Fi
+# 📡🏺🧑‍🏫 History: `Internet`, `Networking` & `Wireless`
 _Knowing our history anchors us in the present & paves the way for a purposeful future. Mistakes become lessons, successes the stepping stones for our journey ahead: The one who knows the past can build the future. "Building the future, and keeping the past alive – are one and the same thing."_
 
-## 🏺🌐 History of Network Communications & Internet
+## 🏺🌐 History: `Network Communications` & `Internet`
 - [Telegraphy](https://en.wikipedia.org/wiki/Telegraphy) Long-distance transmission of messages where the sender uses symbolic codes, known to the recipient
 - [El telégrafo: El único medio de comunicación que funciona... ¡cuando todo cae!](https://www.youtube.com/watch?v=v5XhNLaAtF8)  _`video`_
 - [Código morse y el telégrafo](https://es.wikipedia.org/wiki/C%C3%B3digo_morse)
@@ -41,7 +41,7 @@ _Knowing our history anchors us in the present & paves the way for a purposeful 
 - [A Brief History of the Internet & Related Networks @ Internet Society](https://www.internetsociety.org/internet/history-internet/brief-history-internet-related-networks/) _`info`_
 - [https://www.livescience.com/20727-internet-history.html](https://www.livescience.com/20727-internet-history.html) _`timeline`_
 
-### 🗓️ 🌐 Networking & Internet `Timeline`
+### 🗓️🌐 Timeline: `Network Communications` & `Internet` 
 - [`1965` :: Two computers at MIT Lincoln Lab communicate with one another using packet-switching technology]()
 - [`1968` :: Beranek and Newman, Inc. (BBN) unveils the final version of the Interface Message Processor (IMP) specifications. BBN wins ARPANET contract]()
 
