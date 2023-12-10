@@ -128,7 +128,7 @@ _Knowing our history anchors us in the present & paves the way for a purposeful 
 - [`1968`: BBN unveils final version of the Interface Message Processor (IMP), the Packet Switch which the ARPANET was made out]()
 - [`1969`: 29/Oct: First 4 nodes of ARPANET connected. `LO` The first Internet message. `LOGIN` 2 hours later after a crash]()
 
-## 🏺📡 History of `Radio` & `Wireless Communications`
+## 🏺📡 History: `Radio` & `Wireless Communications`
 - [Invention of Radio, discovery of electromagnetic waves & development of radio communication](https://en.wikipedia.org/wiki/Invention_of_radio)
 - [Radiotelegrahy | Telegrafía sin hilos](https://es.wikipedia.org/wiki/Telegraf%C3%ADa_sin_hilos)
 - [The Titanic & Radio Telegraph](https://www.sciencemuseum.org.uk/objects-and-stories/titanic-marconi-and-wireless-telegraph)
@@ -165,7 +165,7 @@ _Knowing our history anchors us in the present & paves the way for a purposeful 
 - [`2020` :: Actual Ratiferd 802.11b/a/g/n/ac Wi-Fi 6E | OFDM 2.4, 5 & 6 GHz]()
 - [`2024 -->` :: Actual Wi-Fi & Future Transition | Giga & 10Giga | 802.11ax/be | 5 & 6 GHz]()
 
-### 802.11 Wi-Fi Wireless Early & Legacy Devices
+### 🧮📡 IEEE 802.11 Wireless (Wi-Fi): `Early & Legacy Devices`
 - [`1998`: **InTalk WR1200**: First 802.11 Access Point `802.11b`](https://www.pcmag.com/encyclopedia/term/access-point)
 - [`1999`: **iBook** & **AirPort** :: Steve Jobs introduces WiFi to the masses](https://www.youtube.com/watch?v=3iTNWZF2m3o) _`video`_
 - [`2000`: **Linksys** Early 2000s  Wi-Fi Gear `802.11b`](https://www.youtube.com/watch?v=LvLPz72IvAM)
@@ -227,17 +227,17 @@ https://www.milenio.com/cultura/como-llego-el-internet-a-mexico]()
 - [`2013`: Reforma Constitucional de Telecomunicaciones 2013]()
 - [`2023`: En México hay un total de 80.6 millones de personas conectadas, de las cuales un 95% usa el smartphone para ello via inalámbirca]()
 
-## Redes de Fibra Óptica en México
+## 💡🇲🇽 Redes de Fibra Óptica en México
 - [Cronología e Historia de la fibra óptica en las telecomunicaciones en México](https://fibrasopticasdemexico.com/fibra-optica-en-telecomunicaciones/)
 
-### `Timeline`: Fibra Óptica en México
+### 🗓️💡 `Timeline`: Fibra Óptica en México
 - [`1991`: Telmex comienza a desplegar fibra óptica en México]()
 - [`1992`: Se inaugura la Red Integral de Telecomunicaciones en la UNAM : (500km de FO)]()
 
-## Satélites Artificiales de México
+## 🛰️🇲🇽 Satélites Artificiales de México
 - [Satélites artificiales de México](https://es.wikipedia.org/wiki/Sat%C3%A9lites_artificiales_de_M%C3%A9xico)
 
-### `Timeline`: Satélites Artificiales de México
+### 🗓️🛰️ `Timeline`: Satélites Artificiales de México
 
 # 🌎♻️🧙‍♂️ Internet, Networking & Wireless `Organizations`
 
