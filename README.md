@@ -651,7 +651,7 @@ _Also Known As: Physical Layer Convergence Protocol (depends the 802.11 version)
 - [PLCP: Physical Layer Convergence Procedure @ Telecom Trainer](https://www.telecomtrainer.com/plcp-physical-layer-convergence-procedure/#:~:text=The%20Physical%20Layer%20Convergence%20Procedure,access%20control%20(MAC)%20layer.)
 - [Where does the PLCP sublayer layer actually reside?](https://www.youtube.com/watch?v=thcg9Dn2QL0) _`video`_
 
-### ⬆️ PLCP Operations: `PPDU` & `PSDU`
+## 💊↕️🪆 802.11 PHY: `Encapsulation`
 _The PLCP consists of two main sublayers: the PLCP protocol data unit (PPDU) & the PLCP service data unit (PSDU)_
 - [PPDU]()
 - [PSDU]()
