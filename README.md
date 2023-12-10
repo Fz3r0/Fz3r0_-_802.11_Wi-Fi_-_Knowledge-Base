@@ -576,10 +576,8 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 - [`1983` - Basic Reference Model for Open Systems Interconnection](https://ieeexplore.ieee.org/document/1457043)
 - [`1994` - Modelo OSI: ISO/IEC 7498-1:1994 - 30 años del Modelo sin cambios](https://ipmoguide.com/modelo-osi-iso-iec-7498-11994/)
 
----
-
-### 💀🎩🫅Fz3r0 Extended OSI Model for 802.11 Deep Analysis
-_En Wireless 802.11 los layers más importantes son los 1 & 2, pero también son relevantes 3 & 4, en menores de los casos son de capas superiores ya que salen del scope de las funciones 802.11_
+# 💀🎩🫅Fz3r0 Extended OSI Model for 802.11 Deep Analysis
+_En Wireless 802.11 los layers más importantes son los 1 & 2, pero también son relevantes 3 & 4, en menores de los casos son de capas superiores ya que salen del scope de las funciones 802.11. Los 1 y 2 para comprenderlos bien, hay que dividirlos en sublayers y cada uno identificar su PDU y operaciones que realiza con los layers superiores o inferiores._
 
 - [💀🎩 **`Fz3r0`** Extended **OSI Model** for 802.11 Deep Analysis](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)
 - [802.11 Layer 1 & Layer 2: Sub-Layers](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289) _`diagram`_ <br><br>
@@ -595,35 +593,7 @@ _En Wireless 802.11 los layers más importantes son los 1 & 2, pero también son
     - [**`Layer 1`** :: **`Physical`** ** :: **PDU** = Physical Layer **`Frame`** :: Sub-Layer - `Lower` = **`PMD`** > **1/0 @ RF air**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289)
     - [**`Transmission Medium`** :: Radio (Air RF), Optical, Coaxial, Twisted Pair](https://en.wikipedia.org/wiki/Transmission_medium)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 💊✉️🪆 Encapsulation
-
-## Elemental Concepts: Encapsulation
-- [Packet / Frame Header]()
-- [Overhead]()
-
-## 💊✉️🪆 802.11 Encapsulation & Decapsulation
-
-## 💊🚛🚢 80.11 Frame Aggregation
-
-## 🛣️🚇🏎️`BandWidth`, `Throughput` & `Data Rate`
-- [Differences: `BandWidth`, `Throughput` & `Data Rate`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/272a7cf3-5a9f-4a02-892a-f3c8d56cab68) _`Diagram`_
-
-
-
-# 🪆🛜⚙️ 802.11 Layer 1: Physical (PHY) :: `Spectrum`
+## 🪆🛜⚙️ 802.11 Layer 1: Physical (PHY) :: `Spectrum`
 _The PHY services provided to the MAC. The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. 
 Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx using management info | B) Characteristics & Method to Tx & Rx data through WM (Wireless Medium). The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. _
 
@@ -644,10 +614,7 @@ _Also Known As: Physical Layer Convergence Protocol (depends the 802.11 version)
 - [PLCP: Physical Layer Convergence Procedure @ Telecom Trainer](https://www.telecomtrainer.com/plcp-physical-layer-convergence-procedure/#:~:text=The%20Physical%20Layer%20Convergence%20Procedure,access%20control%20(MAC)%20layer.)
 - [Where does the PLCP sublayer layer actually reside?](https://www.youtube.com/watch?v=thcg9Dn2QL0) _`video`_
 
-## 💊↕️🪆 802.11 PHY: `Encapsulation`
-_The PLCP consists of two main sublayers: the PLCP protocol data unit (PPDU) & the PLCP service data unit (PSDU)_
-- [PPDU]()
-- [PSDU]()
+
 
 ---
 
@@ -656,6 +623,41 @@ _PMDs further help to define the physical layer of computer network protocols. P
 - [PMD: Physical Medium Dependent @ Telecom Trainer](https://www.telecomtrainer.com/pmd-physical-medium-dependent/) _`Full Info`_
 - [PMD: Physical medium dependent](https://en.wikipedia.org/wiki/Physical_medium_dependent) _`Wiki`_
 - [PMD layer @ keysight](https://rfmw.em.keysight.com/wireless/helpfiles/n7617a/pmd_layer.htm) _`Diagram`_
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 💊✉️🪆 Packet/Frame: `Encapsulation`
+
+## 💊❓ Encapsulation: `Elemental Concepts` 
+- [Packet / Frame Header]()
+- [Overhead]()
+
+## 🛣️🚇🏎️`BandWidth`, `Throughput` & `Data Rate`
+- [Differences: `BandWidth`, `Throughput` & `Data Rate`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/272a7cf3-5a9f-4a02-892a-f3c8d56cab68) _`Diagram`_
+
+## 💊↕️🪆 802.11: `PHY & MAC` `Encapsulation`
+_The PLCP consists of two main sublayers: the PLCP protocol data unit (PPDU) & the PLCP service data unit (PSDU)_
+- [PPDU]()
+- [PSDU]()
+
+
+# 💊🚛🚢 IEEE 802.11: `Frame Aggregation`
+
+
+
+
+
 
 ## ⭕ 802.11 PHY Functional Entities _(AKA PHY Functions)_
 - PHY Function
