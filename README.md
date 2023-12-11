@@ -691,6 +691,7 @@ _Instructions & Data directly understandable by STAs, not present on 802.11 Fram
 _Most common issues to torubleshoot are Connectivity Problems, this means: STAs/Clients either can't connect, can't maintain it's connection, it's not roaming well between APs, it can't connect to the SSID, and so on... Understanding this kind of Frame Exchanges help to analyze step by step the process for BSS Discovery & Joining, Analyze Roaming Behavior, etc_
 
 ## 🪪🔐🔁 IEEE 802.11: `State Machine`
+_Considered as "The discovery/connection/transition/disconnection process" of a client in a BSS at a protocol level._
 - [802.11 State Machine :: `Diagram 1`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/c8715d19-fe2f-42e6-914a-144d3fb4e70d) _`diagram`_
 - [802.11 State Machine :: `Diagram 2`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/5826a51b-eb23-4fba-bdeb-73ba23295819)
 - [Understanding 802.11 State Machine @ Aruba Networks](https://blogs.arubanetworks.com/industries/understanding-802-11-state-machine/)
