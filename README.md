@@ -710,15 +710,15 @@ _Any STA or AP can be in some "state" within this state machine at any given tim
 
 ### 🥇🥈🥉 802.11 State Machine: `Frame Classes` `1`, `2`, `3`
 - [802.11 WLAN States: Difference between WLAN class1 class2 and class3](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)<br><br>
-    - [**`Class1 Frames`**](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+    - [**🥇🖽 `Class1 Frames`**](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
         - [**Control**: `RTS & CTS`, `ACK`, `CF-End+CF-Ack & CF-End`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
         - [**Management**: `Beacon`, `Probe Req/Res`, `Auth/Deauth`, `ATIM`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
         - [**Data**: `Any frame with ToDS & FromDS false(0)`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)<br><br>
-    - [**`Class2 Frames`**](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+    - [**🥈🖽 `Class2 Frames`**](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
         - [**Control**: _None_](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
         - [**Management**: `Association Req/Res`, `Re-Association Req/Res`. `Disassociation`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
         - [**Data**: _None_](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)<br><br>
-    - [**`Class3 Frames`**](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+    - [**🥉🖽 `Class3 Frames`**](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
         - [**Control**: `PS-Poll`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
         - [**Management**: `Deauthentication`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
         - [**Data**: `Any frame with ToDS or FromDS true(1)`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)<br><br>
