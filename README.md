@@ -701,9 +701,9 @@ _Any STA or AP can be in some "state" within this state machine at any given tim
 
 ### 🔐🪪🔓 802.11 State Machine: `4 States`
 - [**`State 1`** > **Unauthenticated**, **Unassociated**]() `STA no connected to AP` > Frames: **`Class 1`** > **AuthReq/Res::ProbeReq/Res** 
-- [**`State 2`** > **`Authenticated`**, **Unassociated**]() `STA Authenticated to AP (Pending RSN/Open Auth)` Frames: **`Class 1 & 2`** > **AssociReq/Res** _+ Class1_ 
-- [**`State 3`** > **`Authenticated`**, **`Associated`**]() `STA Associated to AP (Pending RSN/Open Auth)` Frames: **`Class 1, 2 & 3`** | 802.1X Port Blocked until > 4-way-handshake, portal, open, etc.
-- [**`State 4`** > **`Authenticated`**, **`Associated`**]() `STA Fully Connected to AP (RSN/Open Auth OK!)` Frames: **`Class 1, 2 & 3`** | 802.1X Port Un-Blocked
+- [**`State 2`** > **`Authenticated`**, **Unassociated**]() `STA Authenticated to AP (Pending RSN/Open)` Frames: **`Class 1 & 2`** > **AssociReq/Res**_ 
+- [**`State 3`** > **`Authenticated`**, **`Associated`**]() `STA Associated to AP (Pending RSN/Open)` Frames: **`Class 1, 2 & 3`** | 802.1X Port Blocked until RSN/Open
+- [**`State 4`** > **`Authenticated`**, **`Associated`**]() `STA Fully Connected to AP (RSN/Open OK!)` Frames: **`Class 1, 2 & 3`** | 802.1X Port Un-Blocked
 
 
 
