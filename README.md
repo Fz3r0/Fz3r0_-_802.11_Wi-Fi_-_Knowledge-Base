@@ -699,12 +699,10 @@ _Most common issues to torubleshoot are Connectivity Problems, this means: STAs/
 - [802.11 Frame Exchanges](https://howiwifi.com/2020/07/16/802-11-frame-exchanges/)
 
 ### 🔐🪪🔓 802.11 State Machine: `4 States`
-- [**`State 1 >`** ****]()
-- [**`State 2 >`**]()
-- [**`State 3 >`**]()
-- [**`State 4 >`**]()
-
-
+- [**`State 1` > **Unauthenticated**, **Unassociated**]() Frames: **`Class 1`** | 
+- [**`State 2` > **`Authenticated`**, **Unassociated**]() Frames: **`Class 1 & 2`** | 
+- [**`State 3` > **`Authenticated`**, **`Associated`**]() Frames: **`Class 1, 2 & 3`** | **Pending RSN Auth** :: 802.1X Port Blocked
+- [**`State 4` > **`Authenticated`**, **`Associated`**]() Frames: **`Class 1, 2 & 3`** | 802.1X Port Un-Blocked
 
 
 
