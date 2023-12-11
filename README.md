@@ -700,11 +700,15 @@ _Any STA or AP can be in some "state" within this state machine at any given tim
 - [802.11 Frame Exchanges](https://howiwifi.com/2020/07/16/802-11-frame-exchanges/)
 
 ### 🔐🪪🔓 802.11 State Machine: `4 States`
-- ❓[**`State 1`** > **Unauthenticated**, **Unassociated**]() `STA no connected to AP` > Frames: **`Class 1`** > **AuthReq/Res::ProbeReq/Res** 
-- 🚪[**`State 2`** > **`Authenticated`**, **Unassociated**]() `STA Authenticated to AP (Pending RSN/Open)` Frames: **`Class 1 & 2`** > **AssociReq/Res**
-- 🪪[**`State 3`** > **`Authenticated`**, **`Associated`**]() `STA Associated to AP (Pending RSN/Open)` Frames: **`Class 1, 2 & 3`** | 802.1X Port **Blocked** 
-- 🔓[**`State 4`** > **`Authenticated`**, **`Associated`**]() `STA Fully Connected to AP (RSN/Open OK!)` Frames: **`Class 1, 2 & 3`** | 802.1X Port **Un-Blocked**
+- ❓[**`State 1`**: **Unauthenticated**, **Unassociated**]() `STA no connected to AP` > Frames: **`Class 1`** > **AuthReq/Res::ProbeReq/Res** 
+- 🚪[**`State 2`**: **`Authenticated`**, **Unassociated**]() `STA Authenticated to AP (Pending RSN/Open)` Frames: **`Class 1 & 2`** > **AssociReq/Res**
+- 🪪[**`State 3`**: **`Authenticated`**, **`Associated`**]() `STA Associated to AP (Pending RSN/Open)` Frames: **`Class 1, 2 & 3`** | 802.1X : **Blocked** 
+- 🔓[**`State 4`**: **`Authenticated`**, **`Associated`**]() `STA Fully Connected to AP (RSN/Open OK!)` Frames: **`Class 1, 2 & 3`** | 802.1X : **Un-Blocked**
 
+## 🤳🏾🛸📡 IEEE 802.11: `BSS Discovery`
+- [A study of the discovery process in 802.11 networks](https://www.researchgate.net/publication/215502402_A_study_of_the_discovery_process_in_80211_networks) _`pdf study`_
+
+### 🛸🛜 BSS Discovery: `Passive Scanning` & `Active Scanning`
 
 
 
