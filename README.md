@@ -730,6 +730,7 @@ _Any STA or AP can be in some "state" within this state machine at any given tim
 - 🔓[**`State 4`**: **`Authenticated`**, **`Associated`**]() `STA Fully Connected to AP (RSN/Open OK!)` Frames: **`Class 1, 2 & 3`** | 802.1X : **Un-Blocked**
 
 ## 🤳🏾🛸📡 IEEE 802.11: `BSS Discovery`
+- [Wireless association: active vs passive scanning, & roaming @ Sunny](https://youtu.be/HPJonmd8z1c?si=g47qTqJ5ma4iF3c0)
 - [A study of the discovery process in 802.11 networks](https://www.researchgate.net/publication/215502402_A_study_of_the_discovery_process_in_80211_networks) _`pdf study`_
 
 ### 🛸🛜 BSS Discovery: `Passive Scanning` & `Active Scanning`
