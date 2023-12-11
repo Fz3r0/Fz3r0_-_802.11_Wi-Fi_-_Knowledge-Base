@@ -106,8 +106,8 @@ _Networking & Wireless terminology, covering definitions, acronyms, and abbrevia
 ## ⭕📖 `Wi-Fi`: Definition
 _Wi-Fi is not an abbreviation for “wireless fidelity”; the name was created by "Interbrand", a marketing firm hired by WECA & chosen because it sounds more pleaseant than 'IEEE 802.11b Direct Sequence" & similarity to “hi-fi” (high-fidelity). The name is often written as WiFi, Wifi, or wifi, but these are not approved by the Wi-Fi Alliance._
 - [Wi-Fi Definition @ Britanica](https://www.britannica.com/technology/Wi-Fi)
-- [wifi / Wi-Fi :: Wiki](https://es.wikipedia.org/wiki/Wifi) _español_
-- [wifi / Wi-Fi :: Wiki](https://en.wikipedia.org/wiki/Wi-Fi) _english_
+- [Wi-Fi :: Wiki](https://es.wikipedia.org/wiki/Wifi) _`español`_
+- [Wi-Fi :: Wiki](https://en.wikipedia.org/wiki/Wi-Fi) _`english`_
 
 # 📡🏺🧑‍🏫 History: `Internet`, `Networking` & `Wireless`
 _Knowing our history anchors us in the present & paves the way for a purposeful future. Mistakes become lessons, successes the stepping stones for our journey ahead: The one who knows the past can build the future. "Building the future, and keeping the past alive – are one and the same thing."_
@@ -337,6 +337,15 @@ _Set of rules and policies providing the end user with configurations of country
 - [Regulatory Body: KCC]()
 
 ## 👮🇺🇸 FCC Federal Communications Commission
+_Regulates USA interstate and international communications by radio, television, wire, satellite, and cable in all 50 states, the District of Columbia and U.S. territories. An independent U.S. government agency overseen by Congress, the Commission is the federal agency responsible for implementing and enforcing America’s communications law and regulations._
+- [FCC: Federal Communications Commission | About](https://www.fcc.gov/about/overview) _`official`_
+- [Federal Communications Commission](https://en.wikipedia.org/wiki/Federal_Communications_Commission) _`wiki`_
+
+### 👮🇺🇸 FCC: `Wireless & Wi-Fi Regulations`
+- [FCC Rules and Regulations for 2.4 & 5 GHz Bands](https://www.air802.com/fcc-rules-and-regulations.html) _`Table`_
+- [Wi-Fi 6E (802.11ax) Regulatory Test for FCC and ETSI](https://www.linkedin.com/pulse/wi-fi-6e-80211ax-regulatory-test-fcc-etsi-shijie-wang/)
+- [FCC Regulatory Certification Guide for Murata WLAN and Bluetooth Modules](https://www.murata.com/-/media/webrenewal/products/connectivitymodule/asset/pub/rfm/data/murata_wifi_bt_fcc_guide.ashx)
+- [What Is FCC PART 15.247 for Bluetooth/WLAN 802.11 b/g/n (2.4 GHz)?](https://compliancetesting.com/what-is-fcc-part-15-247-for-bluetooth-wlan-802-11-b-g-n-2-4-ghz/)
 
 ## 👮🇲🇽 Regulaciones y Organizaciones Mexicanas
 - [IFT: Instituto Federal de Telecomunicaciones](https://www.ift.org.mx/espectro-radioelectrico#:~:text=En%20este%20sentido%2C%20la%20Unidad,y%20la%20Comunicaci%C3%B3n%20V%C3%ADa%20Sat%C3%A9lite.)
