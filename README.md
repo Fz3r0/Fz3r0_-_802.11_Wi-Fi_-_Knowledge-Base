@@ -699,6 +699,16 @@ _Any STA or AP can be in some "state" within this state machine at any given tim
 - [Los 4 pasos/estados de la máquina de estados, ¡En 2 minutos!](https://www.youtube.com/watch?v=u3dkoPrdOdE) _`video`_
 - [802.11 Frame Exchanges](https://howiwifi.com/2020/07/16/802-11-frame-exchanges/)
 
+### 802.11 State Machine: `Frame Classes 1, 2, 3`
+- [802.11 WLAN States: Difference between WLAN class1 class2 and class3](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)<br><br>
+    - [**`Class1 Frames`**](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+        - [**Control**: `RTS & CTS`, `ACK`, `CF-End+CF-Ack & CF-End`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+        - [**Management**: `Beacon`, `Probe Req/Res`, `Auth/Deauth`, `ATIM`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+        - [**Data**: `Any frame with ToDS & FromDS false(0)`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+    - [**`Class1 Frames`**](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+        - [**Control**: `RTS & CTS`, `ACK`, `CF-End+CF-Ack & CF-End`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+
+
 ### 🔐🪪🔓 802.11 State Machine: `4 States`
 - ❓[**`State 1`**: **Unauthenticated**, **Unassociated**]() `STA no connected to AP` > Frames: **`Class 1`** > **AuthReq/Res::ProbeReq/Res** 
 - 🚪[**`State 2`**: **`Authenticated`**, **Unassociated**]() `STA Authenticated to AP (Pending RSN/Open)` Frames: **`Class 1 & 2`** > **AssociReq/Res**
