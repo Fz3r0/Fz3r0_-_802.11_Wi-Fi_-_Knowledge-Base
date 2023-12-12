@@ -1188,6 +1188,46 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 
 
 
+### Analysis
+
+- CWAP CWNP
+
+## Fz3r0: Filters, Scripts, Tricks
+
+## Wireshark
+- [About Wireshark](https://www.wireshark.org/about.html)
+- [Wireshark - Where to Start?](https://www.wireshark.org/docs/)
+
+### Wireshark: `Display Filters`
+- [Wireshark Filter Manual Page - Wireshark display filter syntax and reference](https://www.wireshark.org/docs/man-pages/wireshark-filter.html)
+- [Display Filter Reference](https://www.wireshark.org/docs/dfref/)
+- [Wlan - Display Filter Reference](https://www.wireshark.org/docs/dfref/w/wlan.html)
+- [Wlan Radio - Display Filter Reference](https://www.wireshark.org/docs/dfref/w/wlan_radio.html)
+
+### Wireshark: `Analytics`
+
+### Wireshark: `Source Code`
+- https://gitlab.com/wireshark/wireshark/-/tree/master
+
+## Fz3r0 :: BlackShark Framework
+- [BlackShark Filters]()
+
+## Fz3r0 :: Scripts & Tricks
+
+### Linux Commands & Scripts
+- [Monitor Mode]()
+- [Channel & Frequency]()
+
+### Windows Commands & Scripts
+- [Powershell Frenzy :: Fz3r0]()
+
+
+
+
+
+
+
+
 
 
 
@@ -1197,7 +1237,6 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 
 
 # 🕵️🚨🆘 802.11 Analysis & Troubleshooting
-
 
 ## Beacon Overhead Calculation
 _One of the most commonly cited best practices among Wi-Fi professionals is to the limit the number of SSIDs you have configured on your WLAN in order to reduce the amount of overhead on the network and to maintain high performance. **CWNP Standard = no more than 5 SSIDs, for best results maximum 3 SSIDs**_
@@ -1258,21 +1297,58 @@ _Software that can capture and display network packets in a readable format, all
 - [Mojo Packets :: Peter Mackenzee](https://www.youtube.com/watch?v=r4fMGfiF9Jo) _discontinued_
 - [Packets :: Arista Networks](https://packets.arista.com/site/portal?fallbackUrl=..%2Fupload%2Fupload)
 
-### The BlackShark :: by Fz3r0
-_My own modification, filters, profiles, colors, for Wireshark_
+## Protocol Analysis: `Packet & Frame Capture`
+- [Wireshark Tutorial for BEGINNERS // Where to start with Wireshark @ Chris Greer](https://www.youtube.com/watch?v=OU-A2EmVrKQ)
+- [802.11 Wi-Fi VS 802.3 Ethernet Capture: Differences]()
 
 ## Protocol Analysis: `802.11 Frame Capture Options`
 _There are basically 3 different options to capture 802.11 traffic & communications. At the end, it mostly depends on the resources and needs_
-### Mobile
-### Infrastructure
-### Distributed
 
-## `Monitor Mode` & `Promiscous Mode`
+### Mobile
+- [Linux Based + Wi-Fi Adapter]()
+- [Mac-OS Based: Internal Adapter Capability]()
+- [Wi-Spy + Software based]()
+- [Wlan PI]()
+
+### Infrastructure
+- [Ruckus AP Capture]()
+- [Cisco Air Marshall]()
+
+### Distributed
+- [Omnipeek]()
+
+## Adapter Modes: `Monitor Mode` & `Promiscous Mode`
 - [`Promiscous Mode` & `Monitor Mode`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md#-monitor-mode--promiscous-mode)
     -[`Promiscous Mode`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md#-promiscous-mode)
     -[`Monitor Mode`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md#-promiscous-mode)
 
-### Monitor Mode: `Drivers`
+### Monitor Mode: `Adapters` & `Drivers`
+- [Fz3r0 Monitor Mode Drivers Lab]()
+- [Recomended Adapters & Firmwares for 802.11 Frame Capture]()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1373,19 +1449,6 @@ _There are basically 3 different options to capture 802.11 traffic & communicati
 - [La analogía del CWAP y una expedición al K2](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Certifications/CWAP/4-Analogia_CWAP_%26_K2.md) _`¡Avanzar a morir!`_
 
 
-### Analysis
-
-- CWAP CWNP
-
-## Fz3r0: Filters, Scripts, Tricks
-- [BlackShark Filters]()
-
-### Linux Commands & Scripts
-- [Monitor Mode]()
-- [Channel & Frequency]()
-
-### Windows Commands & Scripts
-- [Powershell Frenzy :: Fz3r0]()
 
 ## Resources
 
