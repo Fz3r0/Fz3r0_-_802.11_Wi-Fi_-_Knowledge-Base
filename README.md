@@ -1225,17 +1225,29 @@ _Process of capturing, decoding, and interpreting network communicatios (data pa
 - [Best Practices for Monitoring and Troubleshooting 802.11ac Networks](https://networking.report/Resources/Whitepapers/1d1514d9-48e2-41f9-ab28-04ba3b04868a_Best%20Practices%20for%20Monitoring%20and%20Troubleshooting%20802.11ac%20Networks.pdf) _`White paper`_
 - [Protocol Analysis: How do you analyze network performance and identify bottlenecks?](https://www.linkedin.com/advice/0/how-do-you-analyze-network-performance)
 
+
+
+
+
+
+
+
+
+
+
+
+
 ## Protocol Analysis: `Tools`
 _Software that can capture and display network packets in a readable format, allowing you to examine the details of each packet and how they interact with each other. Some of them can make expert reports._
 
 ### 🦈🖥️📊 `Protocol Analyzers` or `Sniffers`
-- Wireshark
-- T-Shark
-- BlackShark
-- TCPdump
-- NMAP & NPCAP library
-- Omnipeek
-- AirMagnet Wi-Fi Analzyer Pro
+- [Wireshark](https://www.wireshark.org/) The world's most popular network protocol analyzer
+- [T-Shark](https://www.wireshark.org/docs/man-pages/tshark.html) Command-line version of Wireshark
+- [BlackShark]() Fz3r0 WireShark Mod on Steroids
+- [TCPdump & LIBPCAP](https://www.tcpdump.org/) Powerful command-line packet analyzer & portable C/C++ library for network traffic capture
+- [NMAP & NPCAP library](https://npcap.com/) Nmap Project's packet capture/send library for MS-Windows. It implements the open Pcap API
+- [Omnipeek](https://www.liveaction.com/products/omnipeek/) The world’s easiest to use network protocol analyzer.
+- [AirMagnet Wi-Fi Analzyer Pro](https://www.netally.com/products/airmagnet-wifi-analyzer/) _Discontinued_
 - CommView (& CommView for Wi-Fi)
 - Acrylic Wi-Fi Analyzer & Acrylic Wi-Fi Capture
 - Motorola Air Defence
