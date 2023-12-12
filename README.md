@@ -602,7 +602,20 @@ _En Wireless 802.11 los layers más importantes son los 1 & 2, pero también son
     - [**`Layer 1`** :: **`Physical`** ** :: **PDU** = Physical Layer **`Frame`** :: Sub-Layer - `Lower` = **`PMD`** > **1/0 @ RF air**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289)
     - [**`Transmission Medium`** :: Radio (Air RF), Optical, Coaxial, Twisted Pair](https://en.wikipedia.org/wiki/Transmission_medium)
 
-## 🪆🛜⚙️ 802.11 Layer 1: Physical (PHY) :: `Spectrum`
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 🪆🛜⚙️ 802.11 Layer 1: Physical (PHY) :: `Spectrum`
 _The PHY services provided to the MAC. The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. 
 Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx using management info | B) Characteristics & Method to Tx & Rx data through WM (Wireless Medium). The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. _
 
@@ -632,6 +645,58 @@ _PMDs further help to define the physical layer of computer network protocols. P
 - [PMD: Physical Medium Dependent @ Telecom Trainer](https://www.telecomtrainer.com/pmd-physical-medium-dependent/) _`Full Info`_
 - [PMD: Physical medium dependent](https://en.wikipedia.org/wiki/Physical_medium_dependent) _`Wiki`_
 - [PMD layer @ keysight](https://rfmw.em.keysight.com/wireless/helpfiles/n7617a/pmd_layer.htm) _`Diagram`_
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 🪆🛜🦈 802.11 Layer 2: Medium Access (MAC) :: `PCAP`
+
+
+
+## 802.11 MAC Frames
+- [`Fz3r0` 802.11 Frames]()
+
+
+### Management Frames
+- [Beacons]() Fixed Schedule (default 100TU = 1024us microseconds) | Lowest Datarate 
+
+
+### Control Frames
+- []()
+
+
+### Data Frames
+- []()
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -695,6 +760,45 @@ _Instructions & Data directly understandable by STAs, not present on 802.11 Fram
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
 # 🪆🛜⚙️ Frame Exchanges: `Association`, `Transition (Roaming)`, `Security`
 _Most common issues to torubleshoot are Connectivity Problems, this means: STAs/Clients either can't connect, can't maintain it's connection, it's not roaming well between APs, it can't connect to the SSID, and so on... Understanding this kind of Frame Exchanges help to analyze step by step the process for BSS Discovery & Joining, Analyze Roaming Behavior, etc_
@@ -752,7 +856,7 @@ _Any STA or AP can be in some "state" within this state machine at any given tim
 
 
 
-## 🪆🛜⚙️ 802.11 Layer 2: Medium Access (MAC) :: `PCAP`
+
 
 
 
