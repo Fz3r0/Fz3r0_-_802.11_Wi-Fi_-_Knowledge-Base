@@ -637,7 +637,6 @@ _Also Known As: Physical Layer Convergence Protocol (depends the 802.11 version)
 - [Where does the PLCP sublayer layer actually reside?](https://www.youtube.com/watch?v=thcg9Dn2QL0) _`video`_
 
 
-
 ---
 
 ### ⬇️↕️🛜 `PMD`: Physical Medium Dependant :: Sublayer > `Lower`
