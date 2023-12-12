@@ -673,11 +673,19 @@ _PMDs further help to define the physical layer of computer network protocols. P
 
 
 ## 802.11 MAC Frames
+- [Table 9-32—Beacon frame body | 9.3.3.2 Beacon frame format 824 @ IEEE 802.11-2020]()
+- 
 - [`Fz3r0` 802.11 Frames]()
+    - [Beacon Frame Format | Filters | Exchanges]() 
 
 
-### Management Frames
-- [Beacons]() Fixed Schedule (default 100TU = 1024us microseconds) | Lowest Datarate 
+
+### IEEE 802.11-2020 9.3.3 (PV0) `Management Frames`
+- [Beacon](https://mrncciew.com/2014/10/08/802-11-mgmt-beacon-frame/) Fixed Schedule (default 100TU = 1024us microseconds) | Lowest Basic Data Rate
+- [Probe Request]
+- [Directed Probe Request]
+- [Probe Response]
+
 
 
 ### Control Frames
@@ -1171,6 +1179,23 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 
 
 # 🕵️🚨🆘 802.11 Analysis & Troubleshooting
+
+
+## Beacon Overhead Calculation
+_One of the most commonly cited best practices among Wi-Fi professionals is to the limit the number of SSIDs you have configured on your WLAN in order to reduce the amount of overhead on the network and to maintain high performance. **CWNP Standard = no more than 5 SSIDs, for best results maximum 3 SSIDs**_
+- [SSID Overhead Calculator](https://revolutionwifi.blogspot.com/p/ssid-overhead-calculator.html)
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Spectrum Analysis `layer 1`:`PHY`
 
