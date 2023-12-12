@@ -1210,6 +1210,32 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 
 # 🕵️🚨🆘 802.11 Analysis & Troubleshooting
 
+## Troubleshooting Methodologies
+- [WLAN Professionals Troubleshooting Methodology](https://wlanprofessionals.com/wireless-troubleshooting-best-practices/)
+
+### CWNA Troubleshooting Methodology
+1. [Identify the problem]()
+2. [Discover the scale of the problem]()
+3. [Define the possible causes of the problem]()
+4. [Narrow to the most likely cause]()
+5. [Create a plan of action or escalate the problem]()
+6. [Perform corrective actions]()
+7. [Verify the solution]()
+8. [Document the results]()
+
+### CWAP Troubleshooting Methodology
+
+### Cisco Troubleshooting Methodology
+- [Cisco: Network Troubleshooting Methodology and Techniques](https://study-ccna.com/network-troubleshooting-methodology-techniques/)<br><br>
+    1. [Define the problem]()
+    2. [Gather detailed information]()
+    3. [Consider probable cause for the failure]()
+    4. [Devise a plan to solve the problem]()
+    5. [Implement the plan]()
+    6. [Observe the results of the implementation]()
+    7. [Repeat the process if the plan does not resolve the problem]()
+    8. [Document the changes made to solve the problem]()
+
 ## Fz3r0 :: BlackShark Framework
 - [BlackShark Filters]()
 
