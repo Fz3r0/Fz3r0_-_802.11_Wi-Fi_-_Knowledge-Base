@@ -733,8 +733,11 @@ _Any STA or AP can be in some "state" within this state machine at any given tim
 - [Wireless association: active vs passive scanning, & roaming @ Sunny](https://youtu.be/HPJonmd8z1c?si=g47qTqJ5ma4iF3c0)
 - [A study of the discovery process in 802.11 networks](https://www.researchgate.net/publication/215502402_A_study_of_the_discovery_process_in_80211_networks) _`pdf study`_
 
-### 🛸🛜 BSS Discovery: `Passive Scanning` & `Active Scanning`
+### 🛸🛜 BSS Discovery Scanning Methods: `Passive Scanning` & `Active Scanning`
+- [**`Active Scanning`**]() `Client/STA` **init effort** | STA broadcast `ProbeReq` (All CHs) > AP answer `PropeRes` > STA answer Directed `Probe` > `AuthReq`
+- [**`Passive Scanning`**]() `AP` **init effort** | AP broadcast `Beacon` @ `BSA` > STA answer Directed `Probe` > `AuthReq`
 
+## 🤳🏾🔄📡 IEEE 802.11: `Re-Association` & `Roaming`
 
 
 
