@@ -2,7 +2,6 @@
 
 Y ARRANCAN!!!
 
-
 <p align="center"> <img src="solo el link" alt="Mac" height=600px/> </a> </p> 
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/94720207/223137182-929a5e71-1b1f-48c4-94b4-1553a386fefa.png" alt="Mac" height=600px/> </a> </p> 
