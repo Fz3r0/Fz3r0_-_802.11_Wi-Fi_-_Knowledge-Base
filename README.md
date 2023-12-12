@@ -849,6 +849,23 @@ _Any STA or AP can be in some "state" within this state machine at any given tim
 - [**`Active Scanning`**]() `Client/STA` **init effort** | **STA:**`ProbeReq` (All CHs) > AP answer `PropeRes` > STA answer Directed `Probe` > `AuthReq`
 - [**`Passive Scanning`**]() `AP` **init effort** | **AP:**`Beacon` @ `BSA` > STA answer Directed `Probe` > `AuthReq`
 
+## 🪪🛡️🔐 IEEE 802.11: `Authentication`
+_These are the Authentication Methods a STA can use to access to a BSS_
+
+### 🛡️🔐 Authentication Methods
+- [802.11 Authentication Methods](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/46509dcd-047a-4529-b4c5-c9cad8b88760) _`table`_<br><br>
+    - [🔓 `Open System` :: `0`]() No authentication | Every client is allowed || used for: `Pre-Shared Key`, `802.1X`
+    - [🔑 `Shared Key` :: `1`]() Authenticates via WEP(legacy) demonstrating a key
+    - [🔄 `FT`:`Fast Transition :: `2`]() `802.11r` Authenticates using a key derived from previous authentication
+    - [🖧 `SAE`:`Simultaneous Authentication of Equals` :: `3`]() `802.11s-mesh` Diffie-Hellman / Mesh
+
+
+
+
+
+
+
+
 ## 🤳🏾🔄📡 IEEE 802.11: `Re-Association` & `Roaming`
 
 
