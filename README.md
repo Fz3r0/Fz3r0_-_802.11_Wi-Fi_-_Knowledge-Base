@@ -1192,34 +1192,6 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 
 - CWAP CWNP
 
-## Fz3r0: Filters, Scripts, Tricks
-
-## Wireshark
-- [About Wireshark](https://www.wireshark.org/about.html)
-- [Wireshark - Where to Start?](https://www.wireshark.org/docs/)
-
-### Wireshark: `Display Filters`
-- [Wireshark Filter Manual Page - Wireshark display filter syntax and reference](https://www.wireshark.org/docs/man-pages/wireshark-filter.html)
-- [Display Filter Reference](https://www.wireshark.org/docs/dfref/)
-- [Wlan - Display Filter Reference](https://www.wireshark.org/docs/dfref/w/wlan.html)
-- [Wlan Radio - Display Filter Reference](https://www.wireshark.org/docs/dfref/w/wlan_radio.html)
-
-### Wireshark: `Analytics`
-
-### Wireshark: `Source Code`
-- https://gitlab.com/wireshark/wireshark/-/tree/master
-
-## Fz3r0 :: BlackShark Framework
-- [BlackShark Filters]()
-
-## Fz3r0 :: Scripts & Tricks
-
-### Linux Commands & Scripts
-- [Monitor Mode]()
-- [Channel & Frequency]()
-
-### Windows Commands & Scripts
-- [Powershell Frenzy :: Fz3r0]()
 
 
 
@@ -1238,6 +1210,18 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 
 # 🕵️🚨🆘 802.11 Analysis & Troubleshooting
 
+## Fz3r0 :: BlackShark Framework
+- [BlackShark Filters]()
+
+### Fz3r0 :: Scripts & Tricks
+
+### Linux Commands & Scripts
+- [Monitor Mode]()
+- [Channel & Frequency]()
+
+### Windows Commands & Scripts
+- [Powershell Frenzy :: Fz3r0]()
+
 ## Beacon Overhead Calculation
 _One of the most commonly cited best practices among Wi-Fi professionals is to the limit the number of SSIDs you have configured on your WLAN in order to reduce the amount of overhead on the network and to maintain high performance. **CWNP Standard = no more than 5 SSIDs, for best results maximum 3 SSIDs**_
 - [SSID Overhead Calculator](https://revolutionwifi.blogspot.com/p/ssid-overhead-calculator.html)
@@ -1247,14 +1231,14 @@ _One of the most commonly cited best practices among Wi-Fi professionals is to t
 
 
 
-
-
-
-
-
-
-
 ## Spectrum Analysis `layer 1`:`PHY`
+
+
+
+
+
+
+
 
 ## 🦈🕵️💊 Protocol Analysis :: `Layer 2`:`MAC` & `layers 3-7`
 _Process of capturing, decoding, and interpreting network communicatios (data packets that travel across a network). Network protocol analysis tools (Software like Wireshark) can capture and display these packets in a readable format, allowing you to examine the details of each packet and how they interact with each other._
@@ -1264,21 +1248,10 @@ _Process of capturing, decoding, and interpreting network communicatios (data pa
 - [Protocol Analysis: How do you analyze network performance and identify bottlenecks?](https://www.linkedin.com/advice/0/how-do-you-analyze-network-performance)
 
 
-
-
-
-
-
-
-
-
-
-
-
-## Protocol Analysis: `Tools`
+## 🦈🕵️🛠️ Protocol Analysis: `Tools`
 _Software that can capture and display network packets in a readable format, allowing you to examine the details of each packet and how they interact with each other. Some of them can make expert reports._
 
-### 🦈🖥️📊 `Protocol Analyzers` or `Sniffers`
+### 🦈🖥️📊 Protocol Analysis: `Protocol Analyzers` or `Sniffers`
 - [Wireshark](https://www.wireshark.org/) The world's most popular network protocol analyzer
 - [T-Shark](https://www.wireshark.org/docs/man-pages/tshark.html) Command-line version of Wireshark
 - [BlackShark]() Fz3r0 WireShark Mod on Steroids
@@ -1292,10 +1265,29 @@ _Software that can capture and display network packets in a readable format, all
 - Wi-Fi Pilot
 - NetScout
 
-### `Visualization Tools`
+### 📈📊📉 Protocol Analysis: `Visualization Tools`
 - [Channelyzer :: Metageek](https://www.metageek.com/chanalyzer/)
 - [Mojo Packets :: Peter Mackenzee](https://www.youtube.com/watch?v=r4fMGfiF9Jo) _discontinued_
 - [Packets :: Arista Networks](https://packets.arista.com/site/portal?fallbackUrl=..%2Fupload%2Fupload)
+
+## 🦈🪤👑 `Wireshark`
+_Few tools are as useful to the IT professional as Wireshark, the go-to network packet capture tool. Wireshark will help to capture network packets and display them at a granular level. Once these packets are broken down, you can use them for real-time or offline analysis. This tool lets you put your network traffic under a microscope, and then filter and drill down into it, zooming in on the root cause of problems, assisting with network analysis for troubleshooting and ultimately network security._
+- [About Wireshark](https://www.wireshark.org/about.html)
+- [Wireshark - Where to Start?](https://www.wireshark.org/docs/)
+
+### 🦈🕵️ Wireshark: `Display Filters`
+- [Wireshark Filter Manual Page - Wireshark display filter syntax and reference](https://www.wireshark.org/docs/man-pages/wireshark-filter.html)
+- [Display Filter Reference](https://www.wireshark.org/docs/dfref/)
+- [Wlan - Display Filter Reference](https://www.wireshark.org/docs/dfref/w/wlan.html)
+- [Wlan Radio - Display Filter Reference](https://www.wireshark.org/docs/dfref/w/wlan_radio.html)
+
+### 🦈📊 Wireshark: `Analytics`
+
+### 🦈📇 Wireshark: `Source Code`
+- https://gitlab.com/wireshark/wireshark/-/tree/master
+
+
+
 
 ## Protocol Analysis: `Packet & Frame Capture`
 - [Wireshark Tutorial for BEGINNERS // Where to start with Wireshark @ Chris Greer](https://www.youtube.com/watch?v=OU-A2EmVrKQ)
