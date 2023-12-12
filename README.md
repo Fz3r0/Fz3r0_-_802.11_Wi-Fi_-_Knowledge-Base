@@ -1,24 +1,43 @@
-<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-                   Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base v0.1 αLFα 
- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- 
-                               BIENVENIDO AL INFIERNO 
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ #                                                               #
+ #       Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base v0.1 αLFα         #
+ #                                                               #
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-                            "El infierno es aquí merito...
-                    
-                 Esta vida y no chingaderas es el cabrón infierno"
+    - Cualquiera es libre de copiar, distribuir, enseñar, 
+      modificar, presentar, mejorar y/o utilizar este documento 
+      como le sea su voluntad.
 
- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-  - Cualquiera es libre de copiar, distribuir, enseñar, modificar, presentar, mejorar y/o utilizar este documento como le sea su voluntad.
-
-  - La educación y el conocimiento son derechos fundamentales del ser humano. Todos tenemos derecho a acceder a ellos y a compartirlos libremente. La educación y el conocimiento deben ser inclusivos y accesibles para todos, independientemente de su origen o estatus socioeconómico.
+    - La educación y el conocimiento son derechos fundamentales 
+      del ser humano. Todos tenemos derecho a acceder a ellos y a 
+      compartirlos libremente. La educación y el conocimiento deben 
+      ser inclusivos y accesibles para todos, independientemente de 
+      su origen o estatus socioeconómico.
   
-  - El conocimiento y las tecnologías libres son un acto de resistencia contra la exclusión y la opresión, lo que permite una apertura hacia los caminos de la verdad y la justicia. Al compartir el conocimiento, estamos empoderando a las personas y fomentando un cambio social y espiritual. Compartir nuestro conocimiento es una manera de fomentar la creatividad y la innovación, para así construir un mundo mejor y dejar una huella en el universo en honor de la raza humana en este tiempo y espacio.
+    - El conocimiento y las tecnologías libres son un acto de 
+      resistencia contra la exclusión y la opresión, lo que permite 
+      una apertura hacia los caminos de la verdad y la justicia. 
+      Al compartir el conocimiento, estamos empoderando a las 
+      personas y fomentando un cambio social y espiritual. 
+      Compartir nuestro conocimiento es una manera de fomentar 
+      la creatividad y la innovación, para así construir un mundo 
+      mejor y dejar una huella en el universo en honor de la raza 
+      humana en este tiempo y espacio.
 
-  - En caso de obtener algún beneficio económico a partir de este documento, se solicita al acreedor donar algún porcentaje de esos recursos a causas ya sea para alimentar a gente necesitada o para la protección de la flora y fauna alrededor de su comunidad. 
+    - En caso de obtener algún beneficio económico a partir de este 
+      documento, se solicita al acreedor donar algún porcentaje de 
+      esos recursos a causas ya sea para alimentar a gente 
+      necesitada o para la protección de la flora y fauna alrededor 
+      de su comunidad. 
 
-  - Los créditos hacia mi persona serán agradecidos y bien recibidos, pero tampoco son necesarios.
+    - Los créditos hacia mi persona serán agradecidos, pero no son 
+      necesarios.
+
+        "La educación es el arma más poderosa que puedes usar 
+                       para cambiar el mundo" 
+                                                  -Nelson Mandela
 
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  "                                                               "
@@ -66,6 +85,13 @@
  "⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠘⠙⠝⠂⠄⢘⠋⠃⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄"
  "⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄"
  "⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄"
+
+                       BIENVENIDO AL INFIERNO 
+
+                  "El infierno es aquí merito...
+                    
+          Esta vida y no chingaderas es el cabrón infierno"
+
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
 
 <!-- PORTADA Y BANNER -->
