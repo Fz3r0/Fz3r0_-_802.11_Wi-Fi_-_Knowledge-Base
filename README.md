@@ -1366,6 +1366,16 @@ _There are basically 3 different options to capture 802.11 traffic & communicati
 
 - CWAP CWNP
 
+## Fz3r0: Filters, Scripts, Tricks
+- [BlackShark Filters]()
+
+### Linux Commands & Scripts
+- [Monitor Mode]()
+- [Channel & Frequency]()
+
+### Windows Commands & Scripts
+- [Powershell Frenzy :: Fz3r0]()
+
 ## Resources
 
 - [wifi-professionals](https://www.wifi-professionals.com/)
