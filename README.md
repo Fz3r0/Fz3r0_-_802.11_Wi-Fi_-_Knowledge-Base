@@ -682,9 +682,9 @@ _PMDs further help to define the physical layer of computer network protocols. P
 
 ### IEEE 802.11-2020 9.3.3 (PV0) `Management Frames`
 - [Beacon](https://mrncciew.com/2014/10/08/802-11-mgmt-beacon-frame/) Fixed Schedule (default 100TU = 1024us microseconds) | Lowest Basic Data Rate
-- [Probe Request]
-- [Directed Probe Request]
-- [Probe Response]
+- [Probe Request | **STA** -> Broadcast][]() `APs does not ACK Probe Req` :: Broadcast :: Lowest STA's Data Rate :: 
+- [Directed Probe Request | **STA** -> AP]() `APs does not ACK Probe Req` :: AP/SSID Directed ::
+- [Probe Response | STA <- **AP**]() `STAs ACK Probes Res` :: Lowest BSS Data Rate :: Includes SSID & Very similar to a Beacon
 
 
 
