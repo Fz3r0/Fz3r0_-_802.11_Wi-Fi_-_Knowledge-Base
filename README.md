@@ -689,6 +689,7 @@ _PMDs further help to define the physical layer of computer network protocols. P
 
 
 ### Control Frames
+- [ACK]() Allways after a unicast frame |
 - []()
 
 
@@ -854,10 +855,11 @@ _These are the Authentication Methods a STA can use to access to a BSS_
 
 ### 🛡️🔐 Authentication Methods
 - [802.11 Authentication Methods](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/46509dcd-047a-4529-b4c5-c9cad8b88760) _`table`_<br><br>
-    - [🔓 `Open System` :: `0`]() No authentication | Every client is allowed || used for: `Pre-Shared Key`, `802.1X`
+    - [🔓 `Open System` :: `0`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/da6135ed-352d-42c1-a73a-736112c79650) No authentication | Every client is allowed || used for: `Pre-Shared Key`, `802.1X` (after association state)
     - [🔑 `Shared Key` :: `1`]() Authenticates via WEP(legacy) demonstrating a key
     - [🔄 `FT`:`Fast Transition :: `2`]() `802.11r` Authenticates using a key derived from previous authentication
     - [🖧 `SAE`:`Simultaneous Authentication of Equals` :: `3`]() `802.11s-mesh` Diffie-Hellman / Mesh
+
 
 
 
