@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 # 👹 `CANTO II`: Protocol Analysis
 
 En primer lugar, quiero destacar que para todo este capítulo y básicamente para todo el curso de `CWAP`, el `Software` que utilizaré como `Sniffer` / `Protocol Analyzer` para ejemplos y laboratorios será `Wireshark`, en específico utilizando mi mod de profile y OUI `Blackshark by Fz3r0`. En la literatura oficial del `CWAP` utilizan ejemplos de otras herramientas como `Omnipeek`, sin embargo, además que es mi herramienta preferida de análisis de paquetes (packets) y tramas (frames), esta herramienta es de código abierto y al alcance de todo mundo de manera gratuita.
@@ -1381,6 +1388,15 @@ FIN DE CAPITULO :D
 
 
 ![image](https://user-images.githubusercontent.com/94720207/236647132-f6c643ea-93c9-41ec-a472-03d260033d00.png)
+
+
+
+
+
+
+
+
+
 
 
 
