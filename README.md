@@ -1512,28 +1512,90 @@ _The right adapter give you the right capture capabilites and scopes... There is
 
 ## Fz3r0: The BlackShark for 802.11
 
-### WLAN Troubleshooting
 
-## 802.11 Security
-- 802.11 Network Security Architecture
-- Wireless LAN Security
-- WLAN Discovery Techniques
-- Intrusion and Attack Techniques
-- Wireless Intrusion Prevention Systems (WIPS) Implementation
-- Layer 2 and 3 VPNs used over 802.11 networks
-- Enterprise/SMB/SOHO/Public-Network Security design models
-- Managed Endpoint Security Systems 802.11 Authentication and Key
 
-## 802.11 Vendor Specific Implementation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 802.11 Vendor Specific Implementation
 - Ruckus
 - Cisco
 - Aruba
 - MikroTik
 - Fortinet
 
-## 802.11 Tools (Hardware & Software)
-- 802.11 Tools lists (HW)
-- 802.11 Tools lists (SW)
+
+
+
+
+
+
+# IEEE 802.11 Wireless (Wi-Fi): `Defensive Security`
+- 802.11 Network Security Architecture
+- Wireless LAN Security
+- WLAN Discovery Techniques
+
+- Wireless Intrusion Prevention Systems (WIPS) Implementation
+- Layer 2 and 3 VPNs used over 802.11 networks
+- Enterprise/SMB/SOHO/Public-Network Security design models
+- Managed Endpoint Security Systems 802.11 Authentication and Key
+
+
+
+
+# IEEE 802.11 Wireless (Wi-Fi): `Ofensive Security` & `Pentesting`
+
+## IEEE 802.11 Pentesting: `Software Tools`
+- [aircrackng]()
+
+## IEEE 802.11 Pentesting: `Hardware Tools`
+- [Wi-Fi Coconut]()
+- [Wi-Fi Pineapple]()
+
+## 802.11 `Hacking` & `Attack Techniques`
+
+### 802.11 PWN!!!: `Init Setup & Basics`
+- [Monitor Mode & Validations]()
+
+---
+
+### 802.11 PWN!!!: `WLANs Audit`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
