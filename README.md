@@ -954,13 +954,14 @@ _These are the Authentication Methods a STA can use to access to a BSS_
 
 
 
-# Radio Frequency (RF) Theory
+# Radio Frequency (RF): `Physics` & `Mathematics`
 
 ## FFT: Fast Fourier Transform
 - [FFT: Fast Fourier Transform](https://en.wikipedia.org/wiki/Fast_Fourier_transform) _`english`_
 - [FFT: Transformada rápida de Fourier](https://es.wikipedia.org/wiki/Transformada_r%C3%A1pida_de_Fourier) _`español`_
 - [FFT, series de Fourier y el espectro de frecuencia con animaciones 3D de fácil entendimiento](https://www.youtube.com/watch?v=r18Gi8lSkfM) _`video`_
 - [Transformada de Fourier aplicada a Telecomunicaciones](https://www.youtube.com/watch?v=rgYjWcW6fO4) _`video`_
+- [Explicación Teórica de la aplicación de la Serie y Yransformada de Fourier en las Telecomunicaciones](https://www.youtube.com/watch?v=fAsAl0JVG7Q)
 - [¿Qué es la Transformada de Fourier? Una introducción visual](https://www.youtube.com/watch?v=h4PTucW3Rm0&t=7s) _`video`_
 - [How to Do FFT in MATLAB](https://www.youtube.com/watch?v=XEbV7WfoOSE)
 
@@ -969,17 +970,16 @@ _These are the Authentication Methods a STA can use to access to a BSS_
 - [Spread Spectrum Modulation & Demodulation | Video Demo](https://www.youtube.com/watch?app=desktop&v=68Nua8gKdRU)
 - [Espectro Expandido (Spread Spectrum) - Fundamentos de Telecomunicaciones](https://www.youtube.com/watch?v=h1Hp451xtIA)
 
-### Radio Frequency Signal
-
+## Radio Frequency Signal
 - What Is a Radio Frequency Signal?
-- Radio Frequency Characteristics
-    - Wavelength 
-    - Frequency 
-    - Amplitude 
-    - Phase
 
-### Radio Frequency Behaviors
+### Radio Frequency Signal: `Characteristics`
+- Wavelength
+- Frequency 
+- Amplitude 
+- Phase
 
+## Radio Frequency Behaviors
 - Wave Propagation 
 - Absorption 
 - Reflection 
@@ -991,8 +991,7 @@ _These are the Authentication Methods a STA can use to access to a BSS_
 - Multipath 
 - Gain (Amplification)
 
-### Carrier Signals & Data transsmission using RF
-
+## Carrier Signals & Data transsmission using RF
 - Communications Fundamentals
 - Communication Terminology
 - Understanding Carrier Signals
@@ -1006,7 +1005,7 @@ _These are the Authentication Methods a STA can use to access to a BSS_
 - Intentional Radiator 
 - Equivalent Isotropically Radiated Power
 
-## Radio Frequency (RF) Measurements & Mathematics
+## Radio Frequency (RF) Measurements
 - Units of Power and Comparison 
     - Watt
     - Milliwatt 
@@ -1015,9 +1014,12 @@ _These are the Authentication Methods a STA can use to access to a BSS_
     - Decibels Relative to a Half-Wave Dipole Antenna (dBd)
     - Decibels Relative to 1 Milliwatt (dBm)
     - Inverse Square Law 
-- RF Mathematics
-    - Rule of 10s and 3s
-    - RF Math Summary
+
+## RF Mathematics
+- Rule of 10s and 3s
+- RF Math Summary
+
+
 - Noise Floor
 - Signal-to-Noise Ratio
     - Signal-to-Interference-Plus-Noise Ratio
