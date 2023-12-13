@@ -1317,6 +1317,7 @@ _One of the most commonly cited best practices among Wi-Fi professionals is to t
 ## 🦈🕵️💊 Protocol Analysis :: `Layer 2`:`MAC` & `layers 3-7`
 _Process of capturing, decoding, and interpreting network communicatios (data packets that travel across a network). Network protocol analysis tools (Software like Wireshark) can capture and display these packets in a readable format, allowing you to examine the details of each packet and how they interact with each other._
 - [**`Fz3r0`**: Protocol Analysis](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md)
+- [Ekahau Wi-Fi Webinar - Packet Capture and Analysis - February 7, 2019](https://www.youtube.com/watch?v=W_wjmk-YQTc)
 - [Analyze and Troubleshoot 802.11 Wireless Sniffing @ Cisco](https://www.cisco.com/c/en/us/support/docs/wireless-mobility/80211/200527-Fundamentals-of-802-11-Wireless-Sniffing.html) _`Complete Guide`_
 - [Best Practices for Monitoring and Troubleshooting 802.11ac Networks](https://networking.report/Resources/Whitepapers/1d1514d9-48e2-41f9-ab28-04ba3b04868a_Best%20Practices%20for%20Monitoring%20and%20Troubleshooting%20802.11ac%20Networks.pdf) _`White paper`_
 - [Protocol Analysis: How do you analyze network performance and identify bottlenecks?](https://www.linkedin.com/advice/0/how-do-you-analyze-network-performance)
@@ -1342,7 +1343,9 @@ _Software that can capture and display network packets in a readable format, all
 
 ### 📈📊📉 Protocol Analysis: `Visualization Tools`
 _Concept is instead of looking a specific packets, you are looking at analyisis of those packets that's been done wirh graphics, lists, and so on..._
+- [Visual Packet Analysis Blog :: Metageek](https://www.metageek.com/blog/tag/visual-packet-analysis/)
 - [Channelyzer :: Metageek](https://www.metageek.com/chanalyzer/)
+- [Eye P.A. :: Metageek](https://www.metageek.com/eye-pa/) Enables easy multi-channel 802.11ac packet capture and visual analysis
 - [Mojo Packets :: Peter Mackenzee](https://www.youtube.com/watch?v=r4fMGfiF9Jo) _discontinued_
 - [Packets :: Arista Networks](https://packets.arista.com/site/portal?fallbackUrl=..%2Fupload%2Fupload)
 
