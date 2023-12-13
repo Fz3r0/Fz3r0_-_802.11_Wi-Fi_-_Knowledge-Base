@@ -845,6 +845,7 @@ _Any STA or AP can be in some "state" within this state machine at any given tim
 - [802.11 State Machine @ Noticias Inalámbricas](https://notasinalambricas.wordpress.com/tag/802-11-state-machine/) _`español`_
 - [Los 4 pasos/estados de la máquina de estados, ¡En 2 minutos!](https://www.youtube.com/watch?v=u3dkoPrdOdE) _`video`_
 - [802.11 Frame Exchanges](https://howiwifi.com/2020/07/16/802-11-frame-exchanges/)
+- [802.11 Association Process Explained @ Meraki](https://documentation.meraki.com/MR/Wi-Fi_Basics_and_Best_Practices/802.11_Association_Process_Explained)
 
 ### 🥇🥈🥉 802.11 State Machine: `Frame Classes` `1`, `2`, `3`
 - [802.11 WLAN States: Difference between WLAN class1 class2 and class3](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)<br><br>
@@ -1386,6 +1387,14 @@ _There are basically 3 different options to capture 802.11 traffic & communicati
 - [Fz3r0 :: Channel Selection on each Scenario]() _`table`_
 
 ## 802.11 Frame Capture: `Roaming Scenarios`
+- [Roaming Analysis using only a Mac and Wireshark](https://framebyframewifi.net/2018/08/04/roaming-analysis-using-only-a-mac-and-wireshark/)
+- [How to check in Wireshark if a Wi-Fi Network support 802.11k (roaming)](https://semfionetworks.com/blog/wireshark-how-to-check-if-a-wi-fi-network-supports-80211k/)
+- [How To Fix Wi-Fi Roaming](https://www.smallnetbuilder.com/basics/wireless-basics/how-to-fix-wi-fi-roaming/) 
+- [Wi-Fi Roaming Secrets Revealed :: ](https://www.smallnetbuilder.com/wireless/wireless-features/wi-fi-roaming-secrets-revealed/)
+- [Wi-Fi Roaming Analysis Part 1 - `Connection Control` @ Revolution Wi-Fi](https://revolutionwifi.blogspot.com/2011/12/wi-fi-roaming-analysis-part-1.html)
+- [Wi-Fi Roaming Analysis Part 2 - `Roaming Variations` @ Revolution Wi-Fi](https://revolutionwifi.blogspot.com/2012/02/wi-fi-roaming-analysis-part-2-roaming.html)
+- [Wi-Fi Roaming Analysis Part 3 - `Methods of Measuring Roam Times` @ Revolution Wi-Fi](https://revolutionwifi.blogspot.com/2012/12/wi-fi-roaming-analysis-part-3-measuring.html)
+- [Wi-Fi Roaming Analysis Part 4 - `Analysis with Wireshark & AirPcap` @ Revolution Wi-Fi](https://revolutionwifi.blogspot.com/2013/01/wi-fi-roaming-analysis-with-wireshark.html)
 
 
 
