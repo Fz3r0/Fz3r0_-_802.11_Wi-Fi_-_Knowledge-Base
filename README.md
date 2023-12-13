@@ -1382,7 +1382,7 @@ _There are basically 3 different options to capture 802.11 traffic & communicati
 - [Install Drivers for 802.11 capture in Linux]()
 
 ### Monitor Mode: `Adapters`
-_The right adapter give you the right capture capabilites and scopes..._
+_The right adapter give you the right capture capabilites and scopes... There is no "the best" adaptor for every scenario_
 
 - [802.11 Capture Table]() 
 - [Alfa]() `Custom`
@@ -1392,7 +1392,7 @@ _The right adapter give you the right capture capabilites and scopes..._
 - [Saavius]() `Vendor Supported Licenced`
 
 ### Monitor Mode: `Infrestructure APs`
-_The right adapter give you the right capture capabilites and scopes..._
+_The right adapter give you the right capture capabilites and scopes... There is no "the best" adaptor for every scenario_
 - [Ruckus R850]() `4x4 spatial streams` | `2.4/5/6 GHz`
 
 ## 802.11 Frame Capture: `Location for Capture`
