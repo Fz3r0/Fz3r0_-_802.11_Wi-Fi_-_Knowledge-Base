@@ -1240,7 +1240,8 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 ## Troubleshooting Methodologies
 - [WLAN Professionals Troubleshooting Methodology](https://wlanprofessionals.com/wireless-troubleshooting-best-practices/)
 
-### CWNA Troubleshooting Methodology
+### Troubleshooting Methodology: `CWNA`
+- [CWNP :: CWNA - Troubleshooting Methodology]()<br><br>
 1. [Identify the problem]()
 2. [Discover the scale of the problem]()
 3. [Define the possible causes of the problem]()
@@ -1250,18 +1251,18 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 7. [Verify the solution]()
 8. [Document the results]()
 
-### CWAP Troubleshooting Methodology
+### Troubleshooting Methodology: `CWAP`
 
 ### Cisco Troubleshooting Methodology
 - [Cisco: Network Troubleshooting Methodology and Techniques](https://study-ccna.com/network-troubleshooting-methodology-techniques/)<br><br>
-    1. [Define the problem]()
-    2. [Gather detailed information]()
-    3. [Consider probable cause for the failure]()
-    4. [Devise a plan to solve the problem]()
-    5. [Implement the plan]()
-    6. [Observe the results of the implementation]()
-    7. [Repeat the process if the plan does not resolve the problem]()
-    8. [Document the changes made to solve the problem]()
+1. [Define the problem]()
+2. [Gather detailed information]()
+3. [Consider probable cause for the failure]()
+4. [Devise a plan to solve the problem]()
+5. [Implement the plan]()
+6. [Observe the results of the implementation]()
+7. [Repeat the process if the plan does not resolve the problem]()
+8. [Document the changes made to solve the problem]()
 
 ## Fz3r0 :: BlackShark Framework
 - [BlackShark Filters]()
@@ -1319,6 +1320,7 @@ _Software that can capture and display network packets in a readable format, all
 - NetScout
 
 ### 📈📊📉 Protocol Analysis: `Visualization Tools`
+_Concept is instead of looking a specific packets, you are looking at analyisis of those packets that's been done wirh graphics, lists, and so on..._
 - [Channelyzer :: Metageek](https://www.metageek.com/chanalyzer/)
 - [Mojo Packets :: Peter Mackenzee](https://www.youtube.com/watch?v=r4fMGfiF9Jo) _discontinued_
 - [Packets :: Arista Networks](https://packets.arista.com/site/portal?fallbackUrl=..%2Fupload%2Fupload)
@@ -1327,6 +1329,7 @@ _Software that can capture and display network packets in a readable format, all
 _Few tools are as useful to the IT professional as Wireshark, the go-to network packet capture tool. Wireshark will help to capture network packets and display them at a granular level. Once these packets are broken down, you can use them for real-time or offline analysis. This tool lets you put your network traffic under a microscope, and then filter and drill down into it, zooming in on the root cause of problems, assisting with network analysis for troubleshooting and ultimately network security._
 - [About Wireshark](https://www.wireshark.org/about.html)
 - [Wireshark - Where to Start?](https://www.wireshark.org/docs/)
+- [Wireshark Tutorial for BEGINNERS // Where to start with Wireshark @ Chris Greer](https://www.youtube.com/watch?v=OU-A2EmVrKQ)
 
 ### 🦈🕵️ Wireshark: `Display Filters`
 - [Wireshark Filter Manual Page - Wireshark display filter syntax and reference](https://www.wireshark.org/docs/man-pages/wireshark-filter.html)
@@ -1339,12 +1342,9 @@ _Few tools are as useful to the IT professional as Wireshark, the go-to network 
 ### 🦈📇 Wireshark: `Source Code`
 - https://gitlab.com/wireshark/wireshark/-/tree/master
 
-
-
-
-## Protocol Analysis: `Packet & Frame Capture`
-- [Wireshark Tutorial for BEGINNERS // Where to start with Wireshark @ Chris Greer](https://www.youtube.com/watch?v=OU-A2EmVrKQ)
-- [802.11 Wi-Fi VS 802.3 Ethernet Capture: Differences]()
+## Protocol Analysis: `How to capture 802.11 Radio Frames?`
+- [802.11 Wi-Fi VS 802.3 Ethernet Capture: Differences & 802.11 Adapters]()
+- [Capturing 802.11 Frames: Monitor Mode & Packet Injection]()
 
 ## Protocol Analysis: `802.11 Frame Capture Options`
 _There are basically 3 different options to capture 802.11 traffic & communications. At the end, it mostly depends on the resources and needs_
