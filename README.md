@@ -954,7 +954,12 @@ _These are the Authentication Methods a STA can use to access to a BSS_
 
 
 
-## Radio Frequency (RF) Theory
+# Radio Frequency (RF) Theory
+
+## FFT: Fast Fourier Transform
+- [FFT: Fast Fourier Transform](https://en.wikipedia.org/wiki/Fast_Fourier_transform) _`english`_
+- [FFT: Transformada rápida de Fourier](https://es.wikipedia.org/wiki/Transformada_r%C3%A1pida_de_Fourier) _`español`_
+- [FFT, series de Fourier y el espectro de frecuencia con animaciones 3D de fácil entendimiento](https://www.youtube.com/watch?v=r18Gi8lSkfM)
 
 ### Spread Spectrum
 
