@@ -1380,8 +1380,12 @@ _There are basically 3 different options to capture 802.11 traffic & communicati
 ## 802.11 Frame Capture: `Location for Capture`
 
 
+## 802.11 Frame Capture: `Time and Moment for Capture`
 
+## 802.11 Frame Capture: `One Channel VS Various Channels`
+- [Fz3r0 :: Channel Selection on each Scenario]() _`table`_
 
+## 802.11 Frame Capture: `Roaming Scenarios`
 
 
 
