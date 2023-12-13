@@ -1301,6 +1301,9 @@ _Process of capturing, decoding, and interpreting network communicatios (data pa
 - [Best Practices for Monitoring and Troubleshooting 802.11ac Networks](https://networking.report/Resources/Whitepapers/1d1514d9-48e2-41f9-ab28-04ba3b04868a_Best%20Practices%20for%20Monitoring%20and%20Troubleshooting%20802.11ac%20Networks.pdf) _`White paper`_
 - [Protocol Analysis: How do you analyze network performance and identify bottlenecks?](https://www.linkedin.com/advice/0/how-do-you-analyze-network-performance)
 
+## WLAN Scanners & BSS Discovery: `Tools`
+- [Wi-Fi Analyzer]()
+- [NetSpot]()
 
 ## 🦈🕵️🛠️ Protocol Analysis: `Tools`
 _Software that can capture and display network packets in a readable format, allowing you to examine the details of each packet and how they interact with each other. Some of them can make expert reports._
@@ -1355,12 +1358,15 @@ _There are basically 3 different options to capture 802.11 traffic & communicati
 - [Wi-Spy + Software based]()
 - [Wlan PI]()
 
-### Infrastructure
+### Infrastructure (WLC or AP)
 - [Ruckus AP Capture]()
 - [Cisco Air Marshall]()
 
-### Distributed
+### Distributed Forensics
 - [Omnipeek]()
+
+### WIPS Sensors
+- [Arista WIPS](https://www.arista.com/assets/data/pdf/Whitepapers/Arista-WIPS-Whitepaper.pdf)
 
 ## Adapter Modes: `Monitor Mode` & `Promiscous Mode`
 - [`Promiscous Mode` & `Monitor Mode`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md#-monitor-mode--promiscous-mode)
@@ -1373,10 +1379,12 @@ _There are basically 3 different options to capture 802.11 traffic & communicati
 - [Install Drivers for 802.11 capture in Linux]()
 
 ### Monitor Mode: `Adapters`
-- [802.11 Capture Table]()
-- [Alfa]()
-- [Panda]()
-- [TP-Link]()
+- [802.11 Capture Table]() 
+- [Alfa]() `Custom`
+- [Panda]() `Custom`
+- [TP-Link]() `Custom`
+- [WiSpy]() `Vendor Supported Licenced`
+- [Saavius]() `Vendor Supported Licenced`
 
 ## 802.11 Frame Capture: `Location for Capture`
 
@@ -1428,15 +1436,8 @@ _There are basically 3 different options to capture 802.11 traffic & communicati
 
 ---
 
-### RF Analysis Tools
 
-#### Protocol Analyzers & Frame Capture
-- Wireshark
-- BlackShark
-- 
 
-#### Spectrum Analyzers
-- Metageek
 
 #### WLAN Scanners & Discovery Tools
 - Wi-Fi Analyzer Android
