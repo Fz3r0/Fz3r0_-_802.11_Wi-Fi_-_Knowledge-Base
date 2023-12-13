@@ -1440,10 +1440,24 @@ _The right adapter give you the right capture capabilites and scopes... There is
 
 ## Spectrum Analysis `layer 1`:`PHY`
 
+## Spectrum Analyzers
+- [Ekahau Sidekick]()
+- [Metageek]()
 
+## Spectrum Analysis: `FFT Plot`
 
+## Spectrum Analysis: `Duty Cicle`
+- [Low Duty Cicle VS High Duty Cicle :: Channel Utilization]()
 
+## Spectrum Analysis: `Device Finder`
+- [Omnidirectional VS Directional Antenna]()
+- [It Took MONTHS to Solve This WiFi Problem but I DID!](https://www.youtube.com/watch?v=f-dGcs6bb5U&t=537s)
 
+## Spectrum Analysis: `Device Signatures` & `Non-WiFi Interference`
+- [Wideband Jammer]() `Ultra high & Wide Duty Cicle`
+- [Bluetooth]() `Low Duty Cicle`
+- [Cordless Phone]() `Low Duty Cicle` | 2 or more channels
+- [Wireless Camera]() `High Duty Cicle`
 
 
 
