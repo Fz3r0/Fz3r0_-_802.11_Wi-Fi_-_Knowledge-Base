@@ -112,7 +112,14 @@ _🚧🏗️ Under Construction 🏗️🚧 /// 🚧🏗️ En Construcción �
 - `802.11 Wireless`: Definitions & Acronyms
 - `Wi-Fi`: Definition
 ### 📡🏺🧑‍🏫 History: `Internet`, `Networking` & `Wireless`
+- History: `Network Communications` & `Internet`
+    - Timeline: `Network Communications` & `Internet`
+- History: `Radio` & `Wireless Communications`
+    - Timeline: `Radio` & `Wireless Communications`
+- IEEE 802.11 Wireless (Wi-Fi): `Early & Legacy Devices`
+- Historia de Redes, Internet, Telecomunicaciones y Radiodifusión en México
 
+ 
 # 📖❓ `Definitions`, `Acronyms` & `Abbreviations`
 _Networking & Wireless terminology, covering definitions, acronyms, and abbreviations. From computer-related acronyms to clarifying Wi-Fi's origin, IEEE 802.11 standards with insights from various sources._
 
