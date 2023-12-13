@@ -1350,6 +1350,7 @@ _Few tools are as useful to the IT professional as Wireshark, the go-to network 
 ## Protocol Analysis: `How to capture 802.11 Radio Frames?`
 - [802.11 Wi-Fi VS 802.3 Ethernet Capture: Differences & 802.11 Adapters]()
 - [Capturing 802.11 Frames: Monitor Mode & Packet Injection]()
+- [Selecting the right Adapter (Spatial Streams): How to identify if I missing frames?](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/510bc21c-845a-464a-8726-32ed3bb16944)
 
 ## Protocol Analysis: `802.11 Frame Capture Options`
 _There are basically 3 different options to capture 802.11 traffic & communications. At the end, it mostly depends on the resources and needs_
@@ -1381,12 +1382,18 @@ _There are basically 3 different options to capture 802.11 traffic & communicati
 - [Install Drivers for 802.11 capture in Linux]()
 
 ### Monitor Mode: `Adapters`
+_The right adapter give you the right capture capabilites and scopes..._
+
 - [802.11 Capture Table]() 
 - [Alfa]() `Custom`
 - [Panda]() `Custom`
 - [TP-Link]() `Custom`
 - [WiSpy]() `Vendor Supported Licenced`
 - [Saavius]() `Vendor Supported Licenced`
+
+### Monitor Mode: `Infrestructure APs`
+_The right adapter give you the right capture capabilites and scopes..._
+- [Ruckus R850]() `4x4 spatial streams` | `2.4/5/6 GHz`
 
 ## 802.11 Frame Capture: `Location for Capture`
 
