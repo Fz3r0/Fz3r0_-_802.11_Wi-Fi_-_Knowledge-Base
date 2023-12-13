@@ -711,16 +711,16 @@ _PMDs further help to define the physical layer of computer network protocols. P
 - [**`Directed Probe Request`**]() **STA** -> AP `APs does not ACK Probe Req` :: AP/SSID Directed ::
 - [**`Probe Response`**]() STA <- **AP** `STAs ACK Probes Res` :: Lowest BSS Data Rate :: Includes SSID & Very similar to a Beacon
 
-
-
 ### Control Frames
 - [ACK]() Allways after a unicast frame |
 - []()
 
-
 ### Data Frames
 - []()
 
+### Other Frames
+- [`Malformed Frames`]()
+- [`Retransmission`]()
 
 
 
@@ -1366,9 +1366,19 @@ _There are basically 3 different options to capture 802.11 traffic & communicati
     -[`Promiscous Mode`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md#-promiscous-mode)
     -[`Monitor Mode`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md#-promiscous-mode)
 
-### Monitor Mode: `Adapters` & `Drivers`
+### Monitor Mode: `Drivers` & `Chipsets`
 - [Fz3r0 Monitor Mode Drivers Lab]()
 - [Recomended Adapters & Firmwares for 802.11 Frame Capture]()
+- [Install Drivers for 802.11 capture in Linux]()
+
+### Monitor Mode: `Adapters`
+- [802.11 Capture Table]()
+- [Alfa]()
+- [Panda]()
+- [TP-Link]()
+
+## 802.11 Frame Capture: `Location for Capture`
+
 
 
 
