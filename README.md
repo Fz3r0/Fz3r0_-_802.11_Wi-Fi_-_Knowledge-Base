@@ -1237,11 +1237,11 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 
 # 🕵️🚨🆘 802.11 Analysis & Troubleshooting
 
-## Troubleshooting Methodologies
-- [WLAN Professionals Troubleshooting Methodology](https://wlanprofessionals.com/wireless-troubleshooting-best-practices/)
+## Troubleshooting Methodologies & Best Practices
+- [WLAN Pros: Troubleshooting Best Practices](https://wlanprofessionals.com/wireless-troubleshooting-best-practices/)
 
 ### Troubleshooting Methodology: `CWNA`
-- [CWNP :: CWNA - Troubleshooting Methodology]()<br><br>
+- [CWNP :: CWNA - Troubleshooting Methodology](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/00e059e9-cd95-4f8c-8c8d-3a4ae111acd6)<br><br>
 1. [Identify the problem]()
 2. [Discover the scale of the problem]()
 3. [Define the possible causes of the problem]()
@@ -1252,6 +1252,14 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 8. [Document the results]()
 
 ### Troubleshooting Methodology: `CWAP`
+- [CWNP :: CWAP - Troubleshooting Methodology](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/6c2a7436-3f82-408d-a5ec-77a31a97ac9a)<br><br>
+1. [Identify the problem]()
+2. [Discover the scale of the problem]()
+3. [Identify possible causes of the problem]()
+4. [Capture and Analyze the Data]()
+5. [Observe the Problem]()
+6. [Choose appropiate remediation steps]()
+7. [Document the problem and resolution]()
 
 ### Cisco Troubleshooting Methodology
 - [Cisco: Network Troubleshooting Methodology and Techniques](https://study-ccna.com/network-troubleshooting-methodology-techniques/)<br><br>
@@ -1282,13 +1290,9 @@ _One of the most commonly cited best practices among Wi-Fi professionals is to t
 
 
 
-
-
-
-## Spectrum Analysis `layer 1`:`PHY`
-
-
-
+## WLAN Scanners & BSS Discovery: `Tools`
+- [Wi-Fi Analyzer]()
+- [NetSpot]()
 
 
 
@@ -1301,9 +1305,7 @@ _Process of capturing, decoding, and interpreting network communicatios (data pa
 - [Best Practices for Monitoring and Troubleshooting 802.11ac Networks](https://networking.report/Resources/Whitepapers/1d1514d9-48e2-41f9-ab28-04ba3b04868a_Best%20Practices%20for%20Monitoring%20and%20Troubleshooting%20802.11ac%20Networks.pdf) _`White paper`_
 - [Protocol Analysis: How do you analyze network performance and identify bottlenecks?](https://www.linkedin.com/advice/0/how-do-you-analyze-network-performance)
 
-## WLAN Scanners & BSS Discovery: `Tools`
-- [Wi-Fi Analyzer]()
-- [NetSpot]()
+
 
 ## 🦈🕵️🛠️ Protocol Analysis: `Tools`
 _Software that can capture and display network packets in a readable format, allowing you to examine the details of each packet and how they interact with each other. Some of them can make expert reports._
@@ -1420,6 +1422,7 @@ _There are basically 3 different options to capture 802.11 traffic & communicati
 
 
 
+## Spectrum Analysis `layer 1`:`PHY`
 
 
 
@@ -1427,12 +1430,6 @@ _There are basically 3 different options to capture 802.11 traffic & communicati
 
 
 
-
-### Wireless 802.11 Troubleshooting Methodologies
-
-- [CWNA: Troubleshooting Methodology](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/00e059e9-cd95-4f8c-8c8d-3a4ae111acd6)
-- [CWAP: Troubleshooting Methodology](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/e8b2b696-12ee-4f7a-b8d2-024b89137eed)
-- [WLAN Pros: Troubleshooting Best Practices](https://wlanprofessionals.com/wireless-troubleshooting-best-practices/)
 
 ---
 
