@@ -959,10 +959,12 @@ _These are the Authentication Methods a STA can use to access to a BSS_
 ## FFT: Fast Fourier Transform
 - [FFT: Fast Fourier Transform](https://en.wikipedia.org/wiki/Fast_Fourier_transform) _`english`_
 - [FFT: Transformada rápida de Fourier](https://es.wikipedia.org/wiki/Transformada_r%C3%A1pida_de_Fourier) _`español`_
-- [FFT, series de Fourier y el espectro de frecuencia con animaciones 3D de fácil entendimiento](https://www.youtube.com/watch?v=r18Gi8lSkfM)
+- [FFT, series de Fourier y el espectro de frecuencia con animaciones 3D de fácil entendimiento](https://www.youtube.com/watch?v=r18Gi8lSkfM) _`video`_
+- [Transformada de Fourier aplicada a Telecomunicaciones](https://www.youtube.com/watch?v=rgYjWcW6fO4) _`video`_
+- [¿Qué es la Transformada de Fourier? Una introducción visual](https://www.youtube.com/watch?v=h4PTucW3Rm0&t=7s) _`video`_
+- [How to Do FFT in MATLAB](https://www.youtube.com/watch?v=XEbV7WfoOSE)
 
-### Spread Spectrum
-
+## Spread Spectrum 
 - [Spread Spectrum](https://en.wikipedia.org/wiki/Spread_spectrum)
 - [Spread Spectrum Modulation & Demodulation | Video Demo](https://www.youtube.com/watch?app=desktop&v=68Nua8gKdRU)
 - [Espectro Expandido (Spread Spectrum) - Fundamentos de Telecomunicaciones](https://www.youtube.com/watch?v=h1Hp451xtIA)
@@ -1440,6 +1442,12 @@ _The right adapter give you the right capture capabilites and scopes... There is
 
 
 
+
+
+
+
+
+## FFT Emulation: `MATLAB`
 
 
 
