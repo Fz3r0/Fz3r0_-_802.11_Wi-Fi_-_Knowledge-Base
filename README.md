@@ -1355,16 +1355,23 @@ _Few tools are as useful to the IT professional as Wireshark, the go-to network 
 - [Wireshark - Where to Start?](https://www.wireshark.org/docs/)
 - [Wireshark Tutorial for BEGINNERS // Where to start with Wireshark @ Chris Greer](https://www.youtube.com/watch?v=OU-A2EmVrKQ)
 
-### 🦈🕵️ Wireshark: `Display Filters`
+### 🦈🕵️ Wireshark: `Filters`
+- [`Display Filters` :: Wireshark]()
+- [`Capture Filters` :: Wireshark]()
+- [`Colorization` :: Wireshark]()
+- [`Custom Colors` :: Wireshark]()
+- [`Custom Profile` :: Wireshark]()
 - [Wireshark Filter Manual Page - Wireshark display filter syntax and reference](https://www.wireshark.org/docs/man-pages/wireshark-filter.html)
 - [Display Filter Reference](https://www.wireshark.org/docs/dfref/)
-- [Wlan - Display Filter Reference](https://www.wireshark.org/docs/dfref/w/wlan.html)
-- [Wlan Radio - Display Filter Reference](https://www.wireshark.org/docs/dfref/w/wlan_radio.html)
+- [`802.11 Wi-Fi WLAN` - Display Filter Reference](https://www.wireshark.org/docs/dfref/w/wlan.html)
+- [`WLAN Radio` - Display Filter Reference](https://www.wireshark.org/docs/dfref/w/wlan_radio.html)
 
 ### 🦈📊 Wireshark: `Analytics`
 
 ### 🦈📇 Wireshark: `Source Code`
 - https://gitlab.com/wireshark/wireshark/-/tree/master
+
+### 🦈🕵️ Wireshark: `Labs`
 
 ## Protocol Analysis: `How to capture 802.11 Radio Frames?`
 - [802.11 Wi-Fi VS 802.3 Ethernet Capture: Differences & 802.11 Adapters]()
