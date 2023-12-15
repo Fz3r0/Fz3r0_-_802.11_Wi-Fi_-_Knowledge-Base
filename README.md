@@ -1378,26 +1378,26 @@ _Few tools are as useful to the IT professional as Wireshark, the go-to network 
 - [Capturing 802.11 Frames: Monitor Mode & Packet Injection]()
 - [Selecting the right Adapter (Spatial Streams): How to identify if I missing frames?](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/510bc21c-845a-464a-8726-32ed3bb16944)
 
-## Protocol Analysis: `802.11 Frame Capture Options`
+## 🛜🪤🎣 Protocol Analysis: `802.11 Frame Capture Options`
 _There are basically 3 different options to capture 802.11 traffic & communications. At the end, it mostly depends on the resources and needs_
 
-### Mobile
+### 💻🦈 Mobile
 - [Linux Based + Wi-Fi Adapter]()
 - [Mac-OS Based: Internal Adapter Capability]()
 - [Wi-Spy + Software based]()
 - [Wlan PI]()
 
-### Infrastructure (WLC or AP)
+### 📡🐶 Infrastructure (WLC or AP)
 - [Ruckus AP Capture]()
 - [Cisco Air Marshall]()
 
-### Distributed Forensics
-- [Omnipeek]()
-
-### WIPS Sensors
+### 📡👮 WIPS Sensors
 - [Arista WIPS](https://www.arista.com/assets/data/pdf/Whitepapers/Arista-WIPS-Whitepaper.pdf)
 
-## Adapter Modes: `Monitor Mode` & `Promiscous Mode`
+### 📡🏭 Distributed Forensics
+- [Omnipeek]()
+
+## 🛜👂🩺 Adapter Modes: `Monitor Mode` & `Promiscous Mode`
 - [`Promiscous Mode` & `Monitor Mode`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md#-monitor-mode--promiscous-mode)
     -[`Promiscous Mode`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md#-promiscous-mode)
     -[`Monitor Mode`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md#-promiscous-mode)
