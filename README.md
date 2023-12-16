@@ -1400,9 +1400,11 @@ _Few tools are as useful to the IT professional as Wireshark, the go-to network 
 - [`Taps` Vs. `SPAN`: Taps Provide Full Visibility into Network Data](https://www.youtube.com/watch?v=r3-PBfmFMqA) _`video`_
 - [`Network Tap 101` :: How it works?](https://www.garlandtechnology.com/2014/01/17/a-test-access-point-tap-primer) The 101 Series: A Primer On Network TAPs
 - [How Copper & Fiber Taps](https://www.youtube.com/watch?v=jiyNRSj-UFE) _`video`_
+- [Port Aggregated Taps](https://www.nextgigsystems.com/net_optics/aggregation_taps.html) Single NIC can capture from different Switchports
 - [How to build a Network Tap with just 1 cable?](https://www.youtube.com/watch?v=2tsvBnTIjFo) _`video`_
 
 ### 🖧🪤 Network Taps:
+- [Net Optics Aggregation TAPS](https://www.nextgigsystems.com/net_optics/aggregation_taps.html) Access to full-duplex links using just a single NIC on the monitoring or analyzer tool.
 - [Netsplit](https://www.youtube.com/watch?v=MPsN4K2pVz4) Pocket-sized passive Ethernet tap
 - [Sharktap](https://www.youtube.com/watch?v=EiY4VMdYdk4) Cheap and affordable way to analyze your network
 
