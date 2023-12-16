@@ -653,7 +653,9 @@ _The PHY services provided to the MAC. The function of the PHY is to provide a m
 Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx using management info | B) Characteristics & Method to Tx & Rx data through WM (Wireless Medium). The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. _
 
 ## 🔝📡🗂️ Radiotap Header / PPI (Per-Packet Information) / Pseudo-Header
-_Data that is NOT present in a frame, but is intepreted coming from the PHY-Layer 1 (spectrum). Additional information (Meta-Information) that is added to each 802.11 frame when capturing frames with an analysis application interpreted/calculated because the PHY layer 1 spectrum throught drivers/adapters. These are not part of the standard 802.11 frame format, but are additional information added at the time of capture to provide supplementary data about the frames captured_
+_Data that is NOT present in a 802.11 MAC-frame, but is intepreted coming from the PHY-Layer 1 (spectrum) derived from the PLCP header. Additional information (Meta-Information) that is added to each 802.11 frame when capturing frames with an analysis application interpreted/calculated because the PHY layer 1 spectrum throught drivers/adapters. These are not part of the standard 802.11 frame format, but are additional information added at the time of capture to provide supplementary data about the frames captured_
+- [Radiotap.org](https://www.radiotap.org/fields/defined)
+- [Radiotap.org :: Github](https://github.com/radiotap)
 - [PPI: PPI (Per-Packet Information) @ Wireshark](https://wiki.wireshark.org/PPI#:~:text=PPI%20(Per%2DPacket%20Information)&text=Each%20PPI%20packet%20header%20is,field%20headers%20are%20little%2Dendian.)
 - [Radiotap Headers @ Wi-Fi Nigel](https://wifinigel.blogspot.com/2013/11/what-are-radiotap-headers.html)
 
@@ -1426,7 +1428,7 @@ _Few tools are as useful to the IT professional as Wireshark, the go-to network 
 - [`Custom Columns` :: Wireshark](https://www.youtube.com/watch?v=2GVW6bUG98A)
 - [`Custom Profile` :: Wireshark]()
 
-### 🦈📊 Wireshark: `Analyze` & `Statistics`
+### 🦈📊 Wireshark: Nodes `Expert Analysis`, `Statistics` & `Conversations`
 - [Reading PCAPs with Wireshark Statistics @ Chris Greer](https://www.youtube.com/watch?v=ZNS115MPsO0) _`video`_
 
 ### 🦈🔑 Wireshark: `Encryption` & `Decryption`
