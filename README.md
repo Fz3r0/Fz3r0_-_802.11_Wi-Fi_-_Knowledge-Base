@@ -1360,7 +1360,6 @@ _Few tools are as useful to the IT professional as Wireshark, the go-to network 
 - [`Shared Ethernet` Capture Setup :: Wireshark](https://wiki.wireshark.org/CaptureSetup/Ethernet) Hubs & Non-Switched Networks || No VLANs || Legacy
 - [`Switched Media Ethernet` Capture Setup :: Wireshark](https://wiki.wireshark.org/CaptureSetup/Ethernet) Routing & Switching || VLANs & Subnets
 - [`Monitor Port` versus `Network Tap`](https://wiki.wireshark.org/CaptureSetup/Ethernet#monitor-port-versus-network-tap) Some arguments for using a passive network tap rather than a monitor port
-- [Taps Vs. SPAN: Taps Provide Full Visibility into Network Data](https://www.youtube.com/watch?v=r3-PBfmFMqA) _`video`_
 - [`802.1q` :: `VLANs` Capture](https://wiki.wireshark.org/CaptureSetup/Ethernet#sniffing-802-1q-vlan-tags) Only captured with Network Taps & Supported Monitor Switches
 
 #### 🖧🪤 Switched Media Ethernet Capture
@@ -1398,9 +1397,10 @@ _Few tools are as useful to the IT professional as Wireshark, the go-to network 
 - [Wireshark Source Code :: Open Source](https://gitlab.com/wireshark/wireshark/-/tree/master)
 
 ## 🖧🪤💰 802.3 Ethernet Switch Media Capture: `Network Taps`
+- [`Taps` Vs. `SPAN`: Taps Provide Full Visibility into Network Data](https://www.youtube.com/watch?v=r3-PBfmFMqA) _`video`_
 - [`Network Tap 101` :: How it works?](https://www.garlandtechnology.com/2014/01/17/a-test-access-point-tap-primer) The 101 Series: A Primer On Network TAPs
-- [How Copper & Fiber Taps](https://www.youtube.com/watch?v=jiyNRSj-UFE)
-- [How to build a Network Tap with just 1 cable?](https://www.youtube.com/watch?v=2tsvBnTIjFo)
+- [How Copper & Fiber Taps](https://www.youtube.com/watch?v=jiyNRSj-UFE) _`video`_
+- [How to build a Network Tap with just 1 cable?](https://www.youtube.com/watch?v=2tsvBnTIjFo) _`video`_
 
 ### 🖧🪤 Network Taps:
 - [Netsplit](https://www.youtube.com/watch?v=MPsN4K2pVz4) Pocket-sized passive Ethernet tap
