@@ -1399,8 +1399,10 @@ _Few tools are as useful to the IT professional as Wireshark, the go-to network 
 ### 🦈🐣 Wireshark: `Wireshark Basics` 
 - [`Capture Options`: The “Capture Options” Dialog Box](https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureOptions.html)
 - [`Building Display Filter Expressions` & `Operators`](https://www.wireshark.org/docs/wsug_html_chunked/ChWorkBuildDisplayFilterSection.html)
-- [`Init Config` :: How to configure Wireshark?](https://subscription.packtpub.com/book/cloud-and-networking/9781788833226/1/ch01lvl1sec05/4-configuring-wireshark#:~:text=Relative%20time%20(conversation)%3A%20This,packet%20to%20the%20current%20packet.)
+- [`Configuration` :: **Timestamp | Columns | Colorization | Rules | Profiles | Preferences**](https://subscription.packtpub.com/book/cloud-and-networking/9781788833226/1/ch01lvl1sec05/4-configuring-wireshark#:~:text=Relative%20time%20(conversation)%3A%20This,packet%20to%20the%20current%20packet.)
+- [`Configuration Files` :: `Customization`](https://www.wireshark.org/docs/wsug_html_chunked/ChAppFilesConfigurationSection.html)
 - [`Absolute Time` :: `Relative Time` :: `Delta Time` :: `Custom Time`](https://subscription.packtpub.com/book/cloud-and-networking/9781788833226/1/ch01lvl1sec05/4-configuring-wireshark#:~:text=Relative%20time%20(conversation)%3A%20This,packet%20to%20the%20current%20packet.)
+- [`Name Resolution` :: **Eth | Hosts | IPs | Manuf | Subnets | VLANs**](https://www.wireshark.org/docs/wsug_html_chunked/ChAppFilesConfigurationSection.html)
 
 ### 🦈🖧 Wireshark: `Ethernet Capture Setup` / `Switched Media` 
 - [`Shared Ethernet` Capture Setup :: Wireshark](https://wiki.wireshark.org/CaptureSetup/Ethernet) Hubs & Non-Switched Networks || No VLANs || Legacy
