@@ -1356,11 +1356,22 @@ _Few tools are as useful to the IT professional as Wireshark, the go-to network 
 - [Wireshark Tutorial for BEGINNERS // Where to start with Wireshark @ Chris Greer](https://www.youtube.com/watch?v=OU-A2EmVrKQ)
 - [Interview with Gerald Combs - Wireshark Creator](https://youtu.be/O5tW7ShNlkk?si=yXVjZvIuUOZlZTyu)
 
-### 🦈🕵️ Wireshark: `Traffic Access Methods` 
-- [Span / Mirror]()
-- [Inline]() Expensive Tool working as bridge in the middle of 2 switches
-- 
+### 🦈🖧 Wireshark: `Ethernet Capture Setup` / `Switched Media` 
+- [`Shared Ethernet` Capture Setup :: Wireshark](https://wiki.wireshark.org/CaptureSetup/Ethernet) Hubs & Non-Switched Networks || No VLANs || Legacy
+- [`Switched Media Ethernet` Capture Setup :: Wireshark](https://wiki.wireshark.org/CaptureSetup/Ethernet) Routing & Switching || VLANs & Subnets
+- [`Network Tap 101` :: How it works?](https://www.garlandtechnology.com/2014/01/17/a-test-access-point-tap-primer) The 101 Series: A Primer On Network TAPs
+- [`Monitor Port` versus `Network Tap`](https://wiki.wireshark.org/CaptureSetup/Ethernet#monitor-port-versus-network-tap) Some arguments for using a passive network tap rather than a monitor port 
+- [`802.1q` :: `VLANs` Capture](https://wiki.wireshark.org/CaptureSetup/Ethernet#sniffing-802-1q-vlan-tags) Only captured with Network Taps & Supported Monitor Switches
 
+#### 🖧🪤 Switched Media Ethernet Capture
+- [Capture: `From the Machine/PC interested in`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-on-the-machine-you-re-interested-in) Easiest & common way to capture || **Unicast to Machine only** (Other traffic not available)
+- [Capture: `Ethernet Hub`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-an-ethernet-hub) Not optimal for network troubleshooting || Hubs are legacy || Affect Eth Duplex Traffic
+- [Capture: `Port Monitor/Mirror Mode AKA Span (Switch Integrated)`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-a-monitor-mode-of-the-switch) Easy to use if available on SW || Packet loss at high traffic rate
+- [Capture: `Machine-in-the-middle AKA In-Line`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-a-machine-in-the-middle) Dedicated machine (PC) configuration required || Only 2 PC's NICs are needed
+- [Capture: `Network Tap`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-a-network-tap) Expensive Tool || All packets of Eth-FullDuplex captured || won't affect Ethernet traffic
+- [Capture: `MITM (Man-in.the-middle)`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-a-mitm-man-in-the-middle-software) ARP Poisoning || Network Attack || Confuses Switches
+- [Capture: `MAC Flooding`](https://wiki.wireshark.org/CaptureSetup/Ethernet#mac-flooding) ARP Poisoning || Network Attack || Confuses Switches
+ 
 ### 🦈🕵️ Wireshark: `Filters` 
 - [Wireshark Filter Manual Page - Wireshark display filter syntax and reference](https://www.wireshark.org/docs/man-pages/wireshark-filter.html)
 - [Display Filter Reference](https://www.wireshark.org/docs/dfref/)
@@ -1375,10 +1386,10 @@ _Few tools are as useful to the IT professional as Wireshark, the go-to network 
 ### 🦈📊 Wireshark: `Analyze` & `Statistics`
 - [Reading PCAPs with Wireshark Statistics @ Chris Greer](https://www.youtube.com/watch?v=ZNS115MPsO0) _`video`_
 
-### 🦈📊 Wireshark: `Encryption` & `Decryption`
+### 🦈🔑 Wireshark: `Encryption` & `Decryption`
 - [`HTTPS Decryption` :: Website TLS Decryption](https://www.youtube.com/watch?v=GMNOT1aZmD8)
 
-### 🦈🕵️ Wireshark: `Labs`
+### 🦈🧪 Wireshark: `Labs`
 - [`QUIC` :: HOW QUIC WORKS - Intro to the QUIC Transport Protocol](https://www.youtube.com/watch?v=HnDsMehSSY4&list=PLW8bTPfXNGdDcSDSmcfYs3ynYOdc1cXSh)
 - [`TCP` :: How TCP really works // Three-way handshake // TCP/IP Deep Dive](https://www.youtube.com/watch?v=rmFX1V49K8U&list=PLW8bTPfXNGdAZIKv-y9v_XLXtEqrPtntm)
 - [`TLS` :: How to DECRYPT HTTPS Traffic with Wireshark // TLS Handshake](https://www.youtube.com/watch?v=5qecyZHL-GU&list=PLW8bTPfXNGdCq-W2G8C5VrHRPMBHovccJ)
