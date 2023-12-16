@@ -1356,6 +1356,11 @@ _Few tools are as useful to the IT professional as Wireshark, the go-to network 
 - [Wireshark Tutorial for BEGINNERS // Where to start with Wireshark @ Chris Greer](https://www.youtube.com/watch?v=OU-A2EmVrKQ)
 - [Interview with Gerald Combs - Wireshark Creator](https://youtu.be/O5tW7ShNlkk?si=yXVjZvIuUOZlZTyu)
 
+### 🦈🕵️ Wireshark: `Traffic Access Methods` 
+- [Span / Mirror]()
+- [Inline]() Expensive Tool working as bridge in the middle of 2 switches
+- 
+
 ### 🦈🕵️ Wireshark: `Filters` 
 - [Wireshark Filter Manual Page - Wireshark display filter syntax and reference](https://www.wireshark.org/docs/man-pages/wireshark-filter.html)
 - [Display Filter Reference](https://www.wireshark.org/docs/dfref/)
@@ -1430,7 +1435,17 @@ _The right adapter give you the right capture capabilites and scopes... There is
 - [Ruckus R850]() `4x4 spatial streams` | `2.4/5/6 GHz`
 
 ## 802.11 Frame Capture: `Location for Capture`
+_In 802.11 Frames Capture is very important the physical location of the adapter that will capture 802.11 Frames depending on what are we tring to capture, it's important to remember that we are capturing on wireless medium (RF flying through the air)_
+- [`Near the AP` :: Capture that AP sees]() For capturing the whole BSA & All traffic of clients subscribed to the AP (Tx/Rx)
+- [`Near the Client` :: Capture that Client sees]() For capturing a specific client having a problem
+- [`In the middle of Client <--> AP`]() For getting the whole picture of whats happening inside the BSA
 
+## 802.11 Frame Catpure: `802.3 Wired Ethernet` + `802.11 Wireless Wi-Fi`
+_Sometimes is important to capture and troubleshoot wired captures in adition to 802.11 capture._
+- [EAP over LAN exchanges & RADIUS]() Simultaneos capture of Wi-Fi & Ethernet
+- [DHCP exchanges]()
+- [QoS]() Tags and Markings all the way through the network, for VoIP for example
+- [VLAN Tagging]()
 
 ## 802.11 Frame Capture: `Time and Moment for Capture`
 
