@@ -1354,6 +1354,7 @@ _Few tools are as useful to the IT professional as Wireshark, the go-to network 
 - [About Wireshark](https://www.wireshark.org/about.html)
 - [Wireshark - Where to Start?](https://www.wireshark.org/docs/)
 - [Wireshark Tutorial for BEGINNERS // Where to start with Wireshark @ Chris Greer](https://www.youtube.com/watch?v=OU-A2EmVrKQ)
+- [Interview with Gerald Combs - Wireshark Creator](https://youtu.be/O5tW7ShNlkk?si=yXVjZvIuUOZlZTyu)
 
 ### 🦈🕵️ Wireshark: `Filters` 
 - [Wireshark Filter Manual Page - Wireshark display filter syntax and reference](https://www.wireshark.org/docs/man-pages/wireshark-filter.html)
@@ -1363,7 +1364,7 @@ _Few tools are as useful to the IT professional as Wireshark, the go-to network 
 - [`Display Filters` :: Wireshark]()
 - [`Capture Filters` :: Wireshark]()
 - [`Custom Colors` :: Wireshark]()
-- [`Custom Columns` :: Wireshark]()
+- [`Custom Columns` :: Wireshark](https://www.youtube.com/watch?v=2GVW6bUG98A)
 - [`Custom Profile` :: Wireshark]()
 
 ### 🦈📊 Wireshark: `Analyze` & `Statistics`
@@ -1372,10 +1373,13 @@ _Few tools are as useful to the IT professional as Wireshark, the go-to network 
 ### 🦈📊 Wireshark: `Encryption` & `Decryption`
 - [`HTTPS Decryption` :: Website TLS Decryption](https://www.youtube.com/watch?v=GMNOT1aZmD8)
 
+### 🦈🕵️ Wireshark: `Labs`
+- [`QUIC` :: HOW QUIC WORKS - Intro to the QUIC Transport Protocol](https://www.youtube.com/watch?v=HnDsMehSSY4&list=PLW8bTPfXNGdDcSDSmcfYs3ynYOdc1cXSh)
+- [`TCP` :: How TCP really works // Three-way handshake // TCP/IP Deep Dive](https://www.youtube.com/watch?v=rmFX1V49K8U&list=PLW8bTPfXNGdAZIKv-y9v_XLXtEqrPtntm)
+- [`TLS` :: How to DECRYPT HTTPS Traffic with Wireshark // TLS Handshake](https://www.youtube.com/watch?v=5qecyZHL-GU&list=PLW8bTPfXNGdCq-W2G8C5VrHRPMBHovccJ)
+
 ### 🦈📇 Wireshark: `Source Code`
 - [Wireshark Source Code :: Open Source](https://gitlab.com/wireshark/wireshark/-/tree/master)
-
-### 🦈🕵️ Wireshark: `Labs`
 
 ## 🕵️🛜📡 Protocol Analysis: `How to capture 802.11 Radio Frames?`
 - [802.11 Wi-Fi VS 802.3 Ethernet Capture: Differences & 802.11 Adapters]()
