@@ -1288,6 +1288,19 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 7. [Repeat the process if the plan does not resolve the problem]()
 8. [Document the changes made to solve the problem]()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Fz3r0 :: BlackShark Framework
 - [BlackShark Filters]()
 
@@ -1299,6 +1312,31 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 
 ### Windows Commands & Scripts
 - [Powershell Frenzy :: Fz3r0]()
+
+### Vendor Specific Capture
+- [`Ruckus` :: `SmartZone`]() `Infraestructure` :: `WLC Centralized`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Beacon Overhead Calculation
 _One of the most commonly cited best practices among Wi-Fi professionals is to the limit the number of SSIDs you have configured on your WLAN in order to reduce the amount of overhead on the network and to maintain high performance. **CWNP Standard = no more than 5 SSIDs, for best results maximum 3 SSIDs**_
@@ -1355,6 +1393,10 @@ _Few tools are as useful to the IT professional as Wireshark, the go-to network 
 - [Wireshark - Where to Start?](https://www.wireshark.org/docs/)
 - [Wireshark Tutorial for BEGINNERS // Where to start with Wireshark @ Chris Greer](https://www.youtube.com/watch?v=OU-A2EmVrKQ)
 - [Interview with Gerald Combs - Wireshark Creator](https://youtu.be/O5tW7ShNlkk?si=yXVjZvIuUOZlZTyu)
+
+### 🦈🐣 Wireshark: `Wireshark Basics` 
+- [`Capture Options`: The “Capture Options” Dialog Box](https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureOptions.html)
+- [`Building Display Filter Expressions` & `Operators`](https://www.wireshark.org/docs/wsug_html_chunked/ChWorkBuildDisplayFilterSection.html)
 
 ### 🦈🖧 Wireshark: `Ethernet Capture Setup` / `Switched Media` 
 - [`Shared Ethernet` Capture Setup :: Wireshark](https://wiki.wireshark.org/CaptureSetup/Ethernet) Hubs & Non-Switched Networks || No VLANs || Legacy
