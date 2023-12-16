@@ -1397,6 +1397,11 @@ _Few tools are as useful to the IT professional as Wireshark, the go-to network 
 ### 🦈📇 Wireshark: `Source Code`
 - [Wireshark Source Code :: Open Source](https://gitlab.com/wireshark/wireshark/-/tree/master)
 
+## 🖧🪤💰 802.3 Ethernet Switch Media Capture: `Network Taps`
+### Port Aggregator Taps
+### Fiber & Copper Taps
+### Portable Taps
+
 ## 🕵️🛜📡 Protocol Analysis: `How to capture 802.11 Radio Frames?`
 - [802.11 Wi-Fi VS 802.3 Ethernet Capture: Differences & 802.11 Adapters]()
 - [Capturing 802.11 Frames: Monitor Mode & Packet Injection]()
