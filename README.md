@@ -158,7 +158,7 @@ _Networking & Wireless terminology, covering definitions, acronyms, and abbrevia
 
 ## ⭕📖 `Wi-Fi`: Definition
 _Wi-Fi is not an abbreviation for “wireless fidelity”; the name was created by "Interbrand", a marketing firm hired by WECA & chosen because it sounds more pleaseant than 'IEEE 802.11b Direct Sequence" & similarity to “hi-fi” (high-fidelity). The name is often written as WiFi, Wifi, or wifi, but these are not approved by the Wi-Fi Alliance._
-- [Wi-Fi Definition @ Britanica](https://www.britannica.com/technology/Wi-Fi)
+- [Wi-Fi Definition @ Britanica](https://www.britannica.com/technology/Wi-Fi) _`definition`_
 - [Wi-Fi :: Wiki](https://es.wikipedia.org/wiki/Wifi) _`español`_
 - [Wi-Fi :: Wiki](https://en.wikipedia.org/wiki/Wi-Fi) _`english`_
 
@@ -488,6 +488,15 @@ IETF RFC 8200, Internet Protocol, Version 6 (IPv6) Specification, Deering, S., a
 IETF RFC 8265, Preparation, Enforcement, and Comparison of Internationalized Strings Representing
 Usernames and Passwords, Saint-Andre, P., and A. Melnikov, 2017.
 
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ #                                                               #
+ #            Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base              #
+ #                                                               #
+ #                       Wi-Fi Alliance                          #
+ #                                                               #
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
 
 ## 🫅🛜♾️ `Wi-Fi Alliance`
 _Non-profit organization that owns the Wi-Fi trademark. Manufacturers may use the trademark to brand products certified for Wi-Fi interoperability. _
@@ -503,13 +512,33 @@ _Non-profit organization that owns the Wi-Fi trademark. Manufacturers may use th
 - Wi-Fi Passpoint
 - 
 
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ #                                                               #
+ #            Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base              #
+ #                                                               #
+ #      NIST: National Institute of Standards and Technology     #
+ #                                                               #
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+
 ## 🪖🛡️⚔️ `NIST`: National Institute of Standards and Technology 
 - NIST Special Publication 800-38B, Recommendation for Block Cipher Modes of Operation: The CMAC Mode for Authentication, Dworkin, M.13
 - NIST Special Publication 800-38D, Recommendation for Block Cipher Modes of Operation: Galois/ Counter Mode (GCM) and GMAC, Dworkin, M., Nov. 2007.
 - NIST Special Publication 800-56A R2, Recommendation for Pair-Wise Key Establishment Schemes Using Discrete Logarithm Cryptography, May 2013.
 - NIST Special Publication 800-57, Part 1 Rev 4, Recommendation for Key Management, Barker, E., Jan. 2016.
 
-## 👑🧪⚙️ IEEE: Institute of Electrical and Electronics Engineers
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ #                                                               #
+ #            Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base              #
+ #                                                               #
+ #     IEEE: Institute of Electrical and Electronics Engineers   #
+ #                                                               #
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+
+## 👑🧪⚙️ `IEEE`: Institute of Electrical and Electronics Engineers
 _IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. IEEE and its members inspire a global community through its highly cited publications, conferences, technology standards, and professional and educational activities._
 - [IEEE: Institute of Electrical and Electronics Engineers](https://en.wikipedia.org/wiki/Institute_of_Electrical_and_Electronics_Engineers) _`Wiki`_
 - [About IEEE](https://www.ieee.org/about/) _`Official`_
@@ -527,7 +556,6 @@ _The most widely used IEEE 802 standards are for Ethernet, Bridging and Virtual 
 - IEEE 802: Overview & Architecture
 
 ### 👑⚙️ IEEE 802 Standards: List
-
 - IEEE 802.1: Bridging & Management
 - [IEEE 802.3: Ethernet](https://en.wikipedia.org/wiki/IEEE_802.3) _Full List_
 - IEEE 802.11: Wireless LANs
@@ -666,6 +694,15 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 - [**802.11T**](https://en-academic.com/dic.nsf/enwiki/1333888) **Withdrawn in 2008** :: **WPP** Wireless Performance Prediction 
 - [**802.11bg**]()  **unassigned** :: likely to avoid confusion by combining 802.11b/g
 
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ #                                                               #
+ #            Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base              #
+ #                                                               #
+ #      Networking Models: `OSI model (ISO/IEC)` & `TCP/IP`      #
+ #                                                               #
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
 
 ## 🫅🌎 Networking Models: `OSI model (ISO/IEC)` & `TCP/IP`
 
