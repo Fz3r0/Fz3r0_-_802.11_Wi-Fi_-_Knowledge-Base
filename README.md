@@ -1522,13 +1522,16 @@ _A Wi-Fi analyzer tool helps you track and analyze your wireless network's perfo
 - [Wi-Fi Analyzer]()
 - [NetSpot]()
 
+## 🔭🕵️‍♂️🛜 WLAN Scan & Monitoring: airmon-ng
+_airmon-ng script can be used to enable monitor mode on wireless interfaces. It may also be used to kill network managers, or go back from monitor mode to managed mode. Entering the airmon-ng command without parameters will show the interfaces status._
+- [**`airmon-ng`**](https://www.aircrack-ng.org/doku.php?id=airmon-ng) _`official`_
+- [airmon-ng: Cómo Conectar Adapdadot Wi-Fi en Kali Linux y Parrot OS](https://www.youtube.com/watch?v=xCrDuRlHfeA)
 
-
-## 📣💊🧮 Beacon Overhead Calculation
+## 📣💊🧮 Beacon/SSID Overhead Calculation
 _One of the most commonly cited best practices among Wi-Fi professionals is to the limit the number of SSIDs you have configured on your WLAN in order to reduce the amount of overhead on the network and to maintain high performance. **CWNP Standard = no more than 5 SSIDs, for best results maximum 3 SSIDs**_
-- [SSID Overhead Calculator](https://revolutionwifi.blogspot.com/p/ssid-overhead-calculator.html)
+- [**`SSID Overhead Calculator`**](https://revolutionwifi.blogspot.com/p/ssid-overhead-calculator.html)
 
-## 📣💊🧮 MCS Index Table
+## 🛜🖩🧮 MCS Index Table
 _The MCS table evaluates the quality of the RF environment- the RF media that devices are working in, which is reflected in every single transmission || Every transmitter device, whether it be an AP or a client, will make an internal decision of which MCS it is going to use || MCS summarizes and categorizes Wi-Fi parameters such as modulation, coding scheme, guard interval, and channel width._
 - [MCS Index Table, Modulation and Coding Scheme Index 11n, 11ac, and 11ax :: MCSINDEX.COM](https://mcsindex.com/) _`MCS Table`_
 - [MCS Table (HT/VHT/HE) :: MCSINDEX.NET](https://mcsindex.net/) _`MCS Index Table`_
@@ -1660,17 +1663,23 @@ _Few tools are as useful to the IT professional as Wireshark, the go-to network 
 _There are basically 3 different options to capture 802.11 traffic & communications. At the end, it mostly depends on the resources and needs_
 
 ### 💻🦈 802.11 Frame Capture: `Mobile`
+- [Capturing Wireless Traffic from a Client Machine :: MacBook :: Linux :: Wireshark](https://documentation.meraki.com/MR/Monitoring_and_Reporting/Capturing_Wireless_Traffic_from_a_Client_Machine)
+- [airmon]()
 - [Linux Based + Wi-Fi Adapter]()
 - [Mac-OS Based: Internal Adapter Capability]()
+- [Wireshark 802.11 Monitor Mode & Compatibility]()
 - [Wi-Spy + Software based]()
 - [Wlan PI]()
 
-### 📡🐶 Protocol Analysis: `Infrastructure` _(WLC or AP)_
-- [Ruckus AP Capture]()
+### 📡🐶 802.11 Frame Capture: `Infrastructure` _(WLC or AP)_
+- [Ruckus AP :: 802.11 Capture]()
+- [Ruckus SmartZone :: 802.11 Caoture]()
 - [Cisco Air Marshall]()
 
-### 📡👮 Protocol Analysis: `WIPS Sensors`
+### 📡👮 802.11 Frame Capture: `WIPS Sensors`
+- [Cisco Adaptive wIPS](https://www.cisco.com/c/en/us/td/docs/wireless/technology/wips/deployment/guide/WiPS_deployment_guide.html)
 - [Arista WIPS](https://www.arista.com/assets/data/pdf/Whitepapers/Arista-WIPS-Whitepaper.pdf)
+- [Fortinet WIPS](https://community.fortinet.com/t5/Wireless-Controller/Technical-Tip-WIPS-Configuration/ta-p/194512)
 
 ### 📡🏭 Protocol Analysis: `Distributed Forensics`
 - [Omnipeek]()
@@ -1777,6 +1786,10 @@ _Sometimes is important to capture and troubleshoot wired captures in adition to
 
 ## FFT Emulation: `MATLAB`
 
+
+
+## AI Automated
+- [Wyebot](https://wyebot.com/) AI-Driven WiFi Automation to Proactively Eliminate WiFi Performance Issues
 
 
 ---
