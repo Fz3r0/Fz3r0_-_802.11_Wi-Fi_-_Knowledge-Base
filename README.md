@@ -1434,8 +1434,8 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 ## Troubleshooting Methodologies & Best Practices
 - [WLAN Pros: Troubleshooting Best Practices](https://wlanprofessionals.com/wireless-troubleshooting-best-practices/)
 
-### Troubleshooting Methodology: `CWNA`
-- [CWNP :: CWNA - Troubleshooting Methodology](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/00e059e9-cd95-4f8c-8c8d-3a4ae111acd6)<br><br>
+### WLAN Troubleshooting Methodology: `CWNA`
+- [CWNP :: CWNA - Troubleshooting Methodology](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/00e059e9-cd95-4f8c-8c8d-3a4ae111acd6)<br>
 1. [Identify the problem]()
 2. [Discover the scale of the problem]()
 3. [Define the possible causes of the problem]()
@@ -1445,8 +1445,8 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 7. [Verify the solution]()
 8. [Document the results]()
 
-### Troubleshooting Methodology: `CWAP`
-- [CWNP :: CWAP - Troubleshooting Methodology](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/6c2a7436-3f82-408d-a5ec-77a31a97ac9a)<br><br>
+### WLAN Troubleshooting Methodology: `CWAP`
+- [CWNP :: CWAP - Troubleshooting Methodology](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/6c2a7436-3f82-408d-a5ec-77a31a97ac9a)<br>
 1. [Identify the problem]()
 2. [Discover the scale of the problem]()
 3. [Identify possible causes of the problem]()
@@ -1455,8 +1455,8 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 6. [Choose appropiate remediation steps]()
 7. [Document the problem and resolution]()
 
-### Cisco Troubleshooting Methodology
-- [Cisco: Network Troubleshooting Methodology and Techniques](https://study-ccna.com/network-troubleshooting-methodology-techniques/)<br><br>
+### Networking Troubleshooting Methodology: `Cisco`
+- [Cisco: Network Troubleshooting Methodology and Techniques](https://study-ccna.com/network-troubleshooting-methodology-techniques/)<br><
 1. [Define the problem]()
 2. [Gather detailed information]()
 3. [Consider probable cause for the failure]()
@@ -1465,6 +1465,22 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 6. [Observe the results of the implementation]()
 7. [Repeat the process if the plan does not resolve the problem]()
 8. [Document the changes made to solve the problem]()
+
+### WLAN Troubleshooting Methodology: `Tech Target`
+- [6 steps to troubleshoot Wi-Fi network issues](https://www.techtarget.com/searchnetworking/tip/6-steps-to-troubleshoot-Wi-Fi-network-issues)
+
+### WLAN Troubleshooting Methodology: `Tanaza`
+- [The Ultimate Guide to Troubleshoot WiFi Networks with the OSI model](https://f.hubspotusercontent10.net/hubfs/149916/Content%20for%20Linkedin/Troubleshooting%20WiFi%20networks.pdf)
+
+### WLAN Troubleshooting Methodology: `BICSI`
+- [BICSI: Common Troubleshooting Methodology](https://www.bicsi.org/docs/default-source/conference-presentations/2017-fall/learning-to-troubleshoot-wireless.pdf?sfvrsn=ecf7a89b_2)
+1. Identify the problem
+2. Determine the scale of the problem
+3. Determine Possible causes of the problem
+4. Isolate the problem
+5. Resolution or escalation
+6. Corrective action & verify solution
+7. Document, document and document
 
 
 
