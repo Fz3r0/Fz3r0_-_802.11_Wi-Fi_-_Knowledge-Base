@@ -1515,19 +1515,37 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 
 
 
-## Beacon Overhead Calculation
-_One of the most commonly cited best practices among Wi-Fi professionals is to the limit the number of SSIDs you have configured on your WLAN in order to reduce the amount of overhead on the network and to maintain high performance. **CWNP Standard = no more than 5 SSIDs, for best results maximum 3 SSIDs**_
-- [SSID Overhead Calculator](https://revolutionwifi.blogspot.com/p/ssid-overhead-calculator.html)
 
 
-
-## WLAN Scanners & BSS Discovery: `Tools`
+## 🔭🔍🛜 WLAN Scan, BSS Discovery & Audit
 - [Wi-Fi Analyzer]()
 - [NetSpot]()
 
+## 📣💊🧮 Beacon Overhead Calculation
+_One of the most commonly cited best practices among Wi-Fi professionals is to the limit the number of SSIDs you have configured on your WLAN in order to reduce the amount of overhead on the network and to maintain high performance. **CWNP Standard = no more than 5 SSIDs, for best results maximum 3 SSIDs**_
+- [SSID Overhead Calculator](https://revolutionwifi.blogspot.com/p/ssid-overhead-calculator.html)
+
+## 📣💊🧮 MCS Index Table
+_The MCS table evaluates the quality of the RF environment- the RF media that devices are working in, which is reflected in every single transmission || Every transmitter device, whether it be an AP or a client, will make an internal decision of which MCS it is going to use || MCS summarizes and categorizes Wi-Fi parameters such as modulation, coding scheme, guard interval, and channel width._
+- [MCS Index Table, Modulation and Coding Scheme Index 11n, 11ac, and 11ax :: MCSINDEX.COM](https://mcsindex.com/) _`MCS Table`_
+- [MCS Table (HT/VHT/HE) :: MCSINDEX.NET](https://mcsindex.net/) _`MCS Index Table`_
+- [MCS Table and how to use it @ WLAN Pros](https://wlanprofessionals.com/mcs-table-and-how-to-use-it/) _`text`_
+- [MCS Table and how to use it @ WLAN Pros](https://www.youtube.com/watch?v=QBiBPbME5tY) _`video`_
+- [Índices MCS @ Inside Wireless en Español](https://www.youtube.com/watch?v=iVBZojHMYAM) _`video`_
+- [MCS Index @ Inside Wireless](https://www.youtube.com/watch?v=f6zesWNDGXc) _`video`_
 
 
 
+
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ #                                                               #
+ #            Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base              #
+ #                                                               #
+ #        Protocol Analysis :: Layer 2 : MAC & layers 3-7        #
+ #                                                               #
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
 
 ## 🦈🕵️💊 Protocol Analysis :: `Layer 2`:`MAC` & `layers 3-7`
 _Process of capturing, decoding, and interpreting network communicatios (data packets that travel across a network). Network protocol analysis tools (Software like Wireshark) can capture and display these packets in a readable format, allowing you to examine the details of each packet and how they interact with each other._
@@ -1536,8 +1554,6 @@ _Process of capturing, decoding, and interpreting network communicatios (data pa
 - [Analyze and Troubleshoot 802.11 Wireless Sniffing @ Cisco](https://www.cisco.com/c/en/us/support/docs/wireless-mobility/80211/200527-Fundamentals-of-802-11-Wireless-Sniffing.html) _`Complete Guide`_
 - [Best Practices for Monitoring and Troubleshooting 802.11ac Networks](https://networking.report/Resources/Whitepapers/1d1514d9-48e2-41f9-ab28-04ba3b04868a_Best%20Practices%20for%20Monitoring%20and%20Troubleshooting%20802.11ac%20Networks.pdf) _`White paper`_
 - [Protocol Analysis: How do you analyze network performance and identify bottlenecks?](https://www.linkedin.com/advice/0/how-do-you-analyze-network-performance)
-
-
 
 ## 🦈🕵️🛠️ Protocol Analysis: `Tools`
 _Software that can capture and display network packets in a readable format, allowing you to examine the details of each packet and how they interact with each other. Some of them can make expert reports._
