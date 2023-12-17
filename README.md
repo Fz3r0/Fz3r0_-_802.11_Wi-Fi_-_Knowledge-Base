@@ -142,21 +142,23 @@
 # 📖❓ `Definitions`, `Acronyms` & `Abbreviations`
 _Networking & Wireless terminology, covering definitions, acronyms, and abbreviations. From computer-related acronyms to clarifying Wi-Fi's origin, IEEE 802.11 standards with insights from various sources._
 
-## ⭕📖 `Networking`: Definitions & Acronyms
-- [Networking Acronyms: Extensive List of Computer Related Acronyms](https://www.activexperts.com/admin/network-acronyms/)
-- [Networking & Wi-Fi Acronyms @ EXFO](https://www.exfo.com/en/resources/glossary/)
-- [Computer Networking Acronyms](https://networkencyclopedia.com/computer-networking-acronyms/)
-- [List of Information Technology (IT) initialisms](https://en.wikipedia.org/wiki/List_of_information_technology_initialisms)
+## ⭕📖 Definitions & Acronyms: `Networking`
+- [**`IEEE 802.3-2022`** Ethernet Networking :: `Defninitions` :: **IEEE 802.3-2022**](https://ieeexplore.ieee.org/document/9844436) 1.4 | p. 187
+- [**`IEEE 802.3-2022`** Ethernet Networking :: `Abbreviations` :: **IEEE 802.3-2022**](https://ieeexplore.ieee.org/document/9844436) 1.5 | p. 227
+- [PC Mag - Encyclopedia](https://www.pcmag.com/encyclopedia) _`list`_
+- [Networking Acronyms: Extensive List of Computer Related Acronyms](https://www.activexperts.com/admin/network-acronyms/) _`list`_
+- [Networking & Wi-Fi Acronyms @ EXFO](https://www.exfo.com/en/resources/glossary/) _`list`_
+- [Computer Networking Acronyms](https://networkencyclopedia.com/computer-networking-acronyms/) _`list`_
+- [List of Information Technology (IT) initialisms](https://en.wikipedia.org/wiki/List_of_information_technology_initialisms) _`list`_
 
-## ⭕📖 `802.11 Wireless`: Definitions & Acronyms
-- [Definitions, Acronyms, and Abbreviations :: **IEEE 802.11-2020**](https://ieeexplore.ieee.org/document/9363693) 3.1 & 3.2 | p. 157
-- [IEEE: 802.11 Standards Dictionary Online](https://ieeexplore.ieee.org/browse/standards/dictionary?activeStatus=true)
-- [Agilent Technologies: Wireless Dictionary](https://ftp.unpad.ac.id/orari/library/library-ref-eng/ref-eng-1/physical/voip/wireless/dictionary.pdf)
-- [PC Mag - Encyclopedia](https://www.pcmag.com/encyclopedia)
+## ⭕📖 Definitions & Acronyms: `802.11 Wireless`
+- [**`IEEE 802.11-2020`** :: Definitions, Acronyms, and Abbreviations](https://ieeexplore.ieee.org/document/9363693) 3.1 & 3.2 | p. 157
+- [IEEE: 802.11 Standards Dictionary Online](https://ieeexplore.ieee.org/browse/standards/dictionary?activeStatus=true) _`list`_
 - [IEEE: 802.11 Acronyms & Abbreviations](https://ieeexplore.ieee.org/document/5769885) _`$$$`_
+- [Agilent Technologies: Wireless Dictionary](https://ftp.unpad.ac.id/orari/library/library-ref-eng/ref-eng-1/physical/voip/wireless/dictionary.pdf) _`list`_
 - [Wireless Dictionary of Acronyms & Abbreviations @ IWPC: The International Wireless Industry Consortium](https://www.iwpc.org/dictionary.aspx)
 
-## ⭕📖 `Wi-Fi`: Definition
+## ⭕📖 Definition: `Wi-Fi`
 _Wi-Fi is not an abbreviation for “wireless fidelity”; the name was created by "Interbrand", a marketing firm hired by WECA & chosen because it sounds more pleaseant than 'IEEE 802.11b Direct Sequence" & similarity to “hi-fi” (high-fidelity). The name is often written as WiFi, Wifi, or wifi, but these are not approved by the Wi-Fi Alliance._
 - [Wi-Fi Definition @ Britanica](https://www.britannica.com/technology/Wi-Fi) _`definition`_
 - [Wi-Fi :: Wiki](https://es.wikipedia.org/wiki/Wifi) _`español`_
