@@ -1517,9 +1517,12 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 
 
 
-## 🔭🔍🛜 WLAN Scan, BSS Discovery & Audit
+## 🔭🔍🛜 WLAN Scan & BSS Discovery
+_A Wi-Fi analyzer tool helps you track and analyze your wireless network's performance with ease. With WiFi Analyzer's network admins can collect information from different wireless components such as WLCs and access points to determine the availability and performance of your wireless network._
 - [Wi-Fi Analyzer]()
 - [NetSpot]()
+
+
 
 ## 📣💊🧮 Beacon Overhead Calculation
 _One of the most commonly cited best practices among Wi-Fi professionals is to the limit the number of SSIDs you have configured on your WLAN in order to reduce the amount of overhead on the network and to maintain high performance. **CWNP Standard = no more than 5 SSIDs, for best results maximum 3 SSIDs**_
@@ -1866,7 +1869,11 @@ _Sometimes is important to capture and troubleshoot wired captures in adition to
 # IEEE 802.11 Wireless (Wi-Fi): `Ofensive Security` & `Pentesting`
 
 ## IEEE 802.11 Pentesting: `Software Tools`
-- [aircrackng]()
+
+## 🔭🔍🛜 IEEE 802.11 Pentesting Tools: `Aircrack-ng`
+_Aircrack-ng is basically a suite of tools that has been crafted to achieve objectives as Monitoring, Attacking, Testing & Cracking Wi-Fi Networks || Capture raw Wi-Fi packets in an intended airspace, on various channels of interest, and then analyse them to show the various Wi-Fi networks and Wi-Fi clients that were operating during the collection period ||  Break WEP and WPA PSK (pre-shared key)-type Wi-Fi networks by exploiting the known vulnerabilities of such networks || Injection/replay of Wi-Fi packets into the airspace. || Exploit the weaknesses present in various Wi-Fi clients, to establish fake connections with such clients, in order to launch man-in-the-middle type of attacks._
+- [**`Aircrack-ng`**](https://www.aircrack-ng.org/) _`official`_
+- [Aircrack-ng :: Wi-Fi Troubleshooting, Auditing and Cracking Made Easy](https://www.opensourceforu.com/2011/01/aircrack-ng-wi-fi-troubleshooting-auditing-and-cracking-made-easy/)
 
 ## IEEE 802.11 Pentesting: `Hardware Tools`
 - [Wi-Fi Coconut]()
