@@ -117,7 +117,7 @@
 ### 🏁🎬 `Introduction`
 - `whoami` **_root@Fz3r0💀_**
 - `Contact`
-### 📖❓ **`Definitions`, `Acronyms` & `Abbreviations`**
+### 📖🔠❓ **`Definitions`, `Acronyms` & `Abbreviations`**
 - `Networking`: Definitions & Acronyms
 - `802.11 Wireless`: Definitions & Acronyms
 - `Wi-Fi`: Definition
@@ -139,7 +139,7 @@
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
  
-# 📖❓ `Definitions`, `Acronyms` & `Abbreviations`
+# 📖🔠❓ `Definitions`, `Acronyms` & `Abbreviations`
 _Networking & Wireless terminology, covering definitions, acronyms, and abbreviations. From computer-related acronyms to clarifying Wi-Fi's origin, IEEE 802.11 standards with insights from various sources._
 
 ## ⭕📖 Definitions & Acronyms: `Networking`
