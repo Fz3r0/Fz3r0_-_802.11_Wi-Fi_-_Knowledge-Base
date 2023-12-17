@@ -159,10 +159,16 @@ _Networking & Wireless terminology, covering definitions, acronyms, and abbrevia
 - [Wireless Dictionary of Acronyms & Abbreviations @ IWPC: The International Wireless Industry Consortium](https://www.iwpc.org/dictionary.aspx)
 
 ## ⭕📖 Definition: `Wi-Fi`
-_Wi-Fi is not an abbreviation for “wireless fidelity”; the name was created by "Interbrand", a marketing firm hired by WECA & chosen because it sounds more pleaseant than 'IEEE 802.11b Direct Sequence" & similarity to “hi-fi” (high-fidelity). The name is often written as WiFi, Wifi, or wifi, but these are not approved by the Wi-Fi Alliance._
+_Wi-Fi is not an abbreviation for “wireless fidelity”; the name was created by "Interbrand", a marketing firm hired by WECA & chosen because it sounds more pleaseant than "IEEE 802.11b Direct Sequence" & similarity to “hi-fi” (high-fidelity). The name is often written as WiFi, Wifi, or wifi, but these are not approved by the Wi-Fi Alliance._
 - [Wi-Fi Definition @ Britanica](https://www.britannica.com/technology/Wi-Fi) _`definition`_
 - [Wi-Fi :: Wiki](https://es.wikipedia.org/wiki/Wifi) _`español`_
 - [Wi-Fi :: Wiki](https://en.wikipedia.org/wiki/Wi-Fi) _`english`_
+
+## ⭕📖 Definition: `802.11`
+_Is the same as Wi-Fi... IEEE 802.11 refers to the set of standards that define communication for wireless LANs (wireless local area networks, or WLANs). The technology behind 802.11 is branded to consumers as Wi-Fi. This means, for the "end user" is easier to remember the word "Wi-Fi" instead of "IEEE 802.11b/a/g/n/ac/ax/be Standard for Wireless Communications" or "IEEE 802.11b DSSS/Direct Sequence"._
+- [802.11 Definition @ Technopedia](https://www.techopedia.com/definition/24967/ieee-80211) _`definition`_
+- [IEEE 802.11 :: Wiki](https://es.wikipedia.org/wiki/Wifi) _`español`_
+- [IEEE 802.11 :: Wiki](https://en.wikipedia.org/wiki/Wi-Fi) _`english`_
 
 <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
