@@ -718,10 +718,12 @@ _PMDs further help to define the physical layer of computer network protocols. P
 - [`Frame Format` :: Management Frames]() 
 
 ### 📡🔍⚙️ 802.11 Management Frames: `Beacon`
-- [**`Beacon`** @ Nayanajith](https://mrncciew.com/2014/10/08/802-11-mgmt-beacon-frame/) Fixed Schedule (default 100TU = 1024us microseconds) | Lowest Basic Data Rate
+_Fixed Schedule (default 100TU = 1024us microseconds) | Sent always at Lowest Basic Data Rate configured |_
+- [**`Beacon`** :: Frame Decode @ Nayanajith](https://mrncciew.com/2014/10/08/802-11-mgmt-beacon-frame/) Fixed Schedule (default 100TU = 1024us microseconds) | Lowest Basic Data Rate
 - [`Beacon Frame Body` :: Elements](https://ieeexplore.ieee.org/document/9363693) IEEE 802.11-2020: Table 9-32 | 9.3.3.2
 
 ### 🤳🏾🔍⚙️ 802.11 Management Frames: `Probe Request` & `Probe Response`
+_STAs send Probe Request on Active Scanning or after a Beacon in Passive Scanning | APs does not response an ACK from a Probe Request, AP responds with Probe Response directly (broadcast 802.11 Frames are neved ACKed) | Directed Probe Request conain SSID or wildcard set & Probe Request (broadcast) is sent empty bit_
 - [**`Probe Request`**]() **STA** -> Broadcast `APs does not ACK Probe Req` :: Broadcast :: Lowest STA's Data Rate :: 
 - [**`Directed Probe Request`**]() **STA** -> AP `APs does not ACK Probe Req` :: AP/SSID Directed ::
 - [**`Probe Response`**]() STA <- **AP** `STAs ACK Probes Res` :: Lowest BSS Data Rate :: Includes SSID & Very similar to a Beacon
@@ -894,6 +896,8 @@ _Any STA or AP can be in some "state" within this state machine at any given tim
 - [**`Active Scanning`**](https://community.nxp.com/t5/Wireless-Connectivity-Knowledge/802-11-Wi-Fi-Connection-Disconnection-process/ta-p/1121148) `Client/STA` **init effort** | **STA:**`ProbeReq` (All CHs) > AP answer `PropeRes` > STA answer Directed `Probe` > `AuthReq`
 - [**`Passive Scanning`**](https://community.nxp.com/t5/Wireless-Connectivity-Knowledge/802-11-Wi-Fi-Connection-Disconnection-process/ta-p/1121148) `AP` **init effort** | **AP:**`Beacon` @ `BSA` > STA answer Directed `Probe` > `AuthReq`
 
+
+
 ## 🪪🛡️🔐 IEEE 802.11: `Authentication`
 _These are the Authentication Methods a STA can use to access to a BSS_
 
@@ -901,8 +905,19 @@ _These are the Authentication Methods a STA can use to access to a BSS_
 - [802.11 Authentication Methods](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/46509dcd-047a-4529-b4c5-c9cad8b88760) _`table`_<br><br>
     - [🔓 `Open System` :: `0`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/da6135ed-352d-42c1-a73a-736112c79650) No authentication | Every client is allowed || used for modern: `Pre-Shared Key`, `802.1X` (after association state)
     - [🔑 `Shared Key` :: `1`]() Authenticates via WEP demonstrating a key :: Legacy Networks (modern uses open system)
-    - [🔄 `FT`:`Fast Transition :: `2`]() `802.11r` Authenticates using a key derived from previous authentication
+    - [🔄 `FT - Fast Transition` :: `2`]() `802.11r` Authenticates using a key derived from previous authentication
     - [🖧 `SAE`:`Simultaneous Authentication of Equals` :: `3`]() `802.11s-mesh` Diffie-Hellman / Mesh
+
+### 🔓🪪 Open System Authentication: `Authentication` :: `State 1` ➡️ `State 2`
+_Open System authentication should never fail | Init method of authentication used by most modern WLANs | RSN like 802.1X or PSK is performed later (state 3 > 4)_ <br>
+**Exchange**: `AP`:`Beacon` _(Optional)_ >> `STA`:`Probe Req` >> `AP`:`Probe Res` >> `STA`:`ACK` >> `STA`:`Auth Req` >> `AP`:`ACK` >> `AP`:`Auth Res` >> `STA`:`ACK` >> State 2 OK!
+- [`Authentication` :: Frame Exchange :: `Open System``](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/bb52ef07-7502-435c-844d-9b32f7f7b43a) _PCAP decode_
+
+### 🔓🪪 Open System Authentication: `Association` :: `State 1` ➡️ `State 2`
+_Open System authentication should never fail | Init method of authentication used by most modern WLANs | RSN like 802.1X or PSK is performed later (state 3 > 4)_ <br>
+**Exchange**: (After authentication State 2) > 
+- [`Association` :: Frame Exchange :: `Open System`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/64b10b5f-ba1a-4885-9141-c94e317f9ac9) _PCAP decode_
+
 
 
 
