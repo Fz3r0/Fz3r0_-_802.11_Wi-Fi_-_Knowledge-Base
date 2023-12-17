@@ -1118,9 +1118,9 @@ _Open System authentication should never fail | Init method of authentication us
 
 
 
-# Radio Frequency (RF): `Physics` & `Mathematics`
+# 🧬🧮📐 Radio Frequency (RF): `Physics` & `Mathematics`
 
-## FFT: Fast Fourier Transform
+## 🧬📐🛜 FFT: Fast Fourier Transform
 - [FFT: Fast Fourier Transform](https://en.wikipedia.org/wiki/Fast_Fourier_transform) _`english`_
 - [FFT: Transformada rápida de Fourier](https://es.wikipedia.org/wiki/Transformada_r%C3%A1pida_de_Fourier) _`español`_
 - [FFT, series de Fourier y el espectro de frecuencia con animaciones 3D de fácil entendimiento](https://www.youtube.com/watch?v=r18Gi8lSkfM) _`video`_
@@ -1129,21 +1129,24 @@ _Open System authentication should never fail | Init method of authentication us
 - [¿Qué es la Transformada de Fourier? Una introducción visual](https://www.youtube.com/watch?v=h4PTucW3Rm0&t=7s) _`video`_
 - [How to Do FFT in MATLAB](https://www.youtube.com/watch?v=XEbV7WfoOSE)
 
-## Spread Spectrum 
-- [Spread Spectrum](https://en.wikipedia.org/wiki/Spread_spectrum)
-- [Spread Spectrum Modulation & Demodulation | Video Demo](https://www.youtube.com/watch?app=desktop&v=68Nua8gKdRU)
-- [Espectro Expandido (Spread Spectrum) - Fundamentos de Telecomunicaciones](https://www.youtube.com/watch?v=h1Hp451xtIA)
+## 📡📻🛰️ `RF`: Radio Frequency
+_Oscillation rate of an alternating electric current or voltage or of a magnetic, electric or electromagnetic field or mechanical system in the frequency range from around 20 kHz to around 300 GHz (This is roughly between the upper limit of audio frequencies and the lower limit of infrared frequencies) || These are the frequencies at which energy from an oscillating current can radiate off a conductor into space as radio waves, so they are used in radio technology & telecomunicatios || In wireless electronics & comunications: Radio waves are a form of electromagnetic radiation with identified radio frequencies that range from 3kHz to 300 GHz. Frequency refers to the rate of oscillation (of the radio waves.) || RF propagation occurs at the speed of light and does not need a medium like air in order to travel. This means that radio waves (RF) can propagate through a vacuum and do not require a physical medium, such as air, to travel. In other words, while it is true that radio waves are a form of electromagnetic radiation that can propagate through the air, it is also true that they do not need air or any other material medium for their propagation. Unlike sound, which requires a material medium (such as air, water, or a solid) to travel, radio waves can propagate in the vacuum of space, this is why radio waves could travel through space virtually indefinitely, as they encounter no significant resistance that dissipates them._
+- [RF: Radio Frequency](https://en.wikipedia.org/wiki/Radio_frequency) _`wiki`_
+- [RF in Wireless 802.11 Wi-Fi Technology @ Mouser](https://www.mouser.mx/applications/rf-wireless-technology/)
+- [RF: Radio Frequency || Definition @ Tech Target](https://www.techtarget.com/searchnetworking/definition/radio-frequency)
+- [RF Cable (Coaxial) :: Introducción a la electrónica RF o radiofrecuencia](https://www.youtube.com/watch?v=d7hKJtf7-y4) _`video`_
+- [Diferencias: `Radio` (RF baja frecuencia) vs. `Wi-Fi` (RF alta frecuencia)](https://www.ellab.com/es/blog/radio-vs-wi-fi-es/)
 
-## Radio Frequency Signal
+### 🛜📐 RF: `Signal`
 - What Is a Radio Frequency Signal?
 
-### Radio Frequency Signal: `Characteristics`
+### 🛜📊 RF Signal: `Characteristics`
 - Wavelength
 - Frequency 
 - Amplitude 
 - Phase
 
-## Radio Frequency Behaviors
+### 🛜📊 RF Signal: `Behaviors`
 - Wave Propagation 
 - Absorption 
 - Reflection 
@@ -1179,11 +1182,9 @@ _Open System authentication should never fail | Init method of authentication us
     - Decibels Relative to 1 Milliwatt (dBm)
     - Inverse Square Law 
 
-## RF Mathematics
+## RF Mathematics: `Calculation`
 - Rule of 10s and 3s
 - RF Math Summary
-
-
 - Noise Floor
 - Signal-to-Noise Ratio
     - Signal-to-Interference-Plus-Noise Ratio
@@ -1224,7 +1225,18 @@ _Open System authentication should never fail | Init method of authentication us
     - Grounding Rods and Wires 
 - Antenna Regulatory Compliance
 
-## Wireless Networks and Spread Spectrum Technologies
+## `Spread Spectrum`
+- [What is Spread Spectrum? @ geeksforgeeks](https://www.geeksforgeeks.org/what-is-spread-spectrum/)
+
+
+
+
+
+
+
+
+
+
 
 ## 802.11 Protocol Theory
 - Radio Frequency (RF) Technologies
