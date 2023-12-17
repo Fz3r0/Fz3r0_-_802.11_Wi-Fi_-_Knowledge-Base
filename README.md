@@ -124,6 +124,7 @@ _🚧🏗️ Under Construction 🏗️🚧 /// 🚧🏗️ En Construcción �
 _Networking & Wireless terminology, covering definitions, acronyms, and abbreviations. From computer-related acronyms to clarifying Wi-Fi's origin, IEEE 802.11 standards with insights from various sources._
 
 ## ⭕📖 `Networking`: Definitions & Acronyms
+- [Definitions, acronyms, and abbreviations :: **IEEE 802.11-2020**](https://ieeexplore.ieee.org/document/9363693) 3.1 & 3.2 | p. 157
 - [Networking Acronyms: Extensive List of Computer Related Acronyms](https://www.activexperts.com/admin/network-acronyms/)
 - [Networking & Wi-Fi Acronyms @ EXFO](https://www.exfo.com/en/resources/glossary/)
 - [Computer Networking Acronyms](https://networkencyclopedia.com/computer-networking-acronyms/)
@@ -280,8 +281,8 @@ https://www.milenio.com/cultura/como-llego-el-internet-a-mexico]()
 
 ## 🌎🏭 Internet Organizations 
 _List of Internet organizations, or organizations that play or played a key role in the evolution of the Internet by developing recommendations, standards, and technology; deploying infrastructure and services; and addressing other major issues._
-
 - [List of Internet Organizations](https://en.wikipedia.org/wiki/List_of_Internet_organizations)
+- [`Normative References` :: **IEEE 802.11-2020**](https://ieeexplore.ieee.org/document/9363693) 2 | p. 153
 
 ---
 
