@@ -843,11 +843,12 @@ _Instructions & Data directly understandable by STAs, not present on 802.11 Fram
 
 
         
-# 🪆🛜⚙️ Frame Exchanges: `Association`, `Transition (Roaming)`, `Security`
+# 🪆🛜⚙️ Frame Exchanges: `Discovery`, `Association`, `Transition (Roaming)` & `Security`
 _Most common issues to torubleshoot are Connectivity Problems, this means: STAs/Clients either can't connect, can't maintain it's connection, it's not roaming well between APs, it can't connect to the SSID, and so on... Understanding this kind of Frame Exchanges help to analyze step by step the process for BSS Discovery & Joining, Analyze Roaming Behavior, etc_
+- [IEEE 802.11 Wi-Fi Discovey, Connection, Roaming & Disconnection process](https://community.nxp.com/t5/Wireless-Connectivity-Knowledge/802-11-Wi-Fi-Connection-Disconnection-process/ta-p/1121148)
 
 ## 🪪🔐🔁 IEEE 802.11: `State Machine`
-_Any STA or AP can be in some "state" within this state machine at any given time. Considered as "The discovery/connection/transition/disconnection process" of a client in a BSS at a protocol level._
+_Any STA or AP can be in some "state" within this state machine at any given time. Considered as "The discovery/connection/transition/disconnection process" of a client in a BSS at a protocol level. Modern networks does not "authenticate", instead uses "open system authentication". Open System Authentication is when STA send Auth Req & AP responds with Auth Res, then the same with Asso Res/Res at this point they are at "state 3" (where open authentication reach), then is where we use RSN method is used (like 802.1X EAP or WPA2 PSK) to make a "real authentication", and that take us finally to state 4 "Fully connected to the network"._
 - [802.11 State Machine :: `Diagram 1`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/c8715d19-fe2f-42e6-914a-144d3fb4e70d) _`diagram`_
 - [802.11 State Machine :: `Diagram 2`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/5826a51b-eb23-4fba-bdeb-73ba23295819)
 - [Understanding 802.11 State Machine @ Aruba Networks](https://blogs.arubanetworks.com/industries/understanding-802-11-state-machine/)
@@ -857,22 +858,22 @@ _Any STA or AP can be in some "state" within this state machine at any given tim
 - [802.11 Association Process Explained @ Meraki](https://documentation.meraki.com/MR/Wi-Fi_Basics_and_Best_Practices/802.11_Association_Process_Explained)
 
 ### 🥇🥈🥉 802.11 State Machine: `Frame Classes` `1`, `2`, `3`
-- [802.11 WLAN States: Difference between WLAN class1 class2 and class3](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)<br><br>
+- [802.11 WLAN States: Difference between WLAN class1 class2 and class3](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
     - [**🥇🖽 `Class1 Frames`**](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
         - [**Control**: `RTS & CTS`, `ACK`, `CF-End+CF-Ack & CF-End`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
         - [**Management**: `Beacon`, `Probe Req/Res`, `Auth/Deauth`, `ATIM`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
-        - [**Data**: `Any frame with ToDS & FromDS false(0)`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)<br><br>
+        - [**Data**: `Any frame with ToDS & FromDS false(0)`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
     - [**🥈🖽 `Class2 Frames`**](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
         - [**Control**: _None_](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
         - [**Management**: `Association Req/Res`, `Re-Association Req/Res`. `Disassociation`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
-        - [**Data**: _None_](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)<br><br>
+        - [**Data**: _None_](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
     - [**🥉🖽 `Class3 Frames`**](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
         - [**Control**: `PS-Poll`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
         - [**Management**: `Deauthentication`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
-        - [**Data**: `Any frame with ToDS or FromDS true(1)`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)<br><br>
-
+        - [**Data**: `Any frame with ToDS or FromDS true(1)`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+      
 ### 🔐🪪🔓 802.11 State Machine: `4 States`
-- ❓[**`State 1`**: **Unauthenticated**, **Unassociated** :: `/`]() `STA no connected to AP` > Frames: **`Class 1`** > **AuthReq/Res::ProbeReq/Res** 
+- ❓[**`State 1`**: **Unauthenticated**, **Unassociated** :: `/`]() `STA no connected to AP` > Frames: **`Class 1`** > **Beacon : AuthReq/Res : ProbeReq/Res** 
 - 🚪[**`State 2`**: **`Authenticated`**, **Unassociated** :: `Auth`]() `STA Authenticated to AP (Pending RSN/Open)` Frames: **`Class 1 & 2`** > **AssociReq/Res**
 - 🪪[**`State 3`**: **`Authenticated`**, **`Associated`** :: `Asso`]() `STA Associated to AP (Pending RSN/Open)` Frames: **`Class 1, 2 & 3`** | RSN : **Blocked** 
 - 🔓[**`State 4`**: **`Authenticated`**, **`Associated`** :: `OK!`]() `STA Fully Connected to AP (RSN/Open OK!)` Frames: **`Class 1, 2 & 3`** | RSN : **Un-Blocked**
@@ -882,16 +883,16 @@ _Any STA or AP can be in some "state" within this state machine at any given tim
 - [A study of the discovery process in 802.11 networks](https://www.researchgate.net/publication/215502402_A_study_of_the_discovery_process_in_80211_networks) _`pdf study`_
 
 ### 🛸🛜 BSS Discovery Scanning Methods: `Passive Scanning` & `Active Scanning`
-- [**`Active Scanning`**]() `Client/STA` **init effort** | **STA:**`ProbeReq` (All CHs) > AP answer `PropeRes` > STA answer Directed `Probe` > `AuthReq`
-- [**`Passive Scanning`**]() `AP` **init effort** | **AP:**`Beacon` @ `BSA` > STA answer Directed `Probe` > `AuthReq`
+- [**`Active Scanning`**](https://community.nxp.com/t5/Wireless-Connectivity-Knowledge/802-11-Wi-Fi-Connection-Disconnection-process/ta-p/1121148) `Client/STA` **init effort** | **STA:**`ProbeReq` (All CHs) > AP answer `PropeRes` > STA answer Directed `Probe` > `AuthReq`
+- [**`Passive Scanning`**](https://community.nxp.com/t5/Wireless-Connectivity-Knowledge/802-11-Wi-Fi-Connection-Disconnection-process/ta-p/1121148) `AP` **init effort** | **AP:**`Beacon` @ `BSA` > STA answer Directed `Probe` > `AuthReq`
 
 ## 🪪🛡️🔐 IEEE 802.11: `Authentication`
 _These are the Authentication Methods a STA can use to access to a BSS_
 
 ### 🛡️🔐 Authentication Methods
 - [802.11 Authentication Methods](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/46509dcd-047a-4529-b4c5-c9cad8b88760) _`table`_<br><br>
-    - [🔓 `Open System` :: `0`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/da6135ed-352d-42c1-a73a-736112c79650) No authentication | Every client is allowed || used for: `Pre-Shared Key`, `802.1X` (after association state)
-    - [🔑 `Shared Key` :: `1`]() Authenticates via WEP(legacy) demonstrating a key
+    - [🔓 `Open System` :: `0`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/da6135ed-352d-42c1-a73a-736112c79650) No authentication | Every client is allowed || used for modern: `Pre-Shared Key`, `802.1X` (after association state)
+    - [🔑 `Shared Key` :: `1`]() Authenticates via WEP demonstrating a key :: Legacy Networks (modern uses open system)
     - [🔄 `FT`:`Fast Transition :: `2`]() `802.11r` Authenticates using a key derived from previous authentication
     - [🖧 `SAE`:`Simultaneous Authentication of Equals` :: `3`]() `802.11s-mesh` Diffie-Hellman / Mesh
 
