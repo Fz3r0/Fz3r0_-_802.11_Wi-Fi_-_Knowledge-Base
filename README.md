@@ -430,19 +430,67 @@ _Regulates USA interstate and international communications by radio, television,
 # 🌎🔧🫅 Internet, Networking & Wireless: `Standards` 
 _Networking organizations, certifications, standards (particularly IEEE 802.11) & wireless regulations used for wireless connectivity around the world_ 📡
 
-## 🌎🎖️ `IETF`: Internet Engineering Task Force
+## 🌎🎖️📝 `IETF`: Internet Engineering Task Force
 _(1986) It's the premiere standards development organization (SDO) for the Internet. The IETF makes voluntary standards that are often adopted by Internet users, network operators, and equipment vendors, and it thus helps shape the trajectory of the development of the Internet._
 - [Introduction to the IETF](https://www.ietf.org/about/introduction/) _`Official`_
 - [IETF: Internet Engineering Task Force](https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force) _`Wiki`_
 
-### 🎖️ IETF: `RFCs - Request For Comments` 
+### 🎖️📝 IETF: `RFCs - Request For Comments` 
 _RFC documents contain technical specifications and organizational notes for the Internet.'Internet Standard', 'Proposed Standard', 'Best Current Practice' BCP, 'Informational', 'Experimental' or 'Historic'._
 - [RFCs @ IETF](https://www.ietf.org/standards/rfcs/) _`Official`_
 - [RFC List @ RFC Editor](https://www.rfc-editor.org/rfc/) _`RFC Editor`_
 
-## 🫅🛜 Wi-Fi Alliance
-_Non-profit organization that owns the Wi-Fi trademark. Manufacturers may use the trademark to brand products certified for Wi-Fi interoperability. _
+### 🎖️📡 IETF RFCs: `RFCs`::`IEEE 802.11 / Wireless Related` 
+- [`1981`: `RFC 791` :: Internet Protocol, Sept. 1981.7]()
+- [`1982`: `RFC 826` :: An Ethernet Address Resolution Protocol]()
+- [`1987`: `RFC 1035` :: Domain Names — Implementation and Specification]()
+- [`1988`: `RFC 1042` :: A Standard for the Transmission of IP Datagrams over IEEE 802 ® Networks,]()
+- [`1992`: `RFC 1321` :: The MD5 Message-Digest Algorithm, Apr. 1992 (status: informational).]()
+- [`1997`: `RFC 2104` :: HMAC: Keyed-Hashing for Message Authentication (status: informational).]()
+- [`1997`: `RFC 2131` :: Dynamic Host Configuration Protocol]()
+- [`1998`: `RFC 2409` :: The Internet Key Exchange (IKE) (status: Standards Track)]()
+- [`2002`: `RFC 3279` :: Algorithms and Identifiers for the Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile]()
+- [`2002`: `RFC 3394` :: Advanced Encryption Standard (AES) Key Wrap Algorithm (status: informational)]()
+- [`2003`: `RFC 3447` :: Public-Key Cryptography Standards (PKCS) #1: RSA Cryptography Specification Version 2.1]()
+- [`2003`: `RFC 3490` :: Internationalizing Domain Names in Applications (IDNA)]()
+- [`2003`: `RFC 3315` :: Dynamic Host Configuration Protocol for IPv6 (DHCPv6)]()
+- [`2003`: `RFC 3610` :: Counter with CBC-MAC (CCM)]()
+- [`2004`: `RFC 3748` :: Extensible Authentication Protocol (EAP)]()
+- [`2005`: `RFC 3986` :: Uniform Resource Identifier (URI): Generic Syntax]()
+- [`2005`: `RFC 4017` :: Extensible Authentication Protocol (EAP) Method Requirements for Wireless LANs]()
+- [`2005`: `RFC 4119` :: A Presence-based GEOPRIV Location Object Format]()
+- [`2005`: `RFC 4282` :: The Network Access Identifier]()
+- [`2006`: `RFC 4776` :: Dynamic Host Configuration Protocol (DHCPv4 and DHCPv6) Option for Civic Addresses Configuration Information]()
+IETF RFC 4861, Neighbor Discovery for IP version 6 (IPv6), Narten, T., E. Nordmark, W. Simpson, and
+H. Soliman, Sept. 2007.
+IETF RFC 4862, IPv6 Stateless Address Autoconfiguration, Sept. 2007.
+IETF RFC 5116, An Interface and Algorithms for Authenticated Encryption, Jan. 2008.
+IETF RFC 5216, The EAP-TLS Authentication Protocol, Simon, D., B. Aboba, and R. Hurst, Mar. 2008.
+IETF RFC 5227, IPv4 Address Conflict Detection, Cheshire, S., July 2008.
+IETF RFC 5280, Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL)
+Profile, May 2008.
+IETF RFC 5295, Specification for the Derivation of Root Keys from an Extended Master Session Key
+(EMSK), Aug. 2008.
+IETF RFC 5297, Synthetic Initialization Vector (SIV) Authenticated Encryption Using the Advanced
+Encryption Standard (AES), Harkins, D., Oct. 2008 (status: informational).
+IETF RFC 5424, The Syslog Protocol, Gerhards, R., Mar. 2009.
+IETF RFC 5480, Elliptic Curve Cryptography Subject Public Key Information, Mar. 2009.
+IETF RFC 5869, HMAC-based Extract and Expand Key Derivation Function, Krawczyk, H., and
+P. Eronen, May 2010.
+IETF RFC 5985, HTTP-Enabled Location Delivery (HELD), M. Barnes (Ed.), Sept. 2010.
+IETF RFC 6225, Dynamic Host Configuration Protocol Options for Coordinate-Based Location
+Configuration Information, Polk, J., M. Linsner, M. Thomson, and B. Aboba, July 2011.
+IETF RFC 6335, Internet Assigned Numbers Authority (IANA) Procedures for the Management of the
+Service Name and Transport Protocol Port Number Registry, Aug. 2011.
+IETF RFC 6696, EAP Extensions for the EAP Re-authentication Protocol (ERP), July 2012.
+IETF RFC 6942, Diameter Support for the EAP Re-authentication Protocol (ERP), May 2013.
+IETF RFC 8200, Internet Protocol, Version 6 (IPv6) Specification, Deering, S., and R. Hinden, 2017.
+IETF RFC 8265, Preparation, Enforcement, and Comparison of Internationalized Strings Representing
+Usernames and Passwords, Saint-Andre, P., and A. Melnikov, 2017.
 
+
+## 🫅🛜♾️ `Wi-Fi Alliance`
+_Non-profit organization that owns the Wi-Fi trademark. Manufacturers may use the trademark to brand products certified for Wi-Fi interoperability. _
 - [](https://www.wi-fi.org/) _`official`_
 - [Wi-Fi Alliance](https://en.wikipedia.org/wiki/Wi-Fi_Alliance) _`Wiki`_
 
@@ -455,7 +503,13 @@ _Non-profit organization that owns the Wi-Fi trademark. Manufacturers may use th
 - Wi-Fi Passpoint
 - 
 
-## 🫅🪖 IEEE: Institute of Electrical and Electronics Engineers
+## 🪖🛡️⚔️ `NIST`: National Institute of Standards and Technology 
+- NIST Special Publication 800-38B, Recommendation for Block Cipher Modes of Operation: The CMAC Mode for Authentication, Dworkin, M.13
+- NIST Special Publication 800-38D, Recommendation for Block Cipher Modes of Operation: Galois/ Counter Mode (GCM) and GMAC, Dworkin, M., Nov. 2007.
+- NIST Special Publication 800-56A R2, Recommendation for Pair-Wise Key Establishment Schemes Using Discrete Logarithm Cryptography, May 2013.
+- NIST Special Publication 800-57, Part 1 Rev 4, Recommendation for Key Management, Barker, E., Jan. 2016.
+
+## 👑🧪⚙️ IEEE: Institute of Electrical and Electronics Engineers
 _IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. IEEE and its members inspire a global community through its highly cited publications, conferences, technology standards, and professional and educational activities._
 - [IEEE: Institute of Electrical and Electronics Engineers](https://en.wikipedia.org/wiki/Institute_of_Electrical_and_Electronics_Engineers) _`Wiki`_
 - [About IEEE](https://www.ieee.org/about/) _`Official`_
@@ -472,7 +526,7 @@ _The most widely used IEEE 802 standards are for Ethernet, Bridging and Virtual 
 - [IEEE 802 50th Aniversary, a look back](https://standards.ieee.org/featured/ieee-802/#:~:text=The%20most%20widely%20used%20IEEE,providing%20focus%20for%20each%20area.)
 - IEEE 802: Overview & Architecture
 
-### 👑🪖 IEEE 802 Standards: List
+### 👑⚙️ IEEE 802 Standards: List
 
 - IEEE 802.1: Bridging & Management
 - [IEEE 802.3: Ethernet](https://en.wikipedia.org/wiki/IEEE_802.3) _Full List_
