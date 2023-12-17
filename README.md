@@ -1127,6 +1127,7 @@ _Open System authentication should never fail | Init method of authentication us
 
 
 # 🧬🧮📐 Radio Frequency (RF): `Physics` & `Mathematics`
+_A significant amount of math and physics is used in radio frequency (RF) for wireless communications. This field involves the design, development, and implementation of systems that operate with radio frequencies (RF), this needs the understanding and analysis of electromagnetic fields and wave propagation, principles of electromagnetic theory, wave propagation, and antenna theory to design and optimize RF systems._
 
 ## 🧬📐🛜 FFT: Fast Fourier Transform
 - [FFT: Fast Fourier Transform](https://en.wikipedia.org/wiki/Fast_Fourier_transform) _`english`_
