@@ -100,7 +100,17 @@
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/31a9f57c-c4c1-4831-b997-784ac5db2140)
 
-_🚧🏗️ Under Construction 🏗️🚧 /// 🚧🏗️ En Construcción 🏗️🚧_ 
+**_🚧🏗️ Under Construction 🏗️🚧 /// 🚧🏗️ En Construcción 🏗️🚧_** 
+
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ #                                                               #
+ #            Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base              #
+ #                                                               #
+ #                            Index                              #
+ #                                                               #
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
 
 # 📡🗂️ `INDEX` 🗂️📡</h1>
 
@@ -119,18 +129,27 @@ _🚧🏗️ Under Construction 🏗️🚧 /// 🚧🏗️ En Construcción �
 - IEEE 802.11 Wireless (Wi-Fi): `Early & Legacy Devices`
 - Historia de Redes, Internet, Telecomunicaciones y Radiodifusión en México
 
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ #                                                               #
+ #            Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base              #
+ #                                                               #
+ #            Definitions, Acronyms & Abbreviations              #
+ #                                                               #
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
  
 # 📖❓ `Definitions`, `Acronyms` & `Abbreviations`
 _Networking & Wireless terminology, covering definitions, acronyms, and abbreviations. From computer-related acronyms to clarifying Wi-Fi's origin, IEEE 802.11 standards with insights from various sources._
 
 ## ⭕📖 `Networking`: Definitions & Acronyms
-- [Definitions, acronyms, and abbreviations :: **IEEE 802.11-2020**](https://ieeexplore.ieee.org/document/9363693) 3.1 & 3.2 | p. 157
 - [Networking Acronyms: Extensive List of Computer Related Acronyms](https://www.activexperts.com/admin/network-acronyms/)
 - [Networking & Wi-Fi Acronyms @ EXFO](https://www.exfo.com/en/resources/glossary/)
 - [Computer Networking Acronyms](https://networkencyclopedia.com/computer-networking-acronyms/)
 - [List of Information Technology (IT) initialisms](https://en.wikipedia.org/wiki/List_of_information_technology_initialisms)
 
 ## ⭕📖 `802.11 Wireless`: Definitions & Acronyms
+- [Definitions, Acronyms, and Abbreviations :: **IEEE 802.11-2020**](https://ieeexplore.ieee.org/document/9363693) 3.1 & 3.2 | p. 157
 - [IEEE: 802.11 Standards Dictionary Online](https://ieeexplore.ieee.org/browse/standards/dictionary?activeStatus=true)
 - [Agilent Technologies: Wireless Dictionary](https://ftp.unpad.ac.id/orari/library/library-ref-eng/ref-eng-1/physical/voip/wireless/dictionary.pdf)
 - [PC Mag - Encyclopedia](https://www.pcmag.com/encyclopedia)
@@ -142,6 +161,16 @@ _Wi-Fi is not an abbreviation for “wireless fidelity”; the name was created 
 - [Wi-Fi Definition @ Britanica](https://www.britannica.com/technology/Wi-Fi)
 - [Wi-Fi :: Wiki](https://es.wikipedia.org/wiki/Wifi) _`español`_
 - [Wi-Fi :: Wiki](https://en.wikipedia.org/wiki/Wi-Fi) _`english`_
+
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ #                                                               #
+ #            Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base              #
+ #                                                               #
+ #          History:  Internet, Networking & Wireless            #
+ #                                                               #
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
 
 # 📡🏺🧑‍🏫 History: `Internet`, `Networking` & `Wireless`
 _Knowing our history anchors us in the present & paves the way for a purposeful future. Mistakes become lessons, successes the stepping stones for our journey ahead: The one who knows the past can build the future. "Building the future, and keeping the past alive – are one and the same thing."_
@@ -276,6 +305,16 @@ https://www.milenio.com/cultura/como-llego-el-internet-a-mexico]()
 - [Satélites artificiales de México](https://es.wikipedia.org/wiki/Sat%C3%A9lites_artificiales_de_M%C3%A9xico)
 
 ### 🗓️🛰️ `Timeline`: Satélites Artificiales de México
+
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ #                                                               #
+ #            Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base              #
+ #                                                               #
+ #        Internet, Networking & Wireless: Organizations         #
+ #                                                               #
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
 
 # 🌎♻️🧙‍♂️ Internet, Networking & Wireless: `Organizations`
 
