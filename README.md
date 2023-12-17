@@ -706,7 +706,7 @@ _PMDs further help to define the physical layer of computer network protocols. P
 
 
 
-## 802.11 MAC Frames
+## 👑 802.11 MAC Frames
 - [Table 9-32—Beacon frame body | 9.3.3.2 Beacon frame format 824 @ IEEE 802.11-2020]()
 - 
 - [`Fz3r0` 802.11 Frames]()
@@ -714,11 +714,19 @@ _PMDs further help to define the physical layer of computer network protocols. P
 
 
 
-### IEEE 802.11-2020 9.3.3 (PV0) `Management Frames`
-- [**`Beacon`**](https://mrncciew.com/2014/10/08/802-11-mgmt-beacon-frame/) Fixed Schedule (default 100TU = 1024us microseconds) | Lowest Basic Data Rate
+## 🛜⚙️💊 IEEE 802.11-2020 9.3.3 (PV0) `Management Frames`
+- [`Frame Format` :: Management Frames]() 
+
+### 📡🔍⚙️ 802.11 Management Frames: `Beacon`
+- [**`Beacon`** @ Nayanajith](https://mrncciew.com/2014/10/08/802-11-mgmt-beacon-frame/) Fixed Schedule (default 100TU = 1024us microseconds) | Lowest Basic Data Rate
+- [`Beacon Frame Body` :: Elements](https://ieeexplore.ieee.org/document/9363693) IEEE 802.11-2020: Table 9-32 | 9.3.3.2
+
+### 🤳🏾🔍⚙️ 802.11 Management Frames: `Probe Request` & `Probe Response`
 - [**`Probe Request`**]() **STA** -> Broadcast `APs does not ACK Probe Req` :: Broadcast :: Lowest STA's Data Rate :: 
 - [**`Directed Probe Request`**]() **STA** -> AP `APs does not ACK Probe Req` :: AP/SSID Directed ::
 - [**`Probe Response`**]() STA <- **AP** `STAs ACK Probes Res` :: Lowest BSS Data Rate :: Includes SSID & Very similar to a Beacon
+
+### 🚪❓⚙️ 802.11 Management Frames: `Authentication Request` & `Authentication Response`
 
 ### Control Frames
 - [ACK]() Allways after a unicast frame |
