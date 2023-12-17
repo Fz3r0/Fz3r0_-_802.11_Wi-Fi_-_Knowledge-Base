@@ -1861,9 +1861,15 @@ _Sometimes is important to capture and troubleshoot wired captures in adition to
 ### 802.11 PWN!!!: `Init Setup & Basics`
 - [Monitor Mode & Validations]()
 
+### 802.11 PWN!!!: `WLANs Audit`
+- []()
+
+### 802.11 Attack: `Evil Twin` & `Phishing`
+- [`wifiphishing` :: Evil Twin Attack with Phishing](https://www.youtube.com/watch?v=TZcgvi_KRvY)
+
 ---
 
-### 802.11 PWN!!!: `WLANs Audit`
+
 
 
 
