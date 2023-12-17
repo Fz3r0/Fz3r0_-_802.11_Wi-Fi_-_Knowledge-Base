@@ -1465,20 +1465,20 @@ _Few tools are as useful to the IT professional as Wireshark, the go-to network 
 ## 🛜🪤🎣 Protocol Analysis: `802.11 Frame Capture Options`
 _There are basically 3 different options to capture 802.11 traffic & communications. At the end, it mostly depends on the resources and needs_
 
-### 💻🦈 Mobile
+### 💻🦈 802.11 Frame Capture: `Mobile`
 - [Linux Based + Wi-Fi Adapter]()
 - [Mac-OS Based: Internal Adapter Capability]()
 - [Wi-Spy + Software based]()
 - [Wlan PI]()
 
-### 📡🐶 Infrastructure (WLC or AP)
+### 📡🐶 Protocol Analysis: `Infrastructure` _(WLC or AP)_
 - [Ruckus AP Capture]()
 - [Cisco Air Marshall]()
 
-### 📡👮 WIPS Sensors
+### 📡👮 Protocol Analysis: `WIPS Sensors`
 - [Arista WIPS](https://www.arista.com/assets/data/pdf/Whitepapers/Arista-WIPS-Whitepaper.pdf)
 
-### 📡🏭 Distributed Forensics
+### 📡🏭 Protocol Analysis: `Distributed Forensics`
 - [Omnipeek]()
 
 ## 🛜👂🩺 Adapter Modes: `Monitor Mode` & `Promiscous Mode`
@@ -1486,14 +1486,13 @@ _There are basically 3 different options to capture 802.11 traffic & communicati
     -[`Promiscous Mode`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md#-promiscous-mode)
     -[`Monitor Mode`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md#-promiscous-mode)
 
-### Monitor Mode: `Drivers` & `Chipsets`
+### 🩺⚙️ Monitor Mode: `Drivers` & `Chipsets`
 - [Fz3r0 Monitor Mode Drivers Lab]()
 - [Recomended Adapters & Firmwares for 802.11 Frame Capture]()
 - [Install Drivers for 802.11 capture in Linux]()
 
-### Monitor Mode: `Adapters`
+### 🩺🪄 Monitor Mode: `Adapters`
 _The right adapter give you the right capture capabilites and scopes... There is no "the best" adaptor for every scenario_
-
 - [802.11 Capture Table]() 
 - [Alfa]() `Custom`
 - [Panda]() `Custom`
@@ -1501,29 +1500,27 @@ _The right adapter give you the right capture capabilites and scopes... There is
 - [WiSpy]() `Vendor Supported Licenced`
 - [Saavius]() `Vendor Supported Licenced`
 
-### Monitor Mode: `Infrestructure APs`
+### 🩺📡 Monitor Mode: `Infrestructure APs`
 _The right adapter give you the right capture capabilites and scopes... There is no "the best" adaptor for every scenario_
 - [Ruckus R850]() `4x4 spatial streams` | `2.4/5/6 GHz`
 
-## 802.11 Frame Capture: `Location for Capture`
+## 🤳🏾🪤📡 802.11 Frame Capture: `Location for Capture`
 _In 802.11 Frames Capture is very important the physical location of the adapter that will capture 802.11 Frames depending on what are we tring to capture, it's important to remember that we are capturing on wireless medium (RF flying through the air)_
 - [`Near the AP` :: Capture that AP sees]() For capturing the whole BSA & All traffic of clients subscribed to the AP (Tx/Rx)
 - [`Near the Client` :: Capture that Client sees]() For capturing a specific client having a problem
 - [`In the middle of Client <--> AP`]() For getting the whole picture of whats happening inside the BSA
 
-## 802.11 Frame Catpure: `802.3 Wired Ethernet` + `802.11 Wireless Wi-Fi`
+## 📡🪤🖧 802.11 Frame Catpure: `802.3 Wired Ethernet` + `802.11 Wireless Wi-Fi`
 _Sometimes is important to capture and troubleshoot wired captures in adition to 802.11 capture._
 - [EAP over LAN exchanges & RADIUS]() Simultaneos capture of Wi-Fi & Ethernet
 - [DHCP exchanges]()
 - [QoS]() Tags and Markings all the way through the network, for VoIP for example
 - [VLAN Tagging]()
 
-## 802.11 Frame Capture: `Time and Moment for Capture`
-
-## 802.11 Frame Capture: `One Channel VS Various Channels`
+## 📶📻🪤 802.11 Frame Capture: `One Channel` VS `Hopping` VS `Various Channels`
 - [Fz3r0 :: Channel Selection on each Scenario]() _`table`_
 
-## 802.11 Frame Capture: `Roaming Scenarios`
+## 🪤🔁📡 802.11 Frame Capture: `Roaming Scenarios`
 - [Roaming Analysis using only a Mac and Wireshark](https://framebyframewifi.net/2018/08/04/roaming-analysis-using-only-a-mac-and-wireshark/)
 - [How to check in Wireshark if a Wi-Fi Network support 802.11k (roaming)](https://semfionetworks.com/blog/wireshark-how-to-check-if-a-wi-fi-network-supports-80211k/)
 - [How To Fix Wi-Fi Roaming](https://www.smallnetbuilder.com/basics/wireless-basics/how-to-fix-wi-fi-roaming/) 
