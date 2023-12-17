@@ -1568,15 +1568,14 @@ _Software that can capture and display network packets in a readable format, all
 - [Wireshark](https://www.wireshark.org/) The world's most popular network protocol analyzer
 - [T-Shark](https://www.wireshark.org/docs/man-pages/tshark.html) Command-line version of Wireshark
 - [BlackShark]() Fz3r0 WireShark Mod on Steroids
+- [CommView & CommView for Wi-Fi @ TamoSoft](https://www.tamos.com/products/commwifi) The best wireless packet analysis tool on the market with lots of unique features
+- [Omnipeek](https://www.liveaction.com/products/omnipeek/) The world’s easiest to use network protocol analyzer.
 - [TCPdump & LIBPCAP](https://www.tcpdump.org/) Powerful command-line packet analyzer & portable C/C++ library for network traffic capture
 - [NMAP & NPCAP library](https://npcap.com/) Nmap Project's packet capture/send library for MS-Windows. It implements the open Pcap API
-- [Omnipeek](https://www.liveaction.com/products/omnipeek/) The world’s easiest to use network protocol analyzer.
-- [AirMagnet Wi-Fi Analzyer Pro](https://www.netally.com/products/airmagnet-wifi-analyzer/) _Discontinued_
-- CommView (& CommView for Wi-Fi)
-- Acrylic Wi-Fi Analyzer & Acrylic Wi-Fi Capture
-- Motorola Air Defence
-- Wi-Fi Pilot
-- NetScout
+- [Acrylic Wi-Fi Analyzer & Wi-Fi Capture](https://www.acrylicwifi.com/wifi-analyzer/) Detect, analyze, evaluate and monitor Wi-Fi Networks
+- [AirMagnet Wi-Fi Analzyer Pro](https://www.netally.com/products/airmagnet-wifi-analyzer/) _`discontinued`_
+- [AirDefense_Services_Platform (ADSP) :: Appliance Dashboard](https://catalog.m4dconnect.com/docs/AirDefense_Services_Platform_8.0_SPEC_SHEET.pdf) 
+- [NetScout Legacy 2000's](https://docstore.mik.ua/univercd/cc/td/doc/product/rtrmgmt/cw2000/fam_prod/netscout/rel_1_2/packet.pdf) _`legacy`_
 
 ### 📈📊📉 Protocol Analysis: `Visualization Tools`
 _Concept is instead of looking a specific packets, you are looking at analyisis of those packets that's been done wirh graphics, lists, and so on..._
@@ -1643,6 +1642,7 @@ _Few tools are as useful to the IT professional as Wireshark, the go-to network 
 - [Wireshark Source Code :: Open Source](https://gitlab.com/wireshark/wireshark/-/tree/master)
 
 ## 🖧🪤💰 802.3 Ethernet Switch Media Capture: `Network Taps`
+- [`Network Tap` in 30 Seconds @ David Bombal](https://www.youtube.com/shorts/l-wQVuqL2XA) _`¡Vamos Bombal!`_
 - [`Taps` Vs. `SPAN`: Taps Provide Full Visibility into Network Data](https://www.youtube.com/watch?v=r3-PBfmFMqA) _`video`_
 - [`Network Tap 101` :: How it works?](https://www.garlandtechnology.com/2014/01/17/a-test-access-point-tap-primer) The 101 Series: A Primer On Network TAPs
 - [How Copper & Fiber Taps](https://www.youtube.com/watch?v=jiyNRSj-UFE) _`video`_
