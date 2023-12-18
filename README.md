@@ -264,6 +264,8 @@ _Close your eyes... I remember..._
 - [La primer llamada telefónica en México](https://devenir.devenir.com.mx/18-de-junio-de-1878-primera-llamada-telefonica-en-mexico/)
 - [Ley Federal de Radio y Comunicación]()
 - [Telecomunicaciones y Radiodifusión en México @ UNAM](http://derecho.posgrado.unam.mx/site_cpd/public/publis_cpd/telecomyradiodifenMX.pdf)
+- [Cronología e Historia de la fibra óptica en las telecomunicaciones en México](https://fibrasopticasdemexico.com/fibra-optica-en-telecomunicaciones/) _`timeline`_
+- [Satélites artificiales de México](https://es.wikipedia.org/wiki/Sat%C3%A9lites_artificiales_de_M%C3%A9xico) _`timeline`_
 
 ### 🏺🇲🇽 Timeline
 - [`1851`: Se tiende cableado de la primer linea de Telégrafos entre CDMX y Nopalucan, Puebla](https://www.gob.mx/siap/articulos/inauguracion-de-la-primera-linea-telegrafica-en-mexico#:~:text=Un%205%20de%20noviembre%20de,el%20poblado%20de%20Nopalucan%2C%20Puebla.)
@@ -287,6 +289,7 @@ https://www.milenio.com/cultura/como-llego-el-internet-a-mexico]()
 - [`1988`: 12/Oct/1988 El día que México (y LATAM) se conectó a Internet por primera vez (Protocolo IPv4) :: Conexión entre `TEC de Monterrey` <=> `Universidad de Texas <<THENET>>`](https://tecscience.tec.mx/es/tecnologia/primera-conexion-internet-en-mexico/) _leyenda: Texas->TEC "Nos deben unas cervezas"_
 - [`1989`: 25/Abr/1989 La UNAM termina de instalar una antena para conectar `RedUNAM` con `NSFNet`]()
 - [`1989`: 20/Jul/1989 Primera conexión satelital a Internet :: Se realiza con éxito la primer prueba de conexión entre `RedUNAM` con `NSFNet`]() _"este primer mensaje es un pequeño paso para nosotros y es un gran paso para la universidad"_
+- [`1991`: Telmex comienza a desplegar fibra óptica en México]()
 - [`1992`: MEXNET: Se Inaugura la Red Integral de Telecomunicaciones (UNAM) : conecta todas las Universidades con acceso a Internet :: 13 nodos, 500km fibra, 12 links satelitales](https://conecta.tec.mx/es/noticias/nacional/institucion/la-primera-computadora-que-enlazo-mexico-y-latinoamerica-internet)
 - [`1994`: Se hace comercial `RedUNAM` - Primer abastecedor Comercial de servicios de Internet en México - `UNAM`]()
 - [`1994`: Se crea la `Red Nacional de Tecnología (RNT)` - Segundo abastecedor Comercial de servicios de Internet en México]()
@@ -301,18 +304,6 @@ https://www.milenio.com/cultura/como-llego-el-internet-a-mexico]()
 - [`2001`: Telmex lanza al mercado `Banda Ancha Infinitum`](https://realestatemarket.com.mx/articulos/infraestructura-y-construccion/11214-20-anos-de-desarrollo-tecnologico#:~:text=En%201996%20lanzamos%20al%20mercado,brecha%20digital%20en%20el%20pa%C3%ADs.)
 - [`2013`: Reforma Constitucional de Telecomunicaciones 2013]()
 - [`2023`: En México hay un total de 80.6 millones de personas conectadas, de las cuales un 95% usa el smartphone para ello via inalámbirca]()
-
-## 💡🇲🇽 Redes de Fibra Óptica en México
-- [Cronología e Historia de la fibra óptica en las telecomunicaciones en México](https://fibrasopticasdemexico.com/fibra-optica-en-telecomunicaciones/)
-
-### 🗓️💡 `Timeline`: Fibra Óptica en México
-- [`1991`: Telmex comienza a desplegar fibra óptica en México]()
-- [`1992`: Se inaugura la Red Integral de Telecomunicaciones en la UNAM : (500km de FO)]()
-
-## 🛰️🇲🇽 Satélites Artificiales de México
-- [Satélites artificiales de México](https://es.wikipedia.org/wiki/Sat%C3%A9lites_artificiales_de_M%C3%A9xico)
-
-### 🗓️🛰️ `Timeline`: Satélites Artificiales de México
 
 <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -331,72 +322,65 @@ _List of Internet organizations, or organizations that play or played a key role
 - [List of Internet Organizations](https://en.wikipedia.org/wiki/List_of_Internet_organizations)
 - [`Normative References` :: **IEEE 802.11-2020**](https://ieeexplore.ieee.org/document/9363693) 2 | p. 153
 
----
-
-### 🌎⚖️ Internet Governance
+## 🌎⚖️ Internet Governance
 _Internet governance consists of a system of laws, rules, policies and practices that dictate how its board members manage and oversee the affairs of any internet related-regulatory body._
 
 - [**Internet Governance**](https://en.wikipedia.org/wiki/Internet_governance)
 
-#### 🟩 Internet Governance Members
-- [IGF (Internet Governance Forum) :: Group for policy dialogue on issues of Internet governance](https://en.wikipedia.org/wiki/Internet_Governance_Forum)
-- [NRO (Number Resource Organization) :: Unincorporated organization uniting the 5 RIRs](https://en.wikipedia.org/wiki/Regional_Internet_registry#Number_Resource_Organization)
-- [IANA (Internet Assigned Numbers Authority) :: IPs, DNS, Protocols, Time Zone](https://en.wikipedia.org/wiki/Internet_Assigned_Numbers_Authority)
-- [ICANN (Internet Corporation for Assigned Names & Numbers) :: DNS Registries, namespaces & numerical spaces of the Internet](https://en.wikipedia.org/wiki/ICANN)
-- [IETF (Internet Engineering Task Force) :: Technical standards for TCP/IP protocol suite](https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force)
-- [ISOC (Internet Society) :: Non-Profit Internet development, infrastructure, accessibility & standards for the world](https://en.wikipedia.org/wiki/Internet_Society)
+### ⚖️ Internet Governance Members
+- [`IGF`: Internet Governance Forum](https://en.wikipedia.org/wiki/Internet_Governance_Forum) Group for policy dialogue on issues of Internet governance
+- [`NRO`: Number Resource Organization](https://en.wikipedia.org/wiki/Regional_Internet_registry#Number_Resource_Organization) Unincorporated organization uniting the 5 RIRs
+- [`IANA`: Internet Assigned Numbers Authority](https://en.wikipedia.org/wiki/Internet_Assigned_Numbers_Authority) IPs, DNS, Protocols, Time Zone
+- [`ICANN`: Internet Corporation for Assigned Names & Numbers](https://en.wikipedia.org/wiki/ICANN) DNS Registries, namespaces & numerical spaces of the Internet
+- [`IETF`: Internet Engineering Task Force](https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force) Technical standards for TCP/IP protocol suite
+- [`ISOC`: Internet Society](https://en.wikipedia.org/wiki/Internet_Society) Non-Profit Internet development, infrastructure, accessibility & standards for the world
 
----
+## 🌎📧🔢 `NRO`: Number Resource Organization
 
 ### 🌎📧 RIR: Regional Internet registry
 _"The Five RIRs". Organizations that manages the allocation and registration of Internet number resources within a region of the world. Internet number resources include IP addresses & Autonomous System (AS) numbers. The regional Internet registries are informally liaised through the unincorporated Number Resource Organization (NRO), which is a coordinating body to act on matters of global importance._
-
 - AFRINIC (African Network Information Centre) :: Africa
 - ARIN (American Registry for Internet Numbers) :: Antarctica, Canada, parts of the Caribbean, United States
 - APNIC (Asia Pacific Network Information Centre) :: East Asia, Oceania, South Asia, Southeast Asia
 - LACNIC (Latin America and Caribbean Network Information Centre) :: most of the Caribbean, Latin America
 - RIPE NCC (Réseaux IP Européens Network Coordination Centre) :: Europe, Central Asia, Russia, West Asia
 
----
-
-### 🌎🗺️ ITU: International Telecommunication Union 
+## 🌎🗺️ ITU: International Telecommunication Union 
 _United Nations specialized agency that promotes the shared global use of the radio spectrum, facilitates international cooperation in assigning satellite orbits, assists in developing and coordinating worldwide technical standards, and works to improve telecommunication infrastructure in the developing world_
 - [ITU - International Telecommunication Union](https://www.itu.int/en/Pages/default.aspx)
 - [ITU - International Telecommunication Union @ Wikipedia](https://en.wikipedia.org/wiki/International_Telecommunication_Union) _Wiki_
 
-#### 🟩 ITU-R: International Telecommunication Union `Radiocommunication` Sector
+### 🟩 ITU-R: International Telecommunication Union `Radiocommunication` Sector
 - [ITU Members connect the world!](https://www.youtube.com/watch?v=EBPiWhp4KG4) _@ ITU youtube_
 - [ITU- R - Official Web](https://www.itu.int/es/ITU-R/Pages/default.aspx) _One of the three sectors (divisions) of the ITU_
 - [ITU- R - Radiocommunication Sector @ Wikipedia](https://en.wikipedia.org/wiki/ITU-R) <br><br>
 
-#### 🔶 ITU-R: The 5 Administrative Regions
+### 🔶 ITU-R: The 5 Administrative Regions
 - [`Region A`: **CITEL** The Americas Inter-American Telecommunication Commission](www.citel.oas.org) 
 - [`Region B`: **CEPT** Western Europe European Conference of Postal and Telecommunications Administrations](www.cept.org) 
 - [`Region C`: **RCC** Eastern Europe and Northern Asia Regional Commonwealth in the field of Communications](www.en.rcc.org.ru) 
 - [`Region D`: **ATU** Africa African Telecommunications Union](www.atu-uat.org) 
 - [`Region E`: **APT** Asia and Australasia Asia-Pacific Telecommunity](www.aptsec.org)
 
-#### 🔶 ITU-R: The 3 Regulatory Regions
+### 🔶 ITU-R: The 3 Regulatory Regions
 - [Australia Australian Communications and Media Authority (ACMA)
 - [Japan Association of Radio Industries and Businesses (ARIB)
 - [United States Federal Communications Commission (FCC)
 
-#### 🟩 ITU-D: International Telecommunication Union `Development` Sector
+### 🟩 ITU-D: International Telecommunication Union `Development` Sector
 
 - [ITU- D - Development Sector](https://en.wikipedia.org/wiki/ITU-D) _`wiki`_
 
-#### 🟩 ITU-T: International Telecommunication Union `Standardization` Sector
+### 🟩 ITU-T: International Telecommunication Union `Standardization` Sector
 
 - [ITU- T - Standardization Sector](https://en.wikipedia.org/wiki/ITU-T) _`wiki`_
 
----
-
-### 🌎🤝 ISOC: Internet Society
+## 🌎🤝 `ISOC`: Internet Society
 - [Internet Standards Organizations (ISOC, IAB, IESG, IETF, IRSG, IRTF)](http://www.tcpipguide.com/free/t_InternetStandardsOrganizationsISOCIABIESGIETFIRSGI.htm)
 - [Internet Society (ISOC)](https://www.internetsociety.org/)
 - [Internet Society (ISOC) @ Wiki](https://es.wikipedia.org/wiki/Internet_Society)
 
-#### 🟩 ISOC Hierarchy
+#### 🟩 ISOC: `Hierarchy`
 - [ISOC Hierarchy](https://user-images.githubusercontent.com/94720207/179373677-22b265ed-3217-4f70-88c2-4701ce3e7380.png)
     - [**IAB** - Internet Architecture Board]()
     - [**ICANN** - Internet Corporation for Assigned Names and Numbers ]()
