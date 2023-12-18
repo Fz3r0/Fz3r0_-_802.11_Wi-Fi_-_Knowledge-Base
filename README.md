@@ -1605,9 +1605,13 @@ _The MCS table evaluates the quality of the RF environment- the RF media that de
 - [Índices MCS @ Inside Wireless en Español](https://www.youtube.com/watch?v=iVBZojHMYAM) _`video`_
 - [MCS Index @ Inside Wireless](https://www.youtube.com/watch?v=f6zesWNDGXc) _`video`_
 
-## PCAP Troubleshooting Collection
+## 🦈🪤🕵️‍♂️ PCAP Troubleshooting Collection
 - [`WPA2 password fail` :: Wireless] 4-way-Hadshake never pass step 3
 - [`EAP password fail` :: Wireless + Wired](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/102465fb-2873-46a5-848d-e7910c9fbe40) Wired capture shows the "reject" packet
+- [`EAP silent disconnect` :: Wireless + Wired](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/ee08f06b-1359-4fa6-b266-e326447f7a4f) No fails, only ignored packets & no responses || AP/WLC does not belong to Authenticator list
+
+
+
 
 
 
