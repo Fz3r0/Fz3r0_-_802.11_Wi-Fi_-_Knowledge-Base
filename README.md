@@ -443,52 +443,44 @@ _RFC documents contain technical specifications and organizational notes for the
 - [RFC List @ RFC Editor](https://www.rfc-editor.org/rfc/) _`RFC Editor`_
 
 ### 🎖️📡 IETF RFCs: `RFCs`::`IEEE 802.11 / Wireless Related` 
-- [`1981`: `RFC 791` :: Internet Protocol, Sept. 1981.7]()
-- [`1982`: `RFC 826` :: An Ethernet Address Resolution Protocol]()
-- [`1987`: `RFC 1035` :: Domain Names — Implementation and Specification]()
-- [`1988`: `RFC 1042` :: A Standard for the Transmission of IP Datagrams over IEEE 802 ® Networks,]()
-- [`1992`: `RFC 1321` :: The MD5 Message-Digest Algorithm, Apr. 1992 (status: informational).]()
-- [`1997`: `RFC 2104` :: HMAC: Keyed-Hashing for Message Authentication (status: informational).]()
-- [`1997`: `RFC 2131` :: Dynamic Host Configuration Protocol]()
-- [`1998`: `RFC 2409` :: The Internet Key Exchange (IKE) (status: Standards Track)]()
-- [`2002`: `RFC 3279` :: Algorithms and Identifiers for the Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile]()
-- [`2002`: `RFC 3394` :: Advanced Encryption Standard (AES) Key Wrap Algorithm (status: informational)]()
-- [`2003`: `RFC 3447` :: Public-Key Cryptography Standards (PKCS) #1: RSA Cryptography Specification Version 2.1]()
-- [`2003`: `RFC 3490` :: Internationalizing Domain Names in Applications (IDNA)]()
-- [`2003`: `RFC 3315` :: Dynamic Host Configuration Protocol for IPv6 (DHCPv6)]()
-- [`2003`: `RFC 3610` :: Counter with CBC-MAC (CCM)]()
-- [`2004`: `RFC 3748` :: Extensible Authentication Protocol (EAP)]()
-- [`2005`: `RFC 3986` :: Uniform Resource Identifier (URI): Generic Syntax]()
-- [`2005`: `RFC 4017` :: Extensible Authentication Protocol (EAP) Method Requirements for Wireless LANs]()
-- [`2005`: `RFC 4119` :: A Presence-based GEOPRIV Location Object Format]()
-- [`2005`: `RFC 4282` :: The Network Access Identifier]()
-- [`2006`: `RFC 4776` :: Dynamic Host Configuration Protocol (DHCPv4 and DHCPv6) Option for Civic Addresses Configuration Information]()
-IETF RFC 4861, Neighbor Discovery for IP version 6 (IPv6), Narten, T., E. Nordmark, W. Simpson, and
-H. Soliman, Sept. 2007.
-IETF RFC 4862, IPv6 Stateless Address Autoconfiguration, Sept. 2007.
-IETF RFC 5116, An Interface and Algorithms for Authenticated Encryption, Jan. 2008.
-IETF RFC 5216, The EAP-TLS Authentication Protocol, Simon, D., B. Aboba, and R. Hurst, Mar. 2008.
-IETF RFC 5227, IPv4 Address Conflict Detection, Cheshire, S., July 2008.
-IETF RFC 5280, Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL)
-Profile, May 2008.
-IETF RFC 5295, Specification for the Derivation of Root Keys from an Extended Master Session Key
-(EMSK), Aug. 2008.
-IETF RFC 5297, Synthetic Initialization Vector (SIV) Authenticated Encryption Using the Advanced
-Encryption Standard (AES), Harkins, D., Oct. 2008 (status: informational).
-IETF RFC 5424, The Syslog Protocol, Gerhards, R., Mar. 2009.
-IETF RFC 5480, Elliptic Curve Cryptography Subject Public Key Information, Mar. 2009.
-IETF RFC 5869, HMAC-based Extract and Expand Key Derivation Function, Krawczyk, H., and
-P. Eronen, May 2010.
-IETF RFC 5985, HTTP-Enabled Location Delivery (HELD), M. Barnes (Ed.), Sept. 2010.
-IETF RFC 6225, Dynamic Host Configuration Protocol Options for Coordinate-Based Location
-Configuration Information, Polk, J., M. Linsner, M. Thomson, and B. Aboba, July 2011.
-IETF RFC 6335, Internet Assigned Numbers Authority (IANA) Procedures for the Management of the
-Service Name and Transport Protocol Port Number Registry, Aug. 2011.
-IETF RFC 6696, EAP Extensions for the EAP Re-authentication Protocol (ERP), July 2012.
-IETF RFC 6942, Diameter Support for the EAP Re-authentication Protocol (ERP), May 2013.
-IETF RFC 8200, Internet Protocol, Version 6 (IPv6) Specification, Deering, S., and R. Hinden, 2017.
-IETF RFC 8265, Preparation, Enforcement, and Comparison of Internationalized Strings Representing
-Usernames and Passwords, Saint-Andre, P., and A. Melnikov, 2017.
+- [`1981`: `RFC 791` :: Internet Protocol, Sept. 1981.7](https://www.rfc-editor.org/rfc/rfc791.txt)
+- [`1982`: `RFC 826` :: An Ethernet Address Resolution Protocol](https://www.rfc-editor.org/rfc/rfc826.txt)
+- [`1987`: `RFC 1035` :: Domain Names — Implementation and Specification](https://www.rfc-editor.org/rfc/rfc1035.txt)
+- [`1988`: `RFC 1042` :: A Standard for the Transmission of IP Datagrams over IEEE 802 Networks](https://www.rfc-editor.org/rfc/rfc1042.txt)
+- [`1992`: `RFC 1321` :: The MD5 Message-Digest Algorithm, Apr. 1992 (status: informational)](https://www.rfc-editor.org/rfc/rfc1321.txt)
+- [`1997`: `RFC 2104` :: HMAC: Keyed-Hashing for Message Authentication (status: informational)](https://www.rfc-editor.org/rfc/rfc2104.txt)
+- [`1997`: `RFC 2131` :: Dynamic Host Configuration Protocol](https://www.rfc-editor.org/rfc/rfc2131.txt)
+- [`1998`: `RFC 2409` :: The Internet Key Exchange (IKE) (status: Standards Track)](https://www.rfc-editor.org/rfc/rfc2409.txt)
+- [`2002`: `RFC 3279` :: Algorithms and Identifiers for the Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile](https://www.rfc-editor.org/rfc/rfc3279.txt)
+- [`2002`: `RFC 3394` :: Advanced Encryption Standard (AES) Key Wrap Algorithm (status: informational)](https://www.rfc-editor.org/rfc/rfc3394.txt)
+- [`2003`: `RFC 3447` :: Public-Key Cryptography Standards (PKCS) #1: RSA Cryptography Specification Version 2.1](https://www.rfc-editor.org/rfc/rfc3447.txt)
+- [`2003`: `RFC 3490` :: Internationalizing Domain Names in Applications (IDNA)](https://www.rfc-editor.org/rfc/rfc3490.txt)
+- [`2003`: `RFC 3315` :: Dynamic Host Configuration Protocol for IPv6 (DHCPv6)](https://www.rfc-editor.org/rfc/rfc3315.txt)
+- [`2003`: `RFC 3610` :: Counter with CBC-MAC (CCM)](https://www.rfc-editor.org/rfc/rfc3610.txt)
+- [`2004`: `RFC 3748` :: Extensible Authentication Protocol (EAP)](https://www.rfc-editor.org/rfc/rfc3748.txt)
+- [`2005`: `RFC 3986` :: Uniform Resource Identifier (URI): Generic Syntax](https://www.rfc-editor.org/rfc/rfc3986.txt)
+- [`2005`: `RFC 4017` :: Extensible Authentication Protocol (EAP) Method Requirements for Wireless LANs](https://www.rfc-editor.org/rfc/rfc4017.txt)
+- [`2005`: `RFC 4119` :: A Presence-based GEOPRIV Location Object Format](https://www.rfc-editor.org/rfc/rfc4119.txt)
+- [`2005`: `RFC 4282` :: The Network Access Identifier](https://www.rfc-editor.org/rfc/rfc4282.txt)
+- [`2006`: `RFC 4776` :: Dynamic Host Configuration Protocol (DHCPv4 and DHCPv6) Option for Civic Addresses Configuration Information](https://www.rfc-editor.org/rfc/rfc4776.txt)
+- [`2007`: `RFC 4861` :: Neighbor Discovery for IP version 6 (IPv6)](https://www.rfc-editor.org/rfc/rfc4861.txt)
+- [`2007`: `RFC 4862` :: IPv6 Stateless Address Autoconfiguration](https://www.rfc-editor.org/rfc/rfc4862.txt)
+- [`2008`: `RFC 5116` :: An Interface and Algorithms for Authenticated Encryption](https://www.rfc-editor.org/rfc/rfc5116.txt)
+- [`2008`: `RFC 5216` :: The EAP-TLS Authentication Protocol](https://www.rfc-editor.org/rfc/rfc5216.txt)
+- [`2008`: `RFC 5280` :: Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile](https://www.rfc-editor.org/rfc/rfc5280.txt)
+- [`2008`: `RFC 5227` :: IPv4 Address Conflict Detection](https://www.rfc-editor.org/rfc/rfc5227.txt)
+- [`2008`: `RFC 5295` :: Specification for the Derivation of Root Keys from an Extended Master Session Key (EMSK)](https://www.rfc-editor.org/rfc/rfc5295.txt)
+- [`2008`: `RFC 5297` :: Synthetic Initialization Vector (SIV) Authenticated Encryption Using the Advanced Encryption Standard (AES)](https://www.rfc-editor.org/rfc/rfc5297.txt)
+- [`2009`: `RFC 5424` :: The Syslog Protocol](https://www.rfc-editor.org/rfc/rfc5424.txt)
+- [`2009`: `RFC 5480` :: Elliptic Curve Cryptography Subject Public Key Information](https://www.rfc-editor.org/rfc/rfc5480.txt)
+- [`2010`: `RFC 5869` :: HMAC-based Extract and Expand Key Derivation Function](https://www.rfc-editor.org/rfc/rfc5869.txt)
+- [`2010`: `RFC 5985` :: HTTP-Enabled Location Delivery (HELD)](https://www.rfc-editor.org/rfc/rfc5985.txt)
+- [`2011`: `RFC 6335` :: Internet Assigned Numbers Authority (IANA) Procedures for the Management of the Service Name and Transport Protocol Port Number Registry](https://www.rfc-editor.org/rfc/rfc6335.txt)
+- [`2011`: `RFC 6225` :: Dynamic Host Configuration Protocol Options for Coordinate-Based Location Configuration Information](https://www.rfc-editor.org/rfc/rfc6225.txt)
+- [`2012`: `RFC 6696` :: EAP Extensions for the EAP Re-authentication Protocol (ERP)](https://www.rfc-editor.org/rfc/rfc6696.txt)
+- [`2013`: `RFC 6942` :: Diameter Support for the EAP Re-authentication Protocol (ERP)](https://www.rfc-editor.org/rfc/rfc6942.txt)
+- [`2017`: `RFC 8200` :: Internet Protocol, Version 6 (IPv6) Specification](https://www.rfc-editor.org/rfc/rfc8200.txt)
+- [`2017`: `RFC 8265` :: Preparation, Enforcement, and Comparison of Internationalized Strings Representing Usernames and Passwords](https://www.rfc-editor.org/rfc/rfc8265.txt)
 
 <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
