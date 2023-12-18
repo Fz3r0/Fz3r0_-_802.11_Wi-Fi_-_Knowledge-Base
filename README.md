@@ -1045,8 +1045,6 @@ _Any STA or AP can be in some "state" within this state machine at any given tim
 - [**`Active Scanning`**](https://community.nxp.com/t5/Wireless-Connectivity-Knowledge/802-11-Wi-Fi-Connection-Disconnection-process/ta-p/1121148) `Client/STA` **init effort** | **STA:**`ProbeReq` (All CHs) > AP answer `PropeRes` > STA answer Directed `Probe` > `AuthReq`
 - [**`Passive Scanning`**](https://community.nxp.com/t5/Wireless-Connectivity-Knowledge/802-11-Wi-Fi-Connection-Disconnection-process/ta-p/1121148) `AP` **init effort** | **AP:**`Beacon` @ `BSA` > STA answer Directed `Probe` > `AuthReq`
 
-
-
 ## 🪪🛡️🔐 IEEE 802.11: `Authentication`
 _These are the Authentication Methods a STA can use to access to a BSS_
 
@@ -1057,15 +1055,24 @@ _These are the Authentication Methods a STA can use to access to a BSS_
     - [🔄 `FT - Fast Transition` :: `2`]() `802.11r` Authenticates using a key derived from previous authentication
     - [🖧 `SAE`:`Simultaneous Authentication of Equals` :: `3`]() `802.11s-mesh` Diffie-Hellman / Mesh
 
-### 🔓🪪 Open System Authentication: `Authentication` :: `State 1` ➡️ `State 2`
-_Open System authentication should never fail | Init method of authentication used by most modern WLANs | RSN like 802.1X or PSK is performed later (state 3 > 4)_ <br>
-**Exchange**: `AP`:`Beacon` _(Optional)_ >> `STA`:`Probe Req` >> `AP`:`Probe Res` >> `STA`:`ACK` >> `STA`:`Auth Req` >> `AP`:`ACK` >> `AP`:`Auth Res` >> `STA`:`ACK` >> State 2 OK!
-- [`Authentication` :: Frame Exchange :: `Open System``](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/bb52ef07-7502-435c-844d-9b32f7f7b43a) _PCAP decode_
+## 🛡️🔓🪪 Authentication Methods: `Open System Authentication`
+_Open System authentication should never fail || Init method of authentication used by most modern WLANs || RSN like 802.1X or PSK is performed later (state 3 > 4) || There is no "authentication response frame", it's just an "autentication frame" with another status code value || Association process is similar to authentication, in this caso we do have "authentication request" & "authentication response" (both ACKed) ||_
+### 🔓🪪 Open System Authentication: `Authentication` :: From:`State 1` ➡️ To:`State 2`
+**Exchange**: `AP`:`Beacon` _(Optional)_ >> `STA`:`Probe Req` >> `AP`:`Probe Res` >> `STA`:`ACK` >> `STA`:`Auth Req`:`Alg=0 SeqNum=1` >> `AP`:`ACK` >> `AP`:`Auth Res`:`Alg=0 SeqNum=2` >> `STA`:`ACK` >> State 2 OK!
+- [`Authentication` :: Frame Exchange :: `Open System`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/bb52ef07-7502-435c-844d-9b32f7f7b43a) _`frame exchange`_
+- [`Authentication` :: Frame Decode @ Nayanajith](https://mrncciew.com/2014/10/10/802-11-mgmt-authentication-frame/) _`frame decode`_
 
-### 🔓🪪 Open System Authentication: `Association` :: `State 1` ➡️ `State 2`
-_Open System authentication should never fail | Init method of authentication used by most modern WLANs | RSN like 802.1X or PSK is performed later (state 3 > 4)_ <br>
-**Exchange**: (After authentication State 2) > 
-- [`Association` :: Frame Exchange :: `Open System`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/64b10b5f-ba1a-4885-9141-c94e317f9ac9) _PCAP decode_
+### 🔓🪪 Open System Authentication: `Association` :: From:`State 2` ➡️ To:`State 3`
+**Exchange**: (After authentication State 2) >> 
+- [`Association Req` & `Association Res` :: Frame Exchange :: `Open System`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/64b10b5f-ba1a-4885-9141-c94e317f9ac9) _`frame exchange`_
+- [`Association Req` & `Association Res` :: Frame Decode @ Nayanajith](https://mrncciew.com/2014/10/28/802-11-mgmt-association-reqresponse/) _`frame decode`_
+- [`Association Res` :: `Status Codes` :: Responses]() _`0=successful`_
+
+### 🔓🪪 Open System Authentication: `Deauthentication` & `Disassociation` :: From:`ANY` ➡️ To:`State 1`
+**Exchange**: (After State 2 & 3 [or 4 using RSN]) >> 
+- [`Association Req` & `Association Res` :: Frame Exchange :: `Open System`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/64b10b5f-ba1a-4885-9141-c94e317f9ac9) _`frame exchange`_
+- [`Association Req` & `Association Res` :: Frame Decode @ Nayanajith](https://mrncciew.com/2014/10/28/802-11-mgmt-association-reqresponse/) _`frame decode`_
+- [`Association Res` :: `Status Codes` :: Responses]() _`0=successful`_
 
 
 
@@ -1356,6 +1363,7 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 ---
 
 ### 🏘️📡🖧 DSS (Distribution System Service)
+_In High Scale or Enterprise WLAN Networking is not recomended to use IBSS Independent WLANs (like Ad-Hoc / Peer-to-Peer) because in this kind of enviorments can cost a lot of problems of RSSI & interference, the best practice is only allow Infraestructure (BSS or ESS) & make a policy in the enterprise stating that IBSS are not allowed || When analyzing, From DS & To DS bits can show us which kind of networks sorround us._ 
 - [Wireless LAN 802.11 Service Sets @ Wi-Fi Professionals](https://www.wifi-professionals.com/2019/03/802-11-topologies-aka-service-sets)
 - [8 Components of a 802.11 Wireless Service Set](https://www.cbtnuggets.com/blog/technology/networking/8-components-of-a-802-11-wireless-service-set)
 - [WLAN Basic Architecture @ CWNP](https://www.youtube.com/watch?v=QLqgmMFCKnU) _`video`_ <br><br>
