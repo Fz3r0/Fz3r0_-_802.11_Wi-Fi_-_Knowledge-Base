@@ -506,39 +506,39 @@ _Wi-Fi CERTIFIED™ is an internationally recognized seal of approval for produc
 - [Wi-Fi Certified :: Wi-Fi Alliance Certifications](https://www.wi-fi.org/certification) _`official`_
 - [Wi-Fi Certification programs](https://en.wikipedia.org/wiki/Wi-Fi_Alliance#Certification_programs) _`list`_
 
-#### ✅ Wi-Fi Certification: `Connectivity`
-- Wi-Fi Certified b/g/n – certifies equipment to interoperate based on the HR/DSSS, ERP and HT PHYs in the 2.4 GHz frequency band.
-- Wi-Fi Certified a/n/ac – certifies equipment to interoperate based on the OFDM, HT and VHT PHYs in the 5 GHz frequency bands.
-- Wi-Fi Direct® – allows for IBSS devices to share printers, files and displays.
-- WiGig - 60 GHz WLAN connection. The first version IEEE 802.11ad | newer version IEEE 802.11ay (802.11ad/ay)
-- Wi-Fi EasyMesh - based on its Multi-Access Point specification for creating Wi-Fi meshes from products by different vendors. (IEEE 1905.1)
-- Wi-Fi HaLow - standard for low-power wide-area (LPWA) connection standard using sub-1 GHz spectrum for IoT devices (802.11ah)
+### ✅ Wi-Fi Certification: `Connectivity`
+- [Wi-Fi Certified b/g/n]() certifies equipment to interoperate based on the HR/DSSS, ERP and HT PHYs in the 2.4 GHz frequency band.
+- [Wi-Fi Certified a/n/ac]() certifies equipment to interoperate based on the OFDM, HT and VHT PHYs in the 5 GHz frequency bands.
+- [Wi-Fi Direct]() allows for IBSS devices to share printers, files and displays.
+- [WiGig]() 60 GHz WLAN connection. The first version IEEE 802.11ad | newer version IEEE 802.11ay (802.11ad/ay)
+- [Wi-Fi EasyMesh]() based on its Multi-Access Point specification for creating Wi-Fi meshes from products by different vendors. (IEEE 1905.1)
+- [Wi-Fi HaLow]() standard for low-power wide-area (LPWA) connection standard using sub-1 GHz spectrum for IoT devices (802.11ah)
 
-#### ✅ Wi-Fi Certification: `Security`
-- WPA2™ – certifies equipment to interoperate with systems supporting 802.11i security enhancements including AES and CCMP. (802.11i)
-- WPA2 with Protected Management Frames – certifies equipment to interoperate with systems using management frame protection. (802.11i)
+### ✅ Wi-Fi Certification: `Security`
+- [WPA2]() certifies equipment to interoperate with systems supporting 802.11i security enhancements including AES and CCMP. (802.11i)
+- [WPA2 with Protected Management Frames]() certifies equipment to interoperate with systems using management frame protection. (802.11i)
 
-#### ✅ Wi-Fi Certification: `Access`
-- Passpoint – a certification that allows SIM and non-SIM devices to find, choose and connect to private Wi-Fi networks without involving user decisions. (IEEE 802.11u)
-- Wi-Fi Protected Setup (WPS) – certifies equipment to work with PIN or push-button security solutions.
-- IBSS Protected Setup (WPS) – provides WPS security do ad-hoc wireless networks.
-- Easy Connect -  protocol that would enable easily establishing connections via QR code
-- Agile Multiband -  Devices can automatically connect and maintain connection in the most suitable way (802.11k + 802.11v + 802.11u + 802.11r)
-- Wi-Fi Vantage - For operators to maintain and manage quality Wi-Fi connections in high usage environment.
+### ✅ Wi-Fi Certification: `Access`
+- [Passpoint]() a certification that allows SIM and non-SIM devices to find, choose and connect to private Wi-Fi networks without involving user decisions. (IEEE 802.11u)
+- [Wi-Fi Protected Setup (WPS)]() certifies equipment to work with PIN or push-button security solutions.
+- [IBSS Protected Setup (WPS)]() provides WPS security do ad-hoc wireless networks.
+- [Easy Connect]() protocol that would enable easily establishing connections via QR code
+- [Agile Multiband]() Devices can automatically connect and maintain connection in the most suitable way (802.11k + 802.11v + 802.11u + 802.11r)
+- [Wi-Fi Vantage]() For operators to maintain and manage quality Wi-Fi connections in high usage environment.
   
-#### ✅ Wi-Fi Certification: `Applications` & `Services`
-- Miracast® - certification that provides for wireless display services between devices.
-- Voice-Personal – certifies the features and performance of products to provide sufficient quality of communications for VoIP.
-- Voice-Enterprise – certifies the features and performance of products to provide sufficient quality of communications for VoIP including enterprise features such as roaming.
-- Wi-Fi Aware - Proximity Marketing: enables device users, when in the range of a particular access point or another compatible device, to receive notifications of applications or services available in the proximity
-- Wi-Fi Location - type of Wi-Fi positioning system, and the certification could help providing accuracy to in-door positioning
+### ✅ Wi-Fi Certification: `Applications` & `Services`
+- [Miracast]() certification that provides for wireless display services between devices.
+- [Voice-Personal]() certifies the features and performance of products to provide sufficient quality of communications for VoIP.
+- [Voice-Enterprise]() certifies the features and performance of products to provide sufficient quality of communications for VoIP including enterprise features such as roaming.
+- [Wi-Fi Aware]() Proximity Marketing: enables device users, when in the range of a particular access point or another compatible device, to receive notifications of applications or services available in the proximity
+- [Wi-Fi Location]() type of Wi-Fi positioning system, and the certification could help providing accuracy to in-door positioning
 
-#### ✅ Wi-Fi Certification: `Optimization`
-- Tunneled Direct Link Setup (TDLS) – allows for secure, direct links for data transfer. (802.11z)
-- Wi-Fi Multimedia™ (WMM®) – supports multimedia capabilities on Wi-Fi networks such that QoS is implemented based on the WMM Technical Specification.
-- WMM-Admission Control – provides improved bandwidth management features for efficient delivery of voice and other high priority traffic on Wi-Fi networks. (802.11e)
-- WMM-Power Save – certifies equipment to implement proper power save features per the 802.11 specification. (802.11e)
-- Wi-Fi Home Design - Set of guidelines released by Wi-Fi alliance for inclusion of wireless network in home design
+### ✅ Wi-Fi Certification: `Optimization`
+- [Tunneled Direct Link Setup (TDLS)]() allows for secure, direct links for data transfer. (802.11z)
+- [Wi-Fi Multimedia (WMM)]() Supports multimedia capabilities on Wi-Fi networks such that QoS is implemented based on the WMM Technical Specification.
+- [WMM-Admission Control]() provides improved bandwidth management features for efficient delivery of voice and other high priority traffic on Wi-Fi networks. (802.11e)
+- [WMM-Power Save]() certifies equipment to implement proper power save features per the 802.11 specification. (802.11e)
+- [Wi-Fi Home Design]() Set of guidelines released by Wi-Fi alliance for inclusion of wireless network in home design
 
 
 
