@@ -814,20 +814,12 @@ _En Wireless 802.11 los layers más importantes son los 1 & 2, pero también son
 
 # 🪆🛜⚙️ 802.11 Layer 1: Physical (PHY) :: `Spectrum`
 _The PHY services provided to the MAC. The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. 
-Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx using management info | B) Characteristics & Method to Tx & Rx data through WM (Wireless Medium). The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. _
-
-## 🔝📡🗂️ Radiotap Header / PPI (Per-Packet Information) / Pseudo-Header
-_Data that is NOT present in a 802.11 MAC-frame, but is intepreted coming from the PHY-Layer 1 (spectrum) derived from the PLCP header. Additional information (Meta-Information) that is added to each 802.11 frame when capturing frames with an analysis application interpreted/calculated because the PHY layer 1 spectrum throught drivers/adapters. These are not part of the standard 802.11 frame format, but are additional information added at the time of capture to provide supplementary data about the frames captured_
-- [Radiotap.org](https://www.radiotap.org/fields/defined)
-- [Radiotap.org :: Github](https://github.com/radiotap)
-- [PPI: PPI (Per-Packet Information) @ Wireshark](https://wiki.wireshark.org/PPI#:~:text=PPI%20(Per%2DPacket%20Information)&text=Each%20PPI%20packet%20header%20is,field%20headers%20are%20little%2Dendian.)
-- [Radiotap Headers @ Wi-Fi Nigel](https://wifinigel.blogspot.com/2013/11/what-are-radiotap-headers.html)
+Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx using management info | B) Characteristics & Method to Tx & Rx data through WM (Wireless Medium). The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs._
 
 ## 1️⃣↕️🛜 802.11 PHY: `Sub-Layers`
-_The 802.11 series of physical layer specifications includes a variety of options that govern the transmission and reception of frames. There are several 802.11 series PHYs, such as FHSS, DSSS, HR-DSSS, ERPOFDM, DSSS-OFDM, and ERP-PBCC || Each PHY layer has a particular PLCP, which defines framing, and PMD that defines signal modulation._ <br>
+_The 802.11 series of physical layer specifications includes a variety of options that govern the transmission and reception of frames. There are several 802.11 series PHYs, such as FHSS, DSSS, HR-DSSS, ERPOFDM, DSSS-OFDM, and ERP-PBCC. Each PHY layer has a particular PLCP, which defines framing, and PMD that defines signal modulation._ <br>
 **Physical Layer 1 Upper = PLCP** <br>
-**Physical Layer 1 Lower = PMD** <br>
-_(Datalink Layer 2 = LLC & MAC)_
+**Physical Layer 1 Lower = PMD** 
 - [802.11 PHY Layers @ CWAP Techtarget](https://media.techtarget.com/searchMobileComputing/downloads/CWAP_ch8.pdf) _`doc`_
 - [802.11 Layer 1 & Layer 2: Sub-Layers - `PLCP`(**upper**) & `PMD`(**lower**)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289) _`diagram`
 
@@ -838,7 +830,6 @@ _Also Known As: Physical Layer Convergence Protocol (depends the 802.11 version)
 - [PLCP: Physical Layer Convergence Procedure @ Telecom Trainer](https://www.telecomtrainer.com/plcp-physical-layer-convergence-procedure/#:~:text=The%20Physical%20Layer%20Convergence%20Procedure,access%20control%20(MAC)%20layer.)
 - [Where does the PLCP sublayer layer actually reside?](https://www.youtube.com/watch?v=thcg9Dn2QL0) _`video`_
 
-
 ---
 
 ### ⬇️↕️🛜 `PMD`: Physical Medium Dependant :: Sublayer > `Lower`
@@ -847,7 +838,19 @@ _PMDs further help to define the physical layer of computer network protocols. P
 - [PMD: Physical medium dependent](https://en.wikipedia.org/wiki/Physical_medium_dependent) _`Wiki`_
 - [PMD layer @ keysight](https://rfmw.em.keysight.com/wireless/helpfiles/n7617a/pmd_layer.htm) _`Diagram`_
 
+## 📡⚙️📲 802.11 PHY Layer 1: `Operations`
+_The general operation of the various Physical layers is very similar. To perform PLCP functions, the 802.11 standard specifies the use of state
+machines. Each state machine performs one of the following 3 functions:_
+1. [**`CS/CCA`**: Carrier Sense/Clear Channel Assessment](https://media.techtarget.com/searchMobileComputing/downloads/CWAP_ch8.pdf) 217 | check state of medium | 2 purposes: CS detect start of signal receibable : CCA determine channel clear prior to transmitting 
+2. [**`Tx`**: Transmit](https://media.techtarget.com/searchMobileComputing/downloads/CWAP_ch8.pdf) 217 | Used to send individual octets of the data frame after CSA/CA 
+3. [**`Rx`**: Receive](https://media.techtarget.com/searchMobileComputing/downloads/CWAP_ch8.pdf) 217 | Used to receive individual octets of the data frame
 
+## 🔝📡🗂️ Radiotap Header / PPI (Per-Packet Information) / Pseudo-Header
+_Data that is NOT present in a 802.11 MAC-frame, but is intepreted coming from the PHY-Layer 1 (spectrum) derived from the PLCP header. Additional information (Meta-Information) that is added to each 802.11 frame when capturing frames with an analysis application interpreted/calculated because the PHY layer 1 spectrum throught drivers/adapters. These are not part of the standard 802.11 frame format, but are additional information added at the time of capture to provide supplementary data about the frames captured_
+- [Radiotap.org](https://www.radiotap.org/fields/defined)
+- [Radiotap.org :: Github](https://github.com/radiotap)
+- [PPI: PPI (Per-Packet Information) @ Wireshark](https://wiki.wireshark.org/PPI#:~:text=PPI%20(Per%2DPacket%20Information)&text=Each%20PPI%20packet%20header%20is,field%20headers%20are%20little%2Dendian.)
+- [Radiotap Headers @ Wi-Fi Nigel](https://wifinigel.blogspot.com/2013/11/what-are-radiotap-headers.html)
 
 
 
