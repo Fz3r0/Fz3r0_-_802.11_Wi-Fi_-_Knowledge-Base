@@ -824,7 +824,10 @@ _Data that is NOT present in a 802.11 MAC-frame, but is intepreted coming from t
 - [Radiotap Headers @ Wi-Fi Nigel](https://wifinigel.blogspot.com/2013/11/what-are-radiotap-headers.html)
 
 ## 1️⃣↕️🛜 802.11 PHY: `Sub-Layers`
-_Physical = PLCP & PMD (Datalink = LLC & MAC)_
+_The 802.11 series of physical layer specifications includes a variety of options that govern the transmission and reception of frames. There are several 802.11 series PHYs, such as FHSS, DSSS, HR-DSSS, ERPOFDM, DSSS-OFDM, and ERP-PBCC || Each PHY layer has a particular PLCP, which defines framing, and PMD that defines signal modulation._ <br>
+**Physical Layer 1 Upper = PLCP** <br>
+**Physical Layer 1 Lower = PMD** <br>
+_(Datalink Layer 2 = LLC & MAC)_
 - [802.11 PHY Layers @ CWAP Techtarget](https://media.techtarget.com/searchMobileComputing/downloads/CWAP_ch8.pdf) _`doc`_
 - [802.11 Layer 1 & Layer 2: Sub-Layers - `PLCP`(**upper**) & `PMD`(**lower**)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289) _`diagram`
 
