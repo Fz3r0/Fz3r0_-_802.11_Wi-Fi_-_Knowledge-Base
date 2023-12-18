@@ -823,16 +823,12 @@ _The 802.11 series of physical layer specifications includes a variety of option
 - [802.11 PHY Layers @ CWAP Techtarget](https://media.techtarget.com/searchMobileComputing/downloads/CWAP_ch8.pdf) _`doc`_
 - [802.11 Layer 1 & Layer 2: Sub-Layers - `PLCP`(**upper**) & `PMD`(**lower**)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289) _`diagram`
 
----
-
-### ⬆️↕️🛜 `PLCP`: Physical Layer Convergence Procedure :: Sublayer > `Upper`
+### ⬆️ `PLCP`: Physical Layer Convergence Procedure :: Sublayer > `Upper`
 _Also Known As: Physical Layer Convergence Protocol (depends the 802.11 version). Acts as a bridge between MAC & PMD Sublayer | When Tx = Takes frames from MAC & adds extra information to the bits (PHY Preamble & Header <pre-header|MAC|>) | When Rx = Strip off the PHY Preamble and Header (That's why this data is not seen by protocol analyzers) | This Rx & Tx procedure (adding preamble & header) is called "MAC Framing" | The MAC layer communicates with the Physical Layer Convergence Protocol (PLCP) sublayer via primitives (a set of “instructive commands” or “fundamental instructions”) through a Service Access Point (SAP). PLCP is handled by the NIC or Wi-Fi adapter implementation, not the OS, wether it's done: hardware, firmware / microcode, driver running on host, etc._
 - [PLCP: Physical Layer Convergence Procedure @ Telecom Trainer](https://www.telecomtrainer.com/plcp-physical-layer-convergence-procedure/#:~:text=The%20Physical%20Layer%20Convergence%20Procedure,access%20control%20(MAC)%20layer.)
 - [Where does the PLCP sublayer layer actually reside?](https://www.youtube.com/watch?v=thcg9Dn2QL0) _`video`_
 
----
-
-### ⬇️↕️🛜 `PMD`: Physical Medium Dependant :: Sublayer > `Lower`
+### ⬇️ `PMD`: Physical Medium Dependant :: Sublayer > `Lower`
 _PMDs further help to define the physical layer of computer network protocols. PMDs define the details of transmission and reception of individual bits (1/0s) on a physical medium, it define the modulation used in the transmission (BPSK, QPSK, QAM256, etc), for example, starting with the minimum data rate available. In Wireless 802.11 scenario, PMD Transmits & Recieve data over Wireless Medium. Converts 1/0 provided by the PLCP into RF signal. The PLCP and PMD sublayers communicate via primitives, through a SAP, to govern the transmission and reception functions._
 - [PMD: Physical Medium Dependent @ Telecom Trainer](https://www.telecomtrainer.com/pmd-physical-medium-dependent/) _`Full Info`_
 - [PMD: Physical medium dependent](https://en.wikipedia.org/wiki/Physical_medium_dependent) _`Wiki`_
