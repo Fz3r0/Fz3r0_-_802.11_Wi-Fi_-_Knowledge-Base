@@ -1659,18 +1659,18 @@ _Few tools are as useful to the IT professional as Wireshark, the go-to network 
 - [`Name Resolution` :: **Eth | Hosts | IPs | Manuf | Subnets | VLANs**](https://www.wireshark.org/docs/wsug_html_chunked/ChAppFilesConfigurationSection.html)
 - [`Tools Fenzy!!!` Wireshark & Networking Related Tools](https://wiki.wireshark.org/Tools#traffic-generators)
 
-### 🦈🖧 Wireshark: `Ethernet Capture Setup` / `Switched Media` 
+### 🦈🖧 Wireshark: `Ethernet Capture Setup` - `Switched Media` & `Shared Ethernet`
 - [`Shared Ethernet` Capture Setup :: Wireshark](https://wiki.wireshark.org/CaptureSetup/Ethernet) Hubs & Non-Switched Networks || No VLANs || Legacy
 - [`Switched Media Ethernet` Capture Setup :: Wireshark](https://wiki.wireshark.org/CaptureSetup/Ethernet) Routing & Switching || VLANs & Subnets
 - [`Monitor Port` versus `Network Tap`](https://wiki.wireshark.org/CaptureSetup/Ethernet#monitor-port-versus-network-tap) Some arguments for using a passive network tap rather than a monitor port
 - [`802.1q` :: `VLANs` Capture](https://wiki.wireshark.org/CaptureSetup/Ethernet#sniffing-802-1q-vlan-tags) Only captured with Network Taps & Supported Monitor Switches
 
-#### 🖧🪤 Switched Media Ethernet Capture
-- [Capture: `From the Machine/PC interested in`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-on-the-machine-you-re-interested-in) Easiest & common way to capture || **Unicast to Machine only** (Other traffic not available)
-- [Capture: `Ethernet Hub`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-an-ethernet-hub) Not optimal for network troubleshooting || Hubs are legacy || Affect Eth Duplex Traffic
-- [Capture: `Port Monitor/Mirror Mode AKA Span (Switch Integrated)`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-a-monitor-mode-of-the-switch) Easy to use if available on SW || Packet loss at high traffic rate
+#### 🖧🪤 Switched Media Ethernet: `Capture Options`
+- [Capture: `From the Machine/PC interested in`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-on-the-machine-you-re-interested-in) Easiest & common way to capture || No 802.1q captured || **Unicast to Machine ONLY** (Other traffic not available)
+- [Capture: `Port Monitor/Mirror Mode AKA Span (Switch Integrated)`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-a-monitor-mode-of-the-switch) Easy to use if available on SW || Capture 802.1q depending on vendor || Packet loss at high traffic rate
+- [Capture: `Network Tap`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-a-network-tap) All packets of Eth-FullDuplex captured including 802.1q || won't affect Ethernet traffic || Expensive but effective Tool
 - [Capture: `Machine-in-the-middle AKA In-Line`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-a-machine-in-the-middle) Dedicated machine (PC) configuration required || Only 2 PC's NICs are needed
-- [Capture: `Network Tap`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-a-network-tap) Expensive Tool || All packets of Eth-FullDuplex captured || won't affect Ethernet traffic
+- [Capture: `Ethernet Hub`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-an-ethernet-hub) Not optimal for network troubleshooting || Hubs are legacy || Affect Eth Duplex Traffic
 - [Capture: `MITM (Man-in.the-middle)`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-a-mitm-man-in-the-middle-software) ARP Poisoning || Network Attack || Confuses Switches
 - [Capture: `MAC Flooding`](https://wiki.wireshark.org/CaptureSetup/Ethernet#mac-flooding) ARP Poisoning || Network Attack || Confuses Switches
  
