@@ -435,6 +435,16 @@ _Regulates USA interstate and international communications by radio, television,
 - SCT: Secretaría de Comunicaciones y Transportes
 - DOF: Diario Oficial de la Federación
 
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ #                                                               #
+ #            Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base              #
+ #                                                               #
+ #          Internet, Networking & Wireless: Standards           #
+ #                                                               #
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+
 # 🌎🔧🫅 Internet, Networking & Wireless: `Standards` 
 _Networking organizations, certifications, standards (particularly IEEE 802.11) & wireless regulations used for wireless connectivity around the world_ 📡
 
@@ -1125,6 +1135,15 @@ _Open System authentication should never fail | Init method of authentication us
 
 
 
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ #                                                               #
+ #            Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base              #
+ #                                                               #
+ #         Radio Frequency (RF): Physics & Mathematics           #
+ #                                                               #
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
 
 # 🧬🧮📐 Radio Frequency (RF): `Physics` & `Mathematics`
 _A significant amount of math and physics is used in radio frequency (RF) for wireless communications. This field involves the design, development, and implementation of systems that operate with radio frequencies (RF), this needs the understanding and analysis of electromagnetic fields and wave propagation, principles of electromagnetic theory, wave propagation, and antenna theory to design and optimize RF systems._
