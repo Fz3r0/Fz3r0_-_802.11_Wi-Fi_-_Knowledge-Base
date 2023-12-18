@@ -1064,11 +1064,11 @@ _The initial purpose of the authentication frame is to validate the device type 
 - [`Authentication` :: Frame Decode @ Nayanajith](https://mrncciew.com/2014/10/10/802-11-mgmt-authentication-frame/) _`frame decode`_
 
 ### 🔓🪪 Open System Authentication: `Association` :: From:`State 2` ➡️ To:`State 3` 
-_When 802.11 authentication (not the RSN-WPA/WPA2 authentication) completes, a STA move to Association phase to the BSS. The purpose of this exchange is to join the cell & obtain an Association Identifier (AID)_ <br>
+_When 802.11 authentication (not the RSN-WPA/WPA2 authentication) completes, a STA move to Association phase to the BSS. The purpose of this exchange is to join the cell & obtain an Association Identifier (AID). If the network is "Open" (no WPA/2-PSK, 802.1X or other kind of RSN authentication) then this is the last state and the client completes it's connection, else, the client is ready to start with the RSN authentication process to reach the state 4 Fully Connected & Authenticated._ <br>
 **`Association` Exchange**: (After authentication State 2) >> `STA`:`Asso Req` >> `AP`:`ACK` >> `AP`:`Asso Res` >> `STA`:`ACK` >> **State 3 OK! `CLIENT ASSOCIATED`**
 - [`Association Req` & `Association Res` :: Frame Exchange :: `Open System`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/64b10b5f-ba1a-4885-9141-c94e317f9ac9) _`frame exchange`_
 - [`Association Req` & `Association Res` :: Frame Decode @ Nayanajith](https://mrncciew.com/2014/10/28/802-11-mgmt-association-reqresponse/) _`frame decode`_
-- [`Association Res` :: `Status Codes` :: Responses]() _`0=successful`_
+    - [`Association Res` :: `Status Codes` :: Responses]() _`0=successful`_
 
 ### 🔓🪪 Open System Authentication: `Deauthentication` & `Disassociation` :: From:`ANY` ➡️ To:`State 1`
 _**Station or AP can send a Deauthentication Frame** when all communications are terminated (When disassociated, still a station can be authenticated to the cell). || Once a station associated to an AP, **either side can terminate the association at any time by sending a disassociation frame**. It has the same frame format as deauthentication frame. A station can send a disassociation frame because it leave the current cell to roam to another cell. An AP could send disassociation frame because station try to use invalid parameters._ <br>
@@ -1077,11 +1077,23 @@ _**Station or AP can send a Deauthentication Frame** when all communications are
 - [`Deauthentication` :: Frame Exchange :: `Open System` :: Sent by any side AP<-->STA](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/1c1c8c86-769c-4954-8913-5eea07468401) _`frame exchange`_
 - [`Disassociation` :: Frame Exchange :: `Open System` :: Sent by any side AP<-->STA](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/1c1c8c86-769c-4954-8913-5eea07468401) _`frame exchange`_
 - [`Deauthentication` & `Disassociation` :: Frame Decode @ Nayanajith](https://mrncciew.com/2014/10/11/802-11-mgmt-deauth-disassociation-frames/) _`frame decode`_
-- [`Association Res` :: `Status Codes` :: Responses]() _`0=successful`_
+    - [`Deauthentication` :: `Status Codes` :: Responses]() 
+    - [`Disassociation` :: `Status Codes` :: Responses]() 
+
+## 🛡️🔐🏠 RSN Authentication: `WPA/WPA2`
+_Wireless security: WEP, WPA, WPA2 and WPA3 differences_
+- [Wireless security: WEP, WPA, WPA2 and WPA3 differences](https://www.techtarget.com/searchnetworking/feature/Wireless-encryption-basics-Understanding-WEP-WPA-and-WPA2)
+
+### 🔐 WPA/WPA2: `Analysis` & `Frame Exchanges`
+- [**`WPA-PSK (TKIP)`** :: PCAP Analysis](https://community.cisco.com/t5/wireless-mobility-knowledge-base/802-11-sniffer-capture-analysis-wpa-wpa2-with-psk-or-eap/ta-p/3116990)
+- [**`WPA2-PSK (AES/TKIP)`** :: PCAP Analysis](https://community.cisco.com/t5/wireless-mobility-knowledge-base/802-11-sniffer-capture-analysis-wpa-wpa2-with-psk-or-eap/ta-p/3116990)
+- [**`WPA/WPA2 Enterprise`** :: PCAP Analysis](https://community.cisco.com/t5/wireless-mobility-knowledge-base/802-11-sniffer-capture-analysis-wpa-wpa2-with-psk-or-eap/ta-p/3116990)
+- [**`WPA(TKIP)/WPA2(AES)`** with 802.1X (EAP-TLS) :: PCAP Analysis](https://community.cisco.com/t5/wireless-mobility-knowledge-base/802-11-sniffer-capture-analysis-wpa-wpa2-with-psk-or-eap/ta-p/3116990)
 
 
 
-
+## 🛡️🔐🏠 RSN Authentication: `WPA3-Enterprise`
+- [WPA3-Enterprise](https://mrncciew.com/2020/08/17/wpa3-enterprise/)
 
 
 
@@ -1089,7 +1101,7 @@ _**Station or AP can send a Deauthentication Frame** when all communications are
 
 
 ## 🤳🏾🔄📡 IEEE 802.11: `Re-Association` & `Roaming`
-
+- [CWSP- 802.11 Roaming Basics](https://mrncciew.com/2014/09/02/cwsp-802-11-roaming-basics/)
 
 
 
@@ -1680,6 +1692,7 @@ _Few tools are as useful to the IT professional as Wireshark, the go-to network 
 - [Reading PCAPs with Wireshark Statistics @ Chris Greer](https://www.youtube.com/watch?v=ZNS115MPsO0) _`video`_
 
 ### 🦈🔑 Wireshark: `Encryption` & `Decryption`
+- [`WPA/WPA2` :: Decrypt WPA2-PSK using Wireshark](https://mrncciew.com/2014/08/16/decrypt-wpa2-psk-using-wireshark/)
 - [`HTTPS Decryption` :: Website TLS Decryption](https://www.youtube.com/watch?v=GMNOT1aZmD8)
 
 ### 🦈🧪 Wireshark: `Labs`
