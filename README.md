@@ -1064,7 +1064,7 @@ _The initial purpose of the authentication frame is to validate the device type 
 - [`Authentication` :: Frame Decode @ Nayanajith](https://mrncciew.com/2014/10/10/802-11-mgmt-authentication-frame/) _`frame decode`_
 
 ### 🔓🪪 Open System Authentication: `Association` :: From:`State 2` ➡️ To:`State 3` 
-_When 802.11 authentication (not the RSN-WPA/WPA2 authentication) completes, a STA move to Association phase to the BSS. The purpose of this exchange is to join the cell & obtain an Association Identifier (AID). If the network is "Open" (no WPA/2-PSK, 802.1X or other kind of RSN authentication) then this is the last state and the client completes it's connection, else, the client is ready to start with the RSN authentication process to reach the state 4 Fully Connected & Authenticated._ <br>
+_When 802.11 authentication (not the RSN-WPA/WPA2 authentication) completes, a STA move to Association phase to the BSS. The purpose of this exchange is to join the cell & obtain an Association Identifier (AID). If the network is "Open" (no WPA/2-PSK, 802.1X or other kind of RSN authentication) then this is the last state and the client completes it's connection, else, the client is ready to start with the **RSNA** process to reach the state 4 Fully Connected & Authenticated._ <br>
 **`Association` Exchange**: (After authentication State 2) >> `STA`:`Asso Req` >> `AP`:`ACK` >> `AP`:`Asso Res` >> `STA`:`ACK` >> **State 3 OK! `CLIENT ASSOCIATED`**
 - [`Association Req` & `Association Res` :: Frame Exchange :: `Open System`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/64b10b5f-ba1a-4885-9141-c94e317f9ac9) _`frame exchange`_
 - [`Association Req` & `Association Res` :: Frame Decode @ Nayanajith](https://mrncciew.com/2014/10/28/802-11-mgmt-association-reqresponse/) _`frame decode`_
@@ -1079,6 +1079,10 @@ _**Station or AP can send a Deauthentication Frame** when all communications are
 - [`Deauthentication` & `Disassociation` :: Frame Decode @ Nayanajith](https://mrncciew.com/2014/10/11/802-11-mgmt-deauth-disassociation-frames/) _`frame decode`_
     - [`Deauthentication` :: `Status Codes` :: Responses]() 
     - [`Disassociation` :: `Status Codes` :: Responses]() 
+
+## `RSN`: Robust Recure Network
+_A network that only allows the creation of RSNA (Robust Secure Network Associations)_
+
 
 ## 🛡️🔐🏠 RSN Authentication: `WPA/WPA2`
 _Wireless security: WEP, WPA, WPA2 and WPA3 differences_
