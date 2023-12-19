@@ -1130,7 +1130,7 @@ _**Station or AP can send a Deauthentication Frame** when all communications are
 _A network that only allows the creation of RSNA (Robust Secure Network Associations)_
 
 
-## 🛡️🔐🏢 RSN Authentication: `WPA/WPA2`
+## 🛡️🔐🏢 RSNA: `WPA/WPA2`
 _Wireless security: WEP, WPA, WPA2 and WPA3 differences_ <br>
 **`WPA-Personal   `** :: Encryption: `TKIP (depreciated)` :: Authentication: `PSK-256 bits` (8-63 chars) <br>
 **`WPA2-Personal  `** :: Encryption: `AES` :: Cypher-Suite: `CCMP` _(TKIP compatible but depreciated)_ :: Authentication: `PSK-256 bits` (8-63 chars)
@@ -1145,10 +1145,20 @@ _Wireless security: WEP, WPA, WPA2 and WPA3 differences_ <br>
 - [**`WPA/WPA2 Enterprise`** :: PCAP Analysis](https://community.cisco.com/t5/wireless-mobility-knowledge-base/802-11-sniffer-capture-analysis-wpa-wpa2-with-psk-or-eap/ta-p/3116990)
 - [**`WPA(TKIP)/WPA2(AES)`** with 802.1X (EAP-TLS) :: PCAP Analysis](https://community.cisco.com/t5/wireless-mobility-knowledge-base/802-11-sniffer-capture-analysis-wpa-wpa2-with-psk-or-eap/ta-p/3116990)
 
+### Huevos
+
+Authentication & Key Management (Marcus Burton, CWNP) - https://youtu.be/8OPdE1MM1yE?si=1J28-6H1omE9LO0W
+
+4 way nhandshake - https://www.youtube.com/watch?v=9M8kVYFhMDw
 
 
-## 🔐🐉🪰 RSN Authentication: `WPA3-Enterprise`
+
+
+
+## 🔐🐉🪰 RSNA: `WPA3-Enterprise`
 - [WPA3-Enterprise](https://mrncciew.com/2020/08/17/wpa3-enterprise/)
+
+
 
 
 
