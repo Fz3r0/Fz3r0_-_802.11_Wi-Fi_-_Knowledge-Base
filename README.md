@@ -833,7 +833,8 @@ _The 802.11 series of physical layer specifications includes a variety of option
 **Physical Layer 1 `Upper` = `PLCP` = `Framing`** <br>
 **Physical Layer 1 `Lower` = `PMD` = `Modulation`** 
 - [802.11 PHY Layers @ CWAP Techtarget](https://media.techtarget.com/searchMobileComputing/downloads/CWAP_ch8.pdf) _`doc`_
-- [802.11 Layer 1 & Layer 2: Sub-Layers - `PLCP`(**upper**) & `PMD`(**lower**)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289) _`diagram`
+- [802.11 Layer 1 & Layer 2: Sub-Layers - `PLCP`(**upper**) & `PMD`(**lower**)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289) _`diagram`_
+- [MAC sublayer & Physical Layer-Wireless LANs-Computer Communication Networks](https://www.youtube.com/watch?v=Rp23mjuzBQQ) _`video`_
 
 ### ⬆️ `PLCP`: Physical Layer Convergence Procedure :: `Upper Sublayer`=`Framing`
 _Also Known As: Physical Layer Convergence Protocol (depends the 802.11 version). Acts as a bridge between MAC & PMD Sublayer | When Tx = Takes frames from MAC & adds extra information to the bits (PHY Preamble & Header <pre-header|MAC|>) | When Rx = Strip off the PHY Preamble and Header (That's why this data is not seen by protocol analyzers) | This Rx & Tx procedure (adding preamble & header) is called "MAC Framing" | The MAC layer communicates with the Physical Layer Convergence Protocol (PLCP) sublayer via primitives (a set of “instructive commands” or “fundamental instructions”) through a Service Access Point (SAP). PLCP is handled by the NIC or Wi-Fi adapter implementation, not the OS, wether it's done: hardware, firmware / microcode, driver running on host, etc._
@@ -846,6 +847,9 @@ _PMDs further help to define the physical layer of computer network protocols. P
 - [PMD: Physical medium dependent](https://en.wikipedia.org/wiki/Physical_medium_dependent) _`Wiki`_
 - [PMD layer @ keysight](https://rfmw.em.keysight.com/wireless/helpfiles/n7617a/pmd_layer.htm) _`Diagram`_
 
+## 802.11 PHY Layer 1 (PLCP & PMD): `Management Layer Entities`
+_Both MAC and PHY layers conceptually include management entities, called the MAC sublayer management entity and the PHY sublayer management entity. These entities are referred to as the MAC Layer Management Entity (MLME), and the Physical Layer Management Entity (PLME). These entities provide the layer management service interfaces through which layer management functions may be invoked. In order to provide correct MAC operation, a station management entity (SME) shall be present within each station._
+
 ## 📡⚙️📲 802.11 PHY Layer 1: `Operations`
 _The general operation of the various Physical layers is very similar. To perform PLCP functions, the 802.11 standard specifies the use of state
 machines. Each state machine performs one of the following 3 functions:_
@@ -853,12 +857,40 @@ machines. Each state machine performs one of the following 3 functions:_
 2. [**`Tx`**: Transmit](https://media.techtarget.com/searchMobileComputing/downloads/CWAP_ch8.pdf) 217 | Used to send individual octets of the data frame after CSA/CA 
 3. [**`Rx`**: Receive](https://media.techtarget.com/searchMobileComputing/downloads/CWAP_ch8.pdf) 217 | Used to receive individual octets of the data frame
 
+## ⭕ 802.11 PHY Functional Entities _(AKA PHY Functions)_
+- PHY Function
+- Layer Management Function
+
+## ⭕ DS SAP Specification
+- DS SAP Specification Overview
+- SAP Primitives
+
+## ⭕ 802.11 Primitives 
+_Instructions & Data directly understandable by STAs, not present on 802.11 Frames (PCAPs)_
+- [802.11 Primitives (Wireless Access Methods and Physical Layer Specifications)](https://grouper.ieee.org/groups/802/11/Documents/DocumentArchives/1995_docs/1195038_scan.pdf) _`pdf`_
+    - Primitive Category: Supports Peer-to-Peer Interacions
+    - Primitive Category: Have local significance & support Sublayer-toS-ublayer Interacions
+- [802.11b HR-DSSS PHY-SAP Primitives](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/b8fe1268-24f5-4802-b5d0-5ed0c63f04d4)
+- [802.11a OFDM PHY-SAP Primitives](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/ce89b303-ad56-45d2-a944-1d71c81ff0f2)
+
+## ⭕ 802.11 PHY Services Specifications = Clause 8 802.11-2020
+- Clause PHT: DSSS
+- Clause PHT: HR/DSSS
+- Clause PHT: OFDM
+- Clause PHT: ERP
+- Clause PHT: HT
+- Clause 21 :: VHT :: 802.11ac :: DSSS
+
 ## 🔝📡🗂️ Radiotap Header / PPI (Per-Packet Information) / Pseudo-Header
 _Data that is NOT present in a 802.11 MAC-frame, but is intepreted coming from the PHY-Layer 1 (spectrum) derived from the PLCP header. Additional information (Meta-Information) that is added to each 802.11 frame when capturing frames with an analysis application interpreted/calculated because the PHY layer 1 spectrum throught drivers/adapters. These are not part of the standard 802.11 frame format, but are additional information added at the time of capture to provide supplementary data about the frames captured_
 - [What are RadioTap Headers? @ Wi-Fi Nigel](https://wifinigel.blogspot.com/2013/11/what-are-radiotap-headers.html)
 - [Radiotap.org](https://www.radiotap.org/fields/defined)
 - [Radiotap Defined Fields](https://www.radiotap.org/fields/defined)
 - [PPI: PPI (Per-Packet Information) @ Wireshark](https://wiki.wireshark.org/PPI#:~:text=PPI%20(Per%2DPacket%20Information)&text=Each%20PPI%20packet%20header%20is,field%20headers%20are%20little%2Dendian.)
+
+
+
+
 
 
 
@@ -957,6 +989,13 @@ _The PLCP consists of two main sublayers: the PLCP protocol data unit (PPDU) & t
 - [PSDU]()
 
 
+
+
+
+
+
+
+
 # 💊🚛🚢 IEEE 802.11: `Frame Aggregation`
 
 
@@ -964,29 +1003,7 @@ _The PLCP consists of two main sublayers: the PLCP protocol data unit (PPDU) & t
 
 
 
-## ⭕ 802.11 PHY Functional Entities _(AKA PHY Functions)_
-- PHY Function
-- Layer Management Function
 
-## ⭕ DS SAP Specification
-- DS SAP Specification Overview
-- SAP Primitives
-
-## ⭕ 802.11 Primitives 
-_Instructions & Data directly understandable by STAs, not present on 802.11 Frames (PCAPs)_
-- [802.11 Primitives (Wireless Access Methods and Physical Layer Specifications)](https://grouper.ieee.org/groups/802/11/Documents/DocumentArchives/1995_docs/1195038_scan.pdf) _`pdf`_
-    - Primitive Category: Supports Peer-to-Peer Interacions
-    - Primitive Category: Have local significance & support Sublayer-toS-ublayer Interacions
-- [802.11b HR-DSSS PHY-SAP Primitives](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/b8fe1268-24f5-4802-b5d0-5ed0c63f04d4)
-- [802.11a OFDM PHY-SAP Primitives](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/ce89b303-ad56-45d2-a944-1d71c81ff0f2)
-
-## ⭕ 802.11 PHY Services Specifications = Clause 8 802.11-2020
-- Clause PHT: DSSS
-- Clause PHT: HR/DSSS
-- Clause PHT: OFDM
-- Clause PHT: ERP
-- Clause PHT: HT
-- Clause 21 :: VHT :: 802.11ac :: DSSS
 
 
 
