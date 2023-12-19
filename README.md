@@ -505,7 +505,7 @@ _Non-profit organization that owns the Wi-Fi trademark. Manufacturers may use th
 ### 🔎🛜 Wi-Fi Alliance: `Product Finder`
 - [`Product Finder` :: Wi-Fi Certified Product Finder](https://www.wi-fi.org/product-finder) real-time list of Wi-Fi Certified products
 
-### ✅🛜 Wi-Fi Alliance: Certification Program
+### ✅🛜 Wi-Fi Alliance: `Certification Program`
 _Wi-Fi CERTIFIED™ is an internationally recognized seal of approval for products indicating that they have met industry-agreed standards for interoperability, security, and a range of application specific protocols. Certification means that a product has been tested in a variety of ways to validate interoperability with other Wi-Fi CERTIFIED equipment operating in the same frequency band._
 - [Wi-Fi Certified :: Wi-Fi Alliance Certifications](https://www.wi-fi.org/certification) _`official`_
 - [Wi-Fi Certification programs](https://en.wikipedia.org/wiki/Wi-Fi_Alliance#Certification_programs) _`list`_
@@ -560,11 +560,17 @@ _Wi-Fi CERTIFIED™ is an internationally recognized seal of approval for produc
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
 
 ## 🪖🛡️⚔️ `NIST`: National Institute of Standards and Technology 
-- NIST Special Publication 800-38B, Recommendation for Block Cipher Modes of Operation: The CMAC Mode for Authentication, Dworkin, M.13
-- NIST Special Publication 800-38D, Recommendation for Block Cipher Modes of Operation: Galois/ Counter Mode (GCM) and GMAC, Dworkin, M., Nov. 2007.
-- NIST Special Publication 800-56A R2, Recommendation for Pair-Wise Key Establishment Schemes Using Discrete Logarithm Cryptography, May 2013.
-- NIST Special Publication 800-57, Part 1 Rev 4, Recommendation for Key Management, Barker, E., Jan. 2016.
+_The National Institute of Standards and Technology promotes U.S. innovation and industrial competitiveness by advancing measurement science, standards, and technology in ways that enhance economic security and improve our quality of life. || In informatics, networking, wireless & Cyber-Security NIST helps businesses of all sizes better understand, manage, and reduce their cybersecurity risk and protect their networks and data._
+- [`NIST`: National Institute of Standards and Technology](https://www.nist.gov/) _`official`_
+- [About NIST :: About, Mission & Vision](https://www.nist.gov/about-nist) _`official`_
+- [`NIST`: National Institute of Standards and Technology](https://en.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology) _`wiki`_
 
+### 🎖️📡 NIST Special Publications: ` Special Publications Wireless Related` 
+- [`2005`: **`Special Publication 800-38B`**]() Recommendation for Block Cipher Modes of Operation: The CMAC Mode for Authentication
+- [`2007`: **`Special Publication 800-38D`**]() Recommendation for Block Cipher Modes of Operation: Galois/ Counter Mode (GCM) and GMAC
+- [`2013`: **`Special Publication 800-56A R2`**]() Recommendation for Pair-Wise Key Establishment Schemes Using Discrete Logarithm Cryptography
+- [`2016`: **`Special Publication 800-57, Part 1 Rev 4`**]() Recommendation for Key Management
+  
 <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  #                                                               #
@@ -601,6 +607,8 @@ _The most widely used IEEE 802 standards are for Ethernet, Bridging and Virtual 
 - IEEE 802.19: Wireless Coexistence
 - IEEE 802.21: Media Independent Handover Services
 - IEEE 802.22: Wireless Regional Area Networks
+
+### 👑⚙️ IEEE 802 Standards: Ammandments, Standards
 
 ## 👑📡🛰️ IEEE Std 802.11™‐2020 (Revision of IEEE Std 802.11‐2016)
 _IEEE Standard for Information Technology—Telecommunications and Information Exchange between Systems Local and Metropolitan Area Networks—Specific Requirements Part 11: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications | Revision 2020_
