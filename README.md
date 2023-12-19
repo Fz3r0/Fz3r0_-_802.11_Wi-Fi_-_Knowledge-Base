@@ -1061,10 +1061,10 @@ _Any STA or AP can be in some "state" within this state machine at any given tim
         - [**Data**: `Any frame with ToDS or FromDS true(1)`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
       
 ### 🔐🪪🔓 802.11 State Machine: `4 States`
-- ❓[**`State 1`**: **Unauthenticated**, **Unassociated** :: `/`]() `STA no connected to AP` > Frames: **`Class 1`** > **Beacon : AuthReq/Res : ProbeReq/Res** 
-- 🚪[**`State 2`**: **`Authenticated`**, **Unassociated** :: `Auth`]() `STA Authenticated to AP (Pending RSN & Open)` Frames: **`Class 1 & 2`** > **AssociReq/Res**
-- 🪪[**`State 3`**: **`Authenticated`**, **`Associated`** :: `Asso`]() `STA Associated to AP (Open Auth OK! / RSN Pending)` Frames: **`Class 1, 2 & 3`** | **Open Auth** / RSN : **Blocked** 
-- 🔓[**`State 4`**: **`Authenticated`**, **`Associated`** :: `Full OK!`]() `STA Fully Connected to AP (RSN OK!)` Frames: **`Class 1, 2 & 3`** | RSN : **Un-Blocked**
+- ❓[**`State 1`**: **Unauthenticated**, **Unassociated** :: `/`]() `Client NO Connected` | **`Class 1`** > **Beacon : AuthReq/Res : ProbeReq/Res** 
+- 🚪[**`State 2`**: **`Authenticated`**, **Unassociated** :: `Auth`]() `Client Authenticated (AP validating STA capabilities)` | **`Class 1 & 2`** > **AssociReq/Res**
+- 🪪[**`State 3`**: **`Authenticated`**, **`Associated`** :: `Asso`]() `Client Associated to AP (Open Auth Completed)` | **`Class 1, 2 & 3`** | `RSNA`: **Blocked** 
+- 🔓[**`State 4`**: **`Authenticated`**, **`Associated`** :: `Full Auth`]() `STA Fully Connected to AP (RSNA OK!)` Frames: **`Class 1, 2 & 3`** | `RSNA`: **Un-Blocked**
 
 ## 🤳🏾🛸📡 IEEE 802.11: `BSS Discovery`
 - [Wireless association: active vs passive scanning, & roaming @ Sunny](https://youtu.be/HPJonmd8z1c?si=g47qTqJ5ma4iF3c0)
