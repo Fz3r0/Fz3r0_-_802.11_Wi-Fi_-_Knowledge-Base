@@ -1130,9 +1130,14 @@ _**Station or AP can send a Deauthentication Frame** when all communications are
 _A network that only allows the creation of RSNA (Robust Secure Network Associations)_
 
 
-## 🛡️🔐🏠 RSN Authentication: `WPA/WPA2`
-_Wireless security: WEP, WPA, WPA2 and WPA3 differences_
+## 🛡️🔐🏢 RSN Authentication: `WPA/WPA2`
+_Wireless security: WEP, WPA, WPA2 and WPA3 differences_ <br>
+**`WPA-Personal   `** :: Encryption: `TKIP (depreciated)` :: Authentication: `PSK-256 bits` (8-63 chars) <br>
+**`WPA2-Personal  `** :: Encryption: `AES` :: Cypher-Suite: `CCMP` :: Security Frameworks: `802.1X` with `EAP` | _TKIP compatible (depreciated)_ <br>
+**`WPA-Enterprise `** :: Encryption: `TKIP (depreciated)` :: Authentication: `` <br>
+**`WPA2-Enterprise`** :: Encryption: `AES` :: Cypher-Suite: `CCMP` :: Security Frameworks: `802.1X` with `EAP` | _TKIP compatible (depreciated)_ <br>
 - [Wireless security: WEP, WPA, WPA2 and WPA3 differences](https://www.techtarget.com/searchnetworking/feature/Wireless-encryption-basics-Understanding-WEP-WPA-and-WPA2)
+- [WPA and WPA2 @ Marcus Burton - CWNP](https://www.youtube.com/watch?v=hLQ5rYNUwNg) _`video`_
 
 ### 🔐 WPA/WPA2: `Analysis` & `Frame Exchanges`
 - [**`WPA-PSK (TKIP)`** :: PCAP Analysis](https://community.cisco.com/t5/wireless-mobility-knowledge-base/802-11-sniffer-capture-analysis-wpa-wpa2-with-psk-or-eap/ta-p/3116990)
@@ -1142,7 +1147,7 @@ _Wireless security: WEP, WPA, WPA2 and WPA3 differences_
 
 
 
-## 🛡️🔐🏠 RSN Authentication: `WPA3-Enterprise`
+## 🔐🐉🪰 RSN Authentication: `WPA3-Enterprise`
 - [WPA3-Enterprise](https://mrncciew.com/2020/08/17/wpa3-enterprise/)
 
 
