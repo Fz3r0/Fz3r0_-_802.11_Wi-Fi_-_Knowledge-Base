@@ -1183,6 +1183,9 @@ _**Station or AP can send a Deauthentication Frame** when all communications are
 ## `RSN`: Robust Recure Network
 _A network that only allows the creation of RSNA (Robust Secure Network Associations)_
 
+## 🛡️🔐🏢 RSNA: `802.11 Security Keys`
+- [Wi-Fi Authentication & Key Generation](https://www.youtube.com/watch?v=ntGA6V5EciE&t=14s)
+- [RSNA Key Hierarchy](https://www.youtube.com/watch?v=6HoQVul9Zks&t=112s)
 
 ## 🛡️🔐🏢 RSNA: `WPA/WPA2`
 _Wireless security: WEP, WPA, WPA2 and WPA3 differences_ <br>
