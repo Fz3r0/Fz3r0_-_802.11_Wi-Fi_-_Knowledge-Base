@@ -497,7 +497,7 @@ _RFC documents contain technical specifications and organizational notes for the
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
 
 ## 🫅🛜♾️ `Wi-Fi Alliance`
-_Non-profit organization that owns the Wi-Fi trademark. Manufacturers may use the trademark to brand products certified for Wi-Fi interoperability._
+_Non-profit organization that owns the Wi-Fi trademark. Manufacturers may use the trademark to brand products certified for Wi-Fi interoperability. || Wi-Fi Alliance certification programs ensure that Wi-Fi products from multiple manufacturers work well together. || Only Wi-Fi CERTIFIED products have been tested to deliver interoperability with the latest technologies, and industry-standard security protections._
 - [Wi-Fi Alliance :: Home Page](https://www.wi-fi.org/) _`official`_
 - [Wi-Fi Alliance :: Who we are](https://www.wi-fi.org/who-we-are) _`official`_
 - [Wi-Fi Alliance](https://en.wikipedia.org/wiki/Wi-Fi_Alliance) _`Wiki`_
@@ -508,11 +508,12 @@ _Non-profit organization that owns the Wi-Fi trademark. Manufacturers may use th
 ### ✅🛜 Wi-Fi Alliance: `Certification Program`
 _Wi-Fi CERTIFIED™ is an internationally recognized seal of approval for products indicating that they have met industry-agreed standards for interoperability, security, and a range of application specific protocols. Certification means that a product has been tested in a variety of ways to validate interoperability with other Wi-Fi CERTIFIED equipment operating in the same frequency band._
 - [Wi-Fi Certified :: Wi-Fi Alliance Certifications](https://www.wi-fi.org/certification) _`official`_
-- [Wi-Fi Certification programs](https://en.wikipedia.org/wiki/Wi-Fi_Alliance#Certification_programs) _`list`_
+- [Wi-Fi Certification programs](https://www.wi-fi.org/certification/programs) _`official`_
+- [Wi-Fi Test Tools :: For Wi-Fi Devices Manufacturers](https://www.wi-fi.org/certification/wi-fi-test-tools) _`official`_
 
 ### ✅ Wi-Fi Certification: `Connectivity`
-- [Wi-Fi Certified b/g/n]() certifies equipment to interoperate based on the HR/DSSS, ERP and HT PHYs in the 2.4 GHz frequency band.
-- [Wi-Fi Certified a/n/ac]() certifies equipment to interoperate based on the OFDM, HT and VHT PHYs in the 5 GHz frequency bands.
+- [Wi-Fi Certified n]() certifies equipment to interoperate based on the HR/DSSS, ERP and HT PHYs in the 2.4 GHz frequency band.
+- [Wi-Fi Certified ac]() certifies equipment to interoperate based on the OFDM, HT and VHT PHYs in the 5 GHz frequency bands.
 - [Wi-Fi Direct]() allows for IBSS devices to share printers, files and displays.
 - [WiGig]() 60 GHz WLAN connection. The first version IEEE 802.11ad | newer version IEEE 802.11ay (802.11ad/ay)
 - [Wi-Fi EasyMesh]() based on its Multi-Access Point specification for creating Wi-Fi meshes from products by different vendors. (IEEE 1905.1)
@@ -521,6 +522,7 @@ _Wi-Fi CERTIFIED™ is an internationally recognized seal of approval for produc
 ### ✅ Wi-Fi Certification: `Security`
 - [WPA2]() certifies equipment to interoperate with systems supporting 802.11i security enhancements including AES and CCMP. (802.11i)
 - [WPA2 with Protected Management Frames]() certifies equipment to interoperate with systems using management frame protection. (802.11i)
+- [Wi-Fi Protected Setup](https://www.wi-fi.org/discover-wi-fi/wi-fi-protected-setup)
 
 ### ✅ Wi-Fi Certification: `Access`
 - [Passpoint]() a certification that allows SIM and non-SIM devices to find, choose and connect to private Wi-Fi networks without involving user decisions. (IEEE 802.11u)
@@ -528,10 +530,10 @@ _Wi-Fi CERTIFIED™ is an internationally recognized seal of approval for produc
 - [IBSS Protected Setup (WPS)]() provides WPS security do ad-hoc wireless networks.
 - [Easy Connect]() protocol that would enable easily establishing connections via QR code
 - [Agile Multiband]() Devices can automatically connect and maintain connection in the most suitable way (802.11k + 802.11v + 802.11u + 802.11r)
-- [Wi-Fi Vantage]() For operators to maintain and manage quality Wi-Fi connections in high usage environment.
+- [Wi-Fi Vantage](https://www.wi-fi.org/discover-wi-fi/wi-fi-vantage) For operators to maintain and manage quality Wi-Fi connections in high usage environment.
   
 ### ✅ Wi-Fi Certification: `Applications` & `Services`
-- [Miracast]() certification that provides for wireless display services between devices.
+- [Miracast](https://www.wi-fi.org/discover-wi-fi/miracast) certification that provides for wireless display services between devices.
 - [Voice-Personal]() certifies the features and performance of products to provide sufficient quality of communications for VoIP.
 - [Voice-Enterprise]() certifies the features and performance of products to provide sufficient quality of communications for VoIP including enterprise features such as roaming.
 - [Wi-Fi Aware]() Proximity Marketing: enables device users, when in the range of a particular access point or another compatible device, to receive notifications of applications or services available in the proximity
@@ -546,6 +548,58 @@ _Wi-Fi CERTIFIED™ is an internationally recognized seal of approval for produc
 
 
 
+
+
+
+
+
+### ✅ Wi-Fi Certification: `Connectivity`
+
+- [**`Wi-Fi CERTIFIED 6®: Based on the IEEE 802.11ax standard, Wi-Fi CERTIFIED 6 is the newest generation of Wi-Fi technology operating in 2.4, 5, and 6 GHz. Wi-Fi CERTIFIED 6 provides greater capacity, multi-gigabit data rates, better power efficiency, and high performance even in densely populated environments. Wi-Fi 6E introduces the advancements of Wi-Fi 6 into the 6 GHz spectrum.
+- [**`Wi-Fi CERTIFIED ac: Associated with the fifth Wi-Fi generation, Wi-Fi CERTIFIED ac operates in 5 GHz and is capable of gigabit data rates. Key features include enhanced ability in processing a variety of data from multiple sources.
+- [**`Wi-Fi CERTIFIED HaLow™: Operating in spectrum below 1 GHz, Wi-Fi CERTIFIED HaLow brings long range, low power Wi-Fi to devices and applications with constrained power requirements and need for long range connectivity
+- [**`Wi-Fi CERTIFIED n: Operating in both 2.4 and 5 GHz, Wi-Fi CERTIFIED n is considered the fourth generation of Wi-Fi and is used today in many Internet of Things (IoT) devices, including wearables and smart televisions.
+- [**`Wi-Fi CERTIFIED WiGig™: Utilizes the 60 GHz frequency band to enable extremely high performance, multi-gigabit connectivity and low latency for a range of applications, including wireless docking, augmented reality/virtual reality (AR/VR), high-definition multimedia streaming, gaming, and networking.
+- [**`Wi-Fi Direct®: Allows Wi-Fi client devices to connect directly to one another without use of an access point. Enables applications such as printing, content sharing, and wireless display. Wi-Fi Direct certifies products which implement technology defined in the Wi-Fi Direct Specification.
+
+### ✅ Wi-Fi Certification: `Security`
+
+- [**`Wi-Fi CERTIFIED WPA3™`**]() WPA2 Compatible. Most advanced security capabilities for personal % enterprise Wi-Fi
+- [**`Wi-Fi Enhanced Open™`**]() Data protection to users in open networks without the need for user intervention
+- [**`Protected Management Frames`**]() Protected Management Frames. Protections to unicast and multicast management action frames
+
+### ✅ Wi-Fi Certification: `Access`
+
+- [**`Passpoint®: Enables seamless, secure network access. Passpoint helps Wi-Fi devices discover, select, and securely connect to Wi‑Fi access points and networks easily. Once a device contains a network’s credentials, it can seamlessly connect to the network on subsequent visits without further user action.The technology behind Passpoint is foundational to Wi-Fi CERTIFIED Vantage™ which brings better user experiences in managed Wi-Fi networks as well as for OpenRoaming, Wireless Broadband alliance’s federated service.
+- [**`Wi-Fi Easy Connect™: Simplifies device provisioning and configuration while maintaining network security, making onboarding smart home and IoT devices easier than ever
+- [**`Wi-Fi Protected Setup™: Facilitates easy set-up of security features using a Personal Identification Number (PIN) or other defined methods within the Wi-Fi device. Wi-Fi Protected Setup certifies products which implement technology defined in the Wi-Fi Protected Setup Specification.
+
+### ✅ Wi-Fi Certification: `Applications and Services`
+
+- [**`Miracast®`**]() Provides seamless display of high-definition (HD) and 4K Ultra High-Definition (Ultra HD) content between devices, regardless of brand, without cables or a network connection. Miracast certifies products which implement technology defined in the Miracast Specification. Enhancements released in 2017 include 4K Ultra HD support, and extended battery life in mobile devices.
+- [**`Voice-Enterprise`**]() Supports a good experience with voice applications over Wi-Fi, enabling fast transitions between access points and providing management
+- [**`Wi-Fi Aware™`**]() Provides enhanced peer-to-peer communications, enabling devices within Wi-Fi® range to detect one another and exchange information and services without the need for network infrastructure. Wi-Fi Aware improves on existing peer-to-peer connectivity offerings by delivering here-and-now contextual awareness that empowers users to both find and utilize services that match their interests while on the go. Wi-Fi Aware works well indoors as well as in dynamic and dense environments, without requiring a cellular, infrastructure, or GPS connection.
+- [**`Wi-Fi Location™`**]() Delivers accurate indoor location through Wi-Fi networks, allowing location applications and services to operate indoors
+
+### ✅ Wi-Fi Certification: `Optimization`
+
+- [**`TDLS (Tunneled Direct Link Setup)`**]() Allows network-connected devices to create a secure, direct link to transfer data more efficiently
+- [**`Wi-Fi Agile Multiband™`**]() Enables client devices and access points (APs) to exchange information so the Wi-Fi network can guide devices to the best bands, channels, and APs to maximize system efficiency and provide the best user experience.
+- [**`Wi-Fi Data Elements™`**]() Establishes a standardized set of key performance indicators for ensuring the health of Wi-Fi networks, enabling service providers to deliver better Wi-Fi service, potentially reduce customer support calls, and increase customer satisfaction; also provides a necessary foundation for Wi-Fi EasyMesh networks.
+- [**`Wi-Fi EasyMesh™:`**]() Brings a standards-based approach to residential and small office Wi-Fi networks that utilize multiple access points. Wi-Fi EasyMesh delivers scalable, smart Wi-Fi networks that are easy to set up and manage. Supports advanced technologies of Wi-Fi 6 and Wi-Fi 6E networks.
+- [**`Wi-Fi Optimized Connectivity™:`**]() Optimizes roaming and network selection in managed network environments through improved scanning, link quality metric assessment, faster initial authentication, and more efficient transmissions
+- [**`Wi-Fi QoS Management™:`**]() Enables devices, applications, and network managers to prioritize traffic flows, providing consistent, end-to-end Quality of Service treatment, and quality experiences with real-time applications     
+- [**`Wi-Fi Vantage™:`**]() Provides an ongoing evolution of advanced features to elevate the user experience in managed Wi-Fi networks
+- [**`WMM® (Wi-Fi Multimedia™):`**]() Support for multimedia content over Wi-Fi networks enabling Wi-Fi networks to prioritize traffic generated by different applications using Quality of Service (QoS) mechanisms. WMM certifies products which implement technology defined in the WMM Technical Specification.
+- [**`WMM-Admission Control:`**]() Enhanced bandwidth management tools to optimize the delivery of voice and other traffic in Wi-Fi networks. WMM-Admission Control certifies products which implement technology defined in the WMM Technical Specification.
+- [**`WMM-Power Save:`**]() Power savings for multimedia content over Wi-Fi networks - helps conserve battery life while using voice and multimedia applications by managing the time the device spends in sleep mode
+
+### ✅ Wi-Fi Certification: `RF Coexistence`
+- [**`CWG-RF`**]() Developed with CTIA®, this is a test program developed for converged devices with both Wi-Fi and cellular technology. The testing provides detailed information about the performance of the Wi-Fi radio in a converged handset, as well as how the cellular and Wi-Fi radios interact with one another. Although this test program is not an element of Wi-Fi certification, completion of the testing is mandatory for Wi-Fi enabled handsets
+
+### ✅ Wi-Fi Certification: `Additional Capabilities`
+- [**`Power saving features`**]() Enhances capabilities of Wi-Fi CERTIFIED ac and Wi-Fi CERTIFIED n by enabling longer battery life for devices through longer sleep periods and more efficient use of network exchanges
+- [**`Wi-Fi Home Design™`**]() Delivers whole home Wi-Fi coverage through professionally designed and installed Wi-Fi networks in homes and multi-dwelling residences such as condominiums, townhomes, and apartment complexes
 
 
 
