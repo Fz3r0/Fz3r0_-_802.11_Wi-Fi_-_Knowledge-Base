@@ -1990,6 +1990,23 @@ _Sometimes is important to capture and troubleshoot wired captures in adition to
 
 
 
+
+
+
+
+
+## Ekahau 
+- [Ekahau Connect Training :: Free!!!](https://www.ekahau.com/training/ekahau-connect-training/)
+
+
+
+
+
+
+
+
+
+
 #### WLAN Scanners & Discovery Tools
 - Wi-Fi Analyzer Android
 - Wi-Fi Analyzer Windows 
