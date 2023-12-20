@@ -307,6 +307,7 @@ https://www.milenio.com/cultura/como-llego-el-internet-a-mexico]()
 - [`1998`: Primer ciberactivismo en México :: Matanza de Acteal ¡Stop War!](https://www.xataka.com.mx/legislacion-y-derechos/stop-the-war-in-mexico-o-como-la-matanza-de-acteal-provoco-uno-de-los-primeros-casos-de-ciberactivismo-de-la-historia)
 - [`2001`: Telmex lanza al mercado `Banda Ancha Infinitum`](https://realestatemarket.com.mx/articulos/infraestructura-y-construccion/11214-20-anos-de-desarrollo-tecnologico#:~:text=En%201996%20lanzamos%20al%20mercado,brecha%20digital%20en%20el%20pa%C3%ADs.)
 - [`2013`: Reforma Constitucional de Telecomunicaciones 2013]()
+- [`2013`: Acuerdo mediante el cual el Pleno del IFT clasifica la banda de frecuencias 5925-6425 MHz (6GHz) como espectro libre](https://www.ift.org.mx/sites/default/files/02-_acuerdo_mediante_el_cual_el_pleno_del_instituto_federal_de_telecomunicaciones_clasifica_la_banda_de_frecuencias_5925.pdf)
 - [`2023`: En México hay un total de 80.6 millones de personas conectadas, de las cuales un 95% usa el smartphone para ello via inalámbirca]()
 
 <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
