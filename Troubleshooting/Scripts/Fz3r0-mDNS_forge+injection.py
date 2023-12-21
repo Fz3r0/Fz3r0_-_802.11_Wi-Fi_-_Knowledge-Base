@@ -33,7 +33,8 @@ target_ip = sys.argv[1]
 query = "_googlecast._tcp.local"   # google & chromecast
 #query = "_services._dns-sd._udp.local"   # general mdns
 # query = "_ipp._tcp.local"  # impresoras
-# mensaje TXT que se incluirá en la respuesta mDNS (ya que es del tipo QU - TXT)
+
+# mensaje TXT que se incluirá en la respuesta mDNS (ya que es del tipo PTR QU - TXT)
 txt_payload = "Este mDNS va dirigido hacia dispositivos Chromecast UwU 💀"
 
 # Construye el paquete:
