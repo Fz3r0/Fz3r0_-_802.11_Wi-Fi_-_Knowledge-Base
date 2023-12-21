@@ -26,7 +26,7 @@ if len(sys.argv) < 2:
 
 # Obtiene la dirección IP de destino desde la línea de comandos
     # OJO!!!! Aquí se puede forjar cualquier dirección para hacer trucos... 
-    # Pero un paquete real si debe tener la IP de la PC Source (ejecucuón de script)
+    # Pero para que el paquete sea considerado mDNS bien formado... usar IP multicast!!!
 target_ip = sys.argv[1]
 
 # mdns query string (elegir uno dependiendo el servicio)
