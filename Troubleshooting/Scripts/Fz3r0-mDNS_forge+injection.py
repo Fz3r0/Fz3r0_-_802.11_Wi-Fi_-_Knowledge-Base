@@ -54,7 +54,7 @@ pkt = (
 # Envía el paquete y espera por una respuesta
 ans = sr1(pkt, verbose=0, timeout=2)
 
-# Imprime la respuesta (puedes personalizar esto según tus necesidades)
+# Imprime la respuesta (esto aún se puede hacer más detallado y queda pendiente para futuras versiones)
 if ans:
     ans.show()
 else:
