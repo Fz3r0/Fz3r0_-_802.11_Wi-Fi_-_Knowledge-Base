@@ -1184,8 +1184,12 @@ _**Station or AP can send a Deauthentication Frame** when all communications are
 
 ## `RSN`: Robust Recure Network
 _A network that only allows the creation of RSNA (Robust Secure Network Associations) || The term Robust Security Network is used in WiFi networks to describe the security enhancements encompassed in the IEEE 802.11i and WPA (WiFi Protected Access) 1 and 2 variants. The suite of protocols endeavours to compensate for the weaknesses associated with WEP(Wired Equivalent Privacy). || RSN/RSNA uses dynamic key generation via 4 way handshake and two types of keys for unicast and multicast transmission || 
+- [`NIST-800-97`: Establishing Wireless Robust Security Networks: A Guide to IEEE 802.11i @ NIST](https://www.govinfo.gov/content/pkg/GOVPUB-C13-bccd1f279aaf7e4caa863b34791bb565/pdf/GOVPUB-C13-bccd1f279aaf7e4caa863b34791bb565.pdf) _`NIST special publication`_
 - [RSN & EAP in detail @ TB Haxor](https://tbhaxor.com/rsn-and-eap-in-detail/) _`info`_
 - [Pre-RSN VS RSN Security Mechanisms Comparation](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/72a1b555-900a-4715-8835-717cf258c0c1) _`table`_
+
+### RSN: `RSN` : `FT`
+- [RSN with FT | 802.11i | @ CWNP](https://www.cwnp.com/uploads/802-11_rsn_ft.pdf)
 
 ## `AKM`: Authentication Key Management
 _Authentication Key Management (AKM) is a term that describes the process of 802.1X/EAP authentication and the generation of encryption keys. The AKM suite indicates whether a station supports 802.1X or PSK authentication. || Key management is the process of managing cryptographic keys in a cryptosystem. This includes the generation, exchange, storage, use, destruction, and replacement of keys._ <br>
