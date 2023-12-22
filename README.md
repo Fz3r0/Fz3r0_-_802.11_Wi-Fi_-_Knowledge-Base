@@ -1208,7 +1208,7 @@ _Authentication Key Management (AKM) is a term that describes the process of 802
 ## 🛡️🔐🏢 RSNA: `WPA/WPA2`
 _Wireless security: WEP, WPA, WPA2 and WPA3 differences_ <br>
 **`WPA-Personal   `** :: Encryption: `TKIP (depreciated)` :: Authentication: `PSK-256 bits` (8-63 chars) <br>
-**`WPA2-Personal  `** :: Encryption: `AES` :: Cypher-Suite: `CCMP` _(TKIP compatible but depreciated)_ :: Authentication: `PSK-256 bits` (8-63 chars)
+**`WPA2-Personal  `** :: Encryption: `AES` :: Cypher-Suite: `CCMP` _(TKIP compatible but depreciated)_ :: Authentication: `PSK-256 bits` (8-63 chars) <br>
 **`WPA-Enterprise `** :: Encryption: `TKIP (depreciated)` :: Security Frameworks: `802.1X` with `EAP` <br>
 **`WPA2-Enterprise`** :: Encryption: `AES` :: Cypher-Suite: `CCMP` _(TKIP compatible but depreciated)_ :: Security Frameworks: `802.1X` with `EAP` <br>
 - [Wireless security: WEP, WPA, WPA2 and WPA3 differences](https://www.techtarget.com/searchnetworking/feature/Wireless-encryption-basics-Understanding-WEP-WPA-and-WPA2)
