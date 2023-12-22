@@ -1775,6 +1775,7 @@ _Concept is instead of looking a specific packets, you are looking at analyisis 
 - [Visual Packet Analysis Blog :: Metageek](https://www.metageek.com/blog/tag/visual-packet-analysis/)
 - [Channelyzer :: Metageek](https://www.metageek.com/chanalyzer/)
 - [Eye P.A. :: Metageek](https://www.metageek.com/eye-pa/) Enables easy multi-channel 802.11ac packet capture and visual analysis
+- [IOTA: All-In-One Network Traffic Monitoring Solution](https://www.profitap.com/iota/?utm_campaign=IOTA%20Solution&utm_content=276301428&utm_medium=social&utm_source=linkedin&hss_channel=lcp-5383240) powerful network capture and analysis solution for edge and core networks
 - [Mojo Packets :: Peter Mackenzee](https://www.youtube.com/watch?v=r4fMGfiF9Jo) _discontinued_
 - [Packets :: Arista Networks](https://packets.arista.com/site/portal?fallbackUrl=..%2Fupload%2Fupload)
 
@@ -1845,8 +1846,10 @@ _Few tools are as useful to the IT professional as Wireshark, the go-to network 
 
 ### 🖧🪤 Network Taps:
 - [Net Optics Aggregation TAPS](https://www.nextgigsystems.com/net_optics/aggregation_taps.html) Access to full-duplex links using just a single NIC on the monitoring or analyzer tool.
+- [IOTA: All-In-One Network Traffic Monitoring Solution](https://www.profitap.com/iota/?utm_campaign=IOTA%20Solution&utm_content=276301428&utm_medium=social&utm_source=linkedin&hss_channel=lcp-5383240)
 - [Netsplit](https://www.youtube.com/watch?v=MPsN4K2pVz4) Pocket-sized passive Ethernet tap
 - [Sharktap](https://www.youtube.com/watch?v=EiY4VMdYdk4) Cheap and affordable way to analyze your network
+
 
 ## 🕵️🛜📡 Protocol Analysis: `How to capture 802.11 Radio Frames?`
 - [802.11 Wi-Fi VS 802.3 Ethernet Capture: Differences & 802.11 Adapters]()
