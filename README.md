@@ -1183,7 +1183,19 @@ _**Station or AP can send a Deauthentication Frame** when all communications are
     - [`Disassociation` :: `Status Codes` :: Responses]() 
 
 ## `RSN`: Robust Recure Network
-_A network that only allows the creation of RSNA (Robust Secure Network Associations)_
+_A network that only allows the creation of RSNA (Robust Secure Network Associations) || The term Robust Security Network is used in WiFi networks to describe the security enhancements encompassed in the IEEE 802.11i and WPA (WiFi Protected Access) 1 and 2 variants. The suite of protocols endeavours to compensate for the weaknesses associated with WEP(Wired Equivalent Privacy). || RSN/RSNA uses dynamic key generation via 4 way handshake and two types of keys for unicast and multicast transmission || 
+- [RSN & EAP in detail @ TB Haxor](https://tbhaxor.com/rsn-and-eap-in-detail/) _`info`_
+- [Pre-RSN VS RSN Security Mechanisms Comparation](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/72a1b555-900a-4715-8835-717cf258c0c1) _`table`_
+
+## `AKM`: Authentication Key Management
+_Authentication Key Management (AKM) is a term that describes the process of 802.1X/EAP authentication and the generation of encryption keys. The AKM suite indicates whether a station supports 802.1X or PSK authentication. || Key management is the process of managing cryptographic keys in a cryptosystem. This includes the generation, exchange, storage, use, destruction, and replacement of keys._ <br>
+**AKM Suites:**
+00-0F-AC-**01** = **`802.1X`** <br>
+00-0F-AC-**02** = **`PSK`** <br>
+00-0F-AC-**03** = **`FT over 802.1X`** <br>
+- [`AKM`: Authentication Key Management | 802.11i | @ CWNP](https://www.cwnp.com/uploads/802-11i_key_management.pdf) _`pdf document`_
+- [Authenticated Key Management @ Key Management @ Cisco](https://www.cisco.com/web/techdoc/wireless/access_points/online_help/eag/123-02.JA/1100/h_ap_sec_ap-client-security.html) _`info`_
+
 
 ## 🛡️🔐🏢 RSNA: `802.11 Security Keys`
 - [Wi-Fi Authentication & Key Generation](https://www.youtube.com/watch?v=ntGA6V5EciE&t=14s)
