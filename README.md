@@ -942,6 +942,7 @@ _Data that is NOT present in a 802.11 MAC-frame, but is intepreted coming from t
 - [Radiotap.org](https://www.radiotap.org/fields/defined)
 - [Radiotap Defined Fields](https://www.radiotap.org/fields/defined)
 - [PPI: PPI (Per-Packet Information) @ Wireshark](https://wiki.wireshark.org/PPI#:~:text=PPI%20(Per%2DPacket%20Information)&text=Each%20PPI%20packet%20header%20is,field%20headers%20are%20little%2Dendian.)
+- [Injecting Radiotap Headers](https://github.com/vanhoefm/libwifi/blob/master/docs/linux_tutorial.md#injecting-frames)
 
 
 
@@ -1934,7 +1935,8 @@ _Sometimes is important to capture and troubleshoot wired captures in adition to
 
 
 
-
+# 802.11 Frames: Forge, Tamper & Injection
+- [Forging Radiotap Headers](https://github.com/vanhoefm/libwifi/blob/master/docs/linux_tutorial.md#injecting-frames)
 
 
 
