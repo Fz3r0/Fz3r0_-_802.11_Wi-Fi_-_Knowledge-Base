@@ -169,7 +169,7 @@ _Wi-Fi is not an abbreviation for “wireless fidelity”; the name was created 
 - [Wi-Fi :: Wiki](https://en.wikipedia.org/wiki/Wi-Fi) _`english`_
 
 ## ⭕📖 Definition: `802.11`
-_Is the same as Wi-Fi... IEEE 802.11 refers to the set of standards that define communication for wireless LANs (wireless local area networks, or WLANs). The technology behind 802.11 is branded to consumers as Wi-Fi. This means, for the "end user" is easier to remember the word "Wi-Fi" instead of "IEEE 802.11b/a/g/n/ac/ax/be Standard for Wireless Communications" or "IEEE 802.11b DSSS/Direct Sequence"._
+_IEEE 802.11 is the same as Wi-Fi... IEEE 802.11 refers to the set of standards that define communication for wireless LANs (wireless local area networks, or WLANs). The technology behind 802.11 is branded to consumers as Wi-Fi. This means, for the "end user" it's easier to remember the word "Wi-Fi" instead of "IEEE 802.11b/a/g/n/ac/ax/be Standard for Wireless Communications" or something like "IEEE 802.11b - DSSS/Direct Sequence"._
 - [802.11 Definition @ Technopedia](https://www.techopedia.com/definition/24967/ieee-80211) _`definition`_
 - [IEEE 802.11 :: Wiki](https://es.wikipedia.org/wiki/Wifi) _`español`_
 - [IEEE 802.11 :: Wiki](https://en.wikipedia.org/wiki/Wi-Fi) _`english`_
@@ -1155,7 +1155,7 @@ _These are the Authentication Methods a STA can use to access to a BSS_
     - [🔓 `Open System` :: `0`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/da6135ed-352d-42c1-a73a-736112c79650) No authentication | Every client is allowed || used for modern: `802.11i`(`PSK`, `802.1X`) (after association state)
     - [🔑 `Shared Key` :: `1`]() Authenticates via WEP demonstrating a key :: Legacy Networks (modern uses open system)
     - [🔄 `FT - Fast Transition` :: `2`]() `802.11r` Authenticates using a key derived from previous authentication
-    - [🖧 `SAE`:`Simultaneous Authentication of Equals` :: `3`]() `802.11s-mesh` Diffie-Hellman / Mesh
+    - [🌉 `SAE`:`Simultaneous Authentication of Equals` :: `3`]() `802.11s-mesh` Diffie-Hellman / Mesh
 
 ## 🛡️🔓🪪 Authentication Methods: `Open System Authentication`
 _Once a client station is discover a SSID (Probe Request/Response or listening to Beacons) it move to Join phase. This exchange comprise of at least 4 frames || Open System authentication should never fail || Init method of authentication used by most modern WLANs || RSN like 802.1X or PSK is performed later (state 3 > 4) || There is no "authentication response frame", it's just an "autentication frame" with another status code value || Association process is similar to authentication, in this caso we do have "authentication request" & "authentication response" (both ACKed) ||_
@@ -1182,24 +1182,42 @@ _**Station or AP can send a Deauthentication Frame** when all communications are
     - [`Deauthentication` :: `Status Codes` :: Responses]() 
     - [`Disassociation` :: `Status Codes` :: Responses]() 
 
-## `RSN`: Robust Recure Network
-_A network that only allows the creation of RSNA (Robust Secure Network Associations) || The term Robust Security Network is used in WiFi networks to describe the security enhancements encompassed in the IEEE 802.11i and WPA (WiFi Protected Access) 1 and 2 variants. The suite of protocols endeavours to compensate for the weaknesses associated with WEP(Wired Equivalent Privacy). || RSN/RSNA uses dynamic key generation via 4 way handshake and two types of keys for unicast and multicast transmission || 
+
+
+
+
+
+## 🔐💪🛡️ `RSN`: Robust Recure Network
+_A network that only allows the creation of RSNA (Robust Secure Network Associations) || It includes a RSNE () || The term Robust Security Network is used in WiFi networks to describe the security enhancements encompassed in the IEEE 802.11i and WPA (WiFi Protected Access) 1 and 2 variants. The suite of protocols endeavours to compensate for the weaknesses associated with WEP(Wired Equivalent Privacy). || RSN/RSNA uses dynamic key generation via 4 way handshake and two types of keys for unicast and multicast transmission || 
 - [`NIST-800-97`: Establishing Wireless Robust Security Networks: A Guide to IEEE 802.11i @ NIST](https://www.govinfo.gov/content/pkg/GOVPUB-C13-bccd1f279aaf7e4caa863b34791bb565/pdf/GOVPUB-C13-bccd1f279aaf7e4caa863b34791bb565.pdf) _`NIST special publication`_
 - [RSN & EAP in detail @ TB Haxor](https://tbhaxor.com/rsn-and-eap-in-detail/) _`info`_
 - [Pre-RSN VS RSN Security Mechanisms Comparation](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/72a1b555-900a-4715-8835-717cf258c0c1) _`table`_
 
-### RSN: `RSN` : `FT`
+### 🔐🔁 RSN: `RSN` : `FT`
 - [RSN with FT | 802.11i | @ CWNP](https://www.cwnp.com/uploads/802-11_rsn_ft.pdf)
 
-## `AKM`: Authentication Key Management
+## 🔐💪↔️ `RSNA`: Robust Security Network Association
+_An association between a client STA and an AP that was established through authentication resulting in a 4‐way handshake to derive unicast keys and transfer group keys. || RSNA = PSK (WPA) & 802.1X (WEP is not supported in an RSNA)._
+- [`RSNA`: Robust Security Network Association](https://support.accessagility.com/hc/wifi-glossary-rsna) _`definition`_
+- [RSNA Mechanism](https://techhub.hpe.com/eginfolib/networking/docs/routers/msrv7/cg/5200-3028_wlan_cg/content/466576912.htm) _`info`_
+
+## 🔐💪💊 `RSNE`: Robust Security Network Element
+_Robust Security Network Element (RSNE) is an info element that may exist in 802.11 Beacon frames indicating a security network that allows only the creation of robust security network associations (RSNAs), and that the group cipher suite specified is not wired equivalent privacy (WEP). || This is included in the tagged parameters: RSA Elements._
+- [RSNE: Robust Security Network Element](https://en.wikipedia.org/wiki/RSNE)
+- [`RSN`, `RSNA` & `RSNE`: PCAP Analysis](https://www.netprojnetworks.com/802-11i-robust-security-network-12-6-2-rsna-selection/) _`PCAP Analysis`_
+
+## 🔐🤝📡 RSN: `4-way-handshake`
+
+
+## 🪪📡🗝️ `AKM`: Authentication Key Management
 _Authentication Key Management (AKM) is a term that describes the process of 802.1X/EAP authentication and the generation of encryption keys. The AKM suite indicates whether a station supports 802.1X or PSK authentication. || Key management is the process of managing cryptographic keys in a cryptosystem. This includes the generation, exchange, storage, use, destruction, and replacement of keys._ <br>
 **AKM Suites:**
 00-0F-AC-**01** = **`802.1X`** <br>
 00-0F-AC-**02** = **`PSK`** <br>
 00-0F-AC-**03** = **`FT over 802.1X`** <br>
+- [Authentication & Key Management @ CWNP)](https://youtu.be/8OPdE1MM1yE?si=1J28-6H1omE9LO0W)
 - [`AKM`: Authentication Key Management | 802.11i | @ CWNP](https://www.cwnp.com/uploads/802-11i_key_management.pdf) _`pdf document`_
 - [Authenticated Key Management @ Key Management @ Cisco](https://www.cisco.com/web/techdoc/wireless/access_points/online_help/eag/123-02.JA/1100/h_ap_sec_ap-client-security.html) _`info`_
-
 
 ## 🛡️🔐🏢 RSNA: `802.11 Security Keys`
 - [Wi-Fi Authentication & Key Generation](https://www.youtube.com/watch?v=ntGA6V5EciE&t=14s)
@@ -1222,7 +1240,7 @@ _Wireless security: WEP, WPA, WPA2 and WPA3 differences_ <br>
 
 ### Huevos
 
-Authentication & Key Management (Marcus Burton, CWNP) - https://youtu.be/8OPdE1MM1yE?si=1J28-6H1omE9LO0W
+ - 
 
 4 way nhandshake - https://www.youtube.com/watch?v=9M8kVYFhMDw
 
