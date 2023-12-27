@@ -1211,7 +1211,7 @@ _Robust Security Network Element (RSNE) is an info element that may exist in 802
 
 ## 🪪📡🗝️ `AKM`: Authentication Key Management
 _Authentication Key Management (AKM) is a term that describes the process of 802.1X/EAP authentication and the generation of encryption keys. The AKM suite indicates whether a station supports 802.1X or PSK authentication. || Key management is the process of managing cryptographic keys in a cryptosystem. This includes the generation, exchange, storage, use, destruction, and replacement of keys._ <br>
-**AKM Suites:**
+**AKM Suites:** <br>
 00-0F-AC-**01** = **`802.1X`** <br>
 00-0F-AC-**02** = **`PSK`** <br>
 00-0F-AC-**03** = **`FT over 802.1X`** <br>
