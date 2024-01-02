@@ -2105,8 +2105,16 @@ _Sometimes is important to capture and troubleshoot wired captures in adition to
 
 
 # 802.11 Vendor Specific Implementation
-- Ruckus
-- Cisco
+
+## Ruckus
+
+### Authentication
+- [`802.1x Auth` :: 802.1x authentication with NPS policies- Windows Server 2016](https://community.ruckuswireless.com/t5/RUCKUS-Self-Help/802-1x-authentication-with-NPS-policies-Windows-Server-2016/m-p/62773)
+
+### Troubleshooting
+
+
+## Cisco
 - Aruba
 - MikroTik
 - Fortinet
