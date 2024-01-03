@@ -2159,29 +2159,43 @@ _Sometimes is important to capture and troubleshoot wired captures in adition to
 
 
 
-# IEEE 802.11 Wireless (Wi-Fi): `Ofensive Security` & `Pentesting`
+# 💀🛜🥷 IEEE 802.11 Wireless (Wi-Fi): `Ofensive Security` & `Pentesting`
 
-## IEEE 802.11 Pentesting: `Software Tools`
+## 💀🛜🔪 IEEE 802.11 Pentesting: `Software Tools`
 
-## 🔭🔍🛜 IEEE 802.11 Pentesting Tools: `Aircrack-ng`
+### 💥🛜 IEEE 802.11 Pentesting Tools: `Aircrack-ng`
 _Aircrack-ng is basically a suite of tools that has been crafted to achieve objectives as Monitoring, Attacking, Testing & Cracking Wi-Fi Networks || Capture raw Wi-Fi packets in an intended airspace, on various channels of interest, and then analyse them to show the various Wi-Fi networks and Wi-Fi clients that were operating during the collection period ||  Break WEP and WPA PSK (pre-shared key)-type Wi-Fi networks by exploiting the known vulnerabilities of such networks || Injection/replay of Wi-Fi packets into the airspace. || Exploit the weaknesses present in various Wi-Fi clients, to establish fake connections with such clients, in order to launch man-in-the-middle type of attacks._
 - [**`Aircrack-ng`**](https://www.aircrack-ng.org/) _`official`_
 - [Aircrack-ng :: Wi-Fi Troubleshooting, Auditing and Cracking Made Easy](https://www.opensourceforu.com/2011/01/aircrack-ng-wi-fi-troubleshooting-auditing-and-cracking-made-easy/)
+- [WiFi password stealer](https://github.com/AleksaMCode/WiFi-password-stealer)
+
+## 🎃🛜 IEEE 802.11 Pentesting Tools: `Aircrack-ng`
 
 ## IEEE 802.11 Pentesting: `Hardware Tools`
 - [Wi-Fi Coconut]()
 - [Wi-Fi Pineapple]()
 
-## 802.11 `Hacking` & `Attack Techniques`
+## 💀🛜👿 802.11 `Hacking` & `Attack Techniques`
 
-### 802.11 PWN!!!: `Init Setup & Basics`
+### 💀📜⚙️ 802.11 PWN!!!: `Init Setup & Basics`
 - [Monitor Mode & Validations]()
 
-### 802.11 PWN!!!: `WLANs Audit`
+### 💀🕵️🦈 802.11 PWN!!!: `WLANs Audit`
 - []()
 
-### 802.11 Attack: `Evil Twin` & `Phishing`
+### 💀💥🔓 802.11 PWN!!!: `WEP Attacks`
+- [`aircrack-ng` - Cracking WEP Networks](https://www.youtube.com/watch?v=ar00S_GyRUU)
+
+### 💀💥🔓 802.11 PWN!!!: `WPA2 Attacks`
+- [Monitor, Capture & Cracking 4-way-handshake PSK]()
+
+### 💀🥷🦈 802.11 Attack: `Evil Twin`, `Rogue APs` & `Phishing`
 - [`wifiphishing` :: Evil Twin Attack with Phishing](https://www.youtube.com/watch?v=TZcgvi_KRvY)
+- [`airbase-ng` + `brctl` :: Creating a Rogue Wifi Network and Intercepting Traffic](https://www.youtube.com/watch?v=8JGre2T_yaE)
+- [`WEF Framework` :: Creación de un Fake AP (Punto de Acceso Falso) para Auditorias WIFI @ Frank Solo](https://www.youtube.com/watch?v=yWVAxX7uISc)
+
+### 💀🕵️💻 USB Credentials Exfiltration :: WiFi password stealer
+- [WiFi password stealer](https://github.com/AleksaMCode/WiFi-password-stealer)
 
 ---
 
