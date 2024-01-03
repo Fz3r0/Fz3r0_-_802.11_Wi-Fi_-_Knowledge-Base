@@ -1206,6 +1206,18 @@ _Robust Security Network Element (RSNE) is an info element that may exist in 802
 - [RSNE: Robust Security Network Element](https://en.wikipedia.org/wiki/RSNE)
 - [`RSN`, `RSNA` & `RSNE`: PCAP Analysis](https://www.netprojnetworks.com/802-11i-robust-security-network-12-6-2-rsna-selection/) _`PCAP Analysis`_
 
+## 802.11 `Encryption` & `Cipher Suites`
+_Encryption is a process by which information is converted into an unreadable or unintelligible format for those who do not have the key to decrypt it. | Cipher suites are sets of cryptographic algorithms used together to provide comprehensive security in communications. They include algorithms for encryption, but they can also address authentication and data integrity. | Differences: While Encryption is a specific process within the broader scope of cipher suites. Cipher suites not only focus on data encryption but also address other aspects of communication security, such as authentication and integrity. In the context of protocols like TLS/SSL, the negotiation of cipher suites during the handshake is essential to establish a secure connection between a client and an online server._ <br>
+
+Open: No Encryption or Cipher used <br>
+**`WEP`** :: Authentication = `PSK` / Cipher Suite = `TKIP`
+WPA Personal :: Authentication = `PSK` / Cipher Suite = `TKIP` / Encryption = `RC4`
+WPA Enterprise:
+WPA2 Personal:
+WPA2 Enterprise:
+
+- [¿Qué es la encriptación? & ¿Qué tipos de cifrado existen?](https://www.youtube.com/watch?v=vjvMTZWqzao) _`video`_
+
 ## 🔐🤝📡 RSN: `4-way-handshake`
 
 
