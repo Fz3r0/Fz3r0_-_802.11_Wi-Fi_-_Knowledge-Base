@@ -1240,7 +1240,8 @@ _Networking protocol that provides centralized Authentication, Authorization, an
 - [RADIUS: Remote Authentication Dial-In User Service](https://en.wikipedia.org/wiki/RADIUS) _`wiki`_
 
 ### RADIUS Fz3r0 Labs
-- [RADIUSdesk: How to install and configure free RADIUS server in Windows PC & use it with home Wi-Fi](https://www.youtube.com/watch?v=hIcJIRqO-5o)
+- [`FreeRADIUS`: Instalacion y Configuracion de FreeRADIUS en Windows](https://www.youtube.com/watch?v=gaA7TumkjNU)
+- [`RADIUSdesk`: How to install and configure free RADIUS server in Windows PC & use it with home Wi-Fi](https://www.youtube.com/watch?v=hIcJIRqO-5o)
 
 ## 🛡️🔐🏢 RSNA: `WPA/WPA2`
 _Wireless security: WEP, WPA, WPA2 and WPA3 differences_ <br>
