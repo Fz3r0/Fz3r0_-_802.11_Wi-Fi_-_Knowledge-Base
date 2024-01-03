@@ -1235,6 +1235,13 @@ _Authentication Key Management (AKM) is a term that describes the process of 802
 - [Wi-Fi Authentication & Key Generation](https://www.youtube.com/watch?v=ntGA6V5EciE&t=14s)
 - [RSNA Key Hierarchy](https://www.youtube.com/watch?v=6HoQVul9Zks&t=112s)
 
+## 🪪 `RADIUS`: Remote Authentication Dial-In User Service
+_Networking protocol that provides centralized Authentication, Authorization, and Accounting (AAA) management for users who connect and use a network service. RADIUS was developed by Livingston Enterprises in 1991 as an access server authentication and accounting protocol. It was later brought into IEEE 802 and IETF standards. | RADIUS is a client/server protocol that runs in the application layer, and can use either TCP or UDP. Network access servers, which control access to a network, usually contain a RADIUS client component that communicates with the RADIUS server. | RADIUS is often the back-end of choice for 802.1X authentication. | A RADIUS server is usually a background process running on UNIX or Microsoft Windows._
+- [RADIUS: Remote Authentication Dial-In User Service](https://en.wikipedia.org/wiki/RADIUS) _`wiki`_
+
+### RADIUS Fz3r0 Labs
+- [RADIUSdesk: How to install and configure free RADIUS server in Windows PC](https://www.youtube.com/watch?v=hIcJIRqO-5o)
+
 ## 🛡️🔐🏢 RSNA: `WPA/WPA2`
 _Wireless security: WEP, WPA, WPA2 and WPA3 differences_ <br>
 **`WPA-Personal   `** :: Encryption: `TKIP (depreciated)` :: Authentication: `PSK-256 bits` (8-63 chars) <br>
