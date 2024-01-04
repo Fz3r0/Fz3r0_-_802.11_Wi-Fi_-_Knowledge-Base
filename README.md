@@ -1217,8 +1217,8 @@ _Robust Security Network Element (RSNE) is an info element that may exist in 802
 _Encryption is a process by which information is converted into an unreadable or unintelligible format for those who do not have the key to decrypt it. | Cipher suites are sets of cryptographic algorithms used together to provide comprehensive security in communications. They include algorithms for encryption, but they can also address authentication and data integrity. | Differences: While Encryption is a specific process within the broader scope of cipher suites. Cipher suites not only focus on data encryption but also address other aspects of communication security, such as authentication and integrity. In the context of protocols like TLS/SSL, the negotiation of cipher suites during the handshake is essential to establish a secure connection between a client and an online server. In the context of Wi-Fi authentication, the negotiation of cipher suites is crucial during the handshake process. This negotiation helps establish a secure connection between a device and a Wi-Fi access point by determining the encryption methods that will safeguard the wireless communication._ <br><br>
 
 **`Open`** :: No Encryption or Cipher used <br>
-**`WEP`** :: Auth = `Shared Key` | Cipher `RC4` | Encryption `static key` | Integrity `CRC-32` | Lenght = `40 or 104-bit` | AKM = `NONE` <br>
-**`WPA-Personal` Auth = `PSK` | Cipher = `RC4 + TKIP` | Encryption `dynamic TKIP` | Integrity `MIC` | Lenght = `64 & 128-bit` | AKM = `4-way-handshake` <br>                                                       
+**`WEP`** :: Auth `Shared Key` | Cipher `RC4` | Encryption `static key` | Integrity `CRC-32` | Lenght `40 or 104-bit` | AKM `NONE` <br>
+**`WPA-Personal`** :: Auth `PSK` | Cipher `RC4 + TKIP` | Encryption `dynamic TKIP` | Integrity `MIC` | Lenght `64 & 128-bit` | AKM `4-way-handshake` <br>                                                       
 
 WPA Enterprise:
 WPA2 Personal:
