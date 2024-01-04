@@ -1260,8 +1260,8 @@ _Authentication Key Management (AKM) is a term that describes the process of 802
 - [`AKM`: Authentication Key Management | 802.11i | @ CWNP](https://www.cwnp.com/uploads/802-11i_key_management.pdf) _`pdf document`_
 - [Authenticated Key Management @ Key Management @ Cisco](https://www.cisco.com/web/techdoc/wireless/access_points/online_help/eag/123-02.JA/1100/h_ap_sec_ap-client-security.html) _`info`_
 
-### 00-0F-AC-01: `IEEE 802.1X` - `EAP`
-_802.1X is a port access protocol designed to secure networks through authentication. As a result, this type of authentication method is extremely useful in the Wi-Fi environment due to the nature of the medium. If a Wi-Fi user authenticates through 802.1X to access the network, a virtual port is opened on the access point, allowing communication. If not authorized correctly, no virtual port will be available, and communications will be blocked. | EAP is used to transmit authentication information between the supplicant (Wi-Fi workstation) and the authentication server (Microsoft IAS or another server). The specific type of EAP actually manages and defines the authentication process. The access point acting as the authenticator serves as a proxy facilitating communication between the supplicant and the authentication server._ <br><br>
+## 00-0F-AC-01: `IEEE 802.1X`-`EAP`: Extensible Authentication Protocol
+_EAP is the whole Framework used for implement authentication, and it uses 802.1X as a part of it | 802.1X is a port access protocol designed to secure networks through authentication. As a result, this type of authentication method is extremely useful in the Wi-Fi environment due to the nature of the medium. If a Wi-Fi user authenticates through 802.1X to access the network, a virtual port is opened on the access point, allowing communication. If not authorized correctly, no virtual port will be available, and communications will be blocked. | EAP is used to transmit authentication information between the supplicant (Wi-Fi workstation) and the authentication server (Microsoft IAS or another server). The specific type of EAP actually manages and defines the authentication process. The access point acting as the authenticator serves as a proxy facilitating communication between the supplicant and the authentication server._ <br><br>
 **Basic components in 802.1X authentication:** <br>
 **Supplicant**: A software client running on the Wi-Fi workstation (STA).<br>
 **Authenticator** or **NAS**: The Wi-Fi Access Point (AP). <br>
@@ -1270,11 +1270,32 @@ _802.1X is a port access protocol designed to secure networks through authentica
 - [Descripción general de `802.1X` y tipos de `EAP` @ _Intel_](https://www.intel.la/content/www/xl/es/support/articles/000006999/wireless/legacy-intel-wireless-products.html) _`info`_
 - [`Fz3r0` - Capturando EAPOL en aire y RADIUS en cable al mismo tiempo](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/9ffc7fa1-f4dd-49b1-b0cb-4ff2aa6a4e63) _`table`_
 
+### 802.1X-EAP: Frame & Packet Exchange` 
+**BASIC EAP MD5 _(depreciated)_** <br>
+After State 3: 📡⬇️ <br>
+Auhtenticator (**AP**): Request Identity ➡️ **STA** <br>
+Supplicant (**STA**): Identity ➡️ **AP** <br>
+Auhtenticator (**AP**): Access Request ➡️ **RADIUS** <br>
+Authentication Service (**RADIUS**): Challenge (text) ➡️ **AP** <br>
+Auhtenticator (**AP**): Challenge (text) ➡️ **STA** <br>
+Supplicant (**STA**): Challenge Response (cipher text) ➡️ **AP** <br>
+Auhtenticator (**AP**): Challenge Response (cipher text) ➡️ **RADIUS** <br>
+Authentication Service (**RADIUS**): Access Accept ➡️ **AP** <br>
+Auhtenticator (**AP**): Access Success ➡️ **STA** <br>
+Supplicant (**STA**) & Auhtenticator (**AP**): Key Exchange ↔️🗝️ <br>
 
-### 00-0F-AC-02: `PSK - Pre-Shared Key`
+**ACTUAL TUNNELED EAP _(secure)_** <br>
+
+**Wired LAN** (Between Authentication Serivce & Authenticator) = RADIUS = Type **0x888E** <br>
+**Wireless WLAN** (Between Authenticator & Supplicant) = EAPOL = Port **1812** <br>
+
+
+
+
+## 00-0F-AC-02: `PSK - Pre-Shared Key`
 - [`PSK`: Pre-Shared Key](https://en.wikipedia.org/wiki/Pre-shared_key) _`wiki`_
 
-### 00-0F-AC-03: `IEEE 802.11r` or `FT - Fast Transition` _(Over 802.1X)_
+## 00-0F-AC-03: `IEEE 802.11r` or `FT - Fast Transition` _(Over 802.1X)_
 - [IEEE 802.11r-2008 AKA FT (Fast Transition)](https://en.wikipedia.org/wiki/IEEE_802.11r-2008) _`wiki`_
 
 ## 🛡️🔐🏢 RSNA: `802.11 Security Keys`
