@@ -1218,12 +1218,12 @@ _Encryption is a process by which information is converted into an unreadable or
 
 **`Open`** :: _No Encryption or Cipher Suites used_ <br>
 **`WEP`** :: Auth **`Shared Key`** | Cipher `RC4` | Encryption `static key` | Integrity `CRC-32` | Lenght `40 or 104-bit` | AKM `NONE` <br>
-**`WPA-Personal`** :: Auth **`PSK`** | Cipher `RC4 + TKIP` | Encryption `TKIP` _dynamic_ | Integrity `MIC` | Lenght `64 & 128-bit` | AKM `4-way-handshake` <br>                                                       
-**`WPA-Enterprise`** :: Auth **`802.1X`-`EAP`** | Cipher `RC4 + TKIP` | Encryption `TKIP` _dynamic_ | Integrity `MIC` | Lenght `64 & 128-bit` | AKM `4-way-handshake` <br>   
-**`WPA2-Personal`** :: Auth **`PSK`** | Cipher `AES` | Encryption `CCMP` _dynamic_ | Integrity `CBC-MAC` | Lenght `128-bit` | AKM `4-way-handshake` <br>                                                       
-**`WPA2-Enterprise`** :: Auth **`802.1X`-`EAP`** | Cipher `AES` | Encryption `CCMP` _dynamic_ | Integrity `CBC-MAC` | Lenght `128-bit` | AKM `4-way-handshake` <br>   
-**`WPA3-Personal`** :: Auth **`PSK`** | Cipher `GCM` | Encryption `SAE` _dynamic_ | Integrity `SHA` | Lenght `128-bit` | AKM `4-way-handshake` <br>     
-**`WPA3-Personal`** :: Auth **`802.1X`-`EAP`** | Cipher `GCM` | Encryption `SAE` _dynamic_ | Integrity `SHA` | Lenght `192-bit` | AKM `4-way-handshake` <br>    
+**`WPA-Personal`** :: Auth **`PSK`** | Cipher `RC4 + TKIP` | Encryption `TKIP` _dynamic_ | Integrity `MIC` | Lenght `64 & 128-bit` | AKM `4-way-handshake` <br>
+**`WPA-Enterprise`** :: Auth **`802.1X`-`EAP`** | Cipher `RC4 + TKIP` | Encryption `TKIP` _dynamic_ | Integrity `MIC` | Lenght `64 & 128-bit` | AKM `4-way-handshake` <br>
+**`WPA2-Personal`** :: Auth **`PSK`** | Cipher `AES` | Encryption `CCMP` _dynamic_ | Integrity `CBC-MAC` | Lenght `128-bit` | AKM `4-way-handshake` <br>
+**`WPA2-Enterprise`** :: Auth **`802.1X`-`EAP`** | Cipher `AES` | Encryption `CCMP` _dynamic_ | Integrity `CBC-MAC` | Lenght `128-bit` | AKM `4-way-handshake` <br> 
+**`WPA3-Personal`** :: Auth **`PSK`** | Cipher `GCM` | Encryption `SAE` _dynamic_ | Integrity `SHA` | Lenght `128-bit` | AKM `4-way-handshake` <br>
+**`WPA3-Personal`** :: Auth **`802.1X`-`EAP`** | Cipher `GCM` | Encryption `SAE` _dynamic_ | Integrity `SHA` | Lenght `192-bit` | AKM `4-way-handshake` <br>
 - [¿Qué es la encriptación? & ¿Qué tipos de cifrado existen?](https://www.youtube.com/watch?v=vjvMTZWqzao) _`video`_
 - [`AKM`: Authentication & Key Management @ _Marcus Burton, CWNP_](https://www.youtube.com/watch?v=8OPdE1MM1yE) _`video`_
 - [`WEP`: Wired Equivalent Privacy @ _Marcus Burton, CWNP_](https://www.youtube.com/watch?v=ab6GYvKxfV0) _`video`_
