@@ -1223,7 +1223,7 @@ _Encryption is a process by which information is converted into an unreadable or
 **`WPA2-Personal`** :: Auth **`PSK`** | Cipher `CCMP` | Encryption `AES` | Integrity `CBC-MAC` | Lenght `128-bit` | AKM `4-way-handshake` <br>
 **`WPA2-Enterprise`** :: Auth **`802.1X`-`EAP`** | Cipher `CCMP` | Encryption `AES` | Integrity `CBC-MAC` | Lenght `128-bit` | AKM `4-way-handshake` <br> 
 **`WPA3-Personal`** :: Auth **`PSK`** | Cipher `GCM` | Encryption `SAE` | Integrity `SHA` | Lenght `128-bit` | AKM `4-way-handshake` <br>
-**`WPA3-Personal`** :: Auth **`802.1X`-`EAP`** | Cipher `GCM` | Encryption `SAE` | Integrity `SHA` | Lenght `192-bit` | AKM `4-way-handshake` <br>
+**`WPA3-Enterprise`** :: Auth **`802.1X`-`EAP`** | Cipher `GCM` | Encryption `SAE` | Integrity `SHA` | Lenght `192-bit` | AKM `4-way-handshake` <br>
 - [¿Qué es la encriptación? & ¿Qué tipos de cifrado existen?](https://www.youtube.com/watch?v=vjvMTZWqzao) _`video`_
 - [`AKM`: Authentication & Key Management @ _Marcus Burton, CWNP_](https://www.youtube.com/watch?v=8OPdE1MM1yE) _`video`_
 - [`WEP`: Wired Equivalent Privacy @ _Marcus Burton, CWNP_](https://www.youtube.com/watch?v=ab6GYvKxfV0) _`video`_
@@ -1259,6 +1259,15 @@ _Authentication Key Management (AKM) is a term that describes the process of 802
 - [Authentication & Key Management @ CWNP)](https://youtu.be/8OPdE1MM1yE?si=1J28-6H1omE9LO0W)
 - [`AKM`: Authentication Key Management | 802.11i | @ CWNP](https://www.cwnp.com/uploads/802-11i_key_management.pdf) _`pdf document`_
 - [Authenticated Key Management @ Key Management @ Cisco](https://www.cisco.com/web/techdoc/wireless/access_points/online_help/eag/123-02.JA/1100/h_ap_sec_ap-client-security.html) _`info`_
+
+### 00-0F-AC-01: `IEEE 802.1X`
+- [`IEEE 802.1X` :: Standard for `PNAC`: port-based Network Access Control](https://en.wikipedia.org/wiki/IEEE_802.1X) _`wiki`_
+
+### 00-0F-AC-02: `PSK - Pre-Shared Key`
+- [`PSK`: Pre-Shared Key](https://en.wikipedia.org/wiki/Pre-shared_key) _`wiki`_
+
+### 00-0F-AC-03: `IEEE 802.11r` or `FT - Fast Transition` _(Over 802.1X)_
+- [IEEE 802.11r-2008 AKA FT (Fast Transition)](https://en.wikipedia.org/wiki/IEEE_802.11r-2008) _`wiki`_
 
 ## 🛡️🔐🏢 RSNA: `802.11 Security Keys`
 - [Wi-Fi Authentication & Key Generation](https://www.youtube.com/watch?v=ntGA6V5EciE&t=14s)
