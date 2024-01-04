@@ -1260,7 +1260,7 @@ _Authentication Key Management (AKM) is a term that describes the process of 802
 - [`AKM`: Authentication Key Management | 802.11i | @ CWNP](https://www.cwnp.com/uploads/802-11i_key_management.pdf) _`pdf document`_
 - [Authenticated Key Management @ Key Management @ Cisco](https://www.cisco.com/web/techdoc/wireless/access_points/online_help/eag/123-02.JA/1100/h_ap_sec_ap-client-security.html) _`info`_
 
-## 00-0F-AC-01: `IEEE 802.1X`-`EAP`: Extensible Authentication Protocol
+## 🗝️🔐🏢 00-0F-AC-01: `IEEE 802.1X`-`EAP`: Extensible Authentication Protocol
 _EAP is the whole Framework used for implement authentication, and it uses 802.1X as a part of it | 802.1X is a port access protocol designed to secure networks through authentication. As a result, this type of authentication method is extremely useful in the Wi-Fi environment due to the nature of the medium. If a Wi-Fi user authenticates through 802.1X to access the network, a virtual port is opened on the access point, allowing communication. If not authorized correctly, no virtual port will be available, and communications will be blocked. | EAP is used to transmit authentication information between the supplicant (Wi-Fi workstation) and the authentication server (Microsoft IAS or another server). The specific type of EAP actually manages and defines the authentication process. The access point acting as the authenticator serves as a proxy facilitating communication between the supplicant and the authentication server._ <br><br>
 **Basic components in 802.1X authentication:** <br>
 **Supplicant**: A software client running on the Wi-Fi workstation (STA).<br>
@@ -1270,42 +1270,48 @@ _EAP is the whole Framework used for implement authentication, and it uses 802.1
 - [Descripción general de `802.1X` y tipos de `EAP` @ _Intel_](https://www.intel.la/content/www/xl/es/support/articles/000006999/wireless/legacy-intel-wireless-products.html) _`info`_
 - [`Fz3r0` - Capturando EAPOL en aire y RADIUS en cable al mismo tiempo](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/9ffc7fa1-f4dd-49b1-b0cb-4ff2aa6a4e63) _`table`_
 
-### 802.1X-EAP: Frame & Packet Exchange` 
-**BASIC EAP MD5 _(Depreciated Method)_** <br>
+### 🔐🔄💊 802.1X-EAP: Frame & Packet Exchange
+**🔄 BASIC EAP MD5 _(Depreciated Method)_** <br>
 After State 3: 📡⬇️ <br>
-Auhtenticator (**AP**): Request Identity ➡️ **STA** <br>
-Supplicant (**STA**): Identity ➡️ **AP** <br>
-Auhtenticator (**AP**): Access Request ➡️ **RADIUS** <br>
-Authentication Service (**RADIUS**): Challenge (text) ➡️ **AP** <br>
-Auhtenticator (**AP**): Challenge (text) ➡️ **STA** <br>
-Supplicant (**STA**): Challenge Response (cipher text) ➡️ **AP** <br>
-Auhtenticator (**AP**): Challenge Response (cipher text) ➡️ **RADIUS** <br>
-Authentication Service (**RADIUS**): Access Accept ➡️ **AP** <br>
-Auhtenticator (**AP**): Access Success ➡️ **STA** <br>
-Supplicant (**STA**) & Auhtenticator (**AP**): Key Exchange ↔️🗝️ <br><br>
+Auhtenticator (**AP**): 💊 Request Identity ➡️ **STA** <br>
+Supplicant (**STA**): 💊 Identity ➡️ **AP** <br>
+Auhtenticator (**AP**): 💊 Access Request ➡️ **RADIUS** <br>
+Authentication Service (**RADIUS**): 💊 Challenge (text) ➡️ **AP** <br>
+Auhtenticator (**AP**): 💊 Challenge (text) ➡️ **STA** <br>
+Supplicant (**STA**): 💊 Challenge Response (cipher text) ➡️ **AP** <br>
+Auhtenticator (**AP**): 💊 Challenge Response (cipher text) ➡️ **RADIUS** <br>
+Authentication Service (**RADIUS**): 💊 Access Accept ➡️ **AP** <br>
+Auhtenticator (**AP**): 💊 Access Success ➡️ **STA** <br>
+Supplicant (**STA**) & Auhtenticator (**AP**): Key Exchange ↔️🗝️ <br>
 
-**TUNNELED EAP _(Conceptual & General Actual Secure Method)_** <br>
+**🔄 TUNNELED EAP _(Conceptual & General Actual Secure Method)_** <br>
 After State 3: 📡⬇️ <br>
-Auhtenticator (**AP**): Request Identity ➡️ **STA** <br>
-Supplicant (**STA**): Identity: **Dummy** ➡️ **AP** <br>
-Auhtenticator (**AP**): Access Request: **Dummy** ➡️ **RADIUS** <br>
-Authentication Service (**RADIUS**): Authenticate Server Certificate _(for tunneling setup)_ ➡️📝 **AP** <br>
-Auhtenticator (**AP**): Authenticate Server Certificate _(for tunneling setup)_ ➡️📝 **STA** <br>
+Auhtenticator (**AP**): 💊 Request Identity ➡️ **STA** <br>
+Supplicant (**STA**): 💊 Identity: **Dummy** ➡️ **AP** <br>
+Auhtenticator (**AP**): 💊 Access Request: **Dummy** ➡️ **RADIUS** <br>
+Authentication Service (**RADIUS**): 💊 Authenticate Server Certificate _(for tunneling setup)_ ➡️📝 **AP** <br>
+Auhtenticator (**AP**): 💊 Authenticate Server Certificate _(for tunneling setup)_ ➡️📝 **STA** <br>
 <|| 📝🔐 Establish Encrypted Tunnel Using Certificate | Start Encrypted Traffic: 🔐📝 ||> <br>
-Supplicant (**STA**): Identity: **Real** 🔐➡️ **AP** <br>
-Auhtenticator (**AP**): Access Request (using real identity) 🔐➡️ **RADIUS** <br>
-Authentication Service (**RADIUS**): Challenge (text) 🔐➡️ **AP** <br>
-Auhtenticator (**AP**): Challenge (text) 🔐➡️ **STA** <br>
-Supplicant (**STA**): Challenge Response (cipher text) 🔐➡️ **AP** <br>
-Auhtenticator (**AP**): Challenge Response (cipher text) 🔐➡️ **RADIUS** <br>
-Authentication Service (**RADIUS**): Access Accept 🔐➡️ **AP** <br>
-Auhtenticator (**AP**): Access Success 🔐➡️ **STA** <br>
-Supplicant (**STA**) & Auhtenticator (**AP**): Key Exchange 🔐↔️🗝️ <br><br>
+Supplicant (**STA**): 💊 Identity: **Real** 🔐➡️ **AP** <br>
+Auhtenticator (**AP**): 💊 Access Request (using real identity) 🔐➡️ **RADIUS** <br>
+Authentication Service (**RADIUS**): 💊 Challenge (text) 🔐➡️ **AP** <br>
+Auhtenticator (**AP**): 💊 Challenge (text) 🔐➡️ **STA** <br>
+Supplicant (**STA**): 💊 Challenge Response (cipher text) 🔐➡️ **AP** <br>
+Auhtenticator (**AP**): 💊 Challenge Response (cipher text) 🔐➡️ **RADIUS** <br>
+Authentication Service (**RADIUS**): 💊 Access Accept 🔐➡️ **AP** <br>
+Auhtenticator (**AP**): 💊 Access Success 🔐➡️ **STA** <br>
+Supplicant (**STA**) & Auhtenticator (**AP**): Key Exchange 🔐↔️🗝️ <br>
 
-**Packets & Frames to Capture:** <br>
+**🦈 Packets & Frames to Capture:** <br>
 **Wired LAN** (Between Authentication Serivce & Authenticator) = **RADIUS** = Type **0x888E** <br>
 **Wired LAN** (Between Authentication Serivce & Authenticator) = **WLCCP** = Type **???** <br>
 **Wireless WLAN** (Between Authenticator & Supplicant) = EAPOL = **Port** **1812** <br>
+- [Generic EAP Method: Frame Exchange](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/46d6b1c9-e2aa-49ee-a67a-5d9d06b56869) _`Frame Exchange`_
+- [Tunneled EAP Methods: Frame Exchange](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/f90635e2-b72b-4c8c-beac-4237c886ba3b) _`Frame Exchange`_
+- [Wired Capture Example: Incorrect Password](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/9bf57d54-f7e0-481f-8cb8-203fc178adfb) _`PCAP Frame Exchange`_
+- [Wired Capture Example: Silent Dosconnects](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/73bdf52f-92c2-4f95-8878-1ad27348ac50) _`PCAP Frame Exchange`_
+
+
 
 
 
