@@ -1306,6 +1306,7 @@ Supplicant (**STA**) & Auhtenticator (**AP**): Key Exchange 🔐↔️🗝️ <b
 **Wired LAN** (Between Authentication Serivce & Authenticator) = **RADIUS** = Type **0x888E** <br>
 **Wired LAN** (Between Authentication Serivce & Authenticator) = **WLCCP** = Type **???** <br>
 **Wireless WLAN** (Between Authenticator & Supplicant) = EAPOL = **Port** **1812** <br>
+- [`802.1X-EAP` **Full Frame/Packet Exchange**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/0c845cce-22c2-48d1-89cd-3ace19260508) _`Frame Exchange`_
 - [Generic EAP Method: Frame Exchange](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/46d6b1c9-e2aa-49ee-a67a-5d9d06b56869) _`Frame Exchange`_
 - [Tunneled EAP Methods: Frame Exchange](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/f90635e2-b72b-4c8c-beac-4237c886ba3b) _`Frame Exchange`_
 - [Wired Capture Example: Incorrect Password](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/9bf57d54-f7e0-481f-8cb8-203fc178adfb) _`PCAP Frame Exchange`_
