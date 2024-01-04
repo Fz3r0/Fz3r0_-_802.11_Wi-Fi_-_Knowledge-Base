@@ -1213,26 +1213,41 @@ _Robust Security Network Element (RSNE) is an info element that may exist in 802
 - [RSNE: Robust Security Network Element](https://en.wikipedia.org/wiki/RSNE)
 - [`RSN`, `RSNA` & `RSNE`: PCAP Analysis](https://www.netprojnetworks.com/802-11i-robust-security-network-12-6-2-rsna-selection/) _`PCAP Analysis`_
 
-## 802.11 Security: `Encryption` & `Cipher Suites`
-_Encryption is a process by which information is converted into an unreadable or unintelligible format for those who do not have the key to decrypt it. | Cipher suites are sets of cryptographic algorithms used together to provide comprehensive security in communications. They include algorithms for encryption, but they can also address authentication and data integrity. | Differences: While Encryption is a specific process within the broader scope of cipher suites. Cipher suites not only focus on data encryption but also address other aspects of communication security, such as authentication and integrity. In the context of protocols like TLS/SSL, the negotiation of cipher suites during the handshake is essential to establish a secure connection between a client and an online server. In the context of Wi-Fi authentication, the negotiation of cipher suites is crucial during the handshake process. This negotiation helps establish a secure connection between a device and a Wi-Fi access point by determining the encryption methods that will safeguard the wireless communication._ <br>
+## 802.11 Security: `Encryption Methods` & `Cipher Suites`
+_Encryption is a process by which information is converted into an unreadable or unintelligible format for those who do not have the key to decrypt it. | Cipher suites are sets of cryptographic algorithms used together to provide comprehensive security in communications. They include algorithms for encryption, but they can also address authentication and data integrity. | Differences: While Encryption is a specific process within the broader scope of cipher suites. Cipher suites not only focus on data encryption but also address other aspects of communication security, such as authentication and integrity. In the context of protocols like TLS/SSL, the negotiation of cipher suites during the handshake is essential to establish a secure connection between a client and an online server. In the context of Wi-Fi authentication, the negotiation of cipher suites is crucial during the handshake process. This negotiation helps establish a secure connection between a device and a Wi-Fi access point by determining the encryption methods that will safeguard the wireless communication._ <br><br>
 
 **`Open`** :: No Encryption or Cipher used <br>
-**`WEP`** :: AKM = `static` / Size = `64 or 128-bit` / Authentication = `PSK` / Cipher Suite = `` / Encryption = `RC4`
+Sec-Protocol: **`WEP`** :: Cipher = `RC4` using `static key` Encryption `Rivest Cipher 4` :: Lenght = `40 or 104-bit` :: Authentication = `Open or Shared` :: AKM = `NONE`           / Size = `64 or 128-bit` /  / Cipher Suite = `` / Encryption = `RC4` <br>
 WPA Personal :: AKM = `dynamic (TKIP)` / Authentication = `PSK` / Cipher Suite = `TKIP` / Encryption = `RC4`
 WPA Enterprise:
 WPA2 Personal:
 WPA2 Enterprise:
 - [¿Qué es la encriptación? & ¿Qué tipos de cifrado existen?](https://www.youtube.com/watch?v=vjvMTZWqzao) _`video`_
+- [`AKM`: Authentication & Key Management @ _Marcus Burton, CWNP_](https://www.youtube.com/watch?v=8OPdE1MM1yE) _`video`_
+- [`WEP`: Wired Equivalent Privacy @ _Marcus Burton, CWNP_](https://www.youtube.com/watch?v=ab6GYvKxfV0) _`video`_
+- [`WPA` & `WPA2`: Wi-Fi Protected Access @ _Marcus Burton, CWNP_)](https://www.youtube.com/watch?v=hLQ5rYNUwNg) _`video`_
 - [WEP, WPA, WPA2, and WPA3: Differences explained @ _NordVPN_](https://nordvpn.com/blog/wep-vs-wpa-vs-wpa2-vs-wpa3/) _`info + table`_
 - [Wi-Fi Security Timeline | WEP, WPA, WPA2, WPA3, 802.1X](https://semfionetworks.com/blog/wi-fi-security-timeline/) _`timeline + table`_
 - [Evolution of wireless LAN security architecture to IEEE 802.11i (WPA2)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/cc53c61c-d50a-49b1-be8e-ee08d8d54171) _`table`_
 - [A comparative study of WLAN security protocols: WEP, WPA, WPA2](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/c8970a2e-130b-4c78-8426-026c161b9477) _`table`_
 
+### Cipher Suite: `RC4`: Rivest Cipher 4 _depreciated_
+
+### Encryption Method: `TKIP`
+_Encryption Method_
+- [TKIP Encryption Method](https://mrncciew.com/2014/09/13/cwsp-tkip-encryption-method/)
+
+### Encryption Method: `CCMP`
+_Encryption Method_
+- [CCMP Encryption Method](https://mrncciew.com/2014/08/19/cwsp-ccmp-encryption-method/)
+
 ## 🔐🤝📡 RSN: `4-way-handshake`
+__
+- [4-Way-Handshake @ _Nayarasi_](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) _`CWNE info`_
 
 
 ## 🪪📡🗝️ `AKM`: Authentication Key Management
-_Authentication Key Management (AKM) is a term that describes the process of 802.1X/EAP authentication and the generation of encryption keys. The AKM suite indicates whether a station supports 802.1X or PSK authentication. || Key management is the process of managing cryptographic keys in a cryptosystem. This includes the generation, exchange, storage, use, destruction, and replacement of keys._ <br>
+_Authentication Key Management (AKM) is a term that describes the process of 802.1X/EAP authentication and the generation of encryption keys. The AKM suite indicates whether a station supports 802.1X or PSK authentication. || Key management is the process of managing cryptographic keys in a cryptosystem. This includes the generation, exchange, storage, use, destruction, and replacement of keys._ <br><br>
 **AKM Suites:** <br>
 00-0F-AC-**01** = **`802.1X`** <br>
 00-0F-AC-**02** = **`PSK`** <br>
