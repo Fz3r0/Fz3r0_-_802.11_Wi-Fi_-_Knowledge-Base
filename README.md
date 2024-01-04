@@ -1187,6 +1187,12 @@ _**Station or AP can send a Deauthentication Frame** when all communications are
 
 
 
+# 802.11 Wi-Fi Security
+
+- [Wi-Fi Security Timeline | WEP, WPA, WPA2, WPA3, 802.1X](https://semfionetworks.com/blog/wi-fi-security-timeline/)
+
+
+
 ## 🔐💪🛡️ `RSN`: Robust Recure Network
 _A network that only allows the creation of RSNA (Robust Secure Network Associations) || It includes a RSNE () || The term Robust Security Network is used in WiFi networks to describe the security enhancements encompassed in the IEEE 802.11i and WPA (WiFi Protected Access) 1 and 2 variants. The suite of protocols endeavours to compensate for the weaknesses associated with WEP(Wired Equivalent Privacy). || RSN/RSNA uses dynamic key generation via 4 way handshake and two types of keys for unicast and multicast transmission || 
 - [`NIST-800-97`: Establishing Wireless Robust Security Networks: A Guide to IEEE 802.11i @ NIST](https://www.govinfo.gov/content/pkg/GOVPUB-C13-bccd1f279aaf7e4caa863b34791bb565/pdf/GOVPUB-C13-bccd1f279aaf7e4caa863b34791bb565.pdf) _`NIST special publication`_
@@ -1209,14 +1215,14 @@ _Robust Security Network Element (RSNE) is an info element that may exist in 802
 ## 802.11 `Encryption` & `Cipher Suites`
 _Encryption is a process by which information is converted into an unreadable or unintelligible format for those who do not have the key to decrypt it. | Cipher suites are sets of cryptographic algorithms used together to provide comprehensive security in communications. They include algorithms for encryption, but they can also address authentication and data integrity. | Differences: While Encryption is a specific process within the broader scope of cipher suites. Cipher suites not only focus on data encryption but also address other aspects of communication security, such as authentication and integrity. In the context of protocols like TLS/SSL, the negotiation of cipher suites during the handshake is essential to establish a secure connection between a client and an online server. In the context of Wi-Fi authentication, the negotiation of cipher suites is crucial during the handshake process. This negotiation helps establish a secure connection between a device and a Wi-Fi access point by determining the encryption methods that will safeguard the wireless communication._ <br>
 
-Open: No Encryption or Cipher used <br>
-**`WEP`** :: Authentication = `PSK` / Cipher Suite = `TKIP`
-WPA Personal :: Authentication = `PSK` / Cipher Suite = `TKIP` / Encryption = `RC4`
+**`Open`** :: No Encryption or Cipher used <br>
+**`WEP`** :: AKM = `static` / Size = `64 or 128-bit` / Authentication = `PSK` / Cipher Suite = `` / Encryption = `RC4`
+WPA Personal :: AKM = `dynamic (TKIP)` / Authentication = `PSK` / Cipher Suite = `TKIP` / Encryption = `RC4`
 WPA Enterprise:
 WPA2 Personal:
 WPA2 Enterprise:
-
 - [¿Qué es la encriptación? & ¿Qué tipos de cifrado existen?](https://www.youtube.com/watch?v=vjvMTZWqzao) _`video`_
+- [WEP, WPA, WPA2, and WPA3: Differences explained @ _NordVPN_](https://nordvpn.com/blog/wep-vs-wpa-vs-wpa2-vs-wpa3/) _`info + table`_
 
 ## 🔐🤝📡 RSN: `4-way-handshake`
 
