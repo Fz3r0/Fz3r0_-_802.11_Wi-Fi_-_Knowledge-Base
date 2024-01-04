@@ -1271,7 +1271,7 @@ _EAP is the whole Framework used for implement authentication, and it uses 802.1
 - [`Fz3r0` - Capturando EAPOL en aire y RADIUS en cable al mismo tiempo](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/9ffc7fa1-f4dd-49b1-b0cb-4ff2aa6a4e63) _`table`_
 
 ### 802.1X-EAP: Frame & Packet Exchange` 
-**BASIC EAP MD5 _(depreciated)_** <br>
+**BASIC EAP MD5 _(Depreciated Method)_** <br>
 After State 3: 📡⬇️ <br>
 Auhtenticator (**AP**): Request Identity ➡️ **STA** <br>
 Supplicant (**STA**): Identity ➡️ **AP** <br>
@@ -1282,12 +1282,30 @@ Supplicant (**STA**): Challenge Response (cipher text) ➡️ **AP** <br>
 Auhtenticator (**AP**): Challenge Response (cipher text) ➡️ **RADIUS** <br>
 Authentication Service (**RADIUS**): Access Accept ➡️ **AP** <br>
 Auhtenticator (**AP**): Access Success ➡️ **STA** <br>
-Supplicant (**STA**) & Auhtenticator (**AP**): Key Exchange ↔️🗝️ <br>
+Supplicant (**STA**) & Auhtenticator (**AP**): Key Exchange ↔️🗝️ <br><br>
 
-**ACTUAL TUNNELED EAP _(secure)_** <br>
+**TUNNELED EAP _(Conceptual & General Actual Secure Method)_** <br>
+After State 3: 📡⬇️ <br>
+Auhtenticator (**AP**): Request Identity ➡️ **STA** <br>
+Supplicant (**STA**): Identity: **Dummy** ➡️ **AP** <br>
+Auhtenticator (**AP**): Access Request: **Dummy** ➡️ **RADIUS** <br>
+Authentication Service (**RADIUS**): Authenticate Server Certificate _(for tunneling setup)_ ➡️📝 **AP** <br>
+Auhtenticator (**AP**): Authenticate Server Certificate _(for tunneling setup)_ ➡️📝 **STA** <br>
+<|| 📝🔐 Establish Encrypted Tunnel Using Certificate | Start Encrypted Traffic: 🔐📝 ||> <br>
+Supplicant (**STA**): Identity: **Real** 🔐➡️ **AP** <br>
+Auhtenticator (**AP**): Access Request (using real identity) 🔐➡️ **RADIUS** <br>
+Authentication Service (**RADIUS**): Challenge (text) 🔐➡️ **AP** <br>
+Auhtenticator (**AP**): Challenge (text) 🔐➡️ **STA** <br>
+Supplicant (**STA**): Challenge Response (cipher text) 🔐➡️ **AP** <br>
+Auhtenticator (**AP**): Challenge Response (cipher text) 🔐➡️ **RADIUS** <br>
+Authentication Service (**RADIUS**): Access Accept 🔐➡️ **AP** <br>
+Auhtenticator (**AP**): Access Success 🔐➡️ **STA** <br>
+Supplicant (**STA**) & Auhtenticator (**AP**): Key Exchange 🔐↔️🗝️ <br><br>
 
-**Wired LAN** (Between Authentication Serivce & Authenticator) = RADIUS = Type **0x888E** <br>
-**Wireless WLAN** (Between Authenticator & Supplicant) = EAPOL = Port **1812** <br>
+**Packets & Frames to Capture:** <br>
+**Wired LAN** (Between Authentication Serivce & Authenticator) = **RADIUS** = Type **0x888E** <br>
+**Wired LAN** (Between Authentication Serivce & Authenticator) = **WLCCP** = Type **???** <br>
+**Wireless WLAN** (Between Authenticator & Supplicant) = EAPOL = **Port** **1812** <br>
 
 
 
