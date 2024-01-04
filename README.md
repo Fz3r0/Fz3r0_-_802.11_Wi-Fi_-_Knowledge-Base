@@ -1217,8 +1217,9 @@ _Robust Security Network Element (RSNE) is an info element that may exist in 802
 _Encryption is a process by which information is converted into an unreadable or unintelligible format for those who do not have the key to decrypt it. | Cipher suites are sets of cryptographic algorithms used together to provide comprehensive security in communications. They include algorithms for encryption, but they can also address authentication and data integrity. | Differences: While Encryption is a specific process within the broader scope of cipher suites. Cipher suites not only focus on data encryption but also address other aspects of communication security, such as authentication and integrity. In the context of protocols like TLS/SSL, the negotiation of cipher suites during the handshake is essential to establish a secure connection between a client and an online server. In the context of Wi-Fi authentication, the negotiation of cipher suites is crucial during the handshake process. This negotiation helps establish a secure connection between a device and a Wi-Fi access point by determining the encryption methods that will safeguard the wireless communication._ <br><br>
 
 **`Open`** :: No Encryption or Cipher used <br>
-Sec-Protocol: **`WEP`** :: Cipher = `RC4` using `static key` Encryption `Rivest Cipher 4` :: Lenght = `40 or 104-bit` :: Authentication = `Open or Shared` :: AKM = `NONE`           / Size = `64 or 128-bit` /  / Cipher Suite = `` / Encryption = `RC4` <br>
-WPA Personal :: AKM = `dynamic (TKIP)` / Authentication = `PSK` / Cipher Suite = `TKIP` / Encryption = `RC4`
+**`WEP`** :: Cipher = `RC4` - `static key` Encryption & `CRC-32` Integrity :: Lenght = `40 or 104-bit` :: Authentication = `Open or Shared` :: AKM = `NONE` <br>
+**`WPA-Personal` :: Cipher = `RC4 + TKIP` - `dynamic TKIP` Encryption & `MIC` Integrity :: Lenght = `64 & 128-bit` :: Authentication = `PSK` :: AKM = `4-way-handshake` <br>                                                       
+
 WPA Enterprise:
 WPA2 Personal:
 WPA2 Enterprise:
@@ -1227,6 +1228,7 @@ WPA2 Enterprise:
 - [`WEP`: Wired Equivalent Privacy @ _Marcus Burton, CWNP_](https://www.youtube.com/watch?v=ab6GYvKxfV0) _`video`_
 - [`WPA` & `WPA2`: Wi-Fi Protected Access @ _Marcus Burton, CWNP_)](https://www.youtube.com/watch?v=hLQ5rYNUwNg) _`video`_
 - [WEP, WPA, WPA2, and WPA3: Differences explained @ _NordVPN_](https://nordvpn.com/blog/wep-vs-wpa-vs-wpa2-vs-wpa3/) _`info + table`_
+- [WEP vs. WPA vs. WPA2 vs. WPA3 @ _FS_](https://community.fs.com/article/wep-vs-wpa-vs-wpa2-vs-wpa3.html) _`info + table`_
 - [Wi-Fi Security Timeline | WEP, WPA, WPA2, WPA3, 802.1X](https://semfionetworks.com/blog/wi-fi-security-timeline/) _`timeline + table`_
 - [Evolution of wireless LAN security architecture to IEEE 802.11i (WPA2)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/cc53c61c-d50a-49b1-be8e-ee08d8d54171) _`table`_
 - [A comparative study of WLAN security protocols: WEP, WPA, WPA2](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/c8970a2e-130b-4c78-8426-026c161b9477) _`table`_
