@@ -1272,7 +1272,7 @@ _EAP is the whole Framework used for implement authentication, and it uses 802.1
 
 ### 🔐🔄💊 802.1X-EAP: Frame & Packet Exchange
 **🔄 BASIC EAP MD5 _(Depreciated Method)_** <br>
-After State 3: 📡⬇️ <br>
+✅ After State 3 Completed OK: 📡⬇️ <br>
 Auhtenticator (**AP**): 💊 Request Identity ➡️ **STA** <br>
 Supplicant (**STA**): 💊 Identity ➡️ **AP** <br>
 Auhtenticator (**AP**): 💊 Access Request ➡️ **RADIUS** <br>
@@ -1283,15 +1283,16 @@ Auhtenticator (**AP**): 💊 Challenge Response (cipher text) ➡️ **RADIUS** 
 Authentication Service (**RADIUS**): 💊 Access Accept ➡️ **AP** <br>
 Auhtenticator (**AP**): 💊 Access Success ➡️ **STA** <br>
 Supplicant (**STA**) & Auhtenticator (**AP**): Key Exchange ↔️🗝️ <br>
+✅🗝️ State 4 OK!!! STA Full Associated to AP using 802.1X-EAP Encryption & Cipher. <br>
 
 **🔄 TUNNELED EAP _(Conceptual & General Actual Secure Method)_** <br>
-After State 3: 📡⬇️ <br>
+✅ After State 3: 📡⬇️ <br>
 Auhtenticator (**AP**): 💊 Request Identity ➡️ **STA** <br>
 Supplicant (**STA**): 💊 Identity: **Dummy** ➡️ **AP** <br>
 Auhtenticator (**AP**): 💊 Access Request: **Dummy** ➡️ **RADIUS** <br>
 Authentication Service (**RADIUS**): 💊 Authenticate Server Certificate _(for tunneling setup)_ ➡️📝 **AP** <br>
 Auhtenticator (**AP**): 💊 Authenticate Server Certificate _(for tunneling setup)_ ➡️📝 **STA** <br>
-<|| 📝🔐 Establish Encrypted Tunnel Using Certificate | Start Encrypted Traffic: 🔐📝 ||> <br>
+<|| 📝🔐🚇 _Establish Encrypted Tunnel Using Certificate | Start Encrypted Traffic:_ 🚇🔐📝 ||> <br>
 Supplicant (**STA**): 💊 Identity: **Real** 🔐➡️ **AP** <br>
 Auhtenticator (**AP**): 💊 Access Request (using real identity) 🔐➡️ **RADIUS** <br>
 Authentication Service (**RADIUS**): 💊 Challenge (text) 🔐➡️ **AP** <br>
@@ -1301,6 +1302,7 @@ Auhtenticator (**AP**): 💊 Challenge Response (cipher text) 🔐➡️ **RADIU
 Authentication Service (**RADIUS**): 💊 Access Accept 🔐➡️ **AP** <br>
 Auhtenticator (**AP**): 💊 Access Success 🔐➡️ **STA** <br>
 Supplicant (**STA**) & Auhtenticator (**AP**): Key Exchange 🔐↔️🗝️ <br>
+✅🗝️ State 4 OK!!! STA Full Associated to AP using 802.1X-EAP Encryption & Cipher. <br>
 
 **🦈 Packets & Frames to Capture:** <br>
 **Wired LAN** (Between Authentication Serivce & Authenticator) = **RADIUS** = Type **0x888E** <br>
