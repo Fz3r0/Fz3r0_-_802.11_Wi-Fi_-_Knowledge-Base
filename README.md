@@ -1260,8 +1260,16 @@ _Authentication Key Management (AKM) is a term that describes the process of 802
 - [`AKM`: Authentication Key Management | 802.11i | @ CWNP](https://www.cwnp.com/uploads/802-11i_key_management.pdf) _`pdf document`_
 - [Authenticated Key Management @ Key Management @ Cisco](https://www.cisco.com/web/techdoc/wireless/access_points/online_help/eag/123-02.JA/1100/h_ap_sec_ap-client-security.html) _`info`_
 
-### 00-0F-AC-01: `IEEE 802.1X`
+### 00-0F-AC-01: `IEEE 802.1X` - `EAP`
+_802.1X is a port access protocol designed to secure networks through authentication. As a result, this type of authentication method is extremely useful in the Wi-Fi environment due to the nature of the medium. If a Wi-Fi user authenticates through 802.1X to access the network, a virtual port is opened on the access point, allowing communication. If not authorized correctly, no virtual port will be available, and communications will be blocked. | EAP is used to transmit authentication information between the supplicant (Wi-Fi workstation) and the authentication server (Microsoft IAS or another server). The specific type of EAP actually manages and defines the authentication process. The access point acting as the authenticator serves as a proxy facilitating communication between the supplicant and the authentication server._
+**Basic components in 802.1X authentication:** <br>
+**Supplicant**: A software client running on the Wi-Fi workstation (STA).<br>
+**Authenticator** or **NAS**: The Wi-Fi Access Point (AP). <br>
+**Authentication Server**: An authentication database, typically a RADIUS server such as Cisco ACS, Funk Steel-Belted RADIUS, or Microsoft IAS. <br>
 - [`IEEE 802.1X` :: Standard for `PNAC`: port-based Network Access Control](https://en.wikipedia.org/wiki/IEEE_802.1X) _`wiki`_
+- [Descripción general de `802.1X` y tipos de `EAP` @ _Intel_](https://www.intel.la/content/www/xl/es/support/articles/000006999/wireless/legacy-intel-wireless-products.html) _`info`_
+- [`Fz3r0` - Capturando EAPOL en aire y RADIUS en cable al mismo tiempo](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/9ffc7fa1-f4dd-49b1-b0cb-4ff2aa6a4e63) _`table`_
+
 
 ### 00-0F-AC-02: `PSK - Pre-Shared Key`
 - [`PSK`: Pre-Shared Key](https://en.wikipedia.org/wiki/Pre-shared_key) _`wiki`_
@@ -1274,7 +1282,8 @@ _Authentication Key Management (AKM) is a term that describes the process of 802
 - [RSNA Key Hierarchy](https://www.youtube.com/watch?v=6HoQVul9Zks&t=112s)
 
 ## 🪪 `RADIUS`: Remote Authentication Dial-In User Service
-_Networking protocol that provides centralized Authentication, Authorization, and Accounting (AAA) management for users who connect and use a network service. RADIUS was developed by Livingston Enterprises in 1991 as an access server authentication and accounting protocol. It was later brought into IEEE 802 and IETF standards. | RADIUS is a client/server protocol that runs in the application layer, and can use either TCP or UDP. Network access servers, which control access to a network, usually contain a RADIUS client component that communicates with the RADIUS server. | RADIUS is often the back-end of choice for 802.1X authentication. | A RADIUS server is usually a background process running on UNIX or Microsoft Windows._
+_Networking protocol that provides centralized Authentication, Authorization, and Accounting (AAA) management for users who connect and use a network service. RADIUS was developed by Livingston Enterprises in 1991 as an access server authentication and accounting protocol. It was later brought into IEEE 802 and IETF standards. | RADIUS is a client/server protocol that runs in the application layer, and can use either TCP or UDP. Network access servers, which control access to a network, usually contain a RADIUS client component that communicates with the RADIUS server. | RADIUS is often the back-end of choice for 802.1X authentication. | A RADIUS server is usually a background process running on UNIX or Microsoft Windows._ <br>
+Default Port: 1812
 - [RADIUS: Remote Authentication Dial-In User Service](https://en.wikipedia.org/wiki/RADIUS) _`wiki`_
 
 ### RADIUS Fz3r0 Labs
