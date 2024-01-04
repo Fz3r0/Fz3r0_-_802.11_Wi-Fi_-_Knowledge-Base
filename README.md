@@ -1160,8 +1160,18 @@ _These are the Authentication Methods a STA can use to access to a BSS_
 ## 🛡️🔓🪪 Authentication Methods: `Open System Authentication`
 _Once a client station is discover a SSID (Probe Request/Response or listening to Beacons) it move to Join phase. This exchange comprise of at least 4 frames || Open System authentication should never fail || Init method of authentication used by most modern WLANs || RSN like 802.1X or PSK is performed later (state 3 > 4) || There is no "authentication response frame", it's just an "autentication frame" with another status code value || Association process is similar to authentication, in this caso we do have "authentication request" & "authentication response" (both ACKed) ||_
 ### 🔓🪪 Open System Authentication: `Authentication` :: From:`State 1` ➡️ To:`State 2`
-_The initial purpose of the authentication frame is to validate the device type (verify that the requesting station has proper 802.11 capability to join the cell). This exchanged is based on simple two-frame (Auth Request &  Auth Response) called Open System._
-**`Authentication` Exchange**: `AP`:`Beacon` _(Optional)_ >> `STA`:`Probe Req` >> `AP`:`Probe Res` >> `STA`:`ACK` >> `STA`:`Auth Req`:`Alg=0 SeqNum=1` >> `AP`:`ACK` >> `AP`:`Auth Res`:`Alg=0 SeqNum=2` >> `STA`:`ACK` >> **State 2 OK! `CLIENT AUTHENTICATED`**
+_The initial purpose of the authentication frame is to validate the device type (verify that the requesting station has proper 802.11 capability to join the cell). This exchanged is based on simple two-frame (Auth Request &  Auth Response) called Open System._ <br> <br> 
+🏁🔄📡 **`Authentication` Frame Exchange**: <br> 
+📡🛸 `AP`: 💊 `Beacon` _(Optional)_ ➡️ Broadcast _(All Wi-Fi Devices sorrounding)_ <br> 
+🔍❓ `STA`: 💊 `Probe Req` ➡️ AP <br> 
+🔍☑️ `AP`: 💊 `Probe Res` ➡️ STA <br> 
+🆗 `STA`: 💊 `ACK` ➡️ AP <br> 
+🚪❓ `STA`: 💊 `Authentication (Request)`:`Alg=0 SeqNum=1` ➡️ AP <br> 
+🆗 `AP`:`ACK` 💊  ➡️ STA <br> 
+🚪☑️ `AP`: 💊 `Authentication (Seccess)`:`Alg=0 SeqNum=2` ➡️ STA <br> 
+🆗 `STA`:💊 `ACK` ➡️ AP <br> 
+✅ **State 2 OK! `CLIENT AUTHENTICATED`** ✅ <br> 
+
 - [`Authentication` :: Frame Exchange :: `Open System`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/bb52ef07-7502-435c-844d-9b32f7f7b43a) _`frame exchange`_
 - [`Authentication` :: Frame Decode @ Nayanajith](https://mrncciew.com/2014/10/10/802-11-mgmt-authentication-frame/) _`frame decode`_
 
