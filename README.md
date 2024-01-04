@@ -1148,7 +1148,7 @@ _Any STA or AP can be in some "state" within this state machine at any given tim
 - [**`Passive Scanning`**](https://community.nxp.com/t5/Wireless-Connectivity-Knowledge/802-11-Wi-Fi-Connection-Disconnection-process/ta-p/1121148) `AP` **init effort** | **AP:**`Beacon` @ `BSA` > STA answer Directed `Probe` > `AuthReq`
 
 ## 🪪🛡️🔐 IEEE 802.11: `Authentication`
-_These are the Authentication Methods a STA can use to access to a BSS_
+_These are the Authentication Methods a STA can use to access to a BSS | IEEE Std 802.11 defines five 802.11 authentication methods: Open System authentication, Shared Key authentication, FT authentication, and simultaneous authentication of equals (SAE), and fast initial link setup (FILS) authentication. Open System authentication admits any STA to the DS. Shared Key authen-tication relies on WEP to demonstrate knowledge of a WEP encryption key. FT authentication relies on keys derived during the initial mobility domain association to authenticate the stations as defined in Clause 12 (Fast BSS transition). SAE authentication uses finite field cryptography to prove knowledge of a shared password. FILS authentication uses either trusted public keys or a shared key derived out-of-band.  FILS authentication uses three alternative procedures._
 
 ### 🛡️🔐 Authentication Methods
 - [802.11 Authentication Methods](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/46509dcd-047a-4529-b4c5-c9cad8b88760) _`table`_<br><br>
@@ -1156,11 +1156,14 @@ _These are the Authentication Methods a STA can use to access to a BSS_
     - [🔑 `Shared Key` :: `1`]() Authenticates via WEP demonstrating a key :: Legacy Networks (modern uses open system)
     - [🔄 `FT - Fast Transition` :: `2`]() `802.11r` Authenticates using a key derived from previous authentication
     - [🌉 `SAE`:`Simultaneous Authentication of Equals` :: `3`]() `802.11s-mesh` Diffie-Hellman / Mesh
+    - [🚀 `FILS`: `Fast Inistial Link Setup:: `](https://mrncciew.com/2023/09/25/fils-fast-initial-link-setup/) Minimize the time required for the initial link setup (for high density)
 
 ## 🛡️🔓🪪 Authentication Methods: `Open System Authentication`
 _Once a client station is discover a SSID (Probe Request/Response or listening to Beacons) it move to Join phase. This exchange comprise of at least 4 frames || Open System authentication should never fail || Init method of authentication used by most modern WLANs || RSN like 802.1X or PSK is performed later (state 3 > 4) || There is no "authentication response frame", it's just an "autentication frame" with another status code value || Association process is similar to authentication, in this caso we do have "authentication request" & "authentication response" (both ACKed) ||_
+
 ### 🔓🪪 Open System Authentication: `Authentication` :: From:`State 1` ➡️ To:`State 2`
-_The initial purpose of the authentication frame is to validate the device type (verify that the requesting station has proper 802.11 capability to join the cell). This exchanged is based on simple two-frame (Auth Request &  Auth Response) called Open System._ <br> <br> 
+_The initial purpose of the authentication frame is to validate the device type (verify that the requesting station has proper 802.11 capability to join the cell). This exchanged is based on simple two-frame (Auth Request &  Auth Response) called Open System._ <br>
+
 🏁🔄📡 **`Authentication` Frame Exchange**: <br> 
 📡🛸 `AP`: 💊 `Beacon` _(Optional)_ ➡️ Broadcast _(All Wi-Fi Devices sorrounding)_ <br> 
 🔍❓ `STA`: 💊 `Probe Req` ➡️ AP <br> 
@@ -1169,7 +1172,7 @@ _The initial purpose of the authentication frame is to validate the device type 
 🚪❓ `STA`: 💊 `Authentication (Request)`:`Alg=0 SeqNum=1` ➡️ AP <br> 
 🆗 `AP`:`ACK` 💊  ➡️ STA <br> 
 🚪☑️ `AP`: 💊 `Authentication (Seccess)`:`Alg=0 SeqNum=2` ➡️ STA <br> 
-🆗 `STA`:💊 `ACK` ➡️ AP <br> 
+🆗 `STA`:💊 `ACK` ➡️ AP <br>  
 ✅ **State 2 OK! `CLIENT AUTHENTICATED`** ✅ <br> 
 
 - [`Authentication` :: Frame Exchange :: `Open System`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/bb52ef07-7502-435c-844d-9b32f7f7b43a) _`frame exchange`_
@@ -1177,25 +1180,37 @@ _The initial purpose of the authentication frame is to validate the device type 
 
 ### 🔓🪪 Open System Authentication: `Association` :: From:`State 2` ➡️ To:`State 3` 
 _When 802.11 authentication (not the RSN-WPA/WPA2 authentication) completes, a STA move to Association phase to the BSS. The purpose of this exchange is to join the cell & obtain an Association Identifier (AID). If the network is "Open" (no WPA/2-PSK, 802.1X or other kind of RSN authentication) then this is the last state and the client completes it's connection, else, the client is ready to start with the **RSNA** process to reach the state 4 Fully Connected & Authenticated._ <br>
-**`Association` Exchange**: (After authentication State 2) >> `STA`:`Asso Req` >> `AP`:`ACK` >> `AP`:`Asso Res` >> `STA`:`ACK` >> **State 3 OK! `CLIENT ASSOCIATED`**
+
+🏁🔄📡 **`Association` Frame Exchange**: <br>  
+✅ After Authentication State 2 (CLIENT AUTENTICATED) ✅ ⬇️ <br> 
+🤳❓ `STA`: 💊 `Asso Request` ➡️ AP <br> 
+🆗 `AP`: 💊 `ACK` ➡️ STA <br> 
+🤳☑️ `AP`: 💊 `Asso Response` ➡️ STA <br>
+🆗 `STA`: 💊 `ACK` ➡️ AP <br> 
+✅ **State 3 OK! `CLIENT ASSOCIATED` ✅** <br> 
+
 - [`Association Req` & `Association Res` :: Frame Exchange :: `Open System`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/64b10b5f-ba1a-4885-9141-c94e317f9ac9) _`frame exchange`_
 - [`Association Req` & `Association Res` :: Frame Decode @ Nayanajith](https://mrncciew.com/2014/10/28/802-11-mgmt-association-reqresponse/) _`frame decode`_
     - [`Association Res` :: `Status Codes` :: Responses]() _`0=successful`_
 
 ### 🔓🪪 Open System Authentication: `Deauthentication` & `Disassociation` :: From:`ANY` ➡️ To:`State 1`
 _**Station or AP can send a Deauthentication Frame** when all communications are terminated (When disassociated, still a station can be authenticated to the cell). || Once a station associated to an AP, **either side can terminate the association at any time by sending a disassociation frame**. It has the same frame format as deauthentication frame. A station can send a disassociation frame because it leave the current cell to roam to another cell. An AP could send disassociation frame because station try to use invalid parameters._ <br>
-**`Deauthentication` Exchange**: (After State 2 & 3 [or 4 using RSN]) >> `AP` or `STA`:`Deauthentication` || **Return to State 1** `DISCONNECTED`
-**`Disassociation` Exchange**: (After State 2 & 3 [or 4 using RSN]) >> `AP` or `STA`:`Deauthentication` || **Return to State 2** `AUTHENTICATED` _(roaming/re-connect)_
+
+**❌🔄📡 `Deauthentication` Exchange**: <br>
+(After State 2 & 3 [or 4 using RSN]) <br>
+`AP` or `STA`:`Deauthentication` <br>
+**Return to State 1** `DISCONNECTED` <br>
+
+**❌🔄📡 `Disassociation` Exchange**: <br>
+(After State 2 & 3 [or 4 using RSN]) <br>
+`AP` or `STA`:`Deauthentication` <br>
+**Return to State 2** `AUTHENTICATED` _For roaming to other APs or re-connections to the same AP_ <br>
+
 - [`Deauthentication` :: Frame Exchange :: `Open System` :: Sent by any side AP<-->STA](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/1c1c8c86-769c-4954-8913-5eea07468401) _`frame exchange`_
 - [`Disassociation` :: Frame Exchange :: `Open System` :: Sent by any side AP<-->STA](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/1c1c8c86-769c-4954-8913-5eea07468401) _`frame exchange`_
 - [`Deauthentication` & `Disassociation` :: Frame Decode @ Nayanajith](https://mrncciew.com/2014/10/11/802-11-mgmt-deauth-disassociation-frames/) _`frame decode`_
     - [`Deauthentication` :: `Status Codes` :: Responses]() 
     - [`Disassociation` :: `Status Codes` :: Responses]() 
-
-
-
-
-
 
 # 802.11 Wi-Fi Security
 
