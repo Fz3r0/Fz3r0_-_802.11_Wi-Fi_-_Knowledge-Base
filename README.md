@@ -1279,16 +1279,26 @@ _802.11i introduces key management schemes that allow for a separate authenticat
 - [Introduction to WPA Key Hierarchy](https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy) _`full info + video`_
 - [802.11 Security Fundamentals @ _Cisco_](https://www.cisco.com/en/US/docs/wireless/wlan_adapter/secure_client/5.1.0/administration/guide/C1_Network_Security.html) _`info + list`_
 
-### 802.11 Security Keys: `Keys Hierarchy`
+### 🪪🗝️⚙️ `AKM`: Authentication & Key Management
+_Authentication Key Management (AKM) is a term that describes the process of 802.1X/EAP authentication and the generation of encryption keys. The AKM suite indicates whether a station supports 802.1X or PSK authentication. || Key management is the process of managing cryptographic keys in a cryptosystem. This includes the generation, exchange, storage, use, destruction, and replacement of keys._ <br><br>
+**AKM Suites:** <br>
+00-0F-AC-**01** = **`802.1X`** <br>
+00-0F-AC-**02** = **`PSK`** <br>
+00-0F-AC-**03** = **`FT over 802.1X`** <br>
+- [Authentication & Key Management @ CWNP)](https://youtu.be/8OPdE1MM1yE?si=1J28-6H1omE9LO0W)
+- [`AKM`: Authentication Key Management | 802.11i | @ CWNP](https://www.cwnp.com/uploads/802-11i_key_management.pdf) _`pdf document`_
+- [Authenticated Key Management @ Key Management @ Cisco](https://www.cisco.com/web/techdoc/wireless/access_points/online_help/eag/123-02.JA/1100/h_ap_sec_ap-client-security.html) _`info`_
+
+### 🔝🥈🥉 802.11 Security Keys: `Keys Hierarchy`
 _Instead of using a single key for everything, WPA uses a hierarchy with many keys to encrypt and check the integrity of different 802.11 frames. | In WPA the PMK is created by the PSK inserted by the STA Client, in 802.1X it depends on the EAP method used in each case, but works essentialy in the same way._
 - [802.11 Security Keys Hierarchy](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/f6c9c0f4-159b-467a-8b46-cbd6cab0a591) _`diagram`_
 - [802.11 Security Keys Hierarchy - Pyramid Diagram](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/df0a7624-7c53-4969-9e8f-a7a876efec06) _`pyramid`_ <br> <br>
-- `TOP` [`MSK` Master Session Key (or AAA Key)](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) **Derived from: 802.1X-EAP Process** :: Key info negotiated between Supplicant & Authentication Server
--  `LVL2` Master Keys: [`GMK` Group Master Key] **Derived by: Authenticator (AP)** :: Shared among AP & all its STA for multicast | Randomly created on Authenticator
--  `LVL2` Master Keys: [`PMK` Pairways Master Key :: `256-bit`](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) **Derived from: PSK or AAA key (EAP)** :: Created from 256-bit HEX/PSK or EAP used to login <br> <br>
+- `TOP` [`MSK` Master Session Key (or AAA Key)](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) **Derived from: 802.1X-EAP Process** :: <br> Key info negotiated between Supplicant & Authentication Server
+-  `LVL2` Master Keys: [`GMK` Group Master Key] **Derived by: Authenticator (AP)** :: <br> Shared among AP & all its STA for multicast | Randomly created on Authenticator
+-  `LVL2` Master Keys: [`PMK` Pairways Master Key :: `256-bit`](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) **Derived from: PSK or AAA key (EAP)** :: <br> Created from 256-bit HEX/PSK or EAP used to login <br> <br>
 - `BETWEEN LVL 2 & LVL 3`[`4-way-handshake`]() If succeeded, STA & AP proceed to LVL3 <br> <br>
-- `LVL3` Temporal Keys: [`GTK` Group Temporal Key:]() **Derived from: GMK** :: Encrypt all **broadcast/multicast transmission** :: between AP & multiple STAs
-- `LVL3` Temporal Keys: [`PTK` Pairwise Transient Key:]()  **Derived from: PMK, Supplicant's & Authenticator's Addresses & Nonces** :: Encrypt all **unicast transmission** between AP & STA | Consist of 5 different keys
+- `LVL3` Temporal Keys: [`GTK` Group Temporal Key:]() **Derived from: GMK** :: Encrypt all **broadcast/multicast transmission** :: <br> between AP & multiple STAs
+- `LVL3` Temporal Keys: [`PTK` Pairwise Transient Key:]()  **Derived from: PMK, Supplicant's & Authenticator's Addresses & Nonces** :: <br> Encrypt all **unicast transmission** between AP & STA | Consist of 5 different keys
 
 ### PTK (Pairwise Transient Key): `5 PTK Keys`
 1. []()
@@ -1303,15 +1313,7 @@ _Instead of using a single key for everything, WPA uses a hierarchy with many ke
 - [4-Way-Handshake @ _Nayarasi_](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) _`CWNE info`_
 
 
-## 🪪📡🗝️ `AKM`: Authentication Key Management
-_Authentication Key Management (AKM) is a term that describes the process of 802.1X/EAP authentication and the generation of encryption keys. The AKM suite indicates whether a station supports 802.1X or PSK authentication. || Key management is the process of managing cryptographic keys in a cryptosystem. This includes the generation, exchange, storage, use, destruction, and replacement of keys._ <br><br>
-**AKM Suites:** <br>
-00-0F-AC-**01** = **`802.1X`** <br>
-00-0F-AC-**02** = **`PSK`** <br>
-00-0F-AC-**03** = **`FT over 802.1X`** <br>
-- [Authentication & Key Management @ CWNP)](https://youtu.be/8OPdE1MM1yE?si=1J28-6H1omE9LO0W)
-- [`AKM`: Authentication Key Management | 802.11i | @ CWNP](https://www.cwnp.com/uploads/802-11i_key_management.pdf) _`pdf document`_
-- [Authenticated Key Management @ Key Management @ Cisco](https://www.cisco.com/web/techdoc/wireless/access_points/online_help/eag/123-02.JA/1100/h_ap_sec_ap-client-security.html) _`info`_
+
 
 ## 🗝️🔐🏢 00-0F-AC-01: `IEEE 802.1X`-`EAP`: Extensible Authentication Protocol
 _EAP is the whole Framework used for implement authentication, and it uses 802.1X as a part of it | 802.1X is a port access protocol designed to secure networks through authentication. As a result, this type of authentication method is extremely useful in the Wi-Fi environment due to the nature of the medium. If a Wi-Fi user authenticates through 802.1X to access the network, a virtual port is opened on the access point, allowing communication. If not authorized correctly, no virtual port will be available, and communications will be blocked. | EAP is used to transmit authentication information between the supplicant (Wi-Fi workstation) and the authentication server (Microsoft IAS or another server). The specific type of EAP actually manages and defines the authentication process. The access point acting as the authenticator serves as a proxy facilitating communication between the supplicant and the authentication server._ <br><br>
