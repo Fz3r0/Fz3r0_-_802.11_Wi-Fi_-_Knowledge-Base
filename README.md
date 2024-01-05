@@ -2351,6 +2351,9 @@ _Aircrack-ng is basically a suite of tools that has been crafted to achieve obje
 ### 💀🕵️💻 USB Credentials Exfiltration :: WiFi password stealer
 - [WiFi password stealer](https://github.com/AleksaMCode/WiFi-password-stealer)
 
+## 802.1X-EAP Attacking
+- [Attacking EAP Protocols](https://etutorials.org/Networking/Wireless+lan+security/Chapter+6.+Wireless+Vulnerabilities/Attacks+on+EAP+Protocols/)
+
 ---
 
 
