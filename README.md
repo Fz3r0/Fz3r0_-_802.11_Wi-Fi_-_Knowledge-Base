@@ -1283,12 +1283,12 @@ _802.11i introduces key management schemes that allow for a separate authenticat
 _Instead of using a single key for everything, WPA uses a hierarchy with many keys to encrypt and check the integrity of different 802.11 frames. | In WPA the PMK is created by the PSK inserted by the STA Client, in 802.1X it depends on the EAP method used in each case, but works essentialy in the same way._
 - [802.11 Security Keys Hierarchy](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/f6c9c0f4-159b-467a-8b46-cbd6cab0a591) _`diagram`_
 - [802.11 Security Keys Hierarchy - Pyramid Diagram](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/df0a7624-7c53-4969-9e8f-a7a876efec06) _`pyramid`_ <br> <br>
--. `TOP` [`MSK` Master Session Key (or AAA Key)](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) **Derived from: 802.1X-EAP Process** :: Key info negotiated between Supplicant & Authentication Server
--. `LVL2` Master Keys: [`GMK` Group Master Key] **Derived by: Authenticator (AP)** :: Shared among AP & all its STA for multicast | Randomly created on Authenticator 
--. `LVL2` Master Keys: [`PMK` Pairways Master Key :: `256-bit`](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) **Derived from: PSK or AAA key (EAP)** :: Created from 256-bit HEX/PSK or EAP used to login <br> <br>
+- `TOP` [`MSK` Master Session Key (or AAA Key)](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) **Derived from: 802.1X-EAP Process** :: Key info negotiated between Supplicant & Authentication Server
+-  `LVL2` Master Keys: [`GMK` Group Master Key] **Derived by: Authenticator (AP)** :: Shared among AP & all its STA for multicast | Randomly created on Authenticator
+-  `LVL2` Master Keys: [`PMK` Pairways Master Key :: `256-bit`](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) **Derived from: PSK or AAA key (EAP)** :: Created from 256-bit HEX/PSK or EAP used to login <br> <br>
 - `BETWEEN LVL 2 & LVL 3`[`4-way-handshake`]() If succeeded, STA & AP proceed to LVL3 <br> <br>
--. `LVL3` Temporal Keys: [`GTK` Group Temporal Key:]() **Derived from: GMK** :: Encrypt all **broadcast/multicast transmission** :: between AP & multiple STAs
--. `LVL3` Temporal Keys: [`PTK` Pairwise Transient Key:]()  **Derived from: PMK, Supplicant's & Authenticator's Addresses & Nonces** :: Encrypt all **unicast transmission** between AP & STA | Consist of 5 different keys
+- `LVL3` Temporal Keys: [`GTK` Group Temporal Key:]() **Derived from: GMK** :: Encrypt all **broadcast/multicast transmission** :: between AP & multiple STAs
+- `LVL3` Temporal Keys: [`PTK` Pairwise Transient Key:]()  **Derived from: PMK, Supplicant's & Authenticator's Addresses & Nonces** :: Encrypt all **unicast transmission** between AP & STA | Consist of 5 different keys
 
 ### PTK (Pairwise Transient Key): `5 PTK Keys`
 1. []()
