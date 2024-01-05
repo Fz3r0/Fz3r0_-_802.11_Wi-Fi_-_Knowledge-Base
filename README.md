@@ -1286,6 +1286,7 @@ _Instead of using a single key for everything, WPA uses a hierarchy with many ke
 1. `TOP` [`MSK` Master Session Key (or AAA Key)](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) Key information negotiated between the Supplicant & Authentication Server (EAP Process)
 2. `LVL2` Master Keys: [`GMK` Group Master Key] Shared among an AP and all its stations for multicast | Randomly created on Authenticator 
 2. `LVL2` Master Keys: [`PMK` Pairways Master Key :: `256-bit`](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) Created from 256-bit HEX PSK or EAP used by STA to login
+- `BETWEEN LVL 2 & LVL 3`[`4-way-handshake`]() If succeeded, STA & AP proceed to LVL3
 3. `LVL3` Temporal Keys: [`GTK` Group Temporal Key:]() Encrypt all **broadcast/multicast transmission** between an AP & multiple STAs
 3. `LVL3` Temporal Keys: [`PTK` Pairwise Transient Key:]() Encrypt all **unicast transmission** between AP & STA | PTK consist of 5 different keys
 
