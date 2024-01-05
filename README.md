@@ -1629,6 +1629,7 @@ _Oscillation rate of an alternating electric current or voltage or of a magnetic
 - [The WiSE Article Series: Interference from Non-WiFi Sources, Part 1 @ CWNP](https://www.cwnp.com/the-wise-article-series-interference-from-non-wifi-sources-part-1/)
 - [The WiSE Article Series: Interference from Non-WiFi Sources, Part 2 @ CWNP](https://www.cwnp.com/the-wise-article-series-interference-from-non-wifi-sources-part-2/)
 - [`Education`: Why ‘One Access Point Per Classroom’ Approach is Wrong](https://wlanprofessionals.com/why-one-access-point-per-classroom-approach-is-wrong/)
+- [Why speed tests aren’t always the answer when troubleshooting Wi-Fi networks](https://www.thepacketologist.com/2023/12/why-speed-tests-arent-always-the-answer-when-troubleshooting/)
 
 
 ## ⚙️🏗️🛰️ Components of 802.11 WLAN Network Architecture
