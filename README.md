@@ -1279,9 +1279,14 @@ _When using RSNA like 802.1X-EAP or WPA2/3-PSK the end goal is get security in t
 - [802.11 Security Fundamentals @ _Cisco_](https://www.cisco.com/en/US/docs/wireless/wlan_adapter/secure_client/5.1.0/administration/guide/C1_Network_Security.html) _`info + list`_
 
 ### 802.11 Security Keys: `Keys Hierarchy`
-_Instead of using a single key for everything, WPA uses a hierarchy with many keys to encrypt and check the integrity of different 802.11 frames._
+_Instead of using a single key for everything, WPA uses a hierarchy with many keys to encrypt and check the integrity of different 802.11 frames. | In WPA the PMK is created by the PSK inserted by the STA Client, in 802.1X it depends on the EAP method used in each case, but works essentialy in the same way._
 - [802.11 Security Keys Hierarchy](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/f6c9c0f4-159b-467a-8b46-cbd6cab0a591) _`diagram`_
-1. [](https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy)
+- [802.11 Security Keys Hierarchy - Pyramid Diagram](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/df0a7624-7c53-4969-9e8f-a7a876efec06) _`pyramid`_ <br> <br>
+1. `TOP` [`MSK` Master Session Key (or AAA Key)](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) Key information negotiated between the Supplicant & Authentication Server (EAP Process)
+2. `LVL2` Master Keys: [`GMK` Group Master Key] Randomly created on Authenticator & refresh it in configured time interval for security
+2. `LVL2` Master Keys: [`PMK` Pairways Master Key :: `256-bit`](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) Created from 256-bit HEX PSK or EAP used by STA to login
+3. `LVL3` Temporal Keys: [`GTK` Group Temporal Key:]() used to encrypt all broadcast/multicast transmission between an AP & multiple client statsions
+3. `LVL3` Temporal Keys: [`PTK` Pairwise Transient Key:]() This is used to encrypt all unicast transmission between client & an AP. PTK consist of 5 different keys
 
 ## 🔐🤝📡 RSNA: `4-Way-Handshake`
 
@@ -1359,6 +1364,10 @@ Supplicant (**STA**) & Auhtenticator (**AP**): Key Exchange 🔐↔️🗝️ <b
 
 
 ## 00-0F-AC-02: `PSK - Pre-Shared Key`
+**Rules:** <br>
+PSK must be HEX 256-bit, when taken from ASCII characters it gets a padding/mapping to fit those 256.bit
+**ASCII** PSK = 8-63 characters (max 63-bit converted to 256-bit HEX by mapping the characters) <br>
+**HEX** PSK = 64 HEX (256-bits) <br>
 - [`PSK`: Pre-Shared Key](https://en.wikipedia.org/wiki/Pre-shared_key) _`wiki`_
 
 ## 00-0F-AC-03: `IEEE 802.11r` or `FT - Fast Transition` _(Over 802.1X)_
