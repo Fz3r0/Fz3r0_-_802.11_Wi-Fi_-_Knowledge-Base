@@ -1284,10 +1284,10 @@ _Instead of using a single key for everything, WPA uses a hierarchy with many ke
 - [802.11 Security Keys Hierarchy](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/f6c9c0f4-159b-467a-8b46-cbd6cab0a591) _`diagram`_
 - [802.11 Security Keys Hierarchy - Pyramid Diagram](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/df0a7624-7c53-4969-9e8f-a7a876efec06) _`pyramid`_ <br> <br>
 1. `TOP` [`MSK` Master Session Key (or AAA Key)](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) Key information negotiated between the Supplicant & Authentication Server (EAP Process)
-2. `LVL2` Master Keys **Mulitcast**: [`GMK` Group Master Key] Shared among an AP and all its stations for multicast | Randomly created on Authenticator 
-2. `LVL2` Master Keys **Unicast**: [`PMK` Pairways Master Key :: `256-bit`](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) Created from 256-bit HEX PSK or EAP used by STA to login
-3. `LVL3` Temporal Keys**Mulitcast** : [`GTK` Group Temporal Key:]() Encrypt all **broadcast/multicast transmission** between an AP & multiple STAs
-3. `LVL3` Temporal Keys **Unicast**: [`PTK` Pairwise Transient Key:]() Encrypt all **unicast transmission** between AP & STA | PTK consist of 5 different keys
+2. `LVL2` Master Keys: [`GMK` Group Master Key] Shared among an AP and all its stations for multicast | Randomly created on Authenticator 
+2. `LVL2` Master Keys: [`PMK` Pairways Master Key :: `256-bit`](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) Created from 256-bit HEX PSK or EAP used by STA to login
+3. `LVL3` Temporal Keys: [`GTK` Group Temporal Key:]() Encrypt all **broadcast/multicast transmission** between an AP & multiple STAs
+3. `LVL3` Temporal Keys: [`PTK` Pairwise Transient Key:]() Encrypt all **unicast transmission** between AP & STA | PTK consist of 5 different keys
 
 ## 🔐🤝📡 RSNA: `4-Way-Handshake`
 
