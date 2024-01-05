@@ -1271,18 +1271,21 @@ _Encryption Method_
 _Encryption Method_
 - [CCMP Encryption Method](https://mrncciew.com/2014/08/19/cwsp-ccmp-encryption-method/)
 
-## 🗝️ RSNA: `Security Keys`
+## 🗝️ RSNA: `802.11 Security Keys`
 _When using RSNA like 802.1X-EAP or WPA2/3-PSK the end goal is get security in the WLAN connection, to achieve that security the STA & AP (& authenticator server in case of 802.1X) need to make a key exchange for traffic encryption (similar like protocols like SSH or HTTPS) | In an AP with many wireless clients, unicast traffic between a wireless client and the AP has to be private. You don’t want one client to be able to decrypt traffic between another wireless client and the AP. This is why you should have different keys between each wireless Client & AP. We call these pairwise keys because there is a pair of keys between each wireless client and the AP. The AP has multiple pairwise keys, one for each associated wireless client. | There is also broadcast and multicast traffic. All wireless clients should be able to encrypt and decrypt this traffic, so we need a shared key | All associated wireless clients of the AP have the same key. We call this a group key. The Pairwise and group keys are created differently. | Key partitioning in cryptography means dividing (partitioning) a single key into a set of keys. One of the advantages of dividing a key into parts is that the security of the key improves. An attacker needs all parts of the partitioned keys to recover the original key._
 - [802.11i Authentication and Key Management (AKM) @ _CWNP_](https://www.cwnp.com/uploads/802-11i_key_management.pdf) _`CWNP pdf paper`_
+- [Authentication and Key Management (AKM) & Key Hierarchy _@ CWNP_](https://www.youtube.com/watch?v=8OPdE1MM1yE) _`video`_
 - [Introduction to WPA Key Hierarchy](https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy) _`full info + video`_
 - [802.11 Security Fundamentals @ _Cisco_](https://www.cisco.com/en/US/docs/wireless/wlan_adapter/secure_client/5.1.0/administration/guide/C1_Network_Security.html) _`info + list`_
 
-### Security Keys Hierarchy
+### 802.11 Security Keys: `Keys Hierarchy`
 _Instead of using a single key for everything, WPA uses a hierarchy with many keys to encrypt and check the integrity of different 802.11 frames._
+- [802.11 Security Keys Hierarchy](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/f6c9c0f4-159b-467a-8b46-cbd6cab0a591) _`diagram`_
 1. [](https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy)
 
 ## 🔐🤝📡 RSNA: `4-Way-Handshake`
-__
+
+- [4-Way-Handshake @ _CWNP_](https://www.youtube.com/watch?v=9M8kVYFhMDw) _`video`_
 - [4-Way-Handshake @ _Nayarasi_](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) _`CWNE info`_
 
 
