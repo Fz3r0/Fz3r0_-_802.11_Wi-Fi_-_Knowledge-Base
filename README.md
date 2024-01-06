@@ -1299,18 +1299,26 @@ _Instead of using a single key for everything, WPA uses a hierarchy with many ke
 - `LVL3` Temporal Keys: [`GTK` Group Temporal Key:]() **Derived from: GMK** :: <br> _Encrypt all **broadcast/multicast transmission** between AP & multiple STAs_
 - `LVL3` Temporal Keys: [`PTK` Pairwise Transient Key:]()  **Derived from: PMK, Supplicant's & Authenticator's Addresses & Nonces** :: <br> _Encrypt all **unicast transmission** between AP & STA | Consist of 5 different keys_
 
-### PTK (Pairwise Transient Key): `5 PTK Keys`
-_To get all the pieces of the PTK, the keys must do a 4-way-handshake process_
-1. []()
-2. []()
-3. []()
-4. []()
-5. []()
+### PTK (Pairwise Transient Key): `3 (or 5) pieces of PTK Keys`
+_To get all the 3 pieces of the PTK using modern cipher, the keys must do a 4-way-handshake process | Temporal MIC 1 & 2 are used only for TKIP: TKIP uses the Michael function. This is part of the temporal key we use for integrity checks of MSDUs or MPDUs. This key is partitioned into two MIC keys._
+1. [`KCK`:Key Confirmation Key - `128-bit` / `0-127-bit of PTK`](https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy#EAPOL-Key_Key_Confirmation_Key_KCK) Provide data integrity during 4-Way-Handshake & Group-Key-Handshake
+2. [`KEK`: Key Encryption Key - `128-bit` / `0-255-bit of the PTK`](https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy#EAPOL-Key_Key_Encryption_Key_KEK) Used by EAPOL-Key frames to provide data privacy during 4-Way-Handshake & Group-Key-Handshake
+3. [`TK`: Temporal Key – ](https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy#Temporal_Key_TK) Used to encrypt & decrypt MSDU of 802.11 data frames between supplicant & authenticator
+4. [Temporal `MIC-1`](https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy#Temporal_Message_Integrity_Code_MIC_Keys) Used for TKIP Michael function
+5. [Temporal `MIC-2`](https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy#Temporal_Message_Integrity_Code_MIC_Keys) Used for TKIP Michael function
 
 ### 🔐🤝📡 PTK Generation: `4-Way-Handshake`
-_The 4-way-handshake is used for the creation of the PTK (at least 3 pieaces of a PTK)_
+_The 4-way-handshake is used for the creation of the 3 pieces of the PTK (5 if using depreciated TKIP)_
+
+**PTK** = `PMK` + `Supplicant (STA) MAC Address` + `Authenticator (AP) MAC Address` + `Snonce (Supp)` + `Anonce (Auth)`
 - [4-Way-Handshake @ _CWNP_](https://www.youtube.com/watch?v=9M8kVYFhMDw) _`video`_
 - [4-Way-Handshake @ _Nayarasi_](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) _`CWNE info`_
+
+
+
+
+
+
 
 ## 🗝️🔐🏢 00-0F-AC-01: `IEEE 802.1X`-`EAP`: Extensible Authentication Protocol
 _EAP is the whole Framework used for implement authentication, and it uses 802.1X as a part of it | 802.1X is a port access protocol designed to secure networks through authentication. As a result, this type of authentication method is extremely useful in the Wi-Fi environment due to the nature of the medium. If a Wi-Fi user authenticates through 802.1X to access the network, a virtual port is opened on the access point, allowing communication. If not authorized correctly, no virtual port will be available, and communications will be blocked. | EAP is used to transmit authentication information between the supplicant (Wi-Fi workstation) and the authentication server (Microsoft IAS or another server). The specific type of EAP actually manages and defines the authentication process. The access point acting as the authenticator serves as a proxy facilitating communication between the supplicant and the authentication server._ <br><br>
