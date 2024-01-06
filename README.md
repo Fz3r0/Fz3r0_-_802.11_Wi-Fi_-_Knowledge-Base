@@ -1308,11 +1308,16 @@ _To get all the 3 pieces of the PTK using modern cipher, the keys must do a 4-wa
 5. [Temporal `MIC-2`](https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy#Temporal_Message_Integrity_Code_MIC_Keys) Used for TKIP Michael function
 
 ### 🔐🤝📡 PTK Generation: `4-Way-Handshake`
-_The 4-way-handshake is used for the creation of the 3 pieces of the PTK (5 if using depreciated TKIP)_
-
-**PTK** = `PMK` + `Supplicant (STA) MAC Address` + `Authenticator (AP) MAC Address` + `Snonce (Supp)` + `Anonce (Auth)`
+_The 4-way-handshake is used for the generation of a PTK. It confirms that the STA holds a current PMK & also Transfers the GTK to the STA | The term "nonce" is a contraction of "number used once." A "nonce" is a random number used only once to ensure the security and uniqueness of keys generated during the establishment of a secure connection in a Wi-Fi network. AP & STA use a Pseudo-Random Function to generate their nonces._<br><br>
+**PTK Components:**<br>
+**PTK** = `PMK` + `Supplicant (STA) MAC Address` + `Authenticator (AP) MAC Address` + `Snonce (Supp)` + `Anonce (Auth)` <br><br>
 - [4-Way-Handshake @ _CWNP_](https://www.youtube.com/watch?v=9M8kVYFhMDw) _`video`_
 - [4-Way-Handshake @ _Nayarasi_](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) _`CWNE info`_
+- [Cryptographic "Nonce"](https://en.wikipedia.org/wiki/Cryptographic_nonce) `wiki`
+- [4-way-handshake: Diagram 1](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/4594a2cb-bdb8-47b0-9d95-a62eb0e3c62a) `diagram`
+
+### 🤝🔄💊 4-Way-Handshake: `Frame & Packet Exchange`
+✅ After Association State 3 (CLIENT ASSOCIATED) ✅⬇️ <br> 
 
 
 
