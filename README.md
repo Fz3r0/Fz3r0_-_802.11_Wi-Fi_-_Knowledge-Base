@@ -1104,7 +1104,7 @@ _The PLCP consists of two main sublayers: the PLCP protocol data unit (PPDU) & t
 
 
         
-# 🪆🛜⚙️ Frame Exchanges: `Discovery`, `Association`, `Transition (Roaming)` & `Security`
+# 🪆🛜⚙️ 802.11 State Machine: `Discovery`, `Authentication`, `Association`, `Transition` & `Leave WLAN`
 _Most common issues to torubleshoot are Connectivity Problems, this means: STAs/Clients either can't connect, can't maintain it's connection, it's not roaming well between APs, it can't connect to the SSID, and so on... Understanding this kind of Frame Exchanges help to analyze step by step the process for BSS Discovery & Joining, Analyze Roaming Behavior, etc_
 - [IEEE 802.11 Wi-Fi Discovey, Connection, Roaming & Disconnection process](https://community.nxp.com/t5/Wireless-Connectivity-Knowledge/802-11-Wi-Fi-Connection-Disconnection-process/ta-p/1121148)
 
@@ -1213,21 +1213,18 @@ _**Station or AP can send a Deauthentication Frame** when all communications are
     - [`Deauthentication` :: `Status Codes` :: Responses]() 
     - [`Disassociation` :: `Status Codes` :: Responses]() 
 
-# 802.11 Wi-Fi Security
 
 
-
-
-
+# 🛡️🔐🛜 802.11 (Wi-Fi): `Security`
 
 ## 🔐💪🛡️ `RSN`: Robust Recure Network
-_A network that only allows the creation of RSNA (Robust Secure Network Associations) || It includes a RSNE () || The term Robust Security Network is used in WiFi networks to describe the security enhancements encompassed in the IEEE 802.11i and WPA (WiFi Protected Access) 1 and 2 variants. The suite of protocols endeavours to compensate for the weaknesses associated with WEP(Wired Equivalent Privacy). || RSN/RSNA uses dynamic key generation via 4 way handshake and two types of keys for unicast and multicast transmission || 
+_A network that only allows the creation of RSNA (Robust Secure Network Associations) || It includes a RSNE () || The term Robust Security Network is used in WiFi networks to describe the security enhancements encompassed in the IEEE 802.11i and WPA (WiFi Protected Access) 1 and 2 variants. The suite of protocols endeavours to compensate for the weaknesses associated with WEP(Wired Equivalent Privacy). || RSN/RSNA uses dynamic key generation via 4 way handshake and two types of keys for unicast and multicast transmission_
 - [`NIST-800-97`: Establishing Wireless Robust Security Networks: A Guide to IEEE 802.11i @ NIST](https://www.govinfo.gov/content/pkg/GOVPUB-C13-bccd1f279aaf7e4caa863b34791bb565/pdf/GOVPUB-C13-bccd1f279aaf7e4caa863b34791bb565.pdf) _`NIST special publication`_
 - [RSN & EAP in detail @ TB Haxor](https://tbhaxor.com/rsn-and-eap-in-detail/) _`info`_
 - [Pre-RSN VS RSN Security Mechanisms Comparation](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/72a1b555-900a-4715-8835-717cf258c0c1) _`table`_
-
-### 🔐🔁 RSN: `RSN` : `FT`
 - [RSN with FT | 802.11i | @ CWNP](https://www.cwnp.com/uploads/802-11_rsn_ft.pdf)
+
+
 
 ## 🔐💪↔️ `RSNA`: Robust Security Network Association
 _An association between a client STA and an AP that was established through authentication resulting in a 4‐way handshake to derive unicast keys and transfer group keys. || RSNA = PSK (WPA) & 802.1X (WEP is not supported in an RSNA)._
@@ -1239,7 +1236,7 @@ _Robust Security Network Element (RSNE) is an info element that may exist in 802
 - [RSNE: Robust Security Network Element](https://en.wikipedia.org/wiki/RSNE)
 - [`RSN`, `RSNA` & `RSNE`: PCAP Analysis](https://www.netprojnetworks.com/802-11i-robust-security-network-12-6-2-rsna-selection/) _`PCAP Analysis`_
 
-## 802.11 Security: `Encryption Methods` & `Cipher Suites`
+## 802.11i Security: `Encryption Methods` & `Cipher Suites`
 _Encryption is a process by which information is converted into an unreadable or unintelligible format for those who do not have the key to decrypt it. | Cipher suites are sets of cryptographic algorithms used together to provide comprehensive security in communications. They include algorithms for encryption, but they can also address authentication and data integrity. | Differences: While Encryption is a specific process within the broader scope of cipher suites. Cipher suites not only focus on data encryption but also address other aspects of communication security, such as authentication and integrity. In the context of protocols like TLS/SSL, the negotiation of cipher suites during the handshake is essential to establish a secure connection between a client and an online server. In the context of Wi-Fi authentication, the negotiation of cipher suites is crucial during the handshake process. This negotiation helps establish a secure connection between a device and a Wi-Fi access point by determining the encryption methods that will safeguard the wireless communication._ <br><br>
 
 **`Open`** :: _No Encryption or Cipher Suites used_ <br>
@@ -1271,12 +1268,13 @@ _Encryption Method_
 _Encryption Method_
 - [CCMP Encryption Method](https://mrncciew.com/2014/08/19/cwsp-ccmp-encryption-method/)
 
-## 802.11i: `Security Keys`, `Authentication & Key Management`, `4-Way-Handshake` & `Mobility`
+## 802.11i: `Authentication & Key Management`, `4-Way-Handshake` & `Mobility`
 _802.11i introduces key management schemes that allow for a separate authentication process to enable the distribution of keys. There are two main phases to this process: Master key establishment & Key exchange | Master key establishment can occur either manually via configuration or dynamically via the 802.1x protocol using EAP. After master keys are established, two parties perform key exchange to generate the transient keys they will use for the session. Although the term "key exchange" is used in the specification and in the literature, in reality this is a negotiation phase in which no actual keys are exchanged. | When using RSNA like 802.1X-EAP or WPA2/3-PSK the end goal is get security in the WLAN connection, to achieve that security the STA & AP (& authenticator server in case of 802.1X) need to make a key exchange for traffic encryption (similar like protocols like SSH or HTTPS) | In an AP with many wireless clients, unicast traffic between a wireless client and the AP has to be private. You don’t want one client to be able to decrypt traffic between another wireless client and the AP. This is why you should have different keys between each wireless Client & AP. We call these pairwise keys because there is a pair of keys between each wireless client and the AP. The AP has multiple pairwise keys, one for each associated wireless client. | There is also broadcast and multicast traffic. All wireless clients should be able to encrypt and decrypt this traffic, so we need a shared key | All associated wireless clients of the AP have the same key. We call this a group key. The Pairwise and group keys are created differently. | Key partitioning in cryptography means dividing (partitioning) a single key into a set of keys. One of the advantages of dividing a key into parts is that the security of the key improves. An attacker needs all parts of the partitioned keys to recover the original key._
 - [Key Management](https://etutorials.org/Networking/Wireless+lan+security/Chapter+8.+WLAN+Encryption+and+Data+Integrity+Protocols/Key+Management/)
 - [802.11i Authentication and Key Management (AKM) @ _CWNP_](https://www.cwnp.com/uploads/802-11i_key_management.pdf) _`CWNP pdf paper`_
 - [Authentication and Key Management (AKM) & Key Hierarchy _@ CWNP_](https://www.youtube.com/watch?v=8OPdE1MM1yE) _`video`_
 - [Introduction to WPA Key Hierarchy](https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy) _`full info + video`_
+- [Wi-Fi Authentication & Key Generation](https://www.youtube.com/watch?v=ntGA6V5EciE&t=14s)  _`video`_
 - [802.11 Security Fundamentals @ _Cisco_](https://www.cisco.com/en/US/docs/wireless/wlan_adapter/secure_client/5.1.0/administration/guide/C1_Network_Security.html) _`info + list`_
 
 ### 🪪🗝️⚙️ `AKM`: Authentication & Key Management
@@ -1291,6 +1289,7 @@ _Authentication Key Management (AKM) is a term that describes the process of 802
 
 ### 🔝🥈🥉 802.11 Security Keys: `Keys Hierarchy`
 _Instead of using a single key for everything, WPA uses a hierarchy with many keys to encrypt and check the integrity of different 802.11 frames. | In WPA the PMK is created by the PSK inserted by the STA Client, in 802.1X it depends on the EAP method used in each case, but works essentialy in the same way._
+- [RSNA Key Hierarchy](https://www.youtube.com/watch?v=6HoQVul9Zks&t=112s)
 - [802.11 Security Keys Hierarchy](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/f6c9c0f4-159b-467a-8b46-cbd6cab0a591) _`diagram`_
 - [802.11 Security Keys Hierarchy - Pyramid Diagram](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/df0a7624-7c53-4969-9e8f-a7a876efec06) _`pyramid`_ <br> <br>
 - `TOP` [`MSK` Master Session Key (or AAA Key)](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) **Derived from: 802.1X-EAP Process** :: <br> _Key info negotiated between Supplicant & Authentication Server_
@@ -1308,13 +1307,10 @@ _To get all the pieces of the PTK, the keys must do a 4-way-handshake process_
 4. []()
 5. []()
 
-### 🔐🤝📡 RSNA: `4-Way-Handshake`
+### 🔐🤝📡 PTK Generation: `4-Way-Handshake`
 _The 4-way-handshake is used for the creation of the PTK (at least 3 pieaces of a PTK)_
 - [4-Way-Handshake @ _CWNP_](https://www.youtube.com/watch?v=9M8kVYFhMDw) _`video`_
 - [4-Way-Handshake @ _Nayarasi_](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) _`CWNE info`_
-
-
-
 
 ## 🗝️🔐🏢 00-0F-AC-01: `IEEE 802.1X`-`EAP`: Extensible Authentication Protocol
 _EAP is the whole Framework used for implement authentication, and it uses 802.1X as a part of it | 802.1X is a port access protocol designed to secure networks through authentication. As a result, this type of authentication method is extremely useful in the Wi-Fi environment due to the nature of the medium. If a Wi-Fi user authenticates through 802.1X to access the network, a virtual port is opened on the access point, allowing communication. If not authorized correctly, no virtual port will be available, and communications will be blocked. | EAP is used to transmit authentication information between the supplicant (Wi-Fi workstation) and the authentication server (Microsoft IAS or another server). The specific type of EAP actually manages and defines the authentication process. The access point acting as the authenticator serves as a proxy facilitating communication between the supplicant and the authentication server._ <br><br>
@@ -1370,24 +1366,19 @@ Supplicant (**STA**) & Auhtenticator (**AP**): Key Exchange 🔐↔️🗝️ <b
 - [Wired Capture Example: Incorrect Password](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/9bf57d54-f7e0-481f-8cb8-203fc178adfb) _`PCAP Frame Exchange`_
 - [Wired Capture Example: Silent Dosconnects](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/73bdf52f-92c2-4f95-8878-1ad27348ac50) _`PCAP Frame Exchange`_
 
-
-
-
-
-
-## 00-0F-AC-02: `PSK - Pre-Shared Key`
+## 🗝️🔐🏠 00-0F-AC-02: `PSK - Pre-Shared Key`
 **Rules:** <br>
 PSK must be HEX 256-bit, when taken from ASCII characters it gets a padding/mapping to fit those 256.bit
 **ASCII** PSK = 8-63 characters (max 63-bit converted to 256-bit HEX by mapping the characters) <br>
 **HEX** PSK = 64 HEX (256-bits) <br>
 - [`PSK`: Pre-Shared Key](https://en.wikipedia.org/wiki/Pre-shared_key) _`wiki`_
 
-## 00-0F-AC-03: `IEEE 802.11r` or `FT - Fast Transition` _(Over 802.1X)_
+## 🗝️🔐🔁 00-0F-AC-03: `IEEE 802.11r` or `FT - Fast Transition` _(Over 802.1X)_
 - [IEEE 802.11r-2008 AKA FT (Fast Transition)](https://en.wikipedia.org/wiki/IEEE_802.11r-2008) _`wiki`_
+- [RSN with FT | 802.11i + 802.11r | @ CWNP](https://www.cwnp.com/uploads/802-11_rsn_ft.pdf)
 
-## 🛡️🔐🏢 RSNA: `802.11 Security Keys`
-- [Wi-Fi Authentication & Key Generation](https://www.youtube.com/watch?v=ntGA6V5EciE&t=14s)
-- [RSNA Key Hierarchy](https://www.youtube.com/watch?v=6HoQVul9Zks&t=112s)
+
+
 
 ## 🪪 `RADIUS`: Remote Authentication Dial-In User Service
 _Networking protocol that provides centralized Authentication, Authorization, and Accounting (AAA) management for users who connect and use a network service. RADIUS was developed by Livingston Enterprises in 1991 as an access server authentication and accounting protocol. It was later brought into IEEE 802 and IETF standards. | RADIUS is a client/server protocol that runs in the application layer, and can use either TCP or UDP. Network access servers, which control access to a network, usually contain a RADIUS client component that communicates with the RADIUS server. | RADIUS is often the back-end of choice for 802.1X authentication. | A RADIUS server is usually a background process running on UNIX or Microsoft Windows._ <br>
