@@ -1181,7 +1181,7 @@ _The initial purpose of the authentication frame is to validate the device type 
 ### 🔓🪪 Open System Authentication: `Association` :: From:`State 2` ➡️ To:`State 3` 
 _When 802.11 authentication (not the RSN-WPA/WPA2 authentication) completes, a STA move to Association phase to the BSS. The purpose of this exchange is to join the cell & obtain an Association Identifier (AID). If the network is "Open" (no WPA/2-PSK, 802.1X or other kind of RSN authentication) then this is the last state and the client completes it's connection, else, the client is ready to start with the **RSNA** process to reach the state 4 Fully Connected & Authenticated._ <br>
 
-🏁🔄📡 **`Association` Frame Exchange**: <br>  
+🖼️🔄✅ **`Association` Frame Exchange**: <br>  
 ✅ After Authentication State 2 (CLIENT AUTENTICATED) ✅⬇️ <br> 
 🤳❓ `STA`: 💊 `Asso Request` ➡️ AP <br> 
 🆗 `AP`: 💊 `ACK` ➡️ STA <br> 
@@ -1310,13 +1310,17 @@ _To get all the 3 pieces of the PTK using modern cipher, the keys must do a 4-wa
 _The 4-way-handshake is used for the generation of a PTK. It confirms that the STA holds a current PMK & also Transfers the GTK to the STA | The term "nonce" is a contraction of "number used once." A "nonce" is a random number used only once to ensure the security and uniqueness of keys generated during the establishment of a secure connection in a Wi-Fi network. AP & STA use a Pseudo-Random Function to generate their nonces._<br><br>
 **PTK Components:**<br>
 **PTK** = `PMK` + `Supplicant (STA) MAC Address` + `Authenticator (AP) MAC Address` + `Snonce (Supp)` + `Anonce (Auth)` <br><br>
+
+🖼️🔄🤝 **`4-Way-Handshake` Frame Exchange**: <br>  
+✅ After Association State 3 (CLIENT ASSOCIATED) ✅⬇️ <br> 
+
 - [4-Way-Handshake @ _CWNP_](https://www.youtube.com/watch?v=9M8kVYFhMDw) _`video`_
 - [4-Way-Handshake @ _Nayarasi_](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) _`CWNE info`_
 - [Cryptographic "Nonce"](https://en.wikipedia.org/wiki/Cryptographic_nonce) `wiki`
 - [4-way-handshake: Diagram 1](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/4594a2cb-bdb8-47b0-9d95-a62eb0e3c62a) `diagram`
 
-### 🤝🔄💊 4-Way-Handshake: `Frame & Packet Exchange`
-✅ After Association State 3 (CLIENT ASSOCIATED) ✅⬇️ <br> 
+
+
 
 
 
