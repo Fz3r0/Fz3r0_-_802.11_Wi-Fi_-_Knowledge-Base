@@ -1296,7 +1296,7 @@ _Instead of using a single key for everything, WPA uses a hierarchy with many ke
 -  `LVL2` Master Keys: [`PMK` Pairways Master Key :: `256-bit`](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) **Derived from: PSK or AAA key (EAP)** :: <br> _Created from 256-bit HEX/PSK or EAP used to login_ <br> <br>
 - `BETWEEN LVL 2 & LVL 3`[`4-way-handshake`]() If succeeded, STA & AP proceed to LVL3 & uses **this handshake to create the PTK:** <br> <br>
 - `LVL3` Temporal Keys: [`GTK` Group Temporal Key:]() **Derived from: GMK** :: <br> _Encrypt all **broadcast/multicast transmission** between AP & multiple STAs_
-- `LVL3` Temporal Keys: [`PTK` Pairwise Transient Key:]()  **Derived from: PMK, Supplicant's & Authenticator's Addresses & Nonces** :: <br> _Encrypt all **unicast transmission** between AP & STA | Consist of 5 different keys_
+- `LVL3` Temporal Keys: [`PTK` Pairwise Transient Key:]()  **Derived from: PMK, Supplicant's & Authenticator's Addresses & Nonces** :: <br> _Encrypt all **unicast transmission** between AP & STA | **Consist of 3 different keys: KCK, KEK & TK (TKIP : MIC-1 & MIC-2)**_
 
 ### 🔑🏷️🗝️ PTK (Pairwise Transient Key): `3 (or 5) pieces of PTK Keys`
 _To get all the 3 pieces of the PTK using modern cipher, the keys must do a 4-way-handshake process | Temporal MIC 1 & 2 are used only for TKIP: TKIP uses the Michael function. This is part of the temporal key we use for integrity checks of MSDUs or MPDUs. This key is partitioned into two MIC keys._
