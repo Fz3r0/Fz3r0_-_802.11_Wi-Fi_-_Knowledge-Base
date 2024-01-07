@@ -1104,12 +1104,11 @@ _The PLCP consists of two main sublayers: the PLCP protocol data unit (PPDU) & t
 
 
         
-# 🪆🛜⚙️ 802.11 State Machine: `Discovery`, `Authentication`, `Association`, `Transition` & `Leave WLAN`
-_Most common issues to torubleshoot are Connectivity Problems, this means: STAs/Clients either can't connect, can't maintain it's connection, it's not roaming well between APs, it can't connect to the SSID, and so on... Understanding this kind of Frame Exchanges help to analyze step by step the process for BSS Discovery & Joining, Analyze Roaming Behavior, etc_
-- [IEEE 802.11 Wi-Fi Discovey, Connection, Roaming & Disconnection process](https://community.nxp.com/t5/Wireless-Connectivity-Knowledge/802-11-Wi-Fi-Connection-Disconnection-process/ta-p/1121148)
+# 🪆🛜⚙️ 802.11 State Machine: `Discovery`, `Authentication`, `Association`, `Transition` & `Disconnection`
+_Any Client Station or Access Point (STA or AP) can be in some "state" within this state machine at any given time. Considered as "The discovery/connection/transition/disconnection process" of a client in a BSS at a protocol level. Modern networks does not "authenticate" clients, instead uses "open system authentication". Open System Authentication is when STA send Auth Req & AP responds with Auth Res, then the same with Asso Res/Res at this point they are at "state 3" (where open authentication reach), then is where we use RSN method is used (like 802.1X EAP or WPA2 PSK) to make a "real authentication", and that take us finally to state 4 "Fully connected to the network"Most common issues to torubleshoot are Connectivity Problems, this means: STAs/Clients either can't connect, can't maintain it's connection, it's not roaming well between APs, it can't connect to the SSID, and so on... Understanding this kind of Frame Exchanges help to analyze step by step the process for BSS Discovery & Joining, Analyze Roaming Behavior, etc_
 
-## 🪪🔐🔁 IEEE 802.11: `State Machine`
-_Any STA or AP can be in some "state" within this state machine at any given time. Considered as "The discovery/connection/transition/disconnection process" of a client in a BSS at a protocol level. Modern networks does not "authenticate", instead uses "open system authentication". Open System Authentication is when STA send Auth Req & AP responds with Auth Res, then the same with Asso Res/Res at this point they are at "state 3" (where open authentication reach), then is where we use RSN method is used (like 802.1X EAP or WPA2 PSK) to make a "real authentication", and that take us finally to state 4 "Fully connected to the network"._
+## 🤳🏾🔁📡 IEEE 802.11: `State Machine`
+- [IEEE 802.11 Wi-Fi Discovey, Connection, Roaming & Disconnection process](https://community.nxp.com/t5/Wireless-Connectivity-Knowledge/802-11-Wi-Fi-Connection-Disconnection-process/ta-p/1121148) _`info`_
 - [802.11 State Machine :: `Diagram 1`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/c8715d19-fe2f-42e6-914a-144d3fb4e70d) _`diagram`_
 - [802.11 State Machine :: `Diagram 2`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/5826a51b-eb23-4fba-bdeb-73ba23295819)
 - [Understanding 802.11 State Machine @ Aruba Networks](https://blogs.arubanetworks.com/industries/understanding-802-11-state-machine/)
@@ -1133,10 +1132,10 @@ _Any STA or AP can be in some "state" within this state machine at any given tim
         - [**Management**: `Deauthentication`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
         - [**Data**: `Any frame with ToDS or FromDS true(1)`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
       
-### 🔐🪪🔓 802.11 State Machine: `4 States`
-- ❓[**`State 1`**: **Unauthenticated**, **Unassociated**]() `Client NO Connected` | **`Class 1`** > **Beacon : AuthReq/Res : ProbeReq/Res** 
-- 🚪[**`State 2`**: **`Authenticated`**, **Unassociated**]() `Client Authenticated (AP validating STA capabilities)` | **`Class 1 & 2`** > **AssociReq/Res**
-- 🪪[**`State 3`**: **`Authenticated`**, **`Associated`**]() `Client Associated to AP (Open Auth Completed OK!)` | **`Class 1, 2 & 3`** | `RSNA`: **Blocked** 
+### ⛔➡️✅ 802.11 State Machine: `4 States`
+- ⛔[**`State 1`**: **Unauthenticated**, **Unassociated**]() `Client NO Connected` | **`Class 1`** > **Beacon : AuthReq/Res : ProbeReq/Res** 
+- ❓[**`State 2`**: **`Authenticated`**, **Unassociated**]() `Client Authenticated (AP validating STA capabilities)` | **`Class 1 & 2`** > **AssociReq/Res**
+- ✅[**`State 3`**: **`Authenticated`**, **`Associated`**]() `Client Associated to AP (Open Auth Completed OK!)` | **`Class 1, 2 & 3`** | `RSNA`: **Blocked** 
 - 🔓[**`State 4`**: **`Authenticated`**, **`Associated`**]() `STA Fully Connected to AP (RSNA OK!)` Frames: **`Class 1, 2 & 3`** | `RSNA`: **Un-Blocked**
 
 ## 🤳🏾🛸📡 IEEE 802.11: `BSS Discovery`
@@ -1197,9 +1196,9 @@ _When 802.11 authentication (not the RSN-WPA/WPA2 authentication) completes, a S
 ### 🔓🪪 Open System Authentication: `Deauthentication` & `Disassociation` :: From:`ANY` ➡️ To:`State 1`
 _**Station or AP can send a Deauthentication Frame** when all communications are terminated (When disassociated, still a station can be authenticated to the cell). || Once a station associated to an AP, **either side can terminate the association at any time by sending a disassociation frame**. It has the same frame format as deauthentication frame. A station can send a disassociation frame because it leave the current cell to roam to another cell. An AP could send disassociation frame because station try to use invalid parameters._ <br>
 
-**❌🔄📡 `Deauthentication` Exchange**: <br>
+**⛔🔄📡 `Deauthentication` Exchange**: <br>
 ✅ After State 2 & 3 _(or 4 using RSNA)_ ✅⬇️  <br>
-❌🤳📡 `AP` or `STA` can send the Frame: `Deauthentication` _(Send specific code forDeauthentication reason)_ <br>
+⛔🤳📡 `AP` or `STA` can send the Frame: `Deauthentication` _(Send specific code forDeauthentication reason)_ <br>
 **Return to State 1** `DISCONNECTED` <br>
 
 **❌🔄📡 `Disassociation` Exchange**: <br>
@@ -1236,7 +1235,7 @@ _Robust Security Network Element (RSNE) is an info element that may exist in 802
 - [RSNE: Robust Security Network Element](https://en.wikipedia.org/wiki/RSNE)
 - [`RSN`, `RSNA` & `RSNE`: PCAP Analysis](https://www.netprojnetworks.com/802-11i-robust-security-network-12-6-2-rsna-selection/) _`PCAP Analysis`_
 
-## 802.11i Security: `Encryption Methods` & `Cipher Suites`
+## 🔐🔣🤐 802.11i Security: `Encryption Methods` & `Cipher Suites`
 _Encryption is a process by which information is converted into an unreadable or unintelligible format for those who do not have the key to decrypt it. | Cipher suites are sets of cryptographic algorithms used together to provide comprehensive security in communications. They include algorithms for encryption, but they can also address authentication and data integrity. | Differences: While Encryption is a specific process within the broader scope of cipher suites. Cipher suites not only focus on data encryption but also address other aspects of communication security, such as authentication and integrity. In the context of protocols like TLS/SSL, the negotiation of cipher suites during the handshake is essential to establish a secure connection between a client and an online server. In the context of Wi-Fi authentication, the negotiation of cipher suites is crucial during the handshake process. This negotiation helps establish a secure connection between a device and a Wi-Fi access point by determining the encryption methods that will safeguard the wireless communication._ <br><br>
 
 **`Open`** :: _No Encryption or Cipher Suites used_ <br>
@@ -1260,15 +1259,15 @@ _Encryption is a process by which information is converted into an unreadable or
 
 ### Cipher Suite: `RC4`: Rivest Cipher 4 _depreciated_
 
-### Encryption Method: `TKIP`
+### 🔣 Encryption Method: `TKIP`
 _Encryption Method_
 - [TKIP Encryption Method](https://mrncciew.com/2014/09/13/cwsp-tkip-encryption-method/)
 
-### Encryption Method: `CCMP`
+### 🔣 Encryption Method: `CCMP`
 _Encryption Method_
 - [CCMP Encryption Method](https://mrncciew.com/2014/08/19/cwsp-ccmp-encryption-method/)
 
-## 802.11i: `Authentication & Key Management`, `4-Way-Handshake` & `Mobility`
+## 🪪🗝️🔐 802.11i: `Authentication & Key Management`, `4-Way-Handshake` & `Mobility`
 _802.11i introduces key management schemes that allow for a separate authentication process to enable the distribution of keys. There are two main phases to this process: Master key establishment & Key exchange | Master key establishment can occur either manually via configuration or dynamically via the 802.1x protocol using EAP. After master keys are established, two parties perform key exchange to generate the transient keys they will use for the session. Although the term "key exchange" is used in the specification and in the literature, in reality this is a negotiation phase in which no actual keys are exchanged. | When using RSNA like 802.1X-EAP or WPA2/3-PSK the end goal is get security in the WLAN connection, to achieve that security the STA & AP (& authenticator server in case of 802.1X) need to make a key exchange for traffic encryption (similar like protocols like SSH or HTTPS) | In an AP with many wireless clients, unicast traffic between a wireless client and the AP has to be private. You don’t want one client to be able to decrypt traffic between another wireless client and the AP. This is why you should have different keys between each wireless Client & AP. We call these pairwise keys because there is a pair of keys between each wireless client and the AP. The AP has multiple pairwise keys, one for each associated wireless client. | There is also broadcast and multicast traffic. All wireless clients should be able to encrypt and decrypt this traffic, so we need a shared key | All associated wireless clients of the AP have the same key. We call this a group key. The Pairwise and group keys are created differently. | Key partitioning in cryptography means dividing (partitioning) a single key into a set of keys. One of the advantages of dividing a key into parts is that the security of the key improves. An attacker needs all parts of the partitioned keys to recover the original key._
 - [Key Management](https://etutorials.org/Networking/Wireless+lan+security/Chapter+8.+WLAN+Encryption+and+Data+Integrity+Protocols/Key+Management/)
 - [802.11i Authentication and Key Management (AKM) @ _CWNP_](https://www.cwnp.com/uploads/802-11i_key_management.pdf) _`CWNP pdf paper`_
@@ -1299,7 +1298,7 @@ _Instead of using a single key for everything, WPA uses a hierarchy with many ke
 - `LVL3` Temporal Keys: [`GTK` Group Temporal Key:]() **Derived from: GMK** :: <br> _Encrypt all **broadcast/multicast transmission** between AP & multiple STAs_
 - `LVL3` Temporal Keys: [`PTK` Pairwise Transient Key:]()  **Derived from: PMK, Supplicant's & Authenticator's Addresses & Nonces** :: <br> _Encrypt all **unicast transmission** between AP & STA | Consist of 5 different keys_
 
-### PTK (Pairwise Transient Key): `3 (or 5) pieces of PTK Keys`
+### 🔑🏷️🗝️ PTK (Pairwise Transient Key): `3 (or 5) pieces of PTK Keys`
 _To get all the 3 pieces of the PTK using modern cipher, the keys must do a 4-way-handshake process | Temporal MIC 1 & 2 are used only for TKIP: TKIP uses the Michael function. This is part of the temporal key we use for integrity checks of MSDUs or MPDUs. This key is partitioned into two MIC keys._
 1. [`KCK`:Key Confirmation Key - `128-bit` / `0-127-bit of PTK`](https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy#EAPOL-Key_Key_Confirmation_Key_KCK) Provide data integrity during 4-Way-Handshake & Group-Key-Handshake
 2. [`KEK`: Key Encryption Key - `128-bit` / `0-255-bit of the PTK`](https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy#EAPOL-Key_Key_Encryption_Key_KEK) Used by EAPOL-Key frames to provide data privacy during 4-Way-Handshake & Group-Key-Handshake
@@ -1307,7 +1306,7 @@ _To get all the 3 pieces of the PTK using modern cipher, the keys must do a 4-wa
 4. [Temporal `MIC-1`](https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy#Temporal_Message_Integrity_Code_MIC_Keys) Used for TKIP Michael function
 5. [Temporal `MIC-2`](https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy#Temporal_Message_Integrity_Code_MIC_Keys) Used for TKIP Michael function
 
-### 🔐🤝📡 PTK Generation: `4-Way-Handshake`
+### 🗝️🤝🔑 PTK Generation: `4-Way-Handshake`
 _The 4-way-handshake is used for the generation of a PTK. It confirms that the STA holds a current PMK & also Transfers the GTK to the STA | The term "nonce" is a contraction of "number used once." A "nonce" is a random number used only once to ensure the security and uniqueness of keys generated during the establishment of a secure connection in a Wi-Fi network. AP & STA use a Pseudo-Random Function to generate their nonces._<br><br>
 **PTK Components:**<br>
 **PTK** = `PMK` + `Supplicant (STA) MAC Address` + `Authenticator (AP) MAC Address` + `Snonce (Supp)` + `Anonce (Auth)` <br><br>
