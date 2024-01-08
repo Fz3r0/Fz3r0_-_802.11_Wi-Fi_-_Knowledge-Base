@@ -1252,26 +1252,33 @@ _Encryption is a process by which information is converted into an unreadable or
 - [`WPA` & `WPA2`: Wi-Fi Protected Access @ _Marcus Burton, CWNP_)](https://www.youtube.com/watch?v=hLQ5rYNUwNg) _`video`_
 - [`WPA` vs `WPA2`: Table](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/3f67e6b8-779f-42ea-aad0-e7b36074ae98) _`table`_
 - [WEP, WPA, WPA2, and WPA3: Differences explained @ _NordVPN_](https://nordvpn.com/blog/wep-vs-wpa-vs-wpa2-vs-wpa3/) _`info + table`_
+- [Wireless security: WEP, WPA, WPA2 and WPA3 differences @ _techtarget_](https://www.techtarget.com/searchnetworking/feature/Wireless-encryption-basics-Understanding-WEP-WPA-and-WPA2)
 - [WEP vs. WPA vs. WPA2 vs. WPA3 @ _FS_](https://community.fs.com/article/wep-vs-wpa-vs-wpa2-vs-wpa3.html) _`info + table`_
 - [Wi-Fi Security Timeline | WEP, WPA, WPA2, WPA3, 802.1X](https://semfionetworks.com/blog/wi-fi-security-timeline/) _`timeline + table`_
 - [Evolution of wireless LAN security architecture to IEEE 802.11i (WPA2)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/cc53c61c-d50a-49b1-be8e-ee08d8d54171) _`table`_
 - [A comparative study of WLAN security protocols: WEP, WPA, WPA2](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/c8970a2e-130b-4c78-8426-026c161b9477) _`table`_
 - [WPA3-Enterprise](https://mrncciew.com/2020/08/17/wpa3-enterprise/))
 
+### Encryption:
 
-### Encryption: `RC4`: Rivest Cipher 4 _depreciated_
-
-### 🔣 Cipher Suite: `TKIP`
-
+### Cipher Suites: 
+- RC4 Rivest Cipher 4 _depreciated_
 - [TKIP ](https://mrncciew.com/2014/09/13/cwsp-tkip-encryption-method/)
-
-### 🔣 Cipher Suite: `CCMP`
 - [CCMP ](https://mrncciew.com/2014/08/19/cwsp-ccmp-encryption-method/)
+- [GVM ](https://mrncciew.com/2014/08/19/cwsp-ccmp-encryption-method/)
 
-- ### 🔣 Cipher Suite: `GCM`
-- [CCMP ](https://mrncciew.com/2014/08/19/cwsp-ccmp-encryption-method/)
+### 🔐 WPA/WPA2/WPA3: `PCAP Analysis` & `Frame Exchanges`
+- [**`WPA-PSK (TKIP)`** :: PCAP Analysis](https://community.cisco.com/t5/wireless-mobility-knowledge-base/802-11-sniffer-capture-analysis-wpa-wpa2-with-psk-or-eap/ta-p/3116990)
+- [**`WPA2-PSK (AES/TKIP)`** :: PCAP Analysis](https://community.cisco.com/t5/wireless-mobility-knowledge-base/802-11-sniffer-capture-analysis-wpa-wpa2-with-psk-or-eap/ta-p/3116990)
+- [**`WPA/WPA2 Enterprise`** :: PCAP Analysis](https://community.cisco.com/t5/wireless-mobility-knowledge-base/802-11-sniffer-capture-analysis-wpa-wpa2-with-psk-or-eap/ta-p/3116990)
+- [**`WPA(TKIP)/WPA2(AES)`** with 802.1X (EAP-TLS) :: PCAP Analysis](https://community.cisco.com/t5/wireless-mobility-knowledge-base/802-11-sniffer-capture-analysis-wpa-wpa2-with-psk-or-eap/ta-p/3116990)
 
-## 🪪🗝️🔐 802.11i: `Authentication & Key Management`, `4-Way-Handshake` & `Mobility`
+
+
+
+
+
+## 🪪🗝️🔐 802.11i: `Authentication & Key Management` & `4-Way-Handshake`
 _802.11i introduces key management schemes that allow for a separate authentication process to enable the distribution of keys. There are two main phases to this process: Master key establishment & Key exchange | Master key establishment can occur either manually via configuration or dynamically via the 802.1x protocol using EAP. After master keys are established, two parties perform key exchange to generate the transient keys they will use for the session. Although the term "key exchange" is used in the specification and in the literature, in reality this is a negotiation phase in which no actual keys are exchanged. | When using RSNA like 802.1X-EAP or WPA2/3-PSK the end goal is get security in the WLAN connection, to achieve that security the STA & AP (& authenticator server in case of 802.1X) need to make a key exchange for traffic encryption (similar like protocols like SSH or HTTPS) | In an AP with many wireless clients, unicast traffic between a wireless client and the AP has to be private. You don’t want one client to be able to decrypt traffic between another wireless client and the AP. This is why you should have different keys between each wireless Client & AP. We call these pairwise keys because there is a pair of keys between each wireless client and the AP. The AP has multiple pairwise keys, one for each associated wireless client. | There is also broadcast and multicast traffic. All wireless clients should be able to encrypt and decrypt this traffic, so we need a shared key | All associated wireless clients of the AP have the same key. We call this a group key. The Pairwise and group keys are created differently. | Key partitioning in cryptography means dividing (partitioning) a single key into a set of keys. One of the advantages of dividing a key into parts is that the security of the key improves. An attacker needs all parts of the partitioned keys to recover the original key._
 - [Key Management](https://etutorials.org/Networking/Wireless+lan+security/Chapter+8.+WLAN+Encryption+and+Data+Integrity+Protocols/Key+Management/)
 - [802.11i Authentication and Key Management (AKM) @ _CWNP_](https://www.cwnp.com/uploads/802-11i_key_management.pdf) _`CWNP pdf paper`_
@@ -1317,11 +1324,15 @@ _The 4-way-handshake is used for the generation of a PTK. It confirms that the S
 **PTK** = `PMK` + `Supplicant (STA) MAC Address` + `Authenticator (AP) MAC Address` + `Snonce (Supp)` + `Anonce (Auth)` <br><br>
 
 🖼️🔄🤝 **`4-Way-Handshake` Frame Exchange**: <br><br>  
-✅ After Association State 3 (CLIENT ASSOCIATED) ✅⬇️ <br> 
-1. 📡🔢🗝️ `AP`: 1. Pick Random Anonce 2. 💊 Send `M1`: **EAPOL Key**(Unicast[Reply req] + Anone)
+✅ After Association State 3 (CLIENT ASSOCIATED) :: BOTH CLIENTS (AP & STA) HAVE PMK's (From PSK or EAP) ✅⬇️  <br> 
+1. 📡🔢🗝️ `AP` :: Pick Random Anonce | Send `M1` : 💊 **EAPOL Key** (`Anonce`) {Unicast} ➡️ To: `STA` 🤳
+2. 🤳🔢🔑 `STA` :: Generates PTK + Pick Random Snonce | Send `M2` : 💊 **EAPOL Key** (`Snonce` + `MIC`) {Unicast} ➡️ To: `AP` 📡
+3. 📡🔢🔑 `AP` :: Generates PTK + Pick Random Snonce | Send `M3` : 💊 **EAPOL Key** (`Intall PTK` + `MIC` + `Encrypted GTK`) {Unicast} ➡️ To: `STA` 🤳
+4. 🤳🔢🔑 `STA` :: Decrypt GTK sent from AP & andwer with MIC | Send `M4` : 💊 **EAPOL Key** (`MIC`) {Unicast} ➡️ To: `AP` 📡
+✅ **State 4 OK! `CLIENT ASSOCIATED VIA RSNA` ✅** <br><br>
 
+- [`M1`: Message 1 :: 4-way-handshake](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/ae14bb2f-60ed-477b-9598-f350cd4ba23c) _`PCAP Frame Exchange`_
 
-✅ **State 4 OK! `CLIENT ASSOCIATED VIA RSNA` ✅** <br> 
 
 
 
@@ -1408,6 +1419,16 @@ Supplicant (**STA**) & Auhtenticator (**AP**): Key Exchange 🔐↔️🗝️ <b
 - [Wired Capture Example: Incorrect Password](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/9bf57d54-f7e0-481f-8cb8-203fc178adfb) _`PCAP Frame Exchange`_
 - [Wired Capture Example: Silent Dosconnects](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/73bdf52f-92c2-4f95-8878-1ad27348ac50) _`PCAP Frame Exchange`_
 
+
+
+
+
+
+
+
+
+
+
 ## 🗝️🔐🏠 00-0F-AC-02: `PSK - Pre-Shared Key`
 **Rules:** <br>
 PSK must be HEX 256-bit, when taken from ASCII characters it gets a padding/mapping to fit those 256.bit
@@ -1415,11 +1436,32 @@ PSK must be HEX 256-bit, when taken from ASCII characters it gets a padding/mapp
 **HEX** PSK = 64 HEX (256-bits) <br>
 - [`PSK`: Pre-Shared Key](https://en.wikipedia.org/wiki/Pre-shared_key) _`wiki`_
 
-## 🗝️🔐🔁 00-0F-AC-03: `IEEE 802.11r` or `FT - Fast Transition` _(802.11r over 802.1X)_
+## 🗝️🔐🔁 00-0F-AC-03: `IEEE 802.11r` or `_
+
+
+
+
+
+
+
+
+## 🪪🗝️🔐 80.11 `Mobility` / `Roaming`
+- [Cisco: 802.11r, 802.11k, and 802.11w Deployment Guide: `802.11r`](https://www.cisco.com/c/en/us/td/docs/wireless/controller/technotes/5700/software/release/ios_xe_33/11rkw_DeploymentGuide/b_802point11rkw_deployment_guide_cisco_ios_xe_release33/b_802point11rkw_deployment_guide_cisco_ios_xe_release33_chapter_01.html)
+- [¿Cómo funciona el 802.11r?](https://info.ita.tech/blog/como-funciona-el-roaming-en-wifi-802-11r)
+
+### 802.1X Slow Transition
+
+### FT - Fast Transition (802.11r over 802.1X)
 - [IEEE 802.11r-2008 AKA FT (Fast Transition)](https://en.wikipedia.org/wiki/IEEE_802.11r-2008) _`wiki`_
 - [RSN with FT | 802.11i + 802.11r | @ CWNP](https://www.cwnp.com/uploads/802-11_rsn_ft.pdf)
 
-### 802.11 Mobility: Slow Transition 
+
+
+
+
+
+
+
 
 
 
@@ -1433,20 +1475,7 @@ Default Port: 1812
 - [`FreeRADIUS` @ `LINUX` (Kali): Instalacion y Configuracion de FreeRADIUS en Kali Linux](https://www.youtube.com/watch?v=C92x-0Cbxk8)
 - [`RADIUSdesk`: How to install and configure free RADIUS server in Windows PC & use it with home Wi-Fi](https://www.youtube.com/watch?v=hIcJIRqO-5o)
 
-## 🛡️🔐🏢 RSNA: `WPA/WPA2`
-_Wireless security: WEP, WPA, WPA2 and WPA3 differences_ <br>
-**`WPA-Personal   `** :: Encryption: `TKIP (depreciated)` :: Authentication: `PSK-256 bits` (8-63 chars) <br>
-**`WPA2-Personal  `** :: Encryption: `AES` :: Cypher-Suite: `CCMP` _(TKIP compatible but depreciated)_ :: Authentication: `PSK-256 bits` (8-63 chars) <br>
-**`WPA-Enterprise `** :: Encryption: `TKIP (depreciated)` :: Security Frameworks: `802.1X` with `EAP` <br>
-**`WPA2-Enterprise`** :: Encryption: `AES` :: Cypher-Suite: `CCMP` _(TKIP compatible but depreciated)_ :: Security Frameworks: `802.1X` with `EAP` <br>
-- [Wireless security: WEP, WPA, WPA2 and WPA3 differences](https://www.techtarget.com/searchnetworking/feature/Wireless-encryption-basics-Understanding-WEP-WPA-and-WPA2)
-- [WPA and WPA2 @ Marcus Burton - CWNP](https://www.youtube.com/watch?v=hLQ5rYNUwNg) _`video`_
 
-### 🔐 WPA/WPA2: `Analysis` & `Frame Exchanges`
-- [**`WPA-PSK (TKIP)`** :: PCAP Analysis](https://community.cisco.com/t5/wireless-mobility-knowledge-base/802-11-sniffer-capture-analysis-wpa-wpa2-with-psk-or-eap/ta-p/3116990)
-- [**`WPA2-PSK (AES/TKIP)`** :: PCAP Analysis](https://community.cisco.com/t5/wireless-mobility-knowledge-base/802-11-sniffer-capture-analysis-wpa-wpa2-with-psk-or-eap/ta-p/3116990)
-- [**`WPA/WPA2 Enterprise`** :: PCAP Analysis](https://community.cisco.com/t5/wireless-mobility-knowledge-base/802-11-sniffer-capture-analysis-wpa-wpa2-with-psk-or-eap/ta-p/3116990)
-- [**`WPA(TKIP)/WPA2(AES)`** with 802.1X (EAP-TLS) :: PCAP Analysis](https://community.cisco.com/t5/wireless-mobility-knowledge-base/802-11-sniffer-capture-analysis-wpa-wpa2-with-psk-or-eap/ta-p/3116990)
 
 
 
