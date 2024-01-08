@@ -1326,17 +1326,32 @@ _The 4-way-handshake is used for the generation of a PTK. It confirms that the S
 
 
 
-## 🗝️🔐🏢 00-0F-AC-01: `IEEE 802.1X`-`EAP`: Extensible Authentication Protocol
-_EAP is the whole Framework used for implement authentication, and it uses 802.1X as a part of it | 802.1X is a port access protocol designed to secure networks through authentication. As a result, this type of authentication method is extremely useful in the Wi-Fi environment due to the nature of the medium. If a Wi-Fi user authenticates through 802.1X to access the network, a virtual port is opened on the access point, allowing communication. If not authorized correctly, no virtual port will be available, and communications will be blocked. | EAP is used to transmit authentication information between the supplicant (Wi-Fi workstation) and the authentication server (Microsoft IAS or another server). The specific type of EAP actually manages and defines the authentication process. The access point acting as the authenticator serves as a proxy facilitating communication between the supplicant and the authentication server._ <br><br>
+## 🗝️🔐🏢 00-0F-AC-01: `802.1X Protocol` & `EAP (Extensible Authentication Protocol)`
+_EAP is the whole Framework used for implement authentication, and it uses 802.1X as a part of it | 802.1X is a port access protocol designed to secure networks through authentication. As a result, this type of authentication method is extremely useful in the Wi-Fi environment due to the nature of the medium. If a Wi-Fi user authenticates through 802.1X to access the network, a virtual port is opened on the access point, allowing communication. If not authorized correctly, no virtual port will be available, and communications will be blocked. | EAP is used to transmit authentication information between the "Supplicant" (STA) and the "Authentication Server" (Microsoft IAS or AD, RADIUS, etc). The specific type of EAP actually manages and defines the authentication process. The AP acting as the "Authenticator" serves as a proxy facilitating communication between the "Supplicant" (STA) <--> Authentication Server (RADIUS, Windows Server, etc). | There are upwards of 40 EAP methods, including several commonly used ones that are often called inner methods or tunneled EAP methods. Some of the most commonly deployed EAP authentication types include EAP-MD-5, EAP-TLS, EAP-PEAP, EAP-TTLS, EAP-Fast, and Cisco LEAP._ <br>
+
 **Basic components in 802.1X authentication:** <br>
 **Supplicant**: A software client running on the Wi-Fi workstation (STA).<br>
 **Authenticator** or **NAS**: The Wi-Fi Access Point (AP). <br>
 **Authentication Server**: An authentication database, typically a RADIUS server such as Cisco ACS, Funk Steel-Belted RADIUS, or Microsoft IAS. <br>
-- [`IEEE 802.1X` :: Standard for `PNAC`: port-based Network Access Control](https://en.wikipedia.org/wiki/IEEE_802.1X) _`wiki`_
-- [Descripción general de `802.1X` y tipos de `EAP` @ _Intel_](https://www.intel.la/content/www/xl/es/support/articles/000006999/wireless/legacy-intel-wireless-products.html) _`info`_
-- [`Fz3r0` - Capturando EAPOL en aire y RADIUS en cable al mismo tiempo](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/9ffc7fa1-f4dd-49b1-b0cb-4ff2aa6a4e63) _`table`_
 
-### 🔐🔄💊 802.1X-EAP: Frame & Packet Exchange
+- [802.1X Overview and EAP Types  @ _Intel_](https://www.intel.com/content/www/us/en/support/articles/000006999/wireless/legacy-intel-wireless-products.html) _`info + tables`_
+- [Descripción general de `802.1X` y tipos de `EAP` @ _Intel_](https://www.intel.la/content/www/xl/es/support/articles/000006999/wireless/legacy-intel-wireless-products.html) _`info + tables Español`_
+- [EAP: Extensible Authentication Protocol: 802.1X-EAP different types frames exchanges](https://www.techtarget.com/searchsecurity/definition/Extensible-Authentication-Protocol-EAP) _`info + frames exchanges + tables`_
+- [`IEEE 802.1X` :: Standard for `PNAC`: port-based Network Access Control](https://en.wikipedia.org/wiki/IEEE_802.1X) _`wiki`_
+
+### 🪪🏢🗝️ EAP: `Common EAP Authentication Types`
+- [`EAP-MD5`: Message Digest 5]() Base-level EAP support | Not recommended for Wi-Fi implementations (insecure) | Non-Dynamic per session keys
+- [`EAP-TLS` (Transport Layer Security)]() provides for certificate-based and mutual authentication of the client and the network. It relies on client-side and server-side certificates to perform authentication and can be used to dynamically generate user-based and session-based WEP keys to secure subsequent communications between the WLAN client and the access point. One drawback of EAP-TLS is that certificates must be managed on both the client and server side. For a large WLAN installation, this could be a very cumbersome task.
+- [`EAP-TTLS` (Tunneled Transport Layer Security)]() was developed by Funk Software* and Certicom*, as an extension of EAP-TLS. This security method provides for certificate-based, mutual authentication of the client and network through an encrypted channel (or tunnel), as well as a means to derive dynamic, per-user, per-session WEP keys. Unlike EAP-TLS, EAP-TTLS requires only server-side certificates.
+- [`EAP-FAST` (Flexible Authentication via Secure Tunneling)]() was developed by Cisco*. Instead of using a certificate to achieve mutual authentication. EAP-FAST authenticates by means of a PAC (Protected Access Credential) which can be managed dynamically by the authentication server. The PAC can be provisioned (distributed one time) to the client either manually or automatically. Manual provisioning is delivery to the client via disk or a secured network distribution method. Automatic provisioning is an in-band, over the air, distribution.
+- [`EAP-SIM`: Extensible Authentication Protocol Method for GSM Subscriber Identity]() is a mechanism for authentication and session key distribution. It uses the Global System for Mobile Communications (GSM) Subscriber Identity Module (SIM). EAP-SIM uses a dynamic session-based WEP key, which is derived from the client adapter and RADIUS server, to encrypt data. EAP-SIM requires you to enter a user verification code, or PIN, for communication with the Subscriber Identity Module (SIM) card. A SIM card is a special smart card that is used by Global System for Mobile Communications (GSM) based digital cellular networks.
+- [`EAP-AKA` (Extensible Authentication Protocol Method for UMTS Authentication and Key Agreement)]() is an EAP mechanism for authentication and session key distribution, using the Universal Mobile Telecommunications System (UMTS) Subscriber Identity Module (USIM). The USIM card is a special smart card used with cellular networks to validate a given user with the network.
+- [`LEAP` (Lightweight Extensible Authentication Protocol)](), is an EAP authentication type used primarily in Cisco Aironet* WLANs. It encrypts data transmissions using dynamically generated WEP keys, and supports mutual authentication. Heretofore proprietary, Cisco has licensed LEAP to a variety of other manufacturers through their Cisco Compatible Extensions program.
+- [`PEAP` (Protected Extensible Authentication Protocol)]() provides a method to transport securely authentication data, including legacy password-based protocols, via 802.11 Wi-Fi networks. PEAP accomplishes this by using tunneling between PEAP clients and an authentication server. Like the competing standard Tunneled Transport Layer Security (TTLS), PEAP authenticates Wi-Fi LAN clients using only server-side certificates, thus simplifying the implementation and administration of a secure Wi-Fi LAN. Microsoft, Cisco, and RSA Security developed PEAP.
+
+
+
+### 🔐🔄💊 802.1X-EAP: Frame & Packet Exchange <br><br>
 **🔄 BASIC EAP MD5 _(Depreciated Method)_** <br>
 ✅ After State 3 Completed OK: 📡⬇️ <br>
 Auhtenticator (**AP**): 💊 Request Identity ➡️ **STA** <br>
@@ -1375,6 +1390,7 @@ Supplicant (**STA**) & Auhtenticator (**AP**): Key Exchange 🔐↔️🗝️ <b
 **Wired LAN** (Between Authentication Serivce & Authenticator) = **WLCCP** = Type **???** <br>
 **Wireless WLAN** (Between Authenticator & Supplicant) = EAPOL = **Port** **1812** <br>
 - [`802.1X-EAP` **Full Frame/Packet Exchange**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/0c845cce-22c2-48d1-89cd-3ace19260508) _`Frame Exchange`_
+- [`Fz3r0` - Capturando EAPOL en aire y RADIUS en cable al mismo tiempo](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/9ffc7fa1-f4dd-49b1-b0cb-4ff2aa6a4e63) _`table`_
 - [Generic EAP Method: Frame Exchange](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/46d6b1c9-e2aa-49ee-a67a-5d9d06b56869) _`Frame Exchange`_
 - [Tunneled EAP Methods: Frame Exchange](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/f90635e2-b72b-4c8c-beac-4237c886ba3b) _`Frame Exchange`_
 - [Wired Capture Example: Incorrect Password](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/9bf57d54-f7e0-481f-8cb8-203fc178adfb) _`PCAP Frame Exchange`_
