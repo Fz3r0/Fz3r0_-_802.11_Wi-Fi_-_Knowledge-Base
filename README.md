@@ -1270,6 +1270,7 @@ _802.11i introduces key management schemes that allow for a separate authenticat
 - [Key Management](https://etutorials.org/Networking/Wireless+lan+security/Chapter+8.+WLAN+Encryption+and+Data+Integrity+Protocols/Key+Management/)
 - [802.11i Authentication and Key Management (AKM) @ _CWNP_](https://www.cwnp.com/uploads/802-11i_key_management.pdf) _`CWNP pdf paper`_
 - [Authentication and Key Management (AKM) & Key Hierarchy _@ CWNP_](https://www.youtube.com/watch?v=8OPdE1MM1yE) _`video`_
+- [4-Way Hand shake , Keys generation & MIC Verification-WPA2](https://praneethwifi.in/2019/11/09/4-way-hand-shake-keys-generation-and-mic-verification/) _`full info + PCAP analysis`_
 - [Introduction to WPA Key Hierarchy](https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy) _`full info + video`_
 - [Wi-Fi Authentication & Key Generation](https://www.youtube.com/watch?v=ntGA6V5EciE&t=14s)  _`video`_
 - [802.11 Security Fundamentals @ _Cisco_](https://www.cisco.com/en/US/docs/wireless/wlan_adapter/secure_client/5.1.0/administration/guide/C1_Network_Security.html) _`info + list`_
@@ -1309,13 +1310,20 @@ _The 4-way-handshake is used for the generation of a PTK. It confirms that the S
 **PTK Components:**<br>
 **PTK** = `PMK` + `Supplicant (STA) MAC Address` + `Authenticator (AP) MAC Address` + `Snonce (Supp)` + `Anonce (Auth)` <br><br>
 
-🖼️🔄🤝 **`4-Way-Handshake` Frame Exchange**: <br>  
+🖼️🔄🤝 **`4-Way-Handshake` Frame Exchange**: <br><br>  
 ✅ After Association State 3 (CLIENT ASSOCIATED) ✅⬇️ <br> 
+1. 📡🔢🗝️ `AP`: 1. Pick Random Anonce 2. 💊 Send `M1`: **EAPOL Key**(Unicast[Reply req] + Anone)
+
+
+✅ **State 4 OK! `CLIENT ASSOCIATED VIA RSNA` ✅** <br> 
+
+
 
 - [4-Way-Handshake @ _CWNP_](https://www.youtube.com/watch?v=9M8kVYFhMDw) _`video`_
 - [4-Way-Handshake @ _Nayarasi_](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) _`CWNE info`_
 - [Cryptographic "Nonce"](https://en.wikipedia.org/wiki/Cryptographic_nonce) `wiki`
-- [4-way-handshake: Diagram 1](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/4594a2cb-bdb8-47b0-9d95-a62eb0e3c62a) `diagram`
+- ![4-way-handshake: Diagram 1](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/29e33ad0-6894-4244-a8ed-56b30dddc480)
+- [4-way-handshake: Diagram 2](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/4594a2cb-bdb8-47b0-9d95-a62eb0e3c62a) `diagram`
 
 
 
