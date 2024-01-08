@@ -1298,6 +1298,8 @@ _Authentication Key Management (AKM) is a term that describes the process of 802
 - [`AKM`: Authentication Key Management | 802.11i | @ CWNP](https://www.cwnp.com/uploads/802-11i_key_management.pdf) _`pdf document`_
 - [Authenticated Key Management @ Key Management @ Cisco](https://www.cisco.com/web/techdoc/wireless/access_points/online_help/eag/123-02.JA/1100/h_ap_sec_ap-client-security.html) _`info`_
 
+---
+
 ### 🔝🥈🥉 802.11 Security Keys: `Keys Hierarchy`
 _Instead of using a single key for everything, WPA uses a hierarchy with many keys to encrypt and check the integrity of different 802.11 frames. | In WPA the PMK is created by the PSK inserted by the STA Client, in 802.1X it depends on the EAP method used in each case, but works essentialy in the same way._
 - [RSNA Key Hierarchy](https://www.youtube.com/watch?v=6HoQVul9Zks&t=112s)
@@ -1318,29 +1320,33 @@ _To get all the 3 pieces of the PTK using modern cipher, the keys must do a 4-wa
 4. [Temporal `MIC-1`](https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy#Temporal_Message_Integrity_Code_MIC_Keys) Used for TKIP Michael function
 5. [Temporal `MIC-2`](https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy#Temporal_Message_Integrity_Code_MIC_Keys) Used for TKIP Michael function
 
+---
+
 ### 🗝️🤝🔑 PTK Generation: `4-Way-Handshake`
 _The 4-way-handshake is used for the generation of a PTK. It confirms that the STA holds a current PMK & also Transfers the GTK to the STA | The term "nonce" is a contraction of "number used once." A "nonce" is a random number used only once to ensure the security and uniqueness of keys generated during the establishment of a secure connection in a Wi-Fi network. AP & STA use a Pseudo-Random Function to generate their nonces._<br><br>
-**PTK Components:**<br>
-**PTK** = `PMK` + `Supplicant (STA) MAC Address` + `Authenticator (AP) MAC Address` + `Snonce (Supp)` + `Anonce (Auth)` <br><br>
+- [4-Way-Handshake @ _CWNP_](https://www.youtube.com/watch?v=9M8kVYFhMDw) _`video`_
+- [4-Way-Handshake @ _Nayarasi_](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) _`CWNE info`_
+- [Cryptographic "Nonce"](https://en.wikipedia.org/wiki/Cryptographic_nonce) `wiki`
+- [4-way-handshake: Diagram 1](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/29e33ad0-6894-4244-a8ed-56b30dddc480) _`diagram`_
+- [4-way-handshake: Diagram 2](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/4594a2cb-bdb8-47b0-9d95-a62eb0e3c62a) _`diagram`_
 
-🖼️🔄🤝 **`4-Way-Handshake` Frame Exchange**: <br><br>  
+### 🖼️🔄🤝 **`4-Way-Handshake` Frame Exchange**: <br>
+**PTK Components:**<br>
+**PTK** = `PMK` + `Supplicant (STA) MAC Address` + `Authenticator (AP) MAC Address` + `Snonce (Supp)` + `Anonce (Auth)` <br>
+
 ✅ After Association State 3 (CLIENT ASSOCIATED) :: BOTH CLIENTS (AP & STA) HAVE PMK's (From PSK or EAP) ✅⬇️  <br> 
-1. 📡🔢🗝️ `AP` :: Pick Random Anonce | Send `M1` : 💊 **EAPOL Key** (`Anonce`) {Unicast} ➡️ To: `STA` 🤳
-2. 🤳🔢🔑 `STA` :: Generates PTK + Pick Random Snonce | Send `M2` : 💊 **EAPOL Key** (`Snonce` + `MIC`) {Unicast} ➡️ To: `AP` 📡
-3. 📡🔢🔑 `AP` :: Generates PTK + Pick Random Snonce | Send `M3` : 💊 **EAPOL Key** (`Intall PTK` + `MIC` + `Encrypted GTK`) {Unicast} ➡️ To: `STA` 🤳
-4. 🤳🔢🔐 `STA` :: Decrypt GTK sent from AP & answer with MIC | Send `M4` : 💊 **EAPOL Key** (`MIC`) {Unicast} ➡️ To: `AP` 📡 ⬇
-✅🤝 **State 4 OK! `CLIENT ASSOCIATED VIA RSNA` 🤝✅** <br><br>
+1. 📡🔢🗝️ `AP` :: Pick Random Anonce | Send `M1` : 💊 **EAPOL Key** (`Anonce`) {Unicast} ➡️ To: `STA` 🤳 
+2. 🤳🔢🔑 `STA` :: Generates PTK + Pick Random Snonce | Send `M2` : 💊 **EAPOL Key** (`Snonce` + `MIC`) ➡️ To: `AP` 📡
+3. 📡🔢🔑 `AP` :: Generates PTK + Pick Random Snonce | Send `M3` : 💊 **EAPOL Key** (`Intall PTK` + `MIC` + `Encrypted GTK`)  ➡️ To: `STA` 🤳
+4. 🤳🔢🔐 `STA` :: Decrypt GTK sent from AP & answer with MIC | Send `M4` : 💊 **EAPOL Key** (`MIC`) ➡️ To: `AP` 📡 ⬇ <br> 
+✅🤝 **State 4 OK! `CLIENT ASSOCIATED VIA RSNA` 🤝✅** <br>
 
 - [`M1`: Message 1 :: 4-way-handshake](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/ae14bb2f-60ed-477b-9598-f350cd4ba23c) _`PCAP Frame Exchange`_
 
 
 
 
-- [4-Way-Handshake @ _CWNP_](https://www.youtube.com/watch?v=9M8kVYFhMDw) _`video`_
-- [4-Way-Handshake @ _Nayarasi_](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) _`CWNE info`_
-- [Cryptographic "Nonce"](https://en.wikipedia.org/wiki/Cryptographic_nonce) `wiki`
-- [4-way-handshake: Diagram 1](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/29e33ad0-6894-4244-a8ed-56b30dddc480) _`diagram`_
-- [4-way-handshake: Diagram 2](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/4594a2cb-bdb8-47b0-9d95-a62eb0e3c62a) _`diagram`_
+
 
 
 
