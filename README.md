@@ -1279,7 +1279,7 @@ _Authentication Key Management (AKM) is a term that describes the process of 802
 **AKM Suites:** <br>
 00-0F-AC-**01** = **`802.1X`** <br>
 00-0F-AC-**02** = **`PSK`** <br>
-00-0F-AC-**03** = **`FT over 802.1X`** <br>
+00-0F-AC-**03** = **`FT (802.11r over 802.1X)`** <br>
 - [Authentication & Key Management @ CWNP)](https://youtu.be/8OPdE1MM1yE?si=1J28-6H1omE9LO0W)
 - [`AKM`: Authentication Key Management | 802.11i | @ CWNP](https://www.cwnp.com/uploads/802-11i_key_management.pdf) _`pdf document`_
 - [Authenticated Key Management @ Key Management @ Cisco](https://www.cisco.com/web/techdoc/wireless/access_points/online_help/eag/123-02.JA/1100/h_ap_sec_ap-client-security.html) _`info`_
@@ -1403,7 +1403,7 @@ PSK must be HEX 256-bit, when taken from ASCII characters it gets a padding/mapp
 **HEX** PSK = 64 HEX (256-bits) <br>
 - [`PSK`: Pre-Shared Key](https://en.wikipedia.org/wiki/Pre-shared_key) _`wiki`_
 
-## 🗝️🔐🔁 00-0F-AC-03: `IEEE 802.11r` or `FT - Fast Transition` _(Over 802.1X)_
+## 🗝️🔐🔁 00-0F-AC-03: `IEEE 802.11r` or `FT - Fast Transition` _(802.11r over 802.1X)_
 - [IEEE 802.11r-2008 AKA FT (Fast Transition)](https://en.wikipedia.org/wiki/IEEE_802.11r-2008) _`wiki`_
 - [RSN with FT | 802.11i + 802.11r | @ CWNP](https://www.cwnp.com/uploads/802-11_rsn_ft.pdf)
 
