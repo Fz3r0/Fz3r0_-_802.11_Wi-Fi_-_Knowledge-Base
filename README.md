@@ -1244,6 +1244,8 @@ _Encryption is a process by which information is converted into an unreadable or
 **`WPA2-Enterprise`** :: Auth **`802.1X`-`EAP`** | Cipher `CCMP` | Encryption `AES` | Integrity `CBC-MAC` | Lenght `128-bit` | AKM `4-way-handshake` <br> 
 **`WPA3-Personal`** :: Auth **`PSK`** | Cipher `GCM` | Encryption `SAE` | Integrity `SHA` | Lenght `128-bit` | AKM `4-way-handshake` <br>
 **`WPA3-Enterprise`** :: Auth **`802.1X`-`EAP`** | Cipher `GCM` | Encryption `SAE` | Integrity `SHA` | Lenght `192-bit` | AKM `4-way-handshake` <br>
+
+### 🔐🐉🪰 Encryption & Cipher Suites: `WEP`, `WPA`, `WPA2` & `WPA3`
 - [¿Qué es la encriptación? & ¿Qué tipos de cifrado existen?](https://www.youtube.com/watch?v=vjvMTZWqzao) _`video`_
 - [`AKM`: Authentication & Key Management @ _Marcus Burton, CWNP_](https://www.youtube.com/watch?v=8OPdE1MM1yE) _`video`_
 - [`WEP`: Wired Equivalent Privacy @ _Marcus Burton, CWNP_](https://www.youtube.com/watch?v=ab6GYvKxfV0) _`video`_
@@ -1254,16 +1256,20 @@ _Encryption is a process by which information is converted into an unreadable or
 - [Wi-Fi Security Timeline | WEP, WPA, WPA2, WPA3, 802.1X](https://semfionetworks.com/blog/wi-fi-security-timeline/) _`timeline + table`_
 - [Evolution of wireless LAN security architecture to IEEE 802.11i (WPA2)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/cc53c61c-d50a-49b1-be8e-ee08d8d54171) _`table`_
 - [A comparative study of WLAN security protocols: WEP, WPA, WPA2](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/c8970a2e-130b-4c78-8426-026c161b9477) _`table`_
+- [WPA3-Enterprise](https://mrncciew.com/2020/08/17/wpa3-enterprise/))
 
-### Cipher Suite: `RC4`: Rivest Cipher 4 _depreciated_
 
-### 🔣 Encryption Method: `TKIP`
-_Encryption Method_
-- [TKIP Encryption Method](https://mrncciew.com/2014/09/13/cwsp-tkip-encryption-method/)
+### Encryption: `RC4`: Rivest Cipher 4 _depreciated_
 
-### 🔣 Encryption Method: `CCMP`
-_Encryption Method_
-- [CCMP Encryption Method](https://mrncciew.com/2014/08/19/cwsp-ccmp-encryption-method/)
+### 🔣 Cipher Suite: `TKIP`
+
+- [TKIP ](https://mrncciew.com/2014/09/13/cwsp-tkip-encryption-method/)
+
+### 🔣 Cipher Suite: `CCMP`
+- [CCMP ](https://mrncciew.com/2014/08/19/cwsp-ccmp-encryption-method/)
+
+- ### 🔣 Cipher Suite: `GCM`
+- [CCMP ](https://mrncciew.com/2014/08/19/cwsp-ccmp-encryption-method/)
 
 ## 🪪🗝️🔐 802.11i: `Authentication & Key Management`, `4-Way-Handshake` & `Mobility`
 _802.11i introduces key management schemes that allow for a separate authentication process to enable the distribution of keys. There are two main phases to this process: Master key establishment & Key exchange | Master key establishment can occur either manually via configuration or dynamically via the 802.1x protocol using EAP. After master keys are established, two parties perform key exchange to generate the transient keys they will use for the session. Although the term "key exchange" is used in the specification and in the literature, in reality this is a negotiation phase in which no actual keys are exchanged. | When using RSNA like 802.1X-EAP or WPA2/3-PSK the end goal is get security in the WLAN connection, to achieve that security the STA & AP (& authenticator server in case of 802.1X) need to make a key exchange for traffic encryption (similar like protocols like SSH or HTTPS) | In an AP with many wireless clients, unicast traffic between a wireless client and the AP has to be private. You don’t want one client to be able to decrypt traffic between another wireless client and the AP. This is why you should have different keys between each wireless Client & AP. We call these pairwise keys because there is a pair of keys between each wireless client and the AP. The AP has multiple pairwise keys, one for each associated wireless client. | There is also broadcast and multicast traffic. All wireless clients should be able to encrypt and decrypt this traffic, so we need a shared key | All associated wireless clients of the AP have the same key. We call this a group key. The Pairwise and group keys are created differently. | Key partitioning in cryptography means dividing (partitioning) a single key into a set of keys. One of the advantages of dividing a key into parts is that the security of the key improves. An attacker needs all parts of the partitioned keys to recover the original key._
@@ -1413,6 +1419,7 @@ PSK must be HEX 256-bit, when taken from ASCII characters it gets a padding/mapp
 - [IEEE 802.11r-2008 AKA FT (Fast Transition)](https://en.wikipedia.org/wiki/IEEE_802.11r-2008) _`wiki`_
 - [RSN with FT | 802.11i + 802.11r | @ CWNP](https://www.cwnp.com/uploads/802-11_rsn_ft.pdf)
 
+### 802.11 Mobility: Slow Transition 
 
 
 
@@ -1441,18 +1448,12 @@ _Wireless security: WEP, WPA, WPA2 and WPA3 differences_ <br>
 - [**`WPA/WPA2 Enterprise`** :: PCAP Analysis](https://community.cisco.com/t5/wireless-mobility-knowledge-base/802-11-sniffer-capture-analysis-wpa-wpa2-with-psk-or-eap/ta-p/3116990)
 - [**`WPA(TKIP)/WPA2(AES)`** with 802.1X (EAP-TLS) :: PCAP Analysis](https://community.cisco.com/t5/wireless-mobility-knowledge-base/802-11-sniffer-capture-analysis-wpa-wpa2-with-psk-or-eap/ta-p/3116990)
 
-### Huevos
-
- - 
-
-4 way nhandshake - https://www.youtube.com/watch?v=9M8kVYFhMDw
 
 
 
 
 
-## 🔐🐉🪰 RSNA: `WPA3-Enterprise`
-- [WPA3-Enterprise](https://mrncciew.com/2020/08/17/wpa3-enterprise/)
+
 
 
 
