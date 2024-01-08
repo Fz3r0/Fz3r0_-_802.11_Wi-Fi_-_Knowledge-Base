@@ -1328,8 +1328,8 @@ _The 4-way-handshake is used for the generation of a PTK. It confirms that the S
 1. 📡🔢🗝️ `AP` :: Pick Random Anonce | Send `M1` : 💊 **EAPOL Key** (`Anonce`) {Unicast} ➡️ To: `STA` 🤳
 2. 🤳🔢🔑 `STA` :: Generates PTK + Pick Random Snonce | Send `M2` : 💊 **EAPOL Key** (`Snonce` + `MIC`) {Unicast} ➡️ To: `AP` 📡
 3. 📡🔢🔑 `AP` :: Generates PTK + Pick Random Snonce | Send `M3` : 💊 **EAPOL Key** (`Intall PTK` + `MIC` + `Encrypted GTK`) {Unicast} ➡️ To: `STA` 🤳
-4. 🤳🔢🔑 `STA` :: Decrypt GTK sent from AP & andwer with MIC | Send `M4` : 💊 **EAPOL Key** (`MIC`) {Unicast} ➡️ To: `AP` 📡
-✅ **State 4 OK! `CLIENT ASSOCIATED VIA RSNA` ✅** <br><br>
+4. 🤳🔢🔐 `STA` :: Decrypt GTK sent from AP & answer with MIC | Send `M4` : 💊 **EAPOL Key** (`MIC`) {Unicast} ➡️ To: `AP` 📡 ⬇
+✅🤝 **State 4 OK! `CLIENT ASSOCIATED VIA RSNA` 🤝✅** <br><br>
 
 - [`M1`: Message 1 :: 4-way-handshake](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/ae14bb2f-60ed-477b-9598-f350cd4ba23c) _`PCAP Frame Exchange`_
 
