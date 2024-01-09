@@ -1313,7 +1313,7 @@ _Instead of using a single key for everything, WPA uses a hierarchy with many ke
 - `LVL3` Temporal Keys: [`PTK` Pairwise Transient Key:]()  **Derived from: PMK, Supplicant's & Authenticator's Addresses & Nonces** :: <br> _Encrypt all **unicast transmission** between AP & STA | **Consist of 3 different keys: KCK, KEK & TK (TKIP : MIC-1 & MIC-2)**_
 
 ### 🔑🏷️🗝️ PTK (Pairwise Transient Key): `3 (or 5) pieces of PTK Keys`
-_To get all the 3 pieces of the PTK using modern cipher, the keys must do a 4-way-handshake process | Temporal MIC 1 & 2 are used only for TKIP: TKIP uses the Michael function. This is part of the temporal key we use for integrity checks of MSDUs or MPDUs. This key is partitioned into two MIC keys._
+_To get all the 3 pieces of the PTK using modern cipher, the keys must do a 4-way-handshake process | **The PTK is never been transfered!!!** AP generates it's own PTK and STA generates it's own. **The PMK is transfered in a tunnel** encrypted with the authenticator (AP) or Authenticator Service (RADIUS, AD, etc) private key (PSK or EAP)  | Temporal MIC 1 & 2 are used only for TKIP: TKIP uses the Michael function. This is part of the temporal key we use for integrity checks of MSDUs or MPDUs. This key is partitioned into two MIC keys._
 1. [`KCK`:Key Confirmation Key - `128-bit` / `0-127-bit of PTK`](https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy#EAPOL-Key_Key_Confirmation_Key_KCK) Provide data integrity during 4-Way-Handshake & Group-Key-Handshake
 2. [`KEK`: Key Encryption Key - `128-bit` / `0-255-bit of the PTK`](https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy#EAPOL-Key_Key_Encryption_Key_KEK) Used by EAPOL-Key frames to provide data privacy during 4-Way-Handshake & Group-Key-Handshake
 3. [`TK`: Temporal Key – ](https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy#Temporal_Key_TK) Used to encrypt & decrypt MSDU of 802.11 data frames between supplicant & authenticator
@@ -1337,13 +1337,14 @@ _The 4-way-handshake is used for the generation of a PTK. It confirms that the S
 ✅ After Association State 3 (CLIENT ASSOCIATED) :: BOTH CLIENTS (AP & STA) HAVE PMK's (From PSK or EAP) ✅⬇️  <br> 
 1. 📡🔢🗝️ `AP` :: Pick Random Anonce | Send `M1` : 💊 **EAPOL Key** (`Anonce`) {Unicast} ➡️ To: `STA` 🤳 
 2. 🤳🔢🔑 `STA` :: Generates PTK + Pick Random Snonce | Send `M2` : 💊 **EAPOL Key** (`Snonce` + `MIC`) ➡️ To: `AP` 📡
-3. 📡🔢🔑 `AP` :: Generates PTK + Pick Random Snonce | Send `M3` : 💊 **EAPOL Key** (`Intall PTK` + `MIC` + `Encrypted GTK`)  ➡️ To: `STA` 🤳
+3. 📡🔢🔑 `AP` :: Generates PTK + Pick Random Snonce | Send `M3` : 💊 **EAPOL Key** (`Install PTK` + `MIC` + `Encrypted GTK`)  ➡️ To: `STA` 🤳
 4. 🤳🔢🔐 `STA` :: Decrypt GTK sent from AP & answer with MIC | Send `M4` : 💊 **EAPOL Key** (`MIC`) ➡️ To: `AP` 📡 ⬇ <br> 
 ✅🤝 **State 4 OK! `CLIENT ASSOCIATED VIA RSNA` 🤝✅** <br>
 
-- [`M1`: Message 1 :: 4-way-handshake](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/ae14bb2f-60ed-477b-9598-f350cd4ba23c) _`PCAP Frame Exchange`_
-- [`M1`: Message 1 :: 4-way-handshake](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/2add18f2-6b5a-4a81-8709-6df9b380b0ea)
-
+- [📡🔢🗝️ `M1`: Message 1 :: AP sends EAPOL: `Anonce`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/2add18f2-6b5a-4a81-8709-6df9b380b0ea) _`PCAP Frame Exchange`_
+- [🤳🔢🔑 `M2`: Message 2 :: STA sends EAPOL: `Snonce` + `MIC`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/47efb610-f965-42cd-9bbe-efd00bf7370a) _`PCAP Frame Exchange`_
+- [📡🔢🔑 `M3`: Message 3 :: AP sends EAPOL: `Install PTK` + `MIC` + `Anonce` + `Encrypted GTK (Data)`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/b1c9044b-46e5-420e-a4d4-d8c077c93e93) _`PCAP Frame Exchange`_
+- [🤳🔢🔐 `M4`: Message 3 :: STA decrypts GTK + sends EAPOL: `MIC`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/c75d34cb-b735-4bc5-829d-15da0f302dee) _`PCAP Frame Exchange`_
 
 
 
