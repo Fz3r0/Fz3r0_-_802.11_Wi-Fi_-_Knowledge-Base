@@ -1342,6 +1342,8 @@ _The 4-way-handshake is used for the generation of a PTK. It confirms that the S
 ✅🤝 **State 4 OK! `CLIENT ASSOCIATED VIA RSNA` 🤝✅** <br>
 
 - [`M1`: Message 1 :: 4-way-handshake](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/ae14bb2f-60ed-477b-9598-f350cd4ba23c) _`PCAP Frame Exchange`_
+- [`M1`: Message 1 :: 4-way-handshake](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/2add18f2-6b5a-4a81-8709-6df9b380b0ea)
+
 
 
 
