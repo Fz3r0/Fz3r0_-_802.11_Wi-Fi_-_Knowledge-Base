@@ -1343,10 +1343,10 @@ _The 4-way-handshake is used for the generation of a PTK. It confirms that the S
 4. 🤳🔢🔐 `STA` :: Decrypt GTK sent from AP & answer with MIC | Send `M4` : 💊 **EAPOL Key** (`MIC`) ➡️ To: `AP` 📡 ⬇ <br> 
 ✅🤝 **State 4 OK! `CLIENT ASSOCIATED VIA RSNA` 🤝✅** <br>
 
-- [📡🔢🗝️ `M1`: Message 1 :: AP sends EAPOL: `Anonce`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/2add18f2-6b5a-4a81-8709-6df9b380b0ea) _`PCAP Frame Exchange`_
-- [🤳🔢🔑 `M2`: Message 2 :: STA generates PTK & sends EAPOL: `Snonce` + `MIC`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/47efb610-f965-42cd-9bbe-efd00bf7370a) _`PCAP Frame Exchange`_
-- [📡🔢🔑 `M3`: Message 3 :: AP generates PTK & sends EAPOL: `Install PTK (1)` + `MIC` + `Anonce` + `Encrypted GTK (Data)`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/b1c9044b-46e5-420e-a4d4-d8c077c93e93) _`PCAP Frame Exchange`_
-- [🤳🔢🔐 `M4`: Message 3 :: STA decrypts GTK + sends EAPOL: `MIC`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/c75d34cb-b735-4bc5-829d-15da0f302dee) _`PCAP Frame Exchange`_
+- [📡🔢🗝️ `M1`: Message 1 :: AP sends EAPOL: `Anonce`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/2add18f2-6b5a-4a81-8709-6df9b380b0ea) _`PCAP`_
+- [🤳🔢🔑 `M2`: Message 2 :: STA generates PTK & sends EAPOL: `Snonce` + `MIC`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/47efb610-f965-42cd-9bbe-efd00bf7370a) _`PCAP`_
+- [📡🔢🔑 `M3`: Message 3 :: AP generates PTK & sends EAPOL: `Install PTK (1)` + `MIC` + `Anonce` + `Encrypted GTK (Data)`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/b1c9044b-46e5-420e-a4d4-d8c077c93e93) _`PCAP`_
+- [🤳🔢🔐 `M4`: Message 3 :: STA decrypts GTK + sends EAPOL: `MIC`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/c75d34cb-b735-4bc5-829d-15da0f302dee) _`PCAP`_
 
 
 
