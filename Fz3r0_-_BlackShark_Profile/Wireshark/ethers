@@ -1,0 +1,12 @@
+## Ejemplos:
+
+ff-ff-ff-ff-ff-ff    Broadcast
+c0-00-ff-ff-ff-ff    TR_broadcast
+00.2b.08.93.4b.a1    Freds_machine
+
+## Fz3r0 Ethers:
+
+c0-c7-0a-85-43-64    Ruckus-AP_(Authenticator)
+02:99:84:a5:9f:ba    Client-STA_(Supplicant)
+
+
