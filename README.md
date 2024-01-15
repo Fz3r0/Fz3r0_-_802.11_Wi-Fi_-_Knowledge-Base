@@ -965,7 +965,8 @@ _STAs send Probe Request on Active Scanning or after a Beacon in Passive Scannin
 
 
 
-
+## Other 802.11 Frames
+- [`AWDL`: AN OVERVIEW OF APPLE WIRELESS DIRECT](https://wlanprofessionals.com/an-overview-of-apple-wireless-direct/) Channel 149 Jammer
 
 
 
