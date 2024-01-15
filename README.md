@@ -1441,10 +1441,17 @@ _Networking protocol that provides centralized Authentication, Authorization, an
 Default Port: 1812
 - [RADIUS: Remote Authentication Dial-In User Service](https://en.wikipedia.org/wiki/RADIUS) _`wiki`_
 
-### RADIUS Fz3r0 Labs
-- [`FreeRADIUS` @ `WINDOWS`: Instalacion y Configuracion de FreeRADIUS en Windows](https://www.youtube.com/watch?v=gaA7TumkjNU)
-- [`FreeRADIUS` @ `LINUX` (Kali): Instalacion y Configuracion de FreeRADIUS en Kali Linux](https://www.youtube.com/watch?v=C92x-0Cbxk8)
-- [`RADIUSdesk`: How to install and configure free RADIUS server in Windows PC & use it with home Wi-Fi](https://www.youtube.com/watch?v=hIcJIRqO-5o)
+## RADIUS Fz3r0 Labs: `802.1X-EAP over 802.11` _Enterprise Wi-Fi Security_
+
+### FreeRADIUS: `Install` & `Init Configuration`
+- [`FreeRADIUS`: Installing & Upgrading](https://freeradius.org/documentation/freeradius-server/4.0~alpha1/installation/index.html) _`official tutorial`_
+- [`FreeRADIUS` @ `WINDOWS`: Instalacion y Configuracion de FreeRADIUS en Windows](https://www.youtube.com/watch?v=gaA7TumkjNU) _`video`_
+- [`FreeRADIUS` @ `LINUX` (Kali): Instalacion y Configuracion de FreeRADIUS en Kali Linux](https://www.youtube.com/watch?v=C92x-0Cbxk8) _`video`_
+- [`RADIUSdesk`: How to install and configure free RADIUS server in Windows PC & use it with home Wi-Fi](https://www.youtube.com/watch?v=hIcJIRqO-5o) _`video`_
+
+### FreeRADIUS: `EAP Configuration`
+- [`EAP-MD5`: NON-Tunneled authentication | Deprecated](https://freeradius.org/documentation/freeradius-server/4.0~alpha1/tutorials/eap-md5.html) _`official tutorial`_
+- [`EAP-PEAP: Tunneled authentication`: Configuration @ _FreeRadius_](https://freeradius.org/documentation/freeradius-server/4.0~alpha1/tutorials/eap-peap.html) _`official tutorial`_
 
 
 
