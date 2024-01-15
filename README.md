@@ -1453,6 +1453,9 @@ Default Port: 1812
 - [`EAP-MD5`: NON-Tunneled authentication | Deprecated](https://freeradius.org/documentation/freeradius-server/4.0~alpha1/tutorials/eap-md5.html) _`official tutorial`_
 - [`EAP-PEAP: Tunneled authentication`: Configuration @ _FreeRadius_](https://freeradius.org/documentation/freeradius-server/4.0~alpha1/tutorials/eap-peap.html) _`official tutorial`_
 
+### 802.1X Decryption
+- [Configure Wireshark and FreeRADIUS in order to decrypt 802.11 WPA2-Enterprise/EAP/dot1x over-the-air Wireless Sniffer](https://www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/214275-configure-wireshark-and-freeradius-in-or.html)
+- [Cisco 9800 (Wireless LAN Controller WLC) – Decrypt 802.1X Traffic](https://mrncciew.com/2022/08/31/9800-decrypt-802-1x-traffic/)
 
 
 
