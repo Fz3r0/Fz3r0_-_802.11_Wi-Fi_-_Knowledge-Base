@@ -1417,9 +1417,45 @@ PSK must be HEX 256-bit, when taken from ASCII characters it gets a padding/mapp
 
 
 
-## 🪪🗝️🔐 80.11 `Mobility` / `Roaming`
+## 🪪🗝️🔐 80.11 Mobility Domain / Roaming
+- [Roaming en entornos Wi-Fi: protocolos 802.11k/v/r](https://www.teldat.com/es/blog/roaming-802-11-k-v-r-wi-fi/)
+- [Roaming en redes Wi-Fi con 802.11k, 802.11r y 802.11v en iOS, iPadOS y macOS](https://support.apple.com/es-mx/103274)
 - [Cisco: 802.11r, 802.11k, and 802.11w Deployment Guide: `802.11r`](https://www.cisco.com/c/en/us/td/docs/wireless/controller/technotes/5700/software/release/ios_xe_33/11rkw_DeploymentGuide/b_802point11rkw_deployment_guide_cisco_ios_xe_release33/b_802point11rkw_deployment_guide_cisco_ios_xe_release33_chapter_01.html)
-- [¿Cómo funciona el 802.11r?](https://info.ita.tech/blog/como-funciona-el-roaming-en-wifi-802-11r)
+
+### IEEE 802.11k-2008: `RRM` - Radio Resource Management 
+**Protocol operation:** <br> 
+_The following steps are performed before switching to a new AP_ <br>
+AP determines that client STA is moving away from it <br>
+AP Informs client STA to prepare to switch to a new AP <br>
+STA (client) requests list of nearby APs <br>
+AP gives site report to client STA <br>
+STA (client) moves to best AP based on report
+- [IEEE 802.11k-2008](https://en.wikipedia.org/wiki/IEEE_802.11k-2008) _`wiki`_
+- [RRM: Radio Resource Management @ _Cisco_](https://community.cisco.com/t5/blogs-wireless-mobility/802-11k-radio-resource-measurement/ba-p/4265843) _`info`_
+- [¿Qué es ieee 802.11k? @ _techopedia_](https://es.theastrologypage.com/ieee-802-11k)
+
+### IEEE 802.11r: `FT` - Fast BSS Transition
+- [IEEE 802.11r / FT: Fast BSS Transition](https://es.wikipedia.org/wiki/IEEE_802.11r) _`wiki`_
+- [¿Cómo funciona el 802.11r?](https://info.ita.tech/blog/como-funciona-el-roaming-en-wifi-802-11r) _`info`_
+- [802.11r, un nuevo stándar para Wi-Fi (publicado en 2008)](https://www.xataka.com/perifericos/80211r-un-nuevo-standar-para-wi-fi) _`info`_
+
+### IEEE 802.11v-2011: `WNM` - Wireless Network Management
+**The 4 Categories for Management of assisted power saving & roaming:**
+Power Saving
+Position & Location 
+Timer & Temporazation
+Coexistence (for interference reduction)
+- [802.11v-2011](https://en.wikipedia.org/wiki/IEEE_802.11v-2011) _`wiki`_
+- [802.11v @ _Gerar_](https://gerar18-93.wixsite.com/estandareswlan/80211-v)
+
+### IEEE 802.11w: `FT` - Fast BSS Transition
+
+## 🪪🗝️🔐 80.11 Mobility Domain: Slow Transition
+
+
+
+
+
 
 ### 802.1X Slow Transition
 
