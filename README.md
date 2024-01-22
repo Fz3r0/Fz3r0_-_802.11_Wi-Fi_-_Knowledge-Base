@@ -1896,6 +1896,9 @@ _In High Scale or Enterprise WLAN Networking is not recomended to use IBSS Indep
 
 # 🕵️🚨🆘 802.11 Analysis & Troubleshooting
 
+## Troubleshooting Soup
+- [Why speed tests aren’t always the answer when troubleshooting Wi-Fi networks](https://www.thepacketologist.com/2023/12/why-speed-tests-arent-always-the-answer-when-troubleshooting/)
+
 ## Troubleshooting Methodologies & Best Practices
 - [WLAN Pros: Troubleshooting Best Practices](https://wlanprofessionals.com/wireless-troubleshooting-best-practices/)
 
