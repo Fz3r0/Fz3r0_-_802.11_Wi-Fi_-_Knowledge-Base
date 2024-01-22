@@ -1427,11 +1427,16 @@ PSK must be HEX 256-bit, when taken from ASCII characters it gets a padding/mapp
 
 
 ## 🪪🗝️🔐 80.11 Mobility Domain / Roaming
-- [Roaming en entornos Wi-Fi: protocolos 802.11k/v/r](https://www.teldat.com/es/blog/roaming-802-11-k-v-r-wi-fi/)
-- [Roaming en redes Wi-Fi con 802.11k, 802.11r y 802.11v en iOS, iPadOS y macOS](https://support.apple.com/es-mx/103274)
-- [Cisco: 802.11r, 802.11k, and 802.11w Deployment Guide: `802.11r`](https://www.cisco.com/c/en/us/td/docs/wireless/controller/technotes/5700/software/release/ios_xe_33/11rkw_DeploymentGuide/b_802point11rkw_deployment_guide_cisco_ios_xe_release33/b_802point11rkw_deployment_guide_cisco_ios_xe_release33_chapter_01.html)
+- [802.11 Roaming Basics](https://mrncciew.com/2014/09/02/cwsp-802-11-roaming-basics/) _`nayarasi`_
+- [Roaming en entornos Wi-Fi: protocolos 802.11k/v/r](https://www.teldat.com/es/blog/roaming-802-11-k-v-r-wi-fi/) _`info`_
+- [Roaming en redes Wi-Fi con 802.11k, 802.11r y 802.11v en iOS, iPadOS y macOS](https://support.apple.com/es-mx/103274) _`info`_
+- [802.11r, 802.11k, and 802.11w Deployment Guide, Cisco IOS-XE Release
+3.3](https://www.cisco.com/c/en/us/td/docs/wireless/controller/technotes/5700/software/release/ios_xe_33/11rkw_DeploymentGuide/b_802point11rkw_deployment_guide_cisco_ios_xe_release33.pdf) _`guide`_
+- [Cisco: 802.11r, 802.11k, and 802.11w Deployment Guide: `802.11r`](https://www.cisco.com/c/en/us/td/docs/wireless/controller/technotes/5700/software/release/ios_xe_33/11rkw_DeploymentGuide/b_802point11rkw_deployment_guide_cisco_ios_xe_release33/b_802point11rkw_deployment_guide_cisco_ios_xe_release33_chapter_01.html) _`guide`_
 
-### IEEE 802.11k-2008: `RRM` - Radio Resource Management 
+## IEEE 802.11: `Mobility Standards`
+
+### IEEE `802.11k-2008`: `RRM` :: `Radio Resource Management`
 **Protocol operation:** <br> 
 _The following steps are performed before switching to a new AP_ <br>
 AP determines that client STA is moving away from it <br>
@@ -1443,8 +1448,16 @@ STA (client) moves to best AP based on report
 - [RRM: Radio Resource Management @ _Cisco_](https://community.cisco.com/t5/blogs-wireless-mobility/802-11k-radio-resource-measurement/ba-p/4265843) _`info`_
 - [¿Qué es ieee 802.11k? @ _techopedia_](https://es.theastrologypage.com/ieee-802-11k)
 
-### IEEE 802.11r: `FT` - Fast BSS Transition
-- [IEEE 802.11r / FT: Fast BSS Transition](https://es.wikipedia.org/wiki/IEEE_802.11r) _`wiki`_
+### IEEE `802.11r-2008`: `FT` :: `Fast BSS Transition`
+- [IEEE 802.11r-2008 / FT: Fast BSS Transition @ _English_](https://es.wikipedia.org/wiki/IEEE_802.11r) _`wiki`_
+- [IEEE 802.11r-2008 / FT: Fast BSS Transition @ _Español_](https://en.wikipedia.org/wiki/IEEE_802.11r-2008) _`wiki`_
+- [802.11 Roaming Basics](https://mrncciew.com/2014/09/02/cwsp-802-11-roaming-basics/)
+- [`802.11r` :: `FT Association`](https://mrncciew.com/2014/09/06/cwsp-802-11r-ft-association/) _`nayarasi`_
+- [`Over-the-Air` FT](https://mrncciew.com/2014/09/07/cwsp-802-11r-over-the-air-ft/) _`nayarasi`_
+- [`Over-the-DS` FT](https://mrncciew.com/2014/09/08/cwsp-802-11r-over-the-ds-ft/) _`nayarasi`_
+- [802.11r `Key Hierarchy`](https://mrncciew.com/2014/09/05/cwsp-802-11r-key-hierarchy/) _`nayarasi`_
+- [`RSN` with `FT` :: Robust Secure Network using Fast Roaming @ _CWNP_](https://www.cwnp.com/uploads/802-11_rsn_ft.pdf) _`CWNP White Paper`_
+- [802.11r BSS Fast Transition](https://www.cisco.com/c/dam/en/us/td/docs/wireless/controller/technotes/80211r-ft/b-80211r-dg.html)
 - [¿Cómo funciona el 802.11r?](https://info.ita.tech/blog/como-funciona-el-roaming-en-wifi-802-11r) _`info`_
 - [802.11r, un nuevo stándar para Wi-Fi (publicado en 2008)](https://www.xataka.com/perifericos/80211r-un-nuevo-standar-para-wi-fi) _`info`_
 
@@ -1459,18 +1472,35 @@ Coexistence (for interference reduction)
 
 ### IEEE 802.11w: `FT` - Fast BSS Transition
 
-## 🪪🗝️🔐 80.11 Mobility Domain: Slow Transition
+
+
+## 🪪🗝️🔐 80.11 Mobility Domain: Slow Roam
+
+### 802.1X Slow Roam
+_Slow roam is making exactly the same process when a STA connect from AP to another, can take a while & is not recomended_
+- [802.1 Slow Roam | Same association process in both APs](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/7912852b-0101-419a-bfd6-cdf4c70493ce) _`image`_
+
+
+## 🪪🗝️🔐 80.11 Mobility Domain: Fast Roam
+_There are some techniques that helps the fast roaming._
+
+### Fast Roam: `PMK Caching` "Fast-Roam-Back"
+_In this case the STA connect to the AP1 using the complete association process (Open-Association, Open-Authentication, 802.1X-EAP, 4-way-handshake), then the STA moves to the AP2 and do the complete association process again (Open-Association, Open-Authentication, 802.1X-EAP, 4-way-handshake)... but when STA return to the AP1, it will only do only 3 stages of association process without 802.1X-EAP (Open-Association, Open-Authentication, 4-way-handshake)_
+- [PMK Caching: ]()
+
+### Pre-Authentication
 
 
 
 
 
+## Roaming Frame Exchanges
+- [`Current AP`: Re-Association Request | From STA to AP :: for **Any Roaming**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/ca1021b6-bb56-40dd-adc3-bc0b25bd85c4)
+- [`PMKID` ID of cached PMK @ `RSN Element` : Re-Association Frames :: for **PMK Caching "Fast-Roam-Back"**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/01ac55ab-62aa-496e-bf35-c833a280c759)
 
-### 802.1X Slow Transition
 
-### FT - Fast Transition (802.11r over 802.1X)
-- [IEEE 802.11r-2008 AKA FT (Fast Transition)](https://en.wikipedia.org/wiki/IEEE_802.11r-2008) _`wiki`_
-- [RSN with FT | 802.11i + 802.11r | @ CWNP](https://www.cwnp.com/uploads/802-11_rsn_ft.pdf)
+
+
 
 
 
