@@ -1436,7 +1436,7 @@ PSK must be HEX 256-bit, when taken from ASCII characters it gets a padding/mapp
 
 ## IEEE 802.11: `Mobility Standards`
 
-### IEEE `802.11k-2008`: `RRM` :: `Radio Resource Management`
+### IEEE 802.11k-2008: `RRM` :: `Radio Resource Management`
 **Protocol operation:** <br> 
 _The following steps are performed before switching to a new AP_ <br>
 AP determines that client STA is moving away from it <br>
@@ -1448,7 +1448,7 @@ STA (client) moves to best AP based on report
 - [RRM: Radio Resource Management @ _Cisco_](https://community.cisco.com/t5/blogs-wireless-mobility/802-11k-radio-resource-measurement/ba-p/4265843) _`info`_
 - [¿Qué es ieee 802.11k? @ _techopedia_](https://es.theastrologypage.com/ieee-802-11k)
 
-### IEEE `802.11r-2008`: `FT` :: `Fast BSS Transition`
+### IEEE 802.11r-2008: `FT` :: `Fast BSS Transition`
 - [IEEE 802.11r-2008 / FT: Fast BSS Transition @ _English_](https://es.wikipedia.org/wiki/IEEE_802.11r) _`wiki`_
 - [IEEE 802.11r-2008 / FT: Fast BSS Transition @ _Español_](https://en.wikipedia.org/wiki/IEEE_802.11r-2008) _`wiki`_
 - [802.11 Roaming Basics](https://mrncciew.com/2014/09/02/cwsp-802-11-roaming-basics/)
@@ -1461,7 +1461,7 @@ STA (client) moves to best AP based on report
 - [¿Cómo funciona el 802.11r?](https://info.ita.tech/blog/como-funciona-el-roaming-en-wifi-802-11r) _`info`_
 - [802.11r, un nuevo stándar para Wi-Fi (publicado en 2008)](https://www.xataka.com/perifericos/80211r-un-nuevo-standar-para-wi-fi) _`info`_
 
-### IEEE 802.11v-2011: `WNM` - Wireless Network Management
+### IEEE 802.11v-2011: `WNM` - `Wireless Network Management`
 **The 4 Categories for Management of assisted power saving & roaming:**
 Power Saving
 Position & Location 
@@ -1470,8 +1470,13 @@ Coexistence (for interference reduction)
 - [802.11v-2011](https://en.wikipedia.org/wiki/IEEE_802.11v-2011) _`wiki`_
 - [802.11v @ _Gerar_](https://gerar18-93.wixsite.com/estandareswlan/80211-v)
 
-### IEEE 802.11w: `FT` - Fast BSS Transition
-
+### IEEE 802.11w-2009: `Protected Management Frames`
+_The 802.11w standard aims to protect control and management frames and a set of robust management frames against forgery and replay attacks. The frame types protected include Disassociation, Deauthentication, and Robust Action frames such as: Spectrum management, 
+Quality of Service (QoS), Block Ack, Radio measurement, Fast Basic Service Set (BSS) Transition. | 802.11w does not encrypt the frames, however, it protects the management frames. It ensures that the messages come from legitimate sources. In order to do that, you have to add a Message Integrity Check (MIC) element | These extensions interact with IEEE 802.11r & IEEE 802.11u._
+- [IEEE 802.11w-2009 :: Protected Management Frames _@ english_](https://en.wikipedia.org/wiki/IEEE_802.11w-2009) _`wiki`_
+- [IEEE 802.11w-2009 :: Protected Management Frames _@ español_](https://es.wikipedia.org/wiki/IEEE_802.11w-2009) _`wiki`_
+- [Configure 802.11w & Protected Management Frame Analysis :: Cisco WLC _@ english_](https://www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/212576-configure-802-11w-management-frame-prote.html)
+- [Configure 802.11w & Protected Management Frame Analysis :: Cisco WLC _@ español_](https://www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/212576-configure-802-11w-management-frame-prote.html)
 
 
 ## 🪪🗝️🔐 80.11 Mobility Domain: Slow Roam
