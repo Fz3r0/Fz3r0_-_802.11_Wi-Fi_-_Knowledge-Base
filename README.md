@@ -2571,6 +2571,7 @@ _Aircrack-ng is basically a suite of tools that has been crafted to achieve obje
 - [RF Wireless World](https://www.rfwireless-world.com/)
 - [Wi-Fi Nigel](https://wifinigel.blogspot.com/)
 - [WiFi Spainreless](https://wifispainreless.blogspot.com/)
+- [CWAP full bible!!! :: CWIE17 notes](https://cciew17.rssing.com/chan-32236910/all_p1.html)
 
 https://github.com/0xor0ne/awesome-list/blob/main/topics/wireless.md#802.11
 ![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/e8dd78fc-101b-4e45-aeac-f23a0794962e)
