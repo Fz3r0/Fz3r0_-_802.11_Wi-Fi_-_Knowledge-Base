@@ -2053,7 +2053,16 @@ _In High Scale or Enterprise WLAN Networking is not recomended to use IBSS Indep
 
 
 
+## iPerf3
+_iPerf3 is a tool for active measurements of the maximum achievable bandwidth on IP networks. It supports tuning of various parameters related to timing, buffers and protocols (TCP, UDP, SCTP with IPv4 and IPv6). For each test it reports the bandwidth, loss, and other parameters. This is a new implementation that shares no code with the original iPerf and also is not backwards compatible._
+- [iPerf3 :: Official Web](https://iperf.fr/) _`official`_
+- [iPerf Public Servers](https://iperf.fr/iperf-servers.php) _`servers`_
 
+### iPerf3 Labs
+- [`TCP` - Connection Test :: iPerf Official](https://iperf.fr/iperf-doc.php#tuningtcp) _`official`_
+- [`UDP` - Connection Test :: iPerf Official](https://iperf.fr/iperf-doc.php#tuningudp) _`official`_
+- [`Multicast` - Connection Test :: Setting Multicast Clients/Servers & Test](https://iperf.fr/iperf-doc.php#multicast) _`official`_
+- [¿Cómo usar iPerf para verificar la aplicación de QoS? _@ wifispainreless_](https://wifispainreless.blogspot.com/2024/01/como-usar-iperf-para-verificar-la.html) _`lab`_
 
 
 ## 🔭🔍🛜 WLAN Scan & BSS Discovery
