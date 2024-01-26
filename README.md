@@ -2059,7 +2059,7 @@ _iPerf3 is a tool for active measurements of the maximum achievable bandwidth on
 - [iPerf Public Servers](https://iperf.fr/iperf-servers.php) _`servers`_
 
 ### iPerf3 Labs
-- [Measuring Performance With iPerf3 :: Home Lab](https://www.youtube.com/watch?v=ZUTx2t9tmK4) _`video`_
+- [Measuring Performance With iPerf3 :: `Wi-Fi` & `Copper` :: Home Lab](https://www.youtube.com/watch?v=ZUTx2t9tmK4) _`video lab`_
 - [`TCP` - Connection Test :: iPerf Official](https://iperf.fr/iperf-doc.php#tuningtcp) _`official`_
 - [`UDP` - Connection Test :: iPerf Official](https://iperf.fr/iperf-doc.php#tuningudp) _`official`_
 - [`Multicast` - Connection Test :: Setting Multicast Clients/Servers & Test](https://iperf.fr/iperf-doc.php#multicast) _`official`_
