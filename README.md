@@ -1457,6 +1457,7 @@ STA (client) moves to best AP based on report
 - [`Over-the-DS` FT](https://mrncciew.com/2014/09/08/cwsp-802-11r-over-the-ds-ft/) _`nayarasi`_
 - [802.11r `Key Hierarchy`](https://mrncciew.com/2014/09/05/cwsp-802-11r-key-hierarchy/) _`nayarasi`_
 - [`RSN` with `FT` :: Robust Secure Network using Fast Roaming @ _CWNP_](https://www.cwnp.com/uploads/802-11_rsn_ft.pdf) _`CWNP White Paper`_
+- [`FT Frame Exchange` :: `Over the Air` & `Over the DS` :: CWAP & PCAPs Analysis @ _Clear to Send Podcast_](https://www.cleartosend.net/fast-bss-transition-frame-exchanges-cwap/)
 - [802.11r BSS Fast Transition](https://www.cisco.com/c/dam/en/us/td/docs/wireless/controller/technotes/80211r-ft/b-80211r-dg.html)
 - [¿Cómo funciona el 802.11r?](https://info.ita.tech/blog/como-funciona-el-roaming-en-wifi-802-11r) _`info`_
 - [802.11r, un nuevo stándar para Wi-Fi (publicado en 2008)](https://www.xataka.com/perifericos/80211r-un-nuevo-standar-para-wi-fi) _`info`_
