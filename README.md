@@ -2060,8 +2060,8 @@ _iPerf3 is a tool for active measurements of the maximum achievable bandwidth on
 
 
 ###ℹ️🧪 iPerf3 Labs
+- [Como MEDIR la VELOCIDAD, Jitter y Loss de mi RED local con IPERF](https://www.youtube.com/watch?v=XC4e6GqE0f4) 16:34 UDP _`video lab`_
 - [Measuring Performance With iPerf3 :: `Wi-Fi` & `Copper` :: Home Lab](https://www.youtube.com/watch?v=ZUTx2t9tmK4) _`video lab`_
-- [Como MEDIR la VELOCIDAD, Jitter y Loss de mi RED local con IPERF ](https://www.youtube.com/watch?v=XC4e6GqE0f4) _`video lab`_
 - [`TCP` - Connection Test :: iPerf Official](https://iperf.fr/iperf-doc.php#tuningtcp) _`official`_
 - [`UDP` - Connection Test :: iPerf Official](https://iperf.fr/iperf-doc.php#tuningudp) _`official`_
 - [`Multicast` - Connection Test :: Setting Multicast Clients/Servers & Test](https://iperf.fr/iperf-doc.php#multicast) _`official`_
