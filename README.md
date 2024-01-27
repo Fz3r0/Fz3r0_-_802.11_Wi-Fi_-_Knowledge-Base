@@ -1508,6 +1508,15 @@ _In this case the STA connect to the AP1 using the complete association process 
 
 
 
+## 🤳🏾🔄📡 IEEE 802.11: `Re-Association` & `Roaming`
+- [CWSP- 802.11 Roaming Basics](https://mrncciew.com/2014/09/02/cwsp-802-11-roaming-basics/)
+
+
+
+
+
+
+
 
 
 
@@ -1554,8 +1563,58 @@ Default Port: 1812
 
 
 
-## 🤳🏾🔄📡 IEEE 802.11: `Re-Association` & `Roaming`
-- [CWSP- 802.11 Roaming Basics](https://mrncciew.com/2014/09/02/cwsp-802-11-roaming-basics/)
+
+
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ #                                                               #
+ #            Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base              #
+ #                                                               #
+ #         Radio Frequency (RF): Physics & Mathematics           #
+ #                                                               #
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+
+# 🧬🧮📐 Medium Access Methods & QoS (Quality of Service)
+_Once a STA is connected to a WLAN via an AP, the STA need to communicate somehow. This is where Medium Access takes place! The "Medium" is RF (Radio Frequency) & is shared, if there are 60 devices (STA) connected to an AP & other 30 connected to another AP and both are on same channel, those are 90 devices sharing the medium or the same Frequency Space for RF (AKA "air" or "airtime"). The STAs & APs must have a way to "negotiate" who is gonna "talk" and "when" | By other hand, we need to know which frames has more priority in the network and needs to go first, that's what QoS is all about | MAC methods = How to get acces to the medium | QoS = Decide what to put on that medium first once medium access is gained._
+
+## Arbitration & DCF
+_Arbitration is just_
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
