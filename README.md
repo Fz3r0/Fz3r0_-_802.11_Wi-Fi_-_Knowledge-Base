@@ -1636,6 +1636,50 @@ _Arbitration is just deciding "who" is gonna talk "when", in WLAN Networks there
 
 
 
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ #                                                               #
+ #            Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base              #
+ #                                                               #
+ #                     MAC OPERATIONS                            #
+ #                                                               #
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+
+# 🛜🚦🛑 MAC Operations: Power Management & Protection Mechanisms
+_There are 2 types of MAC Operations: Power Management & Protection Mechanisms | Power Management is allow the radio to go to sleep (just few microseconds), because if the antenna/adapter keeps awake all the time is consuming battery all the time, in a movile device can degrade battery life. Power management it's just turning on the antenna, send/recieve the frame, turn off the antenna and so on. The hint here is, that the STA does not lose any frame even if it's sleeping | Protection Mechanisms allow newer devices to communicate and "exist" in a world where older devices also exists_
+
+## MAC Operations: `Power Management`
+
+### Power Management: `802.11 Power Save`
+_802.11 Power Save is a mechanism that allow STA to wake up at various intervals and use a **PS-Poll** frame to indicate to the AP that is awake & ready to recieve frames_ 
+
+````java
+## Basic/Legacy Standard: 
+STA :: Send a PS-Poll PWR Mgmt bit = 1 to indicate to AP that will STA is going to sleep. ➡️
+(STA sleeping... & AP is buffering frames for it) 
+(STA wakes up... & check for beacons frames TIMs (Traffic Indication Map) & check if the STA "Association ID" is included in the TIM
+STA :: If Association ID is in the TIM, then STA send a PS-Poll PWR Mgmt bit = 0 to indicate to AP that STA is wake up ➡️
+AP :: AP ACK the PS-Poll ➡️
+AP :: AP sends Data to the STA and if there's more thata will send a "more data" bit = 1 indicating there's more data ➡️
+STA :: STA ACK the More Data = 1 ➡️
+STA send a PS-Poll PWR Mgmt bit = 0 to indicate to AP that STA still wake up 
+AP :: AP ACK the PS-Poll ➡️
+AP :: AP sends Data to the STA and if there's more thata will send a "more data" bit = 1 indicating there's more data ➡️
+.
+.
+.
+AP :: AP ACK the PS-Poll ➡️
+AP :: AP sends Data to the STA and if there's NO MORE data te send, it will send the "more data" bit = 0 indicating there's no more data ➡️
+STA :: STA ACK the More Data = 0 ➡️
+STA :: Send a PS-Poll PWR Mgmt bit = 1 to indicate to AP that will STA is going to sleep. ➡️
+(STA sleeping... & AP is buffering frames for it)
+
+## Modern Standard: 
+
+````
+- [Power Save basic/legacy standard](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/c1ce9269-5dd2-4cf3-93ac-5db322f1ea72)
+
 
 
 
