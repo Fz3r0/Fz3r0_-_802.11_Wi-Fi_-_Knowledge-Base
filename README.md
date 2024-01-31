@@ -1693,13 +1693,14 @@ STA :: Send a PS-Poll PWR Mgmt bit = 1 to indicate to AP that will STA is going 
    - [**Beacon Frame**: `TIM` & `DTIM` ((Delivery) Traffic Indicator Map)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/df02f9f6-05a8-4e93-9083-4b0db11899d2) Advice is there's buffered data for STAs in low-power mode | DTIM for Mulitcast & Broadcast
 
 ### 802.11 Power Management: TIM - Traffic Indicator Map
-_Not present in every beacon frame and depends of DTIM period_
+_Not present in every beacon frame and depends of DTIM period | If DTIM count is 0 it means current TIM is a DTIM_
 - [TIM: Traffic Indication Map](https://en.wikipedia.org/wiki/Traffic_indication_map) _`wiki`_
 - [TIM: Traffic Indication Map: `Header`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/8caa7780-0199-4265-8fe3-d01e58a5f8cb) _`header frame`_
+- [TIM PCAP Decode](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/7f25e49e-937c-41e5-a60a-834138cd3fe1) _`pcap decode`_
      - [Element ID = 5 :: TIM in beacons]() Element Identifier for TIMs :: `wlan.tag.number == 5`
      - [Lenght = variable : ]() Lenght of `wlan.tag.length == 5` 
      - [DTIM period]() How many beacon frames there will be before there's another DTIM
-     - [DTIM count]() Where is the process between the DTIM period :: If DTIM count is 0 it means current TIM is a DTIM `wlan.tim.dtim_count == 0` 
+     - [DTIM count]() Where is the process between the DTIM period (ex. DTIM 1 of 3 bitmap) | If DTIM count is 0 it means current TIM is a DTIM `wlan.tim.dtim_count == 0` 
 
 
 
