@@ -1688,6 +1688,7 @@ STA :: Send a PS-Poll PWR Mgmt bit = 1 to indicate to AP that will STA is going 
 - [802.11 Power Management with packet capture examples _@ dot11zen_](https://dot11zen.blogspot.com/2018/02/80211-power-management-with-packet.html)
 - [802.11 Power Management _@ Nayarasi_](https://mrncciew.com/2014/10/14/cwap-802-11-power-management/) _`Nayarasi`_
 - [802.11 Power Management: Association Req/Res _@ Nayarasi_](https://mrncciew.com/2014/10/28/802-11-mgmt-association-reqresponse/)
+- [802.11 Power Management explained super easy! | Diagrams & PCAP](https://www.mdpi.com/2079-9292/11/23/3914)
 - [What are the benefits and drawbacks of WiFi power saving modes (PSM and U-APSD)?](https://www.linkedin.com/advice/1/what-benefits-drawbacks-wifi-power-saving-modes-psm-u-apsd)
 - [Power Save basic/legacy standard](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/c1ce9269-5dd2-4cf3-93ac-5db322f1ea72) _`diagram`_
 - [STA Power Save Notification :: Frame Analysis](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/fd0d1066-fadd-4ee5-9ad8-e5eed0c510cd) _`Frame Decode`_
@@ -1706,7 +1707,10 @@ _Not present in every beacon frame and depends of DTIM period | If DTIM count is
      - [DTIM period]() How many beacon frames there will be before there's another DTIM
      - [DTIM count]() Where is the process between the DTIM period (ex. DTIM 1 of 3 bitmap) | If DTIM count is 0 it means current TIM is a DTIM `wlan.tim.dtim_count == 0` 
 
-### 802.11e-2005 
+### 802.11e-2005: `WMM` & `APSD`
+_802.11e introduced Wi-Fi Multimedia (WMM) and Automatic Power Save Delivery (APSD) in two varieties, scheduled and unscheduled. Unscheduled (U-APSD) gets all the attention, it is the method that WMM-PS is based on; scheduled (S-APSD) is not in the objectives of either the CWNA or CWAP exam. The goal of APSD is to be more efficient than the PS-Poll method used previously. This is accomplished by replacing PS-Poll frames with trigger frames. The trigger frame can be ANY data frame; this increases the efficiency of the entire BSS by avoiding the use of the PS-Poll control frame altogether._
+- [802.11e-2005: Wi-Fi Multimedia (WMM) and Automatic Power Save Delivery (APSD) | QoS & PS_@ español_](https://es.wikipedia.org/wiki/IEEE_802.11e-2005)
+- [802.11e-2005: Wi-Fi Multimedia (WMM) and Automatic Power Save Delivery (APSD) | QoS & PS _@ inglés_](https://en.wikipedia.org/wiki/IEEE_802.11e-2005)
 
 ### 802.11n-2009
 
