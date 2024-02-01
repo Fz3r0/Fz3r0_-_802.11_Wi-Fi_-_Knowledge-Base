@@ -1688,7 +1688,8 @@ STA :: Send a PS-Poll PWR Mgmt bit = 1 to indicate to AP that will STA is going 
 - [802.11 Power Management: Association Req/Res _@ Nayarasi_](https://mrncciew.com/2014/10/28/802-11-mgmt-association-reqresponse/)
 - [Power Save basic/legacy standard](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/c1ce9269-5dd2-4cf3-93ac-5db322f1ea72)
 - [STA Power Save Notification :: Frame Analysis](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/fd0d1066-fadd-4ee5-9ad8-e5eed0c510cd) _`Frame Decode`_
-   - [**Association Request**: `Listen Interval`]() How often STA wakes up & listen beacons | In units of Beacon Interval | Determine lifetime of buffered frames
+   - [**(Re)Association Request**: `Listen Interval`]() How often STA wakes up & listen beacons | In units of Beacon Interval | Determine lifetime of buffered frames
+   - [**(Re)Association Response**: `Association Identifier (AID)`]() The ID the STA will get | Useful when AP buffer Data for STA using PS Poll
    - [**Null Data** or **QoS Null Data**: `Power Management 1/0`]() PS Mode (Power Save / Sleep) = 1 | Active Mode (Wake up) = 0 | 0x0001 = 1 | 0x0002 = 2 | 0x000a = 10
    - [**Beacon Frame**: `TIM` & `DTIM` ((Delivery) Traffic Indicator Map)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/df02f9f6-05a8-4e93-9083-4b0db11899d2) Advice is there's buffered data for STAs in low-power mode | DTIM for Mulitcast & Broadcast
 
