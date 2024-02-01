@@ -1696,21 +1696,18 @@ STA :: Send a PS-Poll PWR Mgmt bit = 1 to indicate to AP that will STA is going 
    - [**(Re)Association Response**: `Association Identifier (AID)`]() The ID the STA will get | Useful when AP buffer Data for STA using PS Poll
    - [**Null Data** or **QoS Null Data**: `Power Management 1/0`]() PS Mode (Power Save / Sleep) = 1 | Active Mode (Wake up) = 0 | 0x0001 = 1 | 0x0002 = 2 | 0x000a = 10
    - [**Beacon Frame**: `TIM` & `DTIM` ((Delivery) Traffic Indicator Map)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/df02f9f6-05a8-4e93-9083-4b0db11899d2) Advice is there's buffered data for STAs in low-power mode | DTIM for Mulitcast & Broadcast
+   - [TIM: Traffic Indication Map](https://en.wikipedia.org/wiki/Traffic_indication_map) _`wiki`_
+   - [TIM: Traffic Indication Map: `Header`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/8caa7780-0199-4265-8fe3-d01e58a5f8cb) _`header frame`_
+   - [TIM PCAP Decode](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/7f25e49e-937c-41e5-a60a-834138cd3fe1) _`pcap decode`_
+   - [`Off-Channel Scanning`: PCAP Decode](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/ed85dd9d-25a9-42e2-99f5-7563ee511dd2) PS Mode can be used by STA to scan other APs/CHs in miliseconds for roaming
 
-### 802.11 Power Management: TIM - Traffic Indicator Map
-_Not present in every beacon frame and depends of DTIM period | If DTIM count is 0 it means current TIM is a DTIM_
-- [TIM: Traffic Indication Map](https://en.wikipedia.org/wiki/Traffic_indication_map) _`wiki`_
-- [TIM: Traffic Indication Map: `Header`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/8caa7780-0199-4265-8fe3-d01e58a5f8cb) _`header frame`_
-- [TIM PCAP Decode](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/7f25e49e-937c-41e5-a60a-834138cd3fe1) _`pcap decode`_
-     - [Element ID = 5 :: TIM in beacons]() Element Identifier for TIMs :: `wlan.tag.number == 5`
-     - [Lenght = variable : ]() Lenght of `wlan.tag.length == 5` 
-     - [DTIM period]() How many beacon frames there will be before there's another DTIM
-     - [DTIM count]() Where is the process between the DTIM period (ex. DTIM 1 of 3 bitmap) | If DTIM count is 0 it means current TIM is a DTIM `wlan.tim.dtim_count == 0` 
 
 ### 802.11e-2005: `WMM` & `APSD`
-_802.11e introduced Wi-Fi Multimedia (WMM) and Automatic Power Save Delivery (APSD) in two varieties, scheduled and unscheduled. Unscheduled (U-APSD) gets all the attention, it is the method that WMM-PS is based on; scheduled (S-APSD) is not in the objectives of either the CWNA or CWAP exam. The goal of APSD is to be more efficient than the PS-Poll method used previously. This is accomplished by replacing PS-Poll frames with trigger frames. The trigger frame can be ANY data frame; this increases the efficiency of the entire BSS by avoiding the use of the PS-Poll control frame altogether._
+_802.11e introduced **Wi-Fi Multimedia (WMM)** and also introduced Automatic Power Save Delivery (APSD) in two varieties, scheduled and unscheduled. **Unscheduled (U-APSD)** gets all the attention, it is the method that **WMM-PS** is based on | scheduled (S-APSD) is not in the objectives of either the CWNA or CWAP exam | The goal of APSD is to be more efficient than the PS-Poll method used previously. This is accomplished by replacing PS-Poll frames with **trigger frames**. The trigger frame can be ANY data frame; this increases the efficiency of the entire BSS by avoiding the use of the PS-Poll control frame altogether._
 - [802.11e-2005: Wi-Fi Multimedia (WMM) and Automatic Power Save Delivery (APSD) | QoS & PS_@ español_](https://es.wikipedia.org/wiki/IEEE_802.11e-2005)
 - [802.11e-2005: Wi-Fi Multimedia (WMM) and Automatic Power Save Delivery (APSD) | QoS & PS _@ inglés_](https://en.wikipedia.org/wiki/IEEE_802.11e-2005)
+- [WWM Power Save (U-ASPD :: Frame Exchange)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/873ccc0d-708b-42c5-83b6-d0e4d27347a7) _`frame exchange`_
+- [WMM & QoS Profile _@ Nayarasi_](https://mrncciew.com/2013/07/30/wmm-qos-profile/)
 
 ### 802.11n-2009
 
