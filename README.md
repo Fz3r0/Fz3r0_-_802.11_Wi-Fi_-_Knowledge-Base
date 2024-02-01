@@ -1646,7 +1646,7 @@ _Arbitration is just deciding "who" is gonna talk "when", in WLAN Networks there
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
 
-# 🛜🚦🛑 MAC Operations: Power Management & Protection Mechanisms
+# 🛜🚦🛑 MAC Operations: `Power Management` & `Protection Mechanisms`
 _There are 2 types of MAC Operations: Power Management & Protection Mechanisms | Power Management is allow the radio to go to sleep (just few microseconds), because if the antenna/adapter keeps awake all the time is consuming battery all the time, in a movile device can degrade battery life. Power management it's just turning on the antenna, send/recieve the frame, turn off the antenna and so on. The hint here is, that the STA does not lose any frame even if it's sleeping | Protection Mechanisms allow newer devices to communicate and "exist" in a world where older devices also exists_
 
 ## 🔋🛜🪫 MAC Operations: `802.11 Power Management`
@@ -1686,7 +1686,10 @@ STA :: Send a PS-Poll PWR Mgmt bit = 1 to indicate to AP that will STA is going 
 ````
 - [802.11 Power Management _@ Nayarasi_](https://mrncciew.com/2014/10/14/cwap-802-11-power-management/) _`Nayarasi`_
 - [802.11 Power Management: Association Req/Res _@ Nayarasi_](https://mrncciew.com/2014/10/28/802-11-mgmt-association-reqresponse/)
-- [Power Save basic/legacy standard](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/c1ce9269-5dd2-4cf3-93ac-5db322f1ea72)
+- [802.11 Power Save Methods :: CWAP training :: PCAPs Analysis :: Legacy + 802.11e + 802.11n + VHT TXOP PS – 802.11ac-2013](https://howiwifi.com/2020/06/25/power-save-methods/) _`howtowifi`_
+- [802.11 Power Management with packet capture examples _@ dot11zen_](https://dot11zen.blogspot.com/2018/02/80211-power-management-with-packet.html)
+- [What are the benefits and drawbacks of WiFi power saving modes (PSM and U-APSD)?](https://www.linkedin.com/advice/1/what-benefits-drawbacks-wifi-power-saving-modes-psm-u-apsd)
+- [Power Save basic/legacy standard](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/c1ce9269-5dd2-4cf3-93ac-5db322f1ea72) _`diagram`_
 - [STA Power Save Notification :: Frame Analysis](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/fd0d1066-fadd-4ee5-9ad8-e5eed0c510cd) _`Frame Decode`_
    - [**(Re)Association Request**: `Listen Interval`]() How often STA wakes up & listen beacons | In units of Beacon Interval | Determine lifetime of buffered frames
    - [**(Re)Association Response**: `Association Identifier (AID)`]() The ID the STA will get | Useful when AP buffer Data for STA using PS Poll
@@ -1703,7 +1706,9 @@ _Not present in every beacon frame and depends of DTIM period | If DTIM count is
      - [DTIM period]() How many beacon frames there will be before there's another DTIM
      - [DTIM count]() Where is the process between the DTIM period (ex. DTIM 1 of 3 bitmap) | If DTIM count is 0 it means current TIM is a DTIM `wlan.tim.dtim_count == 0` 
 
+### 802.11e-2005 
 
+### 802.11n-2009
 
 
 
@@ -2716,9 +2721,10 @@ _Aircrack-ng is basically a suite of tools that has been crafted to achieve obje
 
 ## Resources
 
-- [wifi-professionals](https://www.wifi-professionals.com/)
+- [Wi-Fi Professionals](https://www.wifi-professionals.com/)
 - [Telecom Trainer](https://www.telecomtrainer.com/)
 - [How I Wi-Fi](https://howiwifi.com/)
+- [dot11zen Wi-Fi](https://dot11zen.blogspot.com/)
 - [RF Wireless World](https://www.rfwireless-world.com/)
 - [Wi-Fi Nigel](https://wifinigel.blogspot.com/)
 - [WiFi Spainreless](https://wifispainreless.blogspot.com/)
