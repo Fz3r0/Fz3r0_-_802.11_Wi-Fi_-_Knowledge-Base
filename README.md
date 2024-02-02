@@ -1712,6 +1712,11 @@ _802.11e introduced **Wi-Fi Multimedia (WMM)** and also introduced Automatic Pow
 
 
 ## 🛑🛜🚦 MAC Operations: `Protection Mechanisms`
+__
+
+### Mixed Mode: `HR/DSSS (Legacy)` & `ERP/OFDM (Modern)`
+_HR/DSSS STAs (802.11b legacy) does not understand OFDM Modulation used by ERP STAs. But, ERP/OFDM (802.11n modern) STAs are backwards compatible with HR/DSSS STAs & can transmit & understand HR/DSSS modulation | The way to acomplish that is using RTS/CTS mechanisms in case that legacy STAs are using the same AP of modern devices | RTS/CTS are the most used mechanism in Wi-Fi, there's also a mechanism called CTS-to-self that is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame, this is usually done by the AP | ERP element is present only on 2.4GHz network supporting 802.11g & it is present in beacon & probe responses. The non-ERP_Present bit set to 1 in following conditions a. A nonERP station (legacy 802.11 or 802.11b) associate to the cell, b. A neighboring cell is detected, allowing only nonERP data rates, c. Any other management frame (except probe request) is received from neighboring cell supporting only nonERP data rates._
+- [Beacon :: `ERP Information Element`](https://mrncciew.com/2014/10/08/802-11-mgmt-beacon-frame/)
 
 
 
