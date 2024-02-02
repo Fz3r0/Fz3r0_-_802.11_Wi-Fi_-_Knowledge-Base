@@ -1737,7 +1737,9 @@ _All STAs detected in the primary or the secondary channel are HT STAs, and All 
 
 
 
+## Lo que sigue
 
+- [Bans Steering 802.11 algo ](https://www.cwnp.com/bandsteering/)
 
 
 
