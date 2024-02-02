@@ -1712,11 +1712,28 @@ _802.11e introduced **Wi-Fi Multimedia (WMM)** and also introduced Automatic Pow
 
 
 ## 🛑🛜🚦 MAC Operations: `Protection Mechanisms`
-__
+_HR/DSSS STAs (802.11b legacy) does not understand OFDM Modulation used by ERP STAs. But, HT/ERP/OFDM (802.11n modern) STAs are backwards compatible with HR/DSSS STAs & can transmit & understand HR/DSSS modulation | The way to acomplish that is using RTS/CTS mechanisms in case that legacy STAs are using the same AP of modern devices | RTS/CTS are the most used mechanism in Wi-Fi, there's also a mechanism called CTS-to-self that is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame, this is usually done by the AP | ERP element is present only on 2.4GHz network supporting 802.11g & it is present in beacon & probe responses. The non-ERP_Present bit set to 1 in following conditions a. A nonERP station (legacy 802.11 or 802.11b) associate to the cell, b. A neighboring cell is detected, allowing only nonERP data rates, c. Any other management frame (except probe request) is received from neighboring cell supporting only nonERP data rates. | To ensure backward compatibility with older 802.11a/b/g radios, 802.11n (HT) access points may signal to other 802.11n stations when to use one of four HT protection modes.| A field in the beacon frame called the HT Protection field has four possible settings of 0–3._
+- [802.11 Protection Mechanisms _@ Nayarasi_](https://mrncciew.com/2014/11/02/cwap-802-11-protection-mechanism/) _`Nayarasi`_
+- [Protection Ripple in ERP 802.11 WLANs @ _CWNP_](https://www.cwnp.com/uploads/protection_ripple_in_erp_802-11_wlans.pdf) _`whitepaper`_
+- [802.11n Protection Mechanisms: Part 1 @ _CWNP_](https://www.cwnp.com/802-11n-protection-mechanisms-part-1/) _`whitepaper`_
+- [HT Protection Mechanisms](https://dot11ap.wordpress.com/ht-protection-mechanisms/) _`definitions`_
 
-### Mixed Mode: `HR/DSSS (Legacy)` & `ERP/OFDM (Modern)`
-_HR/DSSS STAs (802.11b legacy) does not understand OFDM Modulation used by ERP STAs. But, ERP/OFDM (802.11n modern) STAs are backwards compatible with HR/DSSS STAs & can transmit & understand HR/DSSS modulation | The way to acomplish that is using RTS/CTS mechanisms in case that legacy STAs are using the same AP of modern devices | RTS/CTS are the most used mechanism in Wi-Fi, there's also a mechanism called CTS-to-self that is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame, this is usually done by the AP | ERP element is present only on 2.4GHz network supporting 802.11g & it is present in beacon & probe responses. The non-ERP_Present bit set to 1 in following conditions a. A nonERP station (legacy 802.11 or 802.11b) associate to the cell, b. A neighboring cell is detected, allowing only nonERP data rates, c. Any other management frame (except probe request) is received from neighboring cell supporting only nonERP data rates._
-- [Beacon :: `ERP Information Element`](https://mrncciew.com/2014/10/08/802-11-mgmt-beacon-frame/)
+### Protection Modes: `ERP Elements` & `HT Elements`
+_Protection Modes Elements are present in beacons & probes_
+- [Beacon :: `ERP Information Element`](https://mrncciew.com/2014/10/08/802-11-mgmt-beacon-frame/) Present in 2.4 GHz Beacons | True = non ERP/OFDM STA activated protection
+- [Beacon :: `ERP Information Element`](https://mrncciew.com/2014/10/08/802-11-mgmt-beacon-frame/) Present in 2.4 GHz Beacons | True = non ERP/OFDM STA activated protection
+
+### HT Mixed Mode: `HR/DSSS (Legacy)` & `HT/OFDM (Modern)`
+_Most Common Protection Mechanism | Assumes that there are 802.11a/b/g stations using the same channel. | RTS/CTS Protection Mechanism with 802.11b backward compatibility activated_
+- [Protection Mechanism: Mixed Mode](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/a894e9c6-8a67-4080-9a97-75eb4fd51f44) 
+
+### HT No Protection Greenfield Mode: `No protection set`
+_Assumes that there are NO 802.11a/b/g stations using the same channel. | No protection mechanisms are active_
+- [What is 802.11n "Greenfield" mode?](https://www.computerweekly.com/news/2240101850/What-is-80211n-Greenfield-mode)
+
+### HT 20 MHz Protection Set: `All STAs are HT`
+_All STAs detected in the primary or the secondary channel are HT STAs, and All STAs that are known by the transmitting STA to be a member of this BSS are either: 20/40 MHz HT STAs in a 20/40 MHz BSS, or 20 MHz HT STAs in a 20 MHz BSS._
+- [Protection Mechanism: Mixed Mode](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/a894e9c6-8a67-4080-9a97-75eb4fd51f44) 
 
 
 
