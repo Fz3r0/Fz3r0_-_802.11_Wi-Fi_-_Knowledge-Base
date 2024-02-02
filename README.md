@@ -1132,6 +1132,30 @@ _The initial purpose of the authentication frame is to validate the device type 
 🆗 `STA`:💊 `ACK` ➡️ AP <br>  
 ✅ **State 2 OK! `CLIENT AUTHENTICATED`** ✅ <br> 
 
+````py
+
+🏁 STATE MACHINE = 0 :: client STA disconnected from AP 🏁
+
+🏁 START  >>>  📡 AP ::  ------ {[💊🛸 Beacon ]} (optional/passive scanning) ----->>>  ➡️ BROADCAST "all wi-fi devices sorrounding"  🛸
+
+               📡 AP ⬅️  <<<---------------- {[💊❓ Probe Request]} -----------------  :: STA 🤳🏾
+               📡 AP ::  ------------------- {[💊❓ Probe Response]} ------------->>>  ➡️ STA 🤳🏾
+
+               📡 AP ⬅️  <<<--------------------- {[💊🆗 ACK]} ----------------------  :: STA 🤳🏾
+
+               📡 AP ⬅️  <<<----- {[💊🚪 Authentication SeqNum=1 (request)]} --------  :: STA 🤳🏾 
+
+               📡 AP ::  ------------------------ {[💊🆗 ACK]} ------------------>>>   ➡️ STA 🤳🏾
+
+               📡 AP ⬅️  <<<----- {[💊🚪 Authentication SeqNum=2 (success)]} --------  :: STA 🤳🏾
+
+              📡 AP ⬅️  <<<--------------------- {[💊🆗 ACK]} -----------------------  :: STA 🤳🏾  <<< FINISH 🏁
+
+🏁 STATE MACHINE = 1 :: client STA authenticated to AP 🏁
+
+````
+
+
 - [`Authentication` :: Frame Exchange :: `Open System`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/bb52ef07-7502-435c-844d-9b32f7f7b43a) _`frame exchange`_
 - [`Authentication` :: Frame Decode @ Nayanajith](https://mrncciew.com/2014/10/10/802-11-mgmt-authentication-frame/) _`frame decode`_
 
