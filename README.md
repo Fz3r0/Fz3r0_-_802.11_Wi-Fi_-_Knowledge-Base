@@ -1489,7 +1489,8 @@ STA (client) moves to best AP based on report
 ### IEEE 802.11r-2008: `FT` :: `Fast BSS Transition`
 - [IEEE 802.11r-2008 / FT: Fast BSS Transition @ _English_](https://es.wikipedia.org/wiki/IEEE_802.11r) _`wiki`_
 - [IEEE 802.11r-2008 / FT: Fast BSS Transition @ _Español_](https://en.wikipedia.org/wiki/IEEE_802.11r-2008) _`wiki`_
-- [802.11 Roaming Basics](https://mrncciew.com/2014/09/02/cwsp-802-11-roaming-basics/)
+- [802.11 Roaming Basics](https://mrncciew.com/2014/09/02/cwsp-802-11-roaming-basics/) _`nayarasi`_
+- [Analizando Fast-roaming 802.11r :: PCAP Analysis for CWAP](https://wifispainreless.blogspot.com/2024/02/analizando-fast-roaming-80211r.html) _`Wifispainreless`_
 - [`802.11r` :: `FT Association`](https://mrncciew.com/2014/09/06/cwsp-802-11r-ft-association/) _`nayarasi`_
 - [`Over-the-Air` FT](https://mrncciew.com/2014/09/07/cwsp-802-11r-over-the-air-ft/) _`nayarasi`_
 - [`Over-the-DS` FT](https://mrncciew.com/2014/09/08/cwsp-802-11r-over-the-ds-ft/) _`nayarasi`_
