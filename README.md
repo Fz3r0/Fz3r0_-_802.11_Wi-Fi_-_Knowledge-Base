@@ -657,11 +657,11 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 - [**802.11be**-2023](https://en.wikipedia.org/wiki/IEEE_802.11be) `r5.2023->`**`<<DRAFT>>`** _`Amendment 8`_ **Wi-Fi 7** : **`EHT`** : 5 & 6 GHz :: **40Gbps**
 
 ### 📡🏆 IEEE 802.11-2020 Ratified Amendments `PHY` _(NON-"Traditional" Wi-Fi WLANs)_
-- [**802.11ad**-2012](https://en.wikipedia.org/wiki/IEEE_802.11ad) `r3.2012->`**`2016`** _`Amendment 3`_ **DMG** :: Uses MGWS, GCMP, CCMP | VHT @ 60 GHz in WiGig Networks :: **7Gbps**(max)
-- [**802.11af**-2013](https://en.wikipedia.org/wiki/IEEE_802.11af) `r3.2013->`**`2016`** _`Amendment 5`_ **TVWS** :: Allows the use of wireless in the TV white space (TVWS) :: **570mbps**(max)
-- [**802.11ah**-2016](https://en.wikipedia.org/wiki/IEEE_802.11ah) `r4.2016->`**`2020`** _`Amendment 2`_ **Wi-Fi HaLow** :: Use of Wi-Fi in frequencies below 1 GHz | IoT & M2M :: **350mbps**(max)
+- [**802.11ad**-2012](https://en.wikipedia.org/wiki/IEEE_802.11ad) `r3.2012->`**`2016`** _`Amendment 3`_ **`DMG`** :: Uses MGWS, GCMP, CCMP | VHT @ 60 GHz in WiGig Networks :: **7Gbps**
+- [**802.11af**-2013](https://en.wikipedia.org/wiki/IEEE_802.11af) `r3.2013->`**`2016`** _`Amendment 5`_ **`TVHT`** :: Allows the use of wireless in the TV white space **TVWS** :: **570mbps**
+- [**802.11ah**-2016](https://en.wikipedia.org/wiki/IEEE_802.11ah) `r4.2016->`**`2020`** _`Amendment 2`_ **`S1G`** :: **Wi-Fi HaLow** Use of Wi-Fi in frequencies below 1 GHz | IoT & M2M :: **350mbps**
 - [**802.11ay**-2021](https://en.wikipedia.org/wiki/IEEE_802.11ay) `r5.2021->`**`<<DRAFT>>`** _`Amendment 2`_ Faster speeds & longer range, above 45 GH | TV & Monitor Connectivity
-- [**802.11bb**-2023](https://www.railwayinnovationhub.com/aprobado-el-primer-estandar-lifi-ieee-802-11bb/) `r5.2023->`**`<<DRAFT>>`** _`Amendment 5`_ **Li-Fi** :: Wireless Communication using light waves
+- [**802.11bb**-2023](https://www.railwayinnovationhub.com/aprobado-el-primer-estandar-lifi-ieee-802-11bb/) `r5.2023->`**`<<DRAFT>>`** _`Amendment 5`_ **`Li-Fi`** :: Wireless Communication using light waves
 
 ---
 
