@@ -647,14 +647,14 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 ---
 
 ### 📡🏆 IEEE 802.11-2020 Ratified Amendments `PHY` _("Traditional" Wi-Fi WLANs)_
-- [**802.11 "Prime"**]() `1997 original` **Wi-Fi 0** :: **`DSSS`** or **`FHSS`** : Original 802.11 Standard | DS for Wi-Fi : 2.4 GHz :: **2mbps**(max)
-- [**802.11b**-1999]() `r1.1999->`**`2007`** _`Amendment 1`_ **Wi-Fi 1** :: **`HR-DSSS`** : 2.4 GHz :: **11mbps**(max)
-- [**802.11a**-1999](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11a) `r1.1999->`**`2007`** _`Amendment 2`_ **Wi-Fi 2** :: **`OFDM`** : 5 GHz :: **54mbps**(max)
-- [**802.11g**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11g) `r1.2003->`**`2007`** _`Amendment 4`_ **Wi-Fi 3** :: **`ERP`**-**OFDM** & **`ERP`**-**DSSS/CCK** : 2.4 GHz :: **54mbps**(max)
-- [**802.11n**-2009](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11n) `r2.2009->`**`2012`** _`Amendment 5`_ **Wi-Fi 4** :: **`MIMO`**-**OFDM** : 2.4 & 5 GHz :: **600mbps**(max)
-- [**802.11ac**-2013](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11ac) `r3.2013->`**`2016`** _`Amendment 4`_ **Wi-Fi 5** :: **`VHT`**-**OFDMA** :: **`A-MPDU`** **MU-MIMO**, **Beamforming** : 5GHz :: **7Gbps**(max)
-- [**802.11ax**-2021](https://en.wikipedia.org/wiki/Wi-Fi_6) `r5.2021->`**`<<DRAFT>>`** _`Amendment 1`_ **Wi-Fi 6** & **6E** :: **`HE`** :: **1024-QAM** : 2.4, 5 & 6 GHz :: **9.6Gbps**(max)
-- [**802.11be**-2023](https://en.wikipedia.org/wiki/IEEE_802.11be) `r5.2023->`**`<<DRAFT>>`** _`Amendment 8`_ **Wi-Fi 7** :: **`EHT`** : 5 & 6 GHz :: **40Gbps**(max)
+- [**802.11 "Prime"**]() `1997 original` **Wi-Fi 0** :: **`DSSS`** or **`FHSS`** : Original 802.11 Standard | DS for Wi-Fi : 2.4 GHz :: **2mbps**
+- [**802.11b**-1999]() `r1.1999->`**`2007`** _`Amendment 1`_ **Wi-Fi 1** :: **`HR-DSSS`** : 2.4 GHz :: **11mbps**
+- [**802.11a**-1999](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11a) `r1.1999->`**`2007`** _`Amendment 2`_ **Wi-Fi 2** : **`OFDM`** : 5 GHz : **54mbps**
+- [**802.11g**-2003](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11g) `r1.2003->`**`2007`** _`Amendment 4`_ **Wi-Fi 3** : **`ERP`**-**OFDM** & **`ERP`**-**DSSS/CCK** : 2.4 GHz : **54mbps**
+- [**802.11n**-2009](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11n) `r2.2009->`**`2012`** _`Amendment 5`_ **Wi-Fi 4** : **`MIMO`** : **OFDM** : 2.4 & 5 GHz :: **600mbps**
+- [**802.11ac**-2013](https://es.wikipedia.org/wiki/IEEE_802.11#IEEE_802.11ac) `r3.2013->`**`2016`** _`Amendment 4`_ **Wi-Fi 5** : **`VHT`** : **OFDMA** : **`A-MPDU`**, **MU-MIMO** : 5GHz : **7Gbps**
+- [**802.11ax**-2021](https://en.wikipedia.org/wiki/Wi-Fi_6) `r5.2021->`**`<<DRAFT>>`** _`Amendment 1`_ **Wi-Fi 6** & **6E** : **`HE`** : **1024-QAM** : 2.4, 5 & 6 GHz :: **9.6Gbps**
+- [**802.11be**-2023](https://en.wikipedia.org/wiki/IEEE_802.11be) `r5.2023->`**`<<DRAFT>>`** _`Amendment 8`_ **Wi-Fi 7** : **`EHT`** : 5 & 6 GHz :: **40Gbps**
 
 ### 📡🏆 IEEE 802.11-2020 Ratified Amendments `PHY` _(NON-"Traditional" Wi-Fi WLANs)_
 - [**802.11ad**-2012](https://en.wikipedia.org/wiki/IEEE_802.11ad) `r3.2012->`**`2016`** _`Amendment 3`_ **DMG** :: Uses MGWS, GCMP, CCMP | VHT @ 60 GHz in WiGig Networks :: **7Gbps**(max)
