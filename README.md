@@ -1934,8 +1934,211 @@ _Oscillation rate of an alternating electric current or voltage or of a magnetic
     - Grounding Rods and Wires 
 - Antenna Regulatory Compliance
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 802.11 Wi-Fi: `Modulation`
+_Modulation is important in the physical layer 1 (PHY) because it allows the transmission of information through physical communication mediums such as cables or radio signals (RF). | Modulation also helps improve the efficiency and speed of data transmission by enabling the transmission of a large amount of information on a single carrier wave. | Modulation is used to transmit data from one device to another by modifying a carrier wave, which can be an electrical or electromagnetic signal. | Information is modulated onto the carrier wave by varying some physical property of the wave, such as its amplitude, frequency, or phase._
+
+## RF Modulation
+_Modulation in Wi-Fi is the process of converting digital signals 1 & 0 into RF_ 
+_`Analog` - Sun, light, sounds, colors | Smooth & Continious (no "steps") | Noise Amplification_ <br>
+_`Digital` - 1 & 0 | Discrete Steps (a lot! no infinite tho) | Digital Signal = Pulse Wave | Original Regen_
+- [Why do we need modulation during transmission?](https://youtu.be/dvGcCk1vbjk) _@ Sunny_
+- [`Analog` vs `Digital`](https://youtu.be/gGxpUZ_iuYA) _@ Sunny_ <br>
+
+## RF Modulation: `AM` & `FM`
+_`AM` - lower Freq = larger = far transmission, news channels, more noise (due amplitude moves)_ <br>
+_`FM` - high Freq = smaller = more data, less distance, music, less noise no-static (static amplitude)_
+- [`AM` vs `FM` Modulations - **(Analog Modulation)**](https://youtu.be/I0jdIvwkiDI) _@ Sunny_ <br>
+
+
+## Multiplexing
+_`TDM` - Time Division Multiplexing | dividing time into slots/intervals | **equally** assignment | old_ <br>
+_`STDM` - Statistical Time division Multiplexing | Analyzes stats: workload/priority & determines time will take_ <br>
+_`FDM` - Frequency Division Multiplexing | Different (analog signals) | same time on no overlapping chan_ <br>
+_`Baseband TDM` - Transmit 1 signal at time 1&0 | ej. **`Wired / Ethernet`** | `TDM` & `STDM`_ <br>
+_`Broadband FDM` - Multi-transmit, share 1 channel at diff Freqs | ej. **`RF`**,  **`HSIA`**, **`DSL`** | `FDM`_
+- [`Multiplexing:` TDM, Statistical TDM & FDM | Multiple Signals Combined Together](https://www.youtube.com/watch?v=fIZhDl35_XY)  _@ Sunny_ <br>
+
+## Digital Modulation
+- [`Digital modulation` - ASK, FSK, and PSK - _**(Digital Modulation)**_](https://youtu.be/qGwUOvErR8Q)
+    - [`ASK` - Amplitude Shift Keying](https://user-images.githubusercontent.com/94720207/197251539-77dab9d7-80e2-44c7-a8c1-cce567f2b96c.png) _Same Freq & Amplitude changes = ASK signals_
+    - [`FSK` - Frequency Shift Keying](https://user-images.githubusercontent.com/94720207/197252009-8f3a40fc-9952-4bbf-96ed-6af781221024.png) _1 value = higher freq | 0 value = lower freq_
+    - [`PSK` Phase Shift Keying](https://user-images.githubusercontent.com/94720207/197253324-78c2bd30-10d1-4b82-b8cc-526768defa94.png) _Change phase everytime the value 0 or 1 changes_
+
+## OFDM: ORTHOGONAL FREQUENCY DIVISION MULTIPLEXING -->
+_Based on `FDM` | Multiple Users share 1 single link | **OFDM = variation of FDM** ;)_ <br>
+_latest `Wireless` & `Telecom` Standards| WiFi 802.11ac, 4g, 5g, WiMAX, satellite & more_ <br>
+_`FDM` - Multiple Freqs not interfering with each other (guard band / space in adjacent channs)_ <br>
+_`OFDM` - Multiple Freqs "pushed in" = overlapped in same bandwith | more data than FDM_ <br>
+_`Orthogonal` - For interference avoid! due overlap | waves use independent spaces matching only at 0 point/null_ <br> 
+_`OFDM vs FDM` - More bandwith & Higher Data Transmission Rate than FDM due Orthogonal capacity_
+- `OFDM Subcarriers`
+    - [OFDM 802 11a/g - Subcarriers](https://youtu.be/gKZ6KhXfvWU) _`IFFT` - Inverse Fast Fourier Transform_
+    - 20 MHz bandwith channels | 64 subcarriers (312.5 KHz) | BPSK, QPSK, 16QAM, 64QAM
+    - https://youtu.be/TOBFfe_-UFw - https://youtu.be/lwGsdWkfweU
+<!-- pendientes esos 2 links -->    
+- [`OFDM` - Orthogonal Frequency Division Multiplexing - _**(Analog Modulation)**_](https://youtu.be/KCHO7zlU25Q) _@ Sunny_ <br>
+
+<!-- PCM - Analog to digital conversion -->
+## PCM: Pulse Code Modulation (Analog Phone)
+- [`PCM` - Pulse Code Modulation | **For Analog to Digital conversion** | _composed of 3 steps:_](https://youtu.be/HlGJ6xxbz8s)
+1. _**`Sampling` - Take samples to reconstruct original signal | steps like ableton sample-rate waves :)**_
+    - _`PAM` - Pulse Amplitude Modulation | The result of all discrete sample values (AKA discrete steps)_
+    - _`Sample Rate` - Number of samples per second (or steps!)_
+    - _`Sample Rate Standards` - Phone 8KHz | VoIP 16 KHz | Audio 44 KHz (44,100 samples per sec)_
+2. `Quantizing` - 
+3.  `Encoding`
+
+<!-- Pendiente, no importante por ahora.... -->
+
+## QAM Modulation: QUADRATURE AMPLITUDE MODULATION
+- [`QAM modulation` - Quadrature Amplitude Modulation -  **Digital & Analog Modulation**_](https://www.youtube.com/watch?v=IbUflaeJcU8)
+- [`QAM modulation` -PT2: `The Modulator`](https://youtu.be/YnWCRUoTEAI)
+- [`QAM symbol` - just the binary space... easy!](https://user-images.githubusercontent.com/94720207/197290406-ea9bbfe7-7365-4882-b489-986d105450ee.png)
+- [QAM modulation & symbos](https://user-images.githubusercontent.com/94720207/197350649-4777b078-2dd1-4d22-b623-0164b2d3a62b.png)
+- [QAM Symbol](https://user-images.githubusercontent.com/94720207/197289387-73082a0e-901c-44e0-bf0b-0ef7dcdba5e9.png)
+- [`MCS` rates - Modulation Coding Scheme - Point per Cuadrant](https://www.youtube.com/watch?v=f6zesWNDGXc)
+- [`What is QAM?` | **Analog** = AM Radios | **Digital** = Data, WiFi, Phone, etc](https://www.techtarget.com/searchnetworking/definition/QAM) 
+- _Most common modulation of new technolgy of Radios use to encode info into RF wave_ 
+- _Uses `Phase modulation` + `Amplitude modulation` at same time_
+- _The higher `MCS` (Modulation Coding Scheme) rate, the higher `SNR` needed (cuz' interference susceptible)_
+- [Wi-Fi 4/5/6/6E (802.11 **`n/ac/ax`**)](https://www.duckware.com/tech/wifi-in-the-us.html) _@ duckware_
+- [QAM modulation cheatsheet](https://user-images.githubusercontent.com/94720207/197285711-bc72d114-a7a1-4893-a339-a9d9c64043b1.png)
+- [QAM Constellation Diagram | Clickie!!!](https://user-images.githubusercontent.com/94720207/197289613-6ecbfb20-931d-42fe-86cd-aeead3e91dca.png)
+    - [`4 QAM` = `QPSK`]()
+    - [`64 QAM` 1999-2006 | 16 points per cuadrant = `6 bits` | Legacy `802.11b/a/g` = 64 QAM _(3/4)](https://user-images.githubusercontent.com/94720207/197286283-6fb740a5-bd0b-4a19-8adf-06d52f54753d.png)
+    - [`64 QAM` 2007 | 16 points per cuadrant = `6 bits` | `WiFi4 802.11n` = 64 QAM _(5/6)_](https://user-images.githubusercontent.com/94720207/197286283-6fb740a5-bd0b-4a19-8adf-06d52f54753d.png)
+    - [`256 QAM` 2011 (2014) | 64 points per cuadrant = `8 bits` | `WiFi5 802.11ac` = 256 QAM _(5/6)_](https://user-images.githubusercontent.com/94720207/197286283-6fb740a5-bd0b-4a19-8adf-06d52f54753d.png)
+    - [`1024 QAM` 2019 | 256 points per cuadrant = `10 bits` | `WiFi6 802.11ax` = 1024 QAM _(5/6)_](https://user-images.githubusercontent.com/94720207/197286283-6fb740a5-bd0b-4a19-8adf-06d52f54753d.png)
+    - [`Coding rate` = `1/2`, `3/4`, `5/6` ??? | 3 for data | 1 for error protection data](https://user-images.githubusercontent.com/94720207/197293234-0d397fc3-e692-4ff1-a788-fc000af76de8.png)
+    - [IEEE 802.11 n/ac `Coding Scheme` / `Coding rates`](https://user-images.githubusercontent.com/94720207/197305897-2767405f-2881-4d21-bffe-bbc9e8cae23a.png)
+
+
+
+    
+
+---
+
+
+
+
+
+
+- [DSSS - Direct Sequence Spread Spectrum](https://www.youtube.com/watch?v=-1mxYWvfVWQ) _@ Sunny_
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- [Wave - Amplitude, Crest & Trough](https://user-images.githubusercontent.com/94720207/197251058-03646b14-1447-496e-866a-aa6230772d1e.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## WiFi Timing
+
+### Preamble & Training Fields
+_In 802.11/WiFi, timing is carried out using Preamble & Training Fields. The Preamble is a sequence of bits used to synchronize the receiver device's clock with the transmitter device's clock. This helps ensure that data bits are transmitted at the correct timing and interpreted correctly at the receiver end. The Training Fields are a series of bits used to adjust the transmission signal at the receiver. This includes compensating for signal attenuation and removing interference or noise in the transmission signal. The Training Fields also aid the receiver in detecting transmission errors and making corrections if necessary._
+
+### Timing Synchonization
+_In a WiFi transmission, the receiver must be synchronized with the transmitter. "Time Synchronization" refers to the process of synchronizing the clock between wireless devices within a Wi-Fi network.
+Time synchronization is essential in Wi-Fi networks to ensure reliable and error-free data transmission. When devices are synchronized in time, it ensures that data packets are transmitted and received at the right moment, and prevents devices from transmitting on the same channel and at the same time, which could lead to collisions and errors in data transmission. In Wi-Fi networks, time synchronization is performed using a protocol called Wi-Fi Time Synchronization Protocol - WTS. This protocol allows wireless devices to synchronize their clocks and establish a common time interval for the transmission and reception of data packets._
+- [Time Synchronization in Wireless Networks](https://www.cse.wustl.edu/~jain/cse574-06/ftp/time_sync/index.html) _`whitepaper`_
+
+
+
 ## `Spread Spectrum`
 - [What is Spread Spectrum? @ geeksforgeeks](https://www.geeksforgeeks.org/what-is-spread-spectrum/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2297,6 +2500,10 @@ _The MCS table evaluates the quality of the RF environment- the RF media that de
 - [MCS Table and how to use it @ WLAN Pros](https://www.youtube.com/watch?v=QBiBPbME5tY) _`video`_
 - [Índices MCS @ Inside Wireless en Español](https://www.youtube.com/watch?v=iVBZojHMYAM) _`video`_
 - [MCS Index @ Inside Wireless](https://www.youtube.com/watch?v=f6zesWNDGXc) _`video`_
+- [MCS Index VS Output power](https://www.youtube.com/watch?v=lPDNG1mjeq8)
+- [More QAM = More MCS (points) = Less Distance = More SNR Requiered - **No more confusion ;)**](https://user-images.githubusercontent.com/94720207/197291390-7346a737-a929-4b3c-9e33-18128176656a.png)
+- [The lower the Amplitude = The more the SNR!](https://user-images.githubusercontent.com/94720207/197291955-d2f467f9-820f-4400-9260-141ec3c01ca4.png)
+- [High MCS = High SNR = High Power not OK!!!](https://user-images.githubusercontent.com/94720207/197292805-0dd5be58-4149-4134-837e-184e40d41f76.png)
 
 ## 🦈🪤🕵️‍♂️ PCAP Troubleshooting Collection
 - [`WPA2 password fail` :: Wireless] 4-way-Hadshake never pass step 3
