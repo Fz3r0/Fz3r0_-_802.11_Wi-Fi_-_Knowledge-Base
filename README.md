@@ -2044,7 +2044,8 @@ _`OFDM vs FDM` - More bandwith & Higher Data Transmission Rate than FDM due Orth
 - [`OFDM` - Orthogonal Frequency Division Multiplexing - _**(Analog Modulation)**_](https://youtu.be/KCHO7zlU25Q) _@ Sunny_ <br>
 
 ## OFDMA (802.11ax): 
-_OFDMA implements the resource unit (RU)  Modulation methods include BPSK, QPSK, 16-QAM, 64-QAM, 256-QAM, and 1024-QAM_
+_OFDMA implements the resource unit (RU)  Modulation methods include BPSK, QPSK, 16-QAM, 64-QAM, 256-QAM, and 1024-QAM | _
+- [OFDMA :: How it works :: Frame Exchange Process](https://www.youtube.com/watch?v=owBrkFk9afM) _`video`_
 - OFDMA
 - OFDM VS OFDMA
 
