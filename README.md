@@ -527,13 +527,13 @@ _Wi-Fi CERTIFIED™ is an internationally recognized seal of approval for produc
 
 ### ✅🛜 Wi-Fi Certification: `Access`
 
-- [**`Passpoint®`**]: Enables seamless, secure network access. Passpoint helps Wi-Fi devices discover, select, and securely connect to Wi‑Fi access points and networks easily. Once a device contains a network’s credentials, it can seamlessly connect to the network on subsequent visits without further user action.The technology behind Passpoint is foundational to Wi-Fi CERTIFIED Vantage™ which brings better user experiences in managed Wi-Fi networks as well as for OpenRoaming, Wireless Broadband alliance’s federated service.
-- [**`Wi-Fi Easy Connect™`**]: Simplifies device provisioning and configuration while maintaining network security, making onboarding smart home and IoT devices easier than ever
-- [**`Wi-Fi Protected Setup™`**]: Facilitates easy set-up of security features using a Personal Identification Number (PIN) or other defined methods within the Wi-Fi device. Wi-Fi Protected Setup certifies products which implement technology defined in the Wi-Fi Protected Setup Specification.
+- [**`Passpoint®`**](https://www.wi-fi.org/certification/programs) Easy Discover, select & securely connect to Wi‑Fi APs | Escencial for Wi-Fi CERTIFIED Vantage
+- [**`Wi-Fi Easy Connect™`**](https://www.wi-fi.org/certification/programs) Simplifies device provisioning & config while maintaining network security (IoT)
+- [**`Wi-Fi Protected Setup™`**](https://www.wi-fi.org/certification/programs) Facilitates easy set-up of security features using a Personal Identification Number (PIN) or other methods
 
 ### ✅🛜 Wi-Fi Certification: `Applications and Services`
 
-- [**`Miracast®`**]() Provides seamless display of high-definition (HD) and 4K Ultra High-Definition (Ultra HD) content between devices, regardless of brand, without cables or a network connection. Miracast certifies products which implement technology defined in the Miracast Specification. Enhancements released in 2017 include 4K Ultra HD support, and extended battery life in mobile devices.
+- [**`Miracast®`**](https://www.wi-fi.org/certification/programs) Provides seamless display of high-definition (HD) and 4K Ultra High-Definition (Ultra HD) content between devices, regardless of brand, without cables or a network connection. Miracast certifies products which implement technology defined in the Miracast Specification. Enhancements released in 2017 include 4K Ultra HD support, and extended battery life in mobile devices.
 - [**`Voice-Enterprise`**]() Supports a good experience with voice applications over Wi-Fi, enabling fast transitions between access points and providing management
 - [**`Wi-Fi Aware™`**]() Provides enhanced peer-to-peer communications, enabling devices within Wi-Fi® range to detect one another and exchange information and services without the need for network infrastructure. Wi-Fi Aware improves on existing peer-to-peer connectivity offerings by delivering here-and-now contextual awareness that empowers users to both find and utilize services that match their interests while on the go. Wi-Fi Aware works well indoors as well as in dynamic and dense environments, without requiring a cellular, infrastructure, or GPS connection.
 - [**`Wi-Fi Location™`**]() Delivers accurate indoor location through Wi-Fi networks, allowing location applications and services to operate indoors
