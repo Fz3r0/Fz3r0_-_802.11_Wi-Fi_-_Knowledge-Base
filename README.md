@@ -2359,6 +2359,7 @@ _In High Scale or Enterprise WLAN Networking is not recomended to use IBSS Indep
 - [Why speed tests aren’t always the answer when troubleshooting Wi-Fi networks](https://www.thepacketologist.com/2023/12/why-speed-tests-arent-always-the-answer-when-troubleshooting/)
 - [What Are Good Latency & Ping Speeds?](https://www.pingplotter.com/wisdom/article/is-my-connection-good/)
 
+
 ## Troubleshooting Methodologies & Best Practices
 - [WLAN Pros: Troubleshooting Best Practices](https://wlanprofessionals.com/wireless-troubleshooting-best-practices/)
 
@@ -2522,6 +2523,17 @@ _The MCS table evaluates the quality of the RF environment- the RF media that de
 - [More QAM = More MCS (points) = Less Distance = More SNR Requiered - **No more confusion ;)**](https://user-images.githubusercontent.com/94720207/197291390-7346a737-a929-4b3c-9e33-18128176656a.png)
 - [The lower the Amplitude = The more the SNR!](https://user-images.githubusercontent.com/94720207/197291955-d2f467f9-820f-4400-9260-141ec3c01ca4.png)
 - [High MCS = High SNR = High Power not OK!!!](https://user-images.githubusercontent.com/94720207/197292805-0dd5be58-4149-4134-837e-184e40d41f76.png)
+
+## True Wi-Fi Performance
+_Even if you getting for example 360mbps of Data Rate, it will noever be the actual Throughput at the end. ||_
+**Actual/Real Throughput =** <br>
+`Data Rate` :: Obtained by MCS Index Table || Actual Data Rate Available per STA (Varies by Signal Quality) then: <br>
+`Management Overhead` :: Airtime Consumed by BSS Operations & CCI (Co-Channel Interference) <br>
+`Interference` :: Non Wi-Fi interference casuing retries <br>
+`Other STAs` :: Per STA Throughput
+- [Datarate VS Throughput VS Bandwith]()
+- [True Wi-Fi Performance Pyramif](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/a69f87ab-3bd2-4f0b-804e-10be66675a7e)
+
 
 ## 🦈🪤🕵️‍♂️ PCAP Troubleshooting Collection
 - [`WPA2 password fail` :: Wireless] 4-way-Hadshake never pass step 3
