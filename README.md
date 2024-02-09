@@ -1992,38 +1992,22 @@ _`Baseband TDM` - Transmit 1 signal at time 1&0 | ej. **`Wired / Ethernet`** | `
 _`Broadband FDM` - Multi-transmit, share 1 channel at diff Freqs | ej. **`RF`**,  **`HSIA`**, **`DSL`** | `FDM`_
 - [`Multiplexing:` TDM, Statistical TDM & FDM | Multiple Signals Combined Together](https://www.youtube.com/watch?v=fIZhDl35_XY)  _@ Sunny_ <br>
 
-## Digital Modulation
+## Modulation Methods
+_Modulation is a process by which some property of a carrier signal is modified to represent digital bits. Amplitude, frequency, and phase are the three basic elements of a waveform that can be varied. | Complex Modulation and Coding Schemes (MCS) are used in 802.11 WLANs. There are various types of modulation used in 802.11 WLANs including DBPSK, DQPSK, and QAM. | There are various types of coding schemes as well, including Barker, CCK, PBCC, and FEC (convolutional)._
 - [`Digital modulation` - ASK, FSK, and PSK - _**(Digital Modulation)**_](https://youtu.be/qGwUOvErR8Q)
     - [`ASK` - Amplitude Shift Keying](https://user-images.githubusercontent.com/94720207/197251539-77dab9d7-80e2-44c7-a8c1-cce567f2b96c.png) _Same Freq & Amplitude changes = ASK signals_
     - [`FSK` - Frequency Shift Keying](https://user-images.githubusercontent.com/94720207/197252009-8f3a40fc-9952-4bbf-96ed-6af781221024.png) _1 value = higher freq | 0 value = lower freq_
     - [`PSK` Phase Shift Keying](https://user-images.githubusercontent.com/94720207/197253324-78c2bd30-10d1-4b82-b8cc-526768defa94.png) _Change phase everytime the value 0 or 1 changes_
-
-## OFDM: ORTHOGONAL FREQUENCY DIVISION MULTIPLEXING -->
-_Based on `FDM` | Multiple Users share 1 single link | **OFDM = variation of FDM** ;)_ <br>
-_latest `Wireless` & `Telecom` Standards| WiFi 802.11ac, 4g, 5g, WiMAX, satellite & more_ <br>
-_`FDM` - Multiple Freqs not interfering with each other (guard band / space in adjacent channs)_ <br>
-_`OFDM` - Multiple Freqs "pushed in" = overlapped in same bandwith | more data than FDM_ <br>
-_`Orthogonal` - For interference avoid! due overlap | waves use independent spaces matching only at 0 point/null_ <br> 
-_`OFDM vs FDM` - More bandwith & Higher Data Transmission Rate than FDM due Orthogonal capacity_
-- `OFDM Subcarriers`
-    - [OFDM 802 11a/g - Subcarriers](https://youtu.be/gKZ6KhXfvWU) _`IFFT` - Inverse Fast Fourier Transform_
-    - 20 MHz bandwith channels | 64 subcarriers (312.5 KHz) | BPSK, QPSK, 16QAM, 64QAM
-    - https://youtu.be/TOBFfe_-UFw - https://youtu.be/lwGsdWkfweU
-<!-- pendientes esos 2 links -->    
-- [`OFDM` - Orthogonal Frequency Division Multiplexing - _**(Analog Modulation)**_](https://youtu.be/KCHO7zlU25Q) _@ Sunny_ <br>
-
-<!-- PCM - Analog to digital conversion -->
-## PCM: Pulse Code Modulation (Analog Phone)
-- [`PCM` - Pulse Code Modulation | **For Analog to Digital conversion** | _composed of 3 steps:_](https://youtu.be/HlGJ6xxbz8s)
-1. _**`Sampling` - Take samples to reconstruct original signal | steps like ableton sample-rate waves :)**_
-    - _`PAM` - Pulse Amplitude Modulation | The result of all discrete sample values (AKA discrete steps)_
-    - _`Sample Rate` - Number of samples per second (or steps!)_
-    - _`Sample Rate Standards` - Phone 8KHz | VoIP 16 KHz | Audio 44 KHz (44,100 samples per sec)_
-2. `Quantizing` - 
-3.  `Encoding`
-
-<!-- Pendiente, no importante por ahora.... -->
-
+        - [DBPSK]()
+        - [QPSK]()
+        - [BPSK]()
+    - [`QAM` - Quadrature Amplitude Modulation (]() _higher efficiency compared with BPSK & QPSK used with OFDM_
+        - [QAM Constellations]()
+        - [16-QAM]()
+        - [64-QAM]()
+        - [256-QAM]()
+        - [1024-QAM]()
+          
 ## QAM Modulation: QUADRATURE AMPLITUDE MODULATION
 - [`QAM modulation` - Quadrature Amplitude Modulation -  **Digital & Analog Modulation**_](https://www.youtube.com/watch?v=IbUflaeJcU8)
 - [`QAM modulation` -PT2: `The Modulator`](https://youtu.be/YnWCRUoTEAI)
@@ -2045,6 +2029,40 @@ _`OFDM vs FDM` - More bandwith & Higher Data Transmission Rate than FDM due Orth
     - [`1024 QAM` 2019 | 256 points per cuadrant = `10 bits` | `WiFi6 802.11ax` = 1024 QAM _(5/6)_](https://user-images.githubusercontent.com/94720207/197286283-6fb740a5-bd0b-4a19-8adf-06d52f54753d.png)
     - [`Coding rate` = `1/2`, `3/4`, `5/6` ??? | 3 for data | 1 for error protection data](https://user-images.githubusercontent.com/94720207/197293234-0d397fc3-e692-4ff1-a788-fc000af76de8.png)
     - [IEEE 802.11 n/ac `Coding Scheme` / `Coding rates`](https://user-images.githubusercontent.com/94720207/197305897-2767405f-2881-4d21-bffe-bbc9e8cae23a.png)
+
+## OFDM: ORTHOGONAL FREQUENCY DIVISION MULTIPLEXING 
+_Based on `FDM` | Multiple Users share 1 single link | **OFDM = variation of FDM** ;)_ <br>
+_latest `Wireless` & `Telecom` Standards| WiFi 802.11ac, 4g, 5g, WiMAX, satellite & more_ <br>
+_`FDM` - Multiple Freqs not interfering with each other (guard band / space in adjacent channs)_ <br>
+_`OFDM` - Multiple Freqs "pushed in" = overlapped in same bandwith | more data than FDM_ <br>
+_`Orthogonal` - For interference avoid! due overlap | waves use independent spaces matching only at 0 point/null_ <br> 
+_`OFDM vs FDM` - More bandwith & Higher Data Transmission Rate than FDM due Orthogonal capacity_
+- `OFDM Subcarriers`
+    - [OFDM 802 11a/g - Subcarriers](https://youtu.be/gKZ6KhXfvWU) _`IFFT` - Inverse Fast Fourier Transform_
+    - 20 MHz bandwith channels | 64 subcarriers (312.5 KHz) | BPSK, QPSK, 16QAM, 64QAM
+    - https://youtu.be/TOBFfe_-UFw - https://youtu.be/lwGsdWkfweU  
+- [`OFDM` - Orthogonal Frequency Division Multiplexing - _**(Analog Modulation)**_](https://youtu.be/KCHO7zlU25Q) _@ Sunny_ <br>
+
+## OFDMA (802.11ax): 
+_OFDMA implements the resource unit (RU)  Modulation methods include BPSK, QPSK, 16-QAM, 64-QAM, 256-QAM, and 1024-QAM_
+- OFDMA
+- OFDM VS OFDMA
+
+## PCM: Pulse Code Modulation (Analog Phone)
+- [`PCM` - Pulse Code Modulation | **For Analog to Digital conversion** | _composed of 3 steps:_](https://youtu.be/HlGJ6xxbz8s)
+1. _**`Sampling` - Take samples to reconstruct original signal | steps like ableton sample-rate waves :)**_
+    - _`PAM` - Pulse Amplitude Modulation | The result of all discrete sample values (AKA discrete steps)_
+    - _`Sample Rate` - Number of samples per second (or steps!)_
+    - _`Sample Rate Standards` - Phone 8KHz | VoIP 16 KHz | Audio 44 KHz (44,100 samples per sec)_
+2. `Quantizing` - 
+3.  `Encoding`
+
+## Coding Methods
+  
+
+
+
+
 
 
 
@@ -2493,7 +2511,7 @@ _One of the most commonly cited best practices among Wi-Fi professionals is to t
 - [**`SSID Overhead Calculator`**](https://revolutionwifi.blogspot.com/p/ssid-overhead-calculator.html)
 
 ## 🛜🖩🧮 MCS Index Table
-_The MCS table evaluates the quality of the RF environment- the RF media that devices are working in, which is reflected in every single transmission || Every transmitter device, whether it be an AP or a client, will make an internal decision of which MCS it is going to use || MCS summarizes and categorizes Wi-Fi parameters such as modulation, coding scheme, guard interval, and channel width._
+_The MCS table evaluates the quality of the RF environment- the RF media that devices are working in, which is reflected in every single transmission || Every transmitter device, whether it be an AP or a client, will make an internal decision of which MCS it is going to use || MCS summarizes and categorizes Wi-Fi parameters such as modulation, coding scheme, guard interval, and channel width. || The modulation and coding used, in relation to the channel bandwidth and number of spatial streams, are key determiners in the final data rate of the link. Given that a better signal quality is required for more complex modulation methods, devices fall back to less complex modulation methods as the signal quality degrades. The result is a lowering of the data rate. This process is called Dynamic Rate Switching (DRS). The 802.11 standard does not define the DRS algorithm from the perspective of signal quality, this definition is the responsibility of the chipset manufacturers. The 802.11 standard defines only that the STA must use a permitted data rate for transmission and this permitted list is found in Beacon frames and Probe Response frames from the associated AP._
 - [MCS Index Table, Modulation and Coding Scheme Index 11n, 11ac, and 11ax :: MCSINDEX.COM](https://mcsindex.com/) _`MCS Table`_
 - [MCS Table (HT/VHT/HE) :: MCSINDEX.NET](https://mcsindex.net/) _`MCS Index Table`_
 - [MCS Table and how to use it @ WLAN Pros](https://wlanprofessionals.com/mcs-table-and-how-to-use-it/) _`text`_
