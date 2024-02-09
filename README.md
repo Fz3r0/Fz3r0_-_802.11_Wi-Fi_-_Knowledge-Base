@@ -1431,7 +1431,7 @@ _EAP is the whole Framework used for implement authentication, and it uses 802.1
 - [`IEEE 802.1X` :: Standard for `PNAC`: port-based Network Access Control](https://en.wikipedia.org/wiki/IEEE_802.1X) _`wiki`_
 
 ### 🪪🏢🗝️ EAP: `Common EAP Authentication Types`
-- [`EAP-MD5`: Message Digest 5](https://www.intel.com/content/www/us/en/support/articles/000006999/wireless/legacy-intel-wireless-products.html) Base-level EAP support | Not recommended for Wi-Fi implementations (insecure) | Non-Dynamic per session keys
+- [`EAP-MD5`: Message Digest 5](https://www.intel.com/content/www/us/en/support/articles/000006999/wireless/legacy-intel-wireless-products.html) Basic EAP support | Not recommended for Wi-Fi implementations (insecure) | Non-Dynamic per session keys
 - [`EAP-TLS`: Transport Layer Security](https://www.intel.com/content/www/us/en/support/articles/000006999/wireless/legacy-intel-wireless-products.html) Certificate-Based & Mutual Auth (Client-Server) | Dynamically generate user-based & session-based WEP keys
 - [`EAP-TTLS`: Tunneled Transport Layer Security](https://www.intel.com/content/www/us/en/support/articles/000006999/wireless/legacy-intel-wireless-products.html) Extension of EAP-TLS. Unlike EAP-TLS, EAP-TTLS requires only server-side certificates.
 - [`EAP-FAST`: Flexible Authentication via Secure Tunneling](https://www.intel.com/content/www/us/en/support/articles/000006999/wireless/legacy-intel-wireless-products.html) by Cisco* | Instead of using certificates, authenticates by PAC
