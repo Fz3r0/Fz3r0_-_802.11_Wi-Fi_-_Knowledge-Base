@@ -610,10 +610,32 @@ _The most widely used IEEE 802 standards are for Ethernet, Bridging and Virtual 
 - IEEE 802: Overview & Architecture
 
 ### 👑⚙️ IEEE 802 Standards: List
-- IEEE 802.1: Bridging & Management
-- [IEEE 802.3: Ethernet](https://en.wikipedia.org/wiki/IEEE_802.3) _Full List_
-- IEEE 802.11: Wireless LANs
-- IEEE 802.15: Wireless Specialty Networks (WSN)
+- [IEEE 802.1: Bridging & Management](https://en.wikipedia.org/wiki/IEEE_802.1)
+    - 802 LAN/MAN architecture
+    - Internetworking among 802 LANs, MANs & WANs
+    - 802 Link Security (dot1X)
+    - 802 Link Trunking (dot1q)
+    - 802 overall network management
+    - Protocol Layers above the MAC and LLC layers <br><br>
+- [IEEE 802.3: Ethernet](https://en.wikipedia.org/wiki/IEEE_802.3) 
+    - Optical Fiber
+    - Copper
+    - Coaxial <br><br>
+- [IEEE 802.11: Wireless LANs](https://en.wikipedia.org/wiki/IEEE_802.11)
+    - Wi-Fi 802.11 b/a/g/n/ac/ax/be (Wi-Fi 4,5,6,7)
+    - Wi-Fi DIRECT <br><br>
+- [IEEE 802.15: Wireless Specialty Networks (WSN)](https://en.wikipedia.org/wiki/IEEE_802.15)
+    - IEEE 802.15.1: WPAN / Bluetooth
+    - IEEE 802.15.2: Coexistence
+    - IEEE 802.15.3: High Rate WPAN
+    - IEEE 802.15.4: Low Rate WPAN
+    - IEEE 802.15.5: Mesh Networking
+    - IEEE 802.15.6: Body Area Networks
+    - IEEE 802.15.7: Visible Light Communication
+    - IEEE P802.15.8: Peer Aware Communications
+    - IEEE P802.15.9: Key Management Protocol
+    - IEEE P802.15.10: Layer 2 Routing
+    - IEEE 802.15.13: Multi-Gigabit/s Optical Wireless Communications <br><br>
 - IEEE 802.16: Broadband Wireless MANs
 - IEEE 802.19: Wireless Coexistence
 - IEEE 802.21: Media Independent Handover Services
