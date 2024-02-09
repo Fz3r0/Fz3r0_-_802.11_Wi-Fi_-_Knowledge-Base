@@ -516,7 +516,7 @@ _Wi-Fi CERTIFIED™ is an internationally recognized seal of approval for produc
 - [**`Wi-Fi CERTIFIED ac`**](https://www.wi-fi.org/certification/programs) Based on the IEEE 802.11ac standard | Operates in 5 GHz | Gigabit Data Rates
 - [**`Wi-Fi CERTIFIED HaLow™`**](https://www.wi-fi.org/certification/programs) Operating in spectrum below 1 GHz | long range, low power Wi-Fi 
 - [**`Wi-Fi CERTIFIED n`**](https://www.wi-fi.org/certification/programs) Based on the IEEE 802.11n standard | Operating in both 2.4 & 5 GHz
-- [**`Wi-Fi CERTIFIED WiGig™`**](https://www.wi-fi.org/certification/programs) 60 GHz frequency band to enable extremely high performance, multi-gigabit & low latency for high end devices/tranmissions
+- [**`Wi-Fi CERTIFIED WiGig™`**](https://www.wi-fi.org/certification/programs) 60 GHz extremely high performance, multi-gigabit & low latency for high end devices/transmissions
 - [**`Wi-Fi Direct®`**](https://www.wi-fi.org/certification/programs) STAs connect peer-to-peer without use of an AP | Ad-Hoc Wi-Fi for printing, content sharing & wireless display
 
 ### ✅🛜 Wi-Fi Certification: `Security`
