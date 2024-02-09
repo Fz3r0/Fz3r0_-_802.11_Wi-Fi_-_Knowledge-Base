@@ -1155,6 +1155,8 @@ _The initial purpose of the authentication frame is to validate the device type 
 (Next: association processs)
 ````
 
+---
+
 ### 🔓🪪 Open System Authentication: `Association` :: From:`State 2` ➡️ To:`State 3` 
 _When 802.11 authentication (not the RSN-WPA/WPA2 authentication) completes, a STA move to Association phase to the BSS. The purpose of this exchange is to join the cell & obtain an Association Identifier (AID). If the network is "Open" (no WPA/2-PSK, 802.1X or other kind of RSN authentication) then this is the last state and the client completes it's connection, else, the client is ready to start with the **RSNA** process to reach the state 4 Fully Connected & Authenticated._ <br>
 - [`Association Req` & `Association Res` :: Frame Exchange :: `Open System`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/64b10b5f-ba1a-4885-9141-c94e317f9ac9) _`frame exchange`_
@@ -1186,28 +1188,61 @@ _When 802.11 authentication (not the RSN-WPA/WPA2 authentication) completes, a S
 ####################################################################################################################
 ````
 
-
+---
 
 ### 🔓🪪 Open System Authentication: `Deauthentication` & `Disassociation` :: From:`ANY` ➡️ To:`State 1`
 _**Station or AP can send a Deauthentication Frame** when all communications are terminated (When disassociated, still a station can be authenticated to the cell). || Once a station associated to an AP, **either side can terminate the association at any time by sending a disassociation frame**. It has the same frame format as deauthentication frame. A station can send a disassociation frame because it leave the current cell to roam to another cell. An AP could send disassociation frame because station try to use invalid parameters._ <br>
-
-**⛔🔄📡 `Deauthentication` Exchange**: <br>
-✅ After State 2 & 3 _(or 4 using RSNA)_ ✅⬇️  <br>
-⛔🤳📡 `AP` or `STA` can send the Frame: `Deauthentication` _(Send specific code forDeauthentication reason)_ <br>
-**Return to State 1** `DISCONNECTED` <br>
-
-**❌🔄📡 `Disassociation` Exchange**: <br>
-✅ After State 2 & 3 _(or 4 using RSNA)_ ✅⬇️  <br>
-❌🤳📡 `AP` or `STA` can send the Frame: `Disassociation` _(Send specific code for Disassociation reason)_ <br>
-**Return to State 2** `AUTHENTICATED` _For roaming to other APs or re-connections to the same AP_ <br>
-
 - [`Deauthentication` :: Frame Exchange :: `Open System` :: Sent by any side AP<-->STA](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/1c1c8c86-769c-4954-8913-5eea07468401) _`frame exchange`_
 - [`Disassociation` :: Frame Exchange :: `Open System` :: Sent by any side AP<-->STA](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/1c1c8c86-769c-4954-8913-5eea07468401) _`frame exchange`_
 - [`Deauthentication` & `Disassociation` :: Frame Decode @ Nayanajith](https://mrncciew.com/2014/10/11/802-11-mgmt-deauth-disassociation-frames/) _`frame decode`_
     - [`Deauthentication` :: `Status Codes` :: Responses]() 
-    - [`Disassociation` :: `Status Codes` :: Responses]() 
+    - [`Disassociation` :: `Status Codes` :: Responses]()
+ 
+### 🔄📡 Frame Exchange: `Deauthentication`
 
+````py
+(Previous: STA Associated to AP [State 3 or 4])
+.
+.
+.
+####################################################################################################################
+                         🏁 STATE MACHINE = 3 or 4 (RSNA) :: client STA associated to AP 🏁
+####################################################################################################################
 
+  🏁 FINISH ===>>>  📡 AP ⬅️  <<<----------- {[💊🛜 Deauthentication]}  -----------  :: STA 🤳🏾  <<<=== START 🏁
+
+                                                          - or -
+
+  🏁 START ===>>>  📡 AP ::  -------------- {[💊🛜 Deauthentication]}  -------->>>  ➡️ STA 🤳🏾  <<<=== FINISH 🏁
+
+####################################################################################################################
+                               🏁 STATE MACHINE = 1 :: client STA disconncted from AP
+                                              retrun to STATE 1 - DISCONNECTED
+####################################################################################################################
+````
+
+### 🔄📡 Frame Exchange: `Disassociation`
+
+````py
+(Previous: STA Associated to AP [State 3 or 4])
+.
+.
+.
+####################################################################################################################
+                         🏁 STATE MACHINE = 3 or 4 (RSNA) :: client STA associated to AP 🏁
+####################################################################################################################
+
+  🏁 FINISH ===>>>  📡 AP ⬅️  <<<----------- {[💊🛜 Disassociation]}  -----------  :: STA 🤳🏾  <<<=== START 🏁
+
+                                                          - or -
+
+  🏁 START ===>>>  📡 AP ::  -------------- {[💊🛜 Disassociation]}  -------->>>  ➡️ STA 🤳🏾  <<<=== FINISH 🏁
+
+####################################################################################################################
+                               🏁 STATE MACHINE = 1 :: client STA disconncted from AP
+                           retrun to STATE 2 - AUTHENTICATED (for roaming & re-connections)
+####################################################################################################################
+````
 
 # 🛡️🔐🛜 802.11 (Wi-Fi): `Security`
 
