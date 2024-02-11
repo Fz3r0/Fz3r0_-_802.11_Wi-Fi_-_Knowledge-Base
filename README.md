@@ -1624,23 +1624,23 @@ Supplicant (**STA**) & Auhtenticator (**AP**): Key Exchange ↔️🗝️ <br>
                                         🏁 BASIC EAP MD5 (Depreciated Method) 🏁
 ####################################################################################################################
 
-🤳🏾 STA = Supplicant                        📡 AP = Authenticator                  ☁️ RADIUS = Authention Service
+🤳🏾 STA = supplicant                        📡 AP = authenticator                  ☁️ RADIUS = authention service
 
-🤳🏾 Supplicant  ⬅️  <<<--------------    {[💊🛜 Request Identity]}
+       🤳🏾 ⬅️  <<<--------------------    {[💊🛜 Request Identity]}
 
-{[💊🛜 Identity]}  -------------->>>    ➡️ 📡 AP = Authenticator                                    
+{[💊🛜 Identity]}  --------------------------->>>    ➡️ 📡                                   
            
-                                          {[💊🛜 Access Request]}    -------------->>>  ➡️ ☁️ RADIUS
+                                          {[💊🛜 Access Request]}    -------------------------->>>  ➡️ ☁️ 
 
-                                         📡 AP = Authenticator ⬅️    <<<--------------  {[💊🛜 Challenge (text)]}     
-🤳🏾 Supplicant  ⬅️  <<<--------------    {[💊🛜 Challenge (text)]} 
+                                                  📡  ⬅️   <<<----------------------  {[💊🛜 Challenge (text)]}     
+       🤳🏾 ⬅️  <<<--------------------    {[💊🛜 Challenge (text)]} 
 
-{[💊🛜 Challenge Resp]}   ------->>>    ➡️ 📡 AP = Authenticator                                    
-                                          {[💊🛜 Challenge Resp]}    -------------->>>  ➡️ ☁️ RADIUS
+{[💊🛜 Chall. Resp. (cipher)]}  ---------------->>>  ➡️ 📡                                
+                                        {[💊🛜 Chall. Resp. (cipher)]}    --------------------->>>  ➡️ ☁️ 
 
-                                         📡 AP = Authenticator ⬅️    <<<--------------  {[💊🛜 Access Accept]}     
+                                                   📡 ⬅️   <<<----------------------  {[💊🛜 Access Accept]}     
 
-🤳🏾 Supplicant  ⬅️  <<<--------------    {[💊🛜 Access Success]}
+       🤳🏾 ⬅️  <<<--------------------    {[💊🛜 Access Success]}
 .
 .
 .
