@@ -353,10 +353,16 @@ https://www.milenio.com/cultura/como-llego-el-internet-a-mexico]()
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
 
-# 🌎♻️🧙‍♂️ Internet, Networking & Wireless: `Organizations`
+# 🌎♻️🧙‍♂️ Internet, Networking & Wireless: `The Internet Ecosystem`
+_The Internet is successful in large part due to its unique model: shared global ownership, open standards development, and freely accessible processes for technology and policy development. The Internet has enjoyed unprecedented success thanks to its open, transparent, and collaborative model. The model relies on processes that are local, bottom-up and accessible to users around the world. | The Internet is a collection of autonomous and interconnected networks that implement open protocols and standards. No person, government, or entity owns or controls the Internet. Instead, a volunteer organization called ISOC (Internet Society) controls the future of the Internet. It appoints a technical advisory group called the IAB (Internet Architecture Board) to evaluate and set standards. | Input on protocols and standards can come from anybody-individuals, research groups, companies, and universities. A specification is submitted as an Internet draft and made available for review and comments. The Internet organizations evaluate whether these specifications should be advanced through a process that elevates the specification to different levels of maturity until it potentially reaches a standards status. The process is described under "Internet Standards."_
+- [Who Makes the Internet Work: The Internet Ecosystem @ _ISOC_](https://www.internetsociety.org/internet/who-makes-it-work/) _`ISOC official whitepaper`_
+- [The Internet Exosystem :: Diagram @ _ISOC_](https://www.internetsociety.org/wp-content/uploads/2017/09/factsheet_ecosystem.pdf) _`pdf + diagram`_
+- [The Internet Exosystem :: Easier Diagram @ _ISOC_](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/b630757d-8c45-4925-bee3-aa94d878de7f) _`diagram`_
 
-## 🌎🏭 Internet Organizations 
+## 🌎🏭 Internet Organizations, Committees & Standards
 _List of Internet organizations, or organizations that play or played a key role in the evolution of the Internet by developing recommendations, standards, and technology; deploying infrastructure and services; and addressing other major issues._
+- [Internet Organizations and Committees](https://www.linktionary.com/i/internet_organizations.html#:~:text=In%20particular%2C%20organizations%20such%20as%20the%20IEEE,that%20are%20closely%20linked%20to%20Internet%20standards.)
+- [Internet Standards](https://www.linktionary.com/i/internet_standards.html)
 - [List of Internet Organizations](https://en.wikipedia.org/wiki/List_of_Internet_organizations)
 - [`Normative References` :: **IEEE 802.11-2020**](https://ieeexplore.ieee.org/document/9363693) 2 | p. 153
 
@@ -427,6 +433,23 @@ _United Nations specialized agency that promotes the shared global use of the ra
     - [**IETF** - Internet Engineering Task Force](https://www.ietf.org/) _Create Standards | RFC_
 - [How **IAB** Manage the protocol values done by **IANA**?](http://www.tcpipguide.com/free/t_InternetStandardsOrganizationsISOCIABIESGIETFIRSGI-3.htm)
 - [**IANA** – Internet Assigned Number Authority]() _DNS, Domain Names & IPs Authority Assignments_
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 🌎🚦👮 Internet, Networking & Wireless: `Regulations`
 - [Regulatory Domains in WIFI @ Leo Tech Talk](https://www.youtube.com/watch?app=desktop&v=rcuGjndqicw) _`video`_
