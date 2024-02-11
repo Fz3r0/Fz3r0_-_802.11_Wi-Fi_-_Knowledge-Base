@@ -533,10 +533,10 @@ _Wi-Fi CERTIFIED™ is an internationally recognized seal of approval for produc
 
 ### ✅🛜 Wi-Fi Certification: `Applications and Services`
 
-- [**`Miracast®`**](https://www.wi-fi.org/certification/programs) Provides seamless display of high-definition (HD) and 4K Ultra High-Definition (Ultra HD) content between devices, regardless of brand, without cables or a network connection. Miracast certifies products which implement technology defined in the Miracast Specification. Enhancements released in 2017 include 4K Ultra HD support, and extended battery life in mobile devices.
-- [**`Voice-Enterprise`**]() Supports a good experience with voice applications over Wi-Fi, enabling fast transitions between access points and providing management
-- [**`Wi-Fi Aware™`**]() Provides enhanced peer-to-peer communications, enabling devices within Wi-Fi® range to detect one another and exchange information and services without the need for network infrastructure. Wi-Fi Aware improves on existing peer-to-peer connectivity offerings by delivering here-and-now contextual awareness that empowers users to both find and utilize services that match their interests while on the go. Wi-Fi Aware works well indoors as well as in dynamic and dense environments, without requiring a cellular, infrastructure, or GPS connection.
-- [**`Wi-Fi Location™`**]() Delivers accurate indoor location through Wi-Fi networks, allowing location applications and services to operate indoors
+- [**`Miracast®`**](https://www.wi-fi.org/certification/programs) Provides seamless display HD & 4K-UHD between devices (Ad-Hoc P2P)
+- [**`Voice-Enterprise`**]() Good experience of VoIP over Wi-Fi, enabling FT between APs
+- [**`Wi-Fi Aware™`**]() Provides enhanced P2P Ad-Hoc communications, STAs within range can detect one another without APs
+- [**`Wi-Fi Location™`**]() Delivers accurate indoor location through Wi-Fi networks
 
 ### ✅🛜 Wi-Fi Certification: `Optimization`
 
@@ -552,11 +552,11 @@ _Wi-Fi CERTIFIED™ is an internationally recognized seal of approval for produc
 - [**`WMM-Power Save:`**]() Power savings for multimedia content over Wi-Fi networks - helps conserve battery life while using voice and multimedia applications by managing the time the device spends in sleep mode
 
 ### ✅🛜 Wi-Fi Certification: `RF Coexistence`
-- [**`CWG-RF`**]() Developed with CTIA®, this is a test program developed for converged devices with both Wi-Fi and cellular technology. The testing provides detailed information about the performance of the Wi-Fi radio in a converged handset, as well as how the cellular and Wi-Fi radios interact with one another. Although this test program is not an element of Wi-Fi certification, completion of the testing is mandatory for Wi-Fi enabled handsets
+- [**`CWG-RF`**]() Converged devices with both Wi-Fi and cellular technology. 
 
 ### ✅🛜 Wi-Fi Certification: `Additional Capabilities`
-- [**`Power saving features`**]() Enhances capabilities of Wi-Fi CERTIFIED ac and Wi-Fi CERTIFIED n by enabling longer battery life for devices through longer sleep periods and more efficient use of network exchanges
-- [**`Wi-Fi Home Design™`**]() Delivers whole home Wi-Fi coverage through professionally designed and installed Wi-Fi networks in homes and multi-dwelling residences such as condominiums, townhomes, and apartment complexes
+- [**`Power saving features`**]() 802.11n/ac longer battery life = Longer sleep periods | more efficient Frame Exchange
+- [**`Wi-Fi Home Design™`**]() Whole home Wi-Fi coverage in: homes and multi-dwelling residences
 
 
 
@@ -727,8 +727,8 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 ---
 
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments `Vehicular`
-- [**802.11p**-2010](https://en.wikipedia.org/wiki/IEEE_802.11p) `r2.2009->`**`2012`** _`Amendment 6`_ **WAVE & ITS** :: Wireless access in vehicular environments (WAVE). Required to support intelligent transportation systems (ITS)
-- [**802.11bd**-2022](https://standards.ieee.org/ieee/802.11bd/7451/) `r5.2023->`**`<<DRAFT>>`** _`Amendment 7`_ **V2X** :: next generation vehicle-to-everything (V2X) communication in the 5.9 GHz & 60 GHz bands 
+- [**802.11p**-2010](https://en.wikipedia.org/wiki/IEEE_802.11p) `r2.2009->`**`2012`** _`Amendment 6`_ **WAVE & ITS** :: Wireless Access in Vehicular Environments. (Required for ITS)
+- [**802.11bd**-2022](https://standards.ieee.org/ieee/802.11bd/7451/) `r5.2023->`**`<<DRAFT>>`** _`Amendment 7`_ **V2X** :: Next Generation Vehicle-to-Everything (V2X) 5.9 GHz & 60 GHz
 
 ---
 
