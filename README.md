@@ -593,7 +593,7 @@ _The National Institute of Standards and Technology promotes U.S. innovation and
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
 
 ## 👑🧪⚙️ `IEEE`: Institute of Electrical and Electronics Engineers
-_IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. IEEE and its members inspire a global community through its highly cited publications, conferences, technology standards, and professional and educational activities._
+_IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. IEEE and its members inspire a global community through its highly cited publications, conferences, technology standards, and professional and educational activities. | The Institute of Electrical and Electronics Engineers Standards Association (IEEE SA) is an operating unit within IEEE that develops global standards in a broad range of industries, including: power and energy, artificial intelligence systems, internet of things, consumer technology and consumer electronics, biomedical and health care, learning technology, information technology and robotics, telecommunication, automotive, transportation, home automation, nanotechnology, information assurance, emerging technologies, and many more. | IEEE SA has developed standards for over a century, through a program that offers balance, openness, fair procedures, and consensus. Technical experts from all over the world participate in the development of IEEE standards._
 - [IEEE: Institute of Electrical and Electronics Engineers](https://en.wikipedia.org/wiki/Institute_of_Electrical_and_Electronics_Engineers) _`Wiki`_
 - [About IEEE](https://www.ieee.org/about/) _`Official`_
 - [IEEE at a Glance](https://www.ieee.org/about/at-a-glance.html#:~:text=IEEE%20is%20the%20world's%20largest,and%20professional%20and%20educational%20activities.) _`Official`_
@@ -603,13 +603,101 @@ _IEEE is the world's largest technical professional organization dedicated to ad
 - [Beneficios de la membresía a la IEEE](https://www.youtube.com/watch?v=qXcsZl7WqXY) _`video`_
 - [Joining the IEEE](https://www.ieee.org/membership/join/index.html?WT.mc_id=hc_join) _`Official`_
 
-## 👑 IEEE: 802 Standards
-_The most widely used IEEE 802 standards are for Ethernet, Bridging and Virtual Bridged LANs Wireless LAN, Wireless PAN, Wireless MAN, Wireless Coexistence, Media Independent Handover Services, and Wireless RAN with a dedicated Working Group providing focus for each area. IEEE 802 also coordinates with other national and international standards bodies, including ISO which has published certain IEEE 802 standards as international standards._
+## IEEE Standards
+_Each year, the IEEE SA conducts over 200 standards ballots, a process by which proposed standards are voted upon for technical reliability and soundness. In 2020, IEEE had over 1,200 active standards, with over 650 standards under development. | One of the more notable are the **IEEE 802 LAN/MAN group of standards**, with the widely used computer networking standards for both **wired** (**Ethernet, aka IEEE 802.3**) and **wireless** (**IEEE 802.11 and IEEE 802.16**) networks, IEEE 1547 Standard for Interconnecting Distributed Resources with Electric Power Systems, and ISO/IEEE 11073 Standards for Health Informatics._
+- [IEEE Standards Association](https://en.wikipedia.org/wiki/IEEE_Standards_Association) _`wiki + list`_
+- [IEEE P80]	Guide for Safety in AC Substation Grounding
+- [IEEE 255]	Standard Letter Symbols for Semiconductor Devices, IEEE-255-1963
+- [IEEE 260]	Standard Letter Symbols for Units of Measurement, IEEE-260-1978 (now 260.1-2004)
+- [IEEE 488]	Standard Digital Interface for Programmable Instrumentation, IEEE-488-1978 (now 488.1)
+- [IEEE 519]	Recommended Practice and Requirements for Harmonic Control in Electric Power Systems
+- [IEEE 603]	Standard Criteria for Safety Systems for Nuclear Power Generating Stations
+- [IEEE 610]	Standard Glossary of Software Engineering Terminology
+- [IEEE 754]	Floating point arithmetic specifications
+- [IEEE 802]	LAN/MAN
+    - [IEEE 802.1]	Standards for LAN/MAN bridging and management and remote media access control (MAC) bridging
+    - [IEEE 802.2]	Standards for Logical Link Control (LLC) standards for connectivity
+    - [IEEE 802.3]	Ethernet Standards for Carrier Sense Multiple Access with Collision Detection (CSMA/CD)
+    - [IEEE 802.4]	Standards for token passing bus access
+    - [IEEE 802.5]	Standards for token ring access and for communications between LANs and MANs
+    - [IEEE 802.6]	Standards for information exchange between systems
+    - [IEEE 802.7]	Standards for broadband LAN cable
+    - [IEEE 802.8]	Fiber-optic connection
+    - [IEEE 802.9]	Standards for integrated services, like voice.
+    - [IEEE 802.10]	Standards for LAN/MAN security implementations
+    - [IEEE 802.11]	Wireless Networking – Wireless LANs "Wi-Fi"
+    - [IEEE 802.12]	Standards for demand priority access method
+    - [IEEE 802.14]	Standards for cable television broadband communications
+    - [IEEE 802.15.2]	Bluetooth and Wi-Fi coexistence mechanism
+    - [IEEE 802.15.4]	Wireless Sensor/Control Networks "Zigbee"
+    - [IEEE 802.15.6]	Wireless Body Area Network[17] (BAN)
+    - [IEEE 802.16]	Wireless Networking – "WiMAX"
+    - [IEEE 802.24]	Standards for Logical Link Control (LLC) standards for connectivity
+- [IEEE 828]	Configuration Management in Systems and Software Engineering
+- [IEEE 829]	Software Test Documentation
+- [IEEE 830]	Software Requirements Specifications
+- [IEEE 854]	Standard for Radix-Independent Floating-Point Arithmetic, IEEE-854-1987 (replaced by IEEE-754-2008 and newer)
+- [IEEE 896]	Futurebus
+- [IEEE P1003.1]	Portable Operating System Interface –  – POSIX
+- [IEEE 1016]	Software Design Description
+- [IEEE 1028]	Standard for Software Reviews and Audits
+- [IEEE 1044.1]	Standard Classification for Software Anomalies
+- [IEEE 1059]	Software Verification And Validation Plan
+- [IEEE 1073]	Point of Care Medical Device Communication Standards
+- [IEEE 1074]	Software Development Life Cycle
+- [IEEE 1076]	VHDL – VHSIC Hardware Description Language
+- [IEEE 1149.1]	JTAG
+- [IEEE 1149.6]	AC-JTAG
+- [IEEE 1180]	Discrete cosine transform accuracy
+- [IEEE 1196]	NuBus
+- [IEEE 1233]	System Requirements Specification
+- [IEEE 1275]	Open Firmware
+- [IEEE 1284]	Parallel port
+- [IEEE P1363]	Public key cryptography
+- [IEEE 1364]	Verilog
+- [IEEE 1394]	Serial bus – "FireWire", "i.Link"
+- [IEEE 1471]	software architecture / system architecture
+- [IEEE 1541]	Prefixes for Binary Multiples
+- [IEEE 1547]	Standard for Interconnection and Interoperability of Distributed Energy Resources with Associated Electric Power Systems Interfaces
+- [IEEE 1584]	Guide for Performing Arc Flash Hazard Calculations
+- [IEEE 1588]	Precision Time Protocol
+- [IEEE 1609]	Wireless Access in Vehicular Environments (WAVE)
+- [IEEE P1619]	Security in Storage Working Group (SISWG)
+- [IEEE 1625]	Standard for Rechargeable Batteries for Multi-Cell Mobile Computing Devices
+- [IEEE 1666]	IEEE Standard for Standard SystemC Language Reference Manual
+- [IEEE 1667]	Standard Protocol for Authentication in Host Attachments of Transient Storage Devices
+- [IEEE 1701]	Optical Port Communication Protocol to Complement the Utility Industry End Device Data Tables
+- [IEEE 1800]	SystemVerilog
+- [IEEE 1801]	Unified Power Format
+- [IEEE 1849]	IEEE Standard for eXtensible Event Stream (XES) for Achieving Interoperability in Event Logs and Event Streams	
+- [IEEE 1855]	IEEE Standard for Fuzzy Markup Language
+- [IEEE 1901]	Broadband over Power Line Networks
+- [IEEE 1906.1]	Recommended Practice for Nanoscale and Molecular Communication Framework
+- [IEEE 1914]	Next Generation Fronthaul Interface Working Group
+- [IEEE 1914.1]	Standard for Packet-based Fronthaul Transport Networks
+- [IEEE 1914.3]	Standard for Radio Over Ethernet Encapsulations and Mappings
+- [IEEE 2030]	Guide for Smart Grid Interoperability of Energy Technology and Information Technology Operation with the Electric Power System (EPS), End-Use Applications, and Loads
+- [IEEE 2030.5]	Standard for Smart Energy Profile Application Protocol
+- [IEEE 2050]	RTOS for embedded systems standard
+- [IEEE 2143.1]	Standard for General Process of Cryptocurrency Payment
+- [IEEE 2413]	Standard for an Architectural Framework for the Internet of Things (IoT)
+- [IEEE 2418.2]	Approved Draft Standard Data Format for Blockchain Systems
+- [IEEE 2600]	Hardcopy Device and System Security (and related ISO/IEC 15408 Protection Profiles)
+- [IEEE 3001.4]	Recommended Practice for Estimating the Costs of Industrial and Commercial Power Systems
+- [IEEE 7010]	Recommended Practice for Assessing the Impact of Autonomous and Intelligent Systems on Human Well-Being
+- [IEEE 12207]	Information Technology – Software life-cycle processes
+- [IEEE C37.2040]	Standard Cybersecurity Requirements for Substation Automation, Protection, and Control Systems
+- [IEEE LTSC]	IEEE Learning Technology Standards Committee[18] (LTSC)
+- [IEEE Switchgear Committee	C37] series of standards for Low and High voltage equipment
+- [IEEE Transformers Committee	C57] series of standards for the design, testing, repair, installation and operation and maintenance of transformers
 
+## 👑 IEEE: 802 Standards 
+_The most widely used IEEE 802 standards are for Ethernet, Bridging and Virtual Bridged LANs Wireless LAN, Wireless PAN, Wireless MAN, Wireless Coexistence, Media Independent Handover Services, and Wireless RAN with a dedicated Working Group providing focus for each area. IEEE 802 also coordinates with other national and international standards bodies, including ISO which has published certain IEEE 802 standards as international standards._
+- [IEEE 802](https://en.wikipedia.org/wiki/IEEE_802#:~:text=The%20number%20802%20has%20no,IEEE%20used%20for%20standards%20projects.) `Full List`
 - [IEEE 802 50th Aniversary, a look back](https://standards.ieee.org/featured/ieee-802/#:~:text=The%20most%20widely%20used%20IEEE,providing%20focus%20for%20each%20area.)
 - IEEE 802: Overview & Architecture
 
-### 👑⚙️ IEEE 802 Standards: List
+### 👑⚙️ IEEE 802 Standards: Important Standards for Wi-Fi
 - [IEEE 802.1: Bridging & Management](https://en.wikipedia.org/wiki/IEEE_802.1)
     - 802 LAN/MAN architecture
     - Internetworking among 802 LANs, MANs & WANs
@@ -618,9 +706,14 @@ _The most widely used IEEE 802 standards are for Ethernet, Bridging and Virtual 
     - 802 overall network management
     - Protocol Layers above the MAC and LLC layers <br><br>
 - [IEEE 802.3: Ethernet](https://en.wikipedia.org/wiki/IEEE_802.3) 
+    - Coaxial
+    - Twisted Pair (Copper)
     - Optical Fiber
-    - Copper
-    - Coaxial <br><br>
+    - Repeaters
+    - Full Duplex Flow Control
+    - Adaptations for 802.1q
+    - Adaptation for 802.1AX 
+    - [CSMA/CD (legacy)]() <br><br>
 - [IEEE 802.11: Wireless LANs](https://en.wikipedia.org/wiki/IEEE_802.11)
     - Wi-Fi 802.11 b/a/g/n/ac/ax/be (Wi-Fi 4,5,6,7)
     - Wi-Fi DIRECT <br><br>
@@ -638,10 +731,6 @@ _The most widely used IEEE 802 standards are for Ethernet, Bridging and Virtual 
     - IEEE 802.15.13: Multi-Gigabit/s Optical Wireless Communications <br><br>
 - IEEE 802.16: Broadband Wireless MANs
 - IEEE 802.19: Wireless Coexistence
-- IEEE 802.21: Media Independent Handover Services
-- IEEE 802.22: Wireless Regional Area Networks
-
-### 👑⚙️ IEEE 802 Standards: Ammandments, Standards
 
 ## 👑📡🛰️ IEEE Std 802.11™‐2020 (Revision of IEEE Std 802.11‐2016)
 _IEEE Standard for Information Technology—Telecommunications and Information Exchange between Systems Local and Metropolitan Area Networks—Specific Requirements Part 11: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications | Revision 2020_
