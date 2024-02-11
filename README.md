@@ -772,6 +772,65 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 - [**802.11T**](https://en-academic.com/dic.nsf/enwiki/1333888) **Withdrawn in 2008** :: **WPP** Wireless Performance Prediction 
 - [**802.11bg**]()  **unassigned** :: likely to avoid confusion by combining 802.11b/g
 
+
+## 802.11n Wi-Fi 4
+
+- [802.11n features](https://www.electronics-notes.com/articles/connectivity/wifi-ieee-802-11/802-11n.php)
+
+### Backward compatibility switching
+_802.11n provides backward compatibility for devices in a net using earlier versions of Wi-Fi, this adds a significant overhead to any exchanges, thereby reducing the data transfer capacity. To provide the maximum data transfer speeds when all devices in the wireless local area network are operating on the 802.11n standard, the backwards compatibility feature can be removed._
+````py
+Legacy (only 802.11 a, b, and g)
+Mixed (both 802.11 a, b, g, and n)
+Greenfield (only 802.11 n) - maximum performance
+````
+- [802.11n Backward compatibility switching](https://www.electronics-notes.com/articles/connectivity/wifi-ieee-802-11/802-11n.php)
+
+### OFDM implementation
+_Orthogonal Frequency Division Multiplex, OFDM is a form of signal format that uses a large number of close spaced carriers that are each modulated with low rate data stream. The close spaced signals would normally be expected to interfere with each other, but by making the signals orthogonal to each other there is no mutual interference. The data to be transmitted is shared across all the carriers and this provides resilience against selective fading from multi-path effects._
+- [802.11n Backward compatibility switching](https://www.electronics-notes.com/articles/connectivity/wifi-ieee-802-11/802-11n.php)
+
+### 802.11 MIMO
+_In order to be able to carry very high data rates on the wireless LAN, often within an office or domestic environment, 802.11n has utilised MIMO. This gives the maximum use of the available bandwidth. | MIMO is a form of antenna technology that uses multiple antennas to enable signals travelling via different paths as a result of reflections, etc., to be separated and their capability used to improve the data throughput and / or the signal to noise ratio, thereby improving system performance._
+- [802.11n Backward compatibility switching](https://www.electronics-notes.com/articles/connectivity/wifi-ieee-802-11/802-11n.php)
+
+### 802.1n power saving
+_ne of the problems with using MIMO is that it increases the power of the hardware circuitry. More transmitters and receivers need to be supported and this entails the use of more current. | Data is normally transmitted in a "bursty" fashion. This means that there are long periods when the system remains idle or running at a very slow speed. During these periods when MIMO is not required, the circuitry can be held inactive so that it does not consume power._
+- [802.11n Power Saving](https://www.electronics-notes.com/articles/connectivity/wifi-ieee-802-11/802-11n.php)
+
+## High Efficiency (HE) PHY  802.11ax-2020 Wi-Fi 6
+
+### 802.11ax: OFDMA
+_OFDMA implements the resource unit (RU)  Modulation methods include BPSK, QPSK, 16-QAM, 64-QAM, 256-QAM, and 1024-QAM | The High Efficiency (HE) PHY is defined in the 802.11ax-2020 amendment. Orthogonal Frequency Division Multiple Access (OFDMA) is a new modulation scheme introduced to the 802.11 standard with the 802.11ax amendment. OFDMA has been used in other networks and brings useful new features to the 802.11 WLAN. The most exciting feature is what you might call sub-channelization. It is the ability to divide the channel into multiple resource units (sub-channels) that can be used to transmit or receive to or from multiple STAs concurrently. All previous modulations and modulation schemes used the entire channel to communicate between STAs. This behavior was even true for multi-user MIMO (MU-MIMO)._
+- [OFDMA :: How it works :: Frame Exchange Process](https://www.youtube.com/watch?v=owBrkFk9afM) _`video`_
+- OFDMA
+- OFDM VS OFDMA
+
+### `1024-QAM`
+_1024-QAM modulation is also introduced with 802.11ax. 802.11ac supported 256-QAM, and these higher modulation rates increase the number of bits that can be represented in a symbol, effectively increasing the data rate. However, 1024-QAM will require excellent signal-to-noise ratio to function and will only work within short distances. The image below shows the constellations for 256-QAM and 1024-QAM. You can see why a better signal is required as the modulation rates go higher. The target becomes smaller and smaller, and the receiver must be able to process the received signal in a low noise environment to perceive the appropriate target._
+
+### `Uplink MU-MIMO` 
+_Uplink MU-MIMO is added to the standard with 802.11ax as well. 802.11ac introduced downlink-only MU-MIMO, which was not very advantageous in production networks. Time will tell what impact uplink MU-MIMO will have, but it is available as of the 802.11ax amendment._
+
+### `Target Wake Time (TWT)` 
+_Target Wake Time (TWT) is a new power save scheduling ability for 802.11ax, OFDMA-only STAs. The clients request a sleep schedule from the AP, and they can then wake when required based on the schedule; this way, they do not have to wake at predefined intervals individually assigned to each STA. TWT was first introduced in 802.11ah but is more likely to see wide use with the ratification of 802.11ax._
+
+### `BSS Coloring`
+_To allow it to acknowledge communications of varied signal strengths, 802.11ax implements BSS coloring. Each BSS is assigned a color (identifying bits in the PHY layer communications), and BSS transmissions matching the current STA’s BSS color are considered active transmissions at a weaker signal level than those that do not match the current STA’s BSS color. Clearly stated, when a signal is received with the same BSS color as the receiving STA, a lower signal strength threshold is used to defer to the signal and remain silent. When a signal is received with a different BSS color than the receiving STA, a higher signal strength threshold is used to defer to the signal and remain silent. For example, the matching BSS color threshold could be -90 dBm and the non-matching BSS color threshold could be -75 dBm. The actual signal thresholds may be configurable in enterprise systems, and the exact method used at higher layers to process this data is not defined in the 802.11 standard but is instead left to the vendors to control._
+
+### `Dual Band`
+_802.11ax operates in both the 2.4 GHz and 5 GHz frequency bands, unlike 802.11ac, which was 5 GHz-only. This dual-band allowance brings the efficiency gains of 802.11ax into the 2.4 GHz band, which is very congested and will eventually benefit from these gains. The benefit will be eventual because the clients and APs must support 802.11ax to achieve any of the benefits referenced in this section._
+
+
+
+
+
+
+
+
+
+
+
 <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  #                                                               #
@@ -2094,29 +2153,6 @@ _`OFDM vs FDM` - More bandwith & Higher Data Transmission Rate than FDM due Orth
     - 20 MHz bandwith channels | 64 subcarriers (312.5 KHz) | BPSK, QPSK, 16QAM, 64QAM
     - https://youtu.be/TOBFfe_-UFw - https://youtu.be/lwGsdWkfweU  
 - [`OFDM` - Orthogonal Frequency Division Multiplexing - _**(Analog Modulation)**_](https://youtu.be/KCHO7zlU25Q) _@ Sunny_ <br>
-
-## 802.11ax / Wi-Fi 6
-
-### 802.11ax: OFDMA
-_OFDMA implements the resource unit (RU)  Modulation methods include BPSK, QPSK, 16-QAM, 64-QAM, 256-QAM, and 1024-QAM | The High Efficiency (HE) PHY is defined in the 802.11ax-2020 amendment. Orthogonal Frequency Division Multiple Access (OFDMA) is a new modulation scheme introduced to the 802.11 standard with the 802.11ax amendment. OFDMA has been used in other networks and brings useful new features to the 802.11 WLAN. The most exciting feature is what you might call sub-channelization. It is the ability to divide the channel into multiple resource units (sub-channels) that can be used to transmit or receive to or from multiple STAs concurrently. All previous modulations and modulation schemes used the entire channel to communicate between STAs. This behavior was even true for multi-user MIMO (MU-MIMO)._
-- [OFDMA :: How it works :: Frame Exchange Process](https://www.youtube.com/watch?v=owBrkFk9afM) _`video`_
-- OFDMA
-- OFDM VS OFDMA
-
-### `1024-QAM`
-_1024-QAM modulation is also introduced with 802.11ax. 802.11ac supported 256-QAM, and these higher modulation rates increase the number of bits that can be represented in a symbol, effectively increasing the data rate. However, 1024-QAM will require excellent signal-to-noise ratio to function and will only work within short distances. The image below shows the constellations for 256-QAM and 1024-QAM. You can see why a better signal is required as the modulation rates go higher. The target becomes smaller and smaller, and the receiver must be able to process the received signal in a low noise environment to perceive the appropriate target._
-
-### `Uplink MU-MIMO` 
-_Uplink MU-MIMO is added to the standard with 802.11ax as well. 802.11ac introduced downlink-only MU-MIMO, which was not very advantageous in production networks. Time will tell what impact uplink MU-MIMO will have, but it is available as of the 802.11ax amendment._
-
-### `Target Wake Time (TWT)` 
-_Target Wake Time (TWT) is a new power save scheduling ability for 802.11ax, OFDMA-only STAs. The clients request a sleep schedule from the AP, and they can then wake when required based on the schedule; this way, they do not have to wake at predefined intervals individually assigned to each STA. TWT was first introduced in 802.11ah but is more likely to see wide use with the ratification of 802.11ax._
-
-### `BSS Coloring`
-_To allow it to acknowledge communications of varied signal strengths, 802.11ax implements BSS coloring. Each BSS is assigned a color (identifying bits in the PHY layer communications), and BSS transmissions matching the current STA’s BSS color are considered active transmissions at a weaker signal level than those that do not match the current STA’s BSS color. Clearly stated, when a signal is received with the same BSS color as the receiving STA, a lower signal strength threshold is used to defer to the signal and remain silent. When a signal is received with a different BSS color than the receiving STA, a higher signal strength threshold is used to defer to the signal and remain silent. For example, the matching BSS color threshold could be -90 dBm and the non-matching BSS color threshold could be -75 dBm. The actual signal thresholds may be configurable in enterprise systems, and the exact method used at higher layers to process this data is not defined in the 802.11 standard but is instead left to the vendors to control._
-
-### `Dual Band`
-_802.11ax operates in both the 2.4 GHz and 5 GHz frequency bands, unlike 802.11ac, which was 5 GHz-only. This dual-band allowance brings the efficiency gains of 802.11ax into the 2.4 GHz band, which is very congested and will eventually benefit from these gains. The benefit will be eventual because the clients and APs must support 802.11ax to achieve any of the benefits referenced in this section._
 
 ## PCM: Pulse Code Modulation (Analog Phone)
 - [`PCM` - Pulse Code Modulation | **For Analog to Digital conversion** | _composed of 3 steps:_](https://youtu.be/HlGJ6xxbz8s)
