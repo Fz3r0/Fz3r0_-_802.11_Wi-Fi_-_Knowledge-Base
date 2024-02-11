@@ -1005,19 +1005,19 @@ _Data that is NOT present in a 802.11 MAC-frame, but is intepreted coming from t
 
 
 
-# 🪆🛜🦈 802.11 Layer 2: Medium Access (MAC) :: `PCAP`
 
 
 
-## 👑 802.11 MAC Frames
-- [Table 9-32—Beacon frame body | 9.3.3.2 Beacon frame format 824 @ IEEE 802.11-2020]()
-- 
-- [`Fz3r0` 802.11 Frames]()
-    - [Beacon Frame Format | Filters | Exchanges]() 
+# 💊🛜🦈 802.11 MAC Frames
+_Section 9.2.1 of IEEE Std 802.11-2020 (Revision of IEEE Std 802.11-2016) specifies that the general **MAC frame** must consist of a **MAC header**, **frame body**, and a **frame check sequence (FCS)**. MAC frames can be either protocol version 0 (PV0) or protocol version 1 (PV1)._ 
 
-
+## 802.11 MAC Frames: MAC Frame Format
+- [WLAN MAC Frame Structure @ _Math Works_](https://es.mathworks.com/help/wlan/gs/wlan-mac-frame-structure.html) _`tables + diagrams + info`_
+- [802.11 MAC Header @ _Extreme Networks_](https://www.youtube.com/watch?v=Foi5ZdqLQWs) _`video`_
+- [802.11 MAC Header Breakdown @ _Aruba Comunity_](https://community.arubanetworks.com/browse/articles/blogviewer?blogkey=b101b806-a54b-4d8a-aba3-90f44dd3f94c) _`PCAP Analysys + diagrams + info`_
 
 ## 🛜⚙️💊 IEEE 802.11-2020 9.3.3 (PV0) `Management Frames`
+- [802.11 Mgmt Frame Types @ _nayarasi_](https://mrncciew.com/2014/09/29/cwap-802-11-mgmt-frame-types/) _`nayarasi`_
 - [`Frame Format` :: Management Frames]() 
 
 ### 📡🔍⚙️ 802.11 Management Frames: `Beacon`
@@ -1033,7 +1033,11 @@ _STAs send Probe Request on Active Scanning or after a Beacon in Passive Scannin
 
 ### 🚪❓⚙️ 802.11 Management Frames: `Authentication Request` & `Authentication Response`
 
-### Control Frames
+
+
+
+
+## Control Frames
 - [ACK]() Allways after a unicast frame |
 - []()
 
