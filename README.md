@@ -1568,39 +1568,39 @@ _The 4-way-handshake is used for the generation of a PTK. It confirms that the S
 
 
 
-## 🗝️🔐🏢 00-0F-AC-01: `802.1X Protocol` & `EAP (Extensible Authentication Protocol)`
+# 🗝️🔐🏢 00-0F-AC-01: `802.1X Protocol` & `EAP (Extensible Authentication Protocol)`
 _EAP is the whole Framework used for implement authentication, and it uses 802.1X as a part of it | 802.1X is a port access protocol designed to secure networks through authentication. As a result, this type of authentication method is extremely useful in the Wi-Fi environment due to the nature of the medium. If a Wi-Fi user authenticates through 802.1X to access the network, a virtual port is opened on the access point, allowing communication. If not authorized correctly, no virtual port will be available, and communications will be blocked. | EAP is used to transmit authentication information between the "Supplicant" (STA) and the "Authentication Server" (Microsoft IAS or AD, RADIUS, etc). The specific type of EAP actually manages and defines the authentication process. The AP acting as the "Authenticator" serves as a proxy facilitating communication between the "Supplicant" (STA) <--> Authentication Server (RADIUS, Windows Server, etc). | There are upwards of 40 EAP methods, including several commonly used ones that are often called inner methods or tunneled EAP methods. Some of the most commonly deployed EAP authentication types include EAP-MD-5, EAP-TLS, EAP-PEAP, EAP-TTLS, EAP-Fast, and Cisco LEAP._ <br>
 
 **Basic components in 802.1X authentication:** <br>
 **Supplicant**: A software client running on the Wi-Fi workstation (STA).<br>
 **Authenticator** or **NAS**: The Wi-Fi Access Point (AP). <br>
 **Authentication Server**: An authentication database, typically a RADIUS server such as Cisco ACS, Funk Steel-Belted RADIUS, or Microsoft IAS. <br>
-
+- [EAP Basics](https://mrncciew.com/2014/08/24/cwsp-eap-basics/) _`nayarasi`_
 - [General: 802.1x Authentication EAP Types _@Netally_](https://support.netally.com/kbhome/kbarticle/?id=e56b8e5c-b519-40dd-b964-f3c1a74fbdc4) _`list`_
 - [802.1X Overview and EAP Types  @ _Intel_](https://www.intel.com/content/www/us/en/support/articles/000006999/wireless/legacy-intel-wireless-products.html) _`info + tables`_
 - [Descripción general de `802.1X` y tipos de `EAP` @ _Intel_](https://www.intel.la/content/www/xl/es/support/articles/000006999/wireless/legacy-intel-wireless-products.html) _`info + tables Español`_
 - [EAP: Extensible Authentication Protocol: 802.1X-EAP different types frames exchanges](https://www.techtarget.com/searchsecurity/definition/Extensible-Authentication-Protocol-EAP) _`info + frames exchanges + tables`_
 - [`IEEE 802.1X` :: Standard for `PNAC`: port-based Network Access Control](https://en.wikipedia.org/wiki/IEEE_802.1X) _`wiki`_
 
-### 🪪🏢🗝️ EAP: `Common EAP Authentication Types`
+## 🪪🏢🗝️ EAP: `Common EAP Authentication Types`
 - [`EAP-MD5`: Message Digest 5](https://www.intel.com/content/www/us/en/support/articles/000006999/wireless/legacy-intel-wireless-products.html) Basic EAP support | Not recommended for Wi-Fi implementations (insecure) | Non-Dynamic per session keys
+- [`LEAP` (Lightweight Extensible Authentication Protocol)](https://www.intel.com/content/www/us/en/support/articles/000006999/wireless/legacy-intel-wireless-products.html) Not recommended for Wi-Fi implementations (insecure) | Used primarily in Cisco Aironet* WLANs & other Cisco compatible devices. 
+- [`PEAP` (Protected Extensible Authentication Protocol)](https://www.intel.com/content/www/us/en/support/articles/000006999/wireless/legacy-intel-wireless-products.html) Tunneling between PEAP clients and an authentication server. Microsoft, Cisco, and RSA Security developed PEAP.
 - [`EAP-TLS`: Transport Layer Security](https://www.intel.com/content/www/us/en/support/articles/000006999/wireless/legacy-intel-wireless-products.html) Certificate-Based & Mutual Auth (Client-Server) | Dynamically generate user-based & session-based WEP keys
 - [`EAP-TTLS`: Tunneled Transport Layer Security](https://www.intel.com/content/www/us/en/support/articles/000006999/wireless/legacy-intel-wireless-products.html) Extension of EAP-TLS. Unlike EAP-TLS, EAP-TTLS requires only server-side certificates.
 - [`EAP-FAST`: Flexible Authentication via Secure Tunneling](https://www.intel.com/content/www/us/en/support/articles/000006999/wireless/legacy-intel-wireless-products.html) by Cisco* | Instead of using certificates, authenticates by PAC
 - [`EAP-SIM`: Extensible Authentication Protocol Method for GSM Subscriber Identity](https://www.intel.com/content/www/us/en/support/articles/000006999/wireless/legacy-intel-wireless-products.html) Uses the GSM SIM (cellular network). 
 - [`EAP-AKA`: Extensible Authentication Protocol Method for UMTS Authentication and Key Agreement](https://www.intel.com/content/www/us/en/support/articles/000006999/wireless/legacy-intel-wireless-products.html) uses UMTS & USIM modules | USIM is a special smart card used with cellular networks
-- [`LEAP` (Lightweight Extensible Authentication Protocol)](https://www.intel.com/content/www/us/en/support/articles/000006999/wireless/legacy-intel-wireless-products.html) Used primarily in Cisco Aironet* WLANs & other Cisco compatible devices. 
-- [`PEAP` (Protected Extensible Authentication Protocol)](https://www.intel.com/content/www/us/en/support/articles/000006999/wireless/legacy-intel-wireless-products.html) Tunneling between PEAP clients and an authentication server. Microsoft, Cisco, and RSA Security developed PEAP.
 
-### 🪪🏢🗝️ Authentication Types Differences
+## 🪪🏢🗝️ Authentication Types Differences
 - [EAP-TLS vs PEAP-MSCHAPv2 vs EAP-TTLS/PAP](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/36581da2-0433-47a3-8a1c-4c972d7b83dc) _`table`_
 - [PEAP vs EAP-TLS: Differences](https://www.criticaldesign.net/post/peap-vs-eap-tls) _`info`_
 - [EAP-TLS vs. PEAP-MSCHAPv2: Which Authentication Protocol is Superior?](https://www.securew2.com/blog/eap-tls-vs-peap-mschapv2-which-authentication-protocol-is-superior) _`info`_
 
-### 🪪🏢🗝️ EAP: TLS Handshakes
+## 🪪🏢🗝️ EAP: TLS Handshakes
 - [HTTPS: SSL/TLS Handshake](https://www.reydes.com/d/?q=HTTPS_SSL_TLS_Handshake)
 
-### 🔐🔄💊 802.1X-EAP: Frame & Packet Exchange <br><br>
+## 🔐🔄💊 802.1X-EAP: Frame & Packet Exchange <br><br>
 **🔄 BASIC EAP MD5 _(Depreciated Method)_** <br>
 ✅ After State 3 Completed OK: 📡⬇️ <br>
 Auhtenticator (**AP**): 💊 Request Identity ➡️ **STA** <br>
@@ -1684,6 +1684,13 @@ Supplicant (**STA**) & Auhtenticator (**AP**): Key Exchange 🔐↔️🗝️ <b
 - [Tunneled EAP Methods: Frame Exchange](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/f90635e2-b72b-4c8c-beac-4237c886ba3b) _`Frame Exchange`_
 - [Wired Capture Example: Incorrect Password](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/9bf57d54-f7e0-481f-8cb8-203fc178adfb) _`PCAP Frame Exchange`_
 - [Wired Capture Example: Silent Dosconnects](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/73bdf52f-92c2-4f95-8878-1ad27348ac50) _`PCAP Frame Exchange`_
+
+
+## EAP: PEAP - Protected Extensible Authentication Protocol
+_EAP-PEAP (Protected Extensible Authentication Protocol), creates an encrypted TLS tunnel withing which the supplicant’s inner identity is validated. Sometime it is referred as EAP within EAP. There are 3 major versions of PEAP._
+- [EAP PEAP](https://mrncciew.com/2014/08/25/cwsp-eap-peap/) _`nayarai`_
+
+## EAP: 
 
 
 
