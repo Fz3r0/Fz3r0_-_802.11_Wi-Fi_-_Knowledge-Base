@@ -145,15 +145,13 @@
 
 ## Who am I
 
-I'm just a very lucky person who was born surrounded by IBM computers and walls of floppy disks back in the 80's...
+I'm just a very lucky person who was born surrounded by Silicon, IBM computers, and walls of floppy disks back in the 80's...
 
-When I was a little kid my father took me to a Data Center inside the Company where he worked, then I met a very funny guy with long hair and a beard (The Systems Engineer) who allowed me to play Prince of Persia in MS-DOS surrounded by those huge computers with that peculiar smell of silicon & technology inside that huge room, when I came back home I have never left the IBM 5170 that we had there... Since then I decided to focus on one thing: Let my hair and beard grow!... (and dedicate my life to Computer Science and Information and Communication Technologies) and here I am!
-
-Today I'm a Level 3 NOC Engineer focusing on high-level troubleshooting, analytics, security, support and network performance design & optimization. I have experience with vendors such as: Cisco, Zyxel, Ruckus, Fortinet, SonicWall, MikrotTik, Aruba, Starlink, Huawei, Microsoft, Linux... but also I have some years of background experience with other IT branches like programming, scripting, data base administration, pentesting, ethical hacking and analytics.
+Today I'm a Level 3 NOC Engineer specialized on high-level troubleshooting, analytics, security, support and network performance design & optimization focusing in 802.3 Ethernet Networks & 802.11 Wireless Networks (Wi-Fi). I have experience with vendors such as: Cisco, Zyxel, Ruckus, Fortinet, SonicWall, MikrotTik, Aruba, Starlink, Huawei, Microsoft, Linux... but also I have some years of background experience with other IT branches like programming, scripting, data base administration, pentesting, ethical hacking and analytics.
 
 My day-to-day tasks are Multi-Layer Packet & Frame Exchange analysis for a wide range of 802.3 Ethernet & 802.11 WiFi Protocols, Reverse Engineering, Hex modification, Packet Tampering & Injection. Proficient in tools like Wireshark, TCP Dump, Scappy, NMap, Python, HEX Editors, iPerf, etc. Experience with Network Security, Layer 2 & Wireless Pentesting; Defensive Security SIEM, IDS/IPS, DLP & AV... and some CTF in my spare time!
 
-I also configure and manage network devices, including Next-Generation Firewalls, 802.11 Wireless Infraestructure, Routing, Switching and Services for high-density network environments, within verticals such as International Airports, Hospitality, Health, Retail, Education, Government & Public Transportation, as well as remote locations with Satellite-Only Connections.
+I also configure & design the architecture for network devices including 802.11 Wireless Infraestructure, Next-Generation Firewalls, Routing, Switching and Different types of Services for high-density network environments, within verticals such as International Airports, Hospitality, Health, Retail, Education, Government & Public Transportation, as well as remote locations with Satellite-Only Connections.
 
 Please check out the links of my Social Networks that I've placed above including my LinkedIn, where you will find more information regarding my professional career. Greetings and thank you for reading! 
 
@@ -161,7 +159,7 @@ Please check out the links of my Social Networks that I've placed above includin
 
 _"I have delved deep into the abyss of the mind, attuned to the agonized cries and clamors for respite that lurk behind the veils, thereby discerning the selfsame sprout of obsession that blooms in cognition._
 
-_I am the wraith within the Machine, the ghost in the Shell, the darkness that embrace the Network, the Decipherer of ancient runes, the one who commands the air wave after wave after wave after wave after wave..._
+_I am the wraith within the Machine, the ghost in the Shell, the darkness that embrace the Network, the Decipherer of ancient runes, the one who commands the air wave after wave after wave after wave after wave... I can see deep into your soul, I can read your mind, this are no tricks, this is true power_
 
 _In the mist of the night you may see me come, where shadows move and demons lie..._
 
