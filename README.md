@@ -1615,6 +1615,45 @@ Auhtenticator (**AP**): 💊 Access Success ➡️ **STA** <br>
 Supplicant (**STA**) & Auhtenticator (**AP**): Key Exchange ↔️🗝️ <br>
 ✅🗝️ State 4 OK!!! STA Full Associated to AP using 802.1X-EAP Encryption & Cipher. <br>
 
+````py
+(Previous: State Machine #3 = STA associated to AP)
+.
+.
+.
+####################################################################################################################
+                                        🏁 BASIC EAP MD5 (Depreciated Method) 🏁
+####################################################################################################################
+
+🤳🏾 STA = Supplicant                        📡 AP = Authenticator                  ☁️ RADIUS = Authention Service
+
+🤳🏾 Supplicant  ⬅️  <<<--------------    {[💊🛜 Request Identity]}
+
+{[💊🛜 Identity]}  -------------->>>    ➡️ 📡 AP = Authenticator                                    
+           
+                                          {[💊🛜 Access Request]}    -------------->>>  ➡️ ☁️ RADIUS
+
+                                         📡 AP = Authenticator ⬅️    <<<--------------  {[💊🛜 Challenge (text)]}     
+🤳🏾 Supplicant  ⬅️  <<<--------------    {[💊🛜 Challenge (text)]} 
+
+{[💊🛜 Challenge Resp]}   ------->>>    ➡️ 📡 AP = Authenticator                                    
+                                          {[💊🛜 Challenge Resp]}    -------------->>>  ➡️ ☁️ RADIUS
+
+                                         📡 AP = Authenticator ⬅️    <<<--------------  {[💊🛜 Access Accept]}     
+
+🤳🏾 Supplicant  ⬅️  <<<--------------    {[💊🛜 Access Success]}
+.
+.
+.
+(Next: Key Exchange (4-Way-Handshake))
+
+####################################################################################################################
+                          🏁 STATE MACHINE = 4 :: client STA associated via 802.1X-EAP(MD5)
+                          Open System Authentication/Association + 802.1X-EAP Secuirty Passed
+####################################################################################################################
+````
+
+
+
 **🔄 TUNNELED EAP _(Conceptual & General Actual Secure Method)_** <br>
 ✅ After State 3: 📡⬇️ <br>
 Auhtenticator (**AP**): 💊 Request Identity ➡️ **STA** <br>
