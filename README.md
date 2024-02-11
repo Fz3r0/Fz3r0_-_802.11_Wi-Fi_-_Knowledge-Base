@@ -117,8 +117,7 @@
 # 📡🗂️ `INDEX` 🗂️📡</h1>
 
 ### 🏁🎬 `Introduction`
-- `whoami` **_root@Fz3r0💀_**
-- `Contact`
+- `whoami` & `contact` **_root@Fz3r0💀_**
 ### 📖🔠❓ **`Definitions`, `Acronyms` & `Abbreviations`**
 - `Networking`: Definitions & Acronyms
 - `802.11 Wireless`: Definitions & Acronyms
