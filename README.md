@@ -2515,6 +2515,7 @@ Time synchronization is essential in Wi-Fi networks to ensure reliable and error
 
 ## ⚙️🏗️🛰️ Components of 802.11 WLAN Network Architecture
 _The IEEE 802.11 architecture consists of several components that interact to provide a WLAN that supports STA mobility transparently to upper layers._
+- [CWNA Chapter 11: WLAN Architecture/](https://techimike.com/cwna-chapter-11-wlan-architecture/) _`whitepaper`_
 - [Components of 802.11 WLAN Network Architecture]()
 - [`Fz3r0`: Services Provided by 802.11 Devices](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/802.11_Design/802.11_Network_Architecture/Services-Provided-by-802.11-Devices.md)
 
@@ -2581,12 +2582,31 @@ _In High Scale or Enterprise WLAN Networking is not recomended to use IBSS Indep
     - 🖧[**`BSA`**: Basic Service Area](https://www.wifi-professionals.com/2019/03/802-11-topologies-aka-service-sets) `Infrestructure` Physical area which is covered by one access point | AP Cell
     - 🖧[**`LAN`** + **`WLAN`**: Integration with non-IEEE-802.11 LANs]()
 
-## Network Planes
+## Network Planes: Control, Data, Management
+_The control plane, management plane, and data plane are conceptual planes that include different types of communications within networks. | The control plane is about network control protocols, for example, routing protocols and switching protocols, along with WLAN solutions like radio resource management (RRM) and automated radio management (ARM). | The management plane is focused on managing the devices and monitoring them, such as WLAN configuration and monitoring. | The data plane is focused on user data transfer. The users care about the data plane, but the control and management planes allow the network administrators to ensure that the users get the performance they require out of the data plane. | Consider RRM as an example and how it relates to the different planes. In the control plane, RRM operates. In the management plane, RRM is configured. In the user plane, data is sent on a WLAN that uses RRM for radio configuration management. In the end, that which occurs in the control and management planes impacts the data plane functionality and performance._
+````py
+## Centralized WLAN Architecture uses a central WLC that resides in the core of the network.  Autonomous APs are replaced with controller-based or lightweight APs.  In this case, all three planes move to the controller.
+
+Management Plane:  APs configured and managed from the WLC
+Control Plane:  Adaptive RF, load balancing, roaming handoff and other mechanisms exist on the WLC
+Data Plane:  The WLC exists as a data distribution point for user traffic.  APs tunnel all user traffic to the controller.
+````
+- [The foundation of WLAN architecure: Network Planes](https://techimike.com/cwna-chapter-11-wlan-architecture/)
 - [Control, Management & Data Plane: Wireless Networks](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/802.11_Design/802.11_Network_Architecture/Network_Planes/Wireless_Control-Management-%26-Data-Planes.md)
-    - [Control Plane]() Controlled by a controller :: Data :: LWAPP or CAPWAP
-    - 
 
+### Network Planes: `Management Plane`
+_The management plane is defined by administrative network management, administration and monitoring.  Here we would have a network-management solution used to monitor network devices.  Within 802.11 the functions of the management plane are: WLAN Configuration, WLAN Monitoring and Reporting, WLAN Firmware Management._
+- [The foundation of WLAN architecure: Management Plane](https://techimike.com/cwna-chapter-11-wlan-architecture/)
 
+### Network Planes: `Control Plane`
+_The control plane consists of control or signaling information and is often defined as network intelligence or protocols.  An example would be CAM tables and STP used by L2 switches for data forwarding.  Within 802.11 we have the following examples: | Adapative RF or RRM: Where coordinated channel and power settings for multiple APs are provided. |  Roaming Mechanisms:  This provides support for roaming handoffs between APs. | Client and Load Balancing:  Client load and performance metrics are collected and shared between APs to improve the WLAN experience | Mesh Protocols:  WLAN vendors use either L2 or L3 routing protocols to move user data between mesh APs._
+- [The foundation of WLAN architecure: Control Plane](https://techimike.com/cwna-chapter-11-wlan-architecture/)
+  
+### Network Planes: `Data Plane`
+_Also known as the user plane, the data plane is where the user traffic is actually forwarded in a network.  An example is an individual router where IP packets are forwarded.  The two wireless devices that typically participate here are the AP and the WLC._
+- [The foundation of WLAN architecure: Data Plane](https://techimike.com/cwna-chapter-11-wlan-architecture/)
+
+  
 ---
 
 ## More
