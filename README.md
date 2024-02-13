@@ -142,7 +142,7 @@
 
 # 📡🗂️ `Introduction` 🗂️📡</h1>
 
-## 💀🎩 Who am I
+## 💀🎩 Who am I & Contact
 
 I'm just a very lucky person who was born surrounded by Silicon, IBM computers, and walls of floppy disks back in the 80's...
 
@@ -154,6 +154,10 @@ I also configure & design the architecture for network devices including 802.11 
 
 Please check out the links of my Social Networks that I've placed in the "Contact" section including my LinkedIn, where you will find more information regarding my professional career. Greetings and thank you for reading! 
 
+### Contact:
+
+<p align="center"> <a href="https://twitter.com/Fz3r0_OPs" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/94720207/168743521-b8c142ae-e221-40c9-8d1f-bd9520027717.png" alt="twitter"> </a>   &emsp; &emsp; &emsp;   <a href="https://github.com/Fz3r0" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/94720207/168743591-ca20efa5-f692-46b0-ba84-f2681486009f.png" alt="github"> </a>   &emsp; &emsp; &emsp;   <a href="https://www.linkedin.com/in/fzerocarlos/" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/94720207/168743658-0a5101f0-49fd-494f-9a79-cf70ad860d12.png" alt="github"> </a> </p>
+
 ---
 
 _"I have delved deep into the abyss of the mind, attuned to the agonized cries and clamors for respite that lurk behind the veils, thereby discerning the selfsame sprout of obsession that blooms in cognition._
@@ -164,11 +168,7 @@ _In the mist of the night you may see me come, where shadows move and demons lie
 
 _...I am Fz3r0 and the Sun no longer rises..."_ 💀🎩
 
-## 📧 Contact
-
-Follow my social networks and contact me by sending a message:
-
-<p align="center"> <a href="https://twitter.com/Fz3r0_OPs" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/94720207/168743521-b8c142ae-e221-40c9-8d1f-bd9520027717.png" alt="twitter"> </a>   &emsp; &emsp; &emsp;   <a href="https://github.com/Fz3r0" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/94720207/168743591-ca20efa5-f692-46b0-ba84-f2681486009f.png" alt="github"> </a>   &emsp; &emsp; &emsp;   <a href="https://www.linkedin.com/in/fzerocarlos/" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/94720207/168743658-0a5101f0-49fd-494f-9a79-cf70ad860d12.png" alt="github"> </a> </p>
+<br> <br> 
 
 <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
