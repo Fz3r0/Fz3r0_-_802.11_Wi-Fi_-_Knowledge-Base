@@ -3335,6 +3335,7 @@ _Aircrack-ng is basically a suite of tools that has been crafted to achieve obje
 - [CWAP: Engineer Profile](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Certifications/CWAP/2-CWAP_Engineer_Profile.md)
 - [CWAP: Conocimiento Requerido para CWAP-402](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Certifications/CWAP/2-CWAP_Engineer_Profile.md)
 - [La analogía del CWAP y una expedición al K2](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Certifications/CWAP/4-Analogia_CWAP_%26_K2.md) _`¡Avanzar a morir!`_
+- [CWAP flashcard materials](https://www.mcwireless.co.uk/post/cwap-403-chapter-2-protocol-analysis)
 
 
 ## Specific Protocol Analysis
