@@ -1945,6 +1945,7 @@ Default Port: 1812
 
 # 🛜🚦🛑 Medium Access Methods & QoS (Quality of Service)
 _Once a STA is connected to a WLAN via an AP, the STA need to communicate somehow. This is where Medium Access takes place! The "Medium" is RF (Radio Frequency) & is shared, if there are 60 devices (STA) connected to an AP & other 30 connected to another AP and both are on same channel, those are 90 devices sharing the medium or the same Frequency Space for RF (AKA "air" or "airtime"). The STAs & APs must have a way to "negotiate" who is gonna "talk" and "when" | By other hand, we need to know which frames has more priority in the network and needs to go first, that's what QoS is all about | MAC methods = How to get acces to the medium | QoS = Decide what to put on that medium first once medium access is gained._
+- [Wireless Contention Mechanisms :: Wireless Collision Avoidance – CSMA/CA Though DCF/EDCF :: Full Info for CWNA/CWAP @ _howiwifi.com_](https://howiwifi.com/2020/06/30/wireless-contention-mechanisms/) _`howiwifi`_
 
 ## 👨🏻‍⚖️🚦 Arbitration & DCF: `Network Arbitration`
 _Arbitration is just deciding "who" is gonna talk "when", in WLAN Networks there are rules to determine when STA can transmit into the medium (RF) | There are 2 types of methods: Contention Methods & Contention Free Methods (Token Ring Legacy = Contention Free | CSM-CA & DCF (default Wi-Fi), CSMA-CD (eth) modern = Contention Method)_
