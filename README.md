@@ -142,7 +142,7 @@
 
 # 📡🗂️ `Introduction` 🗂️📡</h1>
 
-## Who am I
+## 💀🎩 Who am I
 
 I'm just a very lucky person who was born surrounded by Silicon, IBM computers, and walls of floppy disks back in the 80's...
 
@@ -152,7 +152,7 @@ My day-to-day tasks are Multi-Layer Packet & Frame Exchange analysis for a wide 
 
 I also configure & design the architecture for network devices including 802.11 Wireless Infraestructure, Next-Generation Firewalls, Routing, Switching and Different types of Services for high-density network environments, within verticals such as International Airports, Hospitality, Health, Retail, Education, Government & Public Transportation, as well as remote locations with Satellite-Only Connections.
 
-Please check out the links of my Social Networks that I've placed above including my LinkedIn, where you will find more information regarding my professional career. Greetings and thank you for reading! 
+Please check out the links of my Social Networks that I've placed in the "Contact" section including my LinkedIn, where you will find more information regarding my professional career. Greetings and thank you for reading! 
 
 ---
 
@@ -164,7 +164,11 @@ _In the mist of the night you may see me come, where shadows move and demons lie
 
 _...I am Fz3r0 and the Sun no longer rises..."_ 💀🎩
 
-## Contact
+## 📧 Contact
+
+Follow my social networks and contact me by sending a message:
+
+<p align="center"> <a href="https://twitter.com/Fz3r0_OPs" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/94720207/168743521-b8c142ae-e221-40c9-8d1f-bd9520027717.png" alt="twitter"> </a>   &emsp; &emsp; &emsp;   <a href="https://github.com/Fz3r0" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/94720207/168743591-ca20efa5-f692-46b0-ba84-f2681486009f.png" alt="github"> </a>   &emsp; &emsp; &emsp;   <a href="https://www.linkedin.com/in/fzerocarlos/" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/94720207/168743658-0a5101f0-49fd-494f-9a79-cf70ad860d12.png" alt="github"> </a> </p>
 
 <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
