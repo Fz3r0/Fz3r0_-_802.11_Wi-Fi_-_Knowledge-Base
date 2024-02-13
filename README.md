@@ -142,13 +142,15 @@
 
 # 📡🗂️ `Introduction` 🗂️📡
 
-- In this repository "Fz3r0 802.11 Wi-Fi Knowledge Base", I compile information from various reliable sources, previously reviewed and studied by myself prior to inclusion, delving into aspects of **IEEE 802.11 wireless technology**, better known as **Wi-Fi**.
+- In this repository "Fz3r0 802.11 Wi-Fi Knowledge Base", I compile information from various reliable sources, previously curated and studied by myself prior to inclusion, delving into aspects of **IEEE 802.11 Wireless Networks Technology**, better known as **Wi-Fi**.
 
-- This repository primarily aggregates publicly available and freely accessible sources of information, enabling anyone to study them. However, in exceptional cases, paid or private resources are included to ensure comprehensive coverage of information.
+- This repository primarily aggregates publicly available and freely accessible sources of information from Internet, enabling anyone to study them. However, in exceptional cases, paid or private resources are included to ensure comprehensive coverage of information. 
   
-- Some of the shared resources are created by myself and are hosted within the same repository as scripts, source code, packet captures, summaries, diagrams, tables, configurations, lists, etc.
+- Some of the shared resources are created by myself and are hosted within the repository including: scripts, source code, packet captures, labs, summaries, diagrams, tables, configuration files, lists, etc.
 
-- The purpose is to gather comprehensive knowledge covering all aspects of the IEEE 802.11 standard, from basic fundamentals to advanced topics, encompassing the history of wireless networks to the most advanced technical configurations of the latest devices in the market.
+- The purpose of this repository is to gather comprehensive knowledge covering all aspects of the IEEE 802.11 standard, from basic fundamentals to advanced topics, encompassing the history of wireless networks to the most advanced technical configurations of the latest devices in the market.
+
+- Some resources included in this repository are not only and strictly information about IEEE 802.11 (Wi-Fi), due to the nature of the Technology and the compatibility with other kind of Networks and Devices, some resources includes information about other branches of Information & Communitacion Technologies (ICTs) & Networking. 
 
 - The majority of shared resources are in English; however, some are in Spanish, as it is my native language, and I have found very comprehensive resources with excellent information in Spanish. Nonetheless, I endeavor to share resources in English to make it a more universal language. I encourage my Spanish-speaking friends to learn English as it is highly important in technology-related fields to have proficiency in this language.
 
