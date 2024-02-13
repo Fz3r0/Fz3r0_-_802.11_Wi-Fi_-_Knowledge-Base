@@ -140,7 +140,15 @@
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
 
-# 📡🗂️ `Introduction` 🗂️📡</h1>
+# 📡🗂️ `Introduction` 🗂️📡
+
+In this repository "Fz3r0 802.11 Wi-Fi Knowledge Base", I compile information from various reliable sources, previously reviewed and studied by myself prior to inclusion, delving into aspects of **IEEE 802.11 wireless technology**, better known as **Wi-Fi**.
+
+The purpose is to gather comprehensive knowledge covering all aspects of the IEEE 802.11 standard, from basic fundamentals to advanced topics, encompassing the history of wireless networks to the most advanced technical configurations of the latest devices in the market.
+
+This repository primarily aggregates publicly available and freely accessible sources of information, enabling anyone to study them. However, in exceptional cases, paid or private resources are included to ensure comprehensive coverage of information.
+
+Originally conceived to centralize my own study materials for certifications such as CWNA, CWAP, CWDP, CWSP, this repository has evolved into a highly comprehensive index, serving as a centralized resource or cheatsheet containing all information, from the essential to the advanced, for a wireless engineer.
 
 ## 💀🎩 Who am I & Contact
 
