@@ -146,7 +146,7 @@ In this repository "Fz3r0 802.11 Wi-Fi Knowledge Base", I compile information fr
 
 The purpose is to gather comprehensive knowledge covering all aspects of the IEEE 802.11 standard, from basic fundamentals to advanced topics, encompassing the history of wireless networks to the most advanced technical configurations of the latest devices in the market.
 
-This repository primarily aggregates publicly available and freely accessible sources of information, enabling anyone to study them. However, in exceptional cases, paid or private resources are included to ensure comprehensive coverage of information.
+This repository primarily aggregates publicly available and freely accessible sources of information, enabling anyone to study them. However, in exceptional cases, paid or private resources are included to ensure comprehensive coverage of information. Some of the shared resources are created by myself and are hosted within the same repository as scripts, source code, packet captures, summaries, diagrams, tables, configurations, lists, etc.
 
 Originally conceived to centralize my own study materials for certifications such as CWNA, CWAP, CWDP, CWSP, this repository has evolved into a highly comprehensive index, serving as a centralized resource or cheatsheet containing all information, from the essential to the advanced, for a wireless engineer.
 
