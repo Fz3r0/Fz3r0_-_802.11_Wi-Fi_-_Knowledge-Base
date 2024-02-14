@@ -2759,7 +2759,14 @@ _Also known as the user plane, the data plane is where the user traffic is actua
 
 
 
+## 802.11 Wi-Fi: VoIP Troubleshooting
 
+### VoIP Best Practices
+````py
+RSSI     =    -68db or more
+SNR      =    20+ SNR / 25+ SNR
+latency  =    (ping to another remote device involved in the call)     = 300ms or less
+````
 
 
 
