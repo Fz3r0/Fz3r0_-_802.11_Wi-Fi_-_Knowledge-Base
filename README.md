@@ -1651,6 +1651,7 @@ _EAP is the whole Framework used for implement authentication, and it uses 802.1
 **Supplicant**: A software client running on the Wi-Fi workstation (STA).<br>
 **Authenticator** or **NAS**: The Wi-Fi Access Point (AP). <br>
 **Authentication Server**: An authentication database, typically a RADIUS server such as Cisco ACS, Funk Steel-Belted RADIUS, or Microsoft IAS. <br>
+- [Fundamentos de EAP @ _hellofriend.mx_](https://hellofriend.mx/2023/04/08/eap/) _`hellofriend.mx`_
 - [EAP Basics](https://mrncciew.com/2014/08/24/cwsp-eap-basics/) _`nayarasi`_
 - [General: 802.1x Authentication EAP Types _@Netally_](https://support.netally.com/kbhome/kbarticle/?id=e56b8e5c-b519-40dd-b964-f3c1a74fbdc4) _`list`_
 - [802.1X Overview and EAP Types  @ _Intel_](https://www.intel.com/content/www/us/en/support/articles/000006999/wireless/legacy-intel-wireless-products.html) _`info + tables`_
