@@ -1365,6 +1365,10 @@ _These are the Authentication Methods a STA can use to access to a BSS | IEEE St
     - [🌉 `SAE`:`Simultaneous Authentication of Equals` :: `3`]() `802.11s-mesh` Diffie-Hellman / Mesh
     - [🚀 `FILS`: `Fast Inistial Link Setup:: `4`](https://mrncciew.com/2023/09/25/fils-fast-initial-link-setup/) Minimize the time required for the initial link setup (for high density)
 
+### 📡🪪 Wi-Fi Connection Manager Protocols
+_To facilitate Wi-Fi connectivity, the industry introduced WISPr 1.0, a protocol which automated the exchange of user name/password credentials with public Wi-Fi HotSpots. | In 2010, Accuris introduced WISPr 1+ extensions to the WISPr protocol which overcame the security flaws and subscriber management complexity of the initial specification. | Today WISPr 1+ is used by Wi-Fi roaming service providers worldwide to offer seamless, secure access and authentication on WISPr-enabled Wi-Fi networks. | Wi-Fi Hotspots need to support 802.1X technology as part of a HotSpot 2.0 upgrade. While many do, WISPr continues to be the predominant access mechanism. With WISPr 1+, service providers are able to bring a SIM-like authentication to non-SIM devices and non-802.1X Wi-Fi alike, and to an installed base of Smartphones which doesn’t support EAP-SIM/AKA today._
+- [Connection Manager Protocols Differences :: WISPr 1.0 VS 802.1X VS Passpoint Release 2 VS WISPr 1+](https://info.accuris-networks.com/hubfs/Documents/WISPr1_DS-07Jan16.pdf)
+
 ## 🛡️🔓🪪 Authentication Methods: `Open System Authentication`
 _Once a client station is discover a SSID (Probe Request/Response or listening to Beacons) it move to Join phase. This exchange comprise of at least 4 frames || Open System authentication should never fail || Init method of authentication used by most modern WLANs || RSN like 802.1X or PSK is performed later (state 3 > 4) || There is no "authentication response frame", it's just an "autentication frame" with another status code value || Association process is similar to authentication, in this caso we do have "authentication request" & "authentication response" (both ACKed) ||_
 
