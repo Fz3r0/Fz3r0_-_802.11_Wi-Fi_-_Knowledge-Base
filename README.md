@@ -3308,6 +3308,9 @@ _Aircrack-ng is basically a suite of tools that has been crafted to achieve obje
 ## 802.1X-EAP Attacking
 - [Attacking EAP Protocols](https://etutorials.org/Networking/Wireless+lan+security/Chapter+6.+Wireless+Vulnerabilities/Attacks+on+EAP+Protocols/)
 
+## Attacking Home & SOHO Routers
+- [Your not so "Home Office" - SOHO Hacking at Pwn2Own _@ NCC Group_](https://conference.hitb.org/files/hitbsecconf2023ams/materials/D1T1%20-%20Your%20Not%20So%20Home%20Office%20-%20Soho%20Hacking%20at%20Pwn2Own%20-%20McCaulay%20Hudson%20&%20Alex%20Plaskett.pdf)
+- [OffensiveCon22 - Pwn2Own’ing Your Router Over the Internet @ _Radek Domanski & Pedro Ribeiro_](https://www.youtube.com/watch?v=nnAxXnjsbUI)
 ---
 
 
