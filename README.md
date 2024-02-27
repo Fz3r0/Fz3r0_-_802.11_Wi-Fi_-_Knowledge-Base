@@ -2534,14 +2534,15 @@ Time synchronization is essential in Wi-Fi networks to ensure reliable and error
 
 ### Gain & Bandwith
 - [`Gain` & `Bandwith`: Bigger Aint Always Better @ Bad-Fi](https://badfi.com/blog/2016/1/25/bigger-aint-always-better) `best practices`
+- [`Gain` & `Green` :: Good Wi-Fi Design is NOT about the GREEN](https://www.youtube.com/watch?v=4bvulueIKkQ)
 
 ### Bandwith, Data Rate & Throughput
 - [Why speed tests aren’t always the answer when troubleshooting Wi-Fi networks](https://www.thepacketologist.com/2023/12/why-speed-tests-arent-always-the-answer-when-troubleshooting/)
 
 ### AP placement
-
-### AP location
 - [`Hallways` :: Wi-Fi Design: APs in Hallways](https://blogs.arubanetworks.com/solutions/wi-fi-design-aps-in-hallways/)
+- [`Hallways` :: Do NOT Put APs in Hallways](https://www.youtube.com/watch?app=desktop&v=cYvP8Ck2zDY)
+- [`Ceiling` :: Do Not Place APs Above The Ceiling](https://www.youtube.com/watch?v=TdF6SGfujH4)
 
 ### Interference
 - [The WiSE Article Series: Interference from Non-WiFi Sources, Part 1 @ CWNP](https://www.cwnp.com/the-wise-article-series-interference-from-non-wifi-sources-part-1/)
