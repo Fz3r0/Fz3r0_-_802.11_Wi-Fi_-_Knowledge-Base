@@ -2856,6 +2856,18 @@ _iPerf3 is a tool for active measurements of the maximum achievable bandwidth on
 - [iPerf3 :: Official Web](https://iperf.fr/) _`official`_
 - [iPerf Public Servers](https://iperf.fr/iperf-servers.php) _`servers`_
 
+### Cheatsheet
+````bat
+## WINDOWS
+
+# Server Side
+iperf3 -s
+
+# Client Side
+iperf3 -c 192.168.1.100 -V -u -b54m
+iperf3 -c 192.168.1.100 -V -u -b100m
+iperf3 -c 192.168.1.100 -V -u -b1000m
+````
 
 ###ℹ️🧪 iPerf3 Labs
 - [Como MEDIR la VELOCIDAD, Jitter y Loss de mi RED local con IPERF](https://www.youtube.com/watch?v=XC4e6GqE0f4) 16:34 UDP _`video lab`_
