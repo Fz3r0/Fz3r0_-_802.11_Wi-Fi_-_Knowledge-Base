@@ -2530,11 +2530,27 @@ Time synchronization is essential in Wi-Fi networks to ensure reliable and error
 # 802.11 Design
 
 ## Design: `Best Practices`
+- [Advanced RF Design & Troubleshooting](https://www.slideshare.net/ArubaNetworks/shanghai-breakout-advanced-rf-design-and-troubleshooting)
+
+### Gain & Bandwith
 - [`Gain` & `Bandwith`: Bigger Aint Always Better @ Bad-Fi](https://badfi.com/blog/2016/1/25/bigger-aint-always-better) `best practices`
+
+### Bandwith, Data Rate & Throughput
+- [Why speed tests aren’t always the answer when troubleshooting Wi-Fi networks](https://www.thepacketologist.com/2023/12/why-speed-tests-arent-always-the-answer-when-troubleshooting/)
+
+### AP placement
+
+### AP location
+- [`Hallways` :: Wi-Fi Design: APs in Hallways](https://blogs.arubanetworks.com/solutions/wi-fi-design-aps-in-hallways/)
+
+### Interference
 - [The WiSE Article Series: Interference from Non-WiFi Sources, Part 1 @ CWNP](https://www.cwnp.com/the-wise-article-series-interference-from-non-wifi-sources-part-1/)
 - [The WiSE Article Series: Interference from Non-WiFi Sources, Part 2 @ CWNP](https://www.cwnp.com/the-wise-article-series-interference-from-non-wifi-sources-part-2/)
+
+### Vertical: Education
 - [`Education`: Why ‘One Access Point Per Classroom’ Approach is Wrong](https://wlanprofessionals.com/why-one-access-point-per-classroom-approach-is-wrong/)
-- [Why speed tests aren’t always the answer when troubleshooting Wi-Fi networks](https://www.thepacketologist.com/2023/12/why-speed-tests-arent-always-the-answer-when-troubleshooting/)
+
+
 
 
 ## ⚙️🏗️🛰️ Components of 802.11 WLAN Network Architecture
