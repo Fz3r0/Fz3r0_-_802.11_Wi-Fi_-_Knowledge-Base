@@ -3195,7 +3195,11 @@ _Sometimes is important to capture and troubleshoot wired captures in adition to
 
 
 ## Ekahau 
+
+### Ekahau Training & Tutorials
 - [Ekahau Connect Training :: Free!!!](https://www.ekahau.com/training/ekahau-connect-training/)
+- [Just Go Survey :: Ekahau Survey Overview Featuring Just Go Survey](https://www.youtube.com/watch?v=34MBRCns67E)
+- [Checking out the new Ekahau “Just Go” tool for AR Wi-Fi surveys at #WLPC Prague 2023!](https://www.youtube.com/watch?v=DdXIgs7LGek)
 
 
 
