@@ -1613,6 +1613,7 @@ _The 4-way-handshake is used for the generation of a PTK. It confirms that the S
 - [4-Way-Handshake @ _CWNP_](https://www.youtube.com/watch?v=9M8kVYFhMDw) _`video`_
 - [4-Way-Handshake @ _Nayarasi_](https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/) _`CWNE info`_
 - [Cryptographic "Nonce"](https://en.wikipedia.org/wiki/Cryptographic_nonce) `wiki`
+- [What's the Deal With 4-Way Handshakes? @ _wifrizzy_](https://www.wifrizzy.com/post/what-s-the-deal-with-4-way-handshakes) _`blog`_
 - [4-way-handshake: Diagram 1](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/29e33ad0-6894-4244-a8ed-56b30dddc480) _`diagram`_
 - [4-way-handshake: Diagram 2](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/4594a2cb-bdb8-47b0-9d95-a62eb0e3c62a) _`diagram`_
 - [[4-way-handshake: Diagram 3](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/36623783-339b-44ce-930c-861ddf10ca9d)
