@@ -2530,7 +2530,8 @@ Time synchronization is essential in Wi-Fi networks to ensure reliable and error
 
 # 802.11 Design
 
-## Design: `Best Practices`
+## Design: `Best Practices` & `Checklists`
+- [Wi-Fi Checklists @ _WLAN Professionals_](https://wlanprofessionals.com/wi-fi-checklists/)
 - [Advanced RF Design & Troubleshooting](https://www.slideshare.net/ArubaNetworks/shanghai-breakout-advanced-rf-design-and-troubleshooting)
 
 ### Gain & Bandwith
