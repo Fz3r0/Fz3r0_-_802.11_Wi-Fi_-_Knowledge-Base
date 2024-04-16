@@ -2546,6 +2546,9 @@ Time synchronization is essential in Wi-Fi networks to ensure reliable and error
 - [`Hallways` :: Do NOT Put APs in Hallways](https://www.youtube.com/watch?app=desktop&v=cYvP8Ck2zDY)
 - [`Ceiling` :: Do Not Place APs Above The Ceiling](https://www.youtube.com/watch?v=TdF6SGfujH4)
 
+### Rate Limiting
+- [SSID Rate Limit VS Firewall Rate Limit :: ¿Es buena idea limitar la red inalámbrica en una antena?](https://www.linkedin.com/feed/update/urn:li:activity:7185985387884949504/)
+
 ### Interference
 - [The WiSE Article Series: Interference from Non-WiFi Sources, Part 1 @ CWNP](https://www.cwnp.com/the-wise-article-series-interference-from-non-wifi-sources-part-1/)
 - [The WiSE Article Series: Interference from Non-WiFi Sources, Part 2 @ CWNP](https://www.cwnp.com/the-wise-article-series-interference-from-non-wifi-sources-part-2/)
