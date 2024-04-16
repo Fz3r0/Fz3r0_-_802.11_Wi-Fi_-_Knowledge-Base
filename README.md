@@ -3265,6 +3265,22 @@ _Sometimes is important to capture and troubleshoot wired captures in adition to
 
 
 
+# Respberry Wi-Fi 802.11: Labs for Analysis
+
+- [Building Wi-Fi Labs with Inexpensive Raspberry Pi Devices - Part 1](https://www.cwnp.com/building-wi-fi-labs-inexpensive-raspberry-pi-devices-part-1/?utm_source=facebook&utm_medium=post&utm_campaign=april_blog&fbclid=IwAR0Ho3NRz5RHey_mMBVpTIDsxFy_zj2JMM0tsrukkIcbH7AqeT-inZ2-K0I)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
