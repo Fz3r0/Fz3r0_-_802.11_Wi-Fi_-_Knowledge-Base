@@ -2796,7 +2796,10 @@ latency  =    (ping to another remote device involved in the call)     = 300ms o
 ````
 
 
+## Captive Portal Troubleshooting
 
+### http to force portal pop
+- [http://fc.com/](http://fc.com/)
 
 
 
