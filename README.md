@@ -2724,6 +2724,13 @@ _Also known as the user plane, the data plane is where the user traffic is actua
 
 # 🕵️🚨🆘 802.11 Analysis & Troubleshooting
 
+## Troubleshooting, Analysis & Monitoring Tools
+
+### Protocol Analyzers & Sniffers
+
+### AP Selection & Viewers
+- [Wi-Fi Information View](https://www.nirsoft.net/utils/wifi_information_view.html) Select Manually the AP to connect
+
 ## Troubleshooting Soup
 - [Why speed tests aren’t always the answer when troubleshooting Wi-Fi networks](https://www.thepacketologist.com/2023/12/why-speed-tests-arent-always-the-answer-when-troubleshooting/)
 - [What Are Good Latency & Ping Speeds?](https://www.pingplotter.com/wisdom/article/is-my-connection-good/)
