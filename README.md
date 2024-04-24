@@ -2724,9 +2724,15 @@ _Also known as the user plane, the data plane is where the user traffic is actua
 
 # 🕵️🚨🆘 802.11 Analysis & Troubleshooting
 
-## Troubleshooting, Analysis & Monitoring Tools
+## 🛠️🚨🆘 Troubleshooting, Analysis & Monitoring Tools
 
 ### Protocol Analyzers & Sniffers
+- [Wireshark](https://www.wireshark.org/) _Most famous Free & open-source packet analyzer & sniffer_
+
+### 🕵️ Monitoring
+- [Grafana](https://grafana.com/) _Open source analytics & monitoring solution for Nwtworking & Databases_
+- [Zabbix](https://www.zabbix.com/) _The all-in-one, open-source solution that lets you monitor anything_
+- [Prometheus](https://prometheus.io/) _Free software application used for event monitoring and alerting_
 
 ### AP Selection & Viewers
 - [Wi-Fi Information View](https://www.nirsoft.net/utils/wifi_information_view.html) Select Manually the AP to connect
