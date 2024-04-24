@@ -893,7 +893,7 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 
 ### 🤖📡 IEEE 802.11-2020 Ratified Amendments `Vehicular`
 - [**802.11p**-2010](https://en.wikipedia.org/wiki/IEEE_802.11p) `r2.2009->`**`2012`** _`Amendment 6`_ **WAVE & ITS** :: Wireless Access in Vehicular Environments. (Required for ITS)
-- [**802.11bd**-2022](https://standards.ieee.org/ieee/802.11bd/7451/) `r5.2023->`**`<<DRAFT>>`** _`Amendment 7`_ **V2X** :: Next Generation Vehicle-to-Everything (V2X) 5.9 GHz & 60 GHz
+- [**802.11bd**-2022](https://standards.ieee.org/ieee/802.11bd/7451/) `r5.2023->`**`<<DRAFT>>`** _`Amendment 7`_ **V2X** :: Next-Gen Vehicle-to-Everything (V2X) 5.9 & 60 GHz
 
 ---
 
