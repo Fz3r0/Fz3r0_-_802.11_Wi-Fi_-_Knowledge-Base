@@ -1222,10 +1222,10 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
 ````py
 ## MAC Header :: Frame Addressing & Control
 
-|---------|-----------|---------|---------|---------|----------|---------|---------|
-|  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |
-| Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control |
-|---------|-----------|---------|---------|---------|----------|---------|---------|
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------|
+|  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     |
+| Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control | Control |
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------|
     ||
     \/
 |-----------|------|---------|----|------|------|-------|-------|------|-------|-------|
@@ -1239,63 +1239,63 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
     - [Protocol Version]() **2 bits** | Wireless version of the protocol is being used <br><br>
         - `00` = 802.11 Wi-Fi as we know it today, so Protocol Version will be always set as 00 <br><br>
     - [Type]() **2 bits** | Type of 802.11 Frame, Type + Subtype subfields together identify the function of the frame <br><br>
-        - `00` = Management Frame
-        - `01` = Control Frame
-        - `10` = Data Frame
-        - `11` = Extension / DMG (Directional Multi-Gigabit)(802.11ad) <br><br>
+        - Type `00` | `wlan.fc.type == 00` = **Management Frame** 
+        - Type `01` | `wlan.fc.type == 01` = **Control Frame**
+        - Type `10` | `wlan.fc.type == 10` = **Data Frame**
+        - Type `11` | `wlan.fc.type == 11` = **Extension** _[DMG (Directional Multi-Gigabit)(802.11ad)]_ <br><br>
     - [SubType]() **2 bits** | SubType of 802.11 Frame | There are many different kinds of management, control & data frames. Therefore 4-bit Subtype field is required to differentiate them <br><br>
-        - Type `00` / Subtype `0000` = Management :: Association Request 
-        - Type `00` / Subtype `0001` = Management :: Association Response
-        - Type `00` / Subtype `0010` = Management :: Re-Association Request 
-        - Type `00` / Subtype `0011` = Management :: Re-Association Response
-        - Type `00` / Subtype `0100` = Management :: Probe Request 
-        - Type `00` / Subtype `0101` = Management :: Probe Response 
-        - Type `00` / Subtype `0110` = Management :: Timing Advertisement
-        - Type `00` / Subtype `0111` = Management :: _Reserved_
-        - Type `00` / Subtype `1000` = Management :: Beacon 
-        - Type `00` / Subtype `1001` = Management :: ATIM (Announcement Traffic Indication Map)
-        - Type `00` / Subtype `1010` = Management :: Disassociation 
-        - Type `00` / Subtype `1011` = Management :: Authentication
-        - Type `00` / Subtype `1100` = Management :: Deauthentication
-        - Type `00` / Subtype `1101` = Management :: Action       
-        - Type `00` / Subtype `1110` = Management :: Action No ACK
-        - Type `00` / Subtype `1111` = Management :: _Reserved_ <br><br>
-        - Type `01` / Subtype `0000` = Control :: _Reserved_
-        - Type `01` / Subtype `0010` = Control :: _Reserved_
-        - Type `01` / Subtype `0011` = Control :: TACK
-        - Type `01` / Subtype `0100` = Control :: Beamforming Report Poll     
-        - Type `01` / Subtype `0101` = Control :: VHT NDP Announcement   
-        - Type `01` / Subtype `0110` = Control :: Control Frame Extension   
-        - Type `01` / Subtype `0111` = Control :: Control Wrapper 
-        - Type `01` / Subtype `1000` = Control :: Block Ack Request (BlockAckReq)
-        - Type `01` / Subtype `1001` = Control :: Block Ack (BlockAck)
-        - Type `01` / Subtype `1010` = Control :: Power Save (PS)-Poll
-        - Type `01` / Subtype `1010` = Control :: Power Save (PS)-Poll
-        - Type `01` / Subtype `1011` = Control :: RTS
-        - Type `01` / Subtype `1100` = Control :: CTS
-        - Type `01` / Subtype `1101` = Control :: ACK (Acknowledgement)
-        - Type `01` / Subtype `1110` = Control :: CF-End
-        - Type `01` / Subtype `1111` = Control :: _Reserved_ <br><br>     
-        - Type `10` / Subtype `0000` = Data :: Data
-        - Type `10` / Subtype `0001` = Data :: _Reserved_
-        - Type `10` / Subtype `0010` = Data :: _Reserved_
-        - Type `10` / Subtype `0011` = Data :: _Reserved_
-        - Type `10` / Subtype `0100` = Data :: Null Function
-        - Type `10` / Subtype `0101` = Data :: _Reserved_
-        - Type `10` / Subtype `0110` = Data :: _Reserved_
-        - Type `10` / Subtype `0111` = Data :: _Reserved_
-        - Type `10` / Subtype `1000` = Data :: QoS Data
-        - Type `10` / Subtype `1001` = Data :: QoS Data +CF-Ack
-        - Type `10` / Subtype `1010` = Data :: QoS Data +CF-Poll
-        - Type `10` / Subtype `1011` = Data :: QoS Data +CF-Ack +CF-Poll
-        - Type `10` / Subtype `1100` = Data :: QoS Null
-        - Type `10` / Subtype `1101` = Data :: _Reserved_
-        - Type `10` / Subtype `1110` = Data :: QoS CF-Poll
-        - Type `10` / Subtype `1111` = Data :: QoS CF-Ack +CF-Poll <br><br>  
-        - Type `11` / Subtype `0000` = Extension :: DMG Beacon
-        - Type `11` / Subtype `0001` = Extension :: S1G Beacon
-        - Type `11` / Subtype `0010` = Extension :: _Reserved_
-        - Type `11` / Subtype `1111` = Extension :: _Reserved_
+        - Type/Subtype `00` & `0000` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 0000` = Management :: Association Request 
+        - Type/Subtype `00` & `0001` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 0001` = Management :: Association Response
+        - Type/Subtype `00` & `0010` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 0010` = Management :: Re-Association Request 
+        - Type/Subtype `00` & `0011` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 0011` = Management :: Re-Association Response
+        - Type/Subtype `00` & `0100` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 0000` = Management :: Probe Request 
+        - Type/Subtype `00` & `0101` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 0000` = Management :: Probe Response 
+        - Type/Subtype `00` & `0110` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 0000` = Management :: Timing Advertisement
+        - Type/Subtype `00` & `0111` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 0000` = Management :: _Reserved_
+        - Type/Subtype `00` & `1000` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 0000` = Management :: Beacon 
+        - Type/Subtype `00` & `1001` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 0000` = Management :: ATIM (Announcement Traffic Indication Map)
+        - Type/Subtype `00` & `1010` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 0000` = Management :: Disassociation 
+        - Type/Subtype `00` & `1011` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 0000` = Management :: Authentication
+        - Type/Subtype `00` & `1100` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 0000` = Management :: Deauthentication
+        - Type/Subtype `00` & `1101` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 0000` = Management :: Action       
+        - Type/Subtype `00` & `1110` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 0000` = Management :: Action No ACK
+        - Type/Subtype `00` & `1111` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 0000` = Management :: _Reserved_ <br><br>
+        - Type/Subtype `01` & `0000` = Control :: _Reserved_
+        - Type/Subtype `01` & `0010` = Control :: _Reserved_
+        - Type/Subtype `01` & `0011` = Control :: TACK
+        - Type/Subtype `01` & `0100` = Control :: Beamforming Report Poll     
+        - Type/Subtype `01` & `0101` = Control :: VHT NDP Announcement   
+        - Type/Subtype `01` & `0110` = Control :: Control Frame Extension   
+        - Type/Subtype `01` & `0111` = Control :: Control Wrapper 
+        - Type/Subtype `01` & `1000` = Control :: Block Ack Request (BlockAckReq)
+        - Type/Subtype `01` & `1001` = Control :: Block Ack (BlockAck)
+        - Type/Subtype `01` & `1010` = Control :: Power Save (PS)-Poll
+        - Type/Subtype `01` & `1010` = Control :: Power Save (PS)-Poll
+        - Type/Subtype `01` & `1011` = Control :: RTS
+        - Type/Subtype `01` & `1100` = Control :: CTS
+        - Type/Subtype `01` & `1101` = Control :: ACK (Acknowledgement)
+        - Type/Subtype `01` & `1110` = Control :: CF-End
+        - Type/Subtype `01` & `1111` = Control :: _Reserved_ <br><br>     
+        - Type/Subtype `10` & `0000` = Data :: Data
+        - Type/Subtype `10` & `0001` = Data :: _Reserved_
+        - Type/Subtype `10` & `0010` = Data :: _Reserved_
+        - Type/Subtype `10` & `0011` = Data :: _Reserved_
+        - Type/Subtype `10` & `0100` = Data :: Null Function
+        - Type/Subtype `10` & `0101` = Data :: _Reserved_
+        - Type/Subtype `10` & `0110` = Data :: _Reserved_
+        - Type/Subtype `10` & `0111` = Data :: _Reserved_
+        - Type/Subtype `10` & `1000` = Data :: QoS Data
+        - Type/Subtype `10` & `1001` = Data :: QoS Data +CF-Ack
+        - Type/Subtype `10` & `1010` = Data :: QoS Data +CF-Poll
+        - Type/Subtype `10` & `1011` = Data :: QoS Data +CF-Ack +CF-Poll
+        - Type/Subtype `10` & `1100` = Data :: QoS Null
+        - Type/Subtype `10` & `1101` = Data :: _Reserved_
+        - Type/Subtype `10` & `1110` = Data :: QoS CF-Poll
+        - Type/Subtype `10` & `1111` = Data :: QoS CF-Ack +CF-Poll <br><br>  
+        - Type/Subtype `11` & `0000` = Extension :: DMG Beacon
+        - Type/Subtype `11` & `0001` = Extension :: S1G Beacon
+        - Type/Subtype `11` & `0010` = Extension :: _Reserved_
+        - Type/Subtype `11` & `1111` = Extension :: _Reserved_
 
 ### Duration (Bytes Lenght)
 
