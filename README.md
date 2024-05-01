@@ -1216,7 +1216,8 @@ _The 802.11 Mac Header can be 36 bytes long if all the fields are being used. Th
 - [MAC Header](https://mrncciew.com/2014/09/27/cwap-mac-header-frame-control/) _`nayarasi`_
 - [Understand MAC Header Format in Detail](https://tbhaxor.com/mac-header-format-in-detail/) _`tb haxor`_
 
-### Frame Control (Bytes Lenght)
+### Frame Control (2 Bytes Lenght)
+_2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Field" | Each 802.11 frame begins with two bytes of meta information called "Frame Control", which is then subdivided into eleven parts_
 
 ````py
 ## MAC Header :: Frame Addressing & Control
@@ -1234,10 +1235,32 @@ _The 802.11 Mac Header can be 36 bytes long if all the fields are being used. Th
       2        2        4       1     1      1      1       1       1      1       1      <<== Bits
 
 ````
-- [Frame Control]() _All 802.11 Frame have control field_
-    - [Protocol Version]() _2 bits lenght | Identifies what wireless version of the protocol is being used | "0" identifies 802.11, Wi-Fi as we know it today_
- 
-    - 
+- [**Frame Control**]() _All 802.11 Frames have a control field_
+    - [Protocol Version]() _**2 bits** | Wireless version of the protocol is being used
+        - `00` = 802.11 Wi-Fi as we know it today, so Protocol Version will be always set as 00
+    - [Type]() _**2 bits** | Type of 802.11 Frame
+        - `00` = Management Frame
+        - `01` = Control Frame
+        - `10` = Data Frame
+        - `11` = Extension / DMG (Directional Multi-Gigabit)(802.11ad)
+    - [SubType]() _**2 bits** | SubType of 802.11 Frame | There are many different kinds of management, control & data frames. Therefore 4-bit Subtype field is required to differentiate them
+        - Type `00` / Subtype `0000` = Management :: Association Request 
+        - Type `00` / Subtype `0001` = Management :: Association Response
+        - Type `00` / Subtype `0010` = Management :: Re-Association Request 
+        - Type `00` / Subtype `0011` = Management :: Re-Association Response
+        - Type `00` / Subtype `0100` = Management :: Probe Request 
+        - Type `00` / Subtype `0101` = Management :: Probe Response 
+        - Type `00` / Subtype `1000` = Management :: Beacon 
+        - Type `00` / Subtype `1001` = Management :: ATIM (Announcement Traffic Indication Map)
+        - Type `00` / Subtype `1010` = Management :: Disassociation 
+        - Type `00` / Subtype `1011` = Management :: Authentication
+        - Type `00` / Subtype `1100` = Management :: Deauthentication <br>
+        - Type `01` / Subtype `1010` = Control :: Power Save (PS)-Poll
+        - Type `01` / Subtype `1011` = Control :: RTS
+        - Type `01` / Subtype `1100` = Control :: CTS
+        - Type `01` / Subtype `1101` = Control :: Acknowledgement <br>
+        - Type `10` / Subtype `0000` = Data :: Data
+        - Type `10` / Subtype `0100` = Data :: Null Function
 
 ### Duration (Bytes Lenght)
 
