@@ -1237,7 +1237,7 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
 ````
 - [**Frame Control**]() _All 802.11 Frames have a control field_ **IEEE-802.11-2020 :: 9.2.4.1 Frame Control field :: page 757** <br><br>
     - [Protocol Version]() **2 bits** | Wireless version of the protocol is being used <br><br>
-        - `00` = 802.11 Wi-Fi as we know it today, so Protocol Version will be always set as 00 <br><br>
+        - Version `00` | `wlan.fc.version == 00` = 802.11 Wi-Fi as we know it today, so Protocol Version will be always set as 00 <br><br>
     - [Type]() **2 bits** | Type of 802.11 Frame, Type + Subtype subfields together identify the function of the frame <br><br>
         - Type `00` | `wlan.fc.type == 00` = **Management Frame** 
         - Type `01` | `wlan.fc.type == 01` = **Control Frame**
