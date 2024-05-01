@@ -1182,17 +1182,18 @@ _Section 9.2.1 of IEEE Std 802.11-2020 (Revision of IEEE Std 802.11-2016) specif
 - [802.11 MAC Header Breakdown @ _Aruba Comunity_](https://community.arubanetworks.com/browse/articles/blogviewer?blogkey=b101b806-a54b-4d8a-aba3-90f44dd3f94c) _`PCAP Analysys + diagrams + info`_
 
 ## MAC Frame Sections :: `MAC Header` + `Frame Body` + `FCS`
+_All MAC frames contain the first three header fields and the FCS. The frame type and subtype determine the additional fields that are contained in the frame. | The HT Control field is a part of the 802.11n amendment which is added to the MAC header_
 
 ````py
 ## MAC Frame Sections :: MAC Header + Frame Body + FCS
 
-|---------|-----------|---------|---------|---------|----------|---------|---------||-------------||-------|
-|  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    ||    Frame    ||  FCS  |
-| Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control ||     Body    ||       |
-|---------|-----------|---------|---------|---------|----------|---------|---------||-------------||-------|
-|__________________________________________________________________________________||_____________||_______|
-                                       ||                                                  ||          ||
-                                       \/                                                  \/          \/   
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------||-------------||-------|
+|  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     ||    Frame    ||  FCS  |
+| Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control | Control ||     Body    ||       |
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------||-------------||-------|
+|____________________________________________________________________________________________||_____________||_______|
+                                       ||                                                            ||          ||
+                                       \/                                                            \/          \/   
 
 
 ````
@@ -1200,22 +1201,23 @@ _Section 9.2.1 of IEEE Std 802.11-2020 (Revision of IEEE Std 802.11-2016) specif
 - [MAC Frame Sections](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/693d761b-6f34-4b95-a6f7-969db147f16d) _`diagram`_
 
 ### 802.11 `MAC Header` - Frame Addressing & Control
+_The 802.11 Mac Header can be 36 bytes long if all the fields are being used. There are a few fields in the 802.11 mac header which are not always utilised | The HT Control field is a part of the 802.11n amendment which is added to the mac header_
 
 ````py
 ## MAC Header :: Frame Addressing & Control
 
-|---------|-----------|---------|---------|---------|----------|---------|---------|
-|  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |
-| Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control |
-|---------|-----------|---------|---------|---------|----------|---------|---------|
-     2         2           6       0 or 6    0 or 6    0 or 2     0 or 6    0 or 2    <<== Bytes        
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------|
+|  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     |
+| Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control | Control |
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------|
+     2         2           6       0 or 6    0 or 6    0 or 2     0 or 6    0 or 2    0 or 4    <<== Bytes        
 
 ````
+- [MAC Header](https://mrncciew.com/2014/09/27/cwap-mac-header-frame-control/) _`nayarasi`_
+- [Understand MAC Header Format in Detail](https://tbhaxor.com/mac-header-format-in-detail/) _`tb haxor`_
+
 ### Frame Control (Bytes Lenght)
 
-- [Frame Control]() _All 802.11 Frame have control field_
-    - [Protocol Version]() _2 bits lenght | Identifies what wireless version of the protocol is being used | "0" identifies 802.11, Wi-Fi as we know it today_
-    - 
 ````py
 ## MAC Header :: Frame Addressing & Control
 
@@ -1232,6 +1234,12 @@ _Section 9.2.1 of IEEE Std 802.11-2020 (Revision of IEEE Std 802.11-2016) specif
       2        2        4       1     1      1      1       1       1      1       1      <<== Bits
 
 ````
+- [Frame Control]() _All 802.11 Frame have control field_
+    - [Protocol Version]() _2 bits lenght | Identifies what wireless version of the protocol is being used | "0" identifies 802.11, Wi-Fi as we know it today_
+ 
+    - 
+
+### Duration (Bytes Lenght)
 
 - [Duration / ID]()
 - [Address 1]()
