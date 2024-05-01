@@ -1208,11 +1208,31 @@ _Section 9.2.1 of IEEE Std 802.11-2020 (Revision of IEEE Std 802.11-2016) specif
 |  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |
 | Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control |
 |---------|-----------|---------|---------|---------|----------|---------|---------|
+     2         2           6       0 or 6    0 or 6    0 or 2     0 or 6    0 or 2    <<== Bytes        
 
+````
+### Frame Control (Bytes Lenght)
+
+- [Frame Control]() _All 802.11 Frame have control field_
+    - [Protocol Version]() _2 bits lenght | Identifies what wireless version of the protocol is being used | "0" identifies 802.11, Wi-Fi as we know it today_
+    - 
+````py
+## MAC Header :: Frame Addressing & Control
+
+|---------|-----------|---------|---------|---------|----------|---------|---------|
+|  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |
+| Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control |
+|---------|-----------|---------|---------|---------|----------|---------|---------|
+    ||
+    \/
+|-----------|------|---------|----|------|------|-------|-------|------|-------|-------|
+|  Protocol | Type | SubType | To | From | More | Retry |  PWR  | More | Prot- | +HTC/ |
+|  Version  |      |         | DS |  DS  | Frag |       | Mngmt | Data | ected | Order |
+|-----------|------|---------|----|------|------|-------|-------|------|-------|-------|
+      2        2        4       1     1      1      1       1       1      1       1      <<== Bits
 
 ````
 
-- [Frame Control]()
 - [Duration / ID]()
 - [Address 1]()
 - [Address 2]()
@@ -1220,6 +1240,7 @@ _Section 9.2.1 of IEEE Std 802.11-2020 (Revision of IEEE Std 802.11-2016) specif
 - [Sequence Control]()
 
 ### 802.11 `Frame Body` - Variable Lenght Frame Body
+_Not all 802.11 Frame have Frame Body, for example CTS/RTS frame will not have a frame body | The frame body for data frames has an upper layer payload / data | The frame body for management frames like beacons, have informations elements_
 
 ````py
 ## Frame Body :: Variable Lenght Frame Body
@@ -1231,7 +1252,7 @@ _Section 9.2.1 of IEEE Std 802.11-2020 (Revision of IEEE Std 802.11-2016) specif
 
 ````
 
-### 802.11 `FCS` - Frame Check Sequence 32-bit CRC
+### 802.11 `FCS` - Frame Check Sequence 32-bit CRC (Cicle Redundancy Check)
 
 ````py
 ## Frame Body :: Variable Lenght Frame Body
