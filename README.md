@@ -1176,10 +1176,41 @@ _Data that is NOT present in a 802.11 MAC-frame, but is intepreted coming from t
 # 💊🛜🦈 802.11 MAC Frames
 _Section 9.2.1 of IEEE Std 802.11-2020 (Revision of IEEE Std 802.11-2016) specifies that the general **MAC frame** must consist of a **MAC header**, **frame body**, and a **frame check sequence (FCS)**. MAC frames can be either protocol version 0 (PV0) or protocol version 1 (PV1)._ 
 
-## 802.11 MAC Frames: MAC Frame Format
+## 💊🛜🗃️ 802.11 MAC Frames: MAC Frame Format
 - [WLAN MAC Frame Structure @ _Math Works_](https://es.mathworks.com/help/wlan/gs/wlan-mac-frame-structure.html) _`tables + diagrams + info`_
 - [802.11 MAC Header @ _Extreme Networks_](https://www.youtube.com/watch?v=Foi5ZdqLQWs) _`video`_
 - [802.11 MAC Header Breakdown @ _Aruba Comunity_](https://community.arubanetworks.com/browse/articles/blogviewer?blogkey=b101b806-a54b-4d8a-aba3-90f44dd3f94c) _`PCAP Analysys + diagrams + info`_
+
+## MAC Frame Sections :: `MAC Header` + `Frame Body` + `FCS`
+- [MAC Frame Sections](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/693d761b-6f34-4b95-a6f7-969db147f16d) _`diagram`_
+
+### 802.11 `MAC Header` - Frame Addressing & Control
+
+````py
+## MAC Header :: Frame Addressing & Control
+
+|---------|-----------|
+|  Frame  | Duration/ |
+| Control |    ID     | 
+|---------|-----------|
+````
+
+- [Frame Control]()
+- [Duration / ID]()
+- [Address 1]()
+- [Address 2]()
+- [Address 3]()
+- [Sequence Control]()
+
+### 802.11 `Frame Body` - Variable Lenght Frame Body
+
+### 802.11 `FCS` - Frame Check Sequence 32-bit CRC
+
+
+
+
+
+
 
 ## 🛜⚙️💊 IEEE 802.11-2020 9.3.3 (PV0) `Management Frames`
 - [802.11 Mgmt Frame Types @ _nayarasi_](https://mrncciew.com/2014/09/29/cwap-802-11-mgmt-frame-types/) _`nayarasi`_
