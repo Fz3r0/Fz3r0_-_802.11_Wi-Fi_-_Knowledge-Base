@@ -1235,14 +1235,14 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
       2        2        4       1     1      1      1       1       1      1       1      <<== Bits
 
 ````
-- [**Frame Control**]() _All 802.11 Frames have a control field_
+- [**Frame Control**]() _All 802.11 Frames have a control field_ <br><br>
     - [Protocol Version]() _**2 bits** | Wireless version of the protocol is being used
-        - `00` = 802.11 Wi-Fi as we know it today, so Protocol Version will be always set as 00
+        - `00` = 802.11 Wi-Fi as we know it today, so Protocol Version will be always set as 00 <br><br>
     - [Type]() _**2 bits** | Type of 802.11 Frame
         - `00` = Management Frame
         - `01` = Control Frame
         - `10` = Data Frame
-        - `11` = Extension / DMG (Directional Multi-Gigabit)(802.11ad)
+        - `11` = Extension / DMG (Directional Multi-Gigabit)(802.11ad) <br><br>
     - [SubType]() _**2 bits** | SubType of 802.11 Frame | There are many different kinds of management, control & data frames. Therefore 4-bit Subtype field is required to differentiate them
         - Type `00` / Subtype `0000` = Management :: Association Request 
         - Type `00` / Subtype `0001` = Management :: Association Response
@@ -1254,11 +1254,11 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
         - Type `00` / Subtype `1001` = Management :: ATIM (Announcement Traffic Indication Map)
         - Type `00` / Subtype `1010` = Management :: Disassociation 
         - Type `00` / Subtype `1011` = Management :: Authentication
-        - Type `00` / Subtype `1100` = Management :: Deauthentication <br>
+        - Type `00` / Subtype `1100` = Management :: Deauthentication <br><br>
         - Type `01` / Subtype `1010` = Control :: Power Save (PS)-Poll
         - Type `01` / Subtype `1011` = Control :: RTS
         - Type `01` / Subtype `1100` = Control :: CTS
-        - Type `01` / Subtype `1101` = Control :: Acknowledgement <br>
+        - Type `01` / Subtype `1101` = Control :: Acknowledgement <br><br>
         - Type `10` / Subtype `0000` = Data :: Data
         - Type `10` / Subtype `0100` = Data :: Null Function
 
