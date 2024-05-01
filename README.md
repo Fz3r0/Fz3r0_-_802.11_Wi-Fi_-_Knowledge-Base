@@ -1174,7 +1174,7 @@ _Data that is NOT present in a 802.11 MAC-frame, but is intepreted coming from t
 
 
 # 💊🛜🦈 802.11 MAC Frames
-_Section 9.2.1 of IEEE Std 802.11-2020 (Revision of IEEE Std 802.11-2016) specifies that the general **MAC frame** must consist of a **MAC header**, **frame body**, and a **frame check sequence (FCS)**. MAC frames can be either protocol version 0 (PV0) or protocol version 1 (PV1)._ 
+_Section 9.2.1 of IEEE Std 802.11-2020 (Revision of IEEE Std 802.11-2016) specifies that the general **MAC frame** must consist of a **MAC header**, **frame body**, and a **frame check sequence (FCS)**. MAC frames can be either protocol version 0 (PV0) or protocol version 1 (PV1). || **IEEE-802.11-2020 :: 9.2 MAC frame formats :: page 754**_ 
 
 ## 💊🛜🗃️ 802.11 MAC Frames: MAC Frame Format
 - [WLAN MAC Frame Structure @ _Math Works_](https://es.mathworks.com/help/wlan/gs/wlan-mac-frame-structure.html) _`tables + diagrams + info`_
@@ -1182,7 +1182,7 @@ _Section 9.2.1 of IEEE Std 802.11-2020 (Revision of IEEE Std 802.11-2016) specif
 - [802.11 MAC Header Breakdown @ _Aruba Comunity_](https://community.arubanetworks.com/browse/articles/blogviewer?blogkey=b101b806-a54b-4d8a-aba3-90f44dd3f94c) _`PCAP Analysys + diagrams + info`_
 
 ## MAC Frame Sections :: `MAC Header` + `Frame Body` + `FCS`
-_All MAC frames contain the first three header fields and the FCS. The frame type and subtype determine the additional fields that are contained in the frame. | The HT Control field is a part of the 802.11n amendment which is added to the MAC header_
+_All MAC frames contain the first three header fields and the FCS. The frame type and subtype determine the additional fields that are contained in the frame. | The HT Control field is a part of the 802.11n amendment which is added to the MAC header || **IEEE-802.11-2020 :: 9.2.3 General frame format :: page 756**_
 
 ````py
 ## MAC Frame Sections :: MAC Header + Frame Body + FCS
@@ -1217,7 +1217,7 @@ _The 802.11 Mac Header can be 36 bytes long if all the fields are being used. Th
 - [Understand MAC Header Format in Detail](https://tbhaxor.com/mac-header-format-in-detail/) _`tb haxor`_
 
 ### Frame Control (2 Bytes Lenght)
-_2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Field" | Each 802.11 frame begins with two bytes of meta information called "Frame Control", which is then subdivided into eleven parts_
+_2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Field" | Each 802.11 frame begins with two bytes of meta information called "Frame Control", which is then subdivided into eleven parts || **IEEE-802.11-2020 :: 9.2.4.1 Frame Control field :: page 757** _
 
 ````py
 ## MAC Header :: Frame Addressing & Control
@@ -1235,32 +1235,67 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
       2        2        4       1     1      1      1       1       1      1       1      <<== Bits
 
 ````
-- [**Frame Control**]() _All 802.11 Frames have a control field_ <br><br>
-    - [Protocol Version]() _**2 bits** | Wireless version of the protocol is being used
+- [**Frame Control**]() _All 802.11 Frames have a control field_ **IEEE-802.11-2020 :: 9.2.4.1 Frame Control field :: page 757** <br><br>
+    - [Protocol Version]() **2 bits** | Wireless version of the protocol is being used <br><br>
         - `00` = 802.11 Wi-Fi as we know it today, so Protocol Version will be always set as 00 <br><br>
-    - [Type]() _**2 bits** | Type of 802.11 Frame
+    - [Type]() **2 bits** | Type of 802.11 Frame, Type + Subtype subfields together identify the function of the frame <br><br>
         - `00` = Management Frame
         - `01` = Control Frame
         - `10` = Data Frame
         - `11` = Extension / DMG (Directional Multi-Gigabit)(802.11ad) <br><br>
-    - [SubType]() _**2 bits** | SubType of 802.11 Frame | There are many different kinds of management, control & data frames. Therefore 4-bit Subtype field is required to differentiate them
+    - [SubType]() **2 bits** | SubType of 802.11 Frame | There are many different kinds of management, control & data frames. Therefore 4-bit Subtype field is required to differentiate them <br><br>
         - Type `00` / Subtype `0000` = Management :: Association Request 
         - Type `00` / Subtype `0001` = Management :: Association Response
         - Type `00` / Subtype `0010` = Management :: Re-Association Request 
         - Type `00` / Subtype `0011` = Management :: Re-Association Response
         - Type `00` / Subtype `0100` = Management :: Probe Request 
         - Type `00` / Subtype `0101` = Management :: Probe Response 
+        - Type `00` / Subtype `0110` = Management :: Timing Advertisement
+        - Type `00` / Subtype `0111` = Management :: _Reserved_
         - Type `00` / Subtype `1000` = Management :: Beacon 
         - Type `00` / Subtype `1001` = Management :: ATIM (Announcement Traffic Indication Map)
         - Type `00` / Subtype `1010` = Management :: Disassociation 
         - Type `00` / Subtype `1011` = Management :: Authentication
-        - Type `00` / Subtype `1100` = Management :: Deauthentication <br><br>
+        - Type `00` / Subtype `1100` = Management :: Deauthentication
+        - Type `00` / Subtype `1101` = Management :: Action       
+        - Type `00` / Subtype `1110` = Management :: Action No ACK
+        - Type `00` / Subtype `1111` = Management :: _Reserved_ <br><br>
+        - Type `01` / Subtype `0000` = Control :: _Reserved_
+        - Type `01` / Subtype `0010` = Control :: _Reserved_
+        - Type `01` / Subtype `0011` = Control :: TACK
+        - Type `01` / Subtype `0100` = Control :: Beamforming Report Poll     
+        - Type `01` / Subtype `0101` = Control :: VHT NDP Announcement   
+        - Type `01` / Subtype `0110` = Control :: Control Frame Extension   
+        - Type `01` / Subtype `0111` = Control :: Control Wrapper 
+        - Type `01` / Subtype `1000` = Control :: Block Ack Request (BlockAckReq)
+        - Type `01` / Subtype `1001` = Control :: Block Ack (BlockAck)
+        - Type `01` / Subtype `1010` = Control :: Power Save (PS)-Poll
         - Type `01` / Subtype `1010` = Control :: Power Save (PS)-Poll
         - Type `01` / Subtype `1011` = Control :: RTS
         - Type `01` / Subtype `1100` = Control :: CTS
-        - Type `01` / Subtype `1101` = Control :: Acknowledgement <br><br>
+        - Type `01` / Subtype `1101` = Control :: ACK (Acknowledgement)
+        - Type `01` / Subtype `1110` = Control :: CF-End
+        - Type `01` / Subtype `1111` = Control :: _Reserved_ <br><br>     
         - Type `10` / Subtype `0000` = Data :: Data
+        - Type `10` / Subtype `0001` = Data :: _Reserved_
+        - Type `10` / Subtype `0010` = Data :: _Reserved_
+        - Type `10` / Subtype `0011` = Data :: _Reserved_
         - Type `10` / Subtype `0100` = Data :: Null Function
+        - Type `10` / Subtype `0101` = Data :: _Reserved_
+        - Type `10` / Subtype `0110` = Data :: _Reserved_
+        - Type `10` / Subtype `0111` = Data :: _Reserved_
+        - Type `10` / Subtype `1000` = Data :: QoS Data
+        - Type `10` / Subtype `1001` = Data :: QoS Data +CF-Ack
+        - Type `10` / Subtype `1010` = Data :: QoS Data +CF-Poll
+        - Type `10` / Subtype `1011` = Data :: QoS Data +CF-Ack +CF-Poll
+        - Type `10` / Subtype `1100` = Data :: QoS Null
+        - Type `10` / Subtype `1101` = Data :: _Reserved_
+        - Type `10` / Subtype `1110` = Data :: QoS CF-Poll
+        - Type `10` / Subtype `1111` = Data :: QoS CF-Ack +CF-Poll <br><br>  
+        - Type `11` / Subtype `0000` = Extension :: DMG Beacon
+        - Type `11` / Subtype `0001` = Extension :: S1G Beacon
+        - Type `11` / Subtype `0010` = Extension :: _Reserved_
+        - Type `11` / Subtype `1111` = Extension :: _Reserved_
 
 ### Duration (Bytes Lenght)
 
