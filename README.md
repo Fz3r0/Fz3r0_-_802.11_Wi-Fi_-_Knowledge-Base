@@ -143,7 +143,7 @@
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
 
-<h1 align="center"> 🏁🎬📡 Introduction  🛜📡</h1>
+<h1 align="center"> 🏁🎬 Introduction 🎬🏁  </h1>
 
 - In this repository **"Fz3r0 - 802.11 Wi-Fi Knowledge Base"**, I compile information from various reliable sources, previously curated and studied by myself prior to inclusion, delving into aspects of **IEEE 802.11 Wireless Networks Technology**, better known as **Wi-Fi**.
 
@@ -165,7 +165,7 @@
 
 _"Education is the most powerful tool you can use to change the world." - Nelson Mandela_
 
-<h1 align="center"> 💀🎩📧 Who am I & Contact </h1>
+<h1 align="center"> 💀🎩📧 Who am I & Contact 📧🎩💀 </h1>
                                        
 I'm just a very lucky person who was born surrounded by IBM computers and walls full of floppy disks back in the 80's.
 
