@@ -143,7 +143,7 @@
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
 
-# 📡🗂️ `Introduction` 🗂️📡
+<h1 align="center"> 🏁🎬📡 Introduction  🛜📡</h1>
 
 - In this repository **"Fz3r0 - 802.11 Wi-Fi Knowledge Base"**, I compile information from various reliable sources, previously curated and studied by myself prior to inclusion, delving into aspects of **IEEE 802.11 Wireless Networks Technology**, better known as **Wi-Fi**.
 
@@ -164,9 +164,9 @@
 - If anyone makes money from this document, please try to donate some of those resources to help people in need or to protect the environment like animals and plants. 
 
 _"Education is the most powerful tool you can use to change the world." - Nelson Mandela_
-                                       
-# 💀🎩 Who am I & Contact
 
+<h1 align="center"> 💀🎩📧 Who am I & Contact </h1>
+                                       
 I'm just a very lucky person who was born surrounded by IBM computers and walls full of floppy disks back in the 80's.
 
 Today I'm a Level 3 NOC Engineer specialized on high-level troubleshooting, analytics, security, support and network performance design & optimization focusing in 802.3 Ethernet Networks & 802.11 Wireless Networks (Wi-Fi). I have experience with vendors such as: Cisco, Zyxel, Ruckus, Fortinet, SonicWall, MikrotTik, Aruba, Starlink, Huawei, Microsoft, Linux, among others... but also I have some years of background experience with other IT branches like programming, scripting, data base administration, pentesting, ethical hacking and data analytics.
