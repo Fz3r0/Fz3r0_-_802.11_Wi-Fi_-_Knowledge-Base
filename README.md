@@ -1297,7 +1297,15 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
         - Type/Subtype `11` & `0000` = Extension :: DMG Beacon
         - Type/Subtype `11` & `0001` = Extension :: S1G Beacon
         - Type/Subtype `11` & `0010` = Extension :: _Reserved_
-        - Type/Subtype `11` & `1111` = Extension :: _Reserved_
+        - Type/Subtype `11` & `1111` = Extension :: _Reserved_ <br><br>
+    - [To DS]() **1 bit** | "1" = data frame is going from client station (STA) to Distribution System (DS)
+    - [From DS]() **1 bit** | "1" = data frame is going from Distribution System (DS) to client station (STA)
+        - To DS `1` | `wlan.fc.tods == 1` = **From STA to DS**
+        - From DS `1` | `wlan.fc.fromds == 1`  = **From DS to STA**
+        - To DS `0` & From DS `0` | `wlan.fc.tods == 0 && wlan.fc.fromds == 0` = **Ad-Hoc** or **Management & Control**
+        - To DS `1` & From DS `0` | `wlan.fc.tods == 1 && wlan.fc.fromds == 0` = **Infraestructure: To Access Point**
+        - To DS `0` & From DS `0` | `wlan.fc.tods == 0 && wlan.fc.fromds == 1` = **Infraestructure: From Access Point**
+        - To DS `1` & From DS `1` | `wlan.fc.tods == 1 && wlan.fc.fromds == 1` = **Bridge/Mesh Link**
 
 ### Duration (Bytes Lenght)
 
