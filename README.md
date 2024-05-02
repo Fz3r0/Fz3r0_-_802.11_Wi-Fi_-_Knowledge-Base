@@ -145,7 +145,7 @@
 
 # 📡🗂️ `Introduction` 🗂️📡
 
-- In this repository "Fz3r0 802.11 Wi-Fi Knowledge Base", I compile information from various reliable sources, previously curated and studied by myself prior to inclusion, delving into aspects of **IEEE 802.11 Wireless Networks Technology**, better known as **Wi-Fi**.
+- In this repository **"Fz3r0 - 802.11 Wi-Fi Knowledge Base"**, I compile information from various reliable sources, previously curated and studied by myself prior to inclusion, delving into aspects of **IEEE 802.11 Wireless Networks Technology**, better known as **Wi-Fi**.
 
 - Originally conceived to centralize my own study materials for certifications such as CWNP (CWNA, CWAP, CWDP, CWSP) Offensive Security (PEN-210, OSWP), Ruckus (RCWA), Cisco (CCNA, CCNP, CCIE Enterprise Wireless, ENWLSD, ENWLSI) this repository has evolved into a highly comprehensive index, serving as a centralized resource or cheatsheet containing all information, from the essential to the advanced, for a wireless engineer.
 
