@@ -1299,13 +1299,16 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
         - Type/Subtype `11` & `0010` = Extension :: _Reserved_
         - Type/Subtype `11` & `1111` = Extension :: _Reserved_ <br><br>
     - [To DS]() **1 bit** | "1" = data frame is going from client station (STA) to Distribution System (DS)
-    - [From DS]() **1 bit** | "1" = data frame is going from Distribution System (DS) to client station (STA)
+    - [From DS]() **1 bit** | "1" = data frame is going from Distribution System (DS) to client station (STA) <br><br>
         - To DS `1` | `wlan.fc.tods == 1` = **From STA to DS**
-        - From DS `1` | `wlan.fc.fromds == 1`  = **From DS to STA**
-        - To DS `0` & From DS `0` | `wlan.fc.tods == 0 && wlan.fc.fromds == 0` = **Ad-Hoc** or **Management & Control**
-        - To DS `1` & From DS `0` | `wlan.fc.tods == 1 && wlan.fc.fromds == 0` = **Infraestructure: To Access Point**
-        - To DS `0` & From DS `0` | `wlan.fc.tods == 0 && wlan.fc.fromds == 1` = **Infraestructure: From Access Point**
-        - To DS `1` & From DS `1` | `wlan.fc.tods == 1 && wlan.fc.fromds == 1` = **Bridge/Mesh Link**
+        - From DS `1` | `wlan.fc.fromds == 1`  = **From DS to STA** <br><br>
+        - To DS `0` & From DS `0` | `wlan.fc.tods == 0 && wlan.fc.fromds == 0` = **Ad-Hoc** or **Management & Control (not going to DS)**
+        - To DS `1` & From DS `0` | `wlan.fc.tods == 1 && wlan.fc.fromds == 0` = **Infraestructure: Traffic From STA Client To Access Point**
+        - To DS `0` & From DS `0` | `wlan.fc.tods == 0 && wlan.fc.fromds == 1` = **Infraestructure: Traffic From Access Point To STA Client**
+        - To DS `1` & From DS `1` | `wlan.fc.tods == 1 && wlan.fc.fromds == 1` = **WDS in use = Bridge/Mesh Link** <br><br>
+    - [More Frag]() **1 bit** | "1" = Indicate that frame (data or management) have another fragment of the current MSDU or current MMPDU to follow. MAC layer fragments only those frame having unicast receiver address & never fragments broadcast or multicast frames (as those never get acknowledged) <br><br>
+        - More Frag `0` | `wlan.fc.frag == 0` = **This is the last fragment of current MSDU or MMPDU**
+        - More Frag `1` | `wlan.fc.frag == 1` = **Another fragment of current MSDU or MMPDU is to follow**
           
 ### Duration (Bytes Lenght)
 
