@@ -660,10 +660,10 @@ _The National Institute of Standards and Technology promotes U.S. innovation and
 - [`NIST`: National Institute of Standards and Technology](https://en.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology) _`wiki`_
 
 ### 🎖️📡 NIST Special Publications: ` Special Publications Wireless Related` 
-- [`2005`: **`Special Publication 800-38B`**]() Recommendation for Block Cipher Modes of Operation: The CMAC Mode for Authentication
-- [`2007`: **`Special Publication 800-38D`**]() Recommendation for Block Cipher Modes of Operation: Galois/ Counter Mode (GCM) and GMAC
-- [`2013`: **`Special Publication 800-56A R2`**]() Recommendation for Pair-Wise Key Establishment Schemes Using Discrete Logarithm Cryptography
-- [`2016`: **`Special Publication 800-57, Part 1 Rev 4`**]() Recommendation for Key Management
+- [`2005`: **`Special Publication 800-38B`**]() Block Cipher Modes of Operation: The CMAC Mode for Authentication
+- [`2007`: **`Special Publication 800-38D`**]() Block Cipher Modes of Operation: Galois/ Counter Mode (GCM) and GMAC
+- [`2013`: **`Special Publication 800-56A R2`**]() Pair-Wise Key Establishment Schemes Using Discrete Logarithm Cryptography
+- [`2016`: **`Special Publication 800-57, Part 1 Rev 4`**]() Key Management
   
 <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
