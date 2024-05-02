@@ -1255,7 +1255,7 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
         - Type `01` | `wlan.fc.type == 01` = **Control Frame**
         - Type `10` | `wlan.fc.type == 02` = **Data Frame**
         - Type `11` | `wlan.fc.type == 03` = **Extension** _[DMG (Directional Multi-Gigabit)(802.11ad)]_ <br><br>
-    - [**SubType**]() **2 bits** | SubType of 802.11 Frame | There are many different kinds of management, control & data frames. Therefore 4-bit Subtype field is required to differentiate them <br><br>
+    - [**SubType**]() **4 bits** | SubType of 802.11 Frame | There are many different kinds of management, control & data frames. Therefore 4-bit Subtype field is required to differentiate them <br><br>
         - Type/Subtype `00` & `0000` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 00` = Management :: **Association Request** 
         - Type/Subtype `00` & `0001` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 01` = Management :: **Association Response**
         - Type/Subtype `00` & `0010` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 02` = Management :: **Re-Association Request** 
