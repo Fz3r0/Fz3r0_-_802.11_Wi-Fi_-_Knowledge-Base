@@ -1266,18 +1266,18 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
         - Type/Subtype `01` & `0001` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 17` = Control :: _Unrecognized / Reserved_
         - Type/Subtype `01` & `0010` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 18` = Control :: **Trigger** / **TACK???**
         - Type/Subtype `01` & `0011` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 19` = Control :: _Unrecognized / Reserved_
-        - Type/Subtype `01` & `0100` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 20` = Control :: **Beamforming Report Poll     
-        - Type/Subtype `01` & `0101` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 21` = Control :: **VHT/HE NDP Announcement   
-        - Type/Subtype `01` & `0110` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 22` = Control :: **Control Frame Extension   
-        - Type/Subtype `01` & `0111` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 23` = Control :: **Control Wrapper 
-        - Type/Subtype `01` & `1000` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 24` = Control :: **Block Ack Request (BlockAckReq)
-        - Type/Subtype `01` & `1001` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 25` = Control :: **Block Ack (BlockAck)
-        - Type/Subtype `01` & `1010` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 26` = Control :: **Power Save (PS)-Poll
-        - Type/Subtype `01` & `1011` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 27` = Control :: **RTS
-        - Type/Subtype `01` & `1100` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 28` = Control :: **CTS
-        - Type/Subtype `01` & `1101` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 29` = Control :: **ACK (Acknowledgement)
-        - Type/Subtype `01` & `1110` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 30` = Control :: **CF-End
-        - Type/Subtype `01` & `1111` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 31` = Control :: **CF-End + CF-Ack
+        - Type/Subtype `01` & `0100` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 20` = Control :: **Beamforming Report Poll**     
+        - Type/Subtype `01` & `0101` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 21` = Control :: **VHT/HE NDP Announcement**   
+        - Type/Subtype `01` & `0110` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 22` = Control :: **Control Frame Extension**   
+        - Type/Subtype `01` & `0111` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 23` = Control :: **Control Wrapper** 
+        - Type/Subtype `01` & `1000` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 24` = Control :: **Block Ack Request (BlockAckReq)**
+        - Type/Subtype `01` & `1001` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 25` = Control :: **Block Ack (BlockAck)**
+        - Type/Subtype `01` & `1010` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 26` = Control :: **Power Save (PS)-Poll**
+        - Type/Subtype `01` & `1011` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 27` = Control :: **RTS**
+        - Type/Subtype `01` & `1100` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 28` = Control :: **CTS**
+        - Type/Subtype `01` & `1101` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 29` = Control :: **ACK (Acknowledgement)**
+        - Type/Subtype `01` & `1110` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 30` = Control :: **CF-End**
+        - Type/Subtype `01` & `1111` | `wlan.fc.type == 01 && wlan.fc.type_subtype == 31` = Control :: **CF-End + CF-Ack** <br><br>
         - Type/Subtype `10` & `0000` | `wlan.fc.type == 02 && wlan.fc.type_subtype == 32` = Data :: **Data**
         - Type/Subtype `10` & `0001` | `wlan.fc.type == 02 && wlan.fc.type_subtype == 33` = Data :: **Data + CF-Ack**
         - Type/Subtype `10` & `0010` | `wlan.fc.type == 02 && wlan.fc.type_subtype == 34` = Data :: **Data + CF-Poll**
