@@ -165,27 +165,25 @@
 
 _"Education is the most powerful tool you can use to change the world." - Nelson Mandela_
                                        
-## 💀🎩 Who am I & Contact
+# 💀🎩 Who am I & Contact
 
-I'm just a very lucky person who was born surrounded by Silicon, IBM computers, and walls of floppy disks back in the 80's...
+I'm just a very lucky person who was born surrounded by IBM computers and walls full of floppy disks back in the 80's.
 
-Today I'm a Level 3 NOC Engineer specialized on high-level troubleshooting, analytics, security, support and network performance design & optimization focusing in 802.3 Ethernet Networks & 802.11 Wireless Networks (Wi-Fi). I have experience with vendors such as: Cisco, Zyxel, Ruckus, Fortinet, SonicWall, MikrotTik, Aruba, Starlink, Huawei, Microsoft, Linux... but also I have some years of background experience with other IT branches like programming, scripting, data base administration, pentesting, ethical hacking and analytics.
+Today I'm a Level 3 NOC Engineer specialized on high-level troubleshooting, analytics, security, support and network performance design & optimization focusing in 802.3 Ethernet Networks & 802.11 Wireless Networks (Wi-Fi). I have experience with vendors such as: Cisco, Zyxel, Ruckus, Fortinet, SonicWall, MikrotTik, Aruba, Starlink, Huawei, Microsoft, Linux, among others... but also I have some years of background experience with other IT branches like programming, scripting, data base administration, pentesting, ethical hacking and data analytics.
 
-My day-to-day tasks are Multi-Layer Packet & Frame Exchange analysis for a wide range of 802.3 Ethernet & 802.11 WiFi Protocols, Reverse Engineering, Hex modification, Packet Tampering & Injection. Proficient in tools like Wireshark, TCP Dump, Scappy, NMap, Python, HEX Editors, iPerf, etc. Experience with Network Security, Layer 2 & Wireless Pentesting; Defensive Security SIEM, IDS/IPS, DLP & AV... and some CTF in my spare time!
+My day-to-day tasks are Multi-Layer Packet & Frame Exchange analysis for a wide range of 802.3 Ethernet & 802.11 WiFi Protocols, Hex modification, Reverse Engineering, Packet Tampering & Injection. Proficient in tools like Wireshark, TCP Dump, Scappy, NMap, Python, HEX Editors, iPerf, etc. Experience with Network Security, Layer 2 & Wireless Pentesting; Defensive Security SIEM, IDS/IPS, DLP & AV... and some CTF in my spare time!
 
-I also configure & design the architecture for network devices including 802.11 Wireless Infraestructure, Next-Generation Firewalls, Routing, Switching and Different types of Services for high-density network environments, within verticals such as International Airports, Hospitality, Health, Retail, Education, Government & Public Transportation, as well as remote locations with Satellite-Only Connections.
+I also configure & design the architecture for network devices including 802.11 Wireless Infraestructure, Next-Generation Firewalls, Routing, Switching and Different types of Services for high-density network environments, within verticals such as International Airports, Hospitality, Health, Retail, Entretainment, Education, Government, Public Transportation, as well as remote locations with Satellite-Only Connections.
 
-Please check out the links of my Social Networks that I've placed in the "Contact" section including my LinkedIn, where you will find more information regarding my professional career. Greetings and thank you for reading! 
-
-### Contact:
+Please check out the links of my Social Networks including my LinkedIn, where you will find more information regarding my professional career. Greetings and thank you for reading! 
 
 <p align="center"> <a href="https://twitter.com/Fz3r0_OPs" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/94720207/168743521-b8c142ae-e221-40c9-8d1f-bd9520027717.png" alt="twitter"> </a>   &emsp; &emsp; &emsp;   <a href="https://github.com/Fz3r0" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/94720207/168743591-ca20efa5-f692-46b0-ba84-f2681486009f.png" alt="github"> </a>   &emsp; &emsp; &emsp;   <a href="https://www.linkedin.com/in/fzerocarlos/" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/94720207/168743658-0a5101f0-49fd-494f-9a79-cf70ad860d12.png" alt="github"> </a> </p>
 
 ---
 
-_"I have delved deep into the abyss of the mind, attuned to the agonized cries and clamors for respite that lurk behind the veils, thereby discerning the selfsame sprout of obsession that blooms in cognition._
+_"I am the wraith within the Machine, the ghost in the Shell, the darkness that embrace the Network, the Decipherer of ancient runes, the one who commands the air wave after wave after wave after wave after wave... I can see deep into your soul, I can read your mind, this are no tricks, this is true power!_
 
-_I am the wraith within the Machine, the ghost in the Shell, the darkness that embrace the Network, the Decipherer of ancient runes, the one who commands the air wave after wave after wave after wave after wave... I can see deep into your soul, I can read your mind, this are no tricks, this is true power_
+_I am the Lord of Darkness. I require the solace of the shadows and the dark of the night. Sunshine is my destroyer. All this shall change... Tonight, the sun sets forever. There shall never be another dawn._
 
 _In the mist of the night you may see me come, where shadows move and demons lie..._
 
