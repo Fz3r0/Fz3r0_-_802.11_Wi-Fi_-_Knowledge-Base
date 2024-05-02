@@ -688,34 +688,34 @@ _IEEE is the world's largest technical professional organization dedicated to ad
 
 ## IEEE Standards
 _Each year, the IEEE SA conducts over 200 standards ballots, a process by which proposed standards are voted upon for technical reliability and soundness. In 2020, IEEE had over 1,200 active standards, with over 650 standards under development. | One of the more notable are the **IEEE 802 LAN/MAN group of standards**, with the widely used computer networking standards for both **wired** (**Ethernet, aka IEEE 802.3**) and **wireless** (**IEEE 802.11 and IEEE 802.16**) networks, IEEE 1547 Standard for Interconnecting Distributed Resources with Electric Power Systems, and ISO/IEEE 11073 Standards for Health Informatics._
-- [IEEE Standards Association](https://en.wikipedia.org/wiki/IEEE_Standards_Association) _`wiki + list`_
-- [IEEE P80]	Guide for Safety in AC Substation Grounding
-- [IEEE 255]	Standard Letter Symbols for Semiconductor Devices, IEEE-255-1963
-- [IEEE 260]	Standard Letter Symbols for Units of Measurement, IEEE-260-1978 (now 260.1-2004)
+- [IEEE Standards Association](https://en.wikipedia.org/wiki/IEEE_Standards_Association) _`wiki + list`_ <br><br>
+- [IEEE P80](https://standards.ieee.org/ieee/80/225/)	Guide for Safety in AC Substation Grounding
+- [IEEE 255](https://standards.ieee.org/ieee/255/433/)	Standard Letter Symbols for Semiconductor Devices | IEEE-255-1963 (Withdrown Dec 06, 1990)
+- [IEEE 260](https://standards.ieee.org/ieee/260.1/442/)	Standard Letter Symbols for Units of Measurement, IEEE-260-1978 (now 260.1-2004)
 - [IEEE 488]	Standard Digital Interface for Programmable Instrumentation, IEEE-488-1978 (now 488.1)
 - [IEEE 519]	Recommended Practice and Requirements for Harmonic Control in Electric Power Systems
 - [IEEE 603]	Standard Criteria for Safety Systems for Nuclear Power Generating Stations
 - [IEEE 610]	Standard Glossary of Software Engineering Terminology
-- [IEEE 754]	Floating point arithmetic specifications
-- [IEEE 802]	LAN/MAN
-    - [IEEE 802.1]	Standards for LAN/MAN bridging and management and remote media access control (MAC) bridging
-    - [IEEE 802.2]	Standards for Logical Link Control (LLC) standards for connectivity
-    - [IEEE 802.3]	Ethernet Standards for Carrier Sense Multiple Access with Collision Detection (CSMA/CD)
-    - [IEEE 802.4]	Standards for token passing bus access
-    - [IEEE 802.5]	Standards for token ring access and for communications between LANs and MANs
-    - [IEEE 802.6]	Standards for information exchange between systems
-    - [IEEE 802.7]	Standards for broadband LAN cable
-    - [IEEE 802.8]	Fiber-optic connection
-    - [IEEE 802.9]	Standards for integrated services, like voice.
-    - [IEEE 802.10]	Standards for LAN/MAN security implementations
-    - [IEEE 802.11]	Wireless Networking – Wireless LANs "Wi-Fi"
-    - [IEEE 802.12]	Standards for demand priority access method
-    - [IEEE 802.14]	Standards for cable television broadband communications
-    - [IEEE 802.15.2]	Bluetooth and Wi-Fi coexistence mechanism
-    - [IEEE 802.15.4]	Wireless Sensor/Control Networks "Zigbee"
-    - [IEEE 802.15.6]	Wireless Body Area Network[17] (BAN)
-    - [IEEE 802.16]	Wireless Networking – "WiMAX"
-    - [IEEE 802.24]	Standards for Logical Link Control (LLC) standards for connectivity
+- [IEEE 754]	Floating point arithmetic specifications <br><br>
+- [**IEEE 802**]	LAN/MAN <br><br>
+    - [**IEEE 802.1**]	Standards for LAN/MAN bridging and management and remote media access control (MAC) bridging
+    - [**IEEE 802.2**]	Standards for Logical Link Control (LLC) standards for connectivity
+    - [**IEEE 802.3**]	Ethernet Standards for Carrier Sense Multiple Access with Collision Detection (CSMA/CD)
+    - [**IEEE 802.4**]	Standards for token passing bus access
+    - [**IEEE 802.5**]	Standards for token ring access and for communications between LANs and MANs
+    - [**IEEE 802.6**]	Standards for information exchange between systems
+    - [**IEEE 802.7**]	Standards for broadband LAN cable
+    - [**IEEE 802.8**]	Fiber-optic connection
+    - [**IEEE 802.9**]	Standards for integrated services, like voice.
+    - [**IEEE 802.10**]	Standards for LAN/MAN security implementations
+    - [**IEEE 802.11**]	Wireless Networking – Wireless LANs "Wi-Fi"
+    - [**IEEE 802.12**]	Standards for demand priority access method
+    - [**IEEE 802.14]**	Standards for cable television broadband communications
+    - [**IEEE 802.15.2**]	Bluetooth and Wi-Fi coexistence mechanism
+    - [**IEEE 802.15.4**]	Wireless Sensor/Control Networks "Zigbee"
+    - [**IEEE 802.15.6**]	Wireless Body Area Network[17] (BAN)
+    - [**IEEE 802.16**]	Wireless Networking – "WiMAX"
+    - [**IEEE 802.24**]	Standards for Logical Link Control (LLC) standards for connectivity <br><br>
 - [IEEE 828]	Configuration Management in Systems and Software Engineering
 - [IEEE 829]	Software Test Documentation
 - [IEEE 830]	Software Requirements Specifications
@@ -780,7 +780,7 @@ _The most widely used IEEE 802 standards are for Ethernet, Bridging and Virtual 
 - [IEEE 802 50th Aniversary, a look back](https://standards.ieee.org/featured/ieee-802/#:~:text=The%20most%20widely%20used%20IEEE,providing%20focus%20for%20each%20area.)
 - IEEE 802: Overview & Architecture
 
-### 👑⚙️ IEEE 802 Standards: Important Standards for Wi-Fi
+### 👑⚙️ IEEE 802 Standards: Important Standards for 802.11 / Wi-Fi
 - [IEEE 802.1: Bridging & Management](https://en.wikipedia.org/wiki/IEEE_802.1)
     - 802 LAN/MAN architecture
     - Internetworking among 802 LANs, MANs & WANs
