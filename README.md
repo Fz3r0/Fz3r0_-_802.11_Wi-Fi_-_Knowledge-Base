@@ -1314,7 +1314,7 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
         - From DS `1` | `wlan.fc.fromds == 1`  = **From DS to STA** <br><br>
         - To DS `0` & From DS `0` | `wlan.fc.tods == 0 && wlan.fc.fromds == 0` = **Ad-Hoc** or **Management & Control (not going to DS)**
         - To DS `1` & From DS `0` | `wlan.fc.tods == 1 && wlan.fc.fromds == 0` = **Infraestructure: Traffic From STA Client To Access Point**
-        - To DS `0` & From DS `0` | `wlan.fc.tods == 0 && wlan.fc.fromds == 1` = **Infraestructure: Traffic From Access Point To STA Client**
+        - To DS `0` & From DS `1` | `wlan.fc.tods == 0 && wlan.fc.fromds == 1` = **Infraestructure: Traffic From Access Point To STA Client**
         - To DS `1` & From DS `1` | `wlan.fc.tods == 1 && wlan.fc.fromds == 1` = **WDS in use = Bridge/Mesh Link** <br><br>
     - [**More Frag**]() **1 bit** | "1" = Indicate that frame (data or management) have another fragment of the current MSDU or current MPDU to follow. MAC layer fragments only those frame having unicast receiver address & never fragments broadcast or multicast frames (as those never get acknowledged) | Depends on fragmentation threshold on the AP <br><br>
         - More Frag `0` | `wlan.fc.frag == 0` = **This is the last fragment of current MSDU or MMPDU**
