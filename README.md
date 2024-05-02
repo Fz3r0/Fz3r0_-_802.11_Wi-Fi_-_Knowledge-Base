@@ -165,7 +165,7 @@
 
 _"Education is the most powerful tool you can use to change the world." - Nelson Mandela_
 
-<h1 align="center"> 💀🎩📧 Who am I & Contact 📧🎩💀 </h1>
+<h1 align="center"> 💀📧 Who am I & Contact 📧💀 </h1>
                                        
 I'm just a very lucky person who was born surrounded by IBM computers and walls full of floppy disks back in the 80's.
 
