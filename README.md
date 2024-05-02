@@ -215,7 +215,7 @@ _Networking & Wireless terminology, covering definitions, acronyms, and abbrevia
 - [Computer Networking Acronyms](https://networkencyclopedia.com/computer-networking-acronyms/) _`list`_
 - [List of Information Technology (IT) initialisms](https://en.wikipedia.org/wiki/List_of_information_technology_initialisms) _`list`_
 
-## ⭕📖 Definitions & Acronyms: `802.11 Wireless`
+## ⭕📖 Definitions & Acronyms: `IEEE 802.11` or `Wi-Fi`
 - [**`IEEE 802.11-2020`** :: Definitions, Acronyms, and Abbreviations](https://ieeexplore.ieee.org/document/9363693) 3.1 & 3.2 | p. 157
 - [IEEE: 802.11 Standards Dictionary Online](https://ieeexplore.ieee.org/browse/standards/dictionary?activeStatus=true) _`list`_
 - [IEEE: 802.11 Acronyms & Abbreviations](https://ieeexplore.ieee.org/document/5769885) _`$$$`_
@@ -228,7 +228,7 @@ _Wi-Fi is not an abbreviation for “wireless fidelity”; the name was created 
 - [Wi-Fi :: Wiki](https://es.wikipedia.org/wiki/Wifi) _`español`_
 - [Wi-Fi :: Wiki](https://en.wikipedia.org/wiki/Wi-Fi) _`english`_
 
-## ⭕📖 Definition: `802.11`
+## ⭕📖 Definition: `IEEE 802.11`
 _IEEE 802.11 is the same as Wi-Fi... IEEE 802.11 refers to the set of standards that define communication for wireless LANs (wireless local area networks, or WLANs). The technology behind 802.11 is branded to consumers as Wi-Fi. This means, for the "end user" it's easier to remember the word "Wi-Fi" instead of "IEEE 802.11b/a/g/n/ac/ax/be Standard for Wireless Communications" or something like "IEEE 802.11b - DSSS/Direct Sequence"._
 - [802.11 Definition @ Technopedia](https://www.techopedia.com/definition/24967/ieee-80211) _`definition`_
 - [IEEE 802.11 :: Wiki](https://es.wikipedia.org/wiki/Wifi) _`español`_
@@ -1204,7 +1204,8 @@ _All MAC frames contain the first three header fields and the FCS. The frame typ
 |---------|-----------|---------|---------|---------|----------|---------|---------|---------||-------------||-------|
 |____________________________________________________________________________________________||_____________||_______|
                                        ||                                                            ||          ||
-                                       \/                                                            \/          \/   
+                                       \/                                                            \/          \/
+                                   MAC Header                                                    Frame Body    32-Bit CRC
 
 
 ````
@@ -1247,14 +1248,14 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
 
 ````
 - [**Frame Control**]() _All 802.11 Frames have a control field_ **IEEE-802.11-2020 :: 9.2.4.1 Frame Control field :: page 757** <br><br>
-    - [Protocol Version]() **2 bits** | Wireless version of the protocol is being used <br><br>
+    - [**Protocol Version**]() **2 bits** | Wireless version of the protocol is being used <br><br>
         - Version `00` | `wlan.fc.version == 00` = 802.11 Wi-Fi as we know it today, so Protocol Version will be always set as 00 <br><br>
-    - [Type]() **2 bits** | Type of 802.11 Frame, Type + Subtype subfields together identify the function of the frame <br><br>
+    - [**Type**]() **2 bits** | Type of 802.11 Frame, Type + Subtype subfields together identify the function of the frame <br><br>
         - Type `00` | `wlan.fc.type == 00` = **Management Frame** 
         - Type `01` | `wlan.fc.type == 01` = **Control Frame**
         - Type `10` | `wlan.fc.type == 02` = **Data Frame**
         - Type `11` | `wlan.fc.type == 03` = **Extension** _[DMG (Directional Multi-Gigabit)(802.11ad)]_ <br><br>
-    - [SubType]() **2 bits** | SubType of 802.11 Frame | There are many different kinds of management, control & data frames. Therefore 4-bit Subtype field is required to differentiate them <br><br>
+    - [**SubType**]() **2 bits** | SubType of 802.11 Frame | There are many different kinds of management, control & data frames. Therefore 4-bit Subtype field is required to differentiate them <br><br>
         - Type/Subtype `00` & `0000` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 00` = Management :: **Association Request** 
         - Type/Subtype `00` & `0001` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 01` = Management :: **Association Response**
         - Type/Subtype `00` & `0010` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 02` = Management :: **Re-Association Request** 
@@ -1307,21 +1308,28 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
         - Type/Subtype `11` & `0001` = Extension :: S1G Beacon
         - Type/Subtype `11` & `0010` = Extension :: _Reserved_
         - Type/Subtype `11` & `1111` = Extension :: _Reserved_ <br><br>
-    - [To DS]() **1 bit** | "1" = data frame is going from client station (STA) to Distribution System (DS)
-    - [From DS]() **1 bit** | "1" = data frame is going from Distribution System (DS) to client station (STA) <br><br>
+    - [**To DS**]() **1 bit** | "1" = data frame is going from client station (STA) to Distribution System (DS)
+    - [**From DS**]() **1 bit** | "1" = data frame is going from Distribution System (DS) to client station (STA) <br><br>
         - To DS `1` | `wlan.fc.tods == 1` = **From STA to DS**
         - From DS `1` | `wlan.fc.fromds == 1`  = **From DS to STA** <br><br>
         - To DS `0` & From DS `0` | `wlan.fc.tods == 0 && wlan.fc.fromds == 0` = **Ad-Hoc** or **Management & Control (not going to DS)**
         - To DS `1` & From DS `0` | `wlan.fc.tods == 1 && wlan.fc.fromds == 0` = **Infraestructure: Traffic From STA Client To Access Point**
         - To DS `0` & From DS `0` | `wlan.fc.tods == 0 && wlan.fc.fromds == 1` = **Infraestructure: Traffic From Access Point To STA Client**
         - To DS `1` & From DS `1` | `wlan.fc.tods == 1 && wlan.fc.fromds == 1` = **WDS in use = Bridge/Mesh Link** <br><br>
-    - [More Frag]() **1 bit** | "1" = Indicate that frame (data or management) have another fragment of the current MSDU or current MPDU to follow. MAC layer fragments only those frame having unicast receiver address & never fragments broadcast or multicast frames (as those never get acknowledged) | Depends on fragmentation threshold on the AP <br><br>
+    - [**More Frag**]() **1 bit** | "1" = Indicate that frame (data or management) have another fragment of the current MSDU or current MPDU to follow. MAC layer fragments only those frame having unicast receiver address & never fragments broadcast or multicast frames (as those never get acknowledged) | Depends on fragmentation threshold on the AP <br><br>
         - More Frag `0` | `wlan.fc.frag == 0` = **This is the last fragment of current MSDU or MMPDU**
         - More Frag `1` | `wlan.fc.frag == 1` = **Another fragment of current MSDU or MMPDU is to follow** <br><br>
-    - [Retry]() **1 bit** | "1" = Either a management frame or data frame, the Tx radio is indicating that the frame being sent is a “retransmission”. If a Tx station did not receive an ACK for a unicast frame, then frame will be retransmitted. In certain cases where ACK is not used (eg in RTS/CTS frame exchange, CTS server as ACK). Excessive L2 retransmissions affect WLAN performance in two ways: 1) Increases overhead resulting decreasing throughput 2) impact timely delivery of application traffic (affect voice/video services | Sensitive applications like VoIP required less than 5% retransmissions <br><br>
+    - [**Retry**]() **1 bit** | "1" = Either a management frame or data frame, the Tx radio is indicating that the frame being sent is a “retransmission”. If a Tx station did not receive an ACK for a unicast frame, then frame will be retransmitted. In certain cases where ACK is not used (eg in RTS/CTS frame exchange, CTS server as ACK). Excessive L2 retransmissions affect WLAN performance in two ways: 1) Increases overhead resulting decreasing throughput 2) impact timely delivery of application traffic (affect voice/video services | Sensitive applications like VoIP required less than 5% retransmissions <br><br>
         - Retry `1` | `wlan.fc.retry == 1` = **All Frames Retranmissions** <br><br>
         - Retry `1` & To DS `1` | `wlan.fc.retry == 1 && wlan.fc.tods == 1` = **Retry From STA to AP**
         - Retry `1` & From DS `1` | `wlan.fc.retry == 1 && wlan.fc.fromds == 1` = **Retry From AP to STA** <br><br>
+    - [**Power Management**]() **1 bit** | "1" = The station indicates that it is using Power Save mode | "Null" data frames used to inform AP about client in Power Save mode | When a client station in "Power Save mode" (PS) it will shutdown some of the transceivers components for a period of time to conserve power. <br><br>
+        - Data Null Function `0100` & Power Management `0` | `wlan.fc.type_subtype == 36 &&  wlan.fc.pwrmgt == 0` = **STA Active** or **Wake Up** (Data)
+        - QoS Data Null Function `1100` & Power Management `0` | `wlan.fc.type_subtype == 44 &&  wlan.fc.pwrmgt == 0` = **STA Active** or **Wake Up** (QoS Data)
+        - Data Null Function `0100` & Power Management `0` | `wlan.fc.type_subtype == 36 &&  wlan.fc.pwrmgt == 1` = **STA Sleep** (Data)
+        - QoS Data Null Function `1100` & Power Management `0` | `wlan.fc.type_subtype == 44 &&  wlan.fc.pwrmgt == 1` = **STA Sleep** (QoS Data) <br><br>
+        - QoS Data + Data Null Function & Power Management `0` | `wlan.fc.type_subtype == 36 &&  wlan.fc.pwrmgt == 0 || wlan.fc.type_subtype == 44 &&  wlan.fc.pwrmgt == 0` = **STA Active** or **Wake Up**
+
             
 ### Duration (Bytes Lenght)
 
