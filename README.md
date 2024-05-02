@@ -1319,9 +1319,9 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
         - More Frag `0` | `wlan.fc.frag == 0` = **This is the last fragment of current MSDU or MMPDU**
         - More Frag `1` | `wlan.fc.frag == 1` = **Another fragment of current MSDU or MMPDU is to follow** <br><br>
     - [Retry]() **1 bit** | "1" = Either a management frame or data frame, the Tx radio is indicating that the frame being sent is a “retransmission”. If a Tx station did not receive an ACK for a unicast frame, then frame will be retransmitted. In certain cases where ACK is not used (eg in RTS/CTS frame exchange, CTS server as ACK). Excessive L2 retransmissions affect WLAN performance in two ways: 1) Increases overhead resulting decreasing throughput 2) impact timely delivery of application traffic (affect voice/video services | Sensitive applications like VoIP required less than 5% retransmissions <br><br>
-    - Retry `1` | `wlan.fc.retry == 1` = **All Frames Retranmissions** <br><br>
-    - Retry `1` & To DS `1` | `wlan.fc.retry == 1 && wlan.fc.tods == 1` = **Retry From STA to AP**
-    - Retry `1` & From DS `1` | `wlan.fc.retry == 1 && wlan.fc.fromds == 1` = **Retry From AP to STA** <br><br>
+        - Retry `1` | `wlan.fc.retry == 1` = **All Frames Retranmissions** <br><br>
+        - Retry `1` & To DS `1` | `wlan.fc.retry == 1 && wlan.fc.tods == 1` = **Retry From STA to AP**
+        - Retry `1` & From DS `1` | `wlan.fc.retry == 1 && wlan.fc.fromds == 1` = **Retry From AP to STA** <br><br>
             
 ### Duration (Bytes Lenght)
 
