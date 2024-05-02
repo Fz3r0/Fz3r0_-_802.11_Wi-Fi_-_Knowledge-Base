@@ -1323,13 +1323,13 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
         - Retry `1` | `wlan.fc.retry == 1` = **All Frames Retranmissions** <br><br>
         - Retry `1` & To DS `1` | `wlan.fc.retry == 1 && wlan.fc.tods == 1` = **Retry From STA to AP**
         - Retry `1` & From DS `1` | `wlan.fc.retry == 1 && wlan.fc.fromds == 1` = **Retry From AP to STA** <br><br>
-    - [**Power Management**]() **1 bit** | "1" = The station indicates that it is using Power Save mode | "Null" data frames used to inform AP about client in Power Save mode | When a client station in "Power Save mode" (PS) it will shutdown some of the transceivers components for a period of time to conserve power. <br><br>
+    - [**Power Management**]() **1 bit** | `1` = The station indicates that it is using Power Save mode | "Null" data frames used to inform AP about client in Power Save mode | When a client station in "Power Save mode" (PS) it will shutdown some of the transceivers components for a period of time to conserve power. <br><br>
         - Data Null `0100` & Pwr Mgmt `0` | `wlan.fc.type_subtype == 36 &&  wlan.fc.pwrmgt == 0` = **STA Wake Up** (Data)
         - QoS Data Null `1100` & Pwr Mgmt `0` | `wlan.fc.type_subtype == 44 &&  wlan.fc.pwrmgt == 0` = **STA Wake Up** (QoS)
-        - Data Null `0100` & Pwr Mgmt `0` | `wlan.fc.type_subtype == 36 &&  wlan.fc.pwrmgt == 1` = **STA Sleep** (Data)
-        - QoS Data Null `1100` & Pwr Mgmt `0` | `wlan.fc.type_subtype == 44 &&  wlan.fc.pwrmgt == 1` = **STA Sleep** (QoS) <br><br>
+        - Data Null `0100` & Pwr Mgmt `1` | `wlan.fc.type_subtype == 36 &&  wlan.fc.pwrmgt == 1` = **STA Sleep** (Data)
+        - QoS Data Null `1100` & Pwr Mgmt `1` | `wlan.fc.type_subtype == 44 &&  wlan.fc.pwrmgt == 1` = **STA Sleep** (QoS) <br><br>
         - QoS Data + Data Nulls & Pwr Mgmt `0` | `(wlan.fc.type_subtype == 36 || wlan.fc.type_subtype == 44) &&  wlan.fc.pwrmgt == 0` = **STA Wake Up** (QoS + Data)
-        - QoS Data + Data Nulls & Pwr Mgmt `0` | `(wlan.fc.type_subtype == 36 || wlan.fc.type_subtype == 44) &&  wlan.fc.pwrmgt == 1` = **STA Sleep** (QoS + Data) <br><br>
+        - QoS Data + Data Nulls & Pwr Mgmt `1` | `(wlan.fc.type_subtype == 36 || wlan.fc.type_subtype == 44) &&  wlan.fc.pwrmgt == 1` = **STA Sleep** (QoS + Data) <br><br>
             
 ### Duration (Bytes Lenght)
 
