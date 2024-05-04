@@ -1178,7 +1178,7 @@ _Instructions & Data directly understandable by STAs, not present on 802.11 Fram
 - Clause 21 :: VHT :: 802.11ac :: DSSS
 
 ## 🔝📡🗂️ 802.11 Pseudo-Headers: `Radiotap`, `plus AVS Radio Information`, `PPI`
-_Radiotap is a de facto standard for 802.11 frame injection and reception | The radiotap header format is a mechanism to supply additional information about frames, from the driver to userspace applications such as libpcap, and from a userspace application to the driver for transmission. | Data that is NOT present in a 802.11 MAC-frame, but is intepreted coming from the PHY-Layer 1 (spectrum) derived from the PLCP header. Additional information (Meta-Information) that is added to each 802.11 frame when capturing frames with an analysis application interpreted/calculated because the PHY layer 1 spectrum throught drivers/adapters. These are not part of the standard 802.11 frame format, but are additional information added at the time of capture to provide supplementary data about the frames captured_
+_Radiotap is a de facto standard for 802.11 frame injection and reception | The radiotap header format is a mechanism to supply additional information about frames, from the driver to userspace applications such as libpcap, and from a userspace application to the driver for transmission. | Data that is NOT present in a 802.11 MAC-frame, but is intepreted coming from the PHY-Layer 1 (spectrum) derived from the PLCP header. Additional information (Meta-Information) that is added to each 802.11 frame when capturing frames with an analysis application interpreted/calculated because the PHY layer 1 spectrum throught drivers/adapters. These are not part of the standard 802.11 frame format, but are additional information added at the time of capture to provide supplementary data about the frames captured | **Most adapters capture Radiotap Header & Radio Information like Atheros Drivers, PPI is less common but it can be captured by some TP-Link adapters**_
 - [802.11 plus Radiotap & 802.11 plus AVS radio information & PPI (Per-Packet Information)](https://www.intuitibits.com/2015/04/06/link-layer-header-types/) _`intuitbits, Adrian Granados`_
 - [What are RadioTap Headers? @ Wi-Fi Nigel](https://wifinigel.blogspot.com/2013/11/what-are-radiotap-headers.html)
 - [Radiotap.org](https://www.radiotap.org) Official Radiotap URL
@@ -1261,7 +1261,7 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
 
 ### PPI: Per Packet Information
 - PPI: Datarate 
-    - 1 mbps Datarate = ``ppi.80211-common.rate == 1000``
+    - 1 mbps Datarate = `ppi.80211-common.rate == 1000`
 
 
 
