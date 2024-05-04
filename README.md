@@ -1188,7 +1188,9 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
 - [How to Capture PPI-Common Headers Instead of RadioTap Headers @ Metageek](https://support.metageek.com/hc/en-us/articles/203618264-How-to-Capture-PPI-Common-Headers-Instead-of-RadioTap-Headers)
 - [Injecting Radiotap Headers](https://github.com/vanhoefm/libwifi/blob/master/docs/linux_tutorial.md#injecting-frames)
 
-### 802.11 Radiotap Header
+---
+
+### 🔝📡 802.11 Radiotap Header
 - Radiotap Header: **`Version`** _(Currently Always 0)_ <br><br>
     - Radiotap Header Version 0 = `radiotap.version == 0` <br><br>
 - Radiotap Header: **`Pad`** _(Currently Unused)_ <br><br>
@@ -1244,8 +1246,16 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
 - Radiotap Header: **`Guard Interval`** <br><br>
    - Long GI = `radiotap.mcs.gi == 0` 
    - Short GI = `radiotap.mcs.gi == 1`
+
+---
+
+### 🔝📡 PPI (Per Packet Information)
+- PPI: Datarate 
+    - 1 mbps Datarate = `ppi.80211-common.rate == 1000`
+
+---
    
-### 802.11 plus AVS Radio Information
+### 💡📡 802.11 Radio Information
 - **802.11 PHY** <br><br>
     - **802.11** | Wi-Fi 0 | DSSS `wlan_radio.phy == 3` 
     - **802.11b** | Wi-Fi 1 | HR/DSSS `wlan_radio.phy == 4`
@@ -1272,9 +1282,7 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
     - Freq - 5280 MHz `wlan_radio.frequency == 5280`
     - Freq - 2462 MHz | CH 11 = `wlan_radio.frequency == 2462`
 
-### PPI (Per Packet Information)
-- PPI: Datarate 
-    - 1 mbps Datarate = `ppi.80211-common.rate == 1000`
+
 
 
 
