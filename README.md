@@ -1177,7 +1177,7 @@ _Instructions & Data directly understandable by STAs, not present on 802.11 Fram
 - Clause PHT: HT
 - Clause 21 :: VHT :: 802.11ac :: DSSS
 
-## 🔝📡🗂️ Pseudo-Headers: `Radiotap`,  `PPI`, `Radio Information`
+## 🔝📡🗂️ 802.11 Pseudo-Headers: `Radiotap`, `plus AVS Radio Information`, `PPI`
 _Radiotap is a de facto standard for 802.11 frame injection and reception | The radiotap header format is a mechanism to supply additional information about frames, from the driver to userspace applications such as libpcap, and from a userspace application to the driver for transmission. | Data that is NOT present in a 802.11 MAC-frame, but is intepreted coming from the PHY-Layer 1 (spectrum) derived from the PLCP header. Additional information (Meta-Information) that is added to each 802.11 frame when capturing frames with an analysis application interpreted/calculated because the PHY layer 1 spectrum throught drivers/adapters. These are not part of the standard 802.11 frame format, but are additional information added at the time of capture to provide supplementary data about the frames captured_
 - [802.11 plus Radiotap & 802.11 plus AVS radio information & PPI (Per-Packet Information)](https://www.intuitibits.com/2015/04/06/link-layer-header-types/) _`intuitbits, Adrian Granados`_
 - [What are RadioTap Headers? @ Wi-Fi Nigel](https://wifinigel.blogspot.com/2013/11/what-are-radiotap-headers.html)
@@ -1258,7 +1258,9 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
     - Freq - 5280 MHz `wlan_radio.frequency == 5280`
     - Freq - 2462 MHz | CH 11 = `wlan_radio.frequency == 2462`
 
-
+### PPI: Per Packet Information
+- PPI: Datarate 
+    - 1 mbps Datarate = ``ppi.80211-common.rate == 1000``
 
 
 
