@@ -1186,13 +1186,24 @@ _Data that is NOT present in a 802.11 MAC-frame, but is intepreted coming from t
 - [Injecting Radiotap Headers](https://github.com/vanhoefm/libwifi/blob/master/docs/linux_tutorial.md#injecting-frames)
 
 ### Radiotap Header: Interpreted Meta Information
+- Radiotap Header: Version
+    - Radiotap Header Version 0 = `radiotap.version == 0` <br><br>  
+- Radiotap Header: Bandwith
+    - Bandwith :: 20 MHz = `radiotap.mcs.bw == 0` 
+    - Bandwith :: 40 MHz = `radiotap.mcs.bw == 1` <br><br>
+- Radiotap Header: Guard Interval
+   - Long GI = `radiotap.mcs.gi == 0` 
+   - Short GI = `radiotap.mcs.gi == 1`
+   
+### Radio Information
 - **802.11 PHY**
-    - 802.11b | Wi-Fi 1 | HR/DSSS `wlan_radio.phy == 4`
-    - 802.11a | Wi-Fi 2 | OFDM `wlan_radio.phy == 5`
-    - 802.11g | Wi-Fi 3 | ERP `wlan_radio.phy == 6`
-    - 802.11n | Wi-Fi 4 | HT :: `wlan_radio.phy == 7`
-    - 802.11ac | Wi-Fi 5 | VHT :: `wlan_radio.phy == 8`
-    - 802.11ax | Wi-Fi 6 | HE `wlan_radio.phy == 11` <br><br>
+    - **802.11** | Wi-Fi 0 | DSSS `wlan_radio.phy == 3` 
+    - **802.11b** | Wi-Fi 1 | HR/DSSS `wlan_radio.phy == 4`
+    - **802.11a** | Wi-Fi 2 | OFDM `wlan_radio.phy == 5`
+    - **802.11g** | Wi-Fi 3 | ERP `wlan_radio.phy == 6`
+    - **802.11n** | Wi-Fi 4 | HT :: `wlan_radio.phy == 7`
+    - **802.11ac** | Wi-Fi 5 | VHT :: `wlan_radio.phy == 8`
+    - **802.11ax** | Wi-Fi 6 | HE `wlan_radio.phy == 11` <br><br>
 - **Bandwith (802.11n/ac/ax)**
     - 802.11ac | Wi-Fi 5 | 40 MHz = `wlan_radio.11ac.bandwidth == 3` 
     - 802.11ac | Wi-Fi 5 | 80 MHz = `wlan_radio.11ac.bandwidth == 4` <br><br>
