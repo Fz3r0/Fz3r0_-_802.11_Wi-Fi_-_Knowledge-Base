@@ -1177,17 +1177,26 @@ _Instructions & Data directly understandable by STAs, not present on 802.11 Fram
 - Clause PHT: HT
 - Clause 21 :: VHT :: 802.11ac :: DSSS
 
-## 🔝📡🗂️ Radiotap Header / PPI (Per-Packet Information) / Pseudo-Header
-_Data that is NOT present in a 802.11 MAC-frame, but is intepreted coming from the PHY-Layer 1 (spectrum) derived from the PLCP header. Additional information (Meta-Information) that is added to each 802.11 frame when capturing frames with an analysis application interpreted/calculated because the PHY layer 1 spectrum throught drivers/adapters. These are not part of the standard 802.11 frame format, but are additional information added at the time of capture to provide supplementary data about the frames captured_
+## 🔝📡🗂️ Pseudo-Headers: `Radiotap`,  `PPI`, `Radio Information`
+_Radiotap is a de facto standard for 802.11 frame injection and reception | The radiotap header format is a mechanism to supply additional information about frames, from the driver to userspace applications such as libpcap, and from a userspace application to the driver for transmission. | Data that is NOT present in a 802.11 MAC-frame, but is intepreted coming from the PHY-Layer 1 (spectrum) derived from the PLCP header. Additional information (Meta-Information) that is added to each 802.11 frame when capturing frames with an analysis application interpreted/calculated because the PHY layer 1 spectrum throught drivers/adapters. These are not part of the standard 802.11 frame format, but are additional information added at the time of capture to provide supplementary data about the frames captured_
+- [802.11 plus Radiotap & 802.11 plus AVS radio information & PPI (Per-Packet Information)](https://www.intuitibits.com/2015/04/06/link-layer-header-
 - [What are RadioTap Headers? @ Wi-Fi Nigel](https://wifinigel.blogspot.com/2013/11/what-are-radiotap-headers.html)
-- [Radiotap.org](https://www.radiotap.org/fields/defined)
-- [Radiotap Defined Fields](https://www.radiotap.org/fields/defined)
+types/#:~:text=The%20802.11%20plus%20Radiotap%20%2C%20802.11,depending%20on%20the%20driver's%20implementation.)
+- [Radiotap.org](https://www.radiotap.org) Official Radiotap URL
+- [Radiotap Defined Fields](https://www.radiotap.org/fields/defined) Official Defined Radiotap Header Fields
+- [Radiotap Suggested Fields](https://www.radiotap.org/fields/suggested) Fields are currently under discussion
 - [PPI: PPI (Per-Packet Information) @ Wireshark](https://wiki.wireshark.org/PPI#:~:text=PPI%20(Per%2DPacket%20Information)&text=Each%20PPI%20packet%20header%20is,field%20headers%20are%20little%2Dendian.)
 - [Injecting Radiotap Headers](https://github.com/vanhoefm/libwifi/blob/master/docs/linux_tutorial.md#injecting-frames)
 
-### Radiotap Header: Interpreted Meta Information
-- Radiotap Header: Version
-    - Radiotap Header Version 0 = `radiotap.version == 0` <br><br>  
+### 802.11 Radiotap Header: Interpreted Meta Information
+- Radiotap Header: **`Version`** _(Currently Always 0)_
+    - Radiotap Header Version 0 = `radiotap.version == 0` <br><br>
+- Radiotap Header: **`Pad`** _(Currently Unused)_ <br><br>
+    - Radiotap Header Pad 0 = `radiotap.pad == 0`
+- Radiotap Header: **`Lenght`** _(entire length of the radiotap data, useful for developers)_ <br><br>
+    - Radiotap Header Lenght **Equal** 50 bits = `radiotap.length == 50`
+    - Radiotap Header Lenght **Less** than 50 bits = `radiotap.length < 50`
+    - Radiotap Header Lenght **More** than 50 bits = `radiotap.length > 50` <br><br>
 - Radiotap Header: Bandwith
     - Bandwith :: 20 MHz = `radiotap.mcs.bw == 0` 
     - Bandwith :: 40 MHz = `radiotap.mcs.bw == 1` <br><br>
@@ -1195,7 +1204,7 @@ _Data that is NOT present in a 802.11 MAC-frame, but is intepreted coming from t
    - Long GI = `radiotap.mcs.gi == 0` 
    - Short GI = `radiotap.mcs.gi == 1`
    
-### Radio Information
+### 802.11 plus AVS: Radio Information
 - **802.11 PHY**
     - **802.11** | Wi-Fi 0 | DSSS `wlan_radio.phy == 3` 
     - **802.11b** | Wi-Fi 1 | HR/DSSS `wlan_radio.phy == 4`
