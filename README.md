@@ -1184,7 +1184,8 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
 - [Radiotap.org](https://www.radiotap.org) Official Radiotap URL
 - [Radiotap Defined Fields](https://www.radiotap.org/fields/defined) Official Defined Radiotap Header Fields
 - [Radiotap Suggested Fields](https://www.radiotap.org/fields/suggested) Fields are currently under discussion
-- [PPI: PPI (Per-Packet Information) @ Wireshark](https://wiki.wireshark.org/PPI#:~:text=PPI%20(Per%2DPacket%20Information)&text=Each%20PPI%20packet%20header%20is,field%20headers%20are%20little%2Dendian.)
+- [PPI: PPI (Per-Packet Information) @ Wireshark](https://wiki.wireshark.org/PPI)
+- [How to Capture PPI-Common Headers Instead of RadioTap Headers @ Metageek](https://support.metageek.com/hc/en-us/articles/203618264-How-to-Capture-PPI-Common-Headers-Instead-of-RadioTap-Headers)
 - [Injecting Radiotap Headers](https://github.com/vanhoefm/libwifi/blob/master/docs/linux_tutorial.md#injecting-frames)
 
 ### 802.11 Radiotap Header: Interpreted Meta Information
