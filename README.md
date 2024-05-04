@@ -961,7 +961,7 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 - [**802.11ax**-2021](https://en.wikipedia.org/wiki/Wi-Fi_6) `r5.2021->`**`<<DRAFT>>`** _`Amendment 1`_ **Wi-Fi 6** :: **HE & OFDMA** High Efficiency WLAN | Throughput & High Density Enhancements
 - [**802.11ay**-2021](https://en.wikipedia.org/wiki/IEEE_802.11ay) `r5.2021->`**`<<DRAFT>>`** _`Amendment 2`_ Faster speeds & longer range, above 45 GH | TV & Monitor Connectivity
 - [**802.11ba**-2021](https://standards.ieee.org/ieee/802.11ba/6896/) `r5.2021->`**`<<DRAFT>>`** _`Amendment 3`_ **WUR** :: Increase battery life of devices (ex. powered IoT devices)
-- [**802.11az**-2023](https://standards.ieee.org/ieee/802.11az/7226/) `r5.2023->`**`<<DRAFT>>`** _`Amendment 4`_ :: Improves physical location tracking & positioning, energy efficiency | SmartBuiding & IoT_
+- [**802.11az**-2023](https://standards.ieee.org/ieee/802.11az/7226/) `r5.2023->`**`<<DRAFT>>`** _`Amendment 4`_ :: Improves physical location tracking, positioning, energy efficiency | SmartBuiding/IoT
 - [**802.11bc**-2023](https://arxiv.org/abs/2104.11811) `r5.2023->`**`<<DRAFT>>`** _`Amendment 5`_ **Enhanced Broadcast Service** :: data rate control based on broadcast ACK
 - [**802.11bb**-2023](https://www.railwayinnovationhub.com/aprobado-el-primer-estandar-lifi-ieee-802-11bb/) `r5.2023->`**`<<DRAFT>>`** _`Amendment 6`_ **Li-Fi** :: Wireless Communication using light waves
 - [**802.11bd**-2022](https://standards.ieee.org/ieee/802.11bd/7451/) `r5.2023->`**`<<DRAFT>>`** _`Amendment 7`_ **V2X** :: next generation vehicle-to-everything (V2X) communication @ 5.9 & 60 GHz 
