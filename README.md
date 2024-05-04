@@ -1196,15 +1196,27 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
     - Radiotap Header Lenght **Equal** 50 bits = `radiotap.length == 50`
     - Radiotap Header Lenght **Less** than 50 bits = `radiotap.length < 50`
     - Radiotap Header Lenght **More** than 50 bits = `radiotap.length > 50` <br><br>
-- Radiotap Header: Bandwith
+- Radiotap Header: **`Flags`** _(Possible present flags / information in a Radiotap Header)_ <br><br>
+    - TSFT present = `radiotap.present.tsft == 1`
+    - TSFT present = `radiotap.present.tsft == 1`
+- Radiotap Header: Bandwith <br><br>
     - Bandwith :: 20 MHz = `radiotap.mcs.bw == 0` 
     - Bandwith :: 40 MHz = `radiotap.mcs.bw == 1` <br><br>
-- Radiotap Header: Guard Interval
+- Radiotap Header: Data Rate <br><br>
+    - 1 mbps Data Rate = `radiotap.datarate == 1`
+    - 2 mbps Data Rate = `radiotap.datarate == 2`
+    - 5.5 mbps Data Rate = `radiotap.datarate == 2` <br><br>
+    - 6 mbps Data Rate = `radiotap.datarate == 6`
+    - 12 mbps Data Rate = `radiotap.datarate == 12`
+    - 24 mbps Data Rate = `radiotap.datarate == 24` <br><br>
+    - **More Than** 24 mbpps Data Rate = `radiotap.datarate > 24`
+    - **Less Than** 24 mbpps Data Rate = `radiotap.datarate < 24` <br><br>
+- Radiotap Header: Guard Interval <br><br>
    - Long GI = `radiotap.mcs.gi == 0` 
    - Short GI = `radiotap.mcs.gi == 1`
    
 ### 802.11 plus AVS: Radio Information
-- **802.11 PHY**
+- **802.11 PHY** <br><br>
     - **802.11** | Wi-Fi 0 | DSSS `wlan_radio.phy == 3` 
     - **802.11b** | Wi-Fi 1 | HR/DSSS `wlan_radio.phy == 4`
     - **802.11a** | Wi-Fi 2 | OFDM `wlan_radio.phy == 5`
@@ -1212,18 +1224,21 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
     - **802.11n** | Wi-Fi 4 | HT :: `wlan_radio.phy == 7`
     - **802.11ac** | Wi-Fi 5 | VHT :: `wlan_radio.phy == 8`
     - **802.11ax** | Wi-Fi 6 | HE `wlan_radio.phy == 11` <br><br>
-- **Bandwith (802.11n/ac/ax)**
+- **Bandwith (802.11n/ac/ax)** <br><br>
+    - 802.11n | Wi-Fi 4 | 20 MHz = `wlan_radio.11n.bandwidth == 0`
+    - 802.11n | Wi-Fi 4 | 40 MHz = `wlan_radio.11n.bandwidth == 1`  
+    - 802.11ac | Wi-Fi 5 | 20 MHz = `wlan_radio.11ac.bandwidth == 0` 
     - 802.11ac | Wi-Fi 5 | 40 MHz = `wlan_radio.11ac.bandwidth == 3` 
     - 802.11ac | Wi-Fi 5 | 80 MHz = `wlan_radio.11ac.bandwidth == 4` <br><br>
-- **Signal Strenght**
+- **Signal Strenght** <br><br>
     - Signal Strengh **equal** -50dbm = `wlan_radio.signal_dbm == -50`
     - Signal Strenght **les**s than -62db `wlan_radio.signal_dbm < -62`
     - Signal Strenght **more** than -62db `wlan_radio.signal_dbm > -62` <br><br>
-- **Channel**
+- **Channel** <br><br>
     - Channel 56 = `wlan_radio.channel == 56`
     - Channels only 1, 6, 11 = `wlan_radio.channel == 1 || wlan_radio.channel == 6 || wlan_radio.channel == 11`
     - Channels except 1, 6, 11 =  `!(wlan_radio.channel == 1 || wlan_radio.channel == 6 || wlan_radio.channel == 11)` <br><br>
-- **Frequency**
+- **Frequency** <br><br>
     - Freq - 5280 MHz `wlan_radio.frequency == 5280`
     - Freq - 2462 MHz | CH 11 = `wlan_radio.frequency == 2462`
 
