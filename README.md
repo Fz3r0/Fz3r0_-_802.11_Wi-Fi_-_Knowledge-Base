@@ -1188,21 +1188,37 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
 - [Injecting Radiotap Headers](https://github.com/vanhoefm/libwifi/blob/master/docs/linux_tutorial.md#injecting-frames)
 
 ### 802.11 Radiotap Header: Interpreted Meta Information
-- Radiotap Header: **`Version`** _(Currently Always 0)_
+- Radiotap Header: **`Version`** _(Currently Always 0)_ <br><br>
     - Radiotap Header Version 0 = `radiotap.version == 0` <br><br>
 - Radiotap Header: **`Pad`** _(Currently Unused)_ <br><br>
-    - Radiotap Header Pad 0 = `radiotap.pad == 0`
+    - Radiotap Header Pad 0 = `radiotap.pad == 0` <br><br>
 - Radiotap Header: **`Lenght`** _(entire length of the radiotap data, useful for developers)_ <br><br>
     - Radiotap Header Lenght **Equal** 50 bits = `radiotap.length == 50`
     - Radiotap Header Lenght **Less** than 50 bits = `radiotap.length < 50`
     - Radiotap Header Lenght **More** than 50 bits = `radiotap.length > 50` <br><br>
 - Radiotap Header: **`Flags`** _(Possible present flags / information in a Radiotap Header)_ <br><br>
-    - TSFT present = `radiotap.present.tsft == 1`
-    - TSFT present = `radiotap.present.tsft == 1`
-- Radiotap Header: Bandwith <br><br>
+    - TSFT (Time Synchronization Function Timer) present = `radiotap.present.tsft == 1`
+    - Flags present = `radiotap.present.flags == 1`
+    - Rate present = `radiotap.present.rate  == 1`
+    - Channel present = `radiotap.present.channel  == 1`
+    - FHSS (Frequency-hopping spread spectrum) present = `radiotap.present.fhss == 1`
+    - dBm Antenna Signal = `radiotap.present.dbm_antsignal == 1`
+    - dBm Antenna Noise = `radiotap.present.dbm_antnoise == 1`
+    - Flags present = `radiotap.present.flags == 1`
+    - Flags present = `radiotap.present.flags == 1`
+    - Flags present = `radiotap.present.flags == 1`
+    - Flags present = `radiotap.present.flags == 1`
+    - Flags present = `radiotap.present.flags == 1`
+    - Flags present = `radiotap.present.flags == 1`
+    - Flags present = `radiotap.present.flags == 1`
+    - Flags present = `radiotap.present.flags == 1`
+    - Flags present = `radiotap.present.flags == 1`
+    - Flags present = `radiotap.present.flags == 1`
+    - Flags present = `radiotap.present.flags == 1`  <br><br>
+- Radiotap Header: **`Bandwith`** <br><br>
     - Bandwith :: 20 MHz = `radiotap.mcs.bw == 0` 
     - Bandwith :: 40 MHz = `radiotap.mcs.bw == 1` <br><br>
-- Radiotap Header: Data Rate <br><br>
+- Radiotap Header: **`Data Rate`** <br><br>
     - 1 mbps Data Rate = `radiotap.datarate == 1`
     - 2 mbps Data Rate = `radiotap.datarate == 2`
     - 5.5 mbps Data Rate = `radiotap.datarate == 2` <br><br>
@@ -1211,7 +1227,7 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
     - 24 mbps Data Rate = `radiotap.datarate == 24` <br><br>
     - **More Than** 24 mbpps Data Rate = `radiotap.datarate > 24`
     - **Less Than** 24 mbpps Data Rate = `radiotap.datarate < 24` <br><br>
-- Radiotap Header: Guard Interval <br><br>
+- Radiotap Header: **`Guard Interval`** <br><br>
    - Long GI = `radiotap.mcs.gi == 0` 
    - Short GI = `radiotap.mcs.gi == 1`
    
