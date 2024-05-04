@@ -943,7 +943,7 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 ---
 
 ### 🤖📡IEEE 802.11-2020 Ratified Amendments `Wi-Fi Bridge Links`
-- [**802.11ak**-2018](https://www.businesswire.com/news/home/20180717005217/en/IEEE-Publishes-802.11ak%E2%84%A2-2018-Standard-Amendment-Enabling-WiFi%C2%AE-Transit-Links-in-Bridged-Networks) `r4.2016->`**`2020`** _`Amendment 4`_ **GLK** 802.11-Wireless working as 802.3-Ethernet providing 802.1Q bridged networks. AKA Trunking
+- [**802.11ak**-2018](https://www.businesswire.com/news/home/20180717005217/en/IEEE-Publishes-802.11ak%E2%84%A2-2018-Standard-Amendment-Enabling-WiFi%C2%AE-Transit-Links-in-Bridged-Networks) `r4.2016->`**`2020`** _`Amendment 4`_ **GLK** 802.11 (Wireless) working as 802.3 (Ethernet) 802.1Q bridged networks (Trunk Link)
 
 ---
 
