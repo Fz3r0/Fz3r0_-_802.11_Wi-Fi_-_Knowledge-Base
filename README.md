@@ -1187,16 +1187,26 @@ _Data that is NOT present in a 802.11 MAC-frame, but is intepreted coming from t
 
 ### Radiotap Header: Interpreted Meta Information
 - **802.11 PHY**
-    - 802.11a | Wi-Fi 1 | OFDM `wlan_radio.phy == 5`
-    - 802.11b | Wi-Fi 2 | `wlan_radio.phy == 6`
+    - 802.11b | Wi-Fi 1 | HR/DSSS `wlan_radio.phy == 4`
+    - 802.11a | Wi-Fi 2 | OFDM `wlan_radio.phy == 5`
+    - 802.11g | Wi-Fi 3 | ERP `wlan_radio.phy == 6`
     - 802.11n | Wi-Fi 4 | HT :: `wlan_radio.phy == 7`
     - 802.11ac | Wi-Fi 5 | VHT :: `wlan_radio.phy == 8`
     - 802.11ax | Wi-Fi 6 | HE `wlan_radio.phy == 11` <br><br>
 - **Bandwith (802.11n/ac/ax)**
     - 802.11ac | Wi-Fi 5 | 40 MHz = `wlan_radio.11ac.bandwidth == 3` 
-    - 802.11ac | Wi-Fi 5 | 80 MHz = `wlan_radio.11ac.bandwidth == 4` 
+    - 802.11ac | Wi-Fi 5 | 80 MHz = `wlan_radio.11ac.bandwidth == 4` <br><br>
+- **Signal Strenght**
+    - Signal Strengh **equal** -50dbm = `wlan_radio.signal_dbm == -50`
+    - Signal Strenght **les**s than -62db `wlan_radio.signal_dbm < -62`
+    - Signal Strenght **more** than -62db `wlan_radio.signal_dbm > -62` <br><br>
 - **Channel**
     - Channel 56 = `wlan_radio.channel == 56`
+    - Channels only 1, 6, 11 = `wlan_radio.channel == 1 || wlan_radio.channel == 6 || wlan_radio.channel == 11`
+    - Channels except 1, 6, 11 =  `!(wlan_radio.channel == 1 || wlan_radio.channel == 6 || wlan_radio.channel == 11)` <br><br>
+- **Frequency**
+    - Freq - 5280 MHz `wlan_radio.frequency == 5280`
+    - Freq - 2462 MHz | CH 11 = `wlan_radio.frequency == 2462`
 
 
 
