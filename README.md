@@ -378,11 +378,43 @@ https://www.milenio.com/cultura/como-llego-el-internet-a-mexico]()
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
 
-# 🌎♻️🧙‍♂️ Networking & Internet: `The Internet Ecosystem`
+# 🌎♻️🧙‍♂️ Internetworking: `The Internet Ecosystem`
 _The Internet is successful in large part due to its unique model: shared global ownership, open standards development, and freely accessible processes for technology and policy development. The Internet has enjoyed unprecedented success thanks to its open, transparent, and collaborative model. The model relies on processes that are local, bottom-up and accessible to users around the world. | The Internet is a collection of autonomous and interconnected networks that implement open protocols and standards. No person, government, or entity owns or controls the Internet. Instead, a volunteer organization called ISOC (Internet Society) controls the future of the Internet. It appoints a technical advisory group called the IAB (Internet Architecture Board) to evaluate and set standards. | Input on protocols and standards can come from anybody-individuals, research groups, companies, and universities. A specification is submitted as an Internet draft and made available for review and comments. The Internet organizations evaluate whether these specifications should be advanced through a process that elevates the specification to different levels of maturity until it potentially reaches a standards status. The process is described under "Internet Standards."_
 - [Who Makes the Internet Work: The Internet Ecosystem @ _ISOC_](https://www.internetsociety.org/internet/who-makes-it-work/) _`ISOC official whitepaper`_
 - [The Internet Exosystem :: Diagram @ _ISOC_](https://www.internetsociety.org/wp-content/uploads/2017/09/factsheet_ecosystem.pdf) _`pdf + diagram`_
 - [The Internet Exosystem :: Easier Diagram @ _ISOC_](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/b630757d-8c45-4925-bee3-aa94d878de7f) _`diagram`_
+- [Internetworking](https://en.wikipedia.org/wiki/Internetworking) _`wiki`_
+
+## 🌎♻️ Internet Ecosystem
+_The Internet Ecosystem is a network of organizations and communities that allows the Internet to function and evolve. It's made up of hardware, software, protocols, standards, and stakeholders that work together to provide services to users and society._
+
+### Internet Ecosystem: `Name & Addressing`
+- [IANA]()
+- [ICANN]()
+- [RIRs]()
+- [gTLDs :: Generic Top-Level Domains](https://www.iana.org/domains/root/db) Generic Top-Level Domains according to ICANN policies
+- [ccTLDs :: County-Code Top-Level Domains](https://www.iana.org/domains/root/db) Operated according local policies (country / territory)
+
+### Internet Ecosystem: `Open Standards Developement`
+- [Internet Society Affiliated Organizations]()
+    - [IETF]()
+    - [IAB]()
+    - [IRTF]() <br><br> 
+- [Other Standard Bodies]()
+    - [W3C]()
+    - [ITU-T]()
+    - [Specialized Bodies](
+
+### Internet Ecosystem: `Policy Developement`
+_Local, National, Regional & Global Polocy Developement_
+- [Goverments]()
+- [Governmental Regional Organization]()
+- [Multilateral Institutions]()
+- [Other Policy Discussion Forums]() <br><br>
+- [Internet Society]()
+    - [Internet Society: Chapters]() 
+    - [Internet Society: Individual Members]() 
+    - [Internet Society: Organization Members]() 
 
 ## 🌎🏭 Internet Organizations, Committees & Standards
 _List of Internet organizations, or organizations that play or played a key role in the evolution of the Internet by developing recommendations, standards, and technology; deploying infrastructure and services; and addressing other major issues._
