@@ -1221,7 +1221,7 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
 - Radiotap Header: **`Data Rate`** <br><br>
     - 1 mbps Data Rate = `radiotap.datarate == 1`
     - 2 mbps Data Rate = `radiotap.datarate == 2`
-    - 5.5 mbps Data Rate = `radiotap.datarate == 2` <br><br>
+    - 5.5 mbps Data Rate = `radiotap.datarate == 5.5` <br><br>
     - 6 mbps Data Rate = `radiotap.datarate == 6`
     - 12 mbps Data Rate = `radiotap.datarate == 12`
     - 24 mbps Data Rate = `radiotap.datarate == 24` <br><br>
