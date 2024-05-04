@@ -1185,9 +1185,18 @@ _Data that is NOT present in a 802.11 MAC-frame, but is intepreted coming from t
 - [PPI: PPI (Per-Packet Information) @ Wireshark](https://wiki.wireshark.org/PPI#:~:text=PPI%20(Per%2DPacket%20Information)&text=Each%20PPI%20packet%20header%20is,field%20headers%20are%20little%2Dendian.)
 - [Injecting Radiotap Headers](https://github.com/vanhoefm/libwifi/blob/master/docs/linux_tutorial.md#injecting-frames)
 
-
-
-
+### Radiotap Header: Interpreted Meta Information
+- **802.11 PHY**
+    - 802.11a | Wi-Fi 1 | OFDM `wlan_radio.phy == 5`
+    - 802.11b | Wi-Fi 2 | `wlan_radio.phy == 6`
+    - 802.11n | Wi-Fi 4 | HT :: `wlan_radio.phy == 7`
+    - 802.11ac | Wi-Fi 5 | VHT :: `wlan_radio.phy == 8`
+    - 802.11ax | Wi-Fi 6 | HE `wlan_radio.phy == 11` <br><br>
+- **Bandwith (802.11n/ac/ax)**
+    - 802.11ac | Wi-Fi 5 | 40 MHz = `wlan_radio.11ac.bandwidth == 3` 
+    - 802.11ac | Wi-Fi 5 | 80 MHz = `wlan_radio.11ac.bandwidth == 4` 
+- **Channel**
+    - Channel 56 = `wlan_radio.channel == 56`
 
 
 
