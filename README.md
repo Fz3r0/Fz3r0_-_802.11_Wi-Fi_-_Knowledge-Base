@@ -1252,7 +1252,7 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
 - Radiotap Header: **`Bandwith`** <br><br>
     - Bandwith (802.11n | Wi-Fi 4) :: 20 MHz = `radiotap.mcs.bw == 0` 
     - Bandwith (802.11n | Wi-Fi 4) :: 40 MHz = `radiotap.mcs.bw == 1` <br><br>
-    - Bandwith (802.11ac | Wi-Fi 5) :: 20 MHz = `radiotap.mcs.bw == 0`
+    - Bandwith (802.11ac | Wi-Fi 5) :: 20 MHz = `radiotap.vht.bw == 0`
     - Bandwith (802.11ac | Wi-Fi 5) :: 40 MHz = `radiotap.vht.bw == 1`
     - Bandwith (802.11ac | Wi-Fi 5) :: 80 MHz = `radiotap.vht.bw == 4`
     - Bandwith (802.11ac | Wi-Fi 5) :: 160 MHz = `radiotap.vht.bw == 11` <br><br>
