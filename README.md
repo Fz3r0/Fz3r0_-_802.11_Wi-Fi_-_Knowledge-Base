@@ -1202,8 +1202,8 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
 - Radiotap Header: **`Present Flags`** _(Possible present flags in a Radiotap Header)_ <br><br>
     - TSFT (Time Synchronization Function Timer) = `radiotap.present.tsft == 1`
     - Flags = `radiotap.present.flags == 1`
-    - Rate = `radiotap.present.rate  == 1`
-    - Channel = `radiotap.present.channel  == 1`
+    - Rate = `radiotap.present.rate == 1`
+    - Channel = `radiotap.present.channel == 1`
     - FHSS (Frequency-hopping spread spectrum) = `radiotap.present.fhss == 1`
     - dBm Antenna Signal = `radiotap.present.dbm_antsignal == 1`
     - dBm Antenna Noise = `radiotap.present.dbm_antnoise == 1`
@@ -1226,14 +1226,40 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
     - HE-MU Information = `radiotap.present.he_mu == 1`
     - 0 Lenght PSDU = `radiotap.present.0_length.psdu == 1`
     - L-SIG (Legacy-Signal) = `radiotap.present.l_sig == 1`
-    - _Reserved_ = `radiotap.present.reserved  == 0x0`
+    - _Reserved_ = `radiotap.present.reserved == 0x0`
     - TLVs (Type-Length-Values) = `radiotap.present.tlv == 1`
     - Radiotap NS (Name Space) = `radiotap.present.rtap_ns == 1`
     - Vendor NS (Name Space) = `radiotap.present.vendor_ns == 1`
     - Ext = `radiotap.present.ext == 1`  <br><br>
+- Radiotap Header: **`MAC Timestamp`** _value in microseconds of the MAC's 64-bit 802.11 Time Synchronization Function timer when the first bit of the MPDU arrived at the MAC_ <br><br>
+    - MAC Timestamp: 0 microseconds = `radiotap.mactime == 0`
+    - MAC Timestamp: 131373891612 microseconds =`radiotap.mactime == 131373891612`<br><br>
+    - MAC Timestamp **less than** 10000 microseconds = `radiotap.mactime > 10000`
+    - MAC Timestamp **more than** 10000 microseconds = `radiotap.mactime < 10000` <br><br>
+- Radiotap Header: **`Flags`** _Properties of transmitted and received frames_ <br><br>
+    - CFP (Contention Free Period) = `radiotap.flags.cfp == 1`
+    - Preamble (0 = Long | 1 = Short) = `radiotap.flags.preamble == 1`
+    - WEP (Wired Equivalent Privacy) = `radiotap.flags.wep == 1`
+    - Fragmentation = `radiotap.flags.frag == 1`
+    - FCS-at-end = `radiotap.flags.fcs == 1`
+    - Datapad = `radiotap.flags.datapad == 1`
+    - Bad FCS = `radiotap.flags.badfcs == 1`
+    - Short GI (Guard Interval) = `radiotap.flags.shortgi == 1` <br><br>
+- Radiotap Header: Channel Flags <br><br>
+- Radiotap Header: [MCS (n) Information](https://www.radiotap.org/fields/MCS.html) _(only in 802.11n Frames {Wi-Fi 4})_ <br><br>
+- Radiotap Header: [VHT Information](https://www.radiotap.org/fields/VHT.html) _(only in 802.11ac Frames {Wi-Fi 5})_ <br><br>
+- Radiotap Header: [HE Information](https://www.radiotap.org/fields/HE.html) _(only in 802.11ax Frames {Wi-Fi 6})_ <br><br>
 - Radiotap Header: **`Bandwith`** <br><br>
-    - Bandwith :: 20 MHz = `radiotap.mcs.bw == 0` 
-    - Bandwith :: 40 MHz = `radiotap.mcs.bw == 1` <br><br>
+    - Bandwith (802.11n | Wi-Fi 4) :: 20 MHz = `radiotap.mcs.bw == 0` 
+    - Bandwith (802.11n | Wi-Fi 4) :: 40 MHz = `radiotap.mcs.bw == 1` <br><br>
+    - Bandwith (802.11ac | Wi-Fi 5) :: 20 MHz = `radiotap.mcs.bw == 0`
+    - Bandwith (802.11ac | Wi-Fi 5) :: 40 MHz = `radiotap.vht.bw == 1`
+    - Bandwith (802.11ac | Wi-Fi 5) :: 80 MHz = `radiotap.vht.bw == 4`
+    - Bandwith (802.11ac | Wi-Fi 5) :: 160 MHz = `radiotap.vht.bw == 11` <br><br>
+    - Bandwith (802.11ax | Wi-Fi 6) :: 20 MHz = `radiotap.he.data_5.data_bw_ru_allocation == 0`
+    - Bandwith (802.11ax | Wi-Fi 6) :: 40 MHz = `radiotap.he.data_5.data_bw_ru_allocation == 1`
+    - Bandwith (802.11ax | Wi-Fi 6) :: 80 MHz = `radiotap.he.data_5.data_bw_ru_allocation == 2`
+    - Bandwith (802.11ax | Wi-Fi 6) :: 160 MHz = `radiotap.he.data_5.data_bw_ru_allocation == 3` <br><br>
 - Radiotap Header: **`Data Rate`** <br><br>
     - 1 mbps Data Rate = `radiotap.datarate == 1`
     - 2 mbps Data Rate = `radiotap.datarate == 2`
@@ -1244,9 +1270,8 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
     - **More Than** 24 mbpps Data Rate = `radiotap.datarate > 24`
     - **Less Than** 24 mbpps Data Rate = `radiotap.datarate < 24` <br><br>
 - Radiotap Header: **`Guard Interval`** <br><br>
-   - Long GI = `radiotap.mcs.gi == 0` 
-   - Short GI = `radiotap.mcs.gi == 1`
-
+    - Long GI = `radiotap.mcs.gi == 0` 
+    - Short GI = `radiotap.mcs.gi == 1`
 ---
 
 ### 🔝📡 PPI (Per Packet Information)
