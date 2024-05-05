@@ -1289,20 +1289,48 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
     - **802.11n** | Wi-Fi 4 | HT :: `wlan_radio.phy == 7`
     - **802.11ac** | Wi-Fi 5 | VHT :: `wlan_radio.phy == 8`
     - **802.11ax** | Wi-Fi 6 | HE `wlan_radio.phy == 11` <br><br>
-- **Bandwith (802.11n/ac/ax)** <br><br>
+- **Bandwith (802.11n/ac)** _802.11ax not present, use HE Information_ <br><br>
     - 802.11n | Wi-Fi 4 | 20 MHz = `wlan_radio.11n.bandwidth == 0`
     - 802.11n | Wi-Fi 4 | 40 MHz = `wlan_radio.11n.bandwidth == 1`  
     - 802.11ac | Wi-Fi 5 | 20 MHz = `wlan_radio.11ac.bandwidth == 0` 
     - 802.11ac | Wi-Fi 5 | 40 MHz = `wlan_radio.11ac.bandwidth == 3` 
-    - 802.11ac | Wi-Fi 5 | 80 MHz = `wlan_radio.11ac.bandwidth == 4` <br><br>
+    - 802.11ac | Wi-Fi 5 | 80 MHz = `wlan_radio.11ac.bandwidth == 4`
+    - 802.11ac | Wi-Fi 5 | 160 MHz = `wlan_radio.11ac.bandwidth == 11 `<br><br>
 - **Signal Strenght** <br><br>
     - Signal Strengh **equal** -50dbm = `wlan_radio.signal_dbm == -50`
     - Signal Strenght **les**s than -62db `wlan_radio.signal_dbm < -62`
     - Signal Strenght **more** than -62db `wlan_radio.signal_dbm > -62` <br><br>
 - **Channel** <br><br>
-    - Channel 56 = `wlan_radio.channel == 56`
-    - Channels only 1, 6, 11 = `wlan_radio.channel == 1 || wlan_radio.channel == 6 || wlan_radio.channel == 11`
-    - Channels except 1, 6, 11 =  `!(wlan_radio.channel == 1 || wlan_radio.channel == 6 || wlan_radio.channel == 11)` <br><br>
+    - **Channel 1 | 2.4 GHz** = `wlan_radio.channel == 1`
+    - Channel 2 | 2.4 GHz = `wlan_radio.channel == 2`
+    - Channel 3 | 2.4 GHz = `wlan_radio.channel == 3`
+    - Channel 4 | 2.4 GHz = `wlan_radio.channel == 4`
+    - Channel 5 | 2.4 GHz = `wlan_radio.channel == 5`
+    - **Channel 6 | 2.4 GHz** = `wlan_radio.channel == 6`
+    - Channel 7 | 2.4 GHz = `wlan_radio.channel == 7`
+    - Channel 8 | 2.4 GHz = `wlan_radio.channel == 8`
+    - Channel 9 | 2.4 GHz = `wlan_radio.channel == 9`
+    - Channel 10 | 2.4 GHz = `wlan_radio.channel == 10`
+    - **Channel 11 | 2.4 GHz** = `wlan_radio.channel == 11`
+    - Channel 12 | 2.4 GHz = `wlan_radio.channel == 12`
+    - Channel 13 | 2.4 GHz = `wlan_radio.channel == 13`
+    - Channel 14 | 2.4 GHz = `wlan_radio.channel == 14` <br><br>
+    - Channels only 1, 6, 11 @ 2.4 GHz = `wlan_radio.channel == 1 || wlan_radio.channel == 6 || wlan_radio.channel == 11`
+    - Channels except 1, 6, 11 @ 2.4 GHz =  `!(wlan_radio.channel == 1 || wlan_radio.channel == 6 || wlan_radio.channel == 11)` <br><br>
+    - Channel 36 | 5 GHz @ 20 MHz | U-NNI 1 = `wlan_radio.channel == 36`
+    - Channel 40 | 5 GHz @ 20 MHz | U-NNI 1 = `wlan_radio.channel == 40`
+    - Channel 44 | 5 GHz @ 20 MHz | U-NNI 1 = `wlan_radio.channel == 44`
+    - Channel 48 | 5 GHz @ 20 MHz | U-NNI 1 = `wlan_radio.channel == 48` <br><br>
+    - Channel 52 | 5 GHz @ 20 MHz | U-NNI 2a = `wlan_radio.channel == 52`
+    - Channel 56 | 5 GHz @ 20 MHz | U-NNI 2a = `wlan_radio.channel == 56`
+    - Channel 60 | 5 GHz @ 20 MHz | U-NNI 2a = `wlan_radio.channel == 60`
+    - Channel 64 | 5 GHz @ 20 MHz | U-NNI 2a = `wlan_radio.channel == 64` <br><br>
+    - Channel 36 | 5 GHz @ 20 MHz  = `wlan_radio.channel == 36`
+    - Channel 36 | 5 GHz @ 20 MHz = `wlan_radio.channel == 36`
+    - Channel 36 | 5 GHz @ 20 MHz = `wlan_radio.channel == 36`
+    - Channel 36 | 5 GHz @ 20 MHz = `wlan_radio.channel == 36`
+    - Channel 36 | 5 GHz @ 20 MHz = `wlan_radio.channel == 36`
+
 - **Frequency** <br><br>
     - Freq - 5280 MHz `wlan_radio.frequency == 5280`
     - Freq - 2462 MHz | CH 11 = `wlan_radio.frequency == 2462`
