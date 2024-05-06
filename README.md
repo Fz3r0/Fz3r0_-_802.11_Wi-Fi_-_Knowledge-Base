@@ -1392,7 +1392,7 @@ _All MAC frames contain the first three header fields and the FCS. The frame typ
 
 ---
 
-### 802.11 `MAC Header` - Frame Addressing & Control
+### 🔝📦 802.11 `MAC Header` - Frame Addressing & Control
 _The 802.11 Mac Header can be 36 bytes long if all the fields are being used. There are a few fields in the 802.11 mac header which are not always utilised | The HT Control field is a part of the 802.11n amendment which is added to the mac header_
 
 ````py
@@ -1408,7 +1408,7 @@ _The 802.11 Mac Header can be 36 bytes long if all the fields are being used. Th
 
 ---
 
-### Frame Control (2 Bytes Lenght)
+### 💊📦 `Frame Control` _(2 Bytes Lenght)_
 _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Field" | Each 802.11 frame begins with two bytes of meta information called "Frame Control", which is then subdivided into eleven parts || **IEEE-802.11-2020 :: 9.2.4.1 Frame Control field :: page 757** _
 
 ````py
