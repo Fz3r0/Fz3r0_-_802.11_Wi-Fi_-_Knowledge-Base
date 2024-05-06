@@ -1291,7 +1291,7 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
     - **802.11ax** | Wi-Fi 6 | HE `wlan_radio.phy == 11` <br><br>
 - **Bandwith (802.11n/ac)** _802.11ax not present, use HE Information_ <br><br>
     - 802.11n | Wi-Fi 4 | 20 MHz = `wlan_radio.11n.bandwidth == 0`
-    - 802.11n | Wi-Fi 4 | 40 MHz = `wlan_radio.11n.bandwidth == 1`  
+    - 802.11n | Wi-Fi 4 | 40 MHz = `wlan_radio.11n.bandwidth == 1` <br><br>  
     - 802.11ac | Wi-Fi 5 | 20 MHz = `wlan_radio.11ac.bandwidth == 0` 
     - 802.11ac | Wi-Fi 5 | 40 MHz = `wlan_radio.11ac.bandwidth == 3` 
     - 802.11ac | Wi-Fi 5 | 80 MHz = `wlan_radio.11ac.bandwidth == 4`
