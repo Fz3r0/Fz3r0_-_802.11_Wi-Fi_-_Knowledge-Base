@@ -1390,6 +1390,8 @@ _All MAC frames contain the first three header fields and the FCS. The frame typ
 
 - [MAC Frame Sections](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/693d761b-6f34-4b95-a6f7-969db147f16d) _`diagram`_
 
+---
+
 ### 802.11 `MAC Header` - Frame Addressing & Control
 _The 802.11 Mac Header can be 36 bytes long if all the fields are being used. There are a few fields in the 802.11 mac header which are not always utilised | The HT Control field is a part of the 802.11n amendment which is added to the mac header_
 
@@ -1403,6 +1405,8 @@ _The 802.11 Mac Header can be 36 bytes long if all the fields are being used. Th
      2         2           6       0 or 6    0 or 6    0 or 2     0 or 6    0 or 2    0 or 4    <<== Bytes        
 
 ````
+
+---
 
 ### Frame Control (2 Bytes Lenght)
 _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Field" | Each 802.11 frame begins with two bytes of meta information called "Frame Control", which is then subdivided into eleven parts || **IEEE-802.11-2020 :: 9.2.4.1 Frame Control field :: page 757** _
@@ -1506,13 +1510,26 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
         - QoS Data Null `1100` & Pwr Mgmt `1` | `wlan.fc.type_subtype == 44 &&  wlan.fc.pwrmgt == 1` = **STA Sleep** (QoS) <br><br>
         - QoS Data + Data Nulls & Pwr Mgmt `0` | `(wlan.fc.type_subtype == 36 || wlan.fc.type_subtype == 44) &&  wlan.fc.pwrmgt == 0` = **STA Wake Up** (QoS + Data)
         - QoS Data + Data Nulls & Pwr Mgmt `1` | `(wlan.fc.type_subtype == 36 || wlan.fc.type_subtype == 44) &&  wlan.fc.pwrmgt == 1` = **STA Sleep** (QoS + Data) <br><br>
+
+---
             
-### Duration (Bytes Lenght)
+### Duration /ID (Bytes Lenght)
 
 - [Duration / ID]()
+
+---
+            
+### Address 1, 2, 3, 5 (Bytes Lenght)
+
 - [Address 1]()
 - [Address 2]()
 - [Address 3]()
+- [Address 4]() 
+
+---
+
+### Sequence Control
+
 - [Sequence Control]()
 
 ### 802.11 `Frame Body` - Variable Lenght Frame Body
