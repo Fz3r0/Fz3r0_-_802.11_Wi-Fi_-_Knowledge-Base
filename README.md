@@ -1367,6 +1367,8 @@ _Section 9.2.1 of IEEE Std 802.11-2020 (Revision of IEEE Std 802.11-2016) specif
 - [WLAN MAC Frame Structure @ _Math Works_](https://es.mathworks.com/help/wlan/gs/wlan-mac-frame-structure.html) _`tables + diagrams + info`_
 - [802.11 MAC Header @ _Extreme Networks_](https://www.youtube.com/watch?v=Foi5ZdqLQWs) _`video`_
 - [802.11 MAC Header Breakdown @ _Aruba Comunity_](https://community.arubanetworks.com/browse/articles/blogviewer?blogkey=b101b806-a54b-4d8a-aba3-90f44dd3f94c) _`PCAP Analysys + diagrams + info`_
+- [MAC Header](https://mrncciew.com/2014/09/27/cwap-mac-header-frame-control/) _`nayarasi`_
+- [Understand MAC Header Format in Detail](https://tbhaxor.com/mac-header-format-in-detail/) _`tb haxor`_
 
 ## MAC Frame Sections :: `MAC Header` + `Frame Body` + `FCS`
 _All MAC frames contain the first three header fields and the FCS. The frame type and subtype determine the additional fields that are contained in the frame. | The HT Control field is a part of the 802.11n amendment which is added to the MAC header || **IEEE-802.11-2020 :: 9.2.3 General frame format :: page 756**_
@@ -1401,8 +1403,6 @@ _The 802.11 Mac Header can be 36 bytes long if all the fields are being used. Th
      2         2           6       0 or 6    0 or 6    0 or 2     0 or 6    0 or 2    0 or 4    <<== Bytes        
 
 ````
-- [MAC Header](https://mrncciew.com/2014/09/27/cwap-mac-header-frame-control/) _`nayarasi`_
-- [Understand MAC Header Format in Detail](https://tbhaxor.com/mac-header-format-in-detail/) _`tb haxor`_
 
 ### Frame Control (2 Bytes Lenght)
 _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Field" | Each 802.11 frame begins with two bytes of meta information called "Frame Control", which is then subdivided into eleven parts || **IEEE-802.11-2020 :: 9.2.4.1 Frame Control field :: page 757** _
