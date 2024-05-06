@@ -1408,7 +1408,7 @@ _The 802.11 Mac Header can be 36 bytes long if all the fields are being used. Th
 
 ---
 
-### 💊📦 `Frame Control` _(2 Bytes Lenght)_
+### 💊📦 `Frame Control` _(2 Bytes / 16 bits)_
 _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Field" | Each 802.11 frame begins with two bytes of meta information called "Frame Control", which is then subdivided into eleven parts || **IEEE-802.11-2020 :: 9.2.4.1 Frame Control field :: page 757** _
 
 ````py
