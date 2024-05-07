@@ -1191,15 +1191,15 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
 ---
 
 ### 🔝📡 802.11 Radiotap Header
-- Radiotap Header: **`Version`** _(Currently Always 0)_ <br><br>
+- ⭕ Radiotap Header: **`Version`** _(Currently Always 0)_ <br><br>
     - Radiotap Header Version 0 = `radiotap.version == 0` <br><br>
-- Radiotap Header: **`Pad`** _(Currently Unused)_ <br><br>
+- ⭕ Radiotap Header: **`Pad`** _(Currently Unused)_ <br><br>
     - Radiotap Header Pad 0 = `radiotap.pad == 0` <br><br>
-- Radiotap Header: **`Lenght`** _(entire length of the radiotap data, useful for developers)_ <br><br>
+- ⭕ Radiotap Header: **`Lenght`** _(entire length of the radiotap data, useful for developers)_ <br><br>
     - Radiotap Header Lenght **Equal** 50 bits = `radiotap.length == 50`
     - Radiotap Header Lenght **Less** than 50 bits = `radiotap.length < 50`
     - Radiotap Header Lenght **More** than 50 bits = `radiotap.length > 50` <br><br>
-- Radiotap Header: **`Present Flags`** _(Possible present flags in a Radiotap Header)_ <br><br>
+- ⭕ Radiotap Header: **`Present Flags`** _(Possible present flags in a Radiotap Header)_ <br><br>
     - TSFT (Time Synchronization Function Timer) = `radiotap.present.tsft == 1`
     - Flags = `radiotap.present.flags == 1`
     - Rate = `radiotap.present.rate == 1`
@@ -1231,12 +1231,12 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
     - Radiotap NS (Name Space) = `radiotap.present.rtap_ns == 1`
     - Vendor NS (Name Space) = `radiotap.present.vendor_ns == 1`
     - Ext = `radiotap.present.ext == 1`  <br><br>
-- Radiotap Header: **`MAC Timestamp`** _value in microseconds of the MAC's 64-bit 802.11 Time Synchronization Function timer when the first bit of the MPDU arrived at the MAC_ <br><br>
+- ⭕ Radiotap Header: **`MAC Timestamp`** _value in microseconds of the MAC's 64-bit 802.11 Time Synchronization Function timer when the first bit of the MPDU arrived at the MAC_ <br><br>
     - MAC Timestamp: 0 microseconds = `radiotap.mactime == 0`
     - MAC Timestamp: 131373891612 microseconds =`radiotap.mactime == 131373891612`<br><br>
     - MAC Timestamp **less than** 10000 microseconds = `radiotap.mactime > 10000`
     - MAC Timestamp **more than** 10000 microseconds = `radiotap.mactime < 10000` <br><br>
-- Radiotap Header: **`Flags`** _Properties of transmitted and received frames_ <br><br>
+- ⭕ Radiotap Header: **`Flags`** _Properties of transmitted and received frames_ <br><br>
     - CFP (Contention Free Period) = `radiotap.flags.cfp == 1`
     - Preamble (0 = Long | 1 = Short) = `radiotap.flags.preamble == 1`
     - WEP (Wired Equivalent Privacy) = `radiotap.flags.wep == 1`
@@ -1245,11 +1245,11 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
     - Datapad = `radiotap.flags.datapad == 1`
     - Bad FCS = `radiotap.flags.badfcs == 1`
     - Short GI (Guard Interval) = `radiotap.flags.shortgi == 1` <br><br>
-- Radiotap Header: Channel Flags <br><br>
-- Radiotap Header: [MCS (n) Information](https://www.radiotap.org/fields/MCS.html) _(only in 802.11n Frames {Wi-Fi 4})_ <br><br>
-- Radiotap Header: [VHT Information](https://www.radiotap.org/fields/VHT.html) _(only in 802.11ac Frames {Wi-Fi 5})_ <br><br>
-- Radiotap Header: [HE Information](https://www.radiotap.org/fields/HE.html) _(only in 802.11ax Frames {Wi-Fi 6})_ <br><br>
-- Radiotap Header: **`Bandwith`** <br><br>
+- ⭕ Radiotap Header: Channel Flags <br><br>
+- ⭕ Radiotap Header: [MCS (n) Information](https://www.radiotap.org/fields/MCS.html) _(only in 802.11n Frames {Wi-Fi 4})_ <br><br>
+- ⭕ Radiotap Header: [VHT Information](https://www.radiotap.org/fields/VHT.html) _(only in 802.11ac Frames {Wi-Fi 5})_ <br><br>
+- ⭕ Radiotap Header: [HE Information](https://www.radiotap.org/fields/HE.html) _(only in 802.11ax Frames {Wi-Fi 6})_ <br><br>
+- ⭕ Radiotap Header: **`Bandwith`** <br><br>
     - Bandwith (802.11n | Wi-Fi 4) :: 20 MHz = `radiotap.mcs.bw == 0` 
     - Bandwith (802.11n | Wi-Fi 4) :: 40 MHz = `radiotap.mcs.bw == 1` <br><br>
     - Bandwith (802.11ac | Wi-Fi 5) :: 20 MHz = `radiotap.vht.bw == 0`
@@ -1260,7 +1260,7 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
     - Bandwith (802.11ax | Wi-Fi 6) :: 40 MHz = `radiotap.he.data_5.data_bw_ru_allocation == 1`
     - Bandwith (802.11ax | Wi-Fi 6) :: 80 MHz = `radiotap.he.data_5.data_bw_ru_allocation == 2`
     - Bandwith (802.11ax | Wi-Fi 6) :: 160 MHz = `radiotap.he.data_5.data_bw_ru_allocation == 3` <br><br>
-- Radiotap Header: **`Data Rate`** <br><br>
+- ⭕ Radiotap Header: **`Data Rate`** <br><br>
     - 1 mbps Data Rate = `radiotap.datarate == 1`
     - 2 mbps Data Rate = `radiotap.datarate == 2`
     - 5.5 mbps Data Rate = `radiotap.datarate == 5.5` <br><br>
@@ -1269,19 +1269,19 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
     - 24 mbps Data Rate = `radiotap.datarate == 24` <br><br>
     - **More Than** 24 mbpps Data Rate = `radiotap.datarate > 24`
     - **Less Than** 24 mbpps Data Rate = `radiotap.datarate < 24` <br><br>
-- Radiotap Header: **`Guard Interval`** <br><br>
+- ⭕ Radiotap Header: **`Guard Interval`** <br><br>
     - Long GI = `radiotap.mcs.gi == 0` 
     - Short GI = `radiotap.mcs.gi == 1`
 ---
 
 ### 🔝📡 PPI (Per Packet Information)
-- PPI: Datarate 
+- ⭕ PPI: Datarate 
     - 1 mbps Datarate = `ppi.80211-common.rate == 1000`
 
 ---
    
 ### 💡📡 802.11 Radio Information
-- **802.11 PHY** <br><br>
+- ⭕ **802.11 PHY** <br><br>
     - **802.11** | Wi-Fi 0 | DSSS `wlan_radio.phy == 3` 
     - **802.11b** | Wi-Fi 1 | HR/DSSS `wlan_radio.phy == 4`
     - **802.11a** | Wi-Fi 2 | OFDM `wlan_radio.phy == 5`
@@ -1289,18 +1289,18 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
     - **802.11n** | Wi-Fi 4 | HT :: `wlan_radio.phy == 7`
     - **802.11ac** | Wi-Fi 5 | VHT :: `wlan_radio.phy == 8`
     - **802.11ax** | Wi-Fi 6 | HE `wlan_radio.phy == 11` <br><br>
-- **Bandwith (802.11n/ac)** _802.11ax not present, use HE Information_ <br><br>
+- ⭕ **Bandwith (802.11n/ac)** _802.11ax not present, use HE Information_ <br><br>
     - 802.11n | Wi-Fi 4 | 20 MHz = `wlan_radio.11n.bandwidth == 0`
     - 802.11n | Wi-Fi 4 | 40 MHz = `wlan_radio.11n.bandwidth == 1` <br><br>  
     - 802.11ac | Wi-Fi 5 | 20 MHz = `wlan_radio.11ac.bandwidth == 0` 
     - 802.11ac | Wi-Fi 5 | 40 MHz = `wlan_radio.11ac.bandwidth == 3` 
     - 802.11ac | Wi-Fi 5 | 80 MHz = `wlan_radio.11ac.bandwidth == 4`
     - 802.11ac | Wi-Fi 5 | 160 MHz = `wlan_radio.11ac.bandwidth == 11 `<br><br>
-- **Signal Strenght** <br><br>
+- ⭕ **Signal Strenght** <br><br>
     - Signal Strengh **equal** -50dbm = `wlan_radio.signal_dbm == -50`
     - Signal Strenght **les**s than -62db `wlan_radio.signal_dbm < -62`
     - Signal Strenght **more** than -62db `wlan_radio.signal_dbm > -62` <br><br>
-- **Channel** <br><br>
+- ⭕ **Channel** <br><br>
     - **Channel 1 | 2.4 GHz** = `wlan_radio.channel == 1`
     - Channel 2 | 2.4 GHz = `wlan_radio.channel == 2`
     - Channel 3 | 2.4 GHz = `wlan_radio.channel == 3`
@@ -1331,7 +1331,7 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
     - Channel 36 | 5 GHz @ 20 MHz = `wlan_radio.channel == 36`
     - Channel 36 | 5 GHz @ 20 MHz = `wlan_radio.channel == 36`
 
-- **Frequency** <br><br>
+- ⭕ **Frequency** <br><br>
     - Freq - 5280 MHz `wlan_radio.frequency == 5280`
     - Freq - 2462 MHz | CH 11 = `wlan_radio.frequency == 2462`
 
@@ -1427,15 +1427,15 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
       2        2        4       1     1      1      1       1       1      1       1      <<== Bits
 
 ````
-- [**Frame Control**]() _All 802.11 Frames have a control field_ **IEEE-802.11-2020 :: 9.2.4.1 Frame Control field :: page 757** <br><br>
-    - [**Protocol Version**]() **2 bits** | Wireless version of the protocol is being used <br><br>
+- 📦 [**Frame Control**]() _All 802.11 Frames have a control field_ **IEEE-802.11-2020 :: 9.2.4.1 Frame Control field :: page 757** <br><br>
+    - ⭕ [**Protocol Version**]() **2 bits** | Wireless version of the protocol is being used <br><br>
         - Version `00` | `wlan.fc.version == 00` = 802.11 Wi-Fi as we know it today, so Protocol Version will be always set as 00 <br><br>
-    - [**Type**]() **2 bits** | Type of 802.11 Frame, Type + Subtype subfields together identify the function of the frame <br><br>
+    - ⭕ [**Type**]() **2 bits** | Type of 802.11 Frame, Type + Subtype subfields together identify the function of the frame <br><br>
         - Type `00` | `wlan.fc.type == 00` = **Management Frame** 
         - Type `01` | `wlan.fc.type == 01` = **Control Frame**
         - Type `10` | `wlan.fc.type == 02` = **Data Frame**
         - Type `11` | `wlan.fc.type == 03` = **Extension** _[DMG (Directional Multi-Gigabit)(802.11ad)]_ <br><br>
-    - [**SubType**]() **4 bits** | SubType of 802.11 Frame | There are many different kinds of management, control & data frames. Therefore 4-bit Subtype field is required to differentiate them <br><br>
+    - ⭕ [**SubType**]() **4 bits** | SubType of 802.11 Frame | There are many different kinds of management, control & data frames. Therefore 4-bit Subtype field is required to differentiate them <br><br>
         - Type/Subtype `00` & `0000` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 00` = Management :: **Association Request** 
         - Type/Subtype `00` & `0001` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 01` = Management :: **Association Response**
         - Type/Subtype `00` & `0010` | `wlan.fc.type == 00 && wlan.fc.type_subtype == 02` = Management :: **Re-Association Request** 
@@ -1488,22 +1488,22 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
         - Type/Subtype `11` & `0001` = Extension :: S1G Beacon
         - Type/Subtype `11` & `0010` = Extension :: _Reserved_
         - Type/Subtype `11` & `1111` = Extension :: _Reserved_ <br><br>
-    - [**To DS**]() **1 bit** | "1" = data frame is going from client station (STA) to Distribution System (DS)
-    - [**From DS**]() **1 bit** | "1" = data frame is going from Distribution System (DS) to client station (STA) <br><br>
+    - ⭕ [**To DS**]() **1 bit** | "1" = data frame is going from client station (STA) to Distribution System (DS)
+    - ⭕ [**From DS**]() **1 bit** | "1" = data frame is going from Distribution System (DS) to client station (STA) <br><br>
         - To DS `1` | `wlan.fc.tods == 1` = **From STA to DS**
         - From DS `1` | `wlan.fc.fromds == 1`  = **From DS to STA** <br><br>
         - To DS `0` & From DS `0` | `wlan.fc.tods == 0 && wlan.fc.fromds == 0` = **Ad-Hoc** or **Management & Control (not going to DS)**
         - To DS `1` & From DS `0` | `wlan.fc.tods == 1 && wlan.fc.fromds == 0` = **Infraestructure: Traffic From STA Client To Access Point**
         - To DS `0` & From DS `1` | `wlan.fc.tods == 0 && wlan.fc.fromds == 1` = **Infraestructure: Traffic From Access Point To STA Client**
         - To DS `1` & From DS `1` | `wlan.fc.tods == 1 && wlan.fc.fromds == 1` = **WDS in use = Bridge/Mesh Link** <br><br>
-    - [**More Frag**]() **1 bit** | "1" = Indicate that frame (data or management) have another fragment of the current MSDU or current MPDU to follow. MAC layer fragments only those frame having unicast receiver address & never fragments broadcast or multicast frames (as those never get acknowledged) | Depends on fragmentation threshold on the AP <br><br>
+    - ⭕ [**More Frag**]() **1 bit** | "1" = Indicate that frame (data or management) have another fragment of the current MSDU or current MPDU to follow. MAC layer fragments only those frame having unicast receiver address & never fragments broadcast or multicast frames (as those never get acknowledged) | Depends on fragmentation threshold on the AP <br><br>
         - More Frag `0` | `wlan.fc.frag == 0` = **This is the last fragment of current MSDU or MMPDU**
         - More Frag `1` | `wlan.fc.frag == 1` = **Another fragment of current MSDU or MMPDU is to follow** <br><br>
-    - [**Retry**]() **1 bit** | "1" = Either a management frame or data frame, the Tx radio is indicating that the frame being sent is a “retransmission”. If a Tx station did not receive an ACK for a unicast frame, then frame will be retransmitted. In certain cases where ACK is not used (eg in RTS/CTS frame exchange, CTS server as ACK). Excessive L2 retransmissions affect WLAN performance in two ways: 1) Increases overhead resulting decreasing throughput 2) impact timely delivery of application traffic (affect voice/video services | Sensitive applications like VoIP required less than 5% retransmissions <br><br>
+    - ⭕ [**Retry**]() **1 bit** | "1" = Either a management frame or data frame, the Tx radio is indicating that the frame being sent is a “retransmission”. If a Tx station did not receive an ACK for a unicast frame, then frame will be retransmitted. In certain cases where ACK is not used (eg in RTS/CTS frame exchange, CTS server as ACK). Excessive L2 retransmissions affect WLAN performance in two ways: 1) Increases overhead resulting decreasing throughput 2) impact timely delivery of application traffic (affect voice/video services | Sensitive applications like VoIP required less than 5% retransmissions <br><br>
         - Retry `1` | `wlan.fc.retry == 1` = **All Frames Retranmissions** <br><br>
         - Retry `1` & To DS `1` | `wlan.fc.retry == 1 && wlan.fc.tods == 1` = **Retry From STA to AP**
         - Retry `1` & From DS `1` | `wlan.fc.retry == 1 && wlan.fc.fromds == 1` = **Retry From AP to STA** <br><br>
-    - [**Power Management**]() **1 bit** | `1` = The station indicates that it is using Power Save mode | "Null" data frames used to inform AP about client in Power Save mode | When a client station in "Power Save mode" (PS) it will shutdown some of the transceivers components for a period of time to conserve power. <br><br>
+    - ⭕ [**Power Management**]() **1 bit** | `1` = The station indicates that it is using Power Save mode | "Null" data frames used to inform AP about client in Power Save mode | When a client station in "Power Save mode" (PS) it will shutdown some of the transceivers components for a period of time to conserve power. <br><br>
         - Data Null `0100` & Pwr Mgmt `0` | `wlan.fc.type_subtype == 36 &&  wlan.fc.pwrmgt == 0` = **STA Wake Up** (Data)
         - QoS Data Null `1100` & Pwr Mgmt `0` | `wlan.fc.type_subtype == 44 &&  wlan.fc.pwrmgt == 0` = **STA Wake Up** (QoS)
         - Data Null `0100` & Pwr Mgmt `1` | `wlan.fc.type_subtype == 36 &&  wlan.fc.pwrmgt == 1` = **STA Sleep** (Data)
@@ -1515,7 +1515,7 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
             
 ### Duration /ID (Bytes Lenght)
 
-- [Duration / ID]()
+- 📦 [Duration / ID]()
 
 ---
             
