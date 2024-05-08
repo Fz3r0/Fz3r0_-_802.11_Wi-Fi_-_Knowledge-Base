@@ -1367,8 +1367,10 @@ _Section 9.2.1 of IEEE Std 802.11-2020 (Revision of IEEE Std 802.11-2016) specif
 - [WLAN MAC Frame Structure @ _Math Works_](https://es.mathworks.com/help/wlan/gs/wlan-mac-frame-structure.html) _`tables + diagrams + info`_
 - [802.11 MAC Header @ _Extreme Networks_](https://www.youtube.com/watch?v=Foi5ZdqLQWs) _`video`_
 - [802.11 MAC Header Breakdown @ _Aruba Comunity_](https://community.arubanetworks.com/browse/articles/blogviewer?blogkey=b101b806-a54b-4d8a-aba3-90f44dd3f94c) _`PCAP Analysys + diagrams + info`_
-- [MAC Header](https://mrncciew.com/2014/09/27/cwap-mac-header-frame-control/) _`nayarasi`_
-- [Understand MAC Header Format in Detail](https://tbhaxor.com/mac-header-format-in-detail/) _`tb haxor`_
+- [802.11 Wi-Fi MAC Frame Structure](https://wifihelp.arista.com/post/wi-fi-mac-frame-structure)
+- [MAC Frame Sections](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/693d761b-6f34-4b95-a6f7-969db147f16d) _`diagram`_ <br><br>
+    - [MAC Header](https://mrncciew.com/2014/09/27/cwap-mac-header-frame-control/) _`nayarasi`_
+    - [Understand MAC Header Format in Detail](https://tbhaxor.com/mac-header-format-in-detail/) _`tb haxor`_ <br><br>
 
 ## MAC Frame Sections :: `MAC Header` + `Frame Body` + `FCS`
 _All MAC frames contain the first three header fields and the FCS. The frame type and subtype determine the additional fields that are contained in the frame. | The HT Control field is a part of the 802.11n amendment which is added to the MAC header || **IEEE-802.11-2020 :: 9.2.3 General frame format :: page 756**_
@@ -1376,19 +1378,23 @@ _All MAC frames contain the first three header fields and the FCS. The frame typ
 ````py
 ## MAC Frame Sections :: MAC Header + Frame Body + FCS
 
-|---------|-----------|---------|---------|---------|----------|---------|---------|---------||-------------||-------|
-|  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     ||    Frame    ||  FCS  |
-| Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control | Control ||     Body    ||       |
-|---------|-----------|---------|---------|---------|----------|---------|---------|---------||-------------||-------|
-|____________________________________________________________________________________________||_____________||_______|
-                                       ||                                                            ||          ||
-                                       \/                                                            \/          \/
-                                   MAC Header                                                    Frame Body    32-Bit CRC
-
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------||-------------||----------|
+|  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     ||    Frame    ||    FCS   |
+| Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control | Control ||     Body    ||          |
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------||-------------||----------|
+|____________________________________________________________________________________________||_____________||__________|
+ \                                                                                          /   \          /  \        /
+   \                                                                                      /       \      /      \    /
+     \__________________________________________________________________________________/           \__/          \/
+                                   MAC HEADER                                                    FRAME BODY       FCS
+                              - Frame Addressing                                                - Var Lenght     - 32-Bit CRC:
+                                 - Tx, Rx, Source, Destination, BSSID                           - Data /           - Check Sequence
+                              - Frame Control:                                                  - Payload          - Integrity                         
+                                 - QoS Control                                                   
+                                 - Sequence Control
+                                 - HT Control
 
 ````
-
-- [MAC Frame Sections](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/693d761b-6f34-4b95-a6f7-969db147f16d) _`diagram`_
 
 ---
 
@@ -1533,10 +1539,10 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
             
 ### Address 1, 2, 3, 5 (Bytes Lenght)
 
-- [Address 1]()
-- [Address 2]()
-- [Address 3]()
-- [Address 4]() 
+- [Address 1](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/)
+- [Address 2](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/)
+- [Address 3](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/)
+- [Address 4](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/) 
 
 ---
 
