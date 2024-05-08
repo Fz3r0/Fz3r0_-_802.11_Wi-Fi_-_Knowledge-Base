@@ -1370,7 +1370,8 @@ _Section 9.2.1 of IEEE Std 802.11-2020 (Revision of IEEE Std 802.11-2016) specif
 - [802.11 Wi-Fi MAC Frame Structure](https://wifihelp.arista.com/post/wi-fi-mac-frame-structure)
 - [MAC Frame Sections](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/693d761b-6f34-4b95-a6f7-969db147f16d) _`diagram`_ <br><br>
     - [MAC Header](https://mrncciew.com/2014/09/27/cwap-mac-header-frame-control/) _`nayarasi`_
-    - [Understand MAC Header Format in Detail](https://tbhaxor.com/mac-header-format-in-detail/) _`tb haxor`_ <br><br>
+    - [Understand MAC Header Format in Detail](https://tbhaxor.com/mac-header-format-in-detail/) _`tb haxor`_
+
 
 ## MAC Frame Sections :: `MAC Header` + `Frame Body` + `FCS`
 _All MAC frames contain the first three header fields and the FCS. The frame type and subtype determine the additional fields that are contained in the frame. | The HT Control field is a part of the 802.11n amendment which is added to the MAC header || **IEEE-802.11-2020 :: 9.2.3 General frame format :: page 756**_
@@ -1529,11 +1530,29 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
         - QoS Frame (802.11n) always set to 0 = `wlan.fc.type_subtype == 40 && wlan.fc.order == 0`
 ---
 
+### 💊📦 `Duration / ID` (Bytes Lenght)
+_2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a two different purposes. Omni peek shows this as duration, however it really is a duration / id field. This field is used to reset NAV timers for devices on channel. It is also used for legacy ps-polling and the use of the AID number. | Expected duration of current transmission. Stations waiting
+for the medium use this to estimate when the channel will be free. | The contents of this field vary with frame type and subtype, with whether the frame is transmitted during the CFP, and with the QoS capabilities of the sending STA._ 
 
-            
-### Duration /ID (Bytes Lenght)
+````py
+## Duration :: Expected duration of current transmission / STAs waiting for the medium use this to estimate when the channel will be free
 
-- 📦 [Duration / ID]()
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------|
+|  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     |
+| Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control | Control |
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------|
+               ||
+               \/
+        |-----------|------|---------|----|------|------|-------|-------|------|-------|-------|
+        |  Protocol | Type | SubType | To | From | More | Retry |  PWR  | More | Prot- | +HTC/ |
+        |  Version  |      |         | DS |  DS  | Frag |       | Mngmt | Data | ected | Order |
+        |-----------|------|---------|----|------|------|-------|-------|------|-------|-------|
+               2        2        4       1     1      1      1       1       1      1       1      <<== Bits
+
+````
+
+
+- 📦 [Duration / ID](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/)
 
 ---
             
