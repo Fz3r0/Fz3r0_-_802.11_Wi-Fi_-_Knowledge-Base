@@ -389,23 +389,26 @@ _The Internet is successful in large part due to its unique model: shared global
 _The Internet Ecosystem is a network of organizations and communities that allows the Internet to function and evolve. It's made up of hardware, software, protocols, standards, and stakeholders that work together to provide services to users and society._
 
 ### 🌎📧 Internet Ecosystem: `Name & Addressing`
-- ⭕ [IANA]()
-- ⭕ [ICANN]()
-- ⭕ [RIRs]()
-- ⭕ [gTLDs :: Generic Top-Level Domains](https://www.iana.org/domains/root/db) Generic Top-Level Domains according to ICANN policies
-- ⭕ [ccTLDs :: County-Code Top-Level Domains](https://www.iana.org/domains/root/db) Operated according local policies (country / territory)
+_The management of unique identifiers and parameters for internet protocols, including domain names and IP addresses._
+- ⭕ [IANA](https://www.iana.org/) Assigns unique identifiers and parameters for internet protocols.
+- ⭕ [ICANN](https://www.icann.org/) Coordinates the internet's global domain name system.
+- ⭕ [RIRs]() Regional Internet Registries manage IP address allocation.
+- ⭕ [gTLDs :: Generic Top-Level Domains](https://www.iana.org/domains/root/db) Internet domain extensions regulated by ICANN.
+- ⭕ [ccTLDs :: County-Code Top-Level Domains](https://www.iana.org/domains/root/db) Country or territory-specific internet domain extensions.
 
 ### 🌎📜 Internet Ecosystem: `Open Standards Developement`
-- ⭕ [Internet Society Affiliated Organizations]()
-    - [IETF]()
+_Organizations and bodies responsible for developing and maintaining open standards for the internet, ensuring interoperability and innovation._
+- ⭕ [Internet Society Affiliated Organizations]() Develop and promote internet standards and protocols.
+    - [IETF :: Internet Engineering Task Force](https://www.ietf.org/) Develops and promotes voluntary internet standards.
     - [IAB :: Internet Architecture Board]() committee of the IETF & as advisory body of the ISOC
-    - [IRTF]() <br><br> 
+    - [IRTF :: Internet Research Task Force](https://www.irtf.org/) Focuses on long-term research related to internet protocols. <br><br> 
 - ⭕ [Other Standard Bodies]()
     - [W3C]()
     - [ITU-T]()
     - [Specialized Bodies](
 
 ### 🌎🗺️ Internet Ecosystem: `Local/National/Regional/Global: Policy Developement`
+_The development of internet-related policies at local, national, regional, and global levels, involving governments, organizations, and multilateral institutions._
 - ⭕ [Governments]() Federal, state & local governments & their regulators
 - ⭕ [Governmental Regional Organization]()
 - ⭕ [Multilateral Institutions]()
@@ -416,6 +419,7 @@ _The Internet Ecosystem is a network of organizations and communities that allow
     - [Internet Society: Organization Members]() 
 
 ### 🌎🧑‍🏫 Internet Ecosystem: `Education & Capacity Building`
+_Initiatives aimed at educating and building the capacity of individuals, organizations, and communities to effectively use and contribute to the internet._
 - ⭕ [Governments]() Federal, state & local governments & their regulators
 - ⭕ [Multilateral Institutions & Development Agencies]()
 - ⭕ [Internet Community Organizations & Businesses]()
@@ -426,6 +430,7 @@ _The Internet Ecosystem is a network of organizations and communities that allow
     - [Internet Society: Organization Members]() 
 
 ### 🌎🕸️ Internet Ecosystem: `Shared Global Services & Operations`
+_Infrastructure, services, and operations that support the functioning of the global internet, including root servers, network operators, and internet exchange points._
 - ⭕ [Root Servers]()
 - ⭕ [Network Operators]()
 - ⭕ [Service Creators / Vendors]()
@@ -434,6 +439,7 @@ _The Internet Ecosystem is a network of organizations and communities that allow
 - ⭕ [ccTLDs :: County-Code Top-Level Domains]() Operated according local policies (country / territory)
 
 ### 🌎👪 Internet Ecosystem: `Users`
+_The diverse range of individuals, businesses, governments, organizations, and machines/devices that utilize the internet for various purposes._
 - ⭕ [Individuals]()
 - ⭕ [Businesses]()
 - ⭕ [Governments]() Federal, state & local governments & their regulators
