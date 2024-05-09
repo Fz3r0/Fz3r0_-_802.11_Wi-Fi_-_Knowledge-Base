@@ -847,7 +847,7 @@ _The most widely used IEEE 802 standards are for Ethernet, Bridging and Virtual 
 - IEEE 802.16: Broadband Wireless MANs
 - IEEE 802.19: Wireless Coexistence
 
-## 👑📡🛰️ IEEE Std 802.11™‐2020 (Revision of IEEE Std 802.11‐2016)
+# 👑📡🛰️ IEEE Std 802.11™‐2020 _(Revision of IEEE Std 802.11‐2016)_
 _IEEE Standard for Information Technology—Telecommunications and Information Exchange between Systems Local and Metropolitan Area Networks—Specific Requirements Part 11: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications | Revision 2020_
 
 - **[IEEE 802.11-2020 Preview: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications](https://thewifiofthings.com/wp-content/uploads/2021/08/802.11-2020-Preview.pdf)**
