@@ -385,36 +385,61 @@ _The Internet is successful in large part due to its unique model: shared global
 - [The Internet Exosystem :: Easier Diagram @ _ISOC_](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/b630757d-8c45-4925-bee3-aa94d878de7f) _`diagram`_
 - [Internetworking](https://en.wikipedia.org/wiki/Internetworking) _`wiki`_
 
-## 🌎♻️ Internet Ecosystem
+## 🌎♻️🤝 Internet Ecosystem
 _The Internet Ecosystem is a network of organizations and communities that allows the Internet to function and evolve. It's made up of hardware, software, protocols, standards, and stakeholders that work together to provide services to users and society._
 
-### Internet Ecosystem: `Name & Addressing`
-- [IANA]()
-- [ICANN]()
-- [RIRs]()
-- [gTLDs :: Generic Top-Level Domains](https://www.iana.org/domains/root/db) Generic Top-Level Domains according to ICANN policies
-- [ccTLDs :: County-Code Top-Level Domains](https://www.iana.org/domains/root/db) Operated according local policies (country / territory)
+### 🌎📧 Internet Ecosystem: `Name & Addressing`
+- ⭕ [IANA]()
+- ⭕ [ICANN]()
+- ⭕ [RIRs]()
+- ⭕ [gTLDs :: Generic Top-Level Domains](https://www.iana.org/domains/root/db) Generic Top-Level Domains according to ICANN policies
+- ⭕ [ccTLDs :: County-Code Top-Level Domains](https://www.iana.org/domains/root/db) Operated according local policies (country / territory)
 
-### Internet Ecosystem: `Open Standards Developement`
-- [Internet Society Affiliated Organizations]()
+### 🌎📜 Internet Ecosystem: `Open Standards Developement`
+- ⭕ [Internet Society Affiliated Organizations]()
     - [IETF]()
-    - [IAB]()
+    - [IAB :: Internet Architecture Board]() committee of the IETF & as advisory body of the ISOC
     - [IRTF]() <br><br> 
-- [Other Standard Bodies]()
+- ⭕ [Other Standard Bodies]()
     - [W3C]()
     - [ITU-T]()
     - [Specialized Bodies](
 
-### Internet Ecosystem: `Policy Developement`
-_Local, National, Regional & Global Polocy Developement_
-- [Goverments]()
-- [Governmental Regional Organization]()
-- [Multilateral Institutions]()
-- [Other Policy Discussion Forums]() <br><br>
-- [Internet Society]()
+### 🌎🗺️ Internet Ecosystem: `Local/National/Regional/Global: Policy Developement`
+- ⭕ [Governments]() Federal, state & local governments & their regulators
+- ⭕ [Governmental Regional Organization]()
+- ⭕ [Multilateral Institutions]()
+- ⭕ [Other Policy Discussion Forums]() <br><br>
+- ⭕ [ISOC :: Internet Society]()
     - [Internet Society: Chapters]() 
     - [Internet Society: Individual Members]() 
     - [Internet Society: Organization Members]() 
+
+### 🌎🧑‍🏫 Internet Ecosystem: `Education & Capacity Building`
+- ⭕ [Governments]() Federal, state & local governments & their regulators
+- ⭕ [Multilateral Institutions & Development Agencies]()
+- ⭕ [Internet Community Organizations & Businesses]()
+- ⭕ [Universities & Academic Institutes]() <br><br>
+- ⭕ [ISOC :: Internet Society]()
+    - [Internet Society: Chapters]() 
+    - [Internet Society: Individual Members]() 
+    - [Internet Society: Organization Members]() 
+
+### 🌎🕸️ Internet Ecosystem: `Shared Global Services & Operations`
+- ⭕ [Root Servers]()
+- ⭕ [Network Operators]()
+- ⭕ [Service Creators / Vendors]()
+- ⭕ [Internet Exchange Points]()
+- ⭕ [gTLDs :: Generic Top-Level Domains]() Generic Top-Level Domains according to ICANN policies
+- ⭕ [ccTLDs :: County-Code Top-Level Domains]() Operated according local policies (country / territory)
+
+### 🌎👪 Internet Ecosystem: `Users`
+- ⭕ [Individuals]()
+- ⭕ [Businesses]()
+- ⭕ [Governments]() Federal, state & local governments & their regulators
+- ⭕ [Organizations]()
+- ⭕ [Machines / Devices]()
+- ⭕ [Service Creators & Equipment Builders]()
 
 ## 🌎🏭 Internet Organizations, Committees & Standards
 _List of Internet organizations, or organizations that play or played a key role in the evolution of the Internet by developing recommendations, standards, and technology; deploying infrastructure and services; and addressing other major issues._
