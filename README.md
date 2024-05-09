@@ -1531,11 +1531,11 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
 ---
 
 ### 💊📦 `Duration / ID` (Bytes Lenght)
-_2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a two different purposes. Omni peek shows this as duration, however it really is a duration / id field. This field is used to reset NAV timers for devices on channel. It is also used for legacy ps-polling and the use of the AID number. | Expected duration of current transmission. Stations waiting
-for the medium use this to estimate when the channel will be free. | The contents of this field vary with frame type and subtype, with whether the frame is transmitted during the CFP, and with the QoS capabilities of the sending STA._ 
+_2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a two different purposes: 1 ) Duration: This field is used to reset NAV timers for devices on channel. Time in microseconds needed to complete the frame exchange, used to update STAs NAV (Network Allocation Vector) 2) ID: Used in legacy PS-poll Frame to indicate the AID (Association ID) of the STA  | Expected duration of current transmission. Stations waiting for the medium use this to estimate when the channel will be free. | The contents of this field vary with frame type and subtype, with whether the frame is transmitted during the CFP, and with the QoS capabilities of the sending STA. | Omni peek shows this as duration, however it really is a duration / id field._ 
 
 ````py
-## Duration :: Expected duration of current transmission / STAs waiting for the medium use this to estimate when the channel will be free
+## Duration (actual) :: Reset NAV timers for devices on channel STAs waiting for the medium use this to estimate when the channel will be free. Expected duration of current transmission 
+## ID (legacy)       :: Used in PS-poll Frame to indicate the AID (Association ID) of the STA
 
 |---------|-----------|---------|---------|---------|----------|---------|---------|---------|
 |  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     |
@@ -1543,11 +1543,45 @@ for the medium use this to estimate when the channel will be free. | The content
 |---------|-----------|---------|---------|---------|----------|---------|---------|---------|
                ||
                \/
-        |-----------|------|---------|----|------|------|-------|-------|------|-------|-------|
-        |  Protocol | Type | SubType | To | From | More | Retry |  PWR  | More | Prot- | +HTC/ |
-        |  Version  |      |         | DS |  DS  | Frag |       | Mngmt | Data | ected | Order |
-        |-----------|------|---------|----|------|------|-------|-------|------|-------|-------|
-               2        2        4       1     1      1      1       1       1      1       1      <<== Bits
+        |-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+        |  0  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  | 10  | 11  | 12  | 13  | 14  | 15  |
+        |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
+        |-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+           1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     <<== Bits
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+## ID (legacy)
+
+        |-----|-----||-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+        |  1  |  1  ||     |     |     |     |     |     |     |     |     |     |     |     |     |     |
+        |     |     ||     |     |     |     |     |     |     |     |     |     |     |     |     |     |
+        |-----|-----||-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+           1     1    |_________________________________________________________________________________|
+                                                       Values:  0 - 2007
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+## Duration (actual)
+
+        |-----||-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+        |  0  ||     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
+        |     ||     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
+        |-----||-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+           1   |________________________________________________________________________________________|
+                                                    Values:  0 - 32,767
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+## CFP Duration (actual)
+
+        |-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+        |  1  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |
+        |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
+        |-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+         |______________________________________________________________________________________________|
+                                         23,768  Transmitted by PC during CFP
+
 
 ````
 
