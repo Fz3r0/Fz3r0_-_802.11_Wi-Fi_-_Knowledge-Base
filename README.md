@@ -1008,30 +1008,34 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 - [**802.11bg**]()  **unassigned** :: likely to avoid confusion by combining 802.11b/g
 
 
+# 802.11 Wireless: `PHY Features`
+
+- [802.11a Features](https://www.tutorialsweb.com/networking/wireless-networks/802.11a-protocol-features.htm)
+
+## 802.11 / Wi-Fi Prime / DSS :: 1997
+_The first wireless LAN (WLAN) standard was created by the IEEE committee in 1997, and was called 802.11. However, 802.11 standard supported only up to 2 Mbps of bandwidth, and quickly became obsolete. Subsequently, IEEE created the 802.11a, and 802.11b standards._
+
+## 802.11b 
+_The following are the advantages of the IEEE 802.11b standard compared to 802.11a and Bluetooth wireless LAN:_
+- 2.4 GHz Frequency: Normally used by many appliances in early days. Hence, it is more interference prone compared to 802.11a.
+- 11mbps Bandwith max: Though the speed is sufficient for most applications, it limits the number of simultaneous users to a far less number compared to 802.11a
+
+## 802.11a
+_The following are the advantages of the IEEE 802.11a standard compared to 802.11b_
+- 5 GHz Frequency: Less crowded than 2.4 and hence has relatively smaller interference problem.
+- 12 non overlapping channels: With more channels, larger number of users can be accommodated with no performance degradation.
+- 54mbps Bandwith max: Much faster than the 11Mbps bandwidth provided by 802.11b standard devices.
+
+
 ## 802.11n Wi-Fi 4
 
-- [802.11n features](https://www.electronics-notes.com/articles/connectivity/wifi-ieee-802-11/802-11n.php)
-
-### Backward compatibility switching
-_802.11n provides backward compatibility for devices in a net using earlier versions of Wi-Fi, this adds a significant overhead to any exchanges, thereby reducing the data transfer capacity. To provide the maximum data transfer speeds when all devices in the wireless local area network are operating on the 802.11n standard, the backwards compatibility feature can be removed._
-````py
-Legacy (only 802.11 a, b, and g)
-Mixed (both 802.11 a, b, g, and n)
-Greenfield (only 802.11 n) - maximum performance
-````
-- [802.11n Backward compatibility switching](https://www.electronics-notes.com/articles/connectivity/wifi-ieee-802-11/802-11n.php)
-
-### OFDM implementation
-_Orthogonal Frequency Division Multiplex, OFDM is a form of signal format that uses a large number of close spaced carriers that are each modulated with low rate data stream. The close spaced signals would normally be expected to interfere with each other, but by making the signals orthogonal to each other there is no mutual interference. The data to be transmitted is shared across all the carriers and this provides resilience against selective fading from multi-path effects._
-- [802.11n Backward compatibility switching](https://www.electronics-notes.com/articles/connectivity/wifi-ieee-802-11/802-11n.php)
-
-### 802.11 MIMO
-_In order to be able to carry very high data rates on the wireless LAN, often within an office or domestic environment, 802.11n has utilised MIMO. This gives the maximum use of the available bandwidth. | MIMO is a form of antenna technology that uses multiple antennas to enable signals travelling via different paths as a result of reflections, etc., to be separated and their capability used to improve the data throughput and / or the signal to noise ratio, thereby improving system performance._
-- [802.11n Backward compatibility switching](https://www.electronics-notes.com/articles/connectivity/wifi-ieee-802-11/802-11n.php)
-
-### 802.1n power saving
-_ne of the problems with using MIMO is that it increases the power of the hardware circuitry. More transmitters and receivers need to be supported and this entails the use of more current. | Data is normally transmitted in a "bursty" fashion. This means that there are long periods when the system remains idle or running at a very slow speed. During these periods when MIMO is not required, the circuitry can be held inactive so that it does not consume power._
-- [802.11n Power Saving](https://www.electronics-notes.com/articles/connectivity/wifi-ieee-802-11/802-11n.php)
+- [802.11n Backward compatibility switching](https://www.electronics-notes.com/articles/connectivity/wifi-ieee-802-11/802-11n.php) :: Backward compatibility for devices in a net using earlier versions of Wi-Fi, this adds a significant overhead to any exchanges, thereby reducing the data transfer capacity. To provide the maximum data transfer speeds when all devices in the wireless local area network are operating on the 802.11n standard, the backwards compatibility feature can be removed. <br><br>
+    - Legacy (only 802.11 a, b, and g)
+    - Mixed (both 802.11 a, b, g, and n)
+    - Greenfield (only 802.11 n) - maximum performance <br><br>
+- OFDM implementation: Orthogonal Frequency Division Multiplex, OFDM is a form of signal format that uses a large number of close spaced carriers that are each modulated with low rate data stream. The close spaced signals would normally be expected to interfere with each other, but by making the signals orthogonal to each other there is no mutual interference. The data to be transmitted is shared across all the carriers and this provides resilience against selective fading from multi-path effects.
+- 802.11 MIMO: In order to be able to carry very high data rates on the wireless LAN, often within an office or domestic environment, 802.11n has utilised MIMO. This gives the maximum use of the available bandwidth. | MIMO is a form of antenna technology that uses multiple antennas to enable signals travelling via different paths as a result of reflections, etc., to be separated and their capability used to improve the data throughput and / or the signal to noise ratio, thereby improving system performance.
+- 802.1n power saving: One of the problems with using MIMO is that it increases the power of the hardware circuitry. More transmitters and receivers need to be supported and this entails the use of more current. | Data is normally transmitted in a "bursty" fashion. This means that there are long periods when the system remains idle or running at a very slow speed. During these periods when MIMO is not required, the circuitry can be held inactive so that it does not consume power.
 
 ## High Efficiency (HE) PHY  802.11ax-2020 Wi-Fi 6
 
