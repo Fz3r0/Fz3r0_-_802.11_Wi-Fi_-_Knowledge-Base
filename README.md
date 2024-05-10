@@ -1014,13 +1014,13 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 
 ## 802.11 / Wi-Fi Prime / DSS :: 1997
 _The first wireless LAN (WLAN) standard was created by the IEEE committee in 1997, and was called 802.11. However, 802.11 standard supported only up to 2 Mbps of bandwidth, and quickly became obsolete. Subsequently, IEEE created the 802.11a, and 802.11b standards._
-- **802.11 Prime** | **Wi-Fi 0** | **DSSS** (Direct Sequence Spread Spectrum) <br <br>
-    - PHY: **`DSSS`** (Direct Sequence Spread Spectrum) <br <br>
+- **802.11 Prime** | **Wi-Fi 0** | **DSSS** (Direct Sequence Spread Spectrum) <br> <br>
+    - PHY: **`DSSS`** (Direct Sequence Spread Spectrum) <br> <br>
     - Year & Status: June **`1997`** _(Legacy)_
     - IEEE 802.11-2020 Clause: **`Clause 11`**
     - Operating Band: **`2.4 GHz`** & **`Infrared`**
     - Stream Data Rates: **1mbps** | **`2mbps`** _peak_
-    - Link Spectral Efficiency: **`0.1 bps/Hz`** <br <br>
+    - Link Spectral Efficiency: **`0.1 bps/Hz`** <br> <br>
     - MIMO: _N/A_
     - Max Single-User (SU) Streams: **`1`**
     - Max Multi-User (MU) Streams: _N/A_
@@ -1030,12 +1030,12 @@ _The first wireless LAN (WLAN) standard was created by the IEEE committee in 199
     - QAM Spectral Efficienty _(aprox)_: for 4-QAM = **`14 SNR`**
     - Guard Interval: _N/A_
     - Max OFDM tones: _N/A_
-    - Subcarrier Spacing: _N/A_ <br <br>
-    - Power Saving: _N/A_ <br <br>
+    - Subcarrier Spacing: _N/A_ <br> <br>
+    - Power Saving: _N/A_ <br> <br>
     - Security: **`WEP`** | **`WPA-Personal`**
     - Authentication: **`Open Authentication`** | **`Shared Key`**
-    - Encryption Algorythm: **`RC4`** | **`TKIP`** <br><br>
-- **Features:**
+    - Encryption Algorythm: **`RC4`** | **`TKIP`** <br> <br>
+- **Features:** <br> <br>
     - First 802.11 Wi-Fi PHY     
 
 
