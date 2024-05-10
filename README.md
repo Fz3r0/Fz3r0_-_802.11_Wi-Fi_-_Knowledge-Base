@@ -1014,6 +1014,29 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 
 ## 802.11 / Wi-Fi Prime / DSS :: 1997
 _The first wireless LAN (WLAN) standard was created by the IEEE committee in 1997, and was called 802.11. However, 802.11 standard supported only up to 2 Mbps of bandwidth, and quickly became obsolete. Subsequently, IEEE created the 802.11a, and 802.11b standards._
+- **802.11 Prime** | **Wi-Fi 0** | **DSSS** (Direct Sequence Spread Spectrum)
+    - Year & Status: June 1997 _(Legacy)_
+    - IEEE 802.11-2020 Clause: 11
+    - PHY: DSSS Direct Sequence Spread Spectrum
+    - Operating Band: 2.4 GHz & Infrared
+    - Stream Data Rates: 1mbps | 2mbps _peak_
+    - Link Spectral Efficiency: 0.1 bps/Hz
+    - MIMO: N/A
+    - Max Single-User (SU) Streams: 1
+    - Max Multi-User (MU) Streams: N/A
+    - Max Constellation | Code Rate: QPSK (4-QAM) {00,01,11,10}
+    - bit / Symbol: 2bits / symbol
+    - MCS: N/A (non 802.11n or higher)
+    - QAM Spectral Efficienty _(aprox)_: for 4-QAM = 14 SNR
+    - Guard Interval: N/A
+    - Max OFDM tones: N/A
+    - Subcarrier Spacing: N/A
+    - Security: WEP | WPA-Personal
+    - Authentication: Open Authentication | Shared Key
+    - Encryption Algorythm: RC4 | TKIP <br><br>
+- Features:
+    - First 802.11 Wi-Fi PHY     
+
 
 ## 802.11b 
 _The following are the advantages of the IEEE 802.11b standard compared to 802.11a and Bluetooth wireless LAN:_
