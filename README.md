@@ -539,11 +539,11 @@ _United Nations specialized agency that promotes the shared global use of the ra
 
 
 
-# 🌎🚦👮 Internet, Networking & Wireless: `Regulations`
+# 🌎📡👮 Wireless Networking: `Regulations`
 - [Regulatory Domains in WIFI @ Leo Tech Talk](https://www.youtube.com/watch?app=desktop&v=rcuGjndqicw) _`video`_
 - [**Regulatory Bodies/Domains**](https://shop.chulo.co.uk/blog/what-is-regulatory-domain.html)
 
-## 👮📡 Regulatory Domains AKA Regulotory Bodies (Wireless)
+## 👮📡 Regulatory Domains AKA Regulotory Bodies
 _Set of rules and policies providing the end user with configurations of country code, calibration channel, and output power settings for a **wireless** device set up in a specific area_
 - [Regulatory Body: ETSI]()
 - [Regulatory Body: FCC - Federal Communications Commission]()
