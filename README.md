@@ -1022,7 +1022,8 @@ _The first wireless LAN (WLAN) standard was created by the IEEE committee in 199
     - Channel Bandwith: **`22 MHz`**
     - Stream Data Rates: **`1mbps`** | **`2mbps`** _peak_ <br> <br>
     - OFDM: _N/A_
-    - Max OFDM tones: _N/A_ <br> <br>
+    - Max OFDM tones: _N/A_
+    - Subcarrier Spacing: _N/A_ <br> <br>
     - MIMO: _N/A_
     - Max Single-User (SU) Streams: **`1`**
     - Max Multi-User (MU) Streams: _N/A_
@@ -1031,8 +1032,7 @@ _The first wireless LAN (WLAN) standard was created by the IEEE committee in 199
     - MCS: _N/A (non 802.11n or higher)_
     - QAM Spectral Efficienty _(aprox)_: for 4-QAM = **`14 SNR`**
     - Link Spectral Efficiency: **`0.1 bps/Hz`**
-    - Guard Interval: _N/A_
-    - Subcarrier Spacing: _N/A_ <br> <br>
+    - Guard Interval: _N/A_ <br> <br>
     - Power Saving: _N/A_ <br> <br>
     - Security: **`WEP`** | **`WPA-Personal`**
     - Authentication: **`Open Authentication`** | **`Shared Key`**
