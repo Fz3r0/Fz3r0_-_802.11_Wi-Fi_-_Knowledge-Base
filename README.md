@@ -578,7 +578,7 @@ _Regulates USA interstate and international communications by radio, television,
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
 
-# 🌎🔧🫅 Internet, Networking & Wireless: `Standards` 
+# 🌎🔧🫅 Wireless Networking: `Standards` 
 _Networking organizations, certifications, standards (particularly IEEE 802.11) & wireless regulations used for wireless connectivity around the world_ 📡
 
 ## 🌎🎖️📝 `IETF`: Internet Engineering Task Force
