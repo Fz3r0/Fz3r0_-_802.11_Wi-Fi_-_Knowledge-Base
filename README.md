@@ -1024,14 +1024,14 @@ _The first wireless LAN (WLAN) standard was created by the IEEE committee in 199
     - ⭕ Channel Bandwith: **`22 MHz`**
     - ⭕ Stream Data Rates: **`1mbps`** | **`2mbps`** _peak_
     - ⭕ Modulation Technique: **`CCK`** Complementary Code Keying <br> <br>
+    - ⭕ Max Constellation | Code Rate: _N/A_ <br> <br>
     - ⭕ OFDM: _N/A_
     - ⭕ Max OFDM tones: _N/A_
     - ⭕ Subcarrier Spacing: _N/A_ <br> <br>
     - ⭕ MIMO: _N/A_
     - ⭕ Max Single-User (SU) Streams: **`1`**
     - ⭕ Max Multi-User (MU) Streams: _N/A_
-    - ⭕ Max Constellation | Code Rate: **`QPSK (4-QAM)`** {00,01,11,10}
-    - ⭕ bit / Symbol: **`2bits / symbol`**
+    - ⭕ bit / Symbol: _N/A_
     - ⭕ MCS: _N/A (non 802.11n or higher)_
     - ⭕ QAM Spectral Efficienty _(aprox)_: for 4-QAM = **`14 SNR`**
     - ⭕ Link Spectral Efficiency: **`0.1 bps/Hz`**
@@ -1053,15 +1053,19 @@ _The DSSS version of legacy 802.11 was rapidly supplemented (and popularized) by
     - ⭕ PHY: **`HR-DSSS`** (High Rate - Direct Sequence Spread Spectrum) 
     - ⭕ Operating Band: **`2.4 GHz`** 
     - ⭕ Channel Bandwith: **`22 MHz`**
-    - ⭕ Stream Data Rates: **`1mbps`** | **`2mbps`** | **`5.5mbps`** | **`6mbps`** _peak_
+    - ⭕ Stream Data Rates: **`1mbps`** | **`2mbps`** | **`5.5mbps`** | **`11mbps`** _peak_
     - ⭕ Modulation Technique: **`CCK`** Complementary Code Keying <br> <br>
     - ⭕ OFDM: _N/A_
     - ⭕ Max OFDM tones: _N/A_
     - ⭕ Subcarrier Spacing: _N/A_ <br> <br>
+    - ⭕ Constellation | Code Rate:
+        - Modulation: **`DBPSK`** | Code Lenght: **`11 bit barker code`** | Bit per symbol: **`1`** | **`1 mbps`**
+        - Modulation: **`DQPSK`** | Code Lenght: **`11 bit barker code`** | Bit per symbol: **`2`** | **`2 mbps`**
+        - Modulation: **`QPSK`** | Code Lenght: **`8-bit CCK`** | Bit per symbol: **`5.5`** | **`5.5 mbps`**
+        - Modulation: **`QPSK`** | Code Lenght: **`8-bit CCK`** | Bit per symbol: **`8`** | **`11 mbps`** <br> <br>
     - ⭕ MIMO: _N/A_
     - ⭕ Max Single-User (SU) Streams: **`1`**
     - ⭕ Max Multi-User (MU) Streams: _N/A_
-    - ⭕ Max Constellation | Code Rate: **`QPSK (4-QAM)`** {00,01,11,10}
     - ⭕ bit / Symbol: **`2bits / symbol`**
     - ⭕ MCS: _N/A (non 802.11n or higher)_
     - ⭕ QAM Spectral Efficienty _(aprox)_: for 4-QAM = **`14 SNR`**
