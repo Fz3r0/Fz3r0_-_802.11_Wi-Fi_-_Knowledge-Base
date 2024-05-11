@@ -147,7 +147,7 @@
 
 - In this repository **"Fz3r0 - 802.11 Wi-Fi Knowledge Base"**, I compile information from various reliable sources, previously curated and studied by myself prior to inclusion, delving into aspects of **IEEE 802.11 Wireless Networks Technology**, better known as **Wi-Fi**.
 
-- Originally conceived to centralize my own study materials for certifications such as CWNP (CWNA, CWAP, CWDP, CWSP) Offensive Security (PEN-210, OSWP), Ruckus (RCWA), Cisco (CCNA, CCNP, CCIE Enterprise Wireless, ENWLSD, ENWLSI) this repository has evolved into a highly comprehensive index, serving as a centralized resource or cheatsheet containing all information, from the essential to the advanced, for a wireless engineer.
+- Originally conceived to centralize my own study materials for certifications such as CWNP (CWNA, CWAP, CWDP, CWSP) Offensive Security (PEN-210, OSWP), Ruckus (RCWA), Cisco (CCNA, CCNP, CCIE Enterprise Wireless, ENWLSD, ENWLSI) this repository has evolved into a highly comprehensive index, serving as a centralized resource and cheatsheet containing all information, from the essential to the advanced, for a wireless engineer.
 
 - The purpose of this repository is to gather comprehensive knowledge covering all aspects of the IEEE 802.11 standard, from basic fundamentals to advanced topics, encompassing from the origins, history and basic knowledge of wireless networks to the most advanced technical analysis, designs, security, best practices and configurations of the latest wireless devices in the todays market for entrerprise and high density networks.
 
@@ -159,11 +159,19 @@
 
 - The majority of shared resources are in English; however, some are in Spanish, as it is my native language, and I have found very comprehensive resources with excellent information in Spanish. Nonetheless, I endeavor to share resources in English to make it a more universal language.
 
+- This repository may contain techniques, configurations, codes or scripts that could harm some systems and devices or not comply with some regulations of all Contries. Read carefully each file documentation and/or script before download, extract, execute, copy, compile or configure. Be sure that you understand and are complying with the laws regarding Wireless and Radio Regulations, Informatics, Sensitive Data & other kind of ICTs regulations in your area. It is recommended to study the legislation of the Regulatory Domain in each Country before replicating any process included in this repository.
+
+- It is mandatory to experiment only in controlled laboratory environments, whether physical or virtual. The administrator in charge of any device, network, or infrastructure must be aware and agree to any configuration, deploy or security engagement that is intended to be carried out. Rules of Engagement (RoE), an external contract or other NDAs (Non-Disclosure Agreement) are recomended.
+
+- Any misuse of the information and files compiled in this repository will not be the responsibility of the author.
+
 - Anyone is free to copy, distribute, teach, modify, present, improve, and/or use this document.
 
 - If anyone makes money from this document, please try to donate some of those resources to help people in need or to protect the environment like animals and plants. 
 
-_"Education is the most powerful tool you can use to change the world." - Nelson Mandela_
+<p align="center"> <img src="https://user-images.githubusercontent.com/94720207/165983361-8d515dec-44f5-4a77-98de-a973705a2226.png" alt="herodotus" width="100" height="100"/> </a> </p>
+ 
+<span align="center"> <p align="center"> _**"The only good is knowledge, and the only evil is ignorance."** Herodotus_ </p> </span> 
 
 <h1 align="center"> 💀📧 Who am I & Contact 📧💀 </h1>
                                        
