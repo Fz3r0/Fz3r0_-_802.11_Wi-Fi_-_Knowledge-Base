@@ -1012,40 +1012,71 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 
 - [802.11a Features](https://www.tutorialsweb.com/networking/wireless-networks/802.11a-protocol-features.htm)
 
-## 802.11 / Wi-Fi Prime / DSS :: 1997
-_The first wireless LAN (WLAN) standard was created by the IEEE committee in 1997, and was called 802.11. However, 802.11 standard supported only up to 2 Mbps of bandwidth, and quickly became obsolete. Subsequently, IEEE created the 802.11a, and 802.11b standards._
-- **802.11 Prime** | **Wi-Fi 0** | **DSSS** (Direct Sequence Spread Spectrum) <br> <br>
-    - Year & Status: June **`1997`** _(Legacy)_
-    - IEEE 802.11-2020 Clause: **`Clause 11`** <br> <br>
-    - PHY: **`DSSS`** (Direct Sequence Spread Spectrum) 
-    - Operating Band: **`2.4 GHz`** & **`Infrared`**
-    - Channel Bandwith: **`22 MHz`**
-    - Stream Data Rates: **`1mbps`** | **`2mbps`** _peak_ <br> <br>
-    - OFDM: _N/A_
-    - Max OFDM tones: _N/A_
-    - Subcarrier Spacing: _N/A_ <br> <br>
-    - MIMO: _N/A_
-    - Max Single-User (SU) Streams: **`1`**
-    - Max Multi-User (MU) Streams: _N/A_
-    - Max Constellation | Code Rate: **`QPSK (4-QAM)`** {00,01,11,10}
-    - bit / Symbol: **`2bits / symbol`**
-    - MCS: _N/A (non 802.11n or higher)_
-    - QAM Spectral Efficienty _(aprox)_: for 4-QAM = **`14 SNR`**
-    - Link Spectral Efficiency: **`0.1 bps/Hz`**
-    - Guard Interval: _N/A_ <br> <br>
-    - Power Saving: _N/A_ <br> <br>
-    - Security: **`WEP`** | **`WPA-Personal`**
-    - Authentication: **`Open Authentication`** | **`Shared Key`**
-    - Encryption Algorythm: **`RC4`** | **`TKIP`** <br> <br>
-- **Features:** <br> <br>
-    - First 802.11 Wi-Fi PHY     
+## 📡⚙️ 802.11 / Wi-Fi Prime / DSS
+_The first wireless LAN (WLAN) standard was created by the IEEE committee in 1997, and was called 802.11. However, 802.11 standard supported only up to 2 Mbps of bandwidth, and quickly became obsolete. Subsequently, IEEE created the 802.11a, and 802.11b standards. IEEE 802.11 (legacy mode) – or more correctly IEEE 802.11-1997 or IEEE 802.11-1999 – refer to the original version of the IEEE 802.11 wireless networking standard released in 1997 and clarified in 1999. Most of the protocols described by this early version are rarely used today._
 
+- 📡 **802.11 Prime** | **Wi-Fi 0** | **DSSS** (Direct Sequence Spread Spectrum) <br> <br>
+    - ⭕ Year & Status: June **`1997`** _(Legacy)_
+    - ⭕ IEEE Ammandment: **_`Original 802.11 Standard`_**
+    - ⭕ IEEE 802.11-2020 Clause: **`Clause 15`** <br> <br>
+    - ⭕ PHY: **`DSSS`** (Direct Sequence Spread Spectrum) 
+    - ⭕ Operating Band: **`2.4 GHz`** & **`Infrared`**
+    - ⭕ Channel Bandwith: **`22 MHz`**
+    - ⭕ Stream Data Rates: **`1mbps`** | **`2mbps`** _peak_
+    - ⭕ Modulation Technique: **`CCK`** Complementary Code Keying <br> <br>
+    - ⭕ OFDM: _N/A_
+    - ⭕ Max OFDM tones: _N/A_
+    - ⭕ Subcarrier Spacing: _N/A_ <br> <br>
+    - ⭕ MIMO: _N/A_
+    - ⭕ Max Single-User (SU) Streams: **`1`**
+    - ⭕ Max Multi-User (MU) Streams: _N/A_
+    - ⭕ Max Constellation | Code Rate: **`QPSK (4-QAM)`** {00,01,11,10}
+    - ⭕ bit / Symbol: **`2bits / symbol`**
+    - ⭕ MCS: _N/A (non 802.11n or higher)_
+    - ⭕ QAM Spectral Efficienty _(aprox)_: for 4-QAM = **`14 SNR`**
+    - ⭕ Link Spectral Efficiency: **`0.1 bps/Hz`**
+    - ⭕ Guard Interval: _N/A_ <br> <br>
+    - ⭕ Power Saving: _N/A_ <br> <br>
+    - ⭕ Security: **`WEP`** | **`WPA-Personal`**
+    - ⭕ Authentication: **`Open Authentication`** | **`Shared Key`**
+    - ⭕ Encryption Algorythm: **`RC4`** | **`TKIP`** <br> <br>
+- ⚙️ **Features:** <br> <br>
+    - First 802.11 Wi-Fi PHY
 
-## 802.11b 
-_The following are the advantages of the IEEE 802.11b standard compared to 802.11a and Bluetooth wireless LAN:_
-- 2.4 GHz Frequency: Normally used by many appliances in early days. Hence, it is more interference prone compared to 802.11a.
-- 11mbps Bandwith max: Though the speed is sufficient for most applications, it limits the number of simultaneous users to a far less number compared to 802.11a
+## 📡⚙️ 802.11b / Wi-Fi 0 / HR-DSSS
+_The DSSS version of legacy 802.11 was rapidly supplemented (and popularized) by the 802.11b amendment in 1999, which increased the bit rate to 11 Mbit/s. Widespread adoption of 802.11 networks only occurred after the release of 802.11b which resulted in multiple interoperable products becoming available from multiple vendors. Consequently, comparatively few networks were implemented on the 802.11-1997 standard_
 
+- 📡 **802.11b** | **Wi-Fi 1** | **HR-DSSS** (High Rate - Direct Sequence Spread Spectrum) <br> <br>
+    - ⭕ Year & Status: September **`1999`** _(Legacy)_
+    - ⭕ IEEE Ammandment: **_`Amendment 1`_**
+    - ⭕ IEEE 802.11-2020 Clause: **`Clause 17`** <br> <br>
+    - ⭕ PHY: **`HR-DSSS`** (High Rate - Direct Sequence Spread Spectrum) 
+    - ⭕ Operating Band: **`2.4 GHz`** 
+    - ⭕ Channel Bandwith: **`22 MHz`**
+    - ⭕ Stream Data Rates: **`1mbps`** | **`2mbps`** | **`5.5mbps`** | **`6mbps`** _peak_
+    - ⭕ Modulation Technique: **`CCK`** Complementary Code Keying <br> <br>
+    - ⭕ OFDM: _N/A_
+    - ⭕ Max OFDM tones: _N/A_
+    - ⭕ Subcarrier Spacing: _N/A_ <br> <br>
+    - ⭕ MIMO: _N/A_
+    - ⭕ Max Single-User (SU) Streams: **`1`**
+    - ⭕ Max Multi-User (MU) Streams: _N/A_
+    - ⭕ Max Constellation | Code Rate: **`QPSK (4-QAM)`** {00,01,11,10}
+    - ⭕ bit / Symbol: **`2bits / symbol`**
+    - ⭕ MCS: _N/A (non 802.11n or higher)_
+    - ⭕ QAM Spectral Efficienty _(aprox)_: for 4-QAM = **`14 SNR`**
+    - ⭕ Link Spectral Efficiency: **`0.55 bps/Hz`**
+    - ⭕ Guard Interval: _N/A_ <br> <br>
+    - ⭕ Power Saving: _N/A_ <br> <br>
+    - ⭕ Security: **`WEP`** | **`WPA-Personal`**
+    - ⭕ Authentication: **`Open Authentication`** | **`Shared Key`**
+    - ⭕ Encryption Algorythm: **`RC4`** | **`TKIP`** <br> <br>
+- ⚙️ **Features:** <br> <br>
+    - Direct extension of original 802.11 prime 
+    - CSMA/CA
+    - More Data Rates available up to 11mbps
+    - Adaptive Rate Selection: It can operate at 11 Mbit/s, but scale back to 5.5, then to 2, then to 1 Mbit/s in order to decrease the rate of re-broadcasts that result from errors.
+  
 ## 802.11a
 _The following are the advantages of the IEEE 802.11a standard compared to 802.11b_
 - 5 GHz Frequency: Less crowded than 2.4 and hence has relatively smaller interference problem.
