@@ -1058,7 +1058,7 @@ _The DSSS version of legacy 802.11 was rapidly supplemented (and popularized) by
     - ⭕ OFDM: _N/A_
     - ⭕ Max OFDM tones: _N/A_
     - ⭕ Subcarrier Spacing: _N/A_ <br> <br>
-    - ⭕ Constellation | Code Rate:
+    - ⭕ Constellation | Code Rate: <br> <br>
         - Modulation: **`DBPSK`** | Code Lenght: **`11 bit barker code`** | Bit per symbol: **`1`** | **`1 mbps`**
         - Modulation: **`DQPSK`** | Code Lenght: **`11 bit barker code`** | Bit per symbol: **`2`** | **`2 mbps`**
         - Modulation: **`QPSK`** | Code Lenght: **`8-bit CCK`** | Bit per symbol: **`5.5`** | **`5.5 mbps`**
@@ -1082,10 +1082,7 @@ _The DSSS version of legacy 802.11 was rapidly supplemented (and popularized) by
     - Adaptive Rate Selection: It can operate at 11 Mbit/s, but scale back to 5.5, then to 2, then to 1 Mbit/s in order to decrease the rate of re-broadcasts that result from errors.
   
 ## 802.11a
-_The following are the advantages of the IEEE 802.11a standard compared to 802.11b_
-- 5 GHz Frequency: Less crowded than 2.4 and hence has relatively smaller interference problem.
-- 12 non overlapping channels: With more channels, larger number of users can be accommodated with no performance degradation.
-- 54mbps Bandwith max: Much faster than the 11Mbps bandwidth provided by 802.11b standard devices.
+_IEEE802.11a is the first wireless standard to employ packet based OFDM | Using the 5 GHz band gives 802.11a a significant advantage, since the 2.4 GHz band is heavily used to the point of being crowded. Degradation caused by such conflicts can cause frequent dropped connections and degradation of service | The effective overall range of 802.11a is slightly less than that of 802.11b/g; 802.11a signals cannot penetrate as far as those for 802.11b because they are absorbed more readily by walls and other solid objects in their path and because the path loss in signal strength is proportional to the square of the signal frequency | he increased number of usable channels (4 to 8 times as many in FCC countries) and the near absence of other interfering systems (microwave ovens, cordless phones, baby monitors) give 802.11a significant aggregate bandwidth and reliability advantages over 802.11b/g._
 
 
 ## 802.11n Wi-Fi 4
