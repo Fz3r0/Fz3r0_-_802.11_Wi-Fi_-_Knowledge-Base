@@ -149,7 +149,7 @@
 
 - Originally conceived to centralize my own study materials for certifications such as CWNP (CWNA, CWAP, CWDP, CWSP) Offensive Security (PEN-210, OSWP), Ruckus (RCWA), Cisco (CCNA, CCNP, CCIE Enterprise Wireless, ENWLSD, ENWLSI) this repository has evolved into a highly comprehensive index, serving as a centralized resource or cheatsheet containing all information, from the essential to the advanced, for a wireless engineer.
 
-- The purpose of this repository is to gather comprehensive knowledge covering all aspects of the IEEE 802.11 standard, from basic fundamentals to advanced topics, encompassing from the origins, history and basic knowledge of wireless networks to the most advanced technical design, best practices and configurations of the latest wireless devices in the todays market.
+- The purpose of this repository is to gather comprehensive knowledge covering all aspects of the IEEE 802.11 standard, from basic fundamentals to advanced topics, encompassing from the origins, history and basic knowledge of wireless networks to the most advanced technical analysis, designs, security, best practices and configurations of the latest wireless devices in the todays market for entrerprise and high density networks.
 
 - This repository primarily aggregates publicly available and freely accessible sources of information from Internet, enabling anyone to study them. However, in exceptional cases, links of paid resources are included to ensure comprehensive coverage of information if needed. 
   
