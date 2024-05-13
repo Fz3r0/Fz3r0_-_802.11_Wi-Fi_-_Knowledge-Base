@@ -1087,8 +1087,8 @@ _The DSSS version of legacy 802.11 was rapidly supplemented (and popularized) by
     - ⭕ Encryption Algorythm: **`RC4`** | **`TKIP`** <br> <br>
 - ⚙️ **Features:** <br> <br>
     - Direct extension of original 802.11 prime <br> <br>
-    - **`More Data Rates available`**: Data rates with varying modulation types: 1, 2, 5.5 and up to 11 Mbps using Adaptative Rate Selection <br> <br>
-    - **`Adaptive Rate Selection`**: It can operate at 11 Mbit/s, but scale back to 5.5, then to 2, then to 1 Mbit/s in order to decrease the rate of re-broadcasts that result from errors. <br> <br>
+    - **`More Data Rates available`**: Data rates with varying modulation types: 1, 2, 5.5 and up to 11 Mbps using Adaptative Rate Selection also known as Dynamic Rate Switching <br> <br>
+    - **`Dynamic Rate Switching`**: It can operate at 11 Mbit/s, but scale back to 5.5, then to 2, then to 1 Mbit/s in order to decrease the rate of re-broadcasts that result from errors. <br> <br>
   
 ## 802.11a
 _IEEE802.11a is the first wireless standard to employ packet based OFDM | Using the 5 GHz band gives 802.11a a significant advantage, since the 2.4 GHz band is heavily used to the point of being crowded. Degradation caused by such conflicts can cause frequent dropped connections and degradation of service | The effective overall range of 802.11a is slightly less than that of 802.11b/g; 802.11a signals cannot penetrate as far as those for 802.11b because they are absorbed more readily by walls and other solid objects in their path and because the path loss in signal strength is proportional to the square of the signal frequency | he increased number of usable channels (4 to 8 times as many in FCC countries) and the near absence of other interfering systems (microwave ovens, cordless phones, baby monitors) give 802.11a significant aggregate bandwidth and reliability advantages over 802.11b/g._
@@ -1098,21 +1098,28 @@ _IEEE802.11a is the first wireless standard to employ packet based OFDM | Using 
     - **`More Data Rates available`**: Data rates with varying modulation types: 6, 9, 12, 18, 24, 36, 48 and up to 54 Mbps using Adaptative Rate Selection <br> <br>
 
 ## 802.11g
+_IEEE 802.11g-2003 or 802.11g is an amendment to the IEEE 802.11 specification that operates in the 2.4 GHz microwave band. The standard has extended link rate to up to 54 Mbit/s using the same 20 MHz bandwidth as 802.11b uses to achieve 11 Mbit/s. 802.11g is fully backward compatible with 802.11b, but coexistence of the two methods creates a significant performance penalty._
 
 - ⚙️ **Features:** <br> <br>
-    - **`Backward compatibility`**: Firts 802.11 with backward compatibility, onfly for 802.11b
-    - **`OFDM in 2.4 GHz band, backward compatible`**: First 802.11 PHY that supports OFDM in 2.4 GHz band. Orthogonal frequency-division multiplexing (OFDM) with 52 subcarrier channels; backwards compatible with 802.11b using DSSS and CCK.
-    - **`Data rates with backward compatibility`**:  Data rates with varying modulation types: 6, 9, 12, 18, 24, 36, 48 and 54 Mbps; can revert to 1, 2, 5.5, and 11 Mbps using DSSS and CCK (for 802.11b compatibility).
+    - **`Backward compatibility`**: Firts 802.11 with backward compatibility, onfly for 802.11b <br> <br>
+    - **`OFDM in 2.4 GHz band, backward compatible`**: First 802.11 PHY that supports OFDM in 2.4 GHz band. Orthogonal frequency-division multiplexing (OFDM) with 52 subcarrier channels; backwards compatible with 802.11b using DSSS and CCK. <br> <br>
+    - **`Data rates with backward compatibility`**:  Data rates with varying modulation types: 6, 9, 12, 18, 24, 36, 48 and 54 Mbps; can revert to 1, 2, 5.5, and 11 Mbps using DSSS and CCK (for 802.11b compatibility). Both Data Rate selection uses Dynamic Rate Switching. <br> <br>
 
 ## 802.11n Wi-Fi 4
+_IEEE 802.11n-2009, or 802.11n, is a wireless-networking standard that uses multiple antennas to increase data rates. The Wi-Fi Alliance has also retroactively labelled the technology for the standard as Wi-Fi 4.[8][9] It standardized support for multiple-input multiple-output, frame aggregation, and security improvements, among other features, and can be used in the 2.4 GHz or 5 GHz frequency bands._
 
-- 802.11n Backward compatibility switching :: Backward compatibility for devices in a net using earlier versions of Wi-Fi, this adds a significant overhead to any exchanges, thereby reducing the data transfer capacity. To provide the maximum data transfer speeds when all devices in the wireless local area network are operating on the 802.11n standard, the backwards compatibility feature can be removed. <br><br>
-    - Legacy (only 802.11 a, b, and g)
-    - Mixed (both 802.11 a, b, g, and n)
-    - Greenfield (only 802.11 n) - maximum performance <br><br>
-- MIMO with OFDM & Channel Bonding (40MHz): In order to be able to carry very high data rates on the wireless LAN, often within an office or domestic environment, 802.11n has utilised MIMO. This gives the maximum use of the available bandwidth. | MIMO is a form of antenna technology that uses multiple antennas to enable signals travelling via different paths as a result of reflections, etc., to be separated and their capability used to improve the data throughput and / or the signal to noise ratio, thereby improving system performance.
-- 40 MHz Bandwith (Channel Bonding): First 802.11 Standard that uses more than only 20 MHz bandwith (using channel bonding technique).
-- 802.1n power saving: One of the problems with using MIMO is that it increases the power of the hardware circuitry. More transmitters and receivers need to be supported and this entails the use of more current. | Data is normally transmitted in a "bursty" fashion. This means that there are long periods when the system remains idle or running at a very slow speed. During these periods when MIMO is not required, the circuitry can be held inactive so that it does not consume power.
+- ⚙️ **Features:** <br> <br>
+    - 802.11n Backward compatibility switching :: Backward compatibility for devices in a net using earlier versions of Wi-Fi, this adds a significant overhead to any exchanges, thereby reducing the data transfer capacity. To provide the maximum data transfer speeds when all devices in the wireless local area network are operating on the 802.11n standard, the backwards compatibility feature can be removed. <br><br>
+        - Legacy (only 802.11 a, b, and g)
+        - Mixed (both 802.11 a, b, g, and n)
+        - Greenfield (only 802.11 n) - maximum performance <br><br>
+    - MIMO with OFDM & Channel Bonding (40MHz): In order to be able to carry very high data rates on the wireless LAN, often within an office or domestic environment, 802.11n has utilised MIMO. This gives the maximum use of the available bandwidth. | MIMO is a form of antenna technology that uses multiple antennas to enable signals travelling via different paths as a result of reflections, etc., to be separated and their capability used to improve the data throughput and / or the signal to noise ratio, thereby improving system performance.
+    - Spatial Streams / Multiplexing (up to 3x3): Wi-Fi Spatial streaming or multiplexing (often shortened to SM or SMX) is a transmission technique used in MIMO wireless communication to transmit independent and separately coded data signals, so called streams, from each of the multiple transmit antennas. This results in the space being reused, or multiplexed, more than one time. On each band, the Wireless-N standard is available in three primary configs, depending on the number of spatial streams being used. The lowest, single stream (1x1), dual stream (2x2) and three-stream (3x3), offering cap speeds of 150Mbps, 300Mbps and 450Mbps.
+    - Frame Aggregation: Frame aggregation is a feature that allows communicating on a shared link or channel, typically a TDM shared channel, with a minimum time slot that for efficiency reasons benefits from filling the time slot with data, i.e. sending two or more data frames in a single transmission. The feature is an important part of the IEEE 802.11e, 802.11n and 802.11ac wireless LAN standards that increases throughput with frame aggregation. | MAC service data unit (MSDU) aggregation relies on the fact that most mobile access points and most mobile client protocol stacks use Ethernet as their "native" frame format. It collects Ethernet frames to be transmitted to one or multiple destinations and wraps them in a single 802.11n frame. This is efficient because Ethernet headers are much shorter than 802.11 headers. | Frame aggregation is a process of packing multiple MSDUs or MPDUs together to reduce the overheads and average them over multiple frames, thereby increasing the user level data rate. A-MPDU aggregation requires the use of block acknowledgement or BlockAck, which was introduced in 802.11e and has been optimized in 802.11n.
+    - 40 MHz Bandwith (Channel Bonding): First 802.11 Standard that uses more than only 20 MHz bandwith (using channel bonding technique) in both 5 GHz and 2.4 GHz bands, recommendation for channel bonding for 40 MHz is only using it for the 5 GHz because there are a limited number of non-overlapping channels available in the 2.4 GHz band.
+    - 802.1n power saving: One of the problems with using MIMO is that it increases the power of the hardware circuitry. More transmitters and receivers need to be supported and this entails the use of more current. | Data is normally transmitted in a "bursty" fashion. This means that there are long periods when the system remains idle or running at a very slow speed. During these periods when MIMO is not required, the circuitry can be held inactive so that it does not consume power.
+
+## High Throughput (HT) PHY  802.11axc 2020 Wi-Fi 6
 
 ## High Efficiency (HE) PHY  802.11ax-2020 Wi-Fi 6
 
