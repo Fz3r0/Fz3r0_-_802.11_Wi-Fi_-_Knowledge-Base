@@ -1049,7 +1049,9 @@ _The first wireless LAN (WLAN) standard was created by the IEEE committee in 199
     - ⭕ Authentication: **`Open Authentication`** | **`Shared Key`**
     - ⭕ Encryption Algorythm: **`RC4`** | **`TKIP`** <br> <br>
 - ⚙️ **Features:** <br> <br>
-    - First 802.11 Wi-Fi PHY
+    - First 802.11 Wi-Fi PHY <br> <br>
+    - **`CSMA/CA (Carrier-sense multiple access with collision avoidance)`**: Originally defined carrier sense multiple access with collision avoidance, this is a protocol for carrier transmission in 802.11 networks. It was developed to minimize the potential of a collision occurring when two or more stations send their signals over a data link layer. <br> <br>
+    - **`2.4 GHz band`**: First 802.11 wireless standard that uses 2.4 GHz band. Three non-overlapping channels in industrial, scientific, medical (ISM) frequency band at 2.4 GHz.    
 
 ## 📡⚙️ 802.11b / Wi-Fi 0 / HR-DSSS
 _The DSSS version of legacy 802.11 was rapidly supplemented (and popularized) by the 802.11b amendment in 1999, which increased the bit rate to 11 Mbit/s. Widespread adoption of 802.11 networks only occurred after the release of 802.11b which resulted in multiple interoperable products becoming available from multiple vendors. Consequently, comparatively few networks were implemented on the 802.11-1997 standard_
@@ -1084,23 +1086,32 @@ _The DSSS version of legacy 802.11 was rapidly supplemented (and popularized) by
     - ⭕ Authentication: **`Open Authentication`** | **`Shared Key`**
     - ⭕ Encryption Algorythm: **`RC4`** | **`TKIP`** <br> <br>
 - ⚙️ **Features:** <br> <br>
-    - Direct extension of original 802.11 prime 
-    - CSMA/CA
-    - More Data Rates available up to 11mbps
-    - Adaptive Rate Selection: It can operate at 11 Mbit/s, but scale back to 5.5, then to 2, then to 1 Mbit/s in order to decrease the rate of re-broadcasts that result from errors.
+    - Direct extension of original 802.11 prime <br> <br>
+    - **`More Data Rates available`**: Data rates with varying modulation types: 1, 2, 5.5 and up to 11 Mbps using Adaptative Rate Selection <br> <br>
+    - **`Adaptive Rate Selection`**: It can operate at 11 Mbit/s, but scale back to 5.5, then to 2, then to 1 Mbit/s in order to decrease the rate of re-broadcasts that result from errors. <br> <br>
   
 ## 802.11a
 _IEEE802.11a is the first wireless standard to employ packet based OFDM | Using the 5 GHz band gives 802.11a a significant advantage, since the 2.4 GHz band is heavily used to the point of being crowded. Degradation caused by such conflicts can cause frequent dropped connections and degradation of service | The effective overall range of 802.11a is slightly less than that of 802.11b/g; 802.11a signals cannot penetrate as far as those for 802.11b because they are absorbed more readily by walls and other solid objects in their path and because the path loss in signal strength is proportional to the square of the signal frequency | he increased number of usable channels (4 to 8 times as many in FCC countries) and the near absence of other interfering systems (microwave ovens, cordless phones, baby monitors) give 802.11a significant aggregate bandwidth and reliability advantages over 802.11b/g._
+- ⚙️ **Features:** <br> <br>
+    - **`5 GHz band`**: First 802.11 wireless standard that uses 5 GHz band. 12 non-overlapping unlicensed national information infrastructure (UNII) channels in 5 GHz frequency band.
+    - **`OFDM`**: First 802.11 wireless standard to employ packet based OFDM (Orthogonal frequency-division multiplexing) with 52 subcarrier channels. Orthogonal Frequency Division Multiplex, OFDM is a form of signal format that uses a large number of close spaced carriers that are each modulated with low rate data stream. The close spaced signals would normally be expected to interfere with each other, but by making the signals orthogonal to each other there is no mutual interference. The data to be transmitted is shared across all the carriers and this provides resilience against selective fading from multi-path effects. <br> <br>
+    - **`More Data Rates available`**: Data rates with varying modulation types: 6, 9, 12, 18, 24, 36, 48 and up to 54 Mbps using Adaptative Rate Selection <br> <br>
 
+## 802.11g
+
+- ⚙️ **Features:** <br> <br>
+    - **`Backward compatibility`**: Firts 802.11 with backward compatibility, onfly for 802.11b
+    - **`OFDM in 2.4 GHz band, backward compatible`**: First 802.11 PHY that supports OFDM in 2.4 GHz band. Orthogonal frequency-division multiplexing (OFDM) with 52 subcarrier channels; backwards compatible with 802.11b using DSSS and CCK.
+    - **`Data rates with backward compatibility`**:  Data rates with varying modulation types: 6, 9, 12, 18, 24, 36, 48 and 54 Mbps; can revert to 1, 2, 5.5, and 11 Mbps using DSSS and CCK (for 802.11b compatibility).
 
 ## 802.11n Wi-Fi 4
 
-- [802.11n Backward compatibility switching](https://www.electronics-notes.com/articles/connectivity/wifi-ieee-802-11/802-11n.php) :: Backward compatibility for devices in a net using earlier versions of Wi-Fi, this adds a significant overhead to any exchanges, thereby reducing the data transfer capacity. To provide the maximum data transfer speeds when all devices in the wireless local area network are operating on the 802.11n standard, the backwards compatibility feature can be removed. <br><br>
+- 802.11n Backward compatibility switching :: Backward compatibility for devices in a net using earlier versions of Wi-Fi, this adds a significant overhead to any exchanges, thereby reducing the data transfer capacity. To provide the maximum data transfer speeds when all devices in the wireless local area network are operating on the 802.11n standard, the backwards compatibility feature can be removed. <br><br>
     - Legacy (only 802.11 a, b, and g)
     - Mixed (both 802.11 a, b, g, and n)
     - Greenfield (only 802.11 n) - maximum performance <br><br>
-- OFDM implementation: Orthogonal Frequency Division Multiplex, OFDM is a form of signal format that uses a large number of close spaced carriers that are each modulated with low rate data stream. The close spaced signals would normally be expected to interfere with each other, but by making the signals orthogonal to each other there is no mutual interference. The data to be transmitted is shared across all the carriers and this provides resilience against selective fading from multi-path effects.
-- 802.11 MIMO: In order to be able to carry very high data rates on the wireless LAN, often within an office or domestic environment, 802.11n has utilised MIMO. This gives the maximum use of the available bandwidth. | MIMO is a form of antenna technology that uses multiple antennas to enable signals travelling via different paths as a result of reflections, etc., to be separated and their capability used to improve the data throughput and / or the signal to noise ratio, thereby improving system performance.
+- MIMO with OFDM & Channel Bonding (40MHz): In order to be able to carry very high data rates on the wireless LAN, often within an office or domestic environment, 802.11n has utilised MIMO. This gives the maximum use of the available bandwidth. | MIMO is a form of antenna technology that uses multiple antennas to enable signals travelling via different paths as a result of reflections, etc., to be separated and their capability used to improve the data throughput and / or the signal to noise ratio, thereby improving system performance.
+- 40 MHz Bandwith (Channel Bonding): First 802.11 Standard that uses more than only 20 MHz bandwith (using channel bonding technique).
 - 802.1n power saving: One of the problems with using MIMO is that it increases the power of the hardware circuitry. More transmitters and receivers need to be supported and this entails the use of more current. | Data is normally transmitted in a "bursty" fashion. This means that there are long periods when the system remains idle or running at a very slow speed. During these periods when MIMO is not required, the circuitry can be held inactive so that it does not consume power.
 
 ## High Efficiency (HE) PHY  802.11ax-2020 Wi-Fi 6
