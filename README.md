@@ -1205,7 +1205,7 @@ _Networking models, such as the OSI (Open Systems Interconnection) and TCP/IP (T
 - [`1994` - Modelo OSI: ISO/IEC 7498-1:1994 - 30 años del Modelo sin cambios](https://ipmoguide.com/modelo-osi-iso-iec-7498-11994/)
 
 # 💀🎩🫅Fz3r0 Extended OSI Model for 802.11 Deep Analysis
-_En Wireless 802.11 los layers más importantes son los 1 & 2, pero también son relevantes 3 & 4, en menores de los casos son de capas superiores ya que salen del scope de las funciones 802.11. Los 1 y 2 para comprenderlos bien, hay que dividirlos en sublayers y cada uno identificar su PDU y operaciones que realiza con los layers superiores o inferiores._
+_In Wireless 802.11 networks, Layers 1 and 2 are the most crucial, Layers 3 and 4 also play significant roles but are not part of the wireless technology. Higher layers, however, are sometimes less relevant as they extend beyond the core functions of 802.11. To fully grasp Layers 1 and 2, it's essential to break them down into sub-layers, identifying each one's Protocol Data Unit (PDU) and its interactions with higher or lower layers._
 
 - [💀🎩 **`Fz3r0`** Extended **OSI Model** for 802.11 Deep Analysis](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)
 - [802.11 Layer 1 & Layer 2: Sub-Layers](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289) _`diagram`_ <br><br>
@@ -1472,7 +1472,7 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
 
 
 
-# 💊🛜🦈 802.11 MAC Frames
+# 💊🛜🦈 802.11 Layer 2:  `801.11 MAC Frames`
 _Section 9.2.1 of IEEE Std 802.11-2020 (Revision of IEEE Std 802.11-2016) specifies that the general **MAC frame** must consist of a **MAC header**, **frame body**, and a **frame check sequence (FCS)**. MAC frames can be either protocol version 0 (PV0) or protocol version 1 (PV1). || **IEEE-802.11-2020 :: 9.2 MAC frame formats :: page 754**_ 
 - [Wireshark Display Filters :: MAC Frames](https://www.wifi-professionals.com/2019/03/wireshark-display-filters) _`WLAN Professionals`_
 - [Display Filter Reference: IEEE 802.11 wireless LAN](https://www.wireshark.org/docs/dfref/w/wlan.html) _`Wireshark`_
