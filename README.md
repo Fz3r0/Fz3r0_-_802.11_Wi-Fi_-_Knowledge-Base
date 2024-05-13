@@ -1164,13 +1164,12 @@ _802.11ax operates in both the 2.4 GHz and 5 GHz frequency bands, unlike 802.11a
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
 
-## 🫅🌎 Networking Models: `OSI model (ISO/IEC)` & `TCP/IP`
+# 🫅🌎 Networking Models: `OSI model (ISO/IEC)`, `TCP/IP model` & more
+_Networking models, such as the OSI (Open Systems Interconnection) and TCP/IP (Transmission Control Protocol/Internet Protocol) models, are conceptual frameworks that establish standards for communication between devices in a computer network. |The OSI model, developed by the International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC), is a seven-layer model that provides a structured approach to network design and communication. These seven layers include the physical layer, data link layer, network layer, transport layer, session layer, presentation layer, and application layer. Each layer has specific functions, and together they define how data is transmitted, received, and processed across a network. | On the other hand, the TCP/IP model, developed by the United States Department of Defense (DoD) and maintained by the Internet Engineering Task Force (IETF), is a four-layer model (sometimes five layers) that is widely used as the standard for Internet communication. The TCP/IP model consists of the application layer, transport layer, internet layer, and network access layer, and sometimes includes the data link layer as well. While both models serve the same purpose of facilitating communication between devices on a network, they have different structures and approaches. The OSI model provides a more theoretical framework, dividing communication into seven distinct layers, while the TCP/IP model is more practical and closely aligned with the implementation of the Internet. **Despite these differences, both models define how devices communicate, the functions performed at each stage of communication, and how information is organized during the process.**_
 
-### 🌎↕️🖧 Networking Models
+## 🌎↕️🖧 Networking Models
 - [All Networking Models Compared](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/6cc880c6-1e1f-4f14-be09-005120bbd8db) `table`
 - [The TCP/IP & OSI Models compared@ Global Knowledge](https://mochieng.files.wordpress.com/2012/04/wp_nw_tcp-ip1.pdf)
-
----
 
 ### ↕️🖧 `1982`: DOD Internet Architecture Model :: 4 Layers _(Legacy)_
 - [DARPA - United State’s Department of Defense (DOD) Model](https://nemmanuel027.medium.com/history-of-tcp-ip-and-dod-model-5cf695ce1967)
@@ -1185,9 +1184,7 @@ _802.11ax operates in both the 2.4 GHz and 5 GHz frequency bands, unlike 802.11a
 ### ↕️🖧 `2000`: Internet Model `Cisco Academy` :: 4 Layers _TCP/IP Model Based_
 [Internet model](https://books.google.com.mx/books?id=JVAk7r6jHF4C&redir_esc=y)
 
----
-
-### ↕️🔬🌎 `1981` - `2005` : TCP/IP Model :: 4 & 5 Layers
+## ↕️🔬🌎 `1981` - `2005` : TCP/IP Model :: 4 & 5 Layers
 - [TCP/IP Model](https://en.wikipedia.org/wiki/Internet_protocol_suite) :: All models : _`Wiki`_
 - [TCP/IP Model](https://en.wikipedia.org/wiki/Internet_protocol_suite) :: All models : _`Table`_ 
 - [TCP/IP Model @ Fortinet](https://www.fortinet.com/resources/cyberglossary/tcp-ip-model-vs-osi-model) :: _`5 Layers`_
@@ -1201,9 +1198,7 @@ _802.11ax operates in both the 2.4 GHz and 5 GHz frequency bands, unlike 802.11a
 - [`2000` :: Computer Networking: A Top-down Approach](https://www.ucg.ac.me/skladiste/blog_44233/objava_64433/fajlovi/Computer%20Networking%20_%20A%20Top%20Down%20Approach,%207th,%20converted.pdf) **Jim Kurose** :: `5 Layers`
 - [`2005` :: The TCP/IP Guide: A Comprehensive, Illustrated Internet Protocols Reference](https://www.amazon.com/TCP-Guide-Comprehensive-Illustrated-Protocols/dp/159327047X) **Charles M. Kozierok** :: `5 Layers`
 
----
-
-### ↕️🫅🌎 `1983` - `1994` : OSI model `ISO/IEC 7498-1:1994` :: 7 Layers
+## ↕️🫅🌎 `1983` - `1994` : OSI model `ISO/IEC 7498-1:1994` :: 7 Layers
 - [OSI Model](https://en.wikipedia.org/wiki/OSI_model) _`Wiki`_
 - [History of the OSI Model and its origins](https://blog.domotz.com/know-your-networks/history-of-the-osi-model/) _`Information`_
 - [`1983` - Basic Reference Model for Open Systems Interconnection](https://ieeexplore.ieee.org/document/1457043)
