@@ -1716,7 +1716,7 @@ _2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a
     - ⭕ [CFP Duratio (PCF - Not implemented in 802.11 Wi-Fi)](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/) :: Point Coordination Function (PCF) process has begun.
 ---
             
-### 💊📦 Addresses 1, 2, 3, 5 (Bytes Lenght)
+### 💊📦 Addresses 1, 2, 3 & 4 (Bytes Lenght)
 _802.11 MAC sublayer address is one of the following two types 1). Individual Address (known as unicast address) 2) Group Address (Multicast or Broadcast address) | 802.11 frame can have upto 4 address fields in the MAC header. 802.11 frames typically use only 3 of the MAC address fields, but frames send within WDS (Wireless Distribution System) requires all 4 MAC address fields. | The Address Field depends on the frame type and may have one of the five different interpretations (DA, SA, RA, TA or BSSID). Protocol Analyzers like Wireshark will interpretate this automatically._
 
 ````py
