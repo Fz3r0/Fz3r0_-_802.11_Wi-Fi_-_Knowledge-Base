@@ -1710,7 +1710,7 @@ _2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a
 
 ````
 
-- 📦 [**`Duration`** / **`ID`**](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/) 
+- 📦 [**`Duration`** / **`ID`**](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/)  <br> <br>
     - ⭕ [ID (legacy)](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/) :: Legacy Power Management <br> <br>
         - PS-Poll (Legacy) :: AID 41 (ID of Station = 41) = `wlan.aid == 41`
         - PS-Poll (Legacy) :: AID 41 (ID of Station = 1723) = `wlan.aid == 1723`<br> <br>
