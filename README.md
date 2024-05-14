@@ -1717,7 +1717,7 @@ _2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a
 ---
             
 ### 💊📦 Addresses 1, 2, 3, 5 (Bytes Lenght)
-_802.11 MAC sublayer address is one of the following two types 1). Individual Address (known as unicast address) 2) Group Address (Multicast or Broadcast address) | 802.11 frame can have upto 4 address fields in the MAC header. 802.11 frames typically use only 3 of the MAC address fields, but frames send within WDS (Wireless Distribution System) requires all 4 MAC address fields. | The Address Field depends on the frame type and may have one of the five different interpretations (DA, SA, RA, TA or BSSID)._
+_802.11 MAC sublayer address is one of the following two types 1). Individual Address (known as unicast address) 2) Group Address (Multicast or Broadcast address) | 802.11 frame can have upto 4 address fields in the MAC header. 802.11 frames typically use only 3 of the MAC address fields, but frames send within WDS (Wireless Distribution System) requires all 4 MAC address fields. | The Address Field depends on the frame type and may have one of the five different interpretations (DA, SA, RA, TA or BSSID). Protocol Analyzers like Wireshark will interpretate this automatically._
 
 ````py
 ## Duration (actual) :: Reset NAV timers for devices on channel STAs waiting for the medium use this to estimate when the channel will be free. Expected duration of current transmission after current frame
@@ -1729,18 +1729,17 @@ _802.11 MAC sublayer address is one of the following two types 1). Individual Ad
 |---------|-----------|---------|---------|---------|----------|---------|---------|---------|
                           |  |      |  |     |  |                  |  |
                            \/        \/       \/                    \/
-                           DA        DA       DA                    DA
-                           SA        SA       SA                    SA
-                           RA        RA       RA                    RA
-                           TA        TA       TA                    TA
-                          BSSID     BSSID    BSSID                 BSSID 
+                           DA /      SA /     SA /                  SA
+                           RA /      TA /     DA /              (Bridge/WDS)   
+                          BSSID     BSSID    BSSID                                
 ````
-|              | To DS<br>(Distribution System) | From DS<br>(Distribution System) | Address 1 {RA}<br>(Receiver Address) | Address 2 {TA}<br>(Transmitter Address) |            Address 3            |        Address 4       |
-|:------------:|:------------------------------:|:--------------------------------:|:------------------------------------:|:---------------------------------------:|:-------------------------------:|:----------------------:|
-|    From AP   |                0               |                 1                |      DA<br>(Destination Address)     |     BSSID<br>(Basic Service Set ID)     |      SA<br>(Source Address)     |           N/A          |
-|     To AP    |                1               |                 0                |    BSSID<br>(Basic Service Set ID)   |          SA<br>(Source Address)         |   DA<br>(Destination Address)   |           N/A          |
-| Ad-Hoc (P2P) |                0               |                 0                |      DA<br>(Destination Address)     |          SA<br>(Source Address)         | BSSID<br>(Basic Service Set ID) |           N/A          |
-| Bridge / WDS |                1               |                 1                |       RA<br>(Receiver Address)       |       TA<br>(Transmitter Address)       |   DA<br>(Destination Address)   | SA<br>(Source Address) |
+
+|                  | **To DS<br>(Distribution System)** | **From DS<br>(Distribution System)** | **Address 1 {RA}<br>(Receiver Address)** | **Address 2 {TA}<br>(Transmitter Address)** |        **Address 3**        |      **Address 4**     |
+|:----------------:|:----------------------------------:|:------------------------------------:|:----------------------------------------:|:-------------------------------------------:|:---------------------------:|:----------------------:|
+|    **From AP**   |                  0                 |                   1                  |        DA<br>(Destination Address)       |                    BSSID                    |    SA<br>(Source Address)   |           N/A          |
+|     **To AP**    |                  1                 |                   0                  |                   BSSID                  |            SA<br>(Source Address)           | DA<br>(Destination Address) |           N/A          |
+| **Ad-Hoc (P2P)** |                  0                 |                   0                  |        DA<br>(Destination Address)       |            SA<br>(Source Address)           |            BSSID            |           N/A          |
+| **Bridge / WDS** |                  1                 |                   1                  |         RA<br>(Receiver Address)         |         TA<br>(Transmitter Address)         | DA<br>(Destination Address) | SA<br>(Source Address) |
 
 
 Each of the four 802.11 Address Fields may have one of 5 different interpretations:
@@ -1748,14 +1747,11 @@ Each of the four 802.11 Address Fields may have one of 5 different interpretatio
 2. Source Address (SA) :: Starting Point of the Transmission
 3. Receiver Address (RA) :: Next Wireless Destination of the Transmission
 4. Transmitter Address (TA) :: STA/AP that transmitted the frame onto the WM (Wireless Medium) 
-5. Basic Service Set Identifier (BSSID) :: ID of the BSS (Similar to MAC Address)
-
-
-
-- [Address 1](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/)
-- [Address 2](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/)
-- [Address 3](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/)
-- [Address 4](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/) 
+5. Basic Service Set Identifier (BSSID) :: ID of the BSS (Similar to MAC Address) <br> <br>
+    - [Address 1](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/) DA (From DS) | BSSID (To AP) | DA (Ad-Hoc) | RA (Bridge/WDS)
+    - [Address 2](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/)
+    - [Address 3](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/)
+    - [Address 4](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/) 
 
 ---
 
