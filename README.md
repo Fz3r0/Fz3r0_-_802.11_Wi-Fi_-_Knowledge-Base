@@ -189,13 +189,13 @@ Please check out the links of my Social Networks including my LinkedIn, where yo
 
 ---
 
-_"I am the wraith within the Machine, the ghost in the Shell, the darkness that embrace the Network, the Decipherer of ancient runes, the one who commands the air wave after wave after wave after wave after wave... I can see deep into your soul, I can read your mind, this are no tricks, this is true power!_
+<span align="center"> <p align="center"> _"I am the Lord of Darkness. I require the solace of the shadows and the dark of the night. Sunshine is my destroyer. All this shall change... Tonight, the sun sets forever. There shall never be another dawn._ </p> </span> 
 
-_I am the Lord of Darkness. I require the solace of the shadows and the dark of the night. Sunshine is my destroyer. All this shall change... Tonight, the sun sets forever. There shall never be another dawn._
+<span align="center"> <p align="center"> _I can see deep into your soul, I can read your mind, this are no tricks, this is true power!_ </p> </span> 
 
-_In the mist of the night you may see me come, where shadows move and demons lie..._
+<span align="center"> <p align="center"> _In the mist of the night you may see me come, where shadows move and demons lie..._ </p> </span> 
 
-_...I am Fz3r0 and the Sun no longer rises..."_ 💀🎩
+<span align="center"> <p align="center"> _...I am Fz3r0 and the Sun no longer rises..."_ 💀🎩 </p> </span> 
 
 <br> <br> 
 
