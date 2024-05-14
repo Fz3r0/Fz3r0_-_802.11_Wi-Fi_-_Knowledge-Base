@@ -1711,17 +1711,23 @@ _2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a
 ````
 
 - 📦 [**`Duration`** / **`ID`**](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/) 
-    - ⭕ [ID (legacy)](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/) :: Legacy Power Management
-    - ⭕ [Duration (Actual)](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/) :: Virtual Carrier Sense
-    - ⭕ [CFP Duratio (PCF - Not implemented in 802.11 Wi-Fi)](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/) :: Point Coordination Function (PCF) process has begun.
+    - ⭕ [ID (legacy)](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/) :: Legacy Power Management <br> <br>
+        - PS-Poll (Legacy) :: AID 41 (ID of Station = 41) = `wlan.aid == 41`
+        - PS-Poll (Legacy) :: AID 41 (ID of Station = 1723) = `wlan.aid == 1723`<br> <br>
+    - ⭕ [Duration (Actual)](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/) :: Virtual Carrier Sense <br> <br>
+        - Duration (Actual) :: ACK = 0 microseconds = `wlan.fc.type_subtype == 29 && wlan.duration == 0`
+        - Duration (Actual) :: ACK > 0 microseconds = `wlan.fc.type_subtype == 29 && wlan.duration > 0` <br> <br>
+        - Duration (Actual) :: Duration more that 0 microseconds = `wlan.duration > 0 && !wlan.fc.type == 1`
+        - Duration (Actual) :: Duration more that 0 microseconds, without control frames = `wlan.duration > 0 && !wlan.fc.type == 1` <br> <br>
+    - ⭕ [CFP Duratio (PCF - Not implemented in 802.11 Wi-Fi)](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/) :: Point Coordination Function (PCF) process has begun. <br><br>
+
 ---
             
 ### 💊📦 Addresses 1, 2, 3 & 4 (Bytes Lenght)
 _802.11 MAC sublayer address is one of the following two types 1). Individual Address (known as unicast address) 2) Group Address (Multicast or Broadcast address) | 802.11 frame can have upto 4 address fields in the MAC header. 802.11 frames typically use only 3 of the MAC address fields, but frames send within WDS (Wireless Distribution System) requires all 4 MAC address fields. | The Address Field depends on the frame type and may have one of the five different interpretations (DA, SA, RA, TA or BSSID). Protocol Analyzers like Wireshark will interpretate this automatically._
 
 ````py
-## Duration (actual) :: Reset NAV timers for devices on channel STAs waiting for the medium use this to estimate when the channel will be free. Expected duration of current transmission after current frame
-## ID (legacy)       :: STA send PS-poll Frame to AP to indicate the AID (Association ID) of the STA
+## Addresses :: The Address Field depends on the frame type and may have one of the five different interpretations (DA, SA, RA, TA or BSSID). The Address Field depends on the frame type
 
 |---------|-----------|---------|---------|---------|----------|---------|---------|---------|
 |  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     |
@@ -1734,6 +1740,8 @@ _802.11 MAC sublayer address is one of the following two types 1). Individual Ad
                           BSSID     BSSID    BSSID                                
 ````
 
+The next table apply **only for Data Frames**:
+
 |                  | **To DS<br>(Distribution System)** | **From DS<br>(Distribution System)** | **Address 1 {RA}<br>(Receiver Address)** | **Address 2 {TA}<br>(Transmitter Address)** |        **Address 3**        |      **Address 4**     |
 |:----------------:|:----------------------------------:|:------------------------------------:|:----------------------------------------:|:-------------------------------------------:|:---------------------------:|:----------------------:|
 |    **From AP**   |                  0                 |                   1                  |        DA<br>(Destination Address)       |                    BSSID                    |    SA<br>(Source Address)   |           N/A          |
@@ -1741,23 +1749,48 @@ _802.11 MAC sublayer address is one of the following two types 1). Individual Ad
 | **Ad-Hoc (P2P)** |                  0                 |                   0                  |        DA<br>(Destination Address)       |            SA<br>(Source Address)           |            BSSID            |           N/A          |
 | **Bridge / WDS** |                  1                 |                   1                  |         RA<br>(Receiver Address)         |         TA<br>(Transmitter Address)         | DA<br>(Destination Address) | SA<br>(Source Address) |
 
+- ⭕ [Address 1](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/) ex. Data Frame -> DA (From DS) | BSSID (To AP) | DA (Ad-Hoc) | RA (Bridge/WDS)
+- ⭕ [Address 2](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/) ex. Data Frame -> BSSID (From DS) | SA (To AP) | SA (Ad-Hoc) | TA (Bridge/WDS)
+- ⭕ [Address 3](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/) ex. Data Frame -> SA (From DS) | DA (To AP) | BSSID (Ad-Hoc) | DA (Bridge/WDS)
+- ⭕ [Address 4](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/) ex. Data Frame -> _N/A_ (From DS) | _N/A_ (To AP) | _N/A_ (Ad-Hoc) | DA (Bridge/WDS)
 
 Each of the four 802.11 Address Fields may have one of 5 different interpretations:
-1. Destination Address (DA) :: Final Destination of Transmission
-2. Source Address (SA) :: Starting Point of the Transmission
-3. Receiver Address (RA) :: Next Wireless Destination of the Transmission
-4. Transmitter Address (TA) :: STA/AP that transmitted the frame onto the WM (Wireless Medium) 
-5. Basic Service Set Identifier (BSSID) :: ID of the BSS (Similar to MAC Address) <br> <br>
-    - [Address 1](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/) DA (From DS) | BSSID (To AP) | DA (Ad-Hoc) | RA (Bridge/WDS)
-    - [Address 2](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/)
-    - [Address 3](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/)
-    - [Address 4](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/) 
+
+1. ⭕ `Destination Address` : **`DA`** :: Final Destination of Transmission
+2. ⭕ `Source Address` : **`SA`** :: Starting Point of the Transmission
+3. ⭕ `Receiver Address` : **`RA`** :: Next Wireless Destination of the Transmission
+4. ⭕ `Transmitter Address` : **`TA`** :: STA/AP that transmitted the frame onto the WM (Wireless Medium) 
+5. ⭕ `Basic Service Set Identifier` : **`BSSID`** :: ID of the BSS (Similar to MAC Address) <br> <br>
+
 
 ---
 
-### Sequence Control
+### 💊📦 Sequence Control
+_The Sequence Control field is 16 bits in length and consists of two subfields, the Sequence Number and the Fragment Number. The sequence Control field is not present in control frames (as no frame body)._
 
-- [Sequence Control]()
+- [Sequence Control](https://mrncciew.com/2014/11/01/cwap-mac-header-sequence-control/) Consists of two subfields: Sequence Number & Fragment Number: <br><br>
+    - **`Sequence Number`**: The Sequence Number field is a 12-bit field indicating the sequence number of an MSDU, A-MSDU, or MMPDU. Each MSDU, A-MSDU, or MMPDU transmitted by a STA is assigned a sequence number.The sequence number remains constant in all retransmissions of an MSDU, MMPDU, or fragment thereof.
+    - **`Fragment Number`**: The Fragment Number field is a 4-bit field indicating the number of each fragment of an MSDU or MMPDU. The fragment number is set to 0 in the first or only fragment of an MSDU or MMPDU and is incremented by one for each successive fragment of that MSDU or MMPDU. The fragment number remains constant in all retransmissions of the fragment.
+
+
+
+### 💊📦 QoS Control
+
+
+
+### 💊📦 HT Control
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### 802.11 `Frame Body` - Variable Lenght Frame Body
 _Not all 802.11 Frame have Frame Body, for example CTS/RTS frame will not have a frame body | The frame body for data frames has an upper layer payload / data | The frame body for management frames like beacons, have informations elements_
