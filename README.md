@@ -1717,7 +1717,7 @@ _2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a
     - ⭕ [Duration (Actual)](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/) :: Virtual Carrier Sense <br> <br>
         - Duration (Actual) :: ACK = 0 microseconds = `wlan.fc.type_subtype == 29 && wlan.duration == 0`
         - Duration (Actual) :: ACK > 0 microseconds = `wlan.fc.type_subtype == 29 && wlan.duration > 0` <br> <br>
-        - Duration (Actual) :: Duration more that 0 microseconds = `wlan.duration > 0 && !wlan.fc.type == 1`
+        - Duration (Actual) :: Duration more that 0 microseconds = `wlan.duration > 0`
         - Duration (Actual) :: Duration more that 0 microseconds, without control frames = `wlan.duration > 0 && !wlan.fc.type == 1` <br> <br>
     - ⭕ [CFP Duratio (PCF - Not implemented in 802.11 Wi-Fi)](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/) :: Point Coordination Function (PCF) process has begun. <br><br>
 
@@ -1756,12 +1756,16 @@ The next table apply **only for Data Frames**:
 
 Each of the four 802.11 Address Fields may have one of 5 different interpretations:
 
-1. ⭕ `Destination Address` : **`DA`** :: Final Destination of Transmission
-2. ⭕ `Source Address` : **`SA`** :: Starting Point of the Transmission
-3. ⭕ `Receiver Address` : **`RA`** :: Next Wireless Destination of the Transmission
-4. ⭕ `Transmitter Address` : **`TA`** :: STA/AP that transmitted the frame onto the WM (Wireless Medium) 
+1. ⭕ `Destination Address` : **`DA`** :: Final Destination of Transmission <br> <br>
+    - DA (F0:F0:F0:F0:F0:F0) = `wlan.da == F0:F0:F0:F0:F0:F0` <br> <br>
+2. ⭕ `Source Address` : **`SA`** :: Starting Point of the Transmission <br> <br>
+    - SA (F0:F0:F0:F0:F0:F0) = `wlan.sa == F0:F0:F0:F0:F0:F0` <br> <br>
+3. ⭕ `Receiver Address` : **`RA`** :: Next Wireless Destination of the Transmission <br> <br>
+    - RA (F0:F0:F0:F0:F0:F0) = `wlan.ra == F0:F0:F0:F0:F0:F0` <br> <br>
+4. ⭕ `Transmitter Address` : **`TA`** :: STA/AP that transmitted the frame onto the WM (Wireless Medium)  <br> <br>
+    - TA (F0:F0:F0:F0:F0:F0) = `wlan.ta == F0:F0:F0:F0:F0:F0` <br> <br>
 5. ⭕ `Basic Service Set Identifier` : **`BSSID`** :: ID of the BSS (Similar to MAC Address) <br> <br>
-
+    - TA (F0:F0:F0:F0:F0:F0) = `wlan.bssid == F0:F0:F0:F0:F0:F0`
 
 ---
 
