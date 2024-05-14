@@ -197,7 +197,9 @@ Please check out the links of my Social Networks including my LinkedIn, where yo
 
 <span align="center"> <p align="center"> _...I am Fz3r0 and the Sun no longer rises..."_ 💀🎩 </p> </span> 
 
-<br> <br> 
+---
+
+<br> <br> <br> <br>
 
 <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
