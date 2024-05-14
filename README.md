@@ -1695,7 +1695,7 @@ _2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a
         |     ||     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
         |-----||-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
            1   |________________________________________________________________________________________|
-                                                    Values:  0 - 32,767
+                                                    Values:  0 - 32767
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
@@ -1715,14 +1715,16 @@ _2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a
 - 📦 [**`Duration`** / **`ID`**](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/)  <br> <br>
     - ⭕ [ID (legacy)](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/) :: Legacy Power Management <br> <br>
         - PS-Poll (Legacy) :: AID 41 (ID of Station = 41) = `wlan.aid == 41`
-        - PS-Poll (Legacy) :: AID 41 (ID of Station = 1723) = `wlan.aid == 1723`<br> <br>
+        - PS-Poll (Legacy) :: AID 1723 (ID of Station = 1723) = `wlan.aid == 1723`
+        - PS-Poll (Legacy) :: AID 2007 (ID of Station = 2007 [maximum value]) = `wlan.aid == 2007` br> <br>
     - ⭕ [Duration (Actual)](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/) :: Virtual Carrier Sense <br> <br>
         - Duration (Actual) :: ACK = 0 microseconds = `wlan.fc.type_subtype == 29 && wlan.duration == 0`
         - Duration (Actual) :: ACK > 0 microseconds = `wlan.fc.type_subtype == 29 && wlan.duration > 0` <br> <br>
         - Duration (Actual) :: Duration more that 0 microseconds = `wlan.duration > 0`
+        - Duration (Actual) :: Maximum duration possible (32767) = `wlan.duration == 32767`
         - Duration (Actual) :: Duration more that 0 microseconds, without control frames = `wlan.duration > 0 && !wlan.fc.type == 1` <br> <br>
-    - ⭕ [CFP Duratio (PCF - Not implemented in 802.11 Wi-Fi)](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/) :: Point Coordination Function (PCF) process has begun. <br><br>
-
+    - ⭕ [CFP Duration (PCF) - Not implemented in 802.11 Wi-Fi)](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/) :: Point Coordination Function (PCF) process has begun. <br><br>
+        - _I can't find a CFP duration captured in the wild yet :(_
 ---
             
 ### 💊📦 Addresses 1, 2, 3 & 4 (Bytes Lenght)
