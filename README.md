@@ -1651,7 +1651,7 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
 ---
 
 ### 💊📦 `Duration / ID` (Bytes Lenght)
-_2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a two different purposes: 1 ) Duration: This field is used to reset NAV timers for devices on channel. Time in microseconds needed to complete the frame exchange, used to update STAs NAV (Network Allocation Vector) 2) ID: Used in legacy PS-poll Frame to indicate the AID (Association ID) of the STA  | Expected duration of current transmission. Stations waiting for the medium use this to estimate when the channel will be free. | The contents of this field vary with frame type and subtype, with whether the frame is transmitted during the CFP, and with the QoS capabilities of the sending STA. | Omni peek shows this as duration, however it really is a duration / id field._ 
+_2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a two different purposes: 1 ) Duration: This field is used to reset NAV timers for devices on channel. Time in microseconds needed to complete the frame exchange, used to update STAs NAV (Network Allocation Vector). This is used a lot and it's important to know that this is not the duration of the current frame, it is the duration of the exchanges after the current frame requeried to actually complete the transaction 2) ID: Used in legacy PS-poll Frame to indicate the AID (Association ID) of the STA (AKA: ID of the Client Station given to the AP) to send the buffered frame in the AP | Expected duration of current transmission. Stations waiting for the medium use this to estimate when the channel will be free. | The contents of this field vary with frame type and subtype, with whether the frame is transmitted during the CFP, and with the QoS capabilities of the sending STA. | Omni peek shows this as duration, however it really is a duration / id field._ 
 
 ````py
 ## Duration (actual) :: Reset NAV timers for devices on channel STAs waiting for the medium use this to estimate when the channel will be free. Expected duration of current transmission after current frame
@@ -1710,13 +1710,47 @@ _2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a
 
 ````
 
-- 📦 [**`Duration`** / **`ID`**](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/)
+- 📦 [**`Duration`** / **`ID`**](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/) 
     - ⭕ [ID (legacy)](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/) :: Legacy Power Management
     - ⭕ [Duration (Actual)](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/) :: Virtual Carrier Sense
     - ⭕ [CFP Duratio (PCF - Not implemented in 802.11 Wi-Fi)](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/) :: Point Coordination Function (PCF) process has begun.
 ---
             
 ### 💊📦 Addresses 1, 2, 3, 5 (Bytes Lenght)
+_802.11 MAC sublayer address is one of the following two types 1). Individual Address (known as unicast address) 2) Group Address (Multicast or Broadcast address) | 802.11 frame can have upto 4 address fields in the MAC header. 802.11 frames typically use only 3 of the MAC address fields, but frames send within WDS (Wireless Distribution System) requires all 4 MAC address fields. | The Address Field depends on the frame type and may have one of the five different interpretations (DA, SA, RA, TA or BSSID)._
+
+````py
+## Duration (actual) :: Reset NAV timers for devices on channel STAs waiting for the medium use this to estimate when the channel will be free. Expected duration of current transmission after current frame
+## ID (legacy)       :: STA send PS-poll Frame to AP to indicate the AID (Association ID) of the STA
+
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------|
+|  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     |
+| Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control | Control |
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------|
+                          |  |      |  |     |  |                  |  |
+                           \/        \/       \/                    \/
+                           DA        DA       DA                    DA
+                           SA        SA       SA                    SA
+                           RA        RA       RA                    RA
+                           TA        TA       TA                    TA
+                          BSSID     BSSID    BSSID                 BSSID 
+````
+|              | To DS<br>(Distribution System) | From DS<br>(Distribution System) | Address 1 {RA}<br>(Receiver Address) | Address 2 {TA}<br>(Transmitter Address) |            Address 3            |        Address 4       |
+|:------------:|:------------------------------:|:--------------------------------:|:------------------------------------:|:---------------------------------------:|:-------------------------------:|:----------------------:|
+|    From AP   |                0               |                 1                |      DA<br>(Destination Address)     |     BSSID<br>(Basic Service Set ID)     |      SA<br>(Source Address)     |           N/A          |
+|     To AP    |                1               |                 0                |    BSSID<br>(Basic Service Set ID)   |          SA<br>(Source Address)         |   DA<br>(Destination Address)   |           N/A          |
+| Ad-Hoc (P2P) |                0               |                 0                |      DA<br>(Destination Address)     |          SA<br>(Source Address)         | BSSID<br>(Basic Service Set ID) |           N/A          |
+| Bridge / WDS |                1               |                 1                |       RA<br>(Receiver Address)       |       TA<br>(Transmitter Address)       |   DA<br>(Destination Address)   | SA<br>(Source Address) |
+
+
+Each of the four 802.11 Address Fields may have one of 5 different interpretations:
+1. Destination Address (DA) :: Final Destination of Transmission
+2. Source Address (SA) :: Starting Point of the Transmission
+3. Receiver Address (RA) :: Next Wireless Destination of the Transmission
+4. Transmitter Address (TA) :: STA/AP that transmitted the frame onto the WM (Wireless Medium) 
+5. Basic Service Set Identifier (BSSID) :: ID of the BSS (Similar to MAC Address)
+
+
 
 - [Address 1](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/)
 - [Address 2](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/)
