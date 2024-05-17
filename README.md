@@ -1025,8 +1025,8 @@ _Revision 5 Draft: **`2024`** ???_ :: _incomporates revision of IEEE Std: `2020 
 
 - [802.11a Features](https://www.tutorialsweb.com/networking/wireless-networks/802.11a-protocol-features.htm)
 
-## 📡⚙️🧬 802.11 / Wi-Fi Prime / DSS
-_The first wireless LAN (WLAN) standard was created by the IEEE committee in 1997, and was called 802.11. However, 802.11 standard supported only up to 2 Mbps of bandwidth, and quickly became obsolete. Subsequently, IEEE created the 802.11a, and 802.11b standards. IEEE 802.11 (legacy mode) – or more correctly IEEE 802.11-1997 or IEEE 802.11-1999 – refer to the original version of the IEEE 802.11 wireless networking standard released in 1997 and clarified in 1999. Most of the protocols described by this early version are rarely used today._
+## 📡⚙️🧬 `802.11` / `Wi-Fi Prime` / `DSS`
+_The first wireless LAN (WLAN) standard was created by the IEEE committee in 1997, and was called 802.11. However, 802.11 standard supported only up to 2 Mbps of bandwidth, and quickly became obsolete. Subsequently, IEEE created the 802.11a, and 802.11b standards. IEEE 802.11 (legacy mode or Prime) – or more correctly IEEE 802.11-1997 or IEEE 802.11-1999 – refer to the original version of the IEEE 802.11 wireless networking standard released in 1997 and clarified in 1999. Most of the protocols described by this early version are rarely used today._
 
 ### 📡💡 **802.11 Prime** | **Wi-Fi 0** | **DSSS**: `Features` 
 
@@ -1055,46 +1055,48 @@ _The first wireless LAN (WLAN) standard was created by the IEEE committee in 199
 - ⭕ Authentication: **`Open Authentication`** | **`Shared Key`**
 - ⭕ Encryption Algorythm: **`RC4`** | **`TKIP`** <br> <br>
 
-### ⚙️🚀 `Enhancements` <br> <br>
+### ⚙️🚀 **802.11 Prime** | **Wi-Fi 0** | **DSSS**: `Enhancements` <br> <br>
 
 - **First 802.11 Wi-Fi PHY:** <br> <br>
     - **`CSMA/CA (Carrier-sense multiple access with collision avoidance)`**: Originally defined carrier sense multiple access with collision avoidance, this is a protocol for carrier transmission in 802.11 networks. It was developed to minimize the potential of a collision occurring when two or more stations send their signals over a data link layer. <br> <br>
     - **`2.4 GHz band`**: First 802.11 wireless standard that uses 2.4 GHz band. Three non-overlapping channels in industrial, scientific, medical (ISM) frequency band at 2.4 GHz.    
 
-## 📡⚙️🧬 802.11b / Wi-Fi 0 / HR-DSSS
-_The DSSS version of legacy 802.11 was rapidly supplemented (and popularized) by the 802.11b amendment in 1999, which increased the bit rate to 11 Mbit/s. Widespread adoption of 802.11 networks only occurred after the release of 802.11b which resulted in multiple interoperable products becoming available from multiple vendors. Consequently, comparatively few networks were implemented on the 802.11-1997 standard_
+## 📡⚙️🧬 `802.11b` / `Wi-Fi 0` / `HR-DSSS`
+_The DSSS version of legacy 802.11 Prime was rapidly supplemented (and popularized) by the 802.11b amendment in 1999, which increased the bit rate to 11 Mbit/s. Widespread adoption of 802.11 networks only occurred after the release of 802.11b which resulted in multiple interoperable products becoming available from multiple vendors. Consequently, comparatively few networks were implemented on the 802.11-1997 standard | 802.11b products appeared on the market in mid-1999, since 802.11b is a direct extension of the DSSS (Direct-sequence spread spectrum) modulation technique defined in the original standard. The Apple iBook was the first mainstream computer sold with optional 802.11b networking. Technically, the 802.11b standard uses complementary code keying (CCK) as its modulation technique, which uses a specific set of length 8 complementary codes that was originally designed for OFDM but was also suitable for use in 802.11b because of its low autocorrelation properties. The dramatic increase in throughput of 802.11b (compared to the original standard released in 1997) along with simultaneous substantial price reductions led to the rapid acceptance of 802.11b as the definitive wireless LAN technology as well as to the formation of the Wi-Fi Alliance | 802.11b devices suffer interference from other products operating in the 2.4 GHz band. Devices operating in the 2.4 GHz range include: microwave ovens, Bluetooth devices, baby monitors and cordless telephones. Interference issues and user density problems within the 2.4 GHz band have become a major concern and frustration for users._
 
-- 📡 **802.11b** | **Wi-Fi 1** | **HR-DSSS** (High Rate - Direct Sequence Spread Spectrum) <br> <br>
-    - ⭕ Year & Status: September **`1999`** _(Legacy)_
-    - ⭕ IEEE Ammandment: **_`Amendment 1`_**
-    - ⭕ IEEE 802.11-2020 Clause: **`Clause 17`** <br> <br>
-    - ⭕ PHY: **`HR-DSSS`** (High Rate - Direct Sequence Spread Spectrum) 
-    - ⭕ Operating Band: **`2.4 GHz`** 
-    - ⭕ Channel Bandwith: **`22 MHz`**
-    - ⭕ Stream Data Rates: **`1mbps`** | **`2mbps`** | **`5.5mbps`** | **`11mbps`** _peak_
-    - ⭕ Modulation Technique: **`CCK`** Complementary Code Keying <br> <br>
-    - ⭕ OFDM: _N/A_
-    - ⭕ Max OFDM tones: _N/A_
-    - ⭕ Subcarrier Spacing: _N/A_ <br> <br>
-    - ⭕ Constellation | Code Rate: <br> <br>
-        - Modulation: **`DBPSK`** | Code Lenght: **`11 bit barker code`** | Bit per symbol: **`1`** | **`1 mbps`**
-        - Modulation: **`DQPSK`** | Code Lenght: **`11 bit barker code`** | Bit per symbol: **`2`** | **`2 mbps`**
-        - Modulation: **`QPSK`** | Code Lenght: **`8-bit CCK`** | Bit per symbol: **`5.5`** | **`5.5 mbps`**
-        - Modulation: **`QPSK`** | Code Lenght: **`8-bit CCK`** | Bit per symbol: **`8`** | **`11 mbps`** <br> <br>
-    - ⭕ MIMO: _N/A_
-    - ⭕ Max Single-User (SU) Streams: **`1`**
-    - ⭕ Max Multi-User (MU) Streams: _N/A_
-    - ⭕ bit / Symbol: **`2bits / symbol`**
-    - ⭕ MCS: _N/A (non 802.11n or higher)_
-    - ⭕ QAM Spectral Efficienty _(aprox)_: for 4-QAM = **`14 SNR`**
-    - ⭕ Link Spectral Efficiency: **`0.55 bps/Hz`**
-    - ⭕ Guard Interval: _N/A_ <br> <br>
-    - ⭕ Power Saving: _N/A_ <br> <br>
-    - ⭕ Security: **`WEP`** | **`WPA-Personal`**
-    - ⭕ Authentication: **`Open Authentication`** | **`Shared Key`**
-    - ⭕ Encryption Algorythm: **`RC4`** | **`TKIP`** <br> <br>
-- ⚙️ **Features:** <br> <br>
-    - Direct extension of original 802.11 prime <br> <br>
+### 📡💡 **802.11b** | **Wi-Fi 1** | **HR-DSSS**: `Features` <br> <br>
+   
+- ⭕ Year & Status: September **`1999`** _(Legacy)_
+- ⭕ IEEE Ammandment: **_`Amendment 1`_**
+- ⭕ IEEE 802.11-2020 Clause: **`Clause 17`** <br> <br>
+- ⭕ PHY: **`HR-DSSS :: High Rate - Direct Sequence Spread Spectrum`** 
+- ⭕ Operating Band: **`2.4 GHz`** 
+- ⭕ Channel Bandwith: **`22 MHz`**
+- ⭕ Stream Data Rates: **`1mbps`** | **`2mbps`** | **`5.5mbps`** | **`11mbps`** _peak_
+- ⭕ Modulation Technique: **`CCK`** Complementary Code Keying <br> <br>
+- ⭕ OFDM: _N/A_
+- ⭕ Max OFDM tones: _N/A_
+- ⭕ Subcarrier Spacing: _N/A_ <br> <br>
+- ⭕ Constellation | Code Rate: <br> <br>
+    - Modulation: **`DBPSK`** | Code Lenght: **`11 bit barker code`** | Bit per symbol: **`1`** | **`1 mbps`**
+    - Modulation: **`DQPSK`** | Code Lenght: **`11 bit barker code`** | Bit per symbol: **`2`** | **`2 mbps`**
+    - Modulation: **`QPSK`** | Code Lenght: **`8-bit CCK`** | Bit per symbol: **`5.5`** | **`5.5 mbps`**
+    - Modulation: **`QPSK`** | Code Lenght: **`8-bit CCK`** | Bit per symbol: **`8`** | **`11 mbps`** <br> <br>
+- ⭕ MIMO: _N/A_
+- ⭕ Max Single-User (SU) Streams: **`1`**
+- ⭕ Max Multi-User (MU) Streams: _N/A_
+- ⭕ bit / Symbol: **`2bits / symbol`**
+- ⭕ MCS: _N/A (non 802.11n or higher)_
+- ⭕ QAM Spectral Efficienty _(aprox)_: for 4-QAM = **`14 SNR`**
+- ⭕ Link Spectral Efficiency: **`0.55 bps/Hz`**
+- ⭕ Guard Interval: _N/A_ <br> <br>
+- ⭕ Power Saving: _N/A_ <br> <br>
+- ⭕ Security: **`WEP`** | **`WPA-Personal`**
+- ⭕ Authentication: **`Open Authentication`** | **`Shared Key`**
+- ⭕ Encryption Algorythm: **`RC4`** | **`TKIP`** <br> <br>
+
+### ⚙️🚀 **802.11b** | **Wi-Fi 1** | **HR-DSSS**: `Enhancements` <br> <br>
+- **Direct extension of original 802.11 Prime (1997)** <br> <br>
     - **`More Data Rates available`**: Data rates with varying modulation types: 1, 2, 5.5 and up to 11 Mbps using Adaptative Rate Selection also known as Dynamic Rate Switching <br> <br>
     - **`Dynamic Rate Switching`**: It can operate at 11 Mbit/s, but scale back to 5.5, then to 2, then to 1 Mbit/s in order to decrease the rate of re-broadcasts that result from errors. <br> <br>
   
