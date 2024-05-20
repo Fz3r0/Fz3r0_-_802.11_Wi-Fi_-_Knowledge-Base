@@ -151,7 +151,7 @@
 
 - The purpose of this repository is to gather comprehensive knowledge covering all aspects of the IEEE 802.11 standard (Wi-Fi), from basic fundamentals to advanced topics, encompassing from the origins, history and basic knowledge of wireless networks to the most advanced technical analysis, design, security, standards, best practices and configurations/deployments of the latest wireless devices in the todays market for entrerprise and high density networks.
 
-- This repository primarily aggregates **publicly available and freely accessible sources of information from Internet**, enabling anyone to study them. However, in exceptional cases, links of **paid resources are included** to ensure comprehensive coverage of information if needed. The resources include **research papers, study materials, repositories, books, technical examples, vendor documentation, tutorials, videos, guides, diagrams, tables, codes and scripts, labs, and more.**
+- This repository primarily aggregates **publicly available and freely accessible sources of information from Internet**, enabling anyone to study them. However, in exceptional cases, links of **paid resources are included** to ensure comprehensive coverage of information if needed. The resources include **research papers, study materials, repositories, books, technical examples, vendor documentation, tutorials, videos, guides, diagrams, tables, cheatsheets, codes and scripts, labs, and more.**
   
 - Some of the shared resources are created by myself and are hosted within the repository including: scripts, source codes, packet captures, labs, summaries, diagrams, tables, configuration files, lists, etc.
 
