@@ -1784,12 +1784,38 @@ Each of the four 802.11 Address Fields may have one of 5 different interpretatio
 ### 💊📦 Sequence Control
 _The Sequence Control field is 16 bits in length and consists of two subfields, the Sequence Number and the Fragment Number. The sequence Control field is not present in control frames (as no frame body)._
 
-- [Sequence Control](https://mrncciew.com/2014/11/01/cwap-mac-header-sequence-control/) Consists of two subfields: Sequence Number & Fragment Number: <br><br>
-    - **`Sequence Number`**: The Sequence Number field is a 12-bit field indicating the sequence number of an MSDU, A-MSDU, or MMPDU. Each MSDU, A-MSDU, or MMPDU transmitted by a STA is assigned a sequence number.The sequence number remains constant in all retransmissions of an MSDU, MMPDU, or fragment thereof.
-    - **`Fragment Number`**: The Fragment Number field is a 4-bit field indicating the number of each fragment of an MSDU or MMPDU. The fragment number is set to 0 in the first or only fragment of an MSDU or MMPDU and is incremented by one for each successive fragment of that MSDU or MMPDU. The fragment number remains constant in all retransmissions of the fragment.
+````py
+## Sequence Control :: The Sequence Control field is 16 bits in length and consists of two subfields, the Sequence Number and the Fragment Number. (Not Present in Control Frames)
 
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------|
+|  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     |
+| Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control | Control |
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------|
+                                                         ||
+                                                         \/
+                                            |-------------|--------------------|
+                                            |   Fragment  |       Sequence     |
+                                            |   Numbrer   |        Number      |
+                                            |-------------|--------------------|
+                                                   4                 12          <<== Bits
 
+````
 
+- [Sequence Control](https://mrncciew.com/2014/11/01/cwap-mac-header-sequence-control/) Consists of two subfields: Fragment Number & Sequence Number: <br><br>
+    - **`Fragment Number`**: Sequences every fragment of MPDU starts at 0 and increment by 1 | The Fragment Number field is a 4-bit field indicating the number of each fragment of an MSDU or MMPDU. The fragment number is set to 0 in the first or only fragment of an MSDU or MMPDU and is incremented by 1 for each successive fragment of that MSDU or MMPDU. The fragment number remains constant in all retransmissions of the fragment. <br><br>
+        - Fragment number = 0 :: `wlan.frag == 0`
+        - Fragment more than 0 :: `wlan.frag > 0` <br><br>
+        - Fragment number = 0 (excluding control frames because not present) :: `!wlan.fc.type == 1 && wlan.frag == 0`
+        - Fragment more than 0 (excluding control frames because not present) :: `!wlan.fc.type == 1 && wlan.frag > 0` <br><br>
+        - Fragment + Control Frames (malformed +/or weird frame indicator) `wlan.fc.type == 1 && wlan.frag` <br><br>
+    - **`Sequence Number`**: Identifies the MPDU | ID begins at 0 and goes up to 4095 | Will be the same for every fragment | The Sequence Number field is a 12-bit field indicating the sequence number of an MSDU, A-MSDU, or MMPDU. Each MSDU, A-MSDU, or MMPDU transmitted by a STA is assigned a sequence number.The sequence number remains constant in all retransmissions of an MSDU, MMPDU, or fragment thereof. <br><br>
+        - Sequence number = 0 (initial sequence) :: `wlan.seq == 0`
+        - Sequence number more than 0 (non initial) :: `wlan.seq > 0`
+        - Sequence number = 4095 (max sequence) :: `wlan.seq == 4095` <br><br>
+        - Sequence number = 0 (initial sequence) (excluding control frames) :: `!wlan.fc.type == 1 && wlan.seq == 0`
+        - Sequence number more than 0 (non initial) (excluding control frames) :: `!wlan.fc.type == 1 && wlan.seq > 0`
+        - Sequence number = 4095 (max sequence) (excluding control frames) :: `wlan.fc.type == 1 && wlan.seq == 4095` <br><br>
+        - Sequence number + Control Frames (malformed +/or weird frame indicator) `wlan.fc.type == 1 && wlan.seq` <br><br>
 ### 💊📦 QoS Control
 
 
