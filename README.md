@@ -1498,13 +1498,13 @@ _Section 9.2.1 of IEEE Std 802.11-2020 (Revision of IEEE Std 802.11-2016) specif
 ## MAC Frame Sections :: `MAC Header` + `Frame Body` + `FCS`
 _All MAC frames contain the first three header fields and the FCS. The frame type and subtype determine the additional fields that are contained in the frame. | The HT Control field is a part of the 802.11n amendment which is added to the MAC header || **IEEE-802.11-2020 :: 9.2.3 General frame format :: page 756**_
 
-- [MAC Header](https://mrncciew.com/2014/09/27/cwap-mac-header-frame-control/) _`nayarasi`_ <br><br>
-    - [MAC Header: Frame Control](https://mrncciew.com/2014/09/27/cwap-mac-header-frame-control/)
-    - [MAC Header: Duration / ID](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/)
-    - [MAC Header: Addresses](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/)
-    - [MAC Header: Sequence Control](https://mrncciew.com/2014/11/01/cwap-mac-header-sequence-control/)
-    - [MAC Header: QoS Control](https://mrncciew.com/2014/10/03/cwap-mac-header-qos-control/)
-    - [MAC Header: HT Control](https://mrncciew.com/2014/10/20/cwap-ht-control-field/) <br><br>
+- [`MAC Header`](https://mrncciew.com/2014/09/27/cwap-mac-header-frame-control/) _`nayarasi`_ <br><br>
+    - [MAC Header: `Frame Control`](https://mrncciew.com/2014/09/27/cwap-mac-header-frame-control/)
+    - [MAC Header: `Duration` / `ID`](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/)
+    - [MAC Header: `Addresses`](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/)
+    - [MAC Header: `Sequence Control`](https://mrncciew.com/2014/11/01/cwap-mac-header-sequence-control/)
+    - [MAC Header: `QoS Control`](https://mrncciew.com/2014/10/03/cwap-mac-header-qos-control/)
+    - [MAC Header: `HT Control`](https://mrncciew.com/2014/10/20/cwap-ht-control-field/) <br><br>
 
 ````py
 ## MAC Frame Sections :: MAC Header + Frame Body + FCS
@@ -1817,10 +1817,31 @@ _The Sequence Control field is 16 bits in length and consists of two subfields, 
         - Sequence number = 4095 (max sequence) (excluding control frames) :: `wlan.fc.type == 1 && wlan.seq == 4095` <br><br>
         - Sequence number + Control Frames (malformed +/or weird frame indicator) `wlan.fc.type == 1 && wlan.seq` <br><br>
 ### 💊📦 QoS Control
+_Related to QoS 802.11 Frames | QoS Control is a 16-bit field that identifies the Quality of Service (QoS) parameter of a data frame (only in data frame type QoS-Data) | WiFi uses EDCA- Enhanced Distributed Channel Access, a wireless access method that provides differentiated access for stations using 8 user priorities & 4 QoS Access categories (AC_VO, AC_VI, AC_BE, AC_BK). These UP values of a wireless frame map to QoS field (CoS/802.1D) of a 802.1q header when it translated to Ethernet frame ;; WiFi alliance QoS certification called WMM-WiFi Multimedia also defined those 4 access categories. So WMM cetified end client should classified its traffic on to one of those classes prior to transmit them over the air. | QoS Control field is comprised of five subfields: 1. Traffic Identifier (TID) also known as UP (User Priority) 2. End of Service Period (EOSP) 3. ACK Policy 4. Reserved 5. TXOP limit, TXOP duration, AP PS buffer state, Queue Size_
 
+````py
+## Sequence Control :: The Sequence Control field is 16 bits in length and consists of two subfields, the Sequence Number and the Fragment Number. (Not Present in Control Frames)
+
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------|
+|  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     |
+| Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control | Control |
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------|
+                                                                             ||
+                                                                             \/
+                                      |------------|------------|------------|------------|------------|
+                                      |     0      |    ACK     |    EOSP    |   QoS bit  | U.Priority |
+                                      | (Reserved) |   Policy   |            | (TXOP,buff)|    (TID)   |
+                                      |------------|------------|------------|------------|------------|
+                                            9             2            1           8-15          3       <<== Bits
+
+````
+
+
+- [QoS Control](https://mrncciew.com/2014/10/03/cwap-mac-header-qos-control/)
 
 
 ### 💊📦 HT Control
+
 
 
 
