@@ -1829,8 +1829,8 @@ _Related to QoS 802.11 Frames | QoS Control is a 16-bit (2 bytes) field that ide
                                                                              ||
                                                                              \/
                                       |------------|------------|------------|------------|------------|
-                                      |     0      |    ACK     |    EOSP    |   QoS bit  | U.Priority |
-                                      | (Reserved) |   Policy   |            | (TXOP,buff)|    (TID)   |
+                                      |     0      |    ACK     |    EOSP    |   QoS bit  |    TID     |
+                                      | (Reserved) |   Policy   |            | (TXOP,buff)|(A.Priority)| 
                                       |------------|------------|------------|------------|------------|
                                             1             2            1            8           4        <<== Bits
 
@@ -1847,18 +1847,23 @@ _Related to QoS 802.11 Frames | QoS Control is a 16-bit (2 bytes) field that ide
 
 **EDCA (Enhanced Distributed Channel Access) 8 user priorities & 4 QoS Access categories QoS field (CoS/802.1D) of a 802.1q header when it translated to Ethernet | _(802.1D service classes and User Priority (UP) levels)_:**
 
-| **User Priority (UP) / <br>Access Category (802.1D Tag)** | **802.1D Class** | **QoS Access Category** | **Designation** |                                                                                          **Description**                                                                                          |
-|:---------------------------------------------------------:|:----------------:|:-----------------------:|:---------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-|                           **1**                           |        BK        |          AC_BK          |  WMM Background | **Low Priority traffic:**<br>Does not have strict throughput or latency requierements (like file transfers or print jobs)                                                                         |
-|                           **2**                           |        --        |          AC_BK          |  WMM Background | **Low Priority traffic:**<br>Does not have strict throughput or latency requierements (like file transfers or print jobs)                                                                         |
-|                           **0**                           |        BE        |          AC_BE          | WMM Best Effort | **Best effort / non QoS capable traffic:**<br>Apps or devices that does not support QoS, such as legacy devices. Traffic not sensitive to latency but affected to delays (like internet browsing) |
-|                           **3**                           |        EE        |          AC_BE          | WMM Best Effort | **Best effort / non QoS capable traffic:**<br>Apps or devices that does not support QoS, such as legacy devices. Traffic not sensitive to latency but affected to delays (like internet browsing) |
-|                           **4**                           |        CL        |          AC_VI          |    WMM Video    | **Prioritize Video before other Data:**<br>Sinlge 802.11g or 802.11a channel can support 3 or 4 SDTV video streams or 1 HDTV video stream                                                         |
-|                           **5**                           |        VI        |          AC_VI          |    WMM Video    | **Prioritize Video before other Data:**<br>Sinlge 802.11g or 802.11a channel can support 3 or 4 SDTV video streams or 1 HDTV video stream                                                         |
-|                           **6**                           |        VO        |          AC_VO          |    WMM Voice    | **Highest Priority:**<br>Multiple concurrent VoIP calls with low latency and toll voice quality                                                                                                   |
-|                           **7**                           |        NC        |          AC_VO          |    WMM Voice    | **Highest Priority:**<br>Multiple concurrent VoIP calls with low latency and toll voice quality                                                                                                   |
+| **User Priority UP <br>Access Category (802.1D Tag)** | **802.1D Class** | **QoS Access Category** | **Designation** |                                                                                          **Description**                                                                                          |
+|:-----------------------------------------------------:|:----------------:|:-----------------------:|:---------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|                         **1**                         |        BK        |          AC_BK          |  WMM Background | **Low Priority traffic:**<br>Does not have strict throughput or latency requierements (like file transfers or print jobs)                                                                         |
+|                         **2**                         |        --        |          AC_BK          |  WMM Background | **Low Priority traffic:**<br>Does not have strict throughput or latency requierements (like file transfers or print jobs)                                                                         |
+|                         **0**                         |        BE        |          AC_BE          | WMM Best Effort | **Best effort / non QoS capable traffic:**<br>Apps or devices that does not support QoS, such as legacy devices. Traffic not sensitive to latency but affected to delays (like internet browsing) |
+|                         **3**                         |        EE        |          AC_BE          | WMM Best Effort | **Best effort / non QoS capable traffic:**<br>Apps or devices that does not support QoS, such as legacy devices. Traffic not sensitive to latency but affected to delays (like internet browsing) |
+|                         **4**                         |        CL        |          AC_VI          |    WMM Video    | **Prioritize Video before other Data:**<br>Sinlge 802.11g or 802.11a channel can support 3 or 4 SDTV video streams or 1 HDTV video stream                                                         |
+|                         **5**                         |        VI        |          AC_VI          |    WMM Video    | **Prioritize Video before other Data:**<br>Sinlge 802.11g or 802.11a channel can support 3 or 4 SDTV video streams or 1 HDTV video stream                                                         |
+|                         **6**                         |        VO        |          AC_VO          |    WMM Voice    | **Highest Priority:**<br>Multiple concurrent VoIP calls with low latency and toll voice quality                                                                                                   |
+|                         **7**                         |        NC        |          AC_VO          |    WMM Voice    | **Highest Priority:**<br>Multiple concurrent VoIP calls with low latency and toll voice quality                                                                                                   |
 
-- [QoS Control](https://mrncciew.com/2014/10/03/cwap-mac-header-qos-control/)
+- [QoS Control](https://mrncciew.com/2014/10/03/cwap-mac-header-qos-control/) <br><br>
+    - TID – Traffic Indicator :: 4 bit value used to identify the user priority (UP) and traffic Access Category (AC) of a QoS data frame. 802.11 WMM clients use WMM-PS (power save) to indicate to an AP that STA is awake. Unlike in legacy PS, WMM-PS client can ask to deliver more than 1 frame.
+        - TID 0 :: BE | AC_BE | Best Effort = `wlan.qos.tid == 0`
+        - Priority 0 (TID 0) :: BE | AC_BE | Best Effort = `wlan.qos.priority == 0`
+        - TID 0 :: BE | AC_BE | Best Effort = `wlan.qos.tid == 0`
+        - Priority 0 (TID 0) :: BE | AC_BE | Best Effort = `wlan.qos.priority == 0` <br><br>
 
 
 ### 💊📦 HT Control
