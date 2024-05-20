@@ -1816,8 +1816,8 @@ _The Sequence Control field is 16 bits in length and consists of two subfields, 
         - Sequence number more than 0 (non initial) (excluding control frames) :: `!wlan.fc.type == 1 && wlan.seq > 0`
         - Sequence number = 4095 (max sequence) (excluding control frames) :: `wlan.fc.type == 1 && wlan.seq == 4095` <br><br>
         - Sequence number + Control Frames (malformed +/or weird frame indicator) `wlan.fc.type == 1 && wlan.seq` <br><br>
-### 💊📦 QoS Control
-_Related to QoS 802.11 Frames | QoS Control is a 16-bit field that identifies the Quality of Service (QoS) parameter of a data frame (only in data frame type QoS-Data) | WiFi uses EDCA- Enhanced Distributed Channel Access, a wireless access method that provides differentiated access for stations using 8 user priorities & 4 QoS Access categories (AC_VO, AC_VI, AC_BE, AC_BK). These UP values of a wireless frame map to QoS field (CoS/802.1D) of a 802.1q header when it translated to Ethernet frame ;; WiFi alliance QoS certification called WMM-WiFi Multimedia also defined those 4 access categories. So WMM cetified end client should classified its traffic on to one of those classes prior to transmit them over the air. | QoS Control field is comprised of five subfields: 1. Traffic Identifier (TID) also known as UP (User Priority) 2. End of Service Period (EOSP) 3. ACK Policy 4. Reserved 5. TXOP limit, TXOP duration, AP PS buffer state, Queue Size_
+### 💊📦 QoS Control | 16 bits / 2 bytes
+_Related to QoS 802.11 Frames | QoS Control is a 16-bit (2 bytes) field that identifies the Quality of Service (QoS) parameter of a data frame (only in data frame type QoS-Data) | WiFi uses EDCA- Enhanced Distributed Channel Access, a wireless access method that provides differentiated access for stations using 8 user priorities & 4 QoS Access categories (AC_VO, AC_VI, AC_BE, AC_BK). These UP values of a wireless frame map to QoS field (CoS/802.1D) of a 802.1q header when it translated to Ethernet frame ;; WiFi alliance QoS certification called WMM-WiFi Multimedia also defined those 4 access categories. So WMM cetified end client should classified its traffic on to one of those classes prior to transmit them over the air. | QoS Control field is comprised of five subfields: 1. Traffic Identifier (TID) also known as UP (User Priority) 2. End of Service Period (EOSP) 3. ACK Policy 4. Reserved 5. TXOP limit, TXOP duration, AP PS buffer state, Queue Size_
 
 ````py
 ## Sequence Control :: The Sequence Control field is 16 bits in length and consists of two subfields, the Sequence Number and the Fragment Number. (Not Present in Control Frames)
@@ -1832,10 +1832,31 @@ _Related to QoS 802.11 Frames | QoS Control is a 16-bit field that identifies th
                                       |     0      |    ACK     |    EOSP    |   QoS bit  | U.Priority |
                                       | (Reserved) |   Policy   |            | (TXOP,buff)|    (TID)   |
                                       |------------|------------|------------|------------|------------|
-                                            9             2            1           8-15          3       <<== Bits
+                                            1             2            1            8           4        <<== Bits
 
 ````
 
+**Type of Devices & QoS bits information:**
+
+| **QoS Station** | **TID<br>Bits 0-3<br>(4 bits)** | **EOSP<br>Bit 4<br>(1 bit)** | **ACK Policy<br>Bits 5-6<br>(2 bits)** | **_Reserved<br>Bit 7<br>(1 bit)_** | **TXOP/Buffer/Queue<br>Bits 8-15<br>(8 bits)** |
+|:---------------:|:-------------------------------:|:----------------------------:|:--------------------------------------:|:----------------------------------:|:----------------------------------------------:|
+|      **AP**     |        TID / Access Class       |             EOSP             |               ACK Policy               |             _Reserved_             |                   TXOP Limit                   |
+|      **AP**     |        TID / Access Class       |             EOSP             |               ACK Policy               |             _Reserved_             |               AP PS Buffer State               |
+|     **STA**     |        TID / Access Class       |               0              |               ACK Policy               |             _Reserved_             |             TXOP Duration Request              |
+|     **STA**     |        TID / Access Class       |               1              |               ACK Policy               |             _Reserved_             |                   Queue Size                   |
+
+**EDCA (Enhanced Distributed Channel Access) 8 user priorities & 4 QoS Access categories QoS field (CoS/802.1D) of a 802.1q header when it translated to Ethernet | _(802.1D service classes and User Priority (UP) levels)_:**
+
+| **User Priority (UP) / <br>Access Category (802.1D Tag)** | **802.1D Class** | **QoS Access Category** | **Designation** |                                                                                          **Description**                                                                                          |
+|:---------------------------------------------------------:|:----------------:|:-----------------------:|:---------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|                           **1**                           |        BK        |          AC_BK          |  WMM Background | **Low Priority traffic:**<br>Does not have strict throughput or latency requierements (like file transfers or print jobs)                                                                         |
+|                           **2**                           |        --        |          AC_BK          |  WMM Background | **Low Priority traffic:**<br>Does not have strict throughput or latency requierements (like file transfers or print jobs)                                                                         |
+|                           **0**                           |        BE        |          AC_BE          | WMM Best Effort | **Best effort / non QoS capable traffic:**<br>Apps or devices that does not support QoS, such as legacy devices. Traffic not sensitive to latency but affected to delays (like internet browsing) |
+|                           **3**                           |        EE        |          AC_BE          | WMM Best Effort | **Best effort / non QoS capable traffic:**<br>Apps or devices that does not support QoS, such as legacy devices. Traffic not sensitive to latency but affected to delays (like internet browsing) |
+|                           **4**                           |        CL        |          AC_VI          |    WMM Video    | **Prioritize Video before other Data:**<br>Sinlge 802.11g or 802.11a channel can support 3 or 4 SDTV video streams or 1 HDTV video stream                                                         |
+|                           **5**                           |        VI        |          AC_VI          |    WMM Video    | **Prioritize Video before other Data:**<br>Sinlge 802.11g or 802.11a channel can support 3 or 4 SDTV video streams or 1 HDTV video stream                                                         |
+|                           **6**                           |        VO        |          AC_VO          |    WMM Voice    | **Highest Priority:**<br>Multiple concurrent VoIP calls with low latency and toll voice quality                                                                                                   |
+|                           **7**                           |        NC        |          AC_VO          |    WMM Voice    | **Highest Priority:**<br>Multiple concurrent VoIP calls with low latency and toll voice quality                                                                                                   |
 
 - [QoS Control](https://mrncciew.com/2014/10/03/cwap-mac-header-qos-control/)
 
