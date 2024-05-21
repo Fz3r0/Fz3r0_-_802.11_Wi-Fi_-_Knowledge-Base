@@ -2018,6 +2018,8 @@ def crc32(data):
 data = [0x00, 0x1A, 0x2B, 0x3C, 0x4D, 0x5E, 0x6F, 0x7A, 0x8B, 0x9C]
 calculated_crc = crc32(data)
 
+# Results: The "calculated_crc" variable is what Wireshark calculates and compares to the FCS in the frame.
+
 ````
 
 
