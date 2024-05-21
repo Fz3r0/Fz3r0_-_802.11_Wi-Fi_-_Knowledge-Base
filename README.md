@@ -1820,7 +1820,7 @@ _The Sequence Control field is 16 bits in length and consists of two subfields, 
 _Related to QoS 802.11 Frames | QoS Control is a 16-bit (2 bytes) field that identifies the Quality of Service (QoS) parameter of a data frame (only in data frame type QoS-Data) | WiFi uses EDCA- Enhanced Distributed Channel Access, a wireless access method that provides differentiated access for stations using 8 user priorities & 4 QoS Access categories (AC_VO, AC_VI, AC_BE, AC_BK). These UP values of a wireless frame map to QoS field (CoS/802.1D) of a 802.1q header when it translated to Ethernet frame ;; WiFi alliance QoS certification called WMM-WiFi Multimedia also defined those 4 access categories. So WMM cetified end client should classified its traffic on to one of those classes prior to transmit them over the air. | QoS Control field is comprised of five subfields: 1. Traffic Identifier (TID) also known as UP (User Priority) 2. End of Service Period (EOSP) 3. ACK Policy 4. Reserved 5. TXOP limit, TXOP duration, AP PS buffer state, Queue Size_
 
 ````py
-## Sequence Control :: The Sequence Control field is 16 bits in length and consists of two subfields, the Sequence Number and the Fragment Number. (Not Present in Control Frames)
+## QoS Control :: QoS Control is a 16-bit (2 bytes) field that identifies the Quality of Service (QoS) parameter of a data frame (only in data frame type QoS-Data or QoS Null Data) 
 
 |---------|-----------|---------|---------|---------|----------|---------|---------|---------|
 |  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     |
@@ -1828,11 +1828,11 @@ _Related to QoS 802.11 Frames | QoS Control is a 16-bit (2 bytes) field that ide
 |---------|-----------|---------|---------|---------|----------|---------|---------|---------|
                                                                              ||
                                                                              \/
-                                      |------------|------------|------------|------------|------------|
-                                      |     0      |    ACK     |    EOSP    |   QoS bit  |    TID     |
-                                      | (Reserved) |   Policy   |            | (TXOP,buff)|(A.Priority)| 
-                                      |------------|------------|------------|------------|------------|
-                                            1             2            1            8           4        <<== Bits
+                                 |--------------|--------------|--------------|--------------|--------------|
+                                 |     TID      |     EOSP     |     ACK      |     MSDU /   | TXOP/Buffer/ |
+                                 | (A.Priority) |              |    Policy    |     A-MSDU   |    Queue     |  
+                                 |--------------|--------------|--------------|--------------|--------------|
+                                         4              1             2               1              8        <<== Bits
 
 ````
 
@@ -1884,12 +1884,39 @@ _Related to QoS 802.11 Frames | QoS Control is a 16-bit (2 bytes) field that ide
         - TID 13 :: Queue + Video(5) = `wlan.qos.tid == 13`
         - TID 14 :: Queue + Voice(6) = `wlan.qos.tid == 14` 
         - TID 15 :: Queue + Network Control {Voice} (7) = `wlan.qos.tid == 15` <br><br>
-    - ⭕ `EOSP` (End of Service Period) :: 1 bit value to indicate the end of a service period. If this bit set to 1, then client can go back to asleep. <br><br>
-        - End of Service Period (0) = `wlan.qos.eosp == 0` <br><br>
-        - Client go Back to Sleep (1) = `wlan.qos.eosp == 1` <br><br>
-
-
-wlan.qos.buf_state_indicated == 1
+    - ⭕ `EOSP` (End of Service Period) :: 1 bit value to indicate the end of a service period. If this bit set to 1, then client can go back to asleep. | Set to 1 by the WMM AP at the end of an Unscheduled Service Period (USP), otherwise set to 0 <br><br>
+        - Service Period (0) = `wlan.qos.eosp == 0` <br><br>
+        - Client go Back to Sleep (1) / End of an Unscheduled Service Period (USP) = `wlan.qos.eosp == 1` <br><br>
+    - ⭕ `ACK Policy`  :: Specify the 2-bit Acknowledgement policy. There are four different options available: ACK (Normal ACK Policy), No-ACK, No Explicit ACK, Block ACK. <br><br>
+        1. Normal ACK Policy =  `wlan.qos.ack == 0`
+        2. No ACK = `wlan.qos.ack == 1`
+        3. No Explicit ACK = `wlan.qos.ack == 2`
+        4. Block ACK = `wlan.qos.ack == 3` <br><br>
+    - ⭕ `A-MSDU` indicator :: Before 802.11ax this was a reserved element | Indicates if the frame is an A-MSDU. <br><br>
+        - Payload type: A-MSDU Present (True) = `wlan.qos.amsdupresent == 1` <br><br>
+        - Payload type: A-MSDU Not Present (False) | Frame is a MSDU = `wlan.qos.amsdupresent == 0` <br><br>
+    - ⭕ `TXOP Limit` / `AP PS Buffer State` / `TXOP Duration Requested` / `Queue Size` :: Indicates one of the 4 
+ following variables: <br><br>
+        - **TXOP Limit** :: Indicate the transmitt opportunity granted by the AP <br><br>
+            - TXOP Limit = `wlan.qos.txop_limit` <br><br>
+        - **TXOP Duration Requested** :: Client use this to tell AP how much time client station wants for its next TXOP. AP may choose to assign shorter TXOP as well. <br><br>
+            - No TXOP Requested = `wlan.qos.txop_dur_req == 0`
+            - TXOP Duration Requested = `wlan.qos.txop_dur_req == 1` <br><br>
+        - **QoS Buffer State** :: AP use this to indicate PS buffer state for a given client station. <br><br>
+            - QAP PS Buffer State  `wlan.qos.ps_buf_state == 0` <br><br>
+                - Buffer State NON Indicated = `wlan.qos.buf_state_indicated == 0` <br><br>
+            - QAP PS Buffer State  (variable) `wlan.qos.ps_buf_state > 0` <br><br>
+                - QAP Buffered Load :: 24576 octets `wlan.qos.qap_buf_load == 6` <br><br>
+        - **Queue Size** :: Client station use that to inform AP how much buffered traffic it has to send. AP can use this information to determine duration for next TXOP to that client <br><br>
+            - No buffered traffic in Queue = `wlan.qos.queue_size == 0` <br><br>
+            - 16 bytes Queue Size = `wlan.qos.queue_size == 1` 
+            - 32 bytes Queue Size = `wlan.qos.queue_size == 2` 
+            - 48 bytes Queue Size = `wlan.qos.queue_size == 3`
+            - 64 bytes Queue Size = `wlan.qos.queue_size == 4`
+            - 80 bytes Queue Size = `wlan.qos.queue_size == 5`
+            - 96 bytes Queue Size = `wlan.qos.queue_size == 6`
+            - 112 bytes Queue Size = `wlan.qos.queue_size == 7`
+            - 128 bytes Queue Size = `wlan.qos.queue_size == 8` <br><br>
 
 ### 💊📦 HT Control
 
