@@ -1884,7 +1884,7 @@ _Related to QoS 802.11 Frames | QoS Control is a 16-bit (2 bytes) field that ide
         - TID 13 :: Queue + Video(5) = `wlan.qos.tid == 13`
         - TID 14 :: Queue + Voice(6) = `wlan.qos.tid == 14` 
         - TID 15 :: Queue + Network Control {Voice} (7) = `wlan.qos.tid == 15` <br><br>
-      - ⭕ `EOSP` (End of Service Period) :: 1 bit value to indicate the end of a service period. If this bit set to 1, then client can go back to asleep. <br><br>
+    - ⭕ `EOSP` (End of Service Period) :: 1 bit value to indicate the end of a service period. If this bit set to 1, then client can go back to asleep. <br><br>
         - End of Service Period (0) = `wlan.qos.eosp == 0` <br><br>
         - Client go Back to Sleep (1) = `wlan.qos.eosp == 1` <br><br>
 
