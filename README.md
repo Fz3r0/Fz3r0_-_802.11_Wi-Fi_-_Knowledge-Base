@@ -1875,7 +1875,7 @@ _Related to QoS 802.11 Frames | QoS Control is a 16-bit (2 bytes) field that ide
         - TID 6 :: VI | AC_VO | Voice = `wlan.qos.tid == 6`
         - Priority 6 (TID 6) :: VI | AC_VO | Voice = `wlan.qos.priority == 6` <br><br>  
         - TID 7 :: NC | AC_VO | Network Control = `wlan.qos.tid == 7`
-        - Priority 7 (TID 7) :: NC | AC_VO | Network Control = `wlan.qos.priority == 7` <br><br><br>
+        - Priority 7 (TID 7) :: NC | AC_VO | Network Control = `wlan.qos.priority == 7` <br><br>
         - TID 8 :: Queue + Best Effort(0) = `wlan.qos.tid == 8`
         - TID 9 :: Queue + Background(1) = `wlan.qos.tid == 9` 
         - TID 10 :: Queue + Background Spare(2) = `wlan.qos.tid == 10` 
