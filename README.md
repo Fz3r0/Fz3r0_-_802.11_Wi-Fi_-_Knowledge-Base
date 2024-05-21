@@ -1761,10 +1761,10 @@ The next table apply **only for Data Frames**:
 | **Ad-Hoc (P2P)** |                  0                 |                   0                  |        DA<br>(Destination Address)       |            SA<br>(Source Address)           |            BSSID            |           N/A          |
 | **Bridge / WDS** |                  1                 |                   1                  |         RA<br>(Receiver Address)         |         TA<br>(Transmitter Address)         | DA<br>(Destination Address) | SA<br>(Source Address) |
 
-- ⭕ [Address 1](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/) ex. Data Frame -> DA (From DS) | BSSID (To AP) | DA (Ad-Hoc) | RA (Bridge/WDS)
-- ⭕ [Address 2](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/) ex. Data Frame -> BSSID (From DS) | SA (To AP) | SA (Ad-Hoc) | TA (Bridge/WDS)
-- ⭕ [Address 3](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/) ex. Data Frame -> SA (From DS) | DA (To AP) | BSSID (Ad-Hoc) | DA (Bridge/WDS)
-- ⭕ [Address 4](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/) ex. Data Frame -> _N/A_ (From DS) | _N/A_ (To AP) | _N/A_ (Ad-Hoc) | DA (Bridge/WDS)
+- 📦 [Address 1](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/) ex. Data Frame -> DA (From DS) | BSSID (To AP) | DA (Ad-Hoc) | RA (Bridge/WDS)
+- 📦 [Address 2](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/) ex. Data Frame -> BSSID (From DS) | SA (To AP) | SA (Ad-Hoc) | TA (Bridge/WDS)
+- 📦 [Address 3](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/) ex. Data Frame -> SA (From DS) | DA (To AP) | BSSID (Ad-Hoc) | DA (Bridge/WDS)
+- 📦 [Address 4](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/) ex. Data Frame -> _N/A_ (From DS) | _N/A_ (To AP) | _N/A_ (Ad-Hoc) | DA (Bridge/WDS)
 
 Each of the four 802.11 Address Fields may have one of 5 different interpretations:
 
@@ -1801,14 +1801,14 @@ _The Sequence Control field is 16 bits in length and consists of two subfields, 
 
 ````
 
-- [Sequence Control](https://mrncciew.com/2014/11/01/cwap-mac-header-sequence-control/) Consists of two subfields: Fragment Number & Sequence Number: <br><br>
-    - **`Fragment Number`**: Sequences every fragment of MPDU starts at 0 and increment by 1 | The Fragment Number field is a 4-bit field indicating the number of each fragment of an MSDU or MMPDU. The fragment number is set to 0 in the first or only fragment of an MSDU or MMPDU and is incremented by 1 for each successive fragment of that MSDU or MMPDU. The fragment number remains constant in all retransmissions of the fragment. <br><br>
+- 📦 [Sequence Control](https://mrncciew.com/2014/11/01/cwap-mac-header-sequence-control/) Consists of two subfields: Fragment Number & Sequence Number: <br><br>
+    - ⭕ **`Fragment Number`**: Sequences every fragment of MPDU starts at 0 and increment by 1 | The Fragment Number field is a 4-bit field indicating the number of each fragment of an MSDU or MMPDU. The fragment number is set to 0 in the first or only fragment of an MSDU or MMPDU and is incremented by 1 for each successive fragment of that MSDU or MMPDU. The fragment number remains constant in all retransmissions of the fragment. <br><br>
         - Fragment number = 0 :: `wlan.frag == 0`
         - Fragment more than 0 :: `wlan.frag > 0` <br><br>
         - Fragment number = 0 (excluding control frames because not present) :: `!wlan.fc.type == 1 && wlan.frag == 0`
         - Fragment more than 0 (excluding control frames because not present) :: `!wlan.fc.type == 1 && wlan.frag > 0` <br><br>
         - Fragment + Control Frames (malformed +/or weird frame indicator) `wlan.fc.type == 1 && wlan.frag` <br><br>
-    - **`Sequence Number`**: Identifies the MPDU | ID begins at 0 and goes up to 4095 | Will be the same for every fragment | The Sequence Number field is a 12-bit field indicating the sequence number of an MSDU, A-MSDU, or MMPDU. Each MSDU, A-MSDU, or MMPDU transmitted by a STA is assigned a sequence number.The sequence number remains constant in all retransmissions of an MSDU, MMPDU, or fragment thereof. <br><br>
+    - ⭕ **`Sequence Number`**: Identifies the MPDU | ID begins at 0 and goes up to 4095 | Will be the same for every fragment | The Sequence Number field is a 12-bit field indicating the sequence number of an MSDU, A-MSDU, or MMPDU. Each MSDU, A-MSDU, or MMPDU transmitted by a STA is assigned a sequence number.The sequence number remains constant in all retransmissions of an MSDU, MMPDU, or fragment thereof. <br><br>
         - Sequence number = 0 (initial sequence) :: `wlan.seq == 0`
         - Sequence number more than 0 (non initial) :: `wlan.seq > 0`
         - Sequence number = 4095 (max sequence) :: `wlan.seq == 4095` <br><br>
@@ -1858,8 +1858,8 @@ _Related to QoS 802.11 Frames | QoS Control is a 16-bit (2 bytes) field that ide
 |                         **6**                         |      VO<br>(Voice)      |          AC_VO          |    WMM Voice    | **Highest Priority:**<br>LESS THAN 10MS DELAY / JITTER: Multiple concurrent VoIP calls with low latency and toll voice quality                                                                                                                                   |
 |                         **7**                         | NC<br>(Network Control) |          AC_VO          |    WMM Voice    | **Highest Priority:**<br>NETWORK CONTROL PROTOCOLS (SSH, SNMP, BGP, IGMP, ETC): Software deliver this traffic with highest priority. This traffic is usually keep alive or hello messages because the loss of this packets jeopardizes proper network operation. |
 
-- [QoS Control](https://mrncciew.com/2014/10/03/cwap-mac-header-qos-control/) Identifies the QoS parameter of a data frame (only present in QoS-Data frames). <br><br>
-    - TID – Traffic Indicator :: 4 bit value used to identify the user priority (UP) and traffic Access Category (AC) of a QoS data frame. 802.11 WMM clients use WMM-PS (power save) to indicate to an AP that STA is awake. Unlike in legacy PS, WMM-PS client can ask to deliver more than 1 frame. <br><br>
+- 📦 [QoS Control](https://mrncciew.com/2014/10/03/cwap-mac-header-qos-control/) Identifies the QoS parameter of a data frame (only present in QoS-Data frames). <br><br>
+    - ⭕ `TID` (Traffic Indicator) / `Priority` :: 4 bit value used to identify the user priority (UP) and traffic Access Category (AC) of a QoS data frame. 802.11 WMM clients use WMM-PS (power save) to indicate to an AP that STA is awake. Unlike in legacy PS, WMM-PS client can ask to deliver more than 1 frame. <br><br>
         - TID 0 :: BE | AC_BE | Best Effort = `wlan.qos.tid == 0`
         - Priority 0 (TID 0) :: BE | AC_BE | Best Effort = `wlan.qos.priority == 0` <br><br>
         - TID 1 :: BE | AC_EE | Best Effort = `wlan.qos.tid == 0`
