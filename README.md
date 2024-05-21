@@ -1950,7 +1950,7 @@ _Not all 802.11 Frame have Frame Body, for example CTS/RTS frame will not have a
 ````
 
 ### 802.11 `FCS` - Frame Check Sequence 32-bit CRC (Cicle Redundancy Check)
-_The Frame Check Sequence (FCS) is a 4-byte field in a data frame used to detect transmission errors. The sender calculates the FCS using the CRC-32 algorithm and appends it to the frame. The receiver recalculates the CRC-32 upon receiving the frame and compares it to the received FCS to check for errors. | Wireshark uses the standard CRC-32 algorithm to compute the CRC of the frame data (excluding the FCS) and then compares this computed value to the FCS appended to the frame. If they match, the frame is considered "good"; otherwise, it is "bad"._
+_The Frame Check Sequence (FCS) is a 4-byte field in a data frame used to detect transmission errors. The sender calculates the FCS using the CRC-32 algorithm and appends it to the frame. The receiver recalculates the CRC-32 upon receiving the frame and compares it to the received FCS to check for errors. | Wireshark uses the standard CRC-32 algorithm to compute the CRC of the frame data (excluding the FCS) and then compares this computed value to the FCS appended to the frame. If they match, the frame is considered "good"; otherwise, it is "bad". | The FCS field contains a number that is calculated by the source node based on the data in the frame. This number is added to the end of a frame that is sent. When the destination node receives the frame the FCS number is recalculated and compared with the FCS number included in the frame. If the two numbers are different, an error is assumed and the frame is discarded._
 
 ````py
 
@@ -2021,6 +2021,10 @@ calculated_crc = crc32(data)
 # Results: The "calculated_crc" variable is what Wireshark calculates and compares to the FCS in the frame.
 
 ````
+
+- 📦 [FCS - Frame Check Sequence](https://community.arubanetworks.com/community-home/librarydocuments/viewdocument?DocumentKey=0d0fd55c-62e5-4908-9b96-831310570a22&CommunityKey=96609c68-a98a-4a35-b790-987564d4402d&tab=librarydocuments) The FCS field contains a number that is calculated by the source node based on the data in the frame. This number is added to the end of a frame that is sent. When the destination node receives the frame the FCS number is recalculated and compared with the FCS number included in the frame. If the two numbers are different, an error is assumed and the frame is discarded. <br><br>
+    - ⭕ Good FCS = `wlan.fcs.status == "Good"` <br><br>
+    - ⭕ Bad FCS = `wlan.fcs.status == "Bad"`
 
 
 
