@@ -1950,14 +1950,73 @@ _Not all 802.11 Frame have Frame Body, for example CTS/RTS frame will not have a
 ````
 
 ### 802.11 `FCS` - Frame Check Sequence 32-bit CRC (Cicle Redundancy Check)
+_The Frame Check Sequence (FCS) is a 4-byte field in a data frame used to detect transmission errors. The sender calculates the FCS using the CRC-32 algorithm and appends it to the frame. The receiver recalculates the CRC-32 upon receiving the frame and compares it to the received FCS to check for errors. | Wireshark uses the standard CRC-32 algorithm to compute the CRC of the frame data (excluding the FCS) and then compares this computed value to the FCS appended to the frame. If they match, the frame is considered "good"; otherwise, it is "bad"._
 
 ````py
-## Frame Body :: Variable Lenght Frame Body
 
-|-------|
-|  FCS  |
-|       |
-|-------|
+## FCS :: The Frame Check Sequence (FCS) is a 4-byte field in a data frame used to detect transmission errors.
+
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------||-------------||----------|
+|  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     ||    Frame    ||    FCS   |
+| Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control | Control ||     Body    ||          |
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------||-------------||----------|
+|____________________________________________________________________________________________||_____________||__________|
+                                                                                                              \        /
+                                                                                                                \    /
+                                                                                                                  \/
+                                                                                                                   FCS
+                                                                                                                - 32-Bit CRC:
+                                                                                                                   - Check Sequence
+                                                                                                                   - Integrity
+
+## Example of Calculation and Comparison: FCS -->> CRC
+
+    # Suppose we capture a frame with the following data (in hexadecimal):
+
+        - Data:     00 1A 2B 3C 4D 5E 6F 7A 8B 9C
+        - FCS:      DE 1F F2 56
+
+    # the procedure would be:
+
+        - Frame Data (excluding FCS):
+
+        - DATA = 00 1A 2B 3C 4D 5E 6F 7A 8B 9C
+
+    # Calculate CRC-32:
+
+        - Initialize CRC to = 0xFFFFFFFF
+
+        - Perform the CRC calculation iteratively on each byte.
+
+    # Resulting CRC-32:
+
+        - Suppose the CRC-32 calculation yields DE 1F F2 56.
+
+    # Comparison:
+
+        - The calculated CRC-32 DE 1F F2 56 is compared to the FCS DE 1F F2 56.
+
+        - Result = Since they match, Wireshark marks the FCS as "good".
+
+## =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+## Basic pseudocode for the CRC-32 calculation in python:
+
+def crc32(data):
+    crc = 0xFFFFFFFF
+    for byte in data:
+        crc ^= byte
+        for _ in range(8):
+            if (crc & 1):
+                crc = (crc >> 1) ^ 0xEDB88320
+            else:
+                crc >>= 1
+    return crc ^ 0xFFFFFFFF
+
+# Example usage:
+
+data = [0x00, 0x1A, 0x2B, 0x3C, 0x4D, 0x5E, 0x6F, 0x7A, 0x8B, 0x9C]
+calculated_crc = crc32(data)
 
 ````
 
