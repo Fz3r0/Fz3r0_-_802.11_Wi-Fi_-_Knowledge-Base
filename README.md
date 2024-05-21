@@ -1858,12 +1858,12 @@ _Related to QoS 802.11 Frames | QoS Control is a 16-bit (2 bytes) field that ide
 |                         **6**                         |      VO<br>(Voice)      |          AC_VO          |    WMM Voice    | **Highest Priority:**<br>LESS THAN 10MS DELAY / JITTER: Multiple concurrent VoIP calls with low latency and toll voice quality                                                                                                                                   |
 |                         **7**                         | NC<br>(Network Control) |          AC_VO          |    WMM Voice    | **Highest Priority:**<br>NETWORK CONTROL PROTOCOLS (SSH, SNMP, BGP, IGMP, ETC): Software deliver this traffic with highest priority. This traffic is usually keep alive or hello messages because the loss of this packets jeopardizes proper network operation. |
 
-- [QoS Control](https://mrncciew.com/2014/10/03/cwap-mac-header-qos-control/) <br><br>
-    - TID – Traffic Indicator :: 4 bit value used to identify the user priority (UP) and traffic Access Category (AC) of a QoS data frame. 802.11 WMM clients use WMM-PS (power save) to indicate to an AP that STA is awake. Unlike in legacy PS, WMM-PS client can ask to deliver more than 1 frame.
-        - TID 0 :: BE | AC_BE | Best Effort = `wlan.qos.tid == 0`
-        - Priority 0 (TID 0) :: BE | AC_BE | Best Effort = `wlan.qos.priority == 0`
+- [QoS Control](https://mrncciew.com/2014/10/03/cwap-mac-header-qos-control/) Identifies the QoS parameter of a data frame (only present in QoS-Data frames). <br><br>
+    - TID – Traffic Indicator :: 4 bit value used to identify the user priority (UP) and traffic Access Category (AC) of a QoS data frame. 802.11 WMM clients use WMM-PS (power save) to indicate to an AP that STA is awake. Unlike in legacy PS, WMM-PS client can ask to deliver more than 1 frame. <br><br>
         - TID 0 :: BE | AC_BE | Best Effort = `wlan.qos.tid == 0`
         - Priority 0 (TID 0) :: BE | AC_BE | Best Effort = `wlan.qos.priority == 0` <br><br>
+        - TID 1 :: BE | AC_EE | Best Effort = `wlan.qos.tid == 0`
+        - Priority 1 (TID 1) :: BE | AC_BE | Best Effort = `wlan.qos.priority == 0` <br><br>
 
 
 ### 💊📦 HT Control
