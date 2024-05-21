@@ -1860,11 +1860,36 @@ _Related to QoS 802.11 Frames | QoS Control is a 16-bit (2 bytes) field that ide
 
 - 📦 [QoS Control](https://mrncciew.com/2014/10/03/cwap-mac-header-qos-control/) Identifies the QoS parameter of a data frame (only present in QoS-Data frames). <br><br>
     - ⭕ `TID` (Traffic Indicator) / `Priority` :: 4 bit value used to identify the user priority (UP) and traffic Access Category (AC) of a QoS data frame. 802.11 WMM clients use WMM-PS (power save) to indicate to an AP that STA is awake. Unlike in legacy PS, WMM-PS client can ask to deliver more than 1 frame. <br><br>
-        - TID 0 :: BE | AC_BE | Best Effort = `wlan.qos.tid == 0`
-        - Priority 0 (TID 0) :: BE | AC_BE | Best Effort = `wlan.qos.priority == 0` <br><br>
-        - TID 1 :: BE | AC_EE | Best Effort = `wlan.qos.tid == 0`
-        - Priority 1 (TID 1) :: BE | AC_BE | Best Effort = `wlan.qos.priority == 0` <br><br>
+        - TID 1 :: BK | AC_BK | Background = `wlan.qos.tid == 1`
+        - Priority 1 (TID 1) :: BK | AC_BK | Background = `wlan.qos.priority == 1` <br><br>
+        - TID 2 :: -- (Spare) | AC_BK | -- (Spare) = `wlan.qos.tid == 2`
+        - Priority 2 (TID 2) :: -- (Spare) | AC_BK | -- (Spare) = `wlan.qos.priority == 2` <br><br>  
+        - TID 0 :: BE | AC_BE | Best Effort (Default LAN Traffic) = `wlan.qos.tid == 0`
+        - Priority 0 (TID 2) :: BE | AC_BE | Best Effort (Default LAN Traffic) = `wlan.qos.priority == 0` <br><br>           
+        - TID 3 :: EE | AC_BE | Excellent Effort (Valued Costumers) = `wlan.qos.tid == 3`
+        - Priority 3 (TID 3) :: EE | AC_BE | Excellent Effort (Valued Costumers) = `wlan.qos.priority == 3` <br><br>   
+        - TID 4 :: CL | AC_VI | Controlled Load = `wlan.qos.tid == 4`
+        - Priority 4 (TID 4) :: CL | AC_VI | Controlled Load = `wlan.qos.priority == 4` <br><br>  
+        - TID 5 :: VI | AC_VI | Video = `wlan.qos.tid == 5`
+        - Priority 5 (TID 5) :: VI | AC_VI | Video = `wlan.qos.priority == 5` <br><br>  
+        - TID 6 :: VI | AC_VO | Voice = `wlan.qos.tid == 6`
+        - Priority 6 (TID 6) :: VI | AC_VO | Voice = `wlan.qos.priority == 6` <br><br>  
+        - TID 7 :: NC | AC_VO | Network Control = `wlan.qos.tid == 7`
+        - Priority 7 (TID 7) :: NC | AC_VO | Network Control = `wlan.qos.priority == 7` <br><br><br>
+        - TID 8 :: Queue + Best Effort(0) = `wlan.qos.tid == 8`
+        - TID 9 :: Queue + Background(1) = `wlan.qos.tid == 9` 
+        - TID 10 :: Queue + Background Spare(2) = `wlan.qos.tid == 10` 
+        - TID 11 :: Queue + Excellent Effort(3) = `wlan.qos.tid == 11` 
+        - TID 12 :: Queue + Controlled Load {Video} (4) = `wlan.qos.tid == 12` 
+        - TID 13 :: Queue + Video(5) = `wlan.qos.tid == 13`
+        - TID 14 :: Queue + Voice(6) = `wlan.qos.tid == 14` 
+        - TID 15 :: Queue + Network Control {Voice} (7) = `wlan.qos.tid == 15` <br><br>
+      - ⭕ `EOSP` (End of Service Period) :: 1 bit value to indicate the end of a service period. If this bit set to 1, then client can go back to asleep. <br><br>
+        - End of Service Period (0) = `wlan.qos.eosp == 0` <br><br>
+        - Client go Back to Sleep (1) = `wlan.qos.eosp == 1` <br><br>
 
+
+wlan.qos.buf_state_indicated == 1
 
 ### 💊📦 HT Control
 
