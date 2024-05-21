@@ -1865,7 +1865,7 @@ _Related to QoS 802.11 Frames | QoS Control is a 16-bit (2 bytes) field that ide
         - TID 2 :: -- (Spare) | AC_BK | -- (Spare) = `wlan.qos.tid == 2`
         - Priority 2 (TID 2) :: -- (Spare) | AC_BK | -- (Spare) = `wlan.qos.priority == 2` <br><br>  
         - TID 0 :: BE | AC_BE | Best Effort (Default LAN Traffic) = `wlan.qos.tid == 0`
-        - Priority 0 (TID 2) :: BE | AC_BE | Best Effort (Default LAN Traffic) = `wlan.qos.priority == 0` <br><br>           
+        - Priority 0 (TID 2) :: BE | AC_BE | Best Effort (Default LAN Traffic) = `wlan.qos.priority == 0` <br><br>         
         - TID 3 :: EE | AC_BE | Excellent Effort (Valued Costumers) = `wlan.qos.tid == 3`
         - Priority 3 (TID 3) :: EE | AC_BE | Excellent Effort (Valued Costumers) = `wlan.qos.priority == 3` <br><br>   
         - TID 4 :: CL | AC_VI | Controlled Load = `wlan.qos.tid == 4`
@@ -1916,10 +1916,13 @@ _Related to QoS 802.11 Frames | QoS Control is a 16-bit (2 bytes) field that ide
             - 80 bytes Queue Size = `wlan.qos.queue_size == 5`
             - 96 bytes Queue Size = `wlan.qos.queue_size == 6`
             - 112 bytes Queue Size = `wlan.qos.queue_size == 7`
-            - 128 bytes Queue Size = `wlan.qos.queue_size == 8` <br><br>
+            - 128 bytes Queue Size = `wlan.qos.queue_size == 8`
+            - 13568 bytes (13.568 gigas) Queue Size = `wlan.qos.queue_size == 113` <br><br>
 
 ### 💊📦 HT Control
+_Present in HT, VHT, EHT, even if the name is only HT control | The 802.11n amendment add a 4 byte HT control field to the 802.11 MAC header. With this HT Control field max MAC header length increased to 36 bytes._
 
+- [`HT Control`](https://mrncciew.com/2014/10/20/cwap-ht-control-field/) <br><br>
 
 
 
