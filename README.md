@@ -2230,8 +2230,6 @@ _The initial purpose of the authentication frame is to validate the device type 
 ### 🔄📡 Frame Exchange: `Authentication` 
 
 ````py
-## State Machine :: 1 to 2 :: Authentication Process
-
 ######################################################################################################################
                                  🏁 STATE MACHINE = 1 :: client STA disconnected from AP 🏁
 ######################################################################################################################
@@ -2258,7 +2256,7 @@ _The initial purpose of the authentication frame is to validate the device type 
 .
 .
 .
-(Next: Association Processs)
+(Next: Association Processs [State 3])
 ````
 
 ---
@@ -2272,7 +2270,7 @@ _When 802.11 authentication (not the RSN-WPA/WPA2 authentication) completes, a S
 ### 🔄📡 Frame Exchange: `Association` 
 
 ````py
-(Previous: Authentication Process)
+(Previous: Authentication Process [State 2)
 .
 .
 .
@@ -2295,7 +2293,7 @@ _When 802.11 authentication (not the RSN-WPA/WPA2 authentication) completes, a S
 .
 .
 .
-(Next: RSNA Process (Only with RSNA Secure Authentication))
+(Next: RSNA Process (Only with RSNA Secure Authentication) [State 4])
 ````
 
 ---
@@ -2478,8 +2476,7 @@ _The 4-way-handshake is used for the generation of a PTK. It confirms that the S
 ### 🖼️🔄🤝 **`4-Way-Handshake` Frame Exchange**: <br>
 
 ````py
-## State Machine :: 1 to 2 :: Authentication Process
-
+(Previous: STA Associated to AP [State 3]
 .
 .
 .
@@ -2487,7 +2484,7 @@ _The 4-way-handshake is used for the generation of a PTK. It confirms that the S
                                  🏁 STATE MACHINE = 3 :: client STA associated to AP 🏁
 ######################################################################################################################
 
-# - BOTH CLIENTS (AP & STA) HAVE PMK's (From PSK or EAP)
+# - BOTH CLIENTS (AP & STA) HAVE PMK's (From PSK (WPA2/WPA3) or EAP (WPA2/WPA3 Enterprise))
 
 # - PTK Components = PMK + Supplicant (STA) MAC Address + Authenticator (AP) MAC Address + Snonce (Supplicant) + Anonce (Authenticator)
 
@@ -2495,7 +2492,7 @@ _The 4-way-handshake is used for the generation of a PTK. It confirms that the S
 
 🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    STA Generates PTK + Pick Random Snonce      |  send M2 : ( 💊 🔑 EAPOL Key | Snonce + MIC )
 
-🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    AP Generates PTK + Generates GTK            |  send M3 : ( 💊 🔑 EAPOL Key | Install PTK + MIC + Encrypted GTK )
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    AP Generates PTK + Generates GTK            |  send M3 : ( 💊 🔑 EAPOL Key | Install PTK + MIC + Anonce + Encrypted GTK )
 
 🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    Decrypt GTK sent from AP + answer with MIC  |  send M4 : ( 💊 🗝️ EAPOL Key | MIC ) 
 
