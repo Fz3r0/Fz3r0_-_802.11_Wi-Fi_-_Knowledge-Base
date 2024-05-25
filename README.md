@@ -2564,77 +2564,114 @@ _EAP is the whole Framework used for implement authentication, and it uses 802.1
 - [HTTPS: SSL/TLS Handshake](https://www.reydes.com/d/?q=HTTPS_SSL_TLS_Handshake)
 
 ## 🔐🔄💊 802.1X-EAP: Frame & Packet Exchange <br><br>
-**🔄 BASIC EAP MD5 _(Depreciated Method)_** <br>
-✅ After State 3 Completed OK: 📡⬇️ <br>
-Auhtenticator (**AP**): 💊 Request Identity ➡️ **STA** <br>
-Supplicant (**STA**): 💊 Identity ➡️ **AP** <br>
-Auhtenticator (**AP**): 💊 Access Request ➡️ **RADIUS** <br>
-Authentication Service (**RADIUS**): 💊 Challenge (text) ➡️ **AP** <br>
-Auhtenticator (**AP**): 💊 Challenge (text) ➡️ **STA** <br>
-Supplicant (**STA**): 💊 Challenge Response (cipher text) ➡️ **AP** <br>
-Auhtenticator (**AP**): 💊 Challenge Response (cipher text) ➡️ **RADIUS** <br>
-Authentication Service (**RADIUS**): 💊 Access Accept ➡️ **AP** <br>
-Auhtenticator (**AP**): 💊 Access Success ➡️ **STA** <br>
-Supplicant (**STA**) & Auhtenticator (**AP**): Key Exchange ↔️🗝️ <br>
-✅🗝️ State 4 OK!!! STA Full Associated to AP using 802.1X-EAP Encryption & Cipher. <br>
+
+### 🔄 `EAP MD5` _(Depreciated Method)_ Frame Exchange: <br>
 
 ````py
-(Previous: State Machine #3 = STA associated to AP)
+(Previous: State 3 :: client STA Associated to AP
 .
 .
 .
-####################################################################################################################
+######################################################################################################################
                                         🏁 BASIC EAP MD5 (Depreciated Method) 🏁
-####################################################################################################################
+######################################################################################################################
 
-🤳🏾 STA = supplicant                        📡 AP = authenticator                  ☁️ RADIUS = authention service
+🤳🏾 SUPPLICANT (STA)           📡 AUTHENTICATOR (AP)         ☁️ AUTHENITCATION SERVER        
 
-       🤳🏾 ⬅️  <<<--------------------    {[💊🛜 Request Identity]}
+🤳🏾 Client STA  :: ⬅️  <<<---------  ::  AP 📡                            RADIUS ☁️    ||    {[ 💊🛜 Request Identity ]}    
 
-{[💊🛜 Identity]}  --------------------------->>>    ➡️ 📡                                   
-           
-                                          {[💊🛜 Access Request]}    -------------------------->>>  ➡️ ☁️ 
+🤳🏾 Client STA  :: --------->>>  ➡️  ::  AP 📡                            RADIUS ☁️    ||    {[ 💊🛜 Identity ]}   
 
-                                                  📡  ⬅️   <<<----------------------  {[💊🛜 Challenge (text)]}     
-       🤳🏾 ⬅️  <<<--------------------    {[💊🛜 Challenge (text)]} 
+🤳🏾 Client STA                            AP 📡  :: --------->>>  ➡️  ::  RADIUS ☁️    ||    {[ 💊🛜 Access Request ]}  
 
-{[💊🛜 Chall. Resp. (cipher)]}  ---------------->>>  ➡️ 📡                                
-                                        {[💊🛜 Chall. Resp. (cipher)]}    --------------------->>>  ➡️ ☁️ 
+🤳🏾 Client STA                            AP 📡  :: ⬅️  <<<---------  ::  RADIUS ☁️    ||    {[ 💊🛜 Challenge (text) ]}  
 
-                                                   📡 ⬅️   <<<----------------------  {[💊🛜 Access Accept]}     
+🤳🏾 Client STA  :: ⬅️  <<<---------  ::  AP 📡                            RADIUS ☁️    ||    {[ 💊🛜 Challenge (text) ]} 
 
-       🤳🏾 ⬅️  <<<--------------------    {[💊🛜 Access Success]}
-.
-.
-.
-(Next: Key Exchange (4-Way-Handshake))
+🤳🏾 Client STA  :: --------->>>  ➡️  ::  AP 📡                            RADIUS ☁️    ||    {[ 💊🛜 Challenge Response (cipher) ]}
 
-####################################################################################################################
+🤳🏾 Client STA                            AP 📡  :: --------->>>  ➡️  ::  RADIUS ☁️    ||    {[ 💊🛜 Challenge Response (cipher) ]}
+
+🤳🏾 Client STA                            AP 📡  :: ⬅️  <<<---------  ::  RADIUS ☁️    ||    {[ 💊🛜 Access Accept ]} 
+
+🤳🏾 Client STA  :: ⬅️  <<<---------  ::  AP 📡                            RADIUS ☁️    ||    {[ 💊🛜 Access Success ]}
+
+                                               ## Key Exchange (4-way-handshake) ##
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡                                          ||     send M1 : ( 💊 🗝️ EAPOL Key | Anonce ) 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡                                          ||     send M2 : ( 💊 🔑 EAPOL Key | Snonce + MIC )
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡                                          ||     send M3 : ( 💊 🔑 EAPOL Key | Install PTK + MIC + Anonce + Encrypted GTK )
+
+🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡                                          ||     send M4 : ( 💊 🗝️ EAPOL Key | MIC ) 
+
+######################################################################################################################
                           🏁 STATE MACHINE = 4 :: client STA associated via 802.1X-EAP(MD5)
                           Open System Authentication/Association + 802.1X-EAP Secuirty Passed
-####################################################################################################################
+######################################################################################################################
 ````
 
+---
+
+### 🔄 `TUNNELED EAP` _(Conceptual & General Actual Secure Method)_ Frame Exchange: <br>
+
+````py
+(Previous: State 3 :: client STA Associated to AP
+.
+.
+.
+######################################################################################################################
+                          🏁 TUNNELED EAP  (Conceptual & General Actual Secure Method) 🏁
+######################################################################################################################
+
+🤳🏾 SUPPLICANT (STA)           📡 AUTHENTICATOR (AP)         ☁️ AUTHENITCATION SERVER        
+
+🤳🏾 Client STA  :: ⬅️  <<<---------  ::  AP 📡                            RADIUS ☁️    ||    {[ 💊🛜 Request Identity ]}    
+
+🤳🏾 Client STA  :: --------->>>  ➡️  ::  AP 📡                            RADIUS ☁️    ||    {[ 💊🛜 Identity (Dummy) ]}   
+
+🤳🏾 Client STA                            AP 📡  :: --------->>>  ➡️  ::  RADIUS ☁️    ||    {[ 💊🛜 Access Request (Dummy) ]}  
+
+🤳🏾 Client STA                            AP 📡  :: ⬅️  <<<---------  ::  RADIUS ☁️    ||    {[ 💊📝 Authenticate Server Certificate (for tunneling setup) ]}  
+
+🤳🏾 Client STA  :: ⬅️  <<<---------  ::  AP 📡                            RADIUS ☁️    ||    {[ 💊📝 Authenticate Server Certificate (for tunneling setup) ]}  
 
 
-**🔄 TUNNELED EAP _(Conceptual & General Actual Secure Method)_** <br>
-✅ After State 3: 📡⬇️ <br>
-Auhtenticator (**AP**): 💊 Request Identity ➡️ **STA** <br>
-Supplicant (**STA**): 💊 Identity: **Dummy** ➡️ **AP** <br>
-Auhtenticator (**AP**): 💊 Access Request: **Dummy** ➡️ **RADIUS** <br>
-Authentication Service (**RADIUS**): 💊 Authenticate Server Certificate _(for tunneling setup)_ ➡️📝 **AP** <br>
-Auhtenticator (**AP**): 💊 Authenticate Server Certificate _(for tunneling setup)_ ➡️📝 **STA** <br>
-<|| 📝🔐🚇 _Establish Encrypted Tunnel Using Certificate | Start Encrypted Traffic:_ 🚇🔐📝 ||> <br>
-Supplicant (**STA**): 💊 Identity: **Real** 🔐➡️ **AP** <br>
-Auhtenticator (**AP**): 💊 Access Request (using real identity) 🔐➡️ **RADIUS** <br>
-Authentication Service (**RADIUS**): 💊 Challenge (text) 🔐➡️ **AP** <br>
-Auhtenticator (**AP**): 💊 Challenge (text) 🔐➡️ **STA** <br>
-Supplicant (**STA**): 💊 Challenge Response (cipher text) 🔐➡️ **AP** <br>
-Auhtenticator (**AP**): 💊 Challenge Response (cipher text) 🔐➡️ **RADIUS** <br>
-Authentication Service (**RADIUS**): 💊 Access Accept 🔐➡️ **AP** <br>
-Auhtenticator (**AP**): 💊 Access Success 🔐➡️ **STA** <br>
-Supplicant (**STA**) & Auhtenticator (**AP**): Key Exchange 🔐↔️🗝️ <br>
-✅🗝️ State 4 OK!!! STA Full Associated to AP using 802.1X-EAP Encryption & Cipher. <br>
+=-=-=-=-= <|| 📝🔐🚇  Establish Encrypted Tunnel Using Certificate | Start Encrypted Traffic:  🚇🔐📝 ||> =-=-=-=-=
+
+
+🤳🏾 Client STA  :: --------->>>  ➡️  ::  AP 📡                            RADIUS ☁️    ||    {[ 💊🛜 Identity (Real) ]}   
+
+🤳🏾 Client STA                            AP 📡  :: --------->>>  ➡️  ::  RADIUS ☁️    ||    {[ 💊🛜 Access Request (Using Real Identity) ]} 
+
+🤳🏾 Client STA                            AP 📡  :: ⬅️  <<<---------  ::  RADIUS ☁️    ||    {[ 💊🛜 Challenge (text) ]}  
+
+🤳🏾 Client STA  :: ⬅️  <<<---------  ::  AP 📡                            RADIUS ☁️    ||    {[ 💊🛜 Challenge (text) ]} 
+
+🤳🏾 Client STA  :: --------->>>  ➡️  ::  AP 📡                            RADIUS ☁️    ||    {[ 💊🛜 Challenge Response (cipher text) ]}
+
+🤳🏾 Client STA                            AP 📡  :: --------->>>  ➡️  ::  RADIUS ☁️    ||    {[ 💊🛜 Challenge Response (cipher text) ]}
+
+🤳🏾 Client STA                            AP 📡  :: ⬅️  <<<---------  ::  RADIUS ☁️    ||    {[ 💊🛜 Access Accept ]} 
+
+🤳🏾 Client STA  :: ⬅️  <<<---------  ::  AP 📡                            RADIUS ☁️    ||    {[ 💊🛜 Access Success ]}
+
+                                               ## Key Exchange (4-way-handshake) ##
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡                                          ||     send M1 : ( 💊 🗝️ EAPOL Key | Anonce ) 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡                                          ||     send M2 : ( 💊 🔑 EAPOL Key | Snonce + MIC )
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡                                          ||     send M3 : ( 💊 🔑 EAPOL Key | Install PTK + MIC + Anonce + Encrypted GTK )
+
+🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡                                          ||     send M4 : ( 💊 🗝️ EAPOL Key | MIC ) 
+
+######################################################################################################################
+                          🏁 STATE MACHINE = 4 :: Client STA Associated to AP using 802.1X-EAP Encryption & Cipher
+                          Open System Authentication/Association + 802.1X-EAP (example: PEAP)
+######################################################################################################################
+````
 
 **🦈 Packets & Frames to Capture:** <br>
 **Wired LAN** (Between Authentication Serivce & Authenticator) = **RADIUS** = Type **0x888E** <br>
