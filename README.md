@@ -2286,12 +2286,12 @@ _When 802.11 authentication (not the RSN-WPA/WPA2 authentication) completes, a S
 
 🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛜 Association Response ]}
 
-🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🆗 ACK ]}                                <<<=== FINISH 🏁
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🆗 ACK ]}                                 <<<=== FINISH 🏁
 
-####################################################################################################################
+######################################################################################################################
                                🏁 STATE MACHINE = 3 :: client STA associated to AP
                                 Open System Authentication/Association Complete!!!
-####################################################################################################################
+######################################################################################################################
 .
 .
 .
@@ -2476,15 +2476,34 @@ _The 4-way-handshake is used for the generation of a PTK. It confirms that the S
 
 
 ### 🖼️🔄🤝 **`4-Way-Handshake` Frame Exchange**: <br>
-**PTK Components:**<br>
-**PTK** = `PMK` + `Supplicant (STA) MAC Address` + `Authenticator (AP) MAC Address` + `Snonce (Supp)` + `Anonce (Auth)` <br>
 
-✅ After Association State 3 (CLIENT ASSOCIATED) :: BOTH CLIENTS (AP & STA) HAVE PMK's (From PSK or EAP) ✅⬇️  <br> 
-1. 📡🔢🗝️ `AP` :: Pick Random Anonce | Send `M1` : 💊 **EAPOL Key** (`Anonce`) {Unicast} ➡️ To: `STA` 🤳 
-2. 🤳🔢🔑 `STA` :: Generates PTK(STA) + Pick Random Snonce | Send `M2` : 💊 **EAPOL Key** (`Snonce` + `MIC`) ➡️ To: `AP` 📡
-3. 📡🔢🔑 `AP` :: Generates PTK(AP) + Generates GTK | Send `M3` : 💊 **EAPOL Key** (`Install PTK` + `MIC` + `Encrypted GTK`)  ➡️ To: `STA` 🤳
-4. 🤳🔢🔐 `STA` :: Decrypt GTK sent from AP & answer with MIC | Send `M4` : 💊 **EAPOL Key** (`MIC`) ➡️ To: `AP` 📡 ⬇ <br> 
-✅🤝 **State 4 OK! `CLIENT ASSOCIATED VIA RSNA` 🤝✅** <br>
+````py
+## State Machine :: 1 to 2 :: Authentication Process
+
+.
+.
+.
+######################################################################################################################
+                                 🏁 STATE MACHINE = 3 :: client STA associated to AP 🏁
+######################################################################################################################
+
+# - BOTH CLIENTS (AP & STA) HAVE PMK's (From PSK or EAP)
+
+# - PTK Components = PMK + Supplicant (STA) MAC Address + Authenticator (AP) MAC Address + Snonce (Supplicant) + Anonce (Authenticator)
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    AP Pick Random Anonce                       |  send M1 : ( 💊 🗝️ EAPOL Key | Anonce ) 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    STA Generates PTK + Pick Random Snonce      |  send M2 : ( 💊 🔑 EAPOL Key | Snonce + MIC )
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    AP Generates PTK + Generates GTK            |  send M3 : ( 💊 🔑 EAPOL Key | Install PTK + MIC + Encrypted GTK )
+
+🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    Decrypt GTK sent from AP + answer with MIC  |  send M4 : ( 💊 🗝️ EAPOL Key | MIC ) 
+
+######################################################################################################################
+                                🏁 STATE MACHINE = 4 :: client STA associated via RSNA 🏁
+######################################################################################################################
+
+````
 
 - [📡🔢🗝️ `M1`: Message 1 :: AP sends EAPOL: `Anonce`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/2add18f2-6b5a-4a81-8709-6df9b380b0ea) _`PCAP`_
 - [🤳🔢🔑 `M2`: Message 2 :: STA generates PTK & sends EAPOL: `Snonce` + `MIC`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/47efb610-f965-42cd-9bbe-efd00bf7370a) _`PCAP`_
