@@ -1143,7 +1143,7 @@ _IEEE802.11a is the first wireless standard to employ packet based OFDM: Orthogo
 
 ### ⚙️🚀 **802.11a** | **Wi-Fi 2** | **OFDM**: `Enhancements` 
 
-- **`5 GHz band`**: First 802.11 wireless standard that uses 5 GHz band. 12 non-overlapping unlicensed national information infrastructure (UNII) channels in 5 GHz frequency band.
+- **`5 GHz band`**: First 802.11 wireless standard that uses 5 GHz band. 12 non-overlapping unlicensed national information infrastructure (UNII) channels in 5 GHz frequency band. <br> <br>
 - **`OFDM`**: First 802.11 wireless standard to employ packet-based OFDM (Orthogonal frequency-division multiplexing) with 52 subcarrier channels. Orthogonal Frequency Division Multiplex, OFDM, is a form of signal format that uses a large number of closely spaced carriers that are each modulated with a low rate data stream. The closely spaced signals would normally be expected to interfere with each other, but by making the signals orthogonal to each other, there is no mutual interference. The data to be transmitted is shared across all the carriers, providing resilience against selective fading from multi-path effects. <br> <br>
 - **`More Data Rates available`**: Data rates with varying modulation types: 6, 9, 12, 18, 24, 36, 48 and up to 54 Mbps using Adaptative Rate Selection <br> <br>
 
