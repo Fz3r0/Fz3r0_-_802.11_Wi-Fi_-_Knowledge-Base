@@ -1867,7 +1867,7 @@ _The Sequence Control field is 16 bits in length and consists of two subfields, 
 ---
 
 ### 💊📦 QoS Control :: _2 Bytes / 16 Bits_
-_Related to QoS 802.11 Frames | QoS Control is a 16-bit (2 bytes) field that identifies the Quality of Service (QoS) parameter of a data frame (only in data frame type QoS-Data) | WiFi uses EDCA- Enhanced Distributed Channel Access, a wireless access method that provides differentiated access for stations using 8 user priorities & 4 QoS Access categories (AC_VO, AC_VI, AC_BE, AC_BK). These UP values of a wireless frame map to QoS field (CoS/802.1D) of a 802.1q header when it translated to Ethernet frame ;; WiFi alliance QoS certification called WMM-WiFi Multimedia also defined those 4 access categories. So WMM cetified end client should classified its traffic on to one of those classes prior to transmit them over the air. | QoS Control field is comprised of five subfields: 1. Traffic Identifier (TID) also known as UP (User Priority) 2. End of Service Period (EOSP) 3. ACK Policy 4. Reserved 5. TXOP limit, TXOP duration, AP PS buffer state, Queue Size_
+_QoS Control is a 16-bit (2 bytes) field that identifies the Quality of Service (QoS) parameter of a data frame (only in data frame type QoS-Data) | The benefit of QoS control is allow the frame to be tag for the priority that actually needs to be. | WiFi uses EDCA- Enhanced Distributed Channel Access, a wireless access method that provides differentiated access for stations using 8 user priorities & 4 QoS Access categories (AC_VO, AC_VI, AC_BE, AC_BK). These UP values of a wireless frame map to QoS field (CoS/802.1D) of a 802.1q header when it translated to Ethernet frame ;; WiFi alliance QoS certification called WMM-WiFi Multimedia also defined those 4 access categories. So WMM cetified end client should classified its traffic on to one of those classes prior to transmit them over the air. | QoS Control field is comprised of five subfields: 1. Traffic Identifier (TID) also known as UP (User Priority) 2. End of Service Period (EOSP) 3. ACK Policy 4. Reserved 5. TXOP limit, TXOP duration, AP PS buffer state, Queue Size_
 
 ````py
 ## QoS Control :: QoS Control is a 16-bit (2 bytes) field that identifies the Quality of Service (QoS) parameter of a data frame (only in data frame type QoS-Data or QoS Null Data) 
@@ -1969,10 +1969,61 @@ _Related to QoS 802.11 Frames | QoS Control is a 16-bit (2 bytes) field that ide
             - 128 bytes Queue Size = `wlan.qos.queue_size == 8`
             - 13568 bytes (13.568 gigas) Queue Size = `wlan.qos.queue_size == 113` <br><br>
 
-### 💊📦 HT Control
-_Present in HT, VHT, EHT, even if the name is only HT control | The 802.11n amendment add a 4 byte HT control field to the 802.11 MAC header. With this HT Control field max MAC header length increased to 36 bytes._
+### 💊📦 HT Control _4 Bytes / 32 Bits_
+_4-byte / 32 bits field present in HT, VHT, EHT, even if the name is only HT control, and depends on the PHY 802.11n/ac/ax the variant it would be present | The 802.11n amendment add a 4 byte HT control field to the 802.11 MAC header. With this HT Control field max MAC header length increased to 36 bytes. | The way it works is that the first bit that was reserved in 802.11n, now is used to determine if it's using VHT when the bit is set to 1, if it's set to 0 it means that the HT control is saying that the frame is 802.11n HT frame_
 
-- [`HT Control`](https://mrncciew.com/2014/10/20/cwap-ht-control-field/) <br><br>
+````py
+## HT Control :: 32-bit (4 bytes) field that has two forms: HT & VHT variants. VHT set to 0 indicate HT variant & 1 indicate a VHT variant
+
+### HT Variant:
+
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------|
+|  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     |
+| Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control | Control |
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------|
+                                                                             ||
+                                                                             \/
+                                 |--------------|----------------------------|--------------|--------------|
+                                 |      VHT     |         HT Control         |      AC      |  RDG / More  |
+        HT Variant ==>>          |      (0)     |       Middle Content       |  Constraint  |    PPDU      | 
+                                 |--------------|----------------------------|--------------|--------------|
+                                         1                    29                     1              1        <<== 4 Bytes / 32 Bits
+                                                              ||
+                                                              \/
+    |---------------|-------------|-------------|----------|----------|--------------|----------|---------|
+    | Link Adaption | Calibration | Calibration | Reserved |   CSI /  |     NDP      | Reserved |   DEI   |
+    |    Control    |   Position  |   Sequence  |          | Steering | Announcement |          |         |
+    |---------------|-------------|-------------|----------|----------|--------------|----------|---------|
+           15              2             2           2          2             1           4         1        <<== 3.2 Bytes / 29 Bits
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+### VHT Variant:
+
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------|
+|  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     |
+| Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control | Control |
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------|
+                                                                             ||
+                                                                             \/
+                                 |--------------|----------------------------|--------------|--------------|
+                                 |      VHT     |         HT Control         |      AC      |  RDG / More  |
+       VHT Variant ==>>          |      (1)     |       Middle Content       |  Constraint  |    PPDU      | 
+                                 |--------------|----------------------------|--------------|--------------|
+                                         1                    29                     1              1        <<== 4 Bytes / 32 Bits
+                                                              ||
+                                                              \/
+    |---------------|-------------|-------------|----------|----------|--------------|----------|---------|
+    | Link Adaption | Calibration | Calibration | Reserved |   CSI /  |     NDP      | Reserved |   DEI   |
+    |    Control    |   Position  |   Sequence  |          | Steering | Announcement |          |         |
+    |---------------|-------------|-------------|----------|----------|--------------|----------|---------|
+           15              2             2           2          2             1           4         1        <<== 3.2 Bytes / 29 Bits
+
+                                                                         
+
+````
+
+- [📦 `HT Control`](https://mrncciew.com/2014/10/20/cwap-ht-control-field/) <br><br>
 
 
 
