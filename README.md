@@ -1035,7 +1035,7 @@ _The first wireless LAN (WLAN) standard was created by the IEEE committee in 199
 - ⭕ IEEE 802.11-2020 Clause: **`Clause 15`** <br> <br>
 - ⭕ PHY: **`DSSS :: Direct Sequence Spread Spectrum`** 
 - ⭕ Operating Band: **`2.4 GHz`** & **`Infrared`**
-- ⭕ Channel Bandwith: **`22 MHz`**
+- ⭕ Channel Bandwidth: **`22 MHz`**
 - ⭕ Stream Data Rates: **`1 Mbps`** | **`2 Mbps`** _peak_
 - ⭕ Modulation Technique: **`DBPSK`** & **`DQPSK`**  <br> <br>
 - ⭕ Constellation | Code Rate: <br> <br>
@@ -1057,7 +1057,7 @@ _The first wireless LAN (WLAN) standard was created by the IEEE committee in 199
 - ⭕ Authentication: **`Open Authentication`** | **`Shared Key`**
 - ⭕ Encryption Algorithm: _N/A_ <br> <br>
 
-### ⚙️🚀 **802.11 Prime** | **Wi-Fi 0** | **DSSS**: `Enhancements` <br> <br>
+### ⚙️🚀 **802.11 Prime** | **Wi-Fi 0** | **DSSS**: `Enhancements`
 
 - **First 802.11 Wi-Fi PHY:** <br> <br>
     - **`CSMA/CA (Carrier-sense multiple access with collision avoidance)`**: Originally defined carrier sense multiple access with collision avoidance, this is a protocol for carrier transmission in 802.11 networks. It was developed to minimize the potential of a collision occurring when two or more stations send their signals over a data link layer. <br> <br>
@@ -1066,14 +1066,14 @@ _The first wireless LAN (WLAN) standard was created by the IEEE committee in 199
 ## 📡⚙️🧬 `802.11b` / `Wi-Fi 0` / `HR-DSSS`
 _The DSSS version of legacy 802.11 Prime was rapidly supplemented (and popularized) by the 802.11b amendment in 1999, which increased the bit rate to 11 Mbps. Widespread adoption of 802.11 networks only occurred after the release of 802.11b, which resulted in multiple interoperable products becoming available from multiple vendors. Consequently, comparatively few networks were implemented on the 802.11-1997 standard. 802.11b products appeared on the market in mid-1999 since 802.11b is a direct extension of the DSSS (Direct-sequence spread spectrum) modulation technique defined in the original standard. The Apple iBook was the first mainstream computer sold with optional 802.11b networking. Technically, the 802.11b standard uses complementary code keying (CCK) as its modulation technique, which uses a specific set of length 8 complementary codes that was originally designed for OFDM but was also suitable for use in 802.11b because of its low autocorrelation properties. The dramatic increase in throughput of 802.11b (compared to the original standard released in 1997) along with simultaneous substantial price reductions led to the rapid acceptance of 802.11b as the definitive wireless LAN technology as well as to the formation of the Wi-Fi Alliance. 802.11b devices suffer interference from other products operating in the 2.4 GHz band. Devices operating in the 2.4 GHz range include microwave ovens, Bluetooth devices, baby monitors, and cordless telephones. Interference issues and user density problems within the 2.4 GHz band have become a major concern and frustration for users. The adoption of 802.11b was crucial in popularizing wireless networks due to its higher speed and lower cost._
 
-### 📡💡 **802.11b** | **Wi-Fi 1** | **HR-DSSS**: `Features` <br> <br>
+### 📡💡 **802.11b** | **Wi-Fi 1** | **HR-DSSS**: `Features`
    
 - ⭕ Year & Status: September **`1999`** _(Legacy)_
 - ⭕ IEEE Amendment: **_`Amendment 1`_**
 - ⭕ IEEE 802.11-2020 Clause: **`Clause 17`** <br> <br>
 - ⭕ PHY: **`HR-DSSS :: High Rate - Direct Sequence Spread Spectrum`** 
 - ⭕ Operating Band: **`2.4 GHz`** 
-- ⭕ Channel Bandwith: **`22 MHz`**
+- ⭕ Channel Bandwidth: **`22 MHz`**
 - ⭕ Stream Data Rates: **`1 Mbps`** | **`2 Mbps`** | **`5.5 Mbps`** | **`11 Mbps`** _peak_
 - ⭕ Modulation Technique: **`CCK`** Complementary Code Keying <br> <br>
 - ⭕ OFDM: _N/A (introduced until 802.11a)_ 
@@ -1097,47 +1097,55 @@ _The DSSS version of legacy 802.11 Prime was rapidly supplemented (and populariz
 - ⭕ Authentication: **`Open Authentication`** | **`Shared Key`**
 - ⭕ Encryption Algorithm: **`RC4`**  <br> <br>
 
-### ⚙️🚀 **802.11b** | **Wi-Fi 1** | **HR-DSSS**: `Enhancements` <br> <br>
+### ⚙️🚀 **802.11b** | **Wi-Fi 1** | **HR-DSSS**: `Enhancements` 
+
 - **Direct extension of original 802.11 Prime (1997)** <br> <br>
     - **`More Data Rates available`**: Data rates with varying modulation types: 1, 2, 5.5 and up to 11 Mbps using Adaptative Rate Selection also known as Dynamic Rate Switching <br> <br>
     - **`Dynamic Rate Switching`**: It can operate at 11 Mbit/s, but scale back to 5.5, then to 2, then to 1 Mbit/s in order to decrease the rate of re-broadcasts that result from errors. <br> <br>
   
 ## 📡⚙️🧬 `802.11a` / `Wi-Fi 2` / `OFDM`
-_IEEE802.11a is the first wireless standard to employ packet based OFDM | Using the 5 GHz band gives 802.11a a significant advantage, since the 2.4 GHz band is heavily used to the point of being crowded. Degradation caused by such conflicts can cause frequent dropped connections and degradation of service | The effective overall range of 802.11a is slightly less than that of 802.11b/g; 802.11a signals cannot penetrate as far as those for 802.11b because they are absorbed more readily by walls and other solid objects in their path and because the path loss in signal strength is proportional to the square of the signal frequency | he increased number of usable channels (4 to 8 times as many in FCC countries) and the near absence of other interfering systems (microwave ovens, cordless phones, baby monitors) give 802.11a significant aggregate bandwidth and reliability advantages over 802.11b/g. | 802.11a offered less interference from other devices but initially had lower adoption due to higher costs and shorter range._
+_IEEE802.11a is the first wireless standard to employ packet based OFDM: Orthogonal Frequency Division Multiplexing | Using the 5 GHz band gives 802.11a a significant advantage, since the 2.4 GHz band is heavily used to the point of being crowded. Degradation caused by such conflicts can cause frequent dropped connections and degradation of service | The effective overall range of 802.11a is slightly less than that of 802.11b/g; 802.11a signals cannot penetrate as far as those for 802.11b because they are absorbed more readily by walls and other solid objects in their path and because the path loss in signal strength is proportional to the square of the signal frequency | he increased number of usable channels (4 to 8 times as many in FCC countries) and the near absence of other interfering systems (microwave ovens, cordless phones, baby monitors) give 802.11a significant aggregate bandwidth and reliability advantages over 802.11b/g. | 802.11a offered less interference from other devices but initially had lower adoption due to higher costs and shorter range._
 
-### 📡💡 **802.11a** | **Wi-Fi 2** | **OFDM**: `Features` <br> <br>
+### 📡💡 **802.11a** | **Wi-Fi 2** | **OFDM**: `Features` 
 
 - ⭕ Year & Status: September **`1999`** _(Legacy)_
 - ⭕ IEEE Amendment: **_`Amendment 1`_**
-- ⭕ IEEE 802.11-2020 Clause: **`Clause 17`** <br> <br>
+- ⭕ IEEE 802.11-2020 Clause: **`Clause 16`** <br> <br>
 - ⭕ PHY: **`OFDM :: Orthogonal Frequency Division Multiplexing`** 
 - ⭕ Operating Band: **`5 GHz`** 
-- ⭕ Channel Bandwith: **`20 MHz`**
+- ⭕ Channel Bandwidth: **`20 MHz`**
 - ⭕ Stream Data Rates: **`6 Mbps`** | **`9 Mbps`** | **`12 Mbps`** | **`18 Mbps`** | **`24 Mbps`** | **`36 Mbps `** | **`48 Mbps`** | **`54 Mbps`** _peak_
 - ⭕ Modulation Technique: **`OFDM`** Orthogonal Frequency Division Multiplexing <br> <br>
 - ⭕ OFDM: `Yes` (OFDM)
 - ⭕ Max OFDM tones: `64`
 - ⭕ Subcarrier Spacing: `312.5 kHz` <br> <br>
 - ⭕ Constellation | Code Rate: <br> <br>
-    - pendiente
+    - Modulation: **`BPSK`** || Coding: **`1/2`** || Data Rate: **`6 Mbps`** || Rate bits: **`1101`**
+    - Modulation: **`BPSK`** || Coding: **`3/4`** || Data Rate: **`9 Mbps`** || Rate bits: **`1111`**
+    - Modulation: **`QPSK`** || Coding: **`1/2`** || Data Rate: **`12 Mbps`** || Rate bits: **`0101`**
+    - Modulation: **`QPSK`** || Coding: **`3/4`** || Data Rate: **`18 Mbps`** || Rate bits: **`0111`**
+    - Modulation: **`16-QAM`** || Coding: **`1/2`** || Data Rate: **`24 Mbps`** || Rate bits: **`1001`**
+    - Modulation: **`16-QAM`** || Coding: **`3/4`** || Data Rate: **`36 Mbps`** || Rate bits: **`1011`**
+    - Modulation: **`64-QAM`** || Coding: **`2/3`** || Data Rate: **`48 Mbps`** || Rate bits: **`0001`**
+    - Modulation: **`64-QAM`** || Coding: **`3/4`** || Data Rate: **`54 Mbps`** || Rate bits: **`0011`** <br> <br>
 - ⭕ MIMO: _N/A (introduced until 802.11n)_
 - ⭕ Max Single-User (SU) Streams: **`1`**
 - ⭕ Max Multi-User (MU) Streams: _N/A_
 - ⭕ bit / Symbol: **`6 bits / symbol`** (for 64-QAM, 3/4)
 - ⭕ MCS: _N/A (non 802.11n or higher)_
-- ⭕ QAM Spectral Efficienty _(aprox)_: for 64-QAM = **`20 SNR`**
+- ⭕ QAM Spectral Efficienty _(aprox)_: 4-QAM = **`24 SNR`** | 16-QAM = **`16 SNR`** | 64-QAM = **`27 SNR`**
 - ⭕ Link Spectral Efficiency: **`2.7 bps/Hz`**
 - ⭕ Guard Interval: _N/A (introduced until 802.11n)_ <br> <br>
 - ⭕ Power Saving: _N/A_ <br> <br>
 - ⭕ Security: **`WEP`** 
 - ⭕ Authentication: **`Open Authentication`** | **`Shared Key`**
-- ⭕ Encryption Algorithm: **`RC4`**  <br> <br>
+- ⭕ Encryption Algorithm: **`WEP`**  <br> <br>
 
-- ⚙️ **Features:** <br> <br>
-    - **`5 GHz band`**: First 802.11 wireless standard that uses 5 GHz band. 12 non-overlapping unlicensed national information infrastructure (UNII) channels in 5 GHz frequency band.
-    - **`OFDM`**: First 802.11 wireless standard to employ packet based OFDM (Orthogonal frequency-division multiplexing) with 52 subcarrier channels. Orthogonal Frequency Division Multiplex, OFDM is a form of signal format that uses a large number of close spaced carriers that are each modulated with low rate data stream. The close spaced signals would normally be expected to interfere with each other, but by making the signals orthogonal to each other there is no mutual interference. The data to be transmitted is shared across all the carriers and this provides resilience against selective fading from multi-path effects. <br> <br>
-    - **`More Data Rates available`**: Data rates with varying modulation types: 6, 9, 12, 18, 24, 36, 48 and up to 54 Mbps using Adaptative Rate Selection <br> <br>
-    - **`Improved Security`**: Supports WPA and WPA2 for enhanced security over WEP
+### ⚙️🚀 **802.11a** | **Wi-Fi 2** | **OFDM**: `Enhancements` 
+
+- **`5 GHz band`**: First 802.11 wireless standard that uses 5 GHz band. 12 non-overlapping unlicensed national information infrastructure (UNII) channels in 5 GHz frequency band.
+- **`OFDM`**: First 802.11 wireless standard to employ packet-based OFDM (Orthogonal frequency-division multiplexing) with 52 subcarrier channels. Orthogonal Frequency Division Multiplex, OFDM, is a form of signal format that uses a large number of closely spaced carriers that are each modulated with a low rate data stream. The closely spaced signals would normally be expected to interfere with each other, but by making the signals orthogonal to each other, there is no mutual interference. The data to be transmitted is shared across all the carriers, providing resilience against selective fading from multi-path effects. <br> <br>
+- **`More Data Rates available`**: Data rates with varying modulation types: 6, 9, 12, 18, 24, 36, 48 and up to 54 Mbps using Adaptative Rate Selection <br> <br>
 
 ## 📡⚙️🧬 `802.11g` / `Wi-Fi 3` / `ERP`
 _IEEE 802.11g-2003 or 802.11g is an amendment to the IEEE 802.11 specification that operates in the 2.4 GHz microwave band. The standard has extended link rate to up to 54 Mbit/s using the same 20 MHz bandwidth as 802.11b uses to achieve 11 Mbit/s. 802.11g is fully backward compatible with 802.11b, but coexistence of the two methods creates a significant performance penalty._
