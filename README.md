@@ -1513,23 +1513,26 @@ _All MAC frames contain the first three header fields and the FCS. The frame typ
 |  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     ||    Frame    ||    FCS   |
 | Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control | Control ||     Body    ||          |
 |---------|-----------|---------|---------|---------|----------|---------|---------|---------||-------------||----------|
+|    2         2           6       0 or 6    0 or 6    0 or 2     0 or 6    0 or 2    0 or 4 ||                               <<== Bytes
 |____________________________________________________________________________________________||_____________||__________|
  \                                                                                          /   \          /  \        /
    \                                                                                      /       \      /      \    /
      \__________________________________________________________________________________/           \__/          \/
-                                   MAC HEADER                                                    FRAME BODY       FCS
-                              - Frame Addressing                                                - Var Lenght     - 32-Bit CRC:
-                                 - Tx, Rx, Source, Destination, BSSID                           - Data /           - Check Sequence
-                              - Frame Control:                                                  - Payload          - Integrity                         
-                                 - QoS Control                                                   
-                                 - Sequence Control
+                                   MAC HEADER                                                   FRAME BODY        FCS
+                              - Addressing                                                     - Var Lenght      - 32-Bit CRC:
+                                 - Transmiter, Receiver, Source, Destination, BSSID               - Data /          - Check Sequence
+                              - Control:                                                          - Payload         - Integrity
+                                 - Frame Control
+                                 - Duration                      
+                                 - Sequence Control                                                   
+                                 - QoS Control
                                  - HT Control
 
 ````
 
 ---
 
-### 🔝📦 802.11 `MAC Header` - Frame Addressing & Control
+### 🔝📦 802.11 `MAC Header` - Frame Addressing & Control :: _36 Bytes / 288 Bits_
 _The 802.11 Mac Header can be 36 bytes long (32 bytes legacy 802.11b/a/g without HT Control) if all the fields are being used. There are a few fields in the 802.11 mac header which are not always utilised | The HT Control field is a part of the 802.11n amendment which is added to the mac header, it is also available in newer standars 802.11n/ac/ax_
 
 ````py
@@ -1545,7 +1548,7 @@ _The 802.11 Mac Header can be 36 bytes long (32 bytes legacy 802.11b/a/g without
 
 ---
 
-### 💊📦 `Frame Control` _(2 Bytes / 16 bits)_
+### 💊📦 `Frame Control` :: _2 Bytes / 16 Bits_
 _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Field" | Each 802.11 frame begins with two bytes of meta information called "Frame Control", which is then subdivided into eleven parts || **IEEE-802.11-2020 :: 9.2.4.1 Frame Control field :: page 757** _
 
 ````py
@@ -1561,7 +1564,7 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
 |  Protocol | Type | SubType | To | From | More | Retry |  PWR  | More | Prot- | +HTC/ |
 |  Version  |      |         | DS |  DS  | Frag |       | Mngmt | Data | ected | Order |
 |-----------|------|---------|----|------|------|-------|-------|------|-------|-------|
-      2        2        4       1     1      1      1       1       1      1       1      <<== Bits
+      2        2        4       1     1      1      1       1       1      1       1      <<== 2 Bytes / 16 Bits
 
 ````
 - 📦 [**Frame Control**]() _All 802.11 Frames have a control field_ **IEEE-802.11-2020 :: 9.2.4.1 Frame Control field :: page 757** <br><br>
@@ -1660,7 +1663,7 @@ _2 Bytes long AKA 2 Octates | All 802.11 have a Frame Control Field AKA "FC Fiel
         - QoS Frame (802.11n) always set to 0 = `wlan.fc.type_subtype == 40 && wlan.fc.order == 0`
 ---
 
-### 💊📦 `Duration / ID` (Bytes Lenght)
+### 💊📦 `Duration / ID` :: _2 Bytes / 16 Bits_
 _2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a two different purposes: 1 ) Duration: This field is used to reset NAV timers for devices on channel. Time in microseconds needed to complete the frame exchange, used to update STAs NAV (Network Allocation Vector). This is used a lot and it's important to know that this is not the duration of the current frame, it is the duration of the exchanges after the current frame requeried to actually complete the transaction 2) ID: Used in legacy PS-poll Frame to indicate the AID (Association ID) of the STA (AKA: ID of the Client Station given to the AP) to send the buffered frame in the AP | Expected duration of current transmission. Stations waiting for the medium use this to estimate when the channel will be free. | The contents of this field vary with frame type and subtype, with whether the frame is transmitted during the CFP, and with the QoS capabilities of the sending STA. | Omni peek shows this as duration, however it really is a duration / id field._ 
 
 ````py
@@ -1677,7 +1680,7 @@ _2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a
         |  0  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  | 10  | 11  | 12  | 13  | 14  | 15  |
         |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
         |-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
-           1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     <<== Bits
+           1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     <<== 2 Bytes / 16 Bits
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
@@ -1689,7 +1692,8 @@ _2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a
         |  1  |  1  ||     |     |     |     |     |     |     |     |     |     |     |     |     |     |
         |     |     ||     |     |     |     |     |     |     |     |     |     |     |     |     |     |
         |-----|-----||-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
-           1     1    |_________________________________________________________________________________|
+           1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     <<== 2 Bytes / 16 Bits
+                      |_________________________________________________________________________________|
                                                        Values:  0 - 2007
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -1702,7 +1706,8 @@ _2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a
         |  0  ||     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
         |     ||     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
         |-----||-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
-           1   |________________________________________________________________________________________|
+           1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     <<== 2 Bytes / 16 Bits
+                |________________________________________________________________________________________|
                                                     Values:  0 - 32767
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -1715,8 +1720,9 @@ _2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a
         |  1  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |
         |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
         |-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+           1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     <<== 2 Bytes / 16 Bits
          |_____________________________________________________________________________________________|
-                                         23,768  Transmitted by PC during CFP
+                                         23768  Transmitted by PC during CFP
 
 ````
 
@@ -1735,7 +1741,7 @@ _2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a
         - _I can't find a CFP duration captured in the wild yet :(_
 ---
             
-### 💊📦 Addresses 1, 2, 3 & 4 (Bytes Lenght)
+### 💊📦 Addresses 1, 2, 3, 4 :: _6 Bytes / 48 Bits (each)_
 _802.11 MAC sublayer address is one of the following two types 1). Individual Address (known as unicast address) 2) Group Address (Multicast or Broadcast address) | 802.11 frame can have upto 4 address fields in the MAC header. 802.11 frames typically use only 3 of the MAC address fields, but frames send within WDS (Wireless Distribution System) requires all 4 MAC address fields. | The Address Field depends on the frame type and may have one of the five different interpretations (DA, SA, RA, TA or BSSID). Protocol Analyzers like Wireshark will interpretate this automatically._
 
 ````py
@@ -1745,6 +1751,7 @@ _802.11 MAC sublayer address is one of the following two types 1). Individual Ad
 |  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     |
 | Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control | Control |
 |---------|-----------|---------|---------|---------|----------|---------|---------|---------|
+                       48 or 0   48 or 0   48 or 0              48 or 0                        <<== 6 Bytes / 48 Bits (each Address)
                           |  |      |  |     |  |                  |  |
                            \/        \/       \/                    \/
                            DA /      SA /     SA /                  SA
@@ -1781,7 +1788,7 @@ Each of the four 802.11 Address Fields may have one of 5 different interpretatio
 
 ---
 
-### 💊📦 Sequence Control
+### 💊📦 Sequence Control :: _2 Bytes / 16 Bits_
 _The Sequence Control field is 16 bits in length and consists of two subfields, the Sequence Number and the Fragment Number. The sequence Control field is not present in control frames (as no frame body)._
 
 ````py
@@ -1797,7 +1804,7 @@ _The Sequence Control field is 16 bits in length and consists of two subfields, 
                                             |   Fragment  |       Sequence     |
                                             |   Numbrer   |        Number      |
                                             |-------------|--------------------|
-                                                   4                 12          <<== Bits
+                                                   4                 12          <<== 2 Bytes / 16 Bits
 
 ````
 
@@ -1816,7 +1823,10 @@ _The Sequence Control field is 16 bits in length and consists of two subfields, 
         - Sequence number more than 0 (non initial) (excluding control frames) :: `!wlan.fc.type == 1 && wlan.seq > 0`
         - Sequence number = 4095 (max sequence) (excluding control frames) :: `wlan.fc.type == 1 && wlan.seq == 4095` <br><br>
         - Sequence number + Control Frames (malformed +/or weird frame indicator) `wlan.fc.type == 1 && wlan.seq` <br><br>
-### 💊📦 QoS Control | 16 bits / 2 bytes
+
+---
+
+### 💊📦 QoS Control :: _2 Bytes / 16 Bits_
 _Related to QoS 802.11 Frames | QoS Control is a 16-bit (2 bytes) field that identifies the Quality of Service (QoS) parameter of a data frame (only in data frame type QoS-Data) | WiFi uses EDCA- Enhanced Distributed Channel Access, a wireless access method that provides differentiated access for stations using 8 user priorities & 4 QoS Access categories (AC_VO, AC_VI, AC_BE, AC_BK). These UP values of a wireless frame map to QoS field (CoS/802.1D) of a 802.1q header when it translated to Ethernet frame ;; WiFi alliance QoS certification called WMM-WiFi Multimedia also defined those 4 access categories. So WMM cetified end client should classified its traffic on to one of those classes prior to transmit them over the air. | QoS Control field is comprised of five subfields: 1. Traffic Identifier (TID) also known as UP (User Priority) 2. End of Service Period (EOSP) 3. ACK Policy 4. Reserved 5. TXOP limit, TXOP duration, AP PS buffer state, Queue Size_
 
 ````py
@@ -1832,7 +1842,7 @@ _Related to QoS 802.11 Frames | QoS Control is a 16-bit (2 bytes) field that ide
                                  |     TID      |     EOSP     |     ACK      |     MSDU /   | TXOP/Buffer/ |
                                  | (A.Priority) |              |    Policy    |     A-MSDU   |    Queue     |  
                                  |--------------|--------------|--------------|--------------|--------------|
-                                         4              1             2               1              8        <<== Bits
+                                         4              1             2               1              8        <<== 2 Bytes / 16 Bits
 
 ````
 
@@ -1936,20 +1946,33 @@ _Present in HT, VHT, EHT, even if the name is only HT control | The 802.11n amen
 
 
 
-### 802.11 `Frame Body` - Variable Lenght Frame Body
-_Not all 802.11 Frame have Frame Body, for example CTS/RTS frame will not have a frame body | The frame body for data frames has an upper layer payload / data | The frame body for management frames like beacons, have informations elements_
+### 💊📦 802.11 `Frame Body` - Variable Lenght Frame Body
+_The Frame Body is a variable length field that contains information specific to individual frame types and subtypes. | The minimum size of the frame body can be 0 bytes (0 bits, 0 octets). This occurs in certain types of control frames or management frames, such as ACK (Acknowledgment) frames, beacon frames or CTS/RTS, which may not carry a frame body. The maximum size of the frame body varies depending on the specific 802.11 standard and network configuration. The maximum length frame body is defined by the maximum length (MSDU + ICV + IV), where ICV and IV are the WEP fields. | The frame body for data frames has an upper layer payload / data | The frame body for management frames like beacons, have informations elements._
 
 ````py
 ## Frame Body :: Variable Lenght Frame Body
 
-|-----------|
-|   Frame   |
-|    Body   |
-|-----------|
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------||-------------||----------|
+|  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     ||    Frame    ||    FCS   |
+| Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control | Control ||     Body    ||          |
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------||-------------||----------|
+|                                                                                            ||  Var Size   ||          |     <<== From 0 Bytes to 11454 Bytes (802.11ac/ax)
+|____________________________________________________________________________________________||_____________||__________|
+                                                                                                \          /  
+                                                                                                  \      /      
+                                                                                                    \__/         
+                                                                                                 FRAME BODY   
+                                                                                                - Var Lenght  
+                                                                                                  - Data /    
+                                                                                                 - Payload
+
+- For 802.11n:  The maximum size of the frame body is 7935 bytes (63480 bits, 7935 octets).
+- For 802.11ac: The maximum size of the frame body is 11454 bytes (91632 bits, 11454 octets).
+- For 802.11ax: The frame body can also support sizes up to 11454 bytes (91632 bits, 11454 octets), depending on configuration and frame aggregation.
 
 ````
 
-### 802.11 `FCS` - Frame Check Sequence 32-bit CRC (Cicle Redundancy Check)
+### 💊📦 802.11 `FCS` - Frame Check Sequence 32-bit CRC (Cicle Redundancy Check) :: _4 Bytes / 32 Bits_
 _The Frame Check Sequence (FCS) is a 4-byte field in a data frame used to detect transmission errors. The sender calculates the FCS using the CRC-32 algorithm and appends it to the frame. The receiver recalculates the CRC-32 upon receiving the frame and compares it to the received FCS to check for errors. | Wireshark uses the standard CRC-32 algorithm to compute the CRC of the frame data (excluding the FCS) and then compares this computed value to the FCS appended to the frame. If they match, the frame is considered "good"; otherwise, it is "bad". | The FCS field contains a number that is calculated by the source node based on the data in the frame. This number is added to the end of a frame that is sent. When the destination node receives the frame the FCS number is recalculated and compared with the FCS number included in the frame. If the two numbers are different, an error is assumed and the frame is discarded._
 
 ````py
@@ -1960,7 +1983,8 @@ _The Frame Check Sequence (FCS) is a 4-byte field in a data frame used to detect
 |  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     ||    Frame    ||    FCS   |
 | Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control | Control ||     Body    ||          |
 |---------|-----------|---------|---------|---------|----------|---------|---------|---------||-------------||----------|
-|____________________________________________________________________________________________||_____________||__________|
+|                                                                                            ||             ||    32    |
+|____________________________________________________________________________________________||_____________||__________|   <<== 4 Bytes / 32 Bits 
                                                                                                               \        /
                                                                                                                 \    /
                                                                                                                   \/
@@ -2031,16 +2055,29 @@ calculated_crc = crc32(data)
 
 
 
-## 🛜⚙️💊 IEEE 802.11-2020 9.3.3 (PV0) `Management Frames`
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 🛜⚙️💊 IEEE 802.11-2020 9.3.3 (PV0) :: `Management Frames`
 - [802.11 Mgmt Frame Types @ _nayarasi_](https://mrncciew.com/2014/09/29/cwap-802-11-mgmt-frame-types/) _`nayarasi`_
 - [`Frame Format` :: Management Frames]() 
 
-### 📡🔍⚙️ 802.11 Management Frames: `Beacon`
+## 📡🔍⚙️ 802.11 Management Frames: `Beacon`
 _Fixed Schedule (default 100TU = 1024us microseconds) | Sent always at Lowest Basic Data Rate configured |_
 - [**`Beacon`** :: Frame Decode @ Nayanajith](https://mrncciew.com/2014/10/08/802-11-mgmt-beacon-frame/) Fixed Schedule (default 100TU = 1024us microseconds) | Lowest Basic Data Rate
 - [`Beacon Frame Body` :: Elements](https://ieeexplore.ieee.org/document/9363693) IEEE 802.11-2020: Table 9-32 | 9.3.3.2
 
-### 🤳🏾🔍⚙️ 802.11 Management Frames: `Probe Request` & `Probe Response`
+## 🤳🏾🔍⚙️ 802.11 Management Frames: `Probe Request` & `Probe Response`
 _STAs send Probe Request on Active Scanning or after a Beacon in Passive Scanning | APs does not response an ACK from a Probe Request, AP responds with Probe Response directly (broadcast 802.11 Frames are neved ACKed) | Directed Probe Request conain SSID or wildcard set & Probe Request (broadcast) is sent empty bit_
 - [**`Probe Request`**]() **STA** -> Broadcast `APs does not ACK Probe Req` :: Broadcast :: Lowest STA's Data Rate :: 
 - [**`Directed Probe Request`**]() **STA** -> AP `APs does not ACK Probe Req` :: AP/SSID Directed ::
