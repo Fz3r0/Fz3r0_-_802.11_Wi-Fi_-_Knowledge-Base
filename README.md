@@ -2054,8 +2054,8 @@ _4-byte / 32 bits field present in HT, VHT, EHT, even if the name is only HT con
             - ⭕ CSI / Steering 1 **CSI** :: `wlan.htc.vht == 0 && wlan.htc.csi_steering == 1`
             - ⭕ CSI / Steering 2 **Non Compressed Beamforming Feedback Matrix** :: `wlan.htc.vht == 0 && wlan.htc.csi_steering == 2`
             - ⭕ CSI / Steering 3 **Compressed Beamforming Feedback Matrix** :: `wlan.htc.vht == 0 && wlan.htc.csi_steering == 3` <br><br>
-            - ⭕ NDP Announcement = No NDP will Follow `wlan.htc.vht == 0 && wlan.htc.ndp_announcement == 0`
-            - ⭕ NDP Announcement = NDP will Follow `wlan.htc.vht == 0 && wlan.htc.ndp_announcement == 1` <br><br>
+            - ⭕ NDP Announcement = **No NDP will Follow** `wlan.htc.vht == 0 && wlan.htc.ndp_announcement == 0`
+            - ⭕ NDP Announcement = **NDP will Follow** `wlan.htc.vht == 0 && wlan.htc.ndp_announcement == 1` <br><br>
             - ⭕ Calibration **Reserved 2** = 5 bit variable :: `wlan.htc.vht == 0 && wlan.htc.reserved2` _(var)_ <br><br>
         - 📡 **VHT** :: VHT Present :: `wlan.htc.vht == 1`
         - 📡 **VHT** :: VHT Present :: `wlan.htc.vht == 1 && wlan.htc.he == 0`<br><br> 
