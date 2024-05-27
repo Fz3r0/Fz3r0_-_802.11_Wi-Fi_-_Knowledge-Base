@@ -2028,6 +2028,22 @@ _4-byte / 32 bits field present in HT, VHT, EHT, even if the name is only HT con
 - [📦 `HT Control`](https://mrncciew.com/2014/10/20/cwap-ht-control-field/) <br><br>
     - `Control Wrapper Frame` :: Only Control Frame with HT Control: `(wlan.fc.type == 1)&&(wlan.fc.subtype == 7)` <br><br>
     - `QoS Data` or `Management Frame` with order bit set to 1 :: Only that includes HT Control: `wlan.fc.order == 1` <br><br>
+    - `HTC` :: HT Control Frame Filter :: `wlan.htc` <br><br>
+        - **HT :: 802.11n** :: VHT Present :: `wlan.htc.vht == 0` <br><br>
+            - HT :: Link Adaptarion Control `wlan.htc.vht == 0 && wlan.htc.lac`
+                - Link Adaptarion Control :: Training Request (TRQ) = `wlan.htc.vht == 0 && wlan.htc.lac.trq == 1`
+                - Link Adaptarion Control :: MCS Request (MRQ) = `wlan.htc.vht == 0 && wlan.htc.lac.mai.mrq == 1`
+                - MCS Request Sequence ID (MSI) `wlan.htc.vht == 0 && wlan.htc.lac.mai.msi` _(var)_
+                - MCS Feedback Sequence ID (MFSI) `wlan.htc.vht == 0 && wlan.htc.lac.mfsi` _(var)_
+                - MCS Feedback (MFB) `wlan.htc.vht == 0 && wlan.htc.lac.mfb` _(var)_ <br><br>
+            - HT :: Calibration Position 0 (**Not a calibration frame**) = `wlan.htc.vht == 0 && wlan.htc.cal.pos == 0`
+            - HT :: Calibration Position 1 (**Calibration Start**) = `wlan.htc.vht == 0 && wlan.htc.cal.pos == 1`
+            - HT :: Calibration Position 2 (**Sounding Response**) = `wlan.htc.vht == 0 && wlan.htc.cal.pos == 2`
+            - HT :: Calibration Position 3 (**Sounding Complete**) = `wlan.htc.vht == 0 && wlan.htc.cal.pos == 3` <br><br>
+            - HT :: Calibration **Sequence ID** = 0 :: `wlan.htc.vht == 0 && wlan.htc.cal.seq == 0`
+            - HT :: Calibration **Sequence ID** = 1 :: `wlan.htc.vht == 0 && wlan.htc.cal.seq == 1`
+            - HT :: Calibration **Sequence ID** = 2 :: `wlan.htc.vht == 0 && wlan.htc.cal.seq == 2`
+            - HT :: Calibration **Sequence ID** = 3 :: `wlan.htc.vht == 0 && wlan.htc.cal.seq == 3` <br><br>
 
 
 
