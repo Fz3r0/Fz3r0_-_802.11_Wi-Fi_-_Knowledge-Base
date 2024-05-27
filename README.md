@@ -1970,10 +1970,12 @@ _QoS Control is a 16-bit (2 bytes) field that identifies the Quality of Service 
             - 13568 bytes (13.568 gigas) Queue Size = `wlan.qos.queue_size == 113` <br><br>
 
 ### 💊📦 HT Control _4 Bytes / 32 Bits_
-_4-byte / 32 bits field present in HT, VHT, EHT, even if the name is only HT control, and depends on the PHY 802.11n/ac/ax the variant it would be present | The 802.11n amendment add a 4 byte HT control field to the 802.11 MAC header. With this HT Control field max MAC header length increased to 36 bytes. | The way it works is that the first bit that was reserved in 802.11n, now is used to determine if it's using VHT when the bit is set to 1, if it's set to 0 it means that the HT control is saying that the frame is 802.11n HT frame_
+_4-byte / 32 bits field present in HT, VHT, EHT, even if the name is only HT control, and depends on the PHY 802.11n/ac/ax the variant it would be present | The 802.11n amendment add a 4 byte HT control field to the 802.11 MAC header. With this HT Control field max MAC header length increased to 36 bytes. | The way it works is that the first bit that was reserved in 802.11n, now is used to determine if it's using VHT when the bit is set to 1, if it's set to 0 it means that the HT control is saying that the frame is 802.11n HT frame || The 802.11n amendment add a 4 byte HT control field to the 802.11 MAC header. With this HT Control field max MAC header length increased to 36 bytes. | HT Control Field is **always present in a Control Wrapper frame** and is present in **QoS Data and management frames as determined by the order bit of the Frame Control Field**. **The only Control Frame subtype for which HT Control field present is the Control Wrapper frame**. A control frame  that is described as + HTC (eg RTS+HTC, BlockAckReq+HTC, PS-Poll+HTC) implies the use of Control Wrapper frame to carry the control frame. Below show the frame format of a Control Wrapper | If it is a **QoS Data frame or management frame, if HT Control Field is present then Order bit of the Frame Control field set to 1** (usually this bit used to indicate strict order processing on 802.11 frames, but with 802.11e QoS this bit is reused for indicate presence of HT control field)._
 
 ````py
 ## HT Control :: 32-bit (4 bytes) field that has two forms: HT & VHT variants. VHT set to 0 indicate HT variant & 1 indicate a VHT variant
+
+   # HT Control field is only present in: Control Frames = Control Wrapper Frames || QoS Data & Management Frames with +HTC/Order bit = 1
 
 ### HT Variant:
 
@@ -2024,11 +2026,8 @@ _4-byte / 32 bits field present in HT, VHT, EHT, even if the name is only HT con
 ````
 
 - [📦 `HT Control`](https://mrncciew.com/2014/10/20/cwap-ht-control-field/) <br><br>
-
-
-
-
-
+    - `Control Wrapper Frame` :: Only Control Frame with HT Control: `(wlan.fc.type == 1)&&(wlan.fc.subtype == 7)` <br><br>
+    - `QoS Data` or `Management Frame` with order bit set to 1 :: Only that includes HT Control: `wlan.fc.order == 1` <br><br>
 
 
 
