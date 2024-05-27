@@ -2017,13 +2017,29 @@ _4-byte / 32 bits field present in HT, VHT, EHT, even if the name is only HT con
                                          1                    29                     1              1        <<== 4 Bytes / 32 Bits
                                                               ||
                                                               \/
-    |---------------|-------------|-------------|----------|----------|--------------|----------|---------|
-    | Link Adaption | Calibration | Calibration | Reserved |   CSI /  |     NDP      | Reserved |   DEI   |
-    |    Control    |   Position  |   Sequence  |          | Steering | Announcement |          |         |
-    |---------------|-------------|-------------|----------|----------|--------------|----------|---------|
-           15              2             2           2          2             1           4         1        <<== 3.2 Bytes / 29 Bits
+    |-----------|-----------|----------|----------|----------|----------|----------|---------|-------------|
+    | Reserved  |    MRQ    |   MSI /  |  MFSI /  |   MFB    |   GID-H  |  Coding  |  FB Tx  | Unspecified |
+    |           |           |   STBC   |  GID-L   |          |          |   Type   |  Type   |    MFB      |
+    |-----------|-----------|----------|----------|----------|----------|----------|---------|-------------|
+          1           1          3          3          15          3          1         1           1        <<== 3.2 Bytes / 29 Bits
 
-                                                                         
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+### HE Variant:                                                                         
+
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------|
+|  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     |
+| Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control | Control |
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------|
+                                                                                       ||
+                                                                                       \/
+                                 |----------|----------|------------------------|--------------|--------------|
+                                 |    VHT   |    HE    |       HT Control       |      AC      |  RDG / More  |
+        HE Variant ==>>          |    (1)   |    (1)   |     Middle Content     |  Constraint  |    PPDU      | 
+                                 |----------|----------|------------------------|--------------|--------------|
+                                         1                       29                     1              1        <<== 4 Bytes / 32 Bits
+                                                                 ||
+                                                                 \/
 
 ````
 
@@ -2059,7 +2075,10 @@ _4-byte / 32 bits field present in HT, VHT, EHT, even if the name is only HT con
             - ⭕ Calibration **Reserved 2** = 5 bit variable :: `wlan.htc.vht == 0 && wlan.htc.reserved2` _(var)_ <br><br>
         - 📡 **VHT** :: VHT Present :: `wlan.htc.vht == 1`
         - 📡 **VHT** :: VHT Present :: `wlan.htc.vht == 1 && wlan.htc.he == 0`<br><br> 
-
+            - ⭕ MRQ :: `wlan.htc.vht == 1 && wlan.htc.mrq == 1` <br><br>
+            - ⭕ Reserved :: `wlan.htc.vht == 1 && wlan.htc.msi_stbc_reserved` _(var)_ <br><br>
+            - ⭕ MSFI :: `wlan.htc.vht == 1 && wlan.htc.mfsi == 1` <br><br>
+            - ⭕ MFB :: `wlan.htc.vht == 1 && wlan.htc.mfb`
             
 
 
