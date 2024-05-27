@@ -1985,8 +1985,8 @@ _4-byte / 32 bits field present in HT, VHT, EHT, even if the name is only HT con
 |  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     |
 | Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control | Control |
 |---------|-----------|---------|---------|---------|----------|---------|---------|---------|
-                                                                             ||
-                                                                             \/
+                                                                                       ||
+                                                                                       \/
                                  |--------------|----------------------------|--------------|--------------|
                                  |      VHT     |         HT Control         |      AC      |  RDG / More  |
         HT Variant ==>>          |      (0)     |       Middle Content       |  Constraint  |    PPDU      | 
@@ -2008,8 +2008,8 @@ _4-byte / 32 bits field present in HT, VHT, EHT, even if the name is only HT con
 |  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     |
 | Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control | Control |
 |---------|-----------|---------|---------|---------|----------|---------|---------|---------|
-                                                                             ||
-                                                                             \/
+                                                                                       ||
+                                                                                       \/
                                  |--------------|----------------------------|--------------|--------------|
                                  |      VHT     |         HT Control         |      AC      |  RDG / More  |
        VHT Variant ==>>          |      (1)     |       Middle Content       |  Constraint  |    PPDU      | 
@@ -2031,32 +2031,32 @@ _4-byte / 32 bits field present in HT, VHT, EHT, even if the name is only HT con
     - 💡 `Control Wrapper Frame` :: Only Control Frame with HT Control: `(wlan.fc.type == 1)&&(wlan.fc.subtype == 7)` <br><br>
     - 💡 `QoS Data` or `Management Frame` with order bit set to 1 :: Only that includes HT Control: `wlan.fc.order == 1` <br><br>
     - 💡 `HTC` :: HT Control Frame Filter :: `wlan.htc` <br><br>
-        - 📡 **HT :: HT Present :: `wlan.htc.vht == 0` <br><br>
-            - ⭕ HT :: Link Adaptarion Control `wlan.htc.vht == 0 && wlan.htc.lac`
+        - 📡 **HT** :: **HT Present** :: `wlan.htc.vht == 0` <br><br>
+            - ⭕ Link Adaptarion Control `wlan.htc.vht == 0 && wlan.htc.lac`
                 - Link Adaptarion Control :: Training Request (TRQ) = `wlan.htc.vht == 0 && wlan.htc.lac.trq == 1`
                 - Link Adaptarion Control :: MCS Request (MRQ) = `wlan.htc.vht == 0 && wlan.htc.lac.mai.mrq == 1`
                 - MCS Request Sequence ID (MSI) `wlan.htc.vht == 0 && wlan.htc.lac.mai.msi` _(var)_
                 - MCS Feedback Sequence ID (MFSI) `wlan.htc.vht == 0 && wlan.htc.lac.mfsi` _(var)_
                 - MCS Feedback (MFB) `wlan.htc.vht == 0 && wlan.htc.lac.mfb` _(var)_ <br><br>
-            - ⭕ HT :: Calibration Position 0 (**Not a calibration frame**) = `wlan.htc.vht == 0 && wlan.htc.cal.pos == 0`
-            - ⭕ HT :: Calibration Position 1 (**Calibration Start**) = `wlan.htc.vht == 0 && wlan.htc.cal.pos == 1`
-            - ⭕ HT :: Calibration Position 2 (**Sounding Response**) = `wlan.htc.vht == 0 && wlan.htc.cal.pos == 2`
-            - ⭕ HT :: Calibration Position 3 (**Sounding Complete**) = `wlan.htc.vht == 0 && wlan.htc.cal.pos == 3` <br><br>
-            - ⭕ HT :: Calibration **Sequence ID** = 0 :: `wlan.htc.vht == 0 && wlan.htc.cal.seq == 0`
-            - ⭕ HT :: Calibration **Sequence ID** = 1 :: `wlan.htc.vht == 0 && wlan.htc.cal.seq == 1`
-            - ⭕ HT :: Calibration **Sequence ID** = 2 :: `wlan.htc.vht == 0 && wlan.htc.cal.seq == 2`
-            - ⭕ HT :: Calibration **Sequence ID** = 3 :: `wlan.htc.vht == 0 && wlan.htc.cal.seq == 3` <br><br>
-            - ⭕ HT :: Calibration **Reserved 1** = 0 :: `wlan.htc.vht == 0 && wlan.htc.reserved1 == 0`
-            - ⭕ HT :: Calibration **Reserved 1** = 1 :: `wlan.htc.vht == 0 && wlan.htc.reserved1 == 1`
-            - ⭕ HT :: Calibration **Reserved 1** = 2 :: `wlan.htc.vht == 0 && wlan.htc.reserved1 == 2`
-            - ⭕ HT :: Calibration **Reserved 1** = 3 :: `wlan.htc.vht == 0 && wlan.htc.reserved1 == 3` <br><br>
-            - ⭕ HT :: CSI / Steering 0 **No Feedback Required** :: `wlan.htc.vht == 0 && wlan.htc.csi_steering == 0`
-            - ⭕ HT :: CSI / Steering 1 **CSI** :: `wlan.htc.vht == 0 && wlan.htc.csi_steering == 1`
-            - ⭕ HT :: CSI / Steering 2 **Non Compressed Beamforming Feedback Matrix** :: `wlan.htc.vht == 0 && wlan.htc.csi_steering == 2`
-            - ⭕ HT :: CSI / Steering 3 **Compressed Beamforming Feedback Matrix** :: `wlan.htc.vht == 0 && wlan.htc.csi_steering == 3` <br><br>
-            - ⭕ HT :: NDP Announcement = No NDP will Follow `wlan.htc.vht == 0 && wlan.htc.ndp_announcement == 0`
-            - ⭕ HT :: NDP Announcement = NDP will Follow `wlan.htc.vht == 0 && wlan.htc.ndp_announcement == 1` <br><br>
-            - ⭕ HT :: Calibration **Reserved 2** = 5 bit variable :: `wlan.htc.vht == 0 && wlan.htc.reserved2` _(var)_
+            - ⭕ Calibration Position 0 (**Not a calibration frame**) = `wlan.htc.vht == 0 && wlan.htc.cal.pos == 0`
+            - ⭕ Calibration Position 1 (**Calibration Start**) = `wlan.htc.vht == 0 && wlan.htc.cal.pos == 1`
+            - ⭕ Calibration Position 2 (**Sounding Response**) = `wlan.htc.vht == 0 && wlan.htc.cal.pos == 2`
+            - ⭕ Calibration Position 3 (**Sounding Complete**) = `wlan.htc.vht == 0 && wlan.htc.cal.pos == 3` <br><br>
+            - ⭕ Calibration **Sequence ID** = 0 :: `wlan.htc.vht == 0 && wlan.htc.cal.seq == 0`
+            - ⭕ Calibration **Sequence ID** = 1 :: `wlan.htc.vht == 0 && wlan.htc.cal.seq == 1`
+            - ⭕ Calibration **Sequence ID** = 2 :: `wlan.htc.vht == 0 && wlan.htc.cal.seq == 2`
+            - ⭕ Calibration **Sequence ID** = 3 :: `wlan.htc.vht == 0 && wlan.htc.cal.seq == 3` <br><br>
+            - ⭕ Calibration **Reserved 1** = 0 :: `wlan.htc.vht == 0 && wlan.htc.reserved1 == 0`
+            - ⭕ Calibration **Reserved 1** = 1 :: `wlan.htc.vht == 0 && wlan.htc.reserved1 == 1`
+            - ⭕ Calibration **Reserved 1** = 2 :: `wlan.htc.vht == 0 && wlan.htc.reserved1 == 2`
+            - ⭕ Calibration **Reserved 1** = 3 :: `wlan.htc.vht == 0 && wlan.htc.reserved1 == 3` <br><br>
+            - ⭕ CSI / Steering 0 **No Feedback Required** :: `wlan.htc.vht == 0 && wlan.htc.csi_steering == 0`
+            - ⭕ CSI / Steering 1 **CSI** :: `wlan.htc.vht == 0 && wlan.htc.csi_steering == 1`
+            - ⭕ CSI / Steering 2 **Non Compressed Beamforming Feedback Matrix** :: `wlan.htc.vht == 0 && wlan.htc.csi_steering == 2`
+            - ⭕ CSI / Steering 3 **Compressed Beamforming Feedback Matrix** :: `wlan.htc.vht == 0 && wlan.htc.csi_steering == 3` <br><br>
+            - ⭕ NDP Announcement = No NDP will Follow `wlan.htc.vht == 0 && wlan.htc.ndp_announcement == 0`
+            - ⭕ NDP Announcement = NDP will Follow `wlan.htc.vht == 0 && wlan.htc.ndp_announcement == 1` <br><br>
+            - ⭕ Calibration **Reserved 2** = 5 bit variable :: `wlan.htc.vht == 0 && wlan.htc.reserved2` _(var)_
         - 📡 **VHT** :: VHT Present :: `wlan.htc.vht == 1`
         - 📡 **VHT** :: VHT Present :: `wlan.htc.vht == 1 && wlan.htc.he == 0`<br><br> 
 
