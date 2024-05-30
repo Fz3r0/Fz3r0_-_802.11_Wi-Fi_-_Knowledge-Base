@@ -2108,14 +2108,18 @@ _The Frame Body is a variable length field that contains information specific to
                                                                                                   - Data /    
                                                                                                  - Payload
 
-- For 802.11n:  The maximum size of the frame body is 7935 bytes (63480 bits, 7935 octets).
-- For 802.11ac: The maximum size of the frame body is 11454 bytes (91632 bits, 11454 octets).
-- For 802.11ax: The frame body can also support sizes up to 11454 bytes (91632 bits, 11454 octets), depending on configuration and frame aggregation.
+- Data Frames        = # Can include upper layer information or payload. (Variable Lenght Payload (depending on 802.11b/a/g/n/ac/ax))
+- Management Frames  = # Does not include upper layer information but includes Frame Body Components Made up of fixed fields and IEs (Information Elements {example: elements of a beacon})
+- Control Frames     = # Most control frames do not contain a frame body. The exceptions to this rule: Block ACK, Block ACK Request and HTC+
+
+   - For 802.11n:  # The maximum size of the frame body is 7935 bytes (63480 bits, 7935 octets).
+   - For 802.11ac: # The maximum size of the frame body is 11454 bytes (91632 bits, 11454 octets).
+   - For 802.11ax: # The frame body can also support sizes up to 11454 bytes (91632 bits, 11454 octets), depending on configuration and frame aggregation.
 
 ````
 
 ### 💊📦 802.11 `FCS` - Frame Check Sequence 32-bit CRC (Cicle Redundancy Check) :: _4 Bytes / 32 Bits_
-_The Frame Check Sequence (FCS) is a 4-byte field in a data frame used to detect transmission errors. The sender calculates the FCS using the CRC-32 algorithm and appends it to the frame. The receiver recalculates the CRC-32 upon receiving the frame and compares it to the received FCS to check for errors. | Wireshark uses the standard CRC-32 algorithm to compute the CRC of the frame data (excluding the FCS) and then compares this computed value to the FCS appended to the frame. If they match, the frame is considered "good"; otherwise, it is "bad". | The FCS field contains a number that is calculated by the source node based on the data in the frame. This number is added to the end of a frame that is sent. When the destination node receives the frame the FCS number is recalculated and compared with the FCS number included in the frame. If the two numbers are different, an error is assumed and the frame is discarded._
+_The Frame Check Sequence (FCS) is a 4-byte field in a data frame used for transmission error detection, this is calculated using the whole MAC Frame (MAC Header + Frame Body). If the calculaton does not match it means the frame have a "CRC Error" and is reported on the protocol analyzer as "corrputed frame". This does not mean an error in the network all of the times, but maybe in the location the frame is captured the modulation is not working, for example, bad signal or distance from the AP | The sender calculates the FCS using the CRC-32 algorithm and appends it to the frame. The receiver recalculates the CRC-32 upon receiving the frame and compares it to the received FCS to check for errors. | Wireshark uses the standard CRC-32 algorithm to compute the CRC of the frame data (excluding the FCS) and then compares this computed value to the FCS appended to the frame. If they match, the frame is considered "good"; otherwise, it is "bad". | The FCS field contains a number that is calculated by the source node based on the data in the frame. This number is added to the end of a frame that is sent. When the destination node receives the frame the FCS number is recalculated and compared with the FCS number included in the frame. If the two numbers are different, an error is assumed and the frame is discarded._
 
 ````py
 
