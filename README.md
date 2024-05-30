@@ -1265,11 +1265,34 @@ _In Wireless 802.11 networks, Layers 1 and 2 are the most crucial, Layers 3 and 
     - [**`Layer 5`** :: **`Session`** :: **PDU** = _**`Data`**_ :: _No Sub-Layers_](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)
     - [**`Layer 4`** :: **`Transport`** :: **PDU** = TCP:**`Segment`** / UDP:**`Datagram`** :: _No Sub-Layers_](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)
     - [**`Layer 3`** :: **`Network`** :: **PDU** = **`Packet`** :: IPv4 & IPv6 ::_No Sub-Layers_](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md) <br><br>
-    - [**`Layer 2`** :: **`Data Link`** :: **PDU** = Data Link **`Frame`** :: Sub-Layer=`Upper` = **`LLC`** > **LPDU**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)
-    - [**`Layer 2`** :: **`Data Link`** :: **PDU** = Data Link **`Frame`** :: Sub-Layer=`Lower` = **`MAC`** > **MPDU**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)
-    - [**`Layer 1`** :: **`Physical`** :: **PDU** = Physical Layer **`Frame`** :: Sub-Layer=`Upper` = **`PLCP`** > **PPDU**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289)
-    - [**`Layer 1`** :: **`Physical`** ** :: **PDU** = Physical Layer **`Frame`** :: Sub-Layer - `Lower` = **`PMD`** > **1/0 @ RF air**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289) <br><br>
-    - [**`Transmission Medium`** :: Radio (Air RF), Optical, Coaxial, Twisted Pair](https://en.wikipedia.org/wiki/Transmission_medium)
+        - [**`Layer 2`** :: **`Data Link`** :: **PDU** = Data Link **`Frame`** :: Sub-Layer=`Upper` = **`LLC`** > **LPDU**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)
+        - [**`Layer 2`** :: **`Data Link`** :: **PDU** = Data Link **`Frame`** :: Sub-Layer=`Lower` = **`MAC`** > **MPDU**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md) <br><br>
+        - [**`Layer 1`** :: **`Physical`** :: **PDU** = Physical Layer **`Frame`** :: Sub-Layer=`Upper` = **`PLCP`** > **PPDU**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289)
+        - [**`Layer 1`** :: **`Physical`** ** :: **PDU** = Physical Layer **`Frame`** :: Sub-Layer - `Lower` = **`PMD`** > **1/0 @ Medium (RF/air)**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289) <br><br>
+
+
+
+````py
+
+---------------------------------------------------------------------
+|   |                    |
+|   |                    |   LLC (Logical Link Control)
+|   |     DATA LINK      | 
+|   |     (Layer 2)      |------------------------
+|   |                    |  
+|   |                    |   MAC  (Medium Access)
+|   |                    |
+|---|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+|   |                    |
+|   |                    |   PLCP Physical Layer Convergence Procedure
+|   |      PHYSICAL      |
+|   |      (Layer 1)     |
+|   |                    |
+|   |                    | 
+|   |                    |
+-----------------------------------------
+
+````
 
 
 
@@ -1282,19 +1305,22 @@ _In Wireless 802.11 networks, Layers 1 and 2 are the most crucial, Layers 3 and 
 
 
 
-
-
-# 🪆🛜⚙️ 802.11 Layer 1: Physical (PHY) :: `Spectrum`
-_The PHY services provided to the MAC. The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs. 
-Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx using management info | B) Characteristics & Method to Tx & Rx data through WM (Wireless Medium). The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs._
+# 🪆🛜⚙️ 802.11 Layer 1: Physical Layer (PHY) :: `Spectrum`
+_The function of the PHY is to provide a mechanism for transferring MPDUs between two or more STAs (It means: The PHY services provided to the MAC.) | Each PHY consists of 2 protocol functions: A) Method to map MPDUs to Tx & Rx using management info | B) Characteristics & Method to Tx & Rx data through WM (Wireless Medium)._
 
 ## 1️⃣↕️🛜 802.11 PHY: `Sub-Layers`
 _The 802.11 series of physical layer specifications includes a variety of options that govern the transmission and reception of frames. There are several 802.11 series PHYs, such as FHSS, DSSS, HR-DSSS, ERPOFDM, DSSS-OFDM, and ERP-PBCC. Each **PHY layer has a particular PLCP, which defines framing**, and **PMD that defines signal modulation**._ <br>
-**Physical Layer 1 `Upper` = `PLCP` = `Framing`** <br>
-**Physical Layer 1 `Lower` = `PMD` = `Modulation`** 
+- **Physical Layer 1 `Upper` = `PLCP` = `Framing`** <br>
+- **Physical Layer 1 `Lower` = `PMD` = `Modulation`**
+
+
+  
 - [802.11 PHY Layers @ CWAP Techtarget](https://media.techtarget.com/searchMobileComputing/downloads/CWAP_ch8.pdf) _`doc`_
 - [802.11 Layer 1 & Layer 2: Sub-Layers - `PLCP`(**upper**) & `PMD`(**lower**)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289) _`diagram`_
 - [MAC sublayer & Physical Layer-Wireless LANs-Computer Communication Networks](https://www.youtube.com/watch?v=Rp23mjuzBQQ) _`video`_
+
+
+
 
 ### ⬆️ `PLCP`: Physical Layer Convergence Procedure :: `Upper Sublayer`=`Framing`
 _Also Known As: Physical Layer Convergence Protocol (depends the 802.11 version). Acts as a bridge between MAC & PMD Sublayer | When Tx = Takes frames from MAC & adds extra information to the bits (PHY Preamble & Header <pre-header|MAC|>) | When Rx = Strip off the PHY Preamble and Header (That's why this data is not seen by protocol analyzers) | This Rx & Tx procedure (adding preamble & header) is called "MAC Framing" | The MAC layer communicates with the Physical Layer Convergence Protocol (PLCP) sublayer via primitives (a set of “instructive commands” or “fundamental instructions”) through a Service Access Point (SAP). PLCP is handled by the NIC or Wi-Fi adapter implementation, not the OS, wether it's done: hardware, firmware / microcode, driver running on host, etc._
