@@ -1272,7 +1272,7 @@ _In Wireless 802.11 networks, Layers 1 and 2 are the most crucial, Layers 3 and 
 
 ---
 
-### Encapsulation Basics: `SDU` & `PDU`
+### 💊🖼️📦 Encapsulation Basics: `SDU` & `PDU`
 
 ````py
 
@@ -1338,7 +1338,7 @@ Layer N - 1      |             PCI                  ||                          
 
 ---
 
-### Layer 1 (Data Link) & Layer 2 (PHY): `Sublayers`
+### 💊🖼️📡 Layer 1 (Data Link) & Layer 2 (PHY): `Sublayers`
 
 ````py
 
@@ -1411,7 +1411,7 @@ PMD
 
 ---
 
-### Layer 1 (Data Link) & Layer 2 (PHY): `Encapsulation`
+### 💊🖼️📦 Layer 1 (Data Link) & Layer 2 (PHY): `Encapsulation`
 
 ````py
 
