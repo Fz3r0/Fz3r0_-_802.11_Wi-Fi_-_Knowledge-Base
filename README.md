@@ -1342,10 +1342,24 @@ Layer N - 1      |             PCI                  ||                          
 
 ````py
 
+## IMPORTANT NOTE:
+
+- # In the context of the Data Link and Physical layers of the OSI model, the terms LSDU (Link Service Data Unit) and LPDU (Link Protocol Data Unit) are not standard terms that are widely recognized or used. The more commonly accepted and used terminology includes MSDU (MAC Service Data Unit), MPDU (MAC Protocol Data Unit), PSDU (Physical Service Data Unit), and PPDU (Physical Protocol Data Unit).
+
+- # The next example contains LSDU and LPDU for learning pruposes, but some authors or documents might omit terms like LSDU and LPDU because they are not widely standardized and used in official documentation and common practice in networking and telecommunications.
+
+    - LSDU (LLC Service Data Unit)         # (unofficial term) :: LLC sublayer would have LSDU coming from the upper layer and encapsulate into a LPDU to hand off to the MAC sublayer
+    - LPDU (LLC Protocol Data Unit)        # (unofficial term) :: LLC sublayer would have LSDU coming from the upper layer and encapsulate into a LPDU to hand off to the MAC sublayer
+
+    - MSDU (MAC Service Data Unit):        # This is the data unit that the MAC sublayer receives from the LLC sublayer.
+    - MPDU (MAC Protocol Data Unit):       # This is the data unit that the MAC sublayer transmits to the Physical layer.
+    - PSDU (Physical Service Data Unit):   # This is the data unit that the PLCP sublayer receives from the MAC sublayer.
+    - PPDU (Physical Protocol Data Unit):  # This is the data unit that the PLCP sublayer transmits through the PMD sublayer.
+
 |-----------------------------------------------------------------------------|----------------------|-------------------------------------------------------------------------------------|
 |   |                   |                                                     |                      |                                                                                     |      
 |   |                   |   LLC =  (Logical Link Control)                     |   SDU = LSDU (data)  |  # Layers 3-7 (upper layers) data are the LSDU which is encapsulated in the a LPDU  |                   
-|   |    DATA LINK      |                                                     |   PDU = LPDU         |    ## LPDU is send to the MAC Sub-Layer which is the same as the MSDU               |
+|   |    DATA LINK      |                                                     |   PDU = LPDU (MSDU)  |    ## LPDU is send to the MAC Sub-Layer which is the same as the MSDU               |
 |   |    (Layer 2)      |-----------------------------------------------------|----------------------|-------------------------------------------------------------------------------------|
 |   |                   |                                                     |                      |                                                                                     |
 |   |                   |   MAC =  (Medium Access Control)                    |   SDU = MSDU (LPDU)  |  # MSDU is encapsulated in a MPDU                                                   |
@@ -4780,18 +4794,27 @@ _Aircrack-ng is basically a suite of tools that has been crafted to achieve obje
 
 ## Wireless Certifications
 
-### CWNA: 
-
-### CWAP:
-- [CWAP: Introducción](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Certifications/CWAP/1-Introduccion_CWAP.md)
-- [CWAP: Engineer Profile](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Certifications/CWAP/2-CWAP_Engineer_Profile.md)
-- [CWAP: Conocimiento Requerido para CWAP-402](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Certifications/CWAP/2-CWAP_Engineer_Profile.md)
-- [La analogía del CWAP y una expedición al K2](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Certifications/CWAP/4-Analogia_CWAP_%26_K2.md) _`¡Avanzar a morir!`_
-- [CWAP flashcard materials](https://www.mcwireless.co.uk/post/cwap-403-chapter-2-protocol-analysis)
+## CWNA: 
 
 
 ## Specific Protocol Analysis
 - [mDNS & Wi-Fi :: mDNS journey with wireshark](https://artofrf.com/2024/01/16/mdns-awdl-journey/)
+
+## CWAP
+
+### CWAP Introduction
+
+- [CWAP: Introducción](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Certifications/CWAP/1-Introduccion_CWAP.md)
+- [CWAP: Engineer Profile](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Certifications/CWAP/2-CWAP_Engineer_Profile.md)
+- [CWAP: Conocimiento Requerido para CWAP-402](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Certifications/CWAP/2-CWAP_Engineer_Profile.md)
+- [La analogía del CWAP y una expedición al K2](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Certifications/CWAP/4-Analogia_CWAP_%26_K2.md) _`¡Avanzar a morir!`_
+
+### CWAP Cheatsheets, Guides & Resources
+
+MC Wireless:
+- [CWAP super cheatsheet - Chapter 1: The protocol](https://www.mcwireless.co.uk/post/cwap-403-chapter-1-the-protocol)
+- [CWAP super cheatsheet - Chapter 2: Protocol Analysis](https://www.mcwireless.co.uk/post/cwap-403-chapter-2-protocol-analysis)
+- [CWAP super cheatsheet - Chapter 3: Physical Layer](https://www.mcwireless.co.uk/post/cwap-chapter-03-physical-layer)
 
 
 
