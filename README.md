@@ -1270,8 +1270,47 @@ _In Wireless 802.11 networks, Layers 1 and 2 are the most crucial, Layers 3 and 
         - [**`Layer 1`** :: **`Physical`** :: **PDU** = **`PHY Frame`** :: Sub-Layer=`Upper` = **`PLCP`** > **PSDU (_MPDU_)**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289)
         - [**`Layer 1`** :: **`Physical`** ** :: **PDU** = **`PHY Frame`** :: Sub-Layer - `Lower` = **`PMD`** > **PPDU** **1/0 @ Medium (RF/air)**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289) <br><br>
 
-### SDU & PDU concepts
+### Encapsulation Basics: `SDU` & `PDU`
 
+````py
+
+SDU (Service Data Unit)
+
+- # Piece of information passed by a layer above of the current layer for transmission 
+
+
+PDU (Protocol Data Unit)
+
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+                                                                                          <--------- payload -------->
+                                                                                         |----------------------------|
+Layer N + 1                                                                              |            PDU             | 
+                                                                                         |    (Protocol Data Unit)    |
+                                                                                         |----------------------------|
+                                                                                         \____________________________/
+                                                                                         <------ Layer N + 1 PDU -----> 
+
+                                                                               Layer N+1 PDU becomes a Layer N SDU  ⬇️
+              
+                                                      <------------ header ------------>  <--------- payload -------->                             
+                                                     |----------------------------------||----------------------------|
+Layer N                                              |             PCI                  ||            SDU             |    
+                                                     |  (Protocol Control Information)  ||    (Service Data Unit)     |
+                                                     |----------------------------------||----------------------------|
+                                                     \________________________________________________________________/
+                                                     <--------------------------- Layer N PDU ------------------------>
+
+                                        Layer N1 adds PCI (header/more info) to the SDU and becomes a Layer N-1 SDU  ⬇️
+
+                  <------------ header ------------>  <----------------------------- payload ------------------------>
+                 |----------------------------------||----------------------------------||----------------------------|
+Layer N - 1      |             PCI                  ||                                  SDU                           | 
+                 |  (Protocol Control Information)  ||                           (Service Data Unit)                  |             
+                 |----------------------------------||----------------------------------||----------------------------|
+                 \____________________________________________________________________________________________________/
+                 <------------------------------------------- Layer N - 1 PDU ---------------------------------------->
+
+````
 
 
 ### Layer 1 (Data Link) & Layer 2 (PHY): `Sublayers`
