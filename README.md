@@ -1353,25 +1353,26 @@ Layer N - 1      |             PCI                  ||                          
 
     - MSDU (MAC Service Data Unit):        # This is the data unit that the MAC sublayer receives from the LLC sublayer.
     - MPDU (MAC Protocol Data Unit):       # This is the data unit that the MAC sublayer transmits to the Physical layer.
+
     - PSDU (Physical Service Data Unit):   # This is the data unit that the PLCP sublayer receives from the MAC sublayer.
     - PPDU (Physical Protocol Data Unit):  # This is the data unit that the PLCP sublayer transmits through the PMD sublayer.
 
 |-----------------------------------------------------------------------------|----------------------|-------------------------------------------------------------------------------------|
 |   |                   |                                                     |                      |                                                                                     |      
 |   |                   |   LLC =  (Logical Link Control)                     |   SDU = LSDU (data)  |  # Layers 3-7 (upper layers) data are the LSDU which is encapsulated in the a LPDU  |                   
-|   |    DATA LINK      |                                                     |   PDU = LPDU (MSDU)  |    ## LPDU is send to the MAC Sub-Layer which is the same as the MSDU               |
+|   |    DATA LINK      |                                                     |   PDU = LPDU (MSDU)  |     ## LPDU is send to the MAC Sub-Layer which is the same as the MSDU              |
 |   |    (Layer 2)      |-----------------------------------------------------|----------------------|-------------------------------------------------------------------------------------|
 |   |                   |                                                     |                      |                                                                                     |
 |   |                   |   MAC =  (Medium Access Control)                    |   SDU = MSDU (LPDU)  |  # MSDU is encapsulated in a MPDU                                                   |
-|   |                   |                                                     |   PDU = MPDU         |    ## // MAC Header & Trailer are added (or removed) to create the MPDU             |
+|   |                   |                                                     |   PDU = MPDU         |     ## // MAC Header & Trailer are added (or removed) to create the MPDU            |
 |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-|
 |   |                   |                                                     |                      |                                                                                     |
 |   |                   |   PLCP = (Physical Layer Convergence Procedure) /   |   SDU = PSDU (MPDU)  |  # PSDU (the same as the MPDU from upper layer) is encapsulated in a PPDU           |
-|   |     PHYSICAL      |          (Physical Layer Convergence Protocol)      |   PDU = PPDU         |    ## // PHY Header & Preamble are added (or removed) to create the PPDU            |
+|   |     PHYSICAL      |          (Physical Layer Convergence Protocol)      |   PDU = PPDU         |     ## // PHY Header & Preamble are added (or removed) to create the PPDU           |
 |   |     (Layer 1)     |-----------------------------------------------------|----------------------|-------------------------------------------------------------------------------------|
 |   |                   |                                                     |                      |                                                                                     |
 |   |                   |   PMD =  (Physical Medium Dependent)                |   1010110110 (PPDU)  |  # Data is transmited as bits into the wireless medium (RF through the air)         |
-|   |                   |                                                     |                      |    ## // This means, the PPDU information is encapsulated in 1's and 0's            |
+|   |                   |                                                     |                      |     ## // This means, the PPDU information is encapsulated in 1's and 0's           |
 |-----------------------------------------------------------------------------|----------------------|-------------------------------------------------------------------------------------|
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
