@@ -1281,7 +1281,8 @@ SDU (Service Data Unit)
 
 PDU (Protocol Data Unit)
 
-|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
                                                                                           <--------- payload -------->
                                                                                          |----------------------------|
 Layer N + 1                                                                              |            PDU             | 
@@ -1318,20 +1319,20 @@ Layer N - 1      |             PCI                  ||                          
 ````py
 
 |-----------------------------------------------------------------------------|----------------------|------------------------------------------------------------------------------|
-|   |                   |                                                     |   SDU = upper data   |                                                                              |      
-|   |                   |   LLC =  (Logical Link Control)                     |   PDU = LPDU         |  # Layers 3-7 (upper layers) data are encapsulated in a MSDU                 |                   
-|   |    DATA LINK      |                                                     |     ⬇️        ⬆️    |                                                                              |
+|   |                   |                                                     |                      |                                                                              |      
+|   |                   |   LLC =  (Logical Link Control)                     |   SDU = upper data   |  # Layers 3-7 (upper layers) data are encapsulated into a MSDU               |                   
+|   |    DATA LINK      |                                                     |   PDU = LPDU         |    ## MSDU is send to the MAC Sub-Layer                                      |
 |   |    (Layer 2)      |-----------------------------------------------------|----------------------|------------------------------------------------------------------------------|
-|   |                   |                                                     |   SDU = MSDU (LPDU)  |                                                                              |
-|   |                   |   MAC =  (Medium Access Control)                    |   PDU = MPDU         |  # MSDU is encapsulated in a MPDU                                            |
-|   |                   |                                                     |     ⬇️        ⬆️    |    ## // MAC Header & Trailer are added or removed                           |
+|   |                   |                                                     |                      |                                                                              |
+|   |                   |   MAC =  (Medium Access Control)                    |   SDU = MSDU (LPDU)  |  # MSDU is encapsulated in a MPDU                                            |
+|   |                   |                                                     |   PDU = MPDU         |    ## // MAC Header & Trailer are added or removed                           |
 |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
-|   |                   |                                                     |   SDU = PSDU (MPDU)  |                                                                              |
-|   |                   |   PLCP = (Physical Layer Convergence Procedure) /   |   PDU = PPDU         |  # PSDU (the same as the MPDU from upper layer) is encapsulated in a PPDU    |
-|   |     PHYSICAL      |          (Physical Layer Convergence Protocol)      |     ⬇️        ⬆️    |    ## // PHY Header & Preamble are added or removed                          |
+|   |                   |                                                     |                      |                                                                              |
+|   |                   |   PLCP = (Physical Layer Convergence Procedure) /   |   SDU = PSDU (MPDU)  |  # PSDU (the same as the MPDU from upper layer) is encapsulated in a PPDU    |
+|   |     PHYSICAL      |          (Physical Layer Convergence Protocol)      |   PDU = PPDU         |    ## // PHY Header & Preamble are added or removed                          |
 |   |     (Layer 1)     |-----------------------------------------------------|----------------------|------------------------------------------------------------------------------|
-|   |                   |                                                     |     ⬇️        ⬆️    |                                                                              |
-|   |                   |   PMD =  (Physical Medium Dependent)                |  10101100110 (PPDU)  |  # Data is transmited as bits into the wireless medium (RF through the air)  |
+|   |                   |                                                     |                      |                                                                              |
+|   |                   |   PMD =  (Physical Medium Dependent)                |   1010110110 (PPDU)  |  # Data is transmited as bits into the wireless medium (RF through the air)  |
 |   |                   |                                                     |                      |                                                                              |
 |-----------------------------------------------------------------------------|----------------------|------------------------------------------------------------------------------|
 
@@ -1376,38 +1377,38 @@ PMD
 
 Upper Layers (example, an IP datagram / data payload):
 
-|----------------|
-|  IP Datagram   |
-|----------------|
+                                                              |----------------|
+                                                              |  IP Datagram   |
+                                                              |----------------|
 
-# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 LLC (Logical Link Control):
 
     MSDU = # IP Datagram + LLC Header (prepended)
-                    
-|--------------||----------------|
-|  LLC Header  ||  IP Datagram   |
-|--------------||----------------|
-\________________________________/
-<------------ LPDU --------------> to: MAC  {LPDU => MSDU}
+                                                              
+                                              |--------------||----------------|
+                                              |  LLC Header  ||  IP Datagram   |
+                                              |--------------||----------------|
+                                              \________________________________/
+                                              <------------ LPDU --------------> to: MAC  {LPDU => MSDU}
 
-# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 MAC (Medium Access Control):
 
     PSDU = # MSDU + MAC Header (prepended) + FCS (appended)
-
-|--------------||--------------||----------------||-------|
-|  MAC Header  ||             MSDU               ||  FCS  |
-|--------------||--------------||----------------||-------|
-\_________________________________________________________/ 
-<----------------------- MPDU (PSDU) ---------------------> to: PLCP  {MPDU => PSDU}
-
-# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
-PLCP = (Physical Layer Convergence Procedure) / (Physical Layer Convergence Protocol):
-
+                                              
+                             |--------------||--------------||----------------||-------|
+                             |  MAC Header  ||             MSDU               ||  FCS  |
+                             |--------------||--------------||----------------||-------|
+                             \_________________________________________________________/                            
+                             <----------------------- MPDU (PSDU) ---------------------> to: PLCP  {MPDU => PSDU}   
+                                                                                        
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+                                                                                       
+PLCP = (Physical Layer Convergence Procedure) / (Physical Layer Convergence Protocol): 
+                                                                                       
     PPDU = # PSDU/MPDU + Preamble & PLCP Header (prepended)
 
 |--------------------------||--------------||--------------||----------------||-------|
@@ -1416,7 +1417,7 @@ PLCP = (Physical Layer Convergence Procedure) / (Physical Layer Convergence Prot
 \________________________________________________________________________________/
 <--------------------------------------- PPDU -----------------------------------> to: PMD  {PPDU => 01100101001}
 
-# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 PMD = (Physical Medium Dependent):
 
