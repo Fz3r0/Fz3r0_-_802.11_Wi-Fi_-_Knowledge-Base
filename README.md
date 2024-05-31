@@ -1270,6 +1270,8 @@ _In Wireless 802.11 networks, Layers 1 and 2 are the most crucial, Layers 3 and 
         - [**`Layer 1`** :: **`Physical`** :: **PDU** = **`PHY Frame`** :: Sub-Layer=`Upper` = **`PLCP`** > **PSDU (_MPDU_)**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289)
         - [**`Layer 1`** :: **`Physical`** ** :: **PDU** = **`PHY Frame`** :: Sub-Layer - `Lower` = **`PMD`** > **PPDU** **1/0 @ Medium (RF/air)**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289) <br><br>
 
+---
+
 ### Encapsulation Basics: `SDU` & `PDU`
 
 ````py
@@ -1289,13 +1291,16 @@ PDU (Protocol Data Unit)
 
 ## Example:
 
-          |----------------------------------||----------------------------|
-Layer N   |             PCI                  ||            SDU             |    
-          |  (Protocol Control Information)  ||    (Service Data Unit)     |
-          |   Protocol Header + Information  ||    Upper Layer Payload
-          |----------------------------------||----------------------------|
-          \________________________________________________________________/
-           <--------------------------- Layer N PDU ------------------------>
+
+          |---------------------------------------------------------------------|
+          |                                      |----------------------------| |
+          |             PCI                      |            SDU             | |    
+Layer N   |  (Protocol Control Information)   +  |    (Service Data Unit)     | |   <<== SDU - # Encapsulated in the PDU
+          |   Protocol Header + Information      |    Upper Layer Payload     | |
+          |                                      |----------------------------| |
+          |---------------------------------------------------------------------|
+          \____________________________________________________________________/
+           <----------------------------- Layer N PDU ------------------------>     <<== PDU - # The whole packet information
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
@@ -1331,28 +1336,29 @@ Layer N - 1      |             PCI                  ||                          
 
 ````
 
+---
 
 ### Layer 1 (Data Link) & Layer 2 (PHY): `Sublayers`
 
 ````py
 
-|-----------------------------------------------------------------------------|----------------------|------------------------------------------------------------------------------|
-|   |                   |                                                     |                      |                                                                              |      
-|   |                   |   LLC =  (Logical Link Control)                     |   SDU = upper data   |  # Layers 3-7 (upper layers) data are encapsulated into a MSDU               |                   
-|   |    DATA LINK      |                                                     |   PDU = LPDU         |    ## MSDU is send to the MAC Sub-Layer                                      |
-|   |    (Layer 2)      |-----------------------------------------------------|----------------------|------------------------------------------------------------------------------|
-|   |                   |                                                     |                      |                                                                              |
-|   |                   |   MAC =  (Medium Access Control)                    |   SDU = MSDU (LPDU)  |  # MSDU is encapsulated in a MPDU                                            |
-|   |                   |                                                     |   PDU = MPDU         |    ## // MAC Header & Trailer are added or removed                           |
-|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
-|   |                   |                                                     |                      |                                                                              |
-|   |                   |   PLCP = (Physical Layer Convergence Procedure) /   |   SDU = PSDU (MPDU)  |  # PSDU (the same as the MPDU from upper layer) is encapsulated in a PPDU    |
-|   |     PHYSICAL      |          (Physical Layer Convergence Protocol)      |   PDU = PPDU         |    ## // PHY Header & Preamble are added or removed                          |
-|   |     (Layer 1)     |-----------------------------------------------------|----------------------|------------------------------------------------------------------------------|
-|   |                   |                                                     |                      |                                                                              |
-|   |                   |   PMD =  (Physical Medium Dependent)                |   1010110110 (PPDU)  |  # Data is transmited as bits into the wireless medium (RF through the air)  |
-|   |                   |                                                     |                      |                                                                              |
-|-----------------------------------------------------------------------------|----------------------|------------------------------------------------------------------------------|
+|-----------------------------------------------------------------------------|----------------------|-------------------------------------------------------------------------------------|
+|   |                   |                                                     |                      |                                                                                     |      
+|   |                   |   LLC =  (Logical Link Control)                     |   SDU = LSDU (data)  |  # Layers 3-7 (upper layers) data are the LSDU which is encapsulated in the a LPDU  |                   
+|   |    DATA LINK      |                                                     |   PDU = LPDU         |    ## LPDU is send to the MAC Sub-Layer which is the same as the MSDU               |
+|   |    (Layer 2)      |-----------------------------------------------------|----------------------|-------------------------------------------------------------------------------------|
+|   |                   |                                                     |                      |                                                                                     |
+|   |                   |   MAC =  (Medium Access Control)                    |   SDU = MSDU (LPDU)  |  # MSDU is encapsulated in a MPDU                                                   |
+|   |                   |                                                     |   PDU = MPDU         |    ## // MAC Header & Trailer are added (or removed) to create the MPDU             |
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-|
+|   |                   |                                                     |                      |                                                                                     |
+|   |                   |   PLCP = (Physical Layer Convergence Procedure) /   |   SDU = PSDU (MPDU)  |  # PSDU (the same as the MPDU from upper layer) is encapsulated in a PPDU           |
+|   |     PHYSICAL      |          (Physical Layer Convergence Protocol)      |   PDU = PPDU         |    ## // PHY Header & Preamble are added (or removed) to create the PPDU            |
+|   |     (Layer 1)     |-----------------------------------------------------|----------------------|-------------------------------------------------------------------------------------|
+|   |                   |                                                     |                      |                                                                                     |
+|   |                   |   PMD =  (Physical Medium Dependent)                |   1010110110 (PPDU)  |  # Data is transmited as bits into the wireless medium (RF through the air)         |
+|   |                   |                                                     |                      |    ## // This means, the PPDU information is encapsulated in 1's and 0's            |
+|-----------------------------------------------------------------------------|----------------------|-------------------------------------------------------------------------------------|
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
@@ -1388,6 +1394,8 @@ PMD
 - # Converts the 1 and 0 provided by the PLCP into an RF signal
  
 ````
+
+---
 
 ### Layer 1 (Data Link) & Layer 2 (PHY): `Encapsulation`
 
