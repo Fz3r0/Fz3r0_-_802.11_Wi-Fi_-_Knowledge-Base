@@ -1265,8 +1265,8 @@ _In Wireless 802.11 networks, Layers 1 and 2 are the most crucial, Layers 3 and 
     - [**`Layer 5`** :: **`Session`** :: **PDU** = _**`Data`**_ :: _No Sub-Layers_](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)
     - [**`Layer 4`** :: **`Transport`** :: **PDU** = TCP:**`Segment`** / UDP:**`Datagram`** :: _No Sub-Layers_](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)
     - [**`Layer 3`** :: **`Network`** :: **PDU** = **`Packet`** :: IPv4 & IPv6 ::_No Sub-Layers_](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md) <br><br>
-        - [**`Layer 2`** :: **`Data Link`** :: **PDU** = **`Data Link Frame`** :: Sub-Layer=`Upper` = **`LLC`** > **LPDU**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)
-        - [**`Layer 2`** :: **`Data Link`** :: **PDU** = **`Data Link Frame`** :: Sub-Layer=`Lower` = **`MAC`** > **MSDU**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md) <br><br>
+        - [**`Layer 2`** :: **`Data Link`** :: **PDU** = **`Data Link Frame`** :: Sub-Layer=`Upper` = **`LLC`** > **MSDU**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md)
+        - [**`Layer 2`** :: **`Data Link`** :: **PDU** = **`Data Link Frame`** :: Sub-Layer=`Lower` = **`MAC`** > **MPDU**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Networking-Models_OSI-%26-TCP-IP/Fz3r0-Extended-OSI-Model-for-802.11-Deep-Analysis.md) <br><br>
         - [**`Layer 1`** :: **`Physical`** :: **PDU** = **`PHY Frame`** :: Sub-Layer=`Upper` = **`PLCP`** > **PSDU (_MPDU_)**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289)
         - [**`Layer 1`** :: **`Physical`** ** :: **PDU** = **`PHY Frame`** :: Sub-Layer - `Lower` = **`PMD`** > **PPDU** **1/0 @ Medium (RF/air)**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289) <br><br>
 
@@ -1274,27 +1274,39 @@ _In Wireless 802.11 networks, Layers 1 and 2 are the most crucial, Layers 3 and 
 
 ````py
 
-|-----------------------------------------------------------------------------|---------|
-|   |                   |                                                     |         |
-|   |                   |   LLC =  (Logical Link Control)                     |  LPDU   |
-|   |    DATA LINK      |                                                     |         |
-|   |    (Layer 2)      |-----------------------------------------------------|---------|
-|   |                   |                                                     |         |
-|   |                   |   MAC =  (Medium Access Control)                    |  MSDU   |
-|   |                   |                                                     |         |
-|---|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|---------|
-|   |                   |                                                     |         |
-|   |                   |   PLCP = (Physical Layer Convergence Procedure) /   |  PSDU   |
-|   |     PHYSICAL      |          (Physical Layer Convergence Protocol)      |  (MPDU) | 
-|   |     (Layer 1)     |-----------------------------------------------------|---------|
-|   |                   |                                                     |         |
-|   |                   |   PMD =  (Physical Medium Dependent)                |  PPDU   | 
-|   |                   |                                                     |         |
-|-----------------------------------------------------------------------------|---------|
+|-----------------------------------------------------------------------------|------------------------|------------------------------------------------------------------------------|
+|   |                   |                                                     |     ⬇️        ⬆️      |                                                                              |      
+|   |                   |   LLC =  (Logical Link Control)                     |   MSDU {upper data}    |  # Layers 3-7 (upper layers) data are encapsulated in a MSDU                 |                   
+|   |    DATA LINK      |                                                     |     ⬇️        ⬆️      |                                                                              |
+|   |    (Layer 2)      |-----------------------------------------------------|------------------------|------------------------------------------------------------------------------|
+|   |                   |                                                     |     ⬇️        ⬆️      |                                                                              |
+|   |                   |   MAC =  (Medium Access Control)                    |        MPDU {MSDU}     |  # MSDU is encapsulated in a MPDU                                            |
+|   |                   |                                                     |     ⬇️        ⬆️      |    ## // MAC Header & Trailer are added or removed                           |
+|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|
+|   |                   |                                                     |     ⬇️        ⬆️      |                                                                              |
+|   |                   |   PLCP = (Physical Layer Convergence Procedure) /   |  PPDU  {PSDU =(MPDU)}  |  # PSDU (the same as the MPDU from upper layer) is encapsulated in a PPDU    |
+|   |     PHYSICAL      |          (Physical Layer Convergence Protocol)      |     ⬇️        ⬆️      |    ## // PHY Header & Preamble are added or removed                          |
+|   |     (Layer 1)     |-----------------------------------------------------|------------------------|------------------------------------------------------------------------------|
+|   |                   |                                                     |     ⬇️        ⬆️      |                                                                              |
+|   |                   |   PMD =  (Physical Medium Dependent)                |  10101100110110010011  |  # Data is transmited as bits into the wireless medium (RF through the air)  |
+|   |                   |                                                     |                        |                                                                              |
+|-----------------------------------------------------------------------------|------------------------|------------------------------------------------------------------------------|
 
-# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+## Layer 2 Notes
+
+- LLC Sub-Layer (upper) :: # The layer 2 receive all the data from the upper layers (3 to 7) into the LLC sub-layer and encapsulate it in a MSDU. 
+
+- MAC Sub-Layer (lower) :: # When the flow continues to the other Layer 2 sub-layer which is the MAC, the MPDU is created encapsulating the MSDU from the LLC and adding a MAC Header. 
 
 ## Layer 1 Notes: 
+
+
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+## PLCP & PMD
 
 PLCP
 
