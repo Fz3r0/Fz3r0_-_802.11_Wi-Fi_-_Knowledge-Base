@@ -1270,6 +1270,10 @@ _In Wireless 802.11 networks, Layers 1 and 2 are the most crucial, Layers 3 and 
         - [**`Layer 1`** :: **`Physical`** :: **PDU** = **`PHY Frame`** :: Sub-Layer=`Upper` = **`PLCP`** > **PSDU (_MPDU_)**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289)
         - [**`Layer 1`** :: **`Physical`** ** :: **PDU** = **`PHY Frame`** :: Sub-Layer - `Lower` = **`PMD`** > **PPDU** **1/0 @ Medium (RF/air)**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289) <br><br>
 
+### SDU & PDU concepts
+
+
+
 ### Layer 1 (Data Link) & Layer 2 (PHY): `Sublayers`
 
 ````py
@@ -1300,9 +1304,11 @@ _In Wireless 802.11 networks, Layers 1 and 2 are the most crucial, Layers 3 and 
 
 - MAC Sub-Layer (lower) :: # When the flow continues to the other Layer 2 sub-layer which is the MAC, the MPDU is created encapsulating the MSDU from the LLC and adding a MAC Header. 
 
-## Layer 1 Notes: 
+## Layer 1 Notes:
 
+- PLCP Sub-Layer (upper) :: # The PSDU do not add any information to the MPDU, but when the PSDU (in the Layer 1) move down to the PLCP Sub-Layer then have to add the PLCP Header & the PLCP Preamble and the result is the PPDU.
 
+- PMD Sub-Layer (lower)  :: # The PPDU data is transmitted as 1's and 0's through the PMD sublayer. Physically through the wireless medium (RF / air).  
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
