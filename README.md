@@ -1276,12 +1276,30 @@ _In Wireless 802.11 networks, Layers 1 and 2 are the most crucial, Layers 3 and 
 
 SDU (Service Data Unit)
 
-- # Piece of information passed by a layer above of the current layer for transmission 
-
+- # Piece of information passed by a layer above of the current layer for transmission using the Service of that layer.
+- # The amount of information whose identity is preserved when transferred to above Sub-Layer.
 
 PDU (Protocol Data Unit)
 
+- # Information delivered as a whole unit among prior entities of networks containing Control Information, Address Information or Data.
+- # In Layers Systems, the PDU represents the unit of Data specified in the protocol of the given layer which consists of Protocol Control Information and User Data (it means: Protocol Header / Info + SDU)
+- # A unit of data specified in a protocol and consisting of: Protocol Control Information + Data (it means: Protocol Header / Info + SDU)
+
+  ** EACH LAYER HAS ITS OWN "SDU" & "PDU" # (SDU is "inside" the current layer PDU)
+
+## Example:
+
+          |----------------------------------||----------------------------|
+Layer N   |             PCI                  ||            SDU             |    
+          |  (Protocol Control Information)  ||    (Service Data Unit)     |
+          |   Protocol Header + Information  ||    Upper Layer Payload
+          |----------------------------------||----------------------------|
+          \________________________________________________________________/
+           <--------------------------- Layer N PDU ------------------------>
+
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+## SDU's encapsulated into PDU's:
 
                                                                                           <--------- payload -------->
                                                                                          |----------------------------|
