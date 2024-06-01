@@ -1544,6 +1544,53 @@ _Instructions & Data directly understandable by STAs, not present on 802.11 Fram
 - [802.11b HR-DSSS PHY-SAP Primitives](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/b8fe1268-24f5-4802-b5d0-5ed0c63f04d4)
 - [802.11a OFDM PHY-SAP Primitives](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/ce89b303-ad56-45d2-a944-1d71c81ff0f2)
 
+## ⭕ LLC Elements in 802.11 MAC Frame
+_The LLC (Logical Link Control) layer is essential in network communication as it provides services for identifying and managing network layer protocols. In WiFi 802.11 frame captures, these fields help interpret and analyze the traffic accurately._
+
+**In Wi-Fi 802.11 captures, these fields are crucial for detailed packet analysis:**
+
+- **`DSAP (Destination Service Access Point)`**: This field is used to identify the destination protocol or service to which the frame is intended. It plays a vital role in ensuring proper routing of LLC frames to the correct protocol stack on the destination device. <br> <br>
+- **`SSAP (Source Service Access Point)`**: Similar to DSAP, the SSAP field identifies the protocol or service at the source, aiding the receiving device in understanding the origin and context of the frame. <br> <br>
+- **`Control Field`**: This field contains various control information essential for managing LLC frames. It includes details such as frame type, sequence numbers, and control frame commands, enabling efficient frame exchange and management within the network. <br> <br>
+- **`OUI (Organizationally Unique Identifier)`**: The OUI field identifies the organization responsible for the protocol encapsulated within the LLC frame. It is particularly useful for vendor-specific analysis, allowing for identification of proprietary protocols or devices. <br> <br>
+- **`Type`**: The Type field indicates the type of encapsulated network layer protocol within the LLC frame. It is critical for identifying protocols such as IPv4, IPv6, ARP, etc., enabling proper interpretation and processing of the encapsulated data. <br> <br>
+- **`Protocol ID`**: This field is essential for identifying the specific protocol in use within the LLC frame. It provides further granularity in protocol identification and helps in accurately parsing and interpreting the frame payload.
+
+| **Field Name**                                        | **Filter**             | **Type**                  | **Description**                                                                                                                                       |
+|-------------------------------------------------------|------------------------|---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **DSAP (Destination Service Access Point)**               | `llc.dsap`             | Unsigned integer (8 bits) | Identifies the protocol or service endpoint at the destination. It helps route LLC frames to the correct protocol stack on the destination device, ensuring proper handling of the data. |
+| **Service Access Point**                                  | `llc.dsap.sap`         | Unsigned integer (8 bits) | Specifies the exact protocol or service at the destination, such as TCP/IP, allowing the device to direct the frame to the appropriate processing function. |
+| **IG Bit (Individual/Group)**                             | `llc.dsap.ig`          | Boolean                   | Specifies if the frame is intended for an individual device or a group. This distinction is crucial for multicast or broadcast communications, where the frame is intended for multiple recipients. |
+| **SSAP (Source Service Access Point)**                    | `llc.ssap`             | Unsigned integer (8 bits) | Identifies the protocol or service at the source. This information is essential for the receiving device to understand the origin of the frame and its context. |
+| **Service Access Point**                                  | `llc.ssap.sap`         | Unsigned integer (8 bits) | Specifies the protocol or service at the source, facilitating the identification of the protocol that generated the frame, which is critical for accurate traffic analysis. |
+| **CR Bit (Command/Response)**                             | `llc.ssap.cr`          | Boolean                   | Indicates whether the frame is a command or a response. This distinction is important for managing bidirectional communications and ensuring proper sequence of operations. |
+| **Control Field**                                         | `llc.control`          | Unsigned integer (16 bits)| Contains control information for managing LLC frames, such as frame type and sequence numbers. This field is pivotal in maintaining the order and reliability of data transmission. |
+| **Unnumbered Modifier Command**                           | `llc.control.u_modifier_cmd` | Unsigned integer (8 bits) | Command in unnumbered frames, used for control operations that don't require sequencing. It is essential for certain types of network control messages that need to be sent without the overhead of sequence numbers. |
+| **Frame Type**                                            | `llc.control.ftype`    | Unsigned integer (16 bits)| Specifies the type of LLC frame, such as supervisory or unnumbered. This categorization is vital for understanding the role of each frame in the communication process. |
+| **Organizationally Unique Identifier (OUI)**              | `llc.oui`              | Unsigned integer (24 bits)| Identifies the organization responsible for the MAC or protocol. This information helps in identifying the vendor and understanding the device’s behavior based on the manufacturer’s specifications. |
+| **Type**                                                  | `llc.type`             | Unsigned integer (16 bits)| Specifies the type of network layer protocol encapsulated in the LLC frame. It is critical for distinguishing between different types of traffic, such as IPv4, IPv6, or ARP, allowing for proper handling and analysis of each protocol. |
+| **Type IPv4**                                             | `llc.type == 0x0800`   | N/A                       | Indicates that the frame contains an IPv4 packet. IPv4 is a fundamental protocol for internet communication, making this field essential for identifying and analyzing standard network traffic. |
+| **Type IPv6**                                             | `llc.type == 0x86dd`   | N/A                       | Indicates that the frame contains an IPv6 packet. IPv6 is the successor to IPv4, providing a larger address space and improved routing capabilities. Identifying IPv6 traffic is crucial for modern network analysis. |
+| **Type ARP**                                              | `llc.type == 0x0806`   | N/A                       | Indicates that the frame contains an ARP (Address Resolution Protocol) packet. ARP is used for mapping network addresses (IP) to physical addresses (MAC), a fundamental function in network operations. |
+| **Protocol ID**                                           | `llc.pid`              | Unsigned integer (16 bits)| Identifies the specific protocol encapsulated in the LLC frame. This field is essential for the detailed analysis and filtering of network traffic, enabling network administrators to diagnose and resolve issues effectively. |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## ⭕ 802.11 PHY Services Specifications = Clause 8 802.11-2020
 - Clause PHT: DSSS
 - Clause PHT: HR/DSSS
