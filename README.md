@@ -2419,10 +2419,10 @@ _802.11 frames are categorized into three main types: **Management, Control & Da
 _IEEE 802.11-2020 9.3.3 (PV0) :: Management frames are used to manage the connections and maintenance of communication between devices within a WLAN. These frames are crucial for tasks such as discovering and joining networks, authenticating devices, and maintaining network associations._ 
 
 **Primary functions of Management Frames:** 
-- **`Network discovery and association`**: Frames like Beacon, Probe Request, and Probe Response are used by devices to discover networks and initiate connections.
-- **`Authentication and deauthentication`**: Frames such as Authentication and Deauthentication facilitate secure connections between client STAs (stations) and APs (access points).
-- **`Network maintenance`**: Frames like Association Request, Association Response, and Disassociation are used to maintain and manage active connections.
-- **`Power Management`**: Frames like ATIM allow devices to announce pending data transmissions to other devices in a power-saving mode, ensuring that they remain active to receive the data.
+- **`Network discovery and association`**: Frames like Beacon, Probe Request, and Probe Response are used by devices to discover networks and initiate connections. <br><br>
+- **`Authentication and deauthentication`**: Frames such as Authentication and Deauthentication facilitate secure connections between client STAs (stations) and APs (access points). <br><br>
+- **`Network maintenance`**: Frames like Association Request, Association Response, and Disassociation are used to maintain and manage active connections. <br><br>
+- **`Power Management`**: Frames like ATIM allow devices to announce pending data transmissions to other devices in a power-saving mode, ensuring that they remain active to receive the data. <br><br>
 - **`Actions`**: Action frames extend the functionality of management frames, enabling advanced features like spectrum management, QoS management, and radio measurement. They allow for a wide range of actions, from channel switching to initiating protected dual of public action frames for more complex operations <br><br>
 - [802.11 Mgmt Frame Types @ _nayarasi_](https://mrncciew.com/2014/09/29/cwap-802-11-mgmt-frame-types/) _`nayarasi`_
 
@@ -2450,14 +2450,14 @@ _IEEE 802.11-2020 9.3.3 (PV0) :: Management frames are used to manage the connec
 _Control frames are used to manage access to the wireless medium and ensure that data transmissions occur smoothly without collisions. These frames are essential for coordinating data transfer and managing the state of communication links._
 
 **Key functions of Control Frames:**
-- **`Acknowledgment`**: Frames like ACK are used to acknowledge the receipt of data frames, ensuring reliable communication.
-- **`Medium reservation`**: Frames such as RTS (Request to Send) and CTS (Clear to Send) help in reserving the medium for transmission, reducing the likelihood of collisions.
-- **`Power management`**: Frames like PS-Poll are used by client STAs to manage power-saving modes, allowing them to conserve energy while maintaining network connectivity.
+- **`Acknowledgment`**: Frames like ACK are used to acknowledge the receipt of data frames, ensuring reliable communication. <br><br>
+- **`Medium reservation`**: Frames such as RTS (Request to Send) and CTS (Clear to Send) help in reserving the medium for transmission, reducing the likelihood of collisions. <br><br>
+- **`Power management`**: Frames like PS-Poll are used by client STAs to manage power-saving modes, allowing them to conserve energy while maintaining network connectivity. <br><br>
 
 **Advanced tasks of Control Frames:**
-- **`Trigger`**: Used in multi-user transmission scenarios, particularly in 802.11ax (Wi-Fi 6). They initiate scheduled uplink transmissions from multiple client STAs, allowing for efficient use of the wireless medium.
-- **`Beamforming Report Poll`**: Utilized in 802.11ac and newer standards, these frames request beamforming feedback from client STAs to optimize directional signal transmission, enhancing overall network performance.
-- **`VHT/HE NDP Announcement`**: Announce the start of a null data packet (NDP) transmission for Very High Throughput (VHT) and High Efficiency (HE) modes, used for channel sounding and beamforming purposes.
+- **`Trigger`**: Used in multi-user transmission scenarios, particularly in 802.11ax (Wi-Fi 6). They initiate scheduled uplink transmissions from multiple client STAs, allowing for efficient use of the wireless medium. <br><br>
+- **`Beamforming Report Poll`**: Utilized in 802.11ac and newer standards, these frames request beamforming feedback from client STAs to optimize directional signal transmission, enhancing overall network performance. <br><br>
+- **`VHT/HE NDP Announcement`**: Announce the start of a null data packet (NDP) transmission for Very High Throughput (VHT) and High Efficiency (HE) modes, used for channel sounding and beamforming purposes. <br><br>
 - **`Control Frame Extension and Control Wrapper frames`**: Provide additional control signaling capabilities beyond the basic control frame functions, supporting enhanced features and future extensions of the 802.11 standards.
 
 | **Subtype Name**               | **Type** | **Subtype** | **Filter**                                  | **Description**                                                                                                  |
@@ -2484,8 +2484,8 @@ _Control frames are used to manage access to the wireless medium and ensure that
 _Data frames carry the actual data payload between devices in a WLAN. These frames are used for transmitting user data as well as network management information. Data frames can also incorporate quality of service (QoS) features to prioritize certain types of traffic._
 
 **Primary functions of Data Frames:** 
-- **`Data transmission`**: Standard data frames are used to transmit data packets between client STAs and APs.
-- **`Contention-free communication`**: Frames like Data + CF-Ack and Data + CF-Poll are used in contention-free periods to ensure smooth data transmission without interference.
+- **`Data transmission`**: Standard data frames are used to transmit data packets between client STAs and APs. <br><br>
+- **`Contention-free communication`**: Frames like Data + CF-Ack and Data + CF-Poll are used in contention-free periods to ensure smooth data transmission without interference. <br><br>
 - **`QoS support`**: QoS Data frames prioritize traffic based on the type of service, enhancing the performance for applications like voice and video streaming.
 
 | **Subtype Name**               | **Type** | **Subtype** | **Filter**                                  | **Description**                                                                                                  |
