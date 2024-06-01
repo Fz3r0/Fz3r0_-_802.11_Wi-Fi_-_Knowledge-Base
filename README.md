@@ -2687,10 +2687,113 @@ _These are the Authentication Methods a STA can use to access to a BSS | IEEE St
 _To facilitate Wi-Fi connectivity, the industry introduced WISPr 1.0, a protocol which automated the exchange of user name/password credentials with public Wi-Fi HotSpots. | In 2010, Accuris introduced WISPr 1+ extensions to the WISPr protocol which overcame the security flaws and subscriber management complexity of the initial specification. | Today WISPr 1+ is used by Wi-Fi roaming service providers worldwide to offer seamless, secure access and authentication on WISPr-enabled Wi-Fi networks. | Wi-Fi Hotspots need to support 802.1X technology as part of a HotSpot 2.0 upgrade. While many do, WISPr continues to be the predominant access mechanism. With WISPr 1+, service providers are able to bring a SIM-like authentication to non-SIM devices and non-802.1X Wi-Fi alike, and to an installed base of Smartphones which doesn’t support EAP-SIM/AKA today._
 - [Connection Manager Protocols Differences :: WISPr 1.0 VS 802.1X VS Passpoint Release 2 VS WISPr 1+](https://info.accuris-networks.com/hubfs/Documents/WISPr1_DS-07Jan16.pdf)
 
-## 🛡️🔓🪪 Authentication Methods: `Open System Authentication`
+# 🛡️🔓🪪 Authentication Methods: `Open System Authentication`
 _Once a client station is discover a SSID (Probe Request/Response or listening to Beacons) it move to Join phase. This exchange comprise of at least 4 frames || Open System authentication should never fail || Init method of authentication used by most modern WLANs || RSN like 802.1X or PSK is performed later (state 3 > 4) || There is no "authentication response frame", it's just an "autentication frame" with another status code value || Association process is similar to authentication, in this caso we do have "authentication request" & "authentication response" (both ACKed) ||_
 
-### 🔓🪪 Open System Authentication: `Authentication` :: From:`State 1` ➡️ To:`State 2`
+### Open System Authentication: `No RSN`
+
+````py
+######################################################################################################################
+                                 🏁 STATE MACHINE = 1 :: client STA disconnected from AP 🏁
+######################################################################################################################
+
+🛸 BROADCAST   :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛸 Beacon ]}  (optional/passive scanning) 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊❓ Probe Request ]}   (active scanning)   <<<=== START 🏁
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊❓ Probe Response ]}  
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🆗 ACK ]} 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🚪 Authentication SeqNum=1 (request) ]} 
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🆗 ACK ]}
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🚪 Authentication SeqNum=2 (success) ]} 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    {[ 💊🆗 ACK ]}                                 <<<=== FINISH 🏁
+
+######################################################################################################################
+                                🏁 STATE MACHINE = 2 :: client STA authenticated to AP 🏁
+######################################################################################################################
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🛜 Association Request ]}                 <<<=== START 🏁
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🆗 ACK ]}
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛜 Association Response ]}
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🆗 ACK ]}                                 <<<=== FINISH 🏁
+
+######################################################################################################################
+                               🏁 STATE MACHINE = 3 :: client STA associated to AP
+                                Open System Authentication/Association Complete!!!
+######################################################################################################################
+
+````
+
+---
+
+### Open System Authentication: `RSN :: WPA2`
+
+````py
+######################################################################################################################
+                                 🏁 STATE MACHINE = 1 :: client STA disconnected from AP 🏁
+######################################################################################################################
+
+🛸 BROADCAST   :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛸 Beacon ]}  (optional/passive scanning) 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊❓ Probe Request ]}   (active scanning)   <<<=== START 🏁
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊❓ Probe Response ]}  
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🆗 ACK ]} 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🚪 Authentication SeqNum=1 (request) ]} 
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🆗 ACK ]}
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🚪 Authentication SeqNum=2 (success) ]} 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    {[ 💊🆗 ACK ]}                                 <<<=== FINISH 🏁
+
+######################################################################################################################
+                                🏁 STATE MACHINE = 2 :: client STA authenticated to AP 🏁
+######################################################################################################################
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🛜 Association Request ]}                 <<<=== START 🏁
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🆗 ACK ]}
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛜 Association Response ]}
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🆗 ACK ]}                                 <<<=== FINISH 🏁
+
+######################################################################################################################
+                                 🏁 STATE MACHINE = 3 :: client STA associated to AP 🏁
+######################################################################################################################
+
+# - BOTH CLIENTS (AP & STA) HAVE PMK's (From PSK (WPA2/WPA3) or EAP (WPA2/WPA3 Enterprise))
+
+# - PTK Components = PMK + Supplicant (STA) MAC Address + Authenticator (AP) MAC Address + Snonce (Supplicant) + Anonce (Authenticator)
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    AP Pick Random Anonce                       |  send M1 : ( 💊 🗝️ EAPOL Key | Anonce ) 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    STA Generates PTK + Pick Random Snonce      |  send M2 : ( 💊 🔑 EAPOL Key | Snonce + MIC )
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    AP Generates PTK + Generates GTK            |  send M3 : ( 💊 🔑 EAPOL Key | Install PTK + MIC + Anonce + Encrypted GTK )
+
+🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    Decrypt GTK sent from AP + answer with MIC  |  send M4 : ( 💊 🗝️ EAPOL Key | MIC ) 
+
+######################################################################################################################
+                                🏁 STATE MACHINE = 4 :: client STA associated via RSNA 🏁
+                              Open System Authentication/Association + WPA2 RSNA  Complete!!!
+######################################################################################################################
+
+````
+---
+
+### 🔓🪪 Open System Authentication: `Authentication` 
 _The initial purpose of the authentication frame is to validate the device type (verify that the requesting station has proper 802.11 capability to join the cell). This exchanged is based on simple two-frame (Auth Request &  Auth Response) called Open System._
 - [`Authentication` :: Frame Exchange :: `Open System`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/bb52ef07-7502-435c-844d-9b32f7f7b43a) _`frame exchange`_
 - [`Authentication` :: Frame Decode @ Nayanajith](https://mrncciew.com/2014/10/10/802-11-mgmt-authentication-frame/) _`frame decode`_
