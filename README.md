@@ -2411,74 +2411,11 @@ calculated_crc = crc32(data)
 
 
 
-
-
-
-
-# 802.11 MAC Frames Types
-
-| **802.11 MAC Frame** | **Subtype Name**          | **Type** | **Subtype** | **Filter**                                  | **Description**                                                       |
-|----------------------|---------------------------|----------|-------------|---------------------------------------------|-----------------------------------------------------------------------|
-| **Management**       | ALL                       | 00       | N/A         | `wlan.fc.type == 00`                        | BSS management, BSS discovery, BSS joining and roaming, Leaving a BSS |
-| **Management**       | Association Request       | 00       | 0000        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 00` | Request to join a network                                              |
-| **Management**       | Association Response      | 00       | 0001        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 01` | Response to association request                                       |
-| **Management**       | Re-Association Request    | 00       | 0010        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 02` | Request to rejoin a network                                           |
-| **Management**       | Re-Association Response   | 00       | 0011        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 03` | Response to re-association request                                    |
-| **Management**       | Probe Request             | 00       | 0100        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 04` | Request information from another device                               |
-| **Management**       | Probe Response            | 00       | 0101        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 05` | Response to probe request                                             |
-| **Management**       | Timing Advertisement      | 00       | 0110        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 06` | Advertise timing information                                          |
-| **Management**       | Unrecognized / Reserved   | 00       | 0111        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 07` | Reserved subtype                                                      |
-| **Management**       | Beacon                    | 00       | 1000        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 08` | Announce the presence of a network                                    |
-| **Management**       | ATIM                      | 00       | 1001        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 09` | Announcement traffic indication message                               |
-| **Management**       | Disassociation            | 00       | 1010        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 10` | Notify that a device is leaving the network                           |
-| **Management**       | Authentication            | 00       | 1011        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 11` | Authentication frame                                                  |
-| **Management**       | Deauthentication          | 00       | 1100        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 12` | Notify that a device is deauthenticated                               |
-| **Management**       | Action                    | 00       | 1101        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 13` | Action frame                                                          |
-| **Management**       | Action No ACK             | 00       | 1110        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 14` | Action frame without acknowledgment                                   |
-| **Management**       | Aruba Management          | 00       | 1111        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 15` | Aruba-specific management frame                                       |
-| **Control**          | ALL                       | 01       | N/A         | `wlan.fc.type == 01`                        | Data ACKnowledgement, Network Reservation, Data Polling               |
-| **Control**          | Unrecognized / Reserved   | 01       | 0000        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 16` | Reserved subtype                                                      |
-| **Control**          | Unrecognized / Reserved   | 01       | 0001        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 17` | Reserved subtype                                                      |
-| **Control**          | Trigger                   | 01       | 0010        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 18` | Trigger frame / TACK???                                               |
-| **Control**          | Unrecognized / Reserved   | 01       | 0011        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 19` | Reserved subtype                                                      |
-| **Control**          | Beamforming Report Poll   | 01       | 0100        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 20` | Poll for beamforming report                                           |
-| **Control**          | VHT/HE NDP Announcement   | 01       | 0101        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 21` | Announce VHT/HE NDP                                                   |
-| **Control**          | Control Frame Extension   | 01       | 0110        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 22` | Extended control frame                                                |
-| **Control**          | Control Wrapper           | 01       | 0111        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 23` | Wrapper for control frames                                            |
-| **Control**          | Block Ack Request (BlockAckReq) | 01  | 1000        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 24` | Request block acknowledgment                                          |
-| **Control**          | Block Ack (BlockAck)      | 01       | 1001        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 25` | Block acknowledgment                                                  |
-| **Control**          | Power Save (PS)-Poll      | 01       | 1010        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 26` | Poll for power save state                                             |
-| **Control**          | RTS                       | 01       | 1011        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 27` | Request to Send                                                       |
-| **Control**          | CTS                       | 01       | 1100        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 28` | Clear to Send                                                         |
-| **Control**          | ACK (Acknowledgement)     | 01       | 1101        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 29` | Acknowledgment frame                                                  |
-| **Control**          | CF-End                    | 01       | 1110        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 30` | End contention-free period                                            |
-| **Control**          | CF-End + CF-Ack           | 01       | 1111        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 31` | End contention-free period and acknowledgment                         |
-| **Data**             | ALL                       | 10       | N/A         | `wlan.fc.type == 02`                        | Transmit MSDUs, Communicate the information contained in the MAC Header |
-| **Data**             | Data                      | 10       | 0000        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 32` | Standard data frame                                                   |
-| **Data**             | Data + CF-Ack             | 10       | 0001        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 33` | Data frame with CF-Ack                                                |
-| **Data**             | Data + CF-Poll            | 10       | 0010        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 34` | Data frame with CF-Poll                                               |
-| **Data**             | Data + CF-Ack + CF-Poll   | 10       | 0011        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 35` | Data frame with CF-Ack and CF-Poll                                    |
-| **Data**             | Null Data                 | 10       | 0100        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 36` | Null data frame                                                       |
-| **Data**             | CF-Ack                    | 10       | 0101        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 37` | CF-Ack frame                                                          |
-| **Data**             | CF-Poll                   | 10       | 0110        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 38` | CF-Poll frame                                                         |
-| **Data**             | CF-ack + CF-poll          | 10       | 0111        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 39` | CF-Ack and CF-Poll frame                                              |
-| **Data**             | QoS Data                  | 10       | 1000        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 40` | Quality of Service data frame                                         |
-| **Data**             | QoS Data + CF-Ack         | 10       | 1001        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 41` | QoS data frame with CF-Ack                                            |
-| **Data**             | QoS Data + CF-Poll        | 10       | 1010        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 42` | QoS data frame with CF-Poll                                           |
-| **Data**             | QoS Data + CF-Ack + CF-Poll | 10     | 1011        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 43` | QoS data frame with CF-Ack and CF-Poll                                |
-| **Data**             | QoS Null                  | 10       | 1100        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 44` | QoS null data frame                                                   |
-| **Data**             | QoS CF-Poll               | 10       | 1101        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 45` | QoS CF-Poll frame                                                     |
-| **Data**             | QoS CF-ack + CF-poll      | 10       | 1110        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 46` | QoS CF-Ack and CF-Poll frame                                          |
-| **Data**             | Unrecognized / Reserved   | 10       | 1111        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 47` | Reserved subtype                                                      |
-
-
-
-
-# 802.11 MAC Frames Types
+# 🛜🦈💊 802.11 MAC Frames Types
 _802.11 frames are categorized into three main types: **Management, Control & Data**. Each frame type serves a specific purpose and contains various subtypes, allowing for a wide range of functionalities within the wireless network. The division of 802.11 frames into management, control, and data frames allows for a robust and efficient mechanism to handle various aspects of wireless communication. Management frames ensure proper network operation and device association, control frames manage access to the wireless medium and ensure collision-free communication, while data frames carry the actual payload necessary for user applications. Understanding these frames and their subtypes is crucial for network professionals to design, manage, and troubleshoot WLANs effectively._
 
 
-## 🛜⚙️💊 802.11 MAC Frames :: `Management`
+## ⚙️🛜💊 802.11 MAC Frames :: `Management`
 _IEEE 802.11-2020 9.3.3 (PV0) :: Management frames are used to manage the connections and maintenance of communication between devices within a WLAN. These frames are crucial for tasks such as discovering and joining networks, authenticating devices, and maintaining network associations._ 
 
 **Primary functions of Management Frames:** 
@@ -2509,7 +2446,7 @@ _IEEE 802.11-2020 9.3.3 (PV0) :: Management frames are used to manage the connec
 | Action No ACK             | 00       | 1110        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 14` | Action frame without acknowledgment. Similar to the Action frame but does not require an acknowledgment. |
 | Aruba Management          | 00       | 1111        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 15` | Aruba-specific management frame. Used for proprietary management functions specific to Aruba networks. |
 
-## 🛜⚙️💊 802.11 MAC Frames :: `Control`
+## 🎮🛜💊 802.11 MAC Frames :: `Control`
 _Control frames are used to manage access to the wireless medium and ensure that data transmissions occur smoothly without collisions. These frames are essential for coordinating data transfer and managing the state of communication links._
 
 **Key functions of Control Frames:**
@@ -2543,7 +2480,7 @@ _Control frames are used to manage access to the wireless medium and ensure that
 | CF-End                         | 01       | 1110        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 30` | Ends the contention-free period in PCF mode.                                                                     |
 | CF-End + CF-Ack                | 01       | 1111        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 31` | Ends the contention-free period and acknowledges the receipt of data frames.                                      |
 
-## 🛜⚙️💊 802.11 MAC Frames :: `Data`
+## 💾🛜💊 802.11 MAC Frames :: `Data`
 _Data frames carry the actual data payload between devices in a WLAN. These frames are used for transmitting user data as well as network management information. Data frames can also incorporate quality of service (QoS) features to prioritize certain types of traffic._
 
 **Primary functions of Data Frames:** 
@@ -2572,7 +2509,7 @@ _Data frames carry the actual data payload between devices in a WLAN. These fram
 | Unrecognized / Reserved        | 10       | 1111        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 47` | Reserved subtype. Not used in standard operations.                                                               |
 
 
-## 📡🔍⚙️ 802.11 Management Frames: `Beacon`
+## 📡🔍⚙️ Management Frames: `Beacon`
 _Fixed Schedule (default 100TU = 1024us microseconds) | Sent always at Lowest Basic Data Rate configured |_
 - [**`Beacon`** :: Frame Decode @ Nayanajith](https://mrncciew.com/2014/10/08/802-11-mgmt-beacon-frame/) Fixed Schedule (default 100TU = 1024us microseconds) | Lowest Basic Data Rate
 - [`Beacon Frame Body` :: Elements](https://ieeexplore.ieee.org/document/9363693) IEEE 802.11-2020: Table 9-32 | 9.3.3.2
@@ -2589,16 +2526,7 @@ _STAs send Probe Request on Active Scanning or after a Beacon in Passive Scannin
 
 
 
-## Control Frames
-- [ACK]() Allways after a unicast frame |
-- []()
 
-### Data Frames
-- []()
-
-### Other Frames
-- [`Malformed Frames`]()
-- [`Retransmission`]()
 
 
 
