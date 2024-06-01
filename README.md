@@ -2984,14 +2984,14 @@ _Shared Key Authentication uses WEP(Wireless Equivlanet Privacy) to authenticate
 ````py
 ## SKA (Shared Key Authentication) process:
 
-1 - First, clientc STA send the "Authentication Request" to the AP. The "SEQ No is 1" for this frame & Authentication algorithm is "Shared Key".
+1 - # First, clientc STA send the "Authentication Request" to the AP. The "SEQ No is 1" for this frame & Authentication algorithm is "Shared Key".
 
-2 - Then, AP sends a cleartext challenge to the client STA in an authentication response. The SEQ number is “2” & challenge Text is included.
+2 - # Then, AP sends a cleartext challenge to the client STA in an authentication response. The SEQ number is “2” & challenge Text is included.
 
-3 - The client STA then encrypt the cleartext challenge and sends it back to the AP in the body of another authentication request frame. The WEP header information contains encrypted data.
+3 - # The client STA then encrypt the cleartext challenge and sends it back to the AP in the body of another authentication request frame. The WEP header information contains encrypted data.
     By using the WEP key in wireshark it's possible to decrypt this message. Then, the Sequence number 3 where AP send cleartext was encrypted using WEP.
     
-4 - Once AP get the WEP encrypted authentication message 3, AP decrypt client STA response & compare it with the cleartext challenge.
+4 - # Once AP get the WEP encrypted authentication message 3, AP decrypt client STA response & compare it with the cleartext challenge.
     If they match AP will respond by sending forth & final authentication frame to the station.
 
 ````
@@ -3007,19 +3007,19 @@ _WEP initialization vector (IV) include the WEP KEY ID details where receiving d
 
 ````py
 
-1 -  24 bit cleartext IV(Initialization Vector) is randomly generated & combined with static secret key.
+1 - # 24 bit cleartext IV(Initialization Vector) is randomly generated & combined with static secret key.
 
-2 - Key length is 40bits in 64bit WEP & key length would be 104bits in 128bit WEP.
+2 - # Key length is 40bits in 64bit WEP & key length would be 104bits in 128bit WEP.
 
-3 - IV & Key with RC4 pseudo-random algorithm generate a keystream.
+3 - # IV & Key with RC4 pseudo-random algorithm generate a keystream.
 
-4 - Resulted key stream are then combined with plaintext data bits using XOR process.
+4 - # Resulted key stream are then combined with plaintext data bits using XOR process.
 
-5 - End result is the WEP ciphertext.
+5 - # End result is the WEP ciphertext.
 
-6 - WEP also run CRC on plaintext data & append as 32 bit ICV(Integrity Check Value) to the end  of plain text data.
+6 - # WEP also run CRC on plaintext data & append as 32 bit ICV(Integrity Check Value) to the end  of plain text data.
 
-7 - WEP add 8 byte (4-IV, 4-ICV) encryption overhead resulting max MSDU from 2304 to 2312 bytes.
+7 - # WEP add 8 byte (4-IV, 4-ICV) encryption overhead resulting max MSDU from 2304 to 2312 bytes.
 
 ````
 
