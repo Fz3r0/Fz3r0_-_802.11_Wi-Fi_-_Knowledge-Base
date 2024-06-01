@@ -1418,7 +1418,7 @@ PMD
 Upper Layers (example, an IP datagram / data payload):
 
                                                             |----------------|
-                                                            |  IP Datagram   |
+                                                            |  IP Datagram   |          from: upper layers 4,5,6,7
                                                             |----------------|
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -1426,12 +1426,13 @@ Upper Layers (example, an IP datagram / data payload):
 LLC (Logical Link Control):
 
     MSDU = # IP Datagram + LLC Header (prepended)
-                                                              
+
+                                                             <--- (LSDU) ---> 
                                             |--------------||----------------|
                                             |  LLC Header  ||  IP Datagram   |
                                             |--------------||----------------|
                                             \________________________________/
-                                            <------------ LPDU --------------> to: MAC  {LPDU => MSDU}
+                                            <---------- MSDU (LPDU) --------->          to: MAC  {(LPDU) => MSDU}
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
