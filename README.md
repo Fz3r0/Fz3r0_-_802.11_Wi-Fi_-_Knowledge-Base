@@ -3921,26 +3921,31 @@ Time synchronization is essential in Wi-Fi networks to ensure reliable and error
 - [Wi-Fi Checklists @ _WLAN Professionals_](https://wlanprofessionals.com/wi-fi-checklists/)
 - [Advanced RF Design & Troubleshooting](https://www.slideshare.net/ArubaNetworks/shanghai-breakout-advanced-rf-design-and-troubleshooting)
 
-### Gain & Bandwith
+## Gain & Bandwith
 - [`Gain` & `Bandwith`: Bigger Aint Always Better @ Bad-Fi](https://badfi.com/blog/2016/1/25/bigger-aint-always-better) `best practices`
 - [`Gain` & `Green` :: Good Wi-Fi Design is NOT about the GREEN](https://www.youtube.com/watch?v=4bvulueIKkQ)
 
-### Bandwith, Data Rate & Throughput
+## Bandwith, Data Rate & Throughput
 - [Why speed tests aren’t always the answer when troubleshooting Wi-Fi networks](https://www.thepacketologist.com/2023/12/why-speed-tests-arent-always-the-answer-when-troubleshooting/)
 
-### AP placement
+## AP placement
 - [`Hallways` :: Wi-Fi Design: APs in Hallways](https://blogs.arubanetworks.com/solutions/wi-fi-design-aps-in-hallways/)
 - [`Hallways` :: Do NOT Put APs in Hallways](https://www.youtube.com/watch?app=desktop&v=cYvP8Ck2zDY)
 - [`Ceiling` :: Do Not Place APs Above The Ceiling](https://www.youtube.com/watch?v=TdF6SGfujH4)
 
-### Rate Limiting
+## Rate Limiting
 - [SSID Rate Limit VS Firewall Rate Limit :: ¿Es buena idea limitar la red inalámbrica en una antena?](https://www.linkedin.com/feed/update/urn:li:activity:7185985387884949504/)
 
-### Interference
+## Interference
 - [The WiSE Article Series: Interference from Non-WiFi Sources, Part 1 @ CWNP](https://www.cwnp.com/the-wise-article-series-interference-from-non-wifi-sources-part-1/)
 - [The WiSE Article Series: Interference from Non-WiFi Sources, Part 2 @ CWNP](https://www.cwnp.com/the-wise-article-series-interference-from-non-wifi-sources-part-2/)
 
-### Vertical: Education
+## ACS: Auto Channel Selection
+- [Enhancing Your Wi-Fi Experience with Auto Channel Selection](https://www.linkedin.com/pulse/enhancing-your-wi-fi-experience-auto-channel-selection-tharun-siriki-zunjc/?trackingId=ElYO2acn6lz65Zh3oun4uA%3D%3D)
+
+# 802.11 Wi-Fi Design for Verticals
+
+## Vertical: Education
 - [`Education`: Why ‘One Access Point Per Classroom’ Approach is Wrong](https://wlanprofessionals.com/why-one-access-point-per-classroom-approach-is-wrong/)
 
 
