@@ -2687,7 +2687,7 @@ _These are the Authentication Methods a STA can use to access to a BSS | IEEE St
 _To facilitate Wi-Fi connectivity, the industry introduced WISPr 1.0, a protocol which automated the exchange of user name/password credentials with public Wi-Fi HotSpots. | In 2010, Accuris introduced WISPr 1+ extensions to the WISPr protocol which overcame the security flaws and subscriber management complexity of the initial specification. | Today WISPr 1+ is used by Wi-Fi roaming service providers worldwide to offer seamless, secure access and authentication on WISPr-enabled Wi-Fi networks. | Wi-Fi Hotspots need to support 802.1X technology as part of a HotSpot 2.0 upgrade. While many do, WISPr continues to be the predominant access mechanism. With WISPr 1+, service providers are able to bring a SIM-like authentication to non-SIM devices and non-802.1X Wi-Fi alike, and to an installed base of Smartphones which doesn’t support EAP-SIM/AKA today._
 - [Connection Manager Protocols Differences :: WISPr 1.0 VS 802.1X VS Passpoint Release 2 VS WISPr 1+](https://info.accuris-networks.com/hubfs/Documents/WISPr1_DS-07Jan16.pdf)
 
-# 🛡️🔓🪪 Authentication Methods: `Open System Authentication`
+# 🛡️🔓🪪 Authentication Method: `Open System`
 _Once a client station is discover a SSID (Probe Request/Response or listening to Beacons) it move to Join phase. This exchange comprise of at least 4 frames || Open System authentication should never fail || Init method of authentication used by most modern WLANs || RSN like 802.1X or PSK is performed later (state 3 > 4) || There is no "authentication response frame", it's just an "autentication frame" with another status code value || Association process is similar to authentication, in this caso we do have "authentication request" & "authentication response" (both ACKed) ||_
 
 ### Open System Authentication: `No RSN`
@@ -2928,6 +2928,116 @@ retrun to STATE 1 - DISCONNECTED
 .
 retrun to STATE 2 - AUTHENTICATED (for roaming / re-connections)
 ````
+
+
+
+
+
+
+
+
+
+
+
+
+# 🛡️🔓🪪 Authentication Method: `SKA: Shared Key Authentication`
+_**Shared Key Authentication (SKA) is simply not used anymore, it is insecure and already PWNEd, never use it!!!.** | Shared Key Authentication (SKA) is a verification process by which a computer can gain access to a wireless network that uses the Wired Equivalent Privacy (WEP) protocol. With SKA, a computer equipped with a wireless modem can fully access any WEP network and exchange encrypted or unencrypted data. Shared Key authentication uses WEP when authenticating client stations and requires that a static WEP key be configured on both the station and the AP. In addition to WEP being mandatory, authentication will not work if the static WEP keys do not match. The authentication process is similar to Open System authentication but includes a challenge and response between the AP and client station. | **SKA/WEP is vulneable to: IV Collision Attack, Weak Key attack, Reinjection Attack.**_
+
+### Shared Key Authentication: `WEP`
+
+````py
+######################################################################################################################
+                                 🏁 STATE MACHINE = 1 :: client STA disconnected from AP 🏁
+######################################################################################################################
+
+🛸 BROADCAST   :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛸 Beacon ]}  (optional/passive scanning) 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊❓ Probe Request ]}   (active scanning)             
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊❓ Probe Response ]}  
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🆗 ACK ]} 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🚪 Authentication Request :: SEQ = 1 ]} 
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🆗 ACK ]}
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🚪 Authentication Response :: SEQ = 2 => with Clear Text Challenge ]} 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    {[ 💊🆗 ACK ]}                               
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🚪 Authentication Request :: SEQ = 3 => with WEP Encrypted Challenge ]} 
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🆗 ACK ]}
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🚪 Authentication Response :: SEQ = 4 => Success or Failure ]} 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    {[ 💊🆗 ACK ]}                                            
+
+######################################################################################################################
+              🏁 STATE MACHINE = 2 :: client STA authenticated to AP via Shared Key Authentication using WEP 🏁
+######################################################################################################################
+````
+
+---
+
+### Shared Key Authentication: `WEP Authentication Process`
+_Shared Key Authentication uses WEP(Wireless Equivlanet Privacy) to authenticate client stations & that require a static WEP key configured on both AP & Client._
+
+````py
+## SKA (Shared Key Authentication) process:
+
+1 - First, clientc STA send the "Authentication Request" to the AP. The "SEQ No is 1" for this frame & Authentication algorithm is "Shared Key".
+
+2 - Then, AP sends a cleartext challenge to the client STA in an authentication response. The SEQ number is “2” & challenge Text is included.
+
+3 - The client STA then encrypt the cleartext challenge and sends it back to the AP in the body of another authentication request frame. The WEP header information contains encrypted data.
+    By using the WEP key in wireshark it's possible to decrypt this message. Then, the Sequence number 3 where AP send cleartext was encrypted using WEP.
+    
+4 - Once AP get the WEP encrypted authentication message 3, AP decrypt client STA response & compare it with the cleartext challenge.
+    If they match AP will respond by sending forth & final authentication frame to the station.
+
+````
+
+- [Legacy 802.11 Security | Shared Key & Open System](https://mrncciew.com/2014/08/19/cwsp-legacy-802-11-securiry/) _`nayarasi`_
+- [Shared Key Authentication (SKA)](https://www.techtarget.com/searchsecurity/definition/Shared-Key-Authentication-SKA) _`info`_
+- [Open System, Shared Key & Deauthentication Process](https://dot11ap.wordpress.com/open-system-authentication-shared-key-authentication-and-deauthentication/)
+
+---
+
+### Shared Key Authentication: `WEP Encryption Process`
+_WEP initialization vector (IV) include the WEP KEY ID details where receiving device can identify which key has been used for encryption.(so it can properly decrypt traffic). MSDU & ICV information will be go as encrypted text._
+
+````py
+
+1 -  24 bit cleartext IV(Initialization Vector) is randomly generated & combined with static secret key.
+
+2 - Key length is 40bits in 64bit WEP & key length would be 104bits in 128bit WEP.
+
+3 - IV & Key with RC4 pseudo-random algorithm generate a keystream.
+
+4 - Resulted key stream are then combined with plaintext data bits using XOR process.
+
+5 - End result is the WEP ciphertext.
+
+6 - WEP also run CRC on plaintext data & append as 32 bit ICV(Integrity Check Value) to the end  of plain text data.
+
+7 - WEP add 8 byte (4-IV, 4-ICV) encryption overhead resulting max MSDU from 2304 to 2312 bytes.
+
+````
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 🛡️🔐🛜 802.11 (Wi-Fi): `Security`
 
