@@ -1484,17 +1484,27 @@ _The function of the PHY is to provide a mechanism for transferring MPDUs betwee
 
 ## 1️⃣↕️🛜 802.11 PHY: `Sub-Layers`
 _The 802.11 series of physical layer specifications includes a variety of options that govern the transmission and reception of frames. There are several 802.11 series PHYs, such as FHSS, DSSS, HR-DSSS, ERPOFDM, DSSS-OFDM, and ERP-PBCC. Each **PHY layer has a particular PLCP, which defines framing**, and **PMD that defines signal modulation**._ <br>
-- **Physical Layer 1 `Upper` = `PLCP` = `Framing`** <br>
-- **Physical Layer 1 `Lower` = `PMD` = `Modulation`**
+- **Physical Layer 1 `Upper` = `PLCP` = `Framing`** 
+- **Physical Layer 1 `Lower` = `PMD` = `Modulation`** <br><br>
 
+````py
+## PHY Layer 1 :: Sublayers
 
-  
+|=-=-=-=-=-=-=-=-=|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-|
+|                 |                                                     |                      |                                                                                     |
+|                 |   PLCP = (Physical Layer Convergence Procedure) /   |   SDU = PSDU (MPDU)  |  # PSDU (the same as the MPDU from upper layer) is encapsulated in a PPDU           | <<<=== Framing
+|    PHYSICAL     |          (Physical Layer Convergence Protocol)      |   PDU = PPDU         |     ## // PHY Header & Preamble are added (or removed) to create the PPDU           |
+|    (Layer 1)    |-----------------------------------------------------|----------------------|-------------------------------------------------------------------------------------|
+|                 |                                                     |                      |                                                                                     |
+|                 |   PMD =  (Physical Medium Dependent)                |   1010110110 (PPDU)  |  # Data is transmited as bits into the wireless medium (RF through the air)         | <<<=== Modulation
+|                 |                                                     |                      |     ## // This means, the PPDU information is encapsulated in 1's and 0's           |
+|=-=-=-=-=-=-=-=-=|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-|
+
+````
+
 - [802.11 PHY Layers @ CWAP Techtarget](https://media.techtarget.com/searchMobileComputing/downloads/CWAP_ch8.pdf) _`doc`_
 - [802.11 Layer 1 & Layer 2: Sub-Layers - `PLCP`(**upper**) & `PMD`(**lower**)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289) _`diagram`_
 - [MAC sublayer & Physical Layer-Wireless LANs-Computer Communication Networks](https://www.youtube.com/watch?v=Rp23mjuzBQQ) _`video`_
-
-
-
 
 ### ⬆️ `PLCP`: Physical Layer Convergence Procedure :: `Upper Sublayer`=`Framing`
 _Also Known As: Physical Layer Convergence Protocol (depends the 802.11 version). Acts as a bridge between MAC & PMD Sublayer | When Tx = Takes frames from MAC & adds extra information to the bits (PHY Preamble & Header <pre-header|MAC|>) | When Rx = Strip off the PHY Preamble and Header (That's why this data is not seen by protocol analyzers) | This Rx & Tx procedure (adding preamble & header) is called "MAC Framing" | The MAC layer communicates with the Physical Layer Convergence Protocol (PLCP) sublayer via primitives (a set of “instructive commands” or “fundamental instructions”) through a Service Access Point (SAP). PLCP is handled by the NIC or Wi-Fi adapter implementation, not the OS, wether it's done: hardware, firmware / microcode, driver running on host, etc._
@@ -1507,7 +1517,7 @@ _PMDs further help to define the physical layer of computer network protocols. P
 - [PMD: Physical medium dependent](https://en.wikipedia.org/wiki/Physical_medium_dependent) _`Wiki`_
 - [PMD layer @ keysight](https://rfmw.em.keysight.com/wireless/helpfiles/n7617a/pmd_layer.htm) _`Diagram`_
 
-## 802.11 PHY Layer 1 (PLCP & PMD): `Management Layer Entities`
+## ⚙️ 802.11 PHY Layer 1 (PLCP & PMD): `Management Layer Entities`
 _Both MAC and PHY layers conceptually include management entities, called the MAC sublayer management entity and the PHY sublayer management entity. These entities are referred to as the MAC Layer Management Entity (MLME), and the Physical Layer Management Entity (PLME). These entities provide the layer management service interfaces through which layer management functions may be invoked. In order to provide correct MAC operation, a station management entity (SME) shall be present within each station._
 
 ## 📡⚙️📲 802.11 PHY Layer 1: `Operations`
