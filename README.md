@@ -2474,13 +2474,20 @@ calculated_crc = crc32(data)
 
 
 
+# 802.11 MAC Frames Types
+_802.11 frames are categorized into three main types: **Management, Control & Data**. Each frame type serves a specific purpose and contains various subtypes, allowing for a wide range of functionalities within the wireless network. The division of 802.11 frames into management, control, and data frames allows for a robust and efficient mechanism to handle various aspects of wireless communication. Management frames ensure proper network operation and device association, control frames manage access to the wireless medium and ensure collision-free communication, while data frames carry the actual payload necessary for user applications. Understanding these frames and their subtypes is crucial for network professionals to design, manage, and troubleshoot WLANs effectively._
 
 
+## 🛜⚙️💊 802.11 MAC Frames :: `Management`
+_IEEE 802.11-2020 9.3.3 (PV0) :: Management frames are used to manage the connections and maintenance of communication between devices within a WLAN. These frames are crucial for tasks such as discovering and joining networks, authenticating devices, and maintaining network associations._ 
 
-
-# 🛜⚙️💊 IEEE 802.11-2020 9.3.3 (PV0) :: `Management Frames`
+**Primary functions of Management Frames:** 
+- **`Network discovery and association`**: Frames like Beacon, Probe Request, and Probe Response are used by devices to discover networks and initiate connections.
+- **`Authentication and deauthentication`**: Frames such as Authentication and Deauthentication facilitate secure connections between client STAs (stations) and APs (access points).
+- **`Network maintenance`**: Frames like Association Request, Association Response, and Disassociation are used to maintain and manage active connections.
+- **`Power Management`**: Frames like ATIM allow devices to announce pending data transmissions to other devices in a power-saving mode, ensuring that they remain active to receive the data.
+- **`Actions`**: Action frames extend the functionality of management frames, enabling advanced features like spectrum management, QoS management, and radio measurement. They allow for a wide range of actions, from channel switching to initiating protected dual of public action frames for more complex operations <br><br>
 - [802.11 Mgmt Frame Types @ _nayarasi_](https://mrncciew.com/2014/09/29/cwap-802-11-mgmt-frame-types/) _`nayarasi`_
-- [`Frame Format` :: Management Frames]() 
 
 | **Subtype Name**          | **Type** | **Subtype** | **Filter**                                  | **Description**                                                                                                  |
 |---------------------------|----------|-------------|---------------------------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -2501,6 +2508,68 @@ calculated_crc = crc32(data)
 | Action                    | 00       | 1101        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 13` | Action frame. Used for various management actions such as spectrum management, QoS management, and security management. |
 | Action No ACK             | 00       | 1110        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 14` | Action frame without acknowledgment. Similar to the Action frame but does not require an acknowledgment. |
 | Aruba Management          | 00       | 1111        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 15` | Aruba-specific management frame. Used for proprietary management functions specific to Aruba networks. |
+
+## 🛜⚙️💊 802.11 MAC Frames :: `Control`
+_Control frames are used to manage access to the wireless medium and ensure that data transmissions occur smoothly without collisions. These frames are essential for coordinating data transfer and managing the state of communication links._
+
+**Key functions of Control Frames:**
+- **`Acknowledgment`**: Frames like ACK are used to acknowledge the receipt of data frames, ensuring reliable communication.
+- **`Medium reservation`**: Frames such as RTS (Request to Send) and CTS (Clear to Send) help in reserving the medium for transmission, reducing the likelihood of collisions.
+- **`Power management`**: Frames like PS-Poll are used by client STAs to manage power-saving modes, allowing them to conserve energy while maintaining network connectivity.
+
+**Advanced tasks of Control Frames:**
+- **`Trigger`**: Used in multi-user transmission scenarios, particularly in 802.11ax (Wi-Fi 6). They initiate scheduled uplink transmissions from multiple client STAs, allowing for efficient use of the wireless medium.
+- **`Beamforming Report Poll`**: Utilized in 802.11ac and newer standards, these frames request beamforming feedback from client STAs to optimize directional signal transmission, enhancing overall network performance.
+- **`VHT/HE NDP Announcement`**: Announce the start of a null data packet (NDP) transmission for Very High Throughput (VHT) and High Efficiency (HE) modes, used for channel sounding and beamforming purposes.
+- **`Control Frame Extension and Control Wrapper frames`**: Provide additional control signaling capabilities beyond the basic control frame functions, supporting enhanced features and future extensions of the 802.11 standards.
+
+| **Subtype Name**               | **Type** | **Subtype** | **Filter**                                  | **Description**                                                                                                  |
+|--------------------------------|----------|-------------|---------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| ALL                            | 01       | N/A         | `wlan.fc.type == 01`                        | All control frames, including data acknowledgment, network reservation, and data polling.                        |
+| Unrecognized / Reserved        | 01       | 0000        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 16` | Reserved subtype. Not used in standard operations.                                                               |
+| Unrecognized / Reserved        | 01       | 0001        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 17` | Reserved subtype. Not used in standard operations.                                                               |
+| Trigger                        | 01       | 0010        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 18` | A frame used to initiate uplink transmissions from client STAs in high efficiency (HE) networks.                 |
+| Unrecognized / Reserved        | 01       | 0011        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 19` | Reserved subtype. Not used in standard operations.                                                               |
+| Beamforming Report Poll        | 01       | 0100        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 20` | Polls a client STA for a beamforming report. Used in MU-MIMO and beamforming processes.                          |
+| VHT/HE NDP Announcement        | 01       | 0101        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 21` | Announces the start of a Null Data Packet (NDP) transmission in Very High Throughput (VHT) and High Efficiency (HE) modes. |
+| Control Frame Extension        | 01       | 0110        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 22` | Extended control frame for additional control functions not covered by standard control frames.                  |
+| Control Wrapper                | 01       | 0111        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 23` | A frame used to encapsulate and transmit other control frames.                                                    |
+| Block Ack Request (BlockAckReq)| 01       | 1000        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 24` | Requests a block acknowledgment for a series of previously transmitted frames.                                    |
+| Block Ack (BlockAck)           | 01       | 1001        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 25` | Acknowledges a block of received frames.                                                                          |
+| Power Save (PS)-Poll           | 01       | 1010        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 26` | Polls the AP to check for buffered data while the client STA is in power save mode.                              |
+| RTS                            | 01       | 1011        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 27` | Request to Send. Initiates the process for gaining control of the medium before transmitting data.               |
+| CTS                            | 01       | 1100        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 28` | Clear to Send. Sent in response to an RTS to indicate that the medium is clear for data transmission.             |
+| ACK (Acknowledgement)          | 01       | 1101        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 29` | Acknowledges the receipt of a data frame.                                                                         |
+| CF-End                         | 01       | 1110        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 30` | Ends the contention-free period in PCF mode.                                                                     |
+| CF-End + CF-Ack                | 01       | 1111        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 31` | Ends the contention-free period and acknowledges the receipt of data frames.                                      |
+
+## 🛜⚙️💊 802.11 MAC Frames :: `Data`
+_Data frames carry the actual data payload between devices in a WLAN. These frames are used for transmitting user data as well as network management information. Data frames can also incorporate quality of service (QoS) features to prioritize certain types of traffic._
+
+**Primary functions of Data Frames:** 
+- **`Data transmission`**: Standard data frames are used to transmit data packets between client STAs and APs.
+- **`Contention-free communication`**: Frames like Data + CF-Ack and Data + CF-Poll are used in contention-free periods to ensure smooth data transmission without interference.
+- **`QoS support`**: QoS Data frames prioritize traffic based on the type of service, enhancing the performance for applications like voice and video streaming.
+
+| **Subtype Name**               | **Type** | **Subtype** | **Filter**                                  | **Description**                                                                                                  |
+|--------------------------------|----------|-------------|---------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| ALL                            | 10       | N/A         | `wlan.fc.type == 02`                        | Transmit MAC Service Data Units (MSDUs), communicate the information contained in the MAC Header.                |
+| Data                           | 10       | 0000        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 32` | Standard data frame used to carry data payloads from higher layers, typically from client STAs to APs or vice versa. |
+| Data + CF-Ack                  | 10       | 0001        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 33` | Data frame with contention-free acknowledgment, used in contention-free periods to acknowledge receipt of data. |
+| Data + CF-Poll                 | 10       | 0010        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 34` | Data frame with contention-free poll, used by APs to poll client STAs for data during contention-free periods.   |
+| Data + CF-Ack + CF-Poll        | 10       | 0011        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 35` | Data frame with both contention-free acknowledgment and poll, used in contention-free periods to both acknowledge and poll for data. |
+| Null Data                      | 10       | 0100        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 36` | Null data frame, used for maintaining association with AP without carrying any data payload.                      |
+| CF-Ack                         | 10       | 0101        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 37` | Contention-free acknowledgment frame, used to acknowledge receipt of data during contention-free periods.        |
+| CF-Poll                        | 10       | 0110        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 38` | Contention-free poll frame, used by APs to request data from client STAs during contention-free periods.          |
+| CF-Ack + CF-Poll               | 10       | 0111        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 39` | Frame combining contention-free acknowledgment and poll, used in contention-free periods to both acknowledge and poll for data. |
+| QoS Data                       | 10       | 1000        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 40` | Quality of Service (QoS) data frame, used to carry data payloads with QoS priority levels.                       |
+| QoS Data + CF-Ack              | 10       | 1001        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 41` | QoS data frame with contention-free acknowledgment, used in contention-free periods to acknowledge receipt of data with QoS priority. |
+| QoS Data + CF-Poll             | 10       | 1010        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 42` | QoS data frame with contention-free poll, used by APs to poll client STAs for QoS data during contention-free periods. |
+| QoS Data + CF-Ack + CF-Poll    | 10       | 1011        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 43` | QoS data frame with both contention-free acknowledgment and poll, used in contention-free periods to both acknowledge and poll for QoS data. |
+| QoS Null                       | 10       | 1100        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 44` | QoS null data frame, used for maintaining QoS association with AP without carrying any data payload.             |
+| QoS CF-Poll                    | 10       | 1101        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 45` | QoS contention-free poll frame, used by APs to request QoS data from client STAs during contention-free periods.  |
+| QoS CF-Ack + CF-Poll           | 10       | 1110        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 46` | Frame combining QoS contention-free acknowledgment and poll, used in contention-free periods to both acknowledge and poll for QoS data. |
+| Unrecognized / Reserved        | 10       | 1111        | `wlan.fc.type == 02 && wlan.fc.type_subtype == 47` | Reserved subtype. Not used in standard operations.                                                               |
 
 
 ## 📡🔍⚙️ 802.11 Management Frames: `Beacon`
