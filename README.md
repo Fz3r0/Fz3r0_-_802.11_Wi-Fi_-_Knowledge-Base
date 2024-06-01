@@ -1490,15 +1490,15 @@ _The 802.11 series of physical layer specifications includes a variety of option
 ````py
 ## PHY Layer 1 :: Sublayers
 
-|=-=-=-=-=-=-=-=-=|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-|
-|                 |                                                     |                      |                                                                                     |
-|                 |   PLCP = (Physical Layer Convergence Procedure) /   |   SDU = PSDU (MPDU)  |  # PSDU (the same as the MPDU from upper layer) is encapsulated in a PPDU           | <<<=== Framing
-|    PHYSICAL     |          (Physical Layer Convergence Protocol)      |   PDU = PPDU         |     ## // PHY Header & Preamble are added (or removed) to create the PPDU           |
-|    (Layer 1)    |-----------------------------------------------------|----------------------|-------------------------------------------------------------------------------------|
-|                 |                                                     |                      |                                                                                     |
-|                 |   PMD =  (Physical Medium Dependent)                |   1010110110 (PPDU)  |  # Data is transmited as bits into the wireless medium (RF through the air)         | <<<=== Modulation
-|                 |                                                     |                      |     ## // This means, the PPDU information is encapsulated in 1's and 0's           |
-|=-=-=-=-=-=-=-=-=|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-|
+|=-=-=-=-=-=-=-=-=|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+|                 |                                                     |                      |
+|                 |   PLCP = (Physical Layer Convergence Procedure) /   |   SDU = PSDU (MPDU)  | <<<=== Framing
+|    PHYSICAL     |          (Physical Layer Convergence Protocol)      |   PDU = PPDU         |
+|    (Layer 1)    |-----------------------------------------------------|----------------------|
+|                 |                                                     |                      |
+|                 |   PMD =  (Physical Medium Dependent)                |   1010110110 (PPDU)  | <<<=== Modulation
+|                 |                                                     |                      |
+|=-=-=-=-=-=-=-=-=|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-|
 
 ````
 
