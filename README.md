@@ -1152,72 +1152,44 @@ _IEEE 802.11g-2003, commonly known as 802.11g, represents an augmentation to the
 
 ### 📡💡 **802.11g | Wi-Fi 3 | ERP: Features**
 
-- ⭕ Year & Status: June 2003 (Legacy)
-- ⭕ IEEE Amendment: Amendment 4
-- ⭕ IEEE 802.11-2020 Clause: Clause 18 <br> <br>
-- ⭕ PHY: ERP :: Enhanced Rate PHY
-- ⭕ Operating Band: 2.4 GHz
-- ⭕ Channel Bandwidth: 20 MHz
-- ⭕ Stream Data Rates: 6 Mbps | 9 Mbps | 12 Mbps | 18 Mbps | 24 Mbps | 36 Mbps | 48 Mbps | 54 Mbps peak
-- ⭕ Modulation Technique: OFDM (Orthogonal Frequency Division Multiplexing) <br> <br>
-- ⭕ OFDM: Yes
-- ⭕ Max OFDM tones: 64
-- ⭕ Subcarrier Spacing: 312.5 kHz <br> <br>
+- ⭕ Year & Status: June **`2003`** (Legacy)
+- ⭕ IEEE Amendment: **`Amendment 4`**
+- ⭕ IEEE 802.11-2020 Clause: **`Clause 18`** <br> <br>
+- ⭕ PHY: **`ERP :: Enhanced Rate PHY`**
+- ⭕ Operating Band: **`2.4 GHz`**
+- ⭕ Channel Bandwidth: **`20 MHz`**
+- ⭕ Stream Data Rates: **`6 Mbps`** | **`9 Mbps`** | **`12 Mbps`** | **`18 Mbps`** | **`24 Mbps`** | **`36 Mbps`** | **`48 Mbps`** | **`54 Mbps`** _peak_
+- ⭕ Modulation Technique: **`ERP - OFDM`** & **`ERP - DSSS/CCK` _(for 802.1b compatibility)_** <br> <br>
+- ⭕ OFDM: **`Yes`**
+- ⭕ Max OFDM tones: **`64`**
+- ⭕ Subcarrier Spacing: **`312.5 kHz`** <br> <br>
 - ⭕ Constellation | Code Rate: <br> <br>
-    - Modulation: BPSK || Coding: 1/2 || Data Rate: 6 Mbps || Rate bits: 1101
-    - Modulation: BPSK || Coding: 3/4 || Data Rate: 9 Mbps || Rate bits: 1111
-    - Modulation: QPSK || Coding: 1/2 || Data Rate: 12 Mbps || Rate bits: 0101
-    - Modulation: QPSK || Coding: 3/4 || Data Rate: 18 Mbps || Rate bits: 0111
-    - Modulation: 16-QAM || Coding: 1/2 || Data Rate: 24 Mbps || Rate bits: 1001
-    - Modulation: 16-QAM || Coding: 3/4 || Data Rate: 36 Mbps || Rate bits: 1011
-    - Modulation: 64-QAM || Coding: 2/3 || Data Rate: 48 Mbps || Rate bits: 0001
-    - Modulation: 64-QAM || Coding: 3/4 || Data Rate: 54 Mbps || Rate bits: 0011 <br> <br>
-- ⭕ MIMO: N/A (introduced until 802.11n)
-- ⭕ Max Single-User (SU) Streams: 1
-- ⭕ Max Multi-User (MU) Streams: N/A
-- ⭕ bits / Symbol: 6 bits / symbol (for 64-QAM, 3/4)
-- ⭕ MCS: N/A (non 802.11n or higher)
-- ⭕ QAM Spectral Efficiency (approx): 4-QAM = 24 SNR | 16-QAM = 16 SNR | 64-QAM = 27 SNR
-- ⭕ Link Spectral Efficiency: 2.7 bps/Hz
-- ⭕ Guard Interval: N/A (introduced until 802.11n) <br> <br>
-- ⭕ Power Saving: N/A <br> <br>
-- ⭕ Security: WEP
-- ⭕ Authentication: Open Authentication | Shared Key
-- ⭕ Encryption Algorithm: WEP <br> <br>
+    - Modulation: **`BPSK`** || Coding: **`1/2`** || Data Rate: **`6 Mbps`** || Rate bits: **`1101`**
+    - Modulation: **`BPSK`** || Coding: **`3/4`** || Data Rate: **`9 Mbps`** || Rate bits: **`1111`**
+    - Modulation: **`QPSK`** || Coding: **`1/2`** || Data Rate: **`12 Mbps`** || Rate bits: **`0101`**
+    - Modulation: **`QPSK`** || Coding: **`3/4`** || Data Rate: **`18 Mbps`** || Rate bits: **`0111`**
+    - Modulation: **`16-QAM`** || Coding: **`1/2`** || Data Rate: **`24 Mbps`** || Rate bits: **`1001`**
+    - Modulation: **`16-QAM`** || Coding: **`3/4`** || Data Rate: **`36 Mbps`** || Rate bits: **`1011`**
+    - Modulation: **`64-QAM`** || Coding: **`2/3`** || Data Rate: **`48 Mbps`** || Rate bits: **`0001`**
+    - Modulation: **`64-QAM`** || Coding: **`3/4`** || Data Rate: **`54 Mbps`** || Rate bits: **`0011`** <br> <br>
+- ⭕ MIMO: _N/A (introduced until 802.11n)_
+- ⭕ Max Single-User (SU) Streams: **`1`**
+- ⭕ Max Multi-User (MU) Streams: _N/A_
+- ⭕ bit / Symbol: **`6 bits / symbol`** (for 64-QAM, 3/4)
+- ⭕ MCS: _N/A (non 802.11n or higher)_
+- ⭕ QAM Spectral Efficienty _(aprox)_: 4-QAM = **`24 SNR`** | 16-QAM = **`16 SNR`** | 64-QAM = **`27 SNR`**
+- ⭕ Link Spectral Efficiency: **`2.7 bps/Hz`**
+- ⭕ Guard Interval: _N/A (introduced until 802.11n)_ <br> <br>
+- ⭕ Power Saving: _N/A_ <br> <br>
+- ⭕ Security: **`WEP`** 
+- ⭕ Authentication: **`Open Authentication`** | **`Shared Key`**
+- ⭕ Encryption Algorithm: **`WEP`**  <br> <br>
 
 ### ⚙️🚀 802.11g | Wi-Fi 3 | ERP: Enhancements
 
 - **`Backward Compatibility`**: First 802.11 with backward compatibility (compatible with 802.11b), allowing devices of both standards to operate in the same network. <br> <br>
 - **`Higher Data Rates`**: Provides higher data rates compared to 802.11b, making it suitable for multimedia applications. Data rates with varying modulation types: 6, 9, 12, 18, 24, 36, 48 and up to 54 Mbps using Adaptative Rate Selection <br> <br>
 - **`OFDM in 2.4 GHz band`**: First 802.11 PHY that supports OFDM in 2.4 GHz band. Orthogonal frequency-division multiplexing (OFDM) with 52 subcarrier channels; backwards compatible with 802.11b using DSSS and CCK. OFDM provides better performance in environments with interference.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
