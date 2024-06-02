@@ -1196,19 +1196,61 @@ _IEEE 802.11g-2003, commonly known as 802.11g, represents an augmentation to the
 
 
 
-## 📡⚙️🧬 `802.11n` / `Wi-Fi 4` / `HT`
-_IEEE 802.11n-2009, or 802.11n, is a wireless-networking standard that uses multiple antennas to increase data rates. The Wi-Fi Alliance has also retroactively labelled the technology for the standard as Wi-Fi 4.[8][9] It standardized support for multiple-input multiple-output, frame aggregation, and security improvements, among other features, and can be used in the 2.4 GHz or 5 GHz frequency bands._
 
-- ⚙️ **Features:** <br> <br>
-    - 802.11n Backward compatibility switching :: Backward compatibility for devices in a net using earlier versions of Wi-Fi, this adds a significant overhead to any exchanges, thereby reducing the data transfer capacity. To provide the maximum data transfer speeds when all devices in the wireless local area network are operating on the 802.11n standard, the backwards compatibility feature can be removed. <br><br>
+## 📡⚙️🧬 `802.11n` / `Wi-Fi 4` / `HT`
+_IEEE 802.11n-2009, or 802.11n, represents a significant enhancement to the IEEE 802.11 wireless networking standard by utilizing multiple antennas to increase data rates, this technology is called "MIMO". The Wi-Fi Alliance has also retroactively labelled the technology for the standard as Wi-Fi 4. It standardized support for multiple-input multiple-output (MIMO), frame aggregation, and security improvements, among other features, and can be used in the 2.4 GHz or 5 GHz frequency bands._
+
+- ⭕ Year & Status: October 2009 _(standard in current use but transitioning out)_
+- ⭕ IEEE Amendment: **`Amendment 5`**
+- ⭕ IEEE 802.11-2020 Clause: **`Clause 19`** <br> <br>
+- ⭕ PHY: **`HT :: High Throughput`**
+- ⭕ Operating Band: **`2.4 GHz`** & **`5 GHz`**
+- ⭕ Channel Bandwidth: **`20 MHz`** & **`40 MHz`**
+- ⭕ Stream Data Rates: **`6 Mbps`** | **`9 Mbps`** | **`12 Mbps`** | **`18 Mbps`** | **`24 Mbps`** | **`36 Mbps`** | **`48 Mbps`** | **`54 Mbps`** | ... |  **`288 Mbps`** _(20 MHz peak)_ | **`600 Mbps`** _(40 MHz peak)_
+- ⭕ Modulation Technique: **`OFDM :: Orthogonal Frequency Division Multiplexing`** / _**`(ERP & HR-DSSS support)`**_ <br> <br>
+- ⭕ OFDM: **`Yes`**
+- ⭕ Max OFDM tones: **`128`**
+- ⭕ Subcarrier Spacing: **`312.5 kHz`** <br> <br>
+- ⭕ Constellation | Code Rate: <br> <br>
+    - [**MCS Index Table for 802.11n**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/969a21d2-8bc4-44b5-9b1a-28e3acaaf09a) <br> <br>
+- ⭕ MIMO: **`MIMO with Spatial Streams (up to 3x3)`**
+- ⭕ Max Single-User (SU) Streams: **`3`** _(up to 3x3)_
+- ⭕ Max Multi-User (MU) Streams:  _N/A_
+- ⭕ bit / Symbol: **`6 bits / symbol`** (for 64-QAM, 3/4)
+- ⭕ MCS: _N/A (non 802.11n or higher)_
+- ⭕ QAM Spectral Efficienty _(aprox)_: 4-QAM = **`24 SNR`** | 16-QAM = **`16 SNR`** | 64-QAM = **`27 SNR`**
+- ⭕ Link Spectral Efficiency: **`2.7 bps/Hz`**
+- ⭕ Guard Interval: **`800 ns (short GI)`** / **`400 ns (long GI)`** <br> <br>
+- ⭕ Frame Aggregation: **`A-MSDU`** & **`A-MPDU`** <br> <br>
+- ⭕ Power Saving: **`802.11n Power Saving`** <br> <br>
+- ⭕ Security: **80.11i =** **`WPA2 - Personal`** & **`WPA2 - Enterprise (802.1X-EAP)`**
+- ⭕ Authentication: **`Open Authentication`** | **`Pre-Shared Key`** | **`Hotspot 2.0 / Passpoint`**
+- ⭕ Encryption Algorithm: For WPA2 PErsonal: **`TKIP`** || For WPA2 Enterprise: **`AES-CCMP`**  <br> <br>
+
+
+
+### ⚙️🚀 802.11n | Wi-Fi 4 | HT: Enhancements
+    
+- 802.11n Backward compatibility switching :: Backward compatibility for devices in a net using earlier versions of Wi-Fi, this adds a significant overhead to any exchanges, thereby reducing the data transfer capacity. To provide the maximum data transfer speeds when all devices in the wireless local area network are operating on the 802.11n standard, the backwards compatibility feature can be removed. <br><br>
         - Legacy (only 802.11 a, b, and g)
         - Mixed (both 802.11 a, b, g, and n)
         - Greenfield (only 802.11 n) - maximum performance <br><br>
-    - MIMO with OFDM & Channel Bonding (40MHz): In order to be able to carry very high data rates on the wireless LAN, often within an office or domestic environment, 802.11n has utilised MIMO. This gives the maximum use of the available bandwidth. | MIMO is a form of antenna technology that uses multiple antennas to enable signals travelling via different paths as a result of reflections, etc., to be separated and their capability used to improve the data throughput and / or the signal to noise ratio, thereby improving system performance.
-    - Spatial Streams / Multiplexing (up to 3x3): Wi-Fi Spatial streaming or multiplexing (often shortened to SM or SMX) is a transmission technique used in MIMO wireless communication to transmit independent and separately coded data signals, so called streams, from each of the multiple transmit antennas. This results in the space being reused, or multiplexed, more than one time. On each band, the Wireless-N standard is available in three primary configs, depending on the number of spatial streams being used. The lowest, single stream (1x1), dual stream (2x2) and three-stream (3x3), offering cap speeds of 150Mbps, 300Mbps and 450Mbps.
-    - Frame Aggregation: Frame aggregation is a feature that allows communicating on a shared link or channel, typically a TDM shared channel, with a minimum time slot that for efficiency reasons benefits from filling the time slot with data, i.e. sending two or more data frames in a single transmission. The feature is an important part of the IEEE 802.11e, 802.11n and 802.11ac wireless LAN standards that increases throughput with frame aggregation. | MAC service data unit (MSDU) aggregation relies on the fact that most mobile access points and most mobile client protocol stacks use Ethernet as their "native" frame format. It collects Ethernet frames to be transmitted to one or multiple destinations and wraps them in a single 802.11n frame. This is efficient because Ethernet headers are much shorter than 802.11 headers. | Frame aggregation is a process of packing multiple MSDUs or MPDUs together to reduce the overheads and average them over multiple frames, thereby increasing the user level data rate. A-MPDU aggregation requires the use of block acknowledgement or BlockAck, which was introduced in 802.11e and has been optimized in 802.11n.
-    - 40 MHz Bandwith (Channel Bonding): First 802.11 Standard that uses more than only 20 MHz bandwith (using channel bonding technique) in both 5 GHz and 2.4 GHz bands, recommendation for channel bonding for 40 MHz is only using it for the 5 GHz because there are a limited number of non-overlapping channels available in the 2.4 GHz band.
-    - 802.1n power saving: One of the problems with using MIMO is that it increases the power of the hardware circuitry. More transmitters and receivers need to be supported and this entails the use of more current. | Data is normally transmitted in a "bursty" fashion. This means that there are long periods when the system remains idle or running at a very slow speed. During these periods when MIMO is not required, the circuitry can be held inactive so that it does not consume power.
+    
+- 40 MHz Bandwith (Channel Bonding): First 802.11 Standard that uses more than only 20 MHz bandwith (using channel bonding technique) in both 5 GHz and 2.4 GHz bands, recommendation for channel bonding for 40 MHz is only using it for the 5 GHz because there are a limited number of non-overlapping channels available in the 2.4 GHz band.
+
+- MIMO with OFDM: In order to be able to carry very high data rates on the wireless LAN, often within an office or domestic environment, 802.11n has utilised MIMO. This gives the maximum use of the available bandwidth. | MIMO is a form of antenna technology that uses multiple antennas to enable signals travelling via different paths as a result of reflections, etc., to be separated and their capability used to improve the data throughput and / or the signal to noise ratio, thereby improving system performance.
+    
+- Spatial Streams / Multiplexing (up to 3x3): Wi-Fi Spatial streaming or multiplexing (often shortened to SM or SMX) is a transmission technique used in MIMO wireless communication to transmit independent and separately coded data signals, so called streams, from each of the multiple transmit antennas. This results in the space being reused, or multiplexed, more than one time. On each band, the Wireless-N standard is available in three primary configs, depending on the number of spatial streams being used. The lowest, single stream (1x1), dual stream (2x2) and three-stream (3x3), offering cap speeds of 150Mbps, 300Mbps and 450Mbps.
+
+- Frame Aggregation: Frame aggregation is a feature that allows communicating on a shared link or channel, typically a TDM shared channel, with a minimum time slot that for efficiency reasons benefits from filling the time slot with data, i.e. sending two or more data frames in a single transmission. The feature is an important part of the IEEE 802.11e, 802.11n and 802.11ac wireless LAN standards that increases throughput with frame aggregation. | MAC service data unit (MSDU) aggregation relies on the fact that most mobile access points and most mobile client protocol stacks use Ethernet as their "native" frame format. It collects Ethernet frames to be transmitted to one or multiple destinations and wraps them in a single 802.11n frame. This is efficient because Ethernet headers are much shorter than 802.11 headers. | Frame aggregation is a process of packing multiple MSDUs or MPDUs together to reduce the overheads and average them over multiple frames, thereby increasing the user level data rate. A-MPDU aggregation requires the use of block acknowledgement or BlockAck, which was introduced in 802.11e and has been optimized in 802.11n.
+
+- Transmit BeamFormig: Transmit Beamforming is a technique used to enhance the signal strength and quality in wireless communications. It involves adjusting the phase and amplitude of the signals transmitted from multiple antennas to focus the signal energy towards the intended receiver. This helps improve the signal-to-noise ratio and extend the coverage range of the wireless network.
+
+- Training Fields (MAC Operations): PLCP Header & PHY Training - Training fields are essential components of the MAC (Media Access Control) layer operations in 802.11n. The PLCP (Physical Layer Convergence Protocol) Header contains signaling information required for frame synchronization and modulation/demodulation. PHY (Physical Layer) Training involves the exchange of training sequences between the transmitter and receiver to estimate channel characteristics and optimize data transmission. These training fields enable efficient communication and enhance the reliability of wireless connections.
+
+- Guard Interval: The guard interval is a period of time used in wireless communications to avoid interference between consecutive transmitted symbols. In the 802.11n standard, a guard interval of 800 nanoseconds (short GI) and 400 nanoseconds (long GI) was introduced, determining the waiting time between symbols to mitigate the effects of time dispersion and enhance interference resilience. This adjustment contributes to improving the efficiency and quality of data transmission in wireless environments. 
+
+- 802.11n power saving: One of the problems with using MIMO is that it increases the power of the hardware circuitry. More transmitters and receivers need to be supported and this entails the use of more current. | Data is normally transmitted in a "bursty" fashion. This means that there are long periods when the system remains idle or running at a very slow speed. During these periods when MIMO is not required, the circuitry can be held inactive so that it does not consume power.
 
 ## 📡⚙️🧬 `802.11ac` / `Wi-Fi 5` / `VHT`
 
