@@ -1215,7 +1215,7 @@ _IEEE 802.11n-2009, or 802.11n, represents a significant enhancement to the IEEE
 - ⭕ Subcarrier Spacing: **`312.5 kHz`** <br> <br>
 - ⭕ Constellation | Code Rate: <br> <br>
     - [**MCS Index Table for 802.11n**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/969a21d2-8bc4-44b5-9b1a-28e3acaaf09a) <br> <br>
-- ⭕ MIMO: **`MIMO with Spatial Streams (up to 3x3)`**
+- ⭕ MIMO: **`MIMO with SS (up to 3x3)`**
 - ⭕ Max Single-User (SU) Streams: **`3`** _(up to 3x3)_
 - ⭕ Max Multi-User (MU) Streams:  _N/A_
 - ⭕ bit / Symbol: **`6 bits / symbol`** (for 64-QAM, 3/4)
@@ -1274,7 +1274,7 @@ _IEEE 802.11ac-2013 or 802.11ac provides high-throughput wireless local area net
 - ⭕ Subcarrier Spacing: 
 - ⭕ Constellation | Code Rate: <br> <br>
     - [**MCS Index Table for 802.11ac**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/969a21d2-8bc4-44b5-9b1a-28e3acaaf09a) <br> <br>
-- ⭕ MIMO: **`MIMO with Spatial Streams (up to 3x3)`** | **`MU-MIMO with Spatial Streams (up to 4x4)`** _(Only for Wave 2)_
+- ⭕ MIMO: **`MIMO with SS (up to 3x3)`** | **`MU-MIMO with SS (up to 4x4)`** _(Only for Wave 2)_
 - ⭕ Max Single-User (SU) Streams: **`3`** _(up to 3x3)_ 
 - ⭕ Max Multi-User (MU) Streams: **`4`** _(up to 4x4 - Only for Wave 2)_
 - ⭕ bit / Symbol:
