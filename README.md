@@ -1599,9 +1599,9 @@ or
 MAC Layer 2 Data (example, elements inside a beacon frame, rts/cts, ACK, etc. not comming from upper layers)
 
 
-                                                            |----------------|          from: upper layers 4,5,6,7
+                                                            |----------------|          from: # upper layers 4,5,6,7
                                                             | Data / Element |          or          
-                                                            |----------------|          from: MAC Layer (ex. beacon, cts/rts, etc)                    
+                                                            |----------------|          from: # MAC Layer (ex. beacon, cts/rts, etc)                    
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
@@ -1610,11 +1610,11 @@ LLC (Logical Link Control):
     MSDU = # IP Datagram + LLC Header (prepended)
 
                                                              <--- (LSDU) ---> 
+                                            |--------------||----------------|           from: # Data / Elements comes from upper layers,
+                                            |  LLC Header  || Data / Element |                 # LLC adds LLC-Header and convert to MSDU (LPDU)
                                             |--------------||----------------|
-                                            |  LLC Header  || Data / Element |
-                                            |--------------||----------------|
-                                            \________________________________/
-                                            <---------- MSDU (LPDU) --------->          to: MAC  {(LPDU) => MSDU}
+                                            \________________________________/   
+                                            <---------- MSDU (LPDU) --------->           to: # MSDU (LPDU) serviced to the MAC Sub-Layer   
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
@@ -1622,11 +1622,11 @@ MAC (Medium Access Control):
 
     PSDU = # MSDU + MAC Header (prepended) + FCS (appended)
                                               
-                            |--------------||--------------||----------------||-------|
-                            |  MAC Header  ||             MSDU               ||  FCS  |
+                            |--------------||--------------||----------------||-------|  from: # MSDU serviced from LLC Sub-Layer,
+                            |  MAC Header  ||             MSDU               ||  FCS  |        # MAC adds MAC-Header & Trailer and convert to MPDU
                             |--------------||--------------||----------------||-------|
                             \_________________________________________________________/                            
-                            <----------------------- MPDU (PSDU) ---------------------> to: PLCP  {MPDU => PSDU}   
+                            <----------------------- MPDU (PSDU) --------------------->  to: # PSDU (MPDU) serviced to the PLCP Sub-Layer   
                                                                                         
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
                                                                                        
@@ -1634,11 +1634,11 @@ PLCP = (Physical Layer Convergence Procedure) / (Physical Layer Convergence Prot
                                                                                        
     PPDU = # PSDU/MPDU + Preamble & PLCP Header (prepended)
 
-|--------------------------||--------------||--------------||----------------||-------|
-|  PLCP Header + Preamble  ||          PSDU (same as MPDU but in the PHY layer)       |
+|--------------------------||--------------||--------------||----------------||-------|  from: # PSDU serviced from MAC Sub-Layer,
+|  PLCP Header + Preamble  ||          PSDU (same as MPDU but in the PHY layer)       |        # PLCP adds PLCP-Header & Preamble and convert to PPDU
 |--------------------------||--------------||--------------||----------------||-------|
 \_____________________________________________________________________________________/
-<------------------------------------------ PPDU -------------------------------------> to: PMD  {PPDU => 01100101001}
+<------------------------------------------ PPDU ------------------------------------->  to: # PPDU is encapsulated into 1's & 0's in PMD Sub-Layer
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
