@@ -1200,6 +1200,8 @@ _IEEE 802.11g-2003, commonly known as 802.11g, represents an augmentation to the
 ## 📡⚙️🧬 `802.11n` / `Wi-Fi 4` / `HT`
 _IEEE 802.11n-2009, or 802.11n, represents a significant enhancement to the IEEE 802.11 wireless networking standard by utilizing multiple antennas to increase data rates, this technology is called "MIMO". The Wi-Fi Alliance has also retroactively labelled the technology for the standard as Wi-Fi 4. It standardized support for multiple-input multiple-output (MIMO), frame aggregation, and security improvements, among other features, and can be used in the 2.4 GHz or 5 GHz frequency bands._
 
+### 📡💡 802.11n / Wi-Fi 4 / HT: `Features`
+
 - ⭕ Year & Status: October 2009 _(standard in current use but transitioning out)_
 - ⭕ IEEE Amendment: **`Amendment 5`**
 - ⭕ IEEE 802.11-2020 Clause: **`Clause 19`** <br> <br>
@@ -1229,7 +1231,7 @@ _IEEE 802.11n-2009, or 802.11n, represents a significant enhancement to the IEEE
 
 
 
-### ⚙️🚀 802.11n | Wi-Fi 4 | HT: Enhancements
+### ⚙️🚀 802.11n / Wi-Fi 4 / HT: `Enhancements` 
     
 - 802.11n Backward compatibility switching :: Backward compatibility for devices in a net using earlier versions of Wi-Fi, this adds a significant overhead to any exchanges, thereby reducing the data transfer capacity. To provide the maximum data transfer speeds when all devices in the wireless local area network are operating on the 802.11n standard, the backwards compatibility feature can be removed. <br><br>
         - Legacy (only 802.11 a, b, and g)
@@ -1250,9 +1252,71 @@ _IEEE 802.11n-2009, or 802.11n, represents a significant enhancement to the IEEE
 
 - Guard Interval: The guard interval is a period of time used in wireless communications to avoid interference between consecutive transmitted symbols. In the 802.11n standard, a guard interval of 800 nanoseconds (short GI) and 400 nanoseconds (long GI) was introduced, determining the waiting time between symbols to mitigate the effects of time dispersion and enhance interference resilience. This adjustment contributes to improving the efficiency and quality of data transmission in wireless environments. 
 
+- HT Control in MAC Header: 
+
 - 802.11n power saving: One of the problems with using MIMO is that it increases the power of the hardware circuitry. More transmitters and receivers need to be supported and this entails the use of more current. | Data is normally transmitted in a "bursty" fashion. This means that there are long periods when the system remains idle or running at a very slow speed. During these periods when MIMO is not required, the circuitry can be held inactive so that it does not consume power.
 
 ## 📡⚙️🧬 `802.11ac` / `Wi-Fi 5` / `VHT`
+_IEEE 802.11ac-2013 or 802.11ac provides high-throughput wireless local area networks (WLANs) on the 5 GHz band. The standard has been retroactively labelled as Wi-Fi 5 by Wi-Fi Alliance. The specification has multi-station throughput of at least 1.1 gigabit per second (1.1 Gbit/s) and single-link throughput of at least 500 megabits per second (0.5 Gbit/s). This is accomplished by extending the air-interface concepts embraced by 802.11n: wider RF bandwidth (up to 160 MHz), more MIMO spatial streams (up to eight), downlink multi-user MIMO (up to four clients), and high-density modulation (up to 256-QAM). | The Wi-Fi Alliance separated the introduction of 802.11ac wireless products into two phases ("waves"), named "Wave 1" and "Wave 2". From mid-2013, the alliance started certifying Wave 1 802.11ac products shipped by manufacturers, based on the IEEE 802.11ac Draft 3.0 (the IEEE standard was not finalized until later that year). Subsequently in 2016, Wi-Fi Alliance introduced the Wave 2 certification, which includes additional features like MU-MIMO (down-link only), 160 MHz channel width support, support for more 5 GHz channels, and four spatial streams (with four antennas; compared to three in Wave 1 and 802.11n, and eight in IEEE's 802.11ax specification). It meant Wave 2 products would have higher bandwidth and capacity than Wave 1 products. | Wave 2, referring to products introduced in 2016, offers a higher throughput than legacy Wave 1 products, those introduced starting in 2013. The maximum physical layer theoretical rate for Wave 1 is 1.3 Gbit/s, while Wave 2 can reach 2.34 Gbit/s. Wave 2 can therefore achieve 1 Gbit/s even if the real world throughput turns out to be only 50% of the theoretical rate. Wave 2 also supports a higher number of connected devices._
+
+### 📡💡 802.11ac / Wi-Fi 5 / VHT: `Features`
+
+- ⭕ Year & Status: Mid `2013 :: Wave 1` &  `2014 :: Wave 2`  _(standard in current use)_
+- ⭕ IEEE Amendment: **`Amendment 5`**
+- ⭕ IEEE 802.11-2020 Clause: **`Clause 20`** <br> <br>
+- ⭕ PHY: **`VHT :: Very High Throughput`**
+- ⭕ Operating Band: **`5 GHz`**
+- ⭕ Channel Bandwidth: **`20 MHz`** | **`40 MHz`** | **`80 MHz`** | **`160 MHz`** _(Only for Wave 2)_
+- ⭕ Stream Data Rates: 
+- ⭕ Modulation Technique: **`OFDM :: Orthogonal Frequency Division Multiplexing`**  <br> <br>
+- ⭕ OFDM: **`Yes`**
+- ⭕ Max OFDM tones: 
+- ⭕ Subcarrier Spacing: 
+- ⭕ Constellation | Code Rate: <br> <br>
+    - [**MCS Index Table for 802.11ac**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/969a21d2-8bc4-44b5-9b1a-28e3acaaf09a) <br> <br>
+- ⭕ MIMO: **`MIMO with Spatial Streams (up to 3x3)`** | **`MU-MIMO with Spatial Streams (up to 4x4)`** _(Only for Wave 2)_
+- ⭕ Max Single-User (SU) Streams: **`3`** _(up to 3x3)_ 
+- ⭕ Max Multi-User (MU) Streams: **`4`** _(up to 4x4 - Only for Wave 2)_
+- ⭕ bit / Symbol:
+- ⭕ MCS: 
+- ⭕ QAM Spectral Efficienty _(aprox)_: 
+- ⭕ Link Spectral Efficiency: 
+- ⭕ Guard Interval: **`800 ns (short GI)`** / **`400 ns (long GI)`** <br> <br>
+- ⭕ Frame Aggregation: <br> <br>
+- ⭕ Power Saving:  <br> <br>
+- ⭕ Security: **80.11i =** **`WPA2 - Personal`** & **`WPA2 - Enterprise (802.1X-EAP)`**
+- ⭕ Authentication: **`Open Authentication`** | **`Pre-Shared Key`** | **`Hotspot 2.0 / Passpoint`**
+- ⭕ Encryption Algorithm: For WPA2 PErsonal: **`TKIP`** || For WPA2 Enterprise: **`AES-CCMP`**  <br> <br>
+
+### ⚙️🚀 802.11ac / Wi-Fi 5 / VHT: `Enhancements` 
+
+- Extended channel binding: Optional 160 MHz and mandatory 80 MHz channel bandwidth for stations; cf. 40 MHz maximum in 802.11n.
+
+- More MIMO spatial streams: Support for up to eight spatial streams (vs. four in 802.11n) 
+
+- Downlink multi-user MIMO (MU-MIMO): Allows up to four simultaneous downlink MU-MIMO clients.  Multiple STAs, each with one or more antennas, transmit or receive independent data streams simultaneously.
+    - Space-division multiple access (SDMA): streams not separated by frequency, but instead resolved spatially, analogous to 11n-style MIMO.
+    - Downlink MU-MIMO (one transmitting device, multiple receiving devices) included as an optional mode.
+
+- 256-QAM (MCS 8/9 (256-QAM)): rate 3/4 and 5/6, added as optional modes (vs. 64-QAM, rate 5/6 maximum in 802.11n).
+
+- 1024-QAM: Some vendors offer a non-standard 1024-QAM mode, providing 25% higher data rate compared to 256-QAM
+
+- Standarized Beamforming: Beamforming with standardized sounding and feedback for compatibility between vendors (non-standard in 802.11n made it hard for beamforming to work effectively between different vendor products)
+
+- Bandwith Coexistence: Coexistence mechanisms for 20, 40, 80, and 160 MHz channels, 11ac and 11a/n devices
+
+- MAC modifications: Mostly to support above changes
+
+- 160 MHz channel bandwidths (contiguous 80+80):
+
+- 80+80 MHz channel bonding (discontiguous 80+80):
+
+- New PPDU HT Elements: Adds four new fields to the PPDU header identifying the frame as a very high throughput (VHT) frame as opposed to 802.11n's high throughput (HT) or earlier. The first three fields in the header are readable by legacy devices to allow coexistence
+DFS was mandated between channels 52 and 144 for 5 GHz to reduce interference with weather stations using the same frequency band.
+
+
+
 
 ## 📡⚙️🧬 `802.11ax` / `Wi-Fi 6` / `HE`
 
