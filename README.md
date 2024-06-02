@@ -1449,7 +1449,7 @@ _In Wireless 802.11 networks, Layers 1 and 2 are the most crucial, Layers 3 and 
 
 ---
 
-### 💊🖼️📦 Encapsulation Basics: `SDU` & `PDU`
+### 💊🖼️📦 Encapsulation: `SDU` & `PDU`
 _Key Concept: The message used to communicate information for a particular protocol is called its protocol data unit (PDU) in OSI model terminology. That PDU is passed down to the next lower layer for transmission; since that layer is providing the service of handling that PDU, it is called the lower layer’s service data unit (SDU). The SDU is encapsulated into that layer’s own PDU and in turn sent to the next lower layer in the stack, proceeding until the physical layer is reached. The process is reversed on the recipient device._ 
 
 **A layer N PDU is a layer N-1 SDU, which is encapsulated into a layer N-1 PDU.**
@@ -1517,7 +1517,13 @@ Layer N - 1      |             PCI                  ||                          
 
 ---
 
-### 💊🖼️📡 Layer 1 (Data Link) & Layer 2 (PHY): `Sublayers`
+### 💊🖼️📡 Encapuslation: Layer 2 (Data Link) & Layer 1 (PHY) `Sub-Layers`
+_**ALL the 802.11b/a/g/n/ac/ax Wi-Fi standards use the terms MSDU, MPDU, PSDU, and PPDU in their frame structures.** These concepts are fundamental to understanding how data is structured and transmitted in Wi-Fi networks according to the various standards. The use of these terms ensures that, regardless of the specific standard (b/a/g/n/ac/ax), the structure and process of data transmission follow a consistent and compatible scheme._
+
+- **`MSDU (MAC Service Data Unit)`**: This is the data unit passed from the Data Link Layer to the Physical Layer. It contains the data information that will be transmitted over the network. <br> <br>
+- **`MPDU (MAC Protocol Data Unit)`**: This is the data unit formed at the MAC (Medium Access Control) layer from one or more MSDUs. It includes headers and frame control sequences necessary for transmission at the MAC level. <br> <br>
+- **`PSDU (PLCP Service Data Unit)`**: This is the data unit passed from the MAC layer to the Physical (PHY) layer. The PSDU becomes the payload of the data field in the PPDU frame. <br> <br>
+- **`PPDU (PLCP Protocol Data Unit)`**: This is the final data unit transmitted over the physical medium. It includes the PSDU along with the PLCP (Physical Layer Convergence Protocol) header, which is added at the physical layer to prepare the data for transmission.
 
 ````py
 
