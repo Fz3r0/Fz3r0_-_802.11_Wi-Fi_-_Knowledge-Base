@@ -1206,7 +1206,7 @@ _IEEE 802.11n-2009, or 802.11n, represents a significant enhancement to the IEEE
 - ⭕ PHY: **`HT :: High Throughput`**
 - ⭕ Operating Band: **`2.4 GHz`** & **`5 GHz`**
 - ⭕ Channel Bandwidth: **`20 MHz`** & **`40 MHz`**
-- ⭕ Stream Data Rates: **`6 Mbps`** | **`9 Mbps`** | **`12 Mbps`** | **`18 Mbps`** | **`24 Mbps`** | **`36 Mbps`** | **`48 Mbps`** | **`54 Mbps`** | ... |  **`288 Mbps`** _(20 MHz peak)_ | **`600 Mbps`** _(40 MHz peak)_
+- ⭕ Stream Data Rates: **`6 Mbps`** | **`9 Mbps`** | **`12 Mbps`** | **`18 Mbps`** | **`24 Mbps`** | ... |  **`288 Mbps`** _(20 MHz peak)_ | **`600 Mbps`** _(40 MHz peak)_
 - ⭕ Modulation Technique: **`OFDM :: Orthogonal Frequency Division Multiplexing`** / _**`(ERP & HR-DSSS support)`**_ <br> <br>
 - ⭕ OFDM: **`Yes`**
 - ⭕ Max OFDM tones: **`128`**
