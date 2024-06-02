@@ -1101,7 +1101,7 @@ _The DSSS version of legacy 802.11 Prime was rapidly supplemented (and populariz
 
 - **Direct extension of original 802.11 Prime (1997)** <br> <br>
     - **`More Data Rates available`**: Data rates with varying modulation types: 1, 2, 5.5 and up to 11 Mbps using Adaptative Rate Selection also known as Dynamic Rate Switching <br> <br>
-    - **`Dynamic Rate Switching`**: It can operate at 11 Mbit/s, but scale back to 5.5, then to 2, then to 1 Mbit/s in order to decrease the rate of re-broadcasts that result from errors. <br> <br>
+    - **`Dynamic Rate Switching`**: It can operate at 11 Mbit/s, but scale back to 5.5, then to 2, then to 1 Mbit/s in order to decrease the rate of re-broadcasts that result from errors.
   
 ## 📡⚙️🧬 `802.11a` / `Wi-Fi 2` / `OFDM`
 _IEEE802.11a is the first wireless standard to employ packet based OFDM: Orthogonal Frequency Division Multiplexing | Using the 5 GHz band gives 802.11a a significant advantage, since the 2.4 GHz band is heavily used to the point of being crowded. Degradation caused by such conflicts can cause frequent dropped connections and degradation of service | The effective overall range of 802.11a is slightly less than that of 802.11b/g; 802.11a signals cannot penetrate as far as those for 802.11b because they are absorbed more readily by walls and other solid objects in their path and because the path loss in signal strength is proportional to the square of the signal frequency | he increased number of usable channels (4 to 8 times as many in FCC countries) and the near absence of other interfering systems (microwave ovens, cordless phones, baby monitors) give 802.11a significant aggregate bandwidth and reliability advantages over 802.11b/g. | 802.11a offered less interference from other devices but initially had lower adoption due to higher costs and shorter range._
@@ -1144,16 +1144,85 @@ _IEEE802.11a is the first wireless standard to employ packet based OFDM: Orthogo
 ### ⚙️🚀 **802.11a** | **Wi-Fi 2** | **OFDM**: `Enhancements` 
 
 - **`5 GHz band`**: First 802.11 wireless standard that uses 5 GHz band. 12 non-overlapping unlicensed national information infrastructure (UNII) channels in 5 GHz frequency band. <br> <br>
-- **`OFDM`**: First 802.11 wireless standard to employ packet-based OFDM (Orthogonal frequency-division multiplexing) with 52 subcarrier channels. Orthogonal Frequency Division Multiplex, OFDM, is a form of signal format that uses a large number of closely spaced carriers that are each modulated with a low rate data stream. The closely spaced signals would normally be expected to interfere with each other, but by making the signals orthogonal to each other, there is no mutual interference. The data to be transmitted is shared across all the carriers, providing resilience against selective fading from multi-path effects. <br> <br>
-- **`More Data Rates available`**: Data rates with varying modulation types: 6, 9, 12, 18, 24, 36, 48 and up to 54 Mbps using Adaptative Rate Selection <br> <br>
+- **`OFDM`**: First 802.11 wireless standard to employ packet-based OFDM (Orthogonal frequency-division multiplexing) with 52 subcarrier channels (using the 5 GHz band). Orthogonal Frequency Division Multiplex, OFDM, is a form of signal format that uses a large number of closely spaced carriers that are each modulated with a low rate data stream. The closely spaced signals would normally be expected to interfere with each other, but by making the signals orthogonal to each other, there is no mutual interference. The data to be transmitted is shared across all the carriers, providing resilience against selective fading from multi-path effects. <br> <br>
+- **`More Data Rates available`**: Data rates with varying modulation types: 6, 9, 12, 18, 24, 36, 48 and up to 54 Mbps using Adaptative Rate Selection 
 
 ## 📡⚙️🧬 `802.11g` / `Wi-Fi 3` / `ERP`
-_IEEE 802.11g-2003 or 802.11g is an amendment to the IEEE 802.11 specification that operates in the 2.4 GHz microwave band. The standard has extended link rate to up to 54 Mbit/s using the same 20 MHz bandwidth as 802.11b uses to achieve 11 Mbit/s. 802.11g is fully backward compatible with 802.11b, but coexistence of the two methods creates a significant performance penalty._
+_IEEE 802.11g-2003, commonly known as 802.11g, represents an augmentation to the IEEE 802.11 protocol, functioning within the 2.4 GHz microwave band. This amendment ensures full backward compatibility with 802.11b; however, simultaneous operation of both methods incurs a substantial performance penalty. Serving as an extension of the 802.11b standard, 802.11g operates within the 2.4 GHz band, yet distinguishes itself by offering higher data rates, rendering it apt for multimedia applications. Leveraging the identical 20 MHz bandwidth as 802.11b, which yields 11 Mbit/s, 802.11g's Enhanced Rate PHY (ERP) now boasts data rates of up to 54 Mbps, same as 802.11a, but using 2.4 GHz (802.11a uses 5 GHz). This standard adopts Orthogonal Frequency Division Multiplexing (OFDM) for modulation, the same as 802.11a. 802.11g retains backward compatibility with 802.11b, enabling seamless integration of devices from both standards into a unified network infrastructure._
 
-- ⚙️ **Features:** <br> <br>
-    - **`Backward compatibility`**: Firts 802.11 with backward compatibility, onfly for 802.11b <br> <br>
-    - **`OFDM in 2.4 GHz band, backward compatible`**: First 802.11 PHY that supports OFDM in 2.4 GHz band. Orthogonal frequency-division multiplexing (OFDM) with 52 subcarrier channels; backwards compatible with 802.11b using DSSS and CCK. <br> <br>
-    - **`Data rates with backward compatibility`**:  Data rates with varying modulation types: 6, 9, 12, 18, 24, 36, 48 and 54 Mbps; can revert to 1, 2, 5.5, and 11 Mbps using DSSS and CCK (for 802.11b compatibility). Both Data Rate selection uses Dynamic Rate Switching. <br> <br>
+### 📡💡 **802.11g | Wi-Fi 3 | ERP: Features**
+
+- ⭕ Year & Status: June 2003 (Legacy)
+- ⭕ IEEE Amendment: Amendment 4
+- ⭕ IEEE 802.11-2020 Clause: Clause 18 <br> <br>
+- ⭕ PHY: ERP :: Enhanced Rate PHY
+- ⭕ Operating Band: 2.4 GHz
+- ⭕ Channel Bandwidth: 20 MHz
+- ⭕ Stream Data Rates: 6 Mbps | 9 Mbps | 12 Mbps | 18 Mbps | 24 Mbps | 36 Mbps | 48 Mbps | 54 Mbps peak
+- ⭕ Modulation Technique: OFDM (Orthogonal Frequency Division Multiplexing) <br> <br>
+- ⭕ OFDM: Yes
+- ⭕ Max OFDM tones: 64
+- ⭕ Subcarrier Spacing: 312.5 kHz <br> <br>
+- ⭕ Constellation | Code Rate: <br> <br>
+    - Modulation: BPSK || Coding: 1/2 || Data Rate: 6 Mbps || Rate bits: 1101
+    - Modulation: BPSK || Coding: 3/4 || Data Rate: 9 Mbps || Rate bits: 1111
+    - Modulation: QPSK || Coding: 1/2 || Data Rate: 12 Mbps || Rate bits: 0101
+    - Modulation: QPSK || Coding: 3/4 || Data Rate: 18 Mbps || Rate bits: 0111
+    - Modulation: 16-QAM || Coding: 1/2 || Data Rate: 24 Mbps || Rate bits: 1001
+    - Modulation: 16-QAM || Coding: 3/4 || Data Rate: 36 Mbps || Rate bits: 1011
+    - Modulation: 64-QAM || Coding: 2/3 || Data Rate: 48 Mbps || Rate bits: 0001
+    - Modulation: 64-QAM || Coding: 3/4 || Data Rate: 54 Mbps || Rate bits: 0011 <br> <br>
+- ⭕ MIMO: N/A (introduced until 802.11n)
+- ⭕ Max Single-User (SU) Streams: 1
+- ⭕ Max Multi-User (MU) Streams: N/A
+- ⭕ bits / Symbol: 6 bits / symbol (for 64-QAM, 3/4)
+- ⭕ MCS: N/A (non 802.11n or higher)
+- ⭕ QAM Spectral Efficiency (approx): 4-QAM = 24 SNR | 16-QAM = 16 SNR | 64-QAM = 27 SNR
+- ⭕ Link Spectral Efficiency: 2.7 bps/Hz
+- ⭕ Guard Interval: N/A (introduced until 802.11n) <br> <br>
+- ⭕ Power Saving: N/A <br> <br>
+- ⭕ Security: WEP
+- ⭕ Authentication: Open Authentication | Shared Key
+- ⭕ Encryption Algorithm: WEP <br> <br>
+
+### ⚙️🚀 802.11g | Wi-Fi 3 | ERP: Enhancements
+
+- **`Backward Compatibility`**: First 802.11 with backward compatibility (compatible with 802.11b), allowing devices of both standards to operate in the same network. <br> <br>
+- **`Higher Data Rates`**: Provides higher data rates compared to 802.11b, making it suitable for multimedia applications. Data rates with varying modulation types: 6, 9, 12, 18, 24, 36, 48 and up to 54 Mbps using Adaptative Rate Selection <br> <br>
+- **`OFDM in 2.4 GHz band`**: First 802.11 PHY that supports OFDM in 2.4 GHz band. Orthogonal frequency-division multiplexing (OFDM) with 52 subcarrier channels; backwards compatible with 802.11b using DSSS and CCK. OFDM provides better performance in environments with interference.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## 📡⚙️🧬 `802.11n` / `Wi-Fi 4` / `HT`
 _IEEE 802.11n-2009, or 802.11n, is a wireless-networking standard that uses multiple antennas to increase data rates. The Wi-Fi Alliance has also retroactively labelled the technology for the standard as Wi-Fi 4.[8][9] It standardized support for multiple-input multiple-output, frame aggregation, and security improvements, among other features, and can be used in the 2.4 GHz or 5 GHz frequency bands._
