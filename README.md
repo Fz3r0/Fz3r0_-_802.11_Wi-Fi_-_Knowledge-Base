@@ -1450,6 +1450,9 @@ _In Wireless 802.11 networks, Layers 1 and 2 are the most crucial, Layers 3 and 
 ---
 
 ### 💊🖼️📦 Encapsulation Basics: `SDU` & `PDU`
+_Key Concept: The message used to communicate information for a particular protocol is called its protocol data unit (PDU) in OSI model terminology. That PDU is passed down to the next lower layer for transmission; since that layer is providing the service of handling that PDU, it is called the lower layer’s service data unit (SDU). The SDU is encapsulated into that layer’s own PDU and in turn sent to the next lower layer in the stack, proceeding until the physical layer is reached. The process is reversed on the recipient device._ 
+
+**A layer N PDU is a layer N-1 SDU, which is encapsulated into a layer N-1 PDU.**
 
 ````py
 
@@ -1623,7 +1626,7 @@ MAC (Medium Access Control):
     PSDU = # MSDU + MAC Header (prepended) + FCS (appended)
                                               
                             |--------------||--------------||----------------||-------|  from: # MSDU serviced from LLC Sub-Layer,
-                            |  MAC Header  ||             MSDU               ||  FCS  |        # MAC adds MAC-Header & Trailer and convert to MPDU
+                            |  MAC Header  ||             MSDU               ||  FCS  |        # MAC adds MAC-Header & Trailer and encapsulates it into a MPDU
                             |--------------||--------------||----------------||-------|
                             \_________________________________________________________/                            
                             <----------------------- MPDU (PSDU) --------------------->  to: # PSDU (MPDU) serviced to the PLCP Sub-Layer   
@@ -1635,7 +1638,7 @@ PLCP = (Physical Layer Convergence Procedure) / (Physical Layer Convergence Prot
     PPDU = # PSDU/MPDU + Preamble & PLCP Header (prepended)
 
 |--------------------------||--------------||--------------||----------------||-------|  from: # PSDU serviced from MAC Sub-Layer,
-|  PLCP Header + Preamble  ||          PSDU (same as MPDU but in the PHY layer)       |        # PLCP adds PLCP-Header & Preamble and convert to PPDU
+|  PLCP Header + Preamble  ||          PSDU (same as MPDU but in the PHY layer)       |        # PLCP adds PLCP-Header & Preamble and encapsulates it into a PPDU
 |--------------------------||--------------||--------------||----------------||-------|
 \_____________________________________________________________________________________/
 <------------------------------------------ PPDU ------------------------------------->  to: # PPDU is encapsulated into 1's & 0's in PMD Sub-Layer
