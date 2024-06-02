@@ -1398,6 +1398,12 @@ _802.11ax operates in both the 2.4 GHz and 5 GHz frequency bands, unlike 802.11a
 # 802.11 WLAN Architecture
 _The 802.11 WLAN Architecture is crucial for comprehending the operation and management of wireless networks. This block delves into the fundamental components, services, and network planes that constitute the 802.11 WLAN framework. The IEEE 802.11 architecture consists of several critical components that interact to provide a robust and flexible WLAN supporting seamless STA (Station) mobility. These components include various types of stations and access points, each playing a specific role in the network. Devices within a WLAN can operate in various modes to support different networking requirements. In a centralized WLAN architecture, a central Wireless LAN Controller (WLC) resides in the core of the network, replacing autonomous APs with controller-based or lightweight APs. This architecture centralizes all three network planes_
 
+                                                                                 
+## ⚙️🏗️🛰️ Components of 802.11 WLAN Network Architecture
+_The IEEE 802.11 architecture consists of several components that interact to provide a WLAN that supports STA mobility transparently to upper layers. The IEEE 802.11 architecture consists of several critical components that interact to provide a robust and flexible WLAN supporting seamless STA (Station) mobility. These components include various types of stations and access points, each playing a specific role in the network._
+- [CWNA Chapter 11: WLAN Architecture/](https://techimike.com/cwna-chapter-11-wlan-architecture/) _`whitepaper`_
+- [`Fz3r0`: Services Provided by 802.11 Devices](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/802.11_Design/802.11_Network_Architecture/Services-Provided-by-802.11-Devices.md)
+
 | Service Name                         | Description                                                                                                                                                                                                                                                                                                                                                                                                                            | Example                                                             |
 |--------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
 | `DSS`: Distributed System Service    | The infrastructure that interconnects the APs in an ESS. It typically consists of a wired network but can also include wireless backhaul connections.                                                                                                                                                                                                                                                                                   | The centralized network connecting all APs and controllers in an office building |
@@ -1413,30 +1419,23 @@ _The 802.11 WLAN Architecture is crucial for comprehending the operation and man
 | `MBSS`: Mesh Basic Service Set       | Set of APs that provide mesh distribution. APs connected to the wired network are called gateways or "mesh gates". APs not connected to the wired network form wireless backhaul connections to the gateways and are known as mesh points. Route selection is done using the HWMP protocol, based on metrics such as RSSI, SNR, client load, and number of hops. Route selection is done via MAC and not via IP.                                    | A mesh network used in a large office campus                             |
 | `PBSS`: Personal Basic Service Set   | Used for direct communication between 802.11ad stations in the 60GHz band. A client assumes the role of PBSS control point (PCP) and synchronizes communication between all clients.                                                                                                                                                                                                                                                   | Wireless communication between devices in a high-frequency, secure office environment            |
 
-                                                                                       
-
-## ⚙️🏗️🛰️ Components of 802.11 WLAN Network Architecture
-_The IEEE 802.11 architecture consists of several components that interact to provide a WLAN that supports STA mobility transparently to upper layers. The IEEE 802.11 architecture consists of several critical components that interact to provide a robust and flexible WLAN supporting seamless STA (Station) mobility. These components include various types of stations and access points, each playing a specific role in the network._
-- [CWNA Chapter 11: WLAN Architecture/](https://techimike.com/cwna-chapter-11-wlan-architecture/) _`whitepaper`_
-- [`Fz3r0`: Services Provided by 802.11 Devices](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/802.11_Design/802.11_Network_Architecture/Services-Provided-by-802.11-Devices.md)
-
-### 🤳🏾🛜📡 802.11 Services: The 3 Categories
+     
+## 🤳🏾🛜📡 802.11 Services: `The 3 Categories`
 _The architecture categorizes services into three primary types, each serving distinct purposes._
-- [1. **`SS`**: Station Service]()
-- [2. **`DSS`**: Distribution System Service]()
-- [3. **`PCPS`**: BSS Control Point Service__(CWAP out of Scope_)]()
+- 1. **`SS`**: Station Service
+- 2. **`DSS`**: Distribution System Service
+- 3. **`PCPS`**: BSS Control Point Service _(CWAP out of Scope)_
 
-### 🤳🏾📡 SS (Station Services): Type of STAs
+## 🤳🏾📡 SS (Station Services): Type of STAs
 - [**`STA`** = Client STA](https://en.wikipedia.org/wiki/Station_(networking)) :: Any device containing IEEE 802.11 MAC & PHY interface to the WM `Does NOT act as AP`
 - [**`AP`** = Access Point STA](https://en.wikipedia.org/wiki/Wireless_access_point) :: Networking device that allows other Wi-Fi devices to connect to a network `Act as an AP` <br> <br>
-    - [**`QSTA` STA-QoS & `QAP`** AP-QoS](https://www.redalyc.org/pdf/6380/638067265006.pdf) :: Any AP or STA that supports Wi-Fi Multimedia 802.11e QoS  _(Any modern device)_
+    - [_**`QSTA` STA-QoS & `QAP`** AP-QoS_](https://www.redalyc.org/pdf/6380/638067265006.pdf) :: Any AP or STA that supports Wi-Fi Multimedia 802.11e QoS  _(Any modern device)_
 
-### 🟣🤳🏾 `Client Modes`
-- [Wireless LAN two **modes**: `Ad-Hoc` vs `Infrastructure` @ Sunny](https://www.youtube.com/watch?v=SLSOZokbFfM) `Video`
-    - 🤳🏾[**`Infrastructure Mode`**](https://www.lifewire.com/infrastructure-mode-in-wireless-networking-816539) :: Device that needs an AP to connect to the Network
-    - 🤳🏾[**`Ad-Hoc Mode`**](https://www.ii.pwr.edu.pl/~kano/course/module8/8.1.3.2/8.1.3.2.html#:~:text=An%20ad%20hoc%20wireless%20network,device%20to%20connect%20to%20it.) :: 2 wireless devices communicate in a peer-to-peer (P2P) manner without using APs
+### 🟣🤳🏾 Client STA: `Modes`
+- 🤳🏾[**`Infrastructure Mode`**](https://www.lifewire.com/infrastructure-mode-in-wireless-networking-816539) :: Device that needs an AP to connect to the Network
+- 🤳🏾[**`Ad-Hoc Mode`**](https://www.ii.pwr.edu.pl/~kano/course/module8/8.1.3.2/8.1.3.2.html#:~:text=An%20ad%20hoc%20wireless%20network,device%20to%20connect%20to%20it.) :: 2 wireless devices communicate in a peer-to-peer (P2P) manner without using APs
 
-### 🟣📡 `AP Modes`
+### 🟣📡 AP: `Modes`
 - [`Cisco` Wireless AP Modes](https://networklessons.com/cisco/ccna-200-301/cisco-wireless-ap-modes)
 - [`Aruba` Instant On AP Modes](https://www.arubainstanton.com/techdocs/en/content/get-started/ap-conf-mode.htm)
 - [`Commscope` - Wi-Fi Bridges and Wi-Fi Mesh: What’s the Difference?](https://www.commscope.com/blog/2018/wi-fi-bridges-and-wi-fi-mesh-whats-the-difference/)<br><br>
@@ -1449,21 +1448,19 @@ _The architecture categorizes services into three primary types, each serving di
     - 📡[**`Sensor Mode`** / **`Sniffer Mode`**]() Dedicates its time to receive 802.11 wireless frames
     - 📡[**`Rogue Detector Mode`**]()
 
-### 🟣🛜 802.11 SS (Station Services): Services
-- [**`Authentication`**]
-- [**`Deauthentication`**]
-- [**`Data confidientality (encryption)`**]
-- [**`MSDU delivery`**]
-- [**`DFS - Dynamic Frequency Selection`**]
-- [**`TPC - Transmit Power Control`**]
-- [**`Time Synchronization with higher layers (QoS facility only)`**]
-- [**`QoS traffic scheduling (QoS facility only)`**]
-- [**`Radio Measurment`**]
-- [**`DSE - Dynamic STA Enablement`**]
+## 🟣🛜 802.11 SS (Station Services): Services
+- Authentication - Validates the identity of devices trying to join the WLAN.
+- Deauthentication - Removes authenticated status of devices from the WLAN.
+- Data confidentiality (encryption) - Ensures that transmitted data is secure and cannot be intercepted.
+- MSDU delivery - Delivers MAC service data units (MSDUs) between stations.
+- DFS (Dynamic Frequency Selection) - Manages frequency usage to avoid interference.
+- TPC (Transmit Power Control) - Regulates the transmit power of devices to optimize performance and reduce interference.
+- Time Synchronization with higher layers (QoS facility only) - Synchronizes time between stations and higher layer protocols for Quality of Service (QoS) management.
+- QoS traffic scheduling (QoS facility only) - Prioritizes and schedules traffic based on quality of service requirements.
+- Radio Measurement - Collects and reports radio metrics for network optimization.
+- DSE (Dynamic STA Enablement) - Enables dynamic stations based on network requirements.
 
----
-
-### 🏘️📡🖧 DSS (Distribution System Service)
+## 🏘️📡🖧 DSS (Distribution System Service)
 _In High Scale or Enterprise WLAN Networking is not recomended to use IBSS Independent WLANs (like Ad-Hoc / Peer-to-Peer) because in this kind of enviorments can cost a lot of problems of RSSI & interference, the best practice is only allow Infraestructure (BSS or ESS) & make a policy in the enterprise stating that IBSS are not allowed || When analyzing, From DS & To DS bits can show us which kind of networks sorround us._ 
 - [Wireless LAN 802.11 Service Sets @ Wi-Fi Professionals](https://www.wifi-professionals.com/2019/03/802-11-topologies-aka-service-sets)
 - [8 Components of a 802.11 Wireless Service Set](https://www.cbtnuggets.com/blog/technology/networking/8-components-of-a-802-11-wireless-service-set)
