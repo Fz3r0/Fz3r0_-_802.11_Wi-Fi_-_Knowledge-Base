@@ -1118,7 +1118,7 @@ _IEEE802.11a is the first wireless standard to employ packet based OFDM: Orthogo
 - ⭕ Modulation Technique: **`OFDM`** Orthogonal Frequency Division Multiplexing <br> <br>
 - ⭕ OFDM: `Yes` (OFDM)
 - ⭕ Max OFDM tones: `64`
-- ⭕ Subcarrier Spacing: `312.5 kHz` <br> <br>
+- ⭕ Subcarrier Spacing: **`312.5 kHz`** <br> <br>
 - ⭕ Constellation | Code Rate: <br> <br>
     - Modulation: **`BPSK`** || Coding: **`1/2`** || Data Rate: **`6 Mbps`** || Rate bits: **`1101`**
     - Modulation: **`BPSK`** || Coding: **`3/4`** || Data Rate: **`9 Mbps`** || Rate bits: **`1111`**
@@ -1271,7 +1271,7 @@ _IEEE 802.11ac-2013 or 802.11ac provides high-throughput wireless local area net
 - ⭕ Modulation Technique: **`OFDM :: Orthogonal Frequency Division Multiplexing`**  <br> <br>
 - ⭕ OFDM: **`Yes`**
 - ⭕ Max OFDM tones: 
-- ⭕ Subcarrier Spacing: 
+- ⭕ Subcarrier Spacing: **`312.5 kHz`** <br> <br>
 - ⭕ Constellation | Code Rate: <br> <br>
     - [**MCS Index Table for 802.11ac**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/969a21d2-8bc4-44b5-9b1a-28e3acaaf09a) <br> <br>
 - ⭕ MIMO: **`MIMO with SS (up to 3x3)`** | **`MU-MIMO with SS (up to 4x4)`** _(Only for Wave 2)_
@@ -1320,6 +1320,36 @@ DFS was mandated between channels 52 and 144 for 5 GHz to reduce interference wi
 
 ## 📡⚙️🧬 `802.11ax` / `Wi-Fi 6` / `HE`
 
+### 📡💡 802.11ax / Wi-Fi 6 / HE: `Features`
+
+- ⭕ Year & Status:  _(standard in current use)_
+- ⭕ IEEE Amendment: **`Amendment 5`**
+- ⭕ IEEE 802.11-2020 Clause: **`Clause 20`** <br> <br>
+- ⭕ PHY: **`HE :: High Efficiency`**
+- ⭕ Operating Band:
+- ⭕ Channel Bandwidth: **`20 MHz`** | **`40 MHz`** | **`80 MHz`** | **`160 MHz`** 
+- ⭕ Stream Data Rates: 
+- ⭕ Modulation Technique: **`OFDM :: Orthogonal Frequency Division Multiplexing`**  <br> <br>
+- ⭕ OFDM: **`Yes`**
+- ⭕ Max OFDM tones: `OFDMA 996-tone RU`
+- ⭕ Subcarrier Spacing: **`78.125 kHz.`** <br> <br>
+- ⭕ Constellation | Code Rate: <br> <br>
+    - [**MCS Index Table for 802.11ax**](https://mcsindex.com/) <br> <br>
+- ⭕ MIMO:
+- ⭕ Max Single-User (SU) Streams: 
+- ⭕ Max Multi-User (MU) Streams: 
+- ⭕ bit / Symbol:
+- ⭕ MCS: 
+- ⭕ QAM Spectral Efficienty _(aprox)_: 
+- ⭕ Link Spectral Efficiency: 
+- ⭕ Guard Interval: **`800 ns (short GI)`** / **`400 ns (long GI)`** <br> <br>
+- ⭕ Frame Aggregation: <br> <br>
+- ⭕ Power Saving:  <br> <br>
+- ⭕ Security: **80.11i =** **`WPA2 - Personal`** & **`WPA2 - Enterprise (802.1X-EAP)`**
+- ⭕ Authentication: **`Open Authentication`** | **`Pre-Shared Key`** | **`Hotspot 2.0 / Passpoint`**
+- ⭕ Encryption Algorithm: For WPA2 PErsonal: **`TKIP`** || For WPA2 Enterprise: **`AES-CCMP`**  <br> <br>
+
+
 ### 802.11ax: OFDMA
 _OFDMA implements the resource unit (RU)  Modulation methods include BPSK, QPSK, 16-QAM, 64-QAM, 256-QAM, and 1024-QAM | The High Efficiency (HE) PHY is defined in the 802.11ax-2020 amendment. Orthogonal Frequency Division Multiple Access (OFDMA) is a new modulation scheme introduced to the 802.11 standard with the 802.11ax amendment. OFDMA has been used in other networks and brings useful new features to the 802.11 WLAN. The most exciting feature is what you might call sub-channelization. It is the ability to divide the channel into multiple resource units (sub-channels) that can be used to transmit or receive to or from multiple STAs concurrently. All previous modulations and modulation schemes used the entire channel to communicate between STAs. This behavior was even true for multi-user MIMO (MU-MIMO)._
 - [OFDMA :: How it works :: Frame Exchange Process](https://www.youtube.com/watch?v=owBrkFk9afM) _`video`_
@@ -1329,7 +1359,7 @@ _OFDMA implements the resource unit (RU)  Modulation methods include BPSK, QP
 ### `1024-QAM`
 _1024-QAM modulation is also introduced with 802.11ax. 802.11ac supported 256-QAM, and these higher modulation rates increase the number of bits that can be represented in a symbol, effectively increasing the data rate. However, 1024-QAM will require excellent signal-to-noise ratio to function and will only work within short distances. The image below shows the constellations for 256-QAM and 1024-QAM. You can see why a better signal is required as the modulation rates go higher. The target becomes smaller and smaller, and the receiver must be able to process the received signal in a low noise environment to perceive the appropriate target._
 
-### `Uplink MU-MIMO` 
+### Uplink multi-user MIMO (MU-MIMO): 
 _Uplink MU-MIMO is added to the standard with 802.11ax as well. 802.11ac introduced downlink-only MU-MIMO, which was not very advantageous in production networks. Time will tell what impact uplink MU-MIMO will have, but it is available as of the 802.11ax amendment._
 
 ### `Target Wake Time (TWT)` 
