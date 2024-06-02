@@ -1402,7 +1402,10 @@ _The 802.11 WLAN Architecture is crucial for comprehending the operation and man
 ## ⚙️🏗️🛰️ Components of 802.11 WLAN Network Architecture
 _The IEEE 802.11 architecture consists of several components that interact to provide a WLAN that supports STA mobility transparently to upper layers. The IEEE 802.11 architecture consists of several critical components that interact to provide a robust and flexible WLAN supporting seamless STA (Station) mobility. These components include various types of stations and access points, each playing a specific role in the network._
 - [CWNA Chapter 11: WLAN Architecture/](https://techimike.com/cwna-chapter-11-wlan-architecture/) _`whitepaper`_
-- [`Fz3r0`: Services Provided by 802.11 Devices](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/802.11_Design/802.11_Network_Architecture/Services-Provided-by-802.11-Devices.md)
+- [`Fz3r0`: Services Provided by 802.11 Devices](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/802.11_Design/802.11_Network_Architecture/Services-Provided-by-802.11-Devices.md) <br><br>
+- [`Cisco` Wireless AP Modes](https://networklessons.com/cisco/ccna-200-301/cisco-wireless-ap-modes)
+- [`Aruba` Instant On AP Modes](https://www.arubainstanton.com/techdocs/en/content/get-started/ap-conf-mode.htm)
+- [`Commscope` - Wi-Fi Bridges and Wi-Fi Mesh: What’s the Difference?](https://www.commscope.com/blog/2018/wi-fi-bridges-and-wi-fi-mesh-whats-the-difference/)
 
 | Service Name                         | Description                                                                                                                                                                                                                                                                                                                                                                                                                            | Example                                                             |
 |--------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
@@ -1422,33 +1425,34 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
      
 ## 🤳🏾🛜📡 802.11 Services: `The 3 Categories`
 _The architecture categorizes services into three primary types, each serving distinct purposes._
-- 1. **`SS`**: Station Service
-- 2. **`DSS`**: Distribution System Service
-- 3. **`PCPS`**: BSS Control Point Service _(CWAP out of Scope)_
+1. **`SS`**: Station Service
+2. **`DSS`**: Distribution System Service
+3. **`PCPS`**: BSS Control Point Service _(CWAP out of Scope)_
 
 ## 🤳🏾📡 SS (Station Services): Type of STAs
+_There are two diffenet type of STAs (APs & Client STA), the third type is the same as APs or STAs but with QpS support._
 - [**`STA`** = Client STA](https://en.wikipedia.org/wiki/Station_(networking)) :: Any device containing IEEE 802.11 MAC & PHY interface to the WM `Does NOT act as AP`
 - [**`AP`** = Access Point STA](https://en.wikipedia.org/wiki/Wireless_access_point) :: Networking device that allows other Wi-Fi devices to connect to a network `Act as an AP` <br> <br>
     - [_**`QSTA` STA-QoS & `QAP`** AP-QoS_](https://www.redalyc.org/pdf/6380/638067265006.pdf) :: Any AP or STA that supports Wi-Fi Multimedia 802.11e QoS  _(Any modern device)_
 
 ### 🟣🤳🏾 Client STA: `Modes`
+_STAs can have any of the following modes:_
 - 🤳🏾[**`Infrastructure Mode`**](https://www.lifewire.com/infrastructure-mode-in-wireless-networking-816539) :: Device that needs an AP to connect to the Network
 - 🤳🏾[**`Ad-Hoc Mode`**](https://www.ii.pwr.edu.pl/~kano/course/module8/8.1.3.2/8.1.3.2.html#:~:text=An%20ad%20hoc%20wireless%20network,device%20to%20connect%20to%20it.) :: 2 wireless devices communicate in a peer-to-peer (P2P) manner without using APs
 
 ### 🟣📡 AP: `Modes`
-- [`Cisco` Wireless AP Modes](https://networklessons.com/cisco/ccna-200-301/cisco-wireless-ap-modes)
-- [`Aruba` Instant On AP Modes](https://www.arubainstanton.com/techdocs/en/content/get-started/ap-conf-mode.htm)
-- [`Commscope` - Wi-Fi Bridges and Wi-Fi Mesh: What’s the Difference?](https://www.commscope.com/blog/2018/wi-fi-bridges-and-wi-fi-mesh-whats-the-difference/)<br><br>
-    - 📡[**`Root Mode`**](http://webhelp.zyxel.com/wohView/help_docs/NWA5123-AC_V4.22_AAZY/Book/Wireless/h_Wireless.htm) Radio acts as AP & bring Wi-Fi connectivity to STAs (supports connections with other APs in repeater mode)
-    - 📡[**`Repeater Mode`**]()
-    - 📡[**`Mesh Mode`** (Gateway / Repeaters)](https://documentation.meraki.com/MR/Wi-Fi_Basics_and_Best_Practices/Wireless_Mesh_Networking) Multiple APs (with/without Eth connections) communicate over wireless interfaces to form a single network
-    - 📡[**`Bridge Mode`**]() dedicated ethernet P2P replacement that can nearly match wired speeds across great distances but cannot communicate with clients
-    - 📡[**`Workgroup Bridge Mode`**](https://www.cisco.com/c/en/us/td/docs/routers/access/wireless/software/guide/RolesWGB.html) Device associates to another AP as a client & provides a network connection for the equipment connected to its Ethernet port
-    - 📡[**`Monitor Mode`**]() Check for IDS events, Rogues APs, Determine Position
-    - 📡[**`Sensor Mode`** / **`Sniffer Mode`**]() Dedicates its time to receive 802.11 wireless frames
-    - 📡[**`Rogue Detector Mode`**]()
+_APs can have any of the following modes:_
+- 📡[**`Root Mode`**](http://webhelp.zyxel.com/wohView/help_docs/NWA5123-AC_V4.22_AAZY/Book/Wireless/h_Wireless.htm) Radio acts as AP & bring Wi-Fi connectivity to client STAs (supports connections with other APs in repeater mode)
+- 📡[**`Repeater Mode`**]() Extends the wireless coverage of an existing network by amplifying the signal from another AP.
+- 📡[**`Mesh Mode`** (Gateway / Repeaters)](https://documentation.meraki.com/MR/Wi-Fi_Basics_and_Best_Practices/Wireless_Mesh_Networking) Multiple APs (with/without Eth connections) communicate over wireless interfaces to form a single network
+- 📡[**`Bridge Mode`**]() Dedicated ethernet P2P replacement (Trunk), but cannot communicate with STA clients
+- 📡[**`Workgroup Bridge Mode`**](https://www.cisco.com/c/en/us/td/docs/routers/access/wireless/software/guide/RolesWGB.html) Device associates to another AP as a client & provides a network connection for the equipment connected to its Ethernet port
+- 📡[**`Monitor Mode`**]() Capture 802.11 Frames // Check for IDS events, Rogues APs, Determine Position,e tc
+- 📡[**`Sensor Mode`** / **`Sniffer Mode`**]() Dedicates its time to Capture 802.11 frames
+- 📡[**`Rogue Detector Mode`**]() Detect rogues within the BSS area
 
-## 🟣🛜 802.11 SS (Station Services): Services
+### 🟣🛜 802.11 SS (Station Services): `Services`
+_APs or client STAs can manage any of the next services:_
 - Authentication - Validates the identity of devices trying to join the WLAN.
 - Deauthentication - Removes authenticated status of devices from the WLAN.
 - Data confidentiality (encryption) - Ensures that transmitted data is secure and cannot be intercepted.
@@ -1479,7 +1483,7 @@ _In High Scale or Enterprise WLAN Networking is not recomended to use IBSS Indep
     - 🖧[**`BSA`**: Basic Service Area](https://www.wifi-professionals.com/2019/03/802-11-topologies-aka-service-sets) `Infrestructure` Physical area which is covered by one access point | AP Cell
     - 🖧[**`LAN`** + **`WLAN`**: Integration with non-IEEE-802.11 LANs]()
 
-## Network Planes: Control, Data, Management
+## 🖧⚖️⚙️ Network Planes: `Control`, `Data`, `Management`
 _The control plane, management plane, and data plane are conceptual planes that include different types of communications within networks. | The control plane is about network control protocols, for example, routing protocols and switching protocols, along with WLAN solutions like radio resource management (RRM) and automated radio management (ARM). | The management plane is focused on managing the devices and monitoring them, such as WLAN configuration and monitoring. | The data plane is focused on user data transfer. The users care about the data plane, but the control and management planes allow the network administrators to ensure that the users get the performance they require out of the data plane. | Consider RRM as an example and how it relates to the different planes. In the control plane, RRM operates. In the management plane, RRM is configured. In the user plane, data is sent on a WLAN that uses RRM for radio configuration management. In the end, that which occurs in the control and management planes impacts the data plane functionality and performance._
 
 ````py
@@ -1494,15 +1498,15 @@ _The control plane, management plane, and data plane are conceptual planes that 
 - [The foundation of WLAN architecure: Network Planes](https://techimike.com/cwna-chapter-11-wlan-architecture/)
 - [Control, Management & Data Plane: Wireless Networks](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/802.11_Design/802.11_Network_Architecture/Network_Planes/Wireless_Control-Management-%26-Data-Planes.md)
 
-### Network Planes: `Management Plane`
+### ⚙️🖧 Network Planes: `Management Plane`
 _The management plane is defined by administrative network management, administration and monitoring.  Here we would have a network-management solution used to monitor network devices.  Within 802.11 the functions of the management plane are: WLAN Configuration, WLAN Monitoring and Reporting, WLAN Firmware Management._
 - [The foundation of WLAN architecure: Management Plane](https://techimike.com/cwna-chapter-11-wlan-architecture/)
 
-### Network Planes: `Control Plane`
+### 🎮🖧 Network Planes: `Control Plane`
 _The control plane consists of control or signaling information and is often defined as network intelligence or protocols.  An example would be CAM tables and STP used by L2 switches for data forwarding.  Within 802.11 we have the following examples: | Adapative RF or RRM: Where coordinated channel and power settings for multiple APs are provided. |  Roaming Mechanisms:  This provides support for roaming handoffs between APs. | Client and Load Balancing:  Client load and performance metrics are collected and shared between APs to improve the WLAN experience | Mesh Protocols:  WLAN vendors use either L2 or L3 routing protocols to move user data between mesh APs._
 - [The foundation of WLAN architecure: Control Plane](https://techimike.com/cwna-chapter-11-wlan-architecture/)
   
-### Network Planes: `Data Plane`
+### 💾🖧 Network Planes: `Data Plane`
 _Also known as the user plane, the data plane is where the user traffic is actually forwarded in a network.  An example is an individual router where IP packets are forwarded.  The two wireless devices that typically participate here are the AP and the WLC._
 - [The foundation of WLAN architecure: Data Plane](https://techimike.com/cwna-chapter-11-wlan-architecture/)
 
