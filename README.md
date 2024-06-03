@@ -1443,7 +1443,7 @@ _STAs can have any of the following modes:_
 _APs can have any of the following modes:_
 - 📡[**`Root Mode`**](http://webhelp.zyxel.com/wohView/help_docs/NWA5123-AC_V4.22_AAZY/Book/Wireless/h_Wireless.htm) Radio acts as AP & bring Wi-Fi connectivity to client STAs (supports connections with other APs in repeater mode)
 - 📡[**`Repeater Mode`**]() Extends the wireless coverage of an existing network by amplifying the signal from another AP.
-- 📡[**`Mesh Mode`** (Gateway / Repeaters)]() Multiple APs (with/without Eth connections) communicate over wireless interfaces to form a single network
+- 📡[**`Mesh Mode`** (Gateway / Repeaters)]() Multiple APs communicate over wireless interfaces to form a single network
 - 📡[**`Bridge Mode`**]() Dedicated ethernet P2P replacement (Trunk), but cannot communicate with STA clients
 - 📡[**`Workgroup Bridge Mode`**](https://www.cisco.com/c/en/us/td/docs/routers/access/wireless/software/guide/RolesWGB.html) Device associates to another AP as a client & provides a network connection for the equipment connected to its Ethernet port
 - 📡[**`Monitor Mode`**]() Capture 802.11 Frames // Check for IDS events, Rogues APs, Determine Position,e tc
