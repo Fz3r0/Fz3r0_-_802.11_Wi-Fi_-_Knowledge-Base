@@ -1488,31 +1488,35 @@ _In High Scale or Enterprise WLAN Networking is not recomended to use IBSS Indep
 
 
 ## 🖧⚖️⚙️ Network Planes: `Control`, `Data`, `Management`
-_The control plane, management plane, and data plane are conceptual planes that include different types of communications within networks. | The control plane is about network control protocols, for example, routing protocols and switching protocols, along with WLAN solutions like radio resource management (RRM) and automated radio management (ARM). | The management plane is focused on managing the devices and monitoring them, such as WLAN configuration and monitoring. | The data plane is focused on user data transfer. The users care about the data plane, but the control and management planes allow the network administrators to ensure that the users get the performance they require out of the data plane. | Consider RRM as an example and how it relates to the different planes. In the control plane, RRM operates. In the management plane, RRM is configured. In the user plane, data is sent on a WLAN that uses RRM for radio configuration management. In the end, that which occurs in the control and management planes impacts the data plane functionality and performance._
+_**Control, Management, and Data Planes are conceptual planes that include different types of communications. The control plane is about network control protocols like routing protocols and switching protocols. In WLANs it includes things like radio resource management (RRM) and adaptive radio management (ARM). The management plane is focused on managing the devices and monitoring them, such as WLAN configuration and monitoring. The data plan is focused on user data transfer. The users care about the data plane, but the control and management planes allow the network administrators to ensure that the users get the performance they require out of the data plane.** Consider RRM as an example and how it relates to the different planes. In the control plane, radio resource management (RRM) operates. In the management plane, radio resource management (RRM) is configured. In the user plane, data is sent on a WLAN that uses radio resource management (RRM) for radio configuration management. In the end, that which occurs in the control and management planes impacts the data plane functionality and performance._
 
-````py
-## Centralized WLAN Architecture uses a central WLC that resides in the core of the network.  Autonomous APs are replaced with controller-based or lightweight APs.  In this case, all three planes move to the controller.
-
-- Management Plane:  # APs configured and managed from the WLC
-
-- Control Plane:     # Adaptive RF, load balancing, roaming handoff and other mechanisms exist on the WLC
-
-- Data Plane:        # The WLC exists as a data distribution point for user traffic.  APs tunnel all user traffic to the controller.
-````
+- [CWNP: The Plane Truth](https://www.cwnp.com/the-plane-truth/)
 - [The foundation of WLAN architecure: Network Planes](https://techimike.com/cwna-chapter-11-wlan-architecture/)
 - [Control, Management & Data Plane: Wireless Networks](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/802.11_Design/802.11_Network_Architecture/Network_Planes/Wireless_Control-Management-%26-Data-Planes.md)
 
+---
+
 ### ⚙️🖧 Network Planes: `Management Plane`
 _The management plane is defined by administrative network management, administration and monitoring.  Here we would have a network-management solution used to monitor network devices.  Within 802.11 the functions of the management plane are: WLAN Configuration, WLAN Monitoring and Reporting, WLAN Firmware Management._
-- [The foundation of WLAN architecure: Management Plane](https://techimike.com/cwna-chapter-11-wlan-architecture/)
+
+- This operation set addresses network configuration, monitoring, and administration.    In the early days of autonomous APs, management was performed uniquely on an AP-by-AP basis, and this was a major scalability drawback.  Initially, WLANs did not have a shared management plane, which meant that admins had to login to and manage each device independently.  The Wireless Network Management System (WNMS) came into play for management and monitoring of autonomous APs and were mostly usurped when WLAN controllers were introduced.  WLAN controllers were ushered in to centralize network management as well as to take on other roles that are part of the control and data planes.  At some point, multiple WLAN controllers become unwieldy, so a management solution is needed for them as well.  The WNMS comes back into play for that purpose.  Some devices exist solely to perform management functions.  Example functions of the management plane include firmware upgrades, device configuration, and network and status reporting and monitoring. <br> <br>
+    - Example: APs configured and managed from the WLC 
+
+---
 
 ### 🎮🖧 Network Planes: `Control Plane`
 _The control plane consists of control or signaling information and is often defined as network intelligence or protocols.  An example would be CAM tables and STP used by L2 switches for data forwarding.  Within 802.11 we have the following examples: | Adapative RF or RRM: Where coordinated channel and power settings for multiple APs are provided. |  Roaming Mechanisms:  This provides support for roaming handoffs between APs. | Client and Load Balancing:  Client load and performance metrics are collected and shared between APs to improve the WLAN experience | Mesh Protocols:  WLAN vendors use either L2 or L3 routing protocols to move user data between mesh APs._
-- [The foundation of WLAN architecure: Control Plane](https://techimike.com/cwna-chapter-11-wlan-architecture/)
+
+- This plane includes the “control” functions related to effective cooperation and interaction between devices within a network.  Similar to the management functions, early networks with autonomous APs didn’t share a control plane.  They shared an Ethernet network for connectivity, but the APs did not communicate with each other to coordinate network control operations.  WLAN ‘control’lers are now the de facto solution to address the needs of the control plane, where many of these operations are centralized into one device (a controller) that communicates with all of the APs.  Again, similar to the management plane, multiple controllers pose new challenges, because controllers need a protocol for communications between one another.  In any case, graceful control of a WLAN is necessary for scalability of any kind.  Example functions include RRM (channel and power settings for automated networks) coordination, mobility management (such as fast secure roaming and uninterrupted policy and security management during transitions), and load balancing.  These operations are usually performed within a WLAN controller, though protocols may be used between APs to perform the same. <br> <br>
+    - Example: Adaptive RF, load balancing, roaming handoff and other mechanisms exist on the WLC 
+
+---
   
 ### 💾🖧 Network Planes: `Data Plane`
 _Also known as the user plane, the data plane is where the user traffic is actually forwarded in a network.  An example is an individual router where IP packets are forwarded.  The two wireless devices that typically participate here are the AP and the WLC._
-- [The foundation of WLAN architecure: Data Plane](https://techimike.com/cwna-chapter-11-wlan-architecture/)
+
+- This plane includes the handling of data within a network.  The two devices that usually participate in the data plane are the AP and the WLAN controller.  Autonomous APs obviously handle all data forwarding operations locally, but controller-based APs may have some variation of data handling.  Centralized data forwarding, where all data is forwarded from the AP to the WLAN controller for processing, may be used in many cases, especially when the WLAN controller manages encryption/decryption or applies security policies.  Distributed forwarding, where the AP performs data forwarding locally, may be used in situations where it is advantageous to perform forwarding at the edge and to avoid a central location in the network for all data, which may require significant Ethernet capacity.  As with the management and control planes, each vendor has a unique method for handling data forwarding, with pros and cons for each.  Other functions that are a part of the data plane are VLAN tagging, QoS classification and queuing, and policy enforcement. <br> <br>
+    - Example: Data traffic from/to client STA <==> AP // The WLC exists as a data distribution point for user traffic.  APs tunnel all user traffic to the controller.     
 
   
 
