@@ -1500,7 +1500,7 @@ _**Control, Management, and Data Planes are conceptual planes that include diffe
 _The management plane is defined by administrative network management, administration and monitoring.  Here we would have a network-management solution used to monitor network devices.  Within 802.11 the functions of the management plane are: WLAN Configuration, WLAN Monitoring and Reporting, WLAN Firmware Management._
 
 - This operation set addresses network configuration, monitoring, and administration.    In the early days of autonomous APs, management was performed uniquely on an AP-by-AP basis, and this was a major scalability drawback.  Initially, WLANs did not have a shared management plane, which meant that admins had to login to and manage each device independently.  The Wireless Network Management System (WNMS) came into play for management and monitoring of autonomous APs and were mostly usurped when WLAN controllers were introduced.  WLAN controllers were ushered in to centralize network management as well as to take on other roles that are part of the control and data planes.  At some point, multiple WLAN controllers become unwieldy, so a management solution is needed for them as well.  The WNMS comes back into play for that purpose.  Some devices exist solely to perform management functions.  Example functions of the management plane include firmware upgrades, device configuration, and network and status reporting and monitoring. <br> <br>
-    - `**Example`**: APs configured and managed from the WLC, for example: SSIDs configuration (name, security, min data rates, bandwith control, max clients per AP, etc) 
+    - **`Example`**: APs configured and managed from the WLC, for example: SSIDs configuration (name, security, min data rates, bandwith control, max clients per AP, etc) 
 
 ---
 
@@ -1508,7 +1508,7 @@ _The management plane is defined by administrative network management, administr
 _The control plane consists of control or signaling information and is often defined as network intelligence or protocols.  An example would be CAM tables and STP used by L2 switches for data forwarding.  Within 802.11 we have the following examples: | Adapative RF or RRM: Where coordinated channel and power settings for multiple APs are provided. |  Roaming Mechanisms:  This provides support for roaming handoffs between APs. | Client and Load Balancing:  Client load and performance metrics are collected and shared between APs to improve the WLAN experience | Mesh Protocols:  WLAN vendors use either L2 or L3 routing protocols to move user data between mesh APs._
 
 - This plane includes the “control” functions related to effective cooperation and interaction between devices within a network.  Similar to the management functions, early networks with autonomous APs didn’t share a control plane.  They shared an Ethernet network for connectivity, but the APs did not communicate with each other to coordinate network control operations.  WLAN ‘control’lers are now the de facto solution to address the needs of the control plane, where many of these operations are centralized into one device (a controller) that communicates with all of the APs.  Again, similar to the management plane, multiple controllers pose new challenges, because controllers need a protocol for communications between one another.  In any case, graceful control of a WLAN is necessary for scalability of any kind.  Example functions include RRM (channel and power settings for automated networks) coordination, mobility management (such as fast secure roaming and uninterrupted policy and security management during transitions), and load balancing.  These operations are usually performed within a WLAN controller, though protocols may be used between APs to perform the same. <br> <br>
-    - `**Example`**: Adaptive RF, load balancing, roaming handoff, band balancing, AP neighbor report, rogue AP report and other mechanisms exist on the WLC 
+    - **`Example`**: Adaptive RF, load balancing, roaming handoff, band balancing, AP neighbor report, rogue AP report and other mechanisms exist on the WLC 
 
 ---
   
@@ -1516,7 +1516,7 @@ _The control plane consists of control or signaling information and is often def
 _Also known as the user plane, the data plane is where the user traffic is actually forwarded in a network.  An example is an individual router where IP packets are forwarded.  The two wireless devices that typically participate here are the AP and the WLC._
 
 - This plane includes the handling of data within a network.  The two devices that usually participate in the data plane are the AP and the WLAN controller.  Autonomous APs obviously handle all data forwarding operations locally, but controller-based APs may have some variation of data handling.  Centralized data forwarding, where all data is forwarded from the AP to the WLAN controller for processing, may be used in many cases, especially when the WLAN controller manages encryption/decryption or applies security policies.  Distributed forwarding, where the AP performs data forwarding locally, may be used in situations where it is advantageous to perform forwarding at the edge and to avoid a central location in the network for all data, which may require significant Ethernet capacity.  As with the management and control planes, each vendor has a unique method for handling data forwarding, with pros and cons for each.  Other functions that are a part of the data plane are VLAN tagging, QoS classification and queuing, and policy enforcement. <br> <br>
-    - `**Example`**: Data traffic from/to client STA <==> AP <==> WLC // The WLC exists as a data distribution point for user traffic. APs tunnel all user traffic to the controller.     
+    - **`Example`**: Data traffic from/to client STA <==> AP <==> WLC // The WLC exists as a data distribution point for user traffic. APs tunnel all user traffic to the controller.     
 
   
 
@@ -1617,6 +1617,8 @@ _In Wireless 802.11 networks, Layers 1 and 2 are the most crucial, Layers 3 and 
 _Key Concept: The message used to communicate information for a particular protocol is called its protocol data unit (PDU) in OSI model terminology. That PDU is passed down to the next lower layer for transmission; since that layer is providing the service of handling that PDU, it is called the lower layer’s service data unit (SDU). The SDU is encapsulated into that layer’s own PDU and in turn sent to the next lower layer in the stack, proceeding until the physical layer is reached. The process is reversed on the recipient device._ 
 
 **A layer N PDU is a layer N-1 SDU, which is encapsulated into a layer N-1 PDU.**
+
+- [CWNP: Basics of MAC Architecture: Encapsulation & Frame Aggregation](https://www.cwnp.com/802.11-mac-series-ndash-basics-mac-architecture-ndash-part-1-3/#Id3)
 
 ````py
 
@@ -1825,8 +1827,46 @@ PMD = (Physical Medium Dependent):
 
 ````
 
+---
+
+### 💊🔎📦 MPDU & MSDU: `Frame Analysis`
+- [Análisis de MPDU y MSDU con wireshark](https://wifispainreless.blogspot.com/2024/01/analisis-de-mpdu-y-msdu-con-wireshark.html)
 
 
+
+## 💊🚛🚢 IEEE 802.11: `Frame Aggregation`
+_With the ratification of 802.11n amendment, two types of frame aggregation were added to 802.11: Aggregate MAC Service Data Unit (A-MSDU) & Aggregate MAC Protocol Data Unit (A-MPDU). Frame aggregation allows multiple smaller MSDU or MPDUs to be grouped together into a single frame, reducing the amount of overhead that would have been necessary for each individual frame.  An analogy for frame aggregation is carpooling that is implemented to reduce traffic and subsequently reduce traffic jams. Similarly, frame aggregation is used to reduce medium contention overhead by combining several service data units (SDUs)._
+- [802.11 Data: Frame Aggregation](https://mrncciew.com/2014/11/01/cwap-802-11-data-frame-aggregation/) _`nayarasi`_
+- [CWNP: Basics of MAC Architecture: Encapsulation & Frame Aggregation](https://www.cwnp.com/802.11-mac-series-ndash-basics-mac-architecture-ndash-part-1-3/#Id3)
+
+### Frame Aggregation: `A-MSDU`
+_The first frame aggregation method is A-MSDU, where several MSDUs are combined into a single frame. An 802.11n access point uses A-MSDU aggregation and removes the headers and trailers from the received MSDUs, and combines these multiple MSDU payloads in to a single frame, which is known as A-MSDU and is further used for transmission across the wireless medium. The aggregated frame is encrypted using the Counter Mode with Cipher Block Chaining Message Authentication Code Protocol (CCMP) encryption method. Each MSDU within the A-MSDU must be of the same 802.11e QoS access category. For example, A-MSDU can contain several MSDUs of Video access category only and it cannot be mixed with Best Effort or Voice MSDUs within the same aggregated frame._
+
+### Frame Aggregation: `A-MPDU`
+_Another method of frame aggregation is A-MPDU, where several MPDUs are combined into a single frame for transmission. Each MPDU of A-MPDU has the same receiver address and data payload and each MPDU is encrypted using the CCMP encryption method. Similar to A-MSDU, each MPDU within the A-MPDU must be of the same 802.11e QoS access category. A-MPDU has more overhead than A-MSDU because each MPDU contains a MAC header and trailer details._
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 🛣️🚇🏎️`BandWidth`, `Throughput` & `Data Rate`
+- [Differences: `BandWidth`, `Throughput` & `Data Rate`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/272a7cf3-5a9f-4a02-892a-f3c8d56cab68) _`Diagram`_
 
 
 
@@ -2791,7 +2831,7 @@ calculated_crc = crc32(data)
 
 # 🛜🦈💊 802.11 MAC Frames Types
 _802.11 frames are categorized into three main types: **Management, Control & Data**. Each frame type serves a specific purpose and contains various subtypes, allowing for a wide range of functionalities within the wireless network. The division of 802.11 frames into management, control, and data frames allows for a robust and efficient mechanism to handle various aspects of wireless communication. Management frames ensure proper network operation and device association, control frames manage access to the wireless medium and ensure collision-free communication, while data frames carry the actual payload necessary for user applications. Understanding these frames and their subtypes is crucial for network professionals to design, manage, and troubleshoot WLANs effectively._
-
+- [CWNP: Basics of MAC Architecture – Part 2 of 3 :: Management, Control & Data Frames](https://www.cwnp.com/802.11-mac-series-ndash-basics-mac-architecture-ndash-part-2-3/)
 
 ## ⚙️🛜💊 802.11 MAC Frames :: `Management`
 _IEEE 802.11-2020 9.3.3 (PV0) :: Management frames are used to manage the connections and maintenance of communication between devices within a WLAN. These frames are crucial for tasks such as discovering and joining networks, authenticating devices, and maintaining network associations._ 
@@ -2929,34 +2969,6 @@ _STAs send Probe Request on Active Scanning or after a Beacon in Passive Scannin
 
 
 
-
-# 💊✉️🪆 Packet/Frame: `Encapsulation`
-
-## 💊❓ Encapsulation: `Elemental Concepts` 
-- [Packet / Frame Header]()
-- [Overhead]()
-
-## 🛣️🚇🏎️`BandWidth`, `Throughput` & `Data Rate`
-- [Differences: `BandWidth`, `Throughput` & `Data Rate`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/272a7cf3-5a9f-4a02-892a-f3c8d56cab68) _`Diagram`_
-
-## 💊↕️🪆 802.11: `PHY & MAC` `Encapsulation`
-_The PLCP consists of two main sublayers: the PLCP protocol data unit (PPDU) & the PLCP service data unit (PSDU)_
-- [PPDU]()
-- [PSDU]()
-
-
-
-
-
-
-
-
-
-# 💊🚛🚢 IEEE 802.11: `Frame Aggregation`
-
-
-
-- [](https://wifispainreless.blogspot.com/2024/01/analisis-de-mpdu-y-msdu-con-wireshark.html)
 
 
 
