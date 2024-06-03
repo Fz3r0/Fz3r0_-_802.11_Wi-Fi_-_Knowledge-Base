@@ -1460,8 +1460,8 @@ _APs or client STAs can manage any of the next services:_
 - **`MSDU delivery`** - Delivers MAC service data units (MSDUs) between stations.
 - **`DFS (Dynamic Frequency Selection)`** - Manages frequency usage to avoid interference.
 - **`TPC (Transmit Power Control)`** - Regulates the transmit power of devices to optimize performance and reduce interference.
-- **`Time Synchronization with higher layers (QoS facility only)`** - Synchronizes time between stations and higher layer protocols for Quality of Service (QoS) management.
-- **`QoS traffic scheduling (QoS facility only)`** - Prioritizes and schedules traffic based on quality of service requirements.
+- **`Time Synchronization with higher layers (QoS only)`** - Synchronizes time between STAs and higher layer protocols for QoS management.
+- **`QoS traffic scheduling (QoS only)`** - Prioritizes and schedules traffic based on quality of service requirements.
 - **`Radio Measurement`** - Collects and reports radio metrics for network optimization.
 - **`DSE (Dynamic STA Enablement)`** - Enables dynamic stations based on network requirements.
 
