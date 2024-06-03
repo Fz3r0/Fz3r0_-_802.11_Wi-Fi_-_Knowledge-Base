@@ -1423,11 +1423,16 @@ _The architecture categorizes services into three primary types, each serving di
 2. **`DSS`**: Distribution System Service
 3. **`PCPS`**: BSS Control Point Service _(CWAP out of Scope)_
 
-## 🤳🏾📡 SS (Station Services): Type of STAs
+## 🤳🏾📡 SS (Station Services): 
+_A Station Service (SS) exists in all 802.11 stations, including client stations (STAs) and access points (APs)._
+
+### SS (Station Services): `Types`
 _There are two diffenet type of STAs (APs & Client STA), the third type is the same as APs or STAs but with QpS support._
 - [**`STA`** = Client STA](https://en.wikipedia.org/wiki/Station_(networking)) :: Any device containing IEEE 802.11 MAC & PHY interface to the WM `Does NOT act as AP`
 - [**`AP`** = Access Point STA](https://en.wikipedia.org/wiki/Wireless_access_point) :: Networking device that allows other Wi-Fi devices to connect to a network `Act as an AP` <br> <br>
     - [_**`QSTA` STA-QoS & `QAP`** AP-QoS_](https://www.redalyc.org/pdf/6380/638067265006.pdf) :: Any AP or STA that supports Wi-Fi Multimedia 802.11e QoS  _(Any modern device)_
+
+---
 
 ### 🟣🤳🏾 Client STA: `Modes`
 _STAs can have any of the following modes:_
@@ -1445,22 +1450,23 @@ _APs can have any of the following modes:_
 - 📡[**`Sensor Mode`** / **`Sniffer Mode`**]() Dedicates its time to Capture 802.11 frames
 - 📡[**`Rogue Detector Mode`**]() Detect rogues within the BSS area
 
+---
+
 ### 🟣🛜 802.11 SS (Station Services): `Services`
 _APs or client STAs can manage any of the next services:_
-- Authentication - Validates the identity of devices trying to join the WLAN.
-- Deauthentication - Removes authenticated status of devices from the WLAN.
-- Data confidentiality (encryption) - Ensures that transmitted data is secure and cannot be intercepted.
-- MSDU delivery - Delivers MAC service data units (MSDUs) between stations.
-- DFS (Dynamic Frequency Selection) - Manages frequency usage to avoid interference.
-- TPC (Transmit Power Control) - Regulates the transmit power of devices to optimize performance and reduce interference.
-- Time Synchronization with higher layers (QoS facility only) - Synchronizes time between stations and higher layer protocols for Quality of Service (QoS) management.
-- QoS traffic scheduling (QoS facility only) - Prioritizes and schedules traffic based on quality of service requirements.
-- Radio Measurement - Collects and reports radio metrics for network optimization.
-- DSE (Dynamic STA Enablement) - Enables dynamic stations based on network requirements.
+- **`Authentication`** - Validates the identity of devices trying to join the WLAN.
+- **`Deauthentication`** - Removes authenticated status of devices from the WLAN.
+- **`Data confidentiality (encryption)`** - Ensures that transmitted data is secure and cannot be intercepted.
+- **`MSDU delivery`** - Delivers MAC service data units (MSDUs) between stations.
+- **`DFS (Dynamic Frequency Selection)`** - Manages frequency usage to avoid interference.
+- **`TPC (Transmit Power Control)`** - Regulates the transmit power of devices to optimize performance and reduce interference.
+- **`Time Synchronization with higher layers (QoS facility only)`** - Synchronizes time between stations and higher layer protocols for Quality of Service (QoS) management.
+- **`QoS traffic scheduling (QoS facility only)`** - Prioritizes and schedules traffic based on quality of service requirements.
+- **`Radio Measurement`** - Collects and reports radio metrics for network optimization.
+- **`DSE (Dynamic STA Enablement)`** - Enables dynamic stations based on network requirements.
 
 ## 🏘️📡🖧 DSS (Distribution System Service)
 _Distribution System Service (DSS) according to IEEE 802.11 is a functionality that allows the interconnection of several WLAN networks, thus creating a larger and more efficient network. This service allows several workstations to connect to the same network, regardless of their physical location. The DSS service is used in business and public environments, such as airports, shopping malls, and train stations. It allows a fluid and uninterrupted connection to users who move from one coverage area to another. The DSS service provides a scalable and flexible infrastructure, allowing companies and organizations to adapt to the changing needs of their users. Additionally, the DSS service is compatible with a wide range of devices, making it easy to deploy and maintain._
-
 
 | **Service Name**                                            | **Network Type**                                    | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | **Example**                                                                                                                     |
 |-------------------------------------------------------------|-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
@@ -1481,7 +1487,6 @@ _Distribution System Service (DSS) according to IEEE 802.11 is a functionality t
 | **`IBSS`** <br>**Independent Basic Service Set**            | Independent                                         | **Ad-Hoc Peer to Peer Wireless Network** // Most basic type of IEEE 802.11 LAN, no APs or Routers in use, only Ad-Hoc/Peer-to-Peer devices // Clients communicate directly. Also known as peer-to-peer or ad-hoc. All clients must share the medium time and respect the same channel. The first client that connects creates the BSSID. In High Scale or Enterprise WLAN Networking is not recomended to use IBSS Independent WLANs because in this kind of enviorments can cost a lot of problems of interference, the best practice is only allow Infraestructure (BSS or ESS)  | Direct communication between laptops in a meeting room without using an AP (ex. Wi-Fi DIRECT screen share)                      |
 | **`PBSS`** <br>**Personal Basic Service Set**               | Independent                                         | **Similar to the IBSS, the PBSS is a type of IEEE 802.11 LAN in which STAs communicate directly with each other** // Used for direct communication between 802.11ad stations in the 60GHz band. A client assumes the role of PBSS control point (PCP) and synchronizes communication between all clients.                                                                                                                                                                                                                                                                          | Wireless communication between devices in a high-frequency, sometimes used for IoT wireless devices                             |
 
-
 ## 🖧⚖️⚙️ Network Planes: `Control`, `Data`, `Management`
 _**Control, Management, and Data Planes are conceptual planes that include different types of communications. The control plane is about network control protocols like routing protocols and switching protocols. In WLANs it includes things like radio resource management (RRM) and adaptive radio management (ARM). The management plane is focused on managing the devices and monitoring them, such as WLAN configuration and monitoring. The data plan is focused on user data transfer. The users care about the data plane, but the control and management planes allow the network administrators to ensure that the users get the performance they require out of the data plane.** Consider RRM as an example and how it relates to the different planes. In the control plane, radio resource management (RRM) operates. In the management plane, radio resource management (RRM) is configured. In the user plane, data is sent on a WLAN that uses radio resource management (RRM) for radio configuration management. In the end, that which occurs in the control and management planes impacts the data plane functionality and performance._
 
@@ -1495,7 +1500,7 @@ _**Control, Management, and Data Planes are conceptual planes that include diffe
 _The management plane is defined by administrative network management, administration and monitoring.  Here we would have a network-management solution used to monitor network devices.  Within 802.11 the functions of the management plane are: WLAN Configuration, WLAN Monitoring and Reporting, WLAN Firmware Management._
 
 - This operation set addresses network configuration, monitoring, and administration.    In the early days of autonomous APs, management was performed uniquely on an AP-by-AP basis, and this was a major scalability drawback.  Initially, WLANs did not have a shared management plane, which meant that admins had to login to and manage each device independently.  The Wireless Network Management System (WNMS) came into play for management and monitoring of autonomous APs and were mostly usurped when WLAN controllers were introduced.  WLAN controllers were ushered in to centralize network management as well as to take on other roles that are part of the control and data planes.  At some point, multiple WLAN controllers become unwieldy, so a management solution is needed for them as well.  The WNMS comes back into play for that purpose.  Some devices exist solely to perform management functions.  Example functions of the management plane include firmware upgrades, device configuration, and network and status reporting and monitoring. <br> <br>
-    - Example: APs configured and managed from the WLC 
+    - `**Example`**: APs configured and managed from the WLC, for example: SSIDs configuration (name, security, min data rates, bandwith control, max clients per AP, etc) 
 
 ---
 
@@ -1503,7 +1508,7 @@ _The management plane is defined by administrative network management, administr
 _The control plane consists of control or signaling information and is often defined as network intelligence or protocols.  An example would be CAM tables and STP used by L2 switches for data forwarding.  Within 802.11 we have the following examples: | Adapative RF or RRM: Where coordinated channel and power settings for multiple APs are provided. |  Roaming Mechanisms:  This provides support for roaming handoffs between APs. | Client and Load Balancing:  Client load and performance metrics are collected and shared between APs to improve the WLAN experience | Mesh Protocols:  WLAN vendors use either L2 or L3 routing protocols to move user data between mesh APs._
 
 - This plane includes the “control” functions related to effective cooperation and interaction between devices within a network.  Similar to the management functions, early networks with autonomous APs didn’t share a control plane.  They shared an Ethernet network for connectivity, but the APs did not communicate with each other to coordinate network control operations.  WLAN ‘control’lers are now the de facto solution to address the needs of the control plane, where many of these operations are centralized into one device (a controller) that communicates with all of the APs.  Again, similar to the management plane, multiple controllers pose new challenges, because controllers need a protocol for communications between one another.  In any case, graceful control of a WLAN is necessary for scalability of any kind.  Example functions include RRM (channel and power settings for automated networks) coordination, mobility management (such as fast secure roaming and uninterrupted policy and security management during transitions), and load balancing.  These operations are usually performed within a WLAN controller, though protocols may be used between APs to perform the same. <br> <br>
-    - Example: Adaptive RF, load balancing, roaming handoff and other mechanisms exist on the WLC 
+    - `**Example`**: Adaptive RF, load balancing, roaming handoff, band balancing, AP neighbor report, rogue AP report and other mechanisms exist on the WLC 
 
 ---
   
@@ -1511,7 +1516,7 @@ _The control plane consists of control or signaling information and is often def
 _Also known as the user plane, the data plane is where the user traffic is actually forwarded in a network.  An example is an individual router where IP packets are forwarded.  The two wireless devices that typically participate here are the AP and the WLC._
 
 - This plane includes the handling of data within a network.  The two devices that usually participate in the data plane are the AP and the WLAN controller.  Autonomous APs obviously handle all data forwarding operations locally, but controller-based APs may have some variation of data handling.  Centralized data forwarding, where all data is forwarded from the AP to the WLAN controller for processing, may be used in many cases, especially when the WLAN controller manages encryption/decryption or applies security policies.  Distributed forwarding, where the AP performs data forwarding locally, may be used in situations where it is advantageous to perform forwarding at the edge and to avoid a central location in the network for all data, which may require significant Ethernet capacity.  As with the management and control planes, each vendor has a unique method for handling data forwarding, with pros and cons for each.  Other functions that are a part of the data plane are VLAN tagging, QoS classification and queuing, and policy enforcement. <br> <br>
-    - Example: Data traffic from/to client STA <==> AP // The WLC exists as a data distribution point for user traffic.  APs tunnel all user traffic to the controller.     
+    - `**Example`**: Data traffic from/to client STA <==> AP <==> WLC // The WLC exists as a data distribution point for user traffic. APs tunnel all user traffic to the controller.     
 
   
 
