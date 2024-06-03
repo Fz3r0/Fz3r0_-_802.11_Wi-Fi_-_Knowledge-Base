@@ -1395,11 +1395,11 @@ _802.11ax operates in both the 2.4 GHz and 5 GHz frequency bands, unlike 802.11a
 
 
 
-# 802.11 WLAN Architecture
+# 🏗️📡📐 802.11 WLAN Architecture
 _The 802.11 WLAN Architecture is crucial for comprehending the operation and management of wireless networks. This block delves into the fundamental components, services, and network planes that constitute the 802.11 WLAN framework. The IEEE 802.11 architecture consists of several critical components that interact to provide a robust and flexible WLAN supporting seamless STA (Station) mobility. These components include various types of stations and access points, each playing a specific role in the network. Devices within a WLAN can operate in various modes to support different networking requirements. In a centralized WLAN architecture, a central Wireless LAN Controller (WLC) resides in the core of the network, replacing autonomous APs with controller-based or lightweight APs. This architecture centralizes all three network planes_
 
                                                                                  
-## ⚙️🏗️🛰️ Components of 802.11 WLAN Network Architecture
+## 🧩🏗️🔩 Components of 802.11 WLAN Network Architecture
 _The IEEE 802.11 architecture consists of several components that interact to provide a WLAN that supports STA mobility transparently to upper layers. The IEEE 802.11 architecture consists of several critical components that interact to provide a robust and flexible WLAN supporting seamless STA (Station) mobility. These components include various types of stations and access points, each playing a specific role in the network._
 - [CWNA Chapter 11: WLAN Architecture/](https://techimike.com/cwna-chapter-11-wlan-architecture/) _`whitepaper`_
 - [`Fz3r0`: Services Provided by 802.11 Devices](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/802.11_Design/802.11_Network_Architecture/Services-Provided-by-802.11-Devices.md) <br><br>
@@ -1417,7 +1417,7 @@ _The IEEE 802.11 architecture consists of several components that interact to pr
 - [DSM - Distribution System Media/Medium](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/80c686ac-14ec-4c8c-8d1c-90f5dbc18420)
 - [IBSS - Introduction of Independent Basic Service Set (IBSS)](https://www.geeksforgeeks.org/introduction-of-independent-basic-service-set-ibss/)
 
-## 🤳🏾🛜📡 802.11 Services: `The 3 Categories`
+## 🤳🏾🏗️📡 802.11 Services: `The 3 Categories`
 _The architecture categorizes services into three primary types, each serving distinct purposes._
 1. **`SS`**: Station Service
 2. **`DSS`**: Distribution System Service
@@ -1426,7 +1426,7 @@ _The architecture categorizes services into three primary types, each serving di
 ## 🤳🏾📡 SS (Station Services): 
 _A Station Service (SS) exists in all 802.11 stations, including client stations (STAs) and access points (APs)._
 
-### SS (Station Services): `Types`
+### 🤳🏾📡 SS (Station Services): `Types`
 _There are two diffenet type of STAs (APs & Client STA), the third type is the same as APs or STAs but with QpS support._
 - [**`STA`** = Client STA](https://en.wikipedia.org/wiki/Station_(networking)) :: Any device containing IEEE 802.11 MAC & PHY interface to the WM `Does NOT act as AP`
 - [**`AP`** = Access Point STA](https://en.wikipedia.org/wiki/Wireless_access_point) :: Networking device that allows other Wi-Fi devices to connect to a network `Act as an AP` <br> <br>
