@@ -1842,13 +1842,77 @@ _With the ratification of 802.11n amendment, two types of frame aggregation were
 _The first frame aggregation method is A-MSDU, where several MSDUs are combined into a single frame. An 802.11n access point uses A-MSDU aggregation and removes the headers and trailers from the received MSDUs, and combines these multiple MSDU payloads in to a single frame, which is known as A-MSDU and is further used for transmission across the wireless medium. The aggregated frame is encrypted using the Counter Mode with Cipher Block Chaining Message Authentication Code Protocol (CCMP) encryption method. Each MSDU within the A-MSDU must be of the same 802.11e QoS access category. For example, A-MSDU can contain several MSDUs of Video access category only and it cannot be mixed with Best Effort or Voice MSDUs within the same aggregated frame._
 
 - **`A-MSDU Key Concept`**: If you do not receive an Ack frame back, the entire payload must be resent, and this takes up more airtime and induces latency in your network. Congested networks and latency sensitive networks may want to reconsider use of the A-MSDU entirely. Please, please use a test bed. No one likes rolling back a production change. <br> <br>
-    - **A-MSDU is transmitted as a single 802.11 frame with multiple 802.3 frames inside it, only having to be sent, and therefore contend, once.** 
+    - **`A-MSDU` is transmitted as a single 802.11 frame with multiple 802.3 frames inside it (subframe #1, subframe #2, subrame #3, etc), only having to be sent, and therefore contend, once.**
+    - **`A-MSDU` is acknowledged by a standard `ACK` frame**
+    - **`A-MSDU` have a significantly `bigger lenght` compared to a normal MSDU data and compared to regular Ethernet frames**
+
+````py
+
+Upper Layers QoS Data / Payload (example, UDP QoS traffic):
+
+                           |----------------|                   |----------------|                   |----------------|          
+                           |  QoS Data # 1  |                   |  QoS Data # 2  |                   |  QoS Data # 3  |                
+                           |----------------|                   |----------------|                   |----------------|
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+LLC (Logical Link Control):
+
+    MSDU = # QoS Data + LLC Header
+                                                            
+           |--------------||----------------|   |--------------||----------------|   |--------------||----------------|         
+           |  LLC Header  ||  QoS Data # 1  |   |  LLC Header  ||  QoS Data # 2  |   |  LLC Header  ||  QoS Data # 3  |               
+           |--------------||----------------|   |--------------||----------------|   |--------------||----------------|
+           \________________________________/   \________________________________/   \________________________________/   
+           <----------- MSDU # 1 ----------->   <----------- MSDU # 2 ----------->   <----------- MSDU # 3 ----------->       
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+MAC (Medium Access Control):
+
+    A-MSDU = # Various MSDUs Sub-Frames with a single MAC Header                                                        
+
+  1 MAC Header
+<-------------->
+|--------------||--------------||----------------| |--------------||----------------| |--------------||----------------|       
+|  MAC Header  ||       MSDU Sub-Frame # 1       |+|       MSDU Sub-Frame # 2       |+|       MSDU Sub-Frame # 3       |              
+|--------------||--------------||----------------| |--------------||----------------| |--------------||----------------|
+                \________________________________/ \________________________________/ \________________________________/   
+                <----------- MSDU # 1 -----------> <----------- MSDU # 2 -----------> <----------- MSDU # 3 ----------->
+\______________________________________________________________________________________________________________________/
+<--------------------------------------------------- A-MSDU (PSDU) ---------------------------------------------------->
+                                                                                          
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+                                                                                       
+PLCP = (Physical Layer Convergence Procedure) / (Physical Layer Convergence Protocol): 
+                                                                                       
+    PPDU = # PSDU/MPDU + Preamble & PLCP Header (prepended)
+
+|--------------------------||--------------||--------------||----------------||-------|  from: # PSDU serviced from MAC Sub-Layer,
+|  PLCP Header + Preamble  ||          PSDU (same as MPDU but in the PHY layer)       |        # PLCP adds PLCP-Header & Preamble and encapsulates it into a PPDU
+|--------------------------||--------------||--------------||----------------||-------|
+\_____________________________________________________________________________________/
+<------------------------------------------ PPDU ------------------------------------->  to: # PPDU is encapsulated into 1's & 0's in PMD Sub-Layer
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+PMD = (Physical Medium Dependent):
+
+|--------------------------||--------------||--------------||----------------||-------|
+|                                         PPDU                                        |
+|--------------------------||--------------||--------------||----------------||-------|
+\_____________________________________________________________________________________/
+<-- 0001010101110011010100011010010101100101010101001010111100101010101010110100011 -->
+
+````
 
 ### Frame Aggregation: `A-MPDU`
-_Another method of frame aggregation is A-MPDU, where several MPDUs are combined into a single frame for transmission. Each MPDU of A-MPDU has the same receiver address and data payload and each MPDU is encrypted using the CCMP encryption method. Similar to A-MSDU, each MPDU within the A-MPDU must be of the same 802.11e QoS access category. A-MPDU has more overhead than A-MSDU because each MPDU contains a MAC header and trailer details._
+_Another method of frame aggregation is A-MPDU, where several MPDUs are combined into a single frame for transmission. Each MPDU of A-MPDU has the same receiver address and data payload and each MPDU is encrypted using the CCMP encryption method. Similar to A-MSDU, each MPDU within the A-MPDU must be of the same 802.11e QoS access category. A-MPDU has more overhead than A-MSDU because each MPDU contains a MAC header and trailer details. **The big difference here is that the transmitter does not merge multiple Ethernet frames into a single 802.11 frame. Every 802.3 frame gets its own 802.11 MAC header and they are aggregated into a single PPDU transmission.**_
 
 - **`A-MPDU Key Concept`**: The A-MPDU method of frame aggregation does not require a single ACK reply, like a A-MSDU method transmission would; Or rather it does but it's not a standard ACK frame. Remember that frame aggregation was introduced with 802.11n alongside a few other frame types, namely the "Block-Ack" Frame type. A block Ack acknowledges a group of frames all at once, and provides a bitmap (Think of like a checklist in this instance) that details what frames, if any, were not received properly. <br> <br>
     - **A-MPDU is many frames in the same contention period but is less efficient.**
+    - **`A-MPDU` frames are Ack’d via the `Block Ack` frame. The Block Ack has the capability to point out individual sequence numbers that were not received, and only those individual frames have to be retransmitted.**
+    - **`A-MPDU` is mandatory in `802.11ac` y `802.11ax.`**
 
 ### Frame Aggregation: `Decision between A-MSDU / A-MPDU / or both`
 
