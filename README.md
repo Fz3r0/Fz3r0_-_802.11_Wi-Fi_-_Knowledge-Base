@@ -1846,12 +1846,14 @@ _The first frame aggregation method is A-MSDU, where several MSDUs are combined 
 
 - **`A-MSDU Key Concept`**: If you do not receive an Ack frame back, the entire payload must be resent, and this takes up more airtime and induces latency in your network. Congested networks and latency sensitive networks may want to reconsider use of the A-MSDU entirely. <br> <br>
     - **`A-MSDU` is available in `802.11n`**
-    - **`A-MSDU` is transmitted as a single 802.11 frame with multiple 802.3 frames inside it (subframe #1, subframe #2, subrame #3, etc), only having to be sent, and therefore contend, once.**
+    - **`A-MSDU` is transmitted as a single 802.11 frame with multiple MSDU frames inside it (subframe #1, subframe #2, subrame #3, etc), only having to be sent, and therefore contend, once.**
     - **`A-MSDU` is acknowledged by a standard `ACK` frame**
-    - **`A-MSDU` have only one `FCS` for all the MSDU's inside the A-MSDU (subframe #1 + subframe #2 + subrame #3 + FCS)**
-    - **`A-MSDU` have only one `Mac Header` called `A-MSDU Header` for all the MSDU's inside the A-MSDU (Mac Header + subframe #1 + subframe #2 + subrame #3 + FCS)**
-    - **Each MSDU inside the A-MSDU have a little `A-MSDU Sub-Header` to identify information about each subframe (Mac Header + {Sub-Header}subframe #1 + {Sub-Header}subframe #2 + {Sub-Header}subrame #3 + FCS)** 
+    - **`A-MSDU` have only one `FCS` for all the MSDU's inside the A-MSDU ({subframe #1 + subframe #2 + subrame #3} + FCS)**
+    - **`A-MSDU` have only one `Mac Header` called `A-MSDU Header` for all the MSDU's inside the A-MSDU (Mac Header + {subframe #1 + subframe #2 + subrame #3} + FCS)**
+    - **Each MSDU inside the A-MSDU have a small `A-MSDU Sub-Header` to identify information about each subframe (Mac Header + [{Sub-Header}subframe #1 + {Sub-Header}subframe #2 + {Sub-Header}subrame #3] + FCS)** 
     - **`A-MSDU` have a significantly `bigger lenght` compared to a normal MSDU data and compared to regular Ethernet frames** <br><br>
+    - `Channel Conditions` :: Preferred in **clean channel** conditions as it aggregates multiple MSDUs into a single MPDU, which is less efficient in noisy environments due to higher retransmission costs.
+    - `Encryption` :: A-MSDU Encrypts the entire aggregated data as a single unit. <br><br>
     - [**`A-MSDU`** :: Encapsulation Diagram](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/df10fc51-9a3e-4f2a-b06b-52dfa01d7cbd)
 
 ````py
@@ -1928,9 +1930,13 @@ PMD = (Physical Medium Dependent):
 _Another method of frame aggregation is A-MPDU, where several MPDUs are combined into a single frame for transmission. Each MPDU of A-MPDU has the same receiver address and data payload and each MPDU is encrypted using the CCMP encryption method. Similar to A-MSDU, each MPDU within the A-MPDU must be of the same 802.11e QoS access category. A-MPDU has more overhead than A-MSDU because each MPDU contains a MAC header and trailer details. **The big difference here is that the transmitter does not merge multiple Ethernet frames into a single 802.11 frame. Every 802.3 frame gets its own 802.11 MAC header and they are aggregated into a single PPDU transmission.**_
 
 - **`A-MPDU Key Concept`**: The A-MPDU method of frame aggregation does not require a single ACK reply, like a A-MSDU method transmission would; Or rather it does but it's not a standard ACK frame. Remember that frame aggregation was introduced with 802.11n alongside a few other frame types, namely the "Block-Ack" Frame type. A block Ack acknowledges a group of frames all at once, and provides a bitmap (Think of like a checklist in this instance) that details what frames, if any, were not received properly. <br> <br>
-    - **`A-MPDU` is mandatory in `802.11ac` y `802.11ax.`**
-    - **`A-MPDU` is many frames in the same contention period but is less efficient than A-MSDU.**
-    - **`A-MPDU` frames are Ack’d via the `Block Ack` frame. The Block Ack has the capability to point out individual sequence numbers that were not received, and only those individual frames have to be retransmitted.** <br><br>
+    - **`A-MPDU` is available in `802.11n`, but is mandatory in `802.11ac` y `802.11ax.`**
+    - **`A-MPDU` big difference VS A-MSDU is that the transmitter does not merge multiple MSDU's into a single 802.11 frame (better known as A-MSDU). Every MSDU frame gets its own 802.11 MAC header + FCS and they are aggregated into a single PPDU transmission.**
+    - **`A-MPDU` works similar as a A-MSDU where has to win one transmit opportunity for the whole A-MPDU in the same contention period, but is less efficient than A-MSDU.**
+    - **`A-MPDU` frames are Ack’d via the `Block Ack` frame. The Block Ack has the capability to point out individual sequence numbers that were not received, and only those individual frames have to be retransmitted.**
+    - **Compared to the A-MSDU, the A-MPDU has more overhead since every frame has its own MAC header. However, it is also much more resilient because in case of frame loss, only the frames not being Ack’d in the Block Ack have to be retransmitted.** <br><br>
+    - `Channel Conditions` :: Preferred in **noisy channel conditions** as it aggregates multiple MPDUs, each acknowledged and retransmitted individually, reducing the impact of errors. <br><br>
+    - `Encryption` :: A-MPDU Encrypts each MPDU individually, offering flexibility and better error handling. <br><br>
     - [**`A-PSDU`** :: Encapsulation Diagram](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/087b9657-b197-4728-8294-f719c4f1bdab)
 
 ````py
@@ -2020,42 +2026,6 @@ PMD = (Physical Medium Dependent):
 _Both of these methods can be used together. It's one of the best ways to increase your throughput to devices that eat a lot of your airtime anyway. The catch here is though you do get the best of both, you get the weaknesses of each, too. Using both together can be a lifesaver, but it should only be used in a low to medium density environment where you have considerable control over the RF environment. The combination of A-MSDU and A-MPDU ist the most efficient method and provides the fastest throughputs in clean environments with low retransmissions. However, as with plain A-MSDU, the cost of retries might be bigger than the benefit of aggregated Ethernet frames inside a single 802.11 frame and **you could be better off with only A-MPDU enabled.**_
 
 
-
-
-
-
-
-### Frame Aggregation: `Decision between A-MSDU / A-MPDU / or both`
-
-**Channel Conditions:**
-
-- A-MSDU: **Preferred in clean channel conditions** as it aggregates multiple MSDUs into a single MPDU, which is less efficient in noisy environments due to higher retransmission costs.
-- A-MPDU: **Preferred in noisy channel conditions** as it aggregates multiple MPDUs, each acknowledged and retransmitted individually, reducing the impact of errors.
-
-**Data Size:**
-
-- A-MSDU: More efficient for aggregating **many small data units into one frame**, but has a maximum size limit.
-- A-MPDU: Suitable for **larger data transmissions** as it can handle multiple MPDUs, each with its own header.
-
-**QoS Priority and Category:**
-
-- Both require data within the aggregation to have the same QoS category (e.g., all video or all voice), but efficiency varies with traffic type.
-
-**Encryption and Security:**
-
-- A-MSDU: Encrypts the entire aggregated data as a single unit.
-- A-MPDU: Encrypts each MPDU individually, offering flexibility and better error handling.
-
-**Who Decides:**
-
-- AP: Primarily controls the decision based on network conditions, frame size, network load, and required quality of service.
-- STA: Can indicate capabilities and preferences during initial negotiations but doesn’t control the aggregation method during regular data transmission.
-
-**Example Decision:**
-_while the access point makes the final decision based on network conditions and device capabilities, the client's initial capability reporting also plays a role. The goal is to optimize network performance and efficiency under specific conditions._
-
-- Good Channel Conditions: The AP may choose A-MSDU to reduce overhead and improve transmission efficiency.
-- Noisy Channel Conditions: The AP may prefer A-MPDU for better error management and reduced retransmission of large data amounts.
 
 
 
