@@ -1,4 +1,4 @@
-<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Troubleshooting Methodologies & Best Practices<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  #                                                               #
  #       Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base v0.1 αLFα         #
@@ -4733,67 +4733,70 @@ Time synchronization is essential in Wi-Fi networks to ensure reliable and error
 
 # 🕵️🚨🆘 802.11 Analysis & Troubleshooting
 
-## 🛠️🚨🆘 Troubleshooting, Analysis & Monitoring Tools
+## 🚨🆘👣 Troubleshooting Methodologies & Best Practices
 
-### Protocol Analyzers & Sniffers
-- [Wireshark](https://www.wireshark.org/) _Most famous Free & open-source packet analyzer & sniffer_
-
-### 🕵️ Monitoring
-- [Grafana](https://grafana.com/) _Open source analytics & monitoring solution for Nwtworking & Databases_
-- [Zabbix](https://www.zabbix.com/) _The all-in-one, open-source solution that lets you monitor anything_
-- [Prometheus](https://prometheus.io/) _Free software application used for event monitoring and alerting_
-
-### AP Selection & Viewers
-- [Wi-Fi Information View](https://www.nirsoft.net/utils/wifi_information_view.html) Select Manually the AP to connect
-
-## Troubleshooting Soup
-- [Why speed tests aren’t always the answer when troubleshooting Wi-Fi networks](https://www.thepacketologist.com/2023/12/why-speed-tests-arent-always-the-answer-when-troubleshooting/)
-- [What Are Good Latency & Ping Speeds?](https://www.pingplotter.com/wisdom/article/is-my-connection-good/)
-
-
-## Troubleshooting Methodologies & Best Practices
-- [WLAN Pros: Troubleshooting Best Practices](https://wlanprofessionals.com/wireless-troubleshooting-best-practices/)
-
-### WLAN Troubleshooting Methodology: `CWNA`
-- [CWNP :: CWNA - Troubleshooting Methodology](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/00e059e9-cd95-4f8c-8c8d-3a4ae111acd6)<br>
-1. [Identify the problem]()
-2. [Discover the scale of the problem]()
-3. [Define the possible causes of the problem]()
-4. [Narrow to the most likely cause]()
-5. [Create a plan of action or escalate the problem]()
-6. [Perform corrective actions]()
-7. [Verify the solution]()
-8. [Document the results]()
-
-### WLAN Troubleshooting Methodology: `CWAP`
-- [CWNP :: CWAP - Troubleshooting Methodology](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/6c2a7436-3f82-408d-a5ec-77a31a97ac9a)<br>
-1. [Identify the problem]()
-2. [Discover the scale of the problem]()
-3. [Identify possible causes of the problem]()
-4. [Capture and Analyze the Data]()
-5. [Observe the Problem]()
-6. [Choose appropiate remediation steps]()
-7. [Document the problem and resolution]()
-
-### Networking Troubleshooting Methodology: `Cisco`
-- [Cisco: Network Troubleshooting Methodology and Techniques](https://study-ccna.com/network-troubleshooting-methodology-techniques/)<br><
-1. [Define the problem]()
-2. [Gather detailed information]()
-3. [Consider probable cause for the failure]()
-4. [Devise a plan to solve the problem]()
-5. [Implement the plan]()
-6. [Observe the results of the implementation]()
-7. [Repeat the process if the plan does not resolve the problem]()
-8. [Document the changes made to solve the problem]()
-
-### WLAN Troubleshooting Methodology: `Tech Target`
-- [6 steps to troubleshoot Wi-Fi network issues](https://www.techtarget.com/searchnetworking/tip/6-steps-to-troubleshoot-Wi-Fi-network-issues)
-
-### WLAN Troubleshooting Methodology: `Tanaza`
+- [CWNP :: CWNA - Troubleshooting Methodology](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/00e059e9-cd95-4f8c-8c8d-3a4ae111acd6)
+- [CWNP :: CWAP - Troubleshooting Methodology](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/6c2a7436-3f82-408d-a5ec-77a31a97ac9a)
+- [WLAN Pros :: Troubleshooting Best Practices](https://wlanprofessionals.com/wireless-troubleshooting-best-practices/)
+- [Cisco :: Network Troubleshooting Methodology and Techniques](https://study-ccna.com/network-troubleshooting-methodology-techniques/)
+- [CompTIA :: Network Ytoubleshooting Methodolody and Tools](https://www.theknowledgeacademy.com/blog/comptia-troubleshooting-steps/)
+- [TechTarget :: 6 steps to troubleshoot Wi-Fi network issues](https://www.techtarget.com/searchnetworking/tip/6-steps-to-troubleshoot-Wi-Fi-network-issues)
+- [BICSI: Common Troubleshooting Methodology - 7 Steps](https://www.bicsi.org/docs/default-source/conference-presentations/2017-fall/learning-to-troubleshoot-wireless.pdf?sfvrsn=ecf7a89b_2)
 - [The Ultimate Guide to Troubleshoot WiFi Networks with the OSI model](https://f.hubspotusercontent10.net/hubfs/149916/Content%20for%20Linkedin/Troubleshooting%20WiFi%20networks.pdf)
 
-### WLAN Troubleshooting Methodology: `BICSI`
-- [BICSI: Common Troubleshooting Methodology](https://www.bicsi.org/docs/default-source/conference-presentations/2017-fall/learning-to-troubleshoot-wireless.pdf?sfvrsn=ecf7a89b_2)
+---
+  
+### 🚨🆘 WLAN Troubleshooting Methodology: `CWNA`
+
+1. Identify the problem
+2. Discover the scale of the problem
+3. Define the possible causes of the problem
+4. Narrow to the most likely cause
+5. Create a plan of action or escalate the problem
+6. Perform corrective actions
+7. Verify the solution
+8. Document the results
+
+---
+
+### 🚨🆘 WLAN Troubleshooting Methodology: `CWAP`
+
+1. Identify the problem
+2. Discover the scale of the problem
+3. Identify possible causes of the problem
+4. Capture and Analyze the Data
+5. Observe the Problem
+6. Choose appropiate remediation steps
+7. Document the problem and resolution
+
+---
+
+### 🚨🆘 Networking Troubleshooting Methodology: `Cisco`
+
+1. Define the problem
+2. Gather detailed information
+3. Consider probable cause for the failure
+4. Devise a plan to solve the problem
+5. Implement the plan
+6. Observe the results of the implementation
+7. Repeat the process if the plan does not resolve the problem
+8. Document the changes made to solve the problem
+
+---
+
+### 🚨🆘 WLAN Troubleshooting Methodology: `Tech Target`
+
+1. Understand the scope of the issue.
+2. Remember: Many wireless network issues are not actually wireless.
+3. Speed tests only go so far. You can't really troubleshoot network issues with just a speed test app.
+4. When Wi-Fi trouble hits, remember the basics of RF. 
+5. Be prepared to capture packets.
+6. Don't trust vendor code.
+
+---
+
+### 🚨🆘 WLAN Troubleshooting Methodology: `BICSI`
+
 1. Identify the problem
 2. Determine the scale of the problem
 3. Determine Possible causes of the problem
@@ -4801,6 +4804,31 @@ Time synchronization is essential in Wi-Fi networks to ensure reliable and error
 5. Resolution or escalation
 6. Corrective action & verify solution
 7. Document, document and document
+
+## 🛠️🚨🆘 Troubleshooting, Analysis & Monitoring Tools
+
+### Protocol Analyzers & Sniffers
+- [Wireshark](https://www.wireshark.org/) _Most famous Free & open-source packet analyzer & sniffer_
+
+---
+
+### 🕵️ Monitoring
+- [Grafana](https://grafana.com/) _Open source analytics & monitoring solution for Nwtworking & Databases_
+- [Zabbix](https://www.zabbix.com/) _The all-in-one, open-source solution that lets you monitor anything_
+- [Prometheus](https://prometheus.io/) _Free software application used for event monitoring and alerting_
+
+---
+
+### AP Selection & Viewers
+- [Wi-Fi Information View](https://www.nirsoft.net/utils/wifi_information_view.html) Select Manually the AP to connect
+
+
+
+## Troubleshooting Soup
+- [Why speed tests aren’t always the answer when troubleshooting Wi-Fi networks](https://www.thepacketologist.com/2023/12/why-speed-tests-arent-always-the-answer-when-troubleshooting/)
+- [What Are Good Latency & Ping Speeds?](https://www.pingplotter.com/wisdom/article/is-my-connection-good/)
+
+
 
 
 
