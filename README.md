@@ -1851,7 +1851,7 @@ _The first frame aggregation method is A-MSDU, where several MSDUs are combined 
     - **`A-MSDU` have only one `FCS` for all the MSDU's inside the A-MSDU (subframe #1 + subframe #2 + subrame #3 + FCS)**
     - **`A-MSDU` have only one `Mac Header` called `A-MSDU Header` for all the MSDU's inside the A-MSDU (Mac Header + subframe #1 + subframe #2 + subrame #3 + FCS)**
     - **Each MSDU inside the A-MSDU have a little `A-MSDU Sub-Header` to identify information about each subframe (Mac Header + {Sub-Header}subframe #1 + {Sub-Header}subframe #2 + {Sub-Header}subrame #3 + FCS)** 
-    - **`A-MSDU` have a significantly `bigger lenght` compared to a normal MSDU data and compared to regular Ethernet frames**
+    - **`A-MSDU` have a significantly `bigger lenght` compared to a normal MSDU data and compared to regular Ethernet frames** <br><br>
     - [**`A-MSDU`** :: Encapsulation Diagram](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/df10fc51-9a3e-4f2a-b06b-52dfa01d7cbd)
 
 ````py
@@ -1928,8 +1928,93 @@ _Another method of frame aggregation is A-MPDU, where several MPDUs are combined
 - **`A-MPDU Key Concept`**: The A-MPDU method of frame aggregation does not require a single ACK reply, like a A-MSDU method transmission would; Or rather it does but it's not a standard ACK frame. Remember that frame aggregation was introduced with 802.11n alongside a few other frame types, namely the "Block-Ack" Frame type. A block Ack acknowledges a group of frames all at once, and provides a bitmap (Think of like a checklist in this instance) that details what frames, if any, were not received properly. <br> <br>
     - **`A-MPDU` is mandatory in `802.11ac` y `802.11ax.`**
     - **`A-MPDU` is many frames in the same contention period but is less efficient than A-MSDU.**
-    - **`A-MPDU` frames are Ack’d via the `Block Ack` frame. The Block Ack has the capability to point out individual sequence numbers that were not received, and only those individual frames have to be retransmitted.**
+    - **`A-MPDU` frames are Ack’d via the `Block Ack` frame. The Block Ack has the capability to point out individual sequence numbers that were not received, and only those individual frames have to be retransmitted.** <br><br>
+    - [**`A-PSDU`** :: Encapsulation Diagram](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/087b9657-b197-4728-8294-f719c4f1bdab)
 
+````py
+
+## A-MPDU encapsulation from upper layers ==>> LLC ==>> MAC ==>> PPLC ==>> PMD
+
+Upper Layers QoS Data / Payload (example, UDP QoS traffic):
+
+                          |----------|                              |----------|                         |----------|          
+                          | QoS Data |                              | QoS Data |                         | QoS Data |              
+                          |    1     |                              |    2     |                         |    3     | 
+                          |----------|                              |----------|                         |----------|
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+LLC (Logical Link Control):
+
+    MSDU = # QoS Data + LLC Header
+           # In this example we are using 3 different QoS Data Frames from upper layers (example, UDP QoS traffic)
+                                                                                        
+               |---------||----------|                   |---------||----------|                  |---------||----------|           
+               |   LLC   || QoS Data |                   |   LLC   || QoS Data |                  |   LLC   || QoS Data |    
+               |  Header ||    1     |                   |  Header ||    2     |                  |  Header ||    3     |  
+               |---------||----------|                   |---------||----------|                  |---------||----------|   
+               \_____________________/                   \_____________________/                  \_____________________/   
+               <------- MSDU 1 ------>                   <------- MSDU 2 ------>                  <------- MSDU 3 ------>      
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+MAC (Medium Access Control):
+
+    A-MSDU = # A little MSDU Sub-Header is prepended in each MSDUs Sub-Frames,
+               then adds a single MAC Header called A-MSDU Header & just 1 FCS for all the MSDUs:                                                       
+
+               1 MAC Header                            3 different MSDU Sub-Frames (with a MSDU Sub-Header each)                               1 FCS
+               <----------> <-------------------------------------------------------------------------------------------------------------> <---------->
+               |----------||------------|----------||----------|+|------------|----------||----------|+|------------|----------||----------||----------|        
+               |  A-MSDU  ||   MSDU 1   |        MSDU 1        |+|   MSDU 2   |        MSDU 2        |+|   MSDU 3   |        MSDU 3        ||   FCS    |         
+               |  Header  || Sub-Header |    (Sub-Frame 1)     |+| Sub-Header |    (Sub-Frame 2)     |+| Sub-Header |    (Sub-Frame 3)     ||          |         
+               |----------||------------|----------||----------|+|------------|----------||----------|+|------------|----------||----------||----------|         
+               \_______________________________________________________________________________________________________________________________________/
+               <------------------------------------------------------------ A-MSDU (PSDU) ------------------------------------------------------------>
+
+
+               1º MAC Header                             2º MAC Header                             3º MAC Header
+               <---------->                              <---------->                              <---------->
+
+                                         
+               |----------|----------||----------|-----|+|----------|----------||----------|-----|+|----------|----------||----------|-----|         
+               |   MAC    |        MSDU 1        | FCS |+|   MAC    |        MSDU 2        | FCS |+|   MAC    |        MSDU 3        | FCS |
+               | Header 1 |    (Sub-Frame 1)     |  1  |+| Header 2 |    (Sub-Frame 2)     |  2  |+| Header 3 |    (Sub-Frame 3)     |  3  |    
+               |----------|----------||----------|-----|+|----------|----------||----------|-----|+|----------|----------||----------|-----|     
+               \___________________________________________________________________________________________________________________________/
+               <------------------------------------------------------ A-MPDU (PSDU) ------------------------------------------------------>
+
+
+
+
+
+                                                                                        
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+                                                                                       
+PLCP = (Physical Layer Convergence Procedure) / (Physical Layer Convergence Protocol): 
+                                                                                       
+    PPDU = # PSDU/MPDU (using the A-MSDU serviced from MAC) + Preamble & PLCP Header (prepended)
+
+                
+|-------------||----------||------------|----------||----------|+|------------|----------||----------|+|------------|----------||----------||----------|           
+| PLCP Header ||                                                               PSDU                                                                    |    
+| + Preamble  ||                                                             (A-MSDU)                                                                  |    
+|-------------||----------||------------|----------||----------|+|------------|----------||----------|+|------------|----------||----------||----------|   
+\______________________________________________________________________________________________________________________________________________________/
+<------------------------------------------------------------------------ PPDU ------------------------------------------------------------------------>
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+PMD = (Physical Medium Dependent):
+
+|-------------||----------||------------|----------||----------|+|------------|----------||----------|+|------------|----------||----------||----------|            
+|                                                                            PPDU                                                                      |     
+|                                           (with 3 MSDUs Sub-Frames, 1 MAC Header (A-MSDU SubHeader) & 1 FCS                                          |   
+|-------------||----------||------------|----------||----------|+|------------|----------||----------|+|------------|----------||----------||----------|   
+\______________________________________________________________________________________________________________________________________________________/
+<-- 000101010111001101010001101001010101010110101010001010101010100101110100010100001001010101101010101010001110011001010111100101010101010110100011 -->
+
+````
 
 ### 🚛🚢 Frame Aggregation: `A-MSDU` + `A-MPDU` 
 _Both of these methods can be used together. It's one of the best ways to increase your throughput to devices that eat a lot of your airtime anyway. The catch here is though you do get the best of both, you get the weaknesses of each, too. Using both together can be a lifesaver, but it should only be used in a low to medium density environment where you have considerable control over the RF environment. The combination of A-MSDU and A-MPDU ist the most efficient method and provides the fastest throughputs in clean environments with low retransmissions. However, as with plain A-MSDU, the cost of retries might be bigger than the benefit of aggregated Ethernet frames inside a single 802.11 frame and **you could be better off with only A-MPDU enabled.**_
