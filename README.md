@@ -1423,14 +1423,14 @@ _The architecture categorizes services into three primary types, each serving di
 2. **`DSS`**: Distribution System Service
 3. **`PCPS`**: BSS Control Point Service _(CWAP out of Scope)_
 
-## 🤳🏾📡 SS (Station Services): 
+## 🤳🏾📡 `SS (Station Services)` 
 _A Station Service (SS) exists in all 802.11 stations, including client stations (STAs) and access points (APs)._
 
 ### 🤳🏾📡 SS (Station Services): `Types`
 _There are two diffenet type of STAs (APs & Client STA), the third type is the same as APs or STAs but with QpS support._
 - [**`STA`** = Client STA](https://en.wikipedia.org/wiki/Station_(networking)) :: Any device containing IEEE 802.11 MAC & PHY interface to the WM `Does NOT act as AP`
 - [**`AP`** = Access Point STA](https://en.wikipedia.org/wiki/Wireless_access_point) :: Networking device that allows other Wi-Fi devices to connect to a network `Act as an AP` <br> <br>
-    - [_**`QSTA` STA-QoS & `QAP`** AP-QoS_](https://www.redalyc.org/pdf/6380/638067265006.pdf) :: Any AP or STA that supports Wi-Fi Multimedia 802.11e QoS  _(Any modern device)_
+- [_**`QSTA`** & **`QAP`** = STA/AP-QoS_](https://www.redalyc.org/pdf/6380/638067265006.pdf) :: Any AP or STA that supports Wi-Fi Multimedia 802.11e QoS  _(Any modern device)_
 
 ---
 
@@ -1465,7 +1465,7 @@ _APs or client STAs can manage any of the next services:_
 - **`Radio Measurement`** - Collects and reports radio metrics for network optimization.
 - **`DSE (Dynamic STA Enablement)`** - Enables dynamic stations based on network requirements.
 
-## 🏘️📡🖧 DSS (Distribution System Service)
+## 🏘️📡🖧 `DSS (Distribution System Service)`
 _Distribution System Service (DSS) according to IEEE 802.11 is a functionality that allows the interconnection of several WLAN networks, thus creating a larger and more efficient network. This service allows several workstations to connect to the same network, regardless of their physical location. The DSS service is used in business and public environments, such as airports, shopping malls, and train stations. It allows a fluid and uninterrupted connection to users who move from one coverage area to another. The DSS service provides a scalable and flexible infrastructure, allowing companies and organizations to adapt to the changing needs of their users. Additionally, the DSS service is compatible with a wide range of devices, making it easy to deploy and maintain._
 
 | **Service Name**                                            | **Network Type**                                    | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | **Example**                                                                                                                     |
@@ -1508,7 +1508,7 @@ _The management plane is defined by administrative network management, administr
 _The control plane consists of control or signaling information and is often defined as network intelligence or protocols.  An example would be CAM tables and STP used by L2 switches for data forwarding.  Within 802.11 we have the following examples: | Adapative RF or RRM: Where coordinated channel and power settings for multiple APs are provided. |  Roaming Mechanisms:  This provides support for roaming handoffs between APs. | Client and Load Balancing:  Client load and performance metrics are collected and shared between APs to improve the WLAN experience | Mesh Protocols:  WLAN vendors use either L2 or L3 routing protocols to move user data between mesh APs._
 
 - This plane includes the “control” functions related to effective cooperation and interaction between devices within a network.  Similar to the management functions, early networks with autonomous APs didn’t share a control plane.  They shared an Ethernet network for connectivity, but the APs did not communicate with each other to coordinate network control operations.  WLAN ‘control’lers are now the de facto solution to address the needs of the control plane, where many of these operations are centralized into one device (a controller) that communicates with all of the APs.  Again, similar to the management plane, multiple controllers pose new challenges, because controllers need a protocol for communications between one another.  In any case, graceful control of a WLAN is necessary for scalability of any kind.  Example functions include RRM (channel and power settings for automated networks) coordination, mobility management (such as fast secure roaming and uninterrupted policy and security management during transitions), and load balancing.  These operations are usually performed within a WLAN controller, though protocols may be used between APs to perform the same. <br> <br>
-    - **`Example`**: Adaptive RF, load balancing, roaming handoff, band balancing, AP neighbor report, rogue AP report and other mechanisms exist on the WLC 
+    - **`Example`**: Adaptive RF, load balancing, band balancing, roaming handoff, AP neighbor report, rogue AP report and other mechanisms exist on the WLC 
 
 ---
   
@@ -1835,15 +1835,17 @@ _With the ratification of 802.11n amendment, two types of frame aggregation were
 - [A-MPDU & A-MSDU :: Configuration on Cisco WLC](https://mrncciew.com/2013/04/11/a-mpdu-a-msdu/)  _`nayarasi`_
 - [CWNP: Basics of MAC Architecture: Encapsulation & Frame Aggregation](https://www.cwnp.com/802.11-mac-series-ndash-basics-mac-architecture-ndash-part-1-3/#Id3)  _`CWNP`_
 - [MSDU or MPDU: Which Is Best Frame Aggregation?](https://www.cbtnuggets.com/blog/technology/networking/msdu-or-mpdu-which-is-best-frame-aggregation)  _`NCB Nuggets`_
-- [Análisis de MPDU y MSDU con wireshark](https://wifispainreless.blogspot.com/2024/01/analisis-de-mpdu-y-msdu-con-wireshark.html) _`wifispainreless`_
+- [Análisis de A-MPDU y A-MSDU con wireshark](https://wifispainreless.blogspot.com/2024/01/analisis-de-mpdu-y-msdu-con-wireshark.html) _`wifispainreless`_
 - [A-MSDU vs. A-MPDU – Real World Examples in Wireshark](https://dot11.exposed/2020/06/22/a-msdu-vs-a-mpdu-real-world-examples-in-wireshark/) _`Wireshark Examples`_
+- [A-MPDU vs. A-MSDU](https://dot11ap.wordpress.com/a-mpdu-vs-a-msdu/) _`dot11ap`_
 
 ---
 
 ### 💊🚛 Frame Aggregation: `A-MSDU`
 _The first frame aggregation method is A-MSDU, where several MSDUs are combined into a single frame. An 802.11n access point uses A-MSDU aggregation and removes the headers and trailers from the received MSDUs, and combines these multiple MSDU payloads in to a single frame, which is known as A-MSDU and is further used for transmission across the wireless medium. The aggregated frame is encrypted using the Counter Mode with Cipher Block Chaining Message Authentication Code Protocol (CCMP) encryption method. Each MSDU within the A-MSDU must be of the same 802.11e QoS access category. For example, A-MSDU can contain several MSDUs of Video access category only and it cannot be mixed with Best Effort or Voice MSDUs within the same aggregated frame._
 
-- **`A-MSDU Key Concept`**: If you do not receive an Ack frame back, the entire payload must be resent, and this takes up more airtime and induces latency in your network. Congested networks and latency sensitive networks may want to reconsider use of the A-MSDU entirely. Please, please use a test bed. No one likes rolling back a production change. <br> <br>
+- **`A-MSDU Key Concept`**: If you do not receive an Ack frame back, the entire payload must be resent, and this takes up more airtime and induces latency in your network. Congested networks and latency sensitive networks may want to reconsider use of the A-MSDU entirely. <br> <br>
+    - **`A-MSDU` is available in `802.11n`**
     - **`A-MSDU` is transmitted as a single 802.11 frame with multiple 802.3 frames inside it (subframe #1, subframe #2, subrame #3, etc), only having to be sent, and therefore contend, once.**
     - **`A-MSDU` is acknowledged by a standard `ACK` frame**
     - **`A-MSDU` have only one `FCS` for all the MSDU's inside the A-MSDU (subframe #1 + subframe #2 + subrame #3 + FCS)**
@@ -1920,13 +1922,22 @@ PMD = (Physical Medium Dependent):
 
 ````
 
-### Frame Aggregation: `A-MPDU`
+### 💊🚛 Frame Aggregation: `A-MPDU`
 _Another method of frame aggregation is A-MPDU, where several MPDUs are combined into a single frame for transmission. Each MPDU of A-MPDU has the same receiver address and data payload and each MPDU is encrypted using the CCMP encryption method. Similar to A-MSDU, each MPDU within the A-MPDU must be of the same 802.11e QoS access category. A-MPDU has more overhead than A-MSDU because each MPDU contains a MAC header and trailer details. **The big difference here is that the transmitter does not merge multiple Ethernet frames into a single 802.11 frame. Every 802.3 frame gets its own 802.11 MAC header and they are aggregated into a single PPDU transmission.**_
 
 - **`A-MPDU Key Concept`**: The A-MPDU method of frame aggregation does not require a single ACK reply, like a A-MSDU method transmission would; Or rather it does but it's not a standard ACK frame. Remember that frame aggregation was introduced with 802.11n alongside a few other frame types, namely the "Block-Ack" Frame type. A block Ack acknowledges a group of frames all at once, and provides a bitmap (Think of like a checklist in this instance) that details what frames, if any, were not received properly. <br> <br>
     - **`A-MPDU` is mandatory in `802.11ac` y `802.11ax.`**
-    - **A-MPDU is many frames in the same contention period but is less efficient.**
+    - **`A-MPDU` is many frames in the same contention period but is less efficient than A-MSDU.**
     - **`A-MPDU` frames are Ack’d via the `Block Ack` frame. The Block Ack has the capability to point out individual sequence numbers that were not received, and only those individual frames have to be retransmitted.**
+
+
+### 🚛🚢 Frame Aggregation: `A-MSDU` + `A-MPDU` 
+_Both of these methods can be used together. It's one of the best ways to increase your throughput to devices that eat a lot of your airtime anyway. The catch here is though you do get the best of both, you get the weaknesses of each, too. Using both together can be a lifesaver, but it should only be used in a low to medium density environment where you have considerable control over the RF environment. The combination of A-MSDU and A-MPDU ist the most efficient method and provides the fastest throughputs in clean environments with low retransmissions. However, as with plain A-MSDU, the cost of retries might be bigger than the benefit of aggregated Ethernet frames inside a single 802.11 frame and **you could be better off with only A-MPDU enabled.**_
+
+
+
+
+
 
 
 ### Frame Aggregation: `Decision between A-MSDU / A-MPDU / or both`
@@ -1961,8 +1972,8 @@ _while the access point makes the final decision based on network conditions and
 - Good Channel Conditions: The AP may choose A-MSDU to reduce overhead and improve transmission efficiency.
 - Noisy Channel Conditions: The AP may prefer A-MPDU for better error management and reduced retransmission of large data amounts.
 
-**Fusion: A-MPDU and A-MSDU together**
-_Both of these methods can be used together. It's one of the best ways to increase your throughput to devices that eat a lot of your airtime anyway. The catch here is though you do get the best of both, you get the weaknesses of each, too. Using both together can be a lifesaver, but it should only be used in a low to medium density environment where you have considerable control over the RF environment._
+
+
 
 
 
