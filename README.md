@@ -4733,7 +4733,9 @@ Time synchronization is essential in Wi-Fi networks to ensure reliable and error
 
 # 🕵️🚨🆘 802.11 Analysis & Troubleshooting
 
+
 ## 🚨🆘👣 Troubleshooting Methodologies & Best Practices
+_There are several methodologies for troubleshooting LAN and WLAN networks, each recommended by different vendors and academies. These methodologies share many similarities but also offer unique perspectives and techniques. In this section, we will delve into some of the most widely recognized and effective troubleshooting methodologies for wireless networks. Addressing issues in LAN or WLAN networks requires a structured troubleshooting methodology that facilitates efficient and effective problem resolution, with a strong emphasis on documentation at each step._
 
 - [CWNP :: CWNA - Troubleshooting Methodology](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/00e059e9-cd95-4f8c-8c8d-3a4ae111acd6)
 - [CWNP :: CWAP - Troubleshooting Methodology](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/6c2a7436-3f82-408d-a5ec-77a31a97ac9a)
@@ -4747,6 +4749,7 @@ Time synchronization is essential in Wi-Fi networks to ensure reliable and error
 ---
   
 ### 🚨🆘 WLAN Troubleshooting Methodology: `CWNA`
+_CWNA & CWAP methodology provide comprehensive methodologies that include problem identification, data analysis, and thorough documentation._
 
 1. Identify the problem
 2. Discover the scale of the problem
@@ -4760,6 +4763,7 @@ Time synchronization is essential in Wi-Fi networks to ensure reliable and error
 ---
 
 ### 🚨🆘 WLAN Troubleshooting Methodology: `CWAP`
+_CWNA & CWAP methodology provide comprehensive methodologies that include problem identification, data analysis, and thorough documentation._
 
 1. Identify the problem
 2. Discover the scale of the problem
@@ -4772,6 +4776,7 @@ Time synchronization is essential in Wi-Fi networks to ensure reliable and error
 ---
 
 ### 🚨🆘 Networking Troubleshooting Methodology: `Cisco`
+_Offers a systematic approach starting with problem definition, detailed information gathering, plan development, and implementation, followed by results observation and change documentation._
 
 1. Define the problem
 2. Gather detailed information
@@ -4785,6 +4790,7 @@ Time synchronization is essential in Wi-Fi networks to ensure reliable and error
 ---
 
 ### 🚨🆘 WLAN Troubleshooting Methodology: `Tech Target`
+_Provides practical insights emphasizing understanding the problem scope, capturing packets, and critically evaluating vendor code, avoiding over-reliance on speed tests._
 
 1. Understand the scope of the issue.
 2. Remember: Many wireless network issues are not actually wireless.
@@ -4796,6 +4802,7 @@ Time synchronization is essential in Wi-Fi networks to ensure reliable and error
 ---
 
 ### 🚨🆘 WLAN Troubleshooting Methodology: `BICSI`
+_Outlines a common seven-step methodology from problem identification to solution verification and detailed documentation._
 
 1. Identify the problem
 2. Determine the scale of the problem
