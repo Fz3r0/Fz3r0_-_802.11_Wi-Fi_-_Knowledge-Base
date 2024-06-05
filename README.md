@@ -2640,7 +2640,7 @@ Each of the four 802.11 Address Fields may have one of 5 different interpretatio
 4. ⭕ `Transmitter Address` : **`TA`** :: STA/AP that transmitted the frame onto the WM (Wireless Medium)  <br> <br>
     - TA (F0:F0:F0:F0:F0:F0) = `wlan.ta == F0:F0:F0:F0:F0:F0` <br> <br>
 5. ⭕ `Basic Service Set Identifier` : **`BSSID`** :: ID of the BSS (Similar to MAC Address) <br> <br>
-    - TA (F0:F0:F0:F0:F0:F0) = `wlan.bssid == F0:F0:F0:F0:F0:F0`
+    - TA (F0:F0:F0:F0:F0:F0) = `wlan.bssid == F0:F0:F0:F0:F0:F0` <br> <br>
 
 Filter specific MAC of any hardware address (AP or STA) of any 5 Addresses:
 
