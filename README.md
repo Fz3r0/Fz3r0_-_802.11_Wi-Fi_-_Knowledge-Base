@@ -1296,7 +1296,10 @@ _IEEE 802.11ac-2013 or 802.11ac provides high-throughput wireless local area net
 
 - Downlink multi-user MIMO (MU-MIMO): Allows up to four simultaneous downlink MU-MIMO clients.  Multiple STAs, each with one or more antennas, transmit or receive independent data streams simultaneously.
     - Space-division multiple access (SDMA): streams not separated by frequency, but instead resolved spatially, analogous to 11n-style MIMO.
-    - Downlink MU-MIMO (one transmitting device, multiple receiving devices) included as an optional mode.
+    - Downlink MU-MIMO (one transmitting device, multiple receiving devices) included as an optional mode.  
+
+- Transmit Beamforming: In order for MU-MIMO to function the access point must support transmit beamforming. Ideally the access point will be capable of 4X4:4 MIMO. This will allow multiple client STA’s to share the medium and communicate with an access point simultaneously. Keep in mind the sessions between the client devices and the access point are still one-to-one but the technology allows for multiple simultaneous sessions to occur.
+    - Transmit beamforming used in 802.11ac technology allows for a non-AP STA (client device to take the role of a beamformee. The transmit beamforming feedback mechanism is included in the VHT null data packet (NDP) Announcement frame and includes more than one STA Info field. 
 
 - 256-QAM (MCS 8/9 (256-QAM)): rate 3/4 and 5/6, added as optional modes (vs. 64-QAM, rate 5/6 maximum in 802.11n).
 
@@ -1314,6 +1317,8 @@ _IEEE 802.11ac-2013 or 802.11ac provides high-throughput wireless local area net
 
 - New PPDU HT Elements: Adds four new fields to the PPDU header identifying the frame as a very high throughput (VHT) frame as opposed to 802.11n's high throughput (HT) or earlier. The first three fields in the header are readable by legacy devices to allow coexistence
 DFS was mandated between channels 52 and 144 for 5 GHz to reduce interference with weather stations using the same frequency band.
+
+
 
 
 
@@ -1832,7 +1837,7 @@ PMD = (Physical Medium Dependent):
 ---
 
 ## 💊🚛🚢 IEEE 802.11: `Frame Aggregation`
-_With the ratification of 802.11n amendment, two types of frame aggregation were added to 802.11: Aggregate MAC Service Data Unit (A-MSDU) & Aggregate MAC Protocol Data Unit (A-MPDU). Frame aggregation allows multiple smaller MSDU or MPDUs to be grouped together into a single frame, reducing the amount of overhead that would have been necessary for each individual frame.  An analogy for frame aggregation is carpooling that is implemented to reduce traffic and subsequently reduce traffic jams. Similarly, frame aggregation is used to reduce medium contention overhead by combining several service data units (SDUs)._
+_**Frame aggregation allows for more data payload with a single header providing more data transfer with less 802.11 overhead.** With the ratification of 802.11n amendment, two types of frame aggregation were added to 802.11: Aggregate MAC Service Data Unit (A-MSDU) & Aggregate MAC Protocol Data Unit (A-MPDU). Frame aggregation allows multiple smaller MSDU or MPDUs to be grouped together into a single frame, reducing the amount of overhead that would have been necessary for each individual frame.  An analogy for frame aggregation is carpooling that is implemented to reduce traffic and subsequently reduce traffic jams. Similarly, frame aggregation is used to reduce medium contention overhead by combining several service data units (SDUs)._
 - [802.11 Data: Frame Aggregation](https://mrncciew.com/2014/11/01/cwap-802-11-data-frame-aggregation/) _`nayarasi`_
 - [A-MPDU & A-MSDU :: Configuration on Cisco WLC](https://mrncciew.com/2013/04/11/a-mpdu-a-msdu/)  _`nayarasi`_
 - [CWNP: Basics of MAC Architecture: Encapsulation & Frame Aggregation](https://www.cwnp.com/802.11-mac-series-ndash-basics-mac-architecture-ndash-part-1-3/#Id3)  _`CWNP`_
@@ -3037,6 +3042,9 @@ _IEEE 802.11-2020 9.3.3 (PV0) :: Management frames are used to manage the connec
 - **`Actions`**: Action frames extend the functionality of management frames, enabling advanced features like spectrum management, QoS management, and radio measurement. They allow for a wide range of actions, from channel switching to initiating protected dual of public action frames for more complex operations <br><br>
 - [802.11 Mgmt Frame Types @ _nayarasi_](https://mrncciew.com/2014/09/29/cwap-802-11-mgmt-frame-types/) _`nayarasi`_
 
+**Key Notes on Management Frames**
+- 802.11 management frames that are sent to a broadcast address of FF FF FF FF FF FF will have a duration value of zero. The duration is a time value that STA’s will use to reserve the medium informing other STA’s in the BSS how long it will take for the frame exchange to complete. In this case since these frames are no acknowledged by a receiver they have a duration value of zero. The duration field is still in the MAC header but it is not used.
+
 | **Subtype Name**          | **Type** | **Subtype** | **Filter**                                  | **Description**                                                                                                  |
 |---------------------------|----------|-------------|---------------------------------------------|------------------------------------------------------------------------------------------------------------------|
 | ALL                       | 00       | N/A         | `wlan.fc.type == 00`                        | All management frames, including BSS management, BSS discovery, BSS joining and roaming, leaving a BSS. |
@@ -3058,7 +3066,7 @@ _IEEE 802.11-2020 9.3.3 (PV0) :: Management frames are used to manage the connec
 | Aruba Management          | 00       | 1111        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 15` | Aruba-specific management frame. Used for proprietary management functions specific to Aruba networks. |
 
 ## 🎮🛜💊 802.11 MAC Frames :: `Control`
-_Control frames are used to manage access to the wireless medium and ensure that data transmissions occur smoothly without collisions. These frames are essential for coordinating data transfer and managing the state of communication links._
+_Control frames are used to manage access to the wireless medium and ensure that data transmissions occur smoothly without collisions, this means that the Control frames are used to assist with the delivery of the data frames such as 802.11 acknowledgement (Ack), request to send (RTS) and clear to send (CTS) and more. These frames are essential for coordinating data transfer and managing the state of communication links._
 
 **Key functions of Control Frames:**
 - **`Acknowledgment`**: Frames like ACK are used to acknowledge the receipt of data frames, ensuring reliable communication. <br><br>
@@ -3070,6 +3078,9 @@ _Control frames are used to manage access to the wireless medium and ensure that
 - **`Beamforming Report Poll`**: Utilized in 802.11ac and newer standards, these frames request beamforming feedback from client STAs to optimize directional signal transmission, enhancing overall network performance. <br><br>
 - **`VHT/HE NDP Announcement`**: Announce the start of a null data packet (NDP) transmission for Very High Throughput (VHT) and High Efficiency (HE) modes, used for channel sounding and beamforming purposes. <br><br>
 - **`Control Frame Extension and Control Wrapper frames`**: Provide additional control signaling capabilities beyond the basic control frame functions, supporting enhanced features and future extensions of the 802.11 standards.
+
+Key Notes on Control Frames: 
+- Control frames are used to assist with the delivery of the data frames such as 802.11 acknowledgement (Ack), request to send (RTS) and clear to send (CTS) and more.
 
 | **Subtype Name**               | **Type** | **Subtype** | **Filter**                                  | **Description**                                                                                                  |
 |--------------------------------|----------|-------------|---------------------------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -3137,7 +3148,8 @@ _STAs send Probe Request on Active Scanning or after a Beacon in Passive Scannin
 
 
 
-
+### Reassociation Request & Response
+- The Association Request and Reassociation Request frames are nearly identical with the exception of the current AP address field. This field is used to assist in moving the STA association to the new access point. A STA can be associated to only one access point at a time.
 
 
 
@@ -3151,7 +3163,9 @@ _STAs send Probe Request on Active Scanning or after a Beacon in Passive Scannin
 
 
 
+## Control Frames
 
+- `ADDBA`: Action frames are management frames that are for various types of actions. This includes block acknowledgements. The add a block ACK (ADDBA) request and response frames are used for the block ACK setup process between STA’s
 
 
 
@@ -4139,15 +4153,18 @@ _Arbitration is just deciding "who" is gonna talk "when", in WLAN Networks there
 - [`802.11 Arbitration` || Detailed Whitepaper @ _CWNP_](https://www.cwnp.com/uploads/802-11_arbitration.pdf) _`whitepaper / report`_
 - [Contention-based MAC Protocols Vs. Contention-free MAC Protocols @ _CS3591 Computer Networks_](https://www.youtube.com/watch?v=BW4Zufcyq9E) _`video`_
 
+### Radar DCF
+_Radar will affect the 5 GHz band on channels 120, 124 and 128. Using WLAN integration allows the analyst to easily identify the channels that are used with 802.11 and will help to identify radar that may impact the WLAN._
+
 ###👨🏻‍⚖️🚦 Network Arbitration: `Arbitration Methods`
 
 
 
 
+- `Slot Time`: The slot time is a set value based on the PHY technology in use. This time is either 9us or 20us. For example OFDM used with 802.11a has a slot time of 9us. This value is used in conjunction with the random number chosen from the contention window to count down and determine if the medium is clear prior to a STA transmitting a single frame.
 
 
-
-
+- `EDCA`: EDCA is an access method under Hybrid Coordination Function (HCF) and assigns user priorities based on the type of traffic sent. There are eight user priorities (0-7) that map to four different access categories AC-VO (voice) AC-VI (video) AC-BE (best effort) and AC-BK (background).
 
 
 
@@ -4208,6 +4225,32 @@ _There are 2 types of MAC Operations: Power Management & Protection Mechanisms |
 ## 🔋🛜🪫 MAC Operations: `802.11 Power Management`
 _`PS Mode` or 802.11 Power Save is a mechanism that allow STA to wake up at various intervals and use a **PS-Poll** frame to indicate to the AP that is awake & ready to recieve frames | Power save methods allow battery-operated devices to save power by shutting down their wireless radios. | Power Management mode shall not change during any single frame exchange sequence. This means the Power Management bit is the same for all MPDUs in an A-MPDU | `Listen Interval` is just How often STA wakes up & listen beacons measured in units of Beacon Interval & Determines lifetime of buffered frames in an AP | `TIM` are Present only within beacon frames generated by APs, TIM element contains information useful for stations in low-power mode. The AP uses Delivery Traffic Indication Map (DTIM) to inform the cell if it has broadcast or multicast frames buffered. `DTIM` is not present in all beacons and all TIMs. |  While devices are in a sleep state, the AP buffers frames destined for it. The legacy power management methods were defined in the original 802.11 standard; however, major improvements have been added in both 802.11e-2005 and 802.11n-2009 amendments. There are also mentions of power save enhancements in both 802.11ac-2013 and 802.11ax-2018 amendments._
 
+
+
+### Legacy
+
+
+
+### 802.11e-2005: `WMM` & `APSD`
+_802.11e introduced **Wi-Fi Multimedia (WMM)** and also introduced Automatic Power Save Delivery (APSD) in two varieties, scheduled and unscheduled. **Unscheduled (U-APSD)** gets all the attention, it is the method that **WMM-PS** is based on | scheduled (S-APSD) is not in the objectives of either the CWNA or CWAP exam | The goal of APSD is to be more efficient than the PS-Poll method used previously. This is accomplished by replacing PS-Poll frames with **trigger frames**. The trigger frame can be ANY data frame; this increases the efficiency of the entire BSS by avoiding the use of the PS-Poll control frame altogether. || Wi-Fi Multimedia (WMM) uses different and more efficient ways for power save mode for client device (STA’s) than the original power save mode that introduced with the 802.11 standard also known as legacy power save mode. U-APSD (Unscheduled Automatic Power Save Delivery) uses what is known as a trigger and delivery method for devices that are enabled for power save. With this method a client device will only doze when not sending or receiving frames. The trigger frame is an event that will inform the client device not to doze until it has received the buffered frames. This eliminates the PS-Poll frame that is used with legacy power save mode._
+- [802.11e-2005: Wi-Fi Multimedia (WMM) and Automatic Power Save Delivery (APSD) | QoS & PS_@ español_](https://es.wikipedia.org/wiki/IEEE_802.11e-2005)
+- [802.11e-2005: Wi-Fi Multimedia (WMM) and Automatic Power Save Delivery (APSD) | QoS & PS _@ inglés_](https://en.wikipedia.org/wiki/IEEE_802.11e-2005)
+- [`WWM Power Save` **(U-ASPD)** :: Frame Exchange](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/873ccc0d-708b-42c5-83b6-d0e4d27347a7) _`frame exchange`_
+- [WMM & QoS Profile _@ Nayarasi_](https://mrncciew.com/2013/07/30/wmm-qos-profile/)
+
+**WMM (U-APSD) power save mode uses `Trigger` to wake and transmit or receive frames** - This is accomplished by replacing PS-Poll frames with **trigger frames**. The trigger frame can be ANY data frame; this increases the efficiency of the entire BSS by avoiding the use of the PS-Poll control frame altogether._
+
+### 802.11n-2009
+
+
+
+
+
+
+
+
+
+
 ````py
 ## Basic Structure of 802.11 Power Management:
 
@@ -4258,14 +4301,7 @@ STA :: Send a PS-Poll PWR Mgmt bit = 1 to indicate to AP that will STA is going 
    - [TIM PCAP Decode](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/7f25e49e-937c-41e5-a60a-834138cd3fe1) _`pcap decode`_
    - [`Off-Channel Scanning`: PCAP Decode](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/ed85dd9d-25a9-42e2-99f5-7563ee511dd2) PS Mode can be used by STA to scan other APs/CHs in miliseconds for roaming
 
-### 802.11e-2005: `WMM` & `APSD`
-_802.11e introduced **Wi-Fi Multimedia (WMM)** and also introduced Automatic Power Save Delivery (APSD) in two varieties, scheduled and unscheduled. **Unscheduled (U-APSD)** gets all the attention, it is the method that **WMM-PS** is based on | scheduled (S-APSD) is not in the objectives of either the CWNA or CWAP exam | The goal of APSD is to be more efficient than the PS-Poll method used previously. This is accomplished by replacing PS-Poll frames with **trigger frames**. The trigger frame can be ANY data frame; this increases the efficiency of the entire BSS by avoiding the use of the PS-Poll control frame altogether._
-- [802.11e-2005: Wi-Fi Multimedia (WMM) and Automatic Power Save Delivery (APSD) | QoS & PS_@ español_](https://es.wikipedia.org/wiki/IEEE_802.11e-2005)
-- [802.11e-2005: Wi-Fi Multimedia (WMM) and Automatic Power Save Delivery (APSD) | QoS & PS _@ inglés_](https://en.wikipedia.org/wiki/IEEE_802.11e-2005)
-- [`WWM Power Save` **(U-ASPD)** :: Frame Exchange](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/873ccc0d-708b-42c5-83b6-d0e4d27347a7) _`frame exchange`_
-- [WMM & QoS Profile _@ Nayarasi_](https://mrncciew.com/2013/07/30/wmm-qos-profile/)
 
-### 802.11n-2009
 
 
 ## 🛑🛜🚦 MAC Operations: `Protection Mechanisms`
@@ -4965,7 +5001,12 @@ When dealing with WiFi networks, several factors need to be considered:
 
 
 
+### Frame Analysis: Capture & Analyzing Tehcniques
 
+- Capture Filter:
+- Color Filter
+- Dwell Time: The dwell time is the amount of time a wireless network adapter will stay on a specific RF channel before moving the next channel that the device is capable of or is set to scan within the software. A shorter dwell time will capture less information on a specific channel but will allow the device to scan all channels at a quicker rate.
+- Trigger Capture:
 
 
 
@@ -5359,14 +5400,22 @@ _Sometimes is important to capture and troubleshoot wired captures in adition to
 - [Ekahau Sidekick]()
 - [Metageek]()
 
-## Spectrum Analysis: `FFT Plot`
 
-## Spectrum Analysis: `Duty Cicle`
+
+## Spectrum Analysis Views
+
+### Spectrum Analysis: `Duty Cicle`
 - [Low Duty Cicle VS High Duty Cicle :: Channel Utilization]()
 
-## Spectrum Analysis: `Device Finder`
+### Spectrum Analysis: `FFT Plot`
+
+### Spectrum Analysis: `Device Finder`
 - [Omnidirectional VS Directional Antenna]()
 - [It Took MONTHS to Solve This WiFi Problem but I DID!](https://www.youtube.com/watch?v=f-dGcs6bb5U&t=537s)
+
+### Spectrum Analysis: `waterfall view`
+_In some cases RF related problems may not be consistent. The best way to identify these problems would be to view the RF over a period of time. The waterfall view allows you to view a RF channel or band over a period of time._
+
 
 ## Spectrum Analysis: `Device Signatures` & `Non-WiFi Interference`
 - [Wideband Jammer]() `Ultra high & Wide Duty Cicle`
