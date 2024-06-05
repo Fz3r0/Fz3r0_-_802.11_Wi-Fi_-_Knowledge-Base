@@ -1297,7 +1297,8 @@ _IEEE 802.11ac-2013 or 802.11ac provides high-throughput wireless local area net
 - Downlink multi-user MIMO (MU-MIMO): Allows up to four simultaneous downlink MU-MIMO clients.  Multiple STAs, each with one or more antennas, transmit or receive independent data streams simultaneously.
     - Space-division multiple access (SDMA): streams not separated by frequency, but instead resolved spatially, analogous to 11n-style MIMO.
     - Downlink MU-MIMO (one transmitting device, multiple receiving devices) included as an optional mode.  
-
+    - Multi-User MIMO allows for multiple client STA’s to communicate with an access point simultaneously. This technology uses different spatial streams on the same RF channel to allow for the simultaneous sessions.
+        
 - Transmit Beamforming: In order for MU-MIMO to function the access point must support transmit beamforming. Ideally the access point will be capable of 4X4:4 MIMO. This will allow multiple client STA’s to share the medium and communicate with an access point simultaneously. Keep in mind the sessions between the client devices and the access point are still one-to-one but the technology allows for multiple simultaneous sessions to occur.
     - Transmit beamforming used in 802.11ac technology allows for a non-AP STA (client device to take the role of a beamformee. The transmit beamforming feedback mechanism is included in the VHT null data packet (NDP) Announcement frame and includes more than one STA Info field. 
 
@@ -1317,6 +1318,8 @@ _IEEE 802.11ac-2013 or 802.11ac provides high-throughput wireless local area net
 
 - New PPDU HT Elements: Adds four new fields to the PPDU header identifying the frame as a very high throughput (VHT) frame as opposed to 802.11n's high throughput (HT) or earlier. The first three fields in the header are readable by legacy devices to allow coexistence
 DFS was mandated between channels 52 and 144 for 5 GHz to reduce interference with weather stations using the same frequency band.
+
+- More Channels: Channel 144 is in use, before 802.11ac this channel was unused. 
 
 
 
@@ -1366,6 +1369,8 @@ _1024-QAM modulation is also introduced with 802.11ax. 802.11ac supported 256-QA
 
 ### Uplink multi-user MIMO (MU-MIMO): 
 _Uplink MU-MIMO is added to the standard with 802.11ax as well. 802.11ac introduced downlink-only MU-MIMO, which was not very advantageous in production networks. Time will tell what impact uplink MU-MIMO will have, but it is available as of the 802.11ax amendment._
+
+
 
 ### `Target Wake Time (TWT)` 
 _Target Wake Time (TWT) is a new power save scheduling ability for 802.11ax, OFDMA-only STAs. The clients request a sleep schedule from the AP, and they can then wake when required based on the schedule; this way, they do not have to wake at predefined intervals individually assigned to each STA. TWT was first introduced in 802.11ah but is more likely to see wide use with the ratification of 802.11ax._
@@ -2101,7 +2106,7 @@ _Also Known As: Physical Layer Convergence Protocol (depends the 802.11 version)
 - [Where does the PLCP sublayer layer actually reside?](https://www.youtube.com/watch?v=thcg9Dn2QL0) _`video`_
 
 ### ⬇️ `PMD`: Physical Medium Dependant :: Sublayer > `Lower Sublayer`=`Modulation`
-_PMDs further help to define the physical layer of computer network protocols. PMDs define the details of transmission and reception of individual bits (1/0s) on a physical medium, it define the modulation used in the transmission (BPSK, QPSK, QAM256, etc), for example, starting with the minimum data rate available. In Wireless 802.11 scenario, PMD Transmits & Recieve data over Wireless Medium. Converts 1/0 provided by the PLCP into RF signal. The PLCP and PMD sublayers communicate via primitives, through a SAP, to govern the transmission and reception functions._
+_The Physical Medium Dependent (PMD) sublayer is the lower half of the Physical Layer (PHY). From a transmission perspective it takes the Physical Protocol Data Unit (PPDU) form the upper half of the PHY and prepares it for transmission across the wireless medium. This means, in the PMD the data modulated and then sent as bits. PMDs further help to define the physical layer of computer network protocols. PMDs define the details of transmission and reception of individual bits (1/0s) on a physical medium, it define the modulation used in the transmission (BPSK, QPSK, QAM256, etc), for example, starting with the minimum data rate available. In Wireless 802.11 scenario, PMD Transmits & Recieve data over Wireless Medium. Converts 1/0 provided by the PLCP into RF signal. The PLCP and PMD sublayers communicate via primitives, through a SAP, to govern the transmission and reception functions._
 - [PMD: Physical Medium Dependent @ Telecom Trainer](https://www.telecomtrainer.com/pmd-physical-medium-dependent/) _`Full Info`_
 - [PMD: Physical medium dependent](https://en.wikipedia.org/wiki/Physical_medium_dependent) _`Wiki`_
 - [PMD layer @ keysight](https://rfmw.em.keysight.com/wireless/helpfiles/n7617a/pmd_layer.htm) _`Diagram`_
@@ -3043,7 +3048,9 @@ _IEEE 802.11-2020 9.3.3 (PV0) :: Management frames are used to manage the connec
 - [802.11 Mgmt Frame Types @ _nayarasi_](https://mrncciew.com/2014/09/29/cwap-802-11-mgmt-frame-types/) _`nayarasi`_
 
 **Key Notes on Management Frames**
+- 802.11 management frames use fields and elements also known as Information Elements. The elements are in the frame body as a management frame does not contain a data payload.
 - 802.11 management frames that are sent to a broadcast address of FF FF FF FF FF FF will have a duration value of zero. The duration is a time value that STA’s will use to reserve the medium informing other STA’s in the BSS how long it will take for the frame exchange to complete. In this case since these frames are no acknowledged by a receiver they have a duration value of zero. The duration field is still in the MAC header but it is not used.
+
 
 | **Subtype Name**          | **Type** | **Subtype** | **Filter**                                  | **Description**                                                                                                  |
 |---------------------------|----------|-------------|---------------------------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -3145,11 +3152,13 @@ _STAs send Probe Request on Active Scanning or after a Beacon in Passive Scannin
 ### 🚪❓⚙️ 802.11 Management Frames: `Authentication Request` & `Authentication Response`
 
 
-
+### Association Request and Response
+- The SSID information element is in a Beacon, Probe Request, Probe Response, Association Request and Reassociation request. The Association Response does not contain the SSID information element. The 802.11 association process verifies capabilities between a client STA and an access point.
 
 
 ### Reassociation Request & Response
 - The Association Request and Reassociation Request frames are nearly identical with the exception of the current AP address field. This field is used to assist in moving the STA association to the new access point. A STA can be associated to only one access point at a time.
+- 
 
 
 
@@ -4227,8 +4236,8 @@ _`PS Mode` or 802.11 Power Save is a mechanism that allow STA to wake up at vari
 
 
 
-### Legacy
-
+### Legacy power save mode
+- PS-Poll frames are used with legacy power save mode. All STA’s receive an Association ID (AID) during the 802.11 association process. When a STA wakes from a doze state based on the listen interval it will check the traffic indication map (TIM) in a Beacon management frame. If there is unicast traffic buffered the STA will send a PS-Poll frame to receive the buffered data.
 
 
 ### 802.11e-2005: `WMM` & `APSD`
@@ -5006,8 +5015,15 @@ When dealing with WiFi networks, several factors need to be considered:
 - Capture Filter:
 - Color Filter
 - Dwell Time: The dwell time is the amount of time a wireless network adapter will stay on a specific RF channel before moving the next channel that the device is capable of or is set to scan within the software. A shorter dwell time will capture less information on a specific channel but will allow the device to scan all channels at a quicker rate.
-- Trigger Capture:
+- Event Trigger: Event triggers can be set to start and end packet captures based on a specific event. This will allow a protocol analyzer to capture frames that may be helpful in troubleshooting intermittent problems when a specific event happens. Event triggers can be very granular to allow for complex captures to be used with troubleshooting WLAN problems.
+- Peer Map: A peer map is used to show frame exchanges between stations (STA’s) that are communicating within a WLAN BSS. This can be a valuable visual representation that may be very useful in troubleshooting WLAN problems.
 
+### Frame Analysis: Time Metrics
+
+- Delta time
+- Relative time: The relative time in a protocol can be used to identify how long it takes for a frame exchange to occur. Some protocol analyzer software programs make this a very simple task. This information is valuable in determining problems such as latency with specific frame exchanges.
+- Arrival time
+- Actual time
 
 
 _
@@ -5405,6 +5421,7 @@ _Sometimes is important to capture and troubleshoot wired captures in adition to
 ## Spectrum Analysis Views
 
 ### Spectrum Analysis: `Duty Cicle`
+_Spectrum analyzer displays a measurement of the amount of time a received signal amplitude is above the noise floor or another arbitrary threshold. Although the term duty cycle can be subjective based on the context in which it is used within WLAN technology, it is commonly identifies the percentage of time an RF signal is above a specific threshold. A high duty cycle such as 95-100% can indicate a problem such as an RF jammer or other devise that is causing high utilization of the RF channel._
 - [Low Duty Cicle VS High Duty Cicle :: Channel Utilization]()
 
 ### Spectrum Analysis: `FFT Plot`
@@ -5415,6 +5432,9 @@ _Sometimes is important to capture and troubleshoot wired captures in adition to
 
 ### Spectrum Analysis: `waterfall view`
 _In some cases RF related problems may not be consistent. The best way to identify these problems would be to view the RF over a period of time. The waterfall view allows you to view a RF channel or band over a period of time._
+
+### Density View
+_Useful for find repetition of data points over time to help locate the interferer. The density view in a spectrum analyzer will show the data points that a specific frequency is hit within a channel or band. Choosing a color scheme will help to show these events. This can be used to help identify an RF transmitter and interferer._
 
 
 ## Spectrum Analysis: `Device Signatures` & `Non-WiFi Interference`
