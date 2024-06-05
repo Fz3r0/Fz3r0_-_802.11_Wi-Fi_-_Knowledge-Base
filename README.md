@@ -4921,6 +4921,70 @@ _Outlines a common seven-step methodology from problem identification to solutio
 
 
 
+# 🦈🕵️📦 Protocol Analysis
+
+## 🦈 `Protocol Analysers` & `Sniffers`
+_A protocol analyzer and a sniffer are software tools used to analyze and monitor/capture network traffic. Although they are often used interchangeably, there is a subtle difference between them._
+
+- `Sniffer`: Focuses on capturing and analyzing network packets in real time.
+- `protocol analyzer`: In contrast, a protocol analyzer is used to analyze network traffic that has been previously captured. In other words, a protocol analyzer is used to analyze and study network packets that have already been captured and stored. <br><br>
+    - Note: Today most of the tools like Wireshark work for both as sniffers and protocol analyzers at same time 
+
+### Protocol Analysers & Sniffers: Tools 
+_The following table provides a comparison of various tools used for network traffic analysis and packet capture. These tools range from open-source solutions to commercial products, each offering unique features suited for different needs in network monitoring, troubleshooting, and cybersecurity education. The tools include capabilities for real-time analysis, protocol decoding, AI-driven insights, and educational resources to help users effectively manage and optimize their network environments._
+
+| Tool                    | Description                                                                                                   | License       |
+|-------------------------|---------------------------------------------------------------------------------------------------------------|---------------|
+| [**Wireshark**](https://www.wireshark.org/)           | Open-source tool for real-time network traffic analysis and previously captured packet analysis.               | Open Source   |
+| [**Omnipeek**](https://www.liveaction.com/products/omnipeek-network-protocol-analyzer/)            | Network analysis tool for real-time monitoring, network topology visualization, and detailed protocol analysis.| $$$$          |
+| [**Acrylic WiFi Analyzer & Acrylic WiFi Capture**](https://www.acrylicwifi.com/en/wlan-software/wlan-scanner-acrylic-wifi-professional/) | Suite for analyzing Wi-Fi networks, including signal quality, performance, and security, with real-time packet capture. | $$$$          |
+| [**TCPdump & TShark**](https://www.tcpdump.org/)    | Command-line tools for capturing and analyzing network traffic, part of the libpcap suite.                    | Open Source   |
+| [**Ekahau Analyzer Packet Capture**](https://www.ekahau.com/products/sidekick/overview/) | Built into the Ekahau Analyzer App, it simplifies packet capture using the Sidekick 2 and an iOS device, supporting up to 4 Wi-Fi channels including 6 GHz channels. Ideal for advanced troubleshooting. | $$$$          |
+| [**Packet Safari**](https://packetsafari.com/)       | Online tools for AI-driven automated analysis of PCAP files, easy sharing, intelligent filtering, and educational resources for packet analysis and cybersecurity. | $$$$          |
+
+### Wireshark: `Resources`
+
+Wireshark Filter Manual Page - Wireshark display filter syntax and reference
+Wireshark - Where to Start?
+Display Filter Reference
+https://www.wireshark.org/docs/dfref/w/wlan.html
+https://www.wireshark.org/docs/dfref/w/wlan_radio.html
+Wireshark Sourcecode & About
+https://gitlab.com/wireshark/wireshark/-/tree/master
+About Wireshark
+
+## 802.11 Sniffing & Analyzing: `Capurring 802.11 Frames`
+_Capturing and analyzing traffic on 802.3 Ethernet networks is simpler compared to 802.11 WiFi networks, which are more complex and require additional tools and skills. Capturing frames in WiFi networks is inherently more challenging than in wired Ethernet networks due to the wireless nature and associated technical difficulties. Therefore, having the right skills and tools is essential for accurate 802.11 frame capture and analysis._ 
+
+When dealing with WiFi networks, several factors need to be considered:
+
+- Capture all types of 802.11 frames, not just management or data frames.
+- Choose the right hardware and software tools, including compatible drivers and operating systems.
+- Select the appropriate band and channel using tools like spectrum analyzers and monitoring tools.
+- Synchronize the capture device’s clock to avoid desynchronization.
+
+
+
+
+
+
+
+_
+
+
+
+_
+
+
+
+
+
+
+
+
+
+
+
 
 
 
