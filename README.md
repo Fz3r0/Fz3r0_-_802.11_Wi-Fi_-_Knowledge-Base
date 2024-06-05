@@ -2642,6 +2642,11 @@ Each of the four 802.11 Address Fields may have one of 5 different interpretatio
 5. ⭕ `Basic Service Set Identifier` : **`BSSID`** :: ID of the BSS (Similar to MAC Address) <br> <br>
     - TA (F0:F0:F0:F0:F0:F0) = `wlan.bssid == F0:F0:F0:F0:F0:F0`
 
+Filter specific MAC of any hardware address (AP or STA) of any 5 Addresses:
+
+- ⭕ `Any AP or STA client traffic` : **`WLAN Address`** :: ID of any hardware antenna transmission <br> <br>
+    - STA or AP (F0:F0:F0:F0:F0:F0) = `wlan.addr == F0:F0:F0:F0:F0:F0`
+
 ---
 
 ### 💊📦 Sequence Control :: _2 Bytes / 16 Bits_
