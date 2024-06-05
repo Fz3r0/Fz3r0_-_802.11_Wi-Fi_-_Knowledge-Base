@@ -4967,6 +4967,21 @@ _Outlines a common seven-step methodology from problem identification to solutio
 
 
 # 🦈🕵️📦 Protocol Analysis
+_Process of capturing, decoding, and interpreting network communicatios (data packets that travel across a network). Network protocol analysis tools (Software like Wireshark) can capture and display these packets in a readable format, allowing you to examine the details of each packet and how they interact with each other._
+
+- [**`Fz3r0`**: Protocol Analysis](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md)
+- [Ekahau Wi-Fi Webinar - Packet Capture and Analysis - February 7, 2019](https://www.youtube.com/watch?v=W_wjmk-YQTc)
+- [Analyze and Troubleshoot 802.11 Wireless Sniffing @ Cisco](https://www.cisco.com/c/en/us/support/docs/wireless-mobility/80211/200527-Fundamentals-of-802-11-Wireless-Sniffing.html) _`Complete Guide`_
+- [Best Practices for Monitoring and Troubleshooting 802.11ac Networks](https://networking.report/Resources/Whitepapers/1d1514d9-48e2-41f9-ab28-04ba3b04868a_Best%20Practices%20for%20Monitoring%20and%20Troubleshooting%20802.11ac%20Networks.pdf) _`White paper`_
+- [Protocol Analysis: How do you analyze network performance and identify bottlenecks?](https://www.linkedin.com/advice/0/how-do-you-analyze-network-performance)
+
+
+
+
+
+
+
+
 
 ## 🦈 `Protocol Analysers` & `Sniffers`
 _A protocol analyzer and a sniffer are software tools used to analyze and monitor/capture network traffic. Although they are often used interchangeably, there is a subtle difference between them._
@@ -4975,38 +4990,119 @@ _A protocol analyzer and a sniffer are software tools used to analyze and monito
 - `protocol analyzer`: In contrast, a protocol analyzer is used to analyze network traffic that has been previously captured. In other words, a protocol analyzer is used to analyze and study network packets that have already been captured and stored. <br><br>
     - Note: Today most of the tools like Wireshark work for both as sniffers and protocol analyzers at same time 
 
-### Protocol Analysers & Sniffers: Tools 
-_The following table provides a comparison of various tools used for network traffic analysis and packet capture. These tools range from open-source solutions to commercial products, each offering unique features suited for different needs in network monitoring, troubleshooting, and cybersecurity education. The tools include capabilities for real-time analysis, protocol decoding, AI-driven insights, and educational resources to help users effectively manage and optimize their network environments._
+### 🦈🕵️🛠️ Protocol Analysis & Sniffers: `Capture & Analysis tools`
+_**Software that can capture and display network packets in a readable format, allowing you to examine the details of each packet and how they interact with each other. Some of them can make expert reports.** The following table provides a comparison of various tools used for network traffic analysis and packet capture. These tools range from open-source solutions to commercial products, each offering unique features suited for different needs in network monitoring, troubleshooting, and cybersecurity education. The tools include capabilities for real-time analysis, protocol decoding, AI-driven insights, and educational resources to help users effectively manage and optimize their network environments._
 
-| Tool                    | Description                                                                                                   | License       |
-|-------------------------|---------------------------------------------------------------------------------------------------------------|---------------|
-| [**Wireshark**](https://www.wireshark.org/)           | Open-source tool for real-time network traffic analysis and previously captured packet analysis.               | Open Source   |
-| [**Omnipeek**](https://www.liveaction.com/products/omnipeek-network-protocol-analyzer/)            | Network analysis tool for real-time monitoring, network topology visualization, and detailed protocol analysis.| $$$$          |
-| [**Acrylic WiFi Analyzer & Acrylic WiFi Capture**](https://www.acrylicwifi.com/en/wlan-software/wlan-scanner-acrylic-wifi-professional/) | Suite for analyzing Wi-Fi networks, including signal quality, performance, and security, with real-time packet capture. | $$$$          |
-| [**TCPdump & TShark**](https://www.tcpdump.org/)    | Command-line tools for capturing and analyzing network traffic, part of the libpcap suite.                    | Open Source   |
-| [**Ekahau Analyzer Packet Capture**](https://www.ekahau.com/products/sidekick/overview/) | Built into the Ekahau Analyzer App, it simplifies packet capture using the Sidekick 2 and an iOS device, supporting up to 4 Wi-Fi channels including 6 GHz channels. Ideal for advanced troubleshooting. | $$$$          |
-| [**Packet Safari**](https://packetsafari.com/)       | Online tools for AI-driven automated analysis of PCAP files, easy sharing, intelligent filtering, and educational resources for packet analysis and cybersecurity. | $$$$          |
+| Tool                                                                                     | Description                                                                                                   | License       |
+|------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|---------------|
+| [**Wireshark**](https://www.wireshark.org/)                                              | Open-source tool for real-time network traffic analysis and previously captured packet analysis.               | Open Source   |
+| [**T-Shark**](https://www.wireshark.org/docs/man-pages/tshark.html)                      | Command-line version of Wireshark.                                                                            | Open Source   |
+| [**BlackShark**]()                                                                       | Fz3r0 WireShark Mod on Steroids.                                                                              | Unknown       |
+| [**CommView & CommView for Wi-Fi**](https://www.tamos.com/products/commwifi)             | Wireless packet analysis tool with unique features.                                                           | $$$$          |
+| [**Omnipeek**](https://www.liveaction.com/products/omnipeek-network-protocol-analyzer/)  | Network analysis tool for real-time monitoring, network topology visualization, and detailed protocol analysis.| $$$$          |
+| [**TCPdump & LIBPCAP**](https://www.tcpdump.org/)                                        | Command-line packet analyzer and portable C/C++ library for network traffic capture.                          | Open Source   |
+| [**NMAP & NPCAP library**](https://npcap.com/)                                           | Nmap Project's packet capture/send library for MS-Windows, implementing the open Pcap API.                    | Open Source   |
+| [**Acrylic Wi-Fi Analyzer & Wi-Fi Capture**](https://www.acrylicwifi.com/wifi-analyzer/) | Suite for analyzing Wi-Fi networks, including signal quality, performance, and security, with real-time packet capture. | $$$$          |
+| [**Ekahau Analyzer Packet Capture**](https://www.ekahau.com/products/sidekick/overview/) | Built into the Ekahau Analyzer App, simplifies packet capture using the Sidekick 2 and an iOS device.         | $$$$          |
+| [**Packet Safari**](https://packetsafari.com/)                                           | Online tools for AI-driven automated analysis of PCAP files, easy sharing, intelligent filtering, and educational resources. | $$$$          |
+| [**AirMagnet Wi-Fi Analyzer Pro**](https://www.netally.com/products/airmagnet-wifi-analyzer/) | Tool for analyzing Wi-Fi networks (discontinued).                                                             | $$$$          |
+| [**AirDefense Services Platform (ADSP)**](https://catalog.m4dconnect.com/docs/AirDefense_Services_Platform_8.0_SPEC_SHEET.pdf) | Appliance dashboard for comprehensive network defense.                                                        | $$$$          |
+| [**NetScout Legacy 2000's**](https://docstore.mik.ua/univercd/cc/td/doc/product/rtrmgmt/cw2000/fam_prod/netscout/rel_1_2/packet.pdf) | Legacy network analysis tools.                                                                                | Legacy        |
 
-### Wireshark: `Resources`
+### 📈📊📉 Protocol Analysis & Sniffers: `Visualization tools`
+_When it comes to protocol analysis, visualization tools are essential for transforming raw packet data into comprehensible graphics and lists. These tools help users quickly identify patterns, anomalies, and issues in network traffic, making troubleshooting and optimization more efficient._
 
-Wireshark Filter Manual Page - Wireshark display filter syntax and reference
-Wireshark - Where to Start?
-Display Filter Reference
-https://www.wireshark.org/docs/dfref/w/wlan.html
-https://www.wireshark.org/docs/dfref/w/wlan_radio.html
-Wireshark Sourcecode & About
-https://gitlab.com/wireshark/wireshark/-/tree/master
-About Wireshark
+| Tool                                                                                       | Description                                                                                           | Status       |
+|--------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|--------------|
+| [**Visual Packet Analysis Blog :: Metageek**](https://www.metageek.com/blog/tag/visual-packet-analysis/) | Blog providing insights and tutorials on visual packet analysis techniques.                          | Active       |
+| [**Channelyzer :: Metageek**](https://www.metageek.com/chanalyzer/)                         | Tool for visualizing Wi-Fi spectrum data to identify interference and optimize channel usage.         | Active       |
+| [**Eye P.A. :: Metageek**](https://www.metageek.com/eye-pa/)                                | Enables easy multi-channel 802.11ac packet capture and visual analysis.                                | Active       |
+| [**IOTA: All-In-One Network Traffic Monitoring Solution**](https://www.profitap.com/iota/?utm_campaign=IOTA%20Solution&utm_content=276301428&utm_medium=social&utm_source=linkedin&hss_channel=lcp-5383240) | Powerful network capture and analysis solution for edge and core networks.                            | Active       |
+| [**Mojo Packets :: Peter Mackenzee**](https://www.youtube.com/watch?v=r4fMGfiF9Jo)          | Visualization tool for packet analysis (discontinued).                                                | Discontinued |
+| [**Packets :: Arista Networks**](https://packets.arista.com/site/portal?fallbackUrl=..%2Fupload%2Fupload) | Platform for comprehensive packet capture and visual analysis.                                         | Active       |
 
-## 802.11 Sniffing & Analyzing: `Capurring 802.11 Frames`
-_Capturing and analyzing traffic on 802.3 Ethernet networks is simpler compared to 802.11 WiFi networks, which are more complex and require additional tools and skills. Capturing frames in WiFi networks is inherently more challenging than in wired Ethernet networks due to the wireless nature and associated technical difficulties. Therefore, having the right skills and tools is essential for accurate 802.11 frame capture and analysis._ 
 
-When dealing with WiFi networks, several factors need to be considered:
 
+
+
+
+
+## Capturing Ethernet 802.3 Freames
+_`Layer 2`:`MAC` & `layers 3-7 wired captures_
+
+### 🖧🪤💰 802.3 Ethernet Switch Media Capture: `Network Taps`
+- [`Network Tap` in 30 Seconds @ David Bombal](https://www.youtube.com/shorts/l-wQVuqL2XA) _`¡Vamos Bombal!`_
+- [`Taps` Vs. `SPAN`: Taps Provide Full Visibility into Network Data](https://www.youtube.com/watch?v=r3-PBfmFMqA) _`video`_
+- [`Network Tap 101` :: How it works?](https://www.garlandtechnology.com/2014/01/17/a-test-access-point-tap-primer) The 101 Series: A Primer On Network TAPs
+- [How Copper & Fiber Taps](https://www.youtube.com/watch?v=jiyNRSj-UFE) _`video`_
+- [Port Aggregated Taps](https://www.nextgigsystems.com/net_optics/aggregation_taps.html) Single NIC can capture from different Switchports
+- [How to build a Network Tap with just 1 cable?](https://www.youtube.com/watch?v=2tsvBnTIjFo) _`video`_
+
+### 🖧🪤 Network Taps:
+- [Net Optics Aggregation TAPS](https://www.nextgigsystems.com/net_optics/aggregation_taps.html) Access to full-duplex links using just a single NIC on the monitoring or analyzer tool.
+- [IOTA: All-In-One Network Traffic Monitoring Solution](https://www.profitap.com/iota/?utm_campaign=IOTA%20Solution&utm_content=276301428&utm_medium=social&utm_source=linkedin&hss_channel=lcp-5383240)
+- [Netsplit](https://www.youtube.com/watch?v=MPsN4K2pVz4) Pocket-sized passive Ethernet tap
+- [Sharktap](https://www.youtube.com/watch?v=EiY4VMdYdk4) Cheap and affordable way to analyze your network
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 🕵️🛜📡 Protocol Analysis: `Capurring 802.11 Frames`
+_Capturing and analyzing traffic on 802.3 Ethernet networks is simpler compared to 802.11 WiFi networks, which are more complex and require additional tools and skills. Capturing frames in WiFi networks is inherently more challenging than in wired Ethernet networks due to the wireless nature and associated technical difficulties. Therefore, having the right skills and tools is essential for accurate 802.11 frame capture and analysis._ _
+- [802.11 Wi-Fi VS 802.3 Ethernet Capture: Differences & 802.11 Adapters]()
+- [Capturing 802.11 Frames: Monitor Mode & Packet Injection]()
+- [Selecting the right Adapter (Spatial Streams): How to identify if I missing frames?](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/510bc21c-845a-464a-8726-32ed3bb16944)
+
+### Key notes on captureing 802.11 Frames
+_When dealing with WiFi networks, several factors need to be considered:_
 - Capture all types of 802.11 frames, not just management or data frames.
 - Choose the right hardware and software tools, including compatible drivers and operating systems.
 - Select the appropriate band and channel using tools like spectrum analyzers and monitoring tools.
 - Synchronize the capture device’s clock to avoid desynchronization.
+
+## 🛜🪤🎣 Protocol Analysis: `802.11 Frame Capture Options`
+_There are basically 3 different options to capture 802.11 traffic & communications. At the end, it mostly depends on the resources and needs_
+
+1. Mobile
+2. Infraestructure
+3. WIPS / Sensors
+4. Distributed Forensics
+
+### 💻🦈 802.11 Frame Capture: `Mobile`
+- [Capturing Wireless Traffic from a Client Machine :: MacBook :: Linux :: Wireshark](https://documentation.meraki.com/MR/Monitoring_and_Reporting/Capturing_Wireless_Traffic_from_a_Client_Machine)
+- [airmon]()
+- [Linux Based + Wi-Fi Adapter]()
+- [Mac-OS Based: Internal Adapter Capability]()
+- [Wireshark 802.11 Monitor Mode & Compatibility]()
+- [Wi-Spy + Software based]()
+- [Wlan PI]()
+
+### 📡🐶 802.11 Frame Capture: `Infrastructure` _(WLC or AP)_
+- [Ruckus AP :: 802.11 Capture]()
+- [Ruckus SmartZone :: 802.11 Caoture]()
+- [Cisco Air Marshall]()
+
+### 📡👮 802.11 Frame Capture: `WIPS Sensors`
+- [Cisco Adaptive wIPS](https://www.cisco.com/c/en/us/td/docs/wireless/technology/wips/deployment/guide/WiPS_deployment_guide.html)
+- [Arista WIPS](https://www.arista.com/assets/data/pdf/Whitepapers/Arista-WIPS-Whitepaper.pdf)
+- [Fortinet WIPS](https://community.fortinet.com/t5/Wireless-Controller/Technical-Tip-WIPS-Configuration/ta-p/194512)
+
+### 📡🏭 Protocol Analysis: `Distributed Forensics`
+- [Omnipeek]()
 
 
 
@@ -5017,6 +5113,12 @@ When dealing with WiFi networks, several factors need to be considered:
 - Dwell Time: The dwell time is the amount of time a wireless network adapter will stay on a specific RF channel before moving the next channel that the device is capable of or is set to scan within the software. A shorter dwell time will capture less information on a specific channel but will allow the device to scan all channels at a quicker rate.
 - Event Trigger: Event triggers can be set to start and end packet captures based on a specific event. This will allow a protocol analyzer to capture frames that may be helpful in troubleshooting intermittent problems when a specific event happens. Event triggers can be very granular to allow for complex captures to be used with troubleshooting WLAN problems.
 - Peer Map: A peer map is used to show frame exchanges between stations (STA’s) that are communicating within a WLAN BSS. This can be a valuable visual representation that may be very useful in troubleshooting WLAN problems.
+- [`Display Filters` :: Wireshark]()
+- [`Capture Filters` :: Wireshark]()
+- [`Custom Colors` :: Wireshark]()
+- [`Custom Columns` :: Wireshark](https://www.youtube.com/watch?v=2GVW6bUG98A)
+- [`Custom Profile` :: Wireshark]()
+
 
 ### Frame Analysis: Time Metrics
 
@@ -5026,11 +5128,170 @@ When dealing with WiFi networks, several factors need to be considered:
 - Actual time
 
 
-_
+
+## 🛜👂🩺 Adapter Modes: `Monitor Mode` & `Promiscous Mode`
+- [`Promiscous Mode` & `Monitor Mode`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md#-monitor-mode--promiscous-mode)
+    -[`Promiscous Mode`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md#-promiscous-mode)
+    -[`Monitor Mode`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md#-promiscous-mode)
+
+### 🩺⚙️ Monitor Mode: `Drivers` & `Chipsets`
+- [Fz3r0 Monitor Mode Drivers Lab]()
+- [Recomended Adapters & Firmwares for 802.11 Frame Capture]()
+- [Install Drivers for 802.11 capture in Linux]()
+
+### 🩺🪄 Monitor Mode: `Adapters`
+_The right adapter give you the right capture capabilites and scopes... There is no "the best" adaptor for every scenario_
+- [802.11 Capture Table]() 
+- [Alfa]() `Custom`
+- [Panda]() `Custom`
+- [TP-Link]() `Custom`
+- [WiSpy]() `Vendor Supported Licenced`
+- [Saavius]() `Vendor Supported Licenced`
+
+### 🩺📡 Monitor Mode: `Infrestructure APs`
+_The right adapter give you the right capture capabilites and scopes... There is no "the best" adaptor for every scenario_
+- [Ruckus R850]() `4x4 spatial streams` | `2.4/5/6 GHz`
+
+## 🤳🏾🪤📡 802.11 Frame Capture: `Location for Capture`
+_In 802.11 Frames Capture is very important the physical location of the adapter that will capture 802.11 Frames depending on what are we tring to capture, it's important to remember that we are capturing on wireless medium (RF flying through the air)_
+- [`Near the AP` :: Capture that AP sees]() For capturing the whole BSA & All traffic of clients subscribed to the AP (Tx/Rx)
+- [`Near the Client` :: Capture that Client sees]() For capturing a specific client having a problem
+- [`In the middle of Client <--> AP`]() For getting the whole picture of whats happening inside the BSA
+
+## 📡🪤🖧 802.11 Frame Catpure: `802.3 Wired Ethernet` + `802.11 Wireless Wi-Fi`
+_Sometimes is important to capture and troubleshoot wired captures in adition to 802.11 capture._
+- [EAP over LAN exchanges & RADIUS]() Simultaneos capture of Wi-Fi & Ethernet
+- [DHCP exchanges]()
+- [QoS]() Tags and Markings all the way through the network, for VoIP for example
+- [VLAN Tagging]()
+
+## 📶📻🪤 802.11 Frame Capture: `One Channel` VS `Hopping` VS `Various Channels`
+- [Fz3r0 :: Channel Selection on each Scenario]() _`table`_
+
+## 🪤🔁📡 802.11 Frame Capture: `Roaming Scenarios`
+- [Roaming Analysis using only a Mac and Wireshark](https://framebyframewifi.net/2018/08/04/roaming-analysis-using-only-a-mac-and-wireshark/)
+- [How to check in Wireshark if a Wi-Fi Network support 802.11k (roaming)](https://semfionetworks.com/blog/wireshark-how-to-check-if-a-wi-fi-network-supports-80211k/)
+- [How To Fix Wi-Fi Roaming](https://www.smallnetbuilder.com/basics/wireless-basics/how-to-fix-wi-fi-roaming/) 
+- [Wi-Fi Roaming Secrets Revealed :: ](https://www.smallnetbuilder.com/wireless/wireless-features/wi-fi-roaming-secrets-revealed/)
+- [Wi-Fi Roaming Analysis Part 1 - `Connection Control` @ Revolution Wi-Fi](https://revolutionwifi.blogspot.com/2011/12/wi-fi-roaming-analysis-part-1.html)
+- [Wi-Fi Roaming Analysis Part 2 - `Roaming Variations` @ Revolution Wi-Fi](https://revolutionwifi.blogspot.com/2012/02/wi-fi-roaming-analysis-part-2-roaming.html)
+- [Wi-Fi Roaming Analysis Part 3 - `Methods of Measuring Roam Times` @ Revolution Wi-Fi](https://revolutionwifi.blogspot.com/2012/12/wi-fi-roaming-analysis-part-3-measuring.html)
+- [Wi-Fi Roaming Analysis Part 4 - `Analysis with Wireshark & AirPcap` @ Revolution Wi-Fi](https://revolutionwifi.blogspot.com/2013/01/wi-fi-roaming-analysis-with-wireshark.html)
+
+
+
+
+
+## 🦈🪤🕵️‍♂️ PCAP Troubleshooting Collection
+- [`WPA2 password fail` :: Wireless] 4-way-Hadshake never pass step 3
+- [`EAP password fail` :: Wireless + Wired](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/102465fb-2873-46a5-848d-e7910c9fbe40) Wired capture shows the "reject" packet
+- [`EAP silent disconnect` :: Wireless + Wired](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/ee08f06b-1359-4fa6-b266-e326447f7a4f) No fails, only ignored packets & no responses || AP/WLC does not belong to Authenticator list
+
+
+
+
+
+
+
+
+
+
+# Wireshark
+_Few tools are as useful to the IT professional as Wireshark, the go-to network packet capture tool. Wireshark will help to capture network packets and display them at a granular level. Once these packets are broken down, you can use them for real-time or offline analysis. This tool lets you put your network traffic under a microscope, and then filter and drill down into it, zooming in on the root cause of problems, assisting with network analysis for troubleshooting and ultimately network security._
+- [About Wireshark](https://www.wireshark.org/about.html)
+- [Wireshark - Where to Start?](https://www.wireshark.org/docs/)
+- [Wireshark Tutorial for BEGINNERS // Where to start with Wireshark @ Chris Greer](https://www.youtube.com/watch?v=OU-A2EmVrKQ)
+- [Interview with Gerald Combs - Wireshark Creator](https://youtu.be/O5tW7ShNlkk?si=yXVjZvIuUOZlZTyu)
+Wireshark Filter Manual Page - Wireshark display filter syntax and reference
+Wireshark - Where to Start?
+
+
+Wireshark Sourcecode & About
+https://gitlab.com/wireshark/wireshark/-/tree/master
+About Wireshark
+
+
+## 🦈🐣 Wireshark: `Wireshark Basics` 
+- [`Capture Options`: The “Capture Options” Dialog Box](https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureOptions.html)
+- [`Building Display Filter Expressions` & `Operators`](https://www.wireshark.org/docs/wsug_html_chunked/ChWorkBuildDisplayFilterSection.html)
+- [`Configuration` :: **Timestamp | Columns | Colorization | Rules | Profiles | Preferences**](https://subscription.packtpub.com/book/cloud-and-networking/9781788833226/1/ch01lvl1sec05/4-configuring-wireshark#:~:text=Relative%20time%20(conversation)%3A%20This,packet%20to%20the%20current%20packet.)
+- [`Configuration Files` :: `Customization`](https://www.wireshark.org/docs/wsug_html_chunked/ChAppFilesConfigurationSection.html)
+- [`Absolute Time` :: `Relative Time` :: `Delta Time` :: `Custom Time`](https://subscription.packtpub.com/book/cloud-and-networking/9781788833226/1/ch01lvl1sec05/4-configuring-wireshark#:~:text=Relative%20time%20(conversation)%3A%20This,packet%20to%20the%20current%20packet.)
+- [`Name Resolution` :: **Eth | Hosts | IPs | Manuf | Subnets | VLANs**](https://www.wireshark.org/docs/wsug_html_chunked/ChAppFilesConfigurationSection.html)
+- [`Tools Fenzy!!!` Wireshark & Networking Related Tools](https://wiki.wireshark.org/Tools#traffic-generators)
+
+## 🦈🖧 Wireshark: `Ethernet Capture Setup` - `Switched Media` & `Shared Ethernet`
+- [`Shared Ethernet` Capture Setup :: Wireshark](https://wiki.wireshark.org/CaptureSetup/Ethernet) Hubs & Non-Switched Networks || No VLANs || Legacy
+- [`Switched Media Ethernet` Capture Setup :: Wireshark](https://wiki.wireshark.org/CaptureSetup/Ethernet) Routing & Switching || VLANs & Subnets
+- [`Monitor Port` versus `Network Tap`](https://wiki.wireshark.org/CaptureSetup/Ethernet#monitor-port-versus-network-tap) Some arguments for using a passive network tap rather than a monitor port
+- [`802.1q` :: `VLANs` Capture](https://wiki.wireshark.org/CaptureSetup/Ethernet#sniffing-802-1q-vlan-tags) Only captured with Network Taps & Supported Monitor Switches
+
+## 🖧🪤 Switched Media Ethernet: `Capture Options`
+- [Capture: `From the Machine/PC interested in`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-on-the-machine-you-re-interested-in) Easiest & common way to capture || No 802.1q captured || **Unicast to Machine ONLY** (Other traffic not available)
+- [Capture: `Port Monitor/Mirror Mode AKA Span (Switch Integrated)`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-a-monitor-mode-of-the-switch) Easy to use if available on SW || Capture 802.1q depending on vendor || Packet loss at high traffic rate
+- [Capture: `Network Tap`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-a-network-tap) All packets of Eth-FullDuplex captured including 802.1q || won't affect Ethernet traffic || Expensive but effective Tool
+- [Capture: `Machine-in-the-middle AKA In-Line`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-a-machine-in-the-middle) Dedicated machine (PC) configuration required || Only 2 PC's NICs are needed
+- [Capture: `Ethernet Hub`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-an-ethernet-hub) Not optimal for network troubleshooting || Hubs are legacy || Affect Eth Duplex Traffic
+- [Capture: `MITM (Man-in.the-middle)`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-a-mitm-man-in-the-middle-software) ARP Poisoning || Network Attack || Confuses Switches
+- [Capture: `MAC Flooding`](https://wiki.wireshark.org/CaptureSetup/Ethernet#mac-flooding) ARP Poisoning || Network Attack || Confuses Switches
+ 
+## 🦈🕵️ Wireshark: `Filters` 
+- [Wireshark Filter Manual Page - Wireshark display filter syntax and reference](https://www.wireshark.org/docs/man-pages/wireshark-filter.html)
+- [Display Filter Reference](https://www.wireshark.org/docs/dfref/)
+- [`802.11 Wi-Fi WLAN` - Display Filter Reference](https://www.wireshark.org/docs/dfref/w/wlan.html)
+- [`WLAN Radio` - Display Filter Reference](https://www.wireshark.org/docs/dfref/w/wlan_radio.html)
+- [`Display Filters` :: Wireshark]()
+- [`Capture Filters` :: Wireshark]()
+- [`Custom Colors` :: Wireshark]()
+- [`Custom Columns` :: Wireshark](https://www.youtube.com/watch?v=2GVW6bUG98A)
+- [`Custom Profile` :: Wireshark]()
+https://www.wireshark.org/docs/dfref/w/wlan.html
+https://www.wireshark.org/docs/dfref/w/wlan_radio.html
+
+
+## 🦈📊 Wireshark: Nodes `Expert Analysis`, `Statistics` & `Conversations`
+- [Reading PCAPs with Wireshark Statistics @ Chris Greer](https://www.youtube.com/watch?v=ZNS115MPsO0) _`video`_
+
+## 🦈🔑 Wireshark: `Encryption` & `Decryption`
+- [`WPA/WPA2` :: Decrypt WPA2-PSK using Wireshark](https://mrncciew.com/2014/08/16/decrypt-wpa2-psk-using-wireshark/)
+- [`HTTPS Decryption` :: Website TLS Decryption](https://www.youtube.com/watch?v=GMNOT1aZmD8)
+
+### 🦈🧪 Wireshark: `Labs`
+- [`QUIC` :: HOW QUIC WORKS - Intro to the QUIC Transport Protocol](https://www.youtube.com/watch?v=HnDsMehSSY4&list=PLW8bTPfXNGdDcSDSmcfYs3ynYOdc1cXSh)
+- [`TCP` :: How TCP really works // Three-way handshake // TCP/IP Deep Dive](https://www.youtube.com/watch?v=rmFX1V49K8U&list=PLW8bTPfXNGdAZIKv-y9v_XLXtEqrPtntm)
+- [`TLS` :: How to DECRYPT HTTPS Traffic with Wireshark // TLS Handshake](https://www.youtube.com/watch?v=5qecyZHL-GU&list=PLW8bTPfXNGdCq-W2G8C5VrHRPMBHovccJ)
+
+### 🦈📇 Wireshark: `Source Code`
+- [Wireshark Source Code :: Open Source](https://gitlab.com/wireshark/wireshark/-/tree/master)
 
 
 
 _
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5187,211 +5448,12 @@ _Even if you getting for example 360mbps of Data Rate, it will noever be the act
 - [True Wi-Fi Performance Pyramif](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/a69f87ab-3bd2-4f0b-804e-10be66675a7e)
 
 
-## 🦈🪤🕵️‍♂️ PCAP Troubleshooting Collection
-- [`WPA2 password fail` :: Wireless] 4-way-Hadshake never pass step 3
-- [`EAP password fail` :: Wireless + Wired](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/102465fb-2873-46a5-848d-e7910c9fbe40) Wired capture shows the "reject" packet
-- [`EAP silent disconnect` :: Wireless + Wired](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/ee08f06b-1359-4fa6-b266-e326447f7a4f) No fails, only ignored packets & no responses || AP/WLC does not belong to Authenticator list
 
 
 
 
 
 
-
-
-<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- #                                                               #
- #            Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base              #
- #                                                               #
- #        Protocol Analysis :: Layer 2 : MAC & layers 3-7        #
- #                                                               #
- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-
-## 🦈🕵️💊 Protocol Analysis :: `Layer 2`:`MAC` & `layers 3-7`
-_Process of capturing, decoding, and interpreting network communicatios (data packets that travel across a network). Network protocol analysis tools (Software like Wireshark) can capture and display these packets in a readable format, allowing you to examine the details of each packet and how they interact with each other._
-- [**`Fz3r0`**: Protocol Analysis](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md)
-- [Ekahau Wi-Fi Webinar - Packet Capture and Analysis - February 7, 2019](https://www.youtube.com/watch?v=W_wjmk-YQTc)
-- [Analyze and Troubleshoot 802.11 Wireless Sniffing @ Cisco](https://www.cisco.com/c/en/us/support/docs/wireless-mobility/80211/200527-Fundamentals-of-802-11-Wireless-Sniffing.html) _`Complete Guide`_
-- [Best Practices for Monitoring and Troubleshooting 802.11ac Networks](https://networking.report/Resources/Whitepapers/1d1514d9-48e2-41f9-ab28-04ba3b04868a_Best%20Practices%20for%20Monitoring%20and%20Troubleshooting%20802.11ac%20Networks.pdf) _`White paper`_
-- [Protocol Analysis: How do you analyze network performance and identify bottlenecks?](https://www.linkedin.com/advice/0/how-do-you-analyze-network-performance)
-
-## 🦈🕵️🛠️ Protocol Analysis: `Tools`
-_Software that can capture and display network packets in a readable format, allowing you to examine the details of each packet and how they interact with each other. Some of them can make expert reports._
-
-### 🦈🖥️📊 Protocol Analysis: `Protocol Analyzers` or `Sniffers`
-- [Wireshark](https://www.wireshark.org/) The world's most popular network protocol analyzer
-- [T-Shark](https://www.wireshark.org/docs/man-pages/tshark.html) Command-line version of Wireshark
-- [BlackShark]() Fz3r0 WireShark Mod on Steroids
-- [CommView & CommView for Wi-Fi @ TamoSoft](https://www.tamos.com/products/commwifi) The best wireless packet analysis tool on the market with lots of unique features
-- [Omnipeek](https://www.liveaction.com/products/omnipeek/) The world’s easiest to use network protocol analyzer.
-- [TCPdump & LIBPCAP](https://www.tcpdump.org/) Powerful command-line packet analyzer & portable C/C++ library for network traffic capture
-- [NMAP & NPCAP library](https://npcap.com/) Nmap Project's packet capture/send library for MS-Windows. It implements the open Pcap API
-- [Acrylic Wi-Fi Analyzer & Wi-Fi Capture](https://www.acrylicwifi.com/wifi-analyzer/) Detect, analyze, evaluate and monitor Wi-Fi Networks
-- [AirMagnet Wi-Fi Analzyer Pro](https://www.netally.com/products/airmagnet-wifi-analyzer/) _`discontinued`_
-- [AirDefense_Services_Platform (ADSP) :: Appliance Dashboard](https://catalog.m4dconnect.com/docs/AirDefense_Services_Platform_8.0_SPEC_SHEET.pdf) 
-- [NetScout Legacy 2000's](https://docstore.mik.ua/univercd/cc/td/doc/product/rtrmgmt/cw2000/fam_prod/netscout/rel_1_2/packet.pdf) _`legacy`_
-
-### 📈📊📉 Protocol Analysis: `Visualization Tools`
-_Concept is instead of looking a specific packets, you are looking at analyisis of those packets that's been done wirh graphics, lists, and so on..._
-- [Visual Packet Analysis Blog :: Metageek](https://www.metageek.com/blog/tag/visual-packet-analysis/)
-- [Channelyzer :: Metageek](https://www.metageek.com/chanalyzer/)
-- [Eye P.A. :: Metageek](https://www.metageek.com/eye-pa/) Enables easy multi-channel 802.11ac packet capture and visual analysis
-- [IOTA: All-In-One Network Traffic Monitoring Solution](https://www.profitap.com/iota/?utm_campaign=IOTA%20Solution&utm_content=276301428&utm_medium=social&utm_source=linkedin&hss_channel=lcp-5383240) powerful network capture and analysis solution for edge and core networks
-- [Mojo Packets :: Peter Mackenzee](https://www.youtube.com/watch?v=r4fMGfiF9Jo) _discontinued_
-- [Packets :: Arista Networks](https://packets.arista.com/site/portal?fallbackUrl=..%2Fupload%2Fupload)
-
-## 🦈🪤👑 `Wireshark`
-_Few tools are as useful to the IT professional as Wireshark, the go-to network packet capture tool. Wireshark will help to capture network packets and display them at a granular level. Once these packets are broken down, you can use them for real-time or offline analysis. This tool lets you put your network traffic under a microscope, and then filter and drill down into it, zooming in on the root cause of problems, assisting with network analysis for troubleshooting and ultimately network security._
-- [About Wireshark](https://www.wireshark.org/about.html)
-- [Wireshark - Where to Start?](https://www.wireshark.org/docs/)
-- [Wireshark Tutorial for BEGINNERS // Where to start with Wireshark @ Chris Greer](https://www.youtube.com/watch?v=OU-A2EmVrKQ)
-- [Interview with Gerald Combs - Wireshark Creator](https://youtu.be/O5tW7ShNlkk?si=yXVjZvIuUOZlZTyu)
-
-### 🦈🐣 Wireshark: `Wireshark Basics` 
-- [`Capture Options`: The “Capture Options” Dialog Box](https://www.wireshark.org/docs/wsug_html_chunked/ChCapCaptureOptions.html)
-- [`Building Display Filter Expressions` & `Operators`](https://www.wireshark.org/docs/wsug_html_chunked/ChWorkBuildDisplayFilterSection.html)
-- [`Configuration` :: **Timestamp | Columns | Colorization | Rules | Profiles | Preferences**](https://subscription.packtpub.com/book/cloud-and-networking/9781788833226/1/ch01lvl1sec05/4-configuring-wireshark#:~:text=Relative%20time%20(conversation)%3A%20This,packet%20to%20the%20current%20packet.)
-- [`Configuration Files` :: `Customization`](https://www.wireshark.org/docs/wsug_html_chunked/ChAppFilesConfigurationSection.html)
-- [`Absolute Time` :: `Relative Time` :: `Delta Time` :: `Custom Time`](https://subscription.packtpub.com/book/cloud-and-networking/9781788833226/1/ch01lvl1sec05/4-configuring-wireshark#:~:text=Relative%20time%20(conversation)%3A%20This,packet%20to%20the%20current%20packet.)
-- [`Name Resolution` :: **Eth | Hosts | IPs | Manuf | Subnets | VLANs**](https://www.wireshark.org/docs/wsug_html_chunked/ChAppFilesConfigurationSection.html)
-- [`Tools Fenzy!!!` Wireshark & Networking Related Tools](https://wiki.wireshark.org/Tools#traffic-generators)
-
-### 🦈🖧 Wireshark: `Ethernet Capture Setup` - `Switched Media` & `Shared Ethernet`
-- [`Shared Ethernet` Capture Setup :: Wireshark](https://wiki.wireshark.org/CaptureSetup/Ethernet) Hubs & Non-Switched Networks || No VLANs || Legacy
-- [`Switched Media Ethernet` Capture Setup :: Wireshark](https://wiki.wireshark.org/CaptureSetup/Ethernet) Routing & Switching || VLANs & Subnets
-- [`Monitor Port` versus `Network Tap`](https://wiki.wireshark.org/CaptureSetup/Ethernet#monitor-port-versus-network-tap) Some arguments for using a passive network tap rather than a monitor port
-- [`802.1q` :: `VLANs` Capture](https://wiki.wireshark.org/CaptureSetup/Ethernet#sniffing-802-1q-vlan-tags) Only captured with Network Taps & Supported Monitor Switches
-
-### 🖧🪤 Switched Media Ethernet: `Capture Options`
-- [Capture: `From the Machine/PC interested in`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-on-the-machine-you-re-interested-in) Easiest & common way to capture || No 802.1q captured || **Unicast to Machine ONLY** (Other traffic not available)
-- [Capture: `Port Monitor/Mirror Mode AKA Span (Switch Integrated)`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-a-monitor-mode-of-the-switch) Easy to use if available on SW || Capture 802.1q depending on vendor || Packet loss at high traffic rate
-- [Capture: `Network Tap`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-a-network-tap) All packets of Eth-FullDuplex captured including 802.1q || won't affect Ethernet traffic || Expensive but effective Tool
-- [Capture: `Machine-in-the-middle AKA In-Line`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-a-machine-in-the-middle) Dedicated machine (PC) configuration required || Only 2 PC's NICs are needed
-- [Capture: `Ethernet Hub`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-an-ethernet-hub) Not optimal for network troubleshooting || Hubs are legacy || Affect Eth Duplex Traffic
-- [Capture: `MITM (Man-in.the-middle)`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-a-mitm-man-in-the-middle-software) ARP Poisoning || Network Attack || Confuses Switches
-- [Capture: `MAC Flooding`](https://wiki.wireshark.org/CaptureSetup/Ethernet#mac-flooding) ARP Poisoning || Network Attack || Confuses Switches
- 
-### 🦈🕵️ Wireshark: `Filters` 
-- [Wireshark Filter Manual Page - Wireshark display filter syntax and reference](https://www.wireshark.org/docs/man-pages/wireshark-filter.html)
-- [Display Filter Reference](https://www.wireshark.org/docs/dfref/)
-- [`802.11 Wi-Fi WLAN` - Display Filter Reference](https://www.wireshark.org/docs/dfref/w/wlan.html)
-- [`WLAN Radio` - Display Filter Reference](https://www.wireshark.org/docs/dfref/w/wlan_radio.html)
-- [`Display Filters` :: Wireshark]()
-- [`Capture Filters` :: Wireshark]()
-- [`Custom Colors` :: Wireshark]()
-- [`Custom Columns` :: Wireshark](https://www.youtube.com/watch?v=2GVW6bUG98A)
-- [`Custom Profile` :: Wireshark]()
-
-### 🦈📊 Wireshark: Nodes `Expert Analysis`, `Statistics` & `Conversations`
-- [Reading PCAPs with Wireshark Statistics @ Chris Greer](https://www.youtube.com/watch?v=ZNS115MPsO0) _`video`_
-
-### 🦈🔑 Wireshark: `Encryption` & `Decryption`
-- [`WPA/WPA2` :: Decrypt WPA2-PSK using Wireshark](https://mrncciew.com/2014/08/16/decrypt-wpa2-psk-using-wireshark/)
-- [`HTTPS Decryption` :: Website TLS Decryption](https://www.youtube.com/watch?v=GMNOT1aZmD8)
-
-### 🦈🧪 Wireshark: `Labs`
-- [`QUIC` :: HOW QUIC WORKS - Intro to the QUIC Transport Protocol](https://www.youtube.com/watch?v=HnDsMehSSY4&list=PLW8bTPfXNGdDcSDSmcfYs3ynYOdc1cXSh)
-- [`TCP` :: How TCP really works // Three-way handshake // TCP/IP Deep Dive](https://www.youtube.com/watch?v=rmFX1V49K8U&list=PLW8bTPfXNGdAZIKv-y9v_XLXtEqrPtntm)
-- [`TLS` :: How to DECRYPT HTTPS Traffic with Wireshark // TLS Handshake](https://www.youtube.com/watch?v=5qecyZHL-GU&list=PLW8bTPfXNGdCq-W2G8C5VrHRPMBHovccJ)
-
-### 🦈📇 Wireshark: `Source Code`
-- [Wireshark Source Code :: Open Source](https://gitlab.com/wireshark/wireshark/-/tree/master)
-
-## 🖧🪤💰 802.3 Ethernet Switch Media Capture: `Network Taps`
-- [`Network Tap` in 30 Seconds @ David Bombal](https://www.youtube.com/shorts/l-wQVuqL2XA) _`¡Vamos Bombal!`_
-- [`Taps` Vs. `SPAN`: Taps Provide Full Visibility into Network Data](https://www.youtube.com/watch?v=r3-PBfmFMqA) _`video`_
-- [`Network Tap 101` :: How it works?](https://www.garlandtechnology.com/2014/01/17/a-test-access-point-tap-primer) The 101 Series: A Primer On Network TAPs
-- [How Copper & Fiber Taps](https://www.youtube.com/watch?v=jiyNRSj-UFE) _`video`_
-- [Port Aggregated Taps](https://www.nextgigsystems.com/net_optics/aggregation_taps.html) Single NIC can capture from different Switchports
-- [How to build a Network Tap with just 1 cable?](https://www.youtube.com/watch?v=2tsvBnTIjFo) _`video`_
-
-### 🖧🪤 Network Taps:
-- [Net Optics Aggregation TAPS](https://www.nextgigsystems.com/net_optics/aggregation_taps.html) Access to full-duplex links using just a single NIC on the monitoring or analyzer tool.
-- [IOTA: All-In-One Network Traffic Monitoring Solution](https://www.profitap.com/iota/?utm_campaign=IOTA%20Solution&utm_content=276301428&utm_medium=social&utm_source=linkedin&hss_channel=lcp-5383240)
-- [Netsplit](https://www.youtube.com/watch?v=MPsN4K2pVz4) Pocket-sized passive Ethernet tap
-- [Sharktap](https://www.youtube.com/watch?v=EiY4VMdYdk4) Cheap and affordable way to analyze your network
-
-
-## 🕵️🛜📡 Protocol Analysis: `How to capture 802.11 Radio Frames?`
-- [802.11 Wi-Fi VS 802.3 Ethernet Capture: Differences & 802.11 Adapters]()
-- [Capturing 802.11 Frames: Monitor Mode & Packet Injection]()
-- [Selecting the right Adapter (Spatial Streams): How to identify if I missing frames?](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/510bc21c-845a-464a-8726-32ed3bb16944)
-
-## 🛜🪤🎣 Protocol Analysis: `802.11 Frame Capture Options`
-_There are basically 3 different options to capture 802.11 traffic & communications. At the end, it mostly depends on the resources and needs_
-
-### 💻🦈 802.11 Frame Capture: `Mobile`
-- [Capturing Wireless Traffic from a Client Machine :: MacBook :: Linux :: Wireshark](https://documentation.meraki.com/MR/Monitoring_and_Reporting/Capturing_Wireless_Traffic_from_a_Client_Machine)
-- [airmon]()
-- [Linux Based + Wi-Fi Adapter]()
-- [Mac-OS Based: Internal Adapter Capability]()
-- [Wireshark 802.11 Monitor Mode & Compatibility]()
-- [Wi-Spy + Software based]()
-- [Wlan PI]()
-
-### 📡🐶 802.11 Frame Capture: `Infrastructure` _(WLC or AP)_
-- [Ruckus AP :: 802.11 Capture]()
-- [Ruckus SmartZone :: 802.11 Caoture]()
-- [Cisco Air Marshall]()
-
-### 📡👮 802.11 Frame Capture: `WIPS Sensors`
-- [Cisco Adaptive wIPS](https://www.cisco.com/c/en/us/td/docs/wireless/technology/wips/deployment/guide/WiPS_deployment_guide.html)
-- [Arista WIPS](https://www.arista.com/assets/data/pdf/Whitepapers/Arista-WIPS-Whitepaper.pdf)
-- [Fortinet WIPS](https://community.fortinet.com/t5/Wireless-Controller/Technical-Tip-WIPS-Configuration/ta-p/194512)
-
-### 📡🏭 Protocol Analysis: `Distributed Forensics`
-- [Omnipeek]()
-
-## 🛜👂🩺 Adapter Modes: `Monitor Mode` & `Promiscous Mode`
-- [`Promiscous Mode` & `Monitor Mode`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md#-monitor-mode--promiscous-mode)
-    -[`Promiscous Mode`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md#-promiscous-mode)
-    -[`Monitor Mode`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md#-promiscous-mode)
-
-### 🩺⚙️ Monitor Mode: `Drivers` & `Chipsets`
-- [Fz3r0 Monitor Mode Drivers Lab]()
-- [Recomended Adapters & Firmwares for 802.11 Frame Capture]()
-- [Install Drivers for 802.11 capture in Linux]()
-
-### 🩺🪄 Monitor Mode: `Adapters`
-_The right adapter give you the right capture capabilites and scopes... There is no "the best" adaptor for every scenario_
-- [802.11 Capture Table]() 
-- [Alfa]() `Custom`
-- [Panda]() `Custom`
-- [TP-Link]() `Custom`
-- [WiSpy]() `Vendor Supported Licenced`
-- [Saavius]() `Vendor Supported Licenced`
-
-### 🩺📡 Monitor Mode: `Infrestructure APs`
-_The right adapter give you the right capture capabilites and scopes... There is no "the best" adaptor for every scenario_
-- [Ruckus R850]() `4x4 spatial streams` | `2.4/5/6 GHz`
-
-## 🤳🏾🪤📡 802.11 Frame Capture: `Location for Capture`
-_In 802.11 Frames Capture is very important the physical location of the adapter that will capture 802.11 Frames depending on what are we tring to capture, it's important to remember that we are capturing on wireless medium (RF flying through the air)_
-- [`Near the AP` :: Capture that AP sees]() For capturing the whole BSA & All traffic of clients subscribed to the AP (Tx/Rx)
-- [`Near the Client` :: Capture that Client sees]() For capturing a specific client having a problem
-- [`In the middle of Client <--> AP`]() For getting the whole picture of whats happening inside the BSA
-
-## 📡🪤🖧 802.11 Frame Catpure: `802.3 Wired Ethernet` + `802.11 Wireless Wi-Fi`
-_Sometimes is important to capture and troubleshoot wired captures in adition to 802.11 capture._
-- [EAP over LAN exchanges & RADIUS]() Simultaneos capture of Wi-Fi & Ethernet
-- [DHCP exchanges]()
-- [QoS]() Tags and Markings all the way through the network, for VoIP for example
-- [VLAN Tagging]()
-
-## 📶📻🪤 802.11 Frame Capture: `One Channel` VS `Hopping` VS `Various Channels`
-- [Fz3r0 :: Channel Selection on each Scenario]() _`table`_
-
-## 🪤🔁📡 802.11 Frame Capture: `Roaming Scenarios`
-- [Roaming Analysis using only a Mac and Wireshark](https://framebyframewifi.net/2018/08/04/roaming-analysis-using-only-a-mac-and-wireshark/)
-- [How to check in Wireshark if a Wi-Fi Network support 802.11k (roaming)](https://semfionetworks.com/blog/wireshark-how-to-check-if-a-wi-fi-network-supports-80211k/)
-- [How To Fix Wi-Fi Roaming](https://www.smallnetbuilder.com/basics/wireless-basics/how-to-fix-wi-fi-roaming/) 
-- [Wi-Fi Roaming Secrets Revealed :: ](https://www.smallnetbuilder.com/wireless/wireless-features/wi-fi-roaming-secrets-revealed/)
-- [Wi-Fi Roaming Analysis Part 1 - `Connection Control` @ Revolution Wi-Fi](https://revolutionwifi.blogspot.com/2011/12/wi-fi-roaming-analysis-part-1.html)
-- [Wi-Fi Roaming Analysis Part 2 - `Roaming Variations` @ Revolution Wi-Fi](https://revolutionwifi.blogspot.com/2012/02/wi-fi-roaming-analysis-part-2-roaming.html)
-- [Wi-Fi Roaming Analysis Part 3 - `Methods of Measuring Roam Times` @ Revolution Wi-Fi](https://revolutionwifi.blogspot.com/2012/12/wi-fi-roaming-analysis-part-3-measuring.html)
-- [Wi-Fi Roaming Analysis Part 4 - `Analysis with Wireshark & AirPcap` @ Revolution Wi-Fi](https://revolutionwifi.blogspot.com/2013/01/wi-fi-roaming-analysis-with-wireshark.html)
 
 
 
@@ -5399,6 +5461,23 @@ _Sometimes is important to capture and troubleshoot wired captures in adition to
 
 # 802.11 Frames: Forge, Tamper & Injection
 - [Forging Radiotap Headers](https://github.com/vanhoefm/libwifi/blob/master/docs/linux_tutorial.md#injecting-frames)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
