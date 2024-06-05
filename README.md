@@ -1368,7 +1368,7 @@ _Target Wake Time (TWT) is a new power save scheduling ability for 802.11ax, OFD
 ### `BSS Coloring`
 _To allow it to acknowledge communications of varied signal strengths, 802.11ax implements BSS coloring. Each BSS is assigned a color (identifying bits in the PHY layer communications), and BSS transmissions matching the current STA’s BSS color are considered active transmissions at a weaker signal level than those that do not match the current STA’s BSS color. Clearly stated, when a signal is received with the same BSS color as the receiving STA, a lower signal strength threshold is used to defer to the signal and remain silent. When a signal is received with a different BSS color than the receiving STA, a higher signal strength threshold is used to defer to the signal and remain silent. For example, the matching BSS color threshold could be -90 dBm and the non-matching BSS color threshold could be -75 dBm. The actual signal thresholds may be configurable in enterprise systems, and the exact method used at higher layers to process this data is not defined in the 802.11 standard but is instead left to the vendors to control._
 
-### `Dual Band`
+### `Dual Band 2.4 Ghz & 5 GHz`
 _802.11ax operates in both the 2.4 GHz and 5 GHz frequency bands, unlike 802.11ac, which was 5 GHz-only. This dual-band allowance brings the efficiency gains of 802.11ax into the 2.4 GHz band, which is very congested and will eventually benefit from these gains. The benefit will be eventual because the clients and APs must support 802.11ax to achieve any of the benefits referenced in this section._
 
 
