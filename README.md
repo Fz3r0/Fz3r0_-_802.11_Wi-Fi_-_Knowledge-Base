@@ -1616,7 +1616,9 @@ _In Wireless 802.11 networks, Layers 1 and 2 are the most crucial, Layers 3 and 
 ### 💊🖼️📦 Encapsulation: `SDU` & `PDU`
 _Key Concept: The message used to communicate information for a particular protocol is called its protocol data unit (PDU) in OSI model terminology. That PDU is passed down to the next lower layer for transmission; since that layer is providing the service of handling that PDU, it is called the lower layer’s service data unit (SDU). The SDU is encapsulated into that layer’s own PDU and in turn sent to the next lower layer in the stack, proceeding until the physical layer is reached. The process is reversed on the recipient device._ 
 
-**A layer N PDU is a layer N-1 SDU, which is encapsulated into a layer N-1 PDU.**
+Key Concept: **A layer N PDU is a layer N-1 SDU, which is encapsulated into a layer N-1 PDU.** <br><br>
+
+- **`Example`**: The LPDU is generated at the LLC Sub-Layer (Layer 2 - Upper), and then is passed down into the MAC Sub-Layer (Layer 2 - Lower), the MAC Sub-Layer recieves it as a MSDU. So, the MAC layer process the MSDU, put a MAC-Header + FCS and that's called a MPDU (that is generated at the MAC Sub-Layer) and then is passed down into the PLCP Sub-Layer (Layer 1 - Upper), the PLCP Sub-Layer recieves it as a PSDU... So, the PLCP layer process the PSDU, put a PLCP-Header + Preamble and that's called a PPDU, and then, the PPDU is passed down into the PMD Sub-Layer (Layer 1 - Lower), the PMD Sub-Layer modulate that into 1's and 0's and send it into the wireless medium.
 
 - [CWNP: Basics of MAC Architecture: Encapsulation & Frame Aggregation](https://www.cwnp.com/802.11-mac-series-ndash-basics-mac-architecture-ndash-part-1-3/#Id3)
 
@@ -1845,7 +1847,7 @@ _With the ratification of 802.11n amendment, two types of frame aggregation were
 _The first frame aggregation method is A-MSDU, where several MSDUs are combined into a single frame. An 802.11n access point uses A-MSDU aggregation and removes the headers and trailers from the received MSDUs, and combines these multiple MSDU payloads in to a single frame, which is known as A-MSDU and is further used for transmission across the wireless medium. The aggregated frame is encrypted using the Counter Mode with Cipher Block Chaining Message Authentication Code Protocol (CCMP) encryption method. Each MSDU within the A-MSDU must be of the same 802.11e QoS access category. For example, A-MSDU can contain several MSDUs of Video access category only and it cannot be mixed with Best Effort or Voice MSDUs within the same aggregated frame._
 
 - **`A-MSDU Key Concept`**: If you do not receive an Ack frame back, the entire payload must be resent, and this takes up more airtime and induces latency in your network. Congested networks and latency sensitive networks may want to reconsider use of the A-MSDU entirely. <br> <br>
-    - **`A-MSDU` is available in `802.11n`**
+    - **`A-MSDU` is available in `802.11n` _(but A-MPDU is used more)_**
     - **`A-MSDU` is transmitted as a single 802.11 frame with multiple MSDU frames inside it (subframe #1, subframe #2, subrame #3, etc), only having to be sent, and therefore contend, once.**
     - **`A-MSDU` is acknowledged by a standard `ACK` frame**
     - **`A-MSDU` have only one `FCS` for all the MSDU's inside the A-MSDU ({subframe #1 + subframe #2 + subrame #3} + FCS)**
@@ -1930,8 +1932,10 @@ PMD = (Physical Medium Dependent):
 _Another method of frame aggregation is A-MPDU, where several MPDUs are combined into a single frame for transmission. Each MPDU of A-MPDU has the same receiver address and data payload and each MPDU is encrypted using the CCMP encryption method. Similar to A-MSDU, each MPDU within the A-MPDU must be of the same 802.11e QoS access category. A-MPDU has more overhead than A-MSDU because each MPDU contains a MAC header and trailer details. **The big difference here is that the transmitter does not merge multiple Ethernet frames into a single 802.11 frame. Every 802.3 frame gets its own 802.11 MAC header and they are aggregated into a single PPDU transmission.**_
 
 - **`A-MPDU Key Concept`**: The A-MPDU method of frame aggregation does not require a single ACK reply, like a A-MSDU method transmission would; Or rather it does but it's not a standard ACK frame. Remember that frame aggregation was introduced with 802.11n alongside a few other frame types, namely the "Block-Ack" Frame type. A block Ack acknowledges a group of frames all at once, and provides a bitmap (Think of like a checklist in this instance) that details what frames, if any, were not received properly. <br> <br>
-    - **`A-MPDU` is available in `802.11n`, but is mandatory in `802.11ac` y `802.11ax.`**
+    - **`A-MPDU` is available in `802.11n`, but is mandatory and the standrard way to send a frame in `802.11ac` y `802.11ax.`, this means: A true VHT or HE frames uses allways A-MPDUs**
+    - **All `A-MPDUs` are addressed to the same reciever. _(the STA just look at the MAC-Header of the first MPDU and know if the transmission is for them or not)_**
     - **`A-MPDU` big difference VS A-MSDU is that the transmitter does not merge multiple MSDU's into a single 802.11 frame (better known as A-MSDU). Every MSDU frame gets its own 802.11 MAC header + FCS and they are aggregated into a single PPDU transmission.**
+    - **`A-MPDU`** uses a `MPDU delimiter` between each of the MPDU's sent as the aggregated MPDU, this is like an extre Header in order to separate the different MPDU's.
     - **`A-MPDU` works similar as a A-MSDU where has to win one transmit opportunity for the whole A-MPDU in the same contention period, but is less efficient than A-MSDU.**
     - **`A-MPDU` frames are Ack’d via the `Block Ack` frame. The Block Ack has the capability to point out individual sequence numbers that were not received, and only those individual frames have to be retransmitted.**
     - **Compared to the A-MSDU, the A-MPDU has more overhead since every frame has its own MAC header. However, it is also much more resilient because in case of frame loss, only the frames not being Ack’d in the Block Ack have to be retransmitted.** <br><br>
