@@ -5032,9 +5032,11 @@ _When it comes to protocol analysis, visualization tools are essential for trans
 _`Layer 2`:`MAC` & `layers 3-7 wired captures_
 
 ## Capturing Ethernet 802.3 Freames: Taffic Access Methods
-- Span / Mirror:
-- Inline
-- Network Tap:
+- [Different Traffic Access Methods :: Diagram](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/180ecca3-6586-47bd-85d7-02e26fd17ca5) <br><br>
+    - PC to switchport: Most basic capture method || Good for learning but no so usefull for troubleshooting || Only captures unicast traffic betweeen PC and network || Can't capture all the traffic of the network || Very easy configuration
+    - Span / Mirror: Uses the mirror configuration on a switch port || Does not pass critical Layer 1 and 2 errors || Cost time and resources for switch re-configuration || Easy to configure for Ad-Hoc Analysis || Does not requiere link downtime <br> <br>
+    - Inline: Uses the PC/capture in the middle of traffic || Potential point of failure || Expensive one-tool-to-one-link deployment || Relocating tool means link downtime <br> <br>
+    - Network Tap: Can capture Layer 1 and 2 errors || Can capture traffic like VLAN tagging || Passive - Network traffic flows regardless of power avaibility to the tap || Considered the best option for capture, but the most expensive
 
 ### 🖧🪤💰 802.3 Ethernet Switch Media Capture: `Network Taps`
 - [`Network Tap` in 30 Seconds @ David Bombal](https://www.youtube.com/shorts/l-wQVuqL2XA) _`¡Vamos Bombal!`_
@@ -5044,7 +5046,7 @@ _`Layer 2`:`MAC` & `layers 3-7 wired captures_
 - [Port Aggregated Taps](https://www.nextgigsystems.com/net_optics/aggregation_taps.html) Single NIC can capture from different Switchports
 - [How to build a Network Tap with just 1 cable?](https://www.youtube.com/watch?v=2tsvBnTIjFo) _`video`_
 
-### 🖧🪤 Network Taps:
+### 🖧🪤 Network Taps: `Models & Vendors`:
 - [Net Optics Aggregation TAPS](https://www.nextgigsystems.com/net_optics/aggregation_taps.html) Access to full-duplex links using just a single NIC on the monitoring or analyzer tool.
 - [IOTA: All-In-One Network Traffic Monitoring Solution](https://www.profitap.com/iota/?utm_campaign=IOTA%20Solution&utm_content=276301428&utm_medium=social&utm_source=linkedin&hss_channel=lcp-5383240)
 - [Netsplit](https://www.youtube.com/watch?v=MPsN4K2pVz4) Pocket-sized passive Ethernet tap
