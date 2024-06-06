@@ -5196,8 +5196,8 @@ _Capturing and troubleshooting both wired (802.3 Ethernet) and wireless (802.11 
 
 ## Frame Analysis: `Time Metrics`
 
-- Absolute time: This is the actual capture date and time based on the time zone of the capture device, this means, the time when the packet was captured, provides the real-world time of packet capture for example date and hour. This metric is useful for correlating captured data with real-world events and time-based troubleshooting.
-- Delta time: This is the elapsed time from the previous packet to the current packet, this means, measures the time elapsed between successive packets. This metric helps in understanding the time intervals between packet transmissions, which can be useful for performance analysis.
+- Absolute time: This is the actual capture date and time based on the time zone of the capture device, this means, the time when the packet was captured, provides the real-world time of packet capture for example date and hour. This metric is useful for correlating captured data with real-world events and time-based troubleshooting. <br> <br>
+- Delta time: This is the elapsed time from the previous packet to the current packet, this means, measures the time elapsed between successive packets. This metric helps in understanding the time intervals between packet transmissions, which can be useful for performance analysis. <br> <br>
 - Relative time: This is the time from the first packet in a capture file, but it can be also similar to the Seconds Since Beginning of Capture option. Cumulative time from a selected packet to another selected packet, it can be used to identify how long it takes for a frame exchange to occur. Some protocol analyzer software programs make this a very simple task. This information is valuable in determining problems such as latency or contention with specific frame exchanges. (ex. in a 4-way-handshake you can select the first frame, and then look how many time does the 4th frame took)
 
  
