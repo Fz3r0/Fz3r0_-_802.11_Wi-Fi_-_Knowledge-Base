@@ -5031,6 +5031,11 @@ _When it comes to protocol analysis, visualization tools are essential for trans
 ## Capturing Ethernet 802.3 Freames
 _`Layer 2`:`MAC` & `layers 3-7 wired captures_
 
+## Capturing Ethernet 802.3 Freames: Taffic Access Methods
+- Span / Mirror:
+- Inline
+- Network Tap:
+
 ### 🖧🪤💰 802.3 Ethernet Switch Media Capture: `Network Taps`
 - [`Network Tap` in 30 Seconds @ David Bombal](https://www.youtube.com/shorts/l-wQVuqL2XA) _`¡Vamos Bombal!`_
 - [`Taps` Vs. `SPAN`: Taps Provide Full Visibility into Network Data](https://www.youtube.com/watch?v=r3-PBfmFMqA) _`video`_
