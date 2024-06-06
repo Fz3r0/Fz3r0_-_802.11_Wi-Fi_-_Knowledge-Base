@@ -5101,9 +5101,10 @@ _It is important to understand that Monitor Mode and Promiscuous Mode are differ
 - WiFi traffic in the air can be captured by anyone within range with the right tools, highlighting the importance of encryption and other security measures. <br> <br>
     - IMPORTANT: On Apple macOS, you can put Wireshark in Monitor Mode without needing an additional USB adapter and drivers, unlike on Windows. In Linux, it depends on the adapter, distribution, drivers, updates, and other variables.
     - IMPORTANT: If you capture in USB 2.0 mode some frame may lose, and if you capture in UDB 3.0 mode you must be aware that some frames may be end being corrupted because you don't have enough SNR, USB 3.0 interference may increase your noise floor from 3 db's to 20 db's. So you need to choose the right adapter and the right USB hub to keep a max of 5 or 6 db's of noise floor increase to have the oportunity of demulate most of the captured frames.
----
 
-### 🩺⚙️ Monitor Mode: `Drivers` & `Chipsets`
+
+
+## 🩺⚙️ Monitor Mode: `Drivers` & `Chipsets`
 _Selecting the right drivers and chipsets for capturing 802.11 frames in monitor mode is crucial for effective wireless network analysis. Not all Wi-Fi adapters support monitor mode, and the ability to capture all types of frames (management, control, and data) depends heavily on the hardware and its drivers._
 - [Fz3r0 Monitor Mode Drivers Lab]()
 - [Recomended Adapters & Firmwares for 802.11 Frame Capture]()
@@ -5129,31 +5130,18 @@ _The right adapter give you the right capture capabilites and scopes... There is
 
 
 
-
-
-
-
-
-
-## 🛜🪤🎣 Protocol Analysis: `802.11 Frame Capture Options`
+## 🛜🪤🎣 Frame Capture: `802.11 Frame Capture Devices & Methods`
 _Devices and methods for capturing 802.11 WiFi frames can be categorized into three main types. At the end, it mostly depends on the resources and needs_
-
-1. Mobile Capture: This involves using mobile devices like laptops with Linux and USB WiFi adapters (e.g., Alfa adapters) to capture WiFi traffic. It's portable and flexible but may require extensive preparation and can be limited in terms of range and capacity.
-2. Infrastructure Capture: This uses professional wireless network devices (e.g., Ruckus Networks or Ubiquiti) to capture traffic via Access Points (APs) while also providing network connectivity. It offers scalability and efficiency but can be costly due to the need for specialized hardware.
-3. Distributed Capture (WIPS & Sensors): This involves specialized sensors (e.g., Multi-Sensor Wireless Overlay Systems, Wireless Intrusion Prevention Systems - WIPS) placed at various points in the network to capture traffic on multiple channels simultaneously. It provides detailed network activity analysis but is more complex and expensive to set up and manage.
-
-
-### 802.11 Frame Capture Options: Comparison Table
-
 
 | **Capture Method**        | **Description**                                                                                                                                               | **Pros**                                                                                       | **Cons**                                                                                          | **Accessibility and Cost**                                                                       | **Examples**                                                                                     |
 |---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | **Mobile Capture**        | Uses mobile devices like laptops with Linux and USB WiFi adapters to capture traffic.                                                                          | Portable and flexible, relatively low cost, no specialized hardware needed                    | Limited range and capacity, requires extensive setup and configuration, potential driver issues  | Most accessible, can be cost-effective, range from simple setups (e.g., Raspberry Pi) to complex systems with high-end computers   | Linux with adapters and tools like airmon, macOS internal adapter, devices like Wi-Pi, WiFi Pineapple, Wi-Spy |
-| **Infrastructure Capture**| Utilizes professional wireless devices like Ruckus Networks or Ubiquiti APs to capture traffic while providing network connectivity.                           | Scalable, efficient, centralized management, real-time streaming to tools like Wireshark      | High cost due to specialized hardware, complexity in setup and management                        | More expensive due to specialized devices, standalone APs like Ubiquiti or Ruckus Unleashed can be more affordable alternatives   | Ruckus APs and SmartZone, Cisco AirMarshal and APs, Meraki APs |
-| **Distributed Capture**   | Employs specialized sensors (e.g., Multi-Sensor Wireless Overlay Systems, WIPS) placed at various points to capture traffic on multiple channels simultaneously.     | Detailed network activity analysis, captures traffic from different locations                 | Very high cost, complex setup and management, requires specialized knowledge and equipment       | Most expensive and complex, requires specialized sensors and systems, less accessible for general use                              | , Omnipeek, Cisco Adaptive wIPS, Arista WIPS, Fortinet WIPS |
+| **Infrastructure Capture**| Utilizes professional wireless devices to capture traffic while providing network connectivity. Note that some vendors like Ruckus allow simultaneous capture and network traffic, while others like Cisco may not support this capability. | Scalable, efficient, centralized management, real-time streaming to tools like Wireshark      | High cost due to specialized hardware, complexity in setup and management                        | More expensive due to specialized devices, standalone APs like Ubiquiti or Ruckus Unleashed can be more affordable alternatives   | Ruckus APs and SmartZone, Cisco AirMarshal and APs, Meraki APs |
+| **Distributed Capture**   | Employs specialized sensors (e.g., Multi-Sensor Wireless Overlay Systems, WIPS) placed at various points to capture traffic on multiple channels simultaneously.     | Detailed network activity analysis, captures traffic from different locations                 | Very high cost, complex setup and management, requires specialized knowledge and equipment       | Most expensive and complex, requires specialized sensors and systems, less accessible for general use                              | Omnipeek, Cisco Adaptive wIPS, Arista WIPS, Fortinet WIPS |
 
 
-### Frame Analysis: Capture Options
+
+## Frame Capture: Capture Options
 
 - Capture Title: Always name your captures with much details as possible like where, when, why (ex. 2024-06-06_13-25hrs_802-11_AP-Room-1_Authentication_iphone-f0-f0-f0-f0-f0-f0_-_01.pcap) <br> <br>
 - Continious Capture: Recycle the capture buffer, which is a temporary buffer where the captured packets are stored. 
@@ -5161,41 +5149,15 @@ _Devices and methods for capturing 802.11 WiFi frames can be categorized into th
 - Save to Disk: Save all packets to disk, specify the name, size and save/stop criteria (ex. Set Title + 512mb file size + Stop After 2048mb captured + Keep Most Recent 3 files + New File every 1 hour) <br> <br>
 - Packet Slicing: Limits the portion of the packet to be captured, used to save disk space or ensure confidentiality. (Warning: Avoid cutting off header information, checksums may become invalid)(ex. Limit each packet to 4500 bytes, this will allow to capture whole beacon frames, but cut large data frames payload that is non critical for analysis) <br> <br>
 - Capture Buffer: The amount of memory allocated to hold packets (ex. Buffer Size = 10mb)
+- Capture Filter: Used to define which packets the sniffer should capture. By setting capture filters, you can limit the captured traffic to only the frames of interest, reducing the amount of data collected and focusing on relevant information. This is not recomended because sometimes you may lose some information.
+- Dwell Time Capturing: The dwell time is the amount of time a wireless network adapter will stay on a specific RF channel before moving the next channel that the device is capable of or is set to scan within the software. A shorter dwell time will capture less information on a specific channel but will allow the device to scan all channels at a quicker rate.
+- Event Trigger Capturing: Event triggers can be set to start and end packet captures based on a specific event. This will allow a protocol analyzer to capture frames that may be helpful in troubleshooting intermittent problems when a specific event happens. Event triggers can be very granular to allow for complex captures to be used with troubleshooting WLAN problems.
 
-### Frame Capture: `Channel Capture & Configuration`
+## Frame Capture: `Channel Capture & Configuration`
 
 - Fixed Channel: Capture in one single channel :: For troubleshooting a particular device that is using a particular channel. Some adapters can be configured even with channel bandwith, primary or secondary channel, etc. (ex. capturing only channel 11 of 2.4 GHz because AP and STA are using that channel) <br> <br>
 - Channel Scan: Capture the whole picture of the BSA channels and bands :: Select every single channel to do a channel hopping method, some adapters can go from 2.4 GHz to 5 GHz hopping. The tradeoff of this capture technique is that you will miss what is happening in others channels while you are hopping from one channel to another.
 - Fixed Channel + Different Channels: If you have more than 1 adapter you can capture on different channels at same time and you won't miss anything. (ex. with 3 adapters you can capture channel 1, 6 & 11 of 2.4 GHz at same time)
-
-### Frame Analysis: Packet Views & Features
-
-- List View: This is the main view of a protocol analyzer and shows the list of all the packets captured. Wireshark has this in the top of a default configuration. 
-- Decode View: Very important view in protocol analyzers. It shows a "human read" format organized from lower layers to upper layers in a "directory" style. Wireshark has this in the bottom left of a default configuration. 
-- HEX / binary View: This is the HEX or binary version of the decode view. It shows a "machine read" format of the packet. Wireshark has this in the bottom right of a default configuration.  
-- Capture Filter: Used to define which packets the sniffer should capture. By setting capture filters, you can limit the captured traffic to only the frames of interest, reducing the amount of data collected and focusing on relevant information. This is not recomended because sometimes you may lose some information. <br> <br>
-- Display Filter: Used to refine the view of captured data in the Protocol Analyzer. They help isolate specific packets within a capture file based on various criteria, making it easier to focus on the relevant traffic during analysis. This is recommended, because you can capture all the data without using a capture filter and then isolate only the packets you want to see. <br> <br>
-- Color Filter: highlight specific types of packets in the Wireshark interface. By applying color filters, you can quickly identify different kinds of traffic, making it easier to spot patterns and anomalies during analysis. <br> <br>
-- Custom Colors: Custom colors allow you to set specific colors for different types of packets. This customization enhances visual analysis and helps in quickly distinguishing between various traffic types. <br> <br>
-- Custom Columns: Enable you to add specific fields to the packet list pane. This feature allows you to display the most relevant information directly in the main view, making it easier to analyze the captured data.
-- Custom Profiles: Let you save different configurations of Wireshark settings, including filters, color schemes, and columns. This is useful for switching between different analysis setups quickly and efficiently. For example, you can use a profile to troubleshoot DHCP in ethernet captures and other profile to troubleshooit association in 802.11 Wi-Fi. 
-- Statistics, Graphics & Expert Reports: Some Protocol Analyzers provides various statistical tools and graphical representations to summarize and visualize the captured data. These tools can help identify trends, anomalies, and potential issues in the network traffic. For example, in 802.11 Wi-Fi you can analyze the airtime utilization filter in the expert view and identify high utilization over the time, the top talking APs, the top talking STAs, etc. 
-- Dwell Time Capturing: The dwell time is the amount of time a wireless network adapter will stay on a specific RF channel before moving the next channel that the device is capable of or is set to scan within the software. A shorter dwell time will capture less information on a specific channel but will allow the device to scan all channels at a quicker rate.
-- Event Trigger Capturing: Event triggers can be set to start and end packet captures based on a specific event. This will allow a protocol analyzer to capture frames that may be helpful in troubleshooting intermittent problems when a specific event happens. Event triggers can be very granular to allow for complex captures to be used with troubleshooting WLAN problems.
-- Peer Map: A peer map is used to show frame exchanges between stations (STA’s) that are communicating within a WLAN BSS. This can be a valuable visual representation that may be very useful in troubleshooting WLAN problems.
-
-
-### Frame Analysis: `Time Metrics`
-
-- Absolute time: The time when the packet was captured, provides the real-world time of packet capture for example date and hour. This metric is useful for correlating captured data with real-world events and time-based troubleshooting.
-- Delta time: Measures the time elapsed between successive packets. This metric helps in understanding the time intervals between packet transmissions, which can be useful for performance analysis.
-- Relative time: Cumulative time from a selected packet to another selected packet, it can be used to identify how long it takes for a frame exchange to occur. Some protocol analyzer software programs make this a very simple task. This information is valuable in determining problems such as latency or contention with specific frame exchanges. (ex. in a 4-way-handshake you can select the first frame, and then look how many time does the 4th frame took)
-- Arrival time: Arrival time records the exact time a packet arrives at the capture interface. This timestamp helps for precise sequence analysis and troubleshooting time-sensitive issues.
- 
-
-
-
-
 
 ## 🤳🏾🪤📡 802.11 Frame Capture: `Location for Capture`
 _In 802.11 Frames Capture is very important the physical location of the adapter that will capture 802.11 Frames depending on what are we tring to capture, it's important to remember that we are capturing on wireless medium (RF flying through the air)_
@@ -5210,8 +5172,35 @@ _Capturing and troubleshooting both wired (802.3 Ethernet) and wireless (802.11 
 - QoS: Analyzing QoS tags and markings across the entire network, including both wireless and wired segments, is essential for applications like VoIP. This ensures that QoS configurations are consistent throughout the network, maintaining optimal performance and prioritization of critical traffic. It's important when troubleshooting QoS in wireless networks be sure that the QoS is working correctly in wired medium and the whole Distribution System.
 - VLAN Tagging: Capturing VLAN tags on both Wi-Fi and Ethernet is necessary for verifying correct VLAN configurations. This helps in ensuring that VLANs are properly propagated and handled across the entire network, facilitating accurate traffic segregation and management. For example when you configure a VLAN for specific SSID. 
 
-## 📶📻🪤 802.11 Frame Capture: `One Channel` VS `Hopping` VS `Various Channels`
-- [Fz3r0 :: Channel Selection on each Scenario]() _`table`_
+## Frame Analysis: `Packet Views`
+
+- List View: This is the main view of a protocol analyzer and shows the list of all the packets captured. Wireshark has this in the top of a default configuration. 
+- Decode View: Very important view in protocol analyzers. It shows a "human read" format organized from lower layers to upper layers in a "directory" style. Wireshark has this in the bottom left of a default configuration. 
+- HEX / binary View: This is the HEX or binary version of the decode view. It shows a "machine read" format of the packet. Wireshark has this in the bottom right of a default configuration.  <br> <br>
+- Display Filter: Used to refine the view of captured data in the Protocol Analyzer. They help isolate specific packets within a capture file based on various criteria, making it easier to focus on the relevant traffic during analysis. This is recommended, because you can capture all the data without using a capture filter and then isolate only the packets you want to see. <br> <br>
+- Color Filter: highlight specific types of packets in the Wireshark interface. By applying color filters, you can quickly identify different kinds of traffic, making it easier to spot patterns and anomalies during analysis. <br> <br>
+- Custom Colors: Custom colors allow you to set specific colors for different types of packets. This customization enhances visual analysis and helps in quickly distinguishing between various traffic types. <br> <br>
+- Custom Columns: Enable you to add specific fields to the packet list pane. This feature allows you to display the most relevant information directly in the main view, making it easier to analyze the captured data.
+- Custom Profiles: Let you save different configurations of Wireshark settings, including filters, color schemes, and columns. This is useful for switching between different analysis setups quickly and efficiently. For example, you can use a profile to troubleshoot DHCP in ethernet captures and other profile to troubleshooit association in 802.11 Wi-Fi. 
+- Statistics, Graphics & Expert Reports: Some Protocol Analyzers provides various statistical tools and graphical representations to summarize and visualize the captured data. These tools can help identify trends, anomalies, and potential issues in the network traffic. For example, in 802.11 Wi-Fi you can analyze the airtime utilization filter in the expert view and identify high utilization over the time, the top talking APs, the top talking STAs, etc. 
+- Peer Map: A peer map is used to show frame exchanges between stations (STA’s) that are communicating within a WLAN BSS. This can be a valuable visual representation that may be very useful in troubleshooting WLAN problems.
+
+
+## Frame Analysis: `Time Metrics`
+
+- Absolute time (Arrival Time): The time when the packet was captured, provides the real-world time of packet capture for example date and hour. This metric is useful for correlating captured data with real-world events and time-based troubleshooting.
+- Delta time: Measures the time elapsed between successive packets. This metric helps in understanding the time intervals between packet transmissions, which can be useful for performance analysis.
+- Relative time: Cumulative time from a selected packet to another selected packet, it can be used to identify how long it takes for a frame exchange to occur. Some protocol analyzer software programs make this a very simple task. This information is valuable in determining problems such as latency or contention with specific frame exchanges. (ex. in a 4-way-handshake you can select the first frame, and then look how many time does the 4th frame took)
+
+ 
+
+
+
+
+
+
+
+
 
 ## 🪤🔁📡 802.11 Frame Capture: `Roaming Scenarios`
 - [Roaming Analysis using only a Mac and Wireshark](https://framebyframewifi.net/2018/08/04/roaming-analysis-using-only-a-mac-and-wireshark/)
