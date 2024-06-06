@@ -4986,9 +4986,9 @@ _Process of capturing, decoding, and interpreting network communicatios (data pa
 ## 🦈 `Protocol Analysers` & `Sniffers`
 _A protocol analyzer and a sniffer are software tools used to analyze and monitor/capture network traffic. Although they are often used interchangeably, there is a subtle difference between them._
 
-- `Sniffer`: Focuses on capturing and analyzing network packets in real time.
-- `protocol analyzer`: In contrast, a protocol analyzer is used to analyze network traffic that has been previously captured. In other words, a protocol analyzer is used to analyze and study network packets that have already been captured and stored. <br><br>
-    - Note: Today most of the tools like Wireshark work for both as sniffers and protocol analyzers at same time 
+- **`Sniffer`**: Focuses on capturing and analyzing network packets in real time.
+- **`Protocol Analyzer`**: In contrast, a protocol analyzer is used to analyze network traffic that has been previously captured. In other words, a protocol analyzer is used to analyze and study network packets that have already been captured and stored. <br><br>
+    - `Note`: Today most of the tools like Wireshark work as both: Sniffer and Protocol Analyzer at same time 
 
 ### 🦈🕵️🛠️ Protocol Analysis & Sniffers: `Capture & Analysis tools`
 _**Software that can capture and display network packets in a readable format, allowing you to examine the details of each packet and how they interact with each other. Some of them can make expert reports.** The following table provides a comparison of various tools used for network traffic analysis and packet capture. These tools range from open-source solutions to commercial products, each offering unique features suited for different needs in network monitoring, troubleshooting, and cybersecurity education. The tools include capabilities for real-time analysis, protocol decoding, AI-driven insights, and educational resources to help users effectively manage and optimize their network environments._
@@ -5147,40 +5147,40 @@ _Devices and methods for capturing 802.11 WiFi frames can be categorized into th
 
 ### Frame Analysis: Capture & Analyzing Tehcniques
 
-- Capture Filter:
-- Color Filter
-- Dwell Time: The dwell time is the amount of time a wireless network adapter will stay on a specific RF channel before moving the next channel that the device is capable of or is set to scan within the software. A shorter dwell time will capture less information on a specific channel but will allow the device to scan all channels at a quicker rate.
-- Event Trigger: Event triggers can be set to start and end packet captures based on a specific event. This will allow a protocol analyzer to capture frames that may be helpful in troubleshooting intermittent problems when a specific event happens. Event triggers can be very granular to allow for complex captures to be used with troubleshooting WLAN problems.
+- Capture Filter: Used to define which packets the sniffer should capture. By setting capture filters, you can limit the captured traffic to only the frames of interest, reducing the amount of data collected and focusing on relevant information. This is not recomended because sometimes you may lose some information. 
+- Display Filter: Used to refine the view of captured data in the Protocol Analyzer. They help isolate specific packets within a capture file based on various criteria, making it easier to focus on the relevant traffic during analysis. This is recommended, because you can capture all the data without using a capture filter and then isolate only the packets you want to see. 
+- Color Filter: highlight specific types of packets in the Wireshark interface. By applying color filters, you can quickly identify different kinds of traffic, making it easier to spot patterns and anomalies during analysis.
+- Custom Colors: Custom colors allow you to set specific colors for different types of packets. This customization enhances visual analysis and helps in quickly distinguishing between various traffic types.
+- Custom Columns: Enable you to add specific fields to the packet list pane. This feature allows you to display the most relevant information directly in the main view, making it easier to analyze the captured data.
+- Custom Profiles: Let you save different configurations of Wireshark settings, including filters, color schemes, and columns. This is useful for switching between different analysis setups quickly and efficiently. For example, you can use a profile to troubleshoot DHCP in ethernet captures and other profile to troubleshooit association in 802.11 Wi-Fi. 
+- Statistics & Graphics: Some Protocol Analyzers provides various statistical tools and graphical representations to summarize and visualize the captured data. These tools can help identify trends, anomalies, and potential issues in the network traffic.
+- Dwell Time Capturing: The dwell time is the amount of time a wireless network adapter will stay on a specific RF channel before moving the next channel that the device is capable of or is set to scan within the software. A shorter dwell time will capture less information on a specific channel but will allow the device to scan all channels at a quicker rate.
+- Event Trigger Capturing: Event triggers can be set to start and end packet captures based on a specific event. This will allow a protocol analyzer to capture frames that may be helpful in troubleshooting intermittent problems when a specific event happens. Event triggers can be very granular to allow for complex captures to be used with troubleshooting WLAN problems.
 - Peer Map: A peer map is used to show frame exchanges between stations (STA’s) that are communicating within a WLAN BSS. This can be a valuable visual representation that may be very useful in troubleshooting WLAN problems.
-- [`Display Filters` :: Wireshark]()
-- [`Capture Filters` :: Wireshark]()
-- [`Custom Colors` :: Wireshark]()
-- [`Custom Columns` :: Wireshark](https://www.youtube.com/watch?v=2GVW6bUG98A)
-- [`Custom Profile` :: Wireshark]()
 
 
-### Frame Analysis: Time Metrics
+### Frame Analysis: `Time Metrics`
 
-- Delta time
+- Delta time: Delta time measures the time difference between successive packets. This metric helps in understanding the time intervals between packet transmissions, which can be useful for performance analysis.
 - Relative time: The relative time in a protocol can be used to identify how long it takes for a frame exchange to occur. Some protocol analyzer software programs make this a very simple task. This information is valuable in determining problems such as latency with specific frame exchanges.
-- Arrival time
-- Actual time
+- Arrival time: Arrival time records the exact time a packet arrives at the capture interface. This timestamp is critical for precise sequence analysis and troubleshooting time-sensitive issues.
+- Actual time: Actual time provides the real-world time of packet capture. This metric is useful for correlating captured data with real-world events and time-based troubleshooting.
 
 
 
 
 ## 🤳🏾🪤📡 802.11 Frame Capture: `Location for Capture`
 _In 802.11 Frames Capture is very important the physical location of the adapter that will capture 802.11 Frames depending on what are we tring to capture, it's important to remember that we are capturing on wireless medium (RF flying through the air)_
-- [`Near the AP` :: Capture that AP sees]() For capturing the whole BSA & All traffic of clients subscribed to the AP (Tx/Rx)
-- [`Near the Client` :: Capture that Client sees]() For capturing a specific client having a problem
-- [`In the middle of Client <--> AP`]() For getting the whole picture of whats happening inside the BSA
+- `Near the AP`: Capture that AP sees :: This location is ideal for capturing all the traffic within the Basic Service Area (BSA) and the communications between the Access Point (AP) and its connected clients. It helps in analyzing the overall network performance and the interaction between the AP and multiple clients.
+- `Near the Client`: Capture that Client sees :: This setup is useful for diagnosing issues specific to a particular client. By capturing frames from the client's perspective, you can identify problems related to that client’s connection, such as connectivity issues, interference, or performance bottlenecks.
+- `In the middle of Client & AP`: For getting the whole picture of whats happening inside the BSA :: Capture a comprehensive view of the communication. Positioning the adapter between the client and the AP provides a balanced perspective of the entire interaction. This location allows for capturing both the client and AP transmissions, offering a full picture of the communication flow within the BSA.
 
-## 📡🪤🖧 802.11 Frame Catpure: `802.3 Wired Ethernet` + `802.11 Wireless Wi-Fi`
-_Sometimes is important to capture and troubleshoot wired captures in adition to 802.11 capture._
-- [EAP over LAN exchanges & RADIUS]() Simultaneos capture of Wi-Fi & Ethernet
-- [DHCP exchanges]()
-- [QoS]() Tags and Markings all the way through the network, for VoIP for example
-- [VLAN Tagging]()
+## 📡🪤🖧 802.11 Frame Catpure: `802.3 Wired Ethernet` + `802.11 Wireless Wi-Fi` at same time
+_Capturing and troubleshooting both wired (802.3 Ethernet) and wireless (802.11 Wi-Fi) traffic simultaneously is sometimes necessary. This dual approach provides a complete view of network interactions, especially for complex troubleshooting scenarios._
+- EAP over LAN exchanges & RADIUS: Simultaneous capture of Wi-Fi and Ethernet is crucial for analyzing authentication exchanges. By capturing both the wireless and wired sides of the network, you can ensure that authentication processes, such as those using EAP and RADIUS, are functioning correctly and efficiently.
+- DHCP exchanges: Capturing DHCP traffic on both Wi-Fi and Ethernet helps in diagnosing issues related to IP address assignment. It ensures that DHCP requests and responses are correctly handled across both mediums, providing a comprehensive view of the DHCP process.
+- QoS: Analyzing QoS tags and markings across the entire network, including both wireless and wired segments, is essential for applications like VoIP. This ensures that QoS configurations are consistent throughout the network, maintaining optimal performance and prioritization of critical traffic. It's important when troubleshooting QoS in wireless networks be sure that the QoS is working correctly in wired medium and the whole Distribution System.
+- VLAN Tagging: Capturing VLAN tags on both Wi-Fi and Ethernet is necessary for verifying correct VLAN configurations. This helps in ensuring that VLANs are properly propagated and handled across the entire network, facilitating accurate traffic segregation and management. For example when you configure a VLAN for specific SSID. 
 
 ## 📶📻🪤 802.11 Frame Capture: `One Channel` VS `Hopping` VS `Various Channels`
 - [Fz3r0 :: Channel Selection on each Scenario]() _`table`_
