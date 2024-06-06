@@ -5092,11 +5092,12 @@ _It is important to understand that Monitor Mode and Promiscuous Mode are differ
 - In Monitor Mode, the wireless network adapter captures all packets on the wireless network, regardless of their destination. This is useful for analyzing all wireless network traffic, including traffic not directed to your device. <br> <br>
 - To capture all frames on a wireless network, you need a WiFi 802.11 network adapter in Monitor Mode. To capture all packets on a wired Ethernet 802.3 network, use a wired network adapter in Promiscuous Mode. For capturing traffic on a mixed wireless and wired network, both a wireless adapter in Monitor Mode and a wired adapter in Promiscuous Mode are needed. <br> <br>
 - WiFi traffic in the air can be captured by anyone within range with the right tools, highlighting the importance of encryption and other security measures. <br> <br>
-    - IMPORTANT: On Apple macOS, you can put Wireshark in Monitor Mode without needing an additional USB adapter and drivers, unlike on Windows. In Linux, it depends on the adapter, distribution, drivers, updates, and other variables. 
-
+    - IMPORTANT: On Apple macOS, you can put Wireshark in Monitor Mode without needing an additional USB adapter and drivers, unlike on Windows. In Linux, it depends on the adapter, distribution, drivers, updates, and other variables.
+    - IMPORTANT: If you capture in USB 2.0 mode some frame may lose, and if you capture in UDB 3.0 mode you must be aware that some frames may be end being corrupted because you don't have enough SNR, USB 3.0 interference may increase your noise floor from 3 db's to 20 db's. So you need to choose the right adapter and the right USB hub to keep a max of 5 or 6 db's of noise floor increase to have the oportunity of demulate most of the captured frames.
 ---
 
 ### 🩺⚙️ Monitor Mode: `Drivers` & `Chipsets`
+_Selecting the right drivers and chipsets for capturing 802.11 frames in monitor mode is crucial for effective wireless network analysis. Not all Wi-Fi adapters support monitor mode, and the ability to capture all types of frames (management, control, and data) depends heavily on the hardware and its drivers._
 - [Fz3r0 Monitor Mode Drivers Lab]()
 - [Recomended Adapters & Firmwares for 802.11 Frame Capture]()
 - [Install Drivers for 802.11 capture in Linux]()
@@ -5104,13 +5105,14 @@ _It is important to understand that Monitor Mode and Promiscuous Mode are differ
 ---
 
 ### 🩺🪄 Monitor Mode: `Adapters`
-_The right adapter give you the right capture capabilites and scopes... There is no "the best" adaptor for every scenario_
+_The right adapter give you the right capture capabilites and scopes... There is no "the best" adaptor for every scenario. One important thing to remember is that you can't capture 3x3:3 spatial streams with a 2x2:2 adapter. Using incorrect adapter you will notice that you will be losing data._
 - [802.11 Capture Table]() 
 - [Alfa]() `Custom`
 - [Panda]() `Custom`
 - [TP-Link]() `Custom`
 - [WiSpy]() `Vendor Supported Licenced`
 - [Saavius]() `Vendor Supported Licenced`
+- Ruckus 4x4:4 AP: Good way to capture 4x4 spatial streams
 
 ---
 
