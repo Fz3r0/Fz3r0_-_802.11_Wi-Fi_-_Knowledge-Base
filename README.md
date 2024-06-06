@@ -5033,10 +5033,18 @@ _`Layer 2`:`MAC` & `layers 3-7 wired captures_
 
 ## Capturing Ethernet 802.3 Freames: Taffic Access Methods
 - [Different Traffic Access Methods :: Diagram](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/180ecca3-6586-47bd-85d7-02e26fd17ca5) <br><br>
-    - PC to switchport: Most basic capture method || Good for learning but no so usefull for troubleshooting || Only captures unicast traffic betweeen PC and network || Can't capture all the traffic of the network || Very easy configuration
-    - Span / Mirror: Uses the mirror configuration on a switch port || Does not pass critical Layer 1 and 2 errors || Cost time and resources for switch re-configuration || Easy to configure for Ad-Hoc Analysis || Does not requiere link downtime <br> <br>
-    - Inline: Uses the PC/capture in the middle of traffic || Potential point of failure || Expensive one-tool-to-one-link deployment || Relocating tool means link downtime <br> <br>
-    - Network Tap: Can capture Layer 1 and 2 errors || Can capture traffic like VLAN tagging || Passive - Network traffic flows regardless of power avaibility to the tap || Considered the best option for capture, but the most expensive
+    - From the Machine/PC interested in: Easiest & common way to capture || Good for learning but no so usefull for troubleshooting || Unicast to Machine ONLY (Other traffic not available) || Can't capture all the traffic of the network || No 802.1q  VLAN captured || Very easy configuration
+    - Port Monitor / Span / Mirror: Easy to use if available on the Switch, uses the mirror configuration on a switch port || Does not pass critical Layer 1 and 2 errors || Capture 802.1q depending on vendor || Cost time and resources for switch re-configuration || Easy to configure for Ad-Hoc Analysis || Does not requiere link downtime || Packet loss at high traffic rate <br> <br>
+    - In-line / Machine-in-the-Middle: Uses the PC/capture in the middle of traffic || Potential point of failure || Expensive one-tool-to-one-link deployment || 2 PC NICs are needed || Relocating tool means link downtime <br> <br>
+    - Network Tap: Can capture Layer 1 and 2 errors || Can capture traffic like VLAN tagging || Passive - Network traffic flows regardless of power avaibility to the tap || All packets of Ethernet/Full Duplex captured including 802.1q || Considered the best option for capture, but the most expensive
+    - Ethernet Hub: Not optimal for network troubleshooting || Hubs are legacy || Affect Eth Duplex Traffic
+    - MITM (Man-in.the-middle) & MAC Flooding: ARP Poisoning attack used to Confuses Switches || Malicious way to capture traffic || Downtime and glitches on network may expected like DoS || Not a recommended way to troubleshooting networks
+
+
+
+
+
+
 
 ### 🖧🪤💰 802.3 Ethernet Switch Media Capture: `Network Taps`
 - [`Network Tap` in 30 Seconds @ David Bombal](https://www.youtube.com/shorts/l-wQVuqL2XA) _`¡Vamos Bombal!`_
@@ -5141,7 +5149,7 @@ _Devices and methods for capturing 802.11 WiFi frames can be categorized into th
 
 
 
-## Frame Capture: Capture Options
+## Frame Capture: `Capture Options`
 
 - Capture Title: Always name your captures with much details as possible like where, when, why (ex. 2024-06-06_13-25hrs_802-11_AP-Room-1_Authentication_iphone-f0-f0-f0-f0-f0-f0_-_01.pcap) <br> <br>
 - Continious Capture: Recycle the capture buffer, which is a temporary buffer where the captured packets are stored. 
@@ -5260,14 +5268,8 @@ About Wireshark
 - [`Monitor Port` versus `Network Tap`](https://wiki.wireshark.org/CaptureSetup/Ethernet#monitor-port-versus-network-tap) Some arguments for using a passive network tap rather than a monitor port
 - [`802.1q` :: `VLANs` Capture](https://wiki.wireshark.org/CaptureSetup/Ethernet#sniffing-802-1q-vlan-tags) Only captured with Network Taps & Supported Monitor Switches
 
-## 🖧🪤 Switched Media Ethernet: `Capture Options`
-- [Capture: `From the Machine/PC interested in`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-on-the-machine-you-re-interested-in) Easiest & common way to capture || No 802.1q captured || **Unicast to Machine ONLY** (Other traffic not available)
-- [Capture: `Port Monitor/Mirror Mode AKA Span (Switch Integrated)`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-a-monitor-mode-of-the-switch) Easy to use if available on SW || Capture 802.1q depending on vendor || Packet loss at high traffic rate
-- [Capture: `Network Tap`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-a-network-tap) All packets of Eth-FullDuplex captured including 802.1q || won't affect Ethernet traffic || Expensive but effective Tool
-- [Capture: `Machine-in-the-middle AKA In-Line`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-a-machine-in-the-middle) Dedicated machine (PC) configuration required || Only 2 PC's NICs are needed
-- [Capture: `Ethernet Hub`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-an-ethernet-hub) Not optimal for network troubleshooting || Hubs are legacy || Affect Eth Duplex Traffic
-- [Capture: `MITM (Man-in.the-middle)`](https://wiki.wireshark.org/CaptureSetup/Ethernet#capture-using-a-mitm-man-in-the-middle-software) ARP Poisoning || Network Attack || Confuses Switches
-- [Capture: `MAC Flooding`](https://wiki.wireshark.org/CaptureSetup/Ethernet#mac-flooding) ARP Poisoning || Network Attack || Confuses Switches
+
+
  
 ## 🦈🕵️ Wireshark: `Filters` 
 - [Wireshark Filter Manual Page - Wireshark display filter syntax and reference](https://www.wireshark.org/docs/man-pages/wireshark-filter.html)
