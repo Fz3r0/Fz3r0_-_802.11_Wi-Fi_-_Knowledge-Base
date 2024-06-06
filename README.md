@@ -5070,39 +5070,76 @@ _Capturing and analyzing traffic on 802.3 Ethernet networks is simpler compared 
 ### Key notes on captureing 802.11 Frames
 _When dealing with WiFi networks, several factors need to be considered:_
 - Capture all types of 802.11 frames, not just management or data frames.
-- Choose the right hardware and software tools, including compatible drivers and operating systems.
+- Choose the right hardware and software tools, including compatible drivers, monitor mode support and operating systems.
 - Select the appropriate band and channel using tools like spectrum analyzers and monitoring tools.
 - Synchronize the capture device’s clock to avoid desynchronization.
 
+
+
+## 🛜👂🩺 Adapter Modes: `Monitor Mode` & `Promiscous Mode`
+_It is important to understand that Monitor Mode and Promiscuous Mode are different concepts. For Ethernet capture, only Promiscuous Mode is needed. However, capturing WiFi traffic is more complex and requires both Monitor Mode and Promiscuous Mode._
+
+### Adapter Modes: `Promiscous Mode`
+- This mode should always be enabled when capturing frames, whether Ethernet or WiFi. It allows a network adapter (wired or wireless) to capture all packets on the network, regardless of their destination. This means that in Promiscuous Mode, packets not intended for your device can be captured, which is useful for network analysis. <br> <br>
+- Promiscuous Mode lets an interface or network adapter "listen" to all traffic passing through, even if it's not specifically addressed to that device or belongs to a different subnet or VLAN. As long as there is traffic on the interface, it can be captured.
+    - IMPORTANT: Promiscuous Mode cannot capture unicast traffic between two devices that are not the device in promiscuous mode because this traffic is transmitted through other interfaces, either via a switch or directly peer-to-peer. <br> <br>
+- Promiscous Mode for 802.3 Ethernet: Simply connect the Ethernet cable to the interface, enable Promiscuous Mode, and you can start capturing traffic. <br> <br>
+- Promiscous Mode for 802.11 Wi-Fi: It's more complex; besides enabling Promiscuous Mode, additional hardware tools are needed, and drivers must be configured for Monitor Mode. The operating system, hardware (WiFi adapters), and software (protocol analyzers and sniffers) must support Monitor Mode.
+
+### Adapter Modes: `Monitor Mode`
+- Monitor Mode is a special mode where a wireless network adapter is configured to capture all wireless network traffic, including packets addressed to MAC addresses other than the adapter itself. This is similar to Promiscuous Mode but for wireless networks, and Promiscuous Mode is still required. <br> <br>
+- In Monitor Mode, the wireless network adapter captures all packets on the wireless network, regardless of their destination. This is useful for analyzing all wireless network traffic, including traffic not directed to your device. <br> <br>
+- To capture all frames on a wireless network, you need a WiFi 802.11 network adapter in Monitor Mode. To capture all packets on a wired Ethernet 802.3 network, use a wired network adapter in Promiscuous Mode. For capturing traffic on a mixed wireless and wired network, both a wireless adapter in Monitor Mode and a wired adapter in Promiscuous Mode are needed. <br> <br>
+- WiFi traffic in the air can be captured by anyone within range with the right tools, highlighting the importance of encryption and other security measures. <br> <br>
+    - IMPORTANT: On Apple macOS, you can put Wireshark in Monitor Mode without needing an additional USB adapter and drivers, unlike on Windows. In Linux, it depends on the adapter, distribution, drivers, updates, and other variables. 
+
+---
+
+### 🩺⚙️ Monitor Mode: `Drivers` & `Chipsets`
+- [Fz3r0 Monitor Mode Drivers Lab]()
+- [Recomended Adapters & Firmwares for 802.11 Frame Capture]()
+- [Install Drivers for 802.11 capture in Linux]()
+
+---
+
+### 🩺🪄 Monitor Mode: `Adapters`
+_The right adapter give you the right capture capabilites and scopes... There is no "the best" adaptor for every scenario_
+- [802.11 Capture Table]() 
+- [Alfa]() `Custom`
+- [Panda]() `Custom`
+- [TP-Link]() `Custom`
+- [WiSpy]() `Vendor Supported Licenced`
+- [Saavius]() `Vendor Supported Licenced`
+
+---
+
+### 🩺📡 Monitor Mode: `Infrestructure APs`
+_The right adapter give you the right capture capabilites and scopes... There is no "the best" adaptor for every scenario_
+- [Ruckus R850]() `4x4 spatial streams` | `2.4/5/6 GHz`
+
+
+
+
+
+
+
+
+
 ## 🛜🪤🎣 Protocol Analysis: `802.11 Frame Capture Options`
-_There are basically 3 different options to capture 802.11 traffic & communications. At the end, it mostly depends on the resources and needs_
+_Devices and methods for capturing 802.11 WiFi frames can be categorized into three main types. At the end, it mostly depends on the resources and needs_
 
-1. Mobile
-2. Infraestructure
-3. WIPS / Sensors
-4. Distributed Forensics
+1. Mobile Capture: This involves using mobile devices like laptops with Linux and USB WiFi adapters (e.g., Alfa adapters) to capture WiFi traffic. It's portable and flexible but may require extensive preparation and can be limited in terms of range and capacity.
+2. Infrastructure Capture: This uses professional wireless network devices (e.g., Ruckus Networks or Ubiquiti) to capture traffic via Access Points (APs) while also providing network connectivity. It offers scalability and efficiency but can be costly due to the need for specialized hardware.
+3. Distributed Capture (WIPS & Sensors): This involves specialized sensors (e.g., Multi-Sensor Wireless Overlay Systems, Wireless Intrusion Prevention Systems - WIPS) placed at various points in the network to capture traffic on multiple channels simultaneously. It provides detailed network activity analysis but is more complex and expensive to set up and manage.
 
-### 💻🦈 802.11 Frame Capture: `Mobile`
-- [Capturing Wireless Traffic from a Client Machine :: MacBook :: Linux :: Wireshark](https://documentation.meraki.com/MR/Monitoring_and_Reporting/Capturing_Wireless_Traffic_from_a_Client_Machine)
-- [airmon]()
-- [Linux Based + Wi-Fi Adapter]()
-- [Mac-OS Based: Internal Adapter Capability]()
-- [Wireshark 802.11 Monitor Mode & Compatibility]()
-- [Wi-Spy + Software based]()
-- [Wlan PI]()
 
-### 📡🐶 802.11 Frame Capture: `Infrastructure` _(WLC or AP)_
-- [Ruckus AP :: 802.11 Capture]()
-- [Ruckus SmartZone :: 802.11 Caoture]()
-- [Cisco Air Marshall]()
+### 802.11 Frame Capture Options: Comparison Table
 
-### 📡👮 802.11 Frame Capture: `WIPS Sensors`
-- [Cisco Adaptive wIPS](https://www.cisco.com/c/en/us/td/docs/wireless/technology/wips/deployment/guide/WiPS_deployment_guide.html)
-- [Arista WIPS](https://www.arista.com/assets/data/pdf/Whitepapers/Arista-WIPS-Whitepaper.pdf)
-- [Fortinet WIPS](https://community.fortinet.com/t5/Wireless-Controller/Technical-Tip-WIPS-Configuration/ta-p/194512)
-
-### 📡🏭 Protocol Analysis: `Distributed Forensics`
-- [Omnipeek]()
+| **Capture Method**        | **Description**                                                                                                                                               | **Pros**                                                                                       | **Cons**                                                                                          | **Accessibility and Cost**                                                                       | **Examples**                                                                                     |
+|---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| **Mobile Capture**        | Uses mobile devices like laptops with Linux and USB WiFi adapters to capture traffic.                                                                          | Portable and flexible, relatively low cost, no specialized hardware needed                    | Limited range and capacity, requires extensive setup and configuration, potential driver issues  | Most accessible, can be cost-effective, range from simple setups (e.g., Raspberry Pi) to complex systems with high-end computers   | - Capturing Wireless Traffic from a Client Machine <br> - airmon <br> - Linux Based + Wi-Fi Adapter <br> - Mac-OS Based: Internal Adapter Capability <br> - Wireshark 802.11 Monitor Mode & Compatibility <br> - Wi-Spy + Software based <br> - Wlan PI |
+| **Infrastructure Capture**| Utilizes professional wireless devices like Ruckus Networks or Ubiquiti APs to capture traffic while providing network connectivity.                           | Scalable, efficient, centralized management, real-time streaming to tools like Wireshark      | High cost due to specialized hardware, complexity in setup and management                        | More expensive due to specialized devices, standalone APs like Ubiquiti or Ruckus Unleashed can be more affordable alternatives   | - Ruckus AP 802.11 Capture <br> - Ruckus SmartZone 802.11 Capture <br> - Cisco Air Marshall - Cisco APs & Meraki |
+| **Distributed Capture**   | Employs specialized sensors (e.g., Multi-Sensor Wireless Overlay Systems, WIPS) placed at various points to capture traffic on multiple channels simultaneously.     | Detailed network activity analysis, captures traffic from different locations                 | Very high cost, complex setup and management, requires specialized knowledge and equipment       | Most expensive and complex, requires specialized sensors and systems, less accessible for general use                              | - Cisco Adaptive wIPS <br> - Arista WIPS <br> - Fortinet WIPS <br> - Omnipeek |
 
 
 
@@ -5129,28 +5166,6 @@ _There are basically 3 different options to capture 802.11 traffic & communicati
 
 
 
-## 🛜👂🩺 Adapter Modes: `Monitor Mode` & `Promiscous Mode`
-- [`Promiscous Mode` & `Monitor Mode`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md#-monitor-mode--promiscous-mode)
-    -[`Promiscous Mode`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md#-promiscous-mode)
-    -[`Monitor Mode`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md#-promiscous-mode)
-
-### 🩺⚙️ Monitor Mode: `Drivers` & `Chipsets`
-- [Fz3r0 Monitor Mode Drivers Lab]()
-- [Recomended Adapters & Firmwares for 802.11 Frame Capture]()
-- [Install Drivers for 802.11 capture in Linux]()
-
-### 🩺🪄 Monitor Mode: `Adapters`
-_The right adapter give you the right capture capabilites and scopes... There is no "the best" adaptor for every scenario_
-- [802.11 Capture Table]() 
-- [Alfa]() `Custom`
-- [Panda]() `Custom`
-- [TP-Link]() `Custom`
-- [WiSpy]() `Vendor Supported Licenced`
-- [Saavius]() `Vendor Supported Licenced`
-
-### 🩺📡 Monitor Mode: `Infrestructure APs`
-_The right adapter give you the right capture capabilites and scopes... There is no "the best" adaptor for every scenario_
-- [Ruckus R850]() `4x4 spatial streams` | `2.4/5/6 GHz`
 
 ## 🤳🏾🪤📡 802.11 Frame Capture: `Location for Capture`
 _In 802.11 Frames Capture is very important the physical location of the adapter that will capture 802.11 Frames depending on what are we tring to capture, it's important to remember that we are capturing on wireless medium (RF flying through the air)_
