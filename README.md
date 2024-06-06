@@ -5175,41 +5175,32 @@ _In 802.11 Frames Capture is very important the physical location of the adapter
 
 ## 📡🪤🖧 802.11 Frame Catpure: `802.3 Wired Ethernet` + `802.11 Wireless Wi-Fi` at same time
 _Capturing and troubleshooting both wired (802.3 Ethernet) and wireless (802.11 Wi-Fi) traffic simultaneously is sometimes necessary. This dual approach provides a complete view of network interactions, especially for complex troubleshooting scenarios._
-- EAP over LAN exchanges & RADIUS: Simultaneous capture of Wi-Fi and Ethernet is crucial for analyzing authentication exchanges. By capturing both the wireless and wired sides of the network, you can ensure that authentication processes, such as those using EAP and RADIUS, are functioning correctly and efficiently.
-- DHCP exchanges: Capturing DHCP traffic on both Wi-Fi and Ethernet helps in diagnosing issues related to IP address assignment. It ensures that DHCP requests and responses are correctly handled across both mediums, providing a comprehensive view of the DHCP process.
-- QoS: Analyzing QoS tags and markings across the entire network, including both wireless and wired segments, is essential for applications like VoIP. This ensures that QoS configurations are consistent throughout the network, maintaining optimal performance and prioritization of critical traffic. It's important when troubleshooting QoS in wireless networks be sure that the QoS is working correctly in wired medium and the whole Distribution System.
-- VLAN Tagging: Capturing VLAN tags on both Wi-Fi and Ethernet is necessary for verifying correct VLAN configurations. This helps in ensuring that VLANs are properly propagated and handled across the entire network, facilitating accurate traffic segregation and management. For example when you configure a VLAN for specific SSID. 
+- EAP over LAN exchanges & RADIUS: Simultaneous capture of Wi-Fi and Ethernet is crucial for analyzing authentication exchanges. By capturing both the wireless and wired sides of the network, you can ensure that authentication processes, such as those using EAP and RADIUS, are functioning correctly and efficiently. <br> <br>
+- DHCP exchanges: Capturing DHCP traffic on both Wi-Fi and Ethernet helps in diagnosing issues related to IP address assignment. It ensures that DHCP requests and responses are correctly handled across both mediums, providing a comprehensive view of the DHCP process. <br> <br>
+- QoS: Analyzing QoS tags and markings across the entire network, including both wireless and wired segments, is essential for applications like VoIP. This ensures that QoS configurations are consistent throughout the network, maintaining optimal performance and prioritization of critical traffic. It's important when troubleshooting QoS in wireless networks be sure that the QoS is working correctly in wired medium and the whole Distribution System. <br> <br>
+- VLAN Tagging: Capturing VLAN tags on both Wi-Fi and Ethernet is necessary for verifying correct VLAN VS SSIDs configurations. This helps in ensuring that VLANs are properly propagated and handled across the entire network, facilitating accurate traffic segregation and management. For example when you configure a VLAN for specific SSID. 
 
 ## Frame Analysis: `Packet Views`
 
-- List View: This is the main view of a protocol analyzer and shows the list of all the packets captured. Wireshark has this in the top of a default configuration. 
-- Decode View: Very important view in protocol analyzers. It shows a "human read" format organized from lower layers to upper layers in a "directory" style. Wireshark has this in the bottom left of a default configuration. 
+- List View: This is the main view of a protocol analyzer and shows the list of all the packets captured. Wireshark has this in the top of a default configuration. <br> <br>
+- Decode View: Very important view in protocol analyzers. It shows a "human read" format organized from lower layers to upper layers in a "directory" style. Wireshark has this in the bottom left of a default configuration. <br> <br> 
 - HEX / binary View: This is the HEX or binary version of the decode view. It shows a "machine read" format of the packet. Wireshark has this in the bottom right of a default configuration.  <br> <br>
 - Display Filter: Used to refine the view of captured data in the Protocol Analyzer. They help isolate specific packets within a capture file based on various criteria, making it easier to focus on the relevant traffic during analysis. This is recommended, because you can capture all the data without using a capture filter and then isolate only the packets you want to see. <br> <br>
 - Color Filter: highlight specific types of packets in the Wireshark interface. By applying color filters, you can quickly identify different kinds of traffic, making it easier to spot patterns and anomalies during analysis. <br> <br>
 - Custom Colors: Custom colors allow you to set specific colors for different types of packets. This customization enhances visual analysis and helps in quickly distinguishing between various traffic types. <br> <br>
-- Custom Columns: Enable you to add specific fields to the packet list pane. This feature allows you to display the most relevant information directly in the main view, making it easier to analyze the captured data.
-- Custom Profiles: Let you save different configurations of Wireshark settings, including filters, color schemes, and columns. This is useful for switching between different analysis setups quickly and efficiently. For example, you can use a profile to troubleshoot DHCP in ethernet captures and other profile to troubleshooit association in 802.11 Wi-Fi. 
-- Statistics, Graphics & Expert Reports: Some Protocol Analyzers provides various statistical tools and graphical representations to summarize and visualize the captured data. These tools can help identify trends, anomalies, and potential issues in the network traffic. For example, in 802.11 Wi-Fi you can analyze the airtime utilization filter in the expert view and identify high utilization over the time, the top talking APs, the top talking STAs, etc. 
+- Custom Columns: Enable you to add specific fields to the packet list pane. This feature allows you to display the most relevant information directly in the main view, making it easier to analyze the captured data. <br> <br>
+- Custom Profiles: Let you save different configurations of Wireshark settings, including filters, color schemes, and columns. This is useful for switching between different analysis setups quickly and efficiently. For example, you can use a profile to troubleshoot DHCP in ethernet captures and other profile to troubleshooit association in 802.11 Wi-Fi. <br> <br>
+- Statistics, Graphics & Expert Reports: Some Protocol Analyzers provides various statistical tools and graphical representations to summarize and visualize the captured data. These tools can help identify trends, anomalies, and potential issues in the network traffic. For example, in 802.11 Wi-Fi you can analyze the airtime utilization filter in the expert view and identify high utilization over the time, the top talking APs, the top talking STAs, etc. <br> <br>
 - Peer Map: A peer map is used to show frame exchanges between stations (STA’s) that are communicating within a WLAN BSS. This can be a valuable visual representation that may be very useful in troubleshooting WLAN problems.
 
 
 ## Frame Analysis: `Time Metrics`
 
-- Absolute time (Arrival Time): The time when the packet was captured, provides the real-world time of packet capture for example date and hour. This metric is useful for correlating captured data with real-world events and time-based troubleshooting.
-- Delta time: Measures the time elapsed between successive packets. This metric helps in understanding the time intervals between packet transmissions, which can be useful for performance analysis.
-- Relative time: Cumulative time from a selected packet to another selected packet, it can be used to identify how long it takes for a frame exchange to occur. Some protocol analyzer software programs make this a very simple task. This information is valuable in determining problems such as latency or contention with specific frame exchanges. (ex. in a 4-way-handshake you can select the first frame, and then look how many time does the 4th frame took)
+- Absolute time: This is the actual capture date and time based on the time zone of the capture device, this means, the time when the packet was captured, provides the real-world time of packet capture for example date and hour. This metric is useful for correlating captured data with real-world events and time-based troubleshooting.
+- Delta time: This is the elapsed time from the previous packet to the current packet, this means, measures the time elapsed between successive packets. This metric helps in understanding the time intervals between packet transmissions, which can be useful for performance analysis.
+- Relative time: This is the time from the first packet in a capture file, but it can be also similar to the Seconds Since Beginning of Capture option. Cumulative time from a selected packet to another selected packet, it can be used to identify how long it takes for a frame exchange to occur. Some protocol analyzer software programs make this a very simple task. This information is valuable in determining problems such as latency or contention with specific frame exchanges. (ex. in a 4-way-handshake you can select the first frame, and then look how many time does the 4th frame took)
 
  
-
-
-
-
-
-
-
-
-
 ## 🪤🔁📡 802.11 Frame Capture: `Roaming Scenarios`
 - [Roaming Analysis using only a Mac and Wireshark](https://framebyframewifi.net/2018/08/04/roaming-analysis-using-only-a-mac-and-wireshark/)
 - [How to check in Wireshark if a Wi-Fi Network support 802.11k (roaming)](https://semfionetworks.com/blog/wireshark-how-to-check-if-a-wi-fi-network-supports-80211k/)
