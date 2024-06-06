@@ -2176,7 +2176,7 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
     - TSFT (Time Synchronization Function Timer) = `radiotap.present.tsft == 1`
     - Flags = `radiotap.present.flags == 1`
     - Rate = `radiotap.present.rate == 1`
-    - Channel = `radiotap.present.channel == 1`
+    - Channel (channel where frame was captured) = `radiotap.present.channel == 1`
     - FHSS (Frequency-hopping spread spectrum) = `radiotap.present.fhss == 1`
     - dBm Antenna Signal = `radiotap.present.dbm_antsignal == 1`
     - dBm Antenna Noise = `radiotap.present.dbm_antnoise == 1`
@@ -5153,10 +5153,26 @@ _Devices and methods for capturing 802.11 WiFi frames can be categorized into th
 | **Distributed Capture**   | Employs specialized sensors (e.g., Multi-Sensor Wireless Overlay Systems, WIPS) placed at various points to capture traffic on multiple channels simultaneously.     | Detailed network activity analysis, captures traffic from different locations                 | Very high cost, complex setup and management, requires specialized knowledge and equipment       | Most expensive and complex, requires specialized sensors and systems, less accessible for general use                              | , Omnipeek, Cisco Adaptive wIPS, Arista WIPS, Fortinet WIPS |
 
 
+### Frame Analysis: Capture Options
 
+- Capture Title: Always name your captures with much details as possible like where, when, why (ex. 2024-06-06_13-25hrs_802-11_AP-Room-1_Authentication_iphone-f0-f0-f0-f0-f0-f0_-_01.pcap) <br> <br>
+- Continious Capture: Recycle the capture buffer, which is a temporary buffer where the captured packets are stored. 
+ (Buffer becomes a FIFO buffer) (ex. each 10mb of capture the buffer will reset). <br> <br>
+- Save to Disk: Save all packets to disk, specify the name, size and save/stop criteria (ex. Set Title + 512mb file size + Stop After 2048mb captured + Keep Most Recent 3 files + New File every 1 hour) <br> <br>
+- Packet Slicing: Limits the portion of the packet to be captured, used to save disk space or ensure confidentiality. (Warning: Avoid cutting off header information, checksums may become invalid)(ex. Limit each packet to 4500 bytes, this will allow to capture whole beacon frames, but cut large data frames payload that is non critical for analysis) <br> <br>
+- Capture Buffer: The amount of memory allocated to hold packets (ex. Buffer Size = 10mb)
 
-### Frame Analysis: Capture & Analyzing Tehcniques
+### Frame Capture: `Channel Capture & Configuration`
 
+- Fixed Channel: Capture in one single channel :: For troubleshooting a particular device that is using a particular channel. Some adapters can be configured even with channel bandwith, primary or secondary channel, etc. (ex. capturing only channel 11 of 2.4 GHz because AP and STA are using that channel) <br> <br>
+- Channel Scan: Capture the whole picture of the BSA channels and bands :: Select every single channel to do a channel hopping method, some adapters can go from 2.4 GHz to 5 GHz hopping. The tradeoff of this capture technique is that you will miss what is happening in others channels while you are hopping from one channel to another.
+- Fixed Channel + Different Channels: If you have more than 1 adapter you can capture on different channels at same time and you won't miss anything. (ex. with 3 adapters you can capture channel 1, 6 & 11 of 2.4 GHz at same time)
+
+### Frame Analysis: Packet Views & Features
+
+- List View: This is the main view of a protocol analyzer and shows the list of all the packets captured. Wireshark has this in the top of a default configuration. 
+- Decode View: Very important view in protocol analyzers. It shows a "human read" format organized from lower layers to upper layers in a "directory" style. Wireshark has this in the bottom left of a default configuration. 
+- HEX / binary View: This is the HEX or binary version of the decode view. It shows a "machine read" format of the packet. Wireshark has this in the bottom right of a default configuration.  
 - Capture Filter: Used to define which packets the sniffer should capture. By setting capture filters, you can limit the captured traffic to only the frames of interest, reducing the amount of data collected and focusing on relevant information. This is not recomended because sometimes you may lose some information. <br> <br>
 - Display Filter: Used to refine the view of captured data in the Protocol Analyzer. They help isolate specific packets within a capture file based on various criteria, making it easier to focus on the relevant traffic during analysis. This is recommended, because you can capture all the data without using a capture filter and then isolate only the packets you want to see. <br> <br>
 - Color Filter: highlight specific types of packets in the Wireshark interface. By applying color filters, you can quickly identify different kinds of traffic, making it easier to spot patterns and anomalies during analysis. <br> <br>
@@ -5171,10 +5187,12 @@ _Devices and methods for capturing 802.11 WiFi frames can be categorized into th
 
 ### Frame Analysis: `Time Metrics`
 
-- Delta time: Delta time measures the time difference between successive packets. This metric helps in understanding the time intervals between packet transmissions, which can be useful for performance analysis.
-- Relative time: The relative time in a protocol can be used to identify how long it takes for a frame exchange to occur. Some protocol analyzer software programs make this a very simple task. This information is valuable in determining problems such as latency with specific frame exchanges.
-- Arrival time: Arrival time records the exact time a packet arrives at the capture interface. This timestamp is critical for precise sequence analysis and troubleshooting time-sensitive issues.
-- Actual time: Actual time provides the real-world time of packet capture. This metric is useful for correlating captured data with real-world events and time-based troubleshooting.
+- Absolute time: The time when the packet was captured, provides the real-world time of packet capture for example date and hour. This metric is useful for correlating captured data with real-world events and time-based troubleshooting.
+- Delta time: Measures the time elapsed between successive packets. This metric helps in understanding the time intervals between packet transmissions, which can be useful for performance analysis.
+- Relative time: Cumulative time from a selected packet to another selected packet, it can be used to identify how long it takes for a frame exchange to occur. Some protocol analyzer software programs make this a very simple task. This information is valuable in determining problems such as latency or contention with specific frame exchanges. (ex. in a 4-way-handshake you can select the first frame, and then look how many time does the 4th frame took)
+- Arrival time: Arrival time records the exact time a packet arrives at the capture interface. This timestamp helps for precise sequence analysis and troubleshooting time-sensitive issues.
+ 
+
 
 
 
