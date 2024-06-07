@@ -5036,8 +5036,8 @@ _`Layer 2`:`MAC` & `layers 3-7 wired captures_
     - From the Machine/PC interested in: Easiest & common way to capture || Good for learning but no so usefull for troubleshooting || Unicast to Machine ONLY (Other traffic not available) || Can't capture all the traffic of the network || No 802.1q  VLAN captured || Very easy configuration <br> <br>
     - Port Monitor / Span / Mirror: Easy to use if available on the Switch, uses the mirror configuration on a switch port || Does not pass critical Layer 1 and 2 errors || Capture 802.1q depending on vendor || Cost time and resources for switch re-configuration || Easy to configure for Ad-Hoc Analysis || Does not requiere link downtime || Packet loss at high traffic rate <br> <br>
     - In-line / Machine-in-the-Middle: Uses the PC/capture in the middle of traffic || Potential point of failure || Expensive one-tool-to-one-link deployment || 2 PC NICs are needed || Relocating tool means link downtime <br> <br>
-    - Network Tap: Can capture Layer 1 and 2 errors || Can capture traffic like VLAN tagging || Passive - Network traffic flows regardless of power avaibility to the tap || All packets of Ethernet/Full Duplex captured including 802.1q || Considered the best option for capture, but the most expensive
-    - Ethernet Hub: Not optimal for network troubleshooting || Hubs are legacy || Affect Eth Duplex Traffic
+    - Network Tap: Can capture Layer 1 and 2 errors || Can capture traffic like VLAN tagging || Passive - Network traffic flows regardless of power avaibility to the tap || All packets of Ethernet/Full Duplex captured including 802.1q || Considered the best option for capture, but the most expensive <br> <br>
+    - Ethernet Hub: Not optimal for network troubleshooting || Hubs are legacy || Affect Eth Duplex Traffic <br> <br>
     - MITM (Man-in.the-middle) & MAC Flooding: ARP Poisoning attack used to Confuses Switches || Malicious way to capture traffic || Downtime and glitches on network may expected like DoS || Not a recommended way to troubleshooting networks
 
 
