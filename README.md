@@ -4280,12 +4280,22 @@ _A client STA can be in one of two Power Management modes:_
 
 - TIM (Traffic Indication Map): It's a IE (Information Element) with the two following Sub-Fields: <br> <br>
     - Element ID (1 byte / 8 bits): Value of 5 indicates is a TIM. <br> <br>
+        - Element ID = 5 :: `wlan.tag.number == 5` <br> <br>
     - Lenght (1 byte / 8 bits): Lenght of the information carrying fields (DTIM Count, DTIM Period, Bitmap Control, Partial Virtual Bitmap). <br> <br>
+        - Tag Lenght = 4 :: `wlan.tag.length == 4` <br> <br>
     - DTIM (Delivery-TIM) Count (1 byte / 8 bits): Incremental `Beacon Frames` until the next DTIM. <br> <br>
+        - DTIM = 0 ==>> **Beacon is a DTIM** :: `wlan.tim.dtim_count == 0`
+        - DTIM = 1 ==>> **1 Beacon left until next DTIM** :: `wlan.tim.dtim_count == 1`
+        - DTIM = 2 ==>> **2 Beacons left until next DTIM** :: `wlan.tim.dtim_count == 2` <br> <br>
     - DTIM (Delivery-TIM) Period (1 byte / 8 bits): Number of `Beacon Frames` between DTIM beacon. <br> <br>
-    - Bitmap Control (1 byte / 8 bits): Indicates if **Multicast/Broadcast** traffic are buffered at the AP & use a space save called `bitmap offset`. <br> <br>
-    - PVB (Partial Virtual Map): (1 byte - 251 bytes): Series of flags indicating whether each associated STA has **Unicast** frames buffered at the AP. Each bit in this field corresponds to an AID of a STA.
-
+        - DTIM period = 3 ==>> **Every 2rd beacon will be a DTIM** _(ex. Fz3r0_CWAP_SSID)_ :: `wlan.tim.dtim_period == 2`
+        - DTIM period = 3 ==>> **Every 3rd beacon will be a DTIM** _(ex. Muegahouse_SSID)_ :: `wlan.tim.dtim_period == 3` <br> <br>
+    - Bitmap Control (1 byte / 8 bits): Indicates if **Multicast/Broadcast** traffic are buffered at the AP (true or false) & also uses a space save called `bitmap offset` (HEX). <br> <br>
+        - Bitmap Control = 1 ==>> **There's a multicast/broadcast frame buffering for any STA** :: `wlan.tim.bmapctl.multicast == 1`
+        - Bitmap Control = 0 ==>> **No multicast/broadcast frames are buffering** :: `wlan.tim.bmapctl.multicast == 0` <br> <br>
+    - PVB (Partial Virtual Map): (1 byte - 251 bytes): Series of flags indicating whether each associated STA has **Unicast** frames buffered at the AP. Each bit in this field corresponds to an AID of a STA. <br> <br>
+        - PVB = 0 ==>> **No unicast frames are buffered** :: `wlan.tim.partial_virtual_bitmap == 00` 
+        - PVB more than 0 ==>> **Unicast frames are buffered** :: `wlan.tim.partial_virtual_bitmap > 00`
 
 
 
