@@ -4235,12 +4235,14 @@ _The primary power save mechanism is based on a low-power state in which the rad
 _A wireless client STA enters Power Save (PS) mode in which the radio power state can transition between awake and doze according to the 802.11 power management rules. A radio STA can be in one of two Power states:_
 
 - **`Awake`**: the radio is constantly powered and able to receive and transmit. <br> <br>
-- **`Doze`**: the radio is not able to receive and transmit and consumes low power. STA is allowed to go to "Doze" state after an AP has been notified that station is about to enter power save mode. STA will use `Null Data Frame` or `QoS Null Data Frame` with bit `Power Management / Power Save Mode = 1`.
+- **`Doze`**: the radio is not able to receive and transmit and consumes low power. STA is allowed to go to "Doze" state after an AP has been notified that station is about to enter power save mode. STA will use `Null Data Frame` or `QoS Null Data Frame` with bit `Power Management / Power Save Mode = 1` to inform the AP that it will going to "Doze" state.
 
 STA will go from `Doze` to `Awake` state for one of two reasons: 
 
 1. If STA have a frame to send.
 2. Based on the STA internal timing mechanism.
+
+---
 
 ### Power Management Modes
 _A client STA can be in one of two Power Management modes:_
@@ -4248,10 +4250,23 @@ _A client STA can be in one of two Power Management modes:_
 - **`Active mode`**: the client is awake all the time. The AP immediately transmits the frames to the client. <br> <br>
 - **`Power Save (PS) mode`**: the client is mostly in doze power state, but can also be awake to transmit and receive now and then. In this mode, the AP buffers the eligible frames destined for the client.
 
-### Power Management Elements & Fields
+---
+
+### PS Field: AID (Association Identifier)
 
 - AID (Association Identifier): Every 802.11 Power Management Method starts begin with the client STA associates to the BSS. When AP sends `Association Response` or `Re-Association Response` frame to the STA, an `AID` value is present in the AID parameter field (16-bit)
-- TIM (Traffic Indication Map): It's a IE (Information Element) with the two following Sub-Fields:  
+
+---
+
+### PS Information Element: TIM (Traffic Indication Map)
+
+- TIM (Traffic Indication Map): It's a IE (Information Element) with the two following Sub-Fields:
+    - Element ID (1 byte / 8 bits): Value of 5 indicates is a TIM
+    - Lenght (1 byte / 8 bits): Lenght of the information carrying fields (DTIM Count, DTIM Period, Bitmap Control, Partial Virtual Bitmap)
+
+
+
+
 
 
 ## Power Management: `types`
@@ -4267,13 +4282,13 @@ _From the original version in 1997 to now, many features that reduce power consu
 
 | **Standard**  | **Year**   | **Power Saving Modes**                                                                                      |
 |---------------|------------|-------------------------------------------------------------------------------------------------------------|
-| 802.11prime   | 1997       | Legacy Power Save Mode                                                                                      |
-| 802.11b/a     | 1999       | Legacy Power Save Mode ;; can utilize enhancements from 802.11e if driver & hardware support it             |
-| 802.11g       | 2003       | Legacy Power Save Mode ;;  can utilize enhancements from 802.11e if driver & hardware support it            |
-| 802.11e       | 2005       | Wi-Fi Multimedia (WMM) & Automatic Power Save Delivery (APSD) (S-APSD / U-APSD)                             |
+| 802.11 prime  | 1997       | Legacy Power Save Mode                                                                                      |
+| 802.11b/a     | 1999       | Legacy Power Save Mode ;; _can utilize enhancements from 802.11e if driver & hardware support it_           |
+| 802.11g       | 2003       | Legacy Power Save Mode ;;  _can utilize enhancements from 802.11e if driver & hardware support it_          |
+| _802.11e_       | _2005_   | _Wi-Fi Multimedia (WMM) & Automatic Power Save Delivery (APSD) (S-APSD / U-APSD)_                           |
 | 802.11n       | 2009       | Power Save Multi-Poll (PSMP) & Spatial Multiplexing Power Save (SMPS)                                       |
 | 802.11ac      | 2013       | VHT TXOP (Transmit Opportunity) Power Save                                                                  |
-| 802.11ax      | 2019       | Target Wake Time (TWT) & VHT (802.11ac) TXOP (Transmit Opportunity) Power Save                              |
+| 802.11ax      | 2019       | Target Wake Time (TWT) & _VHT (802.11ac) TXOP (Transmit Opportunity) Power Save_                            |
 
 
 ## Legacy power save mode
