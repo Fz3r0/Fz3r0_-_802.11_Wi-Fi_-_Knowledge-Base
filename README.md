@@ -4218,10 +4218,10 @@ _Radar will affect the 5 GHz band on channels 120, 124 and 128. Using WLAN integ
 
 
 
-# 🛜🚦🛑 MAC Operations: `Power Management` & `Protection Mechanisms`
+# 🛜🔋🛑 MAC Operations: `Power Management` & `Protection Mechanisms`
 _There are 2 types of MAC Operations: Power Management & Protection Mechanisms | Power Management is allow the radio to go to sleep (just few microseconds), because if the antenna/adapter keeps awake all the time is consuming battery all the time, in a movile device can degrade battery life. Power management it's just turning on the antenna, send/recieve the frame, turn off the antenna and so on. The hint here is, that the STA does not lose any frame even if it's sleeping | Protection Mechanisms allow newer devices to communicate and "exist" in a world where older devices also exists_
 
-## 🛜🚦🛑 MAC Operations: `Power Management`
+## 🔋🛜🪫 MAC Operations: `Power Management`
 _Many mechanisms that are described in the IEEE 802.11 standard allow a wireless device to reduce its power consumption, to turn off its radios and to wake up at the correct time to retrieve its traffic. While the APs are generally connected to an external power source, the wireless clients are often running on batteries. The purpose of power saving features is to increase the battery life and to allow longer performance. This battery life extension can be significant for low-powered devices such as smartphones, Voice over IP phones or handheld barcodes scanners._
 
 - [802.11 Power Management with packet captures](https://dot11zen.blogspot.com/2018/02/80211-power-management-with-packet.html) _`dot11zen`_
@@ -4233,27 +4233,27 @@ _Many mechanisms that are described in the IEEE 802.11 standard allow a wireless
 - [Power Save Mechanisms for 802.11ax](https://balramdot11b.com/2020/06/03/power-save-mechanisms-802-11ax/)
 - [Coexistence of IEEE 802.11b & 802.11e STAs in QoS enabled WLAN](https://www.researchgate.net/publication/221278781_Coexistence_of_IEEE_80211B_and_IEEE_80211E_Stations_in_QoS_Enabled_Wireless_Local_Area_Network)
 
-## Power Save (PS) mode: `Basic Concepts`
+## 🔋🛜🪫 Power Save (PS) mode: `Basic Concepts`
 _bla la bla bla intro_
 
-### Power States
+### 🔋🐓💤 Power States
 _A wireless client STA enters Power Save (PS) mode in which the radio power state can transition between awake and doze according to the 802.11 power management rules. A radio STA can be in one of two Power states:_
 
-- **`Awake`**: The client STA radio is constantly powered and able to receive and transmit. <br> <br>
-- **`Doze`**: The client STA cannot receive or transmit any frames and operates in a very low power state to conserve power. STA is allowed to go to "Doze" state after an AP has been notified that station is about to enter Power Save (PS) mode. STA will use `Null Data Frame` or `QoS Null Data Frame` with bit `Power Management / Power Save Mode = 1` to inform the AP that it will going to "Doze" state.
+- 🐓 **`Awake`**: The client STA radio is constantly powered and able to receive and transmit. <br> <br>
+- 💤 **`Doze`**: The client STA cannot receive or transmit any frames and operates in a very low power state to conserve power. STA is allowed to go to "Doze" state after an AP has been notified that station is about to enter Power Save (PS) mode. STA will use `Null Data Frame` or `QoS Null Data Frame` with bit `Power Management / Power Save Mode = 1` to inform the AP that it will going to "Doze" state.
 
 STA will go from `Doze` to `Awake` state for one of two reasons: 
 
 1. If STA have a frame to send.
 2. Based on the STA internal timing mechanism. <br> <br>
-    - Data & Power Management = 0 ==>> **Awake** :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 0`
-    - QoS Data & Power Management = 0 ==>> **Awake** :: `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 0` <br> <br>
-    - Data & Power Management = 1 ==>> **Doze** :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 1`
-    - QoS Data & Power Management = 1 ==>> **Doze** :: `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 1`
+    - 🐓 Data & Power Management = 0 ==>> **Awake** :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 0`
+    - 🐓 QoS Data & Power Management = 0 ==>> **Awake** :: `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 0` <br> <br>
+    - 💤 Data & Power Management = 1 ==>> **Doze** :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 1`
+    - 💤 QoS Data & Power Management = 1 ==>> **Doze** :: `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 1`
 
 ---
 
-### Power Management Modes
+### 🔋⚙️🔀 Power Management Modes
 _A client STA can be in one of two Power Management modes:_
 
 - **`Active mode`**: the client is awake all the time. The AP immediately transmits the frames to the client. <br> <br>
@@ -4263,12 +4263,12 @@ _A client STA can be in one of two Power Management modes:_
 
 ### PS Field: AID (Association Identifier)
 
-- AID (Association Identifier): **Sent by the AP** (`Association Response` or `Re-Association Response`) :: Every 802.11 Power Management Method starts begin with the client STA associates to the BSS. When AP sends "Association Response" or "Re-Association Response" frame to the STA, an `AID` value is present in the AID parameter field (16-bit) <br> <br>
+- 🪪🆔🤳 AID (Association Identifier): **Sent by the AP** (`Association Response` or `Re-Association Response`) :: Every 802.11 Power Management Method starts begin with the client STA associates to the BSS. When AP sends "Association Response" or "Re-Association Response" frame to the STA, an `AID` value is present in the AID parameter field (16-bit) <br> <br>
     - Filter :: AID (Association Identifier) 3 = `wlan.fixed.aid == 3` 
 
 ---
 
-### PS Field: Listen Interval
+### 👂⏳🐓 PS Field: Listen Interval
 
 - Listen Interval: **Sent by the STA** (`Association Request` or `Re-Association Request`) :: The client STA will go to `awake` state in a timing period called "Listen Interval". The "Association Request" or "Re-Association Request" frame includes a Listen Interval subfield within the Capabilities Information field. It is an integer between 0 and 65535 expressed in **units of Beacon Interval**. It indicates to the AP how often a client in PS mode wakes up to listen to the Beacon frames. In the AP, the Aging Time of the buffered frames bound to the client is implemented differently by each vendor but must not be shorter than the Listen Interval (or the WNM Sleep Interval in a WNM Sleep Mode Request frame). The Listen Interval from the client is also vendor specific. <br> <br>
     - Filter :: Listen Interval 250 (HEX) = `wlan.fixed.listen_ival == 0x00fa`
@@ -4276,36 +4276,43 @@ _A client STA can be in one of two Power Management modes:_
 
 ---
 
-### PS Information Element: TIM (Traffic Indication Map)
+### 📫📩📬 PS Information Element: TIM (Traffic Indication Map)
 
-- TIM (Traffic Indication Map): It's a IE (Information Element) with the two following Sub-Fields: <br> <br>
-    - Element ID (1 byte / 8 bits): Value of 5 indicates is a TIM. <br> <br>
+- 📬 TIM (Traffic Indication Map): It's a IE (Information Element) with the two following Sub-Fields: <br> <br>
+    - ⭕ Element ID (1 byte / 8 bits): Value of 5 indicates is a TIM. <br> <br>
         - Element ID = 5 :: `wlan.tag.number == 5` <br> <br>
-    - Lenght (1 byte / 8 bits): Lenght of the information carrying fields (DTIM Count, DTIM Period, Bitmap Control, Partial Virtual Bitmap). <br> <br>
+    - ⭕ Lenght (1 byte / 8 bits): Lenght of the information carrying fields (DTIM Count, DTIM Period, Bitmap Control, Partial Virtual Bitmap). <br> <br>
         - Tag Lenght = 4 :: `wlan.tag.length == 4` <br> <br>
-    - DTIM (Delivery-TIM) Count (1 byte / 8 bits): Incremental `Beacon Frames` until the next DTIM. <br> <br>
+    - ⭕ DTIM (Delivery-TIM) Count (1 byte / 8 bits): Incremental `Beacon Frames` until the next DTIM. <br> <br>
         - DTIM = 0 ==>> **Beacon is a DTIM** :: `wlan.tim.dtim_count == 0`
         - DTIM = 1 ==>> **1 Beacon left until next DTIM** :: `wlan.tim.dtim_count == 1`
         - DTIM = 2 ==>> **2 Beacons left until next DTIM** :: `wlan.tim.dtim_count == 2` <br> <br>
-    - DTIM (Delivery-TIM) Period (1 byte / 8 bits): Number of `Beacon Frames` between DTIM beacon. <br> <br>
-        - DTIM period = 3 ==>> **Every 2rd beacon will be a DTIM** _(ex. Fz3r0_CWAP_SSID)_ :: `wlan.tim.dtim_period == 2`
+    - ⭕ DTIM (Delivery-TIM) Period (1 byte / 8 bits): Number of `Beacon Frames` between DTIM beacon. <br> <br>
+        - DTIM period = 1 ==>> **Every beacon will be a DTIM** _(ex. Ruckus_default_SSID)_ :: `wlan.tim.dtim_period == 1`
+        - DTIM period = 3 ==>> **Every 2nd beacon will be a DTIM** _(ex. Fz3r0_CWAP_SSID)_ :: `wlan.tim.dtim_period == 2`
         - DTIM period = 3 ==>> **Every 3rd beacon will be a DTIM** _(ex. Muegahouse_SSID)_ :: `wlan.tim.dtim_period == 3` <br> <br>
-    - Bitmap Control (1 byte / 8 bits): Indicates if **Multicast/Broadcast** traffic are buffered at the AP (true or false) & also uses a space save called `Bitmap Offset` which may have a value between 0 - 127. <br> <br>
+    - ⭕ Bitmap Control (1 byte / 8 bits): Indicates if **Multicast/Broadcast** traffic are buffered at the AP (true or false) & also uses a space save called `Bitmap Offset` which may have a value between 0 - 127. <br> <br>
         - Bitmap Control = 1 ==>> **There's a multicast/broadcast frame buffering for any STA** :: `wlan.tim.bmapctl.multicast == 1`
         - Bitmap Control = 0 ==>> **No multicast/broadcast frames are buffering** :: `wlan.tim.bmapctl.multicast == 0` <br> <br>
         - Bitmap Offset = 0 ==>> **how many bytes are Zero in Partial Virtual Bitmap (PVB)** :: `wlan.tim.bmapctl.offset == 0`
         - Bitmap Offset > 0 ==>> **how many bytes are Zero in Partial Virtual Bitmap (PVB)** `wlan.tim.bmapctl.offset > 0` <br> <br>
-    - PVB (Partial Virtual Map): (1 byte - 251 bytes): Series of flags indicating whether each associated STA has **Unicast** frames buffered at the AP. Each bit in this field corresponds to an AID of a STA. <br> <br>
+    - ⭕ PVB (Partial Virtual Map): (1 byte - 251 bytes): Series of flags indicating whether each associated STA has **Unicast** frames buffered at the AP. Each bit in this field corresponds to an AID of a STA. <br> <br>
         - PVB = 0 ==>> **No unicast frames are buffered** :: `wlan.tim.partial_virtual_bitmap == 00` 
         - PVB more than 0 ==>> **Unicast frames are buffered** :: `wlan.tim.partial_virtual_bitmap > 00`
 
 ---
 
-### PS Information Element: `DTIM (Delivery Traffic Indication Map)`
+### 🚨📩📬 PS Information Element: `DTIM (Delivery Traffic Indication Map)`
 
-- DTIM (Delivery Traffic Indication Map): **Sent by the AP** (`Beacon`) :: DTIM is a beacon frame, identical in structure to any other beacon frame. The only difference
-
-
+- DTIM (Delivery Traffic Indication Map): **Sent by the AP** (`Beacon`) _(DTIM is not present in all beacons or all TIMs inside a becon)_ :: DTIM is a beacon frame, identical in structure to any other beacon frame. The only difference with a common Beacon Frame is that the content of the DTIM IE (Information Element) will give information about broadcast/multicast traffic that is buffered at the AP, in addition to the typical information about buffered unicast frames that is always present in the TIM. <br> <br>
+- ⭕ DTIM Count = 0: means that the beacon frame is a DTIM
+- ⭕ DTIM Count = 1: means 1 Beacon left until next DTIM
+- ⭕ DTIM Count = 2: means 2 Beacons left until next DTIM <br> <br>
+- ⭕ DTIM Delivery Period = 3: means every 3rd frame a beacon will be a DTIM
+- ⭕ DTIM Delivery Period = 2: means every 2nd frame a beacon will be a DTIM
+- ⭕ DTIM Delivery Period = 1: All the beacons will be a DTIM <br> <br>
+- ⭕ DTIM Bitmap Control = 1: There's a multicast/broadcast frame buffering in the AP for any STA
+- ⭕ DTIM Bitmap Control = 0: No multicast/broadcast frame buffering in the AP for any STA
 
 ---
 
@@ -4364,7 +4371,7 @@ _802.11e introduced **Wi-Fi Multimedia (WMM)** and also introduced Automatic Pow
 
 
 ## 🔋🛜🪫 MAC Operations: `802.11 Power Management`
-_`PS Mode` or 802.11 Power Save is a mechanism that allow STA to wake up at various intervals and use a **PS-Poll** frame to indicate to the AP that is awake & ready to recieve frames | Power save methods allow battery-operated devices to save power by shutting down their wireless radios. | Power Management mode shall not change during any single frame exchange sequence. This means the Power Management bit is the same for all MPDUs in an A-MPDU | `Listen Interval` is just How often STA wakes up & listen beacons measured in units of Beacon Interval & Determines lifetime of buffered frames in an AP | `TIM` are Present only within beacon frames generated by APs, TIM element contains information useful for stations in low-power mode. The AP uses Delivery Traffic Indication Map (DTIM) to inform the cell if it has broadcast or multicast frames buffered. `DTIM` is not present in all beacons and all TIMs. |  While devices are in a sleep state, the AP buffers frames destined for it. The legacy power management methods were defined in the original 802.11 standard; however, major improvements have been added in both 802.11e-2005 and 802.11n-2009 amendments. There are also mentions of power save enhancements in both 802.11ac-2013 and 802.11ax-2018 amendments._
+_`PS Mode` or 802.11 Power Save is a mechanism that allow STA to wake up at various intervals and use a **PS-Poll** frame to indicate to the AP that is awake & ready to recieve frames | Power save methods allow battery-operated devices to save power by shutting down their wireless radios. | Power Management mode shall not change during any single frame exchange sequence. This means the Power Management bit is the same for all MPDUs in an A-MPDU | `Listen Interval` is just How often STA wakes up & listen beacons measured in units of Beacon Interval & Determines lifetime of buffered frames in an AP | `TIM` are Present only within beacon frames generated by APs, TIM element contains information useful for stations in low-power mode. The AP uses Delivery Traffic Indication Map (DTIM) to inform the cell if it has broadcast or multicast frames buffered. |  While devices are in a sleep state, the AP buffers frames destined for it. The legacy power management methods were defined in the original 802.11 standard; however, major improvements have been added in both 802.11e-2005 and 802.11n-2009 amendments. There are also mentions of power save enhancements in both 802.11ac-2013 and 802.11ax-2018 amendments._
 
 
 
