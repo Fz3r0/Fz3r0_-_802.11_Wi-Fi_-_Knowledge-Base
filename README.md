@@ -4234,7 +4234,7 @@ _Many mechanisms that are described in the IEEE 802.11 standard allow a wireless
 - [Coexistence of IEEE 802.11b & 802.11e STAs in QoS enabled WLAN](https://www.researchgate.net/publication/221278781_Coexistence_of_IEEE_80211B_and_IEEE_80211E_Stations_in_QoS_Enabled_Wireless_Local_Area_Network)
 
 ## Power Save (PS) mode: `Basic Concepts`
-_The primary power save mechanism is based on a low-power state in which the radio is not able to transmit or receive._
+_bla la bla bla intro_
 
 ### Power States
 _A wireless client STA enters Power Save (PS) mode in which the radio power state can transition between awake and doze according to the 802.11 power management rules. A radio STA can be in one of two Power states:_
