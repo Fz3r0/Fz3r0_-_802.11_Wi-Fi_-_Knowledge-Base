@@ -4222,12 +4222,14 @@ _Radar will affect the 5 GHz band on channels 120, 124 and 128. Using WLAN integ
 _There are 2 types of MAC Operations: Power Management & Protection Mechanisms | Power Management is allow the radio to go to sleep (just few microseconds), because if the antenna/adapter keeps awake all the time is consuming battery all the time, in a movile device can degrade battery life. Power management it's just turning on the antenna, send/recieve the frame, turn off the antenna and so on. The hint here is, that the STA does not lose any frame even if it's sleeping | Protection Mechanisms allow newer devices to communicate and "exist" in a world where older devices also exists_
 
 ## 🛜🚦🛑 MAC Operations: `Power Management`
+- [802.11 Power Management with packet captures](https://dot11zen.blogspot.com/2018/02/80211-power-management-with-packet.html)
+
+### Power Management: `types`
 
 - Legacy Power Save Mode
-- `WMM` & `APSD` (802.11e-2005)
-- 802.11n Power Management 
-
-
+- 802.11e Power Management: Wireless Network Management (WNM) & Unscheduled Automatic Power-Save Delivery (U-APSD)
+- 802.11n Power Management: Spatial Multiplexing Power Save (SM Power Save or SMPS)
+- 802.11ac Power Management: VHT TXOP (Transmit Opportunity) Power Save
 
 ## Legacy power save mode
 - PS-Poll frames are used with legacy power save mode. All STA’s receive an Association ID (AID) during the 802.11 association process. When a STA wakes from a doze state based on the listen interval it will check the traffic indication map (TIM) in a Beacon management frame. If there is unicast traffic buffered the STA will send a PS-Poll frame to receive the buffered data.
