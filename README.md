@@ -4290,13 +4290,20 @@ _A client STA can be in one of two Power Management modes:_
     - DTIM (Delivery-TIM) Period (1 byte / 8 bits): Number of `Beacon Frames` between DTIM beacon. <br> <br>
         - DTIM period = 3 ==>> **Every 2rd beacon will be a DTIM** _(ex. Fz3r0_CWAP_SSID)_ :: `wlan.tim.dtim_period == 2`
         - DTIM period = 3 ==>> **Every 3rd beacon will be a DTIM** _(ex. Muegahouse_SSID)_ :: `wlan.tim.dtim_period == 3` <br> <br>
-    - Bitmap Control (1 byte / 8 bits): Indicates if **Multicast/Broadcast** traffic are buffered at the AP (true or false) & also uses a space save called `bitmap offset` (HEX). <br> <br>
+    - Bitmap Control (1 byte / 8 bits): Indicates if **Multicast/Broadcast** traffic are buffered at the AP (true or false) & also uses a space save called `Bitmap Offset` which may have a value between 0 - 127. <br> <br>
         - Bitmap Control = 1 ==>> **There's a multicast/broadcast frame buffering for any STA** :: `wlan.tim.bmapctl.multicast == 1`
         - Bitmap Control = 0 ==>> **No multicast/broadcast frames are buffering** :: `wlan.tim.bmapctl.multicast == 0` <br> <br>
+        - Bitmap Offset = 0 ==>> **how many bytes are Zero in Partial Virtual Bitmap (PVB)** :: `wlan.tim.bmapctl.offset == 0`
+        - Bitmap Offset > 0 ==>> **how many bytes are Zero in Partial Virtual Bitmap (PVB)** `wlan.tim.bmapctl.offset > 0` <br> <br>
     - PVB (Partial Virtual Map): (1 byte - 251 bytes): Series of flags indicating whether each associated STA has **Unicast** frames buffered at the AP. Each bit in this field corresponds to an AID of a STA. <br> <br>
         - PVB = 0 ==>> **No unicast frames are buffered** :: `wlan.tim.partial_virtual_bitmap == 00` 
         - PVB more than 0 ==>> **Unicast frames are buffered** :: `wlan.tim.partial_virtual_bitmap > 00`
 
+---
+
+### PS Information Element: `DTIM (Delivery Traffic Indication Map)`
+
+- DTIM (Delivery Traffic Indication Map): **Sent by the AP** (`Beacon`) :: DTIM is a beacon frame, identical in structure to any other beacon frame. The only difference
 
 
 
