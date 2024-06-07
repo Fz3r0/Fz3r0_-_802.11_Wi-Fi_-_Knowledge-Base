@@ -4225,6 +4225,8 @@ _There are 2 types of MAC Operations: Power Management & Protection Mechanisms |
 _Many mechanisms that are described in the IEEE 802.11 standard allow a wireless device to reduce its power consumption, to turn off its radios and to wake up at the correct time to retrieve its traffic. While the APs are generally connected to an external power source, the wireless clients are often running on batteries. The purpose of power saving features is to increase the battery life and to allow longer performance. This battery life extension can be significant for low-powered devices such as smartphones, Voice over IP phones or handheld barcodes scanners._
 - [802.11 Power Management with packet captures](https://dot11zen.blogspot.com/2018/02/80211-power-management-with-packet.html) _`dot11zen`_
 - [802.11 Power Save Methods](https://howiwifi.com/2020/06/25/power-save-methods/) _`how to Wi-fi`_
+- [Power Save Mechanisms for 802.11ax](https://balramdot11b.com/2020/06/03/power-save-mechanisms-802-11ax/)
+- [Coexistence of IEEE 802.11b & 802.11e STAs in QoS enabled WLAN](https://www.researchgate.net/publication/221278781_Coexistence_of_IEEE_80211B_and_IEEE_80211E_Stations_in_QoS_Enabled_Wireless_Local_Area_Network)
 
 ## Power Save (PS) mode: `Basic Concepts`
 _The primary power save mechanism is based on a low-power state in which the radio is not able to transmit or receive._
@@ -4251,13 +4253,28 @@ _From the original version in 1997 to now, many features that reduce power consu
 - 802.11e-2005 Power Management: Wi-Fi Multimedia (WMM) & Automatic Power Save Delivery (APSD) (Scheduled & Unscheduled (S-APSD / U-APSD))
 - 802.11n-2009 Power Management: Power Save Multi-Poll (PSMP) & Spatial Multiplexing Power Save (SMPS) 
 - 802.11ac-2013 Power Management: VHT TXOP (Transmit Opportunity) Power Save
+- 802.11ax-2019 Power Management: Target Wake Time (TWT)
+
+### Power Management: `PHY PS types`
+
+| **Standard**  | **Year**   | **Power Saving Modes**                                                                                      |
+|---------------|------------|-------------------------------------------------------------------------------------------------------------|
+| 802.11prime   | 1997       | Legacy Power Save Mode                                                                                      |
+| 802.11b/a     | 1999       | Legacy Power Save Mode ;; can utilize enhancements from 802.11e if driver & hardware support it             |
+| 802.11g       | 2003       | Legacy Power Save Mode ;;  can utilize enhancements from 802.11e if driver & hardware support it            |
+| 802.11e       | 2005       | Wi-Fi Multimedia (WMM) & Automatic Power Save Delivery (APSD) (S-APSD / U-APSD)                             |
+| 802.11n       | 2009       | Power Save Multi-Poll (PSMP) & Spatial Multiplexing Power Save (SMPS)                                       |
+| 802.11ac      | 2013       | VHT TXOP (Transmit Opportunity) Power Save                                                                  |
+| 802.11ax      | 2019       | Target Wake Time (TWT) & VHT (802.11ac) TXOP (Transmit Opportunity) Power Save                              |
+
 
 ## Legacy power save mode
 - PS-Poll frames are used with legacy power save mode. All STA’s receive an Association ID (AID) during the 802.11 association process. When a STA wakes from a doze state based on the listen interval it will check the traffic indication map (TIM) in a Beacon management frame. If there is unicast traffic buffered the STA will send a PS-Poll frame to receive the buffered data.
 
 
 
-
+##802.11e
+_The 802.11e standard is being designed to be backward compatible with the legacy 802.11 standard, which implies that DCF and PCF mode stations can work without restrictions in the new QoS enable environment. In fact, the traffic of a station working in DCF mode is treated as traffic belonging to AC1 of the new EDCA mode with TXOP equal to zero. Hence, from DCF point of view this coexistence is quite fair as DCF is a Best Effort traffic oriented. On the other hand, PCF mode stations in the new standard are managed by HC as if it were PC, which provides schedule for them. Therefore, there is hardly any change in system behaviour.     However, from 802.11e standpoint the introduction of legacy 802.11 stations in a QBSS system pose a risk to the QoS guarantees. Direct cooperation of both types of stations without any restriction on the legacy 802.11 traffic will penalize all QoS guarantees provided by standalone IEEE 802.11e network [3][4] due to previously mentioned 802.11 limitations. Therefore, to be able to provide real QoS support in wireless LAN with coexistence of 802.11 and 802.11e stations it will be necessary to consider some QoS mechanism for legacy stations._
 
 
 ## 802.11e-2005: `WMM` & `APSD`
