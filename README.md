@@ -5029,9 +5029,11 @@ _When it comes to protocol analysis, visualization tools are essential for trans
 
 
 ## Capturing Ethernet 802.3 Freames
-_`Layer 2`:`MAC` & `layers 3-7 wired captures_
+_Ethernet 802.3 captures involve the examination of data packets from Layer 2 (Data Link) to the upper layers (3-7) of the OSI model. This process is crucial for understanding network traffic, troubleshooting issues, and ensuring efficient network performance. Various methods exist to capture this traffic, each with its advantages and limitations._
 
 ## Capturing Ethernet 802.3 Freames: Taffic Access Methods
+_Capturing Ethernet 802.3 frames can be achieved through several methods, each with its specific use cases and limitations_
+
 - [Different Traffic Access Methods :: Diagram](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/180ecca3-6586-47bd-85d7-02e26fd17ca5) <br><br>
     - From the Machine/PC interested in: Easiest & common way to capture || Good for learning but no so usefull for troubleshooting || Unicast to Machine ONLY (Other traffic not available) || Can't capture all the traffic of the network || No 802.1q  VLAN captured || Very easy configuration <br> <br>
     - Port Monitor / Span / Mirror: Easy to use if available on the Switch, uses the mirror configuration on a switch port || Does not pass critical Layer 1 and 2 errors || Capture 802.1q depending on vendor || Cost time and resources for switch re-configuration || Easy to configure for Ad-Hoc Analysis || Does not requiere link downtime || Packet loss at high traffic rate <br> <br>
@@ -5046,7 +5048,9 @@ _`Layer 2`:`MAC` & `layers 3-7 wired captures_
 
 
 
-### 🖧🪤💰 802.3 Ethernet Switch Media Capture: `Network Taps`
+## 🖧🪤💰 802.3 Ethernet Switch Media Capture: `Network Taps`
+_Network Taps provide the most comprehensive method for capturing Ethernet 802.3 traffic. They passively intercept all data packets flowing through a network, including Layer 1 and 2 errors, VLAN tags, and full-duplex traffic. Unlike other methods, Network Taps do not introduce a point of failure and continue to function even if they lose power, ensuring uninterrupted traffic flow. Although they are more expensive, Network Taps offer unparalleled visibility into network data, making them the preferred choice for detailed and accurate network analysis and troubleshooting._
+
 - [`Network Tap` in 30 Seconds @ David Bombal](https://www.youtube.com/shorts/l-wQVuqL2XA) _`¡Vamos Bombal!`_
 - [`Taps` Vs. `SPAN`: Taps Provide Full Visibility into Network Data](https://www.youtube.com/watch?v=r3-PBfmFMqA) _`video`_
 - [`Network Tap 101` :: How it works?](https://www.garlandtechnology.com/2014/01/17/a-test-access-point-tap-primer) The 101 Series: A Primer On Network TAPs
@@ -5055,6 +5059,7 @@ _`Layer 2`:`MAC` & `layers 3-7 wired captures_
 - [How to build a Network Tap with just 1 cable?](https://www.youtube.com/watch?v=2tsvBnTIjFo) _`video`_
 
 ### 🖧🪤 Network Taps: `Models & Vendors`:
+
 - [Net Optics Aggregation TAPS](https://www.nextgigsystems.com/net_optics/aggregation_taps.html) Access to full-duplex links using just a single NIC on the monitoring or analyzer tool.
 - [IOTA: All-In-One Network Traffic Monitoring Solution](https://www.profitap.com/iota/?utm_campaign=IOTA%20Solution&utm_content=276301428&utm_medium=social&utm_source=linkedin&hss_channel=lcp-5383240)
 - [Netsplit](https://www.youtube.com/watch?v=MPsN4K2pVz4) Pocket-sized passive Ethernet tap
@@ -5079,11 +5084,13 @@ _`Layer 2`:`MAC` & `layers 3-7 wired captures_
 
 ## 🕵️🛜📡 Protocol Analysis: `Capurring 802.11 Frames`
 _Capturing and analyzing traffic on 802.3 Ethernet networks is simpler compared to 802.11 WiFi networks, which are more complex and require additional tools and skills. Capturing frames in WiFi networks is inherently more challenging than in wired Ethernet networks due to the wireless nature and associated technical difficulties. Therefore, having the right skills and tools is essential for accurate 802.11 frame capture and analysis._ _
+
 - [802.11 Wi-Fi VS 802.3 Ethernet Capture: Differences & 802.11 Adapters]()
 - [Capturing 802.11 Frames: Monitor Mode & Packet Injection]()
 - [Selecting the right Adapter (Spatial Streams): How to identify if I missing frames?](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/510bc21c-845a-464a-8726-32ed3bb16944)
 
 ### Key notes on captureing 802.11 Frames
+
 _When dealing with WiFi networks, several factors need to be considered:_
 - Capture all types of 802.11 frames, not just management or data frames.
 - Choose the right hardware and software tools, including compatible drivers, monitor mode support and operating systems.
@@ -5096,13 +5103,15 @@ _When dealing with WiFi networks, several factors need to be considered:_
 _It is important to understand that Monitor Mode and Promiscuous Mode are different concepts. For Ethernet capture, only Promiscuous Mode is needed. However, capturing WiFi traffic is more complex and requires both Monitor Mode and Promiscuous Mode._
 
 ### Adapter Modes: `Promiscous Mode`
+
 - This mode should always be enabled when capturing frames, whether Ethernet or WiFi. It allows a network adapter (wired or wireless) to capture all packets on the network, regardless of their destination. This means that in Promiscuous Mode, packets not intended for your device can be captured, which is useful for network analysis. <br> <br>
-- Promiscuous Mode lets an interface or network adapter "listen" to all traffic passing through, even if it's not specifically addressed to that device or belongs to a different subnet or VLAN. As long as there is traffic on the interface, it can be captured.
+- Promiscuous Mode lets an interface or network adapter "listen" to all traffic passing through, even if it's not specifically addressed to that device or belongs to a different subnet or VLAN. As long as there is traffic on the interface, it can be captured. <br> <br>
     - IMPORTANT: Promiscuous Mode cannot capture unicast traffic between two devices that are not the device in promiscuous mode because this traffic is transmitted through other interfaces, either via a switch or directly peer-to-peer. <br> <br>
 - Promiscous Mode for 802.3 Ethernet: Simply connect the Ethernet cable to the interface, enable Promiscuous Mode, and you can start capturing traffic. <br> <br>
 - Promiscous Mode for 802.11 Wi-Fi: It's more complex; besides enabling Promiscuous Mode, additional hardware tools are needed, and drivers must be configured for Monitor Mode. The operating system, hardware (WiFi adapters), and software (protocol analyzers and sniffers) must support Monitor Mode.
 
 ### Adapter Modes: `Monitor Mode`
+
 - Monitor Mode is a special mode where a wireless network adapter is configured to capture all wireless network traffic, including packets addressed to MAC addresses other than the adapter itself. This is similar to Promiscuous Mode but for wireless networks, and Promiscuous Mode is still required. <br> <br>
 - In Monitor Mode, the wireless network adapter captures all packets on the wireless network, regardless of their destination. This is useful for analyzing all wireless network traffic, including traffic not directed to your device. <br> <br>
 - To capture all frames on a wireless network, you need a WiFi 802.11 network adapter in Monitor Mode. To capture all packets on a wired Ethernet 802.3 network, use a wired network adapter in Promiscuous Mode. For capturing traffic on a mixed wireless and wired network, both a wireless adapter in Monitor Mode and a wired adapter in Promiscuous Mode are needed. <br> <br>
@@ -5114,6 +5123,7 @@ _It is important to understand that Monitor Mode and Promiscuous Mode are differ
 
 ## 🩺⚙️ Monitor Mode: `Drivers` & `Chipsets`
 _Selecting the right drivers and chipsets for capturing 802.11 frames in monitor mode is crucial for effective wireless network analysis. Not all Wi-Fi adapters support monitor mode, and the ability to capture all types of frames (management, control, and data) depends heavily on the hardware and its drivers._
+
 - [Fz3r0 Monitor Mode Drivers Lab]()
 - [Recomended Adapters & Firmwares for 802.11 Frame Capture]()
 - [Install Drivers for 802.11 capture in Linux]()
@@ -5122,6 +5132,7 @@ _Selecting the right drivers and chipsets for capturing 802.11 frames in monitor
 
 ### 🩺🪄 Monitor Mode: `Adapters`
 _The right adapter give you the right capture capabilites and scopes... There is no "the best" adaptor for every scenario. One important thing to remember is that you can't capture 3x3:3 spatial streams with a 2x2:2 adapter. Using incorrect adapter you will notice that you will be losing data._
+
 - [802.11 Capture Table]() 
 - [Alfa]() `Custom`
 - [Panda]() `Custom`
@@ -5169,12 +5180,14 @@ _Devices and methods for capturing 802.11 WiFi frames can be categorized into th
 
 ## 🤳🏾🪤📡 802.11 Frame Capture: `Location for Capture`
 _In 802.11 Frames Capture is very important the physical location of the adapter that will capture 802.11 Frames depending on what are we tring to capture, it's important to remember that we are capturing on wireless medium (RF flying through the air)_
+
 - `Near the AP`: Capture that AP sees :: This location is ideal for capturing all the traffic within the Basic Service Area (BSA) and the communications between the Access Point (AP) and its connected clients. It helps in analyzing the overall network performance and the interaction between the AP and multiple clients. Generally, to troubleshoot a channel-wide problem, you will start with a capture near the AP. <br> <br>
 - `Near the Client`: Capture that Client sees :: This setup is useful for diagnosing issues specific to a particular client. By capturing frames from the client's perspective, you can identify problems related to that client’s connection, such as connectivity issues, interference, or performance bottlenecks. <br> <br>
 - `In the middle of Client & AP`: For getting the whole picture of whats happening inside the BSA :: Capture a comprehensive view of the communication. Positioning the adapter between the client and the AP provides a balanced perspective of the entire interaction. This location allows for capturing both the client and AP transmissions, offering a full picture of the communication flow within the BSA.
 
 ## 📡🪤🖧 802.11 Frame Catpure: `802.3 Wired Ethernet` + `802.11 Wireless Wi-Fi` at same time
 _Capturing and troubleshooting both wired (802.3 Ethernet) and wireless (802.11 Wi-Fi) traffic simultaneously is sometimes necessary. This dual approach provides a complete view of network interactions, especially for complex troubleshooting scenarios._
+
 - EAP over LAN exchanges & RADIUS: Simultaneous capture of Wi-Fi and Ethernet is crucial for analyzing authentication exchanges. By capturing both the wireless and wired sides of the network, you can ensure that authentication processes, such as those using EAP and RADIUS, are functioning correctly and efficiently. <br> <br>
 - DHCP exchanges: Capturing DHCP traffic on both Wi-Fi and Ethernet helps in diagnosing issues related to IP address assignment. It ensures that DHCP requests and responses are correctly handled across both mediums, providing a comprehensive view of the DHCP process. <br> <br>
 - QoS: Analyzing QoS tags and markings across the entire network, including both wireless and wired segments, is essential for applications like VoIP. This ensures that QoS configurations are consistent throughout the network, maintaining optimal performance and prioritization of critical traffic. It's important when troubleshooting QoS in wireless networks be sure that the QoS is working correctly in wired medium and the whole Distribution System. <br> <br>
@@ -5211,6 +5224,7 @@ _Capturing and troubleshooting both wired (802.3 Ethernet) and wireless (802.11 
 - Relative time: This is the time from the first packet in a capture file, but it can be also similar to the Seconds Since Beginning of Capture option. Cumulative time from a selected packet to another selected packet, it can be used to identify how long it takes for a frame exchange to occur. Some protocol analyzer software programs make this a very simple task. This information is valuable in determining problems such as latency or contention with specific frame exchanges. (ex. in a 4-way-handshake you can select the first frame, and then look how many time does the 4th frame took)
 
 ## Frame Analysis: `Name Resolution`
+
 - Name resolution tries to convert some of the numerical address values into a human readable format. There are two possible ways to do these conversions, depending on the resolution to be done: calling system/network services (like the gethostname() function) and/or resolving from Wireshark specific configuration files. Name resolution can be achieved in 3 different ways: <br> <br>
     - Passive Discovery: Automatically add names found in captured packets
     - Active Resolution: Query names via DNS or WINS
@@ -5227,6 +5241,7 @@ _Tools like Wireshark can decrypt WEP and WPA/WPA2/WPA3 in pre-shared (or person
 
  
 ## 🪤🔁📡 802.11 Frame Capture: `Roaming Scenarios`
+
 - [Roaming Analysis using only a Mac and Wireshark](https://framebyframewifi.net/2018/08/04/roaming-analysis-using-only-a-mac-and-wireshark/)
 - [How to check in Wireshark if a Wi-Fi Network support 802.11k (roaming)](https://semfionetworks.com/blog/wireshark-how-to-check-if-a-wi-fi-network-supports-80211k/)
 - [How To Fix Wi-Fi Roaming](https://www.smallnetbuilder.com/basics/wireless-basics/how-to-fix-wi-fi-roaming/) 
@@ -5241,6 +5256,7 @@ _Tools like Wireshark can decrypt WEP and WPA/WPA2/WPA3 in pre-shared (or person
 
 
 ## 🦈🪤🕵️‍♂️ PCAP Troubleshooting Collection
+
 - [`WPA2 password fail` :: Wireless] 4-way-Hadshake never pass step 3
 - [`EAP password fail` :: Wireless + Wired](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/102465fb-2873-46a5-848d-e7910c9fbe40) Wired capture shows the "reject" packet
 - [`EAP silent disconnect` :: Wireless + Wired](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/ee08f06b-1359-4fa6-b266-e326447f7a4f) No fails, only ignored packets & no responses || AP/WLC does not belong to Authenticator list
@@ -5256,6 +5272,7 @@ _Tools like Wireshark can decrypt WEP and WPA/WPA2/WPA3 in pre-shared (or person
 
 # Wireshark
 _Few tools are as useful to the IT professional as Wireshark, the go-to network packet capture tool. Wireshark will help to capture network packets and display them at a granular level. Once these packets are broken down, you can use them for real-time or offline analysis. This tool lets you put your network traffic under a microscope, and then filter and drill down into it, zooming in on the root cause of problems, assisting with network analysis for troubleshooting and ultimately network security._
+
 - [About Wireshark](https://www.wireshark.org/about.html)
 - [Wireshark - Where to Start?](https://www.wireshark.org/docs/)
 - [Wireshark Tutorial for BEGINNERS // Where to start with Wireshark @ Chris Greer](https://www.youtube.com/watch?v=OU-A2EmVrKQ)
