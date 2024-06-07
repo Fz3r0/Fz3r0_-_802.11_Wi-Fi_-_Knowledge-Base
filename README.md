@@ -4222,14 +4222,35 @@ _Radar will affect the 5 GHz band on channels 120, 124 and 128. Using WLAN integ
 _There are 2 types of MAC Operations: Power Management & Protection Mechanisms | Power Management is allow the radio to go to sleep (just few microseconds), because if the antenna/adapter keeps awake all the time is consuming battery all the time, in a movile device can degrade battery life. Power management it's just turning on the antenna, send/recieve the frame, turn off the antenna and so on. The hint here is, that the STA does not lose any frame even if it's sleeping | Protection Mechanisms allow newer devices to communicate and "exist" in a world where older devices also exists_
 
 ## 🛜🚦🛑 MAC Operations: `Power Management`
-- [802.11 Power Management with packet captures](https://dot11zen.blogspot.com/2018/02/80211-power-management-with-packet.html)
+_Many mechanisms that are described in the IEEE 802.11 standard allow a wireless device to reduce its power consumption, to turn off its radios and to wake up at the correct time to retrieve its traffic. While the APs are generally connected to an external power source, the wireless clients are often running on batteries. The purpose of power saving features is to increase the battery life and to allow longer performance. This battery life extension can be significant for low-powered devices such as smartphones, Voice over IP phones or handheld barcodes scanners._
+- [802.11 Power Management with packet captures](https://dot11zen.blogspot.com/2018/02/80211-power-management-with-packet.html) _`dot11zen`_
+- [802.11 Power Save Methods](https://howiwifi.com/2020/06/25/power-save-methods/) _`how to Wi-fi`_
 
-### Power Management: `types`
+## Power Save (PS) mode: `Basic Concepts`
+_The primary power save mechanism is based on a low-power state in which the radio is not able to transmit or receive._
 
-- Legacy Power Save Mode
-- 802.11e Power Management: Wireless Network Management (WNM) & Unscheduled Automatic Power-Save Delivery (U-APSD)
-- 802.11n Power Management: Spatial Multiplexing Power Save (SM Power Save or SMPS)
-- 802.11ac Power Management: VHT TXOP (Transmit Opportunity) Power Save
+### Power States
+_A wireless client STA enters Power Save (PS) mode in which the radio power state can transition between awake and doze according to the 802.11 power management rules. A radio STA can be in one of two Power states:_
+
+- Awake: the radio is constantly powered and able to receive and transmit.
+- Doze: the radio is not able to receive and transmit and consumes low power.
+
+### Power Management Modes
+_A client STA can be in one of two Power Management modes:_
+
+- Active mode: the client is awake all the time. The AP immediately transmits the frames to the client.
+- Power Save (PS) mode: the client is mostly in doze power state, but can also be awake to transmit and receive now and then. In this mode, the AP buffers the eligible frames destined for the client.
+
+
+
+
+## Power Management: `types`
+_From the original version in 1997 to now, many features that reduce power consumption have been added to the standard. Some of them have fallen into disuse (PS-Poll), some have been granted certifications (WMM-Power Save) and others relate to specific technologies (MIMO PSPM, 11ac VHT TXOP PS). And there are many other mechanisms related to power-saving that are not discussed in this article (PSMP, TIM Broadcast, Proxy ARP, etc.). Future amendments (802.11ax, 802.11ah) will also introduce new and enhanced power saving techniques._
+
+- 802.11–1997 prime Power Management: Legacy Power Save Mode
+- 802.11e-2005 Power Management: Wi-Fi Multimedia (WMM) & Automatic Power Save Delivery (APSD) (Scheduled & Unscheduled (S-APSD / U-APSD))
+- 802.11n-2009 Power Management: Power Save Multi-Poll (PSMP) & Spatial Multiplexing Power Save (SMPS) 
+- 802.11ac-2013 Power Management: VHT TXOP (Transmit Opportunity) Power Save
 
 ## Legacy power save mode
 - PS-Poll frames are used with legacy power save mode. All STA’s receive an Association ID (AID) during the 802.11 association process. When a STA wakes from a doze state based on the listen interval it will check the traffic indication map (TIM) in a Beacon management frame. If there is unicast traffic buffered the STA will send a PS-Poll frame to receive the buffered data.
