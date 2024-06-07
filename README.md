@@ -5182,23 +5182,49 @@ _Capturing and troubleshooting both wired (802.3 Ethernet) and wireless (802.11 
 
 ## Frame Analysis: `Packet Views`
 
-- List View: This is the main view of a protocol analyzer and shows the list of all the packets captured. Wireshark has this in the top of a default configuration. <br> <br>
-- Decode View: Very important view in protocol analyzers. It shows a "human read" format organized from lower layers to upper layers in a "directory" style. Wireshark has this in the bottom left of a default configuration. <br> <br> 
-- HEX / binary View: This is the HEX or binary version of the decode view. It shows a "machine read" format of the packet. Wireshark has this in the bottom right of a default configuration.  <br> <br>
-- Display Filter: Used to refine the view of captured data in the Protocol Analyzer. They help isolate specific packets within a capture file based on various criteria, making it easier to focus on the relevant traffic during analysis. This is recommended, because you can capture all the data without using a capture filter and then isolate only the packets you want to see. <br> <br>
+**General Views:**
+
+- Packet List View: This is the main view of a protocol analyzer and shows the columns/list of all the packets captured. (ex. Wireshark has this in the top of a default configuration.) <br> <br>
+- Packet Decode View: Very important view in protocol analyzers for packet analysis. It shows a "human read" format organized from lower layers to upper layers bits/bytes information in a "directory style". This contains all the packet information, elements, payloads, radiotap header, PPI, flags, fields names & values (ex. control field), etc. (ex .Wireshark has this in the bottom left of a default configuration.) <br> <br> 
+- HEX / Binary / ASCII encoding views: This is the HEX or binary version of the decode view. It shows a "machine read" format of the packet. Wireshark has this in the bottom right of a default configuration.  <br> <br>
+- Wireless Views: This is only available in Wireless packet analysis tools and make easier to see information about channel utilization, retries, authenticatins, top channels, top APs, top STAs, etc. 
+
+**Display, Filter & Profiles Views:**
+
+- Display Filter: Used to refine the view of captured data in the Protocol Analyzer. They help isolate specific packets within a capture file based on various criteria, making it easier to focus on the relevant traffic during analysis. This is more recommended than using a capture filter, because you can capture all the data without losing data and then isolate only the packets you want to see. <br> <br>
 - Color Filter: highlight specific types of packets in the Wireshark interface. By applying color filters, you can quickly identify different kinds of traffic, making it easier to spot patterns and anomalies during analysis. <br> <br>
 - Custom Colors: Custom colors allow you to set specific colors for different types of packets. This customization enhances visual analysis and helps in quickly distinguishing between various traffic types. <br> <br>
 - Custom Columns: Enable you to add specific fields to the packet list pane. This feature allows you to display the most relevant information directly in the main view, making it easier to analyze the captured data. <br> <br>
 - Custom Profiles: Let you save different configurations of Wireshark settings, including filters, color schemes, and columns. This is useful for switching between different analysis setups quickly and efficiently. For example, you can use a profile to troubleshoot DHCP in ethernet captures and other profile to troubleshooit association in 802.11 Wi-Fi. <br> <br>
-- Statistics, Graphics & Expert Reports: Some Protocol Analyzers provides various statistical tools and graphical representations to summarize and visualize the captured data. These tools can help identify trends, anomalies, and potential issues in the network traffic. For example, in 802.11 Wi-Fi you can analyze the airtime utilization filter in the expert view and identify high utilization over the time, the top talking APs, the top talking STAs, etc. <br> <br>
+
+**Advanced Features & Graphic Views**
+
+- Statistics, Graphics & Expert Analysis: Some Protocol Analyzers provides various statistical tools and graphical representations to summarize and visualize the captured data. These tools can help identify trends, anomalies, and potential issues in the network traffic. For example, in 802.11 Wi-Fi you can analyze the airtime utilization filter in the expert view and identify high utilization over the time, the top talking APs, the top talking STAs, etc. <br> <br>
+- Endpoints / Protocol List: This window shows statistics about the endpoints captured. For each supported protocol, a tab is shown in this window. Each tab label shows the number of endpoints captured (e.g., the tab label “Ethernet · 4” tells you that four ethernet endpoints have been captured). If no endpoints of a specific protocol were captured, the tab label will be greyed out (although the related page can still be selected).
+- Node Lists / Conversations: The conversations window is similar to the endpoint Window. Along with addresses, packet counters, and byte counters the conversation window adds four columns: the start time of the conversation (“Rel Start”) or (“Abs Start”), the duration of the conversation in seconds, and the average bits (not bytes) per second in each direction. A timeline graph is also drawn across the “Rel Start” / “Abs Start” and “Duration” columns. 
 - Peer Map: A peer map is used to show frame exchanges between stations (STA’s) that are communicating within a WLAN BSS. This can be a valuable visual representation that may be very useful in troubleshooting WLAN problems.
 
 
-## Frame Analysis: `Time Metrics`
+## Frame Analysis: `Time Metric Columns`
 
 - Absolute time: This is the actual capture date and time based on the time zone of the capture device, this means, the time when the packet was captured, provides the real-world time of packet capture for example date and hour. This metric is useful for correlating captured data with real-world events and time-based troubleshooting. <br> <br>
 - Delta time: This is the elapsed time from the previous packet to the current packet, this means, measures the time elapsed between successive packets. This metric helps in understanding the time intervals between packet transmissions, which can be useful for performance analysis. <br> <br>
 - Relative time: This is the time from the first packet in a capture file, but it can be also similar to the Seconds Since Beginning of Capture option. Cumulative time from a selected packet to another selected packet, it can be used to identify how long it takes for a frame exchange to occur. Some protocol analyzer software programs make this a very simple task. This information is valuable in determining problems such as latency or contention with specific frame exchanges. (ex. in a 4-way-handshake you can select the first frame, and then look how many time does the 4th frame took)
+
+## Frame Analysis: `Name Resolution`
+- Name resolution tries to convert some of the numerical address values into a human readable format. There are two possible ways to do these conversions, depending on the resolution to be done: calling system/network services (like the gethostname() function) and/or resolving from Wireshark specific configuration files. Name resolution can be achieved in 3 different ways: <br> <br>
+    - Passive Discovery: Automatically add names found in captured packets
+    - Active Resolution: Query names via DNS or WINS
+    - Manually add: Added manual bu the user (ex. take one specific MAC Address and call it "John_PC")
+    - Import List: Import from a .txt or .csv file
+
+## Frame Analysis: `Decrypting Frames`
+_Tools like Wireshark can decrypt WEP and WPA/WPA2/WPA3 in pre-shared (or personal) mode. WPA/WPA2 enterprise mode decryption works also since Wireshark 2.0, with some limitations. You can add decryption keys using Wireshark's 802.11 preferences or by using the wireless toolbar. Up to 64 keys are supported. **IMPORTANT NOTE: WEP/WPA/WPA2/WPA3 must have captured 4-way-handshake for decryption**_
+
+- [`802.11 Decrypt` :: decrypt WEP & WPA/WPA2/WPA3 in pre-shared (or personal) mode](https://wiki.wireshark.org/HowToDecrypt802.11)
+- [`WPA/WPA2` :: Decrypt WPA2-PSK using Wireshark](https://mrncciew.com/2014/08/16/decrypt-wpa2-psk-using-wireshark/)
+- [`HTTPS Decryption` :: Website TLS Decryption](https://www.youtube.com/watch?v=GMNOT1aZmD8)
+
 
  
 ## 🪤🔁📡 802.11 Frame Capture: `Roaming Scenarios`
@@ -5279,9 +5305,7 @@ https://www.wireshark.org/docs/dfref/w/wlan_radio.html
 ## 🦈📊 Wireshark: Nodes `Expert Analysis`, `Statistics` & `Conversations`
 - [Reading PCAPs with Wireshark Statistics @ Chris Greer](https://www.youtube.com/watch?v=ZNS115MPsO0) _`video`_
 
-## 🦈🔑 Wireshark: `Encryption` & `Decryption`
-- [`WPA/WPA2` :: Decrypt WPA2-PSK using Wireshark](https://mrncciew.com/2014/08/16/decrypt-wpa2-psk-using-wireshark/)
-- [`HTTPS Decryption` :: Website TLS Decryption](https://www.youtube.com/watch?v=GMNOT1aZmD8)
+
 
 ### 🦈🧪 Wireshark: `Labs`
 - [`QUIC` :: HOW QUIC WORKS - Intro to the QUIC Transport Protocol](https://www.youtube.com/watch?v=HnDsMehSSY4&list=PLW8bTPfXNGdDcSDSmcfYs3ynYOdc1cXSh)
@@ -5486,7 +5510,9 @@ _Even if you getting for example 360mbps of Data Rate, it will noever be the act
 
 
 
-# 802.11 Frames: Forge, Tamper & Injection
+# Packet Generation: Forge, Tamper & Injection
+
+## 802.11 Frame Generation: Forging & Injection
 - [Forging Radiotap Headers](https://github.com/vanhoefm/libwifi/blob/master/docs/linux_tutorial.md#injecting-frames)
 
 
