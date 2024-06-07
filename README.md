@@ -4966,6 +4966,18 @@ _Outlines a common seven-step methodology from problem identification to solutio
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 # 🦈🕵️📦 Protocol Analysis
 _Process of capturing, decoding, and interpreting network communicatios (data packets that travel across a network). Network protocol analysis tools (Software like Wireshark) can capture and display these packets in a readable format, allowing you to examine the details of each packet and how they interact with each other._
 
@@ -5333,7 +5345,51 @@ https://www.wireshark.org/docs/dfref/w/wlan_radio.html
 
 
 
-_
+
+
+
+
+
+
+# Spectrum Analysis
+
+## Spectrum Analyzers
+- [Ekahau Sidekick]()
+- [Metageek]()
+
+
+
+## Spectrum Analysis Views
+
+- [Spectrum Analysis – PHYs and Interferers](https://howiwifi.com/2020/07/03/spectrum-analysis-phys-and-interferers/) _`how to Wi-Fi`_
+
+### Spectrum Analysis: `Duty Cicle`
+_Spectrum analyzer displays a measurement of the amount of time a received signal amplitude is above the noise floor or another arbitrary threshold. Although the term duty cycle can be subjective based on the context in which it is used within WLAN technology, it is commonly identifies the percentage of time an RF signal is above a specific threshold. A high duty cycle such as 95-100% can indicate a problem such as an RF jammer or other devise that is causing high utilization of the RF channel._
+- [Low Duty Cicle VS High Duty Cicle :: Channel Utilization]()
+
+### Spectrum Analysis: `FFT Plot`
+
+### Spectrum Analysis: `Device Finder`
+- [Omnidirectional VS Directional Antenna]()
+- [It Took MONTHS to Solve This WiFi Problem but I DID!](https://www.youtube.com/watch?v=f-dGcs6bb5U&t=537s)
+
+### Spectrum Analysis: `waterfall view`
+_In some cases RF related problems may not be consistent. The best way to identify these problems would be to view the RF over a period of time. The waterfall view allows you to view a RF channel or band over a period of time._
+
+### Density View
+_Useful for find repetition of data points over time to help locate the interferer. The density view in a spectrum analyzer will show the data points that a specific frequency is hit within a channel or band. Choosing a color scheme will help to show these events. This can be used to help identify an RF transmitter and interferer._
+
+
+## Spectrum Analysis: `Device Signatures` & `Non-WiFi Interference`
+- [Metageek :: Wi-Fi & No-Wi-Fi Interference examples](https://www.metageek.com/training/resources/wifi-and-non-wifi-interference/)
+- [Metageek :: Interference Identification Guide](https://www.4gon.co.uk/documents/meetageek_interference_identification_guide.pdf)
+- [Ekahau :: Identifying Wi-Fi Interference with Ekahau Analyzer](https://www.ekahau.com/blog/identifying-wi-fi-interference-with-ekahau-analyzer/)
+- [Aruba :: No-Wi-Fi interference examples](https://www.arubanetworks.com/techdocs/ArubaOS_8.11.0_Web_Help/Content/arubaos-solutions/spectrum-analysis/non-wifi-inte.htm) <br> <br>
+- [Wideband Jammer]() `Ultra high & Wide Duty Cicle`
+- [Bluetooth]() `Low Duty Cicle`
+- [Cordless Phone]() `Low Duty Cicle` | 2 or more channels
+- [Wireless Camera]() `High Duty Cicle`
+
 
 
 
@@ -5558,38 +5614,6 @@ _Even if you getting for example 360mbps of Data Rate, it will noever be the act
 
 
 
-## Spectrum Analysis `layer 1`:`PHY`
-
-## Spectrum Analyzers
-- [Ekahau Sidekick]()
-- [Metageek]()
-
-
-
-## Spectrum Analysis Views
-
-### Spectrum Analysis: `Duty Cicle`
-_Spectrum analyzer displays a measurement of the amount of time a received signal amplitude is above the noise floor or another arbitrary threshold. Although the term duty cycle can be subjective based on the context in which it is used within WLAN technology, it is commonly identifies the percentage of time an RF signal is above a specific threshold. A high duty cycle such as 95-100% can indicate a problem such as an RF jammer or other devise that is causing high utilization of the RF channel._
-- [Low Duty Cicle VS High Duty Cicle :: Channel Utilization]()
-
-### Spectrum Analysis: `FFT Plot`
-
-### Spectrum Analysis: `Device Finder`
-- [Omnidirectional VS Directional Antenna]()
-- [It Took MONTHS to Solve This WiFi Problem but I DID!](https://www.youtube.com/watch?v=f-dGcs6bb5U&t=537s)
-
-### Spectrum Analysis: `waterfall view`
-_In some cases RF related problems may not be consistent. The best way to identify these problems would be to view the RF over a period of time. The waterfall view allows you to view a RF channel or band over a period of time._
-
-### Density View
-_Useful for find repetition of data points over time to help locate the interferer. The density view in a spectrum analyzer will show the data points that a specific frequency is hit within a channel or band. Choosing a color scheme will help to show these events. This can be used to help identify an RF transmitter and interferer._
-
-
-## Spectrum Analysis: `Device Signatures` & `Non-WiFi Interference`
-- [Wideband Jammer]() `Ultra high & Wide Duty Cicle`
-- [Bluetooth]() `Low Duty Cicle`
-- [Cordless Phone]() `Low Duty Cicle` | 2 or more channels
-- [Wireless Camera]() `High Duty Cicle`
 
 
 
