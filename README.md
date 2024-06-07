@@ -4223,8 +4223,13 @@ _There are 2 types of MAC Operations: Power Management & Protection Mechanisms |
 
 ## 🛜🚦🛑 MAC Operations: `Power Management`
 _Many mechanisms that are described in the IEEE 802.11 standard allow a wireless device to reduce its power consumption, to turn off its radios and to wake up at the correct time to retrieve its traffic. While the APs are generally connected to an external power source, the wireless clients are often running on batteries. The purpose of power saving features is to increase the battery life and to allow longer performance. This battery life extension can be significant for low-powered devices such as smartphones, Voice over IP phones or handheld barcodes scanners._
+
 - [802.11 Power Management with packet captures](https://dot11zen.blogspot.com/2018/02/80211-power-management-with-packet.html) _`dot11zen`_
 - [802.11 Power Save Methods](https://howiwifi.com/2020/06/25/power-save-methods/) _`how to Wi-fi`_
+- [802.11 Power Save Modes & Power Management](https://www.youtube.com/watch?v=m363xe-fia8) _`video`_
+- [802.11 WLAN Power Management](https://www.youtube.com/watch?v=M_RpvOeiqp0) _`short video`_
+- [802.11 Power Management](https://mrncciew.com/2014/10/14/cwap-802-11-power-management/) _`nayarasi`_
+- [Understanding SMPS Method for Wi-Fi Power Management](https://www.cwnp.com/smps/) _`cwnp`_
 - [Power Save Mechanisms for 802.11ax](https://balramdot11b.com/2020/06/03/power-save-mechanisms-802-11ax/)
 - [Coexistence of IEEE 802.11b & 802.11e STAs in QoS enabled WLAN](https://www.researchgate.net/publication/221278781_Coexistence_of_IEEE_80211B_and_IEEE_80211E_Stations_in_QoS_Enabled_Wireless_Local_Area_Network)
 
