@@ -4259,13 +4259,16 @@ _A client STA can be in one of two Power Management modes:_
 
 ### PS Field: AID (Association Identifier)
 
-- AID (Association Identifier): **Sent by the AP** (`Association Response` or `Re-Association Response`) :: Every 802.11 Power Management Method starts begin with the client STA associates to the BSS. When AP sends "Association Response" or "Re-Association Response" frame to the STA, an `AID` value is present in the AID parameter field (16-bit)
+- AID (Association Identifier): **Sent by the AP** (`Association Response` or `Re-Association Response`) :: Every 802.11 Power Management Method starts begin with the client STA associates to the BSS. When AP sends "Association Response" or "Re-Association Response" frame to the STA, an `AID` value is present in the AID parameter field (16-bit) <br> <br>
+    - Filter :: AID (Association Identifier) 3 = `wlan.fixed.aid == 3` 
 
 ---
 
 ### PS Field: Listen Interval
 
-- Listen Interval: **Sent by the STA** (`Association Request` or `Re-Association Request`) :: The client STA will go to `awake` state in a timing period called "Listen Interval". The "Association Request" or "Re-Association Request" frame includes a Listen Interval subfield within the Capabilities Information field. It is an integer between 0 and 65535 expressed in **units of Beacon Interval**. It indicates to the AP how often a client in PS mode wakes up to listen to the Beacon frames. In the AP, the Aging Time of the buffered frames bound to the client is implemented differently by each vendor but must not be shorter than the Listen Interval (or the WNM Sleep Interval in a WNM Sleep Mode Request frame). The Listen Interval from the client is also vendor specific.
+- Listen Interval: **Sent by the STA** (`Association Request` or `Re-Association Request`) :: The client STA will go to `awake` state in a timing period called "Listen Interval". The "Association Request" or "Re-Association Request" frame includes a Listen Interval subfield within the Capabilities Information field. It is an integer between 0 and 65535 expressed in **units of Beacon Interval**. It indicates to the AP how often a client in PS mode wakes up to listen to the Beacon frames. In the AP, the Aging Time of the buffered frames bound to the client is implemented differently by each vendor but must not be shorter than the Listen Interval (or the WNM Sleep Interval in a WNM Sleep Mode Request frame). The Listen Interval from the client is also vendor specific. <br> <br>
+    - Filter :: Listen Interval 250 (HEX) = `wlan.fixed.listen_ival == 0x00fa`
+    - Filter :: Listen Interval 250 (Decimal) = `wlan.fixed.listen_ival == 0x00fa`
 
 ---
 
