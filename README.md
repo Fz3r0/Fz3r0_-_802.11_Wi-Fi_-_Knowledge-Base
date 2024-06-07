@@ -4245,7 +4245,11 @@ _A wireless client STA enters Power Save (PS) mode in which the radio power stat
 STA will go from `Doze` to `Awake` state for one of two reasons: 
 
 1. If STA have a frame to send.
-2. Based on the STA internal timing mechanism.
+2. Based on the STA internal timing mechanism. <br> <br>
+    - Data & Power Management = 0 ==>> **Awake** :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 0`
+    - QoS Data & Power Management = 0 ==>> **Awake** :: `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 0` <br> <br>
+    - Data & Power Management = 1 ==>> **Doze** :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 1`
+    - QoS Data & Power Management = 1 ==>> **Doze** :: `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 1`
 
 ---
 
