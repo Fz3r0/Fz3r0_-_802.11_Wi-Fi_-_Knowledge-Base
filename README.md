@@ -5173,6 +5173,7 @@ _Devices and methods for capturing 802.11 WiFi frames can be categorized into th
 
 
 ## Frame Capture: `Capture Options`
+_When capturing network traffic, setting appropriate capture options ensures you collect the most relevant data efficiently. Key capture options include:_
 
 - Capture Title: Always name your captures with much details as possible like where, when, why (ex. 2024-06-06_13-25hrs_802-11_AP-Room-1_Authentication_iphone-f0-f0-f0-f0-f0-f0_-_01.pcap) <br> <br>
 - Continious Capture: Recycle the capture buffer, which is a temporary buffer where the captured packets are stored. 
@@ -5185,10 +5186,11 @@ _Devices and methods for capturing 802.11 WiFi frames can be categorized into th
 - Event Trigger Capturing: Event triggers can be set to start and end packet captures based on a specific event. This will allow a protocol analyzer to capture frames that may be helpful in troubleshooting intermittent problems when a specific event happens. Event triggers can be very granular to allow for complex captures to be used with troubleshooting WLAN problems.
 
 ## Frame Capture: `Channel Capture & Configuration`
+_When capturing network traffic, proper channel capture and configuration are essential to collect the relevant data. Capturing on the wrong channel means missing the traffic you need to analyze. Since there are many channels, it's crucial to know which specific channel or channels to target for your troubleshooting needs._
 
 - Fixed Channel: Capture in one single channel :: For troubleshooting a particular device that is using a particular channel. Some adapters can be configured even with channel bandwith, primary or secondary channel, etc. (ex. capturing only channel 11 of 2.4 GHz because AP and STA are using that channel) <br> <br>
 - Channel Scan: Capture the whole picture of the BSA channels and bands :: Select every single channel to do a channel hopping method, some adapters can go from 2.4 GHz to 5 GHz hopping. The tradeoff of this capture technique is that you will miss what is happening in others channels while you are hopping from one channel to another. <br> <br>
-- Fixed Channel + Different Channels: If you have more than 1 adapter you can capture on different channels at same time and you won't miss anything. (ex. with 3 adapters you can capture channel 1, 6 & 11 of 2.4 GHz at same time)
+- Fixed Channels using different Channels: If you have more than 1 adapter you can capture on different channels at same time and you won't miss anything. (ex. with 3 adapters you can capture channel 1, 6 & 11 of 2.4 GHz at same time)
 
 ## 🤳🏾🪤📡 802.11 Frame Capture: `Location for Capture`
 _In 802.11 Frames Capture is very important the physical location of the adapter that will capture 802.11 Frames depending on what are we tring to capture, it's important to remember that we are capturing on wireless medium (RF flying through the air)_
@@ -5206,6 +5208,7 @@ _Capturing and troubleshooting both wired (802.3 Ethernet) and wireless (802.11 
 - VLAN Tagging: Capturing VLAN tags on both Wi-Fi and Ethernet is necessary for verifying correct VLAN VS SSIDs configurations. This helps in ensuring that VLANs are properly propagated and handled across the entire network, facilitating accurate traffic segregation and management. For example when you configure a VLAN for specific SSID. 
 
 ## Frame Analysis: `Packet Views`
+_Understanding network traffic through packet views is crucial for effective analysis. Here are the key packet views used in protocol analyzers._
 
 ### General Views:
 
@@ -5230,18 +5233,19 @@ _Capturing and troubleshooting both wired (802.3 Ethernet) and wireless (802.11 
 - Peer Map: A peer map is used to show frame exchanges between stations (STA’s) that are communicating within a WLAN BSS. This can be a valuable visual representation that may be very useful in troubleshooting WLAN problems.
 
 ## Frame Analysis: `Time Metric Columns`
+_Various time metric columns provide insights into different aspects of packet timing._
 
 - Absolute time: This is the actual capture date and time based on the time zone of the capture device, this means, the time when the packet was captured, provides the real-world time of packet capture for example date and hour. This metric is useful for correlating captured data with real-world events and time-based troubleshooting. <br> <br>
 - Delta time: This is the elapsed time from the previous packet to the current packet, this means, measures the time elapsed between successive packets. This metric helps in understanding the time intervals between packet transmissions, which can be useful for performance analysis. <br> <br>
 - Relative time: This is the time from the first packet in a capture file, but it can be also similar to the Seconds Since Beginning of Capture option. Cumulative time from a selected packet to another selected packet, it can be used to identify how long it takes for a frame exchange to occur. Some protocol analyzer software programs make this a very simple task. This information is valuable in determining problems such as latency or contention with specific frame exchanges. (ex. in a 4-way-handshake you can select the first frame, and then look how many time does the 4th frame took)
 
 ## Frame Analysis: `Name Resolution`
+_Name resolution tries to convert some of the numerical address values into a human readable format. There are different possible ways to do these conversions, depending on the resolution to be done: calling system/network services (like the gethostname() function) and/or resolving from specific configuration files. Name resolution can be achieved in different ways:_ <br> <br>
 
-- Name resolution tries to convert some of the numerical address values into a human readable format. There are two possible ways to do these conversions, depending on the resolution to be done: calling system/network services (like the gethostname() function) and/or resolving from Wireshark specific configuration files. Name resolution can be achieved in 3 different ways: <br> <br>
-    - Passive Discovery: Automatically add names found in captured packets
-    - Active Resolution: Query names via DNS or WINS
-    - Manually add: Added manual bu the user (ex. take one specific MAC Address and call it "John_PC")
-    - Import List: Import from a .txt or .csv file
+- Passive Discovery: Automatically add names found in captured packets
+- Active Resolution: Query names via DNS or WINS
+- Manually add: Added manual bu the user (ex. take one specific MAC Address and call it "John_PC")
+- Import List: Import from a .txt or .csv file
 
 ## Frame Analysis: `Decrypting Frames`
 _Tools like Wireshark can decrypt WEP and WPA/WPA2/WPA3 in pre-shared (or personal) mode. WPA/WPA2 enterprise mode decryption works also since Wireshark 2.0, with some limitations. You can add decryption keys using Wireshark's 802.11 preferences or by using the wireless toolbar. Up to 64 keys are supported. **IMPORTANT NOTE: WEP/WPA/WPA2/WPA3 must have captured 4-way-handshake for decryption**_
