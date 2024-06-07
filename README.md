@@ -4239,8 +4239,8 @@ _The primary power save mechanism is based on a low-power state in which the rad
 ### Power States
 _A wireless client STA enters Power Save (PS) mode in which the radio power state can transition between awake and doze according to the 802.11 power management rules. A radio STA can be in one of two Power states:_
 
-- **`Awake`**: the radio is constantly powered and able to receive and transmit. <br> <br>
-- **`Doze`**: the radio is not able to receive and transmit and consumes low power. STA is allowed to go to "Doze" state after an AP has been notified that station is about to enter power save mode. STA will use `Null Data Frame` or `QoS Null Data Frame` with bit `Power Management / Power Save Mode = 1` to inform the AP that it will going to "Doze" state.
+- **`Awake`**: The client STA radio is constantly powered and able to receive and transmit. <br> <br>
+- **`Doze`**: The client STA cannot receive or transmit any frames and operates in a very low power state to conserve power. STA is allowed to go to "Doze" state after an AP has been notified that station is about to enter Power Save (PS) mode. STA will use `Null Data Frame` or `QoS Null Data Frame` with bit `Power Management / Power Save Mode = 1` to inform the AP that it will going to "Doze" state.
 
 STA will go from `Doze` to `Awake` state for one of two reasons: 
 
@@ -4259,16 +4259,35 @@ _A client STA can be in one of two Power Management modes:_
 
 ### PS Field: AID (Association Identifier)
 
-- AID (Association Identifier): Every 802.11 Power Management Method starts begin with the client STA associates to the BSS. When AP sends `Association Response` or `Re-Association Response` frame to the STA, an `AID` value is present in the AID parameter field (16-bit)
+- AID (Association Identifier): **Sent by the AP** (`Association Response` or `Re-Association Response`) :: Every 802.11 Power Management Method starts begin with the client STA associates to the BSS. When AP sends "Association Response" or "Re-Association Response" frame to the STA, an `AID` value is present in the AID parameter field (16-bit)
+
+---
+
+### PS Field: Listen Interval
+
+- Listen Interval: **Sent by the STA** (`Association Request` or `Re-Association Request`) :: The client STA will go to `awake` state in a timing period called "Listen Interval". The "Association Request" or "Re-Association Request" frame includes a Listen Interval subfield within the Capabilities Information field. It is an integer between 0 and 65535 expressed in **units of Beacon Interval**. It indicates to the AP how often a client in PS mode wakes up to listen to the Beacon frames. In the AP, the Aging Time of the buffered frames bound to the client is implemented differently by each vendor but must not be shorter than the Listen Interval (or the WNM Sleep Interval in a WNM Sleep Mode Request frame). The Listen Interval from the client is also vendor specific.
 
 ---
 
 ### PS Information Element: TIM (Traffic Indication Map)
 
-- TIM (Traffic Indication Map): It's a IE (Information Element) with the two following Sub-Fields:
-    - Element ID (1 byte / 8 bits): Value of 5 indicates is a TIM
-    - Lenght (1 byte / 8 bits): Lenght of the information carrying fields (DTIM Count, DTIM Period, Bitmap Control, Partial Virtual Bitmap)
+- TIM (Traffic Indication Map): It's a IE (Information Element) with the two following Sub-Fields: <br> <br>
+    - Element ID (1 byte / 8 bits): Value of 5 indicates is a TIM. <br> <br>
+    - Lenght (1 byte / 8 bits): Lenght of the information carrying fields (DTIM Count, DTIM Period, Bitmap Control, Partial Virtual Bitmap). <br> <br>
+    - DTIM (Delivery-TIM) Count (1 byte / 8 bits): Incremental `Beacon Frames` until the next DTIM. <br> <br>
+    - DTIM (Delivery-TIM) Period (1 byte / 8 bits): Number of `Beacon Frames` between DTIM beacon. <br> <br>
+    - Bitmap Control (1 byte / 8 bits): Indicates if **Multicast/Broadcast** traffic are buffered at the AP & use a space save called `bitmap offset`. <br> <br>
+    - PVB (Partial Virtual Map): (1 byte - 251 bytes): Series of flags indicating whether each associated STA has **Unicast** frames buffered at the AP. Each bit in this field corresponds to an AID of a STA.
 
+
+
+
+
+---
+
+### Control Frame: PS-Poll
+
+- PS-POLL: The legacy PS mode mechanism is based on the PS-Poll frame to retrieve the buffered frames in the AP. The PS-Poll frame is a short Control Frame containing the AID value of the client. PS-Poll have the following Sub-Fields:
 
 
 
