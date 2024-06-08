@@ -2246,6 +2246,8 @@ Note: # The MAC Layer 2 uses the FCS (Frame Check Sequence) for error check vali
 
 ````
 
+---
+
 ### 📡📏🦒 `HR-DSSS` / `802.11b` Long Preamble PPDU:
 
 - 🔁 `Preamble`: <br><br>
@@ -2259,6 +2261,8 @@ Note: # The MAC Layer 2 uses the FCS (Frame Check Sequence) for error check vali
         - ⭕ `Service` (8 bits) :: Defines High Rate Extensions for HR-DSSS: **0 = Barker Code Coding = 1/2 Mbps** / **1 = CCK Coding = 5.5 Mbps** 
         - ⭕ `Lenght` (16 bits) :: Defines how many microsecods (μs) are requiered to transmit the PSDU (MPDU)  <br><br>
         - ⭕ `CRC (Cyclic Redundancy Check)` (16 bits) :: 16 CRC Frame check to validate the PLCP-Header Information: Signal, Service & Lenght fields
+
+---
 
 ### 📡📏🤏 `HR-DSSS` / `802.11b` Short Preamble PPDU:
 
