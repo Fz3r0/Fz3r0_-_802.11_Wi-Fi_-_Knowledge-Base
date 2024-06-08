@@ -2254,7 +2254,7 @@ PCLP Layer (upper layer 1):
         - `SFD (Start Frame Delimiter)` (16 bits) :: Inform that the Preamble is ending and it's time to start to send the PLCP-Header using a unique sequence **1111 0011 1010 0000** <br><br>
 - `PLCP-Header`: <br><br>
     - 48 bits lenght PLCP-Header (PHY-Header), includes fields: `Signal Rate`, `Service`, `Lenght` & `CRC` <br><br>
-        - 
+
 
 ---
 
