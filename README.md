@@ -2188,8 +2188,8 @@ PCLP Layer (upper layer 1):
 
 - IMPORTANT NOTE:
 
-# When you see a data frame with for example 256 Mbps of Data Rate, remember that the frame is using that Data Rate only for the data transmission,
-  but the PHY information will always be sent at the lowest Data Rate of the PHY or band.  
+#   - When you see a data frame with for example 256 Mbps of Data Rate, remember that the frame is using that Data Rate only for the data transmission,
+#     but the PHY information will always be sent at the lowest Data Rate of the PHY or band.  
 
 ````
 
