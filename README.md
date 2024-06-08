@@ -2149,11 +2149,12 @@ _Instructions & Data directly understandable by STAs, not present on 802.11 Fram
 
 ## ⬆️🗂️📡 PLCP Sub-Layer PPDU: `Preamble`, `PLCP Header` & `PSDU`
 
-- [802.11 PHY :: PLCP Sub-Layer – PPDU & PLCP Header & Preamble](https://mrncciew.com/2014/10/14/cwap-802-11-phy-ppdu/) _`nayarasi`_
+- [802.11 PHY :: PLCP Sub-Layer – PPDU & PLCP Header & Preamble :: 802.11b/a/g/n/ac](https://mrncciew.com/2014/10/14/cwap-802-11-phy-ppdu/) _`nayarasi`_
+- [802.11 PHY :: PLCP Sub-Layer – PPDU & PLCP Header & Preamble :: 802.11ax](https://www.rfwireless-world.com/Terminology/WLAN-802-11ax-frame-structure.html) _`rfwireless-world`_
 
 **The PPDU consist of 3 parts:**
 
-1. PLCP Preamble
+1. Preamble
 2. PLCP Header
 3. PSDU
 
@@ -2311,7 +2312,7 @@ Note: # The MAC Layer 2 uses the FCS (Frame Check Sequence) for error check vali
 
 ### 📡📏🤏 `HR-DSSS` / `802.11b` Short Preamble VS Long Preamble PPDU's:
 
-| ****                            | **Long Preamble PPDU ** | **Short Preamble PPDU** |
+|                                 | **Long Preamble PPDU**  | **Short Preamble PPDU** |
 |---------------------------------|-------------------------|-------------------------|
 | **Preamble lenght**             | 144 bits                | 72 bits                 |
 | **SYNC lenght**                 | 128 bits                | 56 bits                 |
@@ -2327,17 +2328,18 @@ Note: # The MAC Layer 2 uses the FCS (Frame Check Sequence) for error check vali
 
 **OFDM PLCP Preamble:**
 
-– Also known as OFDM training structure
-– consist of 10 short symbols (t1-t10) & 2 long symbols (T1-T2).
-– GI2 is long guard interval.
+– Also known as OFDM training structure (the "Preamble" is called "Training Field" but it work the same way).
+– The Training Field (Preamble) consist of 10 **Short Symbols** (t1-t10) & 2 **Long Symbols** (T1-T2).
+– GI2 is **Long Guard Interval** (GI).
 – Following the PLCP preamble SIGNAL & DATA field each with GI preceding them.
-– total training length is 16μS
+– Total Training length is 16 μS
 – Short OFDM training symbol consist of 12 subcarriers.
 – Long OFDM training symbol consists of 53 subcarriers.
 
 **OFDM Signal Field:**
 
-- In OFDM transmission, SIGNAL field is 24 bits long.
+- The Signal field going to give the rate which is the modulation and coding scheme in use
+- In OFDM transmission, Signal field is 24 bits long.
 – First 4 bits (0-3) indicate the data rate (6,9,12,18,24,36,48,54).
 – Next bit (bit 4) is reserved for future use
 – Next 12 bits (bit 5-16) make up the PLCP Length field which indicate number of bytes in the PSDU.
@@ -2346,27 +2348,28 @@ Note: # The MAC Layer 2 uses the FCS (Frame Check Sequence) for error check vali
 
 ````py
 
-## PLCP Header & Preamble :: The PPDU is formed by the PSDU + PLCP Header + Preamble
+## PLCP OFDM PPDU (802.11a/g) :: The PPDU is formed by the Data + Sugnal + Training Field (Preamble)
 
 PCLP Layer (upper layer 1):
 
-    - Long Preamble PPDU Format:
+    - OFDM Preamble PPDU Format:
 
 <-------------------------------------------- PPDU ------------------------------------------->
 |-----------------|-----------------||--------------------------------------------------------|
-|    Preamble     |   PLCP-Header   ||                            PSDU                        |
-|                 |   (PHY Header)  ||                    (ex. MPDU or A-MPDU)                |
+| Training Field  |      Signal     ||                            Data                        |
+|   (Preamble)    |                 ||                                                        |
 |-----------------|-----------------||--------------------------------------------------------|
-<- ->
+<-- 12 Symbols -->
    ||                          || 
    \/                          \/
-|--------|--------|          |----------|----------|----------|----------|
-|  SYNC  |  SFD   |          |  Singal  |  Service |  Lenght  |   CRC    |
-|  (1s)  |        |          |  / Rate  |          |          |          |
-|--------|--------|          |----------|----------|----------|----------|
-   128       16                   8          8          16         16        <<== 143 bits (Preamble) + 48 bits (PLCP-Header) 
-<--- 143 bits --->           <----------------- 48 bits ----------------->
-
+|--------|--------|          |----------|----------|----------|----------|----------|----------||----------|----------|----------|
+|   STF  |   LTF  |          |   Rate   | Reserved |  Lenght  |  Parity  |   Tail   |  Service ||   PSDU   |   Tail   |    Pad   |
+|        |        |          |          |          |          |          |      
+|--------|--------|          |----------|----------|----------|----------|----------|----------||----------|----------|----------|
+    10        2                                                              
+  Short      Long            <---------------------------- 24 bits ---------------------------->
+ Symbols   Symbols
+ 
 
 
 ````
