@@ -2142,13 +2142,35 @@ _Instructions & Data directly understandable by STAs, not present on 802.11 Fram
 
 
 
-## ⭕ 802.11 PHY Services Specifications = Clause 8 802.11-2020
-- Clause PHT: DSSS
-- Clause PHT: HR/DSSS
-- Clause PHT: OFDM
-- Clause PHT: ERP
-- Clause PHT: HT
-- Clause 21 :: VHT :: 802.11ac :: DSSS
+## ⬆️🗂️📡 PLCP: `PLCP Header` & `Preamble`
+
+````py
+
+## PLCP Header & Preamble :: The PPDU is formed by the PSDU + PLCP Header & Preamble
+
+PCLP Layer (upper layer 1):
+
+<-------------------------------------------- PPDU ------------------------------------------->
+|-----------------|-----------------||--------------------------------------------------------|
+|    Preamble     |   PHY Header    ||                            PSDU                        |
+|                 |  (PLCP-Header)  ||                    (ex. MPDU or A-MPDU)                |
+|-----------------|-----------------||--------------------------------------------------------|
+
+- PLCP Header
+
+- PLCP Preamble
+
+
+````
+
+
+
+
+
+
+
+
+
 
 ## 🔝📡🗂️ 802.11 Pseudo-Headers: `Radiotap`, `plus AVS Radio Information`, `PPI`
 _Radiotap is a de facto standard for 802.11 frame injection and reception | The radiotap header format is a mechanism to supply additional information about frames, from the driver to userspace applications such as libpcap, and from a userspace application to the driver for transmission. | Data that is NOT present in a 802.11 MAC-frame, but is intepreted coming from the PHY-Layer 1 (spectrum) derived from the PLCP header. Additional information (Meta-Information) that is added to each 802.11 frame when capturing frames with an analysis application interpreted/calculated because the PHY layer 1 spectrum throught drivers/adapters. These are not part of the standard 802.11 frame format, but are additional information added at the time of capture to provide supplementary data about the frames captured | **Some adapters capture Radiotap Header & Radio Information, other drivers can capture PPI & Radio Information**_
