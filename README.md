@@ -2165,59 +2165,59 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
 
 ### 🔝📡 802.11 Radiotap Header
 - ⭕ Radiotap Header: **`Version`** _(Currently Always 0)_ <br><br>
-    - Radiotap Header Version 0 = `radiotap.version == 0` <br><br>
+    - 🦈 Radiotap Header Version 0 = `radiotap.version == 0` <br><br>
 - ⭕ Radiotap Header: **`Pad`** _(Currently Unused)_ <br><br>
-    - Radiotap Header Pad 0 = `radiotap.pad == 0` <br><br>
+    - 🦈 Radiotap Header Pad 0 = `radiotap.pad == 0` <br><br>
 - ⭕ Radiotap Header: **`Lenght`** _(entire length of the radiotap data, useful for developers)_ <br><br>
-    - Radiotap Header Lenght **Equal** 50 bits = `radiotap.length == 50`
-    - Radiotap Header Lenght **Less** than 50 bits = `radiotap.length < 50`
-    - Radiotap Header Lenght **More** than 50 bits = `radiotap.length > 50` <br><br>
+    - 🦈 Radiotap Header Lenght **Equal** 50 bits = `radiotap.length == 50`
+    - 🦈 Radiotap Header Lenght **Less** than 50 bits = `radiotap.length < 50`
+    - 🦈 Radiotap Header Lenght **More** than 50 bits = `radiotap.length > 50` <br><br>
 - ⭕ Radiotap Header: **`Present Flags`** _(Possible present flags in a Radiotap Header)_ <br><br>
-    - TSFT (Time Synchronization Function Timer) = `radiotap.present.tsft == 1`
-    - Flags = `radiotap.present.flags == 1`
-    - Rate = `radiotap.present.rate == 1`
-    - Channel (channel where frame was captured) = `radiotap.present.channel == 1`
-    - FHSS (Frequency-hopping spread spectrum) = `radiotap.present.fhss == 1`
-    - dBm Antenna Signal = `radiotap.present.dbm_antsignal == 1`
-    - dBm Antenna Noise = `radiotap.present.dbm_antnoise == 1`
-    - Lock Quality = `radiotap.present.lock_quality == 1`
-    - TX Attenuation = `radiotap.present.tx_attenuation == 1`
-    - db TX Attenuation = `radiotap.present.db_tx_attenuation == 1`
-    - dBm TX Power = `radiotap.present.dbm_tx_power == 1`
-    - Antenna = `radiotap.present.antenna == 1`
-    - dB Antenna Signal = `radiotap.present.db_antsignal == 1`
-    - dB Antenna Noise = `radiotap.present.db_antnoise == 1`
-    - RX Flags = `radiotap.present.rxflags == 1`
-    - TX Flags = `radiotap.present.txflags == 1`
-    - Data Retries = `radiotap.present.data_retries  == 1`
-    - Channel+ = `radiotap.present.xchannel == 1`
-    - MCS Information = `radiotap.present.mcs == 1`
-    - A-MPDU Status = `radiotap.present.ampdu == 1`
-    - VHT Information (801.11ac) = `radiotap.present.vht == 1`
-    - Frame Timesamp = `radiotap.present.timestamp == 1`
-    - HE Information (802.11ax) = `radiotap.present.he == 1`
-    - HE-MU Information = `radiotap.present.he_mu == 1`
-    - 0 Lenght PSDU = `radiotap.present.0_length.psdu == 1`
-    - L-SIG (Legacy-Signal) = `radiotap.present.l_sig == 1`
-    - _Reserved_ = `radiotap.present.reserved == 0x0`
-    - TLVs (Type-Length-Values) = `radiotap.present.tlv == 1`
-    - Radiotap NS (Name Space) = `radiotap.present.rtap_ns == 1`
-    - Vendor NS (Name Space) = `radiotap.present.vendor_ns == 1`
-    - Ext = `radiotap.present.ext == 1`  <br><br>
+    - 🦈 TSFT (Time Synchronization Function Timer) = `radiotap.present.tsft == 1`
+    - 🦈 Flags = `radiotap.present.flags == 1`
+    - 🦈 Rate = `radiotap.present.rate == 1`
+    - 🦈 Channel (channel where frame was captured) = `radiotap.present.channel == 1`
+    - 🦈 FHSS (Frequency-hopping spread spectrum) = `radiotap.present.fhss == 1`
+    - 🦈 dBm Antenna Signal = `radiotap.present.dbm_antsignal == 1`
+    - 🦈 dBm Antenna Noise = `radiotap.present.dbm_antnoise == 1`
+    - 🦈 Lock Quality = `radiotap.present.lock_quality == 1`
+    - 🦈 TX Attenuation = `radiotap.present.tx_attenuation == 1`
+    - 🦈 db TX Attenuation = `radiotap.present.db_tx_attenuation == 1`
+    - 🦈 dBm TX Power = `radiotap.present.dbm_tx_power == 1`
+    - 🦈 Antenna = `radiotap.present.antenna == 1`
+    - 🦈 dB Antenna Signal = `radiotap.present.db_antsignal == 1`
+    - 🦈 dB Antenna Noise = `radiotap.present.db_antnoise == 1`
+    - 🦈 RX Flags = `radiotap.present.rxflags == 1`
+    - 🦈 TX Flags = `radiotap.present.txflags == 1`
+    - 🦈 Data Retries = `radiotap.present.data_retries  == 1`
+    - 🦈 Channel+ = `radiotap.present.xchannel == 1`
+    - 🦈 MCS Information = `radiotap.present.mcs == 1`
+    - 🦈 A-MPDU Status = `radiotap.present.ampdu == 1`
+    - 🦈 VHT Information (801.11ac) = `radiotap.present.vht == 1`
+    - 🦈 Frame Timesamp = `radiotap.present.timestamp == 1`
+    - 🦈 HE Information (802.11ax) = `radiotap.present.he == 1`
+    - 🦈 HE-MU Information = `radiotap.present.he_mu == 1`
+    - 🦈 0 Lenght PSDU = `radiotap.present.0_length.psdu == 1`
+    - 🦈 L-SIG (Legacy-Signal) = `radiotap.present.l_sig == 1`
+    - 🦈 _Reserved_ = `radiotap.present.reserved == 0x0`
+    - 🦈 TLVs (Type-Length-Values) = `radiotap.present.tlv == 1`
+    - 🦈 Radiotap NS (Name Space) = `radiotap.present.rtap_ns == 1`
+    - 🦈 Vendor NS (Name Space) = `radiotap.present.vendor_ns == 1`
+    - 🦈 Ext = `radiotap.present.ext == 1`  <br><br>
 - ⭕ Radiotap Header: **`MAC Timestamp`** _value in microseconds of the MAC's 64-bit 802.11 Time Synchronization Function timer when the first bit of the MPDU arrived at the MAC_ <br><br>
-    - MAC Timestamp: 0 microseconds = `radiotap.mactime == 0`
-    - MAC Timestamp: 131373891612 microseconds =`radiotap.mactime == 131373891612`<br><br>
-    - MAC Timestamp **less than** 10000 microseconds = `radiotap.mactime > 10000`
-    - MAC Timestamp **more than** 10000 microseconds = `radiotap.mactime < 10000` <br><br>
+    - 🦈 MAC Timestamp: 0 microseconds = `radiotap.mactime == 0`
+    - 🦈 MAC Timestamp: 131373891612 microseconds =`radiotap.mactime == 131373891612`<br><br>
+    - 🦈 MAC Timestamp **less than** 10000 microseconds = `radiotap.mactime > 10000`
+    - 🦈 MAC Timestamp **more than** 10000 microseconds = `radiotap.mactime < 10000` <br><br>
 - ⭕ Radiotap Header: **`Flags`** _Properties of transmitted and received frames_ <br><br>
-    - CFP (Contention Free Period) = `radiotap.flags.cfp == 1`
-    - Preamble (0 = Long | 1 = Short) = `radiotap.flags.preamble == 1`
-    - WEP (Wired Equivalent Privacy) = `radiotap.flags.wep == 1`
-    - Fragmentation = `radiotap.flags.frag == 1`
-    - FCS-at-end = `radiotap.flags.fcs == 1`
-    - Datapad = `radiotap.flags.datapad == 1`
-    - Bad FCS = `radiotap.flags.badfcs == 1`
-    - Short GI (Guard Interval) = `radiotap.flags.shortgi == 1` <br><br>
+    - 🦈 CFP (Contention Free Period) = `radiotap.flags.cfp == 1`
+    - 🦈 Preamble (0 = Long | 1 = Short) = `radiotap.flags.preamble == 1`
+    - 🦈 WEP (Wired Equivalent Privacy) = `radiotap.flags.wep == 1`
+    - 🦈 Fragmentation = `radiotap.flags.frag == 1`
+    - 🦈 FCS-at-end = `radiotap.flags.fcs == 1`
+    - 🦈 Datapad = `radiotap.flags.datapad == 1`
+    - 🦈 Bad FCS = `radiotap.flags.badfcs == 1`
+    - 🦈 Short GI (Guard Interval) = `radiotap.flags.shortgi == 1` <br><br>
 - ⭕ Radiotap Header: Channel Flags <br><br>
 - ⭕ Radiotap Header: [MCS (n) Information](https://www.radiotap.org/fields/MCS.html) _(only in 802.11n Frames {Wi-Fi 4})_ <br><br>
 - ⭕ Radiotap Header: [VHT Information](https://www.radiotap.org/fields/VHT.html) _(only in 802.11ac Frames {Wi-Fi 5})_ <br><br>
@@ -4246,33 +4246,33 @@ STA will go from `Doze` to `Awake` state for one of two reasons:
 
 1. If STA have a frame to send.
 2. Based on the STA internal timing mechanism. <br> <br>
-    - 🐓 Data & Power Management = 0 ==>> **Awake** :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 0`
-    - 🐓 QoS Data & Power Management = 0 ==>> **Awake** :: `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 0` <br> <br>
-    - 💤 Data & Power Management = 1 ==>> **Doze** :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 1`
-    - 💤 QoS Data & Power Management = 1 ==>> **Doze** :: `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 1`
+    - 🦈🐓 Data & Power Management = 0 ==>> **Awake** :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 0`
+    - 🦈🐓 QoS Data & Power Management = 0 ==>> **Awake** :: `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 0` <br> <br>
+    - 🦈💤 Data & Power Management = 1 ==>> **Doze** :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 1`
+    - 🦈💤 QoS Data & Power Management = 1 ==>> **Doze** :: `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 1`
 
 ---
 
 ### 🔋⚙️🔀 Power Management Modes
 _A client STA can be in one of two Power Management modes:_
 
-- **`Active mode`**: the client is awake all the time. The AP immediately transmits the frames to the client. <br> <br>
-- **`Power Save (PS) mode`**: the client is mostly in doze power state, but can also be awake to transmit and receive now and then. In this mode, the AP buffers the eligible frames destined for the client.
+- ⭕🐓 **`Active mode`**: the client is awake all the time. The AP immediately transmits the frames to the client. <br> <br>
+- ⭕💤 **`Power Save (PS) mode`**: the client is mostly in doze power state, but can also be awake to transmit and receive now and then. In this mode, the AP buffers the eligible frames destined for the client.
 
 ---
 
-### PS Field: AID (Association Identifier)
+### 🪪🆔🤳 PS Field: AID (Association Identifier)
 
-- 🪪🆔🤳 AID (Association Identifier): **Sent by the AP** (`Association Response` or `Re-Association Response`) :: Every 802.11 Power Management Method starts begin with the client STA associates to the BSS. When AP sends "Association Response" or "Re-Association Response" frame to the STA, an `AID` value is present in the AID parameter field (16-bit) <br> <br>
-    - Filter :: AID (Association Identifier) 3 = `wlan.fixed.aid == 3` 
+- ⭕ AID (Association Identifier): **Sent by the AP** (`Association Response` or `Re-Association Response`) :: Every 802.11 Power Management Method starts begin with the client STA associates to the BSS. When AP sends "Association Response" or "Re-Association Response" frame to the STA, an `AID` value is present in the AID parameter field (16-bit) <br> <br>
+    - 🦈 Filter :: AID (Association Identifier) 3 = `wlan.fixed.aid == 3` 
 
 ---
 
 ### 👂⏳🐓 PS Field: Listen Interval
 
 - Listen Interval: **Sent by the STA** (`Association Request` or `Re-Association Request`) :: The client STA will go to `awake` state in a timing period called "Listen Interval". The "Association Request" or "Re-Association Request" frame includes a Listen Interval subfield within the Capabilities Information field. It is an integer between 0 and 65535 expressed in **units of Beacon Interval** (ex. 250 = Listen every 250 beacons). It indicates to the AP how often a client in PS mode wakes up to listen to the Beacon frames. In the AP, the Aging Time of the buffered frames bound to the client is implemented differently by each vendor but must not be shorter than the Listen Interval (or the WNM Sleep Interval in a WNM Sleep Mode Request frame). The Listen Interval from the client is also vendor specific. <br> <br>
-    - Filter :: Listen Interval 250 (HEX) = `wlan.fixed.listen_ival == 0x00fa`
-    - Filter :: Listen Interval 250 (Decimal) = `wlan.fixed.listen_ival == 250`
+    - 🦈 Filter :: Listen Interval 250 (HEX) = `wlan.fixed.listen_ival == 0x00fa`
+    - 🦈 Filter :: Listen Interval 250 (Decimal) = `wlan.fixed.listen_ival == 250`
 
 ---
 
@@ -4280,25 +4280,25 @@ _A client STA can be in one of two Power Management modes:_
 
 - 📬 TIM (Traffic Indication Map): It's a IE (Information Element) with the two following Sub-Fields: <br> <br>
     - ⭕ Element ID (1 byte / 8 bits): Value of 5 indicates is a TIM. <br> <br>
-        - Element ID = 5 :: `wlan.tag.number == 5` <br> <br>
+        - 🦈 Element ID = 5 :: `wlan.tag.number == 5` <br> <br>
     - ⭕ Lenght (1 byte / 8 bits): Lenght of the information carrying fields (DTIM Count, DTIM Period, Bitmap Control, Partial Virtual Bitmap). <br> <br>
-        - Tag Lenght = 4 :: `wlan.tag.length == 4` <br> <br>
+        - 🦈 Tag Lenght = 4 :: `wlan.tag.length == 4` <br> <br>
     - ⭕ DTIM (Delivery-TIM) Count (1 byte / 8 bits): Incremental `Beacon Frames` until the next DTIM. <br> <br>
-        - DTIM = 0 ==>> **Beacon is a DTIM** :: `wlan.tim.dtim_count == 0`
-        - DTIM = 1 ==>> **1 Beacon left until next DTIM** :: `wlan.tim.dtim_count == 1`
-        - DTIM = 2 ==>> **2 Beacons left until next DTIM** :: `wlan.tim.dtim_count == 2` <br> <br>
+        - 🦈 DTIM = 0 ==>> **Beacon is a DTIM** :: `wlan.tim.dtim_count == 0`
+        - 🦈 DTIM = 1 ==>> **1 Beacon left until next DTIM** :: `wlan.tim.dtim_count == 1`
+        - 🦈 DTIM = 2 ==>> **2 Beacons left until next DTIM** :: `wlan.tim.dtim_count == 2` <br> <br>
     - ⭕ DTIM (Delivery-TIM) Period (1 byte / 8 bits): Number of `Beacon Frames` between DTIM beacon. <br> <br>
-        - DTIM period = 1 ==>> **Every beacon will be a DTIM** _(ex. Ruckus_default_SSID)_ :: `wlan.tim.dtim_period == 1`
-        - DTIM period = 3 ==>> **Every 2nd beacon will be a DTIM** _(ex. Fz3r0_CWAP_SSID)_ :: `wlan.tim.dtim_period == 2`
-        - DTIM period = 3 ==>> **Every 3rd beacon will be a DTIM** _(ex. Muegahouse_SSID)_ :: `wlan.tim.dtim_period == 3` <br> <br>
+        - 🦈 DTIM period = 1 ==>> **Every beacon will be a DTIM** _(ex. Ruckus_default_SSID)_ :: `wlan.tim.dtim_period == 1`
+        - 🦈 DTIM period = 3 ==>> **Every 2nd beacon will be a DTIM** _(ex. Fz3r0_CWAP_SSID)_ :: `wlan.tim.dtim_period == 2`
+        - 🦈 DTIM period = 3 ==>> **Every 3rd beacon will be a DTIM** _(ex. Muegahouse_SSID)_ :: `wlan.tim.dtim_period == 3` <br> <br>
     - ⭕ Bitmap Control (1 byte / 8 bits): Indicates if **Multicast/Broadcast** traffic are buffered at the AP (true or false) & also uses a space save called `Bitmap Offset` which may have a value between 0 - 127. <br> <br>
-        - Bitmap Control = 1 ==>> **There's a multicast/broadcast frame buffering for any STA** :: `wlan.tim.bmapctl.multicast == 1`
-        - Bitmap Control = 0 ==>> **No multicast/broadcast frames are buffering** :: `wlan.tim.bmapctl.multicast == 0` <br> <br>
-        - Bitmap Offset = 0 ==>> **how many bytes are Zero in Partial Virtual Bitmap (PVB)** :: `wlan.tim.bmapctl.offset == 0`
-        - Bitmap Offset > 0 ==>> **how many bytes are Zero in Partial Virtual Bitmap (PVB)** `wlan.tim.bmapctl.offset > 0` <br> <br>
+        - 🦈 Bitmap Control = 1 ==>> **There's a multicast/broadcast frame buffering for any STA** :: `wlan.tim.bmapctl.multicast == 1`
+        - 🦈 Bitmap Control = 0 ==>> **No multicast/broadcast frames are buffering** :: `wlan.tim.bmapctl.multicast == 0` <br> <br>
+        - 🦈 Bitmap Offset = 0 ==>> **how many bytes are Zero in Partial Virtual Bitmap (PVB)** :: `wlan.tim.bmapctl.offset == 0`
+        - 🦈 Bitmap Offset > 0 ==>> **how many bytes are Zero in Partial Virtual Bitmap (PVB)** `wlan.tim.bmapctl.offset > 0` <br> <br>
     - ⭕ PVB (Partial Virtual Map): (1 byte - 251 bytes): Series of flags indicating whether each associated STA has **Unicast** frames buffered at the AP. Each bit in this field corresponds to an AID of a STA. <br> <br>
-        - PVB = 0 ==>> **No unicast frames are buffered** :: `wlan.tim.partial_virtual_bitmap == 00` 
-        - PVB more than 0 ==>> **Unicast frames are buffered** :: `wlan.tim.partial_virtual_bitmap > 00`
+        - 🦈 PVB = 0 ==>> **No unicast frames are buffered** :: `wlan.tim.partial_virtual_bitmap == 00` 
+        - 🦈 PVB more than 0 ==>> **Unicast frames are buffered** :: `wlan.tim.partial_virtual_bitmap > 00`
 
 ---
 
