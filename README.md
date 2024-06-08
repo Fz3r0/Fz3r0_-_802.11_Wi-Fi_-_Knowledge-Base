@@ -2281,6 +2281,16 @@ Note: # The MAC Layer 2 uses the FCS (Frame Check Sequence) for error check vali
 
 ### 📡📏🤏 `HR-DSSS` / `802.11b` Short Preamble VS Long Preamble PPDU's:
 
+|                     | Long Preamble PPDU  | Short Preamble PPDU |
+|---------------------|---------------------|---------------------|
+| SYNC lenght         |                     |                     |
+| SFD lenght          |                     |                     |
+| Preamble lenght     |                     |                     |
+| SFD bits            |                     |                     |
+| Preamble Tx Rate    |                     |                     |
+| PLCP-Header Tx Rate |                     |                     |
+| PSDU Tx Rate        |                     |                     |
+|                     |                     |                     |
 
 ## 📡🪆 PPDU Format: `OFDM` / `802.11a/g` / `Wi-Fi 1 / 2`
 
