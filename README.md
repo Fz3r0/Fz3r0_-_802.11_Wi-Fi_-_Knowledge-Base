@@ -1777,6 +1777,11 @@ PMD
 
 ### 💊🖼️📦 Layer 1 (Data Link) & Layer 2 (PHY): `Encapsulation`
 
+- The PLCP prepare the frame for transmission by taking the frame from the MAC sublayer & creating PLCP Protocol Data Unit (PPDU).
+- PMD sublayer then modulates and transmits the data as bits. When the MAC Protocol Data Unit (MPDU) is handed down to the physical layer it is then referred to as PLCP Service Data Unit (PSDU).
+- Note that PSDU & MPDU is refer to the same as it is depend on from which sublayer perspective you looking ( PSDU from PHY sublayer & MPDU from MAC sublayer)
+- When PLCP receives PSDU, it then prepares the PSDU to be transmitted & creates PPDU. The PLCP adds a preamble and PHY header to the PSDU.
+
 ````py
 
 Upper Layers Data / Payload (example, an IP datagram / data payload):
@@ -2142,10 +2147,33 @@ _Instructions & Data directly understandable by STAs, not present on 802.11 Fram
 
 
 
-## ⬆️🗂️📡 PLCP Sub-Layer: `PLCP Header` & `Preamble`
-_When the PLCP layer receives the PSDU from the MAC layer, the appropriate PLCP Preamble & PLCP Header are added to the PSDU to create PPDU. When transmitting data, the Tx STA alerts the Rx STA of transmission by sending PLCP Preamble at the beginning of transmission. IEEE 8021.11-2007 define 3 different preambles: 1. Long PLCP Preamble, 2. Short PLCP Preamble, 3. OFDM PLCP Preamble ; 802.11n amendment further defines 3 additional preambles in 3 different PPDU: 1. non-HT legacy PPDU, 2. HT-mixed PPDU, 3. HT-Greenfield PPDU_
+## ⬆️🗂️📡 PLCP Sub-Layer PPDU: `Preamble`, `PLCP Header` & `PSDU`
 
 - [802.11 PHY :: PLCP Sub-Layer – PPDU & PLCP Header & Preamble](https://mrncciew.com/2014/10/14/cwap-802-11-phy-ppdu/) _`nayarasi`_
+
+**The PPDU consist of 3 parts:**
+
+1. PLCP Preamble
+2. PLCP Header
+3. PSDU
+
+**How PPDU is encapsulated & transmitted:**
+
+- When the PLCP layer receives the PSDU from the MAC layer, the appropriate PLCP Preamble & PLCP Header are added to the PSDU to create PPDU.
+- When transmitting data, the Tx STA alerts the Rx STA of transmission by sending PLCP Preamble at the beginning of transmission.
+
+**Different preambles for each PHY Standard:**
+
+1. Long PLCP Preamble :: (802.11b)
+2. Short PLCP Preamble :: (802.11b)
+3. OFDM PLCP Preamble :: (802.11a/g)
+4. _**3 Additional Preambles :: **(802.11n)_
+
+**802.11n amendment further defines 3 additional preambles in 3 different PPDU.**
+
+1. non-HT legacy PPDU :: (802.11n)
+2. HT-mixed PPDU :: (802.11n)
+3. HT-Greenfield PPDU  :: (802.11n)
 
 ````py
 
@@ -2195,6 +2223,8 @@ PCLP Layer (upper layer 1):
 
 ## 📡🪆 PPDU Format: `HR-DSSS` / `802.11b` / `Wi-Fi 1`
 
+
+
 ````py
 
 ## PLCP Header & Preamble :: The PPDU is formed by the PSDU + PLCP Header + Preamble (short or long)
@@ -2215,8 +2245,8 @@ PCLP Layer (upper layer 1):
 |  SYNC  |  SFD   |          |  Singal  |  Service |  Lenght  |   CRC    |
 |  (1s)  |        |          |  / Rate  |          |          |          |
 |--------|--------|          |----------|----------|----------|----------|
-   128       16                   8          8          16         16        <<== 143 bits (Preamble) + 48 bits (PLCP-Header) 
-<--- 144 bits --->           <----------------- 48 bits ----------------->
+   128       16                   8          8          16         16        <<== 144 bits (Preamble) + 48 bits (PLCP-Header) 
+<--- 144 bits --->           <------------ 48 bits @ 1 Mbps ------------->
 
 - Long SFD :   1111 0011 1010 0000
   
@@ -2228,7 +2258,7 @@ PCLP Layer (upper layer 1):
 <-------------------------------------------- PPDU ------------------------------------------->
 |-----------------|-----------------||--------------------------------------------------------|
 |    Preamble     |   PLCP-Header   ||                        PSDU (MPDU)                     |
-|                 |   (PHY Header)  ||                                                        |
+|                 |   (PHY Header)  ||           (Variable: 2 Mbps, 5 Mbps or 11 Mbps)        |
 |-----------------|-----------------||--------------------------------------------------------|
 <--------------- 96 μs ------------->
    ||                          || 
@@ -2238,7 +2268,7 @@ PCLP Layer (upper layer 1):
 |  (0s)  |        |          |  / Rate  |          |          |          |
 |--------|--------|          |----------|----------|----------|----------|
    56       16                   8          8          16         16        <<== 72 bits (Preamble) + 48 bits (PLCP-Header) 
-<---  72 bits --->           <----------------- 48 bits ----------------->
+<---  72 bits --->           <------------ 48 bits @ 2 Mbps ------------->
 
 - Long SFD :   0000 0101 1100 1111
 
@@ -2281,18 +2311,38 @@ Note: # The MAC Layer 2 uses the FCS (Frame Check Sequence) for error check vali
 
 ### 📡📏🤏 `HR-DSSS` / `802.11b` Short Preamble VS Long Preamble PPDU's:
 
-|                     | Long Preamble PPDU  | Short Preamble PPDU |
-|---------------------|---------------------|---------------------|
-| SYNC lenght         |                     |                     |
-| SFD lenght          |                     |                     |
-| Preamble lenght     |                     |                     |
-| SFD bits            |                     |                     |
-| Preamble Tx Rate    |                     |                     |
-| PLCP-Header Tx Rate |                     |                     |
-| PSDU Tx Rate        |                     |                     |
-|                     |                     |                     |
+| ****                            | **Long Preamble PPDU ** | **Short Preamble PPDU** |
+|---------------------------------|-------------------------|-------------------------|
+| **Preamble lenght**             | 144 bits                | 72 bits                 |
+| **SYNC lenght**                 | 128 bits                | 56 bits                 |
+| **SFD lenght**                  | 16 bits                 | 16 bits                 |
+| **SFD bits content**            | 1111 0011 0101 0000     | 0000 0101 1100 1111     |
+| **Preamble Tx Rate**            | DBPSK (1 Mbps)          | DBPSK (1 Mbps)          |
+| **PLCP-Header Tx Rate**         | DBPSK (1 Mbps)          | DQPSK (2 Mbps)          |
+| **PSDU Tx Rate**                | 1, 2, 5.5 or 11 Mbps    | 2, 5.5 or 11 Mbps       |
+| **(Preamble + Header) Tx Time** | 192 μs                  | 96 μs                   |
+
 
 ## 📡🪆 PPDU Format: `OFDM` / `802.11a/g` / `Wi-Fi 1 / 2`
+
+**OFDM PLCP Preamble:**
+
+– Also known as OFDM training structure
+– consist of 10 short symbols (t1-t10) & 2 long symbols (T1-T2).
+– GI2 is long guard interval.
+– Following the PLCP preamble SIGNAL & DATA field each with GI preceding them.
+– total training length is 16μS
+– Short OFDM training symbol consist of 12 subcarriers.
+– Long OFDM training symbol consists of 53 subcarriers.
+
+**OFDM Signal Field:**
+
+- In OFDM transmission, SIGNAL field is 24 bits long.
+– First 4 bits (0-3) indicate the data rate (6,9,12,18,24,36,48,54).
+– Next bit (bit 4) is reserved for future use
+– Next 12 bits (bit 5-16) make up the PLCP Length field which indicate number of bytes in the PSDU.
+– Bit 17 will be parity bit for 0-16 bits.
+– Last 6 bits (bit 18-23) make up the SIGNAL TAIL with all 6 bits set to 0.
 
 ````py
 
