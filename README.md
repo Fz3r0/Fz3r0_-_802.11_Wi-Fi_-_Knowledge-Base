@@ -2142,27 +2142,58 @@ _Instructions & Data directly understandable by STAs, not present on 802.11 Fram
 
 
 
-## ⬆️🗂️📡 PLCP: `PLCP Header` & `Preamble`
+## ⬆️🗂️📡 PLCP Sub-Layer: `PLCP Header` & `Preamble`
+_When the PLCP layer receives the PSDU from the MAC layer, the appropriate PLCP Preamble & PLCP Header are added to the PSDU to create PPDU. When transmitting data, the Tx STA alerts the Rx STA of transmission by sending PLCP Preamble at the beginning of transmission. IEEE 8021.11-2007 define 3 different preambles: 1. Long PLCP Preamble, 2. Short PLCP Preamble, 3. OFDM PLCP Preamble ; 802.11n amendment further defines 3 additional preambles in 3 different PPDU: 1. non-HT legacy PPDU, 2. HT-mixed PPDU, 3. HT-Greenfield PPDU_
+
+- [802.11 PHY :: PLCP Sub-Layer – PPDU & PLCP Header & Preamble](https://mrncciew.com/2014/10/14/cwap-802-11-phy-ppdu/) _`nayarasi`_
 
 ````py
 
-## PLCP Header & Preamble :: The PPDU is formed by the PSDU + PLCP Header & Preamble
+## PLCP Header & Preamble :: The PPDU is formed by the PSDU + PLCP Header + Preamble
 
 PCLP Layer (upper layer 1):
 
 <-------------------------------------------- PPDU ------------------------------------------->
 |-----------------|-----------------||--------------------------------------------------------|
-|    Preamble     |   PHY Header    ||                            PSDU                        |
-|                 |  (PLCP-Header)  ||                    (ex. MPDU or A-MPDU)                |
+|    Preamble     |   PLCP-Header   ||                            PSDU                        |
+|                 |   (PHY Header)  ||                    (ex. MPDU or A-MPDU)                |
 |-----------------|-----------------||--------------------------------------------------------|
 
-- PLCP Header
+- PLCP Preamble:
 
-- PLCP Preamble
+    - # Indicated to all nearby STAs that a frame is forthcoming.
 
+    - # Includes a known pattern of 1's and 0's, when seen by other STAs they will know that a frame is coming. 
+
+    - # Provides time for the receiver to detect the signal and synchronise with the signal.
+
+        - # **/ Sent at the most robust Data Rate (lowest Data Rate in the band):
+
+            - 2.4 GHz = #  1 Mbps / 2 Mbps
+            - 5 GHz   = #  6 Mbps
+
+- PLCP Header:
+
+    - # Communicates important information about the forthcoming PSDU such as Lenght and Data Rate.
+
+    - # Information of the PLCP-Header is often shown in the Radio Tap Header or PPI section of a protocol decode.
+
+        - # **/ Sent the Data Rate speciefied by the PHY:
+
+            - HR-DSSS = # Long Preamble  :: 1 Mbps
+            - HR-DSSS = # Short Preamble :: 2 Mbps
+            - ERP, OFDM, HT, VHT = #     :: 6 Mbps
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+- IMPORTANT NOTE:
+
+# When you see a data frame with for example 256 Mbps of Data Rate, remember that the frame is using that Data Rate only for the data transmission,
+  but the PHY information will always be sent at the lowest Data Rate of the PHY or band.  
 
 ````
 
+### PPDU Format: `HR-DSSS` / `802.11b` / `Wi-Fi 1`
 
 
 
