@@ -1506,7 +1506,7 @@ _**Control, Management, and Data Planes are conceptual planes that include diffe
 
 ---
 
-### ⚙️🖧 Network Planes: `Management Plane`
+### ⚙️🖧🥪 Network Planes: `Management Plane`
 _The management plane is defined by administrative network management, administration and monitoring.  Here we would have a network-management solution used to monitor network devices.  Within 802.11 the functions of the management plane are: WLAN Configuration, WLAN Monitoring and Reporting, WLAN Firmware Management._
 
 - This operation set addresses network configuration, monitoring, and administration.    In the early days of autonomous APs, management was performed uniquely on an AP-by-AP basis, and this was a major scalability drawback.  Initially, WLANs did not have a shared management plane, which meant that admins had to login to and manage each device independently.  The Wireless Network Management System (WNMS) came into play for management and monitoring of autonomous APs and were mostly usurped when WLAN controllers were introduced.  WLAN controllers were ushered in to centralize network management as well as to take on other roles that are part of the control and data planes.  At some point, multiple WLAN controllers become unwieldy, so a management solution is needed for them as well.  The WNMS comes back into play for that purpose.  Some devices exist solely to perform management functions.  Example functions of the management plane include firmware upgrades, device configuration, and network and status reporting and monitoring. <br> <br>
@@ -1514,7 +1514,7 @@ _The management plane is defined by administrative network management, administr
 
 ---
 
-### 🎮🖧 Network Planes: `Control Plane`
+### 🎮🖧🥪 Network Planes: `Control Plane`
 _The control plane consists of control or signaling information and is often defined as network intelligence or protocols.  An example would be CAM tables and STP used by L2 switches for data forwarding.  Within 802.11 we have the following examples: | Adapative RF or RRM: Where coordinated channel and power settings for multiple APs are provided. |  Roaming Mechanisms:  This provides support for roaming handoffs between APs. | Client and Load Balancing:  Client load and performance metrics are collected and shared between APs to improve the WLAN experience | Mesh Protocols:  WLAN vendors use either L2 or L3 routing protocols to move user data between mesh APs._
 
 - This plane includes the “control” functions related to effective cooperation and interaction between devices within a network.  Similar to the management functions, early networks with autonomous APs didn’t share a control plane.  They shared an Ethernet network for connectivity, but the APs did not communicate with each other to coordinate network control operations.  WLAN ‘control’lers are now the de facto solution to address the needs of the control plane, where many of these operations are centralized into one device (a controller) that communicates with all of the APs.  Again, similar to the management plane, multiple controllers pose new challenges, because controllers need a protocol for communications between one another.  In any case, graceful control of a WLAN is necessary for scalability of any kind.  Example functions include RRM (channel and power settings for automated networks) coordination, mobility management (such as fast secure roaming and uninterrupted policy and security management during transitions), and load balancing.  These operations are usually performed within a WLAN controller, though protocols may be used between APs to perform the same. <br> <br>
@@ -1522,7 +1522,7 @@ _The control plane consists of control or signaling information and is often def
 
 ---
   
-### 💾🖧 Network Planes: `Data Plane`
+### 💾🖧🥪 Network Planes: `Data Plane`
 _Also known as the user plane, the data plane is where the user traffic is actually forwarded in a network.  An example is an individual router where IP packets are forwarded.  The two wireless devices that typically participate here are the AP and the WLC._
 
 - This plane includes the handling of data within a network.  The two devices that usually participate in the data plane are the AP and the WLAN controller.  Autonomous APs obviously handle all data forwarding operations locally, but controller-based APs may have some variation of data handling.  Centralized data forwarding, where all data is forwarded from the AP to the WLAN controller for processing, may be used in many cases, especially when the WLAN controller manages encryption/decryption or applies security policies.  Distributed forwarding, where the AP performs data forwarding locally, may be used in situations where it is advantageous to perform forwarding at the edge and to avoid a central location in the network for all data, which may require significant Ethernet capacity.  As with the management and control planes, each vendor has a unique method for handling data forwarding, with pros and cons for each.  Other functions that are a part of the data plane are VLAN tagging, QoS classification and queuing, and policy enforcement. <br> <br>
@@ -2205,9 +2205,10 @@ PCLP Layer (upper layer 1):
 
 <-------------------------------------------- PPDU ------------------------------------------->
 |-----------------|-----------------||--------------------------------------------------------|
-|    Preamble     |   PLCP-Header   ||                            PSDU                        |
-|                 |   (PHY Header)  ||                    (ex. MPDU or A-MPDU)                |
+|    Preamble     |   PLCP-Header   ||                        PSDU (MPDU)                     |
+|                 |   (PHY Header)  ||     (1 Mbps - DBPSK | 2 Mbps - DQPSK | 5.5 or 11)      |
 |-----------------|-----------------||--------------------------------------------------------|
+<-------------- 192 μs ------------->
    ||                          || 
    \/                          \/
 |--------|--------|          |----------|----------|----------|----------|
@@ -2215,7 +2216,7 @@ PCLP Layer (upper layer 1):
 |  (1s)  |        |          |  / Rate  |          |          |          |
 |--------|--------|          |----------|----------|----------|----------|
    128       16                   8          8          16         16        <<== 143 bits (Preamble) + 48 bits (PLCP-Header) 
-<--- 143 bits --->           <----------------- 48 bits ----------------->
+<--- 144 bits --->           <----------------- 48 bits ----------------->
 
 - Long SFD :   1111 0011 1010 0000
   
@@ -2226,17 +2227,18 @@ PCLP Layer (upper layer 1):
 
 <-------------------------------------------- PPDU ------------------------------------------->
 |-----------------|-----------------||--------------------------------------------------------|
-|    Preamble     |   PLCP-Header   ||                            PSDU                        |
-|                 |   (PHY Header)  ||                    (ex. MPDU or A-MPDU)                |
+|    Preamble     |   PLCP-Header   ||                        PSDU (MPDU)                     |
+|                 |   (PHY Header)  ||                                                        |
 |-----------------|-----------------||--------------------------------------------------------|
+<--------------- 96 μs ------------->
    ||                          || 
    \/                          \/
 |--------|--------|          |----------|----------|----------|----------|
 |  SYNC  |  SFD   |          |  Singal  |  Service |  Lenght  |   CRC    |
 |  (0s)  |        |          |  / Rate  |          |          |          |
 |--------|--------|          |----------|----------|----------|----------|
-   72       16                   8          8          16         16        <<== 88 bits (Preamble) + 48 bits (PLCP-Header) 
-<---  88 bits --->           <----------------- 48 bits ----------------->
+   56       16                   8          8          16         16        <<== 72 bits (Preamble) + 48 bits (PLCP-Header) 
+<---  72 bits --->           <----------------- 48 bits ----------------->
 
 - Long SFD :   0000 0101 1100 1111
 
@@ -2277,8 +2279,37 @@ Note: # The MAC Layer 2 uses the FCS (Frame Check Sequence) for error check vali
         - ⭕ `Lenght` (16 bits) :: Defines how many microsecods (μs) are requiered to transmit the PSDU (MPDU)  <br><br>
         - ⭕ `CRC (Cyclic Redundancy Check)` (16 bits) :: 16 CRC Frame check to validate the PLCP-Header Information: Signal, Service & Lenght fields
 
+### 📡📏🤏 `HR-DSSS` / `802.11b` Short Preamble VS Long Preamble PPDU's:
+
+
 ## 📡🪆 PPDU Format: `OFDM` / `802.11a/g` / `Wi-Fi 1 / 2`
 
+````py
+
+## PLCP Header & Preamble :: The PPDU is formed by the PSDU + PLCP Header + Preamble
+
+PCLP Layer (upper layer 1):
+
+    - Long Preamble PPDU Format:
+
+<-------------------------------------------- PPDU ------------------------------------------->
+|-----------------|-----------------||--------------------------------------------------------|
+|    Preamble     |   PLCP-Header   ||                            PSDU                        |
+|                 |   (PHY Header)  ||                    (ex. MPDU or A-MPDU)                |
+|-----------------|-----------------||--------------------------------------------------------|
+<- ->
+   ||                          || 
+   \/                          \/
+|--------|--------|          |----------|----------|----------|----------|
+|  SYNC  |  SFD   |          |  Singal  |  Service |  Lenght  |   CRC    |
+|  (1s)  |        |          |  / Rate  |          |          |          |
+|--------|--------|          |----------|----------|----------|----------|
+   128       16                   8          8          16         16        <<== 143 bits (Preamble) + 48 bits (PLCP-Header) 
+<--- 143 bits --->           <----------------- 48 bits ----------------->
+
+
+
+````
 
 
 
