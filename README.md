@@ -2193,8 +2193,72 @@ PCLP Layer (upper layer 1):
 
 ````
 
+---
+
 ### PPDU Format: `HR-DSSS` / `802.11b` / `Wi-Fi 1`
 
+````py
+
+## PLCP Header & Preamble :: The PPDU is formed by the PSDU + PLCP Header + Preamble (short or long)
+
+PCLP Layer (upper layer 1):
+
+    - Long Preamble PPDU Format:
+
+<-------------------------------------------- PPDU ------------------------------------------->
+|-----------------|-----------------||--------------------------------------------------------|
+|    Preamble     |   PLCP-Header   ||                            PSDU                        |
+|                 |   (PHY Header)  ||                    (ex. MPDU or A-MPDU)                |
+|-----------------|-----------------||--------------------------------------------------------|
+   ||                          || 
+   \/                          \/
+|--------|--------|          |----------|----------|----------|----------|
+|  SYNC  |  SFD   |          |  Singal  |  Service |  Lenght  |   CRC    |
+|  (1s)  |        |          |  / Rate  |          |          |          |
+|--------|--------|          |----------|----------|----------|----------|
+   128       16                   8          8          16         16        <<== 143 bits (Preamble) + 48 bits (PLCP-Header) 
+<--- 143 bits --->           <----------------- 48 bits ----------------->
+
+- Long SFD :   1111 0011 1010 0000
+  
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+    - Short Preamble PPDU Format:
+
+<-------------------------------------------- PPDU ------------------------------------------->
+|-----------------|-----------------||--------------------------------------------------------|
+|    Preamble     |   PLCP-Header   ||                            PSDU                        |
+|                 |   (PHY Header)  ||                    (ex. MPDU or A-MPDU)                |
+|-----------------|-----------------||--------------------------------------------------------|
+   ||                          || 
+   \/                          \/
+|--------|--------|          |----------|----------|----------|----------|
+|  SYNC  |  SFD   |          |  Singal  |  Service |  Lenght  |   CRC    |
+|  (0s)  |        |          |  / Rate  |          |          |          |
+|--------|--------|          |----------|----------|----------|----------|
+   72       16                   8          8          16         16        <<== 88 bits (Preamble) + 48 bits (PLCP-Header) 
+<---  88 bits --->           <----------------- 48 bits ----------------->
+
+- Long SFD :   0000 0101 1100 1111
+
+
+````
+
+**`HR-DSSS` / `802.11b` Long Preamble PPDU:**
+
+- `Preamble`: <br><br>
+    - 144 bits lenght Preamble, includes fields: `SYNC` & `SFD`
+    - The oldest PPDU format, supports 802.11 legacy technology <br><br>
+        - `SYNC` (128 bits) :: Gives the time for the synchronizer (the reciever of the transmission) to synchronize with this. **128 bits scrambled ones (1s)** <br><br>
+        - `SFD (Start Frame Delimiter)` (16 bits) :: Inform that the Preamble is ending and it's time to start to send the PLCP-Header using a unique sequence **1111 0011 1010 0000** <br><br>
+- `PLCP-Header`: <br><br>
+    - 48 bits lenght PLCP-Header (PHY-Header), includes fields: `Signal Rate`, `Service`, `Lenght` & `CRC` <br><br>
+        - 
+
+---
+
+### PPDU Format: `OFDM` / `802.11a/g` / `Wi-Fi 1 / 2`
 
 
 
