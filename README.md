@@ -1862,18 +1862,20 @@ _**Frame aggregation allows for more data payload with a single header providing
 ## 💊🚛 Frame Aggregation: `Why "Aggregate"?`
 _The analogy of the car and the bus in the highway for frame aggregation_
 
-- Why "aggregate"? It's the same benefit illustrated by the typical image of a truck versus many cars on a highway, where both solutions have the same capacity to transport the exact same number of people at the same time... <br> <br>
-- However, using `cars` congests the highway, causing issues like more traffic, slower speeds, and increased resource consumption. In contrast, "aggregating" all those people into a single `bus` makes traffic and speed more efficient. <br> <br>
-- The `cars` represent `overhead` (headers, footers, QoS, management, control, etc.) since they are traffic from different people who don't know each other, traveling in different cars (the classic segmentation into frames containing a payload, as is traditionally done in data transfer over a network). But... **if these people coordinated, they could travel more efficiently in the same bus, as long as they all come from the `same origin` and are going to the `same destination`.** <br> <br>
+- Why "aggregate"? It's the same benefit illustrated by the typical image of **one bus versus many cars on a highway**:
+- Both solutions (one bus or many cars) have the same capacity to transport the exact same number of people at the same time. <br> <br>
+- However, using `cars` congests the highway much more than just `one bus`, causing issues like more traffic, slower speeds, and increased resource consumption.
+- In contrast, "aggregating" all those people into a `single bus` makes traffic and speed more efficient. <br> <br>
+- The `cars` represent `overhead` (headers, preambles, FCS's, control fields, etc.) and the people represent the `payload` (the relevant data tranmission from point A to point B), the people is traveling in different cars (the classic segmentation into frames containing a payload, as is traditionally done in data transfer over a network). But... **if these people coordinated, they could travel more efficiently in the same bus, as long as they all come from the `same origin` and are going to the `same destination`.** <br> <br>
 - This is what Frame Aggregation really does: it significantly reduces overhead and makes Wi-Fi much more efficient.
 
 ## 💊🚛 Frame Aggregation: `No Aggregation`
 _This is a normal frame traffic without aggregation._
 
-- Each Frame has a LLC-Header, MAC-Header, PLCP-Header and a MSDU.
-- There is an ACK (Acknowledgement) for each of these frames.
-- This generally works for legacy standards like 802.11a; it is good, but not very efficient.
-- In case of an error, only 1 frame is retransmitted.
+- Each Frame has a LLC-Header, MAC-Header, PLCP-Header and a MSDU (inside the MSDU usually is a payload of data coming from upper layers). <br> <br>
+- There is an ACK (Acknowledgement) for each of these frames. <br> <br>
+- This generally works for legacy standards like 802.11a; it works good, but it is not very efficient. <br> <br>
+- In case of an error, only 1 frame is retransmitted (including again the LLC-Header, MAC-Header, PLCP-Header and a MSDU).
 
 ````py
 
@@ -1931,12 +1933,24 @@ PLCP = (Physical Layer Convergence Procedure) / (Physical Layer Convergence Prot
 
 PMD = (Physical Medium Dependent):
 
+    - # PMD Sub-Layer modulates each PPDU and send it to the medium as 1's and 0s
+      # then, each frame is acknowledged by a standard ACK by the receiver:
+
 |-------------||--------||----------||---------||-----|    |-------------||--------||----------||---------||-----|    |-------------||--------||----------||---------||-----|            
 |                         PPDU 1                      |    |                         PPDU 2                      |    |                         PPDU 3                      | 
 |                        (Data 1)                     |    |                        (Data 2)                     |    |                        (Data 3)                     |        
 |-------------||--------||----------||---------||-----|    |-------------||--------||----------||---------||-----|    |-------------||--------||----------||---------||-----|   
 \_____________________________________________________/    \_____________________________________________________/    \_____________________________________________________/
 <-- 00010101011100110101000110100101010101011000100 -->    <-- 11010101011100110101000110100101010101011010101 -->    <-- 11110101011100110101000110100101010101011010111 -->
+
+                          /\  Tx                                                      /\  Tx                                                     /\  Tx 
+                          ||                                                          ||                                                         ||
+                          \/  Rx                                                      \/  Rx                                                     \/  Rx
+
+                |---------||----------|                                     |---------||----------|                                    |---------||----------|
+                |   PHY   ||   ACK    |                                     |   PHY   ||   ACK    |                                    |   PHY   ||   ACK    |
+                |  Header ||          |                                     |  Header ||          |                                    |  Header ||          |
+                |---------||----------|                                     |---------||----------|                                    |---------||----------|
 
 ````
 
