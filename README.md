@@ -4600,10 +4600,10 @@ _bla la bla bla intro_
 
 A wireless radio can perform one of the 4 activities. Power consumed by each activity increases in the given order ( 1-4).
 
-1. `⚡    ` **Asleep**
-2. `⚡⚡  ` **Idle & Awake** 
-3. `⚡⚡⚡ ` **Receiving** 
-4.  `⚡⚡⚡⚡` **Transmitting** 
+1. ➖`⚡       `➕ **Asleep**
+2. ➖`⚡⚡    `➕ **Idle & Awake** 
+3. ➖`⚡⚡⚡  `➕ **Receiving** 
+4. ➖`⚡⚡⚡⚡`➕ **Transmitting** 
 
 ### 🔋🐓💤 Power States
 _A wireless client STA enters Power Save (PS) mode in which the radio power state can transition between awake and doze according to the 802.11 power management rules. A radio STA can be in one of two Power states:_
