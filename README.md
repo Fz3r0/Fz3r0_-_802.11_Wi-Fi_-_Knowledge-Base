@@ -4600,9 +4600,9 @@ _bla la bla bla intro_
 
 A wireless radio can perform one of the 4 activities. Power consumed by each activity increases in the given order ( 1-4).
 
-1. ➖`⚡󠀠󠀠󠀠󠀠󠀠󠁪󠁪󠁪󠁪󠁪󠀵󠀵ˑˑˑ`➕ **Asleep**
-2. ➖`⚡⚡    `➕ **Idle & Awake** 
-3. ➖`⚡⚡⚡  `➕ **Receiving** 
+1. ➖`⚡󠀠󠀠󠀠󠀠󠀠󠁪󠁪󠁪󠁪󠁪󠀵󠀵🔘🔘🔘`➕ **Asleep**
+2. ➖`⚡⚡🔘🔘`➕ **Idle & Awake** 
+3. ➖`⚡⚡⚡🔘`➕ **Receiving** 
 4. ➖`⚡⚡⚡⚡`➕ **Transmitting** 
 
 ### 🔋🐓💤 Power States
