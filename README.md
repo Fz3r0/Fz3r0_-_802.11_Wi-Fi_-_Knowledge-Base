@@ -1849,6 +1849,8 @@ PMD = (Physical Medium Dependent):
 ## 💊🚛🚢 IEEE 802.11: `Frame Aggregation`
 _**Frame aggregation allows for more data payload with a single header providing more data transfer with less 802.11 overhead.** With the ratification of 802.11n amendment, two types of frame aggregation were added to 802.11: Aggregate MAC Service Data Unit (A-MSDU) & Aggregate MAC Protocol Data Unit (A-MPDU). Frame aggregation allows multiple smaller MSDU or MPDUs to be grouped together into a single frame, reducing the amount of overhead that would have been necessary for each individual frame.  An analogy for frame aggregation is carpooling that is implemented to reduce traffic and subsequently reduce traffic jams. Similarly, frame aggregation is used to reduce medium contention overhead by combining several service data units (SDUs)._
 - [802.11 Data: Frame Aggregation](https://mrncciew.com/2014/11/01/cwap-802-11-data-frame-aggregation/) _`nayarasi`_
+- [802.11 Aggregation - Friend or Foe? | Wes Purvis](https://www.youtube.com/watch?v=3jqYwFQSqnE) _`WPLC`_
+- [Aggregation in WI-FI](https://www.youtube.com/watch?v=RvLVDi41lKQ) _`leos techTalk`_
 - [A-MPDU & A-MSDU :: Configuration on Cisco WLC](https://mrncciew.com/2013/04/11/a-mpdu-a-msdu/)  _`nayarasi`_
 - [CWNP: Basics of MAC Architecture: Encapsulation & Frame Aggregation](https://www.cwnp.com/802.11-mac-series-ndash-basics-mac-architecture-ndash-part-1-3/#Id3)  _`CWNP`_
 - [MSDU or MPDU: Which Is Best Frame Aggregation?](https://www.cbtnuggets.com/blog/technology/networking/msdu-or-mpdu-which-is-best-frame-aggregation)  _`NCB Nuggets`_
@@ -1856,9 +1858,98 @@ _**Frame aggregation allows for more data payload with a single header providing
 - [A-MSDU vs. A-MPDU – Real World Examples in Wireshark](https://dot11.exposed/2020/06/22/a-msdu-vs-a-mpdu-real-world-examples-in-wireshark/) _`Wireshark Examples`_
 - [A-MPDU vs. A-MSDU](https://dot11ap.wordpress.com/a-mpdu-vs-a-msdu/) _`dot11ap`_
 
----
 
-### 💊🚛 Frame Aggregation: `A-MSDU`
+## 💊🚛 Frame Aggregation: `Why "Aggregate"?`
+_The analogy of the car and the bus in the highway for frame aggregation_
+
+- Why "aggregate"? It's the same benefit illustrated by the typical image of a truck versus many cars on a highway, where both solutions have the same capacity to transport the exact same number of people at the same time... <br> <br>
+- However, using `cars` congests the highway, causing issues like more traffic, slower speeds, and increased resource consumption. In contrast, "aggregating" all those people into a single `bus` makes traffic and speed more efficient. <br> <br>
+- The `cars` represent `overhead` (headers, footers, QoS, management, control, etc.) since they are traffic from different people who don't know each other, traveling in different cars (the classic segmentation into frames containing a payload, as is traditionally done in data transfer over a network). But... **if these people coordinated, they could travel more efficiently in the same bus, as long as they all come from the `same origin` and are going to the `same destination`.**
+- This is what Frame Aggregation really does: it significantly reduces overhead and makes Wi-Fi much more efficient.
+
+## 💊🚛 Frame Aggregation: `No Aggregation`
+_This is a normal frame traffic without aggregation._
+
+- Each Frame has a LLC-Header, MAC-Header, PLCP-Header and a MSDU.
+- There is an ACK (Acknowledgement) for each of these frames.
+- This generally works for legacy standards like 802.11a; it is good, but not very efficient.
+- In case of an error, only 1 frame is retransmitted.
+
+````py
+
+## A-MSDU encapsulation from upper layers ==>> LLC ==>> MAC ==>> PPLC ==>> PMD
+
+Upper Layers Data / Payload (example, UDP traffic):
+
+                                                   |----------|                         |----------|                         |----------|          
+                                                   |   Data   |                         |   Data   |                         |   Data   |              
+                                                   |    1     |                         |    2     |                         |    3     | 
+                                                   |----------|                         |----------|                         |----------|
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+LLC (Logical Link Control):
+
+    MSDU = # QoS Data + LLC Header
+           # In this example we are using 3 different Data Frames from upper layers (example, UDP traffic)
+                                                                                        
+                                        |---------||----------|              |---------||----------|              |---------||----------|           
+                                        |   LLC   ||   Data   |              |   LLC   ||   Data   |               |   LLC  ||   Data   |  
+                                        |  Header ||    1     |              |  Header ||    2     |              |  Header ||    3     |  
+                                        |---------||----------|              |---------||----------|              |---------||----------|   
+                                        \_____________________/              \_____________________/              \_____________________/   
+                                        <------- MSDU 1 ------>              <------- MSDU 2 ------>              <------- MSDU 3 ------>      
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+MAC (Medium Access Control):
+
+    A-MSDU = # A little MSDU Sub-Header is prepended in each MSDUs Sub-Frames,
+               then adds a single MAC Header called A-MSDU Header & just 1 FCS for all the MSDUs:                                                       
+
+               1 MAC Header                         3 different MSDU Sub-Frames (with a MSDU Sub-Header each) = A-MSDU's                        1 FCS
+
+                              |--------||----------||----------||-----| 
+                              |  MAC   ||        MSDU 1        || FCS |        
+                              | Header ||                    | ||     |
+                              |--------||----------||----------||-----|       
+               \_______________________________________________________________________________________________________________________________________/
+               <-------------------------------------------------- MPDU (PSDU) {Formed with A-MSDU's} ------------------------------------------------->
+                                                                                         
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+                                                                                       
+PLCP = (Physical Layer Convergence Procedure) / (Physical Layer Convergence Protocol): 
+                                                                                       
+    PPDU = # PSDU/MPDU (using the A-MSDU serviced from MAC) + Preamble & PLCP Header (prepended)
+
+                
+|-------------||----------||------------|----------||----------|+|------------|----------||----------|+|------------|----------||----------||----------|           
+| PLCP Header ||                                                               PSDU                                                                    |    
+| + Preamble  ||                                                              (MPDU)                                                                   |    
+|-------------||----------||------------|----------||----------|+|------------|----------||----------|+|------------|----------||----------||----------|   
+\______________________________________________________________________________________________________________________________________________________/
+<------------------------------------------------------------------------ PPDU ------------------------------------------------------------------------>
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+PMD = (Physical Medium Dependent):
+
+|-------------||----------||------------|----------||----------|+|------------|----------||----------|+|------------|----------||----------||----------|            
+|                                                                            PPDU                                                                      |     
+|                                           (with 3 MSDUs Sub-Frames, 1 MAC Header (A-MSDU SubHeader) & 1 FCS                                          |   
+|-------------||----------||------------|----------||----------|+|------------|----------||----------|+|------------|----------||----------||----------|   
+\______________________________________________________________________________________________________________________________________________________/
+<-- 000101010111001101010001101001010101010110101010001010101010100101110100010100001001010101101010101010001110011001010111100101010101010110100011 -->
+
+````
+
+
+
+
+
+
+
+## 💊🚛 Frame Aggregation: `A-MSDU`
 _The first frame aggregation method is A-MSDU, where several MSDUs are combined into a single frame. An 802.11n access point uses A-MSDU aggregation and removes the headers and trailers from the received MSDUs, and combines these multiple MSDU payloads in to a single frame, which is known as A-MSDU and is further used for transmission across the wireless medium. The aggregated frame is encrypted using the Counter Mode with Cipher Block Chaining Message Authentication Code Protocol (CCMP) encryption method. Each MSDU within the A-MSDU must be of the same 802.11e QoS access category. For example, A-MSDU can contain several MSDUs of Video access category only and it cannot be mixed with Best Effort or Voice MSDUs within the same aggregated frame._
 
 - **`A-MSDU Key Concept`**: If you do not receive an Ack frame back, the entire payload must be resent, and this takes up more airtime and induces latency in your network. Congested networks and latency sensitive networks may want to reconsider use of the A-MSDU entirely. <br> <br>
@@ -2041,7 +2132,7 @@ PMD = (Physical Medium Dependent):
 
 ---
 
-### 🚛🚢 Frame Aggregation: `A-MSDU` + `A-MPDU` 
+### 🚛🚢 Frame Aggregation: `Two Level Aggegation - A-MPDU of A-MSDU's` 
 _Both of these methods can be used together. It's one of the best ways to increase your throughput to devices that eat a lot of your airtime anyway. The catch here is though you do get the best of both, you get the weaknesses of each, too. Using both together can be a lifesaver, but it should only be used in a low to medium density environment where you have considerable control over the RF environment. The combination of A-MSDU and A-MPDU ist the most efficient method and provides the fastest throughputs in clean environments with low retransmissions. However, as with plain A-MSDU, the cost of retries might be bigger than the benefit of aggregated Ethernet frames inside a single 802.11 frame and **you could be better off with only A-MPDU enabled.**_
 
 
