@@ -1862,11 +1862,11 @@ _**Frame aggregation allows for more data payload with a single header providing
 ## 💊🚛 Frame Aggregation: `Why "Aggregate"?`
 _The analogy of the car and the bus in the highway for frame aggregation_
 
-- Why "aggregate"? It's the same benefit illustrated by the typical image of **one bus versus many cars on a highway**:
-- Both solutions (one bus or many cars) have the same capacity to transport the exact same number of people at the same time. <br> <br>
-- However, using `cars` congests the highway much more than just `one bus`, causing issues like more traffic, slower speeds, and increased resource consumption.
-- In contrast, "aggregating" all those people into a `single bus` makes traffic and speed more efficient. <br> <br>
-- The `cars` represent `overhead` (headers, preambles, FCS's, control fields, etc.) and the people represent the `payload` (the relevant data tranmission from point A to point B), the people is traveling in different cars (the classic segmentation into frames containing a payload, as is traditionally done in data transfer over a network). But... **if these people coordinated, they could travel more efficiently in the same bus, as long as they all come from the `same origin` and are going to the `same destination`.** <br> <br>
+- Why "aggregate"? It's the same benefit illustrated by the typical image of **one bus versus many cars on a highway**: <br> <br>
+    - Both solutions (one bus or many cars) have the same capacity to transport the exact same number of people at the same time. <br> <br>
+    - However, using `cars` congests the highway much more than just `one bus`, causing issues like more traffic, slower speeds, and increased resource consumption. <br> <br>
+    - In contrast, "aggregating" all those people into a `single bus` makes traffic and speed more efficient. <br> <br>
+    - The `cars` represent `overhead` (headers, preambles, FCS's, control fields, etc.) and the people represent the `payload` (the relevant data tranmission from point A to point B), the people is traveling in different cars (the classic segmentation into frames containing a payload, as is traditionally done in data transfer over a network). But... **if these people coordinated, they could travel more efficiently in the same bus, as long as they all come from the `same origin` and are going to the `same destination`.** <br> <br>
 - This is what Frame Aggregation really does: it significantly reduces overhead and makes Wi-Fi much more efficient.
 
 ## 💊🚛 Frame Aggregation: `No Aggregation`
