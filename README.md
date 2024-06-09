@@ -4596,7 +4596,7 @@ _Many mechanisms that are described in the IEEE 802.11 standard allow a wireless
 ## 🔋🛜🪫 Power Save (PS) mode: `Basic Concepts`
 _bla la bla bla intro_
 
-### Power Consumption Activities
+### 🔋⚡🪫 Power Consumption Activities
 
 A wireless radio can perform one of the 4 activities. Power consumed by each activity increases in the given order ( 1-4).
 
@@ -4604,6 +4604,8 @@ A wireless radio can perform one of the 4 activities. Power consumed by each act
 2. ➖`⚡⚡🔘🔘`➕ **Idle & Awake** 
 3. ➖`⚡⚡⚡🔘`➕ **Receiving** 
 4. ➖`⚡⚡⚡⚡`➕ **Transmitting** 
+
+---
 
 ### 🔋🐓💤 Power States
 _A wireless client STA enters Power Save (PS) mode in which the radio power state can transition between awake and doze according to the 802.11 power management rules. A radio STA can be in one of two Power states:_
@@ -4632,7 +4634,7 @@ _A client STA can be in one of two Power Management modes:_
 
 ### 🪪🆔🤳 PS Field: AID (Association Identifier)
 
-- ⭕ AID (Association Identifier): **Sent by the AP** (`Association Response` or `Re-Association Response`) :: Every 802.11 Power Management Method starts begin with the client STA associates to the BSS. When AP sends "Association Response" or "Re-Association Response" frame to the STA, an `AID` value is present in the AID parameter field (16-bit) <br> <br>
+- ⭕ AID (Association Identifier): **Sent by the AP** (`Association Response` or `Re-Association Response`) :: Every 802.11 Power Management Method starts begin with the client STA associates to the BSS. When AP sends "Association Response" or "Re-Association Response" frame to the STA, an `AID` value is present in the AID parameter field (16-bit). <br> <br>
     - 🦈 Filter :: AID (Association Identifier) 3 = `wlan.fixed.aid == 3` 
 
 ---
@@ -4675,7 +4677,7 @@ _A client STA can be in one of two Power Management modes:_
 ### 🚨📩📬 PS Information Element: `DTIM (Delivery Traffic Indication Map)`
 
 - DTIM (Delivery Traffic Indication Map): **Sent by the AP** (`Beacon`) _(DTIM is not present in all beacons or all TIMs inside a becon)_ :: DTIM is a beacon frame, identical in structure to any other beacon frame. The only difference with a common Beacon Frame is that the content of the DTIM IE (Information Element) will give information about broadcast/multicast traffic that is buffered at the AP, in addition to the typical information about buffered unicast frames that is always present in the TIM. <br> <br>
-- ⭕ DTIM Count = 0: means that the beacon frame is a DTIM
+- ⭕ DTIM Count = 0: means that the current TIM (beacon) frame is a DTIM
 - ⭕ DTIM Count = 1: means 1 Beacon left until next DTIM
 - ⭕ DTIM Count = 2: means 2 Beacons left until next DTIM <br> <br>
 - ⭕ DTIM Delivery Period = 3: means every 3rd frame a beacon will be a DTIM
@@ -4689,23 +4691,29 @@ _A client STA can be in one of two Power Management modes:_
 ### Control Frame: PS-Poll
 
 - PS-POLL: The legacy PS mode mechanism is based on the PS-Poll frame to retrieve the buffered frames in the AP. The PS-Poll frame is a short Control Frame containing the AID value of the client. PS-Poll have the following Sub-Fields:
+- Type 01 (Control Frame)
+- Subtype 1010 (PS-Poll)
+    - AID (Association ID) : AID of the STA requesting buffered frames
+    - BSSID : BSSID where the STA is associated
+    - Transmitter : MAC of the STA requesting buffered frames
 
 
 
 
-
-## Power Management: `types`
+## Power Management: `Types`
 _From the original version in 1997 to now, many features that reduce power consumption have been added to the standard. Some of them have fallen into disuse (PS-Poll), some have been granted certifications (WMM-Power Save) and others relate to specific technologies (MIMO PSPM, 11ac VHT TXOP PS). And there are many other mechanisms related to power-saving that are not discussed in this article (PSMP, TIM Broadcast, Proxy ARP, etc.). Future amendments (802.11ax, 802.11ah) will also introduce new and enhanced power saving techniques._
 
-- 802.11–1997 prime Power Management: Legacy Power Save Mode
+- 802.11–1997 prime Power Management: 802.11 Power Management (Legacy Power Save Mode)
 - 802.11e-2005 Power Management: Wi-Fi Multimedia (WMM) using Automatic Power Save Delivery (APSD) (Scheduled & Unscheduled (S-APSD / U-APSD)). U-APSD is the main Power Save used in 802.11e.
 - 802.11n-2009 Power Management: Power Save Multi-Poll (PSMP) & _Spatial Multiplexing Power Save (SMPS)_ 
 - 802.11ac-2013 Power Management: VHT TXOP (Transmit Opportunity) Power Save
 - 802.11ax-2019 Power Management: Target Wake Time (TWT)
 
+---
+
 ### Methods of Power Management
 
-There are 3 main methods of power management used in 802.11, the others are not used or are very limited for Wi-Fi
+There are 3 main methods of power management used in 802.11, the others mentioned before are not used or are very limited for Wi-Fi
 
 1. `Legacy Power Management` 802.11 Power Management
 2. `802.11e-2005 Power Management`: Unscheduled Automatic Power Save Delivery (U-APSD) from 802.11e amendment
@@ -4716,25 +4724,33 @@ There are 3 main methods of power management used in 802.11, the others are not 
 
 | **Standard**  | **Year**   | **Power Saving Modes**                                                                                      |
 |---------------|------------|-------------------------------------------------------------------------------------------------------------|
-| 802.11 prime  | 1997       | Legacy Power Save Mode                                                                                      |
+| 802.11 prime  | 1997       | 802.11 Power Save (Legacy Power Save Mode)                                                                  |
 | 802.11b/a     | 1999       | Legacy Power Save Mode ;; _can utilize enhancements from 802.11e if driver & hardware support it_           |
 | 802.11g       | 2003       | Legacy Power Save Mode ;;  _can utilize enhancements from 802.11e if driver & hardware support it_          |
-| _802.11e_       | _2005_   | _Wi-Fi Multimedia (WMM) & Automatic Power Save Delivery (APSD) (S-APSD / U-APSD)_                           |
+| _802.11e_       | _2005_   | _Wi-Fi Multimedia (WMM) - Unscheduled Automatic Power Save Delivery (U-APSD)_                               |
 | 802.11n       | 2009       | Power Save Multi-Poll (PSMP) & Spatial Multiplexing Power Save (SMPS)                                       |
 | 802.11ac      | 2013       | VHT TXOP (Transmit Opportunity) Power Save                                                                  |
-| 802.11ax      | 2019       | Target Wake Time (TWT) & _VHT (802.11ac) TXOP (Transmit Opportunity) Power Save_                            |
+| 802.11ax      | 2019       | Target Wake Time (TWT)                                                                                      |
 
 
-## Legacy power save mode
+## 802.11 Power Save (Legacy power save mode)
+
+- Less Efficient Power Save Mode
 - PS-Poll frames are used with legacy power save mode. All STA’s receive an Association ID (AID) during the 802.11 association process. When a STA wakes from a doze state based on the listen interval it will check the traffic indication map (TIM) in a Beacon management frame. If there is unicast traffic buffered the STA will send a PS-Poll frame to receive the buffered data.
 
+Process:
+
+1. When STA associates to the Network, it sends an `Association Request` to the AP with a `Listen Interval` (Listen interval is how often the STA will wake up to listen beacon frames, ex. a Listen Interval of 20 means that the STA will wake up every 20th beacon). AP uses the Listen Interval to determine the lifetime of buffered frames.
+2. AP answer with an `Association Response` including the `AID` of the STA.
+3. If there are frames buffered to the STA, then, the AP sends a `beacon` including a 
 
 
-##802.11e
+
+## 802.11e
 _The 802.11e standard is being designed to be backward compatible with the legacy 802.11 standard, which implies that DCF and PCF mode stations can work without restrictions in the new QoS enable environment. In fact, the traffic of a station working in DCF mode is treated as traffic belonging to AC1 of the new EDCA mode with TXOP equal to zero. Hence, from DCF point of view this coexistence is quite fair as DCF is a Best Effort traffic oriented. On the other hand, PCF mode stations in the new standard are managed by HC as if it were PC, which provides schedule for them. Therefore, there is hardly any change in system behaviour.     However, from 802.11e standpoint the introduction of legacy 802.11 stations in a QBSS system pose a risk to the QoS guarantees. Direct cooperation of both types of stations without any restriction on the legacy 802.11 traffic will penalize all QoS guarantees provided by standalone IEEE 802.11e network [3][4] due to previously mentioned 802.11 limitations. Therefore, to be able to provide real QoS support in wireless LAN with coexistence of 802.11 and 802.11e stations it will be necessary to consider some QoS mechanism for legacy stations._
 
 
-## 802.11e-2005: `WMM` & `APSD`
+## 802.11e-2005: `WMM` & `U-APSD`
 _802.11e introduced **Wi-Fi Multimedia (WMM)** and also introduced Automatic Power Save Delivery (APSD) in two varieties, scheduled and unscheduled. **Unscheduled (U-APSD)** gets all the attention, it is the method that **WMM-PS** is based on | scheduled (S-APSD) is not in the objectives of either the CWNA or CWAP exam | The goal of APSD is to be more efficient than the PS-Poll method used previously. This is accomplished by replacing PS-Poll frames with **trigger frames**. The trigger frame can be ANY data frame; this increases the efficiency of the entire BSS by avoiding the use of the PS-Poll control frame altogether. || Wi-Fi Multimedia (WMM) uses different and more efficient ways for power save mode for client device (STA’s) than the original power save mode that introduced with the 802.11 standard also known as legacy power save mode. U-APSD (Unscheduled Automatic Power Save Delivery) uses what is known as a trigger and delivery method for devices that are enabled for power save. With this method a client device will only doze when not sending or receiving frames. The trigger frame is an event that will inform the client device not to doze until it has received the buffered frames. This eliminates the PS-Poll frame that is used with legacy power save mode._
 - [802.11e-2005: Wi-Fi Multimedia (WMM) and Automatic Power Save Delivery (APSD) | QoS & PS_@ español_](https://es.wikipedia.org/wiki/IEEE_802.11e-2005)
 - [802.11e-2005: Wi-Fi Multimedia (WMM) and Automatic Power Save Delivery (APSD) | QoS & PS _@ inglés_](https://en.wikipedia.org/wiki/IEEE_802.11e-2005)
@@ -4742,6 +4758,19 @@ _802.11e introduced **Wi-Fi Multimedia (WMM)** and also introduced Automatic Pow
 - [WMM & QoS Profile _@ Nayarasi_](https://mrncciew.com/2013/07/30/wmm-qos-profile/)
 
 **WMM (U-APSD) power save mode uses `Trigger` to wake and transmit or receive frames** - This is accomplished by replacing PS-Poll frames with **trigger frames**. The trigger frame can be ANY data frame; this increases the efficiency of the entire BSS by avoiding the use of the PS-Poll control frame altogether._
+
+
+
+
+
+## Offchannel Scanning
+
+
+
+
+
+
+
 
 
 
