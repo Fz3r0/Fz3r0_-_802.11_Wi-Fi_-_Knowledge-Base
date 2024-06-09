@@ -4510,11 +4510,17 @@ Default Port: 1812
 # 🛜🚦🛑 Medium Access Methods & QoS (Quality of Service)
 _Once a STA is connected to a WLAN via an AP, the STA need to communicate somehow. This is where Medium Access takes place! The "Medium" is RF (Radio Frequency) & is shared, if there are 60 devices (STA) connected to an AP & other 30 connected to another AP and both are on same channel, those are 90 devices sharing the medium or the same Frequency Space for RF (AKA "air" or "airtime"). The STAs & APs must have a way to "negotiate" who is gonna "talk" and "when" | By other hand, we need to know which frames has more priority in the network and needs to go first, that's what QoS is all about | MAC methods = How to get acces to the medium | QoS = Decide what to put on that medium first once medium access is gained._
 - [Wireless Contention Mechanisms :: Wireless Collision Avoidance – CSMA/CA Though DCF/EDCF :: Full Info for CWNA/CWAP @ _howiwifi.com_](https://howiwifi.com/2020/06/30/wireless-contention-mechanisms/) _`howiwifi`_
+- [802.11 Network Contention](https://mrncciew.com/2014/10/12/cwap-802-11-medium-contention/) _`nayarasi`_
 
 ## 👨🏻‍⚖️🚦 Arbitration & DCF: `Network Arbitration`
 _Arbitration is just deciding "who" is gonna talk "when", in WLAN Networks there are rules to determine when STA can transmit into the medium (RF) | There are 2 types of methods: Contention Methods & Contention Free Methods (Token Ring Legacy = Contention Free | CSM-CA & DCF (default Wi-Fi), CSMA-CD (eth) modern = Contention Method)_
 - [`802.11 Arbitration` || Detailed Whitepaper @ _CWNP_](https://www.cwnp.com/uploads/802-11_arbitration.pdf) _`whitepaper / report`_
 - [Contention-based MAC Protocols Vs. Contention-free MAC Protocols @ _CS3591 Computer Networks_](https://www.youtube.com/watch?v=BW4Zufcyq9E) _`video`_
+
+
+### cfb
+
+`CFB (Contention-Free Burst)`: CFB refers to a burst of frames sent during a contention-free period, often associated with legacy 802.11 protocols.
 
 ### Radar DCF
 _Radar will affect the 5 GHz band on channels 120, 124 and 128. Using WLAN integration allows the analyst to easily identify the channels that are used with 802.11 and will help to identify radar that may impact the WLAN._
