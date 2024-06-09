@@ -3290,7 +3290,7 @@ _IEEE 802.11-2020 9.3.3 (PV0) :: Management frames are used to manage the connec
 | Re-Association Request    | 00       | 0010        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 02` | A request from a client STA to rejoin a network. Used when a client STA has disconnected and wants to reconnect, providing its old and new MAC addresses. |
 | Re-Association Response   | 00       | 0011        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 03` | Response from the AP to a re-association request. Similar to the association response, includes status and network parameters. |
 | Probe Request             | 00       | 0100        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 04` | A request for information from another client STA. Used by a client STA to discover available networks. |
-| Probe Response            | 00       | 0101        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 05` | Response to a probe request. Contains information about the network, such as supported data rates and capabilities. |
+| Probe Response            | 00       | 0101        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 05` | Response to a probe request. Contains information about the network, such as supported data rates and capabilities. Identical to a Beacon management from with the exception of the traffic indication map (TIM) that is used for power save mechanisms. ex. The Non-Greenfield HT STAs Present field is in Beacon and Probe Response frames. |
 | Timing Advertisement      | 00       | 0110        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 06` | Advertises timing information. Used to synchronize the timing of stations within a network. |
 | Unrecognized / Reserved   | 00       | 0111        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 07` | Reserved subtype. Not used in standard operations. |
 | Beacon                    | 00       | 1000        | `wlan.fc.type == 00 && wlan.fc.type_subtype == 08` | Announces the presence of a network. Sent periodically by APs to advertise the network and its capabilities. |
@@ -3372,9 +3372,14 @@ _Data frames carry the actual data payload between devices in a WLAN. These fram
 _Fixed Schedule (default 100TU = 1024us microseconds) | Sent always at Lowest Basic Data Rate configured |_
 - [**`Beacon`** :: Frame Decode @ Nayanajith](https://mrncciew.com/2014/10/08/802-11-mgmt-beacon-frame/) Fixed Schedule (default 100TU = 1024us microseconds) | Lowest Basic Data Rate
 - [`Beacon Frame Body` :: Elements](https://ieeexplore.ieee.org/document/9363693) IEEE 802.11-2020: Table 9-32 | 9.3.3.2
+- TBTT: The target beacon transmission time (TBTT) determines the rate at which Beacon management frames are sent. This value is 1,024 microseconds and usually multiplied by 100 time units (TU’s) which will allow the Beacon interval to be 102.4 milliseconds.
 
 ## 🤳🏾🔍⚙️ 802.11 Management Frames: `Probe Request` & `Probe Response`
 _STAs send Probe Request on Active Scanning or after a Beacon in Passive Scanning | APs does not response an ACK from a Probe Request, AP responds with Probe Response directly (broadcast 802.11 Frames are neved ACKed) | Directed Probe Request conain SSID or wildcard set & Probe Request (broadcast) is sent empty bit_
+
+Important Notes of Probe Request & Responses:
+
+- The Probe Response frame from an access point is identical to a Beacon management from with the exception of the traffic indication map (TIM) that is used for power save mechanisms. The Non-Greenfield HT STAs Present field is in Beacon and Probe Response frames.
 - [**`Probe Request`**]() **STA** -> Broadcast `APs does not ACK Probe Req` :: Broadcast :: Lowest STA's Data Rate :: 
 - [**`Directed Probe Request`**]() **STA** -> AP `APs does not ACK Probe Req` :: AP/SSID Directed ::
 - [**`Probe Response`**]() STA <- **AP** `STAs ACK Probes Res` :: Lowest BSS Data Rate :: Includes SSID & Very similar to a Beacon
@@ -4500,7 +4505,8 @@ _A client STA can be in one of two Power Management modes:_
 
 ### 👂⏳🐓 PS Field: Listen Interval
 
-- Listen Interval: **Sent by the STA** (`Association Request` or `Re-Association Request`) :: The client STA will go to `awake` state in a timing period called "Listen Interval". The "Association Request" or "Re-Association Request" frame includes a Listen Interval subfield within the Capabilities Information field. It is an integer between 0 and 65535 expressed in **units of Beacon Interval** (ex. 250 = Listen every 250 beacons). It indicates to the AP how often a client in PS mode wakes up to listen to the Beacon frames. In the AP, the Aging Time of the buffered frames bound to the client is implemented differently by each vendor but must not be shorter than the Listen Interval (or the WNM Sleep Interval in a WNM Sleep Mode Request frame). The Listen Interval from the client is also vendor specific. <br> <br>
+- Listen Interval: **Sent by the STA** (`Association Request` or `Re-Association Request`) :: The client STA will go to `awake` state in a timing period called "Listen Interval". The "Association Request" or "Re-Association Request" frame includes a Listen Interval subfield within the Capabilities Information field. It is an integer between 0 and 65535 expressed in **units of Beacon Interval** (ex. 250 = Listen every 250 beacons). It indicates to the AP how often a client in PS mode wakes up to listen to the Beacon frames. In the AP, the Aging Time of the buffered frames bound to the client is implemented differently by each vendor but must not be shorter than the Listen Interval (or the WNM Sleep Interval in a WNM Sleep Mode Request frame). The Listen Interval from the client is also vendor specific // In other words, **this is an unicast frame used for power management purposes sent from the STA to the AP, this value informs the AP of how many Beacons the STA will be dozing when in a power save state.** For example if a STA has a listen interval of 15 that means it will doze for 15 Beacons and if the Beacon interval is 100 time units the STA will doze for approximately 1.5 seconds.<br> <br>
+
     - 🦈 Filter :: Listen Interval 250 (HEX) = `wlan.fixed.listen_ival == 0x00fa`
     - 🦈 Filter :: Listen Interval 250 (Decimal) = `wlan.fixed.listen_ival == 250`
 
