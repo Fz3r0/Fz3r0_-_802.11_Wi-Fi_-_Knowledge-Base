@@ -4596,6 +4596,15 @@ _Many mechanisms that are described in the IEEE 802.11 standard allow a wireless
 ## 🔋🛜🪫 Power Save (PS) mode: `Basic Concepts`
 _bla la bla bla intro_
 
+### Power Consumption Activities
+
+A wireless radio can perform one of the 4 activities. Power consumed by each activity increases in the given order ( 1-4).
+
+1. `⚡    ` **Asleep**
+2. `⚡⚡  ` **Idle & Awake** 
+3. `⚡⚡⚡ ` **Receiving** 
+4.  `⚡⚡⚡⚡` **Transmitting** 
+
 ### 🔋🐓💤 Power States
 _A wireless client STA enters Power Save (PS) mode in which the radio power state can transition between awake and doze according to the 802.11 power management rules. A radio STA can be in one of two Power states:_
 
@@ -4690,9 +4699,18 @@ _From the original version in 1997 to now, many features that reduce power consu
 
 - 802.11–1997 prime Power Management: Legacy Power Save Mode
 - 802.11e-2005 Power Management: Wi-Fi Multimedia (WMM) using Automatic Power Save Delivery (APSD) (Scheduled & Unscheduled (S-APSD / U-APSD)). U-APSD is the main Power Save used in 802.11e.
-- 802.11n-2009 Power Management: Power Save Multi-Poll (PSMP) & Spatial Multiplexing Power Save (SMPS) 
+- 802.11n-2009 Power Management: Power Save Multi-Poll (PSMP) & _Spatial Multiplexing Power Save (SMPS)_ 
 - 802.11ac-2013 Power Management: VHT TXOP (Transmit Opportunity) Power Save
 - 802.11ax-2019 Power Management: Target Wake Time (TWT)
+
+### Methods of Power Management
+
+There are 3 main methods of power management used in 802.11, the others are not used or are very limited for Wi-Fi
+
+1. `Legacy Power Management` 802.11 Power Management
+2. `802.11e-2005 Power Management`: Unscheduled Automatic Power Save Delivery (U-APSD) from 802.11e amendment
+3. `802.11n-2009 Power Management`: Power Save Multi-Poll (PSMP) from 802.11n amendment
+
 
 ### Power Management: `PHY PS types`
 
