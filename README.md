@@ -4758,33 +4758,39 @@ There are 3 main methods of power management used in 802.11, the others mentione
 
 🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛜 Association Response / AID = 5 ]}
 
-🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🆗 ACK ]}                               
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🆗 ACK ]}
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🚫 Null Function / No Data Frame ]} [Doze State] 🤳🏾💤 
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🆗 ACK ]} [Doze State] 🤳🏾💤 
 
 ######################################################################################################################
                         ⚡🔋 STA wakes up after a TIM indicating buffered frames for AID 5 (our STA) 🔋⚡
 ######################################################################################################################
 
-🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    Beacon with TIM  announcing AID = 5 (STA identifier)                   
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊⏰ Beacon with TIM announcing AID = 5 (STA identifier)                   
 
-🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    PS-Poll    
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🔋 PS-Poll (Power Management = 1) [STA Wake up] 🤳🏾🐓   
 
-🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    Buffered Unicast Frame (More Data = 1) {Buffered Frame 1/3}            
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛜 Send Buffered Unicast Frame 1/3 (More Data = 1) {Buffered Frame 1/3}           
 
-🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    ACK 
+🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    {[ 💊 ACK ]}
 
-🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    PS-Poll    
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🔋 PS-Poll (Power Management = 1) [STA Wake up] 🤳🏾🐓    
 
-🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    Buffered Unicast Frame (More Data = 1) {Buffered Frame 2/3}            
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛜 Send Buffered Unicast Frame 2/3 (More Data = 1) {Buffered Frame 2/3}            
 
-🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    ACK  
+🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    {[ 💊 ACK ]}  
 
-🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    PS-Poll    
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🔋 PS-Poll (Power Management = 1) [STA Wake up] 🤳🏾🐓    
 
-🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    Buffered Unicast Frame (More Data = 0) {Buffered Frame 3/3}            
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛜 Send Buffered Unicast Frame 3/3 (More Data = 0) {Buffered Frame 3/3}            
 
-🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    ACK
+🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    {[ 💊 ACK ]}
 
-🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    Null Data Frame (Power Managemet = 1 {Doze State})
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🚫 Null Function / No Data Frame ]} [Doze State] 🤳🏾💤 
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🆗 ACK ]} [Doze State] 🤳🏾💤
 
 ````
 
@@ -4803,7 +4809,8 @@ There are 3 main methods of power management used in 802.11, the others mentione
         - 🦈 DTIM period = 3 ==>> **Every 3rd beacon will be a DTIM** _(ex. Muegahouse_SSID)_ :: `wlan.tim.dtim_period == 3` <br> <br>
 3. **If there are frames buffered to the STA, then, the AP sends a `beacon` including a** 
 
-
+more data for STA buffered at AP:
+wlan.fc.type == 2 && wlan.fc.moredata == 1
 
 ## 802.11e
 _The 802.11e standard is being designed to be backward compatible with the legacy 802.11 standard, which implies that DCF and PCF mode stations can work without restrictions in the new QoS enable environment. In fact, the traffic of a station working in DCF mode is treated as traffic belonging to AC1 of the new EDCA mode with TXOP equal to zero. Hence, from DCF point of view this coexistence is quite fair as DCF is a Best Effort traffic oriented. On the other hand, PCF mode stations in the new standard are managed by HC as if it were PC, which provides schedule for them. Therefore, there is hardly any change in system behaviour.     However, from 802.11e standpoint the introduction of legacy 802.11 stations in a QBSS system pose a risk to the QoS guarantees. Direct cooperation of both types of stations without any restriction on the legacy 802.11 traffic will penalize all QoS guarantees provided by standalone IEEE 802.11e network [3][4] due to previously mentioned 802.11 limitations. Therefore, to be able to provide real QoS support in wireless LAN with coexistence of 802.11 and 802.11e stations it will be necessary to consider some QoS mechanism for legacy stations._
