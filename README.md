@@ -3004,7 +3004,10 @@ Each of the four 802.11 Address Fields may have one of 5 different interpretatio
 Filter specific MAC of any hardware address (AP or STA) of any 5 Addresses:
 
 - ⭕ `Any AP or STA client traffic` : **`WLAN Address`** :: ID of any hardware antenna transmission <br> <br>
-    - STA or AP (F0:F0:F0:F0:F0:F0) = `wlan.addr == F0:F0:F0:F0:F0:F0`
+    - STA or AP (F0:F0:F0:F0:F0:F0) = `wlan.addr == F0:F0:F0:F0:F0:F0` <br> <br>
+- ⭕ `Any AP or STA client traffic` : **`WLAN Address`** :: Filter only for the OUI MAC "F0:F0:F0:xx:xx:xx" <br> <br>
+    - STA or AP (F0:F0:F0:F0:F0:F0) = `  wlan.addr [0:3] == F0:F0:F0`
+
 
 ---
 
