@@ -4593,6 +4593,7 @@ _Many mechanisms that are described in the IEEE 802.11 standard allow a wireless
 - [Understanding SMPS Method for Wi-Fi Power Management](https://www.cwnp.com/smps/) _`cwnp`_
 - [Power Save Mechanisms for 802.11ax](https://balramdot11b.com/2020/06/03/power-save-mechanisms-802-11ax/)
 - [Coexistence of IEEE 802.11b & 802.11e STAs in QoS enabled WLAN](https://www.researchgate.net/publication/221278781_Coexistence_of_IEEE_80211B_and_IEEE_80211E_Stations_in_QoS_Enabled_Wireless_Local_Area_Network)
+- [IEEE 802.11e :: DEVx](https://www.devx.com/terms/ieee-802-11e/) _`devx`_
 
 ## 🔋🛜🪫 Power Save (PS) mode: `Basic Concepts`
 _bla la bla bla intro_
