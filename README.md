@@ -4740,13 +4740,58 @@ There are 3 main methods of power management used in 802.11, the others mentione
 - PS-Poll frames are used with legacy power save mode.
 -  All STA’s receive an Association ID (AID) during the 802.11 association process. When a STA wakes from a doze state based on the listen interval it will check the traffic indication map (TIM) in a Beacon management frame. If there is unicast traffic buffered the STA will send a PS-Poll frame to receive the buffered data.
 
-Process:
+### 802.11 Power Save (Legacy power save mode): `Process`:
 
-1. When STA associates to the Network, it sends an `Association Request` to the AP with a `Power Save = True` and a `Listen Interval` (Listen interval is how often the STA will wake up to listen beacon frames, ex. a Listen Interval of 20 means that the STA will wake up every 20th beacon). AP uses the Listen Interval to determine the lifetime of buffered frames. <br><br>
+````py
+
+# - In this example, the AP have 3 buffered unicast frames for the STA
+
+######################################################################################################################
+                           🏁🔋 STA Associates to the AP (BSS), indicating Listen Interval = 250 🔋🏁
+                         🏁🔋 AP Resopond the Association setting the AID for the STA using AID = 5 🔋🏁
+######################################################################################################################
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🛜 Association Request / Listen Interval = 250 ]}                 
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🆗 ACK ]}
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛜 Association Response / AID = 5 ]}
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🆗 ACK ]}                               
+
+######################################################################################################################
+                        ⚡🔋 STA wakes up after a TIM indicating buffered frames for AID 5 (our STA) 🔋⚡
+######################################################################################################################
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    Beacon with TIM  announcing AID = 5 (STA identifier)                   
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    PS-Poll    
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    Buffered Unicast Frame (More Data = 1) {Buffered Frame 1/3}            
+
+🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    ACK 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    PS-Poll    
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    Buffered Unicast Frame (More Data = 1) {Buffered Frame 2/3}            
+
+🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    ACK  
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    PS-Poll    
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    Buffered Unicast Frame (More Data = 0) {Buffered Frame 3/3}            
+
+🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    ACK
+
+🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    Null Data Frame (Power Managemet = 1 {Doze State})
+
+````
+
+1. **When STA associates to the Network, it sends an `Association Request` to the AP with a `Power Save = True` and a `Listen Interval` (Listen interval is how often the STA will wake up to listen beacon frames, ex. a Listen Interval of 20 means that the STA will wake up every 20th beacon). AP uses the Listen Interval to determine the lifetime of buffered frames.** <br><br>
     - 🦈 Listen Interval of 250 :: `wlan.fixed.listen_ival == 250` <br><br>
-2. AP answer with an `Association Response` including the `AID` of the STA. <br><br>
+2. **AP answer with an `Association Response` including the `AID` of the STA.** <br><br>
     - 🦈 AID os the STA assigned by the AP (ex. AID = 3) `wlan.fixed.aid == 3` <br><br>
-3. AP send `beacons` with a `TIM` bit set, some TIMs may include a `DTIM`: 
+3. **AP send `beacons` with a `TIM` bit set, some TIMs may include a `DTIM`:** <br><br>
     - ⭕ DTIM (Delivery-TIM) Count (1 byte / 8 bits): Incremental `Beacon Frames` until the next DTIM. <br> <br>
         - 🦈 DTIM = 0 ==>> **Beacon is a DTIM** :: `wlan.tim.dtim_count == 0`
         - 🦈 DTIM = 1 ==>> **1 Beacon left until next DTIM** :: `wlan.tim.dtim_count == 1`
@@ -4755,7 +4800,7 @@ Process:
         - 🦈 DTIM period = 1 ==>> **Every beacon will be a DTIM** _(ex. Ruckus_default_SSID)_ :: `wlan.tim.dtim_period == 1`
         - 🦈 DTIM period = 3 ==>> **Every 2nd beacon will be a DTIM** _(ex. Fz3r0_CWAP_SSID)_ :: `wlan.tim.dtim_period == 2`
         - 🦈 DTIM period = 3 ==>> **Every 3rd beacon will be a DTIM** _(ex. Muegahouse_SSID)_ :: `wlan.tim.dtim_period == 3` <br> <br>
-3. If there are frames buffered to the STA, then, the AP sends a `beacon` including a 
+3. **If there are frames buffered to the STA, then, the AP sends a `beacon` including a** 
 
 
 
