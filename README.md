@@ -4816,16 +4816,18 @@ There are 3 main methods of power management used in 802.11, the others mentione
         - 🦈 Tim beacon (Element ID = 5) :: `wlan.tag.number == 5`
         - 🦈 Tim beacon with Association ID (AID) = 3 :: `wlan.tag.number == 5 && wlan.tim.aid == 3` <br> <br>
 5. **Client STA** sends `PS-Poll` indicating wake up ==>> Upon receiving a beacon with its AID (eg. AID = 3) indicated in the TIM, the client STA wakes up and sends a `PS-Poll (Power Save Poll)` frame to the AP to request the buffered data. <br> <br>
-6. AP sends the first buffered unicast frame (1/3, More Data = 1) ==>> The AP responds to the PS-Poll by sending the first buffered unicast frame to the client STA. This frame has the "More Data" bit set to 1, indicating that there are more buffered frames waiting for the STA.
+6. AP sends the **first** buffered unicast frame (`1/3`, `More Data = 1`) ==>> The AP responds to the PS-Poll by sending the **first** buffered unicast frame to the client STA. This frame has the "More Data" bit set to 1, indicating that there are more buffered frames waiting for the STA. // Then, the **client STA acknowledges the Data Frame with the "More Data" bit set to 1** from the AP by sending an ACK frame back to the AP. <br><br>
+    - 🦈 More data for STA buffered at AP ::  `wlan.fc.moredata == 1` <br><br>
+7. AP sends the **second** buffered unicast frame (`2/3`, `More Data = 1`) ==>> The AP responds to the PS-Poll by sending the **second** buffered unicast frame to the client STA. This frame has the "More Data" bit set to 1, indicating that there are more buffered frames waiting for the STA. // Then, the **client STA acknowledges the Data Frame with the "More Data" bit set to 1** from the AP by sending an ACK frame back to the AP. <br><br>
+8. AP sends the **third and LAST** buffered unicast frame (`3/3`, `More Data = 0`) ==>> The AP responds to the PS-Poll by sending the **third and last** buffered unicast frame to the client STA. This frame has the "More Data" bit set to 0, indicating that there are NO MORE buffered frames waiting for the STA. // Then, the **client STA acknowledges the Data Frame with the "More Data" bit set to 0** from the AP by sending an ACK frame back to the AP. <br><br>
+9. The **client STA** sends a `Null Function` Frame with the `Power Management bit set to 1`, indicating that it is **entering the doze state (power save mode)** and has no data to send or receive. // Then, the **AP acknowledges the Null Function Frame** from the client STA by sending an ACK frame, confirming that it knows the STA is now in doze state (power save mode).
+    - 🦈 Null Function with Power Management bit set to 1 ::  `xxxxxxxxxx` <br><br>
 
 
 
 
 
 
-
-more data for STA buffered at AP:
-wlan.fc.type == 2 && wlan.fc.moredata == 1
 
 ## 802.11e
 _The 802.11e standard is being designed to be backward compatible with the legacy 802.11 standard, which implies that DCF and PCF mode stations can work without restrictions in the new QoS enable environment. In fact, the traffic of a station working in DCF mode is treated as traffic belonging to AC1 of the new EDCA mode with TXOP equal to zero. Hence, from DCF point of view this coexistence is quite fair as DCF is a Best Effort traffic oriented. On the other hand, PCF mode stations in the new standard are managed by HC as if it were PC, which provides schedule for them. Therefore, there is hardly any change in system behaviour.     However, from 802.11e standpoint the introduction of legacy 802.11 stations in a QBSS system pose a risk to the QoS guarantees. Direct cooperation of both types of stations without any restriction on the legacy 802.11 traffic will penalize all QoS guarantees provided by standalone IEEE 802.11e network [3][4] due to previously mentioned 802.11 limitations. Therefore, to be able to provide real QoS support in wireless LAN with coexistence of 802.11 and 802.11e stations it will be necessary to consider some QoS mechanism for legacy stations._
