@@ -4631,7 +4631,7 @@ STA will go from `Doze` to `Awake` state for one of two reasons:
 
 ---
 
-### 🔋⚙️🔀 Power Management Modes
+### 🔋⚙️🔀 Power Management: `Modes`
 _A client STA can be in one of two Power Management modes:_
 
 - ⭕🐓 **`Active mode`**: the client is awake all the time. The AP immediately transmits the frames to the client. <br> <br>
@@ -4639,14 +4639,14 @@ _A client STA can be in one of two Power Management modes:_
 
 ---
 
-### 🪪🆔🤳 PS Field: AID (Association Identifier)
+### 🪪🆔🤳 PS Field: `AID (Association Identifier)`
 
 - ⭕ AID (Association Identifier): **Sent by the AP** (`Association Response` or `Re-Association Response`) :: Every 802.11 Power Management Method starts begin with the client STA associates to the BSS. When AP sends "Association Response" or "Re-Association Response" frame to the STA, an `AID` value is present in the AID parameter field (16-bit). <br> <br>
     - 🦈 Filter :: AID (Association Identifier) 3 = `wlan.fixed.aid == 3` 
 
 ---
 
-### 👂⏳🐓 PS Field: Listen Interval
+### 👂⏳🐓 PS Field: `Listen Interval`
 
 - Listen Interval: **Sent by the STA** (`Association Request` or `Re-Association Request`) :: The client STA will go to `awake` state in a timing period called "Listen Interval". The "Association Request" or "Re-Association Request" frame includes a Listen Interval subfield within the Capabilities Information field. It is an integer between 0 and 65535 expressed in **units of Beacon Interval** (ex. 250 = Listen every 250 beacons). It indicates to the AP how often a client in PS mode wakes up to listen to the Beacon frames. In the AP, the Aging Time of the buffered frames bound to the client is implemented differently by each vendor but must not be shorter than the Listen Interval (or the WNM Sleep Interval in a WNM Sleep Mode Request frame). The Listen Interval from the client is also vendor specific // In other words, **this is an unicast frame used for power management purposes sent from the STA to the AP, this value informs the AP of how many Beacons the STA will be dozing when in a power save state.** For example if a STA has a listen interval of 15 that means it will doze for 15 Beacons and if the Beacon interval is 100 time units the STA will doze for approximately 1.5 seconds.<br> <br>
 
@@ -4655,35 +4655,37 @@ _A client STA can be in one of two Power Management modes:_
 
 ---
 
-### 📫📩📬 PS Information Element: TIM (Traffic Indication Map)
+### 📫📩📬 PS Information Element: `TIM (Traffic Indication Map)`
 
-- 📬 TIM (Traffic Indication Map): It's a IE (Information Element) with the two following Sub-Fields: <br> <br>
-    - ⭕ Element ID (1 byte / 8 bits): Value of 5 indicates is a TIM. <br> <br>
-        - 🦈 Element ID = 5 :: `wlan.tag.number == 5` <br> <br>
-    - ⭕ Lenght (1 byte / 8 bits): Lenght of the information carrying fields (DTIM Count, DTIM Period, Bitmap Control, Partial Virtual Bitmap). <br> <br>
-        - 🦈 Tag Lenght = 4 :: `wlan.tag.length == 4` <br> <br>
-    - ⭕ DTIM (Delivery-TIM) Count (1 byte / 8 bits): Incremental `Beacon Frames` until the next DTIM. <br> <br>
-        - 🦈 DTIM = 0 ==>> **Beacon is a DTIM** :: `wlan.tim.dtim_count == 0`
-        - 🦈 DTIM = 1 ==>> **1 Beacon left until next DTIM** :: `wlan.tim.dtim_count == 1`
-        - 🦈 DTIM = 2 ==>> **2 Beacons left until next DTIM** :: `wlan.tim.dtim_count == 2` <br> <br>
-    - ⭕ DTIM (Delivery-TIM) Period (1 byte / 8 bits): Number of `Beacon Frames` between DTIM beacon. <br> <br>
-        - 🦈 DTIM period = 1 ==>> **Every beacon will be a DTIM** _(ex. Ruckus_default_SSID)_ :: `wlan.tim.dtim_period == 1`
-        - 🦈 DTIM period = 3 ==>> **Every 2nd beacon will be a DTIM** _(ex. Fz3r0_CWAP_SSID)_ :: `wlan.tim.dtim_period == 2`
-        - 🦈 DTIM period = 3 ==>> **Every 3rd beacon will be a DTIM** _(ex. Muegahouse_SSID)_ :: `wlan.tim.dtim_period == 3` <br> <br>
-    - ⭕ Bitmap Control (1 byte / 8 bits): Indicates if **Multicast/Broadcast** traffic are buffered at the AP (true or false) & also uses a space save called `Bitmap Offset` which may have a value between 0 - 127. <br> <br>
-        - 🦈 Bitmap Control = 1 ==>> **There's a multicast/broadcast frame buffering for any STA** :: `wlan.tim.bmapctl.multicast == 1`
-        - 🦈 Bitmap Control = 0 ==>> **No multicast/broadcast frames are buffering** :: `wlan.tim.bmapctl.multicast == 0` <br> <br>
-        - 🦈 Bitmap Offset = 0 ==>> **how many bytes are Zero in Partial Virtual Bitmap (PVB)** :: `wlan.tim.bmapctl.offset == 0`
-        - 🦈 Bitmap Offset > 0 ==>> **how many bytes are Zero in Partial Virtual Bitmap (PVB)** `wlan.tim.bmapctl.offset > 0` <br> <br>
-    - ⭕ PVB (Partial Virtual Map): (1 byte - 251 bytes): Series of flags indicating whether each associated STA has **Unicast** frames buffered at the AP. Each bit in this field corresponds to an AID of a STA. <br> <br>
-        - 🦈 PVB = 0 ==>> **No unicast frames are buffered** :: `wlan.tim.partial_virtual_bitmap == 00` 
-        - 🦈 PVB more than 0 ==>> **Unicast frames are buffered** :: `wlan.tim.partial_virtual_bitmap > 00`
+`TIM (Traffic Indication Map)`: It's a IE (Information Element) present **only in `Beacon` frames** with the two following Sub-Fields: 
+
+- ⭕ Element ID (1 byte / 8 bits): Value of 5 indicates is a TIM. <br> <br>
+    - 🦈 Element ID = 5 :: `wlan.tag.number == 5` <br> <br>
+- ⭕ Lenght (1 byte / 8 bits): Lenght of the information carrying fields (DTIM Count, DTIM Period, Bitmap Control, Partial Virtual Bitmap). <br> <br>
+    - 🦈 Tag Lenght = 4 :: `wlan.tag.length == 4` <br> <br>
+- ⭕ DTIM (Delivery-TIM) Count (1 byte / 8 bits): Incremental `Beacon Frames` until the next DTIM. <br> <br>
+    - 🦈 DTIM = 0 ==>> **Beacon is a DTIM** :: `wlan.tim.dtim_count == 0`
+    - 🦈 DTIM = 1 ==>> **1 Beacon left until next DTIM** :: `wlan.tim.dtim_count == 1`
+    - 🦈 DTIM = 2 ==>> **2 Beacons left until next DTIM** :: `wlan.tim.dtim_count == 2` <br> <br>
+- ⭕ DTIM (Delivery-TIM) Period (1 byte / 8 bits): Number of `Beacon Frames` between DTIM beacon. <br> <br>
+    - 🦈 DTIM period = 1 ==>> **Every beacon will be a DTIM** _(ex. Ruckus_default_SSID)_ :: `wlan.tim.dtim_period == 1`
+    - 🦈 DTIM period = 3 ==>> **Every 2nd beacon will be a DTIM** _(ex. Fz3r0_CWAP_SSID)_ :: `wlan.tim.dtim_period == 2`
+    - 🦈 DTIM period = 3 ==>> **Every 3rd beacon will be a DTIM** _(ex. Muegahouse_SSID)_ :: `wlan.tim.dtim_period == 3` <br> <br>
+- ⭕ Bitmap Control (1 byte / 8 bits): Indicates if **Multicast/Broadcast** traffic are buffered at the AP (true or false) & also uses a space save called `Bitmap Offset` which may have a value between 0 - 127. <br> <br>
+    - 🦈 Bitmap Control = 1 ==>> **There's a multicast/broadcast frame buffering for any STA** :: `wlan.tim.bmapctl.multicast == 1`
+    - 🦈 Bitmap Control = 0 ==>> **No multicast/broadcast frames are buffering** :: `wlan.tim.bmapctl.multicast == 0` <br> <br>
+    - 🦈 Bitmap Offset = 0 ==>> **how many bytes are Zero in Partial Virtual Bitmap (PVB)** :: `wlan.tim.bmapctl.offset == 0`
+    - 🦈 Bitmap Offset > 0 ==>> **how many bytes are Zero in Partial Virtual Bitmap (PVB)** `wlan.tim.bmapctl.offset > 0` <br> <br>
+- ⭕ PVB (Partial Virtual Map): (1 byte - 251 bytes): Series of flags indicating whether each associated STA has **Unicast** frames buffered at the AP. Each bit in this field corresponds to an AID of a STA. <br> <br>
+    - 🦈 PVB = 0 ==>> **No unicast frames are buffered** :: `wlan.tim.partial_virtual_bitmap == 00` 
+    - 🦈 PVB more than 0 ==>> **Unicast frames are buffered** :: `wlan.tim.partial_virtual_bitmap > 00`
 
 ---
 
 ### 🚨📩📬 PS Information Element: `DTIM (Delivery Traffic Indication Map)`
 
-- DTIM (Delivery Traffic Indication Map): **Sent by the AP** (`Beacon`) _(DTIM is not present in all beacons or all TIMs inside a becon)_ :: DTIM is a beacon frame, identical in structure to any other beacon frame. The only difference with a common Beacon Frame is that the content of the DTIM IE (Information Element) will give information about broadcast/multicast traffic that is buffered at the AP, in addition to the typical information about buffered unicast frames that is always present in the TIM. <br> <br>
+`DTIM (Delivery Traffic Indication Map)`: **Sent by the AP** (`Beacon`) _(DTIM is not present in all beacons or all TIMs inside a becon)_ :: DTIM is a Information Element inside a TIM carried by a beacon frame (identical in structure to any other Beacon Frame). The only difference with a common Beacon Frame is that the content of the DTIM IE (Information Element) will give information about broadcast/multicast traffic that is buffered at the AP, in addition to the typical information about buffered unicast frames that is always present in the TIM. <br> <br>
+
 - ⭕ DTIM Count = 0: means that the current TIM (beacon) frame is a DTIM
 - ⭕ DTIM Count = 1: means 1 Beacon left until next DTIM
 - ⭕ DTIM Count = 2: means 2 Beacons left until next DTIM <br> <br>
@@ -4695,11 +4697,10 @@ _A client STA can be in one of two Power Management modes:_
 
 ---
 
-### Control Frame: PS-Poll
+### Control Frame: `PS-Poll`
 
-- PS-POLL: The legacy PS mode mechanism is based on the PS-Poll frame to retrieve the buffered frames in the AP. The PS-Poll frame is a short Control Frame containing the AID value of the client. PS-Poll have the following Sub-Fields:
-- Type 01 (Control Frame)
-- Subtype 1010 (PS-Poll)
+PS-POLL: The legacy PS mode mechanism is based on the PS-Poll frame to retrieve the buffered frames in the AP. The PS-Poll frame is a short Control Frame containing the AID value of the client. PS-Poll have the following Sub-Fields:
+- Type `01` (Control Frame) :: Subtype `1010` (PS-Poll)
     - AID (Association ID) : AID of the STA requesting buffered frames
     - BSSID : BSSID where the STA is associated
     - Transmitter : MAC of the STA requesting buffered frames
@@ -4718,7 +4719,7 @@ _From the original version in 1997 to now, many features that reduce power consu
 
 ---
 
-### Methods of Power Management
+### 802.11 Wi-Fi Power Management: `Methods` 
 
 There are 3 main methods of power management used in 802.11, the others mentioned before are not used or are very limited for Wi-Fi
 
