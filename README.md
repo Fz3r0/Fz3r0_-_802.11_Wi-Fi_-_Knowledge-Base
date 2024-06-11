@@ -1788,12 +1788,12 @@ Upper Layers Data / Payload (example, an IP datagram / data payload):
 
 or
 
-MAC Layer 2 Data (example, elements inside a beacon frame, rts/cts, ACK, etc. not comming from upper layers)
+MAC SubLayer Payload (example, elements inside a beacon frame, probe response, reassociation request, rts/cts, ACK, etc. not comming from upper layers)
 
 
-                                                            |----------------|          from: # upper layers 4,5,6,7
+                                                            |----------------|          from: # upper layers 4,5,6,7 data 
                                                             | Data / Element |          or          
-                                                            |----------------|          from: # MAC Layer (ex. beacon, cts/rts, etc)                    
+                                                            |----------------|          from: # MAC SubLayer Payload (eg. beacon, probe response, cts/rts, etc)                    
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
