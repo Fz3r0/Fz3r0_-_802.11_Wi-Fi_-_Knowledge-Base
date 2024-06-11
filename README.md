@@ -4763,7 +4763,7 @@ There are 3 main methods of power management used in 802.11, the others mentione
 
 🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🆗 ACK ]}
 
-🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🚫 Null Function / No Data Frame ]} [Doze State] 🤳🏾💤 
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🚫 Null Function No Data (Power Management = 1) ]} [Doze State] 🤳🏾💤 
 
 🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🆗 ACK ]} [Doze State] 🤳🏾💤 
 
@@ -4791,7 +4791,7 @@ There are 3 main methods of power management used in 802.11, the others mentione
 
 🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    {[ 💊 ACK ]}
 
-🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🚫 Null Function / No Data Frame ]} [Doze State] 🤳🏾💤 
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🚫 Null Function No Data (Power Management = 1) ]} [Doze State] 🤳🏾💤 
 
 🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🆗 ACK ]} [Doze State] 🤳🏾💤
 
@@ -4817,17 +4817,18 @@ There are 3 main methods of power management used in 802.11, the others mentione
         - 🦈 Current TIM beacon is a DTIM :: `wlan.tim.dtim_count == 0`
         - 🦈 Current TIM contains the Association ID (AID) = 3 :: `wlan.tim.aid == 3`
         - 🦈 **Tim beacon is a DTIM with Association ID (AID) = 3 :: `wlan.tag.number == 5 && wlan.tim.dtim_count == 0 && wlan.tim.aid == 3`**
-5. **Client STA** sends `PS-Poll` indicating wake up ==>> Upon receiving a beacon with its AID (eg. AID = 3) indicated in the TIM, the client STA wakes up and sends a `PS-Poll (Power Save Poll)` frame to the AP to request the buffered data with Power Management bit set to 1 indicating wake up. <br> <br>
+5. **Client STA** sends `PS-Poll` with `Power Management = 0` indicating wake up ==>> Upon receiving a beacon with its AID (eg. AID = 3) indicated in the TIM, the client STA wakes up and sends a `PS-Poll (Power Save Poll)` frame to the AP to request the buffered data with `Power Management bit set to 0` indicating wake up. <br> <br>
     - ⭕ PS-Poll with Association ID (AID) = 3 and Power Management bit set to 0 :: ``  <br> <br>
-        - PS-Poll Frame `wlan.fc.type_subtype == 26`
-        - PS-Poll Frame with Association ID (AID) = 3 `wlan.fc.type_subtype == 26 && wlan.aid == 3`
-
+        - PS-Poll Frame with PS Management set to 0 (awake) `wlan.fc.type_subtype == 26 && wlan.fc.pwrmgt == 0`
+        - PS-Poll Frame with Association ID (AID) = 3 `wlan.fc.type_subtype == 26 && wlan.aid == 3 && wlan.fc.pwrmgt == 0`
 6. AP sends the **first** buffered unicast frame (`1/3`, `More Data = 1`) ==>> The AP responds to the PS-Poll by sending the **first** buffered unicast frame to the client STA. This frame has the "More Data" bit set to 1, indicating that there are more buffered frames waiting for the STA. // Then, the **client STA acknowledges the Data Frame with the "More Data" bit set to 1** from the AP by sending an ACK frame back to the AP. <br><br>
     - 🦈 More data for STA buffered at AP ::  `wlan.fc.moredata == 1` <br><br>
 7. AP sends the **second** buffered unicast frame (`2/3`, `More Data = 1`) ==>> The AP responds to the PS-Poll by sending the **second** buffered unicast frame to the client STA. This frame has the "More Data" bit set to 1, indicating that there are more buffered frames waiting for the STA. // Then, the **client STA acknowledges the Data Frame with the "More Data" bit set to 1** from the AP by sending an ACK frame back to the AP. <br><br>
+    - 🦈 More data for STA buffered at AP ::  `wlan.fc.moredata == 1` <br><br>
 8. AP sends the **third and LAST** buffered unicast frame (`3/3`, `More Data = 0`) ==>> The AP responds to the PS-Poll by sending the **third and last** buffered unicast frame to the client STA. This frame has the "More Data" bit set to 0, indicating that there are NO MORE buffered frames waiting for the STA. // Then, the **client STA acknowledges the Data Frame with the "More Data" bit set to 0** from the AP by sending an ACK frame back to the AP. <br><br>
-9. The **client STA** sends a `Null Function` Frame with the `Power Management bit set to 1`, indicating that it is **entering the doze state (power save mode)** and has no data to send or receive. // Then, the **AP acknowledges the Null Function Frame** from the client STA by sending an ACK frame, confirming that it knows the STA is now in doze state (power save mode).
-    - 🦈 Null Function with Power Management bit set to 1 ::  `xxxxxxxxxx` <br><br>
+    - 🦈 More data for STA buffered at AP ::  `wlan.fc.moredata == 0` <br><br>
+9. The **client STA** sends a `Null Function` Frame with the `Power Management bit set to 1`, indicating that it is **entering the doze state (power save mode)** and has no data to send or receive. // Then, the **AP acknowledges the Null Function Frame** from the client STA by sending an ACK frame, confirming that it knows the STA is now in doze state (power save mode). <br><br>
+    - 🦈 Null Function with Power Management bit set to 1 ::  `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 1` <br><br>
 
 
 
