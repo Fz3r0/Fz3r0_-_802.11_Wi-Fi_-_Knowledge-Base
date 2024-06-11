@@ -4590,11 +4590,13 @@ _Many mechanisms that are described in the IEEE 802.11 standard allow a wireless
 
 - [802.11 Power Management with packet captures](https://dot11zen.blogspot.com/2018/02/80211-power-management-with-packet.html) _`dot11zen`_
 - [802.11 Power Save Methods](https://howiwifi.com/2020/06/25/power-save-methods/) _`how to Wi-fi`_
+- [PS Poll & Non PS Poll :: Legacy Power Management](https://aletheatech.com/legacy-power-save-test-using-managed-client/) _`ale the teach`_
+- [Unscheduled Automatic Power Save Delivery (U-APSD)](https://aletheatech.com/uapsd-wmm-powersave/)
 - [802.11 Power Save Modes & Power Management](https://www.youtube.com/watch?v=m363xe-fia8) _`video`_
 - [802.11 WLAN Power Management](https://www.youtube.com/watch?v=M_RpvOeiqp0) _`short video`_
 - [802.11 Power Management](https://mrncciew.com/2014/10/14/cwap-802-11-power-management/) _`nayarasi`_
 - [Understanding SMPS Method for Wi-Fi Power Management](https://www.cwnp.com/smps/) _`cwnp`_
-- [Power Save Mechanisms for 802.11ax](https://balramdot11b.com/2020/06/03/power-save-mechanisms-802-11ax/)
+- [Power Save Mechanisms for 802.11ax](https://balramdot11b.com/2020/06/03/power-save-mechanisms-802-11ax/) _`ale the teach`_
 - [Coexistence of IEEE 802.11b & 802.11e STAs in QoS enabled WLAN](https://www.researchgate.net/publication/221278781_Coexistence_of_IEEE_80211B_and_IEEE_80211E_Stations_in_QoS_Enabled_Wireless_Local_Area_Network)
 - [IEEE 802.11e :: DEVx](https://www.devx.com/terms/ieee-802-11e/) _`devx`_
 
@@ -4741,10 +4743,16 @@ There are 3 main methods of power management used in 802.11, the others mentione
 ## 802.11 Power Save (Legacy power save mode)
 
 - Less Efficient Power Save Mode.
-- PS-Poll frames are used with legacy power save mode.
--  All STA’s receive an Association ID (AID) during the 802.11 association process. When a STA wakes from a doze state based on the listen interval it will check the traffic indication map (TIM) in a Beacon management frame. If there is unicast traffic buffered the STA will send a PS-Poll frame to receive the buffered data.
+- There are 2 Types of Legacy Power Save Mode _(Clients can support either one of the two legacy power save mechanisms at one time)_: <br><br>
+1. Power save Poll [PS Poll]
+2. Non Power save Poll [Non PS Poll] <br><br>
 
-### 802.11 Power Save (Legacy power save mode): `Process`:
+
+### 802.11 Power Save (Legacy power save mode): `PS Poll`:
+
+- As the name suggests PS POLL stands for Power Save Polling. <br><br>
+- The Access point uses the TIM information element to indicate to the station that there is unicast data buffered for the WLAN station to the AP. <br><br>
+- In PS Poll mode, the device may wake up at intervals to check for incoming data or to initiate data transmission, which can result in lower power consumption compared to the Non PS Poll mode.
 
 ````py
 
@@ -4816,7 +4824,7 @@ There are 3 main methods of power management used in 802.11, the others mentione
         - 🦈 Tim beacon (Element ID = 5) :: `wlan.tag.number == 5`
         - 🦈 Current TIM beacon is a DTIM :: `wlan.tim.dtim_count == 0`
         - 🦈 Current TIM contains the Association ID (AID) = 3 :: `wlan.tim.aid == 3`
-        - 🦈 **Tim beacon is a DTIM with Association ID (AID) = 3 :: `wlan.tag.number == 5 && wlan.tim.dtim_count == 0 && wlan.tim.aid == 3`**
+        - 🦈 **Tim beacon is a DTIM with Association ID (AID) = 3 :: `wlan.tag.number == 5 && wlan.tim.dtim_count == 0 && wlan.tim.aid == 3`** <br> <br>
 5. **Client STA** sends `PS-Poll` with `Power Management = 0` indicating wake up ==>> Upon receiving a beacon with its AID (eg. AID = 3) indicated in the TIM, the client STA wakes up and sends a `PS-Poll (Power Save Poll)` frame to the AP to request the buffered data with `Power Management bit set to 0` indicating wake up. <br> <br>
     - ⭕ PS-Poll with Association ID (AID) = 3 and Power Management bit set to 0 :: ``  <br> <br>
         - PS-Poll Frame with PS Management set to 0 (awake) `wlan.fc.type_subtype == 26 && wlan.fc.pwrmgt == 0`
@@ -4830,6 +4838,7 @@ There are 3 main methods of power management used in 802.11, the others mentione
 9. The **client STA** sends a `Null Function` Frame with the `Power Management bit set to 1`, indicating that it is **entering the doze state (power save mode)** and has no data to send or receive. // Then, the **AP acknowledges the Null Function Frame** from the client STA by sending an ACK frame, confirming that it knows the STA is now in doze state (power save mode). <br><br>
     - 🦈 Null Function with Power Management bit set to 1 ::  `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 1` <br><br>
 
+### 802.11 Power Save (Legacy power save mode): `Non PS Poll`:
 
 
 
