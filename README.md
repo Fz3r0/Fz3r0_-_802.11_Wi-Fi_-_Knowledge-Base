@@ -6110,24 +6110,26 @@ https://www.wireshark.org/docs/dfref/w/wlan_radio.html
 
 # Spectrum Analysis
 
+- [Spectrum Analysis](https://mrncciew.com/2014/10/17/cwap-spectrum-analysis/) _`nayarasi`_
+- [Spectrum Analysis – PHYs and Interferers](https://howiwifi.com/2020/07/03/spectrum-analysis-phys-and-interferers/) _`how to Wi-Fi`_
+
 ## Spectrum Analyzers
 - [Ekahau Sidekick]()
 - [Metageek]()
 
 
 
-## Spectrum Analysis Views
+## Spectrum Analysis Views / Displays
 
-- [Spectrum Analysis – PHYs and Interferers](https://howiwifi.com/2020/07/03/spectrum-analysis-phys-and-interferers/) _`how to Wi-Fi`_
+
 
 ## Spectrum Analysis Displays:
 
-- Real-time FFT: Phase Domain - RF energy detected in the swept frequencies
-- FFT Plot
-- Duty Cicle
-- Waterfall
-- Density
-- 
+- Real-time FFT: Phase Domain - Frequency represent in horizontal axis and the energy in dBm defined in vertical axis
+- Spectrogram Graph (Waterfall plot) - This use the same data from Real Time FFT, but with the addition of time dimension. In this view vertical axis shows the historical data. In this case energy in dB values represent in colors (Blue to RED to represent weaker to stronger energy).
+- Spectrum Density - Horizontal axis represent frequency & vertical axis represent energy in dBm with brightness of color being determined by how many times that specific bit of information has been captured.
+- Duty Cycle - This view displays the percentage of time the ambient RF signal is higher than the noise floor or other predefined signal threshold. In this veiw you can see whether a device is constantly using a frequency (100% duty cycle on a particular channel mean it is not usable & caused by sort of jammers)
+- WiFi integration - When spectrum analyzer has WiFi integration capability, it can combined those views. WiFi NIC can scan other channels & report that information to give a overall view on a particular band.
 
 ### Spectrum Analysis: `Duty Cicle`
 _Spectrum analyzer displays a measurement of the amount of time a received signal amplitude is above the noise floor or another arbitrary threshold. Although the term duty cycle can be subjective based on the context in which it is used within WLAN technology, it is commonly identifies the percentage of time an RF signal is above a specific threshold. A high duty cycle such as 95-100% can indicate a problem such as an RF jammer or other devise that is causing high utilization of the RF channel._
