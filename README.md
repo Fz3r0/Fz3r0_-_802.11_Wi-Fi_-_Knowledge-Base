@@ -4773,19 +4773,19 @@ There are 3 main methods of power management used in 802.11, the others mentione
 
 🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊⏰ Beacon with TIM announcing AID = 5 (STA identifier)                   
 
-🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🔋 PS-Poll (Power Management = 1) [STA Wake up] 🤳🏾🐓   
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🔋 PS-Poll (Power Management = 0) [STA Wake up] 🤳🏾🐓   
 
 🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛜 Send Buffered Unicast Frame 1/3 (More Data = 1) {Buffered Frame 1/3}           
 
 🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    {[ 💊 ACK ]}
 
-🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🔋 PS-Poll (Power Management = 1) [STA Wake up] 🤳🏾🐓    
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🔋 PS-Poll (Power Management = 0) [STA Wake up] 🤳🏾🐓    
 
 🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛜 Send Buffered Unicast Frame 2/3 (More Data = 1) {Buffered Frame 2/3}            
 
 🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    {[ 💊 ACK ]}  
 
-🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🔋 PS-Poll (Power Management = 1) [STA Wake up] 🤳🏾🐓    
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🔋 PS-Poll (Power Management = 0) [STA Wake up] 🤳🏾🐓    
 
 🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛜 Send Buffered Unicast Frame 3/3 (More Data = 0) {Buffered Frame 3/3}            
 
@@ -4801,8 +4801,8 @@ There are 3 main methods of power management used in 802.11, the others mentione
     - 🦈 Listen Interval of 250 :: `wlan.fixed.listen_ival == 250` <br><br>
 2. The **AP** responds with an `association response` frame, which includes the `Association ID (AID)` assigned to the client STA (e.g., **AID = 5**). // Then, the **client STA acknowledges the association response** from the AP by sending an ACK frame back to the AP. <br><br>
     - 🦈 AID os the STA assigned by the AP (ex. AID = 3) `wlan.fixed.aid == 3` <br><br>
-3. The **client STA** sends a `Null Function` Frame with the `Power Management bit set to 1`, indicating that it is **entering the doze state (power save mode)** and has no data to send. // Then, the **AP acknowledges the Null Function Frame** from the client STA by sending an ACK frame, confirming that it knows the STA is now in doze state (power save mode).
-    - 🦈 Null Function with Power Management bit set to 1 ::  `xxxxxxxxxx` <br><br>
+3. The **client STA** sends a `Null Function` Frame with the `Power Management bit set to 1`, indicating that it is **entering the doze state (power save mode)** and has no data to send. // Then, the **AP acknowledges the Null Function Frame** from the client STA by sending an ACK frame, confirming that it knows the STA is now in doze state (power save mode). <br><br>
+    - 🦈 Null Function with Power Management bit set to 1 ::  `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 1` <br><br>
 4. AP send beacons normally, until the AP sends Beacon with TIM announcing AID = 5 ==>> Periodically, the AP sends a Beacon frame with a Traffic Indication Map (TIM) that indicates which STAs have buffered frames waiting for them. The TIM will include the AID of the client STA (e.g., AID = 3) when there are buffered frames for it. <br> <br>
     - ⭕ DTIM (Delivery-TIM) Count (1 byte / 8 bits): Incremental `Beacon Frames` until the next DTIM. <br> <br>
         - 🦈 DTIM = 0 ==>> **Beacon is a DTIM** :: `wlan.tim.dtim_count == 0`
@@ -4812,10 +4812,16 @@ There are 3 main methods of power management used in 802.11, the others mentione
         - 🦈 DTIM period = 1 ==>> **Every beacon will be a DTIM** _(ex. Ruckus_default_SSID)_ :: `wlan.tim.dtim_period == 1`
         - 🦈 DTIM period = 3 ==>> **Every 2nd beacon will be a DTIM** _(ex. Fz3r0_CWAP_SSID)_ :: `wlan.tim.dtim_period == 2`
         - 🦈 DTIM period = 3 ==>> **Every 3rd beacon will be a DTIM** _(ex. Muegahouse_SSID)_ :: `wlan.tim.dtim_period == 3` <br> <br>
-    - ⭕ Element ID (1 byte / 8 bits): Value of 5 indicates is a TIM // Beacon with an AID including AID = 3, the ID of our client STA <br> <br>
+    - ⭕ Element ID (1 byte / 8 bits): Value of 5 indicates is a TIM // Tim Beacon is a DTIM, icluding the AID of our STA //  <br> <br>
         - 🦈 Tim beacon (Element ID = 5) :: `wlan.tag.number == 5`
-        - 🦈 Tim beacon with Association ID (AID) = 3 :: `wlan.tag.number == 5 && wlan.tim.aid == 3` <br> <br>
-5. **Client STA** sends `PS-Poll` indicating wake up ==>> Upon receiving a beacon with its AID (eg. AID = 3) indicated in the TIM, the client STA wakes up and sends a `PS-Poll (Power Save Poll)` frame to the AP to request the buffered data. <br> <br>
+        - 🦈 Current TIM beacon is a DTIM :: `wlan.tim.dtim_count == 0`
+        - 🦈 Current TIM contains the Association ID (AID) = 3 :: `wlan.tim.aid == 3`
+        - 🦈 **Tim beacon is a DTIM with Association ID (AID) = 3 :: `wlan.tag.number == 5 && wlan.tim.dtim_count == 0 && wlan.tim.aid == 3`**
+5. **Client STA** sends `PS-Poll` indicating wake up ==>> Upon receiving a beacon with its AID (eg. AID = 3) indicated in the TIM, the client STA wakes up and sends a `PS-Poll (Power Save Poll)` frame to the AP to request the buffered data with Power Management bit set to 1 indicating wake up. <br> <br>
+    - ⭕ PS-Poll with Association ID (AID) = 3 and Power Management bit set to 0 :: ``  <br> <br>
+        - PS-Poll Frame `wlan.fc.type_subtype == 26`
+        - PS-Poll Frame with Association ID (AID) = 3 `wlan.fc.type_subtype == 26 && wlan.aid == 3`
+
 6. AP sends the **first** buffered unicast frame (`1/3`, `More Data = 1`) ==>> The AP responds to the PS-Poll by sending the **first** buffered unicast frame to the client STA. This frame has the "More Data" bit set to 1, indicating that there are more buffered frames waiting for the STA. // Then, the **client STA acknowledges the Data Frame with the "More Data" bit set to 1** from the AP by sending an ACK frame back to the AP. <br><br>
     - 🦈 More data for STA buffered at AP ::  `wlan.fc.moredata == 1` <br><br>
 7. AP sends the **second** buffered unicast frame (`2/3`, `More Data = 1`) ==>> The AP responds to the PS-Poll by sending the **second** buffered unicast frame to the client STA. This frame has the "More Data" bit set to 1, indicating that there are more buffered frames waiting for the STA. // Then, the **client STA acknowledges the Data Frame with the "More Data" bit set to 1** from the AP by sending an ACK frame back to the AP. <br><br>
