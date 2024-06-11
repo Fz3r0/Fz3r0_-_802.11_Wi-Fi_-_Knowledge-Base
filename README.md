@@ -4744,14 +4744,16 @@ There are 3 main methods of power management used in 802.11, the others mentione
 
 - Less Efficient Power Save Mode.
 - There are 2 Types of Legacy Power Save Mode _(Clients can support either one of the two legacy power save mechanisms at one time)_: <br><br>
-1. Power save Poll [PS Poll]
-2. Non Power save Poll [Non PS Poll] <br><br>
+1. **Power save Poll: `PS Poll**
+2. **Non Power save Poll: `Non PS Poll`** 
 
+---
 
-### 802.11 Power Save (Legacy power save mode): `PS Poll`:
+### 802.11 Power Save (Legacy power save mode): `PS-Poll Mode`:
 
-- As the name suggests PS POLL stands for Power Save Polling. <br><br>
-- The Access point uses the TIM information element to indicate to the station that there is unicast data buffered for the WLAN station to the AP. <br><br>
+- As the name suggests `PS-Poll` stands for `Power Save Polling`.
+- In this mode the client STA uses `PS-Poll`, this is a control frame the STA sends to an AP after receiving a beacon containing the STAs association ID (AID) in the TIM. The STA will send PS-Poll frames to the AP until it receives a frame from the AP with the `More Data bit set to 0`. A STA may not go back to sleep until its AID is clear from the TIM whereas APs may choose to delay response to the PS-Poll frame; this is vendor specific.
+- The Access point uses the TIM information element to indicate to the station that there is unicast data buffered for the WLAN client STA to the AP.
 - In PS Poll mode, the device may wake up at intervals to check for incoming data or to initiate data transmission, which can result in lower power consumption compared to the Non PS Poll mode.
 
 ````py
@@ -4838,10 +4840,64 @@ There are 3 main methods of power management used in 802.11, the others mentione
 9. The **client STA** sends a `Null Function` Frame with the `Power Management bit set to 1`, indicating that it is **entering the doze state (power save mode)** and has no data to send or receive. // Then, the **AP acknowledges the Null Function Frame** from the client STA by sending an ACK frame, confirming that it knows the STA is now in doze state (power save mode). <br><br>
     - 🦈 Null Function with Power Management bit set to 1 ::  `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 1` <br><br>
 
-### 802.11 Power Save (Legacy power save mode): `Non PS Poll`:
+---
 
+### 802.11 Power Save (Legacy power save mode): `Non PS-Poll Mode`:
 
+- The `Non PS Poll` mechanism refers to situations where a device **does not use the PS Poll mechanism** to wake up from its power saving mode and instead relies on other mechanisms to wake up and communicate with the AP.
+- In this mode the client simply exits the PS mode and switches back to active mode. `Null Data` frames or `QoS Null Data` frames are generally used for this purpose.
+- The device may wake up more frequently to check for incoming data or to initiate data transmission, which can result in higher power consumption compared to the PS Poll mode. However, it provides more flexibility and responsiveness for the device to communicate when needed.
 
+````py
+
+# - In this example, the AP have 3 buffered unicast frames for the STA
+
+######################################################################################################################
+                           🏁🔋 STA Associates to the AP (BSS), indicating Listen Interval = 250 🔋🏁
+                         🏁🔋 AP Resopond the Association setting the AID for the STA using AID = 5 🔋🏁
+######################################################################################################################
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🛜 Association Request / Listen Interval = 250 ]}                 
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🆗 ACK ]}
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛜 Association Response / AID = 5 ]}
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🆗 ACK ]}
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🚫 Null Function No Data (Power Management = 1) ]} [Doze State] 🤳🏾💤 
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🆗 ACK ]} [Doze State] 🤳🏾💤 
+
+######################################################################################################################
+                        ⚡🔋 STA wakes up after a TIM indicating buffered frames for AID 5 (our STA) 🔋⚡
+######################################################################################################################
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊⏰ Beacon with TIM announcing AID = 5 (STA identifier)                   
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🔋 PS-Poll (Power Management = 0) [STA Wake up] 🤳🏾🐓   
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛜 Send Buffered Unicast Frame 1/3 (More Data = 1) {Buffered Frame 1/3}           
+
+🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    {[ 💊 ACK ]}
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🔋 PS-Poll (Power Management = 0) [STA Wake up] 🤳🏾🐓    
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛜 Send Buffered Unicast Frame 2/3 (More Data = 1) {Buffered Frame 2/3}            
+
+🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    {[ 💊 ACK ]}  
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🔋 PS-Poll (Power Management = 0) [STA Wake up] 🤳🏾🐓    
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛜 Send Buffered Unicast Frame 3/3 (More Data = 0) {Buffered Frame 3/3}            
+
+🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    {[ 💊 ACK ]}
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🚫 Null Function No Data (Power Management = 1) ]} [Doze State] 🤳🏾💤 
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🆗 ACK ]} [Doze State] 🤳🏾💤
+
+````
 
 
 
