@@ -5762,6 +5762,9 @@ _Outlines a common seven-step methodology from problem identification to solutio
 # 🦈🕵️📦 Protocol Analysis
 _Process of capturing, decoding, and interpreting network communicatios (data packets that travel across a network). Network protocol analysis tools (Software like Wireshark) can capture and display these packets in a readable format, allowing you to examine the details of each packet and how they interact with each other._
 
+- [Wireless Network Analyzer's Overview - Part 1](https://www.cwnp.com/analyzers-part1/) _`CWNP`_
+- [Wireless Network Analyzer's Overview - Part 2](https://www.cwnp.com/analyzers-part2/) _`CWNP`_
+- [Wireless Network Analyzer's Overview - Part 3](https://www.cwnp.com/analyzers-part3/) _`CWNP`_ 
 - [**`Fz3r0`**: Protocol Analysis](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Fz3r0_-_802.11_Wi-Fi/Trouble-Shooting_%26_Analysis/Protocol_Analysis/Fz3r0_Protocol-Analysis.md)
 - [Ekahau Wi-Fi Webinar - Packet Capture and Analysis - February 7, 2019](https://www.youtube.com/watch?v=W_wjmk-YQTc)
 - [Analyze and Troubleshoot 802.11 Wireless Sniffing @ Cisco](https://www.cisco.com/c/en/us/support/docs/wireless-mobility/80211/200527-Fundamentals-of-802-11-Wireless-Sniffing.html) _`Complete Guide`_
@@ -6116,6 +6119,15 @@ https://www.wireshark.org/docs/dfref/w/wlan_radio.html
 ## Spectrum Analysis Views
 
 - [Spectrum Analysis – PHYs and Interferers](https://howiwifi.com/2020/07/03/spectrum-analysis-phys-and-interferers/) _`how to Wi-Fi`_
+
+## Spectrum Analysis Displays:
+
+- Real-time FFT: Phase Domain - RF energy detected in the swept frequencies
+- FFT Plot
+- Duty Cicle
+- Waterfall
+- Density
+- 
 
 ### Spectrum Analysis: `Duty Cicle`
 _Spectrum analyzer displays a measurement of the amount of time a received signal amplitude is above the noise floor or another arbitrary threshold. Although the term duty cycle can be subjective based on the context in which it is used within WLAN technology, it is commonly identifies the percentage of time an RF signal is above a specific threshold. A high duty cycle such as 95-100% can indicate a problem such as an RF jammer or other devise that is causing high utilization of the RF channel._
