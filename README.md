@@ -6126,9 +6126,9 @@ https://www.wireshark.org/docs/dfref/w/wlan_radio.html
 ## Spectrum Analysis Displays:
 
 - Real-time FFT: Phase Domain - Frequency represent in horizontal axis and the energy in dBm defined in vertical axis
+- FFT Duty Cycle - This view displays the percentage of time the ambient RF signal is higher than the noise floor or other predefined signal threshold. In this veiw you can see whether a device is constantly using a frequency (100% duty cycle on a particular channel mean it is not usable & caused by sort of jammers)
 - Spectrogram Graph (Waterfall plot) - This use the same data from Real Time FFT, but with the addition of time dimension. In this view vertical axis shows the historical data. In this case energy in dB values represent in colors (Blue to RED to represent weaker to stronger energy).
 - Spectrum Density - Horizontal axis represent frequency & vertical axis represent energy in dBm with brightness of color being determined by how many times that specific bit of information has been captured.
-- Duty Cycle - This view displays the percentage of time the ambient RF signal is higher than the noise floor or other predefined signal threshold. In this veiw you can see whether a device is constantly using a frequency (100% duty cycle on a particular channel mean it is not usable & caused by sort of jammers)
 - WiFi integration - When spectrum analyzer has WiFi integration capability, it can combined those views. WiFi NIC can scan other channels & report that information to give a overall view on a particular band.
 
 ### Spectrum Analysis: `Duty Cicle`
