@@ -6108,10 +6108,47 @@ https://www.wireshark.org/docs/dfref/w/wlan_radio.html
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Spectrum Analysis
+_Sometimes there's something in the enviorment that is not 802.11 MAC Layer signal, and there's no way to capture this kind of interference with a protocol analyzer or Wi-Fi analyzer. Spectrum Analyzers are tools that help to find something based on the existance of RF Energy. This tools have different features and capabilities to help to find RF signatures, The RF signature can be consider as a fingerprint of a electromagnetic radiation signal._
 
 - [Spectrum Analysis](https://mrncciew.com/2014/10/17/cwap-spectrum-analysis/) _`nayarasi`_
 - [Spectrum Analysis – PHYs and Interferers](https://howiwifi.com/2020/07/03/spectrum-analysis-phys-and-interferers/) _`how to Wi-Fi`_
+- [`Time Domain` VS `Frequency Domain` in a Spectrum Analyzer]((https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/3c9c4886-11fc-4ef0-8ad1-c68dd32b8b24) _`image`_
+)
+
+
+## Spectrum Analyzer: `Types`
+
+- Laptop based Spectrum Analyzers: Used very common to analyze wireless networks ::
+- Smartphone / Tablet based Spectrum Analyzers: Used very common to analyze wireless networks ::
+- Handheld Spectrum Analyzers: Used very common to analyze wireless networks ::
+- AP based Spectrum Analyzers: Used very common to analyze wireless networks ::
+- Overlay Sensor Spectrum Analyzers: Used tuoanalyze wireless networks ::
+- Desktop Spectrum Analyzer: Not very used to analyze wireless networks :: Instead of connecting the radio of the AP to an antenna, you can use that radio to connect it to a PC, tablet, or any other device which support it. This is achieved using a cable. 
+
+## Spectrum Analysis: `Time Domain` VS `Frequency Domain`
+
+- `Time Domain`: Seen by a Osciloscope :: The RF in a time domain is where you can see the sine waves (or any other form) being generated.
+- `Frequency Domain`: Seen by a Spectrum Analyzer :: Is like see the wave "coming at us". This means, signal strenghts on a frequency, and this is achieved using the FFT (Fast Fourier Transform)
+
+### Spectrum Analyzers: `FFT (Fast Fourier Transform)`
+
+
+
 
 ## Spectrum Analyzers
 - [Ekahau Sidekick]()
