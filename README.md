@@ -6142,10 +6142,11 @@ https://www.wireshark.org/docs/dfref/w/wlan_radio.html
 _Sometimes there's something in the enviorment that is not 802.11 MAC Layer signal, and there's no way to capture this kind of interference with a protocol analyzer or Wi-Fi analyzer. Spectrum Analyzers are tools that help to find something based on the existance of RF Energy. This tools have different features and capabilities to help to find RF signatures, The RF signature can be consider as a fingerprint of a electromagnetic radiation signal._
 
 - [Wireless Spectrum Analysis Tips](https://www.youtube.com/watch?v=ImSRW6CHcto) _`CWNP`_
-- [Spectrum Analysis – PHYs and Interferers / Key Concepts](https://howiwifi.com/2020/07/03/spectrum-analysis-phys-and-interferers/)
+- [Spectrum Analysis – PHYs and Interferers / Key Concepts](https://howiwifi.com/2020/07/03/spectrum-analysis-phys-and-interferers/) _`How to Wi-Fi`_
 - [Spectrum Analysis](https://mrncciew.com/2014/10/17/cwap-spectrum-analysis/) _`nayarasi`_
 - [Spectrum Analysis – PHYs and Interferers](https://howiwifi.com/2020/07/03/spectrum-analysis-phys-and-interferers/) _`how to Wi-Fi`_
 - [FFT Tutorial // capturing and sampling with spectrum analyzer](https://www.youtube.com/watch?v=zKKGA30bHG0) _`video`_
+- [Fundamentals of Real-Time Spectrum Analysis](https://svelto.faculty.polimi.it/didattica/materiale_didattico/materiale%20didattico_MRF/appnote/real_time_spectrum_analysis.pdf)
 - [Metageek Wi-Spy Air Review](https://wifinigel.blogspot.com/2019/06/metageek-wi-spy-air-review.html) _`Wi-Fi nigel`_
 - [Spectrum Analyzer How-To Guide](https://www.tek.com/en/documents/primer/what-spectrum-analyzer-and-why-do-you-need-one)
 
@@ -6166,9 +6167,9 @@ Difference between Time Domain & Frequency Domain
 
 Spectrum Analyzers can be classified in 3 basic categories in reference to their architecture: 
 
-- Real-time Spectrum Analyzers (RSA).
-- Swept Spectrum Analyzers (SA)
-- Vector Signal Analyzers (VSA)
+- Real-time Spectrum Analyzers (RSA or RSTA):
+- Swept Spectrum Analyzers (SA):
+- Vector Signal Analyzers (VSA):
 
 ## Spectrum Views
 _It is very important to understand what information can be understood from the different views_
@@ -6200,7 +6201,23 @@ Concepts used in FFT:
 
 ### Spectrum Views: `Power Spectral Density`
 
+- Also referred to as **spectrum density**
+- It shows where detected RF energy variations are stronger and where variations are weaker.
+- This is the primary view in Ekahau; you can add the real-time FFT average or max sweep to show overtop of the density view as well.
+- Spectrum density views use colors to indicate the channel utilization. (eg. Ekahau uses green to represent low utilization and red/black to show high/very high utilization.)
 
+### Spectrum Views: `Channel Utilization` / `Duty Cycle`
+
+- Channel utilization shows the percentage of time that the frequency is in use over a period of time. The software in use determines the threshold, some may use the noise floor where others may use a higher value. For example, Aruba documentation states “The spectrum analysis feature considers a frequency bin to be utilized if the detected power in that bin is at least 20 dB higher than the nominal noise floor on that channel.” This is a general measure of how busy the network is. Channel utilization measures both Wi-Fi and non-Wi-Fi devices. Duty cycle percentage is used to identify the amount of time a single device is active. Ekahau shows utilization percentages per channel in real time. Spectrum XT shows “Duty Cycle” percentage but doesn’t reference any single device; I believe this is channel utilization labeled as duty cycle.
+
+### Spectrum Views: WLAN Integration
+
+- Spectrum analyzers show layer one information. It is frequently useful to view information from layer 2 within the same views. WLAN integration with spectrum analysis software enables this feature. The images below show the SSIDs and number of APs in Spectrum XT. We can also see detailed information in Ekahau about the APs, the SSIDs they broadcast, along with operating and capability information.
+
+
+## SNR and Noise Floor
+
+The amount of background energy, Wi-Fi and non, is the noise floor. It is always important to know the amount of noise in an area because wireless networks are designed around devices and applications. For example, Voice-grade wireless expects a signal-to-noise ratio (SNR) of 25dB. To calculate the SNR of a signal, we take the received signal strength indicator (RSSI) and noise floor value (-92dBm in the example below). The difference between these two values is the SNR. Each device has a unique receive sensitivity and will perceive the RSSI and noise floor differently than others. This results in newer devices, with higher receive sensitivity, being able to demodulate the same data rates at greater distances than older devices. Know that a large percentage of noise comes from access points and client devices. To fully understand what the noise floor is in a given area, you should survey or perform spectrum analysis during a time of normal usage.
 
 
 ## Spectrum Analyzer: `Analyzers Options`
