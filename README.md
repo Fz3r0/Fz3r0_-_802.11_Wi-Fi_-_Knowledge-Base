@@ -6122,18 +6122,88 @@ https://www.wireshark.org/docs/dfref/w/wlan_radio.html
 
 
 
-# Spectrum Analysis
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 📡📻📊 Spectrum Analysis
 _Sometimes there's something in the enviorment that is not 802.11 MAC Layer signal, and there's no way to capture this kind of interference with a protocol analyzer or Wi-Fi analyzer. Spectrum Analyzers are tools that help to find something based on the existance of RF Energy. This tools have different features and capabilities to help to find RF signatures, The RF signature can be consider as a fingerprint of a electromagnetic radiation signal._
 
 - [Wireless Spectrum Analysis Tips](https://www.youtube.com/watch?v=ImSRW6CHcto) _`CWNP`_
+- [Spectrum Analysis – PHYs and Interferers / Key Concepts](https://howiwifi.com/2020/07/03/spectrum-analysis-phys-and-interferers/)
 - [Spectrum Analysis](https://mrncciew.com/2014/10/17/cwap-spectrum-analysis/) _`nayarasi`_
 - [Spectrum Analysis – PHYs and Interferers](https://howiwifi.com/2020/07/03/spectrum-analysis-phys-and-interferers/) _`how to Wi-Fi`_
-- [`Time Domain` VS `Frequency Domain` in a Spectrum Analyzer](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/3c9c4886-11fc-4ef0-8ad1-c68dd32b8b24) _`image`_
+- [FFT Tutorial // capturing and sampling with spectrum analyzer](https://www.youtube.com/watch?v=zKKGA30bHG0) _`video`_
 - [Metageek Wi-Spy Air Review](https://wifinigel.blogspot.com/2019/06/metageek-wi-spy-air-review.html) _`Wi-Fi nigel`_
+- [Spectrum Analyzer How-To Guide](https://www.tek.com/en/documents/primer/what-spectrum-analyzer-and-why-do-you-need-one)
 
+## `Oscilloscope - Time Domain` VS `Spectrum Analyzer - Frequency Domain`
+_Spectrum analyzers are **frequency domain tools** used to measure amplitude in a finite frequency space. Wireless Engineers use spectrum analyzers to locate sources of interference that may have a negative impact on the 802.11 network as well as other protocols that operate in the same frequency, 2.4 or 5GHz._
 
+Difference between a spectrum analyzer and an oscilloscope:
+
+- Oscilloscope: Used to measure the timing information around a signal. 
+- Spectrum Analyzer: is used to measure frequency information on a signal
+
+Difference between Time Domain & Frequency Domain
+
+- `Time Domain`: Seen by a Osciloscope :: The RF in a time domain is where you can see the sine waves (or any other form) being generated.
+- `Frequency Domain`: Seen by a Spectrum Analyzer :: Is like see the wave "coming at us". This means, signal strenghts on a frequency, and this is achieved using the FFT (Fast Fourier Transform)
 
 ## Spectrum Analyzer: `Types`
+
+Spectrum Analyzers can be classified in 3 basic categories in reference to their architecture: 
+
+- Real-time Spectrum Analyzers (RSA).
+- Swept Spectrum Analyzers (SA)
+- Vector Signal Analyzers (VSA)
+
+## Spectrum Views
+_It is very important to understand what information can be understood from the different views_
+
+### Spectrum Views: `FFT (Fast Fourier Transform)`
+
+- This view is considered a **Real-time Spectrum Analyzer (RSA).**
+- The key words of FFT are **`real-time`**; **the information shown is live.**. That's why the FFT graphics are common named as **Real Time FFT**. <br><br>
+- FFT is an algorithm that samples a signal over a period of time or space divides it into its frequency components. This means, the FFT decomposes a signal into its component frequencies and their amplitudes. <br><br>
+- The spectrum analyzer captures the RF energy within the time domain and converts the information to the frequency domain using the FFT process which is then viewable without gaps. <br><br>
+- FFT can be explained as: "Measurments of points in the time of the spectrum". Each "point" es marked at the midde of each "FFT bin"
+
+Concepts used in FFT:
+
+- **`FFT Bin`**:
+    - The resolution bandwidth (RBW) is dictated by the size of the FFT Bin
+    - Folowwing statistics are gathered for each bin: Average Power, Max Power, Duty Cicle
+- **`Sampling Rate`**:
+    - How often the spectrum analyzer takes measurments
+- **`Dwell time`**:
+    - The amount of time spent measuring each sample    
+
+### Spectrum Views: `Swept Spectrogram` & `Waterfall View`
+
+- This view is considered a **Swept Spectrum Analyzer (SA).**
+- This is the **same information as the real-time FFT** but often in a different view and tracked over a longer period.
+- These views can often be configured within software to specify the length of time.
+- The **Waterfall View** is the information from the **swept spectrogram** showing: time, frequency, and power but viewed vertically.
+
+### Spectrum Views: `Power Spectral Density`
+
+
+
+
+## Spectrum Analyzer: `Analyzers Options`
 
 - Laptop based Spectrum Analyzers: Used very common to analyze wireless networks ::
 - Smartphone / Tablet based Spectrum Analyzers: Used very common to analyze wireless networks ::
@@ -6142,21 +6212,21 @@ _Sometimes there's something in the enviorment that is not 802.11 MAC Layer sign
 - Overlay Sensor Spectrum Analyzers: Used tuoanalyze wireless networks ::
 - Desktop Spectrum Analyzer: Not very used to analyze wireless networks :: Instead of connecting the radio of the AP to an antenna, you can use that radio to connect it to a PC, tablet, or any other device which support it. This is achieved using a cable. 
 
-## Spectrum Analysis: `Time Domain` VS `Frequency Domain`
 
-- `Time Domain`: Seen by a Osciloscope :: The RF in a time domain is where you can see the sine waves (or any other form) being generated.
-- `Frequency Domain`: Seen by a Spectrum Analyzer :: Is like see the wave "coming at us". This means, signal strenghts on a frequency, and this is achieved using the FFT (Fast Fourier Transform)
-
-### Spectrum Analyzers: `FFT (Fast Fourier Transform)`
 
 
 
 
 ## Spectrum Analyzers
-- [Ekahau Sidekick]()
-- [Metageek]()
 
+### Laptop based:
+- Netscout Airmagnet Spectrum Adapter (previously Fluke Networks) used with Spectrum XT,
+- [Metageek’s Wi-Spy Spectrum Analyzer for use with Chanalyzer](https://wifinigel.blogspot.com/2019/06/metageek-wi-spy-air-review.html)
+- Ekahau Sidekick for use with Ekahau Pro.
+- [Wifi Surveyor](https://rfexplorer.com/wifisurveyor/)
 
+### Access Point Based
+- [Ruckus AP Spectrum Analysis]()
 
 ## Spectrum Analysis Views / Displays
 
@@ -6169,6 +6239,8 @@ _Sometimes there's something in the enviorment that is not 802.11 MAC Layer sign
 - Spectrogram Graph (Waterfall plot) - This use the same data from Real Time FFT, but with the addition of time dimension. In this view vertical axis shows the historical data. In this case energy in dB values represent in colors (Blue to RED to represent weaker to stronger energy).
 - Spectrum Density - Horizontal axis represent frequency & vertical axis represent energy in dBm with brightness of color being determined by how many times that specific bit of information has been captured.
 - WiFi integration - When spectrum analyzer has WiFi integration capability, it can combined those views. WiFi NIC can scan other channels & report that information to give a overall view on a particular band.
+
+
 
 ### Spectrum Analysis: `Duty Cicle`
 _Spectrum analyzer displays a measurement of the amount of time a received signal amplitude is above the noise floor or another arbitrary threshold. Although the term duty cycle can be subjective based on the context in which it is used within WLAN technology, it is commonly identifies the percentage of time an RF signal is above a specific threshold. A high duty cycle such as 95-100% can indicate a problem such as an RF jammer or other devise that is causing high utilization of the RF channel._
