@@ -6125,10 +6125,11 @@ https://www.wireshark.org/docs/dfref/w/wlan_radio.html
 # Spectrum Analysis
 _Sometimes there's something in the enviorment that is not 802.11 MAC Layer signal, and there's no way to capture this kind of interference with a protocol analyzer or Wi-Fi analyzer. Spectrum Analyzers are tools that help to find something based on the existance of RF Energy. This tools have different features and capabilities to help to find RF signatures, The RF signature can be consider as a fingerprint of a electromagnetic radiation signal._
 
+- [Wireless Spectrum Analysis Tips](https://www.youtube.com/watch?v=ImSRW6CHcto) _`CWNP`_
 - [Spectrum Analysis](https://mrncciew.com/2014/10/17/cwap-spectrum-analysis/) _`nayarasi`_
 - [Spectrum Analysis – PHYs and Interferers](https://howiwifi.com/2020/07/03/spectrum-analysis-phys-and-interferers/) _`how to Wi-Fi`_
-- [`Time Domain` VS `Frequency Domain` in a Spectrum Analyzer]((https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/3c9c4886-11fc-4ef0-8ad1-c68dd32b8b24) _`image`_
-)
+- [`Time Domain` VS `Frequency Domain` in a Spectrum Analyzer](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/3c9c4886-11fc-4ef0-8ad1-c68dd32b8b24) _`image`_
+
 
 
 ## Spectrum Analyzer: `Types`
