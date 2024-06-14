@@ -5005,10 +5005,22 @@ _802.11e introduced **Wi-Fi Multimedia (WMM)** and also introduced Automatic Pow
 **WMM (U-APSD) power save mode uses `Trigger` to wake and transmit or receive frames** - This is accomplished by replacing PS-Poll frames with **trigger frames**. The trigger frame can be ANY data frame; this increases the efficiency of the entire BSS by avoiding the use of the PS-Poll control frame altogether._
 
 
-
-
-
 ## Offchannel Scanning
+
+
+## IBSS Power Management
+_In an IBSS configuration, no full-time AP exists and all systems may desire to enter sleep mode, the problem is there is no AP to send TIM or DTIM.  So in IBSS, **Announcement Traffic Indication Message (ATIM)** is use for power management._
+
+- In IBSS (ad hoc network) there is no AP to send TIM or DTIM. So if a STA goes into power save mode multiple other STAs has to buffer its data for specific STA.
+- So in IBSS, Announcement Traffic Indication Message (ATIM) is use for power management.
+- ATIM is a management frame with no frame body.
+- When a STA receives ATIM, that formally dozing station must begin the process of retrieving buffered frame from the stations that transmitted the ATIM.
+
+
+
+
+
+
 
 
 
