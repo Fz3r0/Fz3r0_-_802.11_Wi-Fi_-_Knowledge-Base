@@ -3288,7 +3288,8 @@ _4-byte / 32 bits field present in HT, VHT, EHT, even if the name is only HT con
             - ⭕ Reserved :: `wlan.htc.vht == 1 && wlan.htc.msi_stbc_reserved` _(var)_ <br><br>
             - ⭕ MSFI :: `wlan.htc.vht == 1 && wlan.htc.mfsi == 1` <br><br>
             - ⭕ MFB :: `wlan.htc.vht == 1 && wlan.htc.mfb`
-            
+
+❗ **Important Note:** If it is a QoS `Data` frame or `Management` frame, if HT Control Field is present then Order bit of the Frame Control field set to 1. Usually this bit used to indicate **strict order processing on 802.11 frames**, but with **802.11e QoS** this bit is reused for **indicate presence of HT control field**.
 
 
 
