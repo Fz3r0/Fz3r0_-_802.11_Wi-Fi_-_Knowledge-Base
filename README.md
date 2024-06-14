@@ -4632,12 +4632,12 @@ _bla la bla bla intro_
 
 ### 🔋⚡🪫 Power Consumption Activities
 
-A wireless radio can perform one of the 4 activities. Power consumed by each activity increases in the given order ( 1-4).
+A wireless radio can perform one of the 4 activities. Power consumed by each activity increases in the given order (1-4). In power save mode, the client STA would set the power management flag to `1` to indicate it might go into the **Doze state to save power**, otherwise the client STA would set the power management flag to `0` to indicate that the station is **NOT in power save mode.**
 
-1. ➖`⚡󠀠󠀠󠀠󠀠󠀠󠁪󠁪󠁪󠁪󠁪󠀵󠀵🔘🔘🔘`➕ **Asleep**
-2. ➖`⚡⚡🔘🔘`➕ **Idle & Awake** 
-3. ➖`⚡⚡⚡🔘`➕ **Receiving** 
-4. ➖`⚡⚡⚡⚡`➕ **Transmitting** 
+1. ➖`⚡󠀠󠀠󠀠󠀠󠀠󠁪󠁪󠁪󠁪󠁪󠀵󠀵🔘🔘🔘`➕ | `Power Management = 1` :: **Asleep / Doze**
+2. ➖`⚡⚡🔘🔘`➕ | `Power Management = 0` :: **Awake / Idle** 
+3. ➖`⚡⚡⚡🔘`➕ | `Power Management = 0` :: **Receiving** 
+4. ➖`⚡⚡⚡⚡`➕ | `Power Management = 0` :: **Transmitting** 
 
 ---
 
