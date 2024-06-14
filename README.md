@@ -2987,27 +2987,27 @@ The next table apply **only for Data Frames**:
 
 **Important notes on `Addresses`:**
 
-- 📍 **To DS** and **From DS** fields are `both 0`:
+- 📍 **To DS** and **From DS** fields are `both 0`: <br> <br>
     - 🛈 The frame is part of an `ad-hoc network` / The frame is `Management` or `Control` frame.
-    - 🛈 The frame is **not intended to leave the wireless environment**: `Management` and `Control` frames will always have the To DS and From DS fields set to 0 and are never sent to the distribution system network. (eg. an `Association Response` or `Beacon` will have **To DS** = 0 and **From DS** = 0)
+    - 🛈 The frame is **not intended to leave the wireless environment**: `Management` and `Control` frames will always have the To DS and From DS fields set to 0 and are never sent to the distribution system network. (eg. an `Association Response` or `Beacon` will have **To DS** = 0 and **From DS** = 0) <br> <br>
         - `Address 1` = Destination
         - `Address 2` = Source
         - `Address 3` = BSSID <br> <br>
-- 📍 **To DS** field is `1` and **From DS** field is `0`:
+- 📍 **To DS** field is `1` and **From DS** field is `0`: <br> <br>
     - 🛈 The frame **is leaving the wireless environment** and is intended for a computer on the distribution system network.
-    - 🛈 For example after a wireless station authenticates it will **need to obtain an IP address and that request will be forwarded by the AP to the DHCP server** that resides on the distribution system network. <br>
+    - 🛈 For example after a wireless station authenticates it will **need to obtain an IP address and that request will be forwarded by the AP to the DHCP server** that resides on the distribution system network. <br> <br>
         - `Address 1` = BSSID
         - `Address 2` = Source
         - `Address 3` = Destination <br> <br>
-- 📍 **To DS** field is `0` and **From DS** field is `1`:   
+- 📍 **To DS** field is `0` and **From DS** field is `1`: <br> <br> 
     - 🛈 The packet **is entering the wireless environment coming from the DS.**
-    - 🛈 For example it could be a `Data` frame **coming from the DS to the client STA via the AP.**
+    - 🛈 For example it could be a `Data` frame **coming from the DS to the client STA via the AP.** <br> <br>
         - `Address 1` = Destination
         - `Address 2` = BSSID
         - `Address 3` = Source <br> <br>
-- 📍 **To DS** and **From DS** fields are `both 1`:
+- 📍 **To DS** and **From DS** fields are `both 1`: <br> <br>
     - 🛈 The frame is involved with a `wireless distribution system (WDS)` network.
-    - 🛈 WDS networks are used to connect multiple networks together, typically for building-to-building connectivity, or a WDS can connect access points together to from a wireless mesh network.
+    - 🛈 WDS networks are used to connect multiple networks together, typically for building-to-building connectivity, or a WDS can connect access points together to from a wireless mesh network. <br> <br>
         - `Address 1` = Receiver
         - `Address 2` = Transmitter
         - `Address 3` = Source
