@@ -6282,6 +6282,7 @@ The amount of background energy, Wi-Fi and non, is the noise floor. It is always
 - [Wifi Surveyor](https://rfexplorer.com/wifisurveyor/)
 
 ### Access Point Based
+_Centralized infrastructure allows for coordinated RBW adjustments across multiple access points (APs). This can ensure that spectrum analysis is performed optimally across the network, minimizing interference and maximizing signal clarity. In contrast, laptop-based analyzers may not have this coordinated control and optimization capability._
 - [Ruckus AP Spectrum Analysis]()
 
 ## Spectrum Analysis Views / Displays
