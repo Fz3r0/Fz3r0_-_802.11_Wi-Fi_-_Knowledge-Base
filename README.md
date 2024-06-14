@@ -6452,10 +6452,17 @@ _iPerf3 is a tool for active measurements of the maximum achievable bandwidth on
 # Server Side
 iperf3 -s
 
-# Client Side
+# Client Side - udp testing
 iperf3 -c 192.168.1.100 -V -u -b54m
 iperf3 -c 192.168.1.100 -V -u -b100m
 iperf3 -c 192.168.1.100 -V -u -b1000m
+
+# Client Side - default tcp
+iperf3 -c 192.168.1.100
+
+# Client Side - default tcp (reverse mode)
+iperf3 -c 192.168.1.100 -R
+
 ````
 
 ###ℹ️🧪 iPerf3 Labs
