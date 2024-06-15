@@ -5580,8 +5580,16 @@ Time synchronization is essential in Wi-Fi networks to ensure reliable and error
 - [Advanced RF Design & Troubleshooting](https://www.slideshare.net/ArubaNetworks/shanghai-breakout-advanced-rf-design-and-troubleshooting)
 
 ## Gain & Bandwith
+
+````py
+## Bandwith Channel Capacity Capabilites onf a channel operation (Shannon-Hartley theorem):
+
+C = B * log2(1 + S/N)
+````
+
 - [`Gain` & `Bandwith`: Bigger Aint Always Better @ Bad-Fi](https://badfi.com/blog/2016/1/25/bigger-aint-always-better) `best practices`
 - [`Gain` & `Green` :: Good Wi-Fi Design is NOT about the GREEN](https://www.youtube.com/watch?v=4bvulueIKkQ)
+- [Channel Capacity Operations](http://www.dip.ee.uct.ac.za/~nicolls/lectures/eee482f/04_chancap_2up.pdf)
 
 ## Bandwith, Data Rate & Throughput
 - [Why speed tests aren’t always the answer when troubleshooting Wi-Fi networks](https://www.thepacketologist.com/2023/12/why-speed-tests-arent-always-the-answer-when-troubleshooting/)
