@@ -2982,10 +2982,9 @@ The next table apply **only for Data Frames**:
 |:----------------:|:----------------------------------:|:------------------------------------:|:----------------------------------------:|:-------------------------------------------:|:---------------------------:|:----------------------:|
 |    **From AP**   |                  0                 |                   1                  |        DA<br>(Destination Address)       |                    BSSID                    |    SA<br>(Source Address)   |           N/A          |
 |     **To AP**    |                  1                 |                   0                  |                   BSSID                  |            SA<br>(Source Address)           | DA<br>(Destination Address) |           N/A          |
-| **Ad-Hoc (P2P)** / **Magagement & Control Frames** |                  0                 |                   0                  |        DA<br>(Destination Address)       |            SA<br>(Source Address)           |            BSSID            |           N/A          |
+| **Ad-Hoc (P2P)** / _**Magagement** & **Control Frames**_ |                  0                 |                   0                  |        DA<br>(Destination Address)       |            SA<br>(Source Address)           |            BSSID            |           N/A          |
 | **Bridge / WDS** |                  1                 |                   1                  |         RA<br>(Receiver Address)         |         TA<br>(Transmitter Address)         | DA<br>(Destination Address) | SA<br>(Source Address) |
 
-**Important notes on `Addresses`:**
 
 - 📍 **To DS** and **From DS** fields are `both 0`: <br> <br>
     - 🛈 The frame is part of an `ad-hoc network` / The frame is `Management` or `Control` frame.
@@ -3012,6 +3011,11 @@ The next table apply **only for Data Frames**:
         - `Address 2` = Transmitter
         - `Address 3` = Source
         - `Address 4` = Destination
+
+**Important notes on `Addresses`:**
+
+- 802.11 `management frames` **use three of the four available address fields** in an 802.11 frame. A management frame is also known as MAC Management Protocol Data Unit (MMPDU) and they do not use the Address 4 field which is only used with a mesh basic service set.
+
         
 **Each of the four 802.11 Address Fields may have one of 5 different interpretations:**
 
@@ -6252,16 +6256,24 @@ Concepts used in FFT:
 - These views can often be configured within software to specify the length of time.
 - The **Waterfall View** is the information from the **swept spectrogram** showing: time, frequency, and power but viewed vertically.
 
-### Spectrum Views: `Power Spectral Density`
+### Spectrum Views: `Power Spectral Density` / `Density View`
 
-- Also referred to as **spectrum density**
+- **Power Spectral Density** can be also referred to as **spectrum density**
+- Useful for find repetition of **data points** over time to help locate the interferer.
+- The density view in a spectrum analyzer will show the data points that a specific frequency is hit within a channel or band. Choosing a color scheme will help to show these events. This can be used to help identify an RF transmitter and interferer.
 - It shows where detected RF energy variations are stronger and where variations are weaker.
 - This is the primary view in Ekahau; you can add the real-time FFT average or max sweep to show overtop of the density view as well.
 - Spectrum density views use colors to indicate the channel utilization. (eg. Ekahau uses green to represent low utilization and red/black to show high/very high utilization.)
 
-### Spectrum Views: `Channel Utilization` / `Duty Cycle`
 
-- Channel utilization shows the percentage of time that the frequency is in use over a period of time. The software in use determines the threshold, some may use the noise floor where others may use a higher value. For example, Aruba documentation states “The spectrum analysis feature considers a frequency bin to be utilized if the detected power in that bin is at least 20 dB higher than the nominal noise floor on that channel.” This is a general measure of how busy the network is. Channel utilization measures both Wi-Fi and non-Wi-Fi devices. Duty cycle percentage is used to identify the amount of time a single device is active. Ekahau shows utilization percentages per channel in real time. Spectrum XT shows “Duty Cycle” percentage but doesn’t reference any single device; I believe this is channel utilization labeled as duty cycle.
+### Spectrum Views: `Duty Cycle` / `Channel Utilization`
+
+- Displays a measurement of the amount of time a received signal amplitude is above the noise floor or another arbitrary threshold
+- Although the term duty cycle can be subjective based on the context in which it is used within WLAN technology, it is commonly identifies the percentage of time an RF signal is above a specific threshold. A high duty cycle such as 95-100% can indicate a problem such as an RF jammer or other devise that is causing high utilization of the RF channel.
+- Channel utilization shows the percentage of time that the frequency is in use over a period of time. The software in use determines the threshold, some may use the noise floor where others may use a higher value.
+- For example, Aruba documentation states “The spectrum analysis feature considers a frequency bin to be utilized if the detected power in that bin is at least 20 dB higher than the nominal noise floor on that channel.” This is a general measure of how busy the network is.
+- Channel utilization measures both Wi-Fi and non-Wi-Fi devices.
+- Duty cycle percentage is used to identify the amount of time a single device is active. Ekahau shows utilization percentages per channel in real time. Spectrum XT shows “Duty Cycle” percentage but doesn’t reference any single device (this is channel utilization labeled as duty cycle.)
 
 ### Spectrum Views: WLAN Integration
 
@@ -6326,8 +6338,7 @@ _Spectrum analyzer displays a measurement of the amount of time a received signa
 ### Spectrum Analysis: `waterfall view`
 _In some cases RF related problems may not be consistent. The best way to identify these problems would be to view the RF over a period of time. The waterfall view allows you to view a RF channel or band over a period of time._
 
-### Density View
-_Useful for find repetition of data points over time to help locate the interferer. The density view in a spectrum analyzer will show the data points that a specific frequency is hit within a channel or band. Choosing a color scheme will help to show these events. This can be used to help identify an RF transmitter and interferer._
+
 
 
 ## Spectrum Analysis: `Device Signatures` & `Non-WiFi Interference`
