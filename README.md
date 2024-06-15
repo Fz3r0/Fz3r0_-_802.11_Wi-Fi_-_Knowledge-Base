@@ -6138,6 +6138,12 @@ https://www.wireshark.org/docs/dfref/w/wlan_radio.html
 
 ### 🦈📇 Wireshark: `Source Code`
 - [Wireshark Source Code :: Open Source](https://gitlab.com/wireshark/wireshark/-/tree/master)
+- 
+
+
+## Wireshark DHCP Filters
+
+- `bootp`: In Wireshark, to filter and view only DHCP traffic, you would use the filter bootp. This filter captures both DHCPv4 and DHCPv6 traffic because DHCP messages are transported using BOOTP (Bootstrap Protocol) in IPv4 networks, and Wireshark uses bootp as the filter for this traffic.
 
 
 
