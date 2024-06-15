@@ -1070,7 +1070,7 @@ _The DSSS version of legacy 802.11 Prime was rapidly supplemented (and populariz
    
 - ⭕ Year & Status: September **`1999`** _(Legacy)_
 - ⭕ IEEE Amendment: **_`Amendment 1`_**
-- ⭕ IEEE 802.11-2020 Clause: **`Clause 17`** <br> <br>
+- ⭕ IEEE 802.11-**2020** Clause: **`Clause 17`** _(Important: Clause changes depending the year revision)_ <br> <br>
 - ⭕ PHY: **`HR-DSSS :: High Rate - Direct Sequence Spread Spectrum`** 
 - ⭕ Operating Band: **`2.4 GHz`** 
 - ⭕ Channel Bandwidth: **`22 MHz`**
