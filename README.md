@@ -3014,8 +3014,9 @@ The next table apply **only for Data Frames**:
 
 **Important notes on `Addresses`:**
 
-- 802.11 `management frames` **use three of the four available address fields** in an 802.11 frame. A management frame is also known as MAC Management Protocol Data Unit (MMPDU) and they do not use the Address 4 field which is only used with a mesh basic service set.
-
+- `Management` frames **use three of the four available address fields** in an 802.11 frame `Addresses 1 to 3`. A management frame is also known as MAC Management Protocol Data Unit (MMPDU) and they do not use the Address 4 field which is only used with a mesh basic service set. <br> <br>
+- `RTS` frames **uses only two available address fields** in an 802.11 frame `Addresses 1 to 2`. <br> <br>
+- `CTS` frames **uses only one address field** in an 802.11 frame `Address 1`. 
         
 **Each of the four 802.11 Address Fields may have one of 5 different interpretations:**
 
