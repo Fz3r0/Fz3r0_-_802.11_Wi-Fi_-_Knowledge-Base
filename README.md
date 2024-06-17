@@ -6450,7 +6450,8 @@ latency  =    (ping to another remote device involved in the call)     = 300ms o
 
 
 
-
+## DNS checker, TLDs & whois
+[DNS Report](https://bgp.he.net/report/dns#_inactivetlds)
 
 
 
