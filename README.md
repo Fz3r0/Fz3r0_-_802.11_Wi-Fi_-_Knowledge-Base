@@ -5619,7 +5619,8 @@ C = B * log2(1 + S/N)
 ## Vertical: Education
 - [`Education`: Why ‘One Access Point Per Classroom’ Approach is Wrong](https://wlanprofessionals.com/why-one-access-point-per-classroom-approach-is-wrong/)
 
-
+## Vertical: Offices
+- [Wi-Fi design: Small Office Wi-Fi Design Example](https://ashmeadwifi.com/2024/06/18/office-wi-fi-design/)
 
 
 
