@@ -4597,14 +4597,34 @@ _In every 802.11 network there must be a set of rules to determine when stations
 
 | Arbitration Method | Standard      | Includes                              | Description                                                                                                                                                              |
 |--------------------|---------------|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `DCF` and `PCF`    | 802.11-1997   | CSMA/CA, PCF                          | `DCF (Distributed Coordination Function)` and `PCF (Point Coordination Function)` are the fundamental MAC (Medium Access Control) mechanisms defined in the original IEEE 802.11 standard for wireless LANs. <br><br> DCF uses CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance) for basic access. <br><br> PCF provides optional support for contention-free frame transfers but it is **NOT used**.                              |
-| `HCF`              | 802.11e-2005  | PCF, HCCA, EDCA                       | `HCF (Hybrid Coordination Function)` is an enhancement introduced in the IEEE 802.11e amendment to improve **QoS (Quality of Service)** by providing prioritized and parameterized traffic handling. <br><br> It includes both EDCA (Enhanced Distributed Channel Access) and HCCA (HCF Controlled Channel Access) mechanisms for better support of time-sensitive applications. It also includes PCF but it is **NOT used**.                             |
+| `DCF` and `PCF`    | 802.11-1997   | CSMA/CA, PCF                          | `DCF (Distributed Coordination Function)` and `PCF (Point Coordination Function)` are the fundamental MAC (Medium Access Control) mechanisms defined in the original IEEE 802.11 standard for wireless LANs. <br><br> `DCF` uses CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance) for basic access. <br><br> `PCF` provides optional support for contention-free frame transfers but it is **NOT used**.                              |
+| `HCF`              | 802.11e-2005  | PCF, HCCA, EDCA                       | `HCF (Hybrid Coordination Function)` is an enhancement introduced in the IEEE 802.11e amendment to improve **QoS (Quality of Service)** by providing prioritized and parameterized traffic handling. <br><br> It includes both: <br><br> `EDCA (HCF Contention Access // Enhanced Distributed Channel Access)`: **Implemented** _(DCF is the foundation for EDCA)_ <br><br> `HCCA (HCF Controlled Channel Access)`: **Not Implemented** <br><br> _It also includes `PCF` but it is **NOT used**._                             |
 | `MCF`              | 802.11s-2011  | EDCA, MCCA                            | `MCF (Mesh Coordination Function)` is a MAC protocol introduced in the IEEE 802.11s standard for wireless mesh networks. It supports efficient routing and coordination among mesh nodes, enabling the formation of self-healing and self-configuring multi-hop networks for extended wireless coverage. It includes EDCA and MCCA (Mesh Coordinated Channel Access).                                                                                           |
 
 
 
-### DCF (Distributed Coordination Function)
+## DCF - CSMA/CA
 _The fundamental Network Access Method known as "Carrier Sense Multiple Access/Collition Avoidance"_
+
+DCF - CSMA/CA description:
+
+- CS = Carrier Sense:
+    - Attempting to avoid collisions: Is the medium free? Is there anyone else transmitting? 
+        - Physical Carrier Sense _(PHY - Layer 1)_
+        - Virtual Carrier Sense _(MAC - Layer 2)_ <br><br>
+- MA = Multiple Access:
+    - Half Duplex Medium
+    - Multiple Stations Contending for Access <br><br>
+- CA = Collision Avoidance:
+    - We cannot always detect collisions in a wireless enviorment
+    - We back off everytime medium becomes free 
+
+
+
+
+
+
+
 
 ### Arbitration Methods
 
