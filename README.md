@@ -4533,6 +4533,23 @@ Default Port: 1812
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  #                                                               #
@@ -4548,10 +4565,57 @@ _Once a STA is connected to a WLAN via an AP, the STA need to communicate someho
 - [Wireless Contention Mechanisms :: Wireless Collision Avoidance – CSMA/CA Though DCF/EDCF :: Full Info for CWNA/CWAP @ _howiwifi.com_](https://howiwifi.com/2020/06/30/wireless-contention-mechanisms/) _`howiwifi`_
 - [802.11 Network Contention](https://mrncciew.com/2014/10/12/cwap-802-11-medium-contention/) _`nayarasi`_
 
+
+
+
+
+
+
+
+
+
+
+
 ## 👨🏻‍⚖️🚦 Arbitration & DCF: `Network Arbitration`
-_Arbitration is just deciding "who" is gonna talk "when", in WLAN Networks there are rules to determine when STA can transmit into the medium (RF) | There are 2 types of methods: Contention Methods & Contention Free Methods (Token Ring Legacy = Contention Free | CSM-CA & DCF (default Wi-Fi), CSMA-CD (eth) modern = Contention Method)_
+_In every 802.11 network there must be a set of rules to determine when stations can transmit. Arbitration is just deciding "who" is gonna talk "when", in WLAN Networks there are rules to determine when STA can transmit into the medium (RF) | There are 2 types of methods: Contention Methods & Contention Free Methods (Token Ring Legacy = Contention Free | CSM-CA & DCF (default Wi-Fi), CSMA-CD (eth) modern = Contention Method)_
 - [`802.11 Arbitration` || Detailed Whitepaper @ _CWNP_](https://www.cwnp.com/uploads/802-11_arbitration.pdf) _`whitepaper / report`_
+- [802.11 Medium Contention](https://mrncciew.com/2014/10/12/cwap-802-11-medium-contention/)
 - [Contention-based MAC Protocols Vs. Contention-free MAC Protocols @ _CS3591 Computer Networks_](https://www.youtube.com/watch?v=BW4Zufcyq9E) _`video`_
+
+
+### Contention Methods
+
+- CSMA/CD: Ethernet 802.3 :: Carrier Sense Multiple Access/Collition Detection.
+- CSMA/CA: Wi-Fi 802.11 :: Carrier Sense Multiple Access/Collition Avoidance - This method uses by default DCF (Distributed Coordination Function).
+
+### Contention Free Methods
+
+- Token Passing: Token Ring -
+- PCF (Point Coordination Function) :: Alternative 802.11 Wireless method NOT implemented
+
+### Contention Methods Timeline
+
+| Arbitration Method | Standard      | Description                                                                 |
+|--------------------|---------------|-----------------------------------------------------------------------------|
+| DCF and PCF        | 802.11-1997   | DCF (Distributed Coordination Function) and PCF (Point Coordination Function) are the fundamental MAC (Medium Access Control) mechanisms defined in the original IEEE 802.11 standard for wireless LANs. DCF uses CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance) for basic access, while PCF provides optional support for contention-free frame transfers. |
+| HCF                | 802.11e-2005  | HCF (Hybrid Coordination Function) is an enhancement introduced in the IEEE 802.11e amendment to improve QoS (Quality of Service) by providing prioritized and parameterized traffic handling. It includes both EDCA (Enhanced Distributed Channel Access) and HCCA (HCF Controlled Channel Access) mechanisms for better support of time-sensitive applications. |
+| MCF                | 802.11s-2011  | MCF (Mesh Coordination Function) is a MAC protocol introduced in the IEEE 802.11s standard for wireless mesh networks. It supports efficient routing and coordination among mesh nodes, enabling the formation of self-healing and self-configuring multi-hop networks for extended wireless coverage. |
+
+
+### DCF (Distributed Coordination Function)
+_The fundamental Network Access Method known as "Carrier Sense Multiple Access/Collition Avoidance"_
+
+### Arbitration Methods
+
+- DCF – Distributed Coordination Function : Non-QoS WLAN
+- HCF with EDCA – Hybrid Coordination Function : QoS WLAN
+- EDCA – Enhanced Distributed Channel Access
+- PCF – Point Coordination Function (not implemented practically)
+
+
+
+
+
 
 
 ### cfb
@@ -4570,6 +4634,22 @@ _Radar will affect the 5 GHz band on channels 120, 124 and 128. Using WLAN integ
 
 
 - `EDCA`: EDCA is an access method under Hybrid Coordination Function (HCF) and assigns user priorities based on the type of traffic sent. There are eight user priorities (0-7) that map to four different access categories AC-VO (voice) AC-VI (video) AC-BE (best effort) and AC-BK (background).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
