@@ -4609,21 +4609,24 @@ This simplified process is followed for every frame transmission to ensure that 
 
 **Hint:** Carrier sense involves devices checking whether the wireless medium is busy or idle. These processes are what make up CSMA/CA.
 
-### CSMA/CA (using DCF) description:
-
-- CS = Carrier Sense:
-    - Attempting to avoid collisions: Is the medium free? Is there anyone else transmitting? 
-        - Physical Carrier Sense _(PHY - Layer 1)_
-        - Virtual Carrier Sense _(MAC - Layer 2)_ <br><br>
-- MA = Multiple Access:
-    - Half Duplex Medium
-    - Multiple Stations Contending for Access <br><br>
-- CA = Collision Avoidance:
-    - We cannot always detect collisions in a wireless enviorment
-    - We back off everytime medium becomes free 
-
-### DCF (Distributed Coordination Function)
+### DCF (Distributed Coordination Function) = CSMA/CA
 _DCF is the process by which CSMA/CA is applied to Wi-Fi networks and can be found in the 802.11-1997 standard._
+
+**Note**: DCF is what sometimes is called "CSMA/CA" <br><br>
+
+**Important**: DCF is used in **non-QoS WLANs**.
+
+- **`CS` = `Carrier Sense`**:
+    - Is the medium free? Is there anyone else transmitting? 
+        - **Physical** Carrier Sense 
+        - **Virtual** Carrier Sense  <br><br>
+- **`MA` = `Multiple Access`**:
+    - Half Duplex Medium
+    - Multiple Stations Contending for Access to the medium (because the stations are sharing the medium) <br><br>
+- **`CA` = `Collision Avoidance`**:
+    - Attempting to avoid collisions (attempting!!! because it's impossible to prevent it 100%, that's why we are **avoiding**, **not preventing**): 
+        - We cannot always detect collisions in a wireless enviorment. (We can prevent it using random back offs, using some algrythms to help us decrease the number of colissions that may occur)
+        - We back off everytime medium becomes free 
 
 DCF defines four components to ensure devices share the medium equally: 
 
@@ -4632,7 +4635,7 @@ DCF defines four components to ensure devices share the medium equally:
 3. Random Back-off timers: 
 4. IFS (Interframe Spaces): Periods of time between frames; they are used to allow frames to be processed in a timely manner, avoid interference by ensuring frames are received, and prioritize transmission of certain frames.
 
-Important: DCF is used in **non-QoS WLANs**.
+
 
 
 
@@ -4640,8 +4643,14 @@ Important: DCF is used in **non-QoS WLANs**.
 
 
 ## Physical Carrier Sense
-_Physical Carrier Sense is the process of a device checking the frequency to determine whether the medium is in use or not._
+_Physical Carrier Sense is the process of a device checking the frequency (at physical layer) to determine whether the medium is in use or not._
 
+Hint: Physical Carrier Sense is based on CCA (Clear Channel Assessment). CCA asks the Physical Layer: "Is there anyone else transmitting"?. To do that CCA is comprise of 2 things: 
+
+- `Carrier Sense (CS)` AKA `Preamble Detect (PD)`: Detects and measures 802.11 encoded signals, better known as Preamble Header (PHY layer 1). This means, if CS can "see" a Preamble Header and be able to decode it (generally`-82dBm`) then it can communicate. <br><br>
+- Energy Detect (ED): Measures all RF energy around the antenna. 
+
+## Physical Carrier Sense
 
 
 
@@ -4672,7 +4681,7 @@ _Physical Carrier Sense is the process of a device checking the frequency to det
 | `HCF`              | 802.11e-2005  | PCF, HCCA, EDCA                       | `HCF (Hybrid Coordination Function)` is an enhancement introduced in the IEEE 802.11e amendment to improve **QoS (Quality of Service)** by providing prioritized and parameterized traffic handling. <br><br> It includes both: <br><br> `EDCA (HCF Contention Access // Enhanced Distributed Channel Access)`: **Implemented** _(DCF is the foundation for EDCA)_ <br><br> `HCCA (HCF Controlled Channel Access)`: **Not Implemented** <br><br> _It also includes `PCF` but it is **NOT used**._                             |
 | `MCF`              | 802.11s-2011  | EDCA, MCCA                            | `MCF (Mesh Coordination Function)` is a MAC protocol introduced in the IEEE 802.11s standard for wireless mesh networks. It supports efficient routing and coordination among mesh nodes, enabling the formation of self-healing and self-configuring multi-hop networks for extended wireless coverage. It includes EDCA and MCCA (Mesh Coordinated Channel Access).                                                                                           |
 
-
+NOTE: WMM (Wireless Multi Media) is the Wi-Fi Alliance's QoS implementation based on a subset of EDCA
 
 
 
