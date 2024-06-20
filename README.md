@@ -4560,12 +4560,14 @@ Default Port: 1812
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
 
-# 🛜🚦🛑 Medium Access Methods & QoS (Quality of Service)
+# 🛜🚦🛑 Medium Access Methods & QoS
 _Once a STA is connected to a WLAN via an AP, the STA need to communicate somehow. This is where Medium Access takes place! The "Medium" is RF (Radio Frequency) & is shared, if there are 60 devices (STA) connected to an AP & other 30 connected to another AP and both are on same channel, those are 90 devices sharing the medium or the same Frequency Space for RF (AKA "air" or "airtime"). The STAs & APs must have a way to "negotiate" who is gonna "talk" and "when" | By other hand, we need to know which frames has more priority in the network and needs to go first, that's what QoS is all about | MAC methods = How to get acces to the medium | QoS = Decide what to put on that medium first once medium access is gained._
 - [Wireless Contention Mechanisms :: Wireless Collision Avoidance – CSMA/CA Though DCF/EDCF :: Full Info for CWNA/CWAP @ _howiwifi.com_](https://howiwifi.com/2020/06/30/wireless-contention-mechanisms/) _`howiwifi`_
 - [802.11 Network Contention](https://mrncciew.com/2014/10/12/cwap-802-11-medium-contention/) _`nayarasi`_
-
-
+- [`802.11 Arbitration` || Detailed Whitepaper @ _CWNP_](https://www.cwnp.com/uploads/802-11_arbitration.pdf) _`whitepaper / report`_
+- [Understanding 802.11 Medium Contention](https://blogs.arubanetworks.com/industries/understanding-802-11-medium-contention/) _`Aruba`_
+- [Basics of 802.11 Arbitration Processes: Best Practices Webinar Series](https://www.youtube.com/watch?v=-XYtYa7nOLk) _`7 Signal`_
+- [Contention-based MAC Protocols Vs. Contention-free MAC Protocols @ _CS3591 Computer Networks_](https://www.youtube.com/watch?v=BW4Zufcyq9E) _`video`_
 
 
 
@@ -4578,19 +4580,15 @@ _Once a STA is connected to a WLAN via an AP, the STA need to communicate someho
 
 ## 👨🏻‍⚖️🚦 Arbitration & DCF: `Network Arbitration`
 _In every 802.11 network there must be a set of rules to determine when stations can transmit. Arbitration is just deciding "who" is gonna talk "when", in WLAN Networks there are rules to determine when STA can transmit into the medium (RF) | There are 2 types of methods: Contention Methods & Contention Free Methods (Token Ring Legacy = Contention Free | CSM-CA & DCF (default Wi-Fi), CSMA-CD (eth) modern = Contention Method)_
-- [`802.11 Arbitration` || Detailed Whitepaper @ _CWNP_](https://www.cwnp.com/uploads/802-11_arbitration.pdf) _`whitepaper / report`_
-- [802.11 Medium Contention](https://mrncciew.com/2014/10/12/cwap-802-11-medium-contention/)
-- [Contention-based MAC Protocols Vs. Contention-free MAC Protocols @ _CS3591 Computer Networks_](https://www.youtube.com/watch?v=BW4Zufcyq9E) _`video`_
-
 
 ### Contention Methods
 
-- CSMA/CD: Ethernet 802.3 :: Carrier Sense Multiple Access/Collition Detection.
-- CSMA/CA: Wi-Fi 802.11 :: Carrier Sense Multiple Access/Collition Avoidance - This method uses by default DCF (Distributed Coordination Function).
+- CSMA/CD: Ethernet 802.3 :: Carrier Sense Multiple Access/Collition Detection. <br><br>
+- CSMA/CA: Wi-Fi 802.11 :: Carrier Sense Multiple Access/Collition Avoidance _(This method uses by default DCF (Distributed Coordination Function)._
 
 ### Contention Free Methods
 
-- Token Passing: : Obsolete / Not used :: for Token Ring puproses
+- Token Passing: Obsolete / Not used :: for Token Ring puproses
 - PCF (Point Coordination Function): Obsolete / Not used :: Alternative 802.11 Wireless method NOT implemented
 
 
