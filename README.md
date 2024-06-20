@@ -4650,6 +4650,22 @@ _Physical Carrier Sense is the process of a device checking the frequency to det
 
 
 
+
+
+## IFS
+
+| Inter Frame Space | Standard        | Includes/Timing                             | Description                                                                                                                                                                           |
+|-------------------|-----------------|---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **SIFS**          | 802.11-2007     | 10μS (2.4 GHz), 16μS (5 GHz)                | `SIFS (Shortest Inter Frame Space)`: is used within all coordination functions. It is the shortest of the IFSs and is used before ACK and CTS frames as well as the second or subsequent MPDUs of a fragment burst.             |
+| **RIFS**          | 802.11n         | 2μS                                         | `RIFS (Reduced Inter Frame Space)`: was introduced with 802.11n to improve efficiency for transmissions to the same receiver where a SIFS-separated response is not required, such as in a transmission burst (CFB).            |
+| **DIFS**          | 802.11a/g/n/ac  | SIFS + 2x SlotTime                          | `DIFS (Distributed Inter Frame Space)`: is used when a station wants to transmit a data frame (MPDU) or management frame (MMPDU) for the first time within a DCF network.                                                    |
+| **EIFS**          | 802.11b/g/n/a   | SIFS + DIFS + ACK_Tx_Time                   | `EIFS (Extended Inter Frame Space)`: is used when a station has received a frame with errors to give the transmitting station enough time to recognize the failure before the receiving station starts transmission again.     |
+| **PIFS**          | 802.11 (PCF)    | SIFS + SlotTime                             | `PIFS (PCF Inter Frame Space)`: is used during the contention-free period (CFP) in PCF mode. The AP can transmit a Channel Switch Announcement (802.11h) frame after observing a PIFS to gain priority over other stations.    |
+| **AIFS**          | 802.11e         | AIFSN[AC] × SlotTime + SIFSTime             | `AIFS (Arbitration Inter Frame Space)`: is used by QoS stations to transmit all data frames (MPDUs), all management frames (MMPDUs), and certain control frames.                                                              |
+
+
+
+
 ## Contention Methods Timeline
 
 | Arbitration Method | Standard      | Includes                              | Description                                                                                                                                                              |
