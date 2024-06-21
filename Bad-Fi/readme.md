@@ -36,6 +36,12 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 
 
 
+
+
+
+
+
+
 ## Bad-Fi: Wi-Fi Analyzers & Monitoring
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/a16fcbc7-343e-4826-b84d-b8263cb35743)
@@ -51,6 +57,11 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 ---
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/7b00eb2a-847c-46bc-98e7-4a660c4d3b5e)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/067de9e8-4c85-4b73-b896-125ddc3f129c)
+
 
 ---
 
@@ -114,6 +125,9 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 
 
 
+
+
+
 ## Bad-Fi: Configs
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/f68130db-6888-48b4-bf90-d4c232febe13)
@@ -146,7 +160,20 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 
 
 
+
+
+
+
+
+
 ## Bad-Fi: Spectrums
+
+
+
+
+
+
+
 
 
 
@@ -194,6 +221,11 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 ---
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_BlackShark/assets/94720207/94dfd498-0f03-4158-9130-beefb9381d84)
+
+---
+
+![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/4196d8e5-2542-4f39-90f6-094eeb274a15)
+
 
 ---
 
@@ -372,6 +404,11 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 ---
 
 ![image](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/3fa93356-cbee-479d-aa92-8dc5de47f473)
+
+
+
+
+
 
 
 
