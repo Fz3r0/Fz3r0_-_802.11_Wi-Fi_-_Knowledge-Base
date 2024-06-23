@@ -4663,7 +4663,7 @@ Physical Carrier Sense is based on CCA (Clear Channel Assessment). CCA asks the 
 
  |----------------------------------------------------------|
  |                                                          |
- |             Clear Channel Assessment (CCS)               |
+ |             Clear Channel Assessment (CCA)               |
  |    determine if channel is clear before transmission     |
  |                                                          |
  |  |------------------------|  |------------------------|  |
