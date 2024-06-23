@@ -4570,7 +4570,8 @@ _Once a STA is connected to a WLAN via an AP, the STA need to communicate someho
 - [Understanding 802.11 Medium Contention](https://blogs.arubanetworks.com/industries/understanding-802-11-medium-contention/) _`Aruba`_
 - [Basics of 802.11 Arbitration Processes: Best Practices Webinar Series](https://www.youtube.com/watch?v=-XYtYa7nOLk) _`7 Signal`_
 - [Contention-based MAC Protocols Vs. Contention-free MAC Protocols @ _CS3591 Computer Networks_](https://www.youtube.com/watch?v=BW4Zufcyq9E) _`video`_
-- [Network Allocation Vector (NAV) Duration Field (wireshark examples)](https://wifisharks.com/2020/11/07/network-allocation-vector/#google_vignette)
+- [CSMA/CA (wireshark examples)](https://wifisharks.com/2020/10/31/csma-ca/) _`wifisharks`_
+- [Network Allocation Vector (NAV) Duration Field (wireshark examples)](https://wifisharks.com/2020/11/07/network-allocation-vector/#google_vignette) _`wifisharks`_
 
 
 
