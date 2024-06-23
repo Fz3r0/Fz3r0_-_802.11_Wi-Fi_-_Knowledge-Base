@@ -4642,16 +4642,45 @@ DCF defines four components to ensure devices share the medium equally:
 
 
 
-## Physical Carrier Sense
+## DCF: `Physical Carrier Sense`
 _Physical Carrier Sense is the process of a device checking the frequency (at physical layer) to determine whether the medium is in use or not._
 
-Hint: Physical Carrier Sense is based on CCA (Clear Channel Assessment). CCA asks the Physical Layer: "Is there anyone else transmitting"?. To do that CCA is comprise of 2 things: 
+**Hint**: Physical Carrier Sense is based on CCA (Clear Channel Assessment). CCA asks the Physical Layer: "Is there anyone else transmitting"?. **This means that CCA determines if the channel is clear before transmission.** To do that CCA is comprise of 2 things: 
 
-- `Carrier Sense (CS)` AKA `Preamble Detect (PD)`: Detects and measures 802.11 encoded signals, better known as Preamble Header (PHY layer 1). This means, if CS can "see" a Preamble Header and be able to decode it (generally`-82dBm`) then it can communicate. <br><br>
-- Energy Detect (ED): Measures all RF energy around the antenna. 
+1. `Carrier Sense (CS)` AKA `Preamble Detect (PD)`::: **For any 802.11 Signal** ::: CS/PD detects and measures 802.11 encoded signals, better known as 802.11 Preamble Header (PHY layer 1). This means, if CS can "see" a Preamble Header and be able to decode it **(generally`-82 dBm`)** will detect the channel busy.  <br><br>
+2. `Energy Detect (ED)`::: **For any NON 802.11 Signal** ::: Measures all RF energy around the antenna, for example signals not recognized as 802.11. **(generally`-62 dBm`)** to detect a channel busy.
 
-## Physical Carrier Sense
+**Hint**: The start of a valid OFDM transmission at a recieve level greater than or equal to the minimum modulation and coding rate sensitivity (-82dBm for 20 MHz channel spacing) shall cause CS/CCA to detect channel busy
 
+````py
+
+## Physical Carrier Sense:
+
+# CSS asks the Physical Layer "Is there anyone else transmitting"?
+
+ |----------------------------------------------------------|
+ |                                                          |
+ |             Clear Channel Assessment (CCS)               |
+ |    determine if channel is clear before transmission     |
+ |                                                          |
+ |  |------------------------|  |------------------------|  |
+ |  |   Energy Detect (ED)   |  |  Carrier Sense (CS)    |  |
+ |  |                        |  |  Preamble Detect (PD)  |  |
+ |  |                        |  |                        |  |
+ |  |   ------------------   |  |   ------------------   |  |            
+ |  |   ------------------   |  |   ------------------   |  |                
+ |  | ====== - 62 dBm ====== |  |   ------------------   |  |                                        
+ |  |   ==================   |  | ====== - 82 dBm ====== |  |  
+ |  |   ==================   |  |   ==================   |  |
+ |  |   ==================   |  |   ==================   |  |
+ |  |   ==================   |  |   ==================   |  |
+ |  |------------------------|  |------------------------|  |
+ |                                                          |
+ |----------------------------------------------------------|
+
+````
+
+## DCF: `Virtual Carrier Sense`
 
 
 
