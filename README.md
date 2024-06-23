@@ -4649,10 +4649,10 @@ _Physical Carrier Sense is the process of a device checking the frequency (at ph
 
 Physical Carrier Sense is based on CCA (Clear Channel Assessment). CCA asks the Physical Layer: "Is there anyone else transmitting"?. **This means that CCA determines if the channel is clear before transmission.** To do that CCA uses 2 different components: 
 
-1. **`Carrier Sense (CS)` AKA `Preamble Detect (PD)`:** <br><br>
+1. **`Carrier Sense (CS)`** AKA **`Preamble Detect (PD)`:** <br><br>
     - **Purpose:** Detects and measures 802.11 encoded signals.
     - **Mechanism:** CS/PD detects and measures the 802.11 Preamble Header.
-    - **Threshold:** If CS can "see" a Preamble Header & decode it (generally at -82 dBm), it will detect the channel as busy.
+    - **Threshold:** If CS can "see" a Preamble Header & decode it (generally at -82 dBm), it will detect the channel as busy. <br><br>
 2. **`Energy Detect (ED)`:** <br><br>
     - **Purpose:** Measures all RF energy around the antenna, including signals not recognized as 802.11.
     - **Mechanism:** ED detects any RF energy around the antenna.
@@ -4676,8 +4676,8 @@ Physical Carrier Sense is based on CCA (Clear Channel Assessment). CCA asks the 
  |  |   ------------------   |  |   ------------------   |  |            
  |  |   ------------------   |  |   ------------------   |  |                
  |  | ====== - 62 dBm ====== |  |   ------------------   |  |                                        
- |  |   ==================   |  | ====== - 82 dBm ====== |  |  
- |  |   ==================   |  |   ==================   |  |
+ |  |   ==================   |  |   ------------------   |  |  
+ |  |   ==================   |  | ====== - 82 dBm ====== |  |
  |  |   ==================   |  |   ==================   |  |
  |  |   ==================   |  |   ==================   |  |
  |  |------------------------|  |------------------------|  |
@@ -4685,23 +4685,79 @@ Physical Carrier Sense is based on CCA (Clear Channel Assessment). CCA asks the 
  |----------------------------------------------------------|
 
 - # The start of a valid OFDM transmission at a recieve level
-    greater than or equal to the minimum modulation and coding
-    rate sensitivity (-82dBm for 20 MHz channel spacing) shall
-    cause CS/CCA to detect channel busy.
+  # greater than or equal to the minimum modulation and coding
+  # rate sensitivity (-82dBm for 20 MHz channel spacing) shall
+  # cause CS/CCA to detect channel busy.
 
 - # Energy Detect (ED) is approximately 20 dB stronger than
-    Carrier Sense (CS) when indicating a present signal.
+  # Carrier Sense (CS) when indicating a present signal.
 
 ````
 
 ## ☁️📀 DCF: `Virtual Carrier Sense`
 _Virtual Carrier Sense is a mechanism used in wireless networks to avoid collisions and ensure efficient use of the medium using information of the MAC Frame Headers: Duration Field & NAC_ 
 
-Unlike Physical Carrier Sense, which relies on detecting actual transmissions at the physical layer, Virtual Carrier Sense uses information contained in the frame headers to predict future traffic on the medium. Two key components of Virtual Carrier Sense are the Duration Field and the Network Allocation Vector (NAV).:
+Unlike Physical Carrier Sense, which relies on detecting actual transmissions at the physical layer, Virtual Carrier Sense uses information contained in the **MAC Frame Header** to predict future traffic on the medium. 
 
-### NAV & Duration Field in Wireshark
+The two key components of Virtual Carrier Sense are:
 
-In Wireshark, the Network Allocation Vector (NAV) is not directly displayed as a single field because it is a conceptual timer maintained by each station based on the Duration Field found in the MAC header of 802.11 frames. However, you can infer the NAV by examining the Duration Field of the frames. By inspecting the Duration Field, you can understand the NAV that stations would use. The Duration Field value indicates how long the medium will be busy, and stations use this value to set their NAV timers. While Wireshark doesn't explicitly show the NAV, the Duration Field provides the necessary information to infer it.
+1. **`Duration Field`** <br><br>
+    - Purpose: Indicates the amount of time (in microseconds) that the channel will be occupied by the current frame exchange sequence.
+    - Mechanism: The Duration Field is included in the **Frame Control of the MAC header**. It specifies how long the transmitting station expects to use the medium, including any acknowledgment frames that may be sent in response.
+    - Usage: Other stations in the network read the Duration Field and update their NAV accordingly to avoid transmitting during the specified period. <br><br>
+2. **`Network Allocation Vector (NAV)`** <br><br>
+    - Purpose: Acts as a timer that represents the period during which the medium is expected to be busy, based on the Duration Field values from received frames.
+    - Mechanism: When a station receives a frame with a Duration Field, it sets its NAV timer to the value specified in the Duration Field if this value is greater than the current NAV value. This prevents the station from attempting to access the medium until the NAV timer expires.
+    - Impact: The NAV helps manage medium access by providing a way for stations to reserve the medium for a certain period, reducing the likelihood of collisions. **While NAV is not equal to "0", stations presume that the medium is busy and will not transmit.**
+
+**IMPORTANT:** In Wireshark (or any other protocol analyzer), the Network Allocation Vector (NAV) is not directly displayed as a single field because it is a conceptual timer maintained by each station based on the Duration Field found in the MAC header of 802.11 frames. However, you can infer the NAV by examining the Duration Field of the frames. By inspecting the Duration Field, you can understand the NAV that stations would use. The Duration Field value indicates how long the medium will be busy, and stations use this value to set their NAV timers. While Wireshark doesn't explicitly show the NAV, the Duration Field provides the necessary information to infer it.
+
+**How Virtual Carrier Sense Works?**
+
+- `Frame Transmission`: A station wishing to transmit sends a frame with a Duration Field indicating how long it will use the medium. <br><br>
+- `NAV Update`: Other stations that receive this frame read the Duration Field and set their NAV timers accordingly if the Duration value is greater than their current NAV value. <br><br>
+- `Medium Access`: These stations refrain from accessing the medium until their NAV timers expire, allowing the transmitting station to complete its transmission without interference.
+
+````py
+
+# Virtual Carrier Sense Example Scenario:
+
+1. # Station A wants to send data to Station B.
+   # It calculates the total time needed for the transmission, including any necessary acknowledgments.
+
+2. # Station A sets the Duration Field in its frame to this calculated time and transmits the frame.
+
+3. # Station C and Station D, which are within range, receive the frame from Station A.
+   # They read the Duration Field and set their NAV timers to this value if it is greater than their current NAV value.
+
+4. # Station C and Station D refrain from transmitting until their NAV timers expire,
+   # allowing Station A to complete its transmission to Station B without collision.
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+    Station A (transmitting)  -------> Frame with Duration Field -------> Station B (receiving)
+                                \
+                                 \
+                                  \
+                                   \
+                                    V
+                           Stations C and D (other stations)
+                           --------------------------------
+                           |   Read Duration Field        |
+                           |   Set NAV timers             |
+                           |   NAV > current NAV value    |
+                           |   While NAV ≠ 0              |
+                           |   Presume medium is busy     |
+                           |   Wait from transmitting     |
+                           --------------------------------
+
+````
+
+
+
+
+
 
 
 
