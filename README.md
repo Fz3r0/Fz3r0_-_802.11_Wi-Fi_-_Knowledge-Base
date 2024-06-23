@@ -4645,12 +4645,16 @@ DCF defines four components to ensure devices share the medium equally:
 ## 🛜🪨🧏 DCF: `Physical Carrier Sense`
 _Physical Carrier Sense is the process of a device checking the frequency (at physical layer) to determine whether the medium is in use or not._
 
-**Hint**: Physical Carrier Sense is based on CCA (Clear Channel Assessment). CCA asks the Physical Layer: "Is there anyone else transmitting"?. **This means that CCA determines if the channel is clear before transmission.** To do that CCA is comprise of 2 things: 
+Physical Carrier Sense is based on CCA (Clear Channel Assessment). CCA asks the Physical Layer: "Is there anyone else transmitting"?. **This means that CCA determines if the channel is clear before transmission.** To do that CCA uses 2 different components: 
 
-1. `Carrier Sense (CS)` AKA `Preamble Detect (PD)`::: **For any 802.11 Signal** ::: CS/PD detects and measures 802.11 encoded signals, better known as 802.11 Preamble Header (PHY layer 1). This means, if CS can "see" a Preamble Header and be able to decode it **(generally`-82 dBm`)** will detect the channel busy.  <br><br>
-2. `Energy Detect (ED)`::: **For any NON 802.11 Signal** ::: Measures all RF energy around the antenna, for example signals not recognized as 802.11. **(generally`-62 dBm`)** to detect a channel busy.
-
-**Hint**: The start of a valid OFDM transmission at a recieve level greater than or equal to the minimum modulation and coding rate sensitivity (-82dBm for 20 MHz channel spacing) shall cause CS/CCA to detect channel busy
+1. **`Carrier Sense (CS)` AKA `Preamble Detect (PD)`:** <br><br>
+    - **Purpose:** Detects and measures 802.11 encoded signals.
+    - **Mechanism:** CS/PD detects and measures the 802.11 Preamble Header.
+    - **Threshold:** If CS can "see" a Preamble Header & decode it (generally at -82 dBm), it will detect the channel as busy.
+2. **`Energy Detect (ED)`:** <br><br>
+    - **Purpose:** Measures all RF energy around the antenna, including signals not recognized as 802.11.
+    - **Mechanism:** ED detects any RF energy around the antenna.
+    - **Threshold:** Detects a channel as busy if RF energy is greater than or equal to -62 dBm.
 
 ````py
 
@@ -4675,12 +4679,23 @@ _Physical Carrier Sense is the process of a device checking the frequency (at ph
  |  |   ==================   |  |   ==================   |  |
  |  |   ==================   |  |   ==================   |  |
  |  |------------------------|  |------------------------|  |
- |                                                          |
+ |      NON 802.11 signal              802.11 signal        |
  |----------------------------------------------------------|
+
+- # The start of a valid OFDM transmission at a recieve level
+    greater than or equal to the minimum modulation and coding
+    rate sensitivity (-82dBm for 20 MHz channel spacing) shall
+    cause CS/CCA to detect channel busy.
+
+- # Energy Detect (ED) is approximately 20 dB stronger than
+    Carrier Sense (CS) when indicating a present signal.
 
 ````
 
 ## ☁️📀 DCF: `Virtual Carrier Sense`
+_Virtual Carrier Sense is a mechanism used in wireless networks to avoid collisions and ensure efficient use of the medium using information of the MAC Frame Headers: Duration Field & NAC_ 
+
+Unlike Physical Carrier Sense, which relies on detecting actual transmissions at the physical layer, Virtual Carrier Sense uses information contained in the frame headers to predict future traffic on the medium. Two key components of Virtual Carrier Sense are the Duration Field and the Network Allocation Vector (NAV).:
 
 
 
