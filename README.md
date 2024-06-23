@@ -4599,7 +4599,11 @@ _In every 802.11 network there must be a set of rules to determine when stations
 
 
 ## 🚦💥🚥 CSMA/CA (DCF)
-_The fundamental Network Access Method known as "Carrier Sense Multiple Access/Collition Avoidance"_
+_The fundamental Network Access Method known as "Carrier Sense Multiple Access/Collition Avoidance". DCF is the process by which CSMA/CA is applied to Wi-Fi networks and can be found in the 802.11-1997 standard._
+
+- DCF is what sometimes is called "CSMA/CA"
+- DCF is used in **non-QoS WLANs**
+- Carrier sense involves devices checking whether the wireless medium is busy or idle. These processes are what make up CSMA/CA
 
 This simplified process is followed for every frame transmission to ensure that every device gets equal opportunity to transmit. This equal opportunity is the “multiple access” part of CSMA/CA:
 
@@ -4609,14 +4613,7 @@ This simplified process is followed for every frame transmission to ensure that 
         - **If other devices are not transmitting**: The device will request control of the medium and begin transmitting. <br><br>
         - **If other stations are transmitting**: The device will set a timer for itself based on the duration of the transmission from the other device. <br><br>
 
-**Hint:** Carrier sense involves devices checking whether the wireless medium is busy or idle. These processes are what make up CSMA/CA.
-
-### 🚦💥 DCF (Distributed Coordination Function) = CSMA/CA
-_DCF is the process by which CSMA/CA is applied to Wi-Fi networks and can be found in the 802.11-1997 standard._
-
-**Note**: DCF is what sometimes is called "CSMA/CA" <br><br>
-
-**Important**: DCF is used in **non-QoS WLANs**.
+### CSMA/CA:
 
 - **`CS` = `Carrier Sense`**:
     - Is the medium free? Is there anyone else transmitting? 
@@ -4630,12 +4627,12 @@ _DCF is the process by which CSMA/CA is applied to Wi-Fi networks and can be fou
         - We cannot always detect collisions in a wireless enviorment. (We can prevent it using random back offs, using some algrythms to help us decrease the number of colissions that may occur)
         - We back off everytime medium becomes free 
 
-DCF defines four components to ensure devices share the medium equally: 
+**DCF defines four components to ensure devices share the medium equally:** 
 
-1. Physical Carrier Sense
-2. Virtual Carrier Sense
-3. Random Back-off timers: 
-4. IFS (Interframe Spaces): Periods of time between frames; they are used to allow frames to be processed in a timely manner, avoid interference by ensuring frames are received, and prioritize transmission of certain frames.
+1. **`Physical Carrier Sense`**: Process of a device checking the frequency **(at physical layer)** to determine whether the medium is in use or not. It can detect both: **802.11 signals** (reading the PHy preamble) and **NON 802.11 signals** (measuring the RF energy) <br><br>
+2. **`Virtual Carrier Sense`**: Process of a device to determine whether the medium is in use or not using information of the **MAC Frame Headers**: **Duration Field** & **NAV** <br><br>
+3. **`Random Back-off timers`**: 
+4. **`IFS (Interframe Spaces)`**: Periods of time between frames; they are used to allow frames to be processed in a timely manner, avoid interference by ensuring frames are received, and prioritize transmission of certain frames.
 
 
 
@@ -4695,7 +4692,7 @@ Physical Carrier Sense is based on CCA (Clear Channel Assessment). CCA asks the 
 ````
 
 ## ☁️📀 DCF: `Virtual Carrier Sense`
-_Virtual Carrier Sense is a mechanism used in wireless networks to avoid collisions and ensure efficient use of the medium using information of the MAC Frame Headers: Duration Field & NAC_ 
+_Virtual Carrier Sense is a mechanism used in wireless networks to avoid collisions and ensure efficient use of the medium using information of the MAC Frame Headers: Duration Field & NAV_ 
 
 Unlike Physical Carrier Sense, which relies on detecting actual transmissions at the physical layer, Virtual Carrier Sense uses information contained in the **MAC Frame Header** to predict future traffic on the medium. 
 
