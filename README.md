@@ -4570,7 +4570,7 @@ _Once a STA is connected to a WLAN via an AP, the STA need to communicate someho
 - [Understanding 802.11 Medium Contention](https://blogs.arubanetworks.com/industries/understanding-802-11-medium-contention/) _`Aruba`_
 - [Basics of 802.11 Arbitration Processes: Best Practices Webinar Series](https://www.youtube.com/watch?v=-XYtYa7nOLk) _`7 Signal`_
 - [Contention-based MAC Protocols Vs. Contention-free MAC Protocols @ _CS3591 Computer Networks_](https://www.youtube.com/watch?v=BW4Zufcyq9E) _`video`_
-
+- [Network Allocation Vector (NAV) Duration Field (wireshark examples)](https://wifisharks.com/2020/11/07/network-allocation-vector/#google_vignette)
 
 
 
@@ -4699,6 +4699,9 @@ _Virtual Carrier Sense is a mechanism used in wireless networks to avoid collisi
 
 Unlike Physical Carrier Sense, which relies on detecting actual transmissions at the physical layer, Virtual Carrier Sense uses information contained in the frame headers to predict future traffic on the medium. Two key components of Virtual Carrier Sense are the Duration Field and the Network Allocation Vector (NAV).:
 
+### NAV & Duration Field in Wireshark
+
+In Wireshark, the Network Allocation Vector (NAV) is not directly displayed as a single field because it is a conceptual timer maintained by each station based on the Duration Field found in the MAC header of 802.11 frames. However, you can infer the NAV by examining the Duration Field of the frames. By inspecting the Duration Field, you can understand the NAV that stations would use. The Duration Field value indicates how long the medium will be busy, and stations use this value to set their NAV timers. While Wireshark doesn't explicitly show the NAV, the Duration Field provides the necessary information to infer it.
 
 
 
