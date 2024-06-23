@@ -4516,6 +4516,8 @@ Default Port: 1812
 - [Configure Wireshark and FreeRADIUS in order to decrypt 802.11 WPA2-Enterprise/EAP/dot1x over-the-air Wireless Sniffer](https://www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/214275-configure-wireshark-and-freeradius-in-or.html)
 - [Cisco 9800 (Wireless LAN Controller WLC) – Decrypt 802.1X Traffic](https://mrncciew.com/2022/08/31/9800-decrypt-802-1x-traffic/)
 
+## Packet Trance RADIUS labs
+- [Configure TACACS+ and RADIUS in packet tracer](https://www.internetworks.in/2024/06/what-are-tacacs-radius-and-diameter.html)
 
 
 
