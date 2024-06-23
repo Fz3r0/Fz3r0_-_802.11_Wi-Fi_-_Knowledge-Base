@@ -4596,7 +4596,7 @@ _In every 802.11 network there must be a set of rules to determine when stations
 
 
 
-## CSMA/CA (DCF)
+## 🚦💥🚥 CSMA/CA (DCF)
 _The fundamental Network Access Method known as "Carrier Sense Multiple Access/Collition Avoidance"_
 
 This simplified process is followed for every frame transmission to ensure that every device gets equal opportunity to transmit. This equal opportunity is the “multiple access” part of CSMA/CA:
@@ -4609,7 +4609,7 @@ This simplified process is followed for every frame transmission to ensure that 
 
 **Hint:** Carrier sense involves devices checking whether the wireless medium is busy or idle. These processes are what make up CSMA/CA.
 
-### DCF (Distributed Coordination Function) = CSMA/CA
+### 🚦💥 DCF (Distributed Coordination Function) = CSMA/CA
 _DCF is the process by which CSMA/CA is applied to Wi-Fi networks and can be found in the 802.11-1997 standard._
 
 **Note**: DCF is what sometimes is called "CSMA/CA" <br><br>
@@ -4642,7 +4642,7 @@ DCF defines four components to ensure devices share the medium equally:
 
 
 
-## DCF: `Physical Carrier Sense`
+## 🛜🪨🧏 DCF: `Physical Carrier Sense`
 _Physical Carrier Sense is the process of a device checking the frequency (at physical layer) to determine whether the medium is in use or not._
 
 **Hint**: Physical Carrier Sense is based on CCA (Clear Channel Assessment). CCA asks the Physical Layer: "Is there anyone else transmitting"?. **This means that CCA determines if the channel is clear before transmission.** To do that CCA is comprise of 2 things: 
@@ -4680,7 +4680,7 @@ _Physical Carrier Sense is the process of a device checking the frequency (at ph
 
 ````
 
-## DCF: `Virtual Carrier Sense`
+## ☁️📀 DCF: `Virtual Carrier Sense`
 
 
 
