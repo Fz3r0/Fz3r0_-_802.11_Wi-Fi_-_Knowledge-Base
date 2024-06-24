@@ -4621,7 +4621,7 @@ This simplified process is followed for every frame transmission to ensure that 
     - While one device transmits, all the others listen, even if the frame is not destined for the listeners. _(This concept comes from the use of Carrier Sense Multiple Access with Collision Avoidance (CSMA/CA))_. <br><br>
     - After the transmitting device is done sending data, all devices that wish to transmit will follow a similar process. _(It involves waiting a calculated random amount of time and checking to see if other devices are transmitting.)_ <br><br>
         - **If other devices are not transmitting**: The device will request control of the medium and begin transmitting. <br><br>
-        - **If other stations are transmitting**: The device will set a timer for itself based on the duration of the transmission from the other device. <br><br>
+        - **If other stations are transmitting**: The device will set a timer for itself based on the duration of the transmission from the other device. 
 
 ### CSMA/CA:
 
@@ -4644,7 +4644,28 @@ This simplified process is followed for every frame transmission to ensure that 
 3. **`Random Back-off timers`**: 
 4. **`IFS (Interframe Spaces)`**: Periods of time between frames; they are used to allow frames to be processed in a timely manner, avoid interference by ensuring frames are received, and prioritize transmission of certain frames.
 
+### CSMA/CA Flow Chart:
 
+````py
+
+                                              START
+                           _____________________|______________________
+                          |                                            |                          |
+          Physical Carrier Sense (CCA):                   Virtual Carrier Sense (NAV)             |
+             is the medium iddle?                                 is NAV = 0 ?            ____ > NO
+         check for 802.11 or NON 802.11 signals          check for duration field / NAV   
+                          |                                            |
+                          V                                            V
+                         YES                                          YES
+                          |                                            |
+                          V                                            V
+                                Observe The Appropiate IFS Interval
+                                        (DIFS, SIFS, etc)
+                                               |
+                                               v
+
+ 
+````
 
 
 
