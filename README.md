@@ -4572,6 +4572,7 @@ _Once a STA is connected to a WLAN via an AP, the STA need to communicate someho
 - [Contention-based MAC Protocols Vs. Contention-free MAC Protocols @ _CS3591 Computer Networks_](https://www.youtube.com/watch?v=BW4Zufcyq9E) _`video`_
 - [CSMA/CA (wireshark examples)](https://wifisharks.com/2020/10/31/csma-ca/) _`wifisharks`_
 - [Network Allocation Vector (NAV) Duration Field (wireshark examples)](https://wifisharks.com/2020/11/07/network-allocation-vector/#google_vignette) _`wifisharks`_
+- [IFS: InterFrame Space](https://wifisharks.com/2020/11/14/interframe-space/) _`wifisharks`_
 
 
 
