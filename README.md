@@ -4770,6 +4770,8 @@ Physical Carrier Sense is based on CCA (Clear Channel Assessment). CCA asks the 
  |      NON 802.11 signal              802.11 signal        |
  |----------------------------------------------------------|
 
+- # Values of ED and CS/PD may vary depending the PHY is used.
+
 - # The start of a valid OFDM transmission at a recieve level
   # greater than or equal to the minimum modulation and coding
   # rate sensitivity (-82dBm for 20 MHz channel spacing) shall
@@ -4788,14 +4790,21 @@ Unlike Physical Carrier Sense, which relies on detecting actual transmissions at
 The two key components of Virtual Carrier Sense are:
 
 1. **`Duration Field`** <br><br>
-    - Purpose: Indicates the amount of time (in microseconds) that the channel will be occupied by the current frame exchange sequence.
-    - Mechanism: The Duration Field is included in the **Frame Control of the MAC header**. It specifies how long the transmitting station expects to use the medium, including any acknowledgment frames that may be sent in response.
-    - Usage: Other stations in the network read the Duration Field and update their NAV accordingly to avoid transmitting during the specified period. <br><br>
+    - **Purpose**: Indicates the amount of time (in microseconds) that the channel will be occupied by the current frame exchange sequence.
+    - **Mechanism**: The Duration Field is included in the **Frame Control of the MAC header**. It specifies how long the transmitting station expects to use the medium, including any acknowledgment frames that may be sent in response.
+    - **Usage**: Other stations in the network read the Duration Field and update their NAV accordingly to avoid transmitting during the specified period.
+    - **Important**: **NAV is only updated when the Duration value is greater than the current NAV value.** <br><br>
 2. **`Network Allocation Vector (NAV)`** <br><br>
-    - Purpose: Acts as a timer that represents the period during which the medium is expected to be busy, based on the Duration Field values from received frames.
-    - Mechanism: When a station receives a frame with a Duration Field, it sets its NAV timer to the value specified in the Duration Field if this value is greater than the current NAV value. This prevents the station from attempting to access the medium until the NAV timer expires.
-    - Impact: The NAV helps manage medium access by providing a way for stations to reserve the medium for a certain period, reducing the likelihood of collisions. **While NAV is not equal to "0", stations presume that the medium is busy and will not transmit.**
+    - **Purpose**: Acts as a timer that represents the period during which the medium is expected to be busy, based on the Duration Field values from received frames.
+    - **Mechanism**: When a station receives a frame with a Duration Field, it sets its NAV timer to the value specified in the Duration Field if this value is greater than the current NAV value. This prevents the station from attempting to access the medium until the NAV timer expires.
+    - **Impact**: The NAV helps manage medium access by providing a way for stations to reserve the medium for a certain period, reducing the likelihood of collisions.
+    - **Important**: **While NAV is not equal to "0", stations presume that the medium is busy and will not transmit.**
 
+**⭕ Duration Field Filter:**
+
+- 🦈 **Duration Field = 0** :: NAV 0 : `wlan.duration == 0`
+- 🦈 **Duration Field more than 0** :: NAV > 0 : `wlan.duration > 0`
+  
 **IMPORTANT:** In Wireshark (or any other protocol analyzer), the Network Allocation Vector (NAV) is not directly displayed as a single field because it is a conceptual timer maintained by each station based on the Duration Field found in the MAC header of 802.11 frames. However, you can infer the NAV by examining the Duration Field of the frames. By inspecting the Duration Field, you can understand the NAV that stations would use. The Duration Field value indicates how long the medium will be busy, and stations use this value to set their NAV timers. While Wireshark doesn't explicitly show the NAV, the Duration Field provides the necessary information to infer it.
 
 **How Virtual Carrier Sense Works?**
