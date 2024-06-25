@@ -4648,41 +4648,55 @@ This simplified process is followed for every frame transmission to ensure that 
 
 ````py
 
-                                                   START ⬅️--------------------------------------------
-                                                     |                                                 |
-                                                     |                                                 |
-                               ----------------------|-----------------------                          |
-                               |                                            |                     Decrement      
-                               |                                            |                     NAV timer
-                              ⬇️                                           ⬇️                         |
-               Physical Carrier Sense (CCA):                   Virtual Carrier Sense (NAV)             |
-                  is the medium iddle?                                 is NAV = 0 ?             --->> NO
-              check for 802.11 or NON 802.11 signals          check for duration field / NAV   
-                               |                                            |
-                              ⬇️                                           ⬇️
-                              YES                                          YES
-                               |                                            |
-                               |                                            |   
-                               |                                            |
-                              ⬇️                                           ⬇️
-                                     Observe The Appropiate IFS Interval
-                                             (DIFS, SIFS, etc)
-                                                    |
-                                                    |
-                                                   ⬇️
-                                      Select a Random Backoff Value
-                                         if is not already chosen
-                                                    |
-                                                    |
-                                                   ⬇️
-                                                  /   \
-          Decrement Backoff Timer  -----------➡️ \    /                                               
-               by one slot                          |
-                                                    |  
-                  YES                               |
-                                                                                 
-                (CCA):                             ⬇️
-  NO  ⬅️-- is the medium iddle ?    ⬅️--  NO    Backoff Timer = 0    YES  --➡️   TRANSMIT FRAME
+  --------------------------------------->>> +--------------+
+  |               ----------------------->>> |     START    | <<<-----------------------
+                  |                          +--------------+                          |
+  |               |                                  |                                 |
+        +-------------------+                                                  +-------------------+
+  |     | Wait until medium |                        |                               Decrement   
+  |     |     is clear      |                        |                               NAV Timer      
+        +-------------------+                                                  +-------------------+
+                  ^                                  v                                 ^
+  |               ^                                  v                                 ^
+  |               |            +---------------------+---------------------+           |
+  |               |            |                                           |           |
+  |           {{ NO }}         v                                           v        {{ NO }}
+  |               |            v                                           v           |
+       +------------------------------------------+    +------------------------------------------+
+  |    |      Physical Carrier Sense (CCA):       |    |       Virtual Carrier Sense (NAV):       |
+  |    |          is the medium iddle?            |    |               is NAV = 0 ?               |
+  |    |  check for 802.11 or NON 802.11 signals  |    |      check for Duration Field / NAV      |
+  |    +------------------------------------------+    +------------------------------------------+ 
+  |                            |                                            |
+  |                        {{ YES }}                                     {{ YES }}
+  |                            |                                            |
+  |                            |                                            |   
+  |                            v                                            v
+  |                            v                                            v
+  |                           +----------------------------------------------+
+                              |     Observe The Appropiate IFS Interval      |
+  |                           |              (DIFS, SIFS, etc)               |
+                              +----------------------------------------------+
+  |                                                  |
+                                                     |
+                                                     v
+  |                                                  v
+  |                           +----------------------------------------------+
+  |                           |       Select a Random Backoff Value          |
+  |                           |          if is not already chosen            |
+  |                           +----------------------------------------------+
+
+
+  |                                                 |
+  |                                                ⬇️
+  |                                               /   \
+  |       Decrement Backoff Timer  -----------➡️ \    /                                               
+  |            by one slot                          |
+  |                |                                |  
+  |               YES                               |
+  |                |                                |                              
+  |              (CCA):                             ⬇️
+  NO ⬅️--- is the medium iddle ?  ⬅️--  NO -- Backoff Timer = 0  -- YES  --➡️   TRANSMIT FRAME
                   &
                 (NAV):
              is NAV = 0 ?
