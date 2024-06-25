@@ -4651,12 +4651,13 @@ This simplified process is followed for every frame transmission to ensure that 
 ## CCMA/CA Flow Chart
 
 
-       --------------------------------------->>> +===============+
-       |               +---------------------->>> |     START     | <<<----------------------+
-       |               |                          +===============+                          |
+                                                  +===============+
+       --------------------------------------->>> |     START     | 
+       |               +---------------------->>> +===============+ <<<----------------------+                         
+       |               |                                  v                                  |     
        |               |                                  v                                  |
        |     +-------------------+                        v                        +-------------------+
-       |     | Wait until medium |                        v                        |     Decrement     |   
+       |     | wait until medium |                        v                        |     decrement     |   
        |     |     is clear      |                        v                        |     NAV Timer     |  
        |     +-------------------+                        v                        +-------------------+
        |               ^                                  v                                  ^
@@ -4689,32 +4690,36 @@ This simplified process is followed for every frame transmission to ensure that 
        |                                                  v
        |                                                  v
        |                          +-----------------------------------------------+
-       |                          |     Select a Random Backoff Timer Value       |
+       |                          |     select a Random Backoff Timer Value       |
        |                          |          if is not already chosen             |
        |                          +-----------------------------------------------+
        |                                                  |
        |                                                  |              
        |   +-------------------------+                    |
-       |     Decrement Backoff Timer |----------------->> +                                              
-       |          by one slot        |                    |
+       |   | decrement Backoff Timer |---------------->>> O                                              
+       |   |      by one slot        |                    |
        |   +-------------------------+                    |   
-       |                                                  |     
-       |                                                  |
-       |                                                  |     
-       |                                                  |    
-       |               YES                                |
+       |                ^                                 |     
+       |                ^                                 |  
+                        |                                 |
+       |                |                                 |    
+       |            {{ YES }}                             |
        |                |                                 |                              
        |   +-------------------------+                                     
-                     (CCA): 
-              is the medium iddle ?                     
-                                               +-------------------------+    
- NO ---                                        |  is Backoff Timer = 0 ? |   
-                       &                       +-------------------------+
-                                                  |                   |
-                     (NAV):                   {{ NO }}            {{ YES }}      
-                  is NAV = 0 ?                    |                   | 
-                                                                      | 
-                                                                      +------------>>>   TRANSMIT FRAME
+           |          CCA:           | 
+           |  "is the medium iddle?" |                    
+           |                         |       +-------------------------+    
+ NO ---    |  Physucal Carrier Sense |       |  is Backoff Timer = 0 ? |   
+           |           &             |       +-------------------------+
+           |  Virtual Carrier Sense               |                   |
+           +-------------------------+        {{ NO }}            {{ YES }}      
+                       ^                          |                   |
+                       ^                          |                   |
+                       |                          |                   |
+                       |                          |                   +------------>>>   TRANSMIT FRAME
+                       +--------------------------+
+
+
 ````
 
 
