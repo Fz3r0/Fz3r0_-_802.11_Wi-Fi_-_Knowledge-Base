@@ -4807,6 +4807,50 @@ The two key components of Virtual Carrier Sense are:
   
 **IMPORTANT:** In Wireshark (or any other protocol analyzer), the Network Allocation Vector (NAV) is not directly displayed as a single field because it is a conceptual timer maintained by each station based on the Duration Field found in the MAC header of 802.11 frames. However, you can infer the NAV by examining the Duration Field of the frames. By inspecting the Duration Field, you can understand the NAV that stations would use. The Duration Field value indicates how long the medium will be busy, and stations use this value to set their NAV timers. While Wireshark doesn't explicitly show the NAV, the Duration Field provides the necessary information to infer it.
 
+**How Virtual Carrier Sense Works?**
+
+- `Frame Transmission`: A station wishing to transmit sends a frame with a Duration Field indicating how long it will use the medium. <br><br>
+- `NAV Update`: Other stations that receive this frame read the Duration Field and set their NAV timers accordingly if the Duration value is greater than their current NAV value. <br><br>
+- `Medium Access`: These stations refrain from accessing the medium until their NAV timers expire, allowing the transmitting station to complete its transmission without interference.
+
+````py
+
+## Virtual Carrier Sense Example Scenario:
+
+1. # Station A wants to send data to Station B.
+   # It calculates the total time needed for the transmission, including any necessary SIFS, Data & Acks.
+
+2. # Station A sets the Duration Field in its frame to this calculated time and transmits the frame.
+
+3. # Station C and Station D, which are within range, receive the frame from Station A.
+   # They read the Duration Field and set their NAV timers to this value if it is greater than their current NAV value.
+
+4. # Station C and Station D refrain from transmitting until their NAV timers expire,
+   # allowing Station A to complete its transmission to Station B without collision.
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+Station A                                                                       Station B
++===============+          +---------------------------------+          +===============+ 
+| transmitting  |------->>>| {{ Frame with Duration Field }} |------->>>|   receiving   |  
++===============+          +---------------------------------+          +===============+                              
+                           \
+                             \
+                               \
+                                V
+                             Stations C and D (or other stations):
+                             +------------------------------------------------------------------+
+                             |   1. Read Duration Field                                         |
+                             |   2. Set NAV timers:                                             |
+                             |      if NAV > current NAV value, then STA will update their NAV  |
+                             |      while NAV ≠ 0, STA will presume medium is busy              |
+                             |   3. Wait from transmitting                                      |
+                             +------------------------------------------------------------------+
+
+````
+
+
 ### ⌛💹🔢 Duration Values
 
 The Duration Field determine the **time in microseconds (μs)** needed to complete the Frame Exchange. This is measured **AFTER the current frame**.
@@ -4845,47 +4889,6 @@ ________________________________________________________________________________
 
 
 
-**How Virtual Carrier Sense Works?**
-
-- `Frame Transmission`: A station wishing to transmit sends a frame with a Duration Field indicating how long it will use the medium. <br><br>
-- `NAV Update`: Other stations that receive this frame read the Duration Field and set their NAV timers accordingly if the Duration value is greater than their current NAV value. <br><br>
-- `Medium Access`: These stations refrain from accessing the medium until their NAV timers expire, allowing the transmitting station to complete its transmission without interference.
-
-````py
-
-# Virtual Carrier Sense Example Scenario:
-
-1. # Station A wants to send data to Station B.
-   # It calculates the total time needed for the transmission, including any necessary acknowledgments.
-
-2. # Station A sets the Duration Field in its frame to this calculated time and transmits the frame.
-
-3. # Station C and Station D, which are within range, receive the frame from Station A.
-   # They read the Duration Field and set their NAV timers to this value if it is greater than their current NAV value.
-
-4. # Station C and Station D refrain from transmitting until their NAV timers expire,
-   # allowing Station A to complete its transmission to Station B without collision.
-
-# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
-
-    Station A (transmitting)  -------> Frame with Duration Field -------> Station B (receiving)
-                                \
-                                 \
-                                  \
-                                   \
-                                    V
-                           Stations C and D (other stations)
-                           --------------------------------
-                           |   Read Duration Field        |
-                           |   Set NAV timers             |
-                           |   NAV > current NAV value    |
-                           |   While NAV ≠ 0              |
-                           |   Presume medium is busy     |
-                           |   Wait from transmitting     |
-                           --------------------------------
-
-````
 
 
 
