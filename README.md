@@ -4790,9 +4790,9 @@ Unlike Physical Carrier Sense, which relies on detecting actual transmissions at
 The two key components of Virtual Carrier Sense are:
 
 1. **`Duration Field`** <br><br>
-    - **Purpose**: Indicates the amount of time (in microseconds) that the channel will be occupied by the current frame exchange sequence.
-    - **Mechanism**: The Duration Field is included in the **Frame Control of the MAC header**. It specifies how long the transmitting station expects to use the medium, including any acknowledgment frames that may be sent in response.
-    - **Usage**: Other stations in the network read the Duration Field and update their NAV accordingly to avoid transmitting during the specified period.
+    - **Purpose**: Indicates the amount of time (in microseconds) that the channel will be occupied by the current frame exchange sequence. 
+    - **Mechanism**: The Duration Field is included in the **Frame Control of the MAC header**. It specifies how long the transmitting station expects to use the medium, including any acknowledgment frames that may be sent in response. **The Duration Field indicated how much time on the medium is going to be requerid to transmit THE REST of the frames requiered in a 802.11 frame exchange. (eg. if it is a CTS frame the duration field will be THE REST of the exchange: 2 SIFS, Data Frame, 3 ACKs).**
+    - **Usage**: Other stations in the network demodulate the 802.11 frame and **read the Duration Field in the MPDU** and update their **NAV Timer** accordingly to avoid transmitting during the specified period. The stations will update the timer until it reach 0, **when NAV = 0 then stations will try to comunicate _(but before stations need to complete IFS & Backoff timer processes)_. If a station can't demodulate the MPDU, then they will measure the medium using Physical Carrier Sense.** 
     - **Important**: **NAV is only updated when the Duration value is greater than the current NAV value.** <br><br>
 2. **`Network Allocation Vector (NAV)`** <br><br>
     - **Purpose**: Acts as a timer that represents the period during which the medium is expected to be busy, based on the Duration Field values from received frames.
@@ -4806,6 +4806,45 @@ The two key components of Virtual Carrier Sense are:
 - 🦈 **Duration Field more than 0** :: NAV > 0 : `wlan.duration > 0`
   
 **IMPORTANT:** In Wireshark (or any other protocol analyzer), the Network Allocation Vector (NAV) is not directly displayed as a single field because it is a conceptual timer maintained by each station based on the Duration Field found in the MAC header of 802.11 frames. However, you can infer the NAV by examining the Duration Field of the frames. By inspecting the Duration Field, you can understand the NAV that stations would use. The Duration Field value indicates how long the medium will be busy, and stations use this value to set their NAV timers. While Wireshark doesn't explicitly show the NAV, the Duration Field provides the necessary information to infer it.
+
+### ⌛💹🔢 Duration Values
+
+The Duration Field determine the **time in microseconds (μs)** needed to complete the Frame Exchange. This is measured **AFTER the current frame**.
+
+````py
+
+## Duration Values >> Data Exchange:
+
+   # In a Data Exchange scenario the Duration is equal the exchange AFTER the Data Frame:
+   
+   #   SIFS + Ack:
+
+        ._______________________________.        ._______.
+  DIFS  |             Data              |  SIFS  |  Ack  |
+__________________________________________________________  
+                                         <--------------->  <<<--- Data Duration =  SIFS + Ack
+                                                        <>  <<<--- Ack Duration  =  0
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+## Duration Values >> RTS/CTS Data Exchange:
+
+   # In a Data Exchange where RTS/CTS is used, Duration is equal the exchange AFTER the RTS Frame:
+   
+   #   x3 SIFS + CTS + Data + ACK:
+
+        ._____.        ._____.        ._______________________________.        ._______.
+  DIFS  | RTS |  SIFS  | CTS |  SIFS  |             Data              |  SIFS  |  Ack  |
+________________________________________________________________________________________
+               <----------------------------------------------------------------------->  <<<--- RTS Duration  =  x3 SIFS + CTS + Data + ACK
+                              <-------------------------------------------------------->  <<<--- CTS Duration  =  x2 SIFS + Data + ACK
+                                                                       <--------------->  <<<--- Data Duration =  SIFS + Ack
+                                                                                      <>  <<<--- Ack Duration  =  0
+
+
+````
+
+
 
 **How Virtual Carrier Sense Works?**
 
@@ -4848,6 +4887,9 @@ The two key components of Virtual Carrier Sense are:
                            --------------------------------
 
 ````
+
+
+
 
 
 
