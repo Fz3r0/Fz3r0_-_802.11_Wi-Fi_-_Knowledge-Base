@@ -4581,6 +4581,7 @@ _Once a STA is connected to a WLAN via an AP, the STA need to communicate someho
 - [CSMA/CA (wireshark examples)](https://wifisharks.com/2020/10/31/csma-ca/) _`wifisharks`_
 - [Network Allocation Vector (NAV) Duration Field (wireshark examples)](https://wifisharks.com/2020/11/07/network-allocation-vector/#google_vignette) _`wifisharks`_
 - [IFS: InterFrame Space](https://wifisharks.com/2020/11/14/interframe-space/) _`wifisharks`_
+- [RTS/CTS Durations](https://mrncciew.com/2014/10/26/cwap-802-11-ctrl-rtscts/) _`nayarasi`_
 
 
 
@@ -4681,7 +4682,7 @@ This simplified process is followed for every frame transmission to ensure that 
      |                                v                                       v
      |                                v                                       v
      |                            +-----------------------------------------------+
-     |                            |     observe the appropiate IFS Interval       |
+     |                            |      wait fot the appropiate IFS Interval     |
      |                            |              (DIFS, SIFS, etc)                |
      |                            +-----------------------------------------------+
      |                                                    |
@@ -4853,11 +4854,17 @@ Station A                                                                       
 
 ### ⌛💹🔢 Duration Values
 
-The Duration Field determine the **time in microseconds (μs)** needed to complete the Frame Exchange. This is measured **AFTER the current frame**.
+The Duration Field determine the **time in microseconds (μs)** needed to complete the Frame Exchange. This is measured **AFTER the current frame**, this means: what is left after the current frame.
+
+There are 3 different main Duration Values types:
+
+1. **Data Exchange** _(AKA RTS Data Exchange)_ = `SIFS + Ack`
+2. **RTS/CTS Data Exchange** = `x3 SIFS + CTS + Data + ACK`
+3. **CTS-to-Self Data Exchange** = `x2 SIFS + Data + ACK`
 
 ````py
 
-## Duration Values >> Data Exchange:
+## Duration Values >> Data Exchange (AKA RTS Data Exchange):
 
    # In a Data Exchange scenario the Duration is equal the exchange AFTER the Data Frame:
    
@@ -4884,6 +4891,35 @@ ________________________________________________________________________________
                               <-------------------------------------------------------->  <<<--- CTS Duration  =  x2 SIFS + Data + ACK
                                                                        <--------------->  <<<--- Data Duration =  SIFS + Ack
                                                                                       <>  <<<--- Ack Duration  =  0
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+## Duration Values >> CTS-to-Self Data Exchange:
+
+   # In a Data Exchange where CTS-to-Self is used, Duration is equal the exchange AFTER the CTS Frame:
+   
+       #   x2 SIFS + Data + ACK:
+
+                       ._____.        ._______________________________.        ._______.
+                       | CTS |  SIFS  |             Data              |  SIFS  |  Ack  |
+                       _________________________________________________________________
+                              <-------------------------------------------------------->  <<<--- CTS Duration  =  x2 SIFS + Data + ACK
+                                                                       <--------------->  <<<--- Data Duration =  SIFS + Ack
+                                                                                      <>  <<<--- Ack Duration  =  0
+
+IMPORTANT:
+
+- # CTS-to-Self is simply another method of performing NAV distribution & that use only CTS frames.
+
+- # It is used strictly as protection mechanism for mixed mode environment.
+
+- # The CTS-to-self NAV distribution mechanism is lower in network overhead cost than is the RTS/CTS NAV distribution mechanism,
+  # but CTS-to-self is less robust against hidden nodes and collisions than RTS/CTS.
+
+- # STAs employing a NAV distribution mechanism should choose a mechanism such as CTS-to-self or RTS/CTS that is appropriate
+  # for the given network conditions.
+
+- # If errors occur when employing the CTS-to-self mechanism, STAs should switch to a more robust mechanism.
 
 ````
 
