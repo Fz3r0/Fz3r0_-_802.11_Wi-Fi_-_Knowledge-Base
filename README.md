@@ -4817,22 +4817,22 @@ The Duration Field determine the **time in microseconds (μs)** needed to comple
 
    # In a Data Exchange scenario the Duration is equal the exchange AFTER the Data Frame:
    
-   #   SIFS + Ack:
+       #   SIFS + Ack:
 
-        ._______________________________.        ._______.
-  DIFS  |             Data              |  SIFS  |  Ack  |
-__________________________________________________________  
-                                         <--------------->  <<<--- Data Duration =  SIFS + Ack
-                                                        <>  <<<--- Ack Duration  =  0
+                                      ._______________________________.        ._______.
+                                DIFS  |             Data              |  SIFS  |  Ack  |
+                              __________________________________________________________  
+                                                                       <--------------->  <<<--- Data Duration =  SIFS + Ack
+                                                                                      <>  <<<--- Ack Duration  =  0
 
-# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 ## Duration Values >> RTS/CTS Data Exchange:
 
    # In a Data Exchange where RTS/CTS is used, Duration is equal the exchange AFTER the RTS Frame:
    
-   #   x3 SIFS + CTS + Data + ACK:
-
+       #   x3 SIFS + CTS + Data + ACK:
+                              
         ._____.        ._____.        ._______________________________.        ._______.
   DIFS  | RTS |  SIFS  | CTS |  SIFS  |             Data              |  SIFS  |  Ack  |
 ________________________________________________________________________________________
@@ -4840,7 +4840,6 @@ ________________________________________________________________________________
                               <-------------------------------------------------------->  <<<--- CTS Duration  =  x2 SIFS + Data + ACK
                                                                        <--------------->  <<<--- Data Duration =  SIFS + Ack
                                                                                       <>  <<<--- Ack Duration  =  0
-
 
 ````
 
