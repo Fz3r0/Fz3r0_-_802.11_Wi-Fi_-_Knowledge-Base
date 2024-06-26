@@ -4684,10 +4684,12 @@ This simplified process is followed for every frame transmission to ensure that 
      |                                |                                       |   
      |                                v                                       v
      |                                v                                       v
-     |                            +-----------------------------------------------+
-     |                            |      wait fot the appropiate IFS Interval     |
-     |                            |              (DIFS, SIFS, etc)                |
-     |                            +-----------------------------------------------+
+     |                          +---------------------------------------------------+
+                                |  if CCA (CS/ED and NAV) say the medium is iddle:  |
+                                |                                                   |
+     |                          |       We must wait fot the appropiate IFS:        |
+     |                          |         (RIFS, SIFS, DIFS, AIFS, EIFS)            |
+     |                          +---------------------------------------------------+
      |                                                    |
      |                                                    |
      |                                                    v
@@ -4726,6 +4728,24 @@ This simplified process is followed for every frame transmission to ensure that 
                                                          |  TRANSMIT  FRAME  |
                                                          +===================+
 
+
+### These are the steps a station go through prior to transmit a frame to the wireless medium:
+
+1. # STAs use a physical carrier sense (Clear Channel Assessment—CCA) to determine if the wireless medium is busy.
+
+2. # STAs use virtual carrier sense (Network Allocation Vector—NAV) to detect if the medium is busy. When the virtual timer (NAV) reaches zero, STAs may proceed.
+
+3. # If conditions 1 and 2 are met, STAs wait the necessary IFS interval, as prescribed by the protocol.
+
+4. # If conditions 1 and 2 are met through the duration of condition 3, STAs generate a random backoff number in accordance with the range of allowed values.
+
+5. # STAs begin decrementing the backoff timer by one for every slot time duration that the wireless medium is idle.
+
+6. # After decrementing the backoff value to zero, with an idle medium, a STA may transmit the allotted frame exchange, in accordance with the parameters of the obtained transmission opportunity (TXOP).
+
+7. # If another STA transmits before Step 6 is completed, STAs observe steps 1, 2, 3, and 5 until the backoff timer is equal to zero.
+
+8. # After a successful transmission, repeat as needed. 
 
 ````
 
@@ -4943,6 +4963,79 @@ IMPORTANT:
 
 
 ## IFS
+_Interframe spaces are periods of time between frames; they are used to allow frames to be processed in a timely manner, avoid interference by ensuring frames are received, and prioritize transmission of certain frames. IFS is defined in the 802.11-2007 standard as: **“The time from the end of the last symbol of the previous frame to the beginning of the first symbol of the preamble of the subsequent frame as seen at the air interface.”**_
+
+After each frame transmission 802.11 protocol require an idle period on the medium called Inter Frame Space (IFS): 
+
+- IFS (Interframe spaces) is the time from the end of the last symbol of the previous frame to beginning og the first symbol of the preamble of the next frame in the air. <br><br>
+- The length of the IFS is depend on previous frame type, following frame type, access category, coordination function in use & PHY type as well. <br><br>
+- IFS unit of time is measured in microseconds (μs)  <br><br>
+- All types of IFS has fixed time for each PHY except AIFS <br><br>   
+- IFS are needed for both: <br><br>
+     - Keep buffer between the frames to avoid interference.
+     - Add control and to prioritize frame transmissions.
+
+### Types of IFS:
+
+- There are multiple types of IFS, some defined by the original standard and others added to in 802.11e-2005 & 802.11n-2009.
+- The type of IFS is dependent on the frame that will come after it.
+- Using a shorter duration IFS gives certain frames priority over others, such as an ACK frame using short IFS (SIFS). <br> <br>
+    - All IFS in a **QoS-BSS** are sent as **AIFS**.
+    - BSS that do **not support QoS** will use the legacy **DCF IFS (DIFS)**.
+
+#### `SIFS`: Short IFS
+
+- Shortest IFS _prior to 802.11n (RIFS)_
+- SIFS shall be used when STAs have seized the medium and need to keep it for the duration of the frame exchange sequence to be performed. Using the smallest gap between transmissions within the frame exchange sequence prevents other STAs, which are required to wait for the medium to be idle for a longer gap, from attempting to use the medium, thus giving priority to completion of the frame exchange sequence in progress.
+- Frames specified to use SIFS will take priority over those using shorter IFS.
+
+Main Uses of SIFS:
+
+- CTS frames sent as a response to RTS frames.
+- Data frames sent immediately after a CTS frame.
+- ACK frames sent immediately after receiving a data frame.
+
+Duration of SIFS:
+
+- 5GHz = `16 μs`
+- 2.4GHz = `10 μs`
+
+#### `RIFS`: Reduced IFS
+
+- Shortest IFS at 2μs. _Even shorter than SIFS_
+- Introduced in 802.11n for networks operating in Greenfield mode for burst transmissions.
+- 802.11ac and later standards do not use RIFS.
+
+Main Uses of RIFS:
+
+- For networks operating in Greenfield mode for burst transmissions.
+
+Duration of RIFS:
+
+- 5GHz = `2 μs`
+- 2.4GHz = `2 μs`
+
+
+### Priority of IFS:
+
+````py
+
+## IFS Priority
+
+"Higher Priority"                                 "Lower Priority"
+
+        RIFS >>> SIFS >>> PIFS >>> DIFS/AIFS >>> EIFS 
+
+````
+
+
+
+
+
+
+
+
+
 
 | Inter Frame Space | Standard        | Includes/Timing                             | Description                                                                                                                                                                           |
 |-------------------|-----------------|---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
