@@ -3016,7 +3016,10 @@ The next table apply **only for Data Frames**:
 
 - `Management` frames **use three of the four available address fields** in an 802.11 frame `Addresses 1 to 3`. A management frame is also known as MAC Management Protocol Data Unit (MMPDU) and they do not use the Address 4 field which is only used with a mesh basic service set. <br> <br>
 - `RTS` frames **uses only two available address fields** in an 802.11 frame `Addresses 1 to 2`. <br> <br>
-- `CTS` frames **uses only one address field** in an 802.11 frame `Address 1`. 
+- `CTS` frames **uses only one address field** in an 802.11 frame `Address 1`. <br> <br>
+- `Address 1` is always the `receiver address (RA)`.
+- `Address 2` is always the `transmitter address (TA)`.
+
         
 **Each of the four 802.11 Address Fields may have one of 5 different interpretations:**
 
