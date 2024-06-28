@@ -4963,7 +4963,7 @@ IMPORTANT:
 
 
 
-## IFS
+## ⌛📏🏁 IFS (Interframe spaces)
 _Interframe spaces are periods of time between frames; they are used to allow frames to be processed in a timely manner, avoid interference by ensuring frames are received, and prioritize transmission of certain frames. IFS is defined in the 802.11-2007 standard as: **“The time from the end of the last symbol of the previous frame to the beginning of the first symbol of the preamble of the subsequent frame as seen at the air interface.”**_
 
 After each frame transmission 802.11 protocol require an idle period on the medium called Inter Frame Space (IFS): 
@@ -4979,7 +4979,7 @@ After each frame transmission 802.11 protocol require an idle period on the medi
 
 ---
 
-### Types of IFS:
+### ⌛📏🔠 Types of IFS:
 
 - There are multiple types of IFS, some defined by the original standard and others added to in 802.11e-2005 & 802.11n-2009.
 - The type of IFS is dependent on the frame that will come after it.
@@ -4992,27 +4992,27 @@ After each frame transmission 802.11 protocol require an idle period on the medi
 
 ---
 
-### `SIFS`: Short IFS
+### ⌛📏 `SIFS`: Short IFS
 
 - Shortest IFS at 16 μs & 10 μs _prior to 802.11n (RIFS)_
 - SIFS shall be used when STAs have seized the medium and need to keep it for the duration of the frame exchange sequence to be performed. Using the smallest gap between transmissions within the frame exchange sequence prevents other STAs, which are required to wait for the medium to be idle for a longer gap, from attempting to use the medium, thus giving priority to completion of the frame exchange sequence in progress.
 - Frames specified to use SIFS will take priority over those using shorter IFS.
 
-**Main Uses of SIFS:**
+**⭕ Main Uses of SIFS:**
 
 - This type is used for RTS/CTS and for positive Ack based high priority transmission.
 - CTS frames sent as a response to RTS frames.
 - Data frames sent immediately after a CTS frame.
 - ACK frames sent immediately after receiving a data frame.
 
-**Duration of SIFS:**
+**⌛ Duration of SIFS:**
 
 - 5GHz = `16 μs`
 - 2.4GHz = `10 μs`
 
 ---
 
-### `RIFS`: Reduced IFS
+### ⌛📏 `RIFS`: Reduced IFS
 
 - Shortest IFS at 2μs. _Even shorter than SIFS_
 - RIFS were introduced with 802.11n for networks operating in Greenfield mode to improve efficiency for transmissions to the same receiver in which a SIFS-separated response is not required, such as a transmission burst (CFB-Contention Free Burst)
@@ -5020,14 +5020,49 @@ After each frame transmission 802.11 protocol require an idle period on the medi
 - In actual 802.11n application RIFS is not used due to Aggregation with Block ACK getting more advantages.
 - 802.11ac and later standards **do not use RIFS**.
 
-**Main Uses of RIFS:**
+**⭕ Main Uses of RIFS:**
 
 - For networks operating in Greenfield mode for burst transmissions (CFB-Contention Free Burst).
 
-**Duration of RIFS:**
+**⌛ Duration of RIFS:**
 
 - 5GHz = `2 μs`
 - 2.4GHz = `2 μs`
+
+---
+
+### ⌛📏 `EIFS`: Extended IFS
+
+- Duration in NON-OFDM needs a formula, for OFDM this equates to 160μs by default.
+- Used in legacy DCF networks when a station is retransmitting (no ACK received) a frame that was previously corrupted due to collision or interference.
+- The EIFS time is long enough to make sure the frame is realle lost and also gives chance to other sender to complete their backoff if it is in progress.
+- EIFS is not used with A-MPDUs because the use of Block-ACK (Block-ACK already indicates about received and not received frames to the sender)
+
+**⭕ Main Uses of EIFS:**
+
+- All devices look for frames that have an incorrect frame check sequence (FCS), this is how they identify corrupt frames. When any AP or station hears a corrupt frame on their channel, they defer transmission for an EIFS to allow the frame to be retransmitted. 
+
+**⌛ Duration of EIFS:**
+
+- **EIFS** = SIFS + (8 * ACKsize) + Preamble Length + PLCP Header Length + DIFS 
+- For OFDM, this equates to `160μs` by default. <br><br>
+- **EIFS (in DCF)**  = SIFS + DIFS + ACK_Tx_Time
+    - EIFS 802.11b/g/n devices using DSS = 364μS
+    - EIFS 802.11g/n devices using OFDM = 160μS
+    - EIFS 802.11a/n devices (5GHz)         = 160μS <br><br>
+- **EIFS (in EDCA)**  = SIFS + AIFS[AC] + ACK_Tx_Time
+
+**⚠️ Near/Far Problem in EIFS:**
+
+- Due to side effect of EIFS, stations near to AP could cause problem to stations at Far(hence called Near/Far problem).
+- When data send between AP & near by stations, they can use high data rates where far stations cannot be demodulate & interpret as corrupted frame. So far stations stay quiet for EIFS, while the near station will be allowed to use DIFS or AIFS.
+- The use of DIFS will give nearby station higher priority & get more opportunity to transmit while far station remain quiet.
+
+---
+
+### ⌛📏 `PIFS`: PCF IFS
+
+
 
 ---
 
@@ -5035,11 +5070,12 @@ After each frame transmission 802.11 protocol require an idle period on the medi
 
 - Duration is SIFS + 2 slot times (The duration of a DIFS is longer than both the SIFS and PIFS.).
 
-**Main Uses of DIFS:**
+**⭕ Main Uses of DIFS:**
 
+- For `NON QoS` frames.
 - When a STA desires to transmit a data frame (MPDU) or management frame (MMPDU) for the first time within a DCF network, the duration of a DIFS must be observed after the previous frame’s completion. 
 
-**Duration of DIFS:**
+**⌛ Duration of DIFS:**
 
 - SIFS + 2 slot times: <br><br>
     - SlotTime :: 802.11b/g/n (2.4 GHz : DSS ) = `20μS` <br><br>
@@ -5049,7 +5085,7 @@ After each frame transmission 802.11 protocol require an idle period on the medi
 
 ---
 
-### `EIFS`: Extended IFS
+
 
 
 
