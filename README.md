@@ -4584,7 +4584,8 @@ _Once a STA is connected to a WLAN via an AP, the STA need to communicate someho
 - [CSMA/CA (wireshark examples)](https://wifisharks.com/2020/10/31/csma-ca/) _`wifisharks`_
 - [Network Allocation Vector (NAV) Duration Field (wireshark examples)](https://wifisharks.com/2020/11/07/network-allocation-vector/#google_vignette) _`wifisharks`_
 - [IFS: InterFrame Space](https://wifisharks.com/2020/11/14/interframe-space/) _`wifisharks`_
-- [RTS/CTS Durations](https://mrncciew.com/2014/10/26/cwap-802-11-ctrl-rtscts/) _`nayarasi`_
+- [Difference Between SIFS, PIFS, DIFS, EIFS And AIFS](https://www.rfwireless-world.com/Terminology/WLAN-SIFS-vs-PIFS-vs-DIFS-vs-EIFS-vs-AIFS.html) _`rfwireless-world`_
+- [RTS/CTS Durations](https://mrncciew.com/2014/10/26/cwap-802-11-ctrl-rtscts/) _`nayarasi`_ 
 
 
 
@@ -4967,53 +4968,90 @@ _Interframe spaces are periods of time between frames; they are used to allow fr
 
 After each frame transmission 802.11 protocol require an idle period on the medium called Inter Frame Space (IFS): 
 
-- IFS (Interframe spaces) is the time from the end of the last symbol of the previous frame to beginning og the first symbol of the preamble of the next frame in the air. <br><br>
-- The length of the IFS is depend on previous frame type, following frame type, access category, coordination function in use & PHY type as well. <br><br>
+- IFS (Interframe spaces) is the time from the end of the last symbol of the previous frame to beginning og the first symbol of the preamble of the next frame in the air. 
+- The interframe spacing timings are defined as time gaps on the medium.
 - IFS unit of time is measured in microseconds (μs)  <br><br>
-- All types of IFS has fixed time for each PHY except AIFS <br><br>   
+- The length of the IFS is depend on previous frame type, following frame type, access category, coordination function in use & PHY type as well. 
+- All types of IFS has fixed time for each PHY except AIFS  
 - IFS are needed for both: <br><br>
      - Keep buffer between the frames to avoid interference.
      - Add control and to prioritize frame transmissions.
+
+---
 
 ### Types of IFS:
 
 - There are multiple types of IFS, some defined by the original standard and others added to in 802.11e-2005 & 802.11n-2009.
 - The type of IFS is dependent on the frame that will come after it.
 - Using a shorter duration IFS gives certain frames priority over others, such as an ACK frame using short IFS (SIFS). <br> <br>
-    - All IFS in a **QoS-BSS** are sent as **AIFS**.
-    - BSS that do **not support QoS** will use the legacy **DCF IFS (DIFS)**.
 
-#### `SIFS`: Short IFS
+**First time transmission:**
 
-- Shortest IFS _prior to 802.11n (RIFS)_
+- All IFS in a **QoS-BSS** are sent as **Arbitration IFS (AIFS)**. 
+- BSS that do **not support QoS** will use the legacy **DCF IFS (DIFS)**.
+
+---
+
+### `SIFS`: Short IFS
+
+- Shortest IFS at 16 μs & 10 μs _prior to 802.11n (RIFS)_
 - SIFS shall be used when STAs have seized the medium and need to keep it for the duration of the frame exchange sequence to be performed. Using the smallest gap between transmissions within the frame exchange sequence prevents other STAs, which are required to wait for the medium to be idle for a longer gap, from attempting to use the medium, thus giving priority to completion of the frame exchange sequence in progress.
 - Frames specified to use SIFS will take priority over those using shorter IFS.
 
-Main Uses of SIFS:
+**Main Uses of SIFS:**
 
+- This type is used for RTS/CTS and for positive Ack based high priority transmission.
 - CTS frames sent as a response to RTS frames.
 - Data frames sent immediately after a CTS frame.
 - ACK frames sent immediately after receiving a data frame.
 
-Duration of SIFS:
+**Duration of SIFS:**
 
 - 5GHz = `16 μs`
 - 2.4GHz = `10 μs`
 
-#### `RIFS`: Reduced IFS
+---
+
+### `RIFS`: Reduced IFS
 
 - Shortest IFS at 2μs. _Even shorter than SIFS_
-- Introduced in 802.11n for networks operating in Greenfield mode for burst transmissions.
-- 802.11ac and later standards do not use RIFS.
+- RIFS were introduced with 802.11n for networks operating in Greenfield mode to improve efficiency for transmissions to the same receiver in which a SIFS-separated response is not required, such as a transmission burst (CFB-Contention Free Burst)
+- 802.11n standard use RIFS & Block Acknowledgement (mandatory in 802.11n). RIFS is used only when Block ACK is enabled. When Block ACK are used, data frames of a CFB may send consecutively without interruption by ACK. At the end of CFB, Tx Station will simply send BAR (BlockACKRequest) & receiving a single Block Acknowledgement (BA).
+- In actual 802.11n application RIFS is not used due to Aggregation with Block ACK getting more advantages.
+- 802.11ac and later standards **do not use RIFS**.
 
-Main Uses of RIFS:
+**Main Uses of RIFS:**
 
-- For networks operating in Greenfield mode for burst transmissions.
+- For networks operating in Greenfield mode for burst transmissions (CFB-Contention Free Burst).
 
-Duration of RIFS:
+**Duration of RIFS:**
 
 - 5GHz = `2 μs`
 - 2.4GHz = `2 μs`
+
+---
+
+### `DIFS`: Distributed IFS
+
+- Duration is SIFS + 2 slot times (The duration of a DIFS is longer than both the SIFS and PIFS.).
+
+**Main Uses of DIFS:**
+
+- When a STA desires to transmit a data frame (MPDU) or management frame (MMPDU) for the first time within a DCF network, the duration of a DIFS must be observed after the previous frame’s completion. 
+
+**Duration of DIFS:**
+
+- SIFS + 2 slot times: <br><br>
+    - SlotTime :: 802.11b/g/n (2.4 GHz : DSS ) = `20μS` <br><br>
+    - SlotTime :: 802.11g/n (2.4 GHz : HT or ERP) = `20μS` with **long preamble**
+    - SlotTime :: 802.11g/n (2.4 GHz : HT or ERP) = `9μS`  with **short preamble** <br><br>
+    - SlotTime :: 802.11a/n/ac (5 GHz) = `9μS`
+
+---
+
+### `EIFS`: Extended IFS
+
+
 
 
 ### Priority of IFS:
