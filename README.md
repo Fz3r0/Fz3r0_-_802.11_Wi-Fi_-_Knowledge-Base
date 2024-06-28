@@ -6870,13 +6870,13 @@ Concepts used in FFT:
 
 - **`FFT Bin`**:  <br><br>
     - The resolution bandwidth (RBW) is dictated by the size of the FFT Bin
-    - Folowwing statistics are gathered for each bin: Average Power, Max Power, Duty Cicle
+    - Folowwing statistics are gathered for each bin: Average Power, Max Power, Duty Cicle  <br><br>
 - **`Sampling Rate`**: <br><br>
-    - How often the spectrum analyzer takes measurments
+    - How often the spectrum analyzer takes measurments  <br><br>
 - **`Dwell time`**: <br><br>
     - The amount of time spent measuring each sample    
 
---
+---
 
 ### 📈💯 Spectrum Views: `Duty Cycle` / `Channel Utilization`
 
