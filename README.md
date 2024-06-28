@@ -5324,6 +5324,8 @@ _A client STA can be in one of two Power Management modes:_
     - 🦈 PVB = 0 ==>> **No unicast frames are buffered** :: `wlan.tim.partial_virtual_bitmap == 00` 
     - 🦈 PVB more than 0 ==>> **Unicast frames are buffered** :: `wlan.tim.partial_virtual_bitmap > 00`
 
+⚠️ **`IMPORTANT`**: **The minimum value of the Length field of the Traffic Indication Map (TIM) information element is 4**. This value includes the length of the **Partial Virtual Bitmap**, which is at least one octet, along with the other **required fields (DTIM Count, DTIM Period, and Bitmap Control)**.
+
 ---
 
 ### 🚨📩📬 PS Information Element: `DTIM (Delivery Traffic Indication Map)`
