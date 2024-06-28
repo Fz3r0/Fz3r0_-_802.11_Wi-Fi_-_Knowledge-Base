@@ -6844,10 +6844,20 @@ Spectrum Analyzers can be classified in 3 basic categories in reference to their
 - Swept Spectrum Analyzers (SA):
 - Vector Signal Analyzers (VSA):
 
-## Spectrum Views
+## 📈 Spectrum Views
 _It is very important to understand what information can be understood from the different views_
 
-### Spectrum Views: `FFT (Fast Fourier Transform)`
+- RF signal can represent in either time domain or frequency domain.
+- Once you do Fast Fourier Transformation (FFT) for a time domain signal you can get the Frequency domain signal.
+- In RF, mostly Frequency Domain representation is more useful.
+
+Here are some different views available in a spectrum analyzer:
+
+---
+
+### 📈📏 Spectrum Views: `Real time FFT (Fast Fourier Transform)`
+
+❗ Frequency represent in horizontal axis and the energy in **`dBm defined`** in vertical axis
 
 - This view is considered a **Real-time Spectrum Analyzer (RSA).**
 - The key words of FFT are **`real-time`**; **the information shown is live.**. That's why the FFT graphics are common named as **Real Time FFT**. <br><br>
@@ -6865,14 +6875,36 @@ Concepts used in FFT:
 - **`Dwell time`**:
     - The amount of time spent measuring each sample    
 
-### Spectrum Views: `Swept Spectrogram` & `Waterfall View`
+--
+
+### 📈💯 Spectrum Views: `Duty Cycle` / `Channel Utilization`
+
+❗ Show the **`percent (%)`** of channel utilization
+
+- In this veiw you can see whether a device is constantly using a frequency (100% duty cycle on a particular channel mean it is not usable & caused by sort of jammers)
+- Displays a measurement of the amount of time a received signal amplitude is above the noise floor or another arbitrary threshold
+- Although the term duty cycle can be subjective based on the context in which it is used within WLAN technology, it is commonly identifies the percentage of time an RF signal is above a specific threshold. A high duty cycle such as 95-100% can indicate a problem such as an RF jammer or other devise that is causing high utilization of the RF channel.
+- Channel utilization shows the percentage of time that the frequency is in use over a period of time. The software in use determines the threshold, some may use the noise floor where others may use a higher value.
+- For example, Aruba documentation states “The spectrum analysis feature considers a frequency bin to be utilized if the detected power in that bin is at least 20 dB higher than the nominal noise floor on that channel.” This is a general measure of how busy the network is.
+- Channel utilization measures both Wi-Fi and non-Wi-Fi devices.
+- Duty cycle percentage is used to identify the amount of time a single device is active. Ekahau shows utilization percentages per channel in real time. Spectrum XT shows “Duty Cycle” percentage but doesn’t reference any single device (this is channel utilization labeled as duty cycle.)
+
+---
+
+### 📈⏳ Spectrum Views: `Swept Spectrogram` & `Waterfall View`
+
+❗ In this view vertical axis shows the historical data (similar to a waterfall)
 
 - This view is considered a **Swept Spectrum Analyzer (SA).**
 - This is the **same information as the real-time FFT** but often in a different view and tracked over a longer period.
 - These views can often be configured within software to specify the length of time.
 - The **Waterfall View** is the information from the **swept spectrogram** showing: time, frequency, and power but viewed vertically.
 
-### Spectrum Views: `Power Spectral Density` / `Density View`
+---
+
+### 📈🌈 Spectrum Views: `Power Spectral Density` / `Density View`
+
+❗ Horizontal axis represent frequency & vertical axis represent energy in dBm with **`brightness of color`** being determined by how many times that specific bit of information has been captured.
 
 - **Power Spectral Density** can be also referred to as **spectrum density**
 - Useful for find repetition of **data points** over time to help locate the interferer.
@@ -6881,18 +6913,13 @@ Concepts used in FFT:
 - This is the primary view in Ekahau; you can add the real-time FFT average or max sweep to show overtop of the density view as well.
 - Spectrum density views use colors to indicate the channel utilization. (eg. Ekahau uses green to represent low utilization and red/black to show high/very high utilization.)
 
+---
 
-### Spectrum Views: `Duty Cycle` / `Channel Utilization`
+### 📈🛜 Spectrum Views: WLAN Integration
 
-- Displays a measurement of the amount of time a received signal amplitude is above the noise floor or another arbitrary threshold
-- Although the term duty cycle can be subjective based on the context in which it is used within WLAN technology, it is commonly identifies the percentage of time an RF signal is above a specific threshold. A high duty cycle such as 95-100% can indicate a problem such as an RF jammer or other devise that is causing high utilization of the RF channel.
-- Channel utilization shows the percentage of time that the frequency is in use over a period of time. The software in use determines the threshold, some may use the noise floor where others may use a higher value.
-- For example, Aruba documentation states “The spectrum analysis feature considers a frequency bin to be utilized if the detected power in that bin is at least 20 dB higher than the nominal noise floor on that channel.” This is a general measure of how busy the network is.
-- Channel utilization measures both Wi-Fi and non-Wi-Fi devices.
-- Duty cycle percentage is used to identify the amount of time a single device is active. Ekahau shows utilization percentages per channel in real time. Spectrum XT shows “Duty Cycle” percentage but doesn’t reference any single device (this is channel utilization labeled as duty cycle.)
+❗ Spectrum Analysis + Information of WLANs similar to a **`Wi-Fi analyzer`++ tool (SSIDs name, RSSI, etc)
 
-### Spectrum Views: WLAN Integration
-
+- When spectrum analyzer has WiFi integration capability, it can combined those views. WiFi NIC can scan other channels & report that information to give a overall view on a particular band.
 - Spectrum analyzers show layer one information. It is frequently useful to view information from layer 2 within the same views. WLAN integration with spectrum analysis software enables this feature. The images below show the SSIDs and number of APs in Spectrum XT. We can also see detailed information in Ekahau about the APs, the SSIDs they broadcast, along with operating and capability information.
 
 
