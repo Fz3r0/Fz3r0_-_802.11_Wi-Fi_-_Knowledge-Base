@@ -6868,12 +6868,12 @@ Here are some different views available in a spectrum analyzer:
 
 Concepts used in FFT:
 
-- **`FFT Bin`**:
+- **`FFT Bin`**:  <br><br>
     - The resolution bandwidth (RBW) is dictated by the size of the FFT Bin
     - Folowwing statistics are gathered for each bin: Average Power, Max Power, Duty Cicle
-- **`Sampling Rate`**:
+- **`Sampling Rate`**: <br><br>
     - How often the spectrum analyzer takes measurments
-- **`Dwell time`**:
+- **`Dwell time`**: <br><br>
     - The amount of time spent measuring each sample    
 
 --
@@ -6894,7 +6894,7 @@ Concepts used in FFT:
 
 ### 📈⏳ Spectrum Views: `Swept Spectrogram` & `Waterfall View`
 
-❗ In this view vertical axis shows the historical data (similar to a waterfall)
+❗ In this view vertical axis shows the **`historical data (similar to a waterfall rectangle from Up-to-Down)`**
 
 - This view is considered a **Swept Spectrum Analyzer (SA).**
 - This is the **same information as the real-time FFT** but often in a different view and tracked over a longer period.
@@ -6918,7 +6918,7 @@ Concepts used in FFT:
 
 ### 📈🛜 Spectrum Views: WLAN Integration
 
-❗ Spectrum Analysis + Information of WLANs similar to a **`Wi-Fi analyzer`++ tool (SSIDs name, RSSI, etc)
+❗ Spectrum Analysis + Information of WLANs similar to a **`Wi-Fi analyzer tool (SSIDs name, RSSI, etc)`**
 
 - When spectrum analyzer has WiFi integration capability, it can combined those views. WiFi NIC can scan other channels & report that information to give a overall view on a particular band.
 - Spectrum analyzers show layer one information. It is frequently useful to view information from layer 2 within the same views. WLAN integration with spectrum analysis software enables this feature. The images below show the SSIDs and number of APs in Spectrum XT. We can also see detailed information in Ekahau about the APs, the SSIDs they broadcast, along with operating and capability information.
