@@ -5034,7 +5034,7 @@ After each frame transmission 802.11 protocol require an idle period on the medi
 
 ### ⌛📏 `EIFS`: Extended IFS
 
-- Duration in NON-OFDM needs a formula, for OFDM this equates to 160μs by default.
+- Duration for EIFS needs a formula, for OFDM this equates to 160μs by default.
 - Used in legacy DCF networks when a station is retransmitting (no ACK received) a frame that was previously corrupted due to collision or interference.
 - The EIFS time is long enough to make sure the frame is realle lost and also gives chance to other sender to complete their backoff if it is in progress.
 - EIFS is not used with A-MPDUs because the use of Block-ACK (Block-ACK already indicates about received and not received frames to the sender)
@@ -5061,19 +5061,30 @@ After each frame transmission 802.11 protocol require an idle period on the medi
 
 ---
 
-### ⌛📏 `PIFS`: PCF IFS
+### ⌛📏 `PIFS`: PCF IFS _(not implemented)_
 
+- PIFS has different durations depending on band and short/long slot time. 
+- PIFS is used in CFP (Contention Free Periods) in PCF mode. But PCF was not implemented in actual 802.11 Wi-Fi application so **there is no use for PIFS**.
+- Because PCF has not been implemented in 802.11 devices, you will not see PIFS used for this purpose. In order to gain priority over other STAs during contention, the AP can transmit a Channel Switch Announcement (802.11h) frame after observing a PIFS
 
+**⭕ Main Uses of EIFS:**
+
+- PIFS is used in Channel Switch Announcement Frame (802.11h) scenario to gain access to the medium priority (As PIFS is shorter than DIFS).
+- PIFS is also used for stations (STAs) operating under PCF to gain priority access of the medium at the start of CFP (contention free period).
+
+**⌛ Duration of PIFS:**
+
+- PIFS = `SIFS + Slot Time`
 
 ---
 
-### `DIFS`: Distributed IFS
+### ⌛📏 `DIFS`: Distributed IFS _(for Non QoS)_
 
 - Duration is SIFS + 2 slot times (The duration of a DIFS is longer than both the SIFS and PIFS.).
+- **For `NON QoS` frames** :: first time transmission within a DCF network
 
 **⭕ Main Uses of DIFS:**
 
-- For `NON QoS` frames.
 - When a STA desires to transmit a data frame (MPDU) or management frame (MMPDU) for the first time within a DCF network, the duration of a DIFS must be observed after the previous frame’s completion. 
 
 **⌛ Duration of DIFS:**
@@ -5086,12 +5097,35 @@ After each frame transmission 802.11 protocol require an idle period on the medi
 
 ---
 
+### ⌛📏 `AIFS`: Arbitration IFS _(for QoS)_
+
+- Duration is SIFS + 2 slot times (The duration of a DIFS is longer than both the SIFS and PIFS.).
+- **For `QoS` frames** :: first time transmission within a DCF network
+
+**⭕ Main Uses of AIFS:**
+
+- The AIFS shall be used by QoS STAs to transmit **all data frames (MPDUs)**, **all management frames (MMPDUs)**, and the following control frames: **PS-Poll**, **RTS**, **CTS (when not transmitted as a response to the RTS)**, **BlockAckReq**, and **BlockAck (when not transmitted as a response to the BlockAckReq)**.
+
+**⚠️ Arbitration Inter Frame Space Number (AIFSN) in AIFS:**
+
+- The number of slot times used in the AIFS is called the Arbitration Inter Frame Space Number (AIFSN).
+- 802.11e specifies 4 access categories (AV_VO : Voice, AC_VI : Video, AC_BE : Best Effort & AC_BK : Background). <br><br>
+    - **Voice & Video = `2 slottimes` by default**
+    - **Best Effort = `3 slottimes` by default**
+    - **Background = `7 slottimes` by default**
+
+**⌛ Duration of AIFS:**
+
+- AIFS[AC] = `AIFSN[AC] × SlotTime + SIFSTime`
 
 
 
 
 
-### Priority of IFS:
+
+## IFS Tables
+
+### Priotirty:
 
 ````py
 
