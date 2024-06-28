@@ -5019,6 +5019,7 @@ After each frame transmission 802.11 protocol require an idle period on the medi
 - 802.11n standard use RIFS & Block Acknowledgement (mandatory in 802.11n). RIFS is used only when Block ACK is enabled. When Block ACK are used, data frames of a CFB may send consecutively without interruption by ACK. At the end of CFB, Tx Station will simply send BAR (BlockACKRequest) & receiving a single Block Acknowledgement (BA).
 - In actual 802.11n application RIFS is not used due to Aggregation with Block ACK getting more advantages.
 - 802.11ac and later standards **do not use RIFS**.
+- **RIFS is used specifically between frame transmissions by the same AP or station to improve efficiency in certain high-throughput scenarios.**
 
 **⭕ Main Uses of RIFS:**
 
