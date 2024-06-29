@@ -3538,7 +3538,10 @@ _Data frames carry the actual data payload between devices in a WLAN. These fram
 _Fixed Schedule (default 100TU (Time Unit) = 1024us microseconds) | Sent always at Lowest Basic Data Rate configured |_
 - [**`Beacon`** :: Frame Decode @ Nayanajith](https://mrncciew.com/2014/10/08/802-11-mgmt-beacon-frame/) Fixed Schedule (default 100TU = 1024us microseconds) | Lowest Basic Data Rate
 - [`Beacon Frame Body` :: Elements](https://ieeexplore.ieee.org/document/9363693) IEEE 802.11-2020: Table 9-32 | 9.3.3.2
-- TBTT: The target beacon transmission time (TBTT) determines the rate at which Beacon management frames are sent. This value is 1,024 microseconds and usually multiplied by 100 time units (TU’s) which will allow the Beacon interval to be 102.4 milliseconds.
+
+Beacon Key Information
+
+- `TBTT: The target beacon transmission time (TBTT)`: determines the rate at which Beacon management frames are sent. This value is `1,024 microseconds` and usually multiplied by `100 time units (TU’s)` which will allow the Beacon interval to be 102.4 milliseconds.
 
 ## 🤳🏾🔍⚙️ 802.11 Management Frames: `Probe Request` & `Probe Response`
 _STAs send Probe Request on Active Scanning or after a Beacon in Passive Scanning | APs does not response an ACK from a Probe Request, AP responds with Probe Response directly (broadcast 802.11 Frames are neved ACKed) | Directed Probe Request conain SSID or wildcard set & Probe Request (broadcast) is sent empty bit_
