@@ -7250,7 +7250,11 @@ _Even if you getting for example 360mbps of Data Rate, it will noever be the act
 - [Forging Radiotap Headers](https://github.com/vanhoefm/libwifi/blob/master/docs/linux_tutorial.md#injecting-frames)
 
 
+## HEX Editors
 
+- [HEXed](https://hexed.it/) _hex editor running in browser_
+- [Im HEX](https://github.com/WerWolv/ImHex/)
+- [Im HEX online](https://web.imhex.werwolv.net/)
 
 
 
