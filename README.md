@@ -4590,8 +4590,10 @@ _Once a STA is connected to a WLAN via an AP, the STA need to communicate someho
 - [CSMA/CA (wireshark examples)](https://wifisharks.com/2020/10/31/csma-ca/) _`wifisharks`_
 - [Network Allocation Vector (NAV) Duration Field (wireshark examples)](https://wifisharks.com/2020/11/07/network-allocation-vector/#google_vignette) _`wifisharks`_
 - [IFS: InterFrame Space](https://wifisharks.com/2020/11/14/interframe-space/) _`wifisharks`_
+- [CWmin & CWmax: Contention Window details](https://wifisharks.com/2021/02/13/cwmin-cwmax/) _`wifisharks`_
 - [Difference Between SIFS, PIFS, DIFS, EIFS And AIFS](https://www.rfwireless-world.com/Terminology/WLAN-SIFS-vs-PIFS-vs-DIFS-vs-EIFS-vs-AIFS.html) _`rfwireless-world`_
-- [RTS/CTS Durations](https://mrncciew.com/2014/10/26/cwap-802-11-ctrl-rtscts/) _`nayarasi`_ 
+- [RTS/CTS Durations](https://mrncciew.com/2014/10/26/cwap-802-11-ctrl-rtscts/) _`nayarasi`_
+
 
 
 
@@ -4613,6 +4615,65 @@ _In every 802.11 network there must be a set of rules to determine when stations
 
 - Token Passing: Obsolete / Not used :: for Token Ring puproses
 - PCF (Point Coordination Function): Obsolete / Not used :: Alternative 802.11 Wireless method NOT implemented
+
+### 👨🏻‍⚖️🚦 Arbitration Methods
+
+- DCF – Distributed Coordination Function : Non-QoS WLAN
+- HCF with EDCA – Hybrid Coordination Function : QoS WLAN
+- EDCA – Enhanced Distributed Channel Access
+- PCF – Point Coordination Function (not implemented practically)
+
+### CFB
+
+`CFB (Contention-Free Burst)`: CFB refers to a burst of frames sent during a contention-free period, often associated with legacy 802.11 protocols.
+
+
+
+
+
+
+
+
+
+
+## Contention Methods Timeline
+
+| Arbitration Method | Standard      | Includes                              | Description                                                                                                                                                              |
+|--------------------|---------------|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `DCF` & _`PCF`_    | 802.11-1997   | CSMA/CA, _PCF_                          | `DCF (Distributed Coordination Function)` and `PCF (Point Coordination Function)` are the fundamental MAC (Medium Access Control) mechanisms defined in the original IEEE 802.11 standard for wireless LANs. <br><br> `DCF` uses CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance) for basic access. <br><br> `PCF` provides optional support for contention-free frame transfers but it is **NOT used**.                              |
+| `HCF`              | 802.11e-2005  | PCF, HCCA, EDCA                       | `HCF (Hybrid Coordination Function)` is an enhancement introduced in the IEEE 802.11e amendment to improve **QoS (Quality of Service)** by providing prioritized and parameterized traffic handling. <br><br> It includes both: <br><br> `EDCA (HCF Contention Access // Enhanced Distributed Channel Access)`: **Implemented** _(DCF is the foundation for EDCA)_ <br><br> `HCCA (HCF Controlled Channel Access)`: **Not Implemented** <br><br> _It also includes `PCF` but it is **NOT used**._                             |
+| `MCF`              | 802.11s-2011  | EDCA, MCCA                            | `MCF (Mesh Coordination Function)` is a MAC protocol introduced in the IEEE 802.11s standard for wireless mesh networks. It supports efficient routing and coordination among mesh nodes, enabling the formation of self-healing and self-configuring multi-hop networks for extended wireless coverage. It includes EDCA and MCCA (Mesh Coordinated Channel Access).                                                                                           |
+
+NOTE: WMM (Wireless Multi Media) is the Wi-Fi Alliance's QoS implementation based on a subset of EDCA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5125,28 +5186,16 @@ After each frame transmission 802.11 protocol require an idle period on the medi
 - AIFS[AC] = `AIFSN[AC] × SlotTime + SIFSTime`
 
 
-## IFS Tables
+## ⌛📅📊 IFS Tables
 
-### Estimated ACK Time
+### ⌛✅ Estimated ACK Time
 
 ACK Time:
 
 - **2.4 GHz = `1 Mbps` Data Rate = `304 μS`** <br><br>
 - **5 GHz = `6 Mbps` Data Rate = `44 μS`** 
 
-### All in one IFS table:
-
-| **PHY**                 | **Slot Time**                                                                    | **SIFS**                                                                   | **RIFS**         | **EIFS**                                                                            | **PIFS**                                                       | **DIFS**                                                    | **AIFS**                                  |
-|-------------------------|----------------------------------------------------------------------------------|----------------------------------------------------------------------------|------------------|-------------------------------------------------------------------------------------|----------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------|
-| **Name**                | /                                                                                | Short IFS                                                                  | Reduced IFS      | Extended IFS                                                                        | PCF IFS                                                        | Distributed IFS                                             | Arbitration IFS                           |
-| **Uses**                | /                                                                                | Between all frames transmitted within a TxOP                               | Only for 802.11n | Corrupt CRC Frames and Retries                                                      | _PCF_<br>_Unused in 802.11_                                    | Only for Non-QoS<br>Prior to Data or RTS in DCF             | Only for QoS (EDCA)<br>802.11e            |
-| **Duration Formula**    | aCCATime <br>+aRxRxTurnAroundTime <br>+aAirPropagation <br>+aMACProcessingDelay  | aRxRFDelay+aRxPLCPDelay <br>+aMACProcessingDelay <br>+aRxTxTurnAroundTime  | RIFS = 2μS       | EIFS (in DCF) = SIFS+DIFS+ACK_Tx_Time<br>EIFS (in EDCA) = SIFS+AIFS[AC]+ACK_Tx_Time | PIFS = SIFS+DIFS+ACK_Tx_Time                                   | DIFS = SIFS + 2x SlotTime<br>_SlotTime depends on each PHY_ | AIFS[AC] = AIFSN[AC]*SlotTime+SIFSTime    |
-| **HR/DSSS <br>802.11b** | 20μS                                                                             | 10μS                                                                       | _N/A_            | 364μS <br>(Depends on ACK Time)                                                     | _30μS_                                                         | 50μS                                                        | Variable:<br>Depending Access Method / CW |
-| **ERP<br>802.11g**      | Long = 20μS<br>Short = 9μS                                                       | Long = 10μS<br>Short = 10μS                                                | _N/A_            | Long = 364μS<br>Short = 342μS<br>(Depends on ACK Time)                              | _Long = 30μS_<br>_Short = 19μS_                                | Long = 50μS<br>Short = 28μS                                 | Variable:<br>Depending Access Method / CW |
-| **OFDM <br>802.11a**    | 9μS                                                                              | 16μS                                                                       | _N/A_            | 94μS <br>(Depends on ACK Time)                                                      | _25μS_                                                         | 34μS                                                        | Variable:<br>Depending Access Method / CW |
-| **HT<br>802.11n**       | 2.4GHz Long = 20μS<br>2.4GHz Short = 9μS<br>5GHz = 20μS                          | 2.4GHz = 10μS<br>5GHz = 16μS                                               | 2μS              | 2.4GHz = 342μS<br>5GHz = 94μS                                                       | _2.4GHz Long = 30μS_<br>_2.4GHz Short = 19μS_<br>_5GHz = 25μS_ | 2.4GHz Long = 50μS<br>2.4GHz Short = 28μS<br>5GHz = 34μS    | Variable:<br>Depending Access Method / CW |
-| **VHT<br>802.11ac**     | 9μS                                                                              | 16μS                                                                       | _N/A_            | 94μS <br>(Depends on ACK Time)                                                      | _25μS_                                                         | 34μS                                                        | Variable:<br>Depending Access Method / CW |
-### Priotirty:
+### ⌛👨‍⚖️ IFS Priotirty:
 
 ````py
 
@@ -5158,6 +5207,91 @@ ACK Time:
 
 ````
 
+### ⌛📅 All in one IFS table:
+
+| **PHY**                 | **Slot Time**                                                                    | **SIFS**                                                                   | **RIFS**         | **EIFS**                                                                            | **PIFS**                                                       | **DIFS**                                                    | **AIFS**                                  |
+|-------------------------|----------------------------------------------------------------------------------|----------------------------------------------------------------------------|------------------|-------------------------------------------------------------------------------------|----------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------|
+| **Name**                | /                                                                                | Short IFS                                                                  | Reduced IFS      | Extended IFS                                                                        | PCF IFS                                                        | Distributed IFS                                             | Arbitration IFS                           |
+| **Uses**                | /                                                                                | Between all frames transmitted within a TxOP                               | Only for 802.11n | Corrupt CRC Frames and Retries                                                      | _PCF_<br>_Unused in 802.11_                                    | Only for Non-QoS<br>Prior to Data or RTS in DCF             | Only for QoS (EDCA)<br>802.11e            |
+| **Duration Formula**    | aCCATime <br>+aRxRxTurnAroundTime <br>+aAirPropagation <br>+aMACProcessingDelay  | aRxRFDelay+aRxPLCPDelay <br>+aMACProcessingDelay <br>+aRxTxTurnAroundTime  | RIFS = 2μS       | EIFS (in DCF) = SIFS+DIFS+ACK_Tx_Time<br>EIFS (in EDCA) = SIFS+AIFS[AC]+ACK_Tx_Time | PIFS = SIFS+DIFS+ACK_Tx_Time                                   | DIFS = SIFS + 2x SlotTime<br>_SlotTime depends on each PHY_ | AIFS[AC] = AIFSN[AC]*SlotTime+SIFSTime    |
+| **HR/DSSS <br>802.11b** | 20μS                                                                             | 10μS                                                                       | _N/A_            | 364μS <br>(Depends on ACK Time)                                                     | _30μS_                                                         | 50μS                                                        | Variable:<br>Depending Access Method / CW |
+| **ERP<br>802.11g**      | Long = 20μS<br>Short = 9μS                                                       | Long = 10μS<br>Short = 10μS                                                | _N/A_            | Long = 364μS<br>Short = 342μS<br>(Depends on ACK Time)                              | _Long = 30μS_<br>_Short = 19μS_                                | Long = 50μS<br>Short = 28μS                                 | Variable:<br>Depending Access Method / CW |
+| **OFDM <br>802.11a**    | 9μS                                                                              | 16μS                                                                       | _N/A_            | 94μS <br>(Depends on ACK Time)                                                      | _25μS_                                                         | 34μS                                                        | Variable:<br>Depending Access Method / CW |
+| **HT<br>802.11n**       | 2.4GHz Long = 20μS<br>2.4GHz Short = 9μS<br>5GHz = 20μS                          | 2.4GHz = 10μS<br>5GHz = 16μS                                               | 2μS              | 2.4GHz = 342μS<br>5GHz = 94μS                                                       | _2.4GHz Long = 30μS_<br>_2.4GHz Short = 19μS_<br>_5GHz = 25μS_ | 2.4GHz Long = 50μS<br>2.4GHz Short = 28μS<br>5GHz = 34μS    | Variable:<br>Depending Access Method / CW |
+| **VHT<br>802.11ac**     | 9μS                                                                              | 16μS                                                                       | _N/A_            | 94μS <br>(Depends on ACK Time)                                                      | _25μS_                                                         | 34μS                                                        | Variable:<br>Depending Access Method / CW |
+
+
+
+
+
+
+## `Backoff Timer` & `Contention Window`
+
+- **`Contention Window`**: A range of numbers netween CWmin and CWmax from which a STA picks a random backoff value. <br><br>
+- **`Backoff`**: A random backoff value is counted down in a number of slots. If the medium becomes busy, pause the backoff time, and defer. 
+
+### Random Backoff Values
+
+````py
+
+### Random Backoff Values:
+
+    # There are different Random Backoff Values for each PHY
+
+    # There are also different Random Backoff Values for each QoS categories in EDCA
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+# 802.11b can be a Random Backoff Value between 0 and 31 slots
+                     
+802.11b   = |-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-| 
+            0                                                             31
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+# 802.11/g can be a Random Backoff Value between 0 and 15 slots
+
+802.11/g  = |-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
+            0                             15      
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+````
+
+**How Backoff Timer and CW works?**
+
+- After a STA has observed an idle wireless medium with carrier sense (CS) for the appropriate IFS interval (DIFS, EIFS, or AIFS).
+- To contend for medium access after the IFS, each station selects a backoff value called random backoff period and is selected at random by the STA from a window of possible values called a contention window (CW) calculated using the below formula where x is a value increments with each failed frame.
+
+**Contention Window (CW) Formula:**
+
+- `CW` = **2^x -1** 
+
+**CW in DSS & OFDM:**
+
+- `DSS` (x) **starts at 5** which resulting CW of `31`. 
+- `OFDM` (x) **starts at 4** which result in a CW of `15`. <br><br>
+- In both DSS & OFDM (x) values stops incrementing at 10 which result CW of `1023`. 
+
+**Table:**
+
+
+### Retries and Backoff
+
+````py
+
+## Retries and Backoff
+
+# If there's a retry in the transmission, the CWmax is doubled + 1 for every retry (until it reached the CWmax)
+
+CWmin
+  0                               
+ 
+
+````
+
+
+### Contention Window
 
 
 
@@ -5167,38 +5301,6 @@ ACK Time:
 
 
 
-| Inter Frame Space | Standard        | Includes/Timing                             | Description                                                                                                                                                                           |
-|-------------------|-----------------|---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **SIFS**          | 802.11-2007     | 10μS (2.4 GHz), 16μS (5 GHz)                | `SIFS (Shortest Inter Frame Space)`: is used within all coordination functions. It is the shortest of the IFSs and is used before ACK and CTS frames as well as the second or subsequent MPDUs of a fragment burst.             |
-| **RIFS**          | 802.11n         | 2μS                                         | `RIFS (Reduced Inter Frame Space)`: was introduced with 802.11n to improve efficiency for transmissions to the same receiver where a SIFS-separated response is not required, such as in a transmission burst (CFB).            |
-| **DIFS**          | 802.11a/g/n/ac  | SIFS + 2x SlotTime                          | `DIFS (Distributed Inter Frame Space)`: is used when a station wants to transmit a data frame (MPDU) or management frame (MMPDU) for the first time within a DCF network.                                                    |
-| **EIFS**          | 802.11b/g/n/a   | SIFS + DIFS + ACK_Tx_Time                   | `EIFS (Extended Inter Frame Space)`: is used when a station has received a frame with errors to give the transmitting station enough time to recognize the failure before the receiving station starts transmission again.     |
-| **PIFS**          | 802.11 (PCF)    | SIFS + SlotTime                             | `PIFS (PCF Inter Frame Space)`: is used during the contention-free period (CFP) in PCF mode. The AP can transmit a Channel Switch Announcement (802.11h) frame after observing a PIFS to gain priority over other stations.    |
-| **AIFS**          | 802.11e         | AIFSN[AC] × SlotTime + SIFSTime             | `AIFS (Arbitration Inter Frame Space)`: is used by QoS stations to transmit all data frames (MPDUs), all management frames (MMPDUs), and certain control frames.                                                              |
-
-
-
-
-## Contention Methods Timeline
-
-| Arbitration Method | Standard      | Includes                              | Description                                                                                                                                                              |
-|--------------------|---------------|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `DCF` & _`PCF`_    | 802.11-1997   | CSMA/CA, _PCF_                          | `DCF (Distributed Coordination Function)` and `PCF (Point Coordination Function)` are the fundamental MAC (Medium Access Control) mechanisms defined in the original IEEE 802.11 standard for wireless LANs. <br><br> `DCF` uses CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance) for basic access. <br><br> `PCF` provides optional support for contention-free frame transfers but it is **NOT used**.                              |
-| `HCF`              | 802.11e-2005  | PCF, HCCA, EDCA                       | `HCF (Hybrid Coordination Function)` is an enhancement introduced in the IEEE 802.11e amendment to improve **QoS (Quality of Service)** by providing prioritized and parameterized traffic handling. <br><br> It includes both: <br><br> `EDCA (HCF Contention Access // Enhanced Distributed Channel Access)`: **Implemented** _(DCF is the foundation for EDCA)_ <br><br> `HCCA (HCF Controlled Channel Access)`: **Not Implemented** <br><br> _It also includes `PCF` but it is **NOT used**._                             |
-| `MCF`              | 802.11s-2011  | EDCA, MCCA                            | `MCF (Mesh Coordination Function)` is a MAC protocol introduced in the IEEE 802.11s standard for wireless mesh networks. It supports efficient routing and coordination among mesh nodes, enabling the formation of self-healing and self-configuring multi-hop networks for extended wireless coverage. It includes EDCA and MCCA (Mesh Coordinated Channel Access).                                                                                           |
-
-NOTE: WMM (Wireless Multi Media) is the Wi-Fi Alliance's QoS implementation based on a subset of EDCA
-
-
-
-
-
-### Arbitration Methods
-
-- DCF – Distributed Coordination Function : Non-QoS WLAN
-- HCF with EDCA – Hybrid Coordination Function : QoS WLAN
-- EDCA – Enhanced Distributed Channel Access
-- PCF – Point Coordination Function (not implemented practically)
 
 
 
@@ -5206,14 +5308,28 @@ NOTE: WMM (Wireless Multi Media) is the Wi-Fi Alliance's QoS implementation base
 
 
 
-### cfb
 
-`CFB (Contention-Free Burst)`: CFB refers to a burst of frames sent during a contention-free period, often associated with legacy 802.11 protocols.
 
-### Radar DCF
-_Radar will affect the 5 GHz band on channels 120, 124 and 128. Using WLAN integration allows the analyst to easily identify the channels that are used with 802.11 and will help to identify radar that may impact the WLAN._
 
-###👨🏻‍⚖️🚦 Network Arbitration: `Arbitration Methods`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5222,53 +5338,6 @@ _Radar will affect the 5 GHz band on channels 120, 124 and 128. Using WLAN integ
 
 
 - `EDCA`: EDCA is an access method under Hybrid Coordination Function (HCF) and assigns user priorities based on the type of traffic sent. There are eight user priorities (0-7) that map to four different access categories AC-VO (voice) AC-VI (video) AC-BE (best effort) and AC-BK (background).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
