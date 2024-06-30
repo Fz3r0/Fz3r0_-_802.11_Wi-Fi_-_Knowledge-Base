@@ -4713,8 +4713,9 @@ This simplified process is followed for every frame transmission to ensure that 
 
 1. **`Physical Carrier Sense`**: Process of a device checking the frequency **(at physical layer)** to determine whether the medium is in use or not. It can detect both: **802.11 signals** (reading the PHy preamble) and **NON 802.11 signals** (measuring the RF energy) <br><br>
 2. **`Virtual Carrier Sense`**: Process of a device to determine whether the medium is in use or not using information of the **MAC Frame Headers**: **Duration Field** & **NAV** <br><br>
-3. **`Random Back-off timers`**: 
-4. **`IFS (Interframe Spaces)`**: Periods of time between frames; they are used to allow frames to be processed in a timely manner, avoid interference by ensuring frames are received, and prioritize transmission of certain frames.
+3. **`IFS (Interframe Spaces)`**: Periods of time between frames; they are used to allow frames to be processed in a timely manner, avoid interference by ensuring frames are received, and prioritize transmission of certain frames.  <br><br>
+4. **`Random Back-off timer`**: The random backoff value is counted down in a number of slots. If the medium becomes busy, pause the backoff time, and defer. The backoff value depends on the PHY and QoS/EDCA access.  
+
 
 ### CSMA/CA Flow Chart:
 
@@ -5275,6 +5276,13 @@ ACK Time:
 
 **Table:**
 
+| **PHY**      | **Contention Window Min<br>(aCWmin)** | **Contention Window Max<br>(CWmax)** |
+|--------------|---------------------------------------|--------------------------------------|
+| **802.11b**  | 31                                    | 1023                                 |
+| **802.11a**  | 15                                    | 1023                                 |
+| **802.11g**  | DSSS(0) = 31<br>OFDM(1) = 15          | 1023                                 |
+| **802.11n**  | 15                                    | 1023                                 |
+| **802.11ac** | 15                                    | 1023                                 |
 
 ### Retries and Backoff
 
@@ -5284,16 +5292,78 @@ ACK Time:
 
 # If there's a retry in the transmission, the CWmax is doubled + 1 for every retry (until it reached the CWmax)
 
-CWmin
-  0                               
- 
+## Example:
+
+    # If a STA chooses a Random Backoff Value of 15 (eg. the largest Value/Number of an OFDM tranmission) and there are retries,
+    # it will look like this: 
+
+
+       CWmin                                                                                                                            CWmax
+         0                                                                                                                               1023
+
+         |                                                                                                                                |
+Initial  |-| CW = 15                                                                                                                      |
+Attempt  |-|                                                                                                                              |
+         |                                                                                                                                |
+1st      |---| CW = 31                                                                                                                    |
+Retry    |---|                                                                                                                            |
+         |                                                                                                                                |
+2nd      |-------| CW = 63                                                                                                                |
+Retry    |-------|                                                                                                                        |
+         |                                                                                                                                |
+3rd      |---------------| CW = 127                                                                                                       |
+Retry    |---------------|                                                                                                                |
+         |                                                                                                                                |                    
+4th      |-------------------------------| CW = 255                                                                                       |
+Retry    |-------------------------------|                                                                                                |
+         |                                                                                                                                |
+5th      |---------------------------------------------------------------| CW = 511                                                       |
+Retry    |---------------------------------------------------------------|                                                                |
+         |                                                                                                                                |
+6th      |-------------------------------------------------------------------------------------------------------------------------------|| CW = 1023
+Retry    |-------------------------------------------------------------------------------------------------------------------------------||
+         |                                                                                                                                |
+More     |-------------------------------------------------------------------------------------------------------------------------------|| CW = 1023
+Retries  |-------------------------------------------------------------------------------------------------------------------------------||
+...      |                                                                                                                                |
+         |________________________________________________________________________________________________________________________________|
+
 
 ````
 
 
-### Contention Window
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Contention Window & EDCA in Wireshark
+
+The values of CWmin and BWMax
+
+
+- Vendor Specific WWM/WME (Wireless Multimedia) Parameter = `wlan.tag.number == 221` 
+- Type WMM = `wlan.wfa.ie.type == 0x02` <br><br>
 
 
 
