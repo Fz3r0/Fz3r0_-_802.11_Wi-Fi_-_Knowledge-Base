@@ -6591,9 +6591,11 @@ _Outlines a common seven-step methodology from problem identification to solutio
 ---
 
 ### 🕵️ Monitoring
+
 - [Grafana](https://grafana.com/) _Open source analytics & monitoring solution for Nwtworking & Databases_
 - [Zabbix](https://www.zabbix.com/) _The all-in-one, open-source solution that lets you monitor anything_
 - [Prometheus](https://prometheus.io/) _Free software application used for event monitoring and alerting_
+- [LAN Speed](https://totusoft.com/lanspeed) _LAN monitoring for just $10 (designed for small LANs)_
 
 ---
 
