@@ -7197,7 +7197,13 @@ _In some cases RF related problems may not be consistent. The best way to identi
 
 
 
+## Spectrum Analysis: `Find non RF Device`
 
+two systematic methods for dividing and locating or tracking unknown RF devices are:
+
+	
+- Triangulation
+- Quadrants
 
 
 
