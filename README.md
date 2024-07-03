@@ -5476,12 +5476,41 @@ Background   ::  |= 7 ======| |= 0 - 15 ==============|
 | Highest<br>⭐⭐⭐<br>⭐⭐⭐<br>⭐  | 6                              | AC_VO                            | VO                             | Voice                           | WMM Voice               | 2         | 3                         | 7                         | 40-55<br>110XXX     | 6                                              |
 | Highest<br>⭐⭐⭐<br>⭐⭐⭐<br>⭐⭐ | 7                              | AC_VO                            | NC                             | Network Control                 | WMM Voice               | 2         | 3                         | 7                         | 65-63<br>111XXX     | 7                                              |
 
-- Low Priority traffic:<br><br><br>**BACKGROUND**: Does not have strict throughput or latency requirements (like file transfers or print jobs) <br><br>
-- Low Priority traffic:<br><br><br>**SPARE**: Does not have strict throughput or latency requirements (like file transfers or print jobs)
-- Best Effort / non QoS capable traffic (DEFAULT TRAFFIC):<br><br><br>**DEFAULT LAN TRAFFIC**: Apps or devices that do not support QoS, such as legacy devices. Traffic not sensitive to latency but affected by delays (like internet browsing)  
-- Excellent Effort / non QoS capable traffic:<br><br><br>**VALUED CUSTOMERS**: Valued Apps or devices that do not support QoS, such as legacy devices. Traffic not sensitive to latency but affected by delays (like internet browsing)                                      - Video Priority for Controlled Load Services:<br><br><br>**CONTROLLED LOAD**: The controlled load service is intended to support a broad class of applications which have been developed for use in today's Internet, but are highly sensitive to overloaded conditions.    - Prioritize Video before other Data:<br><br><br>**LESS THAN 100MS LATENCY / JITTER**: Single 802.11g or 802.11a channel can support 3 or 4 SDTV video streams or 1 HDTV video stream   
-- Highest Priority:<br><br><br>**LESS THAN 10MS LATENCY / JITTER**: Multiple concurrent VoIP calls with low latency and toll voice quality    
-- Highest Priority:<br><br><br>**NETWORK CONTROL PROTOCOLS (SSH, SNMP, BGP, IGMP, ETC)**: Software delivers this traffic with highest priority. This traffic usually consists of keep-alive or hello messages because the loss of these packets jeopardizes proper network operation.
+**Table Details:**
+
+- **`Background`** :: Low Priority traffic ⭐
+    - Does not have strict throughput or latency requirements.
+    - It includes tasks such as software updates, backups, print jobs and other non-urgent communications. <br><br>
+- **`Spare`** :: Low Priority traffic ⭐⭐
+    - Does not have strict throughput or latency requirements.
+    - It typically includes traffic that can use spare or leftover network capacity.
+    - Similar to background traffic but might include less critical business applications that can operate with some level of service degradation. <br><br>
+- **`Best Effort`** :: Default LAN Traffic / non QoS capable traffic ⭐⭐⭐
+    - Best effort traffic is the default level of service for network traffic.
+    - It does not receive any special treatment and is handled on a first-come, first-served basis.
+    - Apps or devices that do not support QoS, such as legacy devices.
+    - Traffic not sensitive to latency but affected by delays (like internet browsing, emails, and other applications that can tolerate some delay and do not require guaranteed performance). <br><br>   
+- **`Excellent Effort`** :: Valued Customers non-QoS capable traffic ⭐⭐⭐⭐
+    - Excellent effort traffic is a step above best effort traffic, providing a higher priority level for certain applications or users, even if they do not inherently support QoS.
+    - Valued applications or devices, legacy devices that do not support QoS, and services intended for important customers.
+    - This includes applications not highly sensitive to latency but still important enough to receive better-than-best-effort treatment. <br><br>
+- **`Controlled Load`** :: Video Priority for Controlled Load Services ⭐⭐⭐⭐⭐
+    - The controlled load service is intended to support a broad class of applications which have been developed for use in today's Internet, but are highly sensitive to overloaded conditions.
+    - Streaming video, online gaming, and other interactive applications that are sensitive to delays and jitter. <br><br>
+- **`Video`** :: Prioritize Video before other Data ⭐⭐⭐⭐⭐⭐
+    - **LESS THAN 100MS LATENCY / JITTER**
+    - Prioritizes video traffic over other types of data to ensure smooth playback and minimal interruptions.
+    - High priority, but typically below voice traffic. Standard Definition TV (SDTV) and High Definition TV (HDTV) streaming, video conferencing. <br><br>
+- **`Voice`** :: Highest Priority ⭐⭐⭐⭐⭐⭐⭐
+    - **LESS THAN 10MS LATENCY / JITTER**
+    - Allocates the highest priority to voice traffic to maintain call quality.
+    - VoIP calls, teleconferencing. <br><br>
+- **`Network Control`** :: Highest Priority ⭐⭐⭐⭐⭐⭐⭐⭐
+    - For Network Control Protocols (like SSH, SNMP, BGP, IGMP, ETC).
+    - Provides the highest priority to network control protocols necessary for maintaining network stability and performance.
+    - Highest priority, often equal to or above voice traffic.
+    - Software delivers this traffic with highest priority.
+    - This traffic usually consists of keep-alive or hello messages because the loss of these packets jeopardizes proper network operation.
 
 ### Contention Window & EDCA in Wireshark
 
