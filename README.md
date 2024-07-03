@@ -5367,15 +5367,29 @@ Retries  |----------------------------------------------------------------------
 
 **Important: No vendor has implemented PCF or HCCA.** 
 
+### QoS BSS (QBSS)
+
+- Quality of Service Basic Service Set (QoS BSS or QBSS) refers to a BSS (Basic Service Set) that supports Quality of Service (QoS) features.
+- QoS is essential for applications that require specific bandwidth, latency, and jitter requirements, such as voice over IP (VoIP), video streaming, and online gaming.
+- The QoS features in Wi-Fi were standardized in the IEEE 802.11e amendment, which introduced enhancements to support QoS in WLANs. The amendment added mechanisms like EDCA, HCCA, and QoS Control fields to the MAC layer, enabling the creation of QoS BSS.
+
+**QBSS Terminology:**
+
+- `QBSS` = QoS BSS :: (BSS that supports WMM)
+- `QAP` = QoS AP :: (AP that implements WMM)
+- `QSTA` = QoS STA :: (STA that supports WMM)
+- `nQSTA` = non-QoS STA :: (STA that does NOT support WMM)
+
 ### EDCA (Enhanced Distributed Channel Access):
- 
+
+- EDCA is the equivalent of WMM (Wireless Multimedia) created by the Wi-Fi Alliance 
 - EDCA is a wireless media access method that provides differentiated access that directs traffic to four access-category QoS priority queues.
 - The EDCA medium access method prioritizes traffic using priority tags that are **identical to 802.1D priority tags**.
 - Priority tags provide a mechanism for implementing QoS at the MAC level.
 - Different classes of service are available, represented in a 3-bit user priority field in an IEEE 802.1Q header added to an Ethernet frame.
 - 802.1D enables priority queuing (enabling some Ethernet frames to be forwarded ahead of others within a switched Ethernet network).
 
-### EDCA access cetegories
+### EDCA Access Cetegories (AC)
 
 EDCA defines four access categories, based on the eight UPs (user priorities):
 
@@ -5386,7 +5400,8 @@ EDCA defines four access categories, based on the eight UPs (user priorities):
 
 ### TXOP (Transmit Opportunity)
 
-- EDCA introduce this TXOP which is a time period where one device, called TXOP holder has unfettered acccess to the channel for data transmission.
+- EDCA introduce this TXOP which is a time period or window of time where one device, called TXOP holder has unfettered acccess to the channel for data transmission. This means, the device wins the contention to the medium for frames transmission. 
+- The TxOP can have a multiple frame transmission depending on Access Category (AC)
 - The data frame transmissions within  a TXOP are called a “contention free burst -CFB” During a TXOP, only the data that makes up a CFB and the ACK for that data may access the channel.
 - 802.11e standard defines default TXOP limit value for each AC, but values can be configured on AP.
 - TXOP limit are set in intervals of 32µs (microseconds).
@@ -5407,12 +5422,46 @@ WMM was introduced by the Wi-Fi Alliance. WMM is based on EDCA mechanisms and us
 
 ### AIFSN (AIFS Number)
 
-- An AIFSN is a number (AIFS Number) value that is user-configurable and determines the brevity (or length) of an AIFS interval.
+- An AIFSN is a number (Arbitration IFS Number) value that is user-configurable and determines the brevity (or length) of an AIFS interval.
+- An AIFSN is assigned to each AC (Access Category)
 - AIFSN values are set for each access category, giving the AIFS[AC] a shorter or longer duration, in accordance with the desired priority.
 
-This is demonstrated by the AIFS[AC] formula:
+**AIFS[AC] formula:**
 
 - AIFS[AC] = AIFSN[AC] × aSlotTime + aSIFSTime
+
+**AIFS values:**
+
+- AIFSN: Voice = 2
+- AIFSN: Video = 2
+- AIFSN: Best Effort = 3
+- AIFSN: Background = 7
+
+### QoS Contention Window (CW)
+
+- Each Access Category (AC) is assigned its own CWmin and CWmax
+- STAs with small CW are statistically more likely to pick a smaller number
+
+**AISFN & Backoff/CW values:**
+
+- Voice :: AISFN = 2 // Backoff = 0 to 3 // CWmin = 3
+- Video :: AISFN = 2 // Backoff = 0 to 7 // CWmin = 7
+- Best Effort :: AISFN = 3 // Backoff = 0 to 15 // CWmin = 15
+- Background :: AISFN = 7 // Backoff = 0 to 15 // CWmin = 15
+
+````py
+                  AIFSN   Backoff
+                
+Voice        ::  |= 2 =| |= 0 - 3 ==|
+
+Video        ::  |= 2 =| |= 0 - 7 ======| 
+
+Best Effort  ::  |= 3 ==| |= 0 - 15 ==============|  
+
+Background   ::  |= 7 ======| |= 0 - 15 ==============|
+                 <----------> <----------------------->
+                   min wait     random backoff / CW
+````
 
 ## EDCA & Qos Table
 
