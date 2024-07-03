@@ -4593,6 +4593,7 @@ _Once a STA is connected to a WLAN via an AP, the STA need to communicate someho
 - [CWmin & CWmax: Contention Window details](https://wifisharks.com/2021/02/13/cwmin-cwmax/) _`wifisharks`_
 - [Difference Between SIFS, PIFS, DIFS, EIFS And AIFS](https://www.rfwireless-world.com/Terminology/WLAN-SIFS-vs-PIFS-vs-DIFS-vs-EIFS-vs-AIFS.html) _`rfwireless-world`_
 - [RTS/CTS Durations](https://mrncciew.com/2014/10/26/cwap-802-11-ctrl-rtscts/) _`nayarasi`_
+- [EDCA Channel access method](https://dot11ap.wordpress.com/edca-channel-access-method/) _`dot11ap`_
 
 
 
@@ -5334,11 +5335,45 @@ Retries  |----------------------------------------------------------------------
 
 
 
+## EDCA & QoS
 
+### EDCA (Enhanced Distributed Channel Access):
+ 
+- EDCA is a wireless media access method that provides differentiated access that directs traffic to four access-category QoS priority queues.
+- The EDCA medium access method prioritizes traffic using priority tags that are **identical to 802.1D priority tags**.
+- Priority tags provide a mechanism for implementing QoS at the MAC level.
+- Different classes of service are available, represented in a 3-bit user priority field in an IEEE 802.1Q header added to an Ethernet frame.
+- 802.1D enables priority queuing (enabling some Ethernet frames to be forwarded ahead of others within a switched Ethernet network).
 
+### EDCA access cetegories
 
+EDCA defines four access categories, based on the eight UPs (user priorities):
 
+1. AC_BK(Background)
+2. AC_BE (Best Effort)
+3. AC_VI (Video)
+4. AC_VO (Voice)
 
+### TXOP (Transmit Opportunity)
+
+- EDCA introduce this TXOP which is a time period where one device, called TXOP holder has unfettered acccess to the channel for data transmission.
+- The data frame transmissions within  a TXOP are called a “contention free burst -CFB” During a TXOP, only the data that makes up a CFB and the ACK for that data may access the channel.
+- 802.11e standard defines default TXOP limit value for each AC, but values can be configured on AP.
+- TXOP limit are set in intervals of 32µs (microseconds).
+- Default TXOP is 47 for AC_VO (47×32=1504µs) for OFDM.
+- Default TXOP is 94 for AC_VI (94×32=3008µs).
+- Note that for AC_BE & AC_BK always TXOP set to 0, in other words those traffic category always has to send one frame at at time (no CFB).
+- For each access category, an enhanced version of DCF known as Enhanced Distributed Channel Access Function (EDCAF) is used to contend for a TxOP (Transmit Oportunity).
+- Frames with the highest-priority access category have the lowest backoff values and therefore are more likely to get a TxOP (Transmit Oportunity).
+
+### WMM (Wireless Multimedia)
+
+WMM was introduced by the Wi-Fi Alliance. WMM is based on EDCA mechanisms and uses the 802.1d priority tags from the Ethernet side to direct traffic to four access-category priority queues:
+
+- WMM `Voice` Priority :: 802.1D = `7,6`
+- WMM `Video` Priority :: 802.1D = `5,4`
+- WMM `Best Effort` Priority :: 802.1D = `0,3`
+- WMM `Background` Priority :: 802.1D = `2,1`
 
 
 
