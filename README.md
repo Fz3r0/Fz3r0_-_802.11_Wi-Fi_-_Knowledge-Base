@@ -3141,7 +3141,7 @@ _QoS Control is a 16-bit (2 bytes) field that identifies the Quality of Service 
         - TID 2 :: -- (Spare) | AC_BK | -- (Spare) = `wlan.qos.tid == 2`
         - Priority 2 (TID 2) :: -- (Spare) | AC_BK | -- (Spare) = `wlan.qos.priority == 2` <br><br>  
         - TID 0 :: BE | AC_BE | Best Effort (Default LAN Traffic) = `wlan.qos.tid == 0`
-        - Priority 0 (TID 2) :: BE | AC_BE | Best Effort (Default LAN Traffic) = `wlan.qos.priority == 0` <br><br>         
+        - Priority 0 (TID 0) :: BE | AC_BE | Best Effort (Default LAN Traffic) = `wlan.qos.priority == 0` <br><br>         
         - TID 3 :: EE | AC_BE | Excellent Effort (Valued Costumers) = `wlan.qos.tid == 3`
         - Priority 3 (TID 3) :: EE | AC_BE | Excellent Effort (Valued Costumers) = `wlan.qos.priority == 3` <br><br>   
         - TID 4 :: CL | AC_VI | Controlled Load = `wlan.qos.tid == 4`
@@ -4596,6 +4596,7 @@ _Once a STA is connected to a WLAN via an AP, the STA need to communicate someho
 - [Difference Between SIFS, PIFS, DIFS, EIFS And AIFS](https://www.rfwireless-world.com/Terminology/WLAN-SIFS-vs-PIFS-vs-DIFS-vs-EIFS-vs-AIFS.html) _`rfwireless-world`_
 - [RTS/CTS Durations](https://mrncciew.com/2014/10/26/cwap-802-11-ctrl-rtscts/) _`nayarasi`_
 - [EDCA Channel access method](https://dot11ap.wordpress.com/edca-channel-access-method/) _`dot11ap`_
+- [What is Differentiated Services Code Point (DSCP)?](https://www.cbtnuggets.com/blog/technology/networking/what-is-differentiated-services-code-point-dscp) _`cbtnuggets`_
 
 
 
@@ -4626,18 +4627,16 @@ _In every 802.11 network there must be a set of rules to determine when stations
 - EDCA – Enhanced Distributed Channel Access
 - PCF – Point Coordination Function (not implemented practically)
 
+### Arbitration & Contention Methods Summary
+
+- `DCF`: is the fundamental, required contention-based access service for all networks :: **(Non-QoS)** <br><br>
+- `PCF`: is an optional contention-free service, used for non-QoS STAs :: **Not implemented in 802.11** <br><br>
+- `HCF Contention Access (EDCA)`: Based on DCF, is required for prioritized contention-based QoS services :: **(QoS)** <br><br>
+- `HCF Controlled Access (HCCA)`: is required for parameterized contention-free QoS services :: **(QoS) - Not implemented in 802.11**
+
 ### CFB
 
 `CFB (Contention-Free Burst)`: CFB refers to a burst of frames sent during a contention-free period, often associated with legacy 802.11 protocols.
-
-
-
-
-
-
-
-
-
 
 ## Contention Methods Timeline
 
@@ -4648,39 +4647,6 @@ _In every 802.11 network there must be a set of rules to determine when stations
 | `MCF`              | 802.11s-2011  | EDCA, MCCA                            | `MCF (Mesh Coordination Function)` is a MAC protocol introduced in the IEEE 802.11s standard for wireless mesh networks. It supports efficient routing and coordination among mesh nodes, enabling the formation of self-healing and self-configuring multi-hop networks for extended wireless coverage. It includes EDCA and MCCA (Mesh Coordinated Channel Access).                                                                                           |
 
 NOTE: WMM (Wireless Multi Media) is the Wi-Fi Alliance's QoS implementation based on a subset of EDCA
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 🚦💥🚥 CSMA/CA (DCF)
@@ -5358,14 +5324,6 @@ Retries  |----------------------------------------------------------------------
 - `EDCA` = **WMM** :: Used for QoS in 802.11
 - `HCCA` = **WMM-SA** :: Used for Scheduled Access contention-free QoS services (not used in 802.11)
 
-**Summary:**
-
-- DCF is the fundamental, required contention-based access service for all networks
-- PCF is an optional contention-free service, used for non-QoS STAs
-- HCF Contention Access (EDCA) is required for prioritized contention-based QoS services
-- HCF Controlled Access (HCCA) is required for parameterized contention-free QoS services
-
-**Important: No vendor has implemented PCF or HCCA.** 
 
 ### QoS BSS (QBSS)
 
@@ -5463,22 +5421,60 @@ Background   ::  |= 7 ======| |= 0 - 15 ==============|
                    min wait     random backoff / CW
 ````
 
-## EDCA & Qos Table
+### DSCP (Differentiated Services Code Point)
 
-| **802.11 User Priority (UP)**  |  **802.1D Designation**  | **QoS Access Category** | **WMM Access Category** | **AIFSN** | **CW min** | **CW max** |                                                                                                                                 **Description**                                                                                                                                 |
-|:------------------------------:|:------------------------:|:-----------------------:|:-----------------------:|:---------:|:----------:|:----------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| 1                              | BK<br>(Background)       | AC_BK                   | WMM Background          | 7         | 15         | 1023       | Low Priority traffic:<br><br><br>BACKGROUND: Does not have strict throughput or latency requirements (like file transfers or print jobs)                                                                                                                                        |
-| 2                              | --<br>(Spare)            | AC_BK                   | WMM Background          | 7         | 15         | 1023       | Low Priority traffic:<br><br><br>SPARE: Does not have strict throughput or latency requirements (like file transfers or print jobs)                                                                                                                                             |
-| 0                              | BE<br>(Best Effort)      | AC_BE                   | WMM Best Effort         | 3         | 15         | 1023       | Best Effort / non QoS capable traffic:<br><br><br>DEFAULT LAN TRAFFIC: Apps or devices that do not support QoS, such as legacy devices. Traffic not sensitive to latency but affected by delays (like internet browsing)                                                        |
-| 3                              | EE<br>(Excellent Effort) | AC_BE                   | WMM Best Effort         | 3         | 15         | 1023       | Excellent Effort / non QoS capable traffic:<br><br><br>VALUED CUSTOMERS: Valued Apps or devices that do not support QoS, such as legacy devices. Traffic not sensitive to latency but affected by delays (like internet browsing)                                               |
-| 4                              | CL<br>(Controlled Load)  | AC_VI                   | WMM Video               | 2         | 7          | 15         | Video Priority for Controlled Load Services:<br><br><br>CONTROLLED LOAD: The controlled load service is intended to support a broad class of applications which have been developed for use in today's Internet, but are highly sensitive to overloaded conditions.             |
-| 5                              | VI<br>(Video)            | AC_VI                   | WMM Video               | 2         | 7          | 15         | Prioritize Video before other Data:<br><br><br>LESS THAN 100MS DELAY / JITTER: Single 802.11g or 802.11a channel can support 3 or 4 SDTV video streams or 1 HDTV video stream                                                                                                   |
-| 6                              | VO<br>(Voice)            | AC_VO                   | WMM Voice               | 2         | 3          | 7          | Highest Priority:<br><br><br>LESS THAN 10MS DELAY / JITTER: Multiple concurrent VoIP calls with low latency and toll voice quality                                                                                                                                              |
-| 7                              | NC<br>(Network Control)  | AC_VO                   | WMM Voice               | 2         | 3          | 7          | Highest Priority:<br><br><br>NETWORK CONTROL PROTOCOLS (SSH, SNMP, BGP, IGMP, ETC): Software delivers this traffic with highest priority. This traffic usually consists of keep-alive or hello messages because the loss of these packets jeopardizes proper network operation. |
+- Differentiated Service Code Points (DSCP) is an aspect of QoS (Quality of Service) used to classify and manage network traffic.
+- The DSCP field is 6 bits in length and can take on values from 0 to 63.
+- DSCP is often described as “managed unfairness,” and with good reason. DSCP prioritizes packets by their attributes, prioritizing some information over others. For example, VoIP packets should be prioritized over email packets.
+- However, as the prioritization criteria become more in-depth, it quickly becomes unmanageable. After all, an IP packet has a 32-bit header, but the DSCP field, responsible for QoS differentiation, is limited to 6 bits. Despite this constraint, DSCP finds a way to differentiate various types of traffic within this compact 6-bit space. 
+- DSCP is configured on the network router or any edge device (wired network), such as a firewall or gateway. While the administrator can set DSCP in multiple places, it is best practice to centralize DSCP management to ensure consistent QoS and packet forwarding prioritization.
 
+**Expedited Forwarding (EF)**
 
+- EF, also known as DSCP 46, is used for data-intensive operations such as VoIP, media streaming, or gaming.
+- EF is known as DSCP 46 because that’s how many bits it takes up in the six-bit header.
+- EF looks like 101110 which is equal to 46 in decimal; take note it is six digits.
+- EF receives the highest preferential treatment.
 
+**Assured Forwarding (AF) Classes**
 
+- AF classes provided numerous levels of priority and drop precedence.
+- A drop precedence indicates the possibility the packet will be dropped due to congestion issues.
+- This is a QoS tactic that ensures higher priority packets will be forwarded.
+
+**There are twelve different AF classes, which are then subdivided into drop precedence:** 
+
+1. Drop Precedence One
+    - AF11 (DSCP 10)
+    - AF12 (DSCP 12)
+    - AF13 (DSCP 14) <br><br>
+2. Drop Precedence Two
+    - AF21 (DSCP 18)
+    - AF22 (DSCP 20)
+    - AF23 (DSCP 22) <br><br>
+3. Drop Precedence Three
+    - AF31 (DSCP 26)
+    - AF32 (DSCP 28)
+    - AF33 (DSCP 30) <br><br>
+4. Drop Precedence Four
+    - AF41 (DSCP 34)
+    - AF42 (DSCP 36)
+    - AF43 (DSCP 38) <br><br>
+5. Expedited Forwarding (EF)
+    - DSCP 46 : data-intensive operations   
+
+## EDCA / Qos Table
+
+| **Priority**        | **802.11 User Priority (UP)**  | **802.11 Access Category (QoS)** | **802.1D/802.1Q** <br>**Designation** | **802.11** <br>**Traffic Type** | **WMM Access Category** | **AIFSN** | **CW min**<br>_(default)_ | **CW max**<br>_(default)_ | **DSCP** |                                                                                                                                   **Description**                                                                                                                                   |
+|---------------------|:------------------------------:|:--------------------------------:|:-------------------------------------:|:-------------------------------:|:-----------------------:|:---------:|:-------------------------:|:-------------------------:|----------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| Lowest<br>⭐         | 1                              | AC_BK                            | BK                                    | Background                      | WMM Background          | 7         | 15                        | 1023                      | 0 - 7    | Low Priority traffic:<br><br><br>**BACKGROUND**: Does not have strict throughput or latency requirements (like file transfers or print jobs)                                                                                                                                        |
+| Lowest<br>⭐⭐        | 2                              | AC_BK                            | --                                    | Spare                           | WMM Background          | 7         | 15                        | 1023                      | 8 - 15   | Low Priority traffic:<br><br><br>**SPARE**: Does not have strict throughput or latency requirements (like file transfers or print jobs)                                                                                                                                             |
+| Low<br>⭐⭐⭐          | 0                              | AC_BE                            | BE                                    | Best Effort                     | WMM Best Effort         | 3         | 15                        | 1023                      | 16 - 23  | Best Effort / non QoS capable traffic (DEFAULT TRAFFIC):<br><br><br>**DEFAULT LAN TRAFFIC**: Apps or devices that do not support QoS, such as legacy devices. Traffic not sensitive to latency but affected by delays (like internet browsing)                                      |
+| Low<br>⭐⭐⭐⭐         | 3                              | AC_BE                            | EE                                    | Excellent Effort                | WMM Best Effort         | 3         | 15                        | 1023                      | 24 - 31  | Excellent Effort / non QoS capable traffic:<br><br><br>**VALUED CUSTOMERS**: Valued Apps or devices that do not support QoS, such as legacy devices. Traffic not sensitive to latency but affected by delays (like internet browsing)                                               |
+| High<br>⭐⭐⭐⭐⭐       | 4                              | AC_VI                            | CL                                    | Controlled Load                 | WMM Video               | 2         | 7                         | 15                        | 32 - 39  | Video Priority for Controlled Load Services:<br><br><br>**CONTROLLED LOAD**: The controlled load service is intended to support a broad class of applications which have been developed for use in today's Internet, but are highly sensitive to overloaded conditions.             |
+| High<br>⭐⭐⭐⭐⭐⭐      | 5                              | AC_VI                            | VI                                    | Video                           | WMM Video               | 2         | 7                         | 15                        | 40 - 47  | Prioritize Video before other Data:<br><br><br>**LESS THAN 100MS LATENCY / JITTER**: Single 802.11g or 802.11a channel can support 3 or 4 SDTV video streams or 1 HDTV video stream                                                                                                 |
+| Highest<br>⭐⭐⭐⭐⭐⭐⭐  | 6                              | AC_VO                            | VO                                    | Voice                           | WMM Voice               | 2         | 3                         | 7                         | 40 - 55  | Highest Priority:<br><br><br>**LESS THAN 10MS LATENCY / JITTER**: Multiple concurrent VoIP calls with low latency and toll voice quality                                                                                                                                            |
+| Highest<br>⭐⭐⭐⭐⭐⭐⭐⭐ | 7                              | AC_VO                            | NC                                    | Network Control                 | WMM Voice               | 2         | 3                         | 7                         | 65 - 63  | Highest Priority:<br><br><br>**NETWORK CONTROL PROTOCOLS (SSH, SNMP, BGP, IGMP, ETC)**: Software delivers this traffic with highest priority. This traffic usually consists of keep-alive or hello messages because the loss of these packets jeopardizes proper network operation. |
 
 
 
