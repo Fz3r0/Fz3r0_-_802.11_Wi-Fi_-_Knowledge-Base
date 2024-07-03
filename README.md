@@ -4581,6 +4581,8 @@ Default Port: 1812
 
 # 🛜🚦🛑 Medium Access Methods & QoS
 _Once a STA is connected to a WLAN via an AP, the STA need to communicate somehow. This is where Medium Access takes place! The "Medium" is RF (Radio Frequency) & is shared, if there are 60 devices (STA) connected to an AP & other 30 connected to another AP and both are on same channel, those are 90 devices sharing the medium or the same Frequency Space for RF (AKA "air" or "airtime"). The STAs & APs must have a way to "negotiate" who is gonna "talk" and "when" | By other hand, we need to know which frames has more priority in the network and needs to go first, that's what QoS is all about | MAC methods = How to get acces to the medium | QoS = Decide what to put on that medium first once medium access is gained._
+
+- [802.11 Arbitration / DCF / EDCA / AIFSN / etc](https://www.cwnp.com/uploads/802-11_arbitration.pdf) _`CWNP whitepaper`_
 - [Wireless Contention Mechanisms :: Wireless Collision Avoidance – CSMA/CA Though DCF/EDCF :: Full Info for CWNA/CWAP @ _howiwifi.com_](https://howiwifi.com/2020/06/30/wireless-contention-mechanisms/) _`howiwifi`_
 - [802.11 Network Contention](https://mrncciew.com/2014/10/12/cwap-802-11-medium-contention/) _`nayarasi`_
 - [`802.11 Arbitration` || Detailed Whitepaper @ _CWNP_](https://www.cwnp.com/uploads/802-11_arbitration.pdf) _`whitepaper / report`_
@@ -5337,6 +5339,34 @@ Retries  |----------------------------------------------------------------------
 
 ## EDCA & QoS
 
+### 802.11e
+
+- IEEE 802.11e-2005 or 802.11e is an approved amendment to the IEEE 802.11 standard that defines a set of quality of service (QoS) enhancements for wireless LAN applications through modifications to the media access control (MAC) layer.
+- The standard is considered of critical importance for delay-sensitive applications, such as voice over wireless LAN and streaming multimedia. The amendment has been incorporated into the published IEEE 802.11-2007 standard.
+
+### HCF (Hybrid Coordination Function)
+
+- As an optional access method that may be used in addition to DCF, HCF was introduced to support QoS in the 802.11e amandment or WMM (Wireless Multimedia)
+- HCF assimilated elements of both DCF and PCF mechanisms, creating a contention-based HCF method, called EDCA, and a contention-free HCF method, called HCCA.
+- EDCA inaugurated a means of prioritizing contention-based wireless medium (WM) access by classifying 802.11 traffic types by User Priorities (UP) and Access Categories (AC).
+- There are a total of 8 UPs, which map to 4 ACs.
+- EDCA is used by stations that support QoS in a QoS BSS to provide prioritized WM access, but **HCF is not used in non-QoS BSSs**.
+- HCCA (HCFControlled Channel Access) is also part of HCF but is not used in 802.11 standards.
+
+**Important:**
+
+- `EDCA` = **WMM** :: Used for QoS in 802.11
+- `HCCA` = **WMM-SA** :: Used for Scheduled Access contention-free QoS services (not used in 802.11)
+
+**Summary:**
+
+- DCF is the fundamental, required contention-based access service for all networks
+- PCF is an optional contention-free service, used for non-QoS STAs
+- HCF Contention Access (EDCA) is required for prioritized contention-based QoS services
+- HCF Controlled Access (HCCA) is required for parameterized contention-free QoS services
+
+**Important: No vendor has implemented PCF or HCCA.** 
+
 ### EDCA (Enhanced Distributed Channel Access):
  
 - EDCA is a wireless media access method that provides differentiated access that directs traffic to four access-category QoS priority queues.
@@ -5375,7 +5405,27 @@ WMM was introduced by the Wi-Fi Alliance. WMM is based on EDCA mechanisms and us
 - WMM `Best Effort` Priority :: 802.1D = `0,3`
 - WMM `Background` Priority :: 802.1D = `2,1`
 
+### AIFSN (AIFS Number)
 
+- An AIFSN is a number (AIFS Number) value that is user-configurable and determines the brevity (or length) of an AIFS interval.
+- AIFSN values are set for each access category, giving the AIFS[AC] a shorter or longer duration, in accordance with the desired priority.
+
+This is demonstrated by the AIFS[AC] formula:
+
+- AIFS[AC] = AIFSN[AC] × aSlotTime + aSIFSTime
+
+## EDCA & Qos Table
+
+| **802.11 User Priority (UP)**  |  **802.1D Designation**  | **QoS Access Category** | **WMM Access Category** | **AIFSN** | **CW min** | **CW max** |                                                                                                                                 **Description**                                                                                                                                 |
+|:------------------------------:|:------------------------:|:-----------------------:|:-----------------------:|:---------:|:----------:|:----------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| 1                              | BK<br>(Background)       | AC_BK                   | WMM Background          | 7         | 15         | 1023       | Low Priority traffic:<br><br><br>BACKGROUND: Does not have strict throughput or latency requirements (like file transfers or print jobs)                                                                                                                                        |
+| 2                              | --<br>(Spare)            | AC_BK                   | WMM Background          | 7         | 15         | 1023       | Low Priority traffic:<br><br><br>SPARE: Does not have strict throughput or latency requirements (like file transfers or print jobs)                                                                                                                                             |
+| 0                              | BE<br>(Best Effort)      | AC_BE                   | WMM Best Effort         | 3         | 15         | 1023       | Best Effort / non QoS capable traffic:<br><br><br>DEFAULT LAN TRAFFIC: Apps or devices that do not support QoS, such as legacy devices. Traffic not sensitive to latency but affected by delays (like internet browsing)                                                        |
+| 3                              | EE<br>(Excellent Effort) | AC_BE                   | WMM Best Effort         | 3         | 15         | 1023       | Excellent Effort / non QoS capable traffic:<br><br><br>VALUED CUSTOMERS: Valued Apps or devices that do not support QoS, such as legacy devices. Traffic not sensitive to latency but affected by delays (like internet browsing)                                               |
+| 4                              | CL<br>(Controlled Load)  | AC_VI                   | WMM Video               | 2         | 7          | 15         | Video Priority for Controlled Load Services:<br><br><br>CONTROLLED LOAD: The controlled load service is intended to support a broad class of applications which have been developed for use in today's Internet, but are highly sensitive to overloaded conditions.             |
+| 5                              | VI<br>(Video)            | AC_VI                   | WMM Video               | 2         | 7          | 15         | Prioritize Video before other Data:<br><br><br>LESS THAN 100MS DELAY / JITTER: Single 802.11g or 802.11a channel can support 3 or 4 SDTV video streams or 1 HDTV video stream                                                                                                   |
+| 6                              | VO<br>(Voice)            | AC_VO                   | WMM Voice               | 2         | 3          | 7          | Highest Priority:<br><br><br>LESS THAN 10MS DELAY / JITTER: Multiple concurrent VoIP calls with low latency and toll voice quality                                                                                                                                              |
+| 7                              | NC<br>(Network Control)  | AC_VO                   | WMM Voice               | 2         | 3          | 7          | Highest Priority:<br><br><br>NETWORK CONTROL PROTOCOLS (SSH, SNMP, BGP, IGMP, ETC): Software delivers this traffic with highest priority. This traffic usually consists of keep-alive or hello messages because the loss of these packets jeopardizes proper network operation. |
 
 
 
