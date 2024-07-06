@@ -4597,6 +4597,8 @@ _Once a STA is connected to a WLAN via an AP, the STA need to communicate someho
 - [RTS/CTS Durations](https://mrncciew.com/2014/10/26/cwap-802-11-ctrl-rtscts/) _`nayarasi`_
 - [EDCA Channel access method](https://dot11ap.wordpress.com/edca-channel-access-method/) _`dot11ap`_
 - [What is Differentiated Services Code Point (DSCP)?](https://www.cbtnuggets.com/blog/technology/networking/what-is-differentiated-services-code-point-dscp) _`cbtnuggets`_
+- [Ip Precedence DSCP ToS Lookup Table](http://www.patrickdenis.biz/blog/ip-precedence-dscp-tos-lookup-table/)
+- [Understanding and Decoding DSCP (Differentiated Services Code Point)](https://www.youtube.com/watch?v=DJSgZ2-BpeM) _`video`_
 
 
 
