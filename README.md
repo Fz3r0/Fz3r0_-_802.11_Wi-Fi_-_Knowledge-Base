@@ -1621,29 +1621,44 @@ _In Wireless 802.11 networks, Layers 1 and 2 are the most crucial, Layers 3 and 
         - [**`Layer 1`** :: **`Physical`** :: **PDU** = **`PHY Frame`** :: Sub-Layer=`Upper` = **`PLCP`** > **PSDU (_MPDU_)**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289)
         - [**`Layer 1`** :: **`Physical`** ** :: **PDU** = **`PHY Frame`** :: Sub-Layer - `Lower` = **`PMD`** > **PPDU** **1/0 @ Medium (RF/air)**](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/d7d703d0-c2bc-4eac-b25a-7656090d9289) <br><br>
 
----
 
-### 💊🖼️📦 Encapsulation: `SDU` & `PDU`
-_Key Concept: The message used to communicate information for a particular protocol is called its protocol data unit (PDU) in OSI model terminology. That PDU is passed down to the next lower layer for transmission; since that layer is providing the service of handling that PDU, it is called the lower layer’s service data unit (SDU). The SDU is encapsulated into that layer’s own PDU and in turn sent to the next lower layer in the stack, proceeding until the physical layer is reached. The process is reversed on the recipient device._ 
 
-Key Concept: **A layer N PDU is a layer N-1 SDU, which is encapsulated into a layer N-1 PDU.** <br><br>
-
-- **`Example`**: The LPDU is generated at the LLC Sub-Layer (Layer 2 - Upper), and then is passed down into the MAC Sub-Layer (Layer 2 - Lower), the MAC Sub-Layer recieves it as a MSDU. So, the MAC layer process the MSDU, put a MAC-Header + FCS and that's called a MPDU (that is generated at the MAC Sub-Layer) and then is passed down into the PLCP Sub-Layer (Layer 1 - Upper), the PLCP Sub-Layer recieves it as a PSDU... So, the PLCP layer process the PSDU, put a PLCP-Header + Preamble and that's called a PPDU, and then, the PPDU is passed down into the PMD Sub-Layer (Layer 1 - Lower), the PMD Sub-Layer modulate that into 1's and 0's and send it into the wireless medium.
+## 💊🖼️📦 Encapsulation: `SDU` & `PDU`
 
 - [CWNP: Basics of MAC Architecture: Encapsulation & Frame Aggregation](https://www.cwnp.com/802.11-mac-series-ndash-basics-mac-architecture-ndash-part-1-3/#Id3)
 
+**`SDU` (Service Data Unit)**:
+
+- Piece of information passed by a layer above of the current layer for transmission using the Service of that layer.
+- The amount of information whose identity is preserved when transferred to above Sub-Layer.
+
+**`PDU` (Protocol Data Unit)**:
+
+- Information delivered as a whole unit among prior entities of networks containing Control Information, Address Information or Data.
+- In Layers Systems, the PDU represents the unit of Data specified in the protocol of the given layer which consists of Protocol Control Information and User Data (it means: Protocol Header / Info + SDU)
+- A unit of data specified in a protocol and consisting of: Protocol Control Information + Data (it means: Protocol Header / Info + SDU)
+
+Key Concept of SDU & PDU in Networking:
+
+- The message used to communicate information for a particular protocol is called its protocol data unit (PDU) in OSI model terminology.
+- That PDU is passed down to the next lower layer for transmission; since that layer is providing the service of handling that PDU, it is called the lower layer’s service data unit (SDU).
+- The SDU is encapsulated into that layer’s own PDU and in turn sent to the next lower layer in the stack, proceeding until the physical layer is reached.
+- The process is reversed on the recipient device. <br><br>
+    - **`Hint`**: **A layer N PDU is a layer N-1 SDU, which is encapsulated into a layer N-1 PDU.** 
+
+**`Example`** (802.11 PDUs & SDUs): 
+
+1. The LPDU is generated at the LLC Sub-Layer (Layer 2 - Upper), and then is passed down into the MAC Sub-Layer (Layer 2 - Lower)...
+2. ...the MAC Sub-Layer recieves it as a MSDU.
+3. So, the MAC layer process the MSDU, put a MAC-Header + FCS and that's called a MPDU (that is generated at the MAC Sub-Layer) and then is passed down into the PLCP Sub-Layer (Layer 1 - Upper),
+5. the PLCP Sub-Layer recieves it as a PSDU...
+6. So, the PLCP layer process the PSDU, put a PLCP-Header + Preamble and that's called a PPDU, and then, the PPDU is passed down into the PMD Sub-Layer (Layer 1 - Lower)...
+7. ...the PMD Sub-Layer modulate that into 1's and 0's and send it into the wireless medium.
+
+
 ````py
 
-SDU (Service Data Unit)
-
-- # Piece of information passed by a layer above of the current layer for transmission using the Service of that layer.
-- # The amount of information whose identity is preserved when transferred to above Sub-Layer.
-
-PDU (Protocol Data Unit)
-
-- # Information delivered as a whole unit among prior entities of networks containing Control Information, Address Information or Data.
-- # In Layers Systems, the PDU represents the unit of Data specified in the protocol of the given layer which consists of Protocol Control Information and User Data (it means: Protocol Header / Info + SDU)
-- # A unit of data specified in a protocol and consisting of: Protocol Control Information + Data (it means: Protocol Header / Info + SDU)
+## PDU & SDU in Networking
 
   ** EACH LAYER HAS ITS OWN "SDU" & "PDU" # (SDU is "inside" the current layer PDU)
 
@@ -1844,7 +1859,7 @@ PMD = (Physical Medium Dependent):
 
 ````
 
----
+
 
 ## 💊🚛🚢 IEEE 802.11: `Frame Aggregation`
 _**Frame aggregation allows for more data payload with a single header providing more data transfer with less 802.11 overhead.** With the ratification of 802.11n amendment, two types of frame aggregation were added to 802.11: Aggregate MAC Service Data Unit (A-MSDU) & Aggregate MAC Protocol Data Unit (A-MPDU). Frame aggregation allows multiple smaller MSDU or MPDUs to be grouped together into a single frame, reducing the amount of overhead that would have been necessary for each individual frame.  An analogy for frame aggregation is carpooling that is implemented to reduce traffic and subsequently reduce traffic jams. Similarly, frame aggregation is used to reduce medium contention overhead by combining several service data units (SDUs)._
