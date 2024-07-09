@@ -5440,12 +5440,48 @@ Background   ::  |= 7 ======| |= 0 - 15 ==============|
 
 ## Differentiated Services (DiffServ)
 
-- Differentiated Services Field
+- `DiffServ (Differentiated Services)` Field is present in the `IP Header` and supersedes the `TOS (Type of service)` field
+
+**`Important`: QoS starts at the IP layer (e.g., any application on a phone using VoIP marked with DiffServ tags). Then, if the phone is a WMM-certified device, it can take those DiffServ tags and map them to 802.11 User Priority (UP). The UP can then place the traffic into an 802.11 Access Category (AC) :: 802.3 Ethernet, 802.1 Bridging, and 802.11 Wireless all work together to provide QoS.**
+
+````py
+## IP Header :: Differentiated Services (DiffServ)
+
+<--------------------------------------------------------------- IP Header --------------------------------------------------------------->
+|---------|--------|------------|--------|------------|-------|----------|----------|----------|----------|---------|---------|-----------|
+| Version | Header |  DiffServ  | Total  | Identifier | Flags | Fragment |  Time to | Protocol |  Header  | Source  |  Dest.  | Options & |
+| Control | Lenght |            | Lenght |            |       |  Offset  |   Live   |          | Checksum | Address | Address | Padding   |
+|---------|--------|------------|--------|------------|-------|----------|----------|----------|----------|---------|---------|-----------|
+     4        4          8          16         16         3        14         8          8           8         48       48       Variable    <<== bits
+                        | |
+                        | |
+                         V
+              |------------|----|
+              |    DSCP    | CU |
+              |            |    |
+              |------------|----|
+                    6        2     <<== bits
+
+````
+
 
 DiffServ includes 2 elements: 
 
-1. DSCP (6 bits)
-2. CU (Currently Unused)
+1. **`DSCP (Differentiated Services Code Point)`** :: (6 bits) :: Used to classify and manage newtwork traffic (QoS)
+2. **`CU (Currently Unused)`** :: (2 bits) :: Reserved for future use
+
+**Hint:** The DSCP contains 6 bits but particuary the first 3 bits are defining the type of service.
+
+| **Priority**                | **DSCP bits** | **Decimal Values** | **IP Precedence** |
+|-----------------------------|---------------|--------------------|-------------------|
+| Lowest<br>⭐                 | **000**XXX    | 0-7                | 0                 |
+| Lowest<br>⭐⭐                | **001**XXX    | 8-15               | 1                 |
+| Low<br>⭐⭐⭐                  | **010**XXX    | 16-23              | 2                 |
+| Low<br>⭐⭐⭐<br>⭐             | **011**XXX    | 24-31              | 3                 |
+| High<br>⭐⭐⭐<br>⭐⭐           | **100**XXX    | 32-39              | 4                 |
+| High<br>⭐⭐⭐<br>⭐⭐⭐          | **101**XXX    | 40-47              | 5                 |
+| Highest<br>⭐⭐⭐<br>⭐⭐⭐<br>⭐  | **110**XXX    | 40-55              | 6                 |
+| Highest<br>⭐⭐⭐<br>⭐⭐⭐<br>⭐⭐ | **111**XXX    | 65-63              | 7                 |
 
 ### DSCP (Differentiated Services Code Point)
 
@@ -5490,10 +5526,18 @@ DiffServ includes 2 elements:
 5. Expedited Forwarding (EF)
     - DSCP 46 : data-intensive operations   
 
+## 802.1Q (VLANs/Bridging)
+
+- 802.1Q also defines prioroties in the `802.1Q VLAN tag` (ethernet traffic).
+- The priority is present in the `Priority Code Point (PCP)` tag, and this is mapps to the `IP Presedence` value aswell.
 
 
 
-## EDCA / Qos Table
+
+
+
+
+## EDCA / QoS / DSCP / 802.1Q :: Table
 
 **Note:** These are the default mappings for each specification (AC, UP, DSCP, etc.). It does not mean that every vendor uses them; always check each vendor's specification.
 
