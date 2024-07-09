@@ -5465,8 +5465,7 @@ Background   ::  |= 7 ======| |= 0 - 15 ==============|
 
 ````
 
-
-DiffServ includes 2 elements: 
+DiffServ field includes 2 tags: 
 
 1. **`DSCP (Differentiated Services Code Point)`** :: (6 bits) :: Used to classify and manage newtwork traffic (QoS)
 2. **`CU (Currently Unused)`** :: (2 bits) :: Reserved for future use
@@ -5540,8 +5539,27 @@ DiffServ includes 2 elements:
 - 802.1Q also defines prioroties in the `802.1Q VLAN tag` (ethernet traffic).
 - The priority is present in the `Priority Code Point (PCP)` tag, and this is mapps to the `IP Presedence` value aswell.
 
+````py
+## MAC Header Header :: 802.1Q VLAN
 
+<------------------------- MAC Header ------------------------->
+|-------------|-------------|----------|-----------|-----------|
+| Destination |   Source    |  802.1Q  | EtherType | IP Header |
+|   Address   |   Address   |   VLAN   |           |           |
+|-------------|-------------|----------|-----------|-----------|
+      16            16           28                     20        <<== bits
+                                | |
+                                | |
+                                 V
+          |---------------|---------------|-------|---------------|
+          |    TPID       | User Priority |  DEI  |    VLAN ID    |
+          |               |    / PCP      |       |               |
+          |---------------|---------------|-------|---------------| 
+                 12              3            1          12        <<== bits
 
+````
+
+802.1Q field includes 4 tags: 
 
 
 
