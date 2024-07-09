@@ -5529,6 +5529,34 @@ Background   ::  |= 7 ======| |= 0 - 15 ==============|
     - Software delivers this traffic with highest priority.
     - This traffic usually consists of keep-alive or hello messages because the loss of these packets jeopardizes proper network operation.
 
+
+
+
+
+
+
+
+
+
+
+
+## QoS Frame & Packet Capture
+
+### WMM Element (Wireless 802.11)
+
+- Present in `Beacon` and `Probe Response` frames. <br><br>
+- Contains information about WMM supported by the AP; the client STA is required, according to the WMM specification, to set its WMM parameters according to this information. The client STA also updates its WMM parameters if the beacon frame changes the WMM information. <br><br>
+- The AP is allowed to use a different set of parameters than what it advertises in the WMM element. Therefore, you can use a different set of parameters for the AP than those used by the client STAs; this allows the AP to give itself more priority since the majority of traffic is downlink. Not every AP or management interface gives you the ability to do that; some only let you set the WMM parameters used by both the AP and clients the same, but others let you configure the AP differently, and that's allowed by the WMM specification: **"The AP can use a private or different set of WMM parameters than the client STAs utilize based on the Beacon or Probe Response information."** Because of this: <br><br>
+    - **It IS NOT TRUE to say that whatever is inside the WMM Element is what the AP uses for its WMM parameters; it IS TRUE to say that whatever is present in the WMM Element, all WMM Wi-Fi Alliance Specification client STAs MUST use that information.**
+
+**WMM Element Filter:**
+ 
+---
+
+
+
+
+
 ### Contention Window & EDCA in Wireshark
 
 The values of CWmin and BWMax
