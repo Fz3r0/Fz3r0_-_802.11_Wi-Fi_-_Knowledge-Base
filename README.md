@@ -3034,9 +3034,9 @@ The next table apply **only for Data Frames**:
 - `RTS` frames **uses only two available address fields** in an 802.11 frame `Addresses 1 to 2`. <br> <br>
 - `CTS` frames **uses only one address field** in an 802.11 frame `Address 1`. <br> <br>
 - `Address 1` is always the `receiver address (RA)`.
-- `Address 2` is always the `transmitter address (TA)`.
+- `Address 2` is always the `transmitter address (TA)`. <br> <br>
+- If `To DS` and `From DS` are `both set to 0` then the frame can be `Management`, `Control` or `Ad-Hoc` Netowrk
 
-        
 **Each of the four 802.11 Address Fields may have one of 5 different interpretations:**
 
 1. ⭕ `Destination Address` : **`DA`** :: Final Destination of Transmission <br> <br>
