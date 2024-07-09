@@ -5323,10 +5323,14 @@ Retries  |----------------------------------------------------------------------
 
 ## EDCA & QoS
 
+EDCA & QoS concepts:
+
 ### 802.11e
 
 - IEEE 802.11e-2005 or 802.11e is an approved amendment to the IEEE 802.11 standard that defines a set of quality of service (QoS) enhancements for wireless LAN applications through modifications to the media access control (MAC) layer.
 - The standard is considered of critical importance for delay-sensitive applications, such as voice over wireless LAN and streaming multimedia. The amendment has been incorporated into the published IEEE 802.11-2007 standard.
+
+---
 
 ### HCF (Hybrid Coordination Function)
 
@@ -5342,6 +5346,7 @@ Retries  |----------------------------------------------------------------------
 - `EDCA` = **WMM** :: Used for QoS in 802.11
 - `HCCA` = **WMM-SA** :: Used for Scheduled Access contention-free QoS services (not used in 802.11)
 
+---
 
 ### QoS BSS (QBSS)
 
@@ -5356,10 +5361,14 @@ Retries  |----------------------------------------------------------------------
 - `QSTA` = QoS STA :: (STA that supports WMM)
 - `nQSTA` = non-QoS STA :: (STA that does NOT support WMM)
 
+---
+
 ### EDCA (Enhanced Distributed Channel Access):
 
 - EDCA is the equivalent of WMM (Wireless Multimedia) created by the Wi-Fi Alliance 
 - EDCA is a wireless media access method that provides differentiated access that directs traffic to four access-category QoS priority queues.
+- EDCA is an access method under Hybrid Coordination Function (HCF) and assigns user priorities based on the type of traffic sent.
+- There are eight user priorities (0-7) that map to four different access categories AC-VO (voice) AC-VI (video) AC-BE (best effort) and AC-BK (background).
 - The EDCA medium access method prioritizes traffic using priority tags that are **identical to 802.1D priority tags**.
 - Priority tags provide a mechanism for implementing QoS at the MAC level.
 - Different classes of service are available, represented in a 3-bit user priority field in an IEEE 802.1Q header added to an Ethernet frame.
@@ -5374,6 +5383,8 @@ EDCA defines four access categories, based on the eight UPs (user priorities):
 3. AC_VI (Video)
 4. AC_VO (Voice)
 
+---
+
 ### TXOP (Transmit Opportunity)
 
 - EDCA introduce this TXOP which is a time period or window of time where one device, called TXOP holder has unfettered acccess to the channel for data transmission. This means, the device wins the contention to the medium for frames transmission. 
@@ -5387,6 +5398,8 @@ EDCA defines four access categories, based on the eight UPs (user priorities):
 - For each access category, an enhanced version of DCF known as Enhanced Distributed Channel Access Function (EDCAF) is used to contend for a TxOP (Transmit Oportunity).
 - Frames with the highest-priority access category have the lowest backoff values and therefore are more likely to get a TxOP (Transmit Oportunity).
 
+---
+
 ### WMM (Wireless Multimedia)
 
 WMM was introduced by the Wi-Fi Alliance. WMM is based on EDCA mechanisms and uses the 802.1d priority tags from the Ethernet side to direct traffic to four access-category priority queues:
@@ -5395,6 +5408,8 @@ WMM was introduced by the Wi-Fi Alliance. WMM is based on EDCA mechanisms and us
 - WMM `Video` Priority :: 802.1D = `5,4`
 - WMM `Best Effort` Priority :: 802.1D = `0,3`
 - WMM `Background` Priority :: 802.1D = `2,1`
+
+---
 
 ### AIFSN (AIFS Number)
 
@@ -5412,6 +5427,8 @@ WMM was introduced by the Wi-Fi Alliance. WMM is based on EDCA mechanisms and us
 - AIFSN: Video = 2
 - AIFSN: Best Effort = 3
 - AIFSN: Background = 7
+
+---
 
 ### QoS Contention Window (CW)
 
@@ -5439,7 +5456,15 @@ Background   ::  |= 7 ======| |= 0 - 15 ==============|
                    min wait     random backoff / CW
 ````
 
-## Differentiated Services (DiffServ)
+---
+
+### Slot Time
+
+- The slot time is a set value based on the PHY technology in use.
+- This time is either 9us or 20us. For example OFDM used with 802.11a has a slot time of 9us.
+- This value is used in conjunction with the random number chosen from the contention window to count down and determine if the medium is clear prior to a STA transmitting a single frame.
+
+## Differentiated Services (DiffServ) :: 802.3 Ethernet
 
 - `DiffServ (Differentiated Services)` Field is present in the `IP Header` and supersedes the `TOS (Type of service)` field
 
@@ -5483,7 +5508,7 @@ DiffServ field includes 2 tags:
 | Highest<br>⭐⭐⭐<br>⭐⭐⭐<br>⭐  | **110**XXX    | 40-55              | 6                 |
 | Highest<br>⭐⭐⭐<br>⭐⭐⭐<br>⭐⭐ | **111**XXX    | 65-63              | 7                 |
 
-### DSCP (Differentiated Services Code Point)
+### DSCP (Differentiated Services Code Point) :: 802.3 Ethernet
 
 - DSCP is defined in the RFC 2475 aswell in the RFC 2474 in the type of service field. 
 - Differentiated Service Code Points (DSCP) is an aspect of QoS (Quality of Service) used to classify and manage network traffic.
@@ -5534,6 +5559,14 @@ DiffServ field includes 2 tags:
 | **Medium** | 001100 <br>AF12 <br>DSCP 12 | 010100 <br>AF22 <br>DSCP 20 | 011100 <br>AF32 <br>DSCP 28 | 100100 <br>AF42 <br>DSCP 36 |
 | **High**   | 001110 <br>AF13 <br>DSCP 14 | 010110 <br>AF23 <br>DSCP 22 | 011110 <br>AF33 <br>DSCP 30 | 100110 <br>AF43 <br>DSCP 38 |
 
+### Differentiated Services (DiffServ) :: `Wireshark Filters`
+
+
+
+
+
+
+
 ## 802.1Q (VLANs/Bridging)
 
 - 802.1Q also defines prioroties in the `802.1Q VLAN tag` (ethernet traffic).
@@ -5566,7 +5599,19 @@ DiffServ field includes 2 tags:
 3. `DEI (Drop Elegible Indicator)`: Formally CFI Field, indicates if the frame is elegible to be dropped in the presence of congestion
 4. `VLAN ID`: VLAN to which frame belongs (eg. VLAN 10, VLAN 20, VLAN 90, etc) 
 
-## QoS Control
+### 802.1Q (VLANs/Bridging) :: `Wireshark Filters`
+
+
+
+
+
+
+
+
+
+
+
+## QoS Control :: (Wireless 802.11)
 
 - The `QoS Control` field is present in the `MAC Header` of a `802.11 frame` (wireless)
 
@@ -5601,12 +5646,37 @@ QoS Control field is comprised of five subfields:
 4. MSDU / A-MSDU: Indicates whether the frame is a single MAC Service Data Unit (MSDU) or an aggregated MSDU (A-MSDU). 
 5. TXOP limit, TXOP duration, AP PS buffer state, Queue Size: The maximum duration a station can hold the medium to send frames. / Specifies the length of the transmission opportunity. / Indicates the power save buffer state of the access point. / Represents the size of the transmission queue, indicating how much data is waiting to be sent.
 
-## WMM Element (Wireless 802.11)
+### QoS Control :: `Wireshark Filters`
+
+
+
+
+
+
+
+
+
+
+## WMM Element :: (Wireless 802.11)
 
 - Present in `Beacon` and `Probe Response` frames. <br><br>
 - Contains information about WMM supported by the AP; the client STA is required, according to the WMM specification, to set its WMM parameters according to this information. The client STA also updates its WMM parameters if the beacon frame changes the WMM information. <br><br>
 - The AP is allowed to use a different set of parameters than what it advertises in the WMM element. Therefore, you can use a different set of parameters for the AP than those used by the client STAs; this allows the AP to give itself more priority since the majority of traffic is downlink. Not every AP or management interface gives you the ability to do that; some only let you set the WMM parameters used by both the AP and clients the same, but others let you configure the AP differently, and that's allowed by the WMM specification: **"The AP can use a private or different set of WMM parameters than the client STAs utilize based on the Beacon or Probe Response information."** Because of this: <br><br>
     - **It IS NOT TRUE to say that whatever is inside the WMM Element is what the AP uses for its WMM parameters; it IS TRUE to say that whatever is present in the WMM Element, all WMM Wi-Fi Alliance Specification client STAs MUST use that information.**
+
+
+### WMM Element :: `Wireshark Filters`
+
+
+
+
+
+
+
+
+
+
+
 
 ## EDCA / QoS / DSCP / 802.1Q :: Table
 
@@ -5670,7 +5740,7 @@ QoS Control field is comprised of five subfields:
 
 
 
-## QoS Frame & Packet Capture
+
 
 
  
@@ -5721,16 +5791,6 @@ The values of CWmin and BWMax
 
 
 
-
-
-
-
-
-
-- `Slot Time`: The slot time is a set value based on the PHY technology in use. This time is either 9us or 20us. For example OFDM used with 802.11a has a slot time of 9us. This value is used in conjunction with the random number chosen from the contention window to count down and determine if the medium is clear prior to a STA transmitting a single frame.
-
-
-- `EDCA`: EDCA is an access method under Hybrid Coordination Function (HCF) and assigns user priorities based on the type of traffic sent. There are eight user priorities (0-7) that map to four different access categories AC-VO (voice) AC-VI (video) AC-BE (best effort) and AC-BK (background).
 
 
 
