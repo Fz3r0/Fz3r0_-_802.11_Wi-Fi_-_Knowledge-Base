@@ -5561,8 +5561,52 @@ DiffServ field includes 2 tags:
 
 802.1Q field includes 4 tags: 
 
+1. `TPID (Tag Protocol Identifier)`: When TPID = 0x8100 then the Protocol will be 802.1Q
+2. `PCP (Priority Code Point)`: Uses the same IP Presedence value (0-7)
+3. `DEI (Drop Elegible Indicator)`: Formally CFI Field, indicates if the frame is elegible to be dropped in the presence of congestion
+4. `VLAN ID`: VLAN to which frame belongs (eg. VLAN 10, VLAN 20, VLAN 90, etc) 
 
+## QoS Control
 
+- The `QoS Control` field is present in the `MAC Header` of a `802.11 frame` (wireless)
+
+````py
+## QoS Control :: QoS Control is a 16-bit (2 bytes) field that identifies the Quality of Service (QoS) parameter of a data frame (only in data frame type QoS-Data or QoS Null Data) 
+
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------|
+|  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     |
+| Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control | Control |
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------|
+                                                                             ||
+                                                                             \/
+                                 |--------------|--------------|--------------|--------------|--------------|
+                                 |     TID /    |     EOSP     |     ACK      |     MSDU /   | TXOP/Buffer/ |
+                                 |      UP      |              |    Policy    |     A-MSDU   |    Queue     |  
+                                 |--------------|--------------|--------------|--------------|--------------|
+                                         4              1             2               1              8        <<== 2 Bytes / 16 Bits
+
+````
+
+- QoS Control is a 16-bit (2 bytes) field that identifies the Quality of Service (QoS) parameter of a data frame (only in data frame type QoS-Data)
+- The benefit of QoS control is allow the frame to be tag for the priority that actually needs to be.
+- Wi-Fi uses EDCA (Enhanced Distributed Channel Access), a wireless access method that provides differentiated access for stations using 8 user priorities & 4 QoS Access categories (AC_VO, AC_VI, AC_BE, AC_BK).
+- These UP values of a wireless frame map to QoS field (CoS/802.1D) of a 802.1Q header when it translated to Ethernet frame
+- Wi-Fi alliance QoS certification called WMM-WiFi Multimedia also defined those 4 access categories. So WMM cetified end client should classified its traffic on to one of those classes prior to transmit them over the air.
+
+QoS Control field is comprised of five subfields: 
+
+1. Traffic Identifier (TID) AKA UP (User Priority): Indicates the QoS 802.1D/802.1Q Priority (0-7)
+2. End of Service Period (EOSP): Set to 1 by the WMM AP at the end of an Unscheduled Service Period (USP), otherwise set to 0.
+3. ACK Policy: 00 = Acknowledgement / 01 = Do not Acknowledge
+4. MSDU / A-MSDU: Indicates whether the frame is a single MAC Service Data Unit (MSDU) or an aggregated MSDU (A-MSDU). 
+5. TXOP limit, TXOP duration, AP PS buffer state, Queue Size: The maximum duration a station can hold the medium to send frames. / Specifies the length of the transmission opportunity. / Indicates the power save buffer state of the access point. / Represents the size of the transmission queue, indicating how much data is waiting to be sent.
+
+## WMM Element (Wireless 802.11)
+
+- Present in `Beacon` and `Probe Response` frames. <br><br>
+- Contains information about WMM supported by the AP; the client STA is required, according to the WMM specification, to set its WMM parameters according to this information. The client STA also updates its WMM parameters if the beacon frame changes the WMM information. <br><br>
+- The AP is allowed to use a different set of parameters than what it advertises in the WMM element. Therefore, you can use a different set of parameters for the AP than those used by the client STAs; this allows the AP to give itself more priority since the majority of traffic is downlink. Not every AP or management interface gives you the ability to do that; some only let you set the WMM parameters used by both the AP and clients the same, but others let you configure the AP differently, and that's allowed by the WMM specification: **"The AP can use a private or different set of WMM parameters than the client STAs utilize based on the Beacon or Probe Response information."** Because of this: <br><br>
+    - **It IS NOT TRUE to say that whatever is inside the WMM Element is what the AP uses for its WMM parameters; it IS TRUE to say that whatever is present in the WMM Element, all WMM Wi-Fi Alliance Specification client STAs MUST use that information.**
 
 ## EDCA / QoS / DSCP / 802.1Q :: Table
 
@@ -5628,14 +5672,7 @@ DiffServ field includes 2 tags:
 
 ## QoS Frame & Packet Capture
 
-### WMM Element (Wireless 802.11)
 
-- Present in `Beacon` and `Probe Response` frames. <br><br>
-- Contains information about WMM supported by the AP; the client STA is required, according to the WMM specification, to set its WMM parameters according to this information. The client STA also updates its WMM parameters if the beacon frame changes the WMM information. <br><br>
-- The AP is allowed to use a different set of parameters than what it advertises in the WMM element. Therefore, you can use a different set of parameters for the AP than those used by the client STAs; this allows the AP to give itself more priority since the majority of traffic is downlink. Not every AP or management interface gives you the ability to do that; some only let you set the WMM parameters used by both the AP and clients the same, but others let you configure the AP differently, and that's allowed by the WMM specification: **"The AP can use a private or different set of WMM parameters than the client STAs utilize based on the Beacon or Probe Response information."** Because of this: <br><br>
-    - **It IS NOT TRUE to say that whatever is inside the WMM Element is what the AP uses for its WMM parameters; it IS TRUE to say that whatever is present in the WMM Element, all WMM Wi-Fi Alliance Specification client STAs MUST use that information.**
-
-**WMM Element Filter:**
  
 ---
 
