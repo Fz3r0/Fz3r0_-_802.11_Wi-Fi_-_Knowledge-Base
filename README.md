@@ -4612,6 +4612,7 @@ _Once a STA is connected to a WLAN via an AP, the STA need to communicate someho
 - [RTS/CTS Durations](https://mrncciew.com/2014/10/26/cwap-802-11-ctrl-rtscts/) _`nayarasi`_
 - [EDCA Channel access method](https://dot11ap.wordpress.com/edca-channel-access-method/) _`dot11ap`_
 - [What is Differentiated Services Code Point (DSCP)?](https://www.cbtnuggets.com/blog/technology/networking/what-is-differentiated-services-code-point-dscp) _`cbtnuggets`_
+- [Implement Quality of Service Policies with Differentiated Services Code Point in Cisco :: TABLE INCLUDED](https://www.cisco.com/c/en/us/support/docs/quality-of-service-qos/qos-packet-marking/10103-dscpvalues.html)
 - [Ip Precedence DSCP ToS Lookup Table](http://www.patrickdenis.biz/blog/ip-precedence-dscp-tos-lookup-table/)
 - [Understanding and Decoding DSCP (Differentiated Services Code Point)](https://www.youtube.com/watch?v=DJSgZ2-BpeM) _`video`_
 
@@ -5525,6 +5526,14 @@ DiffServ includes 2 elements:
     - AF43 (DSCP 38) <br><br>
 5. Expedited Forwarding (EF)
     - DSCP 46 : data-intensive operations   
+
+**Classes 1 to 4 are referred to as AF classes. This table illustrates the DSCP code that specifies the AF class with the probability. Bits DS5, DS4 and DS3 define the class; bits DS2 and DS1 specify the drop probability; bit DS0 is always zero.**
+
+|  **Drop**  |         **Class 1**         |         **Class 2**         |         **Class 3**         |         **Class 4**         |
+|:----------:|:---------------------------:|:---------------------------:|:---------------------------:|:---------------------------:|
+| **Low**    | 001010 <br>AF11 <br>DSCP 10 | 010010 <br>AF21 <br>DSCP 18 | 011010 <br>AF31 <br>DSCP 26 | 100010 <br>AF41 <br>DSCP 34 |
+| **Medium** | 001100 <br>AF12 <br>DSCP 12 | 010100 <br>AF22 <br>DSCP 20 | 011100 <br>AF32 <br>DSCP 28 | 100100 <br>AF42 <br>DSCP 36 |
+| **High**   | 001110 <br>AF13 <br>DSCP 14 | 010110 <br>AF23 <br>DSCP 22 | 011110 <br>AF33 <br>DSCP 30 | 100110 <br>AF43 <br>DSCP 38 |
 
 ## 802.1Q (VLANs/Bridging)
 
