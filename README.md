@@ -5438,8 +5438,18 @@ Background   ::  |= 7 ======| |= 0 - 15 ==============|
                    min wait     random backoff / CW
 ````
 
+## Differentiated Services (DiffServ)
+
+- Differentiated Services Field
+
+DiffServ includes 2 elements: 
+
+1. DSCP (6 bits)
+2. CU (Currently Unused)
+
 ### DSCP (Differentiated Services Code Point)
 
+- DSCP is defined in the RFC 2475 aswell in the RFC 2474 in the type of service field. 
 - Differentiated Service Code Points (DSCP) is an aspect of QoS (Quality of Service) used to classify and manage network traffic.
 - The DSCP field is 6 bits in length and can take on values from 0 to 63.
 - DSCP is often described as “managed unfairness,” and with good reason. DSCP prioritizes packets by their attributes, prioritizing some information over others. For example, VoIP packets should be prioritized over email packets.
@@ -5480,9 +5490,14 @@ Background   ::  |= 7 ======| |= 0 - 15 ==============|
 5. Expedited Forwarding (EF)
     - DSCP 46 : data-intensive operations   
 
+
+
+
 ## EDCA / Qos Table
 
-| **Priority**                | **802.11 User Priority (UP)**  | **802.11 Access Category (QoS)** | **802.1D** <br>**Designation** | **802.11** <br>**Traffic Type** | **WMM Access Category** | **AIFSN** | **CW min**<br>_(default)_ | **CW max**<br>_(default)_ | **DSCP**<br>_(eth)_ | **IP Precedence** / <br>**802.1Q** <br>_(eth)_ |
+**Note:** These are the default mappings for each specification (AC, UP, DSCP, etc.). It does not mean that every vendor uses them; always check each vendor's specification.
+
+| **Priority**                | **802.11 User Priority (UP)**  | **802.11 Access Category (AC) QoS** | **802.1D** <br>**Designation** | **802.11** <br>**Traffic Type** | **WMM Access Category** | **AIFSN** | **CW min**<br>_(default)_ | **CW max**<br>_(default)_ | **DSCP**<br>_(eth)_ | **IP Precedence** / <br>**802.1Q** <br>_(eth)_ |
 |-----------------------------|:------------------------------:|:--------------------------------:|:------------------------------:|:-------------------------------:|:-----------------------:|:---------:|:-------------------------:|:-------------------------:|---------------------|------------------------------------------------|
 | Lowest<br>⭐                 | 1                              | AC_BK                            | BK                             | Background                      | WMM Background          | 7         | 15                        | 1023                      | 0-7<br>000XXX       | 0                                              |
 | Lowest<br>⭐⭐                | 2                              | AC_BK                            | --                             | Spare                           | WMM Background          | 7         | 15                        | 1023                      | 8-15<br>001XXX      | 1                                              |
