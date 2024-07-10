@@ -4611,6 +4611,7 @@ _Once a STA is connected to a WLAN via an AP, the STA need to communicate someho
 - [Difference Between SIFS, PIFS, DIFS, EIFS And AIFS](https://www.rfwireless-world.com/Terminology/WLAN-SIFS-vs-PIFS-vs-DIFS-vs-EIFS-vs-AIFS.html) _`rfwireless-world`_
 - [RTS/CTS Durations](https://mrncciew.com/2014/10/26/cwap-802-11-ctrl-rtscts/) _`nayarasi`_
 - [EDCA Channel access method](https://dot11ap.wordpress.com/edca-channel-access-method/) _`dot11ap`_
+- [Differentiated services or DiffServ :: Wiki](https://en.wikipedia.org/wiki/Differentiated_services) _`wiki`_
 - [What is Differentiated Services Code Point (DSCP)?](https://www.cbtnuggets.com/blog/technology/networking/what-is-differentiated-services-code-point-dscp) _`cbtnuggets`_
 - [Implement Quality of Service Policies with Differentiated Services Code Point in Cisco :: TABLE INCLUDED](https://www.cisco.com/c/en/us/support/docs/quality-of-service-qos/qos-packet-marking/10103-dscpvalues.html)
 - [Ip Precedence DSCP ToS Lookup Table](http://www.patrickdenis.biz/blog/ip-precedence-dscp-tos-lookup-table/)
@@ -5549,7 +5550,16 @@ DiffServ field includes 2 tags:
     - AF42 (DSCP 36)
     - AF43 (DSCP 38) <br><br>
 5. Expedited Forwarding (EF)
-    - DSCP 46 : data-intensive operations   
+    - DSCP 46 : data-intensive operations
+
+### AF (Assured Forwarding) Table
+
+- The IETF defines the Assured Forwarding (AF) behavior in RFC 2597 and RFC 3260.
+- Assured forwarding allows the operator to provide assurance of delivery as long as the traffic does not exceed some subscribed rate.
+- Traffic that exceeds the subscription rate faces a higher probability of being dropped if congestion occurs.
+- The AF behavior group defines four separate AF classes with all traffic within one class having the same priority.
+- Within each class, packets are given a drop precedence (high, medium or low, where higher precedence means more dropping).
+- The combination of classes and drop precedence yields twelve separate DSCP encodings from AF11 through AF43 (see table).
 
 **Classes 1 to 4 are referred to as AF classes. This table illustrates the DSCP code that specifies the AF class with the probability. Bits DS5, DS4 and DS3 define the class; bits DS2 and DS1 specify the drop probability; bit DS0 is always zero.**
 
@@ -5557,12 +5567,83 @@ DiffServ field includes 2 tags:
 |:----------:|:---------------------------:|:---------------------------:|:---------------------------:|:---------------------------:|
 | **Low**    | 001010 <br>AF11 <br>DSCP 10 | 010010 <br>AF21 <br>DSCP 18 | 011010 <br>AF31 <br>DSCP 26 | 100010 <br>AF41 <br>DSCP 34 |
 | **Medium** | 001100 <br>AF12 <br>DSCP 12 | 010100 <br>AF22 <br>DSCP 20 | 011100 <br>AF32 <br>DSCP 28 | 100100 <br>AF42 <br>DSCP 36 |
-| **High**   | 001110 <br>AF13 <br>DSCP 14 | 010110 <br>AF23 <br>DSCP 22 | 011110 <br>AF33 <br>DSCP 30 | 100110 <br>AF43 <br>DSCP 38 |
+| **High**   | 001110 <br>AF13 <br>DSCP 14 | 010110 <br>AF23 <br>DSCP 22 | 011110 <br>AF33 <br>DSCP 30 | 100110 <br>AF43 <br>DSCP 38 |  
+
+### CS (Class Selector) Table
+
+- Prior to DiffServ, IPv4 networks could use the IP precedence field in the TOS byte of the IPv4 header to mark priority traffic.
+- The TOS octet and IP precedence were not widely used.
+- The IETF agreed to reuse the TOS octet as the DS field for DiffServ networks, later splitting it into the DS field and ECN field.
+- In order to maintain backward compatibility with network devices that still use the Precedence field, DiffServ defines the Class Selector PHB.
+- The Class Selector code points are of the binary form 'xxx000'.
+- The first three bits are the IP precedence bits.
+- Each IP precedence value can be mapped into a DiffServ class.
+- IP precedence 0 maps to CS0, IP precedence 1 to CS1, and so on.
+- If a packet is received from a non-DiffServ-aware router that used IP precedence markings, the DiffServ router can still understand the encoding as a Class Selector code point.
+- Specific recommendations for use of Class Selector code points are given in RFC 4594.
+
+|                      **Service class**                      | **DSCP Name** | **DSCP Value** | **IP precedence** |                                       **Examples of application**                                      |
+|:-----------------------------------------------------------:|:-------------:|:--------------:|:-----------------:|:------------------------------------------------------------------------------------------------------:|
+| **Standard**                                                | CS0 (DF)      | 0              | 0 (000)           |                                                                                                        |
+| **Low-priority data**                                       | CS1           | 8              | 1 (001)           | File transfer (FTP, SMB)                                                                               |
+| **Network operations, administration and management (OAM)** | CS2           | 16             | 2 (010)           | SNMP, SSH, Ping, Telnet, syslog                                                                        |
+| **Broadcast video**                                         | CS3           | 24             | 3 (011)           | RTSP broadcast TV, streaming of live audio & video, video surveillance, video-on-demand                |
+| **Real-time interactive**                                   | CS4           | 32             | 4 (100)           | Gaming, low priority video conferencing                                                                |
+| **Signaling**                                               | CS5           | 40             | 5 (101)           | Peer-to-peer (SIP, H.323, H.248), NTP                                                                  |
+| **Network control**                                         | CS6           | 48             | 6 (110)           | Routing protocols (OSPF, BGP, ISIS, RIP)                                                               |
+| **Reserved for future use**                                 | CS7           | 56             | 7 (111)           |                                                                                                        |
+
+### RFC 4594 Recomendations
+
+- RFC 4594 offers detailed and specific recommendations for the use and configuration of code points.
+
+|      Service class      |     DSCP Name    | DSCP Value |                  Conditioning at DS edge                 |    PHB   |  Queuing |      AQM     |
+|:-----------------------:|:----------------:|:----------:|:--------------------------------------------------------:|:--------:|:--------:|:------------:|
+| Network control         | CS6              | 48         | See section 3.1                                          | RFC 2474 | Rate     | Yes          |
+| Telephony               | EF               | 46         | Police using sr+bs                                       | RFC 3246 | Priority | No           |
+| Signaling               | CS5              | 40         | Police using sr+bs                                       | RFC 2474 | Rate     | No           |
+| Multimedia conferencing | AF41, AF42, AF43 | 34, 36, 38 | Using two-rate, three-color marker (such as RFC 2698)    | RFC 2597 | Rate     | Yes per DSCP |
+| Real-time interactive   | CS4              | 32         | Police using sr+bs                                       | RFC 2474 | Rate     | No           |
+| Multimedia streaming    | AF31, AF32, AF33 | 26, 28, 30 | Using two-rate, three-color marker (such as RFC 2698)    | RFC 2597 | Rate     | Yes per DSCP |
+| Broadcast video         | CS3              | 24         | Police using sr+bs                                       | RFC 2474 | Rate     | No           |
+| Low-latency data        | AF21, AF22, AF23 | 18, 20, 22 | Using single-rate, three-color marker (such as RFC 2697) | RFC 2597 | Rate     | Yes per DSCP |
+| OAM                     | CS2              | 16         | Police using sr+bs                                       | RFC 2474 | Rate     | Yes          |
+| High-throughput data    | AF11, AF12, AF13 | 10, 12, 14 | Using two-rate, three-color marker (such as RFC 2698)    | RFC 2597 | Rate     | Yes per DSCP |
+| Standard                | DF               | 0          | Not applicable                                           | RFC 2474 | Rate     | Yes          |
+| Lower-effort            | LE               | 1          | Not applicable                                           | RFC 8622 | Priority | Yes          |
 
 ### Differentiated Services (DiffServ) :: `Wireshark Filters`
 
+- `DiffServ (Differentiated Services)` field is present in the `IP Header` and supersedes the `TOS (Type of service)` field.
 
+|                      **Service class**                      | **DSCP Name** | **DSCP Value** | **IP precedence** |                                       **Examples of application**                                      | **Wireshark Filter**              |
+|:-----------------------------------------------------------:|:-------------:|:--------------:|:-----------------:|:------------------------------------------------------------------------------------------------------:|:---------------------------------:|
+|                                                             |               |                |                   | IP Packets with DiffServ Field                                                                         | `ip.dsfield`                      |
+| **Standard**                                                | CS0 (DF)      | 0              | 0 (000)           |                                                                                                        | `ip.dsfield.dscp == 0`            |
+| **Low-priority data**                                       | CS1           | 8              | 1 (001)           | File transfer (FTP, SMB)                                                                               | `ip.dsfield.dscp == 8`            |
+| **Network operations, administration and management (OAM)** | CS2           | 16             | 2 (010)           | SNMP, SSH, Ping, Telnet, syslog                                                                        | `ip.dsfield.dscp == 16`           |
+| **Broadcast video**                                         | CS3           | 24             | 3 (011)           | RTSP broadcast TV, streaming of live audio & video, video surveillance, video-on-demand                | `ip.dsfield.dscp == 24`           |
+| **Real-time interactive**                                   | CS4           | 32             | 4 (100)           | Gaming, low priority video conferencing                                                                | `ip.dsfield.dscp == 32`           |
+| **Signaling**                                               | CS5           | 40             | 5 (101)           | Peer-to-peer (SIP, H.323, H.248), NTP                                                                  | `ip.dsfield.dscp == 40`           |
+| **Network control**                                         | CS6           | 48             | 6 (110)           | Routing protocols (OSPF, BGP, ISIS, RIP)                                                               | `ip.dsfield.dscp == 48`           |
+| **Reserved for future use**                                 | CS7           | 56             | 7 (111)           |                                                                                                        | `ip.dsfield.dscp == 56`           |
 
+### Class Selector (CS) :: `Wireshark Filters`
+
+| Drop probability | Class |  AF  | DSCP |  Binary  |                      Description                      |     Wireshark Filter    |
+|:----------------:|:-----:|:----:|:----:|:--------:|:----------------------------------------------------:|:-----------------------:|
+|       Low        |   1   | AF11 |  10  |  001010  | Used for background traffic                           | `ip.dsfield.dscp == 10` |
+|       Low        |   2   | AF21 |  18  |  010010  | Used for standard data traffic                       | `ip.dsfield.dscp == 18` |
+|       Low        |   3   | AF31 |  26  |  011010  | Used for streaming media                              | `ip.dsfield.dscp == 26` |
+|       Low        |   4   | AF41 |  34  |  100010  | Used for interactive media                            | `ip.dsfield.dscp == 34` |
+|      Medium      |   1   | AF12 |  12  |  001100  | Used for background traffic                           | `ip.dsfield.dscp == 12` |
+|      Medium      |   2   | AF22 |  20  |  010100  | Used for standard data traffic                       | `ip.dsfield.dscp == 20` |
+|      Medium      |   3   | AF32 |  28  |  011100  | Used for streaming media                              | `ip.dsfield.dscp == 28` |
+|      Medium      |   4   | AF42 |  36  |  100100  | Used for interactive media                            | `ip.dsfield.dscp == 36` |
+|       High       |   1   | AF13 |  14  |  001110  | Used for background traffic                           | `ip.dsfield.dscp == 14` |
+|       High       |   2   | AF23 |  22  |  010110  | Used for standard data traffic                       | `ip.dsfield.dscp == 22` |
+|       High       |   3   | AF33 |  30  |  011110  | Used for streaming media                              | `ip.dsfield.dscp == 30` |
+|       High       |   4   | AF43 |  38  |  100110  | Used for interactive media                            | `ip.dsfield.dscp == 38` |
 
 
 
@@ -5600,6 +5681,8 @@ DiffServ field includes 2 tags:
 4. `VLAN ID`: VLAN to which frame belongs (eg. VLAN 10, VLAN 20, VLAN 90, etc) 
 
 ### 802.1Q (VLANs/Bridging) :: `Wireshark Filters`
+
+
 
 
 
