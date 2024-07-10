@@ -5614,11 +5614,14 @@ DiffServ field includes 2 tags:
 
 ### Differentiated Services (DiffServ) :: `Wireshark Filters`
 
-- `DiffServ (Differentiated Services)` field is present in the `IP Header` and supersedes the `TOS (Type of service)` field.
+`DiffServ (Differentiated Services)` field is present in the `IP Header` and supersedes the `TOS (Type of service)` field.
+
+- IP Packets with DiffServ Field Filer = `ip.dsfield`       
+
+#### AF (Assured Forwarding) :: `Wireshark Filters`
 
 |                      **Service class**                      | **DSCP Name** | **DSCP Value** | **IP precedence** |                                       **Examples of application**                                      | **Wireshark Filter**              |
 |:-----------------------------------------------------------:|:-------------:|:--------------:|:-----------------:|:------------------------------------------------------------------------------------------------------:|:---------------------------------:|
-|                                                             |               |                |                   | IP Packets with DiffServ Field                                                                         | `ip.dsfield`                      |
 | **Standard**                                                | CS0 (DF)      | 0              | 0 (000)           |                                                                                                        | `ip.dsfield.dscp == 0`            |
 | **Low-priority data**                                       | CS1           | 8              | 1 (001)           | File transfer (FTP, SMB)                                                                               | `ip.dsfield.dscp == 8`            |
 | **Network operations, administration and management (OAM)** | CS2           | 16             | 2 (010)           | SNMP, SSH, Ping, Telnet, syslog                                                                        | `ip.dsfield.dscp == 16`           |
@@ -5628,7 +5631,7 @@ DiffServ field includes 2 tags:
 | **Network control**                                         | CS6           | 48             | 6 (110)           | Routing protocols (OSPF, BGP, ISIS, RIP)                                                               | `ip.dsfield.dscp == 48`           |
 | **Reserved for future use**                                 | CS7           | 56             | 7 (111)           |                                                                                                        | `ip.dsfield.dscp == 56`           |
 
-### Class Selector (CS) :: `Wireshark Filters`
+#### Class Selector (CS) :: `Wireshark Filters`
 
 | Drop probability | Class |  AF  | DSCP |  Binary  |                      Description                      |     Wireshark Filter    |
 |:----------------:|:-----:|:----:|:----:|:--------:|:----------------------------------------------------:|:-----------------------:|
@@ -5645,7 +5648,7 @@ DiffServ field includes 2 tags:
 |       High       |   3   | AF33 |  30  |  011110  | Used for streaming media                              | `ip.dsfield.dscp == 30` |
 |       High       |   4   | AF43 |  38  |  100110  | Used for interactive media                            | `ip.dsfield.dscp == 38` |
 
-### Explicit Congestion Notification (ECN) :: `Wireshark Filters`
+#### Explicit Congestion Notification (ECN) :: `Wireshark Filters`
 
 | ECN Value | Binary |                        Description                        |     Wireshark Filter    |
 |:---------:|:------:|:--------------------------------------------------------:|:-----------------------:|
@@ -5690,16 +5693,21 @@ DiffServ field includes 2 tags:
 
 ### 802.1Q (VLANs/Bridging) :: `Wireshark Filters`
 
+- All VLAN filter :: `vlan`
+- VLAN ID Filter (eg. vlan 10) :: `vlan.id == 500` <br><br>
+- DEI (Drop Elegible Indicator) :: NOT elegible to be dropped in the presence of congestion :: `vlan.dei == 0`
+- DEI (Drop Elegible Indicator) :: elegible to be dropped in the presence of congestion :: `vlan.dei == 1`
 
-
-
-
-
-
-
-
-
-
+| **PCP (Priority Code Point) / VLAN Priority** | **IP Prority** |                          **Description**                          | **Wireshark Filter** |
+|-----------------------------------------------|----------------|--------------------------------------------------------------------|----------------------|
+| Best Effort (default)                         | 0              | Standard traffic without specific priority requirements.           | vlan.priority == 0   |
+| Background                                    | 1              | Lower priority traffic, suitable for bulk data transfers.          | vlan.priority == 1   |
+| Excellent Effort                              | 2              | Traffic requiring better-than-default but not highest priority.    | vlan.priority == 2   |
+| Critical Applications                         | 3              | Traffic critical to the network operations, such as control data.  | vlan.priority == 3   |
+| Video < 100ms latency / jitter                | 4              | Video traffic with low latency and jitter requirements.            | vlan.priority == 4   |
+| Voice < 10ms latency / jitter                 | 5              | Voice traffic with stringent low latency and jitter requirements.  | vlan.priority == 5   |
+| Network Control                               | 6              | Network control traffic, used for routing and other network tasks. | vlan.priority == 6   |
+| Network Control                               | 7              | Network control traffic, used for routing and other network tasks. | vlan.priority == 7   |
 
 
 ## QoS Control :: (Wireless 802.11)
@@ -5739,14 +5747,64 @@ QoS Control field is comprised of five subfields:
 
 ### QoS Control :: `Wireshark Filters`
 
+The `QoS Control` field is present in the `MAC Header` of a `802.11 frame` (wireless)
 
-
-
-
-
-
-
-
+| **PCP (Priority Code Point) / VLAN Priority** | **IP Prority** |                       **Description**                       |         **Wireshark Filter**         |
+|-----------------------------------------------|----------------|-------------------------------------------------------------|--------------------------------------|
+| TID 1                                         | BK (AC_BK)     | Background traffic                                          | `wlan.qos.tid == 1`                  |
+| Priority 1 (TID 1)                            | BK (AC_BK)     | Background traffic                                          | `wlan.qos.priority == 1`             |
+| TID 2                                         | -- (Spare)     | Spare                                                       | `wlan.qos.tid == 2`                  |
+| Priority 2 (TID 2)                            | -- (Spare)     | Spare                                                       | `wlan.qos.priority == 2`             |
+| TID 0                                         | BE (AC_BE)     | Best Effort (Default LAN Traffic)                            | `wlan.qos.tid == 0`                  |
+| Priority 0 (TID 0)                            | BE (AC_BE)     | Best Effort (Default LAN Traffic)                            | `wlan.qos.priority == 0`             |
+| TID 3                                         | EE (AC_BE)     | Excellent Effort (Valued Customers)                          | `wlan.qos.tid == 3`                  |
+| Priority 3 (TID 3)                            | EE (AC_BE)     | Excellent Effort (Valued Customers)                          | `wlan.qos.priority == 3`             |
+| TID 4                                         | CL (AC_VI)     | Controlled Load                                             | `wlan.qos.tid == 4`                  |
+| Priority 4 (TID 4)                            | CL (AC_VI)     | Controlled Load                                             | `wlan.qos.priority == 4`             |
+| TID 5                                         | VI (AC_VI)     | Video                                                       | `wlan.qos.tid == 5`                  |
+| Priority 5 (TID 5)                            | VI (AC_VI)     | Video                                                       | `wlan.qos.priority == 5`             |
+| TID 6                                         | VI (AC_VO)     | Voice                                                       | `wlan.qos.tid == 6`                  |
+| Priority 6 (TID 6)                            | VI (AC_VO)     | Voice                                                       | `wlan.qos.priority == 6`             |
+| TID 7                                         | NC (AC_VO)     | Network Control                                             | `wlan.qos.tid == 7`                  |
+| Priority 7 (TID 7)                            | NC (AC_VO)     | Network Control                                             | `wlan.qos.priority == 7`             |
+| TID 8                                         | Queue + Best Effort (0)   | Queue + Best Effort (0)                              | `wlan.qos.tid == 8`                  |
+| TID 9                                         | Queue + Background (1)    | Queue + Background (1)                               | `wlan.qos.tid == 9`                  |
+| TID 10                                        | Queue + Background Spare (2)   | Queue + Background Spare (2)                              | `wlan.qos.tid == 10`                 |
+| TID 11                                        | Queue + Excellent Effort (3)   | Queue + Excellent Effort (3)                              | `wlan.qos.tid == 11`                 |
+| TID 12                                        | Queue + Controlled Load (4)   | Queue + Controlled Load (Video) (4)                        | `wlan.qos.tid == 12`                 |
+| TID 13                                        | Queue + Video (5)    | Queue + Video (5)                                | `wlan.qos.tid == 13`                 |
+| TID 14                                        | Queue + Voice (6)    | Queue + Voice (6)                                | `wlan.qos.tid == 14`                 |
+| TID 15                                        | Queue + Network Control {Voice} (7) | Queue + Network Control {Voice} (7)                   | `wlan.qos.tid == 15`                 |
+| EOSP (End of Service Period)                  | -              | Indicates end of service period                              | `wlan.qos.eosp`                      |
+| Service Period (0)                            | -              | Service period                                              | `wlan.qos.eosp == 0`                 |
+| Client go Back to Sleep (1)                   | -              | End of unscheduled service period                            | `wlan.qos.eosp == 1`                 |
+| ACK Policy                                    | -              | Acknowledgment policy                                       | `wlan.qos.ack`                       |
+| Normal ACK Policy (0)                         | -              | Normal ACK policy                                           | `wlan.qos.ack == 0`                  |
+| No ACK (1)                                    | -              | No ACK                                                      | `wlan.qos.ack == 1`                  |
+| No Explicit ACK (2)                           | -              | No explicit ACK                                             | `wlan.qos.ack == 2`                  |
+| Block ACK (3)                                 | -              | Block ACK                                                   | `wlan.qos.ack == 3`                  |
+| A-MSDU indicator                              | -              | A-MSDU indication                                           | `wlan.qos.amsdupresent`              |
+| Payload type: A-MSDU Present (True)           | -              | A-MSDU present                                              | `wlan.qos.amsdupresent == 1`         |
+| Payload type: A-MSDU Not Present (False)      | -              | Frame is an MSDU                                            | `wlan.qos.amsdupresent == 0`         |
+| TXOP Limit                                    | -              | Transmit Opportunity Limit                                  | `wlan.qos.txop_limit`                |
+| TXOP Duration Requested                       | -              | TXOP duration requested                                     | `wlan.qos.txop_dur_req`              |
+| No TXOP Requested (0)                         | -              | No TXOP requested                                           | `wlan.qos.txop_dur_req == 0`         |
+| TXOP Duration Requested (1)                   | -              | TXOP duration requested                                     | `wlan.qos.txop_dur_req == 1`         |
+| QoS Buffer State                              | -              | QoS buffer state                                            | `wlan.qos.ps_buf_state`              |
+| QAP PS Buffer State (0)                       | -              | QAP PS buffer state                                         | `wlan.qos.ps_buf_state == 0`         |
+| Buffer State NON Indicated (0)                | -              | Buffer state non indicated                                  | `wlan.qos.buf_state_indicated == 0`  |
+| QAP Buffered Load (variable)                  | -              | QAP buffered load                                           | `wlan.qos.qap_buf_load`              |
+| Queue Size                                    | -              | Queue size                                                  | `wlan.qos.queue_size`                |
+| No buffered traffic in Queue (0)              | -              | No buffered traffic in queue                                | `wlan.qos.queue_size == 0`           |
+| 16 bytes Queue Size (1)                       | -              | 16 bytes queue size                                         | `wlan.qos.queue_size == 1`           |
+| 32 bytes Queue Size (2)                       | -              | 32 bytes queue size                                         | `wlan.qos.queue_size == 2`           |
+| 48 bytes Queue Size (3)                       | -              | 48 bytes queue size                                         | `wlan.qos.queue_size == 3`           |
+| 64 bytes Queue Size (4)                       | -              | 64 bytes queue size                                         | `wlan.qos.queue_size == 4`           |
+| 80 bytes Queue Size (5)                       | -              | 80 bytes queue size                                         | `wlan.qos.queue_size == 5`           |
+| 96 bytes Queue Size (6)                       | -              | 96 bytes queue size                                         | `wlan.qos.queue_size == 6`           |
+| 112 bytes Queue Size (7)                      | -              | 112 bytes queue size                                        | `wlan.qos.queue_size == 7`           |
+| 128 bytes Queue Size (8)                      | -              | 128 bytes queue size                                        | `wlan.qos.queue_size == 8`           |
+| 13.568 gigas Queue Size (113)                 | -              | 13.568 gigas queue size                                     | `wlan.qos.queue_size == 113`         |
 
 ## WMM Element :: (Wireless 802.11)
 
@@ -5755,19 +5813,23 @@ QoS Control field is comprised of five subfields:
 - The AP is allowed to use a different set of parameters than what it advertises in the WMM element. Therefore, you can use a different set of parameters for the AP than those used by the client STAs; this allows the AP to give itself more priority since the majority of traffic is downlink. Not every AP or management interface gives you the ability to do that; some only let you set the WMM parameters used by both the AP and clients the same, but others let you configure the AP differently, and that's allowed by the WMM specification: **"The AP can use a private or different set of WMM parameters than the client STAs utilize based on the Beacon or Probe Response information."** Because of this: <br><br>
     - **It IS NOT TRUE to say that whatever is inside the WMM Element is what the AP uses for its WMM parameters; it IS TRUE to say that whatever is present in the WMM Element, all WMM Wi-Fi Alliance Specification client STAs MUST use that information.**
 
-
 ### WMM Element :: `Wireshark Filters`
 
+Present in `Beacon` and `Probe Response` frames. 
 
+- Vendor Specific WWM/WME (Wireless Multimedia) Parameter = `wlan.tag.number == 221` 
+- Type WMM = `wlan.wfa.ie.type == 0x02` <br><br>
+- Admission Control Mandatory = Yes :: `wlan.wfa.ie.wme.acp.acm == 1`
+- Admission Control Mandatory = No :: `wlan.wfa.ie.wme.acp.acm == 0` <br><br>
+- TXOP Limit = 0 :: `wlan.wfa.ie.wme.acp.txop_limit == 0`
+- TXOP Limit more than 0 :: `wlan.wfa.ie.wme.acp.txop_limit > 0`
 
-
-
-
-
-
-
-
-
+| **Access Category (AC)** | **AIFSN** | **Backoff** | **CWmin** | **AIFSN Wireshark Filter**       | **Access Category (AC) Wireshark Filter** |
+|--------------------------|-----------|-------------|-----------|----------------------------------|-------------------------------------------|
+| **Voice**                | 2         | 0 to 3      | 3         | `wlan.wfa.ie.wme.acp.aifsn == 2` | `wlan.wfa.ie.wme.acp.aci == 0`            |
+| **Video**                | 2         | 0 to 7      | 7         | `wlan.wfa.ie.wme.acp.aifsn == 2` | `wlan.wfa.ie.wme.acp.aci == 1`            |
+| **Best Effort**          | 3         | 0 to 15     | 15        | `wlan.wfa.ie.wme.acp.aifsn == 3` | `wlan.wfa.ie.wme.acp.aci == 2`            |
+| **Background**           | 7         | 0 to 15     | 15        | `wlan.wfa.ie.wme.acp.aifsn == 7` | `wlan.wfa.ie.wme.acp.aci == 3`            |
 
 ## EDCA / QoS / DSCP / 802.1Q :: Table
 
@@ -5840,14 +5902,6 @@ QoS Control field is comprised of five subfields:
 
 
 
-
-### Contention Window & EDCA in Wireshark
-
-The values of CWmin and BWMax
-
-
-- Vendor Specific WWM/WME (Wireless Multimedia) Parameter = `wlan.tag.number == 221` 
-- Type WMM = `wlan.wfa.ie.type == 0x02` <br><br>
 
 
 
