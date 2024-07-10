@@ -5645,6 +5645,14 @@ DiffServ field includes 2 tags:
 |       High       |   3   | AF33 |  30  |  011110  | Used for streaming media                              | `ip.dsfield.dscp == 30` |
 |       High       |   4   | AF43 |  38  |  100110  | Used for interactive media                            | `ip.dsfield.dscp == 38` |
 
+### Explicit Congestion Notification (ECN) :: `Wireshark Filters`
+
+| ECN Value | Binary |                        Description                        |     Wireshark Filter    |
+|:---------:|:------:|:--------------------------------------------------------:|:-----------------------:|
+|     0     |   00   | Not ECN-Capable Transport, Not-ECT                         | `ip.dsfield.ecn == 0`   |
+|     1     |   01   | ECN Capable Transport(1), ECT(1)                           | `ip.dsfield.ecn == 1`   |
+|     2     |   10   | ECN Capable Transport(0), ECT(0)                           | `ip.dsfield.ecn == 2`   |
+|     3     |   11   | Congestion Experienced, CE                                 | `ip.dsfield.ecn == 3`   |
 
 
 
