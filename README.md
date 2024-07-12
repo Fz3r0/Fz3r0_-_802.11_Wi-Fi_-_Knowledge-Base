@@ -7308,6 +7308,13 @@ _The right adapter give you the right capture capabilites and scopes... There is
 _The right adapter give you the right capture capabilites and scopes... There is no "the best" adaptor for every scenario_
 - [Ruckus R850]() `4x4 spatial streams` | `2.4/5/6 GHz`
 
+---
+
+ Frame Capture Tools and DIY
+
+ - [WLAN Pi](https://www.wlanpi.com/)
+ - [Wi-Fi Pineapple](https://shop.hak5.org/products/wifi-pineapple)
+ - [Turn your OnePlus 12 into a WiFi Sniffer](https://firasshaari.com/2024/07/11/turn-your-oneplus-12-into-a-wifi-sniffer/)
 
 
 ## 🛜🪤🎣 Frame Capture: `802.11 Frame Capture Devices & Methods`
