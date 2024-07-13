@@ -5883,21 +5883,46 @@ Present in `Beacon` and `Probe Response` frames.
     - This traffic usually consists of keep-alive or hello messages because the loss of these packets jeopardizes proper network operation.
 
 
+## End-to-End Qos
+
+- One of the most important thing in QoS is that must be End-to-End, that's why we need to know about QoS from ethernet side (DHCP, IP Precedence, 802.1Q, 802.1D etc) and also wireless side (AC, 802.11 QoS, EDCA, etc).
+- We need to make sure QoS is configured End-to-End not just on WLAN. End-to-End means that all devices in the traffic path should be configured with their own QoS mechanism (wireless or wired).
+- If you take the `802.11 frame header` the UP (User Priority) need to be mapped to a `802.1Q tag` and so on...
+
+````py
+## End-to-End QoS
+
+                       +---------------+
+                       |               |
+                       |  Firewalls /  |
+                       |   Routers     |
+                       |               |
+                       +---------------+
+                              ||
+                              || 
+                              ||  <<---- 802.1Q = 6
+                              ||
+                              ||
+                       +===============+
+                       |               |
+                       |    Switch     |
+                       |               |
+                       +===============+
+
+
+
++---------+                     
+|         |                     
+| Servers |                     
+|         |                     
++---------+                     
 
 
 
 
 
+````
 
-
-
-
-
-
-
-
- 
----
 
 
 
