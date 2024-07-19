@@ -5946,13 +5946,13 @@ One very important thing in Wireless and Wired traffic are voice calls quality. 
 
 ## Voice Quality Table
 
-| **Metric**          | **Value**                                          | **Description**                                                                 |
-|---------------------|----------------------------------------------------|---------------------------------------------------------------------------------|
-| **Delay (Latency)** | Less than 300ms (best results are less than 150ms) | The time it takes for a voice packet to travel from the sender to the receiver. |
-| **Jitter**          | Less than 30ms or 40ms                             | The variation in packet arrival time.                                           |
-| **Packet Loss**     | Less than 1% or 2%                                 | The percentage of packets that are lost during transmission.                    |
-| **RSSI**            | -68dB or higher                                    | Received Signal Strength Indicator, measures signal power.                      |
-| **SNR**             | 20+ SNR (best results are 25+ SNR)                 | Signal-to-Noise Ratio, measures the quality of the signal.                      |
+| **Metric**          | **Value**                                              | **Description**                                                                 |
+|---------------------|--------------------------------------------------------|---------------------------------------------------------------------------------|
+| **Delay (Latency)** | Less than 300ms <br>(best results are less than 150ms) | The time it takes for a voice packet to travel from the sender to the receiver. |
+| **Jitter**          | Less than 30ms or 40ms                                 | The variation in packet arrival time.                                           |
+| **Packet Loss**     | Less than 1% or 2%                                     | The percentage of packets that are lost during transmission.                    |
+| **RSSI**            | -68dB or higher                                        | Received Signal Strength Indicator, measures signal power.                      |
+| **SNR**             | 20+ SNR <br>(best results are 25+ SNR)                 | Signal-to-Noise Ratio, measures the quality of the signal.                      |
 
 ## Measuring Voice QoS
 
