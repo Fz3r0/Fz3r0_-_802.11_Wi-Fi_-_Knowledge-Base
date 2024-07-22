@@ -5936,6 +5936,11 @@ Present in `Beacon` and `Probe Response` frames.
 
 # Voice Quality
 
+- [Wireshark VoIP call capture and replay - Using virtual phones on GNS3](https://www.youtube.com/watch?v=uZI9ZnKRudg)
+- [VoIP Wireshark Catpures](https://weberblog.net/voip-captures/)
+
+## Voice Quality
+
 One very important thing in Wireless and Wired traffic are voice calls quality. The major factors that affect call quality are:
 
 - Delay (Latency): This is the ping latency to another remote device involved in the call (Network delay / Round trip time). This means, the time it takes for a voice packet to travel from the sender to the receiver. High latency can cause noticeable delays in conversation, making it difficult to communicate effectively. Ideal latency for VoIP calls is below 150ms, but 300ms still acceptable. <br><br>
@@ -5948,7 +5953,7 @@ One very important thing in Wireless and Wired traffic are voice calls quality. 
 
 | **Metric**          | **Value**                                              | **Description**                                                                 |
 |---------------------|--------------------------------------------------------|---------------------------------------------------------------------------------|
-| **Delay (Latency)** | Less than 300ms <br>(best results are less than 150ms) | The time it takes for a voice packet to travel from the sender to the receiver. |
+| **Delay (Latency)** | Less than 150ms <br>(Some vendors use Less 300ms metric) | The time it takes for a voice packet to travel from the sender to the receiver. |
 | **Jitter**          | Less than 30ms or 40ms                                 | The variation in packet arrival time.                                           |
 | **Packet Loss**     | Less than 1% or 2%                                     | The percentage of packets that are lost during transmission.                    |
 | **RSSI**            | -68dB or higher                                        | Received Signal Strength Indicator, measures signal power.                      |
@@ -5966,6 +5971,7 @@ On unencrypted networks or on networks where you can enter a preshared key to de
 
 ### Call Quality matrix: `MOS` & `R-Factor`)
 
+- The MOS is a subjetive evaulation of quality / The R-Factor is a standarized calculation of quality
 - The Mean Opinion Score (MOS) is a value from 1 to 5 that indicates the perceived quality of a call.
 - MOS score displayed by your protocol analyzer is what is called passive MOS.
 - Passive MOS is calculated from another quality metric that you will see  displayed in your protocol analyzer, called R-Factor.
@@ -5976,7 +5982,7 @@ On unencrypted networks or on networks where you can enter a preshared key to de
 MOS (Mean Opinion Score) is a subjective quality evaluation test (Percived Quality)
 
 - MOS is a widely accepted criterion for call quality.
-- Calculated by a group of listeners in a room, who rate the wuality of a call out of 5 according to the table.
+- Calculated by a group of listeners in a room, who rate the wuality of a call out of 5 according to the table (this means, it's a subjective metric).
 - Network analyzers calculate a PMOS (Predicted Mean Opinion Score), an analytical derivation of MOS (Mean Opinion Score).
 - The MOS is the driven factor that determine what CODEC you want to use, this is because each CODEC have a different MOS. 
 
@@ -6005,7 +6011,6 @@ Important Notes of F-Factor:
 - R-Factor Quality Rating ranges between **1 to 100**
 
 
-
 | **R-Factor** | **MOS** (min) | **Quality** |
 |:------------:|:-------------:|:-----------:|
 |      90      |   4.3         |  Excellent  |
@@ -6015,6 +6020,15 @@ Important Notes of F-Factor:
 |      50      |   2.6         |     Bad     |
 
 
+## Analyzing VoIP & QoS
+
+Most Protocol Analyzers (like wireshark) have tools to analyze VoIP transmissions. For example:
+
+- Expert Analysis: Automatically identifies and highlights potential issues in VoIP traffic (eg. packets with delay, excesive RTP (Real Time Protocol) packet loss, etc).
+- Quality Monitoring: Measures call quality metrics such as latency, jitter, and packet loss (eg. Dashboards with Excelent, Good, Fair, Poor, Bad).
+- Signaling Analysis: Examines signaling protocols (e.g., SIP, H.323) to understand call setup, management, and teardown.
+- Call Playback & Jitter Buffer Settings: Allows playback of VoIP calls and adjustment of jitter buffer to simulate different network conditions (eg. on decrypted frames you can listen to the call playback). 
+- Call Lists: Displays a list of VoIP calls captured, including details like call duration and quality statistics (eg. list of calls that was played on the network).
 
 
 
