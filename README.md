@@ -8126,7 +8126,8 @@ _Even if you getting for example 360mbps of Data Rate, it will noever be the act
 - [Checking out the new Ekahau “Just Go” tool for AR Wi-Fi surveys at #WLPC Prague 2023!](https://www.youtube.com/watch?v=DdXIgs7LGek)
 
 
-
+### Ekahau Training
+- [Ekahau Connect Training | Lesson 4: Surveying with iPad](https://www.youtube.com/watch?v=qKIns28Mo4U)
 
 
 
