@@ -6153,9 +6153,11 @@ _A client STA can be in one of two Power Management modes:_
 
 `TIM (Traffic Indication Map)`: It's a IE (Information Element) present **only in `Beacon` frames**. 
 
-- TIM is a bitmap field which contains:
+- Element ID = 5: Indicates the Frame is a TIM 
+- TIM is a bitmap field which contains: <br><br>
     - `Bitmap Control` (AID = 0 and Bitmap Control = 1 indicates if any **Broadcast or Multicast** packets are buffered at the AP)
     - `PVB (Partial Virtual Map` (Series of flags indicating whether each associated STA has **Unicast** frames buffered at the AP)
+
 
 TIM have the two following Sub-Fields: 
 
@@ -6203,13 +6205,19 @@ TIM have the two following Sub-Fields:
     - ⭕ DTIM Partial Virtual Map (PVM) > 0: Unicast frame(s) buffering in the AP for 1 or more STAs
 ---
 
-### Control Frame: `PS-Poll`
+### 📋🙋‍♂️🐓 Control Frame: `PS-Poll`
 
-PS-POLL: The legacy PS mode mechanism is based on the PS-Poll frame to retrieve the buffered frames in the AP. The PS-Poll frame is a short Control Frame containing the AID value of the client. PS-Poll have the following Sub-Fields:
-- Type `01` (Control Frame) :: Subtype `1010` (PS-Poll)
-    - AID (Association ID) : AID of the STA requesting buffered frames
-    - BSSID : BSSID where the STA is associated
-    - Transmitter : MAC of the STA requesting buffered frames
+PS-POLL is the **legacy** PS mode mechanism is based on the PS-Poll frame to retrieve the buffered frames in the AP. 
+
+- The PS-Poll frame is a short Control Frame containing the AID value of the client. 
+
+PS-Poll have the following Sub-Fields:
+
+- ⭕ Type `01` (Control Frame) :: Subtype `1010` (PS-Poll) ::  `wlan.fc.type == 1 && wlan.fc.type_subtype == 26` <br><br>
+    - 🦈 **AID (Association ID)** : AID of the STA requesting buffered frames :: `wlan.fc.type_subtype == 26 && wlan.aid == 3`
+    - 🦈 **BSSID** : BSSID where the STA is associated :: `wlan.fc.type_subtype == 26 && wlan.bssid == f0:f0:f0:f0:f0:f0`
+    - 🦈 **Transmitter** : MAC of the STA requesting buffered frames :: `wlan.fc.type_subtype == 26 && wlan.ta == f1:f1:f1:f1:f1:f1`
+    - 🦈 **Receiver** : MAC of the AP buffering frames :: `wlan.fc.type_subtype == 26 && wlan.ra == f0:f0:f0:f0:f0:f0`
 
 
 
