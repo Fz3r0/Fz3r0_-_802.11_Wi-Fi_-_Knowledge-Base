@@ -6133,6 +6133,27 @@ _A client STA can be in one of two Power Management modes:_
 
 ---
 
+### 🚫💾📦 `Null Data Frame` & `QoS Null Data Frame`
+
+- ⭕ Null Data Frames are special Wi-Fi frames that contain no data payload. They are primarily used for signaling purposes, particularly in Power Save mode. A device sends a Null Data Frame to inform the access point (AP) about its power management status.
+- ⭕ QoS Null Data Frames are similar to standard Null Data Frames but include additional fields for Quality of Service (QoS) control, which helps manage the prioritization of traffic in the network. <br><br>
+    - Power Management (PM) bit = `1` :: means the device is entering Power Save (PS) mode 
+    - Power Management (PM) bit = `0` :: means the device is awake and ready to Tx/Rx. 
+
+Filters:
+
+- ⭕ Null Data Frame :: `wlan.fc.type_subtype == 36` <br><br>
+    - 🦈 Null Data Frame & PM = 1 (PS mode) :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 1`
+    - 🦈 Null Data Frame & PM = 0 (awake) :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 0`
+- ⭕ QoS Null Data Frame :: `wlan.fc.type_subtype == 44` <br><br>
+    - 🦈 QoS Null Data Frame & PM = 1 (PS mode) :: `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 1`
+    - 🦈 QoS Null Data Frame & PM = 0 (awake) :: `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 0` <br><br>
+- ⭕ QoS Data Frame or QoS Data Frame :: `wlan.fc.type_subtype == 36 || wlan.fc.type_subtype == 44` <br><br>
+    - 🦈 Null Data Frame or QoS Null Data Frame & PM = 1 (PS mode) :: `wlan.fc.type_subtype == 36 || wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 1`
+    - 🦈 Null Data Frame or QoS Null Data Frame & PM = 0 (awake) :: `wlan.fc.type_subtype == 36 || wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 0`
+  
+---
+
 ### 🪪🆔🤳 PS Field: `AID (Association Identifier)`
 
 - ⭕ AID (Association Identifier): **Sent by the AP** (`Association Response` or `Re-Association Response`) :: Every 802.11 Power Management Method starts begin with the client STA associates to the BSS. When AP sends "Association Response" or "Re-Association Response" frame to the STA, an `AID` value is present in the AID parameter field (16-bit). <br> <br>
