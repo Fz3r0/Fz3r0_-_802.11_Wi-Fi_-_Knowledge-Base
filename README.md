@@ -6144,7 +6144,7 @@ Filters:
 
 - ⭕ Null Data Frame :: `wlan.fc.type_subtype == 36` <br><br>
     - 🦈 Null Data Frame & PM = 1 (PS mode) :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 1`
-    - 🦈 Null Data Frame & PM = 0 (awake) :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 0`
+    - 🦈 Null Data Frame & PM = 0 (awake) :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 0` <br><br>
 - ⭕ QoS Null Data Frame :: `wlan.fc.type_subtype == 44` <br><br>
     - 🦈 QoS Null Data Frame & PM = 1 (PS mode) :: `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 1`
     - 🦈 QoS Null Data Frame & PM = 0 (awake) :: `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 0` <br><br>
