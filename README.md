@@ -6077,7 +6077,11 @@ Most Protocol Analyzers (like wireshark) have tools to analyze VoIP transmission
 
 
 # 🛜🔋🛑 MAC Operations: `Power Management` & `Protection Mechanisms`
-_There are 2 types of MAC Operations: Power Management & Protection Mechanisms | Power Management is allow the radio to go to sleep (just few microseconds), because if the antenna/adapter keeps awake all the time is consuming battery all the time, in a movile device can degrade battery life. Power management it's just turning on the antenna, send/recieve the frame, turn off the antenna and so on. The hint here is, that the STA does not lose any frame even if it's sleeping | Protection Mechanisms allow newer devices to communicate and "exist" in a world where older devices also exists_
+
+There are 2 types of MAC Operations: **Power Management** & **Protection Mechanisms**:
+
+1. **Power Management** is allow the radio to go to sleep (just few microseconds), because if the antenna/adapter keeps awake all the time is consuming battery all the time, in a movile device can degrade battery life. Power management it's just turning on the antenna, send/recieve the frame, then "doze" or "sleep" the antenna and so on. The hint here is, that the STA does not lose any frame even if it's sleeping <br><br>
+2. **Protection Mechanisms** allow newer devices to communicate and "exist" in a world where older devices also exists._
 
 ## 🔋🛜🪫 MAC Operations: `Power Management`
 _Many mechanisms that are described in the IEEE 802.11 standard allow a wireless device to reduce its power consumption, to turn off its radios and to wake up at the correct time to retrieve its traffic. While the APs are generally connected to an external power source, the wireless clients are often running on batteries. The purpose of power saving features is to increase the battery life and to allow longer performance. This battery life extension can be significant for low-powered devices such as smartphones, Voice over IP phones or handheld barcodes scanners._
@@ -6641,17 +6645,30 @@ STA :: Send a PS-Poll PWR Mgmt bit = 1 to indicate to AP that will STA is going 
 
 
 
-# 🛑🛜🚦 MAC Operations: `Protection Mechanisms`
+## 🛑🛜🚦 MAC Operations: `Protection Mechanisms`
 _HR/DSSS STAs (802.11b legacy) does not understand OFDM Modulation used by ERP STAs. But, HT/ERP/OFDM (802.11n modern) STAs are backwards compatible with HR/DSSS STAs & can transmit & understand HR/DSSS modulation | The way to acomplish that is using RTS/CTS mechanisms in case that legacy STAs are using the same AP of modern devices | RTS/CTS are the most used mechanism in Wi-Fi, there's also a mechanism called CTS-to-self that is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame, this is usually done by the AP | ERP element is present only on 2.4GHz network supporting 802.11g & it is present in beacon & probe responses. The non-ERP_Present bit set to 1 in following conditions a. A nonERP station (legacy 802.11 or 802.11b) associate to the cell, b. A neighboring cell is detected, allowing only nonERP data rates, c. Any other management frame (except probe request) is received from neighboring cell supporting only nonERP data rates. | To ensure backward compatibility with older 802.11a/b/g radios, 802.11n (HT) access points may signal to other 802.11n stations when to use one of four HT protection modes.| A field in the beacon frame called the HT Protection field has four possible settings of 0–3._
+
 - [802.11 Protection Mechanisms _@ Nayarasi_](https://mrncciew.com/2014/11/02/cwap-802-11-protection-mechanism/) _`Nayarasi`_
-- [Protection Ripple in ERP 802.11 WLANs @ _CWNP_](https://www.cwnp.com/uploads/protection_ripple_in_erp_802-11_wlans.pdf) _`whitepaper`_
 - [802.11n Protection Mechanisms: Part 1 @ _CWNP_](https://www.cwnp.com/802-11n-protection-mechanisms-part-1/) _`whitepaper`_
+- [802.11n Protection Mechanisms: Part 2 @ _CWNP_](https://www.cwnp.com/802-11n-protection-mechanisms-part-2/) _`whitepaper`_
+- [Protection Ripple in ERP 802.11 WLANs @ _CWNP_](https://www.cwnp.com/uploads/protection_ripple_in_erp_802-11_wlans.pdf) _`whitepaper`_
 - [HT Protection Mechanisms](https://dot11ap.wordpress.com/ht-protection-mechanisms/) _`definitions`_
 
-### Protection Modes: `ERP Elements` & `HT Elements`
-_Protection Modes Elements are present in beacons & probes_
-- [Beacon :: `ERP Information Element`](https://mrncciew.com/2014/10/08/802-11-mgmt-beacon-frame/) Present in 2.4 GHz Beacons | True = non ERP/OFDM STA activated protection
-- [Beacon :: `ERP Information Element`](https://mrncciew.com/2014/10/08/802-11-mgmt-beacon-frame/) Present in 2.4 GHz Beacons | True = non ERP/OFDM STA activated protection
+### Protection Mechanisms: `Protection Modes`
+
+- Protection Modes Elements are present in `Beacons` & `Probes`
+
+### Protection Modes: `ERP Information Element` & `HT Operating Mode`
+
+- In an `ERP Beacon`, ERP stations look at the `ERP Information Element` to determine whether or not protection is necessary in the BSS
+- In an `HT Beacon`, HT stations use the `Operating Mode` and "Non-greenfield STAs Present" fields in the HT Information Element to determine whether or not to use protection.
+
+
+
+
+
+- `ERP Information Element` Present in 2.4 GHz Beacons | True = non ERP/OFDM STA activated protection
+
 
 ### HT Mixed Mode: `HR/DSSS (Legacy)` & `HT/OFDM (Modern)`
 _Most Common Protection Mechanism | Assumes that there are 802.11a/b/g stations using the same channel. | RTS/CTS Protection Mechanism with 802.11b backward compatibility activated_
