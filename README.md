@@ -6136,14 +6136,14 @@ _A client STA can be in one of two Power Management modes:_
 ### 🪪🆔🤳 PS Field: `AID (Association Identifier)`
 
 - ⭕ AID (Association Identifier): **Sent by the AP** (`Association Response` or `Re-Association Response`) :: Every 802.11 Power Management Method starts begin with the client STA associates to the BSS. When AP sends "Association Response" or "Re-Association Response" frame to the STA, an `AID` value is present in the AID parameter field (16-bit). <br> <br>
-    - 🦈 Filter :: AID (Association Identifier) 3 = `wlan.fixed.aid == 3` 
+    - 🦈 Filter :: AID (Association Identifier) 3 = `wlan.fixed.aid == 3`
+    - 🦈 Filter :: AID (Association Identifier) 0 (broadcast or multicast frames) = `wlan.fixed.aid == 0`
 
 ---
 
 ### 👂⏳🐓 PS Field: `Listen Interval`
 
-- Listen Interval: **Sent by the STA** (`Association Request` or `Re-Association Request`) :: The client STA will go to `awake` state in a timing period called "Listen Interval". The "Association Request" or "Re-Association Request" frame includes a Listen Interval subfield within the Capabilities Information field. It is an integer between 0 and 65535 expressed in **units of Beacon Interval** (ex. 250 = Listen every 250 beacons). It indicates to the AP how often a client in PS mode wakes up to listen to the Beacon frames. In the AP, the Aging Time of the buffered frames bound to the client is implemented differently by each vendor but must not be shorter than the Listen Interval (or the WNM Sleep Interval in a WNM Sleep Mode Request frame). The Listen Interval from the client is also vendor specific // In other words, **this is an unicast frame used for power management purposes sent from the STA to the AP, this value informs the AP of how many Beacons the STA will be dozing when in a power save state.** For example if a STA has a listen interval of 15 that means it will doze for 15 Beacons and if the Beacon interval is 100 time units the STA will doze for approximately 1.5 seconds.<br> <br>
-
+- Listen Interval: **Sent by the STA** (`Association Request` or `Re-Association Request`) :: The client STA will go to `awake` state in a timing period called "Listen Interval". The "Association Request" or "Re-Association Request" frame includes a Listen Interval subfield within the Capabilities Information field. It is an integer between 0 and 65535 expressed in **units of Beacon Interval** (ex. 250 = Listen every 250 beacons). It indicates to the AP how often a client in PS mode wakes up to listen to the Beacon frames. In the AP, the Aging Time of the buffered frames bound to the client is implemented differently by each vendor but must not be shorter than the Listen Interval (or the WNM Sleep Interval in a WNM Sleep Mode Request frame). The Listen Interval from the client is also vendor specific // In other words, **this is an unicast frame used for power management purposes sent from the STA to the AP, this value informs the AP of how many Beacons the STA will be dozing when in a power save state.** For example if a STA has a listen interval of 15 that means it will doze for 15 Beacons and if the Beacon interval is 100 time units the STA will doze for approximately 1.5 seconds. <br> <br>
     - 🦈 Filter :: Listen Interval 250 (HEX) = `wlan.fixed.listen_ival == 0x00fa`
     - 🦈 Filter :: Listen Interval 250 (Decimal) = `wlan.fixed.listen_ival == 250`
 
@@ -6151,7 +6151,13 @@ _A client STA can be in one of two Power Management modes:_
 
 ### 📫📩📬 PS Information Element: `TIM (Traffic Indication Map)`
 
-`TIM (Traffic Indication Map)`: It's a IE (Information Element) present **only in `Beacon` frames** with the two following Sub-Fields: 
+`TIM (Traffic Indication Map)`: It's a IE (Information Element) present **only in `Beacon` frames**. 
+
+- TIM is a bitmap field which contains:
+    - `Bitmap Control` (AID = 0 and Bitmap Control = 1 indicates if any **Broadcast or Multicast** packets are buffered at the AP)
+    - `PVB (Partial Virtual Map` (Series of flags indicating whether each associated STA has **Unicast** frames buffered at the AP)
+
+TIM have the two following Sub-Fields: 
 
 - ⭕ Element ID (1 byte / 8 bits): Value of 5 indicates is a TIM. <br> <br>
     - 🦈 Element ID = 5 :: `wlan.tag.number == 5` <br> <br>
@@ -6180,17 +6186,21 @@ _A client STA can be in one of two Power Management modes:_
 
 ### 🚨📩📬 PS Information Element: `DTIM (Delivery Traffic Indication Map)`
 
-`DTIM (Delivery Traffic Indication Map)`: **Sent by the AP** (`Beacon`) _(DTIM is not present in all beacons or all TIMs inside a becon)_ :: DTIM is a Information Element inside a TIM carried by a beacon frame (identical in structure to any other Beacon Frame). The only difference with a common Beacon Frame is that the content of the DTIM IE (Information Element) will give information about broadcast/multicast traffic that is buffered at the AP, in addition to the typical information about buffered unicast frames that is always present in the TIM. <br> <br>
+`DTIM (Delivery Traffic Indication Map)`: **Sent by the AP** (`Beacon`)
 
-- ⭕ DTIM Count = 0: means that the current TIM (beacon) frame is a DTIM
-- ⭕ DTIM Count = 1: means 1 Beacon left until next DTIM
-- ⭕ DTIM Count = 2: means 2 Beacons left until next DTIM <br> <br>
-- ⭕ DTIM Delivery Period = 3: means every 3rd frame a beacon will be a DTIM
-- ⭕ DTIM Delivery Period = 2: means every 2nd frame a beacon will be a DTIM
-- ⭕ DTIM Delivery Period = 1: All the beacons will be a DTIM <br> <br>
-- ⭕ DTIM Bitmap Control = 1: There's a multicast/broadcast frame buffering in the AP for any STA
-- ⭕ DTIM Bitmap Control = 0: No multicast/broadcast frame buffering in the AP for any STA
-
+- DTIM **is not present in all beacons** (or all TIMs inside a becon), it depends on the DTIM period (field inculded in the TIM)
+- DTIM is a Information Element inside a TIM carried by a beacon frame (identical in structure to any other Beacon Frame).
+- The only difference with a common Beacon Frame is that the content of the DTIM IE (Information Element) will give information about broadcast/multicast traffic that is buffered at the AP, in addition to the typical information about buffered unicast frames that is always present in the TIM. <br> <br>
+    - ⭕ DTIM Count = 0: means that the current TIM (beacon) frame is a DTIM
+    - ⭕ DTIM Count = 1: means 1 Beacon left until next DTIM
+    - ⭕ DTIM Count = 2: means 2 Beacons left until next DTIM <br> <br>
+    - ⭕ DTIM Delivery Period = 3: means every 3rd frame a beacon will be a DTIM
+    - ⭕ DTIM Delivery Period = 2: means every 2nd frame a beacon will be a DTIM
+    - ⭕ DTIM Delivery Period = 1: All the beacons will be a DTIM <br> <br>
+    - ⭕ DTIM Bitmap Control = 1: There's a multicast/broadcast frame buffering in the AP for any STA
+    - ⭕ DTIM Bitmap Control = 0: No multicast/broadcast frame buffering in the AP for any STA <br> <br>
+    - ⭕ DTIM Partial Virtual Map (PVM) = 0: No unicast frame buffering in the AP
+    - ⭕ DTIM Partial Virtual Map (PVM) > 0: Unicast frame(s) buffering in the AP for 1 or more STAs
 ---
 
 ### Control Frame: `PS-Poll`
