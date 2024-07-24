@@ -5936,6 +5936,7 @@ Present in `Beacon` and `Probe Response` frames.
 
 # Voice Quality
 
+- [Voice over WiFi – Deployment recommendations and best practices](https://mrncciew.com/wp-content/uploads/2012/12/brkewn-2000-voice-over-wifi-best-practices.pdf) _`nayarasi`_
 - [Wireshark VoIP call capture and replay - Using virtual phones on GNS3](https://www.youtube.com/watch?v=uZI9ZnKRudg)
 - [VoIP Wireshark Catpures](https://weberblog.net/voip-captures/)
 
@@ -5953,9 +5954,9 @@ One very important thing in Wireless and Wired traffic are voice calls quality. 
 
 | **Metric**          | **Value**                                              | **Description**                                                                 |
 |---------------------|--------------------------------------------------------|---------------------------------------------------------------------------------|
-| **Delay (Latency)** | Less than 150ms <br>(Some vendors use Less 300ms metric) | The time it takes for a voice packet to travel from the sender to the receiver. |
-| **Jitter**          | Less than 30ms or 40ms                                 | The variation in packet arrival time.                                           |
-| **Packet Loss**     | Less than 1% or 2%                                     | The percentage of packets that are lost during transmission.                    |
+| **Delay (Latency)** | Less/Equal than 150ms <br> (300ms at most)             | The time it takes for a voice packet to travel from the sender to the receiver. |
+| **Jitter**          | Less/Equal than 30ms / 40ms                            | The variation in packet arrival time.                                           |
+| **Packet Loss**     | Less/Equal than 1% <br> (2% at most)                   | The percentage of packets that are lost during transmission.                    |
 | **RSSI**            | -68dB or higher                                        | Received Signal Strength Indicator, measures signal power.                      |
 | **SNR**             | 20+ SNR <br>(best results are 25+ SNR)                 | Signal-to-Noise Ratio, measures the quality of the signal.                      |
 
