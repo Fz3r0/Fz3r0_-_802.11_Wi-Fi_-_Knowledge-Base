@@ -189,11 +189,7 @@ Please check out the links of my Social Networks including my LinkedIn, where yo
 
 ---
 
-<span align="center"> <p align="center"> _"I am the Lord of Darkness. I require the solace of the shadows and the dark of the night. Sunshine is my destroyer. All this shall change... Tonight, the sun sets forever. There shall never be another dawn._ </p> </span> 
-
-<span align="center"> <p align="center"> _I can see deep into your soul, I can read your mind, this are no tricks, this is true power!_ </p> </span> 
-
-<span align="center"> <p align="center"> _In the mist of the night you may see me come, where shadows move and demons lie..._ </p> </span> 
+<span align="center"> <p align="center"> _"In the mist of the night you may see me come, where shadows move and demons lie..._ </p> </span> 
 
 <span align="center"> <p align="center"> _...I am Fz3r0 and the Sun no longer rises..."_ 💀🎩 </p> </span> 
 
