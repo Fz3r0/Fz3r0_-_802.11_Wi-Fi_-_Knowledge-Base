@@ -22,7 +22,7 @@ Los PCAPs utilizados para los ejemplos de este bloque son los siguientes:
 
 For example: 
 
-![image](https://github.com/user-attachments/assets/ae1bda18-7c52-4de9-a320-b4a083af14a5)
+![image](https://github.com/user-attachments/assets/94af60a6-5703-4f0d-8012-5585f1076dec)
 
 
 ## 🦈 `BlackShark Filter`: Beacon Frames (802.11)
