@@ -24,6 +24,11 @@ For example:
 
 ![image](https://github.com/user-attachments/assets/94af60a6-5703-4f0d-8012-5585f1076dec)
 
+![image](https://github.com/user-attachments/assets/59386571-b8ca-487c-8f5d-7822e3216b59)
+
+
+
+
 
 ## 🦈 `BlackShark Filter`: Beacon Frames (802.11)
 
