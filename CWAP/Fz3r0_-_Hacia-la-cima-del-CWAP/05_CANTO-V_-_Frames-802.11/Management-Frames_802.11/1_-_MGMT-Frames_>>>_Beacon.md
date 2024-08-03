@@ -18,6 +18,13 @@ Los PCAPs utilizados para los ejemplos de este bloque son los siguientes:
 - [`PCAP3` - **Infinitum Beacon** - Telmex Home Generic - 2.4 GHz Ch 6 - WPA2 - ESS Home WLAN - 6mb Data Rate](https://github.com/Fz3r0/Fz3r0_-_BlackShark/files/11780434/Infinitum_Beacon_2.4GHz.zip)
 - [`PCAP4` - **Public Beacon** - Ruckus H510 - 5 GHz - 802.1X - ESS Centralized WLC](https://github.com/Fz3r0/Fz3r0_-_BlackShark/files/11782465/Ruckus.H510.Public.Network.802.1x.RSN.zip)
 
+## Packet Tampering for Beacons!
+
+For example: 
+
+![image](https://github.com/user-attachments/assets/ae1bda18-7c52-4de9-a320-b4a083af14a5)
+
+
 ## 🦈 `BlackShark Filter`: Beacon Frames (802.11)
 
 ````py
