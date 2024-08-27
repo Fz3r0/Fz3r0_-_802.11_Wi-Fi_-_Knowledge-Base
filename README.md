@@ -6086,13 +6086,29 @@ _Many mechanisms that are described in the IEEE 802.11 standard allow a wireless
 - [802.11 Power Save Methods](https://howiwifi.com/2020/06/25/power-save-methods/) _`how to Wi-fi`_
 - [PS Poll & Non PS Poll :: Legacy Power Management](https://aletheatech.com/legacy-power-save-test-using-managed-client/) _`ale the teach`_
 - [Unscheduled Automatic Power Save Delivery (U-APSD)](https://aletheatech.com/uapsd-wmm-powersave/)
+- [802.11 Power Management explained super easy! | Diagrams & PCAP](https://www.mdpi.com/2079-9292/11/23/3914)
 - [802.11 Power Save Modes & Power Management](https://www.youtube.com/watch?v=m363xe-fia8) _`video`_
 - [802.11 WLAN Power Management](https://www.youtube.com/watch?v=M_RpvOeiqp0) _`short video`_
 - [802.11 Power Management](https://mrncciew.com/2014/10/14/cwap-802-11-power-management/) _`nayarasi`_
 - [Understanding SMPS Method for Wi-Fi Power Management](https://www.cwnp.com/smps/) _`cwnp`_
 - [Power Save Mechanisms for 802.11ax](https://balramdot11b.com/2020/06/03/power-save-mechanisms-802-11ax/) _`ale the teach`_
 - [Coexistence of IEEE 802.11b & 802.11e STAs in QoS enabled WLAN](https://www.researchgate.net/publication/221278781_Coexistence_of_IEEE_80211B_and_IEEE_80211E_Stations_in_QoS_Enabled_Wireless_Local_Area_Network)
-- [IEEE 802.11e :: DEVx](https://www.devx.com/terms/ieee-802-11e/) _`devx`_
+- [IEEE 802.11e :: DEVx](https://www.devx.com/terms/ieee-802-11e/) _`devx`_ <br><br>
+- [802.11 Power Save Methods :: CWAP training :: PCAPs Analysis :: Legacy + 802.11e + 802.11n + VHT TXOP PS – 802.11ac-2013](https://howiwifi.com/2020/06/25/power-save-methods/) _`howtowifi`_
+- [Legacy Power Save Mode VS Wireless Multimedia Power Save mode VS Extended Power Save mode](https://academy.nordicsemi.com/courses/wi-fi-fundamentals/lessons/lesson-6-wifi-fundamentals/topic/power-save-modes-2/#:~:text=But%20if%20the%20More%20Data%20field%20is,back%20to%20sleep.%20Extended%20Power%20Save%20mode.)
+- [802.11 Power Management with packet capture examples _@ dot11zen_](https://dot11zen.blogspot.com/2018/02/80211-power-management-with-packet.html)
+- [What are the benefits and drawbacks of WiFi power saving modes (PSM and U-APSD)?](https://www.linkedin.com/advice/1/what-benefits-drawbacks-wifi-power-saving-modes-psm-u-apsd)
+- [Power Save basic/legacy standard](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/c1ce9269-5dd2-4cf3-93ac-5db322f1ea72) _`diagram`_
+- [STA Power Save Notification :: Frame Analysis](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/fd0d1066-fadd-4ee5-9ad8-e5eed0c510cd) _`Frame Decode`_
+   - [**(Re)Association Request**: `Listen Interval`]() How often STA wakes up & listen beacons | In units of Beacon Interval | Determine lifetime of buffered frames
+   - [**(Re)Association Response**: `Association Identifier (AID)`]() The ID the STA will get | Useful when AP buffer Data for STA using PS Poll
+   - [**Null Data** or **QoS Null Data**: `Power Management 1/0`]() PS Mode (Power Save / Sleep) = 1 | Active Mode (Wake up) = 0 | 0x0001 = 1 | 0x0002 = 2 | 0x000a = 10
+   - [**Beacon Frame**: `TIM` & `DTIM` ((Delivery) Traffic Indicator Map)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/df02f9f6-05a8-4e93-9083-4b0db11899d2) Advice is there's buffered data for STAs in low-power mode | DTIM for Mulitcast & Broadcast
+   - [TIM: Traffic Indication Map](https://en.wikipedia.org/wiki/Traffic_indication_map) _`wiki`_
+   - [TIM: Traffic Indication Map: `Header`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/8caa7780-0199-4265-8fe3-d01e58a5f8cb) _`header frame`_
+   - [TIM PCAP Decode](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/7f25e49e-937c-41e5-a60a-834138cd3fe1) _`pcap decode`_
+   - [`Off-Channel Scanning`: PCAP Decode](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/ed85dd9d-25a9-42e2-99f5-7563ee511dd2) PS Mode can be used by STA to scan other APs/CHs in miliseconds for roaming
+
 
 ## 🔋🛜🪫 Power Save (PS) mode: `Basic Concepts`
 _bla la bla bla intro_
@@ -6544,84 +6560,8 @@ _In an IBSS configuration, no full-time AP exists and all systems may desire to 
 
 
 
-## 🔋🛜🪫 MAC Operations: `802.11 Power Management`
-_`PS Mode` or 802.11 Power Save is a mechanism that allow STA to wake up at various intervals and use a **PS-Poll** frame to indicate to the AP that is awake & ready to recieve frames | Power save methods allow battery-operated devices to save power by shutting down their wireless radios. | Power Management mode shall not change during any single frame exchange sequence. This means the Power Management bit is the same for all MPDUs in an A-MPDU | `Listen Interval` is just How often STA wakes up & listen beacons measured in units of Beacon Interval & Determines lifetime of buffered frames in an AP | `TIM` are Present only within beacon frames generated by APs, TIM element contains information useful for stations in low-power mode. The AP uses Delivery Traffic Indication Map (DTIM) to inform the cell if it has broadcast or multicast frames buffered. |  While devices are in a sleep state, the AP buffers frames destined for it. The legacy power management methods were defined in the original 802.11 standard; however, major improvements have been added in both 802.11e-2005 and 802.11n-2009 amendments. There are also mentions of power save enhancements in both 802.11ac-2013 and 802.11ax-2018 amendments._
 
 
-
-
-
-
-
-
-
-
-
-### Legacy power save mode
-- PS-Poll frames are used with legacy power save mode. All STA’s receive an Association ID (AID) during the 802.11 association process. When a STA wakes from a doze state based on the listen interval it will check the traffic indication map (TIM) in a Beacon management frame. If there is unicast traffic buffered the STA will send a PS-Poll frame to receive the buffered data.
-
-
-
-
-### 802.11n-2009
-
-
-
-
-
-
-
-
-
-````py
-## Basic Structure of 802.11 Power Management:
-
-1. Before a STA goes into the doze state, it sends a frame, usually null data frame, to the AP indicating that power management is enabled.
-2. Once STA indicate, that it is in Power Save mode, the AP begins to buffer all frames destined to that station.
-3. When the station goes into awake state, it sends a frame to the AP in order to begin the data retrieval process.
-4. When AP has finished sending all buffered data to the station, the station goes back into the doze state.
-
-## Basic/Legacy Standard: 
-
-STA :: Send a PS-Poll PWR Mgmt bit = 1 to indicate to AP that will STA is going to sleep. ➡️
-(STA sleeping... & AP is buffering frames for it) 
-(STA wakes up... & check for beacons frames TIMs (Traffic Indication Map) & check if the STA "Association ID" is included in the TIM
-STA :: If Association ID is in the TIM, then STA send a PS-Poll PWR Mgmt bit = 0 to indicate to AP that STA is wake up ➡️
-AP :: AP ACK the PS-Poll ➡️
-AP :: AP sends Data to the STA and if there's more thata will send a "more data" bit = 1 indicating there's more data ➡️
-STA :: STA ACK the More Data = 1 ➡️
-STA send a PS-Poll PWR Mgmt bit = 0 to indicate to AP that STA still wake up 
-AP :: AP ACK the PS-Poll ➡️
-AP :: AP sends Data to the STA and if there's more thata will send a "more data" bit = 1 indicating there's more data ➡️
-.
-.
-.
-AP :: AP ACK the PS-Poll ➡️
-AP :: AP sends Data to the STA and if there's NO MORE data te send, it will send the "more data" bit = 0 indicating there's no more data ➡️
-STA :: STA ACK the More Data = 0 ➡️
-STA :: Send a PS-Poll PWR Mgmt bit = 1 to indicate to AP that will STA is going to sleep. ➡️
-(STA sleeping... & AP is buffering frames for it)
-
-## Modern Standard: 
-
-````
-- [802.11 Power Save Methods :: CWAP training :: PCAPs Analysis :: Legacy + 802.11e + 802.11n + VHT TXOP PS – 802.11ac-2013](https://howiwifi.com/2020/06/25/power-save-methods/) _`howtowifi`_
-- [Legacy Power Save Mode VS Wireless Multimedia Power Save mode VS Extended Power Save mode](https://academy.nordicsemi.com/courses/wi-fi-fundamentals/lessons/lesson-6-wifi-fundamentals/topic/power-save-modes-2/#:~:text=But%20if%20the%20More%20Data%20field%20is,back%20to%20sleep.%20Extended%20Power%20Save%20mode.)
-- [802.11 Power Management with packet capture examples _@ dot11zen_](https://dot11zen.blogspot.com/2018/02/80211-power-management-with-packet.html)
-- [802.11 Power Management _@ Nayarasi_](https://mrncciew.com/2014/10/14/cwap-802-11-power-management/) _`Nayarasi`_
-- [802.11 Power Management: Association Req/Res _@ Nayarasi_](https://mrncciew.com/2014/10/28/802-11-mgmt-association-reqresponse/)
-- [802.11 Power Management explained super easy! | Diagrams & PCAP](https://www.mdpi.com/2079-9292/11/23/3914)
-- [What are the benefits and drawbacks of WiFi power saving modes (PSM and U-APSD)?](https://www.linkedin.com/advice/1/what-benefits-drawbacks-wifi-power-saving-modes-psm-u-apsd)
-- [Power Save basic/legacy standard](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/c1ce9269-5dd2-4cf3-93ac-5db322f1ea72) _`diagram`_
-- [STA Power Save Notification :: Frame Analysis](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/fd0d1066-fadd-4ee5-9ad8-e5eed0c510cd) _`Frame Decode`_
-   - [**(Re)Association Request**: `Listen Interval`]() How often STA wakes up & listen beacons | In units of Beacon Interval | Determine lifetime of buffered frames
-   - [**(Re)Association Response**: `Association Identifier (AID)`]() The ID the STA will get | Useful when AP buffer Data for STA using PS Poll
-   - [**Null Data** or **QoS Null Data**: `Power Management 1/0`]() PS Mode (Power Save / Sleep) = 1 | Active Mode (Wake up) = 0 | 0x0001 = 1 | 0x0002 = 2 | 0x000a = 10
-   - [**Beacon Frame**: `TIM` & `DTIM` ((Delivery) Traffic Indicator Map)](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/df02f9f6-05a8-4e93-9083-4b0db11899d2) Advice is there's buffered data for STAs in low-power mode | DTIM for Mulitcast & Broadcast
-   - [TIM: Traffic Indication Map](https://en.wikipedia.org/wiki/Traffic_indication_map) _`wiki`_
-   - [TIM: Traffic Indication Map: `Header`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/8caa7780-0199-4265-8fe3-d01e58a5f8cb) _`header frame`_
-   - [TIM PCAP Decode](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/7f25e49e-937c-41e5-a60a-834138cd3fe1) _`pcap decode`_
-   - [`Off-Channel Scanning`: PCAP Decode](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/ed85dd9d-25a9-42e2-99f5-7563ee511dd2) PS Mode can be used by STA to scan other APs/CHs in miliseconds for roaming
 
 
 
