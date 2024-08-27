@@ -6250,12 +6250,13 @@ PS-POLL is the **legacy** PS mode mechanism is based on the PS-Poll frame to ret
 
 PS-Poll have the following Sub-Fields:
 
-- ⭕ Type `01` (Control Frame) :: Subtype `1010` (PS-Poll) ::  `wlan.fc.type == 1 && wlan.fc.type_subtype == 26` <br><br>
-    - 🦈 **AID (Association ID)** : AID of the STA requesting buffered frames :: `wlan.fc.type_subtype == 26 && wlan.aid == 3`
-    - 🦈 **BSSID** : BSSID where the STA is associated :: `wlan.fc.type_subtype == 26 && wlan.bssid == f0:f0:f0:f0:f0:f0`
-    - 🦈 **Transmitter** : MAC of the STA requesting buffered frames :: `wlan.fc.type_subtype == 26 && wlan.ta == f1:f1:f1:f1:f1:f1`
-    - 🦈 **Receiver** : MAC of the AP buffering frames :: `wlan.fc.type_subtype == 26 && wlan.ra == f0:f0:f0:f0:f0:f0`
-
+|     **Field**        |              **Description**              |                       **Wireshark Filter**                      |
+|:--------------------:|:-----------------------------------------:|:---------------------------------------------------------------:|
+| ⭕ **Type/Subtype** | Control Frame (01) / PS-Poll (1010)       | `wlan.fc.type == 1 && wlan.fc.type_subtype == 26`               |
+| 🦈 **AID**          | AID of the STA requesting buffered frames | `wlan.fc.type_subtype == 26 && wlan.aid == 3`                   |
+| 🦈 **BSSID**        | BSSID where the STA is associated         | `wlan.fc.type_subtype == 26 && wlan.bssid == f0:f0:f0:f0:f0:f0` |
+| 🦈 **Transmitter**  | MAC of the STA requesting buffered frames | `wlan.fc.type_subtype == 26 && wlan.ta == f1:f1:f1:f1:f1:f1`    |
+| 🦈 **Receiver**     | MAC of the AP buffering frames            | `wlan.fc.type_subtype == 26 && wlan.ra == f0:f0:f0:f0:f0:f0`    |
 
 
 
