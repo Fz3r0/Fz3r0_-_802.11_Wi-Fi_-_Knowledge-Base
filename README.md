@@ -6250,15 +6250,13 @@ PS-POLL is the **legacy** PS mode mechanism is based on the PS-Poll frame to ret
 
 PS-Poll have the following Sub-Fields:
 
-|     **Field**        |              **Description**              |                       **Wireshark Filter**                      |
-|:--------------------:|:-----------------------------------------:|:---------------------------------------------------------------:|
-| ⭕ **Type/Subtype** | Control Frame (01) / PS-Poll (1010)       | `wlan.fc.type == 1 && wlan.fc.type_subtype == 26`               |
-| 🦈 **AID**          | AID of the STA requesting buffered frames | `wlan.fc.type_subtype == 26 && wlan.aid == 3`                   |
-| 🦈 **BSSID**        | BSSID where the STA is associated         | `wlan.fc.type_subtype == 26 && wlan.bssid == f0:f0:f0:f0:f0:f0` |
-| 🦈 **Transmitter**  | MAC of the STA requesting buffered frames | `wlan.fc.type_subtype == 26 && wlan.ta == f1:f1:f1:f1:f1:f1`    |
-| 🦈 **Receiver**     | MAC of the AP buffering frames            | `wlan.fc.type_subtype == 26 && wlan.ra == f0:f0:f0:f0:f0:f0`    |
-
-
+| **Field**        | **Description**                           | **Wireshark Filter**                                            |
+|------------------|-------------------------------------------|-----------------------------------------------------------------|
+| **Type/Subtype** | Control Frame (01) / PS-Poll (1010)       | `wlan.fc.type == 1 && wlan.fc.type_subtype == 26`               |
+| **AID**          | AID of the STA requesting buffered frames | `wlan.fc.type_subtype == 26 && wlan.aid == 3`                   |
+| **BSSID**        | BSSID where the STA is associated         | `wlan.fc.type_subtype == 26 && wlan.bssid == f0:f0:f0:f0:f0:f0` |
+| **Transmitter**  | MAC of the STA requesting buffered frames | `wlan.fc.type_subtype == 26 && wlan.ta == f1:f1:f1:f1:f1:f1`    |
+| **Receiver**     | MAC of the AP buffering frames            | `wlan.fc.type_subtype == 26 && wlan.ra == f0:f0:f0:f0:f0:f0`    |
 
 ## Power Management: `Types`
 _From the original version in 1997 to now, many features that reduce power consumption have been added to the standard. Some of them have fallen into disuse (PS-Poll), some have been granted certifications (WMM-Power Save) and others relate to specific technologies (MIMO PSPM, 11ac VHT TXOP PS). And there are many other mechanisms related to power-saving that are not discussed in this article (PSMP, TIM Broadcast, Proxy ARP, etc.). Future amendments (802.11ax, 802.11ah) will also introduce new and enhanced power saving techniques._
