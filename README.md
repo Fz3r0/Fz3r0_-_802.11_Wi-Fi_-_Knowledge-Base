@@ -7067,6 +7067,19 @@ C = B * log2(1 + S/N)
 - [The WiSE Article Series: Interference from Non-WiFi Sources, Part 1 @ CWNP](https://www.cwnp.com/the-wise-article-series-interference-from-non-wifi-sources-part-1/)
 - [The WiSE Article Series: Interference from Non-WiFi Sources, Part 2 @ CWNP](https://www.cwnp.com/the-wise-article-series-interference-from-non-wifi-sources-part-2/)
 
+## Channel Utilization / Airtime Utilization
+
+Main causes of high airtime/channel utilization:
+
+- Wi-Fi Interference (Other WLANs being used)
+- Co-Channel Interference (Same WLAN or others WLANs)
+- Too much clients/traffic at the same time
+- Heavy Duty tasks traffic (real time high definition audio & video streaming / daily backups (eg. sinology / etc)
+- Bottleneck: Bandwith Control in Wireless LAN Controller / AP / WLAN
+- Bottleneck: Bandwith Control Firewall
+- Bottleneck: Internet Link too low of bandwith
+
+
 ## ACS: Auto Channel Selection
 - [Enhancing Your Wi-Fi Experience with Auto Channel Selection](https://www.linkedin.com/pulse/enhancing-your-wi-fi-experience-auto-channel-selection-tharun-siriki-zunjc/?trackingId=ElYO2acn6lz65Zh3oun4uA%3D%3D)
 
