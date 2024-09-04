@@ -6585,6 +6585,7 @@ _In an IBSS configuration, no full-time AP exists and all systems may desire to 
 _HR/DSSS STAs (802.11b legacy) does not understand OFDM Modulation used by ERP STAs. But, HT/ERP/OFDM (802.11n modern) STAs are backwards compatible with HR/DSSS STAs & can transmit & understand HR/DSSS modulation | The way to acomplish that is using RTS/CTS mechanisms in case that legacy STAs are using the same AP of modern devices | RTS/CTS are the most used mechanism in Wi-Fi, there's also a mechanism called CTS-to-self that is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame, this is usually done by the AP | ERP element is present only on 2.4GHz network supporting 802.11g & it is present in beacon & probe responses. The non-ERP_Present bit set to 1 in following conditions a. A nonERP station (legacy 802.11 or 802.11b) associate to the cell, b. A neighboring cell is detected, allowing only nonERP data rates, c. Any other management frame (except probe request) is received from neighboring cell supporting only nonERP data rates. | To ensure backward compatibility with older 802.11a/b/g radios, 802.11n (HT) access points may signal to other 802.11n stations when to use one of four HT protection modes.| A field in the beacon frame called the HT Protection field has four possible settings of 0–3._
 
 - [802.11 Protection Mechanisms _@ Nayarasi_](https://mrncciew.com/2014/11/02/cwap-802-11-protection-mechanism/) _`Nayarasi`_
+- [Protection Ripple in ERP 802.11 WLANs](https://www.cwnp.com/uploads/protection_ripple_in_erp_802-11_wlans.pdf) _`whitepaper`_
 - [802.11n Protection Mechanisms: Part 1 @ _CWNP_](https://www.cwnp.com/802-11n-protection-mechanisms-part-1/) _`whitepaper`_
 - [802.11n Protection Mechanisms: Part 2 @ _CWNP_](https://www.cwnp.com/802-11n-protection-mechanisms-part-2/) _`whitepaper`_
 - [Protection Ripple in ERP 802.11 WLANs @ _CWNP_](https://www.cwnp.com/uploads/protection_ripple_in_erp_802-11_wlans.pdf) _`whitepaper`_
@@ -6605,7 +6606,7 @@ As a result, non-ERP and/or non-HT STAs are allowed to coexist with ERP and/or H
     - `ERP Information Element`: Present in 2.4 GHz Beacons & Probes
     - `HT Information Element`: Present in 2.4 & 5 GHz Beacons & Probes
 
-## Protection Modes: Difference Between `802.11g (ERP)` & `802.11n (HT)`
+### Protection Modes: Difference Between `802.11g (ERP)` & `802.11n (HT)`
 
 When 802.11g was introduced, we had RTS/CTS and CTS-to-Self protection mechanisms.  What do we get with 802.11n so that it's backwards compatible with 802.11a and 802.1b/g? First, there's a couple of new things I'd like to introduce, and then we'll get to the protection rules.
 
@@ -6621,9 +6622,48 @@ When 802.11g was introduced, we had RTS/CTS and CTS-to-Self protection mechanism
 
 ### ERP Information Element
 
-ERP Information Element (IE) contains information about Claue15 (802.11) or Clause 18 (802.11b) stations in the BSS that are not capable of communicating Clause 19 (ERP-OFDM) data rates. It also identifies whether AP should use protection mechanism & whether to use long or short preambles. Below shows the ERP IE frame format.
+ERP Information Element (IE) contains information about Claue15 (802.11 Prime) or Clause 18 (802.11b) stations in the BSS that are not capable of communicating Clause 19 (ERP-OFDM) data rates. It also identifies whether AP should use protection mechanism & whether to use long or short preambles. 
 
+````py
+## Beacon or Probe :: ERP Information Element
 
+<----------------------------------- ERP Information ------------------------------>
+|--------------|------------|-----------|-----------------|----|----|----|----|----|
+|  Element ID  | Lenght (1) |  Non-ERP  | Barker Preamble | r3 | r4 | r5 | r6 | r7 |
+|              |            |  present  |       Mode      |    |    |    |    |    |
+|--------------|------------|-----------|-----------------|----|----|----|----|----|
+       8             8            1              1           1    1    1    1    1
+
+````
+
+- Element ID : ERP Infomration Element = 42 :: `wlan.tag.number == 42`
+- Tag Lenght = 1 ::  `wlan.tag.length == 1` <br><br>
+- ERP Information HEX combination: `wlan.erp_info == 0x00` <br><br>
+    - Non-ERP Present : = 1 when non-ERP station is associated to the BSS :: `wlan.erp_info.erp_present == 1`
+    - Use Protection : = 1 when non-ERP station is associated to the BSS :: `wlan.erp_info.use_protection == 1`
+    - Barker Preamble : = 1 if one or more associated non-ERP stations are not capable of using short preambles. :: `wlan.erp_info.barker_preamble_mode == 1`
+    - Reserved (HEX) :: `wlan.erp_info.reserved == 0x00`
+
+**How it works?**
+
+ERP STAs shall use protection mechanisms (such as RTS/CTS or CTS-to-self) for ERP-OFDM MPDUs of type Data or an MMPDU when the Use_Protection field of the ERP element is equal to 1. Note that when using the Clause 19 options, ERP-PBCC or DSSS-OFDM, there is no need to use protection mechanisms, as these frames start with a DSSS header.
+
+In following scenarios that can trigger protection in an ERP basic service set:
+
+1. **An HR-DSSS (802.11b) client association will trigger protection.**:
+    - If a non-ERP STA associates with an ERP AP, the ERP AP will enable the **NonERP_Present** bit in its own beacons, enabling protection mechanisms in its BSS. <br><br>
+2. **If an 802.11g AP hears a beacon frame from an 802.11 or 802.11b access point or ad hoc client, the protection mechanism will be triggered.**:
+    - If an ERP AP hears a beacon from an AP where the supported data rates contain only 802.11b or 802.11 DSSS rates, it will enable the **NonERP_Present** bit in its own beacons, enabling protection mechanisms in its BSS. <br><br>
+3. **If an ERP AP hears a management frame (other than a probe request) where the supported rate includes only 802.11 or 802.11b rates**: 
+    - If an ERP AP hears a management frame (other than a probe request) where the supported rate includes only 802.11 or 802.11b rates the **NonERP_Present** bit may be set to 1.
+
+**So, the 3 scenarios than can trigger the protections are:**
+
+1. HR-DSSS (802.11b) client association, in the ERP (802.11g) WLAN.
+2. ERP (802.11g) WLAN AP "hear" sorrounding Beacons of 802.11-Prime, 802.11b or Ad-Hoc Networks.
+2. ERP (802.11g) WLAN AP "hear" sorrounding Management Frames (except probe request) using 802.11 or 802.11b data rates.
+
+## Protection Mechanism for `HT Tranmissions`
 
 
 
