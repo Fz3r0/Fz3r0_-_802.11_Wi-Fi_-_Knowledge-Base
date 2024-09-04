@@ -6677,14 +6677,24 @@ In following scenarios that can trigger protection in an ERP basic service set:
 
 
 
-## Protection Mechanisms: `Operating Mode`
+## HT Protection Mechanisms: `Operating Mode`
 
 The **Operating Mode** field has 4 possible settings: `0`,`1`,`2` & `3`:
 
-- **`Mode 0`**: If all stations in the BSS are 20/40 MHz HT capable, or if the BSS is 20/40 MHz capable, or if all stations in the BSS are 20 MHz HT stations in a 20 MHz BSS
-- **`Mode 1`**: **HT non-member protection mode** - used if there are non-HT stations or APs using the primary or secondary channels
-- **`Mode 2`**: if only HT stations are associated in the BSS and at least one 20 MHz HT station is associated.
-- **`Mode 3`**: **non-HT Mixed Mode** - used if one or more non-HT stations are associated in the BSS.
+- **`Mode 0`**: **No Protection Mode** / **Greenfield Mode**: <br><br>
+    - All STAs detected in primary or secondary channel are HT STAs
+    - If all stations in the BSS are 20/40 MHz HT capable
+    - or if the BSS is 20/40 MHz capable
+    - or if all stations in the BSS are 20 MHz HT stations in a 20 MHz BSS. <br><br>
+- **`Mode 1`**: **HT non-member protection mode**: <br><br>
+    - A non-HT STA or AP that is not member of this BSS, is detected using primary or secondary channels.
+    - All STAs that are members of this BSS are HT STAs <br><br>
+- **`Mode 2`**: **20 MHz protection mode**: <br><br>
+    - Only HT STAs are associated in the BSS either the primary or secondary channel.
+    - This BSS is a 20/40 MHz BSS
+    - There is at least one 20 MHz STA associated in this BSS  <br><br>
+- **`Mode 3`**: **non-HT Mixed Mode**: <br><br>
+    - Used if one or more non-HT stations are associated in the BSS (All other cases).
 
 ## Protection Mechanisms: `HT Greenfield` & `Non-greenfield` 
 
