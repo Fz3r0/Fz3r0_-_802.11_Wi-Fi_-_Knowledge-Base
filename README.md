@@ -6592,16 +6592,49 @@ _HR/DSSS STAs (802.11b legacy) does not understand OFDM Modulation used by ERP S
 
 ## Protection Modes: `Important Concepts`
 
-- **Protection Modes Elements** are present in `Beacons` & `Probes`
-- `ERP Information Element` Present in 2.4 GHz Beacons | True = non ERP/OFDM STA activated protection
-- `HT Information Element` Present in 2.4 & 5 GHz Beacons ... ?? check this facto
+Protection mechanisms cause a STA that is a potential interferer to defer any transmission for a known period of time. When these mechanisms are used:
 
-### Protection Modes: Difference Between `802.11g (ERP)` & `802.11n (HT)`
+1. non-ERP STAs do not interfere with frame exchanges using ERP PPDUs between ERP STAs.
+2. non-HT STAs do not interfere with frame exchanges using HT PPDUs between HT STAs.
+
+As a result, non-ERP and/or non-HT STAs are allowed to coexist with ERP and/or HT STAs.
+
+### `Protection Modes Elements`
+
+- **Protection Modes Elements** are present in `Beacons` & `Probes` <br><br>
+    - `ERP Information Element`: Present in 2.4 GHz Beacons & Probes
+    - `HT Information Element`: Present in 2.4 & 5 GHz Beacons & Probes
+
+## Protection Modes: Difference Between `802.11g (ERP)` & `802.11n (HT)`
 
 When 802.11g was introduced, we had RTS/CTS and CTS-to-Self protection mechanisms.  What do we get with 802.11n so that it's backwards compatible with 802.11a and 802.1b/g? First, there's a couple of new things I'd like to introduce, and then we'll get to the protection rules.
 
 - **`802.11g` = `ERP`**: In an **ERP Beacon**, ERP stations look at the **ERP Information Element** to determine whether or not protection is necessary in the BSS
 - **`802.11n` = `HT`**: In an **HT Beacon**, HT stations use the **Operating Mode** and **Non-greenfield STAs Present** fields in the **HT Information Element** to determine whether or not to use protection.
+
+
+## Protection Mechanism for `Non-ERP`
+
+- IEEE 802.11-2007 standard mandate support for both DSSS (Direct Sequence Spread Spectrum) & OFDM (Orthogonal Frequency Division Multiplexing) technologies for clause 19 ERP (802.11g) radios.
+- When clause 18 (HR-DSSS) & clause 15 DSSS (802.11) coexisting in ERP BSS, 802.11g devices need to provide compatibility for slower 802.11/802.11b devices.
+- In this **mixed mode** (801.11 + 802.11b) 802.11g devices enable “Protection mechanism” also known as **`802.11g Protected mode`**.
+
+### ERP Information Element
+
+ERP Information Element (IE) contains information about Claue15 (802.11) or Clause 18 (802.11b) stations in the BSS that are not capable of communicating Clause 19 (ERP-OFDM) data rates. It also identifies whether AP should use protection mechanism & whether to use long or short preambles. Below shows the ERP IE frame format.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Protection Mechanisms: `Operating Mode`
@@ -6623,6 +6656,9 @@ There are two kinds of HT stations:
 The "Non-greenfield STAs Present" bit is set to 0 if **all HT STAs that are associated are greenfield capable**:  
 
 The "Non-greenfield STAs Present" bit is set to 1 if **one or more HT STAs that are not greenfield capable are associated**:
+
+HT APs use this bit to tell greenfield capable STAs to use protection when non-greenfield-capable STAs are present. Greenfield transmissions are to be protected by setting the duration/ID value in all frames sent during a TXOP to the time remaining in the TXOP.
+
 
 
 ## Protection Mechanisms: `Protection Modes`
