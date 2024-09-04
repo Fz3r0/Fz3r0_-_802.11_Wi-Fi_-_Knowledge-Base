@@ -6590,21 +6590,42 @@ _HR/DSSS STAs (802.11b legacy) does not understand OFDM Modulation used by ERP S
 - [Protection Ripple in ERP 802.11 WLANs @ _CWNP_](https://www.cwnp.com/uploads/protection_ripple_in_erp_802-11_wlans.pdf) _`whitepaper`_
 - [HT Protection Mechanisms](https://dot11ap.wordpress.com/ht-protection-mechanisms/) _`definitions`_
 
-### Protection Mechanisms: `Protection Modes`
+## Protection Modes: `Important Concepts`
 
-- Protection Modes Elements are present in `Beacons` & `Probes`
-
-### Protection Modes: `ERP Information Element` & `HT Operating Mode`
-
-- In an `ERP Beacon`, ERP stations look at the `ERP Information Element` to determine whether or not protection is necessary in the BSS
-- In an `HT Beacon`, HT stations use the `Operating Mode` and "Non-greenfield STAs Present" fields in the HT Information Element to determine whether or not to use protection.
-
-
-
-
-
+- **Protection Modes Elements** are present in `Beacons` & `Probes`
 - `ERP Information Element` Present in 2.4 GHz Beacons | True = non ERP/OFDM STA activated protection
+- `HT Information Element` Present in 2.4 & 5 GHz Beacons ... ?? check this facto
 
+### Protection Modes: Difference Between `802.11g (ERP)` & `802.11n (HT)`
+
+When 802.11g was introduced, we had RTS/CTS and CTS-to-Self protection mechanisms.  What do we get with 802.11n so that it's backwards compatible with 802.11a and 802.1b/g? First, there's a couple of new things I'd like to introduce, and then we'll get to the protection rules.
+
+- **`802.11g` = `ERP`**: In an **ERP Beacon**, ERP stations look at the **ERP Information Element** to determine whether or not protection is necessary in the BSS
+- **`802.11n` = `HT`**: In an **HT Beacon**, HT stations use the **Operating Mode** and **Non-greenfield STAs Present** fields in the **HT Information Element** to determine whether or not to use protection.
+
+
+## Protection Mechanisms: `Operating Mode`
+
+The **Operating Mode** field has 4 possible settings: `0`,`1`,`2` & `3`:
+
+- **`Mode 0`**: If all stations in the BSS are 20/40 MHz HT capable, or if the BSS is 20/40 MHz capable, or if all stations in the BSS are 20 MHz HT stations in a 20 MHz BSS
+- **`Mode 1`**: **HT non-member protection mode** - used if there are non-HT stations or APs using the primary or secondary channels
+- **`Mode 2`**: if only HT stations are associated in the BSS and at least one 20 MHz HT station is associated.
+- **`Mode 3`**: **non-HT Mixed Mode** - used if one or more non-HT stations are associated in the BSS.
+
+## Protection Mechanisms: `HT Greenfield` & `Non-greenfield` 
+
+There are two kinds of HT stations: 
+
+1. HT STAs capable of using greenfield format.
+2. HT STAs NON-capable of using greenfield format (eg. legacy devices).
+
+The "Non-greenfield STAs Present" bit is set to 0 if **all HT STAs that are associated are greenfield capable**:  
+
+The "Non-greenfield STAs Present" bit is set to 1 if **one or more HT STAs that are not greenfield capable are associated**:
+
+
+## Protection Mechanisms: `Protection Modes`
 
 ### HT Mixed Mode: `HR/DSSS (Legacy)` & `HT/OFDM (Modern)`
 _Most Common Protection Mechanism | Assumes that there are 802.11a/b/g stations using the same channel. | RTS/CTS Protection Mechanism with 802.11b backward compatibility activated_
@@ -6617,6 +6638,22 @@ _Assumes that there are NO 802.11a/b/g stations using the same channel. | No pro
 ### HT 20 MHz Protection Set: `All STAs are HT`
 _All STAs detected in the primary or the secondary channel are HT STAs, and All STAs that are known by the transmitting STA to be a member of this BSS are either: 20/40 MHz HT STAs in a 20/40 MHz BSS, or 20 MHz HT STAs in a 20 MHz BSS._
 - [Protection Mechanism: Mixed Mode](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/a894e9c6-8a67-4080-9a97-75eb4fd51f44) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
