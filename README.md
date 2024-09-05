@@ -2510,7 +2510,7 @@ PCLP Layer (upper layer 1):
 
 
 
-## 🔝📡🗂️ 802.11 Pseudo-Headers: `Radiotap`, `plus AVS Radio Information`, `PPI`
+# 🔝📡🗂️ 802.11 Pseudo-Headers: `Radiotap`, `plus AVS Radio Information`, `PPI`
 _Radiotap is a de facto standard for 802.11 frame injection and reception | The radiotap header format is a mechanism to supply additional information about frames, from the driver to userspace applications such as libpcap, and from a userspace application to the driver for transmission. | Data that is NOT present in a 802.11 MAC-frame, but is intepreted coming from the PHY-Layer 1 (spectrum) derived from the PLCP header. Additional information (Meta-Information) that is added to each 802.11 frame when capturing frames with an analysis application interpreted/calculated because the PHY layer 1 spectrum throught drivers/adapters. These are not part of the standard 802.11 frame format, but are additional information added at the time of capture to provide supplementary data about the frames captured | **Some adapters capture Radiotap Header & Radio Information, other drivers can capture PPI & Radio Information**_
 - [802.11 plus Radiotap & 802.11 plus AVS radio information & PPI (Per-Packet Information)](https://www.intuitibits.com/2015/04/06/link-layer-header-types/) _`intuitbits, Adrian Granados`_
 - [What are RadioTap Headers? @ Wi-Fi Nigel](https://wifinigel.blogspot.com/2013/11/what-are-radiotap-headers.html)
@@ -2521,9 +2521,12 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
 - [How to Capture PPI-Common Headers Instead of RadioTap Headers @ Metageek](https://support.metageek.com/hc/en-us/articles/203618264-How-to-Capture-PPI-Common-Headers-Instead-of-RadioTap-Headers)
 - [Injecting Radiotap Headers](https://github.com/vanhoefm/libwifi/blob/master/docs/linux_tutorial.md#injecting-frames)
 
----
 
-### 🔝📡 802.11 Radiotap Header
+
+## 🔝📡 802.11 Radiotap Header
+
+ The Radiotap Header is the information that is added to the 802.11 frame that is taken from the RF to bit transition process, which includes date and time stamps, a channel stamp, a signal stamp, a noise stamp, and more data.
+
 - ⭕ Radiotap Header: **`Version`** _(Currently Always 0)_ <br><br>
     - 🦈 Radiotap Header Version 0 = `radiotap.version == 0` <br><br>
 - ⭕ Radiotap Header: **`Pad`** _(Currently Unused)_ <br><br>
@@ -2605,15 +2608,15 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
 - ⭕ Radiotap Header: **`Guard Interval`** <br><br>
     - Long GI = `radiotap.mcs.gi == 0` 
     - Short GI = `radiotap.mcs.gi == 1`
----
 
-### 🔝📡 PPI (Per Packet Information)
+
+## 🔝📡 PPI (Per Packet Information)
 - ⭕ PPI: Datarate 
     - 1 mbps Datarate = `ppi.80211-common.rate == 1000`
 
----
+
    
-### 💡📡 802.11 Radio Information
+## 💡📡 802.11 Radio Information
 - ⭕ **802.11 PHY** <br><br>
     - **802.11** | Wi-Fi 0 | DSSS `wlan_radio.phy == 3` 
     - **802.11b** | Wi-Fi 1 | HR/DSSS `wlan_radio.phy == 4`
