@@ -8501,7 +8501,10 @@ MC Wireless:
 - [`Ruckus` :: `SmartZone`]() `Infraestructure` :: `WLC Centralized`
 
 
+## Pendientes: 
 
+- Fragmentation
+- 
 
 
 
