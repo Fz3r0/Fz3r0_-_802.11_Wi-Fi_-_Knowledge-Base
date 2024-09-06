@@ -4193,7 +4193,7 @@ _The 4-way-handshake is used for the generation of a PTK. It confirms that the S
 - [[4-way-handshake: Diagram 3](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/36623783-339b-44ce-930c-861ddf10ca9d)
 
 
-### 🖼️🔄🤝 **`4-Way-Handshake` Frame Exchange**: <br>
+### 🖼️🔄🤝 **`4-Way-Handshake` Frame Exchange**:
 
 ````py
 (Previous: STA Associated to AP [State 3]
@@ -4227,9 +4227,90 @@ _The 4-way-handshake is used for the generation of a PTK. It confirms that the S
 - [📡🔢🔑 `M3`: Message 3 :: AP generates PTK & sends EAPOL: `Install PTK (1)` + `MIC` + `Anonce` + `Encrypted GTK (Data)`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/b1c9044b-46e5-420e-a4d4-d8c077c93e93) _`PCAP`_
 - [🤳🔢🔐 `M4`: Message 3 :: STA decrypts GTK + sends EAPOL: `MIC`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/c75d34cb-b735-4bc5-829d-15da0f302dee) _`PCAP`_
 
+### 🖼️🔄🤝 **`4-Way-Handshake` Frame Exchange Protocol Analyzer**:
 
+#### M1: Message 1:
 
+````sh
+802.1X Authentication
+    Version: 802.1X-2004 (2)
+    Type: Key (3)
+    Length: 117
+    Key Descriptor Type: EAPOL RSN Key (2)
+    [Message number: 1]  <<<<<-----------------------------||| {1} = Message Number = 1
+    Key Information: 0x008a
+        .... .... .... .010 = Key Descriptor Version: AES Cipher, HMAC-SHA1 MIC (2)
+        .... .... .... 1... = Key Type: Pairwise Key
+        .... .... ..00 .... = Key Index: 0
+        .... .... .0.. .... = Install: Not set
+        .... .... 1... .... = Key ACK: Set  <<<<<-----------------------------||| {2} = Key ACK
+        .... ...0 .... .... = Key MIC: Not set
+        .... ..0. .... .... = Secure: Not set   <<<<<-------------------------||| {3} = Secure NOT Set
+        .... .0.. .... .... = Error: Not set
+        .... 0... .... .... = Request: Not set
+        ...0 .... .... .... = Encrypted Key Data: Not set
+        ..0. .... .... .... = SMK Message: Not set
+    Key Length: 16
+    Replay Counter: 1
 
+````
+
+#### M2: Message 2:
+
+````sh
+802.1X Authentication
+    Version: 802.1X-2001 (1)
+    Type: Key (3)
+    Length: 117
+    Key Descriptor Type: EAPOL RSN Key (2)
+    [Message number: 2]  <<<<<-----------------------------||| {1} = Message Number = 2
+    Key Information: 0x010a
+        .... .... .... .010 = Key Descriptor Version: AES Cipher, HMAC-SHA1 MIC (2)
+        .... .... .... 1... = Key Type: Pairwise Key
+        .... .... ..00 .... = Key Index: 0
+        .... .... .0.. .... = Install: Not set
+        .... .... 0... .... = Key ACK: Not set
+        .... ...1 .... .... = Key MIC: Set  <<<<<-----------------------------||| {2} = Key MIC
+        .... ..0. .... .... = Secure: Not set   <<<<<-------------------------||| {3} = Secure NOT Set
+        .... .0.. .... .... = Error: Not set
+        .... 0... .... .... = Request: Not set
+        ...0 .... .... .... = Encrypted Key Data: Not set
+        ..0. .... .... .... = SMK Message: Not set
+    Key Length: 0
+    Replay Counter: 1
+
+````
+
+#### M3: Message 3:
+
+````sh
+Frame 17149: 273 bytes on wire (2184 bits), 273 bytes captured (2184 bits)
+PPI version 0, 84 bytes
+802.11 radio information
+IEEE 802.11 QoS Data, Flags: ......F.
+Logical-Link Control
+802.1X Authentication
+    Version: 802.1X-2004 (2)
+    Type: Key (3)
+    Length: 151
+    Key Descriptor Type: EAPOL RSN Key (2)
+    [Message number: 3]
+    Key Information: 0x13ca
+        .... .... .... .010 = Key Descriptor Version: AES Cipher, HMAC-SHA1 MIC (2)
+        .... .... .... 1... = Key Type: Pairwise Key
+        .... .... ..00 .... = Key Index: 0
+        .... .... .1.. .... = Install: Set
+        .... .... 1... .... = Key ACK: Set
+        .... ...1 .... .... = Key MIC: Set
+        .... ..1. .... .... = Secure: Set
+        .... .0.. .... .... = Error: Not set
+        .... 0... .... .... = Request: Not set
+        ...1 .... .... .... = Encrypted Key Data: Set
+        ..0. .... .... .... = SMK Message: Not set
+    Key Length: 16
+    Replay Counter: 2
+
+````
 
 
 
