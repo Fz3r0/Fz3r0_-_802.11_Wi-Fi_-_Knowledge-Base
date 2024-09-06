@@ -7134,10 +7134,14 @@ _`OFDM vs FDM` - More bandwith & Higher Data Transmission Rate than FDM due Orth
 - [Subcarrier Arrangement in 802.11ac 80MHz Channel](https://www.youtube.com/watch?v=cr7ZSlGfpP4) _`leo's-tech talk`_
 - [Subcarrier Arrangement in 802.11ac 160MHz Channel ](https://www.youtube.com/watch?v=v14GVgtnlks) _`leo's-tech talk`_
 
+Table:
 
-
-
-
+- In an HT 40 MHz channel there are 128 Sybcarriers (64 + 64)
+- In an HT 40 MHz channel there are 114 usable subcarriers:
+    - In an HT 40 MHz channel there are 108 data subcarriers
+    - In an HT 40 MHz channel there are 6 Pilot subcarriers
+    - In an HT 40 MHz channel there are 3 NULL/DC subcarriers
+    - The first 6 & The last 5 (Total of 11) are Guard subcarriers
 
 
 
