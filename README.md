@@ -4232,58 +4232,103 @@ _The 4-way-handshake is used for the generation of a PTK. It confirms that the S
 #### M1: Message 1:
 
 ````sh
+## 4-way-handshake :: M1 :: Message 1
+
 802.1X Authentication
     Version: 802.1X-2004 (2)
     Type: Key (3)
-    Length: 117
+    Length: 95
     Key Descriptor Type: EAPOL RSN Key (2)
-    [Message number: 1]  <<<<<-----------------------------||| {1} = Message Number = 1
+    [Message number: 1]  <<<<<-----------------------------------------------||| {1} = Message Number = 1
     Key Information: 0x008a
         .... .... .... .010 = Key Descriptor Version: AES Cipher, HMAC-SHA1 MIC (2)
         .... .... .... 1... = Key Type: Pairwise Key
         .... .... ..00 .... = Key Index: 0
         .... .... .0.. .... = Install: Not set
-        .... .... 1... .... = Key ACK: Set  <<<<<-----------------------------||| {2} = Key ACK
+        .... .... 1... .... = Key ACK: Set  <<<<<----------------------------||| {2} = Key ACK
         .... ...0 .... .... = Key MIC: Not set
-        .... ..0. .... .... = Secure: Not set   <<<<<-------------------------||| {3} = Secure NOT Set
+        .... ..0. .... .... = Secure: Not set  <<<<<-------------------------||| {3} = Secure NOT Set
         .... .0.. .... .... = Error: Not set
         .... 0... .... .... = Request: Not set
         ...0 .... .... .... = Encrypted Key Data: Not set
         ..0. .... .... .... = SMK Message: Not set
+
     Key Length: 16
     Replay Counter: 1
-
+    WPA Key Nonce: fz3r0_Anonce$$fz3r0_Anonce$$$   <<<<<-- ------------------||| {4} = Anonce
+    Key IV: 00000000000000000000000000000000
+    WPA Key RSC: 0000000000000000
+    WPA Key ID: 0000000000000000
+    WPA Key MIC: 00000000000000000000000000000000
+    WPA Key Data Length: 0
 ````
 
 #### M2: Message 2:
 
 ````sh
+## 4-way-handshake :: M2 :: Message 2
+
+Frame 17148: 239 bytes on wire (1912 bits), 239 bytes captured (1912 bits)
+PPI version 0, 84 bytes
+802.11 radio information
+IEEE 802.11 QoS Data, Flags: .......T
+Logical-Link Control
 802.1X Authentication
     Version: 802.1X-2001 (1)
     Type: Key (3)
     Length: 117
     Key Descriptor Type: EAPOL RSN Key (2)
-    [Message number: 2]  <<<<<-----------------------------||| {1} = Message Number = 2
+    [Message number: 2]  <<<<<-----------------------------------------------||| {1} = Message Number = 2
     Key Information: 0x010a
         .... .... .... .010 = Key Descriptor Version: AES Cipher, HMAC-SHA1 MIC (2)
         .... .... .... 1... = Key Type: Pairwise Key
         .... .... ..00 .... = Key Index: 0
         .... .... .0.. .... = Install: Not set
         .... .... 0... .... = Key ACK: Not set
-        .... ...1 .... .... = Key MIC: Set  <<<<<-----------------------------||| {2} = Key MIC
+        .... ...1 .... .... = Key MIC: Set  <<<<<-----------------------------||| {2} = Key MIC*
         .... ..0. .... .... = Secure: Not set   <<<<<-------------------------||| {3} = Secure NOT Set
         .... .0.. .... .... = Error: Not set
         .... 0... .... .... = Request: Not set
         ...0 .... .... .... = Encrypted Key Data: Not set
         ..0. .... .... .... = SMK Message: Not set
+
     Key Length: 0
     Replay Counter: 1
-
+    WPA Key Nonce: fz3r0_Snonce$$fz3r0_Snonce$$$   <<<<<-- ------------------||| {4} = Snonce
+    Key IV: 00000000000000000000000000000000
+    WPA Key RSC: 0000000000000000
+    WPA Key ID: 0000000000000000
+    WPA Key MIC: Fz3r0_MIC&&Fz3r0_MIC&&Fz3r0_MIC&&   <<<<<-- ---------------||| {2.1} = Key MIC*
+    WPA Key Data Length: 22
+    WPA Key Data: 30140100000fac040100000fac040100000fac028000
+        Tag: RSN Information
+            Tag Number: RSN Information (48)
+            Tag length: 20
+            RSN Version: 1
+            Group Cipher Suite: 00:0f:ac (Ieee 802.11) AES (CCM)
+            Pairwise Cipher Suite Count: 1
+            Pairwise Cipher Suite List 00:0f:ac (Ieee 802.11) AES (CCM)
+            Auth Key Management (AKM) Suite Count: 1
+            Auth Key Management (AKM) List 00:0f:ac (Ieee 802.11) PSK
+                Auth Key Management (AKM) Suite: 00:0f:ac (Ieee 802.11) PSK <<<<<-- --||| {Auth Key Management} = 00 0f ac 02 (PSK)
+                    Auth Key Management (AKM) OUI: 00:0f:ac (Ieee 802.11)   <<<<<-- --||| {Auth Key Management} = 00:0f:ac
+                    Auth Key Management (AKM) type: PSK (2)   <<<<<-------------------||| {Auth Key Management} = 02 (PSK)
+            RSN Capabilities: 0x0080
 ````
 
 #### M3: Message 3:
 
 ````sh
+## 4-way-handshake :: M3 :: Message 3
+
+
+
+
+
+
+
+
+
 Frame 17149: 273 bytes on wire (2184 bits), 273 bytes captured (2184 bits)
 PPI version 0, 84 bytes
 802.11 radio information
