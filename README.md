@@ -1401,6 +1401,12 @@ _802.11ax operates in both the 2.4 GHz and 5 GHz frequency bands, unlike 802.11a
 
 
 
+
+
+
+
+
+
 # 🏗️📡📐 802.11 WLAN Architecture
 _The 802.11 WLAN Architecture is crucial for comprehending the operation and management of wireless networks. This block delves into the fundamental components, services, and network planes that constitute the 802.11 WLAN framework. The IEEE 802.11 architecture consists of several critical components that interact to provide a robust and flexible WLAN supporting seamless STA (Station) mobility. These components include various types of stations and access points, each playing a specific role in the network. Devices within a WLAN can operate in various modes to support different networking requirements. In a centralized WLAN architecture, a central Wireless LAN Controller (WLC) resides in the core of the network, replacing autonomous APs with controller-based or lightweight APs. This architecture centralizes all three network planes_
 
@@ -7023,6 +7029,41 @@ _`OFDM vs FDM` - More bandwith & Higher Data Transmission Rate than FDM due Orth
 
 
 
+# DSSS
+
+- [DSSS - Direct Sequence Spread Spectrum](https://www.youtube.com/watch?v=-1mxYWvfVWQ) _@ Sunny_
+
+
+
+# OFDM: Symbol
+
+- [OFDM Symbol 802.11a/g/n](https://www.youtube.com/watch?v=Z2sGhutUfdY)
+
+
+
+
+
+
+## OFDM: Subcarriers
+
+- [Subcarrier Arrangement in 802.11a/g Channels](https://www.youtube.com/watch?v=6Z0NG-S4quI) _`leo's-tech talk`_
+- [Subcarriers - OFDMA 802 11ax](https://www.youtube.com/watch?v=lwGsdWkfweU) _`leo's-tech talk`_
+- [Subcarrier Arrangement in 802.11n/ac 20MHz Channel ](https://www.youtube.com/watch?v=ApGpM3DqQcY) _`leo's-tech talk`_
+- [Subcarrier Arrangement in 802.11n/ac 40MHz Channel](https://www.youtube.com/watch?v=FsOuyG3nbFk) _`leo's-tech talk`_
+- [Subcarrier Arrangement in 802.11ac 80MHz Channel](https://www.youtube.com/watch?v=cr7ZSlGfpP4) _`leo's-tech talk`_
+- [Subcarrier Arrangement in 802.11ac 160MHz Channel ](https://www.youtube.com/watch?v=v14GVgtnlks) _`leo's-tech talk`_
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7035,7 +7076,7 @@ _`OFDM vs FDM` - More bandwith & Higher Data Transmission Rate than FDM due Orth
 
 
 
-- [DSSS - Direct Sequence Spread Spectrum](https://www.youtube.com/watch?v=-1mxYWvfVWQ) _@ Sunny_
+
 
 
 
