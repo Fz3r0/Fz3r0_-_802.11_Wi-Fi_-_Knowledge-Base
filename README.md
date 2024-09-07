@@ -6786,6 +6786,10 @@ _HR/DSSS STAs (802.11b legacy) does not understand OFDM Modulation used by ERP S
 - [Protection Ripple in ERP 802.11 WLANs @ _CWNP_](https://www.cwnp.com/uploads/protection_ripple_in_erp_802-11_wlans.pdf) _`whitepaper`_
 - [HT Protection Mechanisms](https://dot11ap.wordpress.com/ht-protection-mechanisms/) _`definitions`_
 
+## Protection Mechanisms: `CTS` & `CTS-to-Self`
+
+RTS/CTS are the most used mechanism in Wi-Fi, there's also a mechanism called CTS-to-self that is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame, this is usually done by the AP 
+
 ## Protection Modes: `Important Concepts`
 
 Protection mechanisms cause a STA that is a potential interferer to defer any transmission for a known period of time. When these mechanisms are used:
