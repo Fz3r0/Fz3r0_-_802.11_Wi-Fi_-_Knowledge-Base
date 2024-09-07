@@ -4231,8 +4231,16 @@ _The 4-way-handshake is used for the generation of a PTK. It confirms that the S
 
 #### M1: Message 1:
 
+
+
 ````sh
 ## 4-way-handshake :: M1 :: Message 1
+
+    ### From AP to Client STA:
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    AP Pick Random Anonce                       |  send M1 : ( 💊 🗝️ EAPOL Key | Anonce ) 
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 802.1X Authentication
     Version: 802.1X-2004 (2)
@@ -4318,46 +4326,77 @@ Logical-Link Control
 
 #### M3: Message 3:
 
+- Install PTK + MIC + Anonce + Encrypted GTK
+
 ````sh
 ## 4-way-handshake :: M3 :: Message 3
 
-
-
-
-
-
-
-
-
-Frame 17149: 273 bytes on wire (2184 bits), 273 bytes captured (2184 bits)
-PPI version 0, 84 bytes
-802.11 radio information
-IEEE 802.11 QoS Data, Flags: ......F.
-Logical-Link Control
 802.1X Authentication
     Version: 802.1X-2004 (2)
     Type: Key (3)
     Length: 151
     Key Descriptor Type: EAPOL RSN Key (2)
-    [Message number: 3]
+    [Message number: 3]  <<<<<-----------------------------------------------||| {1} = Message Number = 3 
     Key Information: 0x13ca
         .... .... .... .010 = Key Descriptor Version: AES Cipher, HMAC-SHA1 MIC (2)
         .... .... .... 1... = Key Type: Pairwise Key
         .... .... ..00 .... = Key Index: 0
-        .... .... .1.. .... = Install: Set
-        .... .... 1... .... = Key ACK: Set
-        .... ...1 .... .... = Key MIC: Set
-        .... ..1. .... .... = Secure: Set
+        .... .... .1.. .... = Install: Set  <<<<<----------------------------||| {2} = Install PTK (Pairwaise Transient Key)
+        .... .... 1... .... = Key ACK: Set  <<<<<----------------------------||| {3} = Key ACK
+        .... ...1 .... .... = Key MIC: Set  <<<<<----------------------------||| {4} = Key MIC*
+        .... ..1. .... .... = Secure: Set   <<<<<----------------------------||| {5} = Secure SET
         .... .0.. .... .... = Error: Not set
         .... 0... .... .... = Request: Not set
-        ...1 .... .... .... = Encrypted Key Data: Set
+        ...1 .... .... .... = Encrypted Key Data: Set   <<<<<----------------||| {6} = Encrypted Key Data (GTK)
         ..0. .... .... .... = SMK Message: Not set
+
     Key Length: 16
     Replay Counter: 2
+    WPA Key Nonce: fz3r0_Anonce$$fz3r0_Anonce$$$   <<<<<--------------------||| {7} = Anonce
+    Key IV: 00000000000000000000000000000000
+    WPA Key RSC: 0000000000000000
+    WPA Key ID: 0000000000000000
+    WPA Key MIC: Fz3r0_MIC&&Fz3r0_MIC&&Fz3r0_MIC&&   <<<<<------------------||| {4.1} = Key MIC*
+    WPA Key Data Length: 56
+    WPA Key Data: 3ncrypt3d-K3y-Data_01234_3ncrypt3d-K3y-Data_01234  <<<<<--||| {6.1} = Encrypted Key Data = GTK (Group Transient Key)
+
 
 ````
 
+#### M4: Message 4:
 
+````sh
+## 4-way-handshake :: M4 :: Message 4
+
+802.1X Authentication
+    Version: 802.1X-2001 (1)
+    Type: Key (3)
+    Length: 95
+    Key Descriptor Type: EAPOL RSN Key (2)
+    [Message number: 4]  <<<<<-----------------------------------------------||| {1} = Message Number = 4
+    Key Information: 0x030a
+        .... .... .... .010 = Key Descriptor Version: AES Cipher, HMAC-SHA1 MIC (2)
+        .... .... .... 1... = Key Type: Pairwise Key
+        .... .... ..00 .... = Key Index: 0
+        .... .... .0.. .... = Install: Not set
+        .... .... 0... .... = Key ACK: Not set
+        .... ...1 .... .... = Key MIC: Set  <<<<<----------------------------||| {2} = Key MIC*
+        .... ..1. .... .... = Secure: Set   <<<<<----------------------------||| {3} = Secure SET
+        .... .0.. .... .... = Error: Not set
+        .... 0... .... .... = Request: Not set
+        ...0 .... .... .... = Encrypted Key Data: Not set
+        ..0. .... .... .... = SMK Message: Not set
+
+    Key Length: 0
+    Replay Counter: 2
+    WPA Key Nonce: 0000000000000000000000000000000000000000000000000000000000000000
+    Key IV: 00000000000000000000000000000000
+    WPA Key RSC: 0000000000000000
+    WPA Key ID: 0000000000000000
+    WPA Key MIC: Fz3r0_MIC&&Fz3r0_MIC&&Fz3r0_MIC&&   <<<<<------------------||| {2.1} = Key MIC*
+    WPA Key Data Length: 0
+
+````
 
 
 
