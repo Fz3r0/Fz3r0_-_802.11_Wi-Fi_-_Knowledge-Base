@@ -4308,20 +4308,41 @@ Logical-Link Control
     WPA Key ID: 0000000000000000
     WPA Key MIC: Fz3r0_MIC&&Fz3r0_MIC&&Fz3r0_MIC&&   <<<<<-- ---------------||| {2.1} = Key MIC*
     WPA Key Data Length: 22
+
     WPA Key Data: 30140100000fac040100000fac040100000fac028000
         Tag: RSN Information
             Tag Number: RSN Information (48)
             Tag length: 20
             RSN Version: 1
-            Group Cipher Suite: 00:0f:ac (Ieee 802.11) AES (CCM)
-            Pairwise Cipher Suite Count: 1
+
+            Group Cipher Suite: 00:0f:ac (Ieee 802.11) AES (CCM)  1  <<<<<------------||| Group Cipher Suite
+                Group Cipher Suite OUI: 00:0f:ac (Ieee 802.11)
+                Group Cipher Suite type: AES (CCM) (4)
+
+            Pairwise Cipher Suite Count: 1  <<<<<-------------------------------------||| Pairwise Cipher Suite
             Pairwise Cipher Suite List 00:0f:ac (Ieee 802.11) AES (CCM)
-            Auth Key Management (AKM) Suite Count: 1
+                Pairwise Cipher Suite: 00:0f:ac (Ieee 802.11) AES (CCM)
+                    Pairwise Cipher Suite OUI: 00:0f:ac (Ieee 802.11)
+                    Pairwise Cipher Suite type: AES (CCM) (4)
+
+            Auth Key Management (AKM) Suite Count: 1 <<<<<----------------------------||| Authentication Key Management
             Auth Key Management (AKM) List 00:0f:ac (Ieee 802.11) PSK
                 Auth Key Management (AKM) Suite: 00:0f:ac (Ieee 802.11) PSK <<<<<-- --||| {Auth Key Management} = 00 0f ac 02 (PSK)
                     Auth Key Management (AKM) OUI: 00:0f:ac (Ieee 802.11)   <<<<<-- --||| {Auth Key Management} = 00:0f:ac
                     Auth Key Management (AKM) type: PSK (2)   <<<<<-------------------||| {Auth Key Management} = 02 (PSK)
+
             RSN Capabilities: 0x0080
+                .... .... .... ...0 = RSN Pre-Auth capabilities: Transmitter does not support pre-authentication
+                .... .... .... ..0. = RSN No Pairwise capabilities: Transmitter can support WEP default key 0 simultaneously with Pairwise key
+                .... .... .... 00.. = RSN PTKSA Replay Counter capabilities: 1 replay counter per PTKSA/GTKSA/STAKeySA (0x0)
+                .... .... ..00 .... = RSN GTKSA Replay Counter capabilities: 1 replay counter per PTKSA/GTKSA/STAKeySA (0x0)
+                .... .... .0.. .... = Management Frame Protection Required: False
+                .... .... 1... .... = Management Frame Protection Capable: True
+                .... ...0 .... .... = Joint Multi-band RSNA: False
+                .... ..0. .... .... = PeerKey Enabled: False
+                ..0. .... .... .... = Extended Key ID for Individually Addressed Frames: Not supported
+                .0.. .... .... .... = OCVC: False
+
 ````
 
 #### M3: Message 3:
