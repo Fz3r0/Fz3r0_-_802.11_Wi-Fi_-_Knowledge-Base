@@ -5580,7 +5580,8 @@ EDCA defines four access categories, based on the eight UPs (user priorities):
 
 ### TXOP (Transmit Opportunity)
 
-- EDCA introduce this TXOP which is a time period or window of time where one device, called TXOP holder has unfettered acccess to the channel for data transmission. This means, the device wins the contention to the medium for frames transmission. 
+- EDCA introduce this TXOP which is a time period or window of time where one device, called TXOP holder has unfettered acccess to the channel for data transmission. This means, the device wins the contention to the medium for frames transmission.
+- TXOP is the name given to the series of frames sent by a QoS AP or station that has won arbitration.
 - The TxOP can have a multiple frame transmission depending on Access Category (AC)
 - The data frame transmissions within  a TXOP are called a “contention free burst -CFB” During a TXOP, only the data that makes up a CFB and the ACK for that data may access the channel.
 - 802.11e standard defines default TXOP limit value for each AC, but values can be configured on AP.
@@ -6787,9 +6788,15 @@ _HR/DSSS STAs (802.11b legacy) does not understand OFDM Modulation used by ERP S
 - [Protection Ripple in ERP 802.11 WLANs @ _CWNP_](https://www.cwnp.com/uploads/protection_ripple_in_erp_802-11_wlans.pdf) _`whitepaper`_
 - [HT Protection Mechanisms](https://dot11ap.wordpress.com/ht-protection-mechanisms/) _`definitions`_
 
-## Protection Mechanisms: `CTS` & `CTS-to-Self`
+## Protection Mechanisms: `CTS`, `CTS-to-Self`, `Dual CTS`
 
 RTS/CTS are the most used mechanism in Wi-Fi, there's also a mechanism called CTS-to-self that is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame, this is usually done by the AP 
+
+9. Dual CTS Protection
+Dual CTS protection is used by the AP to set a NAV at STAs that do not support
+STBC and at STAs that can associate solely through the STBC beacon.
+0 – dual CTS protection is not required
+1 – dual CTS protection is required
 
 ## Protection Modes: `Important Concepts`
 
