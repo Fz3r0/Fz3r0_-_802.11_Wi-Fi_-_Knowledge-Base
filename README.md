@@ -1712,6 +1712,24 @@ Layer N - 1      |             PCI                  ||                          
 
 ---
 
+### MSDU Size
+
+- The maximum MSDU size = `2304` _(before encryption)_
+- WEP will add 8 bytes = `2312`
+- WPA-TKIP 20 bytes = `2324`
+- WPA2-CCMP 16 bytes = `2320`
+
+_See also Frame aggregation mechanisms in 802.11n._
+
+
+
+
+
+
+
+
+
+
 ### 💊🖼️📡 Encapuslation: Layer 2 (Data Link) & Layer 1 (PHY) `Sub-Layers`
 _**ALL the 802.11b/a/g/n/ac/ax Wi-Fi standards use the terms MSDU, MPDU, PSDU, and PPDU in their frame structures.** These concepts are fundamental to understanding how data is structured and transmitted in Wi-Fi networks according to the various standards. The use of these terms ensures that, regardless of the specific standard (b/a/g/n/ac/ax), the structure and process of data transmission follow a consistent and compatible scheme._
 
