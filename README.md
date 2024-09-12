@@ -2206,9 +2206,9 @@ _Both of these methods can be used together. It's one of the best ways to increa
 ## 802.11 Fragmentation
 _The process of partitioning an MSDU or an MMPDU into smaller MAC level frames, MPDUs, is called fragmentation. The MAC may fragment and reassemble individually addressed MSDUs or MMPDUs. The fragmentation and defragmentation mechanisms allow for fragment retransmission._
 
-- [802.11 Fragmentation](https://dot11ap.wordpress.com/fragmentation/) _`dot11ap`_
 - [802.11 Fragmentation](https://mrncciew.com/2014/11/03/cwap-802-11-fragmentation/) _`nayarasi`_
-
+- [802.11 Fragmentation: Sequence Control Field](https://mrncciew.com/2014/11/01/cwap-mac-header-sequence-control/) _`nayarasi`_
+- [802.11 Fragmentation](https://dot11ap.wordpress.com/fragmentation/) _`dot11ap`_
 
 
 
