@@ -1625,6 +1625,7 @@ _In Wireless 802.11 networks, Layers 1 and 2 are the most crucial, Layers 3 and 
 
 
 
+
 ## 💊🖼️📦 Encapsulation: `SDU` & `PDU`
 
 - [CWNP: Basics of MAC Architecture: Encapsulation & Frame Aggregation](https://www.cwnp.com/802.11-mac-series-ndash-basics-mac-architecture-ndash-part-1-3/#Id3)
@@ -1712,7 +1713,16 @@ Layer N - 1      |             PCI                  ||                          
 
 ---
 
-### MSDU Size
+
+### Encapuslation: `MTU`
+
+- [Maximum transmission unit (MTU) :: All networks MTU table](https://en.wikipedia.org/wiki/Maximum_transmission_unit) _`wikipedia`_
+
+In computer networking, the maximum transmission unit (MTU) is the size of the largest protocol data unit (PDU) that can be communicated in a single network layer transaction.  The MTU relates to, but is not identical to the maximum frame size that can be transported on the data link layer, e.g., Ethernet frame.
+
+- Larger MTU is associated with reduced overhead. Smaller MTU values can reduce network delay. In many cases, MTU is dependent on underlying network capabilities and must be adjusted manually or automatically so as to not exceed these capabilities. MTU parameters may appear in association with a communications interface or standard. Some systems may decide MTU at connect time, e.g. using Path MTU Discovery.
+
+### MTU: MSDU (IEEE 802.11 Wi-Fi (WLAN))
 
 - The maximum MSDU size = `2304` _(before encryption)_
 - WEP will add 8 bytes = `2312`
