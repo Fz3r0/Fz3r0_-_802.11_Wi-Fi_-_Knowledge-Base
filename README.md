@@ -8737,6 +8737,16 @@ MC Wireless:
 
 
 
+
+
+## 802.11 Fragmentation
+
+- [802.11 Fragmentation](https://dot11ap.wordpress.com/fragmentation/) _`dot11ap`_
+
+
+
+
+
 # Vendor Specific Capture
 
 ## Ruckus Networks / CommScope
