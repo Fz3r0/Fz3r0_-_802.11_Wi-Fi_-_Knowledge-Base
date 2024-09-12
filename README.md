@@ -5606,9 +5606,8 @@ EDCA defines four access categories, based on the eight UPs (user priorities):
 ### TXOP (Transmit Opportunity)
 
 - EDCA introduce this TXOP which is a time period or window of time where one device, called TXOP holder has unfettered acccess to the channel for data transmission. This means, the device wins the contention to the medium for frames transmission.
-- TXOP is the name given to the series of frames sent by a QoS AP or station that has won arbitration.
+- CFB "Contention Free Burst" is the name given to the series of frames transissions sent by a QoS AP or STA that has won arbitration. Only the data that makes up a CFB and the ACK for that data may access the channel.
 - The TxOP can have a multiple frame transmission depending on Access Category (AC)
-- The data frame transmissions within  a TXOP are called a “contention free burst -CFB” During a TXOP, only the data that makes up a CFB and the ACK for that data may access the channel.
 - 802.11e standard defines default TXOP limit value for each AC, but values can be configured on AP.
 - TXOP limit are set in intervals of 32µs (microseconds).
 - Default TXOP is 47 for AC_VO (47×32=1504µs) for OFDM.
