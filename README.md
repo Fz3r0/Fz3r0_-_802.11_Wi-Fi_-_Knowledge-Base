@@ -4073,6 +4073,7 @@ _WEP initialization vector (IV) include the WEP KEY ID details where receiving d
 
 ## 🔐💪🛡️ `RSN`: Robust Recure Network
 _A network that only allows the creation of RSNA (Robust Secure Network Associations) || It includes a RSNE () || The term Robust Security Network is used in WiFi networks to describe the security enhancements encompassed in the IEEE 802.11i and WPA (WiFi Protected Access) 1 and 2 variants. The suite of protocols endeavours to compensate for the weaknesses associated with WEP(Wired Equivalent Privacy). || RSN/RSNA uses dynamic key generation via 4 way handshake and two types of keys for unicast and multicast transmission_
+- [01-WLAN security configuration (Full Security Resource)](https://www.h3c.com/en/Support/Resource_Center/EN/Wireless/Catalog/WBC/WBC/Technical_Documents/Configure___Deploy/Configuration_Guides/WBC_Multservice_CG_E5448/08/202112/1504649_294551_0.htm) _`h3c`_
 - [`NIST-800-97`: Establishing Wireless Robust Security Networks: A Guide to IEEE 802.11i @ NIST](https://www.govinfo.gov/content/pkg/GOVPUB-C13-bccd1f279aaf7e4caa863b34791bb565/pdf/GOVPUB-C13-bccd1f279aaf7e4caa863b34791bb565.pdf) _`NIST special publication`_
 - [RSN & EAP in detail @ TB Haxor](https://tbhaxor.com/rsn-and-eap-in-detail/) _`info`_
 - [Pre-RSN VS RSN Security Mechanisms Comparation](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/72a1b555-900a-4715-8835-717cf258c0c1) _`table`_
