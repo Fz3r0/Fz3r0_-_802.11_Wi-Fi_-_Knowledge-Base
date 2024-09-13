@@ -4311,6 +4311,19 @@ After receiving M1, client STA performs the following operations:
 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+IEEE 802.11 QoS Data, Flags: ......F.
+    Type/Subtype: QoS Data (0x0028)
+    Frame Control Field: 0x8802
+
+    Receiver address: 11:22:33:44:55:66  <<<---------------------------------||| STA
+    Transmitter address: aa:bb:cc:dd:ee:ff  <<<------------------------------||| AP
+
+    Destination address: 11:22:33:44:55:66  <<<------------------------------||| STA
+    Source address: aa:bb:cc:dd:ee:ff  <<<-----------------------------------||| AP
+
+    BSS Id: aa:bb:cc:dd:ee:ff <<<--------------------------------------------||| AP
+    STA address: 11:22:33:44:55:66  <<<--------------------------------------||| STA
+
 802.1X Authentication
     Version: 802.1X-2004 (2)
     Type: Key (3)
@@ -4362,6 +4375,19 @@ After receiving M2, AP performs the following operations:
 ````sh
 ## 4-way-handshake :: M2 :: Message 2
 
+IEEE 802.11 QoS Data, Flags: ......F.
+    Type/Subtype: QoS Data (0x0028)
+    Frame Control Field: 0x8801
+
+    Receiver address: aa:bb:cc:dd:ee:ff <<<----------------------------------||| AP
+    Transmitter address: 11:22:33:44:55:66  <<<------------------------------||| STA
+
+    Destination address: aa:bb:cc:dd:ee:ff <<<-------------------------------||| AP
+    Source address: 11:22:33:44:55:66  <<<-----------------------------------||| STA
+
+    BSS Id: 11:22:33:44:55:66  <<<-------------------------------------------||| STA
+    STA address: aa:bb:cc:dd:ee:ff <<<---------------------------------------||| AP
+
 Frame 17148: 239 bytes on wire (1912 bits), 239 bytes captured (1912 bits)
 PPI version 0, 84 bytes
 802.11 radio information
@@ -4401,21 +4427,21 @@ Logical-Link Control
             Tag length: 20
             RSN Version: 1
 
-            Group Cipher Suite: 00:0f:ac (Ieee 802.11) AES (CCM)  1  <<<<<------------||| Group Cipher Suite
-                Group Cipher Suite OUI: 00:0f:ac (Ieee 802.11)
+            Group Cipher Suite: 00:0f:ac (Ieee 802.11) AES (CCM)  1  <<<<<------------||| AES/CCMP Pairwise Cipher Suite (00:0f:ac)
+                Group Cipher Suite OUI: 00:0f:ac (Ieee 802.11)                            (Secure broadcast/multicast)   
                 Group Cipher Suite type: AES (CCM) (4)
 
-            Pairwise Cipher Suite Count: 1  <<<<<-------------------------------------||| Pairwise Cipher Suite
-            Pairwise Cipher Suite List 00:0f:ac (Ieee 802.11) AES (CCM)
+            Pairwise Cipher Suite Count: 1  <<<<<-------------------------------------||| AES/CCMP Pairwise Cipher Suite (00:0f:ac)
+            Pairwise Cipher Suite List 00:0f:ac (Ieee 802.11) AES (CCM)                   (Secure unicast) 
                 Pairwise Cipher Suite: 00:0f:ac (Ieee 802.11) AES (CCM)
                     Pairwise Cipher Suite OUI: 00:0f:ac (Ieee 802.11)
                     Pairwise Cipher Suite type: AES (CCM) (4)
 
-            Auth Key Management (AKM) Suite Count: 1 <<<<<----------------------------||| Authentication Key Management
+            Auth Key Management (AKM) Suite Count: 1 <<<<<----------------------------||| AKM: Authentication Key Management
             Auth Key Management (AKM) List 00:0f:ac (Ieee 802.11) PSK
-                Auth Key Management (AKM) Suite: 00:0f:ac (Ieee 802.11) PSK <<<<<-- --||| {Auth Key Management} = 00 0f ac 02 (PSK)
-                    Auth Key Management (AKM) OUI: 00:0f:ac (Ieee 802.11)   <<<<<-- --||| {Auth Key Management} = 00:0f:ac
-                    Auth Key Management (AKM) type: PSK (2)   <<<<<-------------------||| {Auth Key Management} = 02 (PSK)
+                Auth Key Management (AKM) Suite: 00:0f:ac (Ieee 802.11) PSK <<<<<-- --||| {Auth Key Management} = 00 0f ac 02 (AES/CCMP - PSK)
+                    Auth Key Management (AKM) OUI: 00:0f:ac (Ieee 802.11)   <<<<<-- --||| {Auth Key Management} = 00:0f:ac    (AES/CCMP)
+                    Auth Key Management (AKM) type: PSK (2)   <<<<<-------------------||| {Auth Key Management} = 02          (PSK)
 
             RSN Capabilities: 0x0080
                 .... .... .... ...0 = RSN Pre-Auth capabilities: Transmitter does not support pre-authentication
