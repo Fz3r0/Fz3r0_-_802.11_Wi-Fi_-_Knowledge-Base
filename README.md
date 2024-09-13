@@ -4281,11 +4281,18 @@ _The 4-way-handshake is used for the generation of a PTK. It confirms that the S
 - [📡🔢🔑 `M3`: Message 3 :: AP generates PTK & sends EAPOL: `Install PTK (1)` + `MIC` + `Anonce` + `Encrypted GTK (Data)`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/b1c9044b-46e5-420e-a4d4-d8c077c93e93) _`PCAP`_
 - [🤳🔢🔐 `M4`: Message 3 :: STA decrypts GTK + sends EAPOL: `MIC`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/c75d34cb-b735-4bc5-829d-15da0f302dee) _`PCAP`_
 
-### 🖼️🔄🤝 **`4-Way-Handshake` Frame Exchange Protocol Analyzer**:
+## 🖼️🔄🤝 **`4-Way-Handshake` Frame Exchange Protocol Analyzer**:
 
-#### M1: Message 1:
+### 4-Way-Handshake > `M1` :: `Message 1`:
 
+From: `AP` 
+To: `client STA`
 
+1. The AP sends the client EAPOL-Key message 1 that contains a random value ANonce. <br><br>
+2. The client STA performs the following operations: <br><br>
+    1. Uses the random value SNonce (STA), ANonce (AP), and PMK to generate a PTK by using the key derivation function (KDF).
+    2. Uses the KCK in the PTK to generate the MIC.
+    3. _The **client STA** Returns EAPOL-Key Message 2 to the **AP** that contains the SNonce and MIC (see `M2` :: `Message 2`)_ .
 
 ````sh
 ## 4-way-handshake :: M1 :: Message 1
@@ -4325,7 +4332,17 @@ _The 4-way-handshake is used for the generation of a PTK. It confirms that the S
     WPA Key Data Length: 0
 ````
 
-#### M2: Message 2:
+### 4-Way-Handshake > `M2` :: `Message 2`:
+
+From: `client STA `
+To: `AP`
+
+1. The **client STA** Returns EAPOL-Key Message 2 to the **AP** that contains the SNonce and MIC. <br><br>
+2. The AP performs the following operations: <br><br>
+    1. Uses the random value SNonce, ANonce, and PMK to generate a PTK by using the key derivation function (KDF). _(Just like the client STA, actually... the PTK will be the same for both AP and STA)._
+    2. Uses the KCK in the PTK to generate the MIC.
+    3. Compares the received MIC with the local MIC.
+    4. Returns EAPOL-Key message 3 that contains the **PTK installation request tag** and **MIC** if the two MICs are the same. _(see `M2` :: `Message 2`)_ _(If the two MICs are different it means that the password is wrong and the 4-way-handshake will loop from message 1 to message 2 until an authentication error message.)_
 
 ````sh
 ## 4-way-handshake :: M2 :: Message 2
@@ -4401,7 +4418,16 @@ Logical-Link Control
 
 #### M3: Message 3:
 
-- Install PTK + MIC + Anonce + Encrypted GTK
+- From: `AP`
+- To: `STA`
+
+Contains: `Install PTK + MIC + Anonce + Encrypted GTK`
+
+1. AP returns EAPOL-Key message 3 to the client STA that contains the **PTK installation request tag** and **MIC** if the two MICs are the same <br><br>
+2. The client STA performs the following operations: <br><br>
+    1. Compares the received MIC with the local MIC
+    2. Installs the PTK and returns EAPOL-Key message 4 that contains the MIC if the two MICs are the same.
+
 
 ````sh
 ## 4-way-handshake :: M3 :: Message 3
@@ -4439,6 +4465,8 @@ Logical-Link Control
 ````
 
 #### M4: Message 4:
+
+- **Installs the PTK and returns EAPOL-Key message 4 that contains the MIC if the two MICs are the same.**
 
 ````sh
 ## 4-way-handshake :: M4 :: Message 4
