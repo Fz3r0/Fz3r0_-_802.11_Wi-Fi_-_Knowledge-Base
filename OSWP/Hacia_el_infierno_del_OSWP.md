@@ -401,10 +401,21 @@ hcxdumptool --do_rcascan -i wlan0mon
 
 ````sh
 # Opción 1: iwconfig
+iwconfig wlan0mon channel auto
+iwconfig wlan0mon channel 1
+iwconfig wlan0mon channel 2
+iwconfig wlan0mon channel 3
+iwconfig wlan0mon channel 4
+iwconfig wlan0mon channel 5
 iwconfig wlan0mon channel 6
-
-# Opción 2: iwconfig (auto)
-iwconfig eth0 channel auto
+iwconfig wlan0mon channel 7
+iwconfig wlan0mon channel 8
+iwconfig wlan0mon channel 9
+iwconfig wlan0mon channel 10
+iwconfig wlan0mon channel 11
+iwconfig wlan0mon channel 12
+iwconfig wlan0mon channel 13
+iwconfig wlan0mon channel 14
 
 # Opción 3: iw
 iw dev wlan0mon set channel 6
