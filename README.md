@@ -4963,7 +4963,7 @@ _In every 802.11 network there must be a set of rules to determine when stations
 ### Arbitration & Contention Methods Summary
 
 - `DCF`: is the fundamental, required contention-based access service for all networks :: **(Non-QoS)** <br><br>
-- `PCF`: is an optional contention-free service, used for non-QoS STAs :: **Not implemented in 802.11** <br><br>
+- `PCF`: is an optional contention-free service, used for non-QoS STAs :: This coordination function is an optional method that is not used in real-world 802.11 APs. **Not implemented in 802.11** <br><br>
 - `HCF Contention Access (EDCA)`: Based on DCF, is required for prioritized contention-based QoS services :: **(QoS)** <br><br>
 - `HCF Controlled Access (HCCA)`: is required for parameterized contention-free QoS services :: 802.11e QoS channel access method that requires the QoS AP to take control of the wireless channel and manage service periods for associated stations **(QoS) - Not implemented in 802.11**
 
