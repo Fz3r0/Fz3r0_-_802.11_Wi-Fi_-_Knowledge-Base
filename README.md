@@ -1724,10 +1724,10 @@ In computer networking, the maximum transmission unit (MTU) is the size of the l
 
 ### MTU: MSDU (IEEE 802.11 Wi-Fi (WLAN))
 
-- The maximum MSDU size = `2304` _(before encryption)_
+- Maximum MSDU size = `2304` _(Before encryption || When a packet is passed down from the Network layer to the Data-Link layer for transmission)_
 - WEP will add 8 bytes = `2312`
-- WPA-TKIP 20 bytes = `2324`
-- WPA2-CCMP 16 bytes = `2320`
+- WPA-TKIP will add 20 bytes = `2324`
+- WPA2-CCMP will add 16 bytes = `2320`
 
 _See also Frame aggregation mechanisms in 802.11n._
 
