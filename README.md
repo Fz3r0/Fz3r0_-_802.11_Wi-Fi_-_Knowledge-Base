@@ -3550,14 +3550,17 @@ _IEEE 802.11-2020 9.3.3 (PV0) :: Management frames are used to manage the connec
 | _Aruba Management_          | 00       | 1111      | `wlan.fc.type == 00 && wlan.fc.type_subtype == 15` | _Aruba-specific management frame. Used for proprietary management functions specific to Aruba networks. (Not 802.11 Standard)_ |
 
 ## 🎮🛜💊 802.11 MAC Frames :: `Control`
-_Control frames are used to manage access to the wireless medium and ensure that data transmissions occur smoothly without collisions, this means that the Control frames are used to assist with the delivery of the data frames such as 802.11 acknowledgement (Ack), request to send (RTS) and clear to send (CTS) and more. These frames are essential for coordinating data transfer and managing the state of communication links._
+
+Control frames are used to manage access to the wireless medium and ensure that data transmissions occur smoothly without collisions, this means that the Control frames are used to assist with the delivery of the data frames such as 802.11 acknowledgement (Ack), request to send (RTS) and clear to send (CTS) and more. These frames are essential for coordinating data transfer and managing the state of communication links.
 
 **Key functions of Control Frames:**
+
 - **`Acknowledgment`**: Frames like ACK are used to acknowledge the receipt of data frames, ensuring reliable communication. <br><br>
 - **`Medium reservation`**: Frames such as RTS (Request to Send) and CTS (Clear to Send) help in reserving the medium for transmission, reducing the likelihood of collisions. <br><br>
 - **`Power management`**: Frames like PS-Poll are used by client STAs to manage power-saving modes, allowing them to conserve energy while maintaining network connectivity. <br><br>
 
 **Advanced tasks of Control Frames:**
+
 - **`Trigger`**: Used in multi-user transmission scenarios, particularly in 802.11ax (Wi-Fi 6). They initiate scheduled uplink transmissions from multiple client STAs, allowing for efficient use of the wireless medium. <br><br>
 - **`Beamforming Report Poll`**: Utilized in 802.11ac and newer standards, these frames request beamforming feedback from client STAs to optimize directional signal transmission, enhancing overall network performance. <br><br>
 - **`VHT/HE NDP Announcement`**: Announce the start of a null data packet (NDP) transmission for Very High Throughput (VHT) and High Efficiency (HE) modes, used for channel sounding and beamforming purposes. <br><br>
