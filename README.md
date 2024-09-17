@@ -3057,7 +3057,7 @@ The next table apply **only for Data Frames**:
 |    **From AP**   |                  0                 |                   1                  |        DA<br>(Destination Address)       |                    BSSID                    |    SA<br>(Source Address)   |           N/A          |
 |     **To AP**    |                  1                 |                   0                  |                   BSSID                  |            SA<br>(Source Address)           | DA<br>(Destination Address) |           N/A          |
 | **Ad-Hoc (P2P)** / _**Magagement** & **Control Frames**_ |                  0                 |                   0                  |        DA<br>(Destination Address)       |            SA<br>(Source Address)           |            BSSID            |           N/A          |
-| **Bridge / WDS** |                  1                 |                   1                  |         RA<br>(Receiver Address)         |         TA<br>(Transmitter Address)         | DA<br>(Destination Address) | SA<br>(Source Address) |
+| **Bridge / WDS** _(Mesh)_ |                  1                 |                   1                  |         RA<br>(Receiver Address)         |         TA<br>(Transmitter Address)         | DA<br>(Destination Address) | SA<br>(Source Address) |
 
 
 - 📍 **To DS** and **From DS** fields are `both 0`: <br> <br>
