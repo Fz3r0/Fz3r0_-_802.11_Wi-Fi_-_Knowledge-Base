@@ -3517,9 +3517,10 @@ _IEEE 802.11-2020 9.3.3 (PV0) :: Management frames are used to manage the connec
 - [802.11 Mgmt Frame Types @ _nayarasi_](https://mrncciew.com/2014/09/29/cwap-802-11-mgmt-frame-types/) _`nayarasi`_
 
 **Key Notes on Management Frames**
-- 802.11 management frames use fields and elements also known as Information Elements. The elements are in the frame body as a management frame does not contain a data payload.
+- 802.11 management frames use fields and elements also known as Information Elements. **The elements are in the frame body as a management frame does not contain a data payload.**
 - 802.11 management frames that are sent to a broadcast address of FF FF FF FF FF FF will have a duration value of zero. The duration is a time value that STA’s will use to reserve the medium informing other STA’s in the BSS how long it will take for the frame exchange to complete. In this case since these frames are no acknowledged by a receiver they have a duration value of zero. The duration field is still in the MAC header but it is not used.
 - According to the IEEE 802.11-2007 standard, there are 12 management frame subtypes: Association request, Association response, Reassociation request, Reassociation response, Probe request, Probe response, Beacon, Announcement traffic indication message (ATIM), Disassociation, Authentication, Deauthentication & Action.
+
 
 
 | **Subtype Name**          | **Type** | **Subtype** | **Filter**                                  | **Description**                                                                                                  |
