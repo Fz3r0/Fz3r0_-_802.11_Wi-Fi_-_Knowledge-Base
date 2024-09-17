@@ -4959,8 +4959,7 @@ Important Note on Contention Free Methods:
 
 - Contention free frames (CF) would be used with Point Coordination Function (PCF) mode if it was ever implemented. 
 - This contention free mode was designated as optional in the original 802.11 standard.
-- With the exception of CF-End these frames are usually attributed to a cyclic redundancy check (CRC) error which will be identified in the radiotap header in the frame that was misinterpreted by the protocol analyzer.
-- **If CF frames including `Data+CF-Ack`, `Data+CF-Poll` and `CF-Ack` are seen in 802.11 capture it may mean that the frames are a misinterpretation that was caused from a corrupted frame**
+- With the exception of `CF-End` CF frames are usually attributed to a cyclic redundancy check (CRC) error which will be identified in the radiotap header in the frame that was misinterpreted by the protocol analyzer. So, **If CF frames including `Data+CF-Ack`, `Data+CF-Poll` and `CF-Ack` are seen in 802.11 capture it may mean that the frames are a misinterpretation that was caused from a corrupted frame**
 
 ### 👨🏻‍⚖️🚦 Arbitration Methods
 
