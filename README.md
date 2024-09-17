@@ -3064,6 +3064,7 @@ The next table apply **only for Data Frames**:
 | **Ad-Hoc (P2P)** / _**Magagement** & **Control Frames**_ |                  0                 |                   0                  |        DA<br>(Destination Address)       |            SA<br>(Source Address)           |            BSSID            |           N/A          |
 | **Bridge / WDS** _(Mesh)_ |                  1                 |                   1                  |         RA<br>(Receiver Address)         |         TA<br>(Transmitter Address)         | DA<br>(Destination Address) | SA<br>(Source Address) |
 
+[Interactive Excercise by Fz3r0](https://excalidraw.com/#room=adce28495476665c6ad0,q3gpEUSg-mF4iW_ROVrPcQ)
 
 - 📍 **To DS** and **From DS** fields are `both 0`: <br> <br>
     - 🛈 The frame is part of an `ad-hoc network` / The frame is `Management` or `Control` frame.
