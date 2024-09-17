@@ -5723,6 +5723,8 @@ EDCA defines four access categories, based on the eight UPs (user priorities):
 
 ### WMM (Wireless Multimedia)
 
+Wi-Fi Multimedia (WMM) uses different and more efficient ways for power save mode for client device (STA’s) than the original power save mode that introduced with the 802.11 standard also known as legacy power save mode. U-APSD (Unscheduled Automatic Power Save Delivery) uses what is known as a trigger and delivery method for devices that are enabled for power save. With this method a client device will only doze when not sending or receiving frames. The trigger frame is an event that will inform the client device not to doze until it has received the buffered frames. This eliminates the PS-Poll frame that is used with legacy power save mode.
+
 WMM was introduced by the Wi-Fi Alliance. WMM is based on EDCA mechanisms and uses the 802.1d priority tags from the Ethernet side to direct traffic to four access-category priority queues:
 
 - WMM `Voice` Priority :: 802.1D = `7,6`
