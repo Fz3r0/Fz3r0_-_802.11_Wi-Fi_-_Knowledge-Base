@@ -1294,6 +1294,7 @@ _IEEE 802.11ac-2013 or 802.11ac provides high-throughput wireless local area net
     - Space-division multiple access (SDMA): streams not separated by frequency, but instead resolved spatially, analogous to 11n-style MIMO.
     - Downlink MU-MIMO (one transmitting device, multiple receiving devices) included as an optional mode.  
     - Multi-User MIMO allows for multiple client STA’s to communicate with an access point simultaneously. This technology uses different spatial streams on the same RF channel to allow for the simultaneous sessions.
+    - **In order for MU-MIMO to function the access point must support transmit beamforming**.
         
 - Transmit Beamforming: In order for MU-MIMO to function the access point must support transmit beamforming. Ideally the access point will be capable of 4X4:4 MIMO. This will allow multiple client STA’s to share the medium and communicate with an access point simultaneously. Keep in mind the sessions between the client devices and the access point are still one-to-one but the technology allows for multiple simultaneous sessions to occur.
     - Transmit beamforming used in 802.11ac technology allows for a non-AP STA (client device to take the role of a beamformee. The transmit beamforming feedback mechanism is included in the VHT null data packet (NDP) Announcement frame and includes more than one STA Info field. 
