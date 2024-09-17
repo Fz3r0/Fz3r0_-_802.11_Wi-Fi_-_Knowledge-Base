@@ -1297,7 +1297,9 @@ _IEEE 802.11ac-2013 or 802.11ac provides high-throughput wireless local area net
     - **In order for MU-MIMO to function the access point must support transmit beamforming**.
         
 - Transmit Beamforming: In order for MU-MIMO to function the access point must support transmit beamforming. Ideally the access point will be capable of 4X4:4 MIMO. This will allow multiple client STA’s to share the medium and communicate with an access point simultaneously. Keep in mind the sessions between the client devices and the access point are still one-to-one but the technology allows for multiple simultaneous sessions to occur.
-    - Transmit beamforming used in 802.11ac technology allows for a non-AP STA (client device to take the role of a beamformee. The transmit beamforming feedback mechanism is included in the VHT null data packet (NDP) Announcement frame and includes more than one STA Info field. 
+    - Transmit beamforming used in 802.11ac technology allows for a non-AP STA (client device to take the role of a beamformee. The transmit beamforming feedback mechanism is included in the VHT null data packet (NDP) Announcement frame and includes more than one STA Info field.
+    - Beamformee = Client STA
+    - Beamformer = AP
 
 - 256-QAM (MCS 8/9 (256-QAM)): rate 3/4 and 5/6, added as optional modes (vs. 64-QAM, rate 5/6 maximum in 802.11n).
 
