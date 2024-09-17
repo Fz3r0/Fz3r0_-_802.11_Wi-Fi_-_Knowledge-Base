@@ -3627,7 +3627,8 @@ Important Notes of Probe Request & Responses:
 - [**`Directed Probe Request`**]() **STA** -> AP `APs does not ACK Probe Req` :: AP/SSID Directed ::
 - [**`Probe Response`**]() STA <- **AP** `STAs ACK Probes Res` :: Lowest BSS Data Rate :: Includes SSID & Very similar to a Beacon
 
-
+Probe Request with SSID element = 0 :: `Broadcast Probe Request`
+Probe Request with SSID element > 0 :: `Directed Probe Request`
 
 ### 🚪❓⚙️ 802.11 Management Frames: `Authentication Request` & `Authentication Response`
 
