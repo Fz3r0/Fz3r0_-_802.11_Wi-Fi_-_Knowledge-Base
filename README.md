@@ -5196,6 +5196,10 @@ The two key components of Virtual Carrier Sense are:
     - **Impact**: The NAV helps manage medium access by providing a way for stations to reserve the medium for a certain period, reducing the likelihood of collisions.
     - **Important**: **While NAV is not equal to "0", stations presume that the medium is busy and will not transmit.**
 
+Important Notes on Duration Field:
+
+- 802.11 management frames that are sent to a broadcast address of FF:FF:FF:FF:FF:FF will have a duration value of zero. The duration is a time value that STA’s will use to reserve the medium informing other STA’s in the BSS how long it will take for the frame exchange to complete. In this case since these frames are no acknowledged by a receiver they have a duration value of zero. The duration field is still in the MAC header but it is not used.
+
 **⭕ Duration Field Filter:**
 
 - 🦈 **Duration Field = 0** :: NAV 0 : `wlan.duration == 0`
