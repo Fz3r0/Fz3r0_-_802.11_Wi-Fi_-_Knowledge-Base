@@ -2583,7 +2583,10 @@ _Radiotap is a de facto standard for 802.11 frame injection and reception | The 
 - [How to Capture PPI-Common Headers Instead of RadioTap Headers @ Metageek](https://support.metageek.com/hc/en-us/articles/203618264-How-to-Capture-PPI-Common-Headers-Instead-of-RadioTap-Headers)
 - [Injecting Radiotap Headers](https://github.com/vanhoefm/libwifi/blob/master/docs/linux_tutorial.md#injecting-frames)
 
+## Pseudo headers
 
+- The RF channel information in the radiotap header is the channel that the WLAN adapter used for protocol analysis received the frame. Keep in mind this may not be the same channel that the frame was transmitted on.
+- The Pseudi header like PPI or Radiotap depends on the capturing device (eg. usb alfa adapter), not in the transmitter (eg. client STA)
 
 ## 🔝📡 802.11 Radiotap Header
 
