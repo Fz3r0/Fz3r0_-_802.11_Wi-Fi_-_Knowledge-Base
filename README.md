@@ -6943,8 +6943,8 @@ _HR/DSSS STAs (802.11b legacy) does not understand OFDM Modulation used by ERP S
 
 ## Protection Mechanisms: `CTS`, `CTS-to-Self`, `Dual CTS`
 
-- `RTS/CTS` are the most used mechanism in Wi-Fi
-- `CTS-to-self` that is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame, this is usually done by the AP 
+- `RTS/CTS` :: (802.11g or newer) :: The most used mechanism in Wi-Fi
+- `CTS-to-self` :: (802.11g or newer) :: that is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame, this is usually done by the AP 
 - `Dual CTS` Protection is used by the AP to set a NAV at STAs that do not support STBC and at STAs that can associate solely through the STBC beacon. (0 – dual CTS protection is not required, 1 – dual CTS protection is required)
 
 ## Protection Modes: `Important Concepts`
@@ -6955,6 +6955,8 @@ Protection mechanisms cause a STA that is a potential interferer to defer any tr
 2. non-HT STAs do not interfere with frame exchanges using HT PPDUs between HT STAs.
 
 As a result, non-ERP and/or non-HT STAs are allowed to coexist with ERP and/or HT STAs.
+
+
 
 ### `Protection Modes Elements`
 
@@ -6969,8 +6971,7 @@ When 802.11g was introduced, we had RTS/CTS and CTS-to-Self protection mechanism
 - **`802.11g` = `ERP`**: In an **ERP Beacon**, ERP stations look at the **ERP Information Element** to determine whether or not protection is necessary in the BSS
 - **`802.11n` = `HT`**: In an **HT Beacon**, HT stations use the **Operating Mode** and **Non-greenfield STAs Present** fields in the **HT Information Element** to determine whether or not to use protection.
 
-
-## Protection Mechanism for `Non-ERP`
+## Non-ERP protection mechanisms
 
 - IEEE 802.11-2007 standard mandate support for both DSSS (Direct Sequence Spread Spectrum) & OFDM (Orthogonal Frequency Division Multiplexing) technologies for clause 19 ERP (802.11g) radios.
 - When clause 18 (HR-DSSS) & clause 15 DSSS (802.11) coexisting in ERP BSS, 802.11g devices need to provide compatibility for slower 802.11/802.11b devices.
@@ -7019,14 +7020,42 @@ In following scenarios that can trigger protection in an ERP basic service set:
 2. ERP (802.11g) WLAN AP "hear" sorrounding Beacons of 802.11-Prime, 802.11b or Ad-Hoc Networks.
 2. ERP (802.11g) WLAN AP "hear" sorrounding Management Frames (except probe request) using 802.11 or 802.11b data rates.
 
-## Protection Mechanism for `HT Tranmissions`
+## HT protection mechanisms
 
+- HT transmissions, are protected if there are other STAs present that cannot interpret HT transmissions correctly.
+- The HT Protection and Nongreenfield HT STAs Present fields in the HT Operation element within Beacon and Probe Response frames are used to indicate the protection requirements for HT transmissions.
+- To ensure backward compatibility with older 802.11a/b/g radios, 802.11n (HT) access points may signal to other 802.11n stations when to **use one of four HT protection modes**.
+- A field in the beacon frame called the HT Protection field has four possible settings of 0–3.
+- Much like an ERP (802.11g) access point, the protection modes may change dynamically depending on devices that are nearby or associated to the HT (802.11n) access point.
+- The protection mechanisms that are used are RTS/CTS, CTS-to-Self, Dual-CTS, or other protection methods.
 
+### HT: `no protection mode / Greenfield`
 
+The HT Protection field may be set to **no protection mode / Greenfield** only if the following are true:
 
+1. All STAs detected in the primary or the secondary channel are HT STAs, and:
+2. All STAs that are known by the transmitting STA to be a member of this BSS are either:
+    1. 20/40 MHz HT STAs in a 20/40 MHz BSS, or:
+    2. 20 MHz HT STAs in a 20 MHz BSS.
 
+### HT: `non-member protection mode`
 
+The HT Protection field may be set to **non-member protection mode** only if the following are true:
 
+- A **non-HT STA is detected in either the primary or the secondary channel or in both the primary and secondary channels**, that is not known by the transmitting STA to be a member of this BSS, and
+- All STAs that are known by the transmitting STA to be a member of this BSS are HT STAs.
+
+### HT: `20 MHz protection mode`
+
+The HT Protection field may be set to **20 MHz protection mode** only if the following are true:
+
+- All STAs detected in the primary channel and all STAs detected in the secondary channel are HT STAs and all STAs that are members of this BSS are HT STAs, and
+- This BSS is a 20/40 MHz BSS, and
+- There is at least one 20 MHz HT STA associated with this BSS.
+
+### HT: `non-HT mixed mode`
+
+The HT Protection field may be set to **20 MHz protection mode** only if non of any 3 other protection mechanisms (`no protection mode / Greenfield`, `non-member protection mode`, `20 MHz protection mode`) are used. 
 
 
 
