@@ -17,7 +17,8 @@
 
 - PMK Size: 256 bits (32 bytes).
 - Derivation Method: PBKDF2 with HMAC-SHA1 (WPA2-Personal) // Derived from the MSK (802.1X-Enterprise) // SAE Handshake (WPA3-Personal).
-- Created by Authenticator (AP) & Supplicant (STA), they should match with each other.
+- Created by Authenticator (AP) & Supplicant (STA) independently, they should match with each other.
+- Never transmitted over the network
 
 ### Example of PMK:
 
@@ -36,25 +37,33 @@ b'\xCB\xDC\xED\xFE\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1A'
 
 ## PMK Derivation
 
-- WPA2-Personal (PSK): The PMK is derived from a Pre-Shared Key (PSK), typically using a process like PBKDF2 with HMAC-SHA1 to transform the passphrase and SSID into a secure key.
-- WPA2-Enterprise (802.1X): The PMK is derived from the Master Session Key (MSK), which is generated during the EAP (Extensible Authentication Protocol) authentication process. The PMK in this case is the first 256 bits of the MSK.
-- WPA3-Personal: The PMK is derived from the SAE (Simultaneous Authentication of Equals) handshake, which is based on elliptic-curve cryptography and does not directly use the password.
+### WPA2-Personal (PSK): 
+
+The PMK is derived from a Pre-Shared Key (PSK), typically using a process like PBKDF2 with HMAC-SHA1 to transform the passphrase and SSID into a secure key.
+
+### WPA2-Enterprise (802.1X): 
+
+The PMK is derived from the Master Session Key (MSK), which is generated during the EAP (Extensible Authentication Protocol) authentication process. The PMK in this case is the first 256 bits of the MSK.
+
+### WPA3-Personal: 
+
+The PMK is derived from the SAE (Simultaneous Authentication of Equals) handshake, which is based on elliptic-curve cryptography and does not directly use the password.
 
 ## PMK: WPA2-Personal (PSK)
 
-- In WPA2-Personal, PBKDF2 with HMAC-SHA1 is used to derive the PMK from the PSK.
+In WPA2-Personal, PBKDF2 with HMAC-SHA1 is used to derive the PMK from the PSK.
 
 ### PBKDF2 PMK Inputs:
 
-- Passphrase (WPA): User's WPA2 passphrase
-- Salt: Network SSID.
-- Iterations: 4096 rounds of HMAC-SHA1.
-- Output: 256-bit PMK used for subsequent key derivations (like PTK and GTK) in the WPA2 authentication process.
+- `Passphrase (WPA)`: User's WPA2 passphrase
+- `Salt`: Network SSID.
+- `Iterations`: 4096 rounds of HMAC-SHA1.
+- `Output`: 256-bit PMK used for subsequent key derivations (like PTK and GTK) in the WPA2 authentication process.
 
-### PMK derivation using PBKDF2: Python
+### PMK derivation using PBKDF2: `Python`
 
 ````py
-# PMK Key Generator by Fz3r0
+# PMK Key Generator in Python by Fz3r0
 
 import hashlib
 import binascii
