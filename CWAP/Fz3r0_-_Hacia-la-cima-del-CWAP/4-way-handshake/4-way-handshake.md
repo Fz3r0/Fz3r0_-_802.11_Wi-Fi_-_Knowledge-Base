@@ -10,7 +10,7 @@
 # MSK (Master Session Key) [AAA Key]
 
 - The MSK (Master Session Key) is a key used exclusively in WPA2/WPA3-Enterprise authentication, where 802.1X and EAP (Extensible Authentication Protocol) are employed.
-- It is generated during the EAP authentication process between the EAP client (Supplicant, such as a Wi-Fi device) and the EAP server (Authentication Server).
+- Key information that is jointly negotiated between the Supplicant & Authentication Server. This key information is transported via a secure channel from Authenticating Server to Authenticator.
 - The MSK serves as the foundation for deriving the PMK (Pairwise Master Key), which is then used in subsequent 4-way handshake processes to derive encryption keys like the PTK (Pairwise Transient Key) and GTK (Group Temporal Key).
 - The MSK is never transmitted over the network but is shared between the Supplicant (STA) and the Authentication Server (eg. RADIUS), which is securely transported to the Authenticator (AP) for further use.
 
@@ -24,17 +24,22 @@
 
 ### Example of MSK:
 
-- `MSK Raw Binary Format`: In memory, the MSK might be stored as a byte array. For example, an MSK could look like this in raw binary format:
+- `MSK Hexadecimal Format`: When displayed or logged, the MSK is typically shown in hexadecimal format :: 256 bits (32 bytes):
 
 ````sh
-b'\x3C\x4D\x6E\x7F\x8A\x9B\xAC\xBD\xCE\xDF\x10\x21\x32\x43\x54\x65' \
-b'\x76\x87\x98\xA9\xBA\xCB\xDC\xED\xFE\x1F\x20\x21\x22\x23\x24\x25\x26'
+# MSK
+1A 2B 3C 4D 5E 6F 7A 8B 9C AD BE CF D0 E1 F2 03
+14 25 36 47 58 69 7A 8B 9C AD BE CF D1 E2 F3 04
+15 26 37 48 59 6A 7B 8C 9D AE BF C0 D1 E2 F3 14
+25 36 47 58 69 7A 8B 9C AD BE CF D1 E2 F3 04 15
 ````
 
-- `MSK Hexadecimal Format`: When displayed or logged, the MSK is typically shown in hexadecimal format:
+- The `PMK (Pairwise Master Key)` is derived from the MSK (Master Session Key) by taking the first 256 bits (32 bytes) of the MSK:
 
 ````sh
-3C:4D:6E:7F:8A:9B:AC:BD:CE:DF:10:21:32:43:54:65:76:87:98:A9:BA:CB:DC:ED:FE:1F:20:21:22:23:24:25:26
+# PMK derived from MSK (first 256 bits (32 bytes) of the MSK)
+1A 2B 3C 4D 5E 6F 7A 8B 9C AD BE CF D0 E1 F2 03
+14 25 36 47 58 69 7A 8B 9C AD BE CF D1 E2 F3 04
 ````
 
 ## MSK Derivation
@@ -65,7 +70,6 @@ The PMK is derived from the MSK. The first 256 bits (32 bytes) of the MSK are us
 NOTE: This is NOT a real-life MSK derivation process!!!
 
 - In real 802.1X/EAP, MSK is derived during the EAP authentication process, not through PBKDF2.
-
 
 ````py
 # MSK Key Derivation Simulator by Fz3r0
@@ -117,11 +121,6 @@ print("Salt used (for demo):", salt.hex())
 
 ````
 
-
-
-
-
-
 # PMK (Pairwise Master Key)
 
 - The PMK (Pairwise Master Key) is a key used in WPA (Wi-Fi Protected Access) security protocols to establish secure communication between a client (such as a laptop or smartphone) and an access point (such as a Wi-Fi router).
@@ -137,17 +136,12 @@ print("Salt used (for demo):", salt.hex())
 
 ### Example of PMK:
 
-- `PMK Raw Binary Format`: In memory, the PMK might be stored as a byte array. For example, a PMK could look like this in raw binary format:
+- `PMK Hexadecimal Format`: When displayed or logged, the PMK is typically shown in hexadecimal format :: 32 bytes (256 bits):
 
 ````sh
-b'\x3A\x5B\x7C\x9D\xAE\xBF\xC1\xD2\xE3\xF4\x65\x76\x87\x98\xA9\xBA' \
-b'\xCB\xDC\xED\xFE\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1A'
-````
-
-- `PMK Hexadecimal Format`: When displayed or logged, the PMK is typically shown in hexadecimal format:
-
-````sh
-3A:5B:7C:9D:AE:BF:C1:D2:E3:F4:65:76:87:98:A9:BA:CB:DC:ED:FE:10:11:12:13:14:15:16:17:18:19:1A
+# PMK
+3A 5B 7C 9D AE BF C1 D2 E3 F4 65 76 87 98 A9 BA
+CB DC ED FE 10 11 12 13 14 15 16 17 18 19 1A 34
 ````
 
 ## PMK Derivation
@@ -247,7 +241,28 @@ print(f"PMK: {pmk}")
 
 
 
+# GTK
 
+## Anonce & Snonce
+
+- These nonces are random 256-bit (32-byte) values generated during the WPA2 4-way handshake process to provide freshness and prevent replay attacks. 
+- They are unique per session and are essential for deriving the session keys securely.
+
+### Anonce example
+
+```` sh
+# Anonce
+A1 B2 C3 D4 E5 F6 07 18 29 3A 4B 5C 6D 7E 8F 90 
+A1 B2 C3 D4 E5 F6 07 18 29 3A 4B 5C 6D 7E 8F 90
+````
+
+### Snonce example
+
+````sh
+# Snonce
+1F 2B 3C 4D 5E 6F 7A 8B 9C AD BE CF D1 E2 F3 04
+15 26 37 48 59 6A 7B 8C 9D AE BF C0 D1 E2 F3 04
+````
 
 
 
