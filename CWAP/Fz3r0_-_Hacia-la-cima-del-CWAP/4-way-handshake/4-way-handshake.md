@@ -7,6 +7,14 @@
 
 ---
 
+# MSK (Master Session Key) [AAA Key]
+
+- Only used in 802.1X-EAP (Enterprise / AAA) authentication methods, (eg. WPA2-Enterprise using 802.1X-PEAP)
+- A key derived between an EAP client and EAP server and exported by the EAP method. Used to derive the PMK, which is used to derive the PTK.
+- The MSK is used in 802.1X/EAP authentication implementations. In personal authentication implementations, the PMK is derived from the pre‐shared key.
+- MSK is the Key information that is jointly negotiated between the Supplicant & Authentication Server. This key information is transported via a secure channel from Authenticating Server to Authenticator.
+- 
+
 # PMK (Pairwise Master Key)
 
 - The PMK (Pairwise Master Key) is a key used in WPA (Wi-Fi Protected Access) security protocols to establish secure communication between a client (such as a laptop or smartphone) and an access point (such as a Wi-Fi router).
@@ -125,6 +133,22 @@ print(f"PMK: {pmk}")
 - After the SAE handshake establishes the PMK, WPA3 still uses a 4-way handshake, much like WPA2, to derive other keys like the PTK (Pairwise Transient Key) and the GTK (Group Temporal Key).
 
 ### PMK Summary
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://support.accessagility.com/hc/wifi-glossary-master-session-key-msk
+https://mrncciew.com/2014/08/19/cwsp-4-way-handshake
+https://en.wikipedia.org/wiki/PBKDF2
 
 
 
