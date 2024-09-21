@@ -42,15 +42,15 @@
 14 25 36 47 58 69 7A 8B 9C AD BE CF D1 E2 F3 04
 ````
 
-## MSK Derivation
+## 🏭🧮 MSK Derivation
 
 MSK derivation happens during the EAP authentication process. The exact method varies depending on the EAP method used:
 
-### EAP-TLS:
+### ⭕ EAP-TLS:
 
 In EAP-TLS, the MSK is derived as part of the TLS handshake between the Supplicant and the Authentication Server, using the session key negotiated during the TLS handshake.
 
-### EAP-PEAP:
+### ⭕ EAP-PEAP:
 
 In EAP-PEAP, a secure tunnel is created using TLS, within which another authentication method (e.g., MSCHAPv2) is used. The result of this process is the MSK.
 
@@ -145,39 +145,39 @@ print("Salt used (for demo):", salt.hex())
 CB DC ED FE 10 11 12 13 14 15 16 17 18 19 1A 34
 ````
 
-## 🟰⚙️ PMK Derivation
+## 🟰🧮 PMK Derivation
 
 PMK derivation refers to the process of generating the PMK from a shared secret (like a pre-shared key) or from an authentication method (like EAP in 802.1X).
 
-### WPA2-Personal (PSK): 
+### ⭕ WPA2-Personal (PSK): 
 
 The PMK is derived from a Pre-Shared Key (PSK), typically using a process like PBKDF2 with HMAC-SHA1 to transform the passphrase and SSID into a secure key.
 
-### WPA2-Enterprise (802.1X): 
+### ⭕ WPA2-Enterprise (802.1X): 
 
 The PMK is derived from the Master Session Key (MSK), which is generated during the EAP (Extensible Authentication Protocol) authentication process. The PMK in this case is the first 256 bits of the MSK.
 
-### WPA3-Personal: 
+### ⭕ WPA3-Personal: 
 
 The PMK is derived from the SAE (Simultaneous Authentication of Equals) handshake, which is based on elliptic-curve cryptography and does not directly use the password.
 
-## PMK: `WPA2-Personal (PSK)`
+## 🟰 PMK: `WPA2-Personal (PSK)`
 
 - In WPA2-Personal, The PMK is derived using the PBKDF2 (Password-Based Key Derivation Function 2) algorithm, often with HMAC-SHA1.
 - The function is applied multiple times (e.g., 4096 iterations) to make brute-force attacks more difficult.
 
-### PBKDF2 PMK Inputs:
+### ⭕ PBKDF2 PMK Inputs:
 
 - `Passphrase (WPA)`: User's WPA2 passphrase
 - `Salt`: Network SSID.
 - `Iterations`: 4096 rounds of HMAC-SHA1.
 - `Output`: 256-bit PMK used for subsequent key derivations (like PTK and GTK) in the WPA2 authentication process.
 
-### PBKDF2 derivation formula
+### ⭕ PBKDF2 derivation formula
 
 - **PMK = PBKDF2(HMAC-SHA1, PSK, SSID(salt), rounds=4096, dklen=32)**
 
-### PMK derivation using PBKDF2: `Python`
+### 🐍 PMK derivation using PBKDF2: `Python`
 
 ````py
 # PMK Key Generator in Python by Fz3r0
