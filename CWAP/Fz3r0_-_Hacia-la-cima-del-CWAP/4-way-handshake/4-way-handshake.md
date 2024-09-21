@@ -1,6 +1,17 @@
 # 4-Way-Handshake
 
+- The "4-Way-Handshake" is a procedure to generate communication keys.
+- Occurs after the client is authenticated and associated. _(this means, after the State 3 of the State Machine = State 3: Associated)_
+- Is used to generate the keys used to encrypt various types of traffic (Unicast, Multicast, Broadcat) between **AP** and **client STA**.
+- Utilizes an **exchange of 4 EAPOL Key Frames also known as "Messages"** between the client STA and the AP (`M1`, `M2`, `M3`, `M4`).
+- In a PSK Network (eg. WPA2), the exchange of frames occurs after the open system authentication and association _(just after the State 3 of the State Machine)_
+- In a 802.1X Network (eg. EAP/RADIUS), the 4-way-handshake occurs after EAP authentication _(after the State 3 of the State Machine + EAP Exchange between AP & Authentication Server)_
+- Through the 4-way-handshake procedure, several keys are generated sequentially
 
+
+
+
+## EAPOL
 
 
 
@@ -326,8 +337,9 @@ print(format_nonce_as_block(snonce))
 ````
 
 
-
+- https://www.wifi-professionals.com/2019/01/4-way-handshake
 - https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/
+- https://www.youtube.com/watch?app=desktop&v=wrbNNri-E1E
 - https://support.accessagility.com/hc/wifi-glossary-master-session-key-msk
 - https://en.wikipedia.org/wiki/PBKDF2
 - https://github.com/k1nd0ne/ScapyWifi/blob/master/ScapyFi.py
