@@ -327,10 +327,9 @@ print(format_nonce_as_block(snonce))
 
 
 
-
-https://support.accessagility.com/hc/wifi-glossary-master-session-key-msk
-https://mrncciew.com/2014/08/19/cwsp-4-way-handshake
-https://en.wikipedia.org/wiki/PBKDF2
-https://github.com/k1nd0ne/ScapyWifi/blob/master/ScapyFi.py
+- https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/
+- https://support.accessagility.com/hc/wifi-glossary-master-session-key-msk
+- https://en.wikipedia.org/wiki/PBKDF2
+- https://github.com/k1nd0ne/ScapyWifi/blob/master/ScapyFi.py
 
 
