@@ -63,7 +63,7 @@ In EAP-PEAP, a secure tunnel is created using TLS, within which another authenti
 
 The PMK is derived from the MSK. The first 256 bits (32 bytes) of the MSK are used as the PMK.
 
-- `PMK = MSK[:32]`  (First 32 bytes of the MSK are the PMK)
+- **`PMK = MSK[:32]`**  _(First 32 bytes of the MSK are the PMK)_
 
 ## MSK derivation simulation: Python
 
@@ -175,7 +175,7 @@ The PMK is derived from the SAE (Simultaneous Authentication of Equals) handshak
 
 ### ⭕ PBKDF2 derivation formula
 
-- **PMK = PBKDF2(HMAC-SHA1, PSK, SSID(salt), rounds=4096, dklen=32)**
+- **`PMK = PBKDF2(HMAC-SHA1, PSK, SSID(salt), rounds=4096, dklen=32)`**
 
 ### 🐍 PMK derivation using PBKDF2: `Python`
 
