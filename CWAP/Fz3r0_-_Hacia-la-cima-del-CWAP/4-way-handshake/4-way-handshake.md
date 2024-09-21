@@ -1,12 +1,15 @@
 # 4-Way-Handshake
 
-- The "4-Way-Handshake" is a procedure to generate communication keys.
-- Occurs after the client is authenticated and associated. _(this means, after the State 3 of the State Machine = State 3: Associated)_
+- The 4-way handshake is the process of exchanging 4 messages between an access point (authenticator) and the client device (supplicant) to generate some encryption keys which can be used to encrypt actual data sent over Wireless medium.
+- Occurs after the client STA is authenticated and associated. _(this means, after the State 3 of the State Machine = State 3: Associated)_
 - Is used to generate the keys used to encrypt various types of traffic (Unicast, Multicast, Broadcat) between **AP** and **client STA**.
 - Utilizes an **exchange of 4 EAPOL Key Frames also known as "Messages"** between the client STA and the AP (`M1`, `M2`, `M3`, `M4`).
 - In a PSK Network (eg. WPA2), the exchange of frames occurs after the open system authentication and association _(just after the State 3 of the State Machine)_
 - In a 802.1X Network (eg. EAP/RADIUS), the 4-way-handshake occurs after EAP authentication _(after the State 3 of the State Machine + EAP Exchange between AP & Authentication Server)_
 - Through the 4-way-handshake procedure, several keys are generated sequentially
+
+## Keys
+
 
 
 
@@ -20,7 +23,8 @@
 
 # 🗝️🏭☁️ MSK (Master Session Key) [AAA Key]
 
-- The MSK (Master Session Key) is a key used exclusively in WPA2/WPA3-Enterprise authentication, where 802.1X and EAP (Extensible Authentication Protocol) are employed.
+- The first level key is generated is MSK during the process of 802.1X/EAP or PSK authentication.
+
 - MSK information is jointly negotiated between the Supplicant & Authentication Server. This key information is transported via a secure channel from Authenticating Server to Authenticator.
 - The MSK serves as the foundation for deriving the PMK (Pairwise Master Key), which is then used in subsequent 4-way handshake processes to derive encryption keys like the PTK (Pairwise Transient Key) and GTK (Group Temporal Key).
 - The MSK is never transmitted over the network but is shared between the Supplicant (STA) and the Authentication Server (eg. RADIUS), which is securely transported to the Authenticator (AP) for further use.
@@ -340,6 +344,7 @@ print(format_nonce_as_block(snonce))
 - https://www.wifi-professionals.com/2019/01/4-way-handshake
 - https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/
 - https://www.youtube.com/watch?app=desktop&v=wrbNNri-E1E
+- https://networklessons.com/cisco/ccnp-encor-350-401/eapol-extensible-authentication-protocol-over-lan
 - https://support.accessagility.com/hc/wifi-glossary-master-session-key-msk
 - https://en.wikipedia.org/wiki/PBKDF2
 - https://github.com/k1nd0ne/ScapyWifi/blob/master/ScapyFi.py
