@@ -252,19 +252,75 @@ print(f"PMK: {pmk}")
 ### Anonce example
 
 ```` sh
-# Anonce
-A1 B2 C3 D4 E5 F6 07 18 29 3A 4B 5C 6D 7E 8F 90 
-A1 B2 C3 D4 E5 F6 07 18 29 3A 4B 5C 6D 7E 8F 90
+# ANonce (Access Point Nonce) - String Format:
+A7F1E5C4A36D5E7B8A94C1C1D3E7B1A8CBBF7456E3191D2F8E9A5B3C4D6E7F8B
+
+# ANonce (Access Point Nonce) - Block Format:
+A7 F1 E5 C4 A3 6D 5E 7B 8A 94 C1 C1 D3 E7 B1 A8
+CB BF 74 56 E3 19 1D 2F 8E 9A 5B 3C 4D 6E 7F 8B
 ````
 
 ### Snonce example
 
 ````sh
-# Snonce
-1F 2B 3C 4D 5E 6F 7A 8B 9C AD BE CF D1 E2 F3 04
-15 26 37 48 59 6A 7B 8C 9D AE BF C0 D1 E2 F3 04
+# SNonce (Supplicant Nonce) - String Format:
+94D2E7F1A8C4A7B6F319C1CBB5A8E9F3D7C6E9B1A45E3D6A8F1E3B9C4D7A5C1D
+
+# SNonce (Supplicant Nonce) - Block Format:
+94 D2 E7 F1 A8 C4 A7 B6 F3 19 C1 CB B5 A8 E9 F3
+D7 C6 E9 B1 A4 5E 3D 6A 8F 1E 3B 9C 4D 7A 5C 1D
 ````
 
+### Anonce & Snonce generator: Python
+
+````py
+# Anonce & Snonce Generator in Python by Fz3r0
+
+import os
+import binascii
+
+# Generate ANonce (Access Point Nonce)
+def generate_anonce():
+    # Generate 32 random bytes (256 bits)
+    anonce = os.urandom(32)
+    return anonce
+
+# Generate SNonce (Supplicant Nonce)
+def generate_snonce():
+    # Generate 32 random bytes (256 bits)
+    snonce = os.urandom(32)
+    return snonce
+
+# Convert the generated nonces to a continuous string (hexadecimal format)
+def format_nonce_as_string(nonce):
+    return binascii.hexlify(nonce).upper().decode('utf-8')
+
+# Convert the generated nonces to formatted hexadecimal blocks with 16 bytes per line
+def format_nonce_as_block(nonce):
+    hex_string = binascii.hexlify(nonce).upper().decode('utf-8')
+    # Break the hex string into chunks of two characters (bytes)
+    byte_pairs = [hex_string[i:i+2] for i in range(0, len(hex_string), 2)]
+    # Group into 16 byte pairs per line
+    formatted_block = '\n'.join([' '.join(byte_pairs[i:i+16]) for i in range(0, len(byte_pairs), 16)])
+    return formatted_block
+
+# Generate and display ANonce and SNonce in both formats
+anonce = generate_anonce()
+snonce = generate_snonce()
+
+print("ANonce (Access Point Nonce) - String Format:")
+print(format_nonce_as_string(anonce))
+
+print("\nANonce (Access Point Nonce) - Block Format:")
+print(format_nonce_as_block(anonce))
+
+print("\nSNonce (Supplicant Nonce) - String Format:")
+print(format_nonce_as_string(snonce))
+
+print("\nSNonce (Supplicant Nonce) - Block Format:")
+print(format_nonce_as_block(snonce))
+
+````
 
 
 
