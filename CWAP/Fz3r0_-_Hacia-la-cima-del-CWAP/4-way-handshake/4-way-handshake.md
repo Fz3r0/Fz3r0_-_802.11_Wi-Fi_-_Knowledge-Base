@@ -49,14 +49,35 @@
 
 ---
 
-# 🗝️🏭☁️ MSK (Master Session Key) [AAA Key]
+# 🗝️👑🪪 MSK (Master Session Key) [AAA Key]
 
-- The first level key is generated is MSK during the process of 802.1X/EAP or PSK authentication.
-- MSK is generated either from 802.1X/EAP (Enterprise) or derived from PSK authentication (Personal).
+- The MSK is the first level key and is derived during the process of 802.1X/EAP (Enterprise) or PSK (Personal) authentication.
 - The MSK serves as the foundation for deriving the PMK (Pairwise Master Key), which is then used in subsequent 4-way handshake processes to derive encryption keys like the PTK (Pairwise Transient Key) and GTK (Group Temporal Key).
 
+### 👑🏭 MSK: 802.1X (WPA/WPA2/WPA3-Enterprise):
 
-## 🏭💡 MSK Summary
+- The MSK is generated as part of the EAP (Extensible Authentication Protocol) process during authentication between the client (supplicant) and the authentication server (typically RADIUS).
+- After successful authentication, the authentication server (AS) provides the 64-byte MSK to both the client and the Access Point (AP).
+- This MSK is then used to derive the Pairwise Master Key (PMK), which is 32 bytes (256 bits). The PMK is crucial for the 4-Way Handshake that follows.
+
+### 👑🏠 MSK: PSK (WPA/WPA2-Personal):
+
+- In PSK mode, the MSK is not explicitly derived through an authentication protocol like EAP. Instead, the Pre-Shared Key (PSK), which is the Wi-Fi password, is used to create the Pairwise Master Key (PMK).
+- The PSK can be 8 to 63 characters long (in ASCII), or a 64-character hexadecimal string.
+- This PSK is hashed using the PBKDF2 (Password-Based Key Derivation Function 2) algorithm along with the SSID and other parameters to derive the 32-byte PMK.
+- Although the PSK directly generates the PMK, conceptually, the MSK in PSK mode can be considered equivalent to the PSK-derived value. However, the PSK process is more direct and skips the formal MSK-to-PMK step seen in 802.1X.
+
+### 👑🏠 MSK: PSK (WPA3-Personal):
+
+- In WPA3, the concept of the Master Session Key (MSK) is still present, but there are key differences in how key management and the handshake work compared to WPA2.
+- Basically, in WPA3 the MSK concept is only present in 802.1X-EAP (Enterprise)
+- WPA3 introduces Simultaneous Authentication of Equals (SAE) for WPA3-Personal and enhances key exchange mechanisms for WPA3-Enterprise.
+- SAE replaces the PSK method used in WPA2-Personal.
+- Instead of deriving an MSK directly from a pre-shared key, SAE uses a Diffie-Hellman-like exchange where both the client and access point generate a shared secret based on the password, but the actual password is never transmitted.
+- WPA3-Enterprise still relies on the 802.1X authentication framework, similar to WPA2-Enterprise.
+- The MSK is still part of the EAP-based authentication process, where the authentication server (RADIUS) provides the MSK to the client and access point after successful authentication.
+
+## 👑💡 MSK Summary
 
 - MSK Size: 512 bits (64 bytes).
 - Generation Method: EAP method (e.g., EAP-TLS, EAP-PEAP).
@@ -64,9 +85,21 @@
 - Created by Supplicant (STA) and the Authentication Server independently, they should match with each other.
 - Not transmitted: the MSK is never transmitted directly over the network.
 
-### 🏭🔢 Example of MSK:
+## 👑🧮 MSK Derivation
 
-- `MSK Hexadecimal Format`: When displayed or logged, the MSK is typically shown in hexadecimal format :: 256 bits (32 bytes):
+- `802.1X-EAP`: From the EAP process during authentication between the client STA (supplicant) and the authentication server (typically RADIUS).
+- `PSK`: From the Wi-Fi password/passphrase.
+
+## MSK to PMK Conversion Formula:
+
+The PMK is derived from the MSK. The first 256 bits (32 bytes) of the MSK are used as the PMK.
+
+- **`PMK = MSK[:32]`**  _(First 32 bytes of the MSK are the PMK)_
+
+### 👑🔢 Example of MSK (from):
+
+- `MSK Hexadecimal Format`: When displayed or logged, the MSK is typically shown in hexadecimal format
+- In both 802.1X (WPA-Enterprise) and PSK (WPA-Personal), the Master Session Key (MSK) has a fixed length of `64 bytes (512 bits)`. 
 
 ````sh
 # MSK
@@ -84,30 +117,7 @@
 14 25 36 47 58 69 7A 8B 9C AD BE CF D1 E2 F3 04
 ````
 
-## 🏭🧮 MSK Derivation
-
-MSK derivation happens during the EAP authentication process. The exact method varies depending on the EAP method used:
-
-### ⭕ EAP-TLS:
-
-In EAP-TLS, the MSK is derived as part of the TLS handshake between the Supplicant and the Authentication Server, using the session key negotiated during the TLS handshake.
-
-### ⭕ EAP-PEAP:
-
-In EAP-PEAP, a secure tunnel is created using TLS, within which another authentication method (e.g., MSCHAPv2) is used. The result of this process is the MSK.
-
-## MSK Transport:
-
-- After MSK is derived between the Supplicant and Authentication Server, it is securely transferred to the Authenticator (AP) via RADIUS or another secure protocol.
-- The Authenticator (AP) then uses this MSK to derive the PMK.
-
-## MSK to PMK Conversion Formula:
-
-The PMK is derived from the MSK. The first 256 bits (32 bytes) of the MSK are used as the PMK.
-
-- **`PMK = MSK[:32]`**  _(First 32 bytes of the MSK are the PMK)_
-
-## MSK derivation simulation: Python
+## 🐍 MSK 802.1X derivation simulation: Python
 
 NOTE: This is NOT a real-life MSK derivation process!!!
 
