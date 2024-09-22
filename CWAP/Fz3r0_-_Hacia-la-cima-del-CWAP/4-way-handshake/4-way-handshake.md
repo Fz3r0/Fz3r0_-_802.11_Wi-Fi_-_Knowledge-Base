@@ -8,6 +8,22 @@
 - In a 802.1X Network (eg. EAP/RADIUS), the 4-way-handshake occurs after EAP authentication _(after the State 3 of the State Machine + EAP Exchange between AP & Authentication Server)_
 - Through the 4-way-handshake procedure, several keys are generated sequentially
 
+## EAPoL
+
+- EAPOL stands for "Extensible Authentication Protocol(EAP) over LAN".
+- The IEEE 802.11i protocol uses EAPOL-Key packets during key negotiation.
+- 
+- The EAPoL frame is silently discarded by the 802.11 Station/AP if the Key Sequence counter value in a particular EAPOL frame received was already sent in a previous EAPOL frame or the MIC received by either party is not properly decoded. **No indication of failure is reported to the sender of the EAPOL frame.**
+
+### EAPol Frame Structure
+
+![image](https://github.com/user-attachments/assets/ae07e111-185e-4627-a28c-c7cf3943abdf)
+
+## Key Management
+
+- Key management defines how to generate and update the PTK and group temporary key (GTK).
+- The PTK is used in unicast and the GTK is used in multicast and broadcast.
+
 ## 4-Way-Handshake: Keys & Components
 
 - MSK (Master Session Key): The first level key is generated is MSK during the process of 802.1X/EAP or PSK authentication.
@@ -364,5 +380,8 @@ print(format_nonce_as_block(snonce))
 - https://support.accessagility.com/hc/wifi-glossary-master-session-key-msk
 - https://en.wikipedia.org/wiki/PBKDF2
 - https://github.com/k1nd0ne/ScapyWifi/blob/master/ScapyFi.py
+- https://www.hitchhikersguidetolearning.com/2017/09/17/eapol-4-way-handshake/
+- https://waitbutwifi.com/deconstructing-the-4-way-handshake/
+- https://support.hpe.com/techhub/eginfolib/networking/docs/routers/msrv7/cg/5200-3028_wlan_cg/content/466576914.htm
 
 
