@@ -47,11 +47,11 @@
     - All wireless clients should be able to encrypt and decrypt this traffic, so we need a **shared key**.
     - All associated wireless clients of the AP have the same key. We call this a group key. 
 
-## Key Derivation
+## key derivation Function (KDF)
 
-- Key derivation is a process used in cryptography to generate one or more cryptographic keys from one or more values, such as keys or a passphrase.
+- A key derivation function (KDF) is an algorithm sed in cryptography that creates cryptographic keys from a secret value, such as a password or master key.
+- KDFs can be used to stretch keys to make them longer or to create keys in a specific format. 
 - The purpose of key derivation is to produce keys that are cryptographically strong and suitable for specific cryptographic applications, like encryption, authentication, or digital signatures.
-- A Key Derivation Function (KDF) is a specific algorithm used for key derivation.
 
 ![image](https://github.com/user-attachments/assets/f4bad625-aec5-491d-9079-f60ce58caeec)
 
