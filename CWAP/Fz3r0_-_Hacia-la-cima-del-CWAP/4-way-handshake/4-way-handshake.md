@@ -36,7 +36,7 @@
 - There are 2 different type of keys in the Key Hierarchy Pairwise Keys and Group Keys
 - The Pairwise and group keys are created differently and used for different kind of traffic.
 
-### Pairwise Keys _(Unicast)_
+### ↔️ 🔑🗝️ Pairwise Keys _(Unicast)_
 
 - **Unicast traffic** between a wireless client and the AP has to be private. <br><br>
     - Other client STAs should not to be able to decrypt traffic between another wireless client STAs and the AP.
@@ -44,7 +44,7 @@
     - We call these pairwise keys because **there is a pair of keys between each wireless client and the AP.**
     - **The AP has multiple pairwise keys, one for each associated wireless client.**
 
-### Group Keys _(Multicast/Broadcast)_
+### 👨‍👨‍👦‍👦🔑🗝️ Group Keys _(Multicast/Broadcast)_
 
 - **Broadcast and mMlticast traffic** between all wireless client and the AP together has to be private. <br><br>
     - All wireless clients should be able to encrypt and decrypt this traffic, so we need a **shared key**.
@@ -52,15 +52,15 @@
 
 ## 4-Way-Handshake: Keys & Components
 
-- 🗝️🏭 MSK (Master Session Key): The first level key is generated is MSK during the process of 802.1X/EAP or PSK authentication.
-- 🗝️↔️  PMK (Pairwise Master Key): 
-- 🗝️👨‍👨‍👦‍👦 GMK (Group Master Key)
-- 🔑↔️ PTK (Pairwise Transient Key)
-- 🔑👨‍👨‍👦‍👦 GTK (Group Temporal Key)
-- ANonce
-- SNonce
-- MIC 1
-- MIC 2
+- 🗝️🏭 **`MSK (Master Session Key)`**: The first level key is generated is MSK during the process of 802.1X/EAP or PSK authentication.
+- 🗝️↔️  **`PMK (Pairwise Master Key)`**: 
+- 🗝️👨‍👨‍👦‍👦 **`GMK (Group Master Key)`**:
+- 🔑↔️ **`PTK (Pairwise Transient Key)`**:
+- 🔑👨‍👨‍👦‍👦 **`GTK (Group Temporal Key)`**:
+- 📡🔢 **`ANonce (Authenticator/AP Nonce)`**:
+- 🤳🔢 **`SNonce (Supplicant/STA Nonce)`**:
+- 📩🛡️ **`MIC 1 (Message Integrity Check 1)`**:
+- 📩🛡️ **`MIC 2 (Message Integrity Check 2)`**:
 
 
 
@@ -68,7 +68,7 @@
 
 ---
 
-# 🗝️👑🪪 MSK (Master Session Key) [AAA/802.1X Key]
+# 🗝️🏭👑  MSK (Master Session Key) [AAA/802.1X Key]
 
 - The MSK is the first level key and is derived during the process of **802.1X-EAP (Enterprise) authentication**.
 - The MSK **serves as the foundation for deriving the PMK (Pairwise Master Key)**, which is then used in subsequent 4-way handshake processes to derive encryption keys like the **PTK (Pairwise Transient Key)** and **GTK (Group Temporal Key)**.
@@ -76,22 +76,22 @@
 - EAP methods (such as EAP-TLS or PEAP) specify their own ways to derive the MSK.
 - The MSK must be at least **64 octets in length (512 bits (64 bytes))**, as mandated by **IETF RFC 3748**
 
-### 👑🏭 MSK: 802.1X (WPA/WPA2/WPA3-Enterprise):
+### 🏭👑 MSK: 802.1X (WPA/WPA2/WPA3-Enterprise):
 
 - The MSK is generated as part of the EAP (Extensible Authentication Protocol) process during authentication between the client (supplicant) and the authentication server (typically RADIUS).
 - After successful authentication, the authentication server (AS) provides the 64-byte MSK to both the client and the Access Point (AP).
 - This MSK is then used to derive the Pairwise Master Key (PMK), which is 32 bytes (256 bits). The PMK is crucial for the 4-Way Handshake that follows.
 
-### 👑🏠 MSK: PSK (WPA/WPA2-Personal):
+### 🏠👑 MSK: PSK (WPA/WPA2-Personal):
 
 - In PSK mode like WPA/WPA2, the MSK is not derived through an authentication protocol like EAP. Instead, the Pre-Shared Key (PSK), which is the Wi-Fi password, is used directly to create the Pairwise Master Key (PMK).
 - This means, PSK authentication doesn't need the use of a MSK during the 4-Way-Handshake; The PMK is derived directly from the Pre-Shared Key (PSK) instead. 
 
-## 👑🧮 MSK Derivation
+## 🏭🧮 MSK Derivation
 
 - `802.1X-EAP`: From the EAP process during authentication between the client STA (supplicant) and the authentication server (typically RADIUS).
 
-## 👑💡 MSK Summary
+## 🏭💡 MSK Summary
 
 - MSK Size: 512 bits (64 bytes).
 - Generation Method: 802.1X-EAP method (e.g., EAP-TLS, EAP-PEAP).
@@ -99,7 +99,7 @@
 - Created by Supplicant (STA) and the Authentication Server independently, they should match with each other.
 - Not transmitted: the MSK is never transmitted directly over the network.
 
-## 👑🟰 MSK to PMK Conversion Formula:
+## 🏭↔️ MSK to PMK Conversion Formula:
 
 The PMK is derived from the MSK. The first 256 bits (32 bytes) of the MSK are used as the PMK.
 
@@ -183,7 +183,7 @@ print("Salt used (for demo):", salt.hex())
 
 ````
 
-# 🗝️🟰🤝 PMK (Pairwise Master Key)
+# 🗝️↔️🤝 PMK (Pairwise Master Key)
 
 - The pairwise master key (PMK) is a 256-bit key at the top of the key hierarchy and is used indirectly for unicast traffic and the WPA 4-way handshake (AP and client STA use the PMK to derive the PTK which is used for unicast data encryption).  
 - The wireless client and AP have the PMK, which should last the entire session, so it should not be exposed. To accomplish this, we use different keys derived from the PMK.
@@ -192,11 +192,11 @@ print("Salt used (for demo):", salt.hex())
 - For secure communication, the PMK generated by both parties must match, ensuring successful authentication and enabling secure data transmission.
 - Both parties (AP & STA), uses the same formula to derive the PMK (that's why the PMK must match)
 
-### 🟰🏭 PMK: 802.1X (WPA/WPA2/WPA3-Enterprise):
+### ↔️🏭 PMK: 802.1X (WPA/WPA2/WPA3-Enterprise):
 
 - This PMK is derived from: `MSK (AAA/801.1X Key)`
 
-### 🟰🏠 PMK: PSK (WPA/WPA2-Personal):
+### ↔️🏠 PMK: PSK (WPA/WPA2-Personal):
 
 - This PMK is derived from: `PSK (Pre-Shared Key)`
 - Pre-shared key is a key previously configured (for example a string/hexadecimal password).
@@ -204,14 +204,14 @@ print("Salt used (for demo):", salt.hex())
 
 
 
-## 🟰💡 PMK Summary
+## ↔️💡 PMK Summary
 
 - PMK Size: 256 bits (32 bytes).
 - Derivation Method: PBKDF2 with HMAC-SHA1 (WPA2-Personal) // Derived from the MSK (802.1X-Enterprise) // SAE Handshake (WPA3-Personal).
 - Created by Authenticator (AP) & Supplicant (STA) independently, they should match with each other.
 - Not transmitted: the PMK is never transmitted directly over the network.
 
-### 🟰🔢 Example of PMK:
+### ↔️🔢 Example of PMK:
 
 - `PMK Hexadecimal Format`: When displayed or logged, the PMK is typically shown in hexadecimal format :: 32 bytes (256 bits):
 
@@ -221,7 +221,7 @@ print("Salt used (for demo):", salt.hex())
 CB DC ED FE 10 11 12 13 14 15 16 17 18 19 1A 34
 ````
 
-## 🟰🧮 PMK Derivation
+## ↔️🧮 PMK Derivation
 
 PMK derivation refers to the process of generating the PMK from a shared secret (like a pre-shared key) or from an authentication method (like EAP in 802.1X).
 
