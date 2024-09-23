@@ -18,10 +18,9 @@
 
 ![image](https://github.com/user-attachments/assets/ae07e111-185e-4627-a28c-c7cf3943abdf)
 
-# Key Management
+# Key Hierarchy
 
-- Key management defines how to generate and update the PTK and group temporary key (GTK).
-- The PTK is used in unicast and the GTK is used in multicast and broadcast.
+- Instead of using a single key for everything, 4-Way-Handshake uses a hierarchy with many keys to encrypt and check the integrity of different 802.11 frames.
 
 ## Key Derivation Function (KDF)
 
@@ -32,10 +31,6 @@
 
 ![image](https://github.com/user-attachments/assets/7177caaf-e152-4dcd-b935-c7341ae76ad5)
 
-## Key Hierarchy
-
-- Instead of using a single key for everything, 4-Way-Handshake uses a hierarchy with many keys to encrypt and check the integrity of different 802.11 frames.
-  
 ## Pairwise Keys and Group Keys
 
 - There are 2 different type of keys in the Key Hierarchy Pairwise Keys and Group Keys
@@ -54,8 +49,6 @@
 - **Broadcast and mMlticast traffic** between all wireless client and the AP together has to be private. <br><br>
     - All wireless clients should be able to encrypt and decrypt this traffic, so we need a **shared key**.
     - All associated wireless clients of the AP have the same key. We call this a group key. 
-
-
 
 ## 4-Way-Handshake: Keys & Components
 
