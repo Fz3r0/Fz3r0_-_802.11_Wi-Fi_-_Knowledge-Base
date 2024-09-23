@@ -12,7 +12,6 @@
 
 - EAPOL stands for "Extensible Authentication Protocol(EAP) over LAN".
 - The IEEE 802.11i protocol uses EAPOL-Key packets during key negotiation.
-- 
 - The EAPoL frame is silently discarded by the 802.11 Station/AP if the Key Sequence counter value in a particular EAPOL frame received was already sent in a previous EAPOL frame or the MIC received by either party is not properly decoded. **No indication of failure is reported to the sender of the EAPOL frame.**
 
 ### EAPol Frame Structure
@@ -23,6 +22,38 @@
 
 - Key management defines how to generate and update the PTK and group temporary key (GTK).
 - The PTK is used in unicast and the GTK is used in multicast and broadcast.
+
+### Key Hierarchy
+
+- Instead of using a single key for everything, WPA uses a hierarchy with many keys to encrypt and check the integrity of different 802.11 frames.
+  
+
+### Pairwise Keys and Group Keys
+
+- There are 2 different type of keys in the Key Hierarchy Pairwise Keys and Group Keys
+- The Pairwise and group keys are created differently and used for different kind of traffic.
+
+**Pairwise Keys:**
+
+- **Unicast traffic** between a wireless client and the AP has to be private. <br><br>
+    - Other client STAs should not to be able to decrypt traffic between another wireless client STAs and the AP.
+    - This is why you should have different keys between each client STA and AP.
+    - We call these pairwise keys because **there is a pair of keys between each wireless client and the AP.**
+    - **The AP has multiple pairwise keys, one for each associated wireless client.**
+
+**Group Keys:**
+
+- There is also broadcast and multicast traffic. <br><br>
+    - All wireless clients should be able to encrypt and decrypt this traffic, so we need a **shared key**.
+    - All associated wireless clients of the AP have the same key. We call this a group key. 
+
+## Key Derivation
+
+- Key derivation is a process used in cryptography to generate one or more cryptographic keys from one or more values, such as keys or a passphrase.
+- The purpose of key derivation is to produce keys that are cryptographically strong and suitable for specific cryptographic applications, like encryption, authentication, or digital signatures.
+- A Key Derivation Function (KDF) is a specific algorithm used for key derivation.
+
+![image](https://github.com/user-attachments/assets/f4bad625-aec5-491d-9079-f60ce58caeec)
 
 ## 4-Way-Handshake: Keys & Components
 
@@ -36,13 +67,6 @@
 - MIC 1
 - MIC 2
 
-## Key Hierarchy
-
-
-
-
-
-## EAPOL
 
 
 
@@ -52,8 +76,9 @@
 # 🗝️👑🪪 MSK (Master Session Key) [AAA/802.1X Key]
 
 - The MSK is the first level key and is derived during the process of **802.1X-EAP (Enterprise) authentication**.
+- The MSK **serves as the foundation for deriving the PMK (Pairwise Master Key)**, which is then used in subsequent 4-way handshake processes to derive encryption keys like the **PTK (Pairwise Transient Key)** and **GTK (Group Temporal Key)**.
+- When you use 802.1X, the authentication server (typically RADIUS) derives the PMK and exports it to the wireless client and AP. This is done using RADIUS attribute MS-MPPE-Recv-key (vendor_id=17).
 - EAP methods (such as EAP-TLS or PEAP) specify their own ways to derive the MSK.
-- The MSK serves as the foundation for deriving the **MK (Pairwise Master Key)**, which is then used in subsequent 4-way handshake processes to derive encryption keys like the **PTK (Pairwise Transient Key)** and **GTK (Group Temporal Key)**.
 - The MSK must be at least **64 octets in length (512 bits (64 bytes))**, as mandated by **IETF RFC 3748**
 
 ### 👑🏭 MSK: 802.1X (WPA/WPA2/WPA3-Enterprise):
@@ -67,6 +92,10 @@
 - In PSK mode like WPA/WPA2, the MSK is not derived through an authentication protocol like EAP. Instead, the Pre-Shared Key (PSK), which is the Wi-Fi password, is used directly to create the Pairwise Master Key (PMK).
 - This means, PSK authentication doesn't need the use of a MSK during the 4-Way-Handshake; The PMK is derived directly from the Pre-Shared Key (PSK) instead. 
 
+## 👑🧮 MSK Derivation
+
+- `802.1X-EAP`: From the EAP process during authentication between the client STA (supplicant) and the authentication server (typically RADIUS).
+
 ## 👑💡 MSK Summary
 
 - MSK Size: 512 bits (64 bytes).
@@ -75,11 +104,7 @@
 - Created by Supplicant (STA) and the Authentication Server independently, they should match with each other.
 - Not transmitted: the MSK is never transmitted directly over the network.
 
-## 👑🧮 MSK Derivation
-
-- `802.1X-EAP`: From the EAP process during authentication between the client STA (supplicant) and the authentication server (typically RADIUS).
-
-## MSK to PMK Conversion Formula:
+## 👑🟰 MSK to PMK Conversion Formula:
 
 The PMK is derived from the MSK. The first 256 bits (32 bytes) of the MSK are used as the PMK.
 
@@ -165,19 +190,24 @@ print("Salt used (for demo):", salt.hex())
 
 # 🗝️🟰🤝 PMK (Pairwise Master Key)
 
+- The pairwise master key (PMK) is a 256-bit key at the top of the key hierarchy and is used indirectly for unicast traffic and the WPA 4-way handshake (AP and client STA use the PMK to derive the PTK which is used for unicast data encryption).  
+- The wireless client and AP have the PMK, which should last the entire session, so it should not be exposed. To accomplish this, we use different keys derived from the PMK.
 - The PMK serves as the foundation for deriving further encryption keys, such as the PTK (Pairwise Transient Key) and GTK (Group Temporal Key).
 - The PMK is never transmitted over the network; instead, it is independently derived and resides on all stations as in AP and client STAs, so this information is not shared through the network. 
 - For secure communication, the PMK generated by both parties must match, ensuring successful authentication and enabling secure data transmission.
 - Both parties (AP & STA), uses the same formula to derive the PMK (that's why the PMK must match)
-- AP and client STA use the PMK to derive the PTK which is used for unicast data encryption.
 
 ### 🟰🏭 PMK: 802.1X (WPA/WPA2/WPA3-Enterprise):
 
-- 
+- This PMK is derived from: `MSK (AAA/801.1X Key)`
 
-### 🟰🏠 MSK: PSK (WPA/WPA2-Personal):
+### 🟰🏠 PMK: PSK (WPA/WPA2-Personal):
 
-- 
+- This PMK is derived from: `PSK (Pre-Shared Key)`
+- Pre-shared key is a key previously configured (for example a string/hexadecimal password).
+- A Password-Based Key Derivation Function 2 (PBKDF2) is used to create a 256-bit PMK.
+
+
 
 ## 🟰💡 PMK Summary
 
@@ -295,6 +325,8 @@ print(f"PMK: {pmk}")
 
 # PTK
 
+- The Pairwise Transient Key (PTK) is used for encryption and integrity checks in unicast user data. It is also used for protecting the 4-way handshake.
+
 ## PTK Formula
 
 - **`PTK = PRF (PMK + Anonce + SNonce + Mac (AA)+ Mac (SA))`**
@@ -382,6 +414,8 @@ print(format_nonce_as_block(snonce))
 
 
 - https://telcomatraining.com/what-is-msk-master-session-key-2/
+- https://networklessons.com/cisco/ccnp-encor-350-401/wpa-and-wpa2-4-way-handshake
+- https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy
 - https://www.wifi-professionals.com/2019/01/4-way-handshake
 - https://mrncciew.com/2014/08/19/cwsp-4-way-handshake/
 - https://www.youtube.com/watch?app=desktop&v=wrbNNri-E1E
