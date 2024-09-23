@@ -7587,6 +7587,10 @@ Time synchronization is essential in Wi-Fi networks to ensure reliable and error
 - [Wi-Fi Checklists @ _WLAN Professionals_](https://wlanprofessionals.com/wi-fi-checklists/)
 - [Advanced RF Design & Troubleshooting](https://www.slideshare.net/ArubaNetworks/shanghai-breakout-advanced-rf-design-and-troubleshooting)
 
+## SSID / Beacon Overhead
+
+- [Beacon/SSID Calculator](https://revolutionwifi.blogspot.com/p/ssid-overhead-calculator.html)
+
 ## Gain & Bandwith
 
 ````py
