@@ -52,11 +52,11 @@
 
 ## 4-Way-Handshake: Keys & Components
 
-- MSK (Master Session Key): The first level key is generated is MSK during the process of 802.1X/EAP or PSK authentication.
-- PMK (Pairwise Master Key): 
-- GMK (Group Master Key)
-- PTK (Pairwise Transient Key)
-- GTK (Group Temporal Key)
+- ꄗ🏭 MSK (Master Session Key): The first level key is generated is MSK during the process of 802.1X/EAP or PSK authentication.
+- 🗝️↔️  PMK (Pairwise Master Key): 
+- 🗝️👨‍👨‍👦‍👦 GMK (Group Master Key)
+- 🔑↔️ PTK (Pairwise Transient Key)
+- 🔑👨‍👨‍👦‍👦 GTK (Group Temporal Key)
 - ANonce
 - SNonce
 - MIC 1
