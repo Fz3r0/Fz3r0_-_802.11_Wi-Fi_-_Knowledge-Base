@@ -538,6 +538,7 @@ print(format_nonce_as_block(snonce))
 - https://support.hpe.com/techhub/eginfolib/networking/docs/routers/msrv7/cg/5200-3028_wlan_cg/content/466576914.htm
 - https://en.wikipedia.org/wiki/IEEE_802.11i-2004
 - https://www.linkedin.com/pulse/how-create-wi-fi-password-cracker-python-vijay-gupta--wkizc/
+- https://lacriptadelhacker.wordpress.com/2022/10/01/hacking-wifi-cracking-de-wpa2-desde-python-mic-cracking/
 
 
 
