@@ -18,22 +18,30 @@
 
 ![image](https://github.com/user-attachments/assets/ae07e111-185e-4627-a28c-c7cf3943abdf)
 
-## Key Management
+# Key Management
 
 - Key management defines how to generate and update the PTK and group temporary key (GTK).
 - The PTK is used in unicast and the GTK is used in multicast and broadcast.
 
-### Key Hierarchy
+## Key Derivation Function (KDF)
 
-- Instead of using a single key for everything, WPA uses a hierarchy with many keys to encrypt and check the integrity of different 802.11 frames.
+- A key derivation function (KDF) is an algorithm sed in cryptography that creates cryptographic keys from a secret value, such as a password or master key.
+- KDFs can be used to stretch keys to make them longer or to create keys in a specific format. 
+- The purpose of key derivation is to produce keys that are cryptographically strong and suitable for specific cryptographic applications, like encryption, authentication, or digital signatures.
+- **In the 4-Way-Handshake procees there are different KDF algorythms and methods used for deriving the different keys.** 
+
+![image](https://github.com/user-attachments/assets/7177caaf-e152-4dcd-b935-c7341ae76ad5)
+
+## Key Hierarchy
+
+- Instead of using a single key for everything, 4-Way-Handshake uses a hierarchy with many keys to encrypt and check the integrity of different 802.11 frames.
   
-
-### Pairwise Keys and Group Keys
+## Pairwise Keys and Group Keys
 
 - There are 2 different type of keys in the Key Hierarchy Pairwise Keys and Group Keys
 - The Pairwise and group keys are created differently and used for different kind of traffic.
 
-**Pairwise Keys:**
+### Pairwise Keys _(Unicast)_
 
 - **Unicast traffic** between a wireless client and the AP has to be private. <br><br>
     - Other client STAs should not to be able to decrypt traffic between another wireless client STAs and the AP.
@@ -41,19 +49,13 @@
     - We call these pairwise keys because **there is a pair of keys between each wireless client and the AP.**
     - **The AP has multiple pairwise keys, one for each associated wireless client.**
 
-**Group Keys:**
+### Group Keys _(Multicast/Broadcast)_
 
-- There is also broadcast and multicast traffic. <br><br>
+- **Broadcast and mMlticast traffic** between all wireless client and the AP together has to be private. <br><br>
     - All wireless clients should be able to encrypt and decrypt this traffic, so we need a **shared key**.
     - All associated wireless clients of the AP have the same key. We call this a group key. 
 
-## key derivation Function (KDF)
 
-- A key derivation function (KDF) is an algorithm sed in cryptography that creates cryptographic keys from a secret value, such as a password or master key.
-- KDFs can be used to stretch keys to make them longer or to create keys in a specific format. 
-- The purpose of key derivation is to produce keys that are cryptographically strong and suitable for specific cryptographic applications, like encryption, authentication, or digital signatures.
-
-![image](https://github.com/user-attachments/assets/7177caaf-e152-4dcd-b935-c7341ae76ad5)
 
 ## 4-Way-Handshake: Keys & Components
 
