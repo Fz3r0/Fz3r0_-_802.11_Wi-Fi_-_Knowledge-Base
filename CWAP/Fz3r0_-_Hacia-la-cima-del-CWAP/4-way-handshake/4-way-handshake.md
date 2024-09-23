@@ -453,18 +453,17 @@ print(format_nonce_as_block(snonce))
 
 ### AP Operations Before M1
 
-1. PMK Derivation: This happens before the 4-Way-Handshake depending on authentication method: <br><br>
+1. **`PMK Derivation`**: This happens before the 4-Way-Handshake depending on authentication method:
+
     - WPA2-PSK:
     - WPA3-PSK: 
     - 802.1X-EAP: 
 
 ### AP Sends M1
 
-- AP sends EAPOL Message 1 with: Anonce (random number)
-- Anonce will be used by the client sTA to generate PTK.
+- AP sends EAPOL Message 1 with: Anonce (random number); Anonce will be used by the client sTA to generate PTK.
 - This message is unencrypted and has no integrity check.
 - If someone messes with this message _(e.g. frame tampering)_, the handshake will fail and that's it.
-
 
 ## Message 2 (M2)
 
@@ -474,10 +473,20 @@ print(format_nonce_as_block(snonce))
 
 ### STA Operations Before M2
 
-Remember, client STA "knows" APs MAC Address because its connected to it since the State Machine 1-3 Process, then: 
+1. **`PMK Derivation`**: This happens before the 4-Way-Handshake depending on authentication method:
 
-- Cliente STA already has the `PMK` + `Snonce` + `STA MAC Address` + `AP MAC Address`... Once it receives `Anonce` from AP, **it has all the inputs to create the `PTK`**. <br><br>
-- Client creates the **`PTK`** using a **PRF (pseudo-random function)** :: **`PTK = PRF (PMK + Anonce + SNonce + Mac (AA)+ Mac (SA))`**
+    - WPA2-PSK:
+    - WPA3-PSK:
+    - 802.1X-EAP:
+
+2. **`PTK Derivation`**: Remember, client STA "knows" APs MAC Address since the State Machine 1-3 Process, then: 
+
+    - Client STA has `PMK` + `Snonce` + `STA MAC Address` + `AP MAC Address`... Once it receives `Anonce` from AP, **it has all the inputs to create the `PTK`**.
+    - Client creates the **`PTK`** using a **PRF (pseudo-random function)** :: **`PTK = PRF (PMK + Anonce + SNonce + Mac (AA)+ Mac (SA))`**
+
+3. `MIC Generation`: STA uses the **KCK** to generate the MIC.
+
+   - AP Compares the MIC when the M2 is received to verify whether this message corrupted or modified 
 
 ### STA Sends M2
 
@@ -491,12 +500,15 @@ Remember, client STA "knows" APs MAC Address because its connected to it since t
 
 ### AP Operations Before M3
 
-Remember, AP "knows" client STA MAC Address because its connected to it since the State Machine 1-3 Process, then: 
+1. **`PTK Derivation`**: Remember, AP "knows" STAs MAC Address since the State Machine 1-3 Process, then:  <br><br>
 
-- AP already has the `PMK` + `Anonce` + `STA MAC Address` + `AP MAC Address`... Once it receives `Snonce` from client STA, **it has all the inputs to create the `PTK`**. <br><br>
-    - AP creates the **`PTK`** using a **PRF (pseudo-random function)** :: **`PTK = PRF (PMK + Anonce + SNonce + Mac (AA)+ Mac (SA))`**
-- AP uses the KCK to generate the MIC.
-   - AP Compares received MIC with calculated MIC to verify whether this message corrupted or modified 
+    - AP has `PMK` + `Anonce` + `STA MAC Address` + `AP MAC Address`... Once it receives `Snonce` from client STA, **it has all the inputs to create the `PTK`**. 
+    - Client creates the **`PTK`** using a **PRF (pseudo-random function)** :: **`PTK = PRF (PMK + Anonce + SNonce + Mac (AA)+ Mac (SA))`**
+
+2. `MIC generation/validation`: AP uses the KCK to generate the MIC.
+
+   - AP Compares received MIC with calculated MIC to verify whether this message corrupted or modified. <br><br>
+       - 🔓 **If the MIC is the same, this proves that the client and AP both have the same PMK.**
 
 
 ### STA Sends M3
