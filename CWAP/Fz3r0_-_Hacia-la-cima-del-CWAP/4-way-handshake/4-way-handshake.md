@@ -461,23 +461,31 @@ print(format_nonce_as_block(snonce))
 ### AP Sends M1
 
 - AP sends EAPOL Message 1 with: Anonce (random number)
-- Anonce will be used by the client sTA to generate PTK. 
+- Anonce will be used by the client sTA to generate PTK.
+- This message is unencrypted and has no integrity check.
+- If someone messes with this message _(e.g. frame tampering)_, the handshake will fail and that's it.
 
 
 ## Message 2 (M2)
+
+- Source: client STA
+- Destination: AP
+- Includes: `MIC`, `Snonce (Supplicant/STA Nonce)`
 
 ### STA Operations Before M2
 
 Remember, client STA "knows" APs MAC Address because its connected to it since the State Machine 1-3 Process, then: 
 
-- Cliente STA already has the `PMK` + `Snonce` + `STA MAC Address` + `AP MAC Address`... Once it receives `Anonce` from AP, **it has all the inputs to create the `PTK`**.
+- Cliente STA already has the `PMK` + `Snonce` + `STA MAC Address` + `AP MAC Address`... Once it receives `Anonce` from AP, **it has all the inputs to create the `PTK`**. <br><br>
 - Client creates the **`PTK`** using a **PRF (pseudo-random function)** :: **`PTK = PRF (PMK + Anonce + SNonce + Mac (AA)+ Mac (SA))`**
 
 ### STA Sends M2
 
-- Once the client STA has created its PTK, it sends out `SNonce` which is needed by the AP to generate PTK as well.
-- STA sends EAPOL Message 2 with: Snonce (random number)
-- Snonce will be used by the AP to generate PTK. 
+- STA sends EAPOL Message 2 (M2) to AP with `MIC (Message Integrity Check)` value to make sure when the AP can verify whether this message corrupted or modified.
+    - The Key Confirmation Key (KCK) is used to calculate the MIC. <br><br>
+- STA sends also the `SNonce` in the M2, which is needed by the AP to generate PTK as well.
+    - Snonce will be used by the AP to generate PTK.
+
 
 ## Message 3 (M2)
 
@@ -485,13 +493,16 @@ Remember, client STA "knows" APs MAC Address because its connected to it since t
 
 Remember, AP "knows" client STA MAC Address because its connected to it since the State Machine 1-3 Process, then: 
 
-- AP already has the `PMK` + `Anonce` + `STA MAC Address` + `AP MAC Address`... Once it receives `Snonce` from client STA, **it has all the inputs to create the `PTK`**.
-- AP creates the **`PTK`** using a **PRF (pseudo-random function)** :: **`PTK = PRF (PMK + Anonce + SNonce + Mac (AA)+ Mac (SA))`**
+- AP already has the `PMK` + `Anonce` + `STA MAC Address` + `AP MAC Address`... Once it receives `Snonce` from client STA, **it has all the inputs to create the `PTK`**. <br><br>
+    - AP creates the **`PTK`** using a **PRF (pseudo-random function)** :: **`PTK = PRF (PMK + Anonce + SNonce + Mac (AA)+ Mac (SA))`**
+- AP uses the KCK to generate the MIC.
+   - AP Compares received MIC with calculated MIC to verify whether this message corrupted or modified 
+
 
 ### STA Sends M3
 
-
-
+- STA sends EAPOL Message 3 (M3) to AP with `MIC (Message Integrity Check)` value to make sure when the AP can verify whether this message corrupted or modified.
+    - The Key Con
 
 
 
