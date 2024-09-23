@@ -46,22 +46,50 @@ def testData():
     WPA2Handshake.mic         = input("Enter the MIC (e.g. EAPOL M2 MIC)                            :: ") or "0a5faaac4272850c8e987bb27b3fca8b"
     WPA2Handshake.Eapol2frame = input("Enter the EAPOL2 Frame in HEX (export > HEX-string)          :: ") or "0103007502010a000000000000000000018e79a5461b1dee8a0c1e9a67addb86f1a54df4c13e91bbda2e8b383e6d773d9e00000000000000000000000000000000000000000000000000000000000000000a5faaac4272850c8e987bb27b3fca8b001630140100000fac040100000fac040100000fac020000"
     
+####################################################################################################################
+#
+# Function: Algoritmo PRF512 (Para obtener PTK)
 
+# Explicación general:
+# Esta función realiza la operación de Pseudo-Random Function (PRF) utilizando el algoritmo HMAC-SHA1 para generar una salida de longitud fija (512 bits) 
+# a partir de una clave (pmk), un texto (text), y datos adicionales (key_data). 
+# Este tipo de función es fundamental en el proceso de creación de la Pairwise Transient Key (PTK) en el protocolo WPA2, 
+# el cual se usa para cifrar las comunicaciones entre un dispositivo y el punto de acceso Wi-Fi.
 
-def customPRF512(pmk,text,key_data):
+def customPRF512(pmk, text, key_data):
+    # Inicializamos el contador c, que se utilizará para iterar y modificar la entrada del HMAC-SHA1
     c = 0
-    block = 64 
+    
+    # Definimos el tamaño del bloque de salida que queremos obtener, 64 bytes (512 bits)
+    block = 64
+    
+    # Creamos un objeto vacío de tipo bytes donde se acumularán los resultados del HMAC
     result = bytes()
-    while c<=((block*8+159)/160):
-        hmacsha1 = hmac.new(pmk,text+chr(0x00).encode()+key_data+chr(c).encode(),hashlib.sha1)
+    
+    # Ejecutamos el ciclo mientras c sea menor o igual al número de iteraciones necesarias para generar los 512 bits.
+    # El cálculo ((block * 8 + 159) / 160) nos da cuántas veces tenemos que generar un HMAC-SHA1 para cubrir los 512 bits,
+    # ya que cada iteración genera 160 bits (20 bytes). La adición de 159 asegura que se redondee hacia arriba.
+    while c <= ((block * 8 + 159) / 160):
+        
+        # Generamos un nuevo HMAC-SHA1 en cada iteración. 
+        # La clave del HMAC es la pmk (Pairwise Master Key), derivada de la contraseña Wi-Fi.
+        # El mensaje para el HMAC es la concatenación de:
+        # 1. `text`, que es un valor que pasamos a la función.
+        # 2. `chr(0x00).encode()`, que es un separador nulo en formato bytes.
+        # 3. `key_data`, que es información adicional.
+        # 4. `chr(c).encode()`, que es el valor del contador `c` convertido en un byte. Esto asegura que cada bloque generado sea único.
+        hmacsha1 = hmac.new(pmk, text + chr(0x00).encode() + key_data + chr(c).encode(), hashlib.sha1)
+        
+        # El resultado de la función hmacsha1.digest() devuelve un bloque de 20 bytes (160 bits).
+        # Vamos concatenando el resultado de cada iteración al objeto result.
         result = result + hmacsha1.digest()
+        
+        # Incrementamos el valor de c para la siguiente iteración, permitiendo que se genere un nuevo bloque.
         c += 1
-    return  result[:block]
-
-
-
-
-
+    
+    # Finalmente, devolvemos los primeros `block` bytes (64 bytes, 512 bits) del resultado acumulado.
+    # Aunque generemos más de 512 bits, solo los primeros 512 bits son los que nos interesan.
+    return result[:block]
 
 def loadHandshakeFromPcap(scapycap):
     #main
