@@ -451,19 +451,53 @@ print(format_nonce_as_block(snonce))
 - Destination: client STA
 - Includes: `Anonce (Authenticator/AP Nonce)`
 
-### AP Operation Before M1
+### AP Operations Before M1
 
-
+1. PMK Derivation: This happens before the 4-Way-Handshake depending on authentication method: <br><br>
+    - WPA2-PSK:
+    - WPA3-PSK: 
+    - 802.1X-EAP: 
 
 ### AP Sends M1
 
-- AP sends EAPOL Message 1 with Anonce (random number) to the device to generate PTK. <br><br>
-    - Remember, client STA "knows" APs MAC Address because its connected to it since the State Machine 1-3 Process, then: 
-    - cliente STA already has the `PMK` + `Snonce` + `STA MAC Address` + `AP MAC Address`... Once it receives `Anonce` from AP, **it has all the inputs to create the `PTK`**.
+- AP sends EAPOL Message 1 with: Anonce (random number)
+- Anonce will be used by the client sTA to generate PTK. 
+
 
 ## Message 2 (M2)
 
-- 
+### STA Operations Before M2
+
+Remember, client STA "knows" APs MAC Address because its connected to it since the State Machine 1-3 Process, then: 
+
+- Cliente STA already has the `PMK` + `Snonce` + `STA MAC Address` + `AP MAC Address`... Once it receives `Anonce` from AP, **it has all the inputs to create the `PTK`**.
+- Client creates the **`PTK`** using a **PRF (pseudo-random function)** :: **`PTK = PRF (PMK + Anonce + SNonce + Mac (AA)+ Mac (SA))`**
+
+### STA Sends M2
+
+- Once the client STA has created its PTK, it sends out `SNonce` which is needed by the AP to generate PTK as well.
+- STA sends EAPOL Message 2 with: Snonce (random number)
+- Snonce will be used by the AP to generate PTK. 
+
+## Message 3 (M2)
+
+### AP Operations Before M3
+
+Remember, AP "knows" client STA MAC Address because its connected to it since the State Machine 1-3 Process, then: 
+
+- AP already has the `PMK` + `Anonce` + `STA MAC Address` + `AP MAC Address`... Once it receives `Snonce` from client STA, **it has all the inputs to create the `PTK`**.
+- AP creates the **`PTK`** using a **PRF (pseudo-random function)** :: **`PTK = PRF (PMK + Anonce + SNonce + Mac (AA)+ Mac (SA))`**
+
+### STA Sends M3
+
+
+
+
+
+
+
+
+
 
 
 - https://telcomatraining.com/what-is-msk-master-session-key-2/
