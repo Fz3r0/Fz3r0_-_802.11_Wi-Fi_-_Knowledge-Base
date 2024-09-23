@@ -445,6 +445,27 @@ print(format_nonce_as_block(snonce))
 ````
 
 
+## Message 1 (M1)
+
+- Source: AP
+- Destination: client STA
+- Includes: `Anonce (Authenticator/AP Nonce)`
+
+### AP Operation Before M1
+
+
+
+### AP Sends M1
+
+- AP sends EAPOL Message 1 with Anonce (random number) to the device to generate PTK. <br><br>
+    - Remember, client STA "knows" APs MAC Address because its connected to it since the State Machine 1-3 Process, then: 
+    - cliente STA already has the `PMK` + `Snonce` + `STA MAC Address` + `AP MAC Address`... Once it receives `Anonce` from AP, **it has all the inputs to create the `PTK`**.
+
+## Message 2 (M2)
+
+- 
+
+
 - https://telcomatraining.com/what-is-msk-master-session-key-2/
 - https://networklessons.com/cisco/ccnp-encor-350-401/wpa-and-wpa2-4-way-handshake
 - https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy
