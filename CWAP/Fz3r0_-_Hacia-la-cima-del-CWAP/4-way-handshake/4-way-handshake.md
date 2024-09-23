@@ -53,7 +53,7 @@
 - KDFs can be used to stretch keys to make them longer or to create keys in a specific format. 
 - The purpose of key derivation is to produce keys that are cryptographically strong and suitable for specific cryptographic applications, like encryption, authentication, or digital signatures.
 
-![image](https://github.com/user-attachments/assets/f4bad625-aec5-491d-9079-f60ce58caeec)
+![image](https://github.com/user-attachments/assets/7177caaf-e152-4dcd-b935-c7341ae76ad5)
 
 ## 4-Way-Handshake: Keys & Components
 
