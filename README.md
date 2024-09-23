@@ -8582,7 +8582,8 @@ _airmon-ng script can be used to enable monitor mode on wireless interfaces. It 
 - [airmon-ng: Cómo Conectar Adapdadot Wi-Fi en Kali Linux y Parrot OS](https://www.youtube.com/watch?v=xCrDuRlHfeA)
 
 ## 📣💊🧮 Beacon/SSID Overhead Calculation
-_One of the most commonly cited best practices among Wi-Fi professionals is to the limit the number of SSIDs you have configured on your WLAN in order to reduce the amount of overhead on the network and to maintain high performance. **CWNP Standard = no more than 5 SSIDs, for best results maximum 3 SSIDs**_
+- One of the most commonly cited best practices among Wi-Fi professionals is to the limit the number of SSIDs you have configured on your WLAN in order to reduce the amount of overhead on the network and to maintain high performance.
+- **CWNP Standard = no more than 5 SSIDs, for best results maximum 3 SSIDs**
 - [**`SSID Overhead Calculator`**](https://revolutionwifi.blogspot.com/p/ssid-overhead-calculator.html)
 
 ## 🛜🖩🧮 MCS Index Table
