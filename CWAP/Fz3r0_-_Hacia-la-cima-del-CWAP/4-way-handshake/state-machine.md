@@ -1,1 +1,352 @@
-# State-Machine
+# 🪆🛜⚙️ 802.11 State Machine: `Discovery`, `Authentication`, `Association`, `Transition` & `Disconnection`
+
+- It consists of the **four states** of client connectivity during a session, from disconnected to fully authorized/associated via secure authentication.
+- Any Client Station or Access Point (STA or AP) can be in some "state" within this state machine at any given time (State 1, State 2, State 3, State 4).
+- Considered as "The discovery/connection/transition/disconnection process" of a client in a BSS at a protocol level.
+
+Most common issues to torubleshoot are Connectivity Problems, this means: 
+
+- STAs/Clients either can't connect, can't maintain it's connection, it's not roaming well between APs, it can't connect to the SSID, and so on...
+
+Understanding this kind of Frame Exchanges help to analyze step by step the process for BSS Discovery & Joining, Analyze Roaming Behavior, etc_
+
+## Open System Authentication
+
+Modern networks does not "authenticate" clients, instead uses "open system authentication". 
+
+Open System Authentication is when STA send Auth Req & AP responds with Auth Res, then the same with Asso Res/Res at this point they are at "state 3" (where open authentication reach), then is where we use RSN method is used (like 802.1X EAP or WPA2 PSK) to make a "real authentication", and that take us finally to state 4 "Fully connected to the network" 
+
+
+## 802.11 State Machine: Authentication & Association
+
+The 802.11 station keeps two variables for tracking the **authentication state** and the **association state**. The states that are tracked are as follows:
+
+1. Authentication state: unauthenticated or authenticated
+2. Association state: unassociated or associated
+
+Together, these two variables create three possible states for the stations.
+
+- State 1: initial start state, unauthenticated and unassociated
+- State 2: authenticated and unassociated
+- State 3: authenticated and associated (pending security mechanisms)
+
+Because a station must authenticate before it can associate, it can never be unauthenticated and associated. 
+
+Since the introduction of 802.11i security mechanisms, the IEEE 802.11-2012 standard now considers there to a forth state in the connection state machine (State 4: authenticated and associated – PSK or 802.1X security mechanisms completed.):
+
+- State 1: initial start state, unauthenticated and unassociated
+- State 2: authenticated and unassociated
+- State 3: authenticated and associated (pending security mechanisms)
+- **State 4: authenticated and associated via RSNA (Robust Security Network Association)**
+
+### ⛔➡️✅ 802.11 State Machine: `4 States`
+
+- ⛔[**`State 1`**: **Unauthenticated**, **Unassociated**]() `Client NO Connected` | **`Class 1`** > **Beacon : AuthReq/Res : ProbeReq/Res** 
+- ❓[**`State 2`**: **`Authenticated`**, **Unassociated**]() `Client Authenticated (AP validating STA capabilities)` | **`Class 1 & 2`** > **AssociReq/Res**
+- ✅[**`State 3`**: **`Authenticated`**, **`Associated`**]() `Client Associated to AP (Open Auth Completed OK!)` | **`Class 1, 2 & 3`** | `RSNA`: **Blocked** 
+- 🔓[**`State 4`**: **`Authenticated`**, **`Associated`**]() `STA Fully Connected to AP (RSNA OK!)` Frames: **`Class 1, 2 & 3`** | `RSNA`: **Un-Blocked**
+
+![image](https://github.com/user-attachments/assets/ca557eaf-fda8-431e-aca5-9c393fff14b4)
+
+### 🥇🥈🥉 802.11 State Machine: `Frame Classes` `1`, `2`, `3`
+
+- [802.11 WLAN States: Difference between WLAN class1 class2 and class3](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)<br><br>
+    - [**🥇🖽 `Class1 Frames`**](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+        - [**Control**: `RTS & CTS`, `ACK`, `CF-End+CF-Ack & CF-End`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+        - [**Management**: `Beacon`, `Probe Req/Res`, `Auth/Deauth`, `ATIM`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+        - [**Data**: `Any frame with ToDS & FromDS false(0)`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)<br><br>
+    - [**🥈🖽 `Class2 Frames`**](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+        - [**Control**: _None_](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+        - [**Management**: `Association Req/Res`, `Re-Association Req/Res`. `Disassociation`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+        - [**Data**: _None_](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)<br><br>
+    - [**🥉🖽 `Class3 Frames`**](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+        - [**Control**: `PS-Poll`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+        - [**Management**: `Deauthentication`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+        - [**Data**: `Any frame with ToDS or FromDS true(1)`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+      
+
+
+## 🤳🏾🛸📡 IEEE 802.11: `BSS Discovery`
+- [Wireless association: active vs passive scanning, & roaming @ Sunny](https://youtu.be/HPJonmd8z1c?si=g47qTqJ5ma4iF3c0)
+- [A study of the discovery process in 802.11 networks](https://www.researchgate.net/publication/215502402_A_study_of_the_discovery_process_in_80211_networks) _`pdf study`_
+
+### 🛸🛜 BSS Discovery Scanning Methods: `Passive Scanning` & `Active Scanning`
+- [**`Active Scanning`**](https://community.nxp.com/t5/Wireless-Connectivity-Knowledge/802-11-Wi-Fi-Connection-Disconnection-process/ta-p/1121148) `Client/STA` **init effort** | **STA:**`ProbeReq` (All CHs) > AP answer `PropeRes` > STA answer Directed `Probe` > `AuthReq`
+- [**`Passive Scanning`**](https://community.nxp.com/t5/Wireless-Connectivity-Knowledge/802-11-Wi-Fi-Connection-Disconnection-process/ta-p/1121148) `AP` **init effort** | **AP:**`Beacon` @ `BSA` > STA answer Directed `Probe` > `AuthReq`
+
+## 🪪🛡️🔐 IEEE 802.11: `Authentication`
+_These are the Authentication Methods a STA can use to access to a BSS | IEEE Std 802.11 defines five 802.11 authentication methods: Open System authentication, Shared Key authentication, FT authentication, and simultaneous authentication of equals (SAE), and fast initial link setup (FILS) authentication. Open System authentication admits any STA to the DS. Shared Key authen-tication relies on WEP to demonstrate knowledge of a WEP encryption key. FT authentication relies on keys derived during the initial mobility domain association to authenticate the stations as defined in Clause 12 (Fast BSS transition). SAE authentication uses finite field cryptography to prove knowledge of a shared password. FILS authentication uses either trusted public keys or a shared key derived out-of-band.  FILS authentication uses three alternative procedures._
+
+### 🛡️🔐 Authentication Methods
+- [802.11 Authentication Methods](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/46509dcd-047a-4529-b4c5-c9cad8b88760) _`table`_
+- [IEEE	Access control and data confidentiality services: Open System, Shared Key, FT, SAE & FILS ](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/files/13836501/11-13-1488-02-00ai-comment-resolution-for-section-4.docx) _`word report`_ <br><br>
+    - [🔓 `Open System` :: `0`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/da6135ed-352d-42c1-a73a-736112c79650) No authentication | Every client is allowed || used for modern: `802.11i`(`PSK`, `802.1X`) (after association state)
+    - [🔑 `Shared Key` :: `1`]() Authenticates via WEP demonstrating a key :: Legacy Networks (modern uses open system)
+    - [🔄 `FT - Fast Transition` :: `2`]() `802.11r` Authenticates using a key derived from previous authentication
+    - [🌉 `SAE`:`Simultaneous Authentication of Equals` :: `3`]() `WPA3` || `802.11s-mesh` Diffie-Hellman / Mesh
+    - [🚀 `FILS`: `Fast Inistial Link Setup:: `4`](https://mrncciew.com/2023/09/25/fils-fast-initial-link-setup/) Minimize the time required for the initial link setup (for high density)
+
+### 📡🪪 Wi-Fi Connection Manager Protocols
+_To facilitate Wi-Fi connectivity, the industry introduced WISPr 1.0, a protocol which automated the exchange of user name/password credentials with public Wi-Fi HotSpots. | In 2010, Accuris introduced WISPr 1+ extensions to the WISPr protocol which overcame the security flaws and subscriber management complexity of the initial specification. | Today WISPr 1+ is used by Wi-Fi roaming service providers worldwide to offer seamless, secure access and authentication on WISPr-enabled Wi-Fi networks. | Wi-Fi Hotspots need to support 802.1X technology as part of a HotSpot 2.0 upgrade. While many do, WISPr continues to be the predominant access mechanism. With WISPr 1+, service providers are able to bring a SIM-like authentication to non-SIM devices and non-802.1X Wi-Fi alike, and to an installed base of Smartphones which doesn’t support EAP-SIM/AKA today._
+- [Connection Manager Protocols Differences :: WISPr 1.0 VS 802.1X VS Passpoint Release 2 VS WISPr 1+](https://info.accuris-networks.com/hubfs/Documents/WISPr1_DS-07Jan16.pdf)
+
+# 🛡️🔓🪪 Authentication Method: `Open System`
+_Once a client station is discover a SSID (Probe Request/Response or listening to Beacons) it move to Join phase. This exchange comprise of at least 4 frames || Open System authentication should never fail || Init method of authentication used by most modern WLANs || RSN like 802.1X or PSK is performed later (state 3 > 4) || There is no "authentication response frame", it's just an "autentication frame" with another status code value || Association process is similar to authentication, in this caso we do have "authentication request" & "authentication response" (both ACKed) ||_
+
+### Open System Authentication: `No RSN`
+
+````py
+######################################################################################################################
+                                 🏁 STATE MACHINE = 1 :: client STA disconnected from AP 🏁
+######################################################################################################################
+
+🛸 BROADCAST   :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛸 Beacon ]}  (optional/passive scanning) 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊❓ Probe Request ]}   (active scanning)   <<<=== START 🏁
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊❓ Probe Response ]}  
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🆗 ACK ]} 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🚪 Authentication SeqNum=1 (request) ]} 
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🆗 ACK ]}
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🚪 Authentication SeqNum=2 (success) ]} 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    {[ 💊🆗 ACK ]}                                 <<<=== FINISH 🏁
+
+######################################################################################################################
+                                🏁 STATE MACHINE = 2 :: client STA authenticated to AP 🏁
+######################################################################################################################
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🛜 Association Request ]}                 <<<=== START 🏁
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🆗 ACK ]}
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛜 Association Response ]}
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🆗 ACK ]}                                 <<<=== FINISH 🏁
+
+######################################################################################################################
+                               🏁 STATE MACHINE = 3 :: client STA associated to AP
+                                Open System Authentication/Association Complete!!!
+######################################################################################################################
+
+````
+
+---
+
+### Open System Authentication: `RSN :: WPA2`
+
+````py
+######################################################################################################################
+                                 🏁 STATE MACHINE = 1 :: client STA disconnected from AP 🏁
+######################################################################################################################
+
+🛸 BROADCAST   :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛸 Beacon ]}  (optional/passive scanning) 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊❓ Probe Request ]}   (active scanning)   <<<=== START 🏁
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊❓ Probe Response ]}  
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🆗 ACK ]} 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🚪 Authentication SeqNum=1 (request) ]} 
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🆗 ACK ]}
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🚪 Authentication SeqNum=2 (success) ]} 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    {[ 💊🆗 ACK ]}                                 <<<=== FINISH 🏁
+
+######################################################################################################################
+                                🏁 STATE MACHINE = 2 :: client STA authenticated to AP 🏁
+######################################################################################################################
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🛜 Association Request ]}                 <<<=== START 🏁
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🆗 ACK ]}
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛜 Association Response ]}
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🆗 ACK ]}                                 <<<=== FINISH 🏁
+
+######################################################################################################################
+                                 🏁 STATE MACHINE = 3 :: client STA associated to AP 🏁
+######################################################################################################################
+
+# - BOTH CLIENTS (AP & STA) HAVE PMK's (From PSK (WPA2/WPA3) or EAP (WPA2/WPA3 Enterprise))
+
+# - PTK Components = PMK + Supplicant (STA) MAC Address + Authenticator (AP) MAC Address + Snonce (Supplicant) + Anonce (Authenticator)
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    AP Pick Random Anonce                       |  send M1 : ( 💊 🗝️ EAPOL Key | Anonce ) 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    STA Generates PTK + Pick Random Snonce      |  send M2 : ( 💊 🔑 EAPOL Key | Snonce + MIC )
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    AP Generates PTK + Generates GTK            |  send M3 : ( 💊 🔑 EAPOL Key | Install PTK + MIC + Anonce + Encrypted GTK )
+
+🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    Decrypt GTK sent from AP + answer with MIC  |  send M4 : ( 💊 🗝️ EAPOL Key | MIC ) 
+
+######################################################################################################################
+                                🏁 STATE MACHINE = 4 :: client STA associated via RSNA 🏁
+                              Open System Authentication/Association + WPA2 RSNA  Complete!!!
+######################################################################################################################
+
+````
+---
+
+### 🔓🪪 Open System Authentication: `Authentication` 
+_The initial purpose of the authentication frame is to validate the device type (verify that the requesting station has proper 802.11 capability to join the cell). This exchanged is based on simple two-frame (Auth Request &  Auth Response) called Open System._
+- [`Authentication` :: Frame Exchange :: `Open System`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/bb52ef07-7502-435c-844d-9b32f7f7b43a) _`frame exchange`_
+- [`Authentication` :: Frame Decode @ Nayanajith](https://mrncciew.com/2014/10/10/802-11-mgmt-authentication-frame/) _`frame decode`_
+
+### 🔄📡 Frame Exchange: `Authentication` 
+
+````py
+######################################################################################################################
+                                 🏁 STATE MACHINE = 1 :: client STA disconnected from AP 🏁
+######################################################################################################################
+
+🛸 BROADCAST   :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛸 Beacon ]}  (optional/passive scanning) 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊❓ Probe Request ]}   (active scanning)   <<<=== START 🏁
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊❓ Probe Response ]}  
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🆗 ACK ]} 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🚪 Authentication SeqNum=1 (request) ]} 
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🆗 ACK ]}
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🚪 Authentication SeqNum=2 (success) ]} 
+
+🤳🏾 Client STA  :: --------->>>  ➡️ :: AP  📡    ||    {[ 💊🆗 ACK ]}                                 <<<=== FINISH 🏁
+
+######################################################################################################################
+                                🏁 STATE MACHINE = 2 :: client STA authenticated to AP 🏁
+######################################################################################################################
+.
+.
+.
+(Next: Association Processs [State 3])
+````
+
+---
+
+### 🔓🪪 Open System Authentication: `Association` :: From:`State 2` ➡️ To:`State 3` 
+_When 802.11 authentication (not the RSN-WPA/WPA2 authentication) completes, a STA move to Association phase to the BSS. The purpose of this exchange is to join the cell & obtain an Association Identifier (AID). If the network is "Open" (no WPA/2-PSK, 802.1X or other kind of RSN authentication) then this is the last state and the client completes it's connection, else, the client is ready to start with the **RSNA** process to reach the state 4 Fully Connected & Authenticated._ <br>
+- [`Association Req` & `Association Res` :: Frame Exchange :: `Open System`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/64b10b5f-ba1a-4885-9141-c94e317f9ac9) _`frame exchange`_
+- [`Association Req` & `Association Res` :: Frame Decode @ Nayanajith](https://mrncciew.com/2014/10/28/802-11-mgmt-association-reqresponse/) _`frame decode`_
+    - [`Association Res` :: `Status Codes` :: Responses]() _`0=successful`_
+
+### 🔄📡 Frame Exchange: `Association` 
+
+````py
+(Previous: Authentication Process [State 2)
+.
+.
+.
+######################################################################################################################
+                             🏁 STATE MACHINE = 2 :: client STA authenticated to AP 🏁
+######################################################################################################################
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🛜 Association Request ]}                 <<<=== START 🏁
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🆗 ACK ]}
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||    {[ 💊🛜 Association Response ]}
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡    ||    {[ 💊🆗 ACK ]}                                 <<<=== FINISH 🏁
+
+######################################################################################################################
+                               🏁 STATE MACHINE = 3 :: client STA associated to AP
+                                Open System Authentication/Association Complete!!!
+######################################################################################################################
+.
+.
+.
+(Next: RSNA Process (Only with RSNA Secure Authentication) [State 4])
+````
+
+---
+
+### 🔓🪪 Open System Authentication: `Deauthentication` & `Disassociation` :: From:`ANY` ➡️ To:`State 1`
+_**Station or AP can send a Deauthentication Frame** when all communications are terminated (When disassociated, still a station can be authenticated to the cell). || Once a station associated to an AP, **either side can terminate the association at any time by sending a disassociation frame**. It has the same frame format as deauthentication frame. A station can send a disassociation frame because it leave the current cell to roam to another cell. An AP could send disassociation frame because station try to use invalid parameters._ <br>
+- [`Deauthentication` :: Frame Exchange :: `Open System` :: Sent by any side AP<-->STA](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/1c1c8c86-769c-4954-8913-5eea07468401) _`frame exchange`_
+- [`Disassociation` :: Frame Exchange :: `Open System` :: Sent by any side AP<-->STA](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/1c1c8c86-769c-4954-8913-5eea07468401) _`frame exchange`_
+- [`Deauthentication` & `Disassociation` :: Frame Decode @ Nayanajith](https://mrncciew.com/2014/10/11/802-11-mgmt-deauth-disassociation-frames/) _`frame decode`_
+    - [`Deauthentication` :: `Status Codes` :: Responses]() 
+    - [`Disassociation` :: `Status Codes` :: Responses]()
+ 
+### 🔄📡 Frame Exchange: `Deauthentication`
+
+````py
+(Previous: STA Associated to AP [State 3 or 4])
+.
+.
+.
+######################################################################################################################
+                         🏁 STATE MACHINE = 3 or 4 (RSNA) :: client STA associated to AP 🏁
+######################################################################################################################
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||     {[ 💊🛜 Deauthentication :: Code X,Y,Z ]}             
+
+                                                   - or -
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡     ||    {[ 💊🛜 Deauthentication :: Code X,Y,Z ]}             
+
+######################################################################################################################
+                        🏁 STATE MACHINE = 1 :: client STA disconncted from AP                                              
+######################################################################################################################
+.
+.
+.
+retrun to STATE 1 - DISCONNECTED
+````
+
+### 🔄📡 Frame Exchange: `Disassociation`
+
+````py
+(Previous: STA Associated to AP [State 3 or 4])
+.
+.
+.
+######################################################################################################################
+                         🏁 STATE MACHINE = 3 or 4 (RSNA) :: client STA associated to AP 🏁
+######################################################################################################################
+
+🤳🏾 Client STA  :: ⬅️  <<<--------- ::  AP 📡    ||     {[ 💊🛜 Disassociation :: Code X,Y,Z ]}             
+
+                                                   - or -
+
+🤳🏾 Client STA  :: --------->>>  ➡️ ::  AP 📡     ||    {[ 💊🛜 Disassociation :: Code X,Y,Z ]}             
+
+######################################################################################################################
+                        🏁 STATE MACHINE = 2 :: client STA authenticated to AP                                              
+######################################################################################################################
+.
+.
+.
+retrun to STATE 2 - AUTHENTICATED (for roaming / re-connections)
+````
+
+
+
+## 🤳🏾🔁📡 IEEE 802.11: `State Machine`
+- [IEEE 802.11 Wi-Fi Discovey, Connection, Roaming & Disconnection process](https://community.nxp.com/t5/Wireless-Connectivity-Knowledge/802-11-Wi-Fi-Connection-Disconnection-process/ta-p/1121148) _`info`_
+- [802.11 State Machine :: `Diagram 1`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/c8715d19-fe2f-42e6-914a-144d3fb4e70d) _`diagram`_
+- [802.11 State Machine :: `Diagram 2`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/5826a51b-eb23-4fba-bdeb-73ba23295819)
+- [Understanding 802.11 State Machine @ Aruba Networks](https://blogs.arubanetworks.com/industries/understanding-802-11-state-machine/)
+- [802.11 State Machine @ Noticias Inalámbricas](https://notasinalambricas.wordpress.com/tag/802-11-state-machine/) _`español`_
+- [Los 4 pasos/estados de la máquina de estados, ¡En 2 minutos!](https://www.youtube.com/watch?v=u3dkoPrdOdE) _`video`_
+- [802.11 Frame Exchanges](https://howiwifi.com/2020/07/16/802-11-frame-exchanges/)
+- [802.11 Association Process Explained @ Meraki](https://documentation.meraki.com/MR/Wi-Fi_Basics_and_Best_Practices/802.11_Association_Process_Explained)
+- https://dot11ap.wordpress.com/the-ieee-802-11-state-machine/
+
+
+
+
+
+
