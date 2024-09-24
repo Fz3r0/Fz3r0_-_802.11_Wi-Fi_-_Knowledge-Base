@@ -16,3 +16,8 @@ clear; airmon-ng start wlan0; iwconfig wlan0mon channel 11 && ifconfig wlan0mon 
 ````
 
 ![image](https://github.com/user-attachments/assets/24d83074-d8de-4040-a659-b345111a65f9)
+
+
+
+
+![image](https://github.com/user-attachments/assets/71ebbd84-ae55-41db-9086-f5110af1033e)
