@@ -344,6 +344,7 @@ retrun to STATE 2 - AUTHENTICATED (for roaming / re-connections)
 - [802.11 Frame Exchanges](https://howiwifi.com/2020/07/16/802-11-frame-exchanges/)
 - [802.11 Association Process Explained @ Meraki](https://documentation.meraki.com/MR/Wi-Fi_Basics_and_Best_Practices/802.11_Association_Process_Explained)
 - https://dot11ap.wordpress.com/the-ieee-802-11-state-machine/
+- https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html
 
 
 
