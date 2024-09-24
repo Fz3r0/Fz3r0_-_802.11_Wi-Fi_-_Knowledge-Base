@@ -1,14 +1,17 @@
 # 🪆🛜⚙️ 802.11 State Machine: `Discovery`, `Authentication`, `Association`, `Transition` & `Disconnection`
 
+The 802.11 state machine describes the process a client (STA) undergoes when connecting to a wireless network, with four key states: Discovery, Authentication, Association, and Transition, concluding with Disconnection. maintain connections.
+
 - It consists of the **four states** of client connectivity during a session, from disconnected to fully authorized/associated via secure authentication.
+- Considered as "The discovery/connection/transition/disconnection process" of a client in a BSS at a protocol level (Frame exchange process).
 - Any Client Station or Access Point (STA or AP) can be in some "state" within this state machine at any given time (State 1, State 2, State 3, State 4).
-- Considered as "The discovery/connection/transition/disconnection process" of a client in a BSS at a protocol level.
+- Each client and Access Point (AP) follows this state machine to manage and maintain connections.
 
 Most common issues to torubleshoot are Connectivity Problems, this means: 
 
 - STAs/Clients either can't connect, can't maintain it's connection, it's not roaming well between APs, it can't connect to the SSID, and so on...
 
-Understanding this kind of Frame Exchanges help to analyze step by step the process for BSS Discovery & Joining, Analyze Roaming Behavior, etc_
+Understanding this kind of Frame Exchanges help to analyze step by step the process for BSS Discovery & Joining, Analyze Roaming Behavior, etc.
 
 ## Open System Authentication
 
@@ -21,30 +24,25 @@ Open System Authentication is when STA send Auth Req & AP responds with Auth Res
 
 The 802.11 station keeps two variables for tracking the **authentication state** and the **association state**. The states that are tracked are as follows:
 
-1. Authentication state: unauthenticated or authenticated
-2. Association state: unassociated or associated
+1. `Authentication state`: unauthenticated or authenticated
+2. `Association state`: unassociated or associated
 
 Together, these two variables create three possible states for the stations.
 
-- State 1: initial start state, unauthenticated and unassociated
-- State 2: authenticated and unassociated
-- State 3: authenticated and associated (pending security mechanisms)
+- `State 1`: initial start state :: unauthenticated and unassociated
+- `State 2`: Authentication state :: authenticated and unassociated
+- `State 3`: Association state :: and associated _(pending security mechanisms / RSNA)_
 
-Because a station must authenticate before it can associate, it can never be unauthenticated and associated. 
+**Note:** Because a station must authenticate before it can associate, it can never be unauthenticated and associated. 
 
 Since the introduction of 802.11i security mechanisms, the IEEE 802.11-2012 standard now considers there to a forth state in the connection state machine (State 4: authenticated and associated – PSK or 802.1X security mechanisms completed.):
 
-- State 1: initial start state, unauthenticated and unassociated
-- State 2: authenticated and unassociated
-- State 3: authenticated and associated (pending security mechanisms)
-- **State 4: authenticated and associated via RSNA (Robust Security Network Association)**
+## ⛔➡️✅ 802.11 State Machine: `4 States`
 
-### ⛔➡️✅ 802.11 State Machine: `4 States`
-
-- ⛔[**`State 1`**: **Unauthenticated**, **Unassociated**]() `Client NO Connected` | **`Class 1`** > **Beacon : AuthReq/Res : ProbeReq/Res** 
-- ❓[**`State 2`**: **`Authenticated`**, **Unassociated**]() `Client Authenticated (AP validating STA capabilities)` | **`Class 1 & 2`** > **AssociReq/Res**
-- ✅[**`State 3`**: **`Authenticated`**, **`Associated`**]() `Client Associated to AP (Open Auth Completed OK!)` | **`Class 1, 2 & 3`** | `RSNA`: **Blocked** 
-- 🔓[**`State 4`**: **`Authenticated`**, **`Associated`**]() `STA Fully Connected to AP (RSNA OK!)` Frames: **`Class 1, 2 & 3`** | `RSNA`: **Un-Blocked**
+- ⛔**`State 1`**: **Unauthenticated**, **Unassociated** `Client NO Connected` | **`Class 1`** > **Beacon : AuthReq/Res : ProbeReq/Res** 
+- ❓**`State 2`**: **`Authenticated`**, **Unassociated** `Client Authenticated (AP validating STA capabilities)` | **`Class 1 & 2`** > **AssociReq/Res**
+- ✅**`State 3`**: **`Authenticated`**, **`Associated`** `Client Associated to AP (Open Auth Completed OK!)` | **`Class 1, 2 & 3`** | `RSNA`: **Blocked** _(Pending RSNA)_
+- 🔓**`State 4`**: **`Authenticated`**, **`Associated`** `STA Fully Connected to AP (RSNA OK!)` Frames: **`Class 1, 2 & 3`** | `RSNA`: **Un-Blocked** _(RSNA OK!)_
 
 ![image](https://github.com/user-attachments/assets/ca557eaf-fda8-431e-aca5-9c393fff14b4)
 
