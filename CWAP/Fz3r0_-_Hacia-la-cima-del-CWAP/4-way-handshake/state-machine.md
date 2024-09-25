@@ -76,13 +76,45 @@ Since the introduction of 802.11i security mechanisms, the IEEE 802.11-2012 stan
       
 
 
-## 🤳🏾🛸📡 IEEE 802.11: `BSS Discovery`
-- [Wireless association: active vs passive scanning, & roaming @ Sunny](https://youtu.be/HPJonmd8z1c?si=g47qTqJ5ma4iF3c0)
-- [A study of the discovery process in 802.11 networks](https://www.researchgate.net/publication/215502402_A_study_of_the_discovery_process_in_80211_networks) _`pdf study`_
+# 🤳🏾🛸📡 IEEE 802.11: `BSS Discovery` 
 
-### 🛸🛜 BSS Discovery Scanning Methods: `Passive Scanning` & `Active Scanning`
-- [**`Active Scanning`**](https://community.nxp.com/t5/Wireless-Connectivity-Knowledge/802-11-Wi-Fi-Connection-Disconnection-process/ta-p/1121148) `Client/STA` **init effort** | **STA:**`ProbeReq` (All CHs) > AP answer `PropeRes` > STA answer Directed `Probe` > `AuthReq`
-- [**`Passive Scanning`**](https://community.nxp.com/t5/Wireless-Connectivity-Knowledge/802-11-Wi-Fi-Connection-Disconnection-process/ta-p/1121148) `AP` **init effort** | **AP:**`Beacon` @ `BSA` > STA answer Directed `Probe` > `AuthReq`
+To join any network first client or station needs to find it the network. In the wired network, just plugging the cable or jack will find the network. In the wireless world, this requires identification of the compatible network before joining process can begin. This identification process of the network is referred as `scanning` and its part of the `BSS Discovery` process.
+
+## 🛸🔍 Scanning
+
+Several parameters are needed in the scanning process. These parameters are: 
+
+- BSSType
+- BSSID
+- channel list
+- scantype
+- MinChannelTime
+- MaxChannelTime.
+
+The parameters are set as default depending upon manufacturer Wi-Fi driver, but it can be modified by the user i.e. if the requirement is for hidden network then we can set scantype parameter as passive scan because the active scan is not useful for the hidden network (networks that do not broadcast their SSID).
+
+There are two scanning methods: `passive scanning` and `active scanning`.
+
+- By default, radios perform both the types of scanning on all the channels allowed by the country of operation.
+- While both the types of scanning are available by default, active scanning is performed only by those channels that are allowed to transmit by regional government regulations.
+- Channels that are not authorized for unlicensed use are excluded from active scanning.
+
+### 🛸📡 BSS Discovery Scanning Methods: `Passive Scanning`
+
+- `AP`: **init effort of finding a STA, sending the announcement of a SSID**
+- `AP`: Broadcast: `Beacon` (Only one channel) : AP send a beacon frame to the BSA announcing the SSID, waiting for a directed probe request from any STA who "heard" the beacon.
+- `client STA`: Unicast: `Probe Request` (Directed Probe) : If any STA used the beacon in passive scanning mode, will answer with a `Directed Probe Response` 
+- Not so used today by smartphones or computers, but still in use. 
+
+### 🛸🤳🏾 BSS Discovery Scanning Methods: `Active Scanning`
+
+- `client STA`: **init effort of finding an AP**
+- `client STA`: Broadcast: `Probe Request` (All Channels) : STA trying to find any SSID broadcasting around with any name. 
+- `client STA`: Unicast: `Probe Request` (Directed Probe) : If any AP answers the first broadcast probe with a `Directed Probe Response` (or the STA already knows the SSID)
+- The most used method today by client STAs like smartphones or computers. 
+
+
+
 
 ## 🪪🛡️🔐 IEEE 802.11: `Authentication`
 _These are the Authentication Methods a STA can use to access to a BSS | IEEE Std 802.11 defines five 802.11 authentication methods: Open System authentication, Shared Key authentication, FT authentication, and simultaneous authentication of equals (SAE), and fast initial link setup (FILS) authentication. Open System authentication admits any STA to the DS. Shared Key authen-tication relies on WEP to demonstrate knowledge of a WEP encryption key. FT authentication relies on keys derived during the initial mobility domain association to authenticate the stations as defined in Clause 12 (Fast BSS transition). SAE authentication uses finite field cryptography to prove knowledge of a shared password. FILS authentication uses either trusted public keys or a shared key derived out-of-band.  FILS authentication uses three alternative procedures._
@@ -344,7 +376,8 @@ retrun to STATE 2 - AUTHENTICATED (for roaming / re-connections)
 
 
 
-## 🤳🏾🔁📡 IEEE 802.11: `State Machine`
+## 🤳🏾🔁📡 IEEE 802.11 State Machine: `Resources`
+
 - [IEEE 802.11 Wi-Fi Discovey, Connection, Roaming & Disconnection process](https://community.nxp.com/t5/Wireless-Connectivity-Knowledge/802-11-Wi-Fi-Connection-Disconnection-process/ta-p/1121148) _`info`_
 - [802.11 State Machine :: `Diagram 1`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/c8715d19-fe2f-42e6-914a-144d3fb4e70d) _`diagram`_
 - [802.11 State Machine :: `Diagram 2`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/5826a51b-eb23-4fba-bdeb-73ba23295819)
@@ -357,7 +390,9 @@ retrun to STATE 2 - AUTHENTICATED (for roaming / re-connections)
 - https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html
 - [802.11 WLAN States: Difference between WLAN class1 class2 and class3](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)<br><br>
 
-
+- [Wireless association: active vs passive scanning, & roaming @ Sunny](https://youtu.be/HPJonmd8z1c?si=g47qTqJ5ma4iF3c0)
+- [A study of the discovery process in 802.11 networks](https://www.researchgate.net/publication/215502402_A_study_of_the_discovery_process_in_80211_networks) _`pdf study`_
+- https://community.nxp.com/t5/Wireless-Connectivity-Knowledge/802-11-Wi-Fi-Connection-Disconnection-process/ta-p/1121148
 
 
 
