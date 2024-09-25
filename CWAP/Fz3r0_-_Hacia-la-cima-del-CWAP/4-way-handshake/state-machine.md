@@ -115,6 +115,11 @@ There are two scanning methods: `passive scanning` and `active scanning`.
 
 ## BSS Doscovery: `Beacon` VS `Probe Response`
 
+The beacon and probe response at protocol level (e.g. seen from Wireshark) are almost identical, with the main differences being:
+
+- **The beacon frame contains a Traffic Indication Map (TIM) element**, which is used for Power Management. This element informs client devices (STAs) if there is buffered traffic waiting for them at the Access Point (AP).
+- The vendor-specific elements content can vary Depending on the each vendor. However, in general, **probe responses tend to include more detailed vendor-specific information compared to beacons**. This is because probe responses are tailored to a specific request from a client device (STA), while beacons are more generic.
+
 ### Beacon (From: AP):
 
 ![image](https://github.com/user-attachments/assets/a1e747ab-bfc4-43e8-ad0d-387519957a73)
