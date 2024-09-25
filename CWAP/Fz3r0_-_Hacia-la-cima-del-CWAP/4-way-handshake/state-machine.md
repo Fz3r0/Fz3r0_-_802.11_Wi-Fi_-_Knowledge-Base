@@ -80,7 +80,7 @@ Since the introduction of 802.11i security mechanisms, the IEEE 802.11-2012 stan
 
 To join any network first client or station needs to find it the network. In the wired network, just plugging the cable or jack will find the network. In the wireless world, this requires identification of the compatible network before joining process can begin. This identification process of the network is referred as `scanning` and its part of the `BSS Discovery` process.
 
-## 🛸🔍 Scanning
+## 🛸🔍 BSS Discovery: `Scanning`
 
 Several parameters are needed in the scanning process. These parameters are: 
 
@@ -114,12 +114,24 @@ There are two scanning methods: `passive scanning` and `active scanning`.
 - The most used method today by client STAs like smartphones or computers. 
 
 
-
-
-## 🪪🛡️🔐 IEEE 802.11: `Authentication`
-_These are the Authentication Methods a STA can use to access to a BSS | IEEE Std 802.11 defines five 802.11 authentication methods: Open System authentication, Shared Key authentication, FT authentication, and simultaneous authentication of equals (SAE), and fast initial link setup (FILS) authentication. Open System authentication admits any STA to the DS. Shared Key authen-tication relies on WEP to demonstrate knowledge of a WEP encryption key. FT authentication relies on keys derived during the initial mobility domain association to authenticate the stations as defined in Clause 12 (Fast BSS transition). SAE authentication uses finite field cryptography to prove knowledge of a shared password. FILS authentication uses either trusted public keys or a shared key derived out-of-band.  FILS authentication uses three alternative procedures._
+## 🪪🛡️🔐 State 1 to State 2: `Authentication`
+_| _
 
 ### 🛡️🔐 Authentication Methods
+
+IEEE Std 802.11 defines five 802.11 authentication methods that a STA can use to access to a BSS:
+
+1. 🔓 Open System authentication: Admits any STA to the DS || Used for modern RSNA: `802.11i`(**PSK**, **802.1X**) _(after association state)_
+2. 🔑 Shared Key authentication: Relies on WEP (LEGACY) to demonstrate knowledge of a WEP encryption key
+3. 🔄 FT authentication: Authenticates STAs using a key derived from previous authentication (keys derived during the initial mobility domain association) as defined in Clause 12 (Fast BSS transition) || For `802.11r` FT 
+4. 🌉 SAE Authentication: Uses finite field cryptography to prove knowledge of a shared password || For `WPA3` or `802.11s` (Diffie-Hellman/Mesh)
+5. 🚀 FILS Authentication: Uses three alternative procedures. (Minimize the time required for the initial link setup (for high density networks))
+
+
+
+
+These are the Authentication Methods a STA can use to access to a BSS: 
+
 - [802.11 Authentication Methods](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/46509dcd-047a-4529-b4c5-c9cad8b88760) _`table`_
 - [IEEE	Access control and data confidentiality services: Open System, Shared Key, FT, SAE & FILS ](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/files/13836501/11-13-1488-02-00ai-comment-resolution-for-section-4.docx) _`word report`_ <br><br>
     - [🔓 `Open System` :: `0`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/da6135ed-352d-42c1-a73a-736112c79650) No authentication | Every client is allowed || used for modern: `802.11i`(`PSK`, `802.1X`) (after association state)
