@@ -106,10 +106,6 @@ There are two scanning methods: `passive scanning` and `active scanning`.
 - `client STA`: Unicast: `Probe Request` (Directed Probe) : If any STA used the beacon in passive scanning mode, will answer with a `Directed Probe Response` 
 - Not so used today by smartphones or computers, but still in use. 
 
-![image](https://github.com/user-attachments/assets/6edf00bb-20a6-4e69-908e-492f53c2678d)
-
-![image](https://github.com/user-attachments/assets/d5465d23-cc64-4002-9367-42f4bc4d3604)
-
 ### 🛸🤳🏾 BSS Discovery Scanning Methods: `Active Scanning`
 
 - `client STA`: **init effort of finding an AP**
@@ -117,6 +113,15 @@ There are two scanning methods: `passive scanning` and `active scanning`.
 - `client STA`: Unicast: `Probe Request` (Directed Probe) : If any AP answers the first broadcast probe with a `Directed Probe Response` (or the STA already knows the SSID)
 - The most used method today by client STAs like smartphones or computers. 
 
+## BSS Doscovery: `Beacon` VS `Probe Response`
+
+### Beacon (From: AP):
+
+![image](https://github.com/user-attachments/assets/a1e747ab-bfc4-43e8-ad0d-387519957a73)
+
+### Probe Request (From: AP):
+
+![image](https://github.com/user-attachments/assets/34295be6-fa9b-48a6-9554-7c6ce9f12b4e)
 
 ## 🪪🛡️🔐 State 1 to State 2: `Authentication`
 _| _
