@@ -44,13 +44,6 @@ Since the introduction of 802.11i security mechanisms, the IEEE 802.11-2012 stan
 - ✅**`State 3`**: **`Authenticated`**, **`Associated`** `Client Associated to AP (Open Auth Completed OK!)` | **`Class 1, 2 & 3`** | `RSNA`: **Blocked** _(Pending RSNA)_
 - 🔓**`State 4`**: **`Authenticated`**, **`Associated`** `STA Fully Connected to AP (RSNA OK!)` Frames: **`Class 1, 2 & 3`** | `RSNA`: **Un-Blocked** _(RSNA OK!)_
 
-![image](https://github.com/user-attachments/assets/ca557eaf-fda8-431e-aca5-9c393fff14b4)
-
-![image](https://github.com/user-attachments/assets/45325a13-68b4-409a-84c3-8a11b4fe9ed4)
-
-![WPA2-PSK-Association-Fz3r0_Password123](https://github.com/user-attachments/assets/12639f76-8ecd-4096-a7c3-52873ae38532)
-
-
 ### 🥇🥈🥉 802.11 State Machine: `Frame Classes` `1`, `2`, `3`
 
 - [802.11 WLAN States: Difference between WLAN class1 class2 and class3](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)<br><br>
@@ -66,6 +59,14 @@ Since the introduction of 802.11i security mechanisms, the IEEE 802.11-2012 stan
         - [**Control**: `PS-Poll`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
         - [**Management**: `Deauthentication`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
         - [**Data**: `Any frame with ToDS or FromDS true(1)`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+
+     
+![image](https://github.com/user-attachments/assets/ca557eaf-fda8-431e-aca5-9c393fff14b4)
+
+![image](https://github.com/user-attachments/assets/45325a13-68b4-409a-84c3-8a11b4fe9ed4)
+
+![WPA2-PSK-Association-Fz3r0_Password123](https://github.com/user-attachments/assets/12639f76-8ecd-4096-a7c3-52873ae38532)
+
       
 
 
