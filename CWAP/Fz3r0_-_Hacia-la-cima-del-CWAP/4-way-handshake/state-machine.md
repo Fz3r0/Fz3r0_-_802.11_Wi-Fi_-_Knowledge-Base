@@ -39,26 +39,32 @@ Since the introduction of 802.11i security mechanisms, the IEEE 802.11-2012 stan
 
 ## ⛔➡️✅ 802.11 State Machine: `4 States`
 
-- ⛔**`State 1`**: **Unauthenticated**, **Unassociated** `Client NO Connected` | **`Class 1`** > **Beacon : AuthReq/Res : ProbeReq/Res** 
-- ❓**`State 2`**: **`Authenticated`**, **Unassociated** `Client Authenticated (AP validating STA capabilities)` | **`Class 1 & 2`** > **AssociReq/Res**
-- ✅**`State 3`**: **`Authenticated`**, **`Associated`** `Client Associated to AP (Open Auth Completed OK!)` | **`Class 1, 2 & 3`** | `RSNA`: **Blocked** _(Pending RSNA)_
-- 🔓**`State 4`**: **`Authenticated`**, **`Associated`** `STA Fully Connected to AP (RSNA OK!)` Frames: **`Class 1, 2 & 3`** | `RSNA`: **Un-Blocked** _(RSNA OK!)_
+| **State #**        | **State Name**                 | **Description**                                                  | **Frame Classes**      | **RSNA**                    |
+|--------------------|--------------------------------|---------------------------------------------------------------------|------------------------|-----------------------------|
+| ⛔ **State 1**     | Unauthenticated, Unassociated |  Client STA NOT Connected                                           | Class 1               | /                           |
+| ❓ **State 2**     | `Authenticated`, Unassociated |  Client STA Authenticated to AP _(AP validating STA capabilities)_  | Class 1 & 2           | /                           |
+| ✅ **State 3**     | `Authenticated`, `Associated` |  Client STA Associated to AP _(open-auth)_                          | Class 1, 2 & 3        | RSNA: Blocked (Pending RSNA) |
+| 🔓 **State 4**     | `Authenticated`, `Associated`   |  Client STA Associated to AP _(RSNA)_                               | Class 1, 2 & 3        | RSNA: Un-Blocked (RSNA OK!)  |
 
 ### 🥇🥈🥉 802.11 State Machine: `Frame Classes` `1`, `2`, `3`
 
-- [802.11 WLAN States: Difference between WLAN class1 class2 and class3](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)<br><br>
-    - [**🥇🖽 `Class1 Frames`**](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
-        - [**Control**: `RTS & CTS`, `ACK`, `CF-End+CF-Ack & CF-End`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
-        - [**Management**: `Beacon`, `Probe Req/Res`, `Auth/Deauth`, `ATIM`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
-        - [**Data**: `Any frame with ToDS & FromDS false(0)`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)<br><br>
-    - [**🥈🖽 `Class2 Frames`**](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
-        - [**Control**: _None_](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
-        - [**Management**: `Association Req/Res`, `Re-Association Req/Res`. `Disassociation`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
-        - [**Data**: _None_](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)<br><br>
-    - [**🥉🖽 `Class3 Frames`**](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
-        - [**Control**: `PS-Poll`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
-        - [**Management**: `Deauthentication`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
-        - [**Data**: `Any frame with ToDS or FromDS true(1)`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+**🥇🖽 `Class1 Frames`**
+
+- [**Control**: `RTS & CTS`, `ACK`, `CF-End+CF-Ack & CF-End`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+- [**Management**: `Beacon`, `Probe Req/Res`, `Auth/Deauth`, `ATIM`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+- [**Data**: `Any frame with ToDS & FromDS false(0)`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)<br><br>
+
+**🥈🖽 `Class2 Frames`
+
+- [**Control**: _None_](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+- [**Management**: `Association Req/Res`, `Re-Association Req/Res`. `Disassociation`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+- [**Data**: _None_](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)<br><br>
+
+**🥉🖽 `Class3 Frames`
+
+- [**Control**: `PS-Poll`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+- [**Management**: `Deauthentication`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+- [**Data**: `Any frame with ToDS or FromDS true(1)`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
 
      
 ![image](https://github.com/user-attachments/assets/ca557eaf-fda8-431e-aca5-9c393fff14b4)
@@ -349,7 +355,7 @@ retrun to STATE 2 - AUTHENTICATED (for roaming / re-connections)
 - [802.11 Association Process Explained @ Meraki](https://documentation.meraki.com/MR/Wi-Fi_Basics_and_Best_Practices/802.11_Association_Process_Explained)
 - https://dot11ap.wordpress.com/the-ieee-802-11-state-machine/
 - https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html
-
+- [802.11 WLAN States: Difference between WLAN class1 class2 and class3](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)<br><br>
 
 
 
