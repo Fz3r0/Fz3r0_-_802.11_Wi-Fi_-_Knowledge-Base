@@ -115,10 +115,15 @@ There are two scanning methods: `passive scanning` and `active scanning`.
 
 ## BSS Doscovery: `Beacon` VS `Probe Response`
 
-The beacon and probe response at protocol level (e.g. seen from Wireshark) are almost identical, with the main differences being:
+The beacon and probe response frames are sent by the AP to start/continue the dicovery process (depending on the scanning method):
 
-- **The beacon frame contains a Traffic Indication Map (TIM) element**, which is used for Power Management. This element informs client devices (STAs) if there is buffered traffic waiting for them at the Access Point (AP).
-- The vendor-specific elements content can vary Depending on the each vendor. However, in general, **probe responses tend to include more detailed vendor-specific information compared to beacons**. This is because probe responses are tailored to a specific request from a client device (STA), while beacons are more generic.
+- `Passive Scanning`: The **beacon** is broadcasted periodically by the AP to advertise its presence and SSID without requiring any action from the client device. STAs listen to these beacons to discover available networks.
+- `Active Scanning`: The **probe response** frame is used in active scanning. In this case, the STA initiates the discovery process by sending a probe request (often as a broadcast) to inquire about available networks. The AP responds with a probe response, which provides detailed information about the network, often including more specific details about vendor-specific capabilities.
+
+**The beacon and probe response at protocol level (e.g. seen from Wireshark) are almost identical**, with the main differences being:
+
+- **The `beacon frame` contains a `Traffic Indication Map (TIM)` element**, which is used for Power Management. This element informs client devices (STAs) if there is buffered traffic waiting for them at the Access Point (AP).
+- The `vendor-specific elements` content can vary depending on the each vendor. However, in general, **probe responses tend to include more detailed vendor-specific information compared to beacons**. This is because probe responses are tailored to a specific request from a client device (STA), while beacons are more generic.
 
 ### Beacon (From: AP):
 
