@@ -131,7 +131,10 @@ The beacon and probe response frames are sent by the AP to start/continue the di
 
 ### Probe Request (From: AP):
 
-![image](https://github.com/user-attachments/assets/34295be6-fa9b-48a6-9554-7c6ce9f12b4e)
+![probe_response_frame](https://github.com/user-attachments/assets/e5d5f1d7-070d-4c62-9149-778d96fbb929)
+
+
+
 
 ## 🪪🛡️🔐 State 1 to State 2: `Authentication`
 _| _
@@ -412,7 +415,7 @@ retrun to STATE 2 - AUTHENTICATED (for roaming / re-connections)
 
 ![image](https://github.com/user-attachments/assets/a1e747ab-bfc4-43e8-ad0d-387519957a73)
 
-
+![image](https://github.com/user-attachments/assets/34295be6-fa9b-48a6-9554-7c6ce9f12b4e)
 
 
 
