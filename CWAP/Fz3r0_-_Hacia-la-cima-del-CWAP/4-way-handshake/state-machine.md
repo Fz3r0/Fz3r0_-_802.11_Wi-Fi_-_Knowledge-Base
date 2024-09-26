@@ -127,7 +127,10 @@ The beacon and probe response frames are sent by the AP to start/continue the di
 
 ### Beacon (From: AP):
 
-![image](https://github.com/user-attachments/assets/a1e747ab-bfc4-43e8-ad0d-387519957a73)
+![beacon_frame](https://github.com/user-attachments/assets/0280e08d-9fd5-4809-ab63-d29adc25fcac)
+
+
+
 
 ### Probe Request (From: AP):
 
@@ -407,6 +410,15 @@ retrun to STATE 2 - AUTHENTICATED (for roaming / re-connections)
 
 
 
+
+
+
+![image](https://github.com/user-attachments/assets/a1e747ab-bfc4-43e8-ad0d-387519957a73)
+
+
+
+
+
 ## 🤳🏾🔁📡 IEEE 802.11 State Machine: `Resources`
 
 - [IEEE 802.11 Wi-Fi Discovey, Connection, Roaming & Disconnection process](https://community.nxp.com/t5/Wireless-Connectivity-Knowledge/802-11-Wi-Fi-Connection-Disconnection-process/ta-p/1121148) _`info`_
@@ -424,6 +436,8 @@ retrun to STATE 2 - AUTHENTICATED (for roaming / re-connections)
 - [Wireless association: active vs passive scanning, & roaming @ Sunny](https://youtu.be/HPJonmd8z1c?si=g47qTqJ5ma4iF3c0)
 - [A study of the discovery process in 802.11 networks](https://www.researchgate.net/publication/215502402_A_study_of_the_discovery_process_in_80211_networks) _`pdf study`_
 - https://community.nxp.com/t5/Wireless-Connectivity-Knowledge/802-11-Wi-Fi-Connection-Disconnection-process/ta-p/1121148
+
+
 
 
 
