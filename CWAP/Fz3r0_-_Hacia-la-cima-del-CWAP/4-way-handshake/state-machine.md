@@ -134,19 +134,23 @@ The beacon and probe response frames are sent by the AP to start/continue the di
 
 ![probe_response_frame](https://github.com/user-attachments/assets/e5edabdb-45a0-4eba-81ff-48d3bf4f9838)
 
-🛸📢 BSS Discovery: `Probe Request` VS `Directed Probe Request`
+## 🛸📢 BSS Discovery: `Probe Request (Wildcard)` VS `Probe Request (Directed)`
 
-A Probe Request is a broadcast frame sent by a client STA when it actively searches for available networks in its vicinity. This can happen when a client device wants to discover networks without having a specific one in mind. Probe Requests are utilized in both active scanning and passive scanning scenarios:
+A Probe Request is a broadcast frame sent by a client STA when it actively searches for available networks in its vicinity. This can happen in both scenarios: 1) when a client device wants to discover networks without having a specific one in mind, or 2) if the client already knows the SSID of the network he wants to join. 
+
+Probe Requests are utilized in both active scanning and passive scanning scenarios:
 
 - Active Scanning: The client STA actively sends a Probe Request frame without specifying a particular SSID (Service Set Identifier). This request is essentially a query to all APs within the Basic Service Area (BSA) for available networks. <br><br>
 - Passive Scanning: Alternatively, if the STA has been using passive scanning—listening to beacon frames broadcast by APs—it may still send a Probe Request if it has yet to receive sufficient network information. <br><br>
 
-### Probe Request
+### Probe Request: `Wildcard`
 
-- **The `Probe Request` are broadcast frames used typically in Active Scanning and does not contain an SSID field or uses a `wildcard SSID (null SSID)`**, signaling to all APs in the area that the client is seeking any available network.
+- **The `Probe Request` are broadcast frames used typically in Active Scanning and does not contain an SSID field or uses a `wildcard SSID (null SSID)`**, **signaling to all APs in the area that the client is seeking any available network**.
 - Upon receiving a broadcast Probe Request, any AP within range may respond with a Probe Response, providing the client STA with details such as the network’s SSID, supported data rates, and security configurations.
 
-### Directed Probe Request Directed
+![probe_request_wildcard](https://github.com/user-attachments/assets/15ff4cf3-c9dc-49ae-afb9-1bb83b003d50)
+
+### Probe Request: `Directed`
 
 - **The Directed Probe Request includes the `specific SSID of the desired network` (eg. Fz3r0_Free_Wi-Fi)**, making it a more focused request than the generic Probe Request.
 - Only APs that are broadcasting the specified SSID will respond with a Probe Response, reducing unnecessary traffic and accelerating the connection process.
