@@ -101,12 +101,16 @@ There are two scanning methods: `passive scanning` and `active scanning`.
 
 ### 🛸📡 BSS Discovery Scanning Methods: `Passive Scanning`
 
+The **beacon** is broadcasted periodically by the AP to advertise its presence and SSID without requiring any action from the client device. STAs listen to these beacons to discover available networks.
+
 - `AP`: **init effort of finding a STA, sending the announcement of a SSID**
 - `AP`: Broadcast: `Beacon` (Only one channel) : AP send a beacon frame to the BSA announcing the SSID, waiting for a directed probe request from any STA who "heard" the beacon.
 - `client STA`: Unicast: `Probe Request` (Directed Probe) : If any STA used the beacon in passive scanning mode, will answer with a `Directed Probe Response` 
 - Not so used today by smartphones or computers, but still in use. 
 
 ### 🛸🤳🏾 BSS Discovery Scanning Methods: `Active Scanning`
+
+The **probe response** frame is used in active scanning. In this case, the **STA initiates the discovery process by sending a probe request (often as a broadcast)** to inquire about available networks. **The AP responds with a probe response**, which provides detailed information about the network, often including more specific details about vendor-specific capabilities.
 
 - `client STA`: **init effort of finding an AP**
 - `client STA`: Broadcast: `Probe Request` (All Channels) : STA trying to find any SSID broadcasting around with any name. 
@@ -115,15 +119,12 @@ There are two scanning methods: `passive scanning` and `active scanning`.
 
 ## BSS Doscovery: `Beacon` VS `Probe Response`
 
-The beacon and probe response frames are sent by the AP to start/continue the dicovery process (depending on the scanning method):
+The beacon and probe response frames are sent by the AP to start/continue the dicovery process (depending on the scanning method: Passive (beacon) or Active (probe response)):
 
-- `Passive Scanning`: The **beacon** is broadcasted periodically by the AP to advertise its presence and SSID without requiring any action from the client device. STAs listen to these beacons to discover available networks.
-- `Active Scanning`: The **probe response** frame is used in active scanning. In this case, the **STA initiates the discovery process by sending a probe request (often as a broadcast)** to inquire about available networks. **The AP responds with a probe response**, which provides detailed information about the network, often including more specific details about vendor-specific capabilities.
+**The beacon frame and the probe response at the protocol level (e.g., as seen in Wireshark) are almost identical**, with the main differences being:
 
-**The beacon and probe response at protocol level (e.g. seen from Wireshark) are almost identical**, with the main differences being:
-
-- **The `beacon frame` contains a `Traffic Indication Map (TIM)` element**, which is used for Power Management, while **`probe responses` will NEVER contain a TIM**. This element informs client STAs if there is buffered traffic waiting for them at the AP using the beacon frame.
-- The `vendor-specific elements` content can vary depending on the each vendor. However, in general, **`probe responses` tend to include more detailed vendor-specific information compared to `beacons`**. This is because probe responses are tailored to a specific request from a client device (STA), while beacons are more generic.
+- **The `beacon frame` contains a `Traffic Indication Map (TIM)` element, which is used for power management (PS)**. **`Probe responses` will NEVER contain a TIM**. The TIM element informs client STAs if there is buffered traffic waiting for them at the AP, using the beacon frame. **This is the most important differente between a beacon and a probe response at protocol perspective**. <br><br>
+- The content of `vendor-specific elements` can vary depending on the vendor or deployment. However, in general, **`probe responses` tend to include more detailed vendor-specific information compared to `beacons`**. This is because probe responses are tailored to a specific request from a client device (STA), while beacons are more generic. For example, in the next probe response screenshoot, it is noticeable that there is much more information in the vendor-specific elements than in the beacon. Most of this data comes from the WPS announcement _(even though we will not be using WPS authentication for this lab)_.
 
 ### Beacon (From: AP):
 
@@ -132,8 +133,6 @@ The beacon and probe response frames are sent by the AP to start/continue the di
 ### Probe Request (From: AP):
 
 ![probe_response_frame](https://github.com/user-attachments/assets/e5d5f1d7-070d-4c62-9149-778d96fbb929)
-
-
 
 
 ## 🪪🛡️🔐 State 1 to State 2: `Authentication`
