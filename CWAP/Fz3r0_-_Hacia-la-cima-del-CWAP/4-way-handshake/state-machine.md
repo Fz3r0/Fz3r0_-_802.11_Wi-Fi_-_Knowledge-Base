@@ -141,12 +141,17 @@ A Probe Request is a broadcast frame sent by a client STA when it actively searc
 - Active Scanning: The client STA actively sends a Probe Request frame without specifying a particular SSID (Service Set Identifier). This request is essentially a query to all APs within the Basic Service Area (BSA) for available networks. <br><br>
 - Passive Scanning: Alternatively, if the STA has been using passive scanning—listening to beacon frames broadcast by APs—it may still send a Probe Request if it has yet to receive sufficient network information. <br><br>
 
-Probe Request
+### Probe Request
 
-- The Probe Request typically does not contain an SSID field or uses a wildcard SSID (null SSID), signaling to all APs in the area that the client is seeking any available network.
+- **The `Probe Request` are broadcast frames used typically in Active Scanning and does not contain an SSID field or uses a `wildcard SSID (null SSID)`**, signaling to all APs in the area that the client is seeking any available network.
 - Upon receiving a broadcast Probe Request, any AP within range may respond with a Probe Response, providing the client STA with details such as the network’s SSID, supported data rates, and security configurations.
 
-Probe Request (Directed)
+### Directed Probe Request Directed
+
+- **The Directed Probe Request includes the `specific SSID of the desired network` (eg. Fz3r0_Free_Wi-Fi)**, making it a more focused request than the generic Probe Request.
+- Only APs that are broadcasting the specified SSID will respond with a Probe Response, reducing unnecessary traffic and accelerating the connection process.
+- In passive scanning scenarios, directed probe request are sent When a client has previously heard a beacon frame or has prior knowledge of a network (e.g., stored SSID from a previous connection).
+- In active scanning scenarios, directed probe request are sent after the AP already answered the first probe request (wildcard SSID (null SSID)) sent by the AP looking for networks. 
 
 ## 🪪🛡️🔐 State 1 to State 2: `Authentication`
 _| _
@@ -428,6 +433,12 @@ retrun to STATE 2 - AUTHENTICATED (for roaming / re-connections)
 ![image](https://github.com/user-attachments/assets/a1e747ab-bfc4-43e8-ad0d-387519957a73)
 
 ![image](https://github.com/user-attachments/assets/34295be6-fa9b-48a6-9554-7c6ce9f12b4e)
+
+---
+
+![image](https://github.com/user-attachments/assets/33bbdc21-a870-4e2a-aa8f-cc66f464bdcc)
+
+![image](https://github.com/user-attachments/assets/17def7c2-e4b6-42e2-8d4d-37ab4a7f44e4)
 
 
 
