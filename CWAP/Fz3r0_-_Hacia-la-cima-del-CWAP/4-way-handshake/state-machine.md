@@ -130,7 +130,7 @@ The beacon and probe response frames are sent by the AP to start/continue the di
 
 ![beacon_frame](https://github.com/user-attachments/assets/44e72191-5f7e-42be-a95e-5aa1310adbcb)
 
-### 🛸🔎 Probe Request (From: AP):
+### 🛸🔎 Probe Response (From: AP):
 
 ![probe_response_frame](https://github.com/user-attachments/assets/e5edabdb-45a0-4eba-81ff-48d3bf4f9838)
 
