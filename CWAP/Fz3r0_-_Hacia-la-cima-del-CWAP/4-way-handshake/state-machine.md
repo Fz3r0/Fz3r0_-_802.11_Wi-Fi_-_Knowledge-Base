@@ -148,7 +148,7 @@ Probe Requests are utilized in both active scanning and passive scanning scenari
 - **The `Probe Request` are broadcast frames used typically in Active Scanning and does not contain an SSID field or uses a `wildcard SSID (null SSID)`**, **signaling to all APs in the area that the client is seeking any available network**.
 - Upon receiving a broadcast Probe Request, any AP within range may respond with a Probe Response, providing the client STA with details such as the network’s SSID, supported data rates, and security configurations.
 
-![probe_request_wildcard](https://github.com/user-attachments/assets/15ff4cf3-c9dc-49ae-afb9-1bb83b003d50)
+![probe_request_wildcard](https://github.com/user-attachments/assets/e397a672-e0a1-4c5e-81fc-d3ac8f271ba0)
 
 ### Probe Request: `Directed`
 
