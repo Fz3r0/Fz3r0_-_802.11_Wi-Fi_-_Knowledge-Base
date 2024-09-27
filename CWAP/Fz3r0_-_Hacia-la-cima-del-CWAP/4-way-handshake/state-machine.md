@@ -117,7 +117,7 @@ The **probe response** frame is used in active scanning. In this case, the **STA
 - `client STA`: Unicast: `Probe Request` (Directed Probe) : If any AP answers the first broadcast probe with a `Directed Probe Response` (or the STA already knows the SSID)
 - The most used method today by client STAs like smartphones or computers. 
 
-## BSS Doscovery: `Beacon` VS `Probe Response`
+## 🛸📢 BSS Discovery: `Beacon` VS `Probe Response`
 
 The beacon and probe response frames are sent by the AP to start/continue the dicovery process (depending on the scanning method: Passive (beacon) or Active (probe response)):
 
@@ -126,13 +126,14 @@ The beacon and probe response frames are sent by the AP to start/continue the di
 - **The `beacon frame` contains a `Traffic Indication Map (TIM)` element, which is used for power management (PS)**. **`Probe responses` will NEVER contain a TIM**. The TIM element informs client STAs if there is buffered traffic waiting for them at the AP, using the beacon frame. **This is the most important differente between a beacon and a probe response at protocol perspective**. <br><br>
 - The content of `vendor-specific elements` can vary depending on the vendor or deployment. However, in general, **`probe responses` tend to include more detailed vendor-specific information compared to `beacons`**. This is because probe responses are tailored to a specific request from a client device (STA), while beacons are more generic. For example, in the next probe response screenshoot, it is noticeable that there is much more information in the vendor-specific elements than in the beacon. Most of this data comes from the WPS announcement _(even though we will not be using WPS authentication for this lab)_.
 
-### Beacon (From: AP):
+### 📢🔎 Beacon (From: AP):
 
-![beacon_frame](https://github.com/user-attachments/assets/75201e41-b148-49fe-921e-ec473dc37f05)
+![beacon_frame](https://github.com/user-attachments/assets/44e72191-5f7e-42be-a95e-5aa1310adbcb)
 
-### Probe Request (From: AP):
+### 🛸🔎 Probe Request (From: AP):
 
-![probe_response_frame](https://github.com/user-attachments/assets/e5d5f1d7-070d-4c62-9149-778d96fbb929)
+![probe_response_frame](https://github.com/user-attachments/assets/e5edabdb-45a0-4eba-81ff-48d3bf4f9838)
+
 
 
 ## 🪪🛡️🔐 State 1 to State 2: `Authentication`
