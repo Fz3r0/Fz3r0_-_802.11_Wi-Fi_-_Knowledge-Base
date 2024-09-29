@@ -444,6 +444,18 @@ retrun to STATE 2 - AUTHENTICATED (for roaming / re-connections)
 
 ![image](https://github.com/user-attachments/assets/17def7c2-e4b6-42e2-8d4d-37ab4a7f44e4)
 
+---
+
+![image](https://github.com/user-attachments/assets/625c74f9-412d-441c-bff0-62a9cacba73b)
+iphone
+
+![image](https://github.com/user-attachments/assets/f73757c8-c04c-4d98-8e8b-21bd0570e550)
+iphone - respuesta
+
+//
+
+
+
 
 
 ## 🤳🏾🔁📡 IEEE 802.11 State Machine: `Resources`
