@@ -57,3 +57,4 @@ hese protocols run on top of 802.11 and enable the Hotspot 2.0 experience
 - https://www.cisco.com/c/en/us/td/docs/wireless/controller/9800/17-1/config-guide/b_wl_17_11_cg/hotspot2.pdf
 - https://www.ironwifi.com/help/ruckus-wireless-lan-controller-passpoint-configuration
 - https://support.alcadis.nl/Support_files/Ruckus/SmartZone//Manuals/SmartZone%206.0.x/Smartzone%206.0.0.0.1331/SmartZone-6.0.0-Hotspot2.0-Guide-RevA-20210406.pdf
+- https://higherlogicdownload.s3.amazonaws.com/HPE/MigratedAttachments/63AF17E3-09CD-4369-A476-CD91D4FA888B-1-WP_PasspointWiFi_062912.pdf
