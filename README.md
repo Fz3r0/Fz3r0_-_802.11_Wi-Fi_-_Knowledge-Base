@@ -7809,10 +7809,12 @@ _Outlines a common seven-step methodology from problem identification to solutio
 - [Zabbix](https://www.zabbix.com/) _The all-in-one, open-source solution that lets you monitor anything_
 - [Prometheus](https://prometheus.io/) _Free software application used for event monitoring and alerting_
 - [LAN Speed](https://totusoft.com/lanspeed) _LAN monitoring for just $10 (designed for small LANs)_
+- [Ntop](https://www.ntop.org/products/traffic-analysis/ntop/) _High-Speed Web-based Traffic Analysis and Flow Collection_
 
 ## Monitoring Labs
 
 - [Prometheus y Node Exporter para visualizar en tiempo real con Grafana el estado de un sistema Linux](https://blog.elhacker.net/2024/10/como-instalar-prometheus-y-node-exporter-graficas-monitorizar-tiempo-real-grafana-linux-windows.html)
+- [Ntopng, un monitor de trafico de red avanzado](https://blog.elhacker.net/2024/10/ntopng-monitor-analizador-trafico-red-avanzado.html)
 
 ---
 
@@ -7895,6 +7897,7 @@ _When it comes to protocol analysis, visualization tools are essential for trans
 | [**Mojo Packets :: Peter Mackenzee**](https://www.youtube.com/watch?v=r4fMGfiF9Jo)          | Visualization tool for packet analysis (discontinued).                                                |
 | [**Packets :: Arista Networks**](https://packets.arista.com/site/portal?fallbackUrl=..%2Fupload%2Fupload) | Platform for comprehensive packet capture and visual analysis.                                         |
 | **Built-in Visualization Tools**                                                           | Includes built-in visualization tools like Ruckus SmartZone for graphing and troubleshooting authentications and disconnections. |
+| [**Ntop**](https://www.ntop.org/products/traffic-analysis/ntop/) | High-Speed Web-based Traffic Analysis and Flow Collection   |                         |
 
 ## ➰🦈🎣 Protocol Analysis: `Capturing 802.3 Freames`
 _Ethernet 802.3 captures involve the examination of data packets from Layer 2 (Data Link) to the upper layers (3-7) of the OSI model. This process is crucial for understanding network traffic, troubleshooting issues, and ensuring efficient network performance. Various methods exist to capture this traffic, each with its advantages and limitations._
