@@ -1,5 +1,67 @@
 # Hotspot 2.0 (Passpoint)
 
+Introducción a Hotspot 2.0
+La Wi-Fi Alliance (WFA) lanzó la especificación IEEE 802.11u (también conocida como Hotspot 2.0) en febrero de 2011. Uno de los principales objetivos de la tecnología Hotspot 2.0 es simplificar el acceso de los dispositivos móviles a las redes Wi-Fi.
+
+Los componentes principales de la tecnología son:
+
+- Descubrimiento y selección automática de redes
+- Autenticación segura
+- Online sign-up (OSU)
+- Gestión de políticas
+
+Hotspot 2.0 Release 1 se centra en los componentes de descubrimiento y selección automática de redes, y autenticación segura, mientras que la Release 2 abarca la especificación de los componentes de Online sign-up y gestión de políticas.
+
+## Operación Básica de Hotspot 2.0
+
+Un dispositivo móvil compatible con Hotspot 2.0 se comunica con la infraestructura Wi-Fi compatible con Hotspot 2.0 (Access Points) para descubrir el SSID (Service Set Identifier) de la red y asociarse a él.
+
+Luego se conecta de manera segura a ese SSID presentando sus credenciales de acceso. Tras una autenticación exitosa, el dispositivo se conecta de forma segura a Wi-Fi con Hotspot 2.0 habilitado. Si un dispositivo móvil no tiene credenciales preexistentes, no se asociará automáticamente a la red WLAN de Hotspot 2.0. En su lugar, el usuario será notificado de los servicios de Online Signup (OSU) si están disponibles. Si el usuario elige inscribirse en uno de estos servicios OSU, será dirigido a un portal de registro a través de la red Hotspot 2.0 onboarding WLAN. Después de una autenticación exitosa, al usuario se le proporcionará un objeto de gestión basado en los estándares de Hotspot 2.0, conocido como Per-Provider Subscription Management object (PPS-MO). El usuario será desconectado de la red onboarding WLAN y reconectado a la red de acceso segura de Hotspot 2.0.
+
+La tecnología Hotspot 2.0 permite a los usuarios hacer roaming sin interrupciones entre la red Wi-Fi del proveedor en casa y la red Wi-Fi visitada en ubicaciones remotas. Un proveedor de Wi-Fi puede asociarse con varios socios de roaming para proporcionar acceso Wi-Fi a los suscriptores de los socios. Los socios de roaming pueden incluir MSOs, MNOs, operadores de línea fija, lugares públicos, empresas y básicamente cualquier entidad que tenga activos Wi-Fi, como se muestra en el siguiente diagrama.
+
+![image](https://github.com/user-attachments/assets/2b9e5930-e352-4a4c-a3c6-8962ba76df1c)
+
+La red onboarding WLAN para Hotspot 2.0 puede ser una WLAN abierta o una WLAN segura. La onboarding WLAN habilita solo la autenticación del lado del servidor, mientras que el lado del cliente permanece anónimo. El proveedor de servicios OSU utiliza PPS-MO para aprovisionar los parámetros de política necesarios, como el intervalo de actualización de la suscripción, el límite de uso de datos, etc. 
+
+En una topología de red basada en Hotspot 2.0, cualquier entidad que opere la infraestructura Wi-Fi puede denominarse Wi-Fi operator, mientras que la entidad que posee la base de datos de usuarios puede denominarse Identity Provider. Un Wi-Fi operator también puede actuar como Identity Provider y puede asociarse con uno o más Identity Providers externos.
+
+## Key points de Hotspot 2.0 
+
+Hotspot 2.0 (también conocido como Passpoint®, el nombre registrado de la solución de la Wi-Fi Alliance) tiene como objetivo mejorar la experiencia de los usuarios móviles al seleccionar y unirse a un Wi-Fi hotspot proporcionando información a la estación antes de la asociación.
+Hotspot 2.0 está enfocado en permitir que un dispositivo móvil descubra automáticamente APs que tienen un acuerdo de roaming con la red de origen del usuario (o con el servicio del operador celular) y luego se conecte de manera segura.
+Hotspot 2.0 puede aprovecharse para configurar un servicio de guest hotspot, ofreciendo acceso público a los usuarios a través de sus redes Wi-Fi. Esto simplifica el proceso de acceso a redes Wi-Fi para una variedad de dispositivos con capacidades Wi-Fi, como APs, smartphones, entre otros.
+Las redes Hotspot 2.0 son creadas por operadores de Wi-Fi y proveedores de identidad.
+Un operador de Wi-Fi despliega y opera una red de acceso de APs accesibles al público o para invitados.
+Un Identity Provider proporciona servicios de red y opera la infraestructura AAA requerida para autenticar a los suscriptores.
+El operador de Wi-Fi y el Identity Provider pueden ser la misma entidad o entidades diferentes.
+Los Service Providers (SPs) que se pueden acceder en un hotspot se denominan socios de roaming para ese hotspot.
+El Identity Provider que realiza la autenticación puede proporcionar a sus suscriptores conectividad AAA a su red a través del hotspot.
+Los Identity Providers se anuncian utilizando información de la red celular 3GPP, una lista de NAI realm, o una lista de consorcio de roaming.
+Puede haber uno o más Identity Providers por red de acceso Hotspot 2.0.
+El roaming Wi-Fi se aplica en cualquier momento en que un dispositivo móvil no vea un AP perteneciente a su proveedor de red de origen.
+Un usuario podría hacer roaming en una red Wi-Fi que esté al otro lado de la ciudad o del mundo.
+Los socios de roaming pueden incluir MSOs, MNOs, operadores de línea fija, lugares públicos, empresas y básicamente cualquier otra entidad que posea activos Wi-Fi.
+El roaming puede realizarse con dispositivos de modo dual (smartphones) o dispositivos solo Wi-Fi como tablets y laptops.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Key points of Hotspot 2.0
+
 - Hotspot 2.0 (also known as Passpoint®, the trademarked name of the Wi-Fi Alliance solution) aims to improve the experience of mobile users when selecting and joining a Wi-Fi hotspot by providing information to the station prior to association.
 - Hotspot 2.0 is focused on enabling a mobile device to automatically discover APs that have a roaming arrangement with the user’s home network (or cellular carrier service) and then securely connect.
 - Hotspot 2.0 can be leveraged to set up a guest hotspot service, offering public access to users through its Wi-Fi networks. It streamlines the process of accessing Wi-Fi networks by a variety of devices that have Wi-Fi capabilities, such as APs, smartphones, and so on.
@@ -58,3 +120,4 @@ hese protocols run on top of 802.11 and enable the Hotspot 2.0 experience
 - https://www.ironwifi.com/help/ruckus-wireless-lan-controller-passpoint-configuration
 - https://support.alcadis.nl/Support_files/Ruckus/SmartZone//Manuals/SmartZone%206.0.x/Smartzone%206.0.0.0.1331/SmartZone-6.0.0-Hotspot2.0-Guide-RevA-20210406.pdf
 - https://higherlogicdownload.s3.amazonaws.com/HPE/MigratedAttachments/63AF17E3-09CD-4369-A476-CD91D4FA888B-1-WP_PasspointWiFi_062912.pdf
+- https://support.alcadis.nl/Support_files/Ruckus/SmartZone//Manuals/SmartZone%206.0.x/Smartzone%206.0.0.0.1331/SmartZone-6.0.0-Hotspot2.0-Guide-RevA-20210406.pdf
