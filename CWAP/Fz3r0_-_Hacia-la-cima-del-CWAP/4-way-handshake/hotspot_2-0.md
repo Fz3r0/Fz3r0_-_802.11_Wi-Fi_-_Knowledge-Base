@@ -1,25 +1,27 @@
 # Hotspot 2.0 (Passpoint)
 
-La `Wi-Fi Alliance (WFA)` lanzó la especificación `IEEE 802.11u` (también conocida como `Hotspot 2.0`) en febrero de 2011. Uno de los principales objetivos de la tecnología Hotspot 2.0 es **simplificar el acceso de los dispositivos móviles a las redes Wi-Fi de manera segura**.
+### Información Clave de HS2.0:
 
-Los componentes principales de la tecnología son:
+- La `Wi-Fi Alliance (WFA)` lanzó la especificación `IEEE 802.11u` (también conocida como `Hotspot 2.0`) en febrero de 2011. 
+- Uno de los principales objetivos de la tecnología Hotspot 2.0 es **simplificar el acceso de los dispositivos móviles a las redes Wi-Fi de manera segura**.
+
+### Componentes principales de la tecnología son:
 
 - Descubrimiento y selección automática de redes
 - Autenticación segura
 - Online sign-up (OSU)
 - Gestión de políticas
 
-`Hotspot 2.0 Release 1` se centra en los componentes de descubrimiento y selección automática de redes, y autenticación segura, mientras que `Hotspot 2.0 Release 2` abarca la especificación de los componentes de Online sign-up y gestión de políticas.
+### Diferencia entre releases:
 
----
+- `Hotspot 2.0 Release 1` se centra en los componentes de descubrimiento y selección automática de redes, y autenticación segura.
+- `Hotspot 2.0 Release 2` abarca la especificación de los componentes de Online sign-up y gestión de políticas.
 
-La naturaleza de Wi-Fi fue originalmente "tecnología inalámbrica en frecuencias no reguladas, disponible para todos". El resultado natural de esto fue que nunca se diseñó para tener **funciones avanzadas como las redes móviles, como roaming, descubrimiento de red, facturación, y similares**. 
+### Detalles de Hotspot 2.0:
 
-El roaming se desarrolló porque había operadores de Wi-Fi que necesitaban esta función para apoyar su modelo de negocio y servir mejor a sus clientes. IEEE nunca estandarizó la arquitectura de roaming, solo se desarrolló utilizando los protocolos existentes (como RADIUS), basado en un enfoque de mejores prácticas.
+La especificación de HotSpot 2.0 proporciona un descubrimiento automático de redes para Wi-Fi, una funcionalidad que ya es familiar en las redes móviles. Esta funcionalidad automatiza el descubrimiento correcto de SSID y simplifica la autenticación, lo que incrementa el uso de Wi-Fi y la descarga de datos (data offloading).
 
-Siempre ha habido un dilema con el roaming en Wi-Fi: ¿Cómo sé cuál es el SSID correcto con el que tengo un acuerdo de roaming? ¿Cómo inserto el SSID correcto en mi terminal y qué tipo de autenticación se utiliza? Cuando se usa un inicio de sesión web heredado (legacy WEB-login), debes conocer al socio de roaming y luego ingresar manualmente el nombre de usuario/contraseña para autenticarte. Además, debes seleccionar el dominio de tu operador de Wi-Fi doméstico, idealmente desde una lista desplegable. ¡Bastante complicado!
-
-Con este propósito, la Wi-Fi Alliance (WFA) ha desarrollado la especificación HotSpot 2.0 (HS2.0). La especificación de HotSpot 2.0 proporciona un descubrimiento automático de redes para Wi-Fi, una funcionalidad que ya es familiar en las redes móviles. HS2.0 está basado en el estándar IEEE 802.11u. Esta funcionalidad automatiza el descubrimiento correcto de SSID y simplifica la autenticación, lo que incrementa el uso de Wi-Fi y la descarga de datos (data offloading). También utiliza métodos EAP para la autenticación y WPA2 para el cifrado de los datos.
+HS2.0 utiliza métodos EAP para la autenticación y WPA2 para el cifrado de los datos.
 
 La funcionalidad se basa en que el AP (punto de acceso) anuncia o transmite una lista de dominios NAI Realm de socios de roaming con los que el AP/Proveedor de Servicios tiene un acuerdo de roaming. La funcionalidad es similar a la de las redes móviles. Cuando un dispositivo compatible con HS2.0 intenta conectarse a una red Wi-Fi, lee la lista de dominios NAI Realm anunciada por el AP y busca el dominio NAI Realm de su proveedor de Wi-Fi doméstico (Home Wi-Fi SP NAI Realm). Si encuentra el dominio NAI de su proveedor, el dispositivo móvil empareja la lista NAI Realm con el de su proveedor y comienza el proceso de autenticación con el método EAP correcto.
 
