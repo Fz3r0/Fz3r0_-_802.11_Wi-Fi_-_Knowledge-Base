@@ -1,7 +1,6 @@
 # Hotspot 2.0 (Passpoint)
 
-Introducción a Hotspot 2.0
-La Wi-Fi Alliance (WFA) lanzó la especificación IEEE 802.11u (también conocida como Hotspot 2.0) en febrero de 2011. Uno de los principales objetivos de la tecnología Hotspot 2.0 es simplificar el acceso de los dispositivos móviles a las redes Wi-Fi.
+La `Wi-Fi Alliance (WFA)` lanzó la especificación `IEEE 802.11u` (también conocida como `Hotspot 2.0`) en febrero de 2011. Uno de los principales objetivos de la tecnología Hotspot 2.0 es **simplificar el acceso de los dispositivos móviles a las redes Wi-Fi de manera segura**.
 
 Los componentes principales de la tecnología son:
 
@@ -10,11 +9,13 @@ Los componentes principales de la tecnología son:
 - Online sign-up (OSU)
 - Gestión de políticas
 
-Hotspot 2.0 Release 1 se centra en los componentes de descubrimiento y selección automática de redes, y autenticación segura, mientras que la Release 2 abarca la especificación de los componentes de Online sign-up y gestión de políticas.
+`Hotspot 2.0 Release 1` se centra en los componentes de descubrimiento y selección automática de redes, y autenticación segura, mientras que `Hotspot 2.0 Release 2` abarca la especificación de los componentes de Online sign-up y gestión de políticas.
 
 ---
 
-La naturaleza de Wi-Fi fue originalmente "tecnología inalámbrica en frecuencias no reguladas, disponible para todos". El resultado natural de esto fue que nunca se diseñó para tener funciones avanzadas como las redes móviles, como roaming, descubrimiento de red, facturación, y similares. El roaming se desarrolló porque había operadores de Wi-Fi que necesitaban esta función para apoyar su modelo de negocio y servir mejor a sus clientes. IEEE nunca estandarizó la arquitectura de roaming, solo se desarrolló utilizando los protocolos existentes (como RADIUS), basado en un enfoque de mejores prácticas.
+La naturaleza de Wi-Fi fue originalmente "tecnología inalámbrica en frecuencias no reguladas, disponible para todos". El resultado natural de esto fue que nunca se diseñó para tener **funciones avanzadas como las redes móviles, como roaming, descubrimiento de red, facturación, y similares**. 
+
+El roaming se desarrolló porque había operadores de Wi-Fi que necesitaban esta función para apoyar su modelo de negocio y servir mejor a sus clientes. IEEE nunca estandarizó la arquitectura de roaming, solo se desarrolló utilizando los protocolos existentes (como RADIUS), basado en un enfoque de mejores prácticas.
 
 Siempre ha habido un dilema con el roaming en Wi-Fi: ¿Cómo sé cuál es el SSID correcto con el que tengo un acuerdo de roaming? ¿Cómo inserto el SSID correcto en mi terminal y qué tipo de autenticación se utiliza? Cuando se usa un inicio de sesión web heredado (legacy WEB-login), debes conocer al socio de roaming y luego ingresar manualmente el nombre de usuario/contraseña para autenticarte. Además, debes seleccionar el dominio de tu operador de Wi-Fi doméstico, idealmente desde una lista desplegable. ¡Bastante complicado!
 
