@@ -76,6 +76,36 @@ El roaming puede realizarse con dispositivos de modo dual (smartphones) o dispos
 
 
 
+# Operator y Service Provider.
+
+Cada AP que proporciona Hotspot 2.0 debe estar configurado con los parámetros del **service profile** y del **operator** correspondiente. No obstante, **un solo "Operator" puede ofrecer simultáneamente su servicio a múltiples "Service Providers"**, lo que permite que diferentes providers utilicen la misma infraestructura de red para ofrecer servicios a sus usuarios. 
+
+- Es decir, el administrador de la red WLAN en el sitio mejor conocido como **"Operator"** (ej. `Fz3r0 Wi-Fi Corp.`) es capaz de ofrecer el servicio de hotspot 2.0 a diferentes "Service Providers" (ej. `Telmex`, `Pillo fon`, `Telcel`, `Movistar`, etc...).
+
+### Operator 
+
+- Son los dueños de un conjunto de APs/infraestructura WLAN compatible con Hotspot 2.0. 
+- Los Operators son responsables de la gestión de los elementos físicos de la red, como la implementación, administración y mantenimiento de los APs
+- Un operator puede revender su servicio Hotspot 2.0 a varios Service Providers.
+- Ejemplo de Operator: `Fz3r0 Wi-Fi Corp.`
+
+### Service Provider 
+
+- Se encargan de gestionar las subscriptions de los usuarios y la facturación.
+- Mientras que los operators manejan la infraestructura física de la red, los service providers se centran en los aspectos relacionados con los usuarios, como la autenticación y la administración de las cuentas de sus subscribers.
+- Ejemplo de Service Provider: `Telmex`, `Pillo fon`, `Telcel`, `Movistar`, etc...
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Identity Provider Network Identifier
