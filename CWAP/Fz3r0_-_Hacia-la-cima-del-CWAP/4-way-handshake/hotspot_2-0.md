@@ -192,5 +192,6 @@ hese protocols run on top of 802.11 and enable the Hotspot 2.0 experience
 - https://support.alcadis.nl/Support_files/Ruckus/SmartZone//Manuals/SmartZone%206.0.x/Smartzone%206.0.0.0.1331/SmartZone-6.0.0-Hotspot2.0-Guide-RevA-20210406.pdf
 - https://higherlogicdownload.s3.amazonaws.com/HPE/MigratedAttachments/63AF17E3-09CD-4369-A476-CD91D4FA888B-1-WP_PasspointWiFi_062912.pdf
 - https://support.alcadis.nl/Support_files/Ruckus/SmartZone//Manuals/SmartZone%206.0.x/Smartzone%206.0.0.0.1331/SmartZone-6.0.0-Hotspot2.0-Guide-RevA-20210406.pdf
+- https://docs.commscope.com/bundle/sz-700-accessservicesguide-sz300vsz/page/GUID-99D65A79-6B5F-4A16-895D-3593EA67DA2D.html
 - http://repo.darmajaya.ac.id/4779/1/The%20Telecommunications%20Handbook_%20Engineering%20Guidelines%20for%20Fixed%2C%20Mobile%20and%20Satellite%20Systems%20%28%20PDFDrive%20%29.pdf
 - https://en.wikipedia.org/wiki/IEEE_802.11u
