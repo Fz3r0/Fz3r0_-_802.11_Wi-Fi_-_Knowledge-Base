@@ -80,7 +80,7 @@ El roaming puede realizarse con dispositivos de modo dual (smartphones) o dispos
 
 Cada AP que proporciona Hotspot 2.0 debe estar configurado con los parámetros del **service profile** y del **operator** correspondiente. No obstante, **un solo "Operator" puede ofrecer simultáneamente su servicio a múltiples "Service Providers"**, lo que permite que diferentes providers utilicen la misma infraestructura de red para ofrecer servicios a sus usuarios. 
 
-- Es decir, el administrador de la red WLAN en el sitio mejor conocido como **"Operator"** (ej. `Fz3r0 Wi-Fi Corp.`) es capaz de ofrecer el servicio de hotspot 2.0 a diferentes "Service Providers" (ej. `Telmex`, `Pillo fon`, `Telcel`, `Movistar`, etc...).
+- Es decir, el administrador de la red WLAN físicamente dentro del Venue es el **"Operator"** (ej. `Fz3r0 Wi-Fi Corp.`) quien es capaz de ofrecer el servicio de Hotspot 2.0 a diferentes "Service Providers" (ej. `Telmex`, `Pillo fon`, `Telcel`, `Movistar`, etc...).
 
 ### Operator 
 
