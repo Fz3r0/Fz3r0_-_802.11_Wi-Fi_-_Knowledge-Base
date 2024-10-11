@@ -55,6 +55,23 @@ El roaming puede realizarse con dispositivos de modo dual (smartphones) o dispos
 
 
 
+# Identity Provider Network Identifier
+
+El dominio WLAN.mnc480.mcc311.3gppnetwork.org es parte de la arquitectura de red de 3GPP (3rd Generation Partnership Project), específicamente relacionada con redes móviles. 
+
+Aquí tienes un desglose de sus componentes:
+
+- WLAN: Esto indica que el dominio está asociado con Wireless Local Area Networks, que a menudo se refiere a redes Wi-Fi.
+- mnc480: Esto se refiere al Mobile Network Code (MNC), que se utiliza para identificar a un operador de red móvil específico dentro de un país. El número "480" indica un operador específico.
+- mcc311: Esto representa el Mobile Country Code (MCC), que identifica el país de la red móvil.
+
+
+
+
+
+
+
+
 
 
 
