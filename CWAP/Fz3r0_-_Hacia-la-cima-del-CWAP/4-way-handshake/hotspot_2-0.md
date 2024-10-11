@@ -12,6 +12,26 @@ Los componentes principales de la tecnología son:
 
 Hotspot 2.0 Release 1 se centra en los componentes de descubrimiento y selección automática de redes, y autenticación segura, mientras que la Release 2 abarca la especificación de los componentes de Online sign-up y gestión de políticas.
 
+---
+
+La naturaleza de Wi-Fi fue originalmente "tecnología inalámbrica en frecuencias no reguladas, disponible para todos". El resultado natural de esto fue que nunca se diseñó para tener funciones avanzadas como las redes móviles, como roaming, descubrimiento de red, facturación, y similares. El roaming se desarrolló porque había operadores de Wi-Fi que necesitaban esta función para apoyar su modelo de negocio y servir mejor a sus clientes. IEEE nunca estandarizó la arquitectura de roaming, solo se desarrolló utilizando los protocolos existentes (como RADIUS), basado en un enfoque de mejores prácticas.
+
+Siempre ha habido un dilema con el roaming en Wi-Fi: ¿Cómo sé cuál es el SSID correcto con el que tengo un acuerdo de roaming? ¿Cómo inserto el SSID correcto en mi terminal y qué tipo de autenticación se utiliza? Cuando se usa un inicio de sesión web heredado (legacy WEB-login), debes conocer al socio de roaming y luego ingresar manualmente el nombre de usuario/contraseña para autenticarte. Además, debes seleccionar el dominio de tu operador de Wi-Fi doméstico, idealmente desde una lista desplegable. ¡Bastante complicado!
+
+Con este propósito, la Wi-Fi Alliance (WFA) ha desarrollado la especificación HotSpot 2.0 (HS2.0). La especificación de HotSpot 2.0 proporciona un descubrimiento automático de redes para Wi-Fi, una funcionalidad que ya es familiar en las redes móviles. HS2.0 está basado en el estándar IEEE 802.11u. Esta funcionalidad automatiza el descubrimiento correcto de SSID y simplifica la autenticación, lo que incrementa el uso de Wi-Fi y la descarga de datos (data offloading). También utiliza métodos EAP para la autenticación y WPA2 para el cifrado de los datos.
+
+La funcionalidad se basa en que el AP (punto de acceso) anuncia o transmite una lista de dominios NAI Realm de socios de roaming con los que el AP/Proveedor de Servicios tiene un acuerdo de roaming. La funcionalidad es similar a la de las redes móviles. Cuando un dispositivo compatible con HS2.0 intenta conectarse a una red Wi-Fi, lee la lista de dominios NAI Realm anunciada por el AP y busca el dominio NAI Realm de su proveedor de Wi-Fi doméstico (Home Wi-Fi SP NAI Realm). Si encuentra el dominio NAI de su proveedor, el dispositivo móvil empareja la lista NAI Realm con el de su proveedor y comienza el proceso de autenticación con el método EAP correcto.
+
+HS2.0 también requiere cambios en el dispositivo. Las principales funcionalidades son escanear diferentes SSID anunciados con sus dominios NAI Realm, emparejarlos con el dispositivo, incluyendo el NAI Realm, y luego iniciar la autenticación. Además, HS2.0 requiere cifrado WPA2-Enterprise para el AP y el dispositivo, en lugar de TKIP o WEP. De hecho, HS2.0 no permite el uso de WPA o WEP.
+
+Aunque HS2.0 soporta todo tipo de dominios NAI Realm, se recomienda que los operadores móviles (MNOs) utilicen el dominio NAI Realm definido por 3GPP para el uso de Wi-Fi (FQDN: wlan.mnc.mcc.3gppnetwork.org), ya que la generación de este dominio NAI puede crearse automáticamente a partir de la tarjeta (U)SIM en el dispositivo móvil. Esto facilita el uso, ya que no se necesita interacción del usuario para completar esta tarea.
+
+La especificación de HS2.0 incluye soporte para EAP-SIM y EAP-AKA, mencionados anteriormente, así como EAP-TTLS y EAP-TLS. La especificación exige que un proveedor de HotSpot 2.0 (MNO) con infraestructura SIM/USIM soporte credenciales SIM/USIM y los métodos EAP asociados, y deberá soportar al menos uno de los siguientes: credenciales de nombre de usuario/contraseña o certificado, y su método EAP asociado.
+
+Lo más importante de HS2.0 es que eleva el Wi-Fi al mismo nivel que las redes móviles en términos de seguridad y facilidad de uso. Esto incrementará enormemente el uso de Wi-Fi.
+
+
+
 ## Operación Básica de Hotspot 2.0
 
 Un dispositivo móvil compatible con Hotspot 2.0 se comunica con la infraestructura Wi-Fi compatible con Hotspot 2.0 (Access Points) para descubrir el SSID (Service Set Identifier) de la red y asociarse a él.
@@ -138,3 +158,4 @@ hese protocols run on top of 802.11 and enable the Hotspot 2.0 experience
 - https://support.alcadis.nl/Support_files/Ruckus/SmartZone//Manuals/SmartZone%206.0.x/Smartzone%206.0.0.0.1331/SmartZone-6.0.0-Hotspot2.0-Guide-RevA-20210406.pdf
 - https://higherlogicdownload.s3.amazonaws.com/HPE/MigratedAttachments/63AF17E3-09CD-4369-A476-CD91D4FA888B-1-WP_PasspointWiFi_062912.pdf
 - https://support.alcadis.nl/Support_files/Ruckus/SmartZone//Manuals/SmartZone%206.0.x/Smartzone%206.0.0.0.1331/SmartZone-6.0.0-Hotspot2.0-Guide-RevA-20210406.pdf
+- http://repo.darmajaya.ac.id/4779/1/The%20Telecommunications%20Handbook_%20Engineering%20Guidelines%20for%20Fixed%2C%20Mobile%20and%20Satellite%20Systems%20%28%20PDFDrive%20%29.pdf
