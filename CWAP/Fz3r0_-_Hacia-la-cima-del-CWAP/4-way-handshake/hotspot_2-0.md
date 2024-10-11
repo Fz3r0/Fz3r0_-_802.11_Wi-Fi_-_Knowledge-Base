@@ -151,6 +151,7 @@ hese protocols run on top of 802.11 and enable the Hotspot 2.0 experience
 # Resources
 
 - https://www.netwifistore.com/HotSpot-2-0.asp
+- https://www.wi-fi.org/discover-wi-fi/passpoint
 - https://www.arubanetworks.com/techdocs/ArubaOS_80_Web_Help/Content/ArubaFrameStyles/hotspot/predepoyment_overview.htm
 - https://docs.cloud.ruckuswireless.com/ruckusone/userguide/GUID-DD35201E-111A-41D7-B5E8-70AC6F8B00F8.html
 - https://www.netwifistore.com/HotSpot-2-0.asp
