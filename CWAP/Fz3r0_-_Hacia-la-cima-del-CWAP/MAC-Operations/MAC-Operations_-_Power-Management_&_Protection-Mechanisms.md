@@ -24,8 +24,8 @@ Power consumed by each activity increases in the given order (1-4). In power sav
 
 ## 📬⚡📪 Power Management Flag:
 
-- 📬💤 **`Power Management = 1`**: The STA may enter the **"Doze"** state, meaning it can transition into a low-power state where it is not actively transmitting or receiving data, **only waking up periodically to check for new information**. <br><br>
-- 📪🐓 **`Power Management = 0`**: It indicates to the AP that the station is entering to any other of the power save states, eg. **Awake/Iddle**, **Receiving**, **Transmitting**. 
+- 📬💤 **`Power Management = 1`**: Indicates the STA device is entering **Power Save (PS) mode** also known as **"Doze"** state, meaning it can transition into a low-power state where it is not actively transmitting or receiving data, **only waking up periodically to check for new information**. <br><br>
+- 📪🐓 **`Power Management = 0`**: Indicates to the AP that the STA device is ready to Tx/Rx and is entering to any other of the power save states, eg. **Awake/Iddle**, **Receiving**, **Transmitting**. 
 
 ## 🔋🐓💤 Power States
 
@@ -41,30 +41,27 @@ A wireless client STA enters **Power Save (PS) mode** in which the radio power s
 
 1. If STA have a frame to send.
 2. Based on the STA internal timing mechanism. <br> <br>
-    - 🦈🐓 Data & Power Management = 0 ==>> **Awake** :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 0`
-    - 🦈🐓 QoS Data & Power Management = 0 ==>> **Awake** :: `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 0` <br> <br>
-    - 🦈💤 Data & Power Management = 1 ==>> **Doze** :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 1`
-    - 🦈💤 QoS Data & Power Management = 1 ==>> **Doze** :: `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 1`
 
----
+## 🔋⚙️🔀 Power Management: `Modes`
 
-### 🔋⚙️🔀 Power Management: `Modes`
-_A client STA can be in one of two Power Management modes:_
+A client STA can be in one of two Power Management modes:
 
 - ⭕🐓 **`Active mode`**: the client is awake all the time. The AP immediately transmits the frames to the client. <br> <br>
 - ⭕💤 **`Power Save (PS) mode`**: the client is mostly in doze power state, but can also be awake to transmit and receive now and then. In this mode, the AP buffers the eligible frames destined for the client.
 
----
+## 🚫💾📦 `Null Data Frame` & `QoS Null Data Frame`
 
-### 🚫💾📦 `Null Data Frame` & `QoS Null Data Frame`
+**Null Data Frame** VS **QoS Null Data Frame**:
 
-- ⭕ Null Data Frames are special Wi-Fi frames that contain no data payload. They are primarily used for signaling purposes, particularly in Power Save mode. A device sends a Null Data Frame to inform the access point (AP) about its power management status.
-- ⭕ QoS Null Data Frames are similar to standard Null Data Frames but include additional fields for Quality of Service (QoS) control, which helps manage the prioritization of traffic in the network. <br><br>
-    - Power Management (PM) bit = `1` :: means the device is entering Power Save (PS) mode 
-    - Power Management (PM) bit = `0` :: means the device is awake and ready to Tx/Rx. 
+- ⭕ Null Data Frames are special Wi-Fi frames that contain no data payload. They are primarily used for signaling purposes, particularly in Power Save mode. A device sends a Null Data Frame to inform the access point (AP) about its power management status. <br><br>
+- ⭕ QoS Null Data Frames are similar to standard Null Data Frames but **include additional fields for Quality of Service (QoS) control**, which helps manage the prioritization of traffic in the network. <br><br>
 
-Filters:
+### 🦈 Wireshark Filters: `Power Management` > `Null Data Frame` & `QoS Null Data Frame`
 
+- 🦈🐓 Data & Power Management = 0 ==>> **Awake** :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 0`
+- 🦈🐓 QoS Data & Power Management = 0 ==>> **Awake** :: `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 0` <br> <br>
+- 🦈💤 Data & Power Management = 1 ==>> **Doze** :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 1`
+- 🦈💤 QoS Data & Power Management = 1 ==>> **Doze** :: `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 1` <br> <br>
 - ⭕ Null Data Frame :: `wlan.fc.type_subtype == 36` <br><br>
     - 🦈 Null Data Frame & PM = 1 (PS mode) :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 1`
     - 🦈 Null Data Frame & PM = 0 (awake) :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 0` <br><br>
@@ -75,17 +72,19 @@ Filters:
     - 🦈 Null Data Frame or QoS Null Data Frame & PM = 1 (PS mode) :: `wlan.fc.type_subtype == 36 || wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 1`
     - 🦈 Null Data Frame or QoS Null Data Frame & PM = 0 (awake) :: `wlan.fc.type_subtype == 36 || wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 0`
   
----
+## 🪪🆔🤳 PS Field: `AID (Association Identifier)`
 
-### 🪪🆔🤳 PS Field: `AID (Association Identifier)`
+AID is a unique number which identifies a particular Association between an AP (Access Point) and a STA (wireless Station).
 
-- ⭕ AID (Association Identifier): **Sent by the AP** (`Association Response` or `Re-Association Response`) :: Every 802.11 Power Management Method starts begin with the client STA associates to the BSS. When AP sends "Association Response" or "Re-Association Response" frame to the STA, an `AID` value is present in the AID parameter field (16-bit). <br> <br>
+Every 802.11 Power Management Method starts begin with the client STA associates to the BSS. When AP sends "Association Response" or "Re-Association Response" frame to the STA, an `AID` value is present in the AID parameter field (16-bit).
+
+### 🦈 Wireshark Filters: `AID (Association Identifier)`
+
+- ⭕ AID (Association Identifier): **Sent by the AP** (`Association Response` or `Re-Association Response`) ::  <br> <br>
     - 🦈 Filter :: AID (Association Identifier) 3 = `wlan.fixed.aid == 3`
     - 🦈 Filter :: AID (Association Identifier) 0 (broadcast or multicast frames) = `wlan.fixed.aid == 0`
 
----
-
-### 👂⏳🐓 PS Field: `Listen Interval`
+## 👂⏳🐓 PS Field: `Listen Interval`
 
 - Listen Interval: **Sent by the STA** (`Association Request` or `Re-Association Request`) :: The client STA will go to `awake` state in a timing period called "Listen Interval". The "Association Request" or "Re-Association Request" frame includes a Listen Interval subfield within the Capabilities Information field. It is an integer between 0 and 65535 expressed in **units of Beacon Interval** (ex. 250 = Listen every 250 beacons). It indicates to the AP how often a client in PS mode wakes up to listen to the Beacon frames. In the AP, the Aging Time of the buffered frames bound to the client is implemented differently by each vendor but must not be shorter than the Listen Interval (or the WNM Sleep Interval in a WNM Sleep Mode Request frame). The Listen Interval from the client is also vendor specific // In other words, **this is an unicast frame used for power management purposes sent from the STA to the AP, this value informs the AP of how many Beacons the STA will be dozing when in a power save state.** For example if a STA has a listen interval of 15 that means it will doze for 15 Beacons and if the Beacon interval is 100 time units the STA will doze for approximately 1.5 seconds. <br> <br>
     - 🦈 Filter :: Listen Interval 250 (HEX) = `wlan.fixed.listen_ival == 0x00fa`
