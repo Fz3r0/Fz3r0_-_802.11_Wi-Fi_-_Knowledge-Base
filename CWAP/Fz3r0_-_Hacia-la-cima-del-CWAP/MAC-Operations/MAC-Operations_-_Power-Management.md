@@ -1,11 +1,11 @@
-# 🛜🔋🛑 MAC Operations: `Power Management` & `Protection Mechanisms`
+# 🛜🔋🛑 MAC Operations: `Power Management`
 
 There are 2 types of MAC Operations: **Power Management** & **Protection Mechanisms**:
 
 1. **`Power Management`** is allow the radio to go to sleep (just few microseconds), because if the antenna/adapter keeps awake all the time is consuming battery all the time, in a movile device can degrade battery life. Power management it's just turning on the antenna, send/recieve the frame, then "doze" or "sleep" the antenna and so on. The hint here is, that the STA does not lose any frame even if it's sleeping <br><br>
 2. **`Protection Mechanisms`** allow newer devices to communicate and "exist" in a world where older devices also exists (eg. devices using 802.11b(HR-DSSS) can coexist with newer devices using 802.11g(ERP) or even newest devices like 802.11n/ac/ax(OFDM)).
 
-# 🔋🛜🪫 MAC Operations: `Power Management`
+# 🔋🛜🪫 `Power Management`
 
 Many mechanisms that are described in the IEEE 802.11 standard allow a wireless device to reduce its power consumption, to turn off its radios and to wake up at the correct time to retrieve its traffic. 
 
