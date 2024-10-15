@@ -56,6 +56,7 @@ Power consumed by each activity increases in the given order (1-4). In power sav
 ````sh
 ## Power Management = 1 (PS Mode / Doze / Sleep)
 
+802.11 radio information
 IEEE 802.11 QoS Null function (No data), Flags: ...P...T
     Type/Subtype: QoS Null function (No data) (0x002c)  # <<<<<=============||| PWR MGT = 0 : QoS Null (No Data)
     Frame Control Field: 0xc811
@@ -78,8 +79,9 @@ IEEE 802.11 QoS Null function (No data), Flags: ...P...T
 ````sh
 ## Power Management = 0 (Awake = Transmit / Receive)
 
+802.11 radio information
 IEEE 802.11 QoS Null function (No data), Flags: .......T
-    Type/Subtype: QoS Null function (No data) (0x002c)  # <<<<<=============||| PWR MGT = 0 : QoS Null (No Data)
+    Type/Subtype: QoS Null function (No data) (0x002c)  # <<<<<=============||| QoS Null (No Data)
     Frame Control Field: 0xc801
         .... ..00 = Version: 0
         .... 10.. = Type: Data frame (2)
@@ -99,8 +101,39 @@ IEEE 802.11 QoS Null function (No data), Flags: .......T
 
 **Null Data Frame** VS **QoS Null Data Frame**:
 
-- ⭕ `Null Data Frames` are special Wi-Fi frames that contain no data payload. They are primarily used for signaling purposes, particularly in Power Save mode. A device sends a Null Data Frame to inform the access point (AP) about its power management status. <br><br>
+- ⭕ `Null Data Frames` are special Wi-Fi frames that contain no data payload. They are primarily used for signaling purposes, particularly in Power Save mode. A device sends a Null Data Frame to inform the access point (AP) about its power management status.
+
+````sh
+## Null Data Frame
+
+802.11 radio information
+IEEE 802.11 Null function (No data), Flags: .......T          # <<<<<=============||| Null (No Data)
+    Type/Subtype: Null function (No data) (0x0024)
+    Frame Control Field: 0x4801
+        .... ..00 = Version: 0
+        .... 10.. = Type: Data frame (2)                      # <<<<<=============||| Type     =  2  :: Data 
+        0100 .... = Subtype: 4                                # <<<<<=============||| Sub-Type =  4  :: Null (No Data) 
+        Flags: 0x01
+    .000 0000 0010 1100 = Duration: 44 microseconds
+````
+ 
 - ⭕ `QoS Null Data Frames` are similar to standard Null Data Frames but **include additional fields for Quality of Service (QoS) control**, which helps manage the prioritization of traffic in the network. 
+
+````sh
+## QoS Null Data Frame
+
+802.11 radio information
+IEEE 802.11 QoS Null function (No data), Flags: .......T      # <<<<<=============||| QoS Null (No Data)
+    Type/Subtype: QoS Null function (No data) (0x002c)
+    Frame Control Field: 0xc801
+        .... ..00 = Version: 0
+        .... 10.. = Type: Data frame (2)                      # <<<<<=============||| Type     =  2  :: Data 
+        1100 .... = Subtype: 12                               # <<<<<=============||| Sub-Type =  12 :: QoS Null (No Data)
+        Flags: 0x01
+    .000 0000 0011 0000 = Duration: 48 microseconds
+````
+
+
 
 ### 🦈 Wireshark Filters: `Power Management` > `Null Data Frame` & `QoS Null Data Frame`
 
