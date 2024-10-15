@@ -5,7 +5,7 @@ There are 2 types of MAC Operations: **Power Management** & **Protection Mechani
 1. **`Power Management`** is allow the radio to go to sleep (just few microseconds), because if the antenna/adapter keeps awake all the time is consuming battery all the time, in a movile device can degrade battery life. Power management it's just turning on the antenna, send/recieve the frame, then "doze" or "sleep" the antenna and so on. The hint here is, that the STA does not lose any frame even if it's sleeping <br><br>
 2. **`Protection Mechanisms`** allow newer devices to communicate and "exist" in a world where older devices also exists (eg. devices using 802.11b(HR-DSSS) can coexist with newer devices using 802.11g(ERP) or even newest devices like 802.11n/ac/ax(OFDM)).
 
-# 🔋🛜🪫 802.11: `Power Management`
+# 🔋🛜🪫 802.11 `Power Management`
 
 Many mechanisms that are described in the IEEE 802.11 standard allow a wireless device to reduce its power consumption, to turn off its radios and to wake up at the correct time to retrieve its traffic. 
 
@@ -182,7 +182,9 @@ PS-Poll have the following Sub-Fields:
 | **Transmitter**  | MAC of the STA requesting buffered frames | `wlan.fc.type_subtype == 26 && wlan.ta == f1:f1:f1:f1:f1:f1`    |
 | **Receiver**     | MAC of the AP buffering frames            | `wlan.fc.type_subtype == 26 && wlan.ra == f0:f0:f0:f0:f0:f0`    |
 
-## Power Management: `Types`
+
+# 🔋🛜🪫 802.11 Power Management: `Types`
+
 _From the original version in 1997 to now, many features that reduce power consumption have been added to the standard. Some of them have fallen into disuse (PS-Poll), some have been granted certifications (WMM-Power Save) and others relate to specific technologies (MIMO PSPM, 11ac VHT TXOP PS). And there are many other mechanisms related to power-saving that are not discussed in this article (PSMP, TIM Broadcast, Proxy ARP, etc.). Future amendments (802.11ax, 802.11ah) will also introduce new and enhanced power saving techniques._
 
 - **`802.11–1997 prime Power Management`**: 802.11 Power Management (Legacy Power Save Mode)
@@ -190,8 +192,6 @@ _From the original version in 1997 to now, many features that reduce power consu
 - **`802.11n-2009 Power Management`**: Power Save Multi-Poll (PSMP) & _Spatial Multiplexing Power Save (SMPS)_ 
 - **`802.11ac-2013 Power Management`**: VHT TXOP (Transmit Opportunity) Power Save
 - **`802.11ax-2019 Power Management`**: Target Wake Time (TWT)
-
----
 
 ### 802.11 Wi-Fi Power Management: `Methods` 
 
@@ -203,7 +203,7 @@ The 5 main methods of power management used in 802.11, the others mentioned befo
 4. `802.11ac-2013 Power Management`: VHT TXOP (Transmit Opportunity) Power Save  
 5. `802.11ax-2019 Power Management`: Target Wake Time (TWT)
 
-### Power Management: `PHY PS types`
+## Power Management: `PHY PS types`
 
 | **Standard**  | **Year**   | **Power Saving Modes**                                                                                      |
 |---------------|------------|-------------------------------------------------------------------------------------------------------------|
