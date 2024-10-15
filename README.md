@@ -8872,7 +8872,7 @@ _Aircrack-ng is basically a suite of tools that has been crafted to achieve obje
 
 ## 💀💥🔓 Attacking: `WPA3`
 
-- [Auditoria Wi-Fi WPA3 con Airgeddon](https://www.youtube.com/watch?v=HJa2TKBZ4Fk) _Brute Force directly VS AP_
+- [WPA3 Audit: Airgeddon](https://www.youtube.com/watch?v=HJa2TKBZ4Fk) _Online - Dictionary_
 
 ## 💀💥🔓 Attacking: `EAP`
 
