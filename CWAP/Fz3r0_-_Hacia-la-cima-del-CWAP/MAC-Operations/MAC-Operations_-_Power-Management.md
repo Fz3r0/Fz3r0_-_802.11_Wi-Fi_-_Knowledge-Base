@@ -250,10 +250,20 @@ The type of Power Management used depends on the AP and client STA standard used
 
 # 🗿🔋🪫 802.11 Power Save (Legacy power save mode)
 
-- Less Efficient Power Save Mode.
-- There are 2 Types of Legacy Power Save Mode _(Clients can support either one of the two legacy power save mechanisms at one time)_: <br><br>
-1. **Power save Poll: `PS Poll**
-2. **Non Power save Poll: `Non PS Poll`** 
+Legacy Power Save mode (PS mode), as its name implies, is the power save mode used in legacy IEEE 802.11 standards and as a result it's the less efficient Power Save Mode. Despite not being a cutting-edge PS mode, it is still widely used in various applications for its simplicity.
+
+Legacy PS mode utilizes the PS-Poll frame technique to retrieve buffered unicast data from the AP. In Legacy PS mode, the STA knows it has pending unicast data when it receives a DTIM beacon containing its own AID in the Partial Virtual Bitmap of the TIM element. Consequently, the device sends a special uplink control frame called the PS-Poll frame, containing its AID. This control frame informs the AP that the STA with this AID is ready to receive its unicast message. The AP responds with an acknowledgment message (ACK) followed by the STA’s unicast data.
+
+The downlink frame received by the STA will contain the requested unicast data along with a More Data subfield. This field is set to value 1 when the AP wishes to inform the STA that there is still more data to be sent. To which the STA responds by sending another PS-Poll frame and the cycle described above is repeated. Once the STA has received all its data, the AP will toggle the More Data subfield in the downlink frame to value 0. This will signal to the STA that data exchange is to be concluded and the device is to go back to sleep.
+
+This means that the STA must send a PS-Poll frame for every downlink frame, which is sub-optimal with regards to efficiency and reducing overhead control signaling.
+
+![image](https://github.com/user-attachments/assets/cfa412e7-0013-4fa8-8804-72527c7b0df2)
+
+There are 2 Types of Legacy Power Save Mode _(Clients can support either one of the two legacy power save mechanisms at one time)_: 
+
+1. **Power save Poll: **`PS Poll`**
+2. **Non Power save Poll: **`Non PS Poll`**
 
 ## 📊✅ 802.11 Power Save (Legacy power save mode): `PS-Poll Mode`
 
@@ -569,7 +579,7 @@ _In an IBSS configuration, no full-time AP exists and all systems may desire to 
 - [QoS - Understanding ADD Traffic Stream (ADDTS) for U-APSD](https://www.hitchhikersguidetolearning.com/2017/09/17/understanding-add-traffic-stream-addts-for-u-apsd/)
 
 
-https://telcomatraining.com/what-is-tim-traffic-indication-map/
+- https://telcomatraining.com/what-is-tim-traffic-indication-map/
 
-
+- https://academy.nordicsemi.com/courses/wi-fi-fundamentals/lessons/lesson-6-wifi-fundamentals/topic/power-save-modes-2/#:~:text=Legacy%20Power%20Save%20mode%20(PS,various%20applications%20for%20its%20simplicity.
 
