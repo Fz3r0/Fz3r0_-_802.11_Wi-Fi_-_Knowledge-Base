@@ -45,9 +45,9 @@ When a STA is capable of Power Save Mode, a wireless radio can perform one of 4 
 Power consumed by each activity increases in the given order (1-4). In power save mode, the client STA would set the power management flag to `1` to indicate it might go into the **Doze state to save power**, otherwise the client STA would set the power management flag to `0` to indicate that the station is **NOT in power save mode.**
 
 1. ➖`⚡󠀠󠀠󠀠󠀠󠀠󠁪󠁪󠁪󠁪󠁪󠀵󠀵🔘🔘🔘`➕ | `Power Management = 1` :: State: **Asleep / Doze**
-2. ➖`⚡⚡🔘🔘`➕ | `Power Management = 0` :: State: **Awake / Iddle** 
-3. ➖`⚡⚡⚡🔘`➕ | `Power Management = 0` :: State: **Receiving** 
-4. ➖`⚡⚡⚡⚡`➕ | `Power Management = 0` :: State: **Transmitting** 
+2. ➖`⚡⚡🔘🔘`➕ | `Power Management = 0` :: State: **Awake** -> **Iddle** 
+3. ➖`⚡⚡⚡🔘`➕ | `Power Management = 0` :: State: **Awake** -> **Receiving (Rx)** 
+4. ➖`⚡⚡⚡⚡`➕ | `Power Management = 0` :: State: **Awake** -> **Transmitting (Tx)** 
 
 ## 📬⚡📪 Power Management Flag:
 
