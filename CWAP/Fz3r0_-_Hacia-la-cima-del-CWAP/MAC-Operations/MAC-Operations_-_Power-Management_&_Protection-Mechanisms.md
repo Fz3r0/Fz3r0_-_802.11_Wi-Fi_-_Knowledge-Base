@@ -20,11 +20,6 @@ A client STA can be in one of two Power Management modes:
 
 ⚠️ **`IMPORTANT`**: Nowdays most wireless devices (eg. smartphones, tablets, computers, etc) by default use `Power Save (PS) mode` to increase the battery life.
 
-## 📬⚡📪 Power Management Flag:
-
-- 📬💤 **`Power Management = 1`**: Indicates the STA device is entering **Power Save (PS) mode** also known as **"Doze"** state, meaning it can transition into a low-power state where it is not actively transmitting or receiving data, **only waking up periodically to check for new information**. <br><br>
-- 📪🐓 **`Power Management = 0`**: Indicates to the AP that the STA device is ready to Tx/Rx and is entering to any other of the power save states, eg. **Awake/Iddle**, **Receiving**, **Transmitting**. 
-
 ## 🔋🐓💤 Power States
 
 A wireless client STA enters **Power Save (PS) mode** in which the radio power state can transition **between awake and doze** according to the 802.11 power management rules. 
@@ -50,6 +45,11 @@ Power consumed by each activity increases in the given order (1-4). In power sav
 2. ➖`⚡⚡🔘🔘`➕ | `Power Management = 0` :: State: **Awake / Iddle** 
 3. ➖`⚡⚡⚡🔘`➕ | `Power Management = 0` :: State: **Receiving** 
 4. ➖`⚡⚡⚡⚡`➕ | `Power Management = 0` :: State: **Transmitting** 
+
+## 📬⚡📪 Power Management Flag:
+
+- 📬💤 **`Power Management = 1`**: Indicates the STA device is entering **Power Save (PS) mode** also known as **"Doze"** state, meaning it can transition into a low-power state where it is not actively transmitting or receiving data, **only waking up periodically to check for new information**. <br><br>
+- 📪🐓 **`Power Management = 0`**: Indicates to the AP that the STA device is ready to Tx/Rx and is entering to any other of the power save states, eg. **Awake/Iddle**, **Receiving**, **Transmitting**. 
 
 ## 🚫💾📦 `Null Data Frame` & `QoS Null Data Frame`
 
