@@ -8847,32 +8847,45 @@ _Aircrack-ng is basically a suite of tools that has been crafted to achieve obje
 ### 💀🕵️🦈 802.11 PWN!!!: `WLANs Audit`
 - []()
 
-### 💀💥🔓 802.11 PWN!!!: `WEP Attacks`
-- [`aircrack-ng` - Cracking WEP Networks](https://www.youtube.com/watch?v=ar00S_GyRUU)
 
-### 💀💥🔓 802.11 PWN!!!: `WPA2 Attacks`
-- [Monitor, Capture & Cracking 4-way-handshake PSK]()
 
-### 💀🥷🦈 802.11 Attack: `Evil Twin`, `Rogue APs` & `Phishing`
-- [`wifiphishing` :: Evil Twin Attack with Phishing](https://www.youtube.com/watch?v=TZcgvi_KRvY)
-- [`airbase-ng` + `brctl` :: Creating a Rogue Wifi Network and Intercepting Traffic](https://www.youtube.com/watch?v=8JGre2T_yaE)
-- [`WEF Framework` :: Creación de un Fake AP (Punto de Acceso Falso) para Auditorias WIFI @ Frank Solo](https://www.youtube.com/watch?v=yWVAxX7uISc)
+
 
 ### 💀🕵️💻 USB Credentials Exfiltration :: WiFi password stealer
 - [WiFi password stealer](https://github.com/AleksaMCode/WiFi-password-stealer)
 
-## 802.1X-EAP Attacking
-- [Attacking EAP Protocols](https://etutorials.org/Networking/Wireless+lan+security/Chapter+6.+Wireless+Vulnerabilities/Attacks+on+EAP+Protocols/)
-
 ## Attacking Home & SOHO Routers
 - [Your not so "Home Office" - SOHO Hacking at Pwn2Own _@ NCC Group_](https://conference.hitb.org/files/hitbsecconf2023ams/materials/D1T1%20-%20Your%20Not%20So%20Home%20Office%20-%20Soho%20Hacking%20at%20Pwn2Own%20-%20McCaulay%20Hudson%20&%20Alex%20Plaskett.pdf)
 - [OffensiveCon22 - Pwn2Own’ing Your Router Over the Internet @ _Radek Domanski & Pedro Ribeiro_](https://www.youtube.com/watch?v=nnAxXnjsbUI)
----
 
 
 
 
 
+## 💀💥🔓 Attacking: `WEP`
+
+- [`aircrack-ng` - Cracking WEP Networks](https://www.youtube.com/watch?v=ar00S_GyRUU)
+
+## 💀💥🔓 Attacking: `WPA` & `WPA2`
+
+- [Monitor, Capture & Cracking 4-way-handshake PSK]()
+
+## 💀💥🔓 Attacking: `WPA3`
+
+- [Auditoria Wi-Fi WPA3 con Airgeddon](https://www.youtube.com/watch?v=HJa2TKBZ4Fk) _Brute Force directly VS AP_
+
+## 💀💥🔓 Attacking: `EAP`
+
+- [Attacking EAP Protocols](https://etutorials.org/Networking/Wireless+lan+security/Chapter+6.+Wireless+Vulnerabilities/Attacks+on+EAP+Protocols/)
+
+
+
+
+## 💀🥷🦈 802.11 Attack: `Evil Twin`, `Rogue APs` & `Phishing`
+
+- [`wifiphishing` :: Evil Twin Attack with Phishing](https://www.youtube.com/watch?v=TZcgvi_KRvY)
+- [`airbase-ng` + `brctl` :: Creating a Rogue Wifi Network and Intercepting Traffic](https://www.youtube.com/watch?v=8JGre2T_yaE)
+- [`WEF Framework` :: Creación de un Fake AP (Punto de Acceso Falso) para Auditorias WIFI @ Frank Solo](https://www.youtube.com/watch?v=yWVAxX7uISc)
 
 
 
