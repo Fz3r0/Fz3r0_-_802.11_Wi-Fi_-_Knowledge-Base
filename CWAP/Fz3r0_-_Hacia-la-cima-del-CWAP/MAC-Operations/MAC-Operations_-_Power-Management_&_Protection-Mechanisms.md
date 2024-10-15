@@ -11,16 +11,14 @@ Many mechanisms that are described in the IEEE 802.11 standard allow a wireless 
 
 While the APs are generally connected to an external power source, the wireless clients are often running on batteries. The purpose of power saving features is to increase the battery life and to allow longer performance. This battery life extension can be significant for low-powered devices such as smartphones, Voice over IP phones or handheld barcodes scanners.
 
-## 🔋⚡🪫 Power Consumption Activities
+## 🔋⚙️🔀 Power Management: `Modes`
 
-When a STA is capable of Power Save Mode, a wireless radio can perform one of 4 activities, better known as **"Power State"**.
+A client STA can be in one of two Power Management modes:
 
-Power consumed by each activity increases in the given order (1-4). In power save mode, the client STA would set the power management flag to `1` to indicate it might go into the **Doze state to save power**, otherwise the client STA would set the power management flag to `0` to indicate that the station is **NOT in power save mode.**
+- ⭕🐓 **`Active mode`**: the client is awake all the time. The AP immediately transmits the frames to the client. <br> <br>
+- ⭕💤 **`Power Save (PS) mode`**: the client is mostly in doze power state, but can also be awake to transmit and receive now and then. In this mode, the AP buffers the eligible frames destined for the client.
 
-1. ➖`⚡󠀠󠀠󠀠󠀠󠀠󠁪󠁪󠁪󠁪󠁪󠀵󠀵🔘🔘🔘`➕ | `Power Management = 1` :: State: **Asleep / Doze**
-2. ➖`⚡⚡🔘🔘`➕ | `Power Management = 0` :: State: **Awake / Iddle** 
-3. ➖`⚡⚡⚡🔘`➕ | `Power Management = 0` :: State: **Receiving** 
-4. ➖`⚡⚡⚡⚡`➕ | `Power Management = 0` :: State: **Transmitting** 
+⚠️ **`IMPORTANT`**: Nowdays most wireless devices (eg. smartphones, tablets, computers, etc) by default use `Power Save (PS) mode` to increase the battery life.
 
 ## 📬⚡📪 Power Management Flag:
 
@@ -42,12 +40,16 @@ A wireless client STA enters **Power Save (PS) mode** in which the radio power s
 1. If STA have a frame to send.
 2. Based on the STA internal timing mechanism. <br> <br>
 
-## 🔋⚙️🔀 Power Management: `Modes`
+## 🔋⚡🪫 Power Consumption Activities
 
-A client STA can be in one of two Power Management modes:
+When a STA is capable of Power Save Mode, a wireless radio can perform one of 4 activities, better known as **"Power State"**.
 
-- ⭕🐓 **`Active mode`**: the client is awake all the time. The AP immediately transmits the frames to the client. <br> <br>
-- ⭕💤 **`Power Save (PS) mode`**: the client is mostly in doze power state, but can also be awake to transmit and receive now and then. In this mode, the AP buffers the eligible frames destined for the client.
+Power consumed by each activity increases in the given order (1-4). In power save mode, the client STA would set the power management flag to `1` to indicate it might go into the **Doze state to save power**, otherwise the client STA would set the power management flag to `0` to indicate that the station is **NOT in power save mode.**
+
+1. ➖`⚡󠀠󠀠󠀠󠀠󠀠󠁪󠁪󠁪󠁪󠁪󠀵󠀵🔘🔘🔘`➕ | `Power Management = 1` :: State: **Asleep / Doze**
+2. ➖`⚡⚡🔘🔘`➕ | `Power Management = 0` :: State: **Awake / Iddle** 
+3. ➖`⚡⚡⚡🔘`➕ | `Power Management = 0` :: State: **Receiving** 
+4. ➖`⚡⚡⚡⚡`➕ | `Power Management = 0` :: State: **Transmitting** 
 
 ## 🚫💾📦 `Null Data Frame` & `QoS Null Data Frame`
 
