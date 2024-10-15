@@ -583,3 +583,5 @@ _In an IBSS configuration, no full-time AP exists and all systems may desire to 
 
 - https://academy.nordicsemi.com/courses/wi-fi-fundamentals/lessons/lesson-6-wifi-fundamentals/topic/power-save-modes-2/#:~:text=Legacy%20Power%20Save%20mode%20(PS,various%20applications%20for%20its%20simplicity.
 
+- https://docs.nordicsemi.com/bundle/ncs-latest/page/nrf/protocols/wifi/station_mode/powersave.html
+
