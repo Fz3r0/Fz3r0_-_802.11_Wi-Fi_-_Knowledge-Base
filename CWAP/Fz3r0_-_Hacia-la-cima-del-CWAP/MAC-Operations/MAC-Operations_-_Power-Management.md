@@ -459,27 +459,7 @@ AP sends ACK. // The AP acknowledges the Null Function Frame from the client STA
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 802.11e-2005: `WMM - Wi-Fi Multimedia`
+# 💎🔋🪫 802.11e-2005: `WMM - Wi-Fi Multimedia`
 
 Wireless Multimedia Power Save mode (WMM PS mode) is an alternative to Legacy power save mode. It still relies on DTIM beacons and TIM elements, but with some changes in its data-retrieval mechanisms, which enhances its performance for certain applications.
 
@@ -496,6 +476,20 @@ PS-Poll frames are replaced in WMM with **trigger frames**. **The trigger frame 
 The 802.11e standard is being designed to be backward compatible with the legacy 802.11 standard, which implies that DCF and PCF mode stations can work without restrictions in the new QoS enable environment. In fact, the traffic of a station working in DCF mode is treated as traffic belonging to AC1 of the new EDCA mode with TXOP equal to zero. Hence, from DCF point of view this coexistence is quite fair as DCF is a Best Effort traffic oriented. On the other hand, PCF mode stations in the new standard are managed by HC as if it were PC, which provides schedule for them. Therefore, there is hardly any change in system behaviour. However, from 802.11e standpoint the introduction of legacy 802.11 stations in a QBSS system pose a risk to the QoS guarantees. Direct cooperation of both types of stations without any restriction on the legacy 802.11 traffic will penalize all QoS guarantees provided by standalone IEEE 802.11e network due to previously mentioned 802.11 limitations. Therefore, to be able to provide real QoS support in wireless LAN with coexistence of 802.11 and 802.11e stations it will be necessary to consider some QoS mechanism for legacy stations.
 
 ![image](https://github.com/user-attachments/assets/4a0d6424-7809-4bf0-a58b-edc77e177b2c)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
