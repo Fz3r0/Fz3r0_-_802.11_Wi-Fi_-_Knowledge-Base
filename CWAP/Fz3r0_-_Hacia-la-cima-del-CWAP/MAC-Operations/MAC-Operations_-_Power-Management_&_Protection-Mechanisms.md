@@ -96,11 +96,14 @@ Every 802.11 Power Management Method starts begin with the client STA associates
 
 - **TIM (Traffic Indication Map)** is a IE (Information Element) present **only in `Beacon` frames** sent by an Access Point (AP). 
 - It serves to indicate to power-saving devices which are connected to the network whether there are buffered frames (data packets) waiting for them at the AP.
+- The TIM contains a **bitmap** where each bit corresponds to a particular device associated with the AP. If a bit is set to 1, it indicates that there are frames queued at the AP for that specific device.
 
 TIM contains 2 Sub-Fields:
 
 - `Bitmap Control` (AID = 0 and Bitmap Control = 1 indicates if any **Broadcast or Multicast** packets are buffered at the AP)
 - `PVB (Partial Virtual Map` (Series of flags indicating whether each associated STA has **Unicast** frames buffered at the AP) _Because the bitmap is never transmitted in its entirety, it is referred to as a virtual bitmap, and the portion that is actually transmitted is referred to as a partial virtual bitmap._
+
+⚠️ **`IMPORTANT`**: **The minimum value of the Length field of the Traffic Indication Map (TIM) information element is 4**. This value includes the length of the **Partial Virtual Bitmap**, which is at least one octet, along with the other **required fields (DTIM Count, DTIM Period, and Bitmap Control)**.
 
 | **Field**                 | **Description**                                                                                              | **Wireshark Filter**            |
 |---------------------------|--------------------------------------------------------------------------------------------------------------|---------------------------------|
@@ -124,11 +127,7 @@ TIM contains 2 Sub-Fields:
 | **PVB = 0**                     | No unicast frames are buffered                                                                         | `wlan.tim.partial_virtual_bitmap == 00` |
 | **PVB more than 0**             | Unicast frames are buffered                                                                            | `wlan.tim.partial_virtual_bitmap > 00`  |
 
-⚠️ **`IMPORTANT`**: **The minimum value of the Length field of the Traffic Indication Map (TIM) information element is 4**. This value includes the length of the **Partial Virtual Bitmap**, which is at least one octet, along with the other **required fields (DTIM Count, DTIM Period, and Bitmap Control)**.
-
----
-
-### 🚨📩📬 PS Information Element: `DTIM (Delivery Traffic Indication Map)`
+## 🚨📩📬 PS Information Element: `DTIM (Delivery Traffic Indication Map)`
 
 `DTIM (Delivery Traffic Indication Map)`: **Sent by the AP** (`Beacon`)
 
