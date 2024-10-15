@@ -57,7 +57,7 @@ Power consumed by each activity increases in the given order (1-4). In power sav
 
 - 📪🐓 **`Power Management = 0`**: Indicates to the AP that the STA device is ready to Tx/Rx and is entering to any other of the power save states, eg. **Awake/Iddle**, **Receiving**, **Transmitting**. 
 
-````conf
+````sh
 ## Power Management = 0 (Awake = Transmit / Receive)
 
 IEEE 802.11 QoS Null function (No data), Flags: .......T
