@@ -595,7 +595,7 @@ When a STA receives ATIM, that formally dozing station must begin the process of
 - [`WWM Power Save` **(U-ASPD)** :: Frame Exchange](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/873ccc0d-708b-42c5-83b6-d0e4d27347a7) _`frame exchange`_
 - [WMM & QoS Profile _@ Nayarasi_](https://mrncciew.com/2013/07/30/wmm-qos-profile/)
 
-
+- https://dot11ap.wordpress.com/timdtimatim/
 
 - https://telcomatraining.com/what-is-tim-traffic-indication-map/
 
