@@ -24,16 +24,19 @@ A client STA can be in one of two Power Management modes:
 
 A wireless client STA enters **Power Save (PS) mode** in which the radio power state can transition **between awake and doze** according to the 802.11 power management rules. 
 
-**A radio STA can be in one of two Power states:**
+**A radio STA can be in one of two `Power states`:**
 
 - 💤 **Doze/Asleep State:** The client STA cannot receive or transmit any frames and operates in a very low power state to conserve power. STA is allowed to go to "Doze" state after an AP has been notified that station is about to enter Power Save (PS) mode. STA will use `Null Data Frame` or `QoS Null Data Frame` with bit `Power Management / Power Save Mode = 1` to inform the AP that it will going to "Doze" state. In this state, the station significantly reduces its power consumption by not actively listening for data, only waking up periodically to check for new packets from the AP. <br><br> 
 - 🐓 **Iddle/Awake State:** The client STA radio is constantly powered and able to receive and transmit. Does not necessarily imply power saving, as a station can be in an idle/awake state while still actively listening for data. <br><br>
+
+**If a radio STA is in `Iddle/Awake State`, it can Recieve or Transmit (Tx/Rx):**
+
 - 📡 **Receive & Transmit states**: station is actively sending or receiving data when in these states.
 
 **STA will go from `Doze` to `Awake` state for one of two reasons:** 
 
 1. If STA have a frame to send.
-2. Based on the STA internal timing mechanism. <br> <br>
+2. Based on the STA internal timing mechanism. 
 
 ## 🔋⚡🪫 Power Consumption Activities
 
