@@ -94,59 +94,35 @@ Every 802.11 Power Management Method starts begin with the client STA associates
 
 ### 📫📩📬 PS Information Element: `TIM (Traffic Indication Map)`
 
-`TIM (Traffic Indication Map)`: It's a IE (Information Element) present **only in `Beacon` frames**. 
+- **TIM (Traffic Indication Map)** is a IE (Information Element) present **only in `Beacon` frames** sent by an Access Point (AP). 
+- It serves to indicate to power-saving devices which are connected to the network whether there are buffered frames (data packets) waiting for them at the AP.
 
-- Element ID = 5: Indicates the Frame is a TIM 
-- TIM is a bitmap field which contains: <br><br>
-    - `Bitmap Control` (AID = 0 and Bitmap Control = 1 indicates if any **Broadcast or Multicast** packets are buffered at the AP)
-    - `PVB (Partial Virtual Map` (Series of flags indicating whether each associated STA has **Unicast** frames buffered at the AP)
+TIM contains 2 Sub-Fields:
 
-
-TIM have the two following Sub-Fields: 
-
-- ⭕ Element ID (1 byte / 8 bits): Value of 5 indicates is a TIM. `wlan.tag.number` <br> <br>
-    - 🦈 Element ID = 5 :: `wlan.tag.number == 5` <br> <br>
-- ⭕ Lenght (1 byte / 8 bits): Lenght of the information carrying fields (DTIM Count, DTIM Period, Bitmap Control, Partial Virtual Bitmap). `wlan.tag.length` <br> <br>
-    - 🦈 Tag Lenght = 4 :: `wlan.tag.length == 4` <br> <br>
-- ⭕ DTIM (Delivery-TIM) Count (1 byte / 8 bits): Incremental `Beacon Frames` until the next DTIM. `wlan.tim.dtim_count` <br> <br>
-    - 🦈 DTIM = 0 ==>> **Beacon is a DTIM** :: `wlan.tim.dtim_count == 0`
-    - 🦈 DTIM = 1 ==>> **1 Beacon left until next DTIM** :: `wlan.tim.dtim_count == 1`
-    - 🦈 DTIM = 2 ==>> **2 Beacons left until next DTIM** :: `wlan.tim.dtim_count == 2` <br> <br>
-- ⭕ DTIM (Delivery-TIM) Period (1 byte / 8 bits): Number of `Beacon Frames` between DTIM beacon. `wlan.tim.dtim_period` <br> <br>
-    - 🦈 DTIM period = 1 ==>> **Every beacon will be a DTIM** _(ex. Ruckus_default_SSID)_ :: `wlan.tim.dtim_period == 1`
-    - 🦈 DTIM period = 3 ==>> **Every 2nd beacon will be a DTIM** _(ex. Fz3r0_CWAP_SSID)_ :: `wlan.tim.dtim_period == 2`
-    - 🦈 DTIM period = 3 ==>> **Every 3rd beacon will be a DTIM** _(ex. Muegahouse_SSID)_ :: `wlan.tim.dtim_period == 3` <br> <br>
-- ⭕ Bitmap Control (1 byte / 8 bits): Indicates if **Multicast/Broadcast** traffic are buffered at the AP (true or false) & also uses a space save called `Bitmap Offset` which may have a value between 0 - 127. `wlan.tim.bmapctl` <br> <br>
-    - 🦈 Bitmap Control = 1 ==>> **There's a multicast/broadcast frame buffering for any STA** :: `wlan.tim.bmapctl.multicast == 1`
-    - 🦈 Bitmap Control = 0 ==>> **No multicast/broadcast frames are buffering** :: `wlan.tim.bmapctl.multicast == 0` <br> <br>
-    - 🦈 Bitmap Offset = 0 ==>> **how many bytes are Zero in Partial Virtual Bitmap (PVB)** :: `wlan.tim.bmapctl.offset == 0`
-    - 🦈 Bitmap Offset > 0 ==>> **how many bytes are Zero in Partial Virtual Bitmap (PVB)** `wlan.tim.bmapctl.offset > 0` <br> <br>
-- ⭕ PVB (Partial Virtual Map): (1 byte - 251 bytes): Series of flags indicating whether each associated STA has **Unicast** frames buffered at the AP. Each bit in this field corresponds to an AID of a STA. `wlan.tim.partial_virtual_bitmap` <br> <br>
-    - 🦈 PVB = 0 ==>> **No unicast frames are buffered** :: `wlan.tim.partial_virtual_bitmap == 00` 
-    - 🦈 PVB more than 0 ==>> **Unicast frames are buffered** :: `wlan.tim.partial_virtual_bitmap > 00`
-
+- `Bitmap Control` (AID = 0 and Bitmap Control = 1 indicates if any **Broadcast or Multicast** packets are buffered at the AP)
+- `PVB (Partial Virtual Map` (Series of flags indicating whether each associated STA has **Unicast** frames buffered at the AP) _Because the bitmap is never transmitted in its entirety, it is referred to as a virtual bitmap, and the portion that is actually transmitted is referred to as a partial virtual bitmap._
 
 | **Field**                 | **Description**                                                                                              | **Wireshark Filter**            |
 |---------------------------|--------------------------------------------------------------------------------------------------------------|---------------------------------|
 | **⭕ Element ID = 5**     | Element ID value Of 5 Indicates Is A TIM.                                                                      | `wlan.tag.number == 5`            |
 | **⭕ Length**              | Length Of The Information Carrying Fields (DTIM Count, DTIM Period, Bitmap Control, Partial Virtual Bitmap). | `wlan.tag.length`                 |
-| **🦈 Tag Length = 4**     |  Lenght = 4 bits                                                                                              | `wlan.tag.length == 4`            |
+| **Tag Length = 4**     |  Lenght = 4 bits                                                                                              | `wlan.tag.length == 4`            |
 | **⭕ DTIM Count**          | Incremental Beacon Frames Until The Next DTIM.                                                               | `wlan.tim.dtim_count`             |
-| **🦈 DTIM = 0**           | Beacon Is A DTIM                                                                                             | `wlan.tim.dtim_count == 0`        |
-| **🦈 DTIM = 1**           | 1 Beacon Left Until Next DTIM                                                                                | `wlan.tim.dtim_count == 1`        |
-| **🦈 DTIM = 2**           | 2 Beacons Left Until Next DTIM                                                                               | `wlan.tim.dtim_count == 2`        |
+| **DTIM = 0**           | Beacon Is A DTIM                                                                                             | `wlan.tim.dtim_count == 0`        |
+| **DTIM = 1**           | 1 Beacon Left Until Next DTIM                                                                                | `wlan.tim.dtim_count == 1`        |
+| **DTIM = 2**           | 2 Beacons Left Until Next DTIM                                                                               | `wlan.tim.dtim_count == 2`        |
 | **⭕ DTIM Period**         | Number Of Beacon Frames Between DTIM Beacon.                                                                 | `wlan.tim.dtim_period`            |
-| **🦈 DTIM Period = 1**    | Every Beacon Will Be A DTIM (ex. Ruckus_default_SSID)                                                        | `wlan.tim.dtim_period == 1`       |
-| **🦈 DTIM Period = 2**    | Every 2nd Beacon Will Be A DTIM (ex. Fz3r0_CWAP_SSID)                                                        | `wlan.tim.dtim_period == 2`       |
-| **🦈 DTIM Period = 3**    | Every 3rd Beacon Will Be A DTIM (ex. Muegahouse_SSID)                                                        | `wlan.tim.dtim_period == 3`       |
+| **DTIM Period = 1**    | Every Beacon Will Be A DTIM (ex. Ruckus_default_SSID)                                                        | `wlan.tim.dtim_period == 1`       |
+| **DTIM Period = 2**    | Every 2nd Beacon Will Be A DTIM (ex. Fz3r0_CWAP_SSID)                                                        | `wlan.tim.dtim_period == 2`       |
+| **DTIM Period = 3**    | Every 3rd Beacon Will Be A DTIM (ex. Muegahouse_SSID)                                                        | `wlan.tim.dtim_period == 3`       |
 | **⭕ Bitmap Control**               | Indicates if Multicast/Broadcast traffic are buffered at the AP & also uses Bitmap Offset (0-127). | `wlan.tim.bmapctl`                |
-| **🦈 Bitmap Control = 1**          | Multicast/broadcast frame buffering for any STA                                                        | `wlan.tim.bmapctl.multicast == 1`       |
-| **🦈 Bitmap Control = 0**          | No multicast/broadcast frames buffering                                                                | `wlan.tim.bmapctl.multicast == 0`       |
-| **🦈 Bitmap Offset = 0**           | How many bytes are Zero in Partial Virtual Bitmap (PVB)                                                | `wlan.tim.bmapctl.offset == 0`          |
-| **🦈 Bitmap Offset > 0**           | How many bytes are Zero in PVB                                                                         | `wlan.tim.bmapctl.offset > 0`           |
+| **Bitmap Control = 1**          | Multicast/broadcast frame buffering for any STA                                                        | `wlan.tim.bmapctl.multicast == 1`       |
+| **Bitmap Control = 0**          | No multicast/broadcast frames buffering                                                                | `wlan.tim.bmapctl.multicast == 0`       |
+| **Bitmap Offset = 0**           | How many bytes are Zero in Partial Virtual Bitmap (PVB)                                                | `wlan.tim.bmapctl.offset == 0`          |
+| **Bitmap Offset > 0**           | How many bytes are Zero in PVB                                                                         | `wlan.tim.bmapctl.offset > 0`           |
 | **⭕ PVB (Partial Virtual Bitmap)** | Series of flags indicating whether each associated STA has Unicast frames buffered at the AP.          | `wlan.tim.partial_virtual_bitmap`       |
-| **🦈 PVB = 0**                     | No unicast frames are buffered                                                                         | `wlan.tim.partial_virtual_bitmap == 00` |
-| **🦈 PVB more than 0**             | Unicast frames are buffered                                                                            | `wlan.tim.partial_virtual_bitmap > 00`  |
+| **PVB = 0**                     | No unicast frames are buffered                                                                         | `wlan.tim.partial_virtual_bitmap == 00` |
+| **PVB more than 0**             | Unicast frames are buffered                                                                            | `wlan.tim.partial_virtual_bitmap > 00`  |
 
 ⚠️ **`IMPORTANT`**: **The minimum value of the Length field of the Traffic Indication Map (TIM) information element is 4**. This value includes the length of the **Partial Virtual Bitmap**, which is at least one octet, along with the other **required fields (DTIM Count, DTIM Period, and Bitmap Control)**.
 
@@ -731,7 +707,7 @@ _All STAs detected in the primary or the secondary channel are HT STAs, and All 
 - [QoS - Understanding ADD Traffic Stream (ADDTS) for U-APSD](https://www.hitchhikersguidetolearning.com/2017/09/17/understanding-add-traffic-stream-addts-for-u-apsd/)
 
 
-
+https://telcomatraining.com/what-is-tim-traffic-indication-map/
 
 
 
