@@ -481,8 +481,9 @@ The 802.11e standard is being designed to be backward compatible with the legacy
 
 
 
+VoIP trigger
 
-
+![image](https://github.com/user-attachments/assets/18390459-a002-43cb-9dcd-fa4e7088e904)
 
 
 
