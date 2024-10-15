@@ -1,11 +1,11 @@
-# 🛜🔋🛑 MAC Operations: `Power Management`
+# 🛜🔋🛑 802.11 MAC Operations: `Power Management`
 
 There are 2 types of MAC Operations: **Power Management** & **Protection Mechanisms**:
 
 1. **`Power Management`** is allow the radio to go to sleep (just few microseconds), because if the antenna/adapter keeps awake all the time is consuming battery all the time, in a movile device can degrade battery life. Power management it's just turning on the antenna, send/recieve the frame, then "doze" or "sleep" the antenna and so on. The hint here is, that the STA does not lose any frame even if it's sleeping <br><br>
 2. **`Protection Mechanisms`** allow newer devices to communicate and "exist" in a world where older devices also exists (eg. devices using 802.11b(HR-DSSS) can coexist with newer devices using 802.11g(ERP) or even newest devices like 802.11n/ac/ax(OFDM)).
 
-# 🔋🛜🪫 `Power Management`
+# 🔋🛜🪫 802.11: `Power Management`
 
 Many mechanisms that are described in the IEEE 802.11 standard allow a wireless device to reduce its power consumption, to turn off its radios and to wake up at the correct time to retrieve its traffic. 
 
@@ -20,7 +20,7 @@ A client STA can be in one of two Power Management modes:
 
 ⚠️ **`IMPORTANT`**: Nowdays most wireless devices (eg. smartphones, tablets, computers, etc) by default use `Power Save (PS) mode` to increase the battery life.
 
-## 🔋🐓💤 Power States
+## 🔋🐓💤 Power Management: `Power States`
 
 A wireless client STA enters **Power Save (PS) mode** in which the radio power state can transition **between awake and doze** according to the 802.11 power management rules. 
 
@@ -58,8 +58,8 @@ Power consumed by each activity increases in the given order (1-4). In power sav
 
 **Null Data Frame** VS **QoS Null Data Frame**:
 
-- ⭕ Null Data Frames are special Wi-Fi frames that contain no data payload. They are primarily used for signaling purposes, particularly in Power Save mode. A device sends a Null Data Frame to inform the access point (AP) about its power management status. <br><br>
-- ⭕ QoS Null Data Frames are similar to standard Null Data Frames but **include additional fields for Quality of Service (QoS) control**, which helps manage the prioritization of traffic in the network. <br><br>
+- ⭕ `Null Data Frames` are special Wi-Fi frames that contain no data payload. They are primarily used for signaling purposes, particularly in Power Save mode. A device sends a Null Data Frame to inform the access point (AP) about its power management status. <br><br>
+- ⭕ `QoS Null Data Frames` are similar to standard Null Data Frames but **include additional fields for Quality of Service (QoS) control**, which helps manage the prioritization of traffic in the network. 
 
 ### 🦈 Wireshark Filters: `Power Management` > `Null Data Frame` & `QoS Null Data Frame`
 
