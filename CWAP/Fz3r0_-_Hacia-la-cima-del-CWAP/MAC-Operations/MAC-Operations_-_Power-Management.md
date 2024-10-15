@@ -205,11 +205,10 @@ TIM contains 2 Sub-Fields:
     - ⭕ DTIM Bitmap Control = 0: No multicast/broadcast frame buffering in the AP for any STA <br> <br>
     - ⭕ DTIM Partial Virtual Map (PVM) = 0: No unicast frame buffering in the AP
     - ⭕ DTIM Partial Virtual Map (PVM) > 0: Unicast frame(s) buffering in the AP for 1 or more STAs
----
 
-### 📋🙋‍♂️🐓 Control Frame: `PS-Poll`
+## 📋🙋‍♂️🐓 Control Frame: `PS-Poll`
 
-PS-POLL is the **legacy** PS mode mechanism is based on the PS-Poll frame to retrieve the buffered frames in the AP. 
+PS-POLL is the **legacy PS mode** mechanism is based on the PS-Poll frame to retrieve the buffered frames in the AP. 
 
 - The PS-Poll frame is a short Control Frame containing the AID value of the client. 
 
@@ -249,16 +248,14 @@ The type of Power Management used depends on the AP and client STA standard used
 | **802.11ax**     | 2019     | Target Wake Time (TWT)                                                                            | Improves energy efficiency by allowing devices to schedule when to wake up and listen for transmissions. |
 
 
-## 802.11 Power Save (Legacy power save mode)
+# 🗿🔋🪫 802.11 Power Save (Legacy power save mode)
 
 - Less Efficient Power Save Mode.
 - There are 2 Types of Legacy Power Save Mode _(Clients can support either one of the two legacy power save mechanisms at one time)_: <br><br>
 1. **Power save Poll: `PS Poll**
 2. **Non Power save Poll: `Non PS Poll`** 
 
----
-
-### 802.11 Power Save (Legacy power save mode): `PS-Poll Mode`:
+## 📊✅ 802.11 Power Save (Legacy power save mode): `PS-Poll Mode`
 
 - As the name suggests `PS-Poll` stands for `Power Save Polling`.
 - In this mode the client STA uses `PS-Poll`, this is a control frame the STA sends to an AP after receiving a beacon containing the STAs association ID (AID) in the TIM. The STA will send PS-Poll frames to the AP until it receives a frame from the AP with the `More Data bit set to 0`. A STA may not go back to sleep until its AID is clear from the TIM whereas APs may choose to delay response to the PS-Poll frame; this is vendor specific.
@@ -357,9 +354,8 @@ The type of Power Management used depends on the AP and client STA standard used
 9. The **client STA** sends a `Null Function` Frame with the `Power Management bit set to 1`, indicating that it is **entering the doze state (power save mode)** and has no data to send or receive. // Then, the **AP acknowledges the Null Function Frame** from the client STA by sending an ACK frame, confirming that it knows the STA is now in doze state (power save mode). <br><br>
     - 🦈 Null Function with Power Management bit set to 1 ::  `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 1` <br><br>
 
----
 
-### 802.11 Power Save (Legacy power save mode): `Non PS-Poll Mode`:
+## 📊🚫 802.11 Power Save (Legacy power save mode): `Non PS-Poll Mode`
 
 - The `Non PS Poll` mechanism refers to situations where a device **does not use the PS Poll mechanism** to wake up from its power saving mode and instead relies on other mechanisms to wake up and communicate with the AP.
 - In this mode the client simply exits the PS mode and switches back to active mode. `Null Data` frames or `QoS Null Data` frames are generally used for this purpose.
