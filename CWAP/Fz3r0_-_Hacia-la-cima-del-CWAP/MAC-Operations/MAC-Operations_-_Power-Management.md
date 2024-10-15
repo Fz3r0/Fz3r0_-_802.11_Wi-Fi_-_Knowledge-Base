@@ -498,13 +498,20 @@ The 802.11e standard is being designed to be backward compatible with the legacy
 ## Offchannel Scanning
 
 
-## IBSS Power Management
-_In an IBSS configuration, no full-time AP exists and all systems may desire to enter sleep mode, the problem is there is no AP to send TIM or DTIM.  So in IBSS, **Announcement Traffic Indication Message (ATIM)** is use for power management._
+# IBSS Power Management _(Ad-Hoc / Peer-to-Peer)_
 
-- In IBSS (ad hoc network) there is no AP to send TIM or DTIM. So if a STA goes into power save mode multiple other STAs has to buffer its data for specific STA.
-- So in IBSS, Announcement Traffic Indication Message (ATIM) is use for power management.
-- ATIM is a management frame with no frame body.
-- When a STA receives ATIM, that formally dozing station must begin the process of retrieving buffered frame from the stations that transmitted the ATIM.
+In an IBSS configuration, no full-time AP exists and all systems may desire to enter sleep mode, the problem is there is no AP to send TIM or DTIM. So in IBSS, **Announcement Traffic Indication Message (ATIM)** is use for power management.
+
+In IBSS (ad hoc network) there is no AP to send TIM or DTIM. So if a STA goes into power save mode multiple other STAs has to buffer its data for specific STA. So in IBSS, Announcement Traffic Indication Message (ATIM) is use for power management.
+
+ATIM is a management frame with no frame body and it is used in IEEE 802.11 ad hoc or Independent BSS (Basic Service Set) networks to announce the existence of buffered frames. These messages are sent between wireless stations to prevent them entering power saving mode and to indicate there is data to follow.
+
+When a STA receives ATIM, that formally dozing station must begin the process of retrieving buffered frame from the stations that transmitted the ATIM.
+
+⚠️ **`IMPORTANT`**: **Do not confuse the `ATIM` frame with the `TIM` field!!!**
+
+- The **ATIM** is a frame used for power management by Ad-Hoc (Peer-to-Peer) clients not communicating through an AP.
+- The **TIM** is a field in the beacon frame that tells client stations in Power Management mode that the AP has buffered unicast frames for the clients.
 
 
 
