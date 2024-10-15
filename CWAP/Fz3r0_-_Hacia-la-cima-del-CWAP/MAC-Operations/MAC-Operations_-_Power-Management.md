@@ -51,8 +51,31 @@ Power consumed by each activity increases in the given order (1-4). In power sav
 
 ## 📬⚡📪 Power Management Flag:
 
-- 📬💤 **`Power Management = 1`**: Indicates the STA device is entering **Power Save (PS) mode** also known as **"Doze"** state, meaning it can transition into a low-power state where it is not actively transmitting or receiving data, **only waking up periodically to check for new information**. <br><br>
+- 📬💤 **`Power Management = 1`**: Indicates the STA device is entering **Power Save (PS) mode** also known as **"Doze"** state, meaning it can transition into a low-power state where it is not actively transmitting or receiving data, **only waking up periodically to check for new information**.
+
+
+
 - 📪🐓 **`Power Management = 0`**: Indicates to the AP that the STA device is ready to Tx/Rx and is entering to any other of the power save states, eg. **Awake/Iddle**, **Receiving**, **Transmitting**. 
+
+````py
+## Power Management = 0 (Awake = Transmit / Receive)
+
+IEEE 802.11 QoS Null function (No data), Flags: .......T
+    Type/Subtype: QoS Null function (No data) (0x002c)  <<<<<=============||| PWR MGT = 0 : QoS Null (No Data)
+    Frame Control Field: 0xc801
+        .... ..00 = Version: 0
+        .... 10.. = Type: Data frame (2)
+        1100 .... = Subtype: 12
+        Flags: 0x01
+            .... ..01 = DS status: Frame from STA to DS via an AP (To DS: 1 From DS: 0) (0x1)
+            .... .0.. = More Fragments: This is the last fragment
+            .... 0... = Retry: Frame is not being retransmitted
+            ...0 .... = PWR MGT: STA will stay up       <<<<<=============||| PWR MGT = 0 : Awake
+            ..0. .... = More Data: No data buffered
+            .0.. .... = Protected flag: Data is not protected
+            0... .... = +HTC/Order flag: Not strictly ordered
+    .000 0000 0010 0100 = Duration: 36 microseconds
+````
 
 ## 🚫💾📦 `Null Data Frame` & `QoS Null Data Frame`
 
