@@ -58,19 +58,17 @@ A client STA can be in one of two Power Management modes:
 
 ### 🦈 Wireshark Filters: `Power Management` > `Null Data Frame` & `QoS Null Data Frame`
 
-- 🦈🐓 Data & Power Management = 0 ==>> **Awake** :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 0`
-- 🦈🐓 QoS Data & Power Management = 0 ==>> **Awake** :: `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 0` <br> <br>
-- 🦈💤 Data & Power Management = 1 ==>> **Doze** :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 1`
-- 🦈💤 QoS Data & Power Management = 1 ==>> **Doze** :: `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 1` <br> <br>
-- ⭕ Null Data Frame :: `wlan.fc.type_subtype == 36` <br><br>
-    - 🦈 Null Data Frame & PM = 1 (PS mode) :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 1`
-    - 🦈 Null Data Frame & PM = 0 (awake) :: `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 0` <br><br>
-- ⭕ QoS Null Data Frame :: `wlan.fc.type_subtype == 44` <br><br>
-    - 🦈 QoS Null Data Frame & PM = 1 (PS mode) :: `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 1`
-    - 🦈 QoS Null Data Frame & PM = 0 (awake) :: `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 0` <br><br>
-- ⭕ QoS Data Frame or QoS Data Frame :: `wlan.fc.type_subtype == 36 || wlan.fc.type_subtype == 44` <br><br>
-    - 🦈 Null Data Frame or QoS Null Data Frame & PM = 1 (PS mode) :: `wlan.fc.type_subtype == 36 || wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 1`
-    - 🦈 Null Data Frame or QoS Null Data Frame & PM = 0 (awake) :: `wlan.fc.type_subtype == 36 || wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 0`
+| **Field**                                   | **Description**                                         | **Wireshark Filter**                              |
+|---------------------------------------------|---------------------------------------------------------|---------------------------------------------------|
+| **⭕ Null Data Frame**                       | Identifies a Null Data Frame                            | `wlan.fc.type_subtype == 36`                        |
+| **💤 Null Data Frame & PM = 1**             | Null Data Frame with Power Save mode (Doze)                   | `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 1` |
+| **🐓 Null Data Frame & PM = 0**             | Null Data Frame with Awake mode                         | `wlan.fc.type_subtype == 36 && wlan.fc.pwrmgt == 0` |
+| **⭕ QoS Null Data Frame**                   | Identifies a QoS Null Data Frame                        | `wlan.fc.type_subtype == 44`                        |
+| **💤 QoS Null Data Frame & PM = 1**         | QoS Null Data Frame with Power Save mode (Doze)               | `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 1` |
+| **🐓 QoS Null Data Frame & PM = 0**         | QoS Null Data Frame with Awake mode                     | `wlan.fc.type_subtype == 44 && wlan.fc.pwrmgt == 0` |
+| **⭕ QoS Data Frame or QoS Null Data Frame** | Either QoS Data Frame or QoS Null Data Frame            | `wlan.fc.type_subtype == 36`                       |
+| **💤 Null or QoS Null Data Frame & PM = 1** | Either Null Data or QoS Null Data Frame with PS mode (Doze)    | `wlan.fc.type_subtype == 36`                       |
+| **🐓 Null or QoS Null Data Frame & PM = 0** | Either Null Data or QoS Null Data Frame with Awake mode | `wlan.fc.type_subtype == 36`                       |
   
 ## 🪪🆔🤳 PS Field: `AID (Association Identifier)`
 
@@ -80,15 +78,32 @@ Every 802.11 Power Management Method starts begin with the client STA associates
 
 ### 🦈 Wireshark Filters: `AID (Association Identifier)`
 
-- ⭕ AID (Association Identifier): **Sent by the AP** (`Association Response` or `Re-Association Response`) ::  <br> <br>
-    - 🦈 Filter :: AID (Association Identifier) 3 = `wlan.fixed.aid == 3`
-    - 🦈 Filter :: AID (Association Identifier) 0 (broadcast or multicast frames) = `wlan.fixed.aid == 0`
+| **Field**                          | **Description**                                                  | **Wireshark Filter** |
+|------------------------------------|------------------------------------------------------------------|----------------------|
+| **⭕ AID (Association Identifier)** | Sent by the AP (Association Response or Re-Association Response) | `wlan.fixed.aid`       |
+| **AID = 3**           | Filter for AID 3 (specific association identifier | eg. STA # 3)               | `wlan.fixed.aid == 3`  |
+| **AID = 0**           | Filter for AID 0 (broadcast or multicast frames)                 | `wlan.fixed.aid == 0`  |
+
 
 ## 👂⏳🐓 PS Field: `Listen Interval`
 
-- Listen Interval: **Sent by the STA** (`Association Request` or `Re-Association Request`) :: The client STA will go to `awake` state in a timing period called "Listen Interval". The "Association Request" or "Re-Association Request" frame includes a Listen Interval subfield within the Capabilities Information field. It is an integer between 0 and 65535 expressed in **units of Beacon Interval** (ex. 250 = Listen every 250 beacons). It indicates to the AP how often a client in PS mode wakes up to listen to the Beacon frames. In the AP, the Aging Time of the buffered frames bound to the client is implemented differently by each vendor but must not be shorter than the Listen Interval (or the WNM Sleep Interval in a WNM Sleep Mode Request frame). The Listen Interval from the client is also vendor specific // In other words, **this is an unicast frame used for power management purposes sent from the STA to the AP, this value informs the AP of how many Beacons the STA will be dozing when in a power save state.** For example if a STA has a listen interval of 15 that means it will doze for 15 Beacons and if the Beacon interval is 100 time units the STA will doze for approximately 1.5 seconds. <br> <br>
-    - 🦈 Filter :: Listen Interval 250 (HEX) = `wlan.fixed.listen_ival == 0x00fa`
-    - 🦈 Filter :: Listen Interval 250 (Decimal) = `wlan.fixed.listen_ival == 250`
+- Listen Interval: **Sent by the STA** (`Association Request` or `Re-Association Request`)
+- The client STA will go to `awake` state in a timing period called "Listen Interval".
+- The "Association Request" or "Re-Association Request" frame includes a Listen Interval subfield within the Capabilities Information field.
+- It is an integer between 0 and 65535 expressed in **units of Beacon Interval** (ex. 250 = Listen every 250 beacons).
+- It indicates to the AP how often a client in PS mode wakes up to listen to the Beacon frames.
+- In the AP, the Aging Time of the buffered frames bound to the client is implemented differently by each vendor but must not be shorter than the Listen Interval (or the WNM Sleep Interval in a WNM Sleep Mode Request frame).
+
+The Listen Interval from the client is also vendor specific // In other words, **this is an unicast frame used for power management purposes sent from the STA to the AP, this value informs the AP of how many Beacons the STA will be dozing when in a power save state.** For example if a STA has a listen interval of 15 that means it will doze for 15 Beacons and if the Beacon interval is 100 time units the STA will doze for approximately 1.5 seconds. <br> <br>
+
+### 🦈 Wireshark Filters: `Listen Interval`
+
+| **Field**                              | **Description**                                                                       | **Wireshark Filter**             |
+|----------------------------------------|---------------------------------------------------------------------------------------|----------------------------------|
+| **⭕ Listen Interval**                  | Indicates to the AP how often a client in PS mode wakes up to listen to Beacon frames | wlan.fixed.listen_ival           |
+| **🦈 Listen Interval = 250 (HEX)**     | Every 250 beacons (in hexadecimal representation)                                     | wlan.fixed.listen_ival == 0x00fa |
+| **🦈 Listen Interval = 250 (Decimal)** | Every 250 beacons (in decimal representation)                                         | wlan.fixed.listen_ival == 250    |
+
 
 ---
 
