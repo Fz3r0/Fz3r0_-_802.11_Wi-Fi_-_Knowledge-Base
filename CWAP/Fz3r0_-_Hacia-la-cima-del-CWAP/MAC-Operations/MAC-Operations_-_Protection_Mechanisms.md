@@ -307,11 +307,20 @@ _All STAs detected in the primary or the secondary channel are HT STAs, and All 
 
 # Protection Mechanisms: `VHT`
 
-Since 802.11ac does not operate on the 2.4 GHz bands, it does not have to worry about 802.11b, 802.11g, or 2.4 GHz 802.11n radios.
+Since 802.11ac does not operate on the 2.4 GHz bands, it does not have to worry about 802.11b, 802.11g, or 2.4 GHz 802.11n radios. 802.11a and 802.11n radios all all PHYs use the OFDM preamble. When a transmission is performed using any of these PHYs, the other radios hear the preamble and can calculate how long to wait before they can transmit.
 
-802.11a and 802.11n radios all all PHYs use the OFDM preamble.
+But for hidden node problems and to determine when channels are available, 802.11ac defines an enhanced Request to Send/Clear to Send (RTS/CTS) mechanism. The mechanism is as follows:
 
-When a transmission is performed using any of these PHYs, the other radios hear the preamble and can calculate how long to wait before they can transmit.
+An 802.11ac device sends an RTS. Basic 802.11a transmission, which is 20 MHz wide, is replicated another three times to fill the 80 MHz or another seven times to fill 160 MHz. Each nearby device, regardless of whether the primary channel is the 20 MHz channel over the 80 MHz or 160 MHz channel, can receive the RTS. Each device that receives the RTS sets virtual sub-channels in busy state.
+
+The device that receives the RTS checks whether the primary channel or sub-channels of the 80 MHz channel are busy. If some channel bandwidth is used, the receiver replies with a CTS with available bandwidth and reports repeated bandwidth.
+A CTS is sent over each available 20 MHz sub-channel.
+
+The sender can learn available and unavailable channels. Then data is sent only over available sub-channels.
+
+![image](https://github.com/user-attachments/assets/d1b18b0a-755e-44da-89e1-54e367744550)
+_Comparation between 802.11n and 802.11ac. In 802.11n, if a sub-channel is unavailable, the entire bandwidth is unavailable. In 802.11ac, if some sub-channels are unavailable, other sub-channels can still be used to send data._
+
 
 
 # Protection Mechanisms: `HE`
@@ -352,7 +361,7 @@ Wi-Fi 6 requires backward compatibility with 802.11/a/b/g/n/ac, which means that
 
 - [Wi-Fi 6 for dummies](https://www.redwaynetworks.com/wp-content/uploads/Wi-Fi-6-FD_-Extreme-Networks-Special-Edition-_1_.pdf)
 
-
+- https://support.huawei.com/enterprise/en/doc/EDOC1100081215
 
 
 - https://gjermundsblog.wordpress.com/wp-content/uploads/2019/08/mu-rts_cts_final.pdf
