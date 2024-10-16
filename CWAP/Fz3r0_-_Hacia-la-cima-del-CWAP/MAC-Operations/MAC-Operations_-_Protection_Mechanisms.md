@@ -7,7 +7,7 @@ There are 2 types of MAC Operations: **Power Management** & **Protection Mechani
 
 # 🙋🛜🚦 `Protection Mechanisms`
 
-802.11 (Wi-Fi) networks allows for backward compatibility with previous generations (eg. Wi-Fi 4 (802.11n) is backward compatible with Wi-Fi 2 or Wi-Fi 3 (802.11b/g)). This is one reason the technology is so popular, people can upgrade their devices at their own pace, without worrying about whether their old ones will still work. 
+802.11 (Wi-Fi) networks allows for backward compatibility with previous generations (eg. Wi-Fi 4 (802.11n) is backward compatible with Wi-Fi 1 or Wi-Fi 3 (802.11b/g)). This is one reason the technology is so popular, people can upgrade their devices at their own pace, without worrying about whether their old ones will still work. 
 
 HR/DSSS (802.11b legacy Wi-Fi-1) STAs does not understand OFDM Modulation used by ERP (802.11g Wi-Fi-3) STAs, but HT/ERP/OFDM (802.11n Wi-Fi-4 {modern}) STAs are backwards compatible with HR/DSSS STAs & can transmit & understand HR/DSSS modulation. The way to acomplish that is using RTS/CTS mechanisms in case that legacy STAs are using the same AP of modern devices.
 
