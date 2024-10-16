@@ -6,13 +6,41 @@ There are 2 types of MAC Operations: **Power Management** & **Protection Mechani
 2. **`Protection Mechanisms`** allow newer devices to communicate and "exist" in a world where older devices also exists (eg. devices using 802.11b(HR-DSSS) can coexist with newer devices using 802.11g(ERP) or even newest devices like 802.11n/ac/ax(OFDM)).
 
 # 🛑🛜🚦 `Protection Mechanisms`
-_HR/DSSS STAs (802.11b legacy) does not understand OFDM Modulation used by ERP STAs. But, HT/ERP/OFDM (802.11n modern) STAs are backwards compatible with HR/DSSS STAs & can transmit & understand HR/DSSS modulation | The way to acomplish that is using RTS/CTS mechanisms in case that legacy STAs are using the same AP of modern devices | RTS/CTS are the most used mechanism in Wi-Fi, there's also a mechanism called CTS-to-self that is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame, this is usually done by the AP | ERP element is present only on 2.4GHz network supporting 802.11g & it is present in beacon & probe responses. The non-ERP_Present bit set to 1 in following conditions a. A nonERP station (legacy 802.11 or 802.11b) associate to the cell, b. A neighboring cell is detected, allowing only nonERP data rates, c. Any other management frame (except probe request) is received from neighboring cell supporting only nonERP data rates. | To ensure backward compatibility with older 802.11a/b/g radios, 802.11n (HT) access points may signal to other 802.11n stations when to use one of four HT protection modes.| A field in the beacon frame called the HT Protection field has four possible settings of 0–3._
 
-## Protection Mechanisms: `CTS`, `CTS-to-Self`, `Dual CTS`
+HR/DSSS (802.11b legacy Wi-Fi-1) STAs does not understand OFDM Modulation used by ERP (802.11g Wi-Fi-3) STAs, but HT/ERP/OFDM (802.11n Wi-Fi-4 {modern}) STAs are backwards compatible with HR/DSSS STAs & can transmit & understand HR/DSSS modulation. The way to acomplish that is using RTS/CTS mechanisms in case that legacy STAs are using the same AP of modern devices.
 
-- `RTS/CTS` :: (802.11g or newer) :: The most used mechanism in Wi-Fi
-- `CTS-to-self` :: (802.11g or newer) :: that is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame, this is usually done by the AP 
-- `Dual CTS` Protection is used by the AP to set a NAV at STAs that do not support STBC and at STAs that can associate solely through the STBC beacon. (0 – dual CTS protection is not required, 1 – dual CTS protection is required)
+RTS/CTS are the most used mechanism in Wi-Fi, there's also a mechanism called CTS-to-self that is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame, this is usually done by the AP.
+
+ERP element is present only on 2.4GHz network supporting 802.11g & it is present in beacon & probe responses. 
+
+The non-ERP_Present bit set to 1 in following conditions: 
+
+1. A nonERP station (legacy 802.11 or 802.11b) associate to the cell
+2. A neighboring cell is detected, allowing only nonERP data rates,
+3. Any other management frame (except probe request) is received from neighboring cell supporting only nonERP data rates.
+
+To ensure backward compatibility with older 802.11a/b/g radios, 802.11n (HT) access points may signal to other 802.11n stations when to use one of four HT protection modes. A field in the beacon frame called the HT Protection field has four possible settings of 0–3.
+
+## Protection Mechanisms: `RTS/CTS` & `CTS-to-Self`
+
+### `RTS/CTS` _(802.11g or newer)_ 
+
+RTS/CTS is the most used mechanism in Wi-Fi
+
+RTS-CTS mechanism is an optional method that is used in Virtual carrier sensing to avoid hidden node problems. First, let us understand: what is a hidden node?
+
+In the below diagram, there is an access point node A indicated by blue. Nodes B and C are wireless devices within the AP – A’s BSS. However, B and C cannot hear each other due to network congestion or they are outside each other’s BSS and are called hidden nodes. Due to this, physical carrier sensing by B and C will never indicate that medium is busy when either one of them is transmitting in the air and could result in corruption and distortion of signal. To avoid this situation, we can use RTS-CTS mechanism.
+
+![image](https://github.com/user-attachments/assets/f8fe7a9f-6dc1-47f1-906b-afca7c174f81)
+
+
+### `CTS-to-self` _(802.11g or newer)_ 
+
+It is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame, this is usually done by the AP 
+
+### `Dual CTS` _(bonus)_ 
+
+Protection is used by the AP to set a NAV at STAs that do not support STBC and at STAs that can associate solely through the STBC beacon. (0 – dual CTS protection is not required, 1 – dual CTS protection is required)
 
 ## Protection Modes: `Important Concepts`
 
@@ -197,5 +225,8 @@ _All STAs detected in the primary or the secondary channel are HT STAs, and All 
 - [Protection Ripple in ERP 802.11 WLANs @ _CWNP_](https://www.cwnp.com/uploads/protection_ripple_in_erp_802-11_wlans.pdf) _`whitepaper`_
 - [HT Protection Mechanisms](https://dot11ap.wordpress.com/ht-protection-mechanisms/) _`definitions`_
 
+- https://myknowledgebits.com/chapter-2-rts-to-cts-and-cts-to-self/
+
+- 
 
 
