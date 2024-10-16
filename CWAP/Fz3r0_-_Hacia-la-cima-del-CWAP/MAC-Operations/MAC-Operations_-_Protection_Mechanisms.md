@@ -7,9 +7,21 @@ There are 2 types of MAC Operations: **Power Management** & **Protection Mechani
 
 # 🙋🛜🚦 `Protection Mechanisms`
 
+802.11 (Wi-Fi) networks allows for backward compatibility with previous generations (eg. Wi-Fi 5 is backward compatible with Wi-Fi 2). This is one reason the technology is so popular, people can upgrade their devices at their own pace, without worrying about whether their old ones will still work. 
+
 HR/DSSS (802.11b legacy Wi-Fi-1) STAs does not understand OFDM Modulation used by ERP (802.11g Wi-Fi-3) STAs, but HT/ERP/OFDM (802.11n Wi-Fi-4 {modern}) STAs are backwards compatible with HR/DSSS STAs & can transmit & understand HR/DSSS modulation. The way to acomplish that is using RTS/CTS mechanisms in case that legacy STAs are using the same AP of modern devices.
 
 RTS/CTS are the most used mechanism in Wi-Fi, there's also a mechanism called CTS-to-self that is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame, this is usually done by the AP.
+
+**`Important`**: Wi-Fi backward compatibility has long been a double-edged sword because backward copatibility brings some drawbacks for newer STAs using the same BSS witn legacy STAs nearby llike **RTS/CTS Overhead**, **Airtime Consumption** or **Connectivity Problems**. But, for the first time in 20 years, Wi-Fi does not require backward compatibility. This is because Wi-Fi 6E and the 6 GHz frequency band. There is no need for RTS/CTS protection mechanisms for legacy Wi-Fi devices in 6 GHz, legacy clients do not consume airtime while transmitting using slow data rates.  This is because Wi-Fi is brand new to 6 GHz, and there are no legacy clients. Altough in the future maybe we will need backward compatibility again in Wi-Fi 7, Wi-Fi 8, and Wi-Fi 9 if they still using 6 GHz band. 
+
+
+
+
+
+
+
+
 
 ERP element is present only on 2.4GHz network supporting 802.11g & it is present in beacon & probe responses. 
 
@@ -224,6 +236,8 @@ _All STAs detected in the primary or the secondary channel are HT STAs, and All 
 
 - https://myknowledgebits.com/chapter-2-rts-to-cts-and-cts-to-self/
 
-- 
+- https://www.extremenetworks.com/resources/blogs/backward-compatibility-the-double-edged-sword-of-wi-fi-performance-and-connectivity
 
+
+- https://davidhoglund.typepad.com/files/white_paper_c11-713103.pdf
 
