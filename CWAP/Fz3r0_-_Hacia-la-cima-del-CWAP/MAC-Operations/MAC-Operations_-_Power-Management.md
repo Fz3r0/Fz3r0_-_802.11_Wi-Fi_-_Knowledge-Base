@@ -107,8 +107,8 @@ IEEE 802.11 QoS Null function (No data), Flags: .......T
 ## Null Data Frame
 
 802.11 radio information
-IEEE 802.11 Null function (No data), Flags: .......T          # <<<<<=============||| Null (No Data)
-    Type/Subtype: Null function (No data) (0x0024)
+IEEE 802.11 Null function (No data), Flags: .......T
+    Type/Subtype: Null function (No data) (0x0024)            # <<<<<=============||| *Null (No Data) = 36
     Frame Control Field: 0x4801
         .... ..00 = Version: 0
         .... 10.. = Type: Data frame (2)                      # <<<<<=============||| Type     =  2  :: Data 
@@ -123,8 +123,8 @@ IEEE 802.11 Null function (No data), Flags: .......T          # <<<<<===========
 ## QoS Null Data Frame
 
 802.11 radio information
-IEEE 802.11 QoS Null function (No data), Flags: .......T      # <<<<<=============||| QoS Null (No Data)
-    Type/Subtype: QoS Null function (No data) (0x002c)
+IEEE 802.11 QoS Null function (No data), Flags: .......T      
+    Type/Subtype: QoS Null function (No data) (0x002c)        # <<<<<=============||| *QoS Null (No Data) = 44
     Frame Control Field: 0xc801
         .... ..00 = Version: 0
         .... 10.. = Type: Data frame (2)                      # <<<<<=============||| Type     =  2  :: Data 
@@ -132,8 +132,6 @@ IEEE 802.11 QoS Null function (No data), Flags: .......T      # <<<<<===========
         Flags: 0x01
     .000 0000 0011 0000 = Duration: 48 microseconds
 ````
-
-
 
 ### 🦈 Wireshark Filters: `Power Management` > `Null Data Frame` & `QoS Null Data Frame`
 
