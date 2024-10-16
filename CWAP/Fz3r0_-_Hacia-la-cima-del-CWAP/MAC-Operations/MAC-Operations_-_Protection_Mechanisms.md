@@ -329,3 +329,8 @@ _All STAs detected in the primary or the secondary channel are HT STAs, and All 
 
 
 - https://dot11ap.wordpress.com/cwna/radio-frequency-rf-technologies/space-time-block-coding-stbc/
+
+- [ERP in WiFi](https://www.youtube.com/watch?v=gfUyMj_xYMU)
+- [ERP Prtection MEchanisms](https://www.youtube.com/watch?v=MxJPNrOftEs)
+- [HT operation modes in WiFi](https://www.youtube.com/watch?v=hjYJkQbXss0)
+- [HT Prtection MEchanisms](https://www.youtube.com/watch?v=n9d9Q-M70_k)
