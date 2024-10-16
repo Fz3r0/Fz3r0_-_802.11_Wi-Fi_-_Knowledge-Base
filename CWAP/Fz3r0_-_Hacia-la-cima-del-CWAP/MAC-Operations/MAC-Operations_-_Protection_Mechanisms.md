@@ -7,7 +7,7 @@ There are 2 types of MAC Operations: **Power Management** & **Protection Mechani
 
 # 🙋🛜🚦 `Protection Mechanisms`
 
-802.11 (Wi-Fi) networks allows for backward compatibility with previous generations (eg. Wi-Fi 5 is backward compatible with Wi-Fi 2). This is one reason the technology is so popular, people can upgrade their devices at their own pace, without worrying about whether their old ones will still work. 
+802.11 (Wi-Fi) networks allows for backward compatibility with previous generations (eg. Wi-Fi 4 (802.11n) is backward compatible with Wi-Fi 2 or Wi-Fi 3 (802.11b/g)). This is one reason the technology is so popular, people can upgrade their devices at their own pace, without worrying about whether their old ones will still work. 
 
 HR/DSSS (802.11b legacy Wi-Fi-1) STAs does not understand OFDM Modulation used by ERP (802.11g Wi-Fi-3) STAs, but HT/ERP/OFDM (802.11n Wi-Fi-4 {modern}) STAs are backwards compatible with HR/DSSS STAs & can transmit & understand HR/DSSS modulation. The way to acomplish that is using RTS/CTS mechanisms in case that legacy STAs are using the same AP of modern devices.
 
@@ -23,21 +23,13 @@ RTS/CTS are the most used mechanism in Wi-Fi, there's also a mechanism called CT
 
 
 
-ERP element is present only on 2.4GHz network supporting 802.11g & it is present in beacon & probe responses. 
 
-The non-ERP_Present bit set to 1 in following conditions: 
-
-1. A nonERP station (legacy 802.11 or 802.11b) associate to the cell
-2. A neighboring cell is detected, allowing only nonERP data rates,
-3. Any other management frame (except probe request) is received from neighboring cell supporting only nonERP data rates.
-
-To ensure backward compatibility with older 802.11a/b/g radios, 802.11n (HT) access points may signal to other 802.11n stations when to use one of four HT protection modes. A field in the beacon frame called the HT Protection field has four possible settings of 0–3.
 
 ## 🙋🤳🏻📡 Protection Mechanisms: `RTS/CTS` _(802.11g or newer)_ 
 
-RTS/CTS is the most used mechanism in Wi-Fi
+`RTS/CTS` is the most used mechanism in Wi-Fi; this mechanism is an optional method that is used in `Virtual Carrier Sense` to avoid `hidden node` problems. 
 
-RTS-CTS mechanism is an optional method that is used in Virtual carrier sensing to avoid hidden node problems. First, let us understand: what is a hidden node?
+### RTS/CTS: `Hidden Node`
 
 In the below diagram, there is an access point node A indicated by blue. Nodes B and C are wireless devices within the AP – A’s BSS. However, B and C cannot hear each other due to network congestion or they are outside each other’s BSS and are called hidden nodes. Due to this, physical carrier sensing by B and C will never indicate that medium is busy when either one of them is transmitting in the air and could result in corruption and distortion of signal. To avoid this situation, we can use RTS-CTS mechanism.
 
@@ -75,11 +67,23 @@ When 802.11g was introduced, we had RTS/CTS and CTS-to-Self protection mechanism
 - **`802.11g` = `ERP`**: In an **ERP Beacon**, ERP stations look at the **ERP Information Element** to determine whether or not protection is necessary in the BSS
 - **`802.11n` = `HT`**: In an **HT Beacon**, HT stations use the **Operating Mode** and **Non-greenfield STAs Present** fields in the **HT Information Element** to determine whether or not to use protection.
 
-## Non-ERP protection mechanisms
+# Protection Mechanisms: ERP
 
 - IEEE 802.11-2007 standard mandate support for both DSSS (Direct Sequence Spread Spectrum) & OFDM (Orthogonal Frequency Division Multiplexing) technologies for clause 19 ERP (802.11g) radios.
 - When clause 18 (HR-DSSS) & clause 15 DSSS (802.11) coexisting in ERP BSS, 802.11g devices need to provide compatibility for slower 802.11/802.11b devices.
 - In this **mixed mode** (801.11 + 802.11b) 802.11g devices enable “Protection mechanism” also known as **`802.11g Protected mode`**.
+
+---
+
+ERP element is present only on 2.4GHz network supporting 802.11g & it is present in beacon & probe responses. 
+
+The non-ERP_Present bit set to 1 in following conditions: 
+
+1. A nonERP station (legacy 802.11 or 802.11b) associate to the cell
+2. A neighboring cell is detected, allowing only nonERP data rates,
+3. Any other management frame (except probe request) is received from neighboring cell supporting only nonERP data rates.
+
+To ensure backward compatibility with older 802.11a/b/g radios, 802.11n (HT) access points may signal to other 802.11n stations when to use one of four HT protection modes. A field in the beacon frame called the HT Protection field has four possible settings of 0–3.
 
 ### ERP Information Element
 
