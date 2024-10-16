@@ -39,9 +39,12 @@ In the below diagram, there is an access point node A indicated by blue. Nodes B
 
 It is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame, this is usually done by the AP 
 
-### `Dual CTS` _(bonus)_ 
+## 🙋📡📡 Protection Mechanisms: `Dual CTS` _(802.11n only : STBC)_ 
 
-Protection is used by the AP to set a NAV at STAs that do not support STBC and at STAs that can associate solely through the STBC beacon. (0 – dual CTS protection is not required, 1 – dual CTS protection is required)
+Protection is used by the AP to set a NAV at STAs that do not support STBC (Space-time block coding) and at STAs that can associate solely through the STBC beacon. 
+
+- 0 – dual CTS protection is not required
+- 1 – dual CTS protection is required
 
 STBC Beacon indicates whether the beacon containing this element is a primary or an STBC beacon. The STBC beacon has half a beacon period shift relative to the primary beacon. Defined only in a Beacon transmitted by an AP. Otherwise reserved.
 
@@ -255,3 +258,5 @@ _All STAs detected in the primary or the secondary channel are HT STAs, and All 
 
 - https://davidhoglund.typepad.com/files/white_paper_c11-713103.pdf
 
+
+- https://dot11ap.wordpress.com/cwna/radio-frequency-rf-technologies/space-time-block-coding-stbc/
