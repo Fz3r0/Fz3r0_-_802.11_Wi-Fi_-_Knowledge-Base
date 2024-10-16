@@ -4216,13 +4216,31 @@ _802.11i introduces key management schemes that allow for a separate authenticat
 
 ### 🪪🗝️⚙️ `AKM`: Authentication & Key Management
 _Authentication Key Management (AKM) is a term that describes the process of 802.1X/EAP authentication and the generation of encryption keys. The AKM suite indicates whether a station supports 802.1X or PSK authentication. || Key management is the process of managing cryptographic keys in a cryptosystem. This includes the generation, exchange, storage, use, destruction, and replacement of keys._ <br><br>
-**AKM Suites:** <br>
-00-0F-AC-**01** = **`802.1X`** <br>
-00-0F-AC-**02** = **`PSK`** <br>
-00-0F-AC-**03** = **`FT (802.11r over 802.1X)`** <br>
+
 - [Authentication & Key Management @ CWNP)](https://youtu.be/8OPdE1MM1yE?si=1J28-6H1omE9LO0W)
 - [`AKM`: Authentication Key Management | 802.11i | @ CWNP](https://www.cwnp.com/uploads/802-11i_key_management.pdf) _`pdf document`_
 - [Authenticated Key Management @ Key Management @ Cisco](https://www.cisco.com/web/techdoc/wireless/access_points/online_help/eag/123-02.JA/1100/h_ap_sec_ap-client-security.html) _`info`_
+
+### AKM Suites
+
+| **OUI**     | **Suite Type** | **Authentication Type**        | **Example**                              |
+|-------------|----------------|--------------------------------|------------------------------------------|
+| _00-0F-AC_  | _0_            | _Reserved_                     | _N/A_                                    |
+| 00-0F-AC    | **1**          | 802.1X                         | WPA/WPA2-Enterprise                      |
+| 00-0F-AC    | **2**          | PSK                            | WPA/WPA2-Personal                        |
+| 00-0F-AC    | **3**          | FT + 802.1X                    | WPA/WPA2-Enterprise + Fast Roaming       |
+| 00-0F-AC    | **4**          | FT + PSK                       | WPA/WPA2-Personal + Fast Roaming         |
+| 00-0F-AC    | **5**          | 802.1X (with SHA-256)          | WPA2-Enterprise (SHA-256)                |
+| 00-0F-AC    | **6**          | PSK (with SHA-256)             | WPA2-Personal (SHA-256)                  |
+| 00-0F-AC    | **7**          | TDLS                           | Tunneled Direct Link Setup (TDLS)        |
+| 00-0F-AC    | **8**          | SAE (with SHA-256)             | WPA3-Personal                            |
+| 00-0F-AC    | **9**          | FT + SAE (with SHA-256)        | WPA3-Personal + Fast Roaming             |
+| _00-0F-AC_  | _10_           | _AP Peer Key Authentication_   | _AP Peer Key (deprecated)_               |
+| 00-0F-AC    | **11**         | 802.1X (suite B / EAP SHA-256) | WPA3-Enterprise (suite B)                |
+| 00-0F-AC    | **12**         | 802.1X (suite B / EAP SHA-384) | WPA3-Enterprise (suite B, SHA-384)       |
+| 00-0F-AC    | **13**         | FT + 802.1X (with SHA-384)     | WPA3-Enterprise + Fast Roaming (SHA-384) |
+| _00-0F-AC_  | _14-255_       | _Reserved_                     | _N/A_                                    |
+| _Other OUI_ | _Any_          | _Vendor Specific_              | _Vendor Specific_                        |
 
 ---
 
