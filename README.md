@@ -4226,15 +4226,15 @@ _Authentication Key Management (AKM) is a term that describes the process of 802
 | **OUI**     | **Suite Type** | **Authentication Type**        | **Example**                              |
 |-------------|----------------|--------------------------------|------------------------------------------|
 | _00-0F-AC_  | _0_            | _Reserved_                     | _N/A_                                    |
-| 00-0F-AC    | **1**          | 802.1X                         | WPA/WPA2-Enterprise                      |
-| 00-0F-AC    | **2**          | PSK                            | WPA/WPA2-Personal                        |
-| 00-0F-AC    | **3**          | FT + 802.1X                    | WPA/WPA2-Enterprise + Fast Roaming       |
-| 00-0F-AC    | **4**          | FT + PSK                       | WPA/WPA2-Personal + Fast Roaming         |
-| 00-0F-AC    | **5**          | 802.1X (with SHA-256)          | WPA2-Enterprise (SHA-256)                |
-| 00-0F-AC    | **6**          | PSK (with SHA-256)             | WPA2-Personal (SHA-256)                  |
-| 00-0F-AC    | **7**          | TDLS                           | Tunneled Direct Link Setup (TDLS)        |
-| 00-0F-AC    | **8**          | SAE (with SHA-256)             | WPA3-Personal                            |
-| 00-0F-AC    | **9**          | FT + SAE (with SHA-256)        | WPA3-Personal + Fast Roaming             |
+| 00-0F-AC    | **01**         | 802.1X                         | WPA/WPA2-Enterprise                      |
+| 00-0F-AC    | **02**         | PSK                            | WPA/WPA2-Personal                        |
+| 00-0F-AC    | **03**         | FT + 802.1X                    | WPA/WPA2-Enterprise + Fast Roaming       |
+| 00-0F-AC    | **04**         | FT + PSK                       | WPA/WPA2-Personal + Fast Roaming         |
+| 00-0F-AC    | **05**         | 802.1X (with SHA-256)          | WPA2-Enterprise (SHA-256)                |
+| 00-0F-AC    | **06**         | PSK (with SHA-256)             | WPA2-Personal (SHA-256)                  |
+| 00-0F-AC    | **07**         | TDLS                           | Tunneled Direct Link Setup (TDLS)        |
+| 00-0F-AC    | **08**         | SAE (with SHA-256)             | WPA3-Personal                            |
+| 00-0F-AC    | **09**         | FT + SAE (with SHA-256)        | WPA3-Personal + Fast Roaming             |
 | _00-0F-AC_  | _10_           | _AP Peer Key Authentication_   | _AP Peer Key (deprecated)_               |
 | 00-0F-AC    | **11**         | 802.1X (suite B / EAP SHA-256) | WPA3-Enterprise (suite B)                |
 | 00-0F-AC    | **12**         | 802.1X (suite B / EAP SHA-384) | WPA3-Enterprise (suite B, SHA-384)       |
