@@ -27,7 +27,7 @@ RTS/CTS are the most used mechanism in Wi-Fi, there's also a mechanism called CT
 
 ## 🙋🤳🏻📡 Protection Mechanisms: `RTS/CTS` _(802.11g or newer)_ 
 
-`RTS/CTS` is the most used mechanism in Wi-Fi; this mechanism is an optional method that is used in `Virtual Carrier Sense` to avoid `hidden node` problems. 
+**RTS/CTS (Request-to-Send / Clear-to-Send)** is the most used mechanism in Wi-Fi; this mechanism is an optional method that is used in `Virtual Carrier Sense` to avoid `hidden node` problems. 
 
 ### RTS/CTS: `Hidden Node`
 
@@ -42,6 +42,16 @@ It is not a frame defined in the standard, this frame is a CTS frame without a p
 ### `Dual CTS` _(bonus)_ 
 
 Protection is used by the AP to set a NAV at STAs that do not support STBC and at STAs that can associate solely through the STBC beacon. (0 – dual CTS protection is not required, 1 – dual CTS protection is required)
+
+STBC Beacon indicates whether the beacon containing this element is a primary or an STBC beacon. The STBC beacon has half a beacon period shift relative to the primary beacon. Defined only in a Beacon transmitted by an AP. Otherwise reserved.
+
+- 0 – primary beacon
+- 1 – STBC beacon
+
+When implementing STBC, the received signal may be improved by up to 8 dB, resulting in greater range shown in the below figure (CWAP- Page 423). An 8 dB increase in signal strength can yield up to 69 percent more range. This increased range will only apply to STBC frames and therefore does not automatically mean an increased BSS size for all STAs.
+
+![image](https://github.com/user-attachments/assets/e177b13b-a7cc-4eeb-8ede-01679eef168b)
+
 
 ## Protection Modes: `Important Concepts`
 
