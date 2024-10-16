@@ -35,6 +35,79 @@ In the below diagram, there is an access point node A indicated by blue. Nodes B
 
 ![image](https://github.com/user-attachments/assets/f8fe7a9f-6dc1-47f1-906b-afca7c174f81)
 
+Any 802.11 device that wishes to transmit in the medium should send `RTS (Request to Send)` frame – **requesting for medium access to the AP**. The latter then responds with `CTS (Clear to Send)` frame that includes the `Duration field`, which helps the station to set its `NAV timer`. 
+
+Once the medium is free, the client STA can access the medium for wireless transmissions. For every frame transmitted in air, there should be an ACK from the AP. There is a SIFs delay between each frame: RTS, CTS, DATA and ACK frames. At times, this mechanism can create a lot of overhead in the network leading to a lot of congestion. And hence, this can be enabled only if the frame size is equal or above a specific configured threshold that depends on the network.
+
+The `Duration Field` determine the **time in microseconds (μs)** needed to complete the Frame Exchange. This is measured **AFTER the current frame**, this means: what is left after the current frame.
+
+**There are 3 different main Duration Values types:**
+
+1. **Data Exchange** _(AKA RTS Data Exchange)_ = `SIFS` + `Ack`
+2. **RTS/CTS Data Exchange** = `x3 SIFS` + `CTS` + `Data` + `ACK`
+3. **CTS-to-Self Data Exchange** = `x2 SIFS` + `Data` + `ACK`
+
+
+````py
+## Duration Values >> Data Exchange (AKA RTS Data Exchange):
+
+   # In a Data Exchange scenario the Duration is equal the exchange AFTER the Data Frame:
+   
+       #   SIFS + Ack:
+
+                                      ._______________________________.        ._______.
+                                DIFS  |             Data              |  SIFS  |  Ack  |
+                              __________________________________________________________  
+                                                                       <--------------->  <<<--- Data Duration =  SIFS + Ack
+                                                                                      <>  <<<--- Ack Duration  =  0
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+## Duration Values >> RTS/CTS Data Exchange:
+
+   # In a Data Exchange where RTS/CTS is used, Duration is equal the exchange AFTER the RTS Frame:
+   
+       #   x3 SIFS + CTS + Data + ACK:
+                              
+        ._____.        ._____.        ._______________________________.        ._______.
+  DIFS  | RTS |  SIFS  | CTS |  SIFS  |             Data              |  SIFS  |  Ack  |
+________________________________________________________________________________________
+               <----------------------------------------------------------------------->  <<<--- RTS Duration  =  x3 SIFS + CTS + Data + ACK
+                              <-------------------------------------------------------->  <<<--- CTS Duration  =  x2 SIFS + Data + ACK
+                                                                       <--------------->  <<<--- Data Duration =  SIFS + Ack
+                                                                                      <>  <<<--- Ack Duration  =  0
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+## Duration Values >> CTS-to-Self Data Exchange:
+
+   # In a Data Exchange where CTS-to-Self is used, Duration is equal the exchange AFTER the CTS Frame:
+   
+       #   x2 SIFS + Data + ACK:
+
+                       ._____.        ._______________________________.        ._______.
+                       | CTS |  SIFS  |             Data              |  SIFS  |  Ack  |
+                       _________________________________________________________________
+                              <-------------------------------------------------------->  <<<--- CTS Duration  =  x2 SIFS + Data + ACK
+                                                                       <--------------->  <<<--- Data Duration =  SIFS + Ack
+                                                                                      <>  <<<--- Ack Duration  =  0
+
+IMPORTANT:
+
+- # CTS-to-Self is simply another method of performing NAV distribution & that use only CTS frames.
+
+- # It is used strictly as protection mechanism for mixed mode environment.
+
+- # The CTS-to-self NAV distribution mechanism is lower in network overhead cost than is the RTS/CTS NAV distribution mechanism,
+  # but CTS-to-self is less robust against hidden nodes and collisions than RTS/CTS.
+
+- # STAs employing a NAV distribution mechanism should choose a mechanism such as CTS-to-self or RTS/CTS that is appropriate
+  # for the given network conditions.
+
+- # If errors occur when employing the CTS-to-self mechanism, STAs should switch to a more robust mechanism.
+
+````
+
 ## 🙋📡📡 Protection Mechanisms: `CTS-to-self` _(802.11g or newer)_ 
 
 It is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame, this is usually done by the AP 
