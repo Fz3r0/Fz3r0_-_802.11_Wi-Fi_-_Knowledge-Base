@@ -1,11 +1,11 @@
-# 🛜🔋🛑 MAC Operations: `Protection Mechanisms`
+# 🙋🛜🚦MAC Operations: `Protection Mechanisms`
 
 There are 2 types of MAC Operations: **Power Management** & **Protection Mechanisms**:
 
 1. **`Power Management`** is allow the radio to go to sleep (just few microseconds), because if the antenna/adapter keeps awake all the time is consuming battery all the time, in a movile device can degrade battery life. Power management it's just turning on the antenna, send/recieve the frame, then "doze" or "sleep" the antenna and so on. The hint here is, that the STA does not lose any frame even if it's sleeping <br><br>
 2. **`Protection Mechanisms`** allow newer devices to communicate and "exist" in a world where older devices also exists (eg. devices using 802.11b(HR-DSSS) can coexist with newer devices using 802.11g(ERP) or even newest devices like 802.11n/ac/ax(OFDM)).
 
-# 🛑🛜🚦 `Protection Mechanisms`
+# 🙋🛜🚦 `Protection Mechanisms`
 
 HR/DSSS (802.11b legacy Wi-Fi-1) STAs does not understand OFDM Modulation used by ERP (802.11g Wi-Fi-3) STAs, but HT/ERP/OFDM (802.11n Wi-Fi-4 {modern}) STAs are backwards compatible with HR/DSSS STAs & can transmit & understand HR/DSSS modulation. The way to acomplish that is using RTS/CTS mechanisms in case that legacy STAs are using the same AP of modern devices.
 
@@ -21,9 +21,7 @@ The non-ERP_Present bit set to 1 in following conditions:
 
 To ensure backward compatibility with older 802.11a/b/g radios, 802.11n (HT) access points may signal to other 802.11n stations when to use one of four HT protection modes. A field in the beacon frame called the HT Protection field has four possible settings of 0–3.
 
-## Protection Mechanisms: `RTS/CTS` & `CTS-to-Self`
-
-### `RTS/CTS` _(802.11g or newer)_ 
+## 🙋🤳🏻📡 Protection Mechanisms: `RTS/CTS` _(802.11g or newer)_ 
 
 RTS/CTS is the most used mechanism in Wi-Fi
 
@@ -33,8 +31,7 @@ In the below diagram, there is an access point node A indicated by blue. Nodes B
 
 ![image](https://github.com/user-attachments/assets/f8fe7a9f-6dc1-47f1-906b-afca7c174f81)
 
-
-### `CTS-to-self` _(802.11g or newer)_ 
+## 🙋📡📡 Protection Mechanisms: `CTS-to-self` _(802.11g or newer)_ 
 
 It is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame, this is usually done by the AP 
 
