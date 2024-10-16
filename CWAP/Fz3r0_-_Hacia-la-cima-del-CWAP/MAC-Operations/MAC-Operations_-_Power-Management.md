@@ -7,18 +7,18 @@ There are 2 types of MAC Operations: **Power Management** & **Protection Mechani
 
 # 🔋🛜🪫 802.11 `Power Management`
 
-Many mechanisms that are described in the IEEE 802.11 standard allow a wireless device to reduce its power consumption, to turn off its radios and to wake up at the correct time to retrieve its traffic. 
+Many mechanisms that are described in the IEEE 802.11 standard allow a wireless device to reduce power consumption when they are not actively transmitting or receiving data, this is achieved by turning off its radios and to wake up at the correct time to send/retrieve its traffic. 
 
-While the APs are generally connected to an external power source, the wireless clients are often running on batteries. The purpose of power saving features is to increase the battery life and to allow longer performance. This battery life extension can be significant for low-powered devices such as smartphones, Voice over IP phones or handheld barcodes scanners.
+While the APs are generally connected to an external power source, the wireless client STAs are often running on batteries. The purpose of power saving features is to increase the battery life and to allow longer performance. This battery life extension can be significant for low-powered devices such as smartphones, Voice over IP phones, tablets or handheld barcodes scanners. 
 
 ## 🔋⚙️🔀 Power Management: `Modes`
 
-A client STA can be in one of two Power Management modes:
+A 802.11 wireless client STA can be in one of two Power Management modes:
 
-- ⚡ **`Active mode`**: the client is awake all the time. The AP immediately transmits the frames to the client. <br> <br>
+- ⚡ **`Active mode`**: the client is awake all the time. The AP immediately transmits the frames to the client. While it’s possible to keep a Wi-Fi adapter in active mode all the time, doing so **significantly increases battery consumption, which may not be ideal for portable devices**. <br> <br>
 - 🔋 **`Power Save (PS) mode`**: the client is mostly in doze power state, but can also be awake to transmit and receive now and then. In this mode, the AP buffers the eligible frames destined for the client.
 
-⚠️ **`IMPORTANT`**: Nowdays most wireless devices (eg. smartphones, tablets, computers, etc) by default use `Power Save (PS) mode` to increase the battery life.
+⚠️ **`IMPORTANT`**: Nowadays, most wireless devices (e.g., smartphones, tablets, computers, etc.) use **Power Save (PS) mode by default** to extend battery life. However, this setting can be manually changed in certain cases _(eg. on Linux, you can adjust this via the Wi-Fi card’s power management options)_. On certain smartphones, this can be done only if the device is rooted and the appropriate settings are adjusted, however, it can be complicated, and there's no guarantee that you can fully disable Power Save Mode at the Wi-Fi hardware level.
 
 ## 🔋🐓💤 Power Management: `Power States`
 
