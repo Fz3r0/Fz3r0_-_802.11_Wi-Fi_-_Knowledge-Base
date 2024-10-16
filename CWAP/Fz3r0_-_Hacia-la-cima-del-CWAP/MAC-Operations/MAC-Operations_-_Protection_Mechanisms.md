@@ -29,9 +29,7 @@ RTS/CTS are the most used mechanism in Wi-Fi, there's also a mechanism called CT
 
 **RTS/CTS (Request-to-Send / Clear-to-Send)** is the most used mechanism in Wi-Fi; this mechanism is an optional method that is used in `Virtual Carrier Sense` to avoid `hidden node` problems. 
 
-### RTS/CTS: `Hidden Node`
-
-In the below diagram, there is an access point node A indicated by blue. Nodes B and C are wireless devices within the AP – A’s BSS. However, B and C cannot hear each other due to network congestion or they are outside each other’s BSS and are called hidden nodes. Due to this, physical carrier sensing by B and C will never indicate that medium is busy when either one of them is transmitting in the air and could result in corruption and distortion of signal. To avoid this situation, we can use RTS-CTS mechanism.
+Tu understand RTS/CTS we must understand what is `hidden node` problems first. In the below diagram, there is an access point node A indicated by blue. Nodes B and C are wireless devices within the AP – A’s BSS. However, B and C cannot hear each other due to network congestion or they are outside each other’s BSS and are called hidden nodes. Due to this, physical carrier sensing by B and C will never indicate that medium is busy when either one of them is transmitting in the air and could result in corruption and distortion of signal. To avoid this situation, we can use RTS-CTS mechanism.
 
 ![image](https://github.com/user-attachments/assets/f8fe7a9f-6dc1-47f1-906b-afca7c174f81)
 
