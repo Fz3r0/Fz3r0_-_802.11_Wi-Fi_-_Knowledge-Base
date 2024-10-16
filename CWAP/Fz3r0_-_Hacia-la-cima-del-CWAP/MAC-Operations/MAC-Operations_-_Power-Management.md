@@ -285,11 +285,15 @@ Legacy Power Save mode (PS mode), as its name implies, is the power save mode us
 
 Legacy PS mode utilizes the PS-Poll frame technique to retrieve buffered unicast data from the AP. In Legacy PS mode, the STA knows it has pending unicast data when it receives a DTIM beacon containing its own AID in the Partial Virtual Bitmap of the TIM element. Consequently, the device sends a special uplink control frame called the PS-Poll frame, containing its AID. This control frame informs the AP that the STA with this AID is ready to receive its unicast message. The AP responds with an acknowledgment message (ACK) followed by the STA’s unicast data.
 
+In **bitmap control** field, first bit set to 1 that indicate buffered traffic at AP is broadcast or multicast. Remaining 7 bits used as Bitmap Offset, which may have any value  between 0 to 127 used as a space saver. **Partial Virtual Bitmap** are a series of flags indicating whether each associated STAT has unicast frames buffered at the AP. Each bit in this filed corresponds to a AID of a STA.
+
 The downlink frame received by the STA will contain the requested unicast data along with a More Data subfield. This field is set to value 1 when the AP wishes to inform the STA that there is still more data to be sent. To which the STA responds by sending another PS-Poll frame and the cycle described above is repeated. Once the STA has received all its data, the AP will toggle the More Data subfield in the downlink frame to value 0. This will signal to the STA that data exchange is to be concluded and the device is to go back to sleep.
 
 This means that the STA must send a PS-Poll frame for every downlink frame, which is sub-optimal with regards to efficiency and reducing overhead control signaling.
 
 ![image](https://github.com/user-attachments/assets/cfa412e7-0013-4fa8-8804-72527c7b0df2)
+
+
 
 There are 2 Types of Legacy Power Save Mode _(Clients can support either one of the two legacy power save mechanisms at one time)_: 
 
