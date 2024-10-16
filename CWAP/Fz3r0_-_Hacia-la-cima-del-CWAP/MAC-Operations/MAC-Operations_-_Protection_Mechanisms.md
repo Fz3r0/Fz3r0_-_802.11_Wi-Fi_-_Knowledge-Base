@@ -305,9 +305,18 @@ _All STAs detected in the primary or the secondary channel are HT STAs, and All 
 
 
 
+# Protection Mechanisms: `VHT`
+
+Since 802.11ac does not operate on the 2.4 GHz bands, it does not have to worry about 802.11b, 802.11g, or 2.4 GHz 802.11n radios.
+
+802.11a and 802.11n radios all all PHYs use the OFDM preamble.
+
+When a transmission is performed using any of these PHYs, the other radios hear the preamble and can calculate how long to wait before they can transmit.
 
 
+# Protection Mechanisms: `HE`
 
+Wi-Fi 6 requires backward compatibility with 802.11/a/b/g/n/ac, which means that RTS/CTS protection mechanisms must be used. RTS/CTS creates overhead and consumes airtime.
 
 
 
@@ -334,3 +343,17 @@ _All STAs detected in the primary or the secondary channel are HT STAs, and All 
 - [ERP Prtection MEchanisms](https://www.youtube.com/watch?v=MxJPNrOftEs)
 - [HT operation modes in WiFi](https://www.youtube.com/watch?v=hjYJkQbXss0)
 - [HT Prtection MEchanisms](https://www.youtube.com/watch?v=n9d9Q-M70_k)
+
+
+
+
+- https://dot11ap.wordpress.com/vht-protection-mechanisms/
+
+
+- [Wi-Fi 6 for dummies](https://www.redwaynetworks.com/wp-content/uploads/Wi-Fi-6-FD_-Extreme-Networks-Special-Edition-_1_.pdf)
+
+
+
+
+- https://gjermundsblog.wordpress.com/wp-content/uploads/2019/08/mu-rts_cts_final.pdf
+- https://gjermundraaen.com/2019/08/23/he-mu-rts-and-cts-deep-dive/
