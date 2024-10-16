@@ -183,10 +183,7 @@ The Listen Interval from the client is also vendor specific // In other words, *
 | **🦈 Listen Interval = 250 (HEX)**     | Every 250 beacons (in hexadecimal representation)                                     | wlan.fixed.listen_ival == 0x00fa |
 | **🦈 Listen Interval = 250 (Decimal)** | Every 250 beacons (in decimal representation)                                         | wlan.fixed.listen_ival == 250    |
 
-
----
-
-### 📫📩📬 PS Information Element: `TIM (Traffic Indication Map)`
+## 📫📩📬 PS Information Element: `TIM (Traffic Indication Map)`
 
 - **TIM (Traffic Indication Map)** is a IE (Information Element) present **only in `Beacon` frames** sent by an Access Point (AP). 
 - It serves to indicate to power-saving devices which are connected to the network whether there are buffered frames (data packets) waiting for them at the AP.
