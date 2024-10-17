@@ -8,6 +8,21 @@
 - In a 802.1X Network (eg. EAP/RADIUS), the 4-way-handshake occurs after EAP authentication _(after the State 3 of the State Machine + EAP Exchange between AP & Authentication Server)_
 - Through the 4-way-handshake procedure, several keys are generated sequentially
 
+---
+
+1. **M1** = Anonce 
+    - sends random number (nonce) to client.
+    - this Anonce helps AP & STA generate same Pairwise Transient Key (PTK)
+2. **M1** = Snonce + MIC
+    - client responds by sending its own nonce
+    - also contains a Message Integrity Code (MIC) to the AP.
+3. **M3** = GTK + MIC
+    - The AP sends the Group Temporal Key (GTK) (used to encrypt multicast & broadcast traffic)
+    - also contains a Message Integrity Code (MIC) to the STA.
+4. **M4** =A CK
+The client sends an acknowledgment
+(ACK), indicating that it has successfully received the GTK and that the handshake is complete
+
 ## EAPoL
 
 - EAPOL stands for "Extensible Authentication Protocol(EAP) over LAN".
