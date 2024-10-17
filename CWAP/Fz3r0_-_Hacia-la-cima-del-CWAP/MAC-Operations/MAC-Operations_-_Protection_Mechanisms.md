@@ -219,7 +219,8 @@ ERP STAs shall use protection mechanisms (such as RTS/CTS or CTS-to-self) for ER
 In following scenarios that can trigger protection in an ERP basic service set:
 
 1. **An HR-DSSS (802.11b) client association will trigger protection.**:
-    - If a non-ERP STA associates with an ERP AP, the ERP AP will enable the **NonERP_Present** bit in its own beacons, enabling protection mechanisms in its BSS. <br><br>
+    - If a non-ERP STA associates with an ERP AP, the ERP AP will enable the **NonERP_Present** bit in its own beacons, enabling protection mechanisms in its BSS.
+![ERP-Protection-set1](https://github.com/user-attachments/assets/99456899-aece-4b55-ad19-0d6317a8d07d)
 2. **If an 802.11g AP hears a beacon frame from an 802.11 or 802.11b access point or ad hoc client, the protection mechanism will be triggered.**:
     - If an ERP AP hears a beacon from an AP where the supported data rates contain only 802.11b or 802.11 DSSS rates, it will enable the **NonERP_Present** bit in its own beacons, enabling protection mechanisms in its BSS. <br><br>
 3. **If an ERP AP hears a management frame (other than a probe request) where the supported rate includes only 802.11 or 802.11b rates**: 
