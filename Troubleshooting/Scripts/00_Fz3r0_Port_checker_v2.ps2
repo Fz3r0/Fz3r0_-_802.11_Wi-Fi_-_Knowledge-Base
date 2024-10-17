@@ -1,0 +1,13 @@
+$ip = "10.10.10.10"
+$port = 8883
+
+$connection = Test-NetConnection -ComputerName $ip -Port $port
+
+if ($connection.TcpTestSucceeded) {
+    Write-Host -ForegroundColor Green "The port $port on IP $ip is OPEN!"
+} else {
+    Write-Host -ForegroundColor Red "The port $port on IP $ip is CLOSED!"
+}
+
+# Pause to allow you to see the result
+Read-Host "Press ENTER to exit"
