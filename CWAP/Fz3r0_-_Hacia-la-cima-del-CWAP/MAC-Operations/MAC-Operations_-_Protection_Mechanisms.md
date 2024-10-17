@@ -157,7 +157,9 @@ When 802.11g was introduced, we had RTS/CTS and CTS-to-Self protection mechanism
 
 
 
-## ERP Protection: `Mixed Mode` - `HR-DSSS + ERP (802.11b/g)`
+## ERP Protection: `Mixed Mode` - `ERP + DSSS/HR-DSSS (802.11g + 802.11prime/b)`
+
+An ERP `Mixed Mode` enviorment means that a **802.11g (ERP)** device is sharing the air/channel with any of both legacy devices: **802.11-prime (DSSS)** or **802.11b (HR-DSSS)** in the 2.4 GHZ band _(ERP only exists in 2.4 GHz)_.
 
 In a mixed mode enviorment, when an **802.11g (ERP) STA** wants to transmit data it will:
 
@@ -166,29 +168,15 @@ In a mixed mode enviorment, when an **802.11g (ERP) STA** wants to transmit data
 3. The `RTS/CTS` or `CTS-to-Self` will contain a `Duration/ID` value that will be used by all od the **listening STAs** to set their `NAV Timers`. 
 
 
+
+
 - IEEE 802.11-2007 standard mandate support for both DSSS (Direct Sequence Spread Spectrum) & OFDM (Orthogonal Frequency Division Multiplexing) technologies for clause 19 ERP (802.11g) radios.
 - When clause 18 (HR-DSSS) & clause 15 DSSS (802.11) coexisting in ERP BSS, 802.11g devices need to provide compatibility for slower 802.11/802.11b devices.
 - In this **mixed mode** (801.11 + 802.11b) 802.11g devices enable “Protection mechanism” also known as **`802.11g Protected mode`**.
 
----
+## ERP Protection: `ERP Information Element`
 
-ERP element is present only on 2.4GHz network supporting 802.11g & it is present in beacon & probe responses. 
-
-### `non-ERP_Present`
-
-The non-ERP_Present bit set to 1 in following conditions: 
-
-1. A nonERP station (legacy 802.11 or 802.11b) associate to the cell.
-2. A neighboring cell is detected, allowing only nonERP data rates,
-3. Any other management frame (except probe request) is received from neighboring cell supporting only nonERP data rates.
-
-
-
-
-
-To ensure backward compatibility with older 802.11a/b/g radios, 802.11n (HT) access points may signal to other 802.11n stations when to use one of four HT protection modes. A field in the beacon frame called the HT Protection field has four possible settings of 0–3.
-
-### ERP Information Element
+**ERP element** is present in `beacon` & `probe responses` **only on 2.4GHz band**.
 
 ERP Information Element (IE) contains information about Claue15 (802.11 Prime) or Clause 18 (802.11b) stations in the BSS that are not capable of communicating Clause 19 (ERP-OFDM) data rates. It also identifies whether AP should use protection mechanism & whether to use long or short preambles. 
 
@@ -204,34 +192,61 @@ ERP Information Element (IE) contains information about Claue15 (802.11 Prime) o
 
 ````
 
-- Element ID : ERP Infomration Element = 42 :: `wlan.tag.number == 42`
-- Tag Lenght = 1 ::  `wlan.tag.length == 1` <br><br>
-- ERP Information HEX combination: `wlan.erp_info == 0x00` <br><br>
-    - Non-ERP Present : = 1 when non-ERP station is associated to the BSS :: `wlan.erp_info.erp_present == 1`
-    - Use Protection : = 1 when non-ERP station is associated to the BSS :: `wlan.erp_info.use_protection == 1`
-    - Barker Preamble : = 1 if one or more associated non-ERP stations are not capable of using short preambles. :: `wlan.erp_info.barker_preamble_mode == 1`
-    - Reserved (HEX) :: `wlan.erp_info.reserved == 0x00`
+|         **Field**         |                                   **Description**                                   |            **Wireshark Filter**           |
+|:-------------------------:|:-----------------------------------------------------------------------------------:|:-----------------------------------------:|
+| ERP Element ID            | ERP Information Element = 42                                                        | `wlan.tag.number == 42`                   |
+| Tag Length                | Indicates the length of the ERP Information Element (1 byte)                        | `wlan.tag.length == 1`                    |
+| ERP Information           | ERP Information HEX combination                                                     | `wlan.erp_info == 0x00`                   |
+| ⚠️**non-ERP Present**      | **= 1 when a non-ERP station is associated with the BSS**                           | `wlan.erp_info.erp_present == 1`          |
+| ⚠️**Use Protection**       | **= 1 when a non-ERP station is associated with the BSS, enabling protection mode** | `wlan.erp_info.use_protection == 1`       |
+| ⚠️**Barker Preamble Mode** | **= 1 if one or more associated non-ERP stations cannot use short preambles**       | `wlan.erp_info.barker_preamble_mode == 1` |
+| _Reserved (HEX)_          | _Reserved bits within the ERP Information Element, typically set to 0x00_           | _`wlan.erp_info.reserved == 0x00`_        |
 
-**How it works?**
+### ERP Information Element: `non-ERP_Present`
 
 ERP STAs shall use protection mechanisms (such as RTS/CTS or CTS-to-self) for ERP-OFDM MPDUs of type Data or an MMPDU when the Use_Protection field of the ERP element is equal to 1. Note that when using the Clause 19 options, ERP-PBCC or DSSS-OFDM, there is no need to use protection mechanisms, as these frames start with a DSSS header.
 
-In following scenarios that can trigger protection in an ERP basic service set:
+The following 3 scenarios can trigger ERP protection in an ERP Basic Service Set (BSS) and the `non-ERP_Present` bit will be set to 1 in beacons and probe responses:
 
-1. **An HR-DSSS (802.11b) client association will trigger protection.**:
-    - If a non-ERP STA associates with an ERP AP, the ERP AP will enable the **NonERP_Present** bit in its own beacons, enabling protection mechanisms in its BSS. <br> <br> ![ERP-Protection-set1](https://github.com/user-attachments/assets/99456899-aece-4b55-ad19-0d6317a8d07d) <br> <br>
-2. **If an 802.11g AP hears a beacon frame from an 802.11 or 802.11b access point or ad hoc client, the protection mechanism will be triggered.**:
-    - If an ERP AP hears a beacon from an AP where the supported data rates contain only 802.11b or 802.11 DSSS rates, it will enable the **NonERP_Present** bit in its own beacons, enabling protection mechanisms in its BSS. <br><br>
-3. **If an ERP AP hears a management frame (other than a probe request) where the supported rate includes only 802.11 or 802.11b rates**: 
-    - If an ERP AP hears a management frame (other than a probe request) where the supported rate includes only 802.11 or 802.11b rates the **NonERP_Present** bit may be set to 1.
+1. **DSSS (802.11-prime) or HR-DSSS (802.11b) client association, in the ERP (802.11g) WLAN**. <br><br>
+    - If a **non-ERP STA** associates with an **ERP AP**, the **ERP AP** will enable the `NonERP_Present` bit = TRUE(1) in its own beacons, enabling protection mechanisms in its BSS. <br> <br> ![ERP-Protection-set1](https://github.com/user-attachments/assets/99456899-aece-4b55-ad19-0d6317a8d07d) <br> <br>
+2. ERP (802.11g) WLAN AP "hear" sorrounding Beacons or Ad-Hoc Networks of DSSS (802.11-prime) or HR-DSSS (802.11b).
+    - If an **ERP AP hears** a beacon from a neighbor AP where the supported data rates contain only 802.11b HR-DSSS or 802.11 DSSS rates, it will enable the `NonERP_Present` bit = TRUE(1) in its own beacons, enabling protection mechanisms in its BSS. <br><br>
+3. ERP (802.11g) WLAN AP "hear" sorrounding Management Frames (except probe request) using DSSS (802.11-prime) or HR-DSSS (802.11b) data rates.
+    - If an ERP AP hears a management frame (other than a probe request) where the supported rate includes only 802.11 or 802.11b rates, , it will enable the `NonERP_Present` bit = TRUE(1) in its own beacons, enabling protection mechanisms in its BSS. 
 
-**So, the 3 scenarios than can trigger the protections are:**
 
-1. HR-DSSS (802.11b) client association, in the ERP (802.11g) WLAN.
-2. ERP (802.11g) WLAN AP "hear" sorrounding Beacons of 802.11-Prime, 802.11b or Ad-Hoc Networks.
-2. ERP (802.11g) WLAN AP "hear" sorrounding Management Frames (except probe request) using 802.11 or 802.11b data rates.
+
+
+
+
+
+
+
+
+
+### ERP Information Element
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## HT protection mechanisms
+
+
+
+To ensure backward compatibility with older 802.11a/b/g radios, 802.11n (HT) access points may signal to other 802.11n stations when to use one of four HT protection modes. A field in the beacon frame called the HT Protection field has four possible settings of 0–3.
+
 
 - HT transmissions, are protected if there are other STAs present that cannot interpret HT transmissions correctly.
 - The HT Protection and Nongreenfield HT STAs Present fields in the HT Operation element within Beacon and Probe Response frames are used to indicate the protection requirements for HT transmissions.
