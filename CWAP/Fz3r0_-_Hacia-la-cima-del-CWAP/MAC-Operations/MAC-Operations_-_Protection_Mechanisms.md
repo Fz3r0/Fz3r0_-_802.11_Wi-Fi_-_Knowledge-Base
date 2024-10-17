@@ -317,6 +317,32 @@ The **Operating Mode** field has 4 possible settings: `0`,`1`,`2` & `3`:
 - **`Mode 3`**: **non-HT Mixed Mode**: <br><br>
     - Used if one or more non-HT stations are associated in the BSS (All other cases).
 
+### Operating Mode 0:
+
+````sh
+# Beacon Frame > Tagged Parameters > HT Information (subset 2)
+
+802.11 radio information
+IEEE 802.11 Beacon frame, Flags: ........
+IEEE 802.11 Wireless Management
+    Fixed parameters (12 bytes)
+    Tagged parameters (285 bytes)
+        Tag: HT Information (802.11n D1.10)
+            Tag Number: HT Information (802.11n D1.10) (61)
+            Tag length: 22
+            Primary Channel: 40
+            HT Information Subset (1 of 3): 0x00
+            HT Information Subset (2 of 3): 0x0000
+                .... .... .... ..00 = HT Protection: No protection mode (0x0)                                  # <<<<<--------  Mode 0 : No Protection Mode / Greenfield Mode
+                .... .... .... .0.. = Non-greenfield STAs present: All associated STAs are greenfield capable  # <<<<<--------  All STAs are Greenfield capable
+                .... .... .... 0... = Reserved: 0x0
+                .... .... ...0 .... = OBSS non-HT STAs present: Use of protection for non-HT STAs by overlapping BSSs is not needed
+                ...0 0000 000. .... = Channel Center Frequency Segment 2: 0
+                000. .... .... .... = Reserved: 0x0
+            HT Information Subset (3 of 3): 0x0000
+````
+
+
 ## Protection Mechanisms: `HT Greenfield` & `Non-greenfield` 
 
 There are two kinds of HT stations: 
@@ -412,3 +438,6 @@ Wi-Fi 6 requires backward compatibility with 802.11/a/b/g/n/ac, which means that
 
 - https://gjermundsblog.wordpress.com/wp-content/uploads/2019/08/mu-rts_cts_final.pdf
 - https://gjermundraaen.com/2019/08/23/he-mu-rts-and-cts-deep-dive/
+
+
+- https://www.youtube.com/watch?app=desktop&v=hjYJkQbXss0
