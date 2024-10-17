@@ -125,39 +125,34 @@ When implementing STBC, the received signal may be improved by up to 8 dB, resul
 ![image](https://github.com/user-attachments/assets/e177b13b-a7cc-4eeb-8ede-01679eef168b)
 
 
-## Protection Modes: `Important Concepts`
+# Protection Types: `ERP Protection` & `HT Protection`
 
 Protection mechanisms cause a STA that is a potential interferer to defer any transmission for a known period of time. When these mechanisms are used:
 
-1. non-ERP STAs do not interfere with frame exchanges using ERP PPDUs between ERP STAs.
-2. non-HT STAs do not interfere with frame exchanges using HT PPDUs between HT STAs.
+1. `ERP Protection`: non-ERP STAs do not interfere with frame exchanges using ERP PPDUs between ERP STAs.
+2. `HT Protection`: non-HT STAs do not interfere with frame exchanges using HT PPDUs between HT STAs.
 
 As a result, non-ERP and/or non-HT STAs are allowed to coexist with ERP and/or HT STAs.
 
+## ERP Protection & HT Protection: `Protection Elements`
 
+**Protection Modes Elements** are present in `Beacons` & `Probes`:
 
-### `Protection Modes Elements`
+- `ERP Information Element`: Present in 2.4 GHz Beacons & Probes:
+- `HT Information Element`: Present in 2.4 & 5 GHz Beacons & Probes:
 
-- **Protection Modes Elements** are present in `Beacons` & `Probes` <br><br>
-    - `ERP Information Element`: Present in 2.4 GHz Beacons & Probes
-    - `HT Information Element`: Present in 2.4 & 5 GHz Beacons & Probes
-
-### Protection Modes: Difference Between `802.11g (ERP)` & `802.11n (HT)`
+## Protection Modes: Difference Between `802.11g (ERP)` & `802.11n (HT)`
 
 When 802.11g was introduced, we had RTS/CTS and CTS-to-Self protection mechanisms.  What do we get with 802.11n so that it's backwards compatible with 802.11a and 802.1b/g? First, there's a couple of new things I'd like to introduce, and then we'll get to the protection rules.
 
 - **`802.11g` = `ERP`**: In an **ERP Beacon**, ERP stations look at the **ERP Information Element** to determine whether or not protection is necessary in the BSS
 - **`802.11n` = `HT`**: In an **HT Beacon**, HT stations use the **Operating Mode** and **Non-greenfield STAs Present** fields in the **HT Information Element** to determine whether or not to use protection.
 
-# Protection Mechanisms: ERP
 
 
 
 
-
-
-
-## ERP Protection: `Mixed Mode` - `ERP + DSSS/HR-DSSS (802.11g + 802.11prime/b)`
+# Protection Mechanisms: `ERP Protection` - `Mixed Mode: ERP + DSSS/HR-DSSS (802.11g + 802.11prime/b)`
 
 An ERP `Mixed Mode` enviorment means that a **802.11g (ERP)** device is sharing the air/channel with any of both legacy devices: **802.11-prime (DSSS)** or **802.11b (HR-DSSS)** in the 2.4 GHZ band _(ERP only exists in 2.4 GHz)_.
 
