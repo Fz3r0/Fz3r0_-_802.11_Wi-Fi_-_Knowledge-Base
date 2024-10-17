@@ -192,8 +192,8 @@ ERP Information Element (IE) contains information about Claue15 (802.11 Prime) o
 
 ````
 
-|         **Field**         |                                   **Description**                                   |            **Wireshark Filter**           |
-|:-------------------------:|:-----------------------------------------------------------------------------------:|:-----------------------------------------:|
+| **Field**                 | **Description**                                                                     | **Wireshark Filter**                      |
+|---------------------------|-------------------------------------------------------------------------------------|-------------------------------------------|
 | ERP Element ID            | ERP Information Element = 42                                                        | `wlan.tag.number == 42`                   |
 | Tag Length                | Indicates the length of the ERP Information Element (1 byte)                        | `wlan.tag.length == 1`                    |
 | ERP Information           | ERP Information HEX combination                                                     | `wlan.erp_info == 0x00`                   |
@@ -201,6 +201,7 @@ ERP Information Element (IE) contains information about Claue15 (802.11 Prime) o
 | ⚠️**Use Protection**       | **= 1 when a non-ERP station is associated with the BSS, enabling protection mode** | `wlan.erp_info.use_protection == 1`       |
 | ⚠️**Barker Preamble Mode** | **= 1 if one or more associated non-ERP stations cannot use short preambles**       | `wlan.erp_info.barker_preamble_mode == 1` |
 | _Reserved (HEX)_          | _Reserved bits within the ERP Information Element, typically set to 0x00_           | _`wlan.erp_info.reserved == 0x00`_        |
+
 
 ### ERP Information Element: `non-ERP_Present`
 
