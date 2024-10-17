@@ -207,9 +207,11 @@ ERP STAs shall use protection mechanisms (such as RTS/CTS or CTS-to-self) for ER
 The following 3 scenarios can trigger ERP protection in an ERP Basic Service Set (BSS) and the `non-ERP_Present` bit will be set to 1 in beacons and probe responses:
 
 1. **DSSS (802.11-prime) or HR-DSSS (802.11b) client association, in the ERP (802.11g) WLAN**. <br><br>
-    - If a **non-ERP STA** associates with an **ERP AP**, the **ERP AP** will enable the `NonERP_Present` bit = TRUE(1) in its own beacons, enabling protection mechanisms in its BSS. <br> <br> ![ERP-Protection-set1](https://github.com/user-attachments/assets/99456899-aece-4b55-ad19-0d6317a8d07d) <br> <br>
+    - If a **non-ERP STA** associates with an **ERP AP**, the **ERP AP** will enable the `NonERP_Present` bit = TRUE(1) in its own beacons, enabling protection mechanisms in its BSS. <br> <br> ![image](https://github.com/user-attachments/assets/13490de4-e450-4aed-8384-3150b80b0035)
+ <br> <br>
 2. ERP (802.11g) WLAN AP "hear" sorrounding Beacons or Ad-Hoc Networks of DSSS (802.11-prime) or HR-DSSS (802.11b).
-    - If an **ERP AP hears** a beacon from a neighbor AP where the supported data rates contain only 802.11b HR-DSSS or 802.11 DSSS rates, it will enable the `NonERP_Present` bit = TRUE(1) in its own beacons, enabling protection mechanisms in its BSS. <br><br>
+    - If an **ERP AP hears** a beacon from a neighbor AP where the supported data rates contain only 802.11b HR-DSSS or 802.11 DSSS rates, it will enable the `NonERP_Present` bit = TRUE(1) in its own beacons, enabling protection mechanisms in its BSS. <br><br> ![image](https://github.com/user-attachments/assets/261592bf-61c1-43c8-a163-01b28be2b044)
+ <br><br>
 3. ERP (802.11g) WLAN AP "hear" sorrounding Management Frames (except probe request) using DSSS (802.11-prime) or HR-DSSS (802.11b) data rates.
     - If an ERP AP hears a management frame (other than a probe request) where the supported rate includes only 802.11 or 802.11b rates, , it will enable the `NonERP_Present` bit = TRUE(1) in its own beacons, enabling protection mechanisms in its BSS. 
 
