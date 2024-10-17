@@ -211,7 +211,8 @@ The following 3 scenarios can trigger ERP protection in an ERP Basic Service Set
 2. ERP (802.11g) WLAN AP "hear" sorrounding Beacons or Ad-Hoc Networks of DSSS (802.11-prime) or HR-DSSS (802.11b).
     - If an **ERP AP hears** a beacon from a neighbor AP where the supported data rates contain only 802.11b HR-DSSS or 802.11 DSSS rates, it will enable the `NonERP_Present` bit = TRUE(1) in its own beacons, enabling protection mechanisms in its BSS. <br><br> ![image](https://github.com/user-attachments/assets/b3182d4b-373c-48dc-8beb-1606150cd5bb) <br><br>
 3. ERP (802.11g) WLAN AP "hear" sorrounding Management Frames (except probe request) using DSSS (802.11-prime) or HR-DSSS (802.11b) data rates.
-    - If an ERP AP hears a management frame (other than a probe request) where the supported rate includes only 802.11 or 802.11b rates, , it will enable the `NonERP_Present` bit = TRUE(1) in its own beacons, enabling protection mechanisms in its BSS. 
+    - If an ERP AP hears a management frame (other than a probe request) where the supported rate includes only 802.11 or 802.11b rates, , it will enable the `NonERP_Present` bit = TRUE(1) in its own beacons, enabling protection mechanisms in its BSS.  <br><br> ![image](https://github.com/user-attachments/assets/dfb232f0-a6e4-4691-a0c0-d404d99b8e02) 
+
 
 
 
