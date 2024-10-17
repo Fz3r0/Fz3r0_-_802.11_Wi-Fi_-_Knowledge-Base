@@ -207,17 +207,23 @@ ERP STAs shall use protection mechanisms (such as RTS/CTS or CTS-to-self) for ER
 - If a non-ERP device/transmission is detected in the cell, both: `non-ERP Present` &  `Use Protection` will set to 1.
 - Only if a non-ERP stations cannot use short preambles the `Barker Preamble Mode` will set to 1.
 
-The following 3 scenarios can trigger ERP protection in an ERP Basic Service Set (BSS) and the `non-ERP_Present` bit will be set to 1 in beacons and probe responses:
+The following 3 scenarios can trigger ERP `Use Protection` and `non-ERP_Present` bit set to 1 (beacons & probes) in an ERP Basic Service Set (BSS):
 
 1. **DSSS (802.11-prime) or HR-DSSS (802.11b) client association, in the ERP (802.11g) WLAN**. <br><br>
     - If a **non-ERP STA** associates with an **ERP AP**, the **ERP AP** will:
-    - enable the `NonERP_Present` bit = 1 in its own beacons.
-    - enable the `Use Protection` bit = 1 in its own beacons.
+        - enable the `NonERP_Present` bit = 1 in its own beacons.
+        - enable the `Use Protection` bit = 1 in its own beacons. <br><br>
 ![image](https://github.com/user-attachments/assets/ce062156-9ae9-490e-9570-70ee821e54a6) <br> <br>
-2. ERP (802.11g) WLAN AP "hear" sorrounding Beacons or Ad-Hoc Networks of DSSS (802.11-prime) or HR-DSSS (802.11b).
-    - If an **ERP AP hears** a beacon from a neighbor AP where the supported data rates contain only 802.11b HR-DSSS or 802.11 DSSS rates, it will enable the `NonERP_Present` bit = TRUE(1) in its own beacons, enabling protection mechanisms in its BSS. <br><br> ![image](https://github.com/user-attachments/assets/b3182d4b-373c-48dc-8beb-1606150cd5bb) <br><br>
-3. ERP (802.11g) WLAN AP "hear" sorrounding Management Frames (except probe request) using DSSS (802.11-prime) or HR-DSSS (802.11b) data rates.
-    - If an ERP AP hears a management frame (other than a probe request) where the supported rate includes only 802.11 or 802.11b rates, , it will enable the `NonERP_Present` bit = TRUE(1) in its own beacons, enabling protection mechanisms in its BSS.  <br><br> ![image](https://github.com/user-attachments/assets/dfb232f0-a6e4-4691-a0c0-d404d99b8e02) 
+2. **ERP (802.11g) WLAN AP "hear" sorrounding Beacons or Ad-Hoc Networks of DSSS (802.11-prime) or HR-DSSS (802.11b).** <br><br>
+    - If an **ERP AP hears** a beacon from a neighbor AP where the supported data rates contain only 802.11b HR-DSSS or 802.11 DSSS rates, the **ERP AP** will:
+        - enable the `NonERP_Present` bit = 1 in its own beacons.
+        - enable the `Use Protection` bit = 1 in its own beacons. <br><br>
+![image](https://github.com/user-attachments/assets/b3182d4b-373c-48dc-8beb-1606150cd5bb) <br><br>
+3. **ERP (802.11g) WLAN AP "hear" sorrounding Management Frames (except probe request) using DSSS (802.11-prime) or HR-DSSS (802.11b) data rates.** <br><br>
+    - If an ERP AP hears a management frame (other than a probe request) where the supported rate includes only 802.11 or 802.11b rates, the **ERP AP** will:
+        - enable the `NonERP_Present` bit = 1 in its own beacons.
+        - enable the `Use Protection` bit = 1 in its own beacons. <br><br>
+![image](https://github.com/user-attachments/assets/dfb232f0-a6e4-4691-a0c0-d404d99b8e02) 
 
 
 
