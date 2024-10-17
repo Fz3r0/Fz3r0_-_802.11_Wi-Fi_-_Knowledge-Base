@@ -152,9 +152,11 @@ When 802.11g was introduced, we had RTS/CTS and CTS-to-Self protection mechanism
 
 
 
-# Protection Mechanisms: `ERP Protection` - `Mixed Mode: ERP + DSSS/HR-DSSS (802.11g + 802.11prime/b)`
+# Protection Mechanisms: `ERP Protection` - 
 
 An ERP `Mixed Mode` enviorment means that a **802.11g (ERP)** device is sharing the air/channel with any of both legacy devices: **802.11-prime (DSSS)** or **802.11b (HR-DSSS)** in the 2.4 GHZ band _(ERP only exists in 2.4 GHz)_.
+
+- **Mixed Mode** =  `ERP (802.11g)` + `DSSS or/and HR-DSSS (802.11prime or/and 802.11b)`
 
 In a mixed mode enviorment, when an **802.11g (ERP) STA** wants to transmit data it will:
 
@@ -234,22 +236,21 @@ The following 3 scenarios can trigger ERP protection in an ERP Basic Service Set
 
 
 
-
+# Protection Mechanisms: `HT Protection` 
 
 
 ## HT protection mechanisms
 
+HT transmissions, are protected if there are other STAs present that cannot interpret HT transmissions correctly. The HT Protection and Nongreenfield HT STAs Present fields in the HT Operation element within Beacon and Probe Response frames are used to indicate the protection requirements for HT transmissions.
 
 
 To ensure backward compatibility with older 802.11a/b/g radios, 802.11n (HT) access points may signal to other 802.11n stations when to use one of four HT protection modes. A field in the beacon frame called the HT Protection field has four possible settings of 0–3.
 
+Much like an ERP (802.11g) access point, the protection modes may change dynamically depending on devices that are nearby or associated to the HT (802.11n) access point.
 
-- HT transmissions, are protected if there are other STAs present that cannot interpret HT transmissions correctly.
-- The HT Protection and Nongreenfield HT STAs Present fields in the HT Operation element within Beacon and Probe Response frames are used to indicate the protection requirements for HT transmissions.
-- To ensure backward compatibility with older 802.11a/b/g radios, 802.11n (HT) access points may signal to other 802.11n stations when to **use one of four HT protection modes**.
-- A field in the beacon frame called the HT Protection field has four possible settings of 0–3.
-- Much like an ERP (802.11g) access point, the protection modes may change dynamically depending on devices that are nearby or associated to the HT (802.11n) access point.
-- The protection mechanisms that are used are RTS/CTS, CTS-to-Self, Dual-CTS, or other protection methods.
+The protection mechanisms that are used are RTS/CTS, CTS-to-Self, Dual-CTS, or other protection methods.
+
+
 
 ### HT: `no protection mode / Greenfield`
 
