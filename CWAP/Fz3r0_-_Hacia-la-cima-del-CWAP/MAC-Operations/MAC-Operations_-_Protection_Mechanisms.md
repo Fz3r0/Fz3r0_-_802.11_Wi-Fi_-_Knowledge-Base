@@ -345,6 +345,8 @@ IEEE 802.11 Wireless Management
 
 ### Operating Mode 1:
 
+#### Option 1: `HT non-Member` + `All associated STAs = Greenfield`
+
 ````sh
 # Beacon Frame > Tagged Parameters > HT Information (subset 2)
 # Mode 1 : HT non-member Protection Mode 
@@ -360,12 +362,21 @@ IEEE 802.11 Wireless Management
             HT Information Subset (1 of 3): 0x00
             HT Information Subset (2 of 3): 0x0001
                 .... .... .... ..01 = HT Protection: HT non-member protection mode (0x1)                      # <<<<<--------  Mode 1 : HT non-member Protection Mode 
-                .... .... .... .0.. = Non-greenfield STAs present: All associated STAs are greenfield capable
+                .... .... .... .0.. = Non-greenfield STAs present: All associated STAs are greenfield capable # <<<<<--------  All associated STAs = Greenfield
                 .... .... .... 0... = Reserved: 0x0
                 .... .... ...0 .... = OBSS non-HT STAs present: Use of protection for non-HT STAs by overlapping BSSs is not needed
                 ...0 0000 000. .... = Channel Center Frequency Segment 2: 0
                 000. .... .... .... = Reserved: 0x0
             HT Information Subset (3 of 3): 0x0000
+````
+
+#### Option 2: `HT non-Member` + `1 or more associated STAs = non-Greenfield`
+
+````sh
+# Beacon Frame > Tagged Parameters > HT Information (subset 2)
+# Mode 1 : HT non-member Protection Mode 
+
+
 ````
 
 
