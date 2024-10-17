@@ -313,7 +313,7 @@ The **Operating Mode** field has 4 possible settings: `0`,`1`,`2` & `3`:
 - **`Mode 2`**: **20 MHz protection mode**: <br><br>
     - Only HT STAs are associated in the BSS either the primary or secondary channel.
     - This BSS is a 20/40 MHz BSS
-    - There is at least one 20 MHz STA associated in this BSS  <br><br>
+    - There is at least one 20 MHz HT (802.11n) STA associated in this BSS  <br><br>
 - **`Mode 3`**: **non-HT Mixed Mode**: <br><br>
     - Used if one or more non-HT stations are associated in the BSS (All other cases).
 
