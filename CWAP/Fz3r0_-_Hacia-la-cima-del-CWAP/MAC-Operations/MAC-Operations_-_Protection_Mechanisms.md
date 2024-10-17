@@ -151,6 +151,21 @@ When 802.11g was introduced, we had RTS/CTS and CTS-to-Self protection mechanism
 
 # Protection Mechanisms: ERP
 
+
+
+
+
+
+
+## ERP Protection: `Mixed Mode` - `HR-DSSS + ERP (802.11b/g)`
+
+In a mixed mode enviorment, when an **802.11g (ERP) STA** wants to transmit data it will:
+
+1. Perform a **NAV distribution** by transmitting `RTS/CTS` exchange with the AP, or by transmitting `CTS-to-Self` using a `Data Rate` and `Modulation Method` that the **802.11b (HR-DSSS) STAs** can understand.
+2. The `RTS/CTS` or `CTS-to-Self` will hopefully be "heard" and "understood" by all the **802.11b/g (HR-DSSS & ERP) STAs** inside the BSA. 
+3. The `RTS/CTS` or `CTS-to-Self` will contain a `Duration/ID` value that will be used by all od the **listening STAs** to set their `NAV Timers`. 
+
+
 - IEEE 802.11-2007 standard mandate support for both DSSS (Direct Sequence Spread Spectrum) & OFDM (Orthogonal Frequency Division Multiplexing) technologies for clause 19 ERP (802.11g) radios.
 - When clause 18 (HR-DSSS) & clause 15 DSSS (802.11) coexisting in ERP BSS, 802.11g devices need to provide compatibility for slower 802.11/802.11b devices.
 - In this **mixed mode** (801.11 + 802.11b) 802.11g devices enable “Protection mechanism” also known as **`802.11g Protected mode`**.
@@ -159,11 +174,17 @@ When 802.11g was introduced, we had RTS/CTS and CTS-to-Self protection mechanism
 
 ERP element is present only on 2.4GHz network supporting 802.11g & it is present in beacon & probe responses. 
 
+### `non-ERP_Present`
+
 The non-ERP_Present bit set to 1 in following conditions: 
 
-1. A nonERP station (legacy 802.11 or 802.11b) associate to the cell
+1. A nonERP station (legacy 802.11 or 802.11b) associate to the cell.
 2. A neighboring cell is detected, allowing only nonERP data rates,
 3. Any other management frame (except probe request) is received from neighboring cell supporting only nonERP data rates.
+
+
+
+
 
 To ensure backward compatibility with older 802.11a/b/g radios, 802.11n (HT) access points may signal to other 802.11n stations when to use one of four HT protection modes. A field in the beacon frame called the HT Protection field has four possible settings of 0–3.
 
