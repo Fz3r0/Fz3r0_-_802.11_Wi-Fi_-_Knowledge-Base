@@ -270,7 +270,22 @@ wlan.erp_info.erp_present == 1 && wlan.erp_info.use_protection == 1 && wlan.erp_
 ### Barker Preamble Mode: `Option 2` - `AP configuration or architecture`
 
 ````sh
+# Barker Preamble Mode
+# Option 2: AP configuration or architecture
 
+802.11 radio information
+IEEE 802.11 Beacon frame, Flags: ........C
+IEEE 802.11 Wireless Management
+    Fixed parameters (12 bytes)
+    Tagged parameters (184 bytes)
+        Tag: ERP Information
+            Tag Number: ERP Information (42)
+            Tag length: 1
+            ERP Information: 0x04
+                .... ...0 = Non ERP Present: Not set
+                .... ..0. = Use Protection: Not set
+                .... .1.. = Barker Preamble Mode: Set  # <<<<<-----|| Barker Pramble Mode Set by device Configuration or Architecture
+                0000 0... = Reserved: 0x00
 ````
 ````py
 # Barker Preamble Mode Wireshark Filter
