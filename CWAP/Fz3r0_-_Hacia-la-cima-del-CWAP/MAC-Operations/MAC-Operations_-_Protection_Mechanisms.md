@@ -205,8 +205,9 @@ ERP Information Element (IE) contains information about Claue15 (802.11 Prime) o
 The `ERP Protection` field may be set to **no protection mode / Greenfield** only if the following are true:
 
 1. All STAs detected in the channel are ERP STAs, and:
-2. All STAs that are known by the transmitting STA to be a member of this BSS are: <br><br>
-    - Short Preamble capable:
+2. All STAs that are known by the transmitting STA to be a member of this BSS are **Short Preamble capable**:
+
+![image](https://github.com/user-attachments/assets/a1937756-a9a3-46cb-937a-1b3a693e847a)
 
 ````sh
 # ERP Protection: No Protection
@@ -232,7 +233,7 @@ IEEE 802.11 Wireless Management
 wlan.erp_info.erp_present == 0 && wlan.erp_info.use_protection == 0 && wlan.erp_info.barker_preamble_mode == 0
 ````
 
-![image](https://github.com/user-attachments/assets/a1937756-a9a3-46cb-937a-1b3a693e847a)
+
 
 ## ERP Protection: `Mixed Mode` = `non-ERP_Present` + `Use Protection`
 
