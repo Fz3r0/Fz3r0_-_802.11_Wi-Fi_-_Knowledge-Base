@@ -236,7 +236,7 @@ The `Barker_Preamble_Mode` is used mostly in `Mixed Mode` and the bit shall be s
 
 - `Option 1`: One or more **associated Non-ERP STAs** are **not short preamble capable** as indicated in their `Capability Information` field.
 - `Option 2`: AP configuration or architecture; the ERP Information Element of the sender `dot11ShortPreambleOptionImplemented` MIB variable is set to `0`.
-- `Option 3`: AP "hears" ***non-ERP STA** within the cell that are **not short preamble capable** OR AP "hears" **non-ERP STA** within the cell and AP configuration or architecture has the `dot11ShortPreambleOptionImplemented` MIB variable is set to `0`.
+- `Option 3`: AP "hears" **non-ERP STA** within the cell that are **not short preamble capable** OR AP "hears" **non-ERP STA** within the cell and AP configuration or architecture has the `dot11ShortPreambleOptionImplemented` MIB variable is set to `0`.
 
 In a 802.11g network, if all STAs are capable of short preambles, Barker Preamble Mode should be disabled and all stations will use short preambles for efficiency.
 
@@ -293,6 +293,35 @@ IEEE 802.11 Wireless Management
 
 wlan.erp_info.erp_present == 0 && wlan.erp_info.use_protection == 0 && wlan.erp_info.barker_preamble_mode == 1
 ````
+
+### Barker Preamble Mode: `Option 3` - `Non-ERP STA + not short preamble capable` or `Non-ERP STA + Config/Architecture`
+
+````sh
+# Barker Preamble Mode
+# Option 3: Non-ERP STA + not short preamble capable or Non-ERP STA + Config/Architecture
+
+802.11 radio information
+IEEE 802.11 Beacon frame, Flags: ........C
+IEEE 802.11 Wireless Management
+    Fixed parameters (12 bytes)
+    Tagged parameters (284 bytes)
+        Tag: ERP Information
+            Tag Number: ERP Information (42)
+            Tag length: 1
+            ERP Information: 0x06
+                .... ...0 = Non ERP Present: Not set
+                .... ..1. = Use Protection: Set        # <<<<<-----|| Non-ERP STA Associated OR Non-ERP within the same BSS
+                .... .1.. = Barker Preamble Mode: Set  # <<<<<-----|| Barker Pramble Mode Set by device Configuration or Architecture OR Non-ERP STA + not short preamble capable
+                0000 0... = Reserved: 0x00
+````
+````py
+# Barker Preamble Mode Wireshark Filter
+# Option 3: Non-ERP STA + not short preamble capable or Non-ERP STA + Config/Architecture
+
+wlan.erp_info.erp_present == 0 && wlan.erp_info.use_protection == 1 && wlan.erp_info.barker_preamble_mode == 1
+````
+
+
 
 ### ERP Information Element
 
