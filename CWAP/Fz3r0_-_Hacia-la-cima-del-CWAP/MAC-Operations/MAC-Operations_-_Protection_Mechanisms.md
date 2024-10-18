@@ -234,10 +234,13 @@ The following **3 scenarios** can trigger ERP `Use Protection` and `non-ERP_Pres
 
 The `Barker_Preamble_Mode` is used mostly in `Mixed Mode` and the bit shall be set to `1` by the `ERP Information Element` sender AP if:
 
-- One or more **associated Non-ERP STAs** are **not short preamble capable** as indicated in their `Capability Information` field.
-- The ERP Information Element senders `dot11ShortPreambleOptionImplemented` MIB variable is set to `0`
+- `Option 1`: One or more **associated Non-ERP STAs** are **not short preamble capable** as indicated in their `Capability Information` field.
+- `Option 2`: AP configuration or architecture; the ERP Information Element of the sender `dot11ShortPreambleOptionImplemented` MIB variable is set to `0`.
+- `Option 3`: AP "hears" ***non-ERP STA** within the cell that are **not short preamble capable** OR AP "hears" **non-ERP STA** within the cell and AP configuration or architecture has the `dot11ShortPreambleOptionImplemented` MIB variable is set to `0`.
 
 In a 802.11g network, if all STAs are capable of short preambles, Barker Preamble Mode should be disabled and all stations will use short preambles for efficiency.
+
+### Barker Preamble Mode: `Option 1` - `not short preamble capable STA`
 
 ````sh
 # Barker Preamble Mode
@@ -264,9 +267,17 @@ IEEE 802.11 Wireless Management
 wlan.erp_info.erp_present == 1 && wlan.erp_info.use_protection == 1 && wlan.erp_info.barker_preamble_mode == 1
 ````
 
+### Barker Preamble Mode: `Option 2` - `AP configuration or architecture`
 
+````sh
 
+````
+````py
+# Barker Preamble Mode Wireshark Filter
+# Option 2: AP configuration or architecture
 
+wlan.erp_info.erp_present == 0 && wlan.erp_info.use_protection == 0 && wlan.erp_info.barker_preamble_mode == 1
+````
 
 ### ERP Information Element
 
