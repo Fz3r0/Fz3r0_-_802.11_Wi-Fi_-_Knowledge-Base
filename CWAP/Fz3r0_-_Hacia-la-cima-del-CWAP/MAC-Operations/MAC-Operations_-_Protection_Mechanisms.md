@@ -209,11 +209,14 @@ ERP STAs shall use protection mechanisms (such as RTS/CTS or CTS-to-self) for ER
 
 The following 3 scenarios can trigger ERP `Use Protection` and `non-ERP_Present` bit set to 1 (beacons & probes) in an ERP Basic Service Set (BSS):
 
+---
+
 1. **DSSS (802.11-prime) or HR-DSSS (802.11b) client association, in the ERP (802.11g) WLAN**. <br><br>
     - If a **non-ERP STA** associates with an **ERP AP**, the **ERP AP** will: <br><br>
         - enable the `NonERP_Present` bit = **`1`** in its own beacons.
         - enable the `Use Protection` bit = **`1`** in its own beacons. <br><br>
-![image](https://github.com/user-attachments/assets/ce062156-9ae9-490e-9570-70ee821e54a6) <br> <br>
+![image](https://github.com/user-attachments/assets/ce062156-9ae9-490e-9570-70ee821e54a6) 
+---
 2. **ERP (802.11g) WLAN AP "hear" sorrounding Beacons or Ad-Hoc Networks of DSSS (802.11-prime) or HR-DSSS (802.11b).** <br><br>
     - If an **ERP AP hears** a beacon from a neighbor AP where the supported data rates contain only 802.11b HR-DSSS or 802.11 DSSS rates, the **ERP AP** will: <br><br>
         - enable the `NonERP_Present` bit = **`0`** in its own beacons.
