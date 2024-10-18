@@ -1,3 +1,26 @@
+# Funcionamiento
+
+# 1. Bitmask: Toma el Bitmask de la captura de un HT Information de un beacon:
+
+# .... .... .... ..10
+# .... .... .... .1..
+# .... .... .... 0...
+# .... .... ...0 ....
+# ...0 0000 000. ....
+# 000. .... .... ....
+
+# 2. De abajo hacia arriba lee el bitmask y lo pasa a un string binario:
+
+# 0000 0000 0000 0110
+
+# 3. Convierte en binario a HEX de 4 bits (ej. www.duplichecker.com/binary-to-hex.php): 
+
+# 0006
+
+# 4. Agrega un "0x" para tener un resultado como se vería en wireshark (HT Infromation Flags):
+
+# 0x0006
+
 import os
 from colorama import Fore, Style, init
 
