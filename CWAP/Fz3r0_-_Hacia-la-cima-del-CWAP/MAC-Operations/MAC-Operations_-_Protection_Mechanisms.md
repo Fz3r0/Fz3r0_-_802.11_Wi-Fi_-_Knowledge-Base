@@ -240,6 +240,9 @@ The `Barker_Preamble_Mode` is used mostly in `Mixed Mode` and the bit shall be s
 In a 802.11g network, if all STAs are capable of short preambles, Barker Preamble Mode should be disabled and all stations will use short preambles for efficiency.
 
 ````sh
+# Barker Preamble Mode
+# Option 1: Associated Non-ERP STA are not short preamble capable
+
 802.11 radio information
 IEEE 802.11 Beacon frame, Flags: ........C
 IEEE 802.11 Wireless Management
@@ -254,7 +257,12 @@ IEEE 802.11 Wireless Management
                 .... .1.. = Barker Preamble Mode: Set  # <<<<<-----|| Barker Pramble Mode Set
                 0000 0... = Reserved: 0x00
 ````
+````py
+# Barker Preamble Mode Wireshark Filter
+# Option 1: Associated Non-ERP STA are not short preamble capable
 
+wlan.erp_info.erp_present == 1 && wlan.erp_info.use_protection == 1 && wlan.erp_info.barker_preamble_mode == 1
+````
 
 
 
