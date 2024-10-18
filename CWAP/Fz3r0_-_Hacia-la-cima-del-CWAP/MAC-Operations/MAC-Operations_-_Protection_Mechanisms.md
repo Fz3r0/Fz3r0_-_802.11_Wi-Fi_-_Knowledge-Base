@@ -200,6 +200,40 @@ ERP Information Element (IE) contains information about Claue15 (802.11 Prime) o
 | _Reserved (HEX)_          | _Reserved bits within the ERP Information Element, typically set to 0x00_           | _`wlan.erp_info.reserved == 0x00`_        |
 
 
+## ERP Protection: `No Protection`
+
+The `ERP Protection` field may be set to **no protection mode / Greenfield** only if the following are true:
+
+1. All STAs detected in the channel are ERP STAs, and:
+2. All STAs that are known by the transmitting STA to be a member of this BSS are: <br><br>
+    - Short Preamble capable:
+
+````sh
+# ERP Protection: No Protection
+
+802.11 radio information
+IEEE 802.11 Beacon frame, Flags: ........C
+IEEE 802.11 Wireless Management
+    Fixed parameters (12 bytes)
+    Tagged parameters (184 bytes)
+        Tag: ERP Information
+            Tag Number: ERP Information (42)
+            Tag length: 1
+            ERP Information: 0x00                                       # No protection:
+                .... ...0 = Non ERP Present: Not set       # <<<<<-----|| All STAs are ERP
+                .... ..0. = Use Protection: Not set        # <<<<<-----|| No protection enabled
+                .... .0.. = Barker Preamble Mode: Not set  # <<<<<-----|| No Barker Long Preamble Needed
+                0000 0... = Reserved: 0x00
+````
+````py
+# Barker Preamble Mode Wireshark Filter
+# Option 2: AP configuration or architecture
+
+wlan.erp_info.erp_present == 0 && wlan.erp_info.use_protection == 0 && wlan.erp_info.barker_preamble_mode == 0
+````
+
+![image](https://github.com/user-attachments/assets/a1937756-a9a3-46cb-937a-1b3a693e847a)
+
 ## ERP Protection: `Mixed Mode` = `non-ERP_Present` + `Use Protection`
 
 ERP STAs shall use protection mechanisms (such as RTS/CTS or CTS-to-self) for ERP-OFDM MPDUs of type Data or an MMPDU when the `Use_Protection` field of the ERP element is equal to 1. Note that when using the Clause 19 options, ERP-PBCC or DSSS-OFDM, there is no need to use protection mechanisms, as these frames start with a DSSS header.
