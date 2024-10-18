@@ -200,7 +200,7 @@ ERP Information Element (IE) contains information about Claue15 (802.11 Prime) o
 | _Reserved (HEX)_          | _Reserved bits within the ERP Information Element, typically set to 0x00_           | _`wlan.erp_info.reserved == 0x00`_        |
 
 
-## ERP Protection: `non-ERP_Present` + `Use Protection`
+## ERP Protection: `Mixed Mode` = `non-ERP_Present` + `Use Protection`
 
 ERP STAs shall use protection mechanisms (such as RTS/CTS or CTS-to-self) for ERP-OFDM MPDUs of type Data or an MMPDU when the `Use_Protection` field of the ERP element is equal to 1. Note that when using the Clause 19 options, ERP-PBCC or DSSS-OFDM, there is no need to use protection mechanisms, as these frames start with a DSSS header.
 
@@ -230,11 +230,30 @@ The following **3 scenarios** can trigger ERP `Use Protection` and `non-ERP_Pres
     - enable the `Use Protection` bit = **`1`** in its own beacons. <br><br>
 ![image](https://github.com/user-attachments/assets/dfb232f0-a6e4-4691-a0c0-d404d99b8e02) 
 
+## ERP Protection: `Barker Preamble Mode`
 
+The `Barker_Preamble_Mode` is used mostly in `Mixed Mode` and the bit shall be set to `1` by the `ERP Information Element` sender AP if:
 
+- One or more **associated Non-ERP STAs** are **not short preamble capable** as indicated in their `Capability Information` field.
+- The ERP Information Element senders `dot11ShortPreambleOptionImplemented` MIB variable is set to `0`
 
+In a 802.11g network, if all STAs are capable of short preambles, Barker Preamble Mode should be disabled and all stations will use short preambles for efficiency.
 
-
+````sh
+802.11 radio information
+IEEE 802.11 Beacon frame, Flags: ........C
+IEEE 802.11 Wireless Management
+    Fixed parameters (12 bytes)
+    Tagged parameters (213 bytes)
+        Tag: ERP Information
+            Tag Number: ERP Information (42)
+            Tag length: 1
+            ERP Information: 0x07                                   # Mixed Mode:  
+                .... ...1 = Non ERP Present: Set       # <<<<<-----|| Non ERP Associated to BSS
+                .... ..1. = Use Protection: Set        # <<<<<-----|| ERP Protection Mode Set
+                .... .1.. = Barker Preamble Mode: Set  # <<<<<-----|| Barker Pramble Mode Set
+                0000 0... = Reserved: 0x00
+````
 
 
 
