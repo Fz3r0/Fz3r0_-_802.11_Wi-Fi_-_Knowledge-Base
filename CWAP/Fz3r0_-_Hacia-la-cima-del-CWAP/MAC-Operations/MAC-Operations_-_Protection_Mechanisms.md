@@ -202,9 +202,9 @@ ERP Information Element (IE) contains information about Claue15 (802.11 Prime) o
 
 ## ERP Protection: `No Protection`
 
-The `ERP Protection` field may be set to **no protection mode / Greenfield** only if the following are true:
+The `ERP Protection` field may be set to **No Protection Mode / Greenfield** only if the following are true:
 
-1. All STAs detected in the channel are ERP STAs, and:
+1. All STAs detected in the channel are ERP (802.11g) STAs, and:
 2. All STAs that are known by the transmitting STA to be a member of this BSS are **Short Preamble capable**:
 
 ![image](https://github.com/user-attachments/assets/a1937756-a9a3-46cb-937a-1b3a693e847a)
@@ -233,14 +233,12 @@ IEEE 802.11 Wireless Management
 wlan.erp_info.erp_present == 0 && wlan.erp_info.use_protection == 0 && wlan.erp_info.barker_preamble_mode == 0
 ````
 
-
-
 ## ERP Protection: `Mixed Mode` = `non-ERP_Present` + `Use Protection`
 
-ERP STAs shall use protection mechanisms (such as RTS/CTS or CTS-to-self) for ERP-OFDM MPDUs of type Data or an MMPDU when the `Use_Protection` field of the ERP element is equal to 1. Note that when using the Clause 19 options, ERP-PBCC or DSSS-OFDM, there is no need to use protection mechanisms, as these frames start with a DSSS header.
+ERP (802.11g) STAs shall use protection mechanisms (such as RTS/CTS or CTS-to-self) for ERP-OFDM MPDUs of type Data or an MMPDU when the `Use_Protection` field of the ERP Element is equal to `1`. Note that when using the Clause 19 options, ERP-PBCC or DSSS-OFDM, there is no need to use protection mechanisms, as these frames start with a DSSS header.
 
-- If a non-ERP device/transmission is detected in the cell, both: `non-ERP Present` &  `Use Protection` will set to 1.
-- Only if a non-ERP stations cannot use short preambles the `Barker Preamble Mode` will set to 1.
+- If a non-ERP (802.11prime or 802.11b) device/transmission is detected in the cell, both: `non-ERP Present` &  `Use Protection` will set to `1`.
+- **Only** if a non-ERP  (802.11prime or 802.11b)STAs cannot use short preambles the `Barker Preamble Mode` will set to `1`.
 
 The following **3 scenarios** can trigger ERP `Use Protection` and `non-ERP_Present` bit set to 1 (beacons & probes) in an ERP Basic Service Set (BSS):
 
