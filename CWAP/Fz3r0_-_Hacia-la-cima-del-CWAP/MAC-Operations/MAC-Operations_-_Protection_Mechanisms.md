@@ -376,7 +376,23 @@ IEEE 802.11 Wireless Management
 # Beacon Frame > Tagged Parameters > HT Information (subset 2)
 # Mode 1 : HT non-member Protection Mode 
 
-
+802.11 radio information
+IEEE 802.11 Beacon frame, Flags: ........
+IEEE 802.11 Wireless Management
+    Fixed parameters (12 bytes)
+    Tagged parameters (317 bytes)
+            Tag Number: HT Information (802.11n D1.10) (61)
+            Tag length: 22
+            Primary Channel: 11
+            HT Information Subset (1 of 3): 0x00
+            HT Information Subset (2 of 3): 0x0005
+                .... .... .... ..01 = HT Protection: HT non-member protection mode (0x1)                      # <<<<<--------  Mode 1 : HT non-member Protection Mode 
+                .... .... .... .1.. = Non-greenfield STAs present: Non-greenfield STAs present                # <<<<<--------  Non Greenfield
+                .... .... .... 0... = Reserved: 0x0
+                .... .... ...0 .... = OBSS non-HT STAs present: Use of protection for non-HT STAs by overlapping BSSs is not needed
+                ...0 0000 000. .... = Channel Center Frequency Segment 2: 0
+                000. .... .... .... = Reserved: 0x0
+            HT Information Subset (3 of 3): 0x0000
 ````
 
 
