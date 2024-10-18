@@ -191,7 +191,7 @@ IEEE 802.11 Wireless Management
     Tagged parameters (263 bytes)
         Tag: SSID parameter set: "Fz3r0 @ CWAP"
         Tag: Supported Rates 12(B), 18, 24(B), 36, 48, 54, [Mbit/sec]
-        Tag: DS Parameter set: Current Channel: 104  <<<<<-------------------------------|||| Channel 1 (2.4 GHz Transmission)
+        Tag: DS Parameter set: Current Channel: 104  <<<<<-------------------------------|||| Channel 104 (5 GHz Transmission)
         Tag: Traffic Indication Map (TIM): DTIM 0 of 1 bitmap
         Tag: Country Information: Country Code MX, Environment Global operating classes
         Tag: Vendor Specific: Microsoft Corp.: WMM/WME: Parameter Element
