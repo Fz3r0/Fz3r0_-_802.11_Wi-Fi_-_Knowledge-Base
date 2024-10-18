@@ -136,12 +136,84 @@ As a result, non-ERP and/or non-HT STAs are allowed to coexist with ERP and/or H
 
 ## ERP Protection & HT Protection: `Protection Elements`
 
-**Protection Modes Elements** are present in `Beacons` & `Probes`:
+**Protection Modes Information Elements** are present in `Beacons` & `Probes`:
 
-- `ERP Information Element`: Present in 2.4 GHz Beacons & Probes:
-- `HT Information Element`: Present in 2.4 & 5 GHz Beacons & Probes:
+- `ERP Information Element`: Present in 2.4 GHz Beacons & Probes
+- `HT Information Element`: Present in 2.4 & 5 GHz Beacons & Probes
 
-## Protection Modes: Difference Between `802.11g (ERP)` & `802.11n (HT)`
+### Information Elements: `2.4 GHz`
+
+````sh
+# Beacon Frame @ 2.4 GHz
+# ERP & HT Information Elements
+
+Frame 1: 356 bytes on wire (2848 bits), 356 bytes captured (2848 bits)
+PPI version 0, 84 bytes
+802.11 radio information
+IEEE 802.11 Beacon frame, Flags: .........
+IEEE 802.11 Wireless Management
+    Fixed parameters (12 bytes)
+    Tagged parameters (232 bytes)
+        Tag: SSID parameter set: "Fz3r0 @ CWAP"
+        Tag: Supported Rates 12(B), 18, 24(B), 36, 48, 54, [Mbit/sec]
+        Tag: DS Parameter set: Current Channel: 1    <<<<<-------------------------------|||| Channel 1 (2.4 GHz Transmission)
+        Tag: Traffic Indication Map (TIM): DTIM 0 of 1 bitmap
+        Tag: Country Information: Country Code MX, Environment Global operating classes
+        Tag: ERP Information                         <<<<<-------------------------------|||| ERP Information Element (2.4 GHz Only)
+        Tag: Vendor Specific: Microsoft Corp.: WMM/WME: Parameter Element
+        Tag: RSN Information
+        Tag: RM Enabled Capabilities (5 octets)
+        Tag: HT Capabilities (802.11n D1.10)
+        Tag: HT Information (802.11n D1.10)          <<<<<-------------------------------|||| HT Information Element  (2.4 & 5 GHz)
+        Tag: QBSS Load Element 802.11e CCA Version
+        Tag: Interworking
+        Tag: Advertisement Protocol
+        Tag: Extended Capabilities (8 octets)
+        Tag: Vendor Specific: Ruckus Wireless: Unknown
+        Tag: Vendor Specific: Ruckus Wireless
+        Tag: Vendor Specific: Wi-Fi Alliance: Hotspot 2.0 Indication
+        Tag: Vendor Specific: Wi-Fi Alliance: Multi Band Operation - Optimized Connectivity Experience
+        Tag: Vendor Specific: Wi-Fi Alliance: P2P
+````
+
+### Information Elements: `5 GHz`
+
+````sh
+# Beacon Frame @ 5 GHz
+# HT Information Element
+
+Frame 1: 383 bytes on wire (3064 bits), 383 bytes captured (3064 bits)
+PPI version 0, 84 bytes
+802.11 radio information
+IEEE 802.11 Beacon frame, Flags: ........
+IEEE 802.11 Wireless Management
+    Fixed parameters (12 bytes)
+    Tagged parameters (263 bytes)
+        Tag: SSID parameter set: "Fz3r0 @ CWAP"
+        Tag: Supported Rates 12(B), 18, 24(B), 36, 48, 54, [Mbit/sec]
+        Tag: DS Parameter set: Current Channel: 104  <<<<<-------------------------------|||| Channel 1 (2.4 GHz Transmission)
+        Tag: Traffic Indication Map (TIM): DTIM 0 of 1 bitmap
+        Tag: Country Information: Country Code MX, Environment Global operating classes
+        Tag: Vendor Specific: Microsoft Corp.: WMM/WME: Parameter Element
+        Tag: RSN Information
+        Tag: RM Enabled Capabilities (5 octets)
+        Tag: HT Capabilities (802.11n D1.10)
+        Tag: HT Information (802.11n D1.10)          <<<<<-------------------------------|||| HT Information Element  (2.4 & 5 GHz)
+        Tag: QBSS Load Element 802.11e CCA Version
+        Tag: Interworking
+        Tag: Advertisement Protocol
+        Tag: Extended Capabilities (8 octets)
+        Tag: VHT Capabilities
+        Tag: VHT Operation
+        Tag: Tx Power Envelope
+        Tag: Vendor Specific: Ruckus Wireless: Unknown
+        Tag: Vendor Specific: Ruckus Wireless
+        Tag: Vendor Specific: Wi-Fi Alliance: Hotspot 2.0 Indication
+        Tag: Vendor Specific: Wi-Fi Alliance: Multi Band Operation - Optimized Connectivity Experience
+        Tag: Vendor Specific: Wi-Fi Alliance: P2P
+````
+
+## ERP & HT Protection: Difference Between `802.11g (ERP)` & `802.11n (HT)`
 
 When 802.11g was introduced, we had RTS/CTS and CTS-to-Self protection mechanisms.  What do we get with 802.11n so that it's backwards compatible with 802.11a and 802.1b/g? First, there's a couple of new things I'd like to introduce, and then we'll get to the protection rules.
 
