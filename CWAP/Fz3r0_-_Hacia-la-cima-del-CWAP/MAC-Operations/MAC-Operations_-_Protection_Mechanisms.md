@@ -28,22 +28,7 @@ Tu understand RTS/CTS we must understand what is `hidden node` problems first. I
 
 Any 802.11 device that wishes to transmit in the medium should send `RTS (Request to Send)` frame – **requesting for medium access to the AP**. The latter then responds with `CTS (Clear to Send)` frame that includes the `Duration field`, which helps the station to set its `NAV timer`. 
 
-Once the medium is free, the client STA can access the medium for wireless transmissions. For every frame transmitted in air, there should be an ACK from the AP. There is a SIFs delay between each frame: RTS, CTS, DATA and ACK frames. At times, this mechanism can create a lot of overhead in the network leading to a lot of congestion. And hence, this can be enabled only if the frame size is equal or above a specific configured threshold that depends on the network.
-
-![image](https://github.com/user-attachments/assets/20a9ebb3-8ab3-42b0-a5f1-f4ffb0085f75)
-
-
-
-
-
-
-## 🙋🤳🏻📡 Protection Mechanisms: `RTS/CTS` _(802.11g or newer)_ 
-
-
-
-
-
-![image](https://github.com/user-attachments/assets/3aaae1e8-46f9-43ac-a68c-d546644c1aa9)
+## 🙋🛜🚦 Protection Mechanisms: `Duration Field`
 
 The `Duration Field` determine the **time in microseconds (μs)** needed to complete the Frame Exchange. This is measured **AFTER the current frame**, this means: what is left after the current frame.
 
@@ -98,6 +83,30 @@ ________________________________________________________________________________
                                                                        <--------------->  <<<--- Data Duration =  SIFS + Ack
                                                                                       <>  <<<--- Ack Duration  =  0
 ````
+
+Once the medium is free, the client STA can access the medium for wireless transmissions. For every frame transmitted in air, there should be an ACK from the AP. There is a SIFs delay between each frame: RTS, CTS, DATA and ACK frames. At times, this mechanism can create a lot of overhead in the network leading to a lot of congestion. And hence, this can be enabled only if the frame size is equal or above a specific configured threshold that depends on the network.
+
+![image](https://github.com/user-attachments/assets/20a9ebb3-8ab3-42b0-a5f1-f4ffb0085f75)
+
+
+
+
+
+
+## 🙋🤳🏻📡 Protection Mechanisms: `RTS/CTS` _(802.11g or newer)_ 
+
+
+
+
+
+
+
+
+
+
+![image](https://github.com/user-attachments/assets/3aaae1e8-46f9-43ac-a68c-d546644c1aa9)
+
+
 
 ## 🙋📡📡 Protection Mechanisms: `CTS-to-self` _(802.11g or newer)_ 
 
