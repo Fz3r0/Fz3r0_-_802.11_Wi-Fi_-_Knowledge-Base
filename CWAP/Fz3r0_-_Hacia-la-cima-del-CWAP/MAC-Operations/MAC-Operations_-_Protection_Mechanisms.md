@@ -84,9 +84,16 @@ ________________________________________________________________________________
                                                                                       <>  <<<--- Ack Duration  =  0
 ````
 
+![image](https://github.com/user-attachments/assets/21ce6e81-e16b-4591-869e-72d037dcd388)
+
+![image](https://github.com/user-attachments/assets/62cdb44f-c40d-4a5c-97d0-19f777722445)
+
+![image](https://github.com/user-attachments/assets/27f321f3-46d8-44a9-b4f3-5c555192c51d)
+
+
 Once the medium is free, the client STA can access the medium for wireless transmissions. For every frame transmitted in air, there should be an ACK from the AP. There is a SIFs delay between each frame: RTS, CTS, DATA and ACK frames. At times, this mechanism can create a lot of overhead in the network leading to a lot of congestion. And hence, this can be enabled only if the frame size is equal or above a specific configured threshold that depends on the network.
 
-![image](https://github.com/user-attachments/assets/20a9ebb3-8ab3-42b0-a5f1-f4ffb0085f75)
+
 
 
 
@@ -99,12 +106,14 @@ Once the medium is free, the client STA can access the medium for wireless trans
 
 
 
+![image](https://github.com/user-attachments/assets/fc8d7516-dc1d-453f-a7eb-45bd1a8440bc)
 
 
+![image](https://github.com/user-attachments/assets/20a9ebb3-8ab3-42b0-a5f1-f4ffb0085f75)
 
 
+![image](https://github.com/user-attachments/assets/1c169f74-c3ac-4905-b794-b8ce05f86b29)
 
-![image](https://github.com/user-attachments/assets/3aaae1e8-46f9-43ac-a68c-d546644c1aa9)
 
 
 
