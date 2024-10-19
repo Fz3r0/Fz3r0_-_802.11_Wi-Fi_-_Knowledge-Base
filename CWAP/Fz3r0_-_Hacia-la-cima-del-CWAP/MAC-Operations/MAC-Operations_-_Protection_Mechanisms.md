@@ -8,7 +8,7 @@
 
 ---
  
-#### Keywords: `Networking` `IEEE 802.11` `Wi-Fi` `CWNA` `CWAP` `CCNA` `CCNP` `Writeup`
+#### Keywords: `Networking` `Wireless Networking` `IEEE 802.11` `Wi-Fi` `CWNA` `CWAP` `CCNA` `CCNP` `MAC Operations` `Protection Mechanisms`
 
 # Index
 
