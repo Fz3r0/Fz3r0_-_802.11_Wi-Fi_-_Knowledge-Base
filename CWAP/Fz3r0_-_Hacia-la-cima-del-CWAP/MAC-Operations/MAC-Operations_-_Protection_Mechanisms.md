@@ -296,7 +296,7 @@ In a mixed mode enviorment, when an **802.11g (ERP) STA** wants to transmit data
 
 ERP Information Element (IE) contains information about Claue15 (802.11 Prime) or Clause 18 (802.11b) stations in the BSS that are not capable of communicating Clause 19 (ERP-OFDM) data rates. It also identifies whether AP should use protection mechanism & whether to use long or short preambles. 
 
-![image](https://github.com/user-attachments/assets/005646d8-cf9d-4f89-a598-2b73df7cf43a)
+![image](https://github.com/user-attachments/assets/2a7889c6-2de2-4431-80e1-4a07876a89ec)
 
 ````sh
 # ERP Information Element
@@ -493,6 +493,9 @@ wlan.erp_info.erp_present == 0 && wlan.erp_info.use_protection == 1 && wlan.erp_
 
 
 # Protection Mechanisms: `HT Protection` 
+
+![image](https://github.com/user-attachments/assets/e117fd92-801e-4e39-899e-5b9a703012bb)
+
 
 
 ## HT protection mechanisms
