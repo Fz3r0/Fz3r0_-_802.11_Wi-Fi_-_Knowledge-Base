@@ -494,13 +494,23 @@ wlan.erp_info.erp_present == 0 && wlan.erp_info.use_protection == 1 && wlan.erp_
 
 # Protection Mechanisms: `HT Protection` 
 
+HT transmissions, are protected if there are other STAs present that cannot interpret HT transmissions correctly. The HT Protection and Nongreenfield HT STAs Present fields in the HT Operation element within Beacon and Probe Response frames are used to indicate the protection requirements for HT transmissions.
+
+To ensure backward compatibility with older 802.11a/b/g radios, 802.11n (HT) access points may signal to other 802.11n stations when to use **one of four HT protection modes**. 
+
+- **A field in the `beacon` frame, inside the `HT Information` element, called the `HT Protection` field has four possible settings of `0–3`**.
+
+Much like an ERP (802.11g) AP, the protection modes may change dynamically depending on devices that are nearby or associated to the HT (802.11n) AP.
+
+The protection mechanisms that are used are **RTS/CTS**, **CTS-to-Self**, **Dual-CTS**, or other protection methods.
 
 ## HT Protection: `HT Information Element`
 
 **HT Information Element** is present in `beacons` & `probe responses` in both: **2.4 GHz band** and **5 GHz band**.
 
-ERP Information Element (IE) contains information about Claue15 (802.11 Prime) or Clause 18 (802.11b) stations in the BSS that are not capable of communicating Clause 19 (ERP-OFDM) data rates. It also identifies whether AP should use protection mechanism & whether to use long or short preambles. 
+HT Information Element (IE) contains information about 802.11b/a/g stations in the BSS that are not capable of communicating HT-OFDM (802.11n) data rates. 
 
+It also identifies if there's an adjacent Non-Greenfield BSS/AP and if Legacy Non-Greenfield device detected within the cell.
 
 ![image](https://github.com/user-attachments/assets/0c0158de-6962-4542-9068-62661f84a32e)
 
@@ -526,9 +536,9 @@ ERP Information Element (IE) contains information about Claue15 (802.11 Prime) o
 
 | **Field**                                                    | **Description**                                                                                                                                                                                                                      | **Wireshark Filter**                       |
 |--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|
-| HT Element ID                                                | HT Information Element = 61                                                                                                                                                                                                          | `wlan.tag.number == 61`                    |
+| Element ID                                                   | HT Information Element = 61                                                                                                                                                                                                          | `wlan.tag.number == 61`                    |
 | Tag Length                                                   | Indicates the length of the HT Information Element (1 byte)                                                                                                                                                                          | `wlan.tag.length == 22`                    |
-| Primary Channel                                              | (falta)                                                                                                                                                                                                                              | `wlan.ht.info.primarychannel == 11`        |
+| Primary Channel                                              | Defines the primary operating channel                                                                                                                                                                                                | `wlan.ht.info.primarychannel == 11`        |
 | HT Info Subset #1                                            | HEX combination for the HT Info Subset # 1                                                                                                                                                                                           | `wlan.ht.info.delim1 == 0x0f`              |
 | **HT Info Subset #2**                                        | **HEX combination for the HT Info Subset # 2 - HT Protection**                                                                                                                                                                       | `wlan.ht.info.delim2 == 0x0000`            |
 | HT Info Subset #3                                            | HEX combination for the HT Info Subset # 3                                                                                                                                                                                           | `wlan.ht.info.delim3 == 0x0000`            |
@@ -542,18 +552,6 @@ ERP Information Element (IE) contains information about Claue15 (802.11 Prime) o
 | Channel Center Frequency Segment 2                           | For 802.11ac only. Center Frequency of the secondary segment for 80+80 MHz bandwidths. For 20, 40, 80, or 160 MHz bandwidths, is undefined.                                                                                          | `wlan.ht.info.chan_center_freq_seg_2 == 0` |
 | _Reserved (HEX)_                                             | _Reserved bits within the HT Information Element_                                                                                                                                                                                    | `wlan.ht.info.reserved_b21_b23 == 0x0`     |
 | Rx Supported Modulation and Coding Scheme (Basic MCS Set)    | Indicates supported MCS values for HT operation                                                                                                                                                                                      | `wlan.ht.mcsset`                           |
-
-## HT protection mechanisms
-
-HT transmissions, are protected if there are other STAs present that cannot interpret HT transmissions correctly. The HT Protection and Nongreenfield HT STAs Present fields in the HT Operation element within Beacon and Probe Response frames are used to indicate the protection requirements for HT transmissions.
-
-
-To ensure backward compatibility with older 802.11a/b/g radios, 802.11n (HT) access points may signal to other 802.11n stations when to use one of four HT protection modes. A field in the beacon frame called the HT Protection field has four possible settings of 0–3.
-
-Much like an ERP (802.11g) access point, the protection modes may change dynamically depending on devices that are nearby or associated to the HT (802.11n) access point.
-
-The protection mechanisms that are used are RTS/CTS, CTS-to-Self, Dual-CTS, or other protection methods.
-
 
 
 ### HT: `no protection mode / Greenfield`
