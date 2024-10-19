@@ -5094,8 +5094,8 @@ This simplified process is followed for every frame transmission to ensure that 
      |                          +---------------------------------------------------+
                                 |  if CCA (CS/ED and NAV) say the medium is iddle:  |
                                 |                                                   |
-     |                          |       We must wait fot the appropiate IFS:        |
-     |                          |         (RIFS, SIFS, DIFS, AIFS, EIFS)            |
+     |                          |           Select the appropiate IFS:              |
+     |                          |                    (eg. DIFS)                     |
      |                          +---------------------------------------------------+
      |                                                    |
      |                                                    |
@@ -5131,9 +5131,10 @@ This simplified process is followed for every frame transmission to ensure that 
                        |                          |                v
                        +--------------------------+                v
                                                                    v
-                                                         +===================+
-                                                         |  TRANSMIT  FRAME  |
-                                                         +===================+
+                                                         +=====================+
+                                                         |  TRANSMIT  FRAME!!! |
+                                                         |  (eg. DIFS + RTS)   |
+                                                         +=====================+
 
 
 ### These are the steps a station go through prior to transmit a frame to the wireless medium:
