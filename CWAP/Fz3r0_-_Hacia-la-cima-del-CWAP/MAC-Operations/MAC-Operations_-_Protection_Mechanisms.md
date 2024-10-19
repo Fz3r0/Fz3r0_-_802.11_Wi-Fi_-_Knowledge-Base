@@ -107,6 +107,7 @@ Once the medium is free, the client STA can access the medium for wireless trans
 
 ## 🙋🤳🏻📡 Protection Mechanisms: `RTS/CTS` _(802.11g or newer)_ 
 
+![image](https://github.com/user-attachments/assets/63d3aed3-1c7b-4aa0-822e-9426a60f3fc2)
 
 
 
