@@ -298,6 +298,19 @@ ERP Information Element (IE) contains information about Claue15 (802.11 Prime) o
 
 ![image](https://github.com/user-attachments/assets/005646d8-cf9d-4f89-a598-2b73df7cf43a)
 
+````sh
+# ERP Information Element
+# Beacon & Probe Responses
+
+        Tag: ERP Information
+            Tag Number: ERP Information (42)
+            Tag length: 1
+            ERP Information: 0x00
+                .... ...0 = Non ERP Present: Not set
+                .... ..0. = Use Protection: Not set
+                .... .0.. = Barker Preamble Mode: Not set
+                0000 0... = Reserved: 0x00
+````
 
 | **Field**                 | **Description**                                                                     | **Wireshark Filter**                      |
 |---------------------------|-------------------------------------------------------------------------------------|-------------------------------------------|
