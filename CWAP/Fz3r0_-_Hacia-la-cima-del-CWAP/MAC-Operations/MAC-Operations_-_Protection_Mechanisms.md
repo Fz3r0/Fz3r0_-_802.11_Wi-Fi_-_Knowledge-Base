@@ -90,6 +90,8 @@ ________________________________________________________________________________
 
 ![image](https://github.com/user-attachments/assets/27f321f3-46d8-44a9-b4f3-5c555192c51d)
 
+![image](https://github.com/user-attachments/assets/c41e4972-3b31-46e9-9232-d8c7b0fb58df)
+
 
 Once the medium is free, the client STA can access the medium for wireless transmissions. For every frame transmitted in air, there should be an ACK from the AP. There is a SIFs delay between each frame: RTS, CTS, DATA and ACK frames. At times, this mechanism can create a lot of overhead in the network leading to a lot of congestion. And hence, this can be enabled only if the frame size is equal or above a specific configured threshold that depends on the network.
 
@@ -756,6 +758,7 @@ Wi-Fi 6 requires backward compatibility with 802.11/a/b/g/n/ac, which means that
 
 - https://www.youtube.com/watch?app=desktop&v=hjYJkQbXss0
 
+- https://www.youtube.com/watch?v=twiOOo8LI9w
 
 rts cts attack
 - https://arxiv.org/pdf/1811.11128
