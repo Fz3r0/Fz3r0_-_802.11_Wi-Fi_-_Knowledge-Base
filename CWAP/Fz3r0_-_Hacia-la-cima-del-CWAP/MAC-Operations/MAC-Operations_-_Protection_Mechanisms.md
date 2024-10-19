@@ -502,7 +502,7 @@ wlan.erp_info.erp_present == 0 && wlan.erp_info.use_protection == 1 && wlan.erp_
 ERP Information Element (IE) contains information about Claue15 (802.11 Prime) or Clause 18 (802.11b) stations in the BSS that are not capable of communicating Clause 19 (ERP-OFDM) data rates. It also identifies whether AP should use protection mechanism & whether to use long or short preambles. 
 
 
-![image](https://github.com/user-attachments/assets/e117fd92-801e-4e39-899e-5b9a703012bb)
+![image](https://github.com/user-attachments/assets/0c0158de-6962-4542-9068-62661f84a32e)
 
 ````sh
 # HT Information Element
