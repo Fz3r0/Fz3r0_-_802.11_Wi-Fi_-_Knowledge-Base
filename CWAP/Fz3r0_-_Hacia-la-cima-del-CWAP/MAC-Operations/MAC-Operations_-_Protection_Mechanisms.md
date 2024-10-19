@@ -271,7 +271,7 @@ When 802.11g was introduced, we had RTS/CTS and CTS-to-Self protection mechanism
 
 
 
-# Protection Mechanisms: `ERP Protection` - 
+# Protection Mechanisms: `ERP Protection` 
 
 An ERP `Mixed Mode` enviorment means that a **802.11g (ERP)** device is sharing the air/channel with any of both legacy devices: **802.11-prime (DSSS)** or **802.11b (HR-DSSS)** in the 2.4 GHZ band _(ERP only exists in 2.4 GHz)_.
 
@@ -292,7 +292,7 @@ In a mixed mode enviorment, when an **802.11g (ERP) STA** wants to transmit data
 
 ## ERP Protection: `ERP Information Element`
 
-**ERP element** is present in `beacon` & `probe responses` **only on 2.4GHz band**.
+**ERP nformation Element** is present in `beacons` & `probe responses` **only on 2.4 GHz band**.
 
 ERP Information Element (IE) contains information about Claue15 (802.11 Prime) or Clause 18 (802.11b) stations in the BSS that are not capable of communicating Clause 19 (ERP-OFDM) data rates. It also identifies whether AP should use protection mechanism & whether to use long or short preambles. 
 
@@ -494,9 +494,35 @@ wlan.erp_info.erp_present == 0 && wlan.erp_info.use_protection == 1 && wlan.erp_
 
 # Protection Mechanisms: `HT Protection` 
 
+
+## HT Protection: `HT Information Element`
+
+**HT Information Element** is present in `beacons` & `probe responses` in both: **2.4 GHz band** and **5 GHz band**.
+
+ERP Information Element (IE) contains information about Claue15 (802.11 Prime) or Clause 18 (802.11b) stations in the BSS that are not capable of communicating Clause 19 (ERP-OFDM) data rates. It also identifies whether AP should use protection mechanism & whether to use long or short preambles. 
+
+
 ![image](https://github.com/user-attachments/assets/e117fd92-801e-4e39-899e-5b9a703012bb)
 
+````sh
+# HT Information Element
+# Beacon & Probe Responses
 
+        Tag: HT Information (802.11n D1.10)
+            Tag Number: HT Information (802.11n D1.10) (61)
+            Tag length: 22
+            Primary Channel: 11
+            HT Information Subset (1 of 3): 0x0f
+            HT Information Subset (2 of 3): 0x0000
+                .... .... .... ..00 = HT Protection: No protection mode (0x0)
+                .... .... .... .0.. = Non-greenfield STAs present: All associated STAs are greenfield capable
+                .... .... .... 0... = Reserved: 0x0
+                .... .... ...0 .... = OBSS non-HT STAs present: Use of protection for non-HT STAs by overlapping BSSs is not needed
+                ...0 0000 000. .... = Channel Center Frequency Segment 2: 0
+                000. .... .... .... = Reserved: 0x0
+            HT Information Subset (3 of 3): 0x0000
+            Rx Supported Modulation and Coding Scheme Set: Basic MCS Set
+````
 
 ## HT protection mechanisms
 
