@@ -168,12 +168,12 @@ As a result, non-ERP and/or non-HT STAs are allowed to coexist with ERP and/or H
 
 ## ERP Protection & HT Protection: `Protection Elements`
 
-**Protection Modes Information Elements** are present in `Beacons` & `Probes`:
+ERP (802.11g) & HT (802.11n) **Protection Modes Information Elements** are present in `Beacons` & `Probe Responses`:
 
-- `ERP Information Element`: Present in 2.4 GHz Beacons & Probes
-- `HT Information Element`: Present in 2.4 & 5 GHz Beacons & Probes
+- `ERP Information Element`: Present in **2.4 GHz** Beacons & Probe Responses
+- `HT Information Element`: Present in **2.4 GHz** & **5 GHz** Beacons & Probe Responses
 
-### Information Elements: `2.4 GHz`
+### Information Elements: `2.4 GHz` : `ERP` & `HT`
 
 ````sh
 # Beacon Frame @ 2.4 GHz
@@ -207,8 +207,16 @@ IEEE 802.11 Wireless Management
         Tag: Vendor Specific: Wi-Fi Alliance: Multi Band Operation - Optimized Connectivity Experience
         Tag: Vendor Specific: Wi-Fi Alliance: P2P
 ````
+````sh
+# ERP & HT Information Element (Beacons & Probe Responses)
+# @ 2.4 GHz 
+# Wireshark Filter:
 
-### Information Elements: `5 GHz`
+wlan.erp_info
+wlan.ht.info.delim2
+````
+
+### Information Elements: `5 GHz` : `HT`
 
 ````sh
 # Beacon Frame @ 5 GHz
@@ -243,6 +251,13 @@ IEEE 802.11 Wireless Management
         Tag: Vendor Specific: Wi-Fi Alliance: Hotspot 2.0 Indication
         Tag: Vendor Specific: Wi-Fi Alliance: Multi Band Operation - Optimized Connectivity Experience
         Tag: Vendor Specific: Wi-Fi Alliance: P2P
+````
+````sh
+# HT Information Element (Beacons & Probe Responses)
+# @ 5 GHz 
+# Wireshark Filter:
+
+wlan.ht.info.delim2
 ````
 
 ## ERP & HT Protection: Difference Between `802.11g (ERP)` & `802.11n (HT)`
