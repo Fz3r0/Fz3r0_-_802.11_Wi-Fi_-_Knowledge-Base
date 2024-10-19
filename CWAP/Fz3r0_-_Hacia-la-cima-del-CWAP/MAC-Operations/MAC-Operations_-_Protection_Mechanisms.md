@@ -763,7 +763,7 @@ Wi-Fi 6 requires backward compatibility with 802.11/a/b/g/n/ac, which means that
 rts cts attack
 - https://arxiv.org/pdf/1811.11128
 
-
+- https://www.youtube.com/watch?v=-B9_4zQLwyo&t=2381s
 
 
 - https://networkengineering.stackexchange.com/questions/58588/why-is-there-no-contention-window-after-a-difs-interval-on-the-first-transmissio
