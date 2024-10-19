@@ -1,3 +1,24 @@
+
+# 🙋🛜🚦MAC Operations (Part 2): `Protection Mechanisms`
+
+![My Video](https://user-images.githubusercontent.com/94720207/165892585-b830998d-d7c5-43b4-a3ad-f71a07b9077e.gif)
+
+### Twitter  : [@fz3r0_OPs](https://twitter.com/Fz3r0_OPs) 
+### Github  : [Fz3r0](https://github.com/fz3r0) 
+
+---
+ 
+#### Keywords: `Networking` `IEEE 802.11` `Wi-Fi` `CWNA` `CWAP` `CCNA` `CCNP` `Writeup`
+
+# Index
+
+### [🙋🛜🚦MAC Operations: `Protection Mechanisms`]()
+
+### [🙋🛜🚦 `Protection Mechanisms`]()
+
+
+
+
 # 🙋🛜🚦MAC Operations: `Protection Mechanisms`
 
 There are 2 types of MAC Operations: **Power Management** & **Protection Mechanisms**:
@@ -879,3 +900,24 @@ rts cts attack
 
 SIFS bueno:
 - https://telcomatraining.com/what-is-sifs-short-interframe-space/
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+> ![hecho en mexico 5](https://user-images.githubusercontent.com/94720207/166068790-fa1f243d-2db9-4810-a6e4-eb3c4ad23700.png)
+>
+> _- Hecho en México - by [Fz3r0 💀](https://github.com/Fz3r0/)_  
+>
+> _"In the mist of the night you could see me come, where shadows move and Demons lie..."_ 
+
+
