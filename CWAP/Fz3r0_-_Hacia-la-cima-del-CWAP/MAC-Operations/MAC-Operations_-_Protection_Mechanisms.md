@@ -296,17 +296,8 @@ In a mixed mode enviorment, when an **802.11g (ERP) STA** wants to transmit data
 
 ERP Information Element (IE) contains information about Claue15 (802.11 Prime) or Clause 18 (802.11b) stations in the BSS that are not capable of communicating Clause 19 (ERP-OFDM) data rates. It also identifies whether AP should use protection mechanism & whether to use long or short preambles. 
 
-````py
-## Beacon or Probe :: ERP Information Element
+![image](https://github.com/user-attachments/assets/005646d8-cf9d-4f89-a598-2b73df7cf43a)
 
-<----------------------------------- ERP Information ------------------------------>
-|--------------|------------|-----------|-----------------|----|----|----|----|----|
-|  Element ID  | Lenght (1) |  Non-ERP  | Barker Preamble | r3 | r4 | r5 | r6 | r7 |
-|              |            |  present  |       Mode      |    |    |    |    |    |
-|--------------|------------|-----------|-----------------|----|----|----|----|----|
-       8             8            1              1           1    1    1    1    1
-
-````
 
 | **Field**                 | **Description**                                                                     | **Wireshark Filter**                      |
 |---------------------------|-------------------------------------------------------------------------------------|-------------------------------------------|
