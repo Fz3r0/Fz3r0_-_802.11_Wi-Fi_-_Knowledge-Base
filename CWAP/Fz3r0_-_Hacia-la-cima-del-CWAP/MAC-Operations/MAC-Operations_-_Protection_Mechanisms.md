@@ -524,6 +524,25 @@ ERP Information Element (IE) contains information about Claue15 (802.11 Prime) o
             Rx Supported Modulation and Coding Scheme Set: Basic MCS Set
 ````
 
+| **Field**                                                    | **Description**                                                                                                                                                                                                                      | **Wireshark Filter**                       |
+|--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|
+| HT Element ID                                                | HT Information Element = 61                                                                                                                                                                                                          | `wlan.tag.number == 61`                    |
+| Tag Length                                                   | Indicates the length of the HT Information Element (1 byte)                                                                                                                                                                          | `wlan.tag.length == 22`                    |
+| Primary Channel                                              | (falta)                                                                                                                                                                                                                              | `wlan.ht.info.primarychannel == 11`        |
+| HT Info Subset #1                                            | HEX combination for the HT Info Subset # 1                                                                                                                                                                                           | `wlan.ht.info.delim1 == 0x0f`              |
+| **HT Info Subset #2**                                        | **HEX combination for the HT Info Subset # 2 - HT Protection**                                                                                                                                                                       | `wlan.ht.info.delim2 == 0x0000`            |
+| HT Info Subset #3                                            | HEX combination for the HT Info Subset # 3                                                                                                                                                                                           | `wlan.ht.info.delim3 == 0x0000`            |
+| ⚠️**HT Protection Mode 0: <br>No Protection / Greenfield**    | All STAs within the cell in primary or secondary channel are HT STAs and 20MHz/40MHz _(for 40MHz WLANs)_                                                                                                                             | `wlan.ht.info.ht_protection == 0x0`        |
+| ⚠️**HT Protection Mode 1: <br>HT Non-Member Protection Mode** | **Non-HT STA is detected** in either the primary or the secondary channel (or both). **Not member of the same BSS**.                                                                                                                 | `wlan.ht.info.ht_protection == 0x1`        |
+| ⚠️**HT Protection Mode 2: <br>20 MHz Protection Mode**        | The BSS is **20/40 MHz** & there is at least one **20 MHz HT STA associated** with this BSS                                                                                                                                          | `wlan.ht.info.ht_protection == 0x2`        |
+| ⚠️**HT Protection Mode 3: <br>Non-HT Mixed Mode**             | **One ore more STAs Associated in the BSS are not HT (802.11n)**. _(Set only if non of any 3 other protection mechanisms (no protection mode / Greenfield, non-member protection mode, 20 MHz protection mode) are used.)_           | `wlan.ht.info.ht_protection == 0x3`        |
+| 🍏**Non-greenfield STAs present**                             | **Legacy Non-Greenfield device detected within the cell**. One or more STAs detected in the primary or the secondary channel are **NOT** : HT STAs, either: 20/40 MHz HT STAs in a 20/40 MHz BSS, or 20 MHz HT STAs in a 20 MHz BSS. | `wlan.ht.info.greenfield == 1`             |
+| _Reserved (bit)_                                             | _Reserved bit within the HT Information Element_                                                                                                                                                                                     | `wlan.ht.info.reserved_b11 == 0`           |
+| 📊**Overlapping BSS Non-HT STAs Present**                     | a non-HT BSS is overlapping (eg. adjacent Wi-Fi Network). Beacons show 802.11b/g supported data rates.                                                                                                                               | `wlan.ht.info.obssnonht == 1`              |
+| Channel Center Frequency Segment 2                           | For 802.11ac only. Center Frequency of the secondary segment for 80+80 MHz bandwidths. For 20, 40, 80, or 160 MHz bandwidths, is undefined.                                                                                          | `wlan.ht.info.chan_center_freq_seg_2 == 0` |
+| _Reserved (HEX)_                                             | _Reserved bits within the HT Information Element_                                                                                                                                                                                    | `wlan.ht.info.reserved_b21_b23 == 0x0`     |
+| Rx Supported Modulation and Coding Scheme (Basic MCS Set)    | Indicates supported MCS values for HT operation                                                                                                                                                                                      | `wlan.ht.mcsset`                           |
+
 ## HT protection mechanisms
 
 HT transmissions, are protected if there are other STAs present that cannot interpret HT transmissions correctly. The HT Protection and Nongreenfield HT STAs Present fields in the HT Operation element within Beacon and Probe Response frames are used to indicate the protection requirements for HT transmissions.
@@ -740,6 +759,33 @@ _Assumes that there are NO 802.11a/b/g stations using the same channel. | No pro
 _All STAs detected in the primary or the secondary channel are HT STAs, and All STAs that are known by the transmitting STA to be a member of this BSS are either: 20/40 MHz HT STAs in a 20/40 MHz BSS, or 20 MHz HT STAs in a 20 MHz BSS._
 - [Protection Mechanism: Mixed Mode](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/assets/94720207/a894e9c6-8a67-4080-9a97-75eb4fd51f44) 
 
+
+
+
+
+## HT Protection: Overlapping BSS
+
+
+
+The OBSS Non-HT STAs Present field allows HT devices to report the presence of other non-HT STAs that cannot interpret the HT transmissions correctly. See 9.13.3 (Protection mechanisms for different HT PHY options).
+A second HT AP that detects a first HT AP’s beacon with the OBSS Non-HT STAs Present field set to 1 may, in conjunction with radio resource measurements and/or heuristics, cause greenfield and RIFS sequence transmissions of the second AP’s BSS to be protected by setting the Operating Mode field to 3. If the NonERP_Present bit is set to 1 in the first AP’s beacon, then the Use_Protection bit to 1 may also be set to 1 by the second AP.  See Annex n061818
+
+HT STAs may also scan for the presence of non-HT devices either autonomously or after the STA’s AP transmits a HT Information element with the Operating Mode field set to 1. Non-HT devices may be detected as follows :
+•	one or more non-HT STAs are associated 
+•	a non-HT BSS is overlapping (a non-HT BSS may be detected by the reception of a Beacon where the supported rates only contain clause 15, 17, 18 or 19 rates)
+•	management frame (excluding a Probe Request) is received where the supported rate set includes only Clause 15, 17, 18 and 19 rates. 
+•	or when a HT Information element with OBSS Non-HT STAs Present field equal to 1 is received. 
+
+
+When non-HT devices are detected, the STA may enable protection of its Greenfield and RIFS sequence transmissions.
+
+
+Set to 1 if the use of protection for non-HT STAs by overlapping BSSs is determined to be desirable. Examples of when this bit may be set to 1 include, but are not limited to, when 
+
+•	one or more non-HT STAs are associated 
+•	a non-HT BSS is overlapping (a non-HT BSS may be detected by the reception of a Beacon where the supported rates only contain clause 15, 17, 18 or 19 rates)
+•	a management frame (excluding a Probe Request) is received where the supported rate set includes only Clause 15, 17, 18 and 19 rates. 
+Set to 0 otherwise. 
 
 
 
