@@ -123,6 +123,10 @@ Once the medium is free, the client STA can access the medium for wireless trans
 
 
 
+![image](https://github.com/user-attachments/assets/1813bbd1-9ef0-4c55-b719-32e3fcbaffc7)
+
+
+
 ## 🙋📡📡 Protection Mechanisms: `CTS-to-self` _(802.11g or newer)_ 
 
 It is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame, this is usually done by the AP 
