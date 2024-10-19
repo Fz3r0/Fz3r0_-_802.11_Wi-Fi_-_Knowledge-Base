@@ -16,8 +16,15 @@ RTS/CTS are the most used mechanism in Wi-Fi, there's also a mechanism called CT
 **`Important`**: Wi-Fi backward compatibility has long been a double-edged sword because backward copatibility brings some drawbacks for newer STAs using the same BSS witn legacy STAs nearby llike **RTS/CTS Overhead**, **Airtime Consumption** or **Connectivity Problems**. But, for the first time in 20 years, Wi-Fi does not require backward compatibility. This is because Wi-Fi 6E and the 6 GHz frequency band. There is no need for RTS/CTS protection mechanisms for legacy Wi-Fi devices in 6 GHz, legacy clients do not consume airtime while transmitting using slow data rates.  This is because Wi-Fi is brand new to 6 GHz, and there are no legacy clients. Altough in the future maybe we will need backward compatibility again in Wi-Fi 7, Wi-Fi 8, and Wi-Fi 9 if they still using 6 GHz band. 
 
 
+## 🙋🛜🚦 Protection Mechanisms: `Hidden Node`
 
+**RTS/CTS (Request-to-Send / Clear-to-Send)** is the most used mechanism in Wi-Fi; this mechanism is an optional method that is used in `Virtual Carrier Sense` to avoid `hidden node` problems. 
 
+![image](https://github.com/user-attachments/assets/20a9ebb3-8ab3-42b0-a5f1-f4ffb0085f75)
+
+Tu understand RTS/CTS we must understand what is `hidden node` problems first. In the below diagram, there is an access point node A indicated by blue. Nodes B and C are wireless devices within the AP – A’s BSS. However, B and C cannot hear each other due to network congestion or they are outside each other’s BSS and are called hidden nodes. Due to this, physical carrier sensing by B and C will never indicate that medium is busy when either one of them is transmitting in the air and could result in corruption and distortion of signal. To avoid this situation, we can use RTS-CTS mechanism.
+
+![image](https://github.com/user-attachments/assets/f8fe7a9f-6dc1-47f1-906b-afca7c174f81)
 
 
 
@@ -27,13 +34,7 @@ RTS/CTS are the most used mechanism in Wi-Fi, there's also a mechanism called CT
 
 ## 🙋🤳🏻📡 Protection Mechanisms: `RTS/CTS` _(802.11g or newer)_ 
 
-**RTS/CTS (Request-to-Send / Clear-to-Send)** is the most used mechanism in Wi-Fi; this mechanism is an optional method that is used in `Virtual Carrier Sense` to avoid `hidden node` problems. 
 
-![image](https://github.com/user-attachments/assets/20a9ebb3-8ab3-42b0-a5f1-f4ffb0085f75)
-
-Tu understand RTS/CTS we must understand what is `hidden node` problems first. In the below diagram, there is an access point node A indicated by blue. Nodes B and C are wireless devices within the AP – A’s BSS. However, B and C cannot hear each other due to network congestion or they are outside each other’s BSS and are called hidden nodes. Due to this, physical carrier sensing by B and C will never indicate that medium is busy when either one of them is transmitting in the air and could result in corruption and distortion of signal. To avoid this situation, we can use RTS-CTS mechanism.
-
-![image](https://github.com/user-attachments/assets/f8fe7a9f-6dc1-47f1-906b-afca7c174f81)
 
 Any 802.11 device that wishes to transmit in the medium should send `RTS (Request to Send)` frame – **requesting for medium access to the AP**. The latter then responds with `CTS (Clear to Send)` frame that includes the `Duration field`, which helps the station to set its `NAV timer`. 
 
