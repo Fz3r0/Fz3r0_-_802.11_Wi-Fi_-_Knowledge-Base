@@ -115,6 +115,7 @@ Once the medium is free, the client STA can access the medium for wireless trans
 
 ![image](https://github.com/user-attachments/assets/1c169f74-c3ac-4905-b794-b8ce05f86b29)
 
+![image](https://github.com/user-attachments/assets/ee96db40-2db9-4049-9357-8e98111d2aa2)
 
 
 
@@ -761,3 +762,8 @@ Wi-Fi 6 requires backward compatibility with 802.11/a/b/g/n/ac, which means that
 
 rts cts attack
 - https://arxiv.org/pdf/1811.11128
+
+
+
+
+- https://networkengineering.stackexchange.com/questions/58588/why-is-there-no-contention-window-after-a-difs-interval-on-the-first-transmissio
