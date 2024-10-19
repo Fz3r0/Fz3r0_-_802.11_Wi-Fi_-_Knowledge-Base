@@ -88,7 +88,6 @@ ________________________________________________________________________________
 
 ![image](https://github.com/user-attachments/assets/62cdb44f-c40d-4a5c-97d0-19f777722445)
 
-![image](https://github.com/user-attachments/assets/27f321f3-46d8-44a9-b4f3-5c555192c51d)
 
 ![image](https://github.com/user-attachments/assets/c41e4972-3b31-46e9-9232-d8c7b0fb58df)
 
