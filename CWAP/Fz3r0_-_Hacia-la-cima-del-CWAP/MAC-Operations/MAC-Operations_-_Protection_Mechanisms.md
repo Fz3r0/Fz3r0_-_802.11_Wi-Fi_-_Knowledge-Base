@@ -512,7 +512,7 @@ HT Information Element (IE) contains information about 802.11b/a/g stations in t
 
 It also identifies if there's an adjacent Non-Greenfield BSS/AP and if Legacy Non-Greenfield device detected within the cell.
 
-![image](https://github.com/user-attachments/assets/0c0158de-6962-4542-9068-62661f84a32e)
+![image](https://github.com/user-attachments/assets/5f1c7ebd-7aa1-4392-bf03-075fad3b9e50)
 
 ````sh
 # HT Information Element
