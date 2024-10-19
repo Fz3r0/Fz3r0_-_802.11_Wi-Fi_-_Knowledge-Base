@@ -771,3 +771,14 @@ rts cts attack
 
 
 - https://networkengineering.stackexchange.com/questions/58588/why-is-there-no-contention-window-after-a-difs-interval-on-the-first-transmissio
+
+
+
+
+
+
+
+
+
+SIFS bueno:
+- https://telcomatraining.com/what-is-sifs-short-interframe-space/
