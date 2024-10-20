@@ -204,17 +204,24 @@ Once the medium is free, the client STA can access the medium for wireless trans
 
 ## 🙋📡📡 Protection Mechanisms: `CTS-to-self` _(802.11g or newer)_ 
 
-It is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame, this is usually done by the AP 
+![image](https://github.com/user-attachments/assets/9f19711c-98df-4be3-960b-5122a078ddc6)
 
-- CTS-to-Self is simply another method of performing NAV distribution & that use only CTS frames.
+CTS-to-Self is not a frame explicitly defined in the IEEE 802.11 standard, but it is commonly used in Wi-Fi networks as a protection mechanism. Essentially, it involves sending a Clear to Send (CTS) frame without the usual preceding Request to Send (RTS) frame, typically initiated by the AP.
 
-- It is used strictly as protection mechanism for mixed mode environment.
+The primary function of CTS-to-Self is to distribute the Network Allocation Vector (NAV) using only CTS frames. This allows devices on the network to be informed that the wireless channel is reserved, reducing the chances of interference during data transmission. By signaling to itself, the AP tells all devices that it is about to transmit data, effectively reserving the channel for its own use.
 
-- The CTS-to-self NAV distribution mechanism is lower in network overhead cost than is the RTS/CTS NAV distribution mechanism, but CTS-to-self is less robust against hidden nodes and collisions than RTS/CTS.
+CTS-to-Self is mainly used as a protection mechanism in mixed-mode environments. These are scenarios where devices that use different Wi-Fi standards (for example, 802.11g and 802.11n) coexist on the same network. In such environments, older devices that may not support newer protocols are alerted that the channel is in use, preventing them from causing interference.
 
-- STAs employing a NAV distribution mechanism should choose a mechanism such as CTS-to-self or RTS/CTS that is appropriate for the given network conditions.
+- **One of the key advantages of CTS-to-Self is that it has lower overhead compared to the RTS/CTS mechanism.** RTS/CTS involves sending an RTS frame, waiting for a CTS response, and only then proceeding with data transmission. This adds more steps and consumes more airtime. In contrast, CTS-to-Self skips the RTS step, making it quicker and more efficient in terms of network overhead. <br><br>
 
-- # If errors occur when employing the CTS-to-self mechanism, STAs should switch to a more robust mechanism.
+However, **this method is not as robust against `hidden nodes` or `collisions` as RTS/CTS**. 
+
+- Since **CTS-to-Self doesn't account for `hidden nodes` (other STAs) trying to transmit at the same time**, it may be less effective in preventing collisions in complex network environments.
+
+Devices (STAs) should choose between **CTS-to-Self** and **RTS/CTS** depending on the network conditions: 
+
+- `CTS-to-Self`: In environments with **fewer hidden nodes** and **less potential for interference** _(because of CTS-to-Self efficiency)_. <br><br>
+- `RTS/CTS`: If **hidden nodes or frequent collisions are detected**, switching to the more robust mechanism _(eg. RTS/CTS)_ may be necessary to ensure reliable communication.
 
 ![image](https://github.com/user-attachments/assets/586d805b-ea07-479c-b3f4-6a55abd1cf49)
 
