@@ -182,11 +182,9 @@ IEEE 802.11 Clear-to-send, Flags: ........
 
 ## 🙋🛜🚦 Background Concepts: `ACK`
 
-An ACK (Acknowledgment) frame is a Control Frame used in wireless networks (like 802.11 Wi-Fi) to confirm the successful receipt of a data frame.
+An **ACK (Acknowledgment)** frame is a `Control Frame` used in wireless networks (like 802.11 Wi-Fi) to confirm the **successful receipt** of **unicast**: `data`, `management`, `PS-Poll` and `fragmented` frames.
 
-- The primary purpose of an ACK frame is to notify the Transmitter that their transmitted data frame has been successfully received by the intended Receiver. If the CRC check of the data frame fails because the frame is corrupted or the data frame is not received, the Receiver will not send an ACK. If the sender does not receive an ACK, it will retransmit the frame.
-
-The ACK frame only includes the Receiver Address because its sole purpose is to acknowledge the successful reception of a data frame. The ACK frame is sent by the device that successfully received the data (e.g., the AP or Bob) and is transmitted directly back to the original sender (e.g., Carl). Since the ACK is a response to the data frame, the receiver of the ACK is the same device that sent the original data frame, so only the Receiver Address (the sender) is needed in the ACK frame.
+- **The primary purpose of an ACK frame is to notify the Transmitter that their transmitted data frame has been successfully received by the intended Receiver. If the CRC check of the data frame fails because the frame is corrupted or the data frame is not received, the Receiver will not send an ACK. If the sender does not receive an ACK, it will retransmit the frame.**
 
 
 Data Transmission: When a device (let's call it Device A) wants to send data to another device (Device B), it first transmits the data frame.
@@ -200,15 +198,25 @@ No Transmitter Address: Unlike other frames, the ACK frame does not include a Tr
 Timeout: If Device A does not receive an ACK within a certain timeframe (due to network issues or collisions), it will assume that the data frame was lost and will retransmit the data.
 
 
+### ACK: `Address` 
 
+The ACK frame only includes the Receiver Address because its sole purpose is to acknowledge the successful reception of a data frame. The ACK frame is sent by the device that successfully received the data (e.g., the AP or Bob) and is transmitted directly back to the original sender (e.g., Carl). Since the ACK is a response to the data frame, the receiver of the ACK is the same device that sent the original data frame, so only the Receiver Address (the sender) is needed in the ACK frame.
 
-#### Addresses
+- **The `Receiver Address (RA)` is copied from the `Transmitter` of the frame being ACKed. Technically, it is copied from the `Address 2 (Transmitter Address TA)` field of the frame being acknowledged _(eg. Alice STA)_.**
 
-the header of an acknowledgement (ACK) frame only uses one of four address fields, the receiver address (RA). The other values found in the frame control field of the header that are frequently referenced include:
+### ACK: `Duration`
 
+The time required to transmit the ACK and its short interframe space is subtracted from the duration in the most recent fragment. The duration calculation in nonfinal ACK frames is similar to the CTS duration calculation. In fact, the 802.11 specification refers to the duration setting in the ACK frames as a virtual CTS.
 
+### ACK: `QoS & EDCA`
+
+Quality-of-service enhancements relax the requirement for a single acknowledgment per Data frame.
+
+### ACK: `Frame`
 
 (wlan.fc.type == 1)&&(wlan.fc.subtype == 13)
+
+
 
 
 
@@ -1194,7 +1202,7 @@ rts cts attack
 
 - https://mrncciew.com/2014/10/26/cwap-802-11-ctrl-rtscts/
 
-
+- https://www.oreilly.com/library/view/80211-wireless-networks/0596100523/ch04.html
 
 - https://www.geeksforgeeks.org/how-rts-and-cts-are-used-to-avoid-collision-in-csma-ca/
 
