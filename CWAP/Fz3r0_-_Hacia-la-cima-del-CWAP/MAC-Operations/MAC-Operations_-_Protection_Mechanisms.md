@@ -242,11 +242,57 @@ Station A                                                                       
 
 ## 🙋🤳🏻📡 Protection Mechanisms: `No Protection` - 
 
+### No Protection: `Description` 
+
+- This is the most basic type of data exchange in Wi-Fi networks and involves a simple transmission of data followed by an acknowledgment (ACK). 
+- The duration value only accounts for the Short Interframe Space (SIFS), which is the brief waiting period between transmissions, and the ACK frame.
+
+### No Protection: `Characteristics`
+
+- There is no protection mechanism in place, meaning that no extra steps are taken to prevent collisions or interference.
+- This method is used when the network conditions are good, and there is little risk of other devices transmitting simultaneously and causing collisions.
+
+- 
+Real-life Example: In a home network with only a few devices and minimal interference, a device like a smartphone or laptop might use this type of data exchange to send a file or stream media. Because there’s little congestion, additional protection is unnecessary.
+Duration Value: SIFS + Ack
+
+### No Protection: `Frame Exchange`
+
 ![image](https://github.com/user-attachments/assets/b486b3fa-4fc7-4820-8a88-198e186a63e8)
 
+### No Protection: `Configuration`
 
+Some devices can be configured for `No protection` mode. _(eg. Ruckus vSZ Virtual Smartzone Controller v6)_
 
 ## 🙋🤳🏻📡 Protection Mechanisms: `RTS/CTS` _(802.11g or newer)_ 
+
+2. RTS/CTS Data Exchange
+Description: This method introduces a protection mechanism called Request to Send/Clear to Send (RTS/CTS), which is used to avoid collisions, especially in environments with hidden nodes (devices that cannot detect each other but share the same access point). Before sending data, a device sends an RTS frame to reserve the channel. The receiver responds with a CTS frame to confirm that the channel is clear for transmission. After this exchange, data is sent, followed by an acknowledgment (ACK).
+Characteristics: RTS/CTS is a more robust method for ensuring that data transmission happens without interference. It’s effective in high-traffic networks or in networks with hidden nodes, as it reduces the chance of collisions.
+Real-life Example: In a large office building or public Wi-Fi environment where many devices are connected, RTS/CTS may be used to prevent devices that are far apart (and cannot sense each other) from transmitting at the same time and causing a collision.
+Duration Value: x3 SIFS + CTS + Data + ACK
+3. CTS-to-Self Data Exchange
+Description: The CTS-to-Self mechanism is another form of protection but is simpler than RTS/CTS. Instead of sending an RTS frame to initiate the transmission, the device sends a CTS frame to itself, indicating that it is about to transmit data. This is followed by the actual data transmission and an acknowledgment (ACK). It’s quicker than RTS/CTS but not as robust in handling interference.
+Characteristics: CTS-to-Self is more efficient in terms of reducing overhead because it eliminates the need for an RTS frame, but it’s not as effective at preventing collisions as RTS/CTS. It’s generally used in mixed-mode environments where older devices might interfere with newer ones, but the risk of hidden nodes is lower.
+Real-life Example: In a mixed environment where a Wi-Fi network has both older and newer devices (e.g., 802.11g and 802.11n devices), CTS-to-Self might be used to ensure that older devices don’t interfere with newer ones. This protection method reduces overhead while still offering some level of protection.
+Duration Value: x2 SIFS + Data + ACK
+Key Differences:
+Protection:
+
+Data Exchange / Block ACK: No protection, most basic.
+RTS/CTS: Strong protection against hidden nodes and collisions.
+CTS-to-Self: Moderate protection, quicker but less robust than RTS/CTS.
+Overhead:
+
+Data Exchange / Block ACK: Lowest overhead.
+RTS/CTS: Highest overhead due to multiple frame exchanges (RTS + CTS).
+CTS-to-Self: Moderate overhead, no RTS frame needed.
+Use Cases:
+
+Data Exchange / Block ACK: Simple, low-congestion networks.
+RTS/CTS: High-traffic or hidden node environments.
+CTS-to-Self: Mixed-mode environments with lower risk of hidden nodes.
+
 
 ![image](https://github.com/user-attachments/assets/63d3aed3-1c7b-4aa0-822e-9426a60f3fc2)
 
