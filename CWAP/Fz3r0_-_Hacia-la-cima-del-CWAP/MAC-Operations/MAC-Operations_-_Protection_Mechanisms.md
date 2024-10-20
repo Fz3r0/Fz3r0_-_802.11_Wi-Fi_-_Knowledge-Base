@@ -82,10 +82,9 @@ Steps demonstrating how RTS and CTS are used to avoid collision in CSMA/CA
 
 ![image](https://github.com/user-attachments/assets/92e90cf0-ffb4-4876-b241-c5308904c55a)
 
-
 Due to this, `Physical Carrier Sense` (CSMA/CA) by `Alice` & `Bob/Carl` **will never indicate that medium is busy** when either one of them is transmitting in the air and could result in corruption and distortion of signal. **To avoid this situation, we can use `RTS/CTS` mechanism:**
 
-
+![image](https://github.com/user-attachments/assets/b8e6e42e-57b6-45d8-aba3-f2ec3b99d4a5)
 
 Any 802.11 device that wishes to transmit in the medium should send `RTS (Request to Send)` frame – **requesting for medium access to the AP**. The latter then responds with `CTS (Clear to Send)` frame that includes the `Duration/ID field`, which helps the station to set its `NAV timer`. 
 
