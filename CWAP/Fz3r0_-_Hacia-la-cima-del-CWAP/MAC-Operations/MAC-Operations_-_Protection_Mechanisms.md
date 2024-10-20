@@ -93,7 +93,10 @@ Due to this, `Physical Carrier Sense` (CSMA/CA) by `Alice` & `Bob/Carl` **will n
 
 ## 🙋🛜🚦 Background Concepts: `RTS/CTS MAC Frames`
 
-An 802.11 `RTS (Request to Send)` and `CTS (Clear to Send)` frame are `Control Frames` used in Wi-Fi networks to **prevent collisions**, part of the **CSMA/CA** process. `RTS` is sent by a device to **request access to the medium**, and `CTS` **is the response, granting permission**. 
+An 802.11 `RTS (Request to Send)` and `CTS (Clear to Send)` frame are `Control Frames` used in Wi-Fi networks to **prevent collisions**. These frames are part of the Distributed Coordination Function (DCF) which uses **CSMA/CA**. 
+
+- `RTS` is sent by a device to **request access to the medium**.
+- `CTS` **is the response, granting permission**. 
 
 Since these `RTS/CTS` are **broadcast**, all STAs within the BSS can "hear" them, which helps manage medium access. STAs that "hear" the `RTS/CTS` frames update their `NAV (Duration)` timers to stay silent, while the transmitting STA proceeds with its transmission.
 
