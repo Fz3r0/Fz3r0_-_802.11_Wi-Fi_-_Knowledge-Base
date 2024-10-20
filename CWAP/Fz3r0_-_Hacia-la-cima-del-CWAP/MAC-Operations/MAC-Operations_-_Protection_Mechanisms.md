@@ -190,18 +190,13 @@ An **ACK (Acknowledgment)** frame is a `Control Frame` used in wireless networks
 
 ### ACK: `Frame Exchange`
 
+![image](https://github.com/user-attachments/assets/e423d47a-98ce-44e6-a8f2-b11da8ec90d1)
 
-
-Data Transmission: When a device (let's call it Device A) wants to send data to another device (Device B), it first transmits the data frame.
-
-Reception: Once Device B receives the data frame, it checks the integrity of the received data (using error-checking methods).
-
-Sending ACK: If the data frame is received correctly, Device B sends an ACK frame back to Device A. This frame includes:
-
-Receiver Address: The address of Device A, indicating that it is the intended recipient of the ACK.
-No Transmitter Address: Unlike other frames, the ACK frame does not include a Transmitter Address because it only serves to confirm receipt.
-Timeout: If Device A does not receive an ACK within a certain timeframe (due to network issues or collisions), it will assume that the data frame was lost and will retransmit the data.
-
+1. When a 802.11 device (eg. `Alice (STA)`) wants to send data to another device (eg. `AP`), it first transmits the `data frame`.
+2. Once the `AP` receives the data frame, it checks the integrity of the received data (using `CRC` error-checking methods).
+3. If the data frame is received correctly, the `AP` sends an `ACK` frame back to `Alice`.
+4. Process repeats until the end of the transmission.
+5. `Timeout`: If `Alice (STA)` does not receive an `ACK` within a certain timeframe from the `AP` _(eg. due to network issues or collisions)_, she will assume that the data frame was lost and will `retransmit` the data.
 
 ### ACK: `Address` 
 
