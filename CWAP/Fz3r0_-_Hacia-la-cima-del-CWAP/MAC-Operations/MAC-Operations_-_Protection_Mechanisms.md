@@ -102,8 +102,9 @@ Since these `RTS/CTS` are **broadcast**, all STAs within the BSS can "hear" them
 
 ### RTS/CTS MAC Frames: `RTS (Request to Send)`
 
-- An 802.11 RTS (Request to Send) frame is a **Control Frame** used to **request access to the medium** and clearing the channel before transmission. 
-- It includes the `Duration` of the upcoming transmission.
+- An 802.11 RTS (Request to Send) frame is a control frame used to **reserve the medium before transmitting data**.
+- This process helps avoid collisions by signaling the intention to transmit data into the channel.
+- It includes the `Duration` of the upcoming transmission **AFTER the RTS**.
 
 #### RTS (Request to Send): `Addresses`
 
@@ -135,8 +136,18 @@ IEEE 802.11 Request-to-send, Flags: ........
 | **RTS Receiver Address (RA)**    	| WLAN Address of the **STA being requested** for medium access, **usually the AP**.                                                        	| `wlan.fc.type == 1 && wlan.fc.subtype == 11 && (wlan.ra == f0:f0:f0:f0:f0:f0)` 	|
 | **RTS Transmitter Address (RA)** 	| Wlan Address of the **STA requesting** access to transmit, **typically a client STA**. (eg. **Alice**, **Bob** or **Carl**)               	| `wlan.fc.type == 1 && wlan.fc.subtype == 11 && (wlan.ta == aa:aa:aa:aa:aa:aa)` 	|
 
-
 ### RTS/CTS MAC Frames: `CTS (Clear to Send)`
+
+- Sent by a 802.11 device (typically AP) in **response to a RTS frame from another device** _(it can also be sent by the own device in a **CTS-to-self** enviorment)_.
+- Its primary purpose is to indicate that the medium is clear and that the requesting device can transmit its data without interference.
+- This process helps avoid collisions by signaling the intention to transmit data into the channel.
+- It includes the `Duration` of the upcoming transmission **AFTER the CTS**.
+
+#### CTS (Request to Send): `Addresses`
+
+- `Receiver Address`: (eg. **AA:AA:AA:AA:AA:AA**) :: STA that **sent the RTS in first place requesting access** to transmit, and **is now being granted access to transmit**.(eg. **Alice STA**)
+
+### CTS (Request to Send): `Frame`
 
 ````sh
 # Clear-to-Send Frame
@@ -161,11 +172,17 @@ IEEE 802.11 Clear-to-send, Flags: ........
 | **CTS Receiver Address (RA)**  | WLAN Address of the **STA that sent the RTS in first place requesting access to transmit, and is now being granted access to transmit**. (eg. Alice)   | `wlan.fc.type == 1 && wlan.fc.subtype == 12 && (wlan.ra == aa:aa:aa:aa:aa:aa)` |
 
 
-- It includes the `Duration` of the upcoming transmission.
 
-#### RTS (Request to Send): `Addresses`
 
-- `Receiver Address`: (eg. **AA:AA:AA:AA:AA:AA**) :: The device who **granted access** to the medium (eg. **AP**)
+
+
+
+
+
+
+
+
+
 
 ## 🙋🛜🚦 Background Concepts: `Duration/ID`
 
