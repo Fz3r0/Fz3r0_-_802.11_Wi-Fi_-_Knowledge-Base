@@ -67,7 +67,7 @@ Steps demonstrating how RTS and CTS are used to avoid collision in CSMA/CA
 
 **RTS/CTS (Request-to-Send / Clear-to-Send)** is the most used mechanism in Wi-Fi; this mechanism is an optional method that is used in `Virtual Carrier Sense` to avoid `hidden node` problems. So... To understand RTS/CTS we must understand what is `hidden node` problems first.
 
-**The diagram below explain the Hidden node in this way: **
+**The diagram below explain the Hidden Node Problem:**
 
 - `AP Node`: Represent the **AP** in the center of the BSA/BSS where all the other nodes (STA) connect for Tx/Rx.
 - `Alice Node`: Represent the **client STA "A"** within the AP wireless network.
@@ -77,13 +77,14 @@ Steps demonstrating how RTS and CTS are used to avoid collision in CSMA/CA
 
 - The `AP` can hear `Alice` within the BSA/BSS network cell. 
 - The `AP` can hear `Bob` within the BSA/BSS network cell.
-- But, `Alice` & `Bob` **CAN'T HEAR EACH OTHER** due to network congestion or they are outside each other’s BSS and are called hidden nodes.
+- The `AP` can hear `Carl` within the BSA/BSS network cell. 
+- But, `Bob` & `Carl` **CAN'T HEAR** `Alice` due to network congestion or she is outside of other’s BSS. **In this scenario, `Alice` is the hidden node**.
 
-Due to this, `Physical Carrier Sense` (CSMA/CA) by `Alice` & `Bob` **will never indicate that medium is busy** when either one of them is transmitting in the air and could result in corruption and distortion of signal. 
+![image](https://github.com/user-attachments/assets/16a16afb-9387-40ee-968a-e9cd5dba3d73)
 
-**To avoid this situation, we can use `RTS/CTS` mechanism.**
+Due to this, `Physical Carrier Sense` (CSMA/CA) by `Alice` & `Bob/Carl` **will never indicate that medium is busy** when either one of them is transmitting in the air and could result in corruption and distortion of signal. **To avoid this situation, we can use `RTS/CTS` mechanism:**
 
-![image](https://github.com/user-attachments/assets/f8fe7a9f-6dc1-47f1-906b-afca7c174f81)
+
 
 Any 802.11 device that wishes to transmit in the medium should send `RTS (Request to Send)` frame – **requesting for medium access to the AP**. The latter then responds with `CTS (Clear to Send)` frame that includes the `Duration/ID field`, which helps the station to set its `NAV timer`. 
 
