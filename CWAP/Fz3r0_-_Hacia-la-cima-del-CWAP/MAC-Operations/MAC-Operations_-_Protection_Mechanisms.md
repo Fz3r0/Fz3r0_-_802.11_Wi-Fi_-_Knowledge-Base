@@ -10,8 +10,6 @@
 #### Keywords: `Networking` `Wireless Networking` `IEEE 802.11` `Wi-Fi` `CWNA` `CWAP` `CCNP` `MAC Operations` `Protection Mechanisms`
 
 ---
-![image](https://github.com/user-attachments/assets/623dffb3-2c3b-45a8-bf98-b16ab7c45ff8)
-
 
 <br>
 
@@ -265,6 +263,10 @@ Duration Value: SIFS + Ack
 ### No Protection: `Configuration`
 
 Some devices can be configured for `No protection` mode. _(eg. Ruckus vSZ Virtual Smartzone Controller v6)_
+
+- **`Important`**:  **It is not a good practice turning off the RTS/CTS or CTS-to-Selft Protection Mechanisms!!!**
+
+![image](https://github.com/user-attachments/assets/623dffb3-2c3b-45a8-bf98-b16ab7c45ff8)
 
 ## 🙋🤳🏻📡 Protection Mechanisms: `RTS/CTS` _(802.11g or newer)_ 
 
