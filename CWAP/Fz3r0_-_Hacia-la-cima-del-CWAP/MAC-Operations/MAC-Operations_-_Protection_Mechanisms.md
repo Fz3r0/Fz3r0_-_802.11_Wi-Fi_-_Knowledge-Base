@@ -101,11 +101,11 @@ Any 802.11 device that wishes to transmit in the medium should send `RTS (Reques
 
 **There are 3 different main `Duration` values types:**
 
-| **Type**                                             | **Duration Value**                  | **Description**                                                                 |
-|------------------------------------------------------|-------------------------------------|---------------------------------------------------------------------------------|
-| 1. **Data Exchange / Block ACK** _(No protection)_   | `SIFS` + `Ack`                      | Involves a SIFS followed by an ACK. **No Protection Mechanism in use.**         |
-| 2. **RTS/CTS Data Exchange**                         | `x3 SIFS` + `CTS` + `Data` + `ACK`  | Uses **RTS/CTS** frame exchange, which involves: RTS +: three SIFS, CTS, Data & ACK frames.  |
-| 3. **CTS-to-Self Data Exchange**                     | `x2 SIFS` + `Data` + `ACK`          | Uses **CTS-to-Self** frame exchange, which involves: CTS +: two SIFS, CTS, Data & ACK frames.|
+| **Type**                                             | **Duration Value**            | **Description**                                                                 |
+|------------------------------------------------------|-------------------------------|---------------------------------------------------------------------------------|
+| 1. **Data Exchange / Block ACK** _(No protection)_   | `SIFS`+`Ack`                  | Involves a SIFS followed by an ACK. **No Protection Mechanism in use.**         |
+| 2. **RTS/CTS Data Exchange**                         | `x3 SIFS`+`CTS`+`Data`+`ACK`  | Uses **RTS/CTS** frame exchange, which involves: RTS +: three SIFS, CTS, Data & ACK frames.  |
+| 3. **CTS-to-Self Data Exchange**                     | `x2 SIFS`+`Data`+`ACK`        | Uses **CTS-to-Self** frame exchange, which involves: CTS +: two SIFS, CTS, Data & ACK frames.|
 
 
 
