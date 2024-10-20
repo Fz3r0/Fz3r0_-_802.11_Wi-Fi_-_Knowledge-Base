@@ -10,6 +10,8 @@
 #### Keywords: `Networking` `Wireless Networking` `IEEE 802.11` `Wi-Fi` `CWNA` `CWAP` `CCNP` `MAC Operations` `Protection Mechanisms`
 
 ---
+![image](https://github.com/user-attachments/assets/623dffb3-2c3b-45a8-bf98-b16ab7c45ff8)
+
 
 <br>
 
