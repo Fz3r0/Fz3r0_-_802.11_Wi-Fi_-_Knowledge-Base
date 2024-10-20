@@ -80,7 +80,8 @@ Steps demonstrating how RTS and CTS are used to avoid collision in CSMA/CA
 - The `AP` can hear `Carl` within the BSA/BSS network cell. 
 - But, `Bob` & `Carl` **CAN'T HEAR** `Alice` due to network congestion or she is outside of other’s BSS. **In this scenario, `Alice` is the hidden node**.
 
-![image](https://github.com/user-attachments/assets/16a16afb-9387-40ee-968a-e9cd5dba3d73)
+![image](https://github.com/user-attachments/assets/92e90cf0-ffb4-4876-b241-c5308904c55a)
+
 
 Due to this, `Physical Carrier Sense` (CSMA/CA) by `Alice` & `Bob/Carl` **will never indicate that medium is busy** when either one of them is transmitting in the air and could result in corruption and distortion of signal. **To avoid this situation, we can use `RTS/CTS` mechanism:**
 
