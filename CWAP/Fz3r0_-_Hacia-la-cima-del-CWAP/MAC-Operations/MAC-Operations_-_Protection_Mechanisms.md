@@ -107,7 +107,44 @@ Since these `RTS/CTS` are **broadcast**, all STAs within the BSS can "hear" them
 - `Receiver Address`: (eg. **F0:F0:F0:F0:F0:F0**) :: The device **being asked to access** the medium (eg. **AP**)
 - `Transmiter Address`: (eg. **AA:AA:AA:AA:AA:AA**) :: The device **requesting the access** to the medium. (eg. **Alice STA**)  
 
+### RTS (Request to Send): `Frame`
+
+````sh
+# Request-to-Send Frame
+
+802.11 radio information
+IEEE 802.11 Request-to-send, Flags: ........
+    Type/Subtype: Request-to-send (0x001b)
+    Frame Control Field: 0xb400
+        .... ..00 = Version: 0
+        .... 01.. = Type: Control frame (1)  <<<---| Type:    Control Frame   = 01
+        1011 .... = Subtype: 11              <<<---| SubType: Request-to-Send = 11
+        Flags: 0x00
+    .000 0000 1011 1000 = Duration: 184 microseconds            <<<<<-----|| Duration/ID field
+    Receiver address: f0:f0:f0:f0:f0:f0 (f0:f0:f0:f0:f0:f0)     <<<<<-----|| Receiver Address (AP)
+    Transmitter address: aa:aa:aa:aa:aa:aa (aa:aa:aa:aa:aa:aa)  <<<<<-----|| Transmitter Address (Alice)
+    [WLAN Flags: ........]
+````
+
 ### RTS/CTS MAC Frames: `CTS (Clear to Send)`
+
+````sh
+# Clear-to-Send Frame
+
+802.11 radio information
+IEEE 802.11 Clear-to-send, Flags: ........
+    Type/Subtype: Clear-to-send (0x001c)
+    Frame Control Field: 0xc400
+        .... ..00 = Version: 0
+        .... 01.. = Type: Control frame (1)  <<<---| Type:    Control Frame = 01
+        1100 .... = Subtype: 12              <<<---| SubType: Clear-to-Send = 12
+        Flags: 0x00
+    .000 0000 1000 1100 = Duration: 140 microseconds          <<<<<------|| Duration/ID field
+    Receiver address: aa:aa:aa:aa:aa:aa (aa:aa:aa:aa:aa:aa)   <<<<<------|| Receiver Address (Alice)
+    [WLAN Flags: ........]
+
+````
+
 
 
 - It includes the `Duration` of the upcoming transmission.
