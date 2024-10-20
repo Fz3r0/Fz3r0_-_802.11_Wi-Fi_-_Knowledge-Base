@@ -208,6 +208,11 @@ The ACK frame only includes the Receiver Address because its sole purpose is to 
 
 The time required to transmit the ACK and its short interframe space is subtracted from the duration in the most recent fragment. The duration calculation in nonfinal ACK frames is similar to the CTS duration calculation. In fact, the 802.11 specification refers to the duration setting in the ACK frames as a virtual CTS.
 
+ACK aprox Duration:
+
+- **2.4 GHz = `1 Mbps` Data Rate = `304 μS`** 
+- **5 GHz = `6 Mbps` Data Rate = `44 μS`** 
+
 ### ACK: `QoS & EDCA`
 
 Quality-of-service enhancements relax the requirement for a single acknowledgment per Data frame.
@@ -360,6 +365,182 @@ Station A                                                                       
                              +------------------------------------------------------------------+
 
 ````
+
+
+
+
+
+## 🙋🛜🚦 Background Concepts: ` IFS (Interframe spaces)`
+
+Interframe Spaces (IFS) are periods of time between frames or "time gaps on the medium"; they are used to allow frames to be processed in a timely manner, avoid interference by ensuring frames are received, and prioritize transmission of certain frames. This means that after each frame transmission, 802.11 protocol require an idle period on the medium called IFS 
+
+IFS is defined in the 802.11-2007 standard as: 
+
+- **“The time from the end of the last symbol of the previous frame to the beginning of the first symbol of the preamble of the subsequent frame as seen at the air interface.”**_
+
+IFS are needed for both: 
+
+1. Keep buffer between the frames to avoid interference.
+2. Add control and to prioritize frame transmissions _(in case of QoS)_.
+
+### IFS (Interframe spaces): `Lenght / Duration`
+
+- IFS unit of time is measured in microseconds (μs)
+- The length of the IFS is depend on previous frame type, following frame type, access category, coordination function in use & PHY type as well. 
+- All types of IFS has fixed time for each PHY except AIFS  
+
+## ⌛📏🔠 Types of IFS:
+
+There are multiple types of IFS, some defined by the original standard and others added to in 802.11e-2005 & 802.11n-2009.
+
+- The type of IFS is dependent on the frame that will come after it.
+- Using a shorter duration IFS gives certain frames priority over others, such as an ACK frame using a short IFS (SIFS).
+
+### Types of IFS: `IFS First time transmission`
+
+- **`No QoS Scenario`**: BSS that do not support QoS will use the legacy `DCF IFS (DIFS)`.
+- **`QoS (EDCA) Scenario`**: All IFS are sent as `Arbitration IFS (AIFS)`. 
+
+---
+
+
+### ⌛👨‍⚖️ IFS Priotirty:
+
+````py
+
+## IFS Priority
+
+"Higher Priority"                                 "Lower Priority"
+
+        RIFS >>> SIFS >>> PIFS >>> DIFS/AIFS >>> EIFS 
+
+````
+
+### ⌛📅 All in one IFS table:
+
+| **PHY**                 | **Slot Time**                                                                    | **SIFS**                                                                   | **RIFS**         | **EIFS**                                                                            | **PIFS**                                                       | **DIFS**                                                    | **AIFS**                                  |
+|-------------------------|----------------------------------------------------------------------------------|----------------------------------------------------------------------------|------------------|-------------------------------------------------------------------------------------|----------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------|
+| **Name**                | /                                                                                | Short IFS                                                                  | Reduced IFS      | Extended IFS                                                                        | PCF IFS                                                        | Distributed IFS                                             | Arbitration IFS                           |
+| **Uses**                | /                                                                                | Between all frames transmitted within a TxOP                               | Only for 802.11n | Corrupt CRC Frames and Retries                                                      | _PCF_<br>_Unused in 802.11_                                    | Only for Non-QoS<br>Prior to Data or RTS in DCF             | Only for QoS (EDCA)<br>802.11e            |
+| **Duration Formula**    | aCCATime <br>+aRxRxTurnAroundTime <br>+aAirPropagation <br>+aMACProcessingDelay  | aRxRFDelay+aRxPLCPDelay <br>+aMACProcessingDelay <br>+aRxTxTurnAroundTime  | RIFS = 2μS       | EIFS (in DCF) = SIFS+DIFS+ACK_Tx_Time<br>EIFS (in EDCA) = SIFS+AIFS[AC]+ACK_Tx_Time | PIFS = SIFS+DIFS+ACK_Tx_Time                                   | DIFS = SIFS + 2x SlotTime<br>_SlotTime depends on each PHY_ | AIFS[AC] = AIFSN[AC]*SlotTime+SIFSTime    |
+| **HR/DSSS <br>802.11b** | 20μS                                                                             | 10μS                                                                       | _N/A_            | 364μS <br>(Depends on ACK Time)                                                     | _30μS_                                                         | 50μS                                                        | Variable:<br>Depending Access Method / CW |
+| **ERP<br>802.11g**      | Long = 20μS<br>Short = 9μS                                                       | Long = 10μS<br>Short = 10μS                                                | _N/A_            | Long = 364μS<br>Short = 342μS<br>(Depends on ACK Time)                              | _Long = 30μS_<br>_Short = 19μS_                                | Long = 50μS<br>Short = 28μS                                 | Variable:<br>Depending Access Method / CW |
+| **OFDM <br>802.11a**    | 9μS                                                                              | 16μS                                                                       | _N/A_            | 94μS <br>(Depends on ACK Time)                                                      | _25μS_                                                         | 34μS                                                        | Variable:<br>Depending Access Method / CW |
+| **HT<br>802.11n**       | 2.4GHz Long = 20μS<br>2.4GHz Short = 9μS<br>5GHz = 20μS                          | 2.4GHz = 10μS<br>5GHz = 16μS                                               | 2μS              | 2.4GHz = 342μS<br>5GHz = 94μS                                                       | _2.4GHz Long = 30μS_<br>_2.4GHz Short = 19μS_<br>_5GHz = 25μS_ | 2.4GHz Long = 50μS<br>2.4GHz Short = 28μS<br>5GHz = 34μS    | Variable:<br>Depending Access Method / CW |
+| **VHT<br>802.11ac**     | 9μS                                                                              | 16μS                                                                       | _N/A_            | 94μS <br>(Depends on ACK Time)                                                      | _25μS_                                                         | 34μS                                                        | Variable:<br>Depending Access Method / CW |
+
+
+
+
+
+
+## `Backoff Timer` & `Contention Window`
+
+- **`Contention Window`**: A range of numbers netween CWmin and CWmax from which a STA picks a random backoff value. <br><br>
+- **`Backoff`**: A random backoff value is counted down in a number of slots. If the medium becomes busy, pause the backoff time, and defer. 
+
+### Random Backoff Values
+
+````py
+
+### Random Backoff Values:
+
+    # There are different Random Backoff Values for each PHY
+
+    # There are also different Random Backoff Values for each QoS categories in EDCA
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+# 802.11b can be a Random Backoff Value between 0 and 31 slots
+                     
+802.11b   = |-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-| 
+            0                                                             31
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+# 802.11/g can be a Random Backoff Value between 0 and 15 slots
+
+802.11/g  = |-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
+            0                             15      
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+````
+
+**How Backoff Timer and CW works?**
+
+- After a STA has observed an idle wireless medium with carrier sense (CS) for the appropriate IFS interval (DIFS, EIFS, or AIFS).
+- To contend for medium access after the IFS, each station selects a backoff value called random backoff period and is selected at random by the STA from a window of possible values called a contention window (CW) calculated using the below formula where x is a value increments with each failed frame.
+
+**Contention Window (CW) Formula:**
+
+- `CW` = **2^x -1** 
+
+**CW in DSS & OFDM:**
+
+- `DSS` (x) **starts at 5** which resulting CW of `31`. 
+- `OFDM` (x) **starts at 4** which result in a CW of `15`. <br><br>
+- In both DSS & OFDM (x) values stops incrementing at 10 which result CW of `1023`. 
+
+**Table:**
+
+| **PHY**      | **Contention Window Min<br>(aCWmin)** | **Contention Window Max<br>(CWmax)** |
+|--------------|---------------------------------------|--------------------------------------|
+| **802.11b**  | 31                                    | 1023                                 |
+| **802.11a**  | 15                                    | 1023                                 |
+| **802.11g**  | DSSS(0) = 31<br>OFDM(1) = 15          | 1023                                 |
+| **802.11n**  | 15                                    | 1023                                 |
+| **802.11ac** | 15                                    | 1023                                 |
+
+### Retries and Backoff
+
+````py
+
+## Retries and Backoff
+
+# If there's a retry in the transmission, the CWmax is doubled + 1 for every retry (until it reached the CWmax)
+
+## Example:
+
+    # If a STA chooses a Random Backoff Value of 15 (eg. the largest Value/Number of an OFDM tranmission) and there are retries,
+    # it will look like this: 
+
+
+       CWmin                                                                                                                            CWmax
+         0                                                                                                                               1023
+
+         |                                                                                                                                |
+Initial  |-| CW = 15                                                                                                                      |
+Attempt  |-|                                                                                                                              |
+         |                                                                                                                                |
+1st      |---| CW = 31                                                                                                                    |
+Retry    |---|                                                                                                                            |
+         |                                                                                                                                |
+2nd      |-------| CW = 63                                                                                                                |
+Retry    |-------|                                                                                                                        |
+         |                                                                                                                                |
+3rd      |---------------| CW = 127                                                                                                       |
+Retry    |---------------|                                                                                                                |
+         |                                                                                                                                |                    
+4th      |-------------------------------| CW = 255                                                                                       |
+Retry    |-------------------------------|                                                                                                |
+         |                                                                                                                                |
+5th      |---------------------------------------------------------------| CW = 511                                                       |
+Retry    |---------------------------------------------------------------|                                                                |
+         |                                                                                                                                |
+6th      |-------------------------------------------------------------------------------------------------------------------------------|| CW = 1023
+Retry    |-------------------------------------------------------------------------------------------------------------------------------||
+         |                                                                                                                                |
+More     |-------------------------------------------------------------------------------------------------------------------------------|| CW = 1023
+Retries  |-------------------------------------------------------------------------------------------------------------------------------||
+...      |                                                                                                                                |
+         |________________________________________________________________________________________________________________________________|
+
+
+````
+
+
+
 
 
 
