@@ -174,16 +174,16 @@
 <span align="center"> <p align="center"> _**"The only good is knowledge, and the only evil is ignorance."** Herodotus_ </p> </span> 
 
 <h1 align="center"> 💀📧 Who am I & Contact 📧💀 </h1>
-                                       
-I'm just a very lucky person who was born surrounded by IBM computers and walls full of floppy disks back in the 80's.
 
-Today I'm a Level 3 NOC Engineer specialized on high-level troubleshooting, analytics, security, support and network performance design & optimization focusing in 802.3 Ethernet Networks & 802.11 Wireless Networks (Wi-Fi). I have experience with vendors such as: Cisco, Zyxel, Ruckus, Fortinet, SonicWall, MikrotTik, Aruba, Starlink, Huawei, Microsoft, Linux, among others... but also I have some years of background experience with other IT branches like programming, scripting, data base administration, pentesting, ethical hacking and data analytics.
+I'm just a very lucky person who was born surrounded by IBM computers and floppy disks walls back in the 80's. One day my father, a COBOL and BASIC developer, took me to his company’s Data Center. There, a long-haired, bearded Systems Engineer _(or whatever they called that back then)_ let me play Prince of Persia on MS-DOS, surrounded by the hum and silicon smell of massive machines. With an IBM 5170 at home, I quickly dove into DOS, where I began exploring games, operating systems, and a bit of programming. That’s where my journey began...
 
-My day-to-day tasks are Multi-Layer Packet & Frame Exchange analysis for a wide range of 802.3 Ethernet & 802.11 WiFi Protocols, Hex modification, Reverse Engineering, Packet Tampering & Injection. Proficient in tools like Wireshark, TCP Dump, Scappy, NMap, Python, HEX Editors, iPerf, etc. Experience with Network Security, Layer 2 & Wireless Pentesting; Defensive Security SIEM, IDS/IPS, DLP & AV... and some CTF in my spare time!
+Fast forward to today, and I’m a Level 3 NOC Engineer, specializing in high-level troubleshooting, analytics, security, and optimizing network performance. My expertise spans across configuring and managing Next-Generation Firewalls, 802.11 Wireless Networks, Routing/Switching, Networking Services, and designing high-density networking solutions with a focus on performance and reliability.
 
-I also configure & design the architecture for network devices including 802.11 Wireless Infraestructure, Next-Generation Firewalls, Routing, Switching and Different types of Services for high-density network environments, within verticals such as International Airports, Hospitality, Health, Retail, Entretainment, Education, Government, Public Transportation, as well as remote locations with Satellite-Only Connections.
+I'm also designer and implementer of wireless high-density network solutions for a variety of industries, including International Airports, Hospitality, Health, Retail, Entretainment, Education, Government, Public Transportation, as well as remote locations with Satellite-Only Connections.
 
-Please check out the links of my Social Networks including my LinkedIn, where you will find more information regarding my professional career. Greetings and thank you for reading! 
+I work with a wide range of vendors _(eg. Cisco, Ruckus, Fortinet, SonicWall, Mikrotik, Aruba, Starlink, Zyxel, Huawei, Linux, Microsoft, and many more)_. Beyond networking, I also have a background in cyber-security, programming, scripting, database administration, ethical hacking and pentesting.
+
+Feel free to explore my social media links above, including my LinkedIn, for more details about my professional journey. Thanks for stopping by and reading! 💀🎩
 
 <p align="center"> <a href="https://twitter.com/Fz3r0_OPs" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/94720207/168743521-b8c142ae-e221-40c9-8d1f-bd9520027717.png" alt="twitter"> </a>   &emsp; &emsp; &emsp;   <a href="https://github.com/Fz3r0" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/94720207/168743591-ca20efa5-f692-46b0-ba84-f2681486009f.png" alt="github"> </a>   &emsp; &emsp; &emsp;   <a href="https://www.linkedin.com/in/fzerocarlos/" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/94720207/168743658-0a5101f0-49fd-494f-9a79-cf70ad860d12.png" alt="github"> </a> </p>
 
