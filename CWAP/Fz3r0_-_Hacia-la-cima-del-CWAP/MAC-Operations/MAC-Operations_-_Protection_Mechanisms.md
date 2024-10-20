@@ -86,7 +86,35 @@ Due to this, `Physical Carrier Sense` (CSMA/CA) by `Alice` & `Bob/Carl` **will n
 
 ![image](https://github.com/user-attachments/assets/b8e6e42e-57b6-45d8-aba3-f2ec3b99d4a5)
 
-Any 802.11 device that wishes to transmit in the medium should send `RTS (Request to Send)` frame **requesting for medium access to the AP**. Then, the AP responds with `CTS (Clear to Send)` frame that includes the `Duration/ID` field, which helps the STA to set its `NAV` timer. 
+- Any 802.11 device that wishes to transmit in the medium should send `RTS (Request to Send)` frame **requesting for medium access to the AP**.
+- When the `RTS` sent by **Alice STA** is received by the **AP**, it will respond with a `CTS` _(if the medium is idle)_, to indicate to **Alice STA** that she can transmit the data frame.
+- The `CTS` frame includes the `Duration/ID` field, which helps other STAs (eg. **Bob & Carl STAs**) within the BSS to set its `NAV` timer. 
+- If **Bob & Carl STAs** or another STA in the BSS could not "hear" the original `RTS` sent by **Alice STA**, **it may hear the `CTS` broadcasted by the AP** which includes a `Duration/ID` field, then, they can **adjust its `NAV` timer to the `Duration` set in `CTS` frame**.
+
+## 🙋🛜🚦 Background Concepts: `RTS/CTS MAC Frames`
+
+An 802.11 `RTS (Request to Send)` and `CTS (Clear to Send)` frame are `Control Frames` used in Wi-Fi networks to **prevent collisions**, part of the **CSMA/CA** process. `RTS` is sent by a device to **request access to the medium**, and `CTS` **is the response, granting permission**. 
+
+Since these `RTS/CTS` are **broadcast**, all STAs within the BSS can "hear" them, which helps manage medium access. STAs that "hear" the `RTS/CTS` frames update their `NAV (Duration)` timers to stay silent, while the transmitting STA proceeds with its transmission.
+
+### RTS/CTS MAC Frames: `RTS (Request to Send)`
+
+- An 802.11 RTS (Request to Send) frame is a **Control Frame** used to **request access to the medium** and clearing the channel before transmission. 
+- It includes the `Duration` of the upcoming transmission.
+
+#### RTS (Request to Send): `Addresses`
+
+- `Receiver Address`: (eg. **F0:F0:F0:F0:F0:F0**) :: The device **being asked to access** the medium (eg. **AP**)
+- `Transmiter Address`: (eg. **AA:AA:AA:AA:AA:AA**) :: The device **requesting the access** to the medium. (eg. **Alice STA**)  
+
+### RTS/CTS MAC Frames: `CTS (Clear to Send)`
+
+
+- It includes the `Duration` of the upcoming transmission.
+
+#### RTS (Request to Send): `Addresses`
+
+- `Receiver Address`: (eg. **AA:AA:AA:AA:AA:AA**) :: The device who **granted access** to the medium (eg. **AP**)
 
 ## 🙋🛜🚦 Background Concepts: `Duration/ID`
 
@@ -1067,6 +1095,8 @@ rts cts attack
 
 - https://networkengineering.stackexchange.com/questions/58588/why-is-there-no-contention-window-after-a-difs-interval-on-the-first-transmissio
 
+
+- https://mrncciew.com/2014/10/26/cwap-802-11-ctrl-rtscts/
 
 
 
