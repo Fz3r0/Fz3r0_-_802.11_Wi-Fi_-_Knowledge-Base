@@ -1082,7 +1082,24 @@ SIFS bueno:
 
 
 
+---
 
+<span align="center"> <p align="center"> ![giphy](https://user-images.githubusercontent.com/94720207/166587250-292d9a9f-e590-4c25-a678-d457e2268e85.gif) </p> </span> 
+
+
+
+&nbsp;
+
+<span align="center"> <p align="center"> _I hope this information was useful for someone_ </p> </span> 
+<span align="center"> <p align="center"> _and please, don't forget to enjoy your days..._ </p> </span> 
+<span align="center"> <p align="center"> _...It is getting dark... so dark..._ </p> </span> 
+
+&nbsp;
+
+<span align="center"> <p align="center"> _In the mist of the night you could see me come, where shadows move and Demons lie..._ </p> </span> 
+<span align="center"> <p align="center"> _I am [Fz3r0 💀](https://github.com/Fz3r0/) and the Sun no longer rises..._ </p> </span> 
+
+---
 
 
 
