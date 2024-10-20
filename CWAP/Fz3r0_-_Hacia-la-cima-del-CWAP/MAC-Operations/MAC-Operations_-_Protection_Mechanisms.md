@@ -63,17 +63,29 @@ Due to this, `Physical Carrier Sense` (CSMA/CA) by `Alice` & `Bob` **will never 
 
 ![image](https://github.com/user-attachments/assets/f8fe7a9f-6dc1-47f1-906b-afca7c174f81)
 
-Any 802.11 device that wishes to transmit in the medium should send `RTS (Request to Send)` frame – **requesting for medium access to the AP**. The latter then responds with `CTS (Clear to Send)` frame that includes the `Duration field`, which helps the station to set its `NAV timer`. 
+Any 802.11 device that wishes to transmit in the medium should send `RTS (Request to Send)` frame – **requesting for medium access to the AP**. The latter then responds with `CTS (Clear to Send)` frame that includes the `Duration/ID field`, which helps the station to set its `NAV timer`. 
 
-## 🙋🛜🚦 Background Concepts: `Duration Field`
+## 🙋🛜🚦 Background Concepts: `Duration Field`, `NAV`, `IFS`
 
-The `Duration Field` determine the **time in microseconds (μs)** needed to complete the Frame Exchange. This is measured **AFTER the current frame**, this means: what is left after the current frame.
+### `Duration/ID field`
 
-**There are 3 different main Duration Values types:**
+**The `Duration/ID` field in a Mac Header has a two different purposes:**
 
-1. **Data Exchange** _(AKA RTS Data Exchange)_ = `SIFS` + `Ack`
-2. **RTS/CTS Data Exchange** = `x3 SIFS` + `CTS` + `Data` + `ACK`
-3. **CTS-to-Self Data Exchange** = `x2 SIFS` + `Data` + `ACK`
+1. `Duration`: <br><br>
+    - Determine the **time in microseconds (μs)** needed to complete the Frame Exchange. This is measured **AFTER the current frame**, this means: what is left after the current frame.
+    - This field is used to reset NAV (Network Allocation Vector) timers for all other 802.11 Wi-Fi devices (STAs) on the same channel.
+    - This is used a lot and it's important to know that this is not the duration of the current frame, **it is the duration of the exchanges after the current frame requeried to actually complete the transaction**. <br><br>
+2. `ID`:  <br><br>
+    - Used in **legacy PS-poll** Frame to indicate the **AID (Association ID)** of the **STA** to send the buffered frame in the AP when using `Legacy 802.11 Power Management`
+
+**There are 3 different main `Duration` values types:**
+
+| **Type**                                             | **Duration Value**                  | **Description**                                                                 |
+|------------------------------------------------------|-------------------------------------|---------------------------------------------------------------------------------|
+| 1. **Data Exchange / Block ACK** _(No protection)_   | `SIFS` + `Ack`                      | Involves a SIFS followed by an ACK. **No Protection Mechanism in use.**         |
+| 2. **RTS/CTS Data Exchange**                         | `x3 SIFS` + `CTS` + `Data` + `ACK`  | Uses **RTS/CTS** frame exchange, which involves: RTS +: three SIFS, CTS, Data & ACK frames.  |
+| 3. **CTS-to-Self Data Exchange**                     | `x2 SIFS` + `Data` + `ACK`          | Uses **CTS-to-Self** frame exchange, which involves: CTS +: two SIFS, CTS, Data & ACK frames.|
+
 
 
 ````py
