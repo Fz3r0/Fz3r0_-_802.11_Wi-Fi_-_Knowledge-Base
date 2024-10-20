@@ -147,6 +147,12 @@ IEEE 802.11 Request-to-send, Flags: ........
 
 - `Receiver Address`: (eg. **AA:AA:AA:AA:AA:AA**) :: STA that **sent the RTS in first place requesting access** to transmit, and **is now being granted access to transmit**.(eg. **Alice STA**)
 
+**`Important`**: Just like an `ACK` frame, the `CTS` frame **only includes the Receiver Address** because its sole purpose is to grant permission for the **requesting device** to transmit. The `CTS` frame is sent by the device that received the RTS (e.g., the `AP`) and is broadcast to inform all other stations within the BSS to stay silent (eg. `Bob` or `Carl`). Since the **CTS is a response to the RTS**: **the receiver of the CTS is the same device that sent the original RTS**, so only the Receiver Address (the requester) is needed in the CTS frame.
+
+The CTS frame functions similarly to an ACK frame, (both only include the Receiver Address and do not contain a Transmitter Address). Therefore, there is no need for an ACK frame after an RTS; in other words: 
+
+- **The `CTS` serves as the `ACK` for an `RTS`**.
+
 ### CTS (Request to Send): `Frame`
 
 ````sh
@@ -174,13 +180,35 @@ IEEE 802.11 Clear-to-send, Flags: ........
 
 
 
+## 🙋🛜🚦 Background Concepts: `ACK`
+
+An ACK (Acknowledgment) frame is a Control Frame used in wireless networks (like 802.11 Wi-Fi) to confirm the successful receipt of a data frame.
+
+- The primary purpose of an ACK frame is to notify the Transmitter that their transmitted data frame has been successfully received by the intended Receiver. If the CRC check of the data frame fails because the frame is corrupted or the data frame is not received, the Receiver will not send an ACK. If the sender does not receive an ACK, it will retransmit the frame.
+
+The ACK frame only includes the Receiver Address because its sole purpose is to acknowledge the successful reception of a data frame. The ACK frame is sent by the device that successfully received the data (e.g., the AP or Bob) and is transmitted directly back to the original sender (e.g., Carl). Since the ACK is a response to the data frame, the receiver of the ACK is the same device that sent the original data frame, so only the Receiver Address (the sender) is needed in the ACK frame.
+
+
+Data Transmission: When a device (let's call it Device A) wants to send data to another device (Device B), it first transmits the data frame.
+
+Reception: Once Device B receives the data frame, it checks the integrity of the received data (using error-checking methods).
+
+Sending ACK: If the data frame is received correctly, Device B sends an ACK frame back to Device A. This frame includes:
+
+Receiver Address: The address of Device A, indicating that it is the intended recipient of the ACK.
+No Transmitter Address: Unlike other frames, the ACK frame does not include a Transmitter Address because it only serves to confirm receipt.
+Timeout: If Device A does not receive an ACK within a certain timeframe (due to network issues or collisions), it will assume that the data frame was lost and will retransmit the data.
 
 
 
 
+#### Addresses
+
+the header of an acknowledgement (ACK) frame only uses one of four address fields, the receiver address (RA). The other values found in the frame control field of the header that are frequently referenced include:
 
 
 
+(wlan.fc.type == 1)&&(wlan.fc.subtype == 13)
 
 
 
@@ -1177,7 +1205,9 @@ SIFS bueno:
 - https://telcomatraining.com/what-is-sifs-short-interframe-space/
 
 
+MAC Frames and formats:
 
+- https://howiwifi.com/2020/07/13/802-11-frame-types-and-formats/
 
 
 ---
