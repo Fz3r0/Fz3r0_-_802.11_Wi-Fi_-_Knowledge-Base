@@ -28,18 +28,40 @@
 There are 2 types of MAC Operations: **Power Management** & **Protection Mechanisms**:
 
 1. **`Power Management`** is allow the radio to go to sleep (just few microseconds), because if the antenna/adapter keeps awake all the time is consuming battery all the time, in a movile device can degrade battery life. Power management it's just turning on the antenna, send/recieve the frame, then "doze" or "sleep" the antenna and so on. The hint here is, that the STA does not lose any frame even if it's sleeping <br><br>
-2. **`Protection Mechanisms`** allow newer devices to communicate and "exist" in a world where older devices also exists (eg. devices using 802.11b(HR-DSSS) can coexist with newer devices using 802.11g(ERP) or even newest devices like 802.11n/ac/ax(OFDM)).
+2. **`Protection Mechanisms`** Allow newer devices to communicate and "exist" in a world where older devices also exists (eg. devices using 802.11b(HR-DSSS) can coexist with newer devices using 802.11g(ERP) or even newest devices like 802.11n/ac/ax(OFDM)) || Protect from the "Hidden Node" problems in 802.11 Wi-Fi Networks. || Determine when the Wi-Fi Channel is available for access using CSMA/CA. 
 
 # 🙋🛜🚦 `Protection Mechanisms`
+
+In IEEE 802.11 Wi-Fi Networks, the **Protection Mechanisms** are used for 3 main purposes: 
+
+### 1. `Backward Compatibility`
 
 802.11 (Wi-Fi) networks allows for backward compatibility with previous generations (eg. Wi-Fi 4 (802.11n) is backward compatible with Wi-Fi 1 or Wi-Fi 3 (802.11b/g)). This is one reason the technology is so popular, people can upgrade their devices at their own pace, without worrying about whether their old ones will still work. 
 
 HR/DSSS (802.11b legacy Wi-Fi-1) STAs does not understand OFDM Modulation used by ERP (802.11g Wi-Fi-3) STAs, but HT/ERP/OFDM (802.11n Wi-Fi-4 {modern}) STAs are backwards compatible with HR/DSSS STAs & can transmit & understand HR/DSSS modulation. The way to acomplish that is using RTS/CTS mechanisms in case that legacy STAs are using the same AP of modern devices.
 
-RTS/CTS are the most used mechanism in Wi-Fi, there's also a mechanism called CTS-to-self that is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame, this is usually done by the AP.
-
 **`Important`**: Wi-Fi backward compatibility has long been a double-edged sword because backward copatibility brings some drawbacks for newer STAs using the same BSS witn legacy STAs nearby llike **RTS/CTS Overhead**, **Airtime Consumption** or **Connectivity Problems**. But, for the first time in 20 years, Wi-Fi does not require backward compatibility. This is because Wi-Fi 6E and the 6 GHz frequency band. There is no need for RTS/CTS protection mechanisms for legacy Wi-Fi devices in 6 GHz, legacy clients do not consume airtime while transmitting using slow data rates.  This is because Wi-Fi is brand new to 6 GHz, and there are no legacy clients. Altough in the future maybe we will need backward compatibility again in Wi-Fi 7, Wi-Fi 8, and Wi-Fi 9 if they still using 6 GHz band. 
 
+### 2. `Hidden Node Problem Protection`
+
+In wireless networking, the hidden node problem or hidden terminal problem occurs when a node can communicate with a wireless access point (AP), but cannot directly communicate with other nodes that are communicating with that AP.[1] This leads to difficulties in medium access control sublayer since multiple nodes can send data packets to the AP simultaneously, which creates interference at the AP resulting in no packet getting through.
+
+Practical protocol solutions exist to the hidden node problem. For example, Request To Send/Clear To Send (RTS/CTS) mechanisms where nodes send short packets to request permission of the access point to send longer data packets. Because responses from the AP are seen by all the nodes, the nodes can synchronize their transmissions to not interfere. However, the mechanism introduces latency, and the overhead can often be greater than the cost, particularly for short data packets.
+
+### 3. `Determine wireless Channel availability`
+
+RTS (Request to Send) and CTS (Clear to Send) signals are mainly used in CSMA/CA to have co-ordinate access to the channel, and making sure that only one node or device sends data at a time to prevent the collisions
+
+Steps demonstrating how RTS and CTS are used to avoid collision in CSMA/CA
+
+- Step 1: Channel Checking - Firstly, before sending the data, the device using CSMA/CA first checks if the channel is idle or not.
+- Step 2: RTS Frame - When the channel becomes in the idle state, the actual transmission device sends the RTS frame to the destination receiving devices. This RTS frame includes the actual length of the data packet, which is to be send.
+- Step 3: CTS Response - When the ITS frame is received, the CTS frame back since this receiving signal back to the RTS frame.
+- Step 4: Data Transmission - RTS data is been received to the CTS frame. The transmitting device processes to send the actual data packet. These transmission occurs without encountering any collisions on the other devices have been informed to defer their transmission during this transmission time.
+- Step 5: Backoff Mechanism - If there is any collision, then the pack of mechanism is used in. this mechanism, the colliding devices wait for the random duration of time before attempting to retransmit the data.
+- Step 6: Repeat Process -  The RTS and CTS processes are repeated till each of the data transmission is completed and also helps in minimizing the collisions in CSMA/CA based networks.
+
+**`Important`**: RTS/CTS are the most used mechanism in Wi-Fi, there's also a mechanism called CTS-to-self that is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame, this is usually done by the AP.
 
 ## 🙋🛜🚦 Background Concepts: `Hidden Node`
 
@@ -65,9 +87,7 @@ Due to this, `Physical Carrier Sense` (CSMA/CA) by `Alice` & `Bob` **will never 
 
 Any 802.11 device that wishes to transmit in the medium should send `RTS (Request to Send)` frame – **requesting for medium access to the AP**. The latter then responds with `CTS (Clear to Send)` frame that includes the `Duration/ID field`, which helps the station to set its `NAV timer`. 
 
-## 🙋🛜🚦 Background Concepts: `Duration Field`, `NAV`, `IFS`
-
-### `Duration/ID field`
+## 🙋🛜🚦 Background Concepts: `Duration/ID`
 
 **The `Duration/ID` field in a Mac Header has a two different purposes:**
 
@@ -76,7 +96,7 @@ Any 802.11 device that wishes to transmit in the medium should send `RTS (Reques
     - This field is used to reset NAV (Network Allocation Vector) timers for all other 802.11 Wi-Fi devices (STAs) on the same channel.
     - This is used a lot and it's important to know that this is not the duration of the current frame, **it is the duration of the exchanges after the current frame requeried to actually complete the transaction**. <br><br>
 2. `ID`:  <br><br>
-    - Used in **legacy PS-poll** Frame to indicate the **AID (Association ID)** of the **STA** to send the buffered frame in the AP when using `Legacy 802.11 Power Management`
+    - Used in **legacy PS-poll** Frame to indicate the **AID (Association ID)** of the **STA** to send the buffered frame in the AP when using `Legacy 802.11 Power Management`. _(This is not used for Protection Mechanisms)._
 
 **There are 3 different main `Duration` values types:**
 
@@ -149,6 +169,7 @@ Once the medium is free, the client STA can access the medium for wireless trans
 
 
 
+## 🙋🛜🚦 Background Concepts: `NAV`
 
 
 ## 🙋🤳🏻📡 Protection Mechanisms: `No Protection` - 
