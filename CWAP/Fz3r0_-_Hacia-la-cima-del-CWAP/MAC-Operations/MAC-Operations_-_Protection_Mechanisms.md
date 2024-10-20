@@ -184,7 +184,12 @@ IEEE 802.11 Clear-to-send, Flags: ........
 
 An **ACK (Acknowledgment)** frame is a `Control Frame` used in wireless networks (like 802.11 Wi-Fi) to confirm the **successful receipt** of **unicast**: `data`, `management`, `PS-Poll` and `fragmented` frames.
 
-- **The primary purpose of an ACK frame is to notify the Transmitter that their transmitted data frame has been successfully received by the intended Receiver. If the CRC check of the data frame fails because the frame is corrupted or the data frame is not received, the Receiver will not send an ACK. If the sender does not receive an ACK, it will retransmit the frame.**
+- **The primary purpose of an `ACK` frame is to notify the `Transmitter (TA)` that their transmitted data frame has been successfully received by the intended `Receiver (RA)`.**
+- **If the `CRC` check of the data frame fails because the frame is corrupted or the data frame is not received, the `Receiver (RA)` will not send an `ACK`.
+- **If the `Transmitter (TA)` of the data frame does not receive an `ACK` from the `Receiver (RA)`, it will `retransmit` the data frame until is ACKed _(or reach max transmission attempts)_.****
+
+### ACK: `Frame Exchange`
+
 
 
 Data Transmission: When a device (let's call it Device A) wants to send data to another device (Device B), it first transmits the data frame.
