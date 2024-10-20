@@ -125,7 +125,12 @@ IEEE 802.11 Request-to-send, Flags: ........
     Transmitter address: aa:aa:aa:aa:aa:aa (aa:aa:aa:aa:aa:aa)  <<<<<-----|| Transmitter Address (Alice)
     [WLAN Flags: ........]
 ````
-
+| **Field**                        	| **Description**                                                                                                                           	| **Wireshark Filter**                                                           	|
+|----------------------------------	|-------------------------------------------------------------------------------------------------------------------------------------------	|--------------------------------------------------------------------------------	|
+| **Request-to-Send (RTS Frames)** 	| Control frame used by a STA to request access to the medium, preventing collisions.                                                       	| `wlan.fc.type == 1 && wlan.fc.subtype == 11`                                   	|
+| **RTS Duration**                 	| Indicates the time (in microseconds) other STAs within the channel should remain silent during the transmission period **AFTER the RTS**. 	| `wlan.fc.type == 1 && wlan.fc.subtype == 11 && (wlan.duration == 140)`         	|
+| **RTS Receiver Address (RA)**    	| WLAN Address of the **STA being requested** for medium access, **usually the AP**.                                                        	| `wlan.fc.type == 1 && wlan.fc.subtype == 11 && (wlan.ra == f0:f0:f0:f0:f0:f0)` 	|
+| **RTS Transmitter Address (RA)** 	| Wlan Address of the **STA requesting** access to transmit, **typically a client STA**. (eg. **Alice**, **Bob** or **Carl**)               	| `wlan.fc.type == 1 && wlan.fc.subtype == 11 && (wlan.ta == aa:aa:aa:aa:aa:aa)` 	|
 
 
 ### RTS/CTS MAC Frames: `CTS (Clear to Send)`
@@ -146,11 +151,11 @@ IEEE 802.11 Clear-to-send, Flags: ........
     [WLAN Flags: ........]
 
 ````
-| **Field**                      | **Description**                                                                                                                         | **Wireshark Filter**                                                           |
-|--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
-| **Clear-to-Send (RTS Frames)** | Control frame used to clear the medium for the requesting 802.11 node after receiving an RTS.                                           | `wlan.fc.type == 1 && wlan.fc.subtype == 12`                                   |
-| **CTS Duration**               | Indicates the time (in microseconds) other stations should remain silent during the transmission period **AFTER** the CTS.              | `wlan.fc.type == 1 && wlan.fc.subtype == 12 && (wlan.duration == 140)`         |
-| **CTS Receiver Address (RA)**  | The WLAN Address of the STA that sent the RTS in first place and is now being granted access to transmit. (eg. Alice)                   | `wlan.fc.type == 1 && wlan.fc.subtype == 12 && (wlan.ra == aa:aa:aa:aa:aa:aa)` |
+| **Field**                      | **Description**                                                                                                                                        | **Wireshark Filter**                                                           |
+|--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| **Clear-to-Send (CTS Frames)** | Control frame used to clear the medium for the requesting 802.11 node **AFTER receiving an RTS**.                                                      | `wlan.fc.type == 1 && wlan.fc.subtype == 12`                                   |
+| **CTS Duration**               | Indicates the time (in microseconds) other STAs within the channel should remain silent during the transmission period **AFTER the CTS**.              | `wlan.fc.type == 1 && wlan.fc.subtype == 12 && (wlan.duration == 140)`         |
+| **CTS Receiver Address (RA)**  | WLAN Address of the **STA that sent the RTS in first place requesting access to transmit, and is now being granted access to transmit**. (eg. Alice)   | `wlan.fc.type == 1 && wlan.fc.subtype == 12 && (wlan.ra == aa:aa:aa:aa:aa:aa)` |
 
 
 - It includes the `Duration` of the upcoming transmission.
