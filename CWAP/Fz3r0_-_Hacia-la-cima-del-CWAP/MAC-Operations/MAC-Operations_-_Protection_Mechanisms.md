@@ -78,7 +78,7 @@ Steps demonstrating how RTS and CTS are used to avoid collision in CSMA/CA
 - The `AP` can hear `Alice` within the BSA/BSS network cell. 
 - The `AP` can hear `Bob` within the BSA/BSS network cell.
 - The `AP` can hear `Carl` within the BSA/BSS network cell. 
-- But, `Bob` & `Carl` **CAN'T HEAR** `Alice` due to network congestion or she is outside of other’s BSS. **In this scenario, `Alice` is the hidden node**.
+- But, `Bob` & `Carl` **CAN'T HEAR** `Alice` due to network congestion or because she is outside of other's radio cell. **In this scenario, `Alice` is the hidden node**.
 
 ![image](https://github.com/user-attachments/assets/92e90cf0-ffb4-4876-b241-c5308904c55a)
 
@@ -86,7 +86,7 @@ Due to this, `Physical Carrier Sense` (CSMA/CA) by `Alice` & `Bob/Carl` **will n
 
 ![image](https://github.com/user-attachments/assets/b8e6e42e-57b6-45d8-aba3-f2ec3b99d4a5)
 
-Any 802.11 device that wishes to transmit in the medium should send `RTS (Request to Send)` frame – **requesting for medium access to the AP**. The latter then responds with `CTS (Clear to Send)` frame that includes the `Duration/ID field`, which helps the station to set its `NAV timer`. 
+Any 802.11 device that wishes to transmit in the medium should send `RTS (Request to Send)` frame **requesting for medium access to the AP**. Then, the AP responds with `CTS (Clear to Send)` frame that includes the `Duration/ID` field, which helps the STA to set its `NAV` timer. 
 
 ## 🙋🛜🚦 Background Concepts: `Duration/ID`
 
