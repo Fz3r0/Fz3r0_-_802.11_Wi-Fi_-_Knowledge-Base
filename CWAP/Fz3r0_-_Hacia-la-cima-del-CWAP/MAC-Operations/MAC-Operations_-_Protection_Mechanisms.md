@@ -126,6 +126,8 @@ IEEE 802.11 Request-to-send, Flags: ........
     [WLAN Flags: ........]
 ````
 
+
+
 ### RTS/CTS MAC Frames: `CTS (Clear to Send)`
 
 ````sh
@@ -144,7 +146,11 @@ IEEE 802.11 Clear-to-send, Flags: ........
     [WLAN Flags: ........]
 
 ````
-
+| **Field**                      | **Description**                                                                                                                         | **Wireshark Filter**                                                           |
+|--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| **Clear-to-Send (RTS Frames)** | Control frame used to clear the medium for the requesting 802.11 node after receiving an RTS.                                           | `wlan.fc.type == 1 && wlan.fc.subtype == 12`                                   |
+| **CTS Duration**               | Indicates the time (in microseconds) other stations should remain silent during the transmission period **AFTER** the CTS.              | `wlan.fc.type == 1 && wlan.fc.subtype == 12 && (wlan.duration == 140)`         |
+| **CTS Receiver Address (RA)**  | The WLAN Address of the STA that sent the RTS in first place and is now being granted access to transmit. (eg. Alice)                   | `wlan.fc.type == 1 && wlan.fc.subtype == 12 && (wlan.ra == aa:aa:aa:aa:aa:aa)` |
 
 
 - It includes the `Duration` of the upcoming transmission.
