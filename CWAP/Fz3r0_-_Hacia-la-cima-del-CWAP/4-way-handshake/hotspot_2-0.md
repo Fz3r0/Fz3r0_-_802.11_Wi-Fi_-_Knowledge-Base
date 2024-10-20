@@ -195,3 +195,4 @@ hese protocols run on top of 802.11 and enable the Hotspot 2.0 experience
 - https://docs.commscope.com/bundle/sz-700-accessservicesguide-sz300vsz/page/GUID-99D65A79-6B5F-4A16-895D-3593EA67DA2D.html
 - http://repo.darmajaya.ac.id/4779/1/The%20Telecommunications%20Handbook_%20Engineering%20Guidelines%20for%20Fixed%2C%20Mobile%20and%20Satellite%20Systems%20%28%20PDFDrive%20%29.pdf
 - https://en.wikipedia.org/wiki/IEEE_802.11u
+- https://www.wi-fi.org/system/files/Wi-Fi_CERTIFIED_Passpoint_Deployment_Guidelines_v1.3.3.pdf
