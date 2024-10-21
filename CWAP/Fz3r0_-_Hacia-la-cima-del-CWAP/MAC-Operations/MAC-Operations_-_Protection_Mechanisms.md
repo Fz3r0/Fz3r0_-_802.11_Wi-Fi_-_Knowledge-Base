@@ -334,6 +334,8 @@ Important Notes on Duration Field:
 - `NAV Update`: Other stations that receive this frame read the Duration Field and set their NAV timers accordingly if the Duration value is greater than their current NAV value. <br><br>
 - `Medium Access`: These stations refrain from accessing the medium until their NAV timers expire, allowing the transmitting station to complete its transmission without interference.
 
+![image](https://github.com/user-attachments/assets/9d346dea-82e4-4069-84c2-d5acea5c7da8)
+
 ````py
 
 ## Virtual Carrier Sense Example Scenario:
