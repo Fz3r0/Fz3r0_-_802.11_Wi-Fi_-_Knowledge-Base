@@ -208,10 +208,11 @@ The ACK frame only includes the Receiver Address because its sole purpose is to 
 
 The time required to transmit the ACK and its short interframe space is subtracted from the duration in the most recent fragment. The duration calculation in nonfinal ACK frames is similar to the CTS duration calculation. In fact, the 802.11 specification refers to the duration setting in the ACK frames as a virtual CTS.
 
-Duration **BEFORE** an `ACK` frame (eg. a Data Frame) a lot of time of `44 μS` (time for a `ACK` + `SIFS`) for tx data frame, & The `Duration` field of an `ACK` frame **will always be = `0 μS`**
+Duration **BEFORE** an `ACK` frame (eg. a Data Frame) use to be `44 μS` or  `304 μS` (time for a `ACK` + `SIFS`) depending on the PHY.  The `Duration` field of an `ACK` frame **will always be = `0 μS`**
 
-- **2.4 GHz = `1 Mbps` Data Rate = `304 μS`** 
-- **5 GHz = `6 Mbps` Data Rate = `44 μS`** 
+- **802.11b = `1 Mbps` Data Rate = `304 μS`** 
+- **802.11a/g/n/ac/ax = `6 Mbps` Data Rate = `44 μS`**
+- **ACK =  `0 μS`**
 
 ### ACK: `QoS & EDCA`
 
@@ -264,9 +265,33 @@ IEEE 802.11 Acknowledgement, Flags: ........C
 
 | **Type**                                             | **Duration Value**            | **Description**                                                                 |
 |------------------------------------------------------|-------------------------------|---------------------------------------------------------------------------------|
-| 1. **Data Exchange / Block ACK** _(No protection)_   | `SIFS`+`Ack`                  | Involves a SIFS followed by an ACK. **No Protection Mechanism in use.**         |
+| 1. **Data Exchange / Block ACK / RTS Data Exchange** _(No protection)_   | `SIFS`+`Ack`                  | Involves a SIFS followed by an ACK. **No Protection Mechanism in use.**         |
 | 2. **RTS/CTS Data Exchange**                         | `x3 SIFS`+`CTS`+`Data`+`ACK`  | Uses **RTS/CTS** frame exchange, which involves: RTS +: three SIFS, CTS, Data & ACK frames.  |
 | 3. **CTS-to-Self Data Exchange**                     | `x2 SIFS`+`Data`+`ACK`        | Uses **CTS-to-Self** frame exchange, which involves: CTS +: two SIFS, CTS, Data & ACK frames.|
+
+### Duration Value Types: 1. `Data Exchange / Block ACK / RTS Data Exchange (No protection)`
+
+In a `Data Exchange` scenario the `Duration` is equal the exchange **AFTER** the `Data Frame`.
+
+- **Duration** = **`SIFS` + `ACK`**
+
+
+### Duration Value Types: 2. `RTS/CTS Data Exchange`
+
+In a `Data Exchange` where `RTS/CTS` is used, Duration is equal the exchange **AFTER** the `RTS Frame`:
+
+- **Duration** = **`x3 SIFS` + `CTS` + `Data` + `ACK`**
+
+### Duration Value Types: 3. `CTS-to-Self Data Exchange`
+
+In a `Data Exchange` where `CTS-to-Self` is used, Duration is equal the exchange **AFTER** the `CTS Frame`:
+
+
+
+
+
+
+
 
 
 
