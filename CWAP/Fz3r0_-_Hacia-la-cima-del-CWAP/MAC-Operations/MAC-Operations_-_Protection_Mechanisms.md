@@ -1394,7 +1394,7 @@ rts cts attack
 
 - https://www.geeksforgeeks.org/how-rts-and-cts-are-used-to-avoid-collision-in-csma-ca/
 
-
+- https://wiki.sj.ifsc.edu.br/index.php/PJI11103:_Redes_sem-fio_IEEE_802.11
 
 
 SIFS bueno:
