@@ -446,33 +446,23 @@ There are multiple types of IFS, some defined by the original standard and other
 - **`Contention Window`**: A range of numbers netween CWmin and CWmax from which a STA picks a random backoff value. <br><br>
 - **`Backoff`**: A random backoff value is counted down in a number of slots. If the medium becomes busy, pause the backoff time, and defer. 
 
+
+
 ### Random Backoff Values
 
-````py
+There are different Random Backoff Values for each PHY. There are also different Random Backoff Values for each QoS categories in EDCA
 
-### Random Backoff Values:
+- `802.11b` can be a Random Backoff Value between 0 and 31 slots:
 
-    # There are different Random Backoff Values for each PHY
+![image](https://github.com/user-attachments/assets/c727ca14-86a0-48c1-829b-32bce96c9b9e)
 
-    # There are also different Random Backoff Values for each QoS categories in EDCA
+- `802.11/g` can be a Random Backoff Value between 0 and 15 slots:
 
-# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+![image](https://github.com/user-attachments/assets/1cac1bcf-1a17-45ac-8d90-4487a2db0229)
 
-# 802.11b can be a Random Backoff Value between 0 and 31 slots
-                     
-802.11b   = |-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-| 
-            0                                                             31
 
-# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-# 802.11/g can be a Random Backoff Value between 0 and 15 slots
-
-802.11/g  = |-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
-            0                             15      
-
-# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
-````
+`---
 
 
 ![image](https://github.com/user-attachments/assets/d888e1f2-ae93-4596-aa87-9c9af58ed0ab)
