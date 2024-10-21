@@ -295,60 +295,6 @@ In a `Data Exchange` where `CTS-to-Self` is used, Duration is equal the exchange
 
 ![image](https://github.com/user-attachments/assets/c0e0349e-9a25-4846-9c52-05d47b741e63)
 
-
-
-
-
-
-
-
-
-
-````py
-## Duration Values >> Data Exchange (AKA RTS Data Exchange):
-
-   # In a Data Exchange scenario the Duration is equal the exchange AFTER the Data Frame:
-   
-       #   SIFS + Ack:
-
-                                      ._______________________________.        ._______.
-                                DIFS  |             Data              |  SIFS  |  Ack  |
-                              __________________________________________________________  
-                                                                       <--------------->  <<<--- Data Duration =  SIFS + Ack
-                                                                                      <>  <<<--- Ack Duration  =  0
-
-# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
-## Duration Values >> RTS/CTS Data Exchange:
-
-   # In a Data Exchange where RTS/CTS is used, Duration is equal the exchange AFTER the RTS Frame:
-   
-       #   x3 SIFS + CTS + Data + ACK:
-                              
-        ._____.        ._____.        ._______________________________.        ._______.
-  DIFS  | RTS |  SIFS  | CTS |  SIFS  |             Data              |  SIFS  |  Ack  |
-________________________________________________________________________________________
-               <----------------------------------------------------------------------->  <<<--- RTS Duration  =  x3 SIFS + CTS + Data + ACK
-                              <-------------------------------------------------------->  <<<--- CTS Duration  =  x2 SIFS + Data + ACK
-                                                                       <--------------->  <<<--- Data Duration =  SIFS + Ack
-                                                                                      <>  <<<--- Ack Duration  =  0
-
-# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
-## Duration Values >> CTS-to-Self Data Exchange:
-
-   # In a Data Exchange where CTS-to-Self is used, Duration is equal the exchange AFTER the CTS Frame:
-   
-       #   x2 SIFS + Data + ACK:
-
-                       ._____.        ._______________________________.        ._______.
-                       | CTS |  SIFS  |             Data              |  SIFS  |  Ack  |
-                       _________________________________________________________________
-                              <-------------------------------------------------------->  <<<--- CTS Duration  =  x2 SIFS + Data + ACK
-                                                                       <--------------->  <<<--- Data Duration =  SIFS + Ack
-                                                                                      <>  <<<--- Ack Duration  =  0
-````
-
 Once the medium is free, the client STA can access the medium for wireless transmissions. For every frame transmitted in air, there should be an ACK from the AP. There is a SIFs delay between each frame: RTS, CTS, DATA and ACK frames. At times, this mechanism can create a lot of overhead in the network leading to a lot of congestion. And hence, this can be enabled only if the frame size is equal or above a specific configured threshold that depends on the network.
 
 ## 🙋🛜🚦 Background Concepts: `Virtual Carrier Sense` : `NAV`
