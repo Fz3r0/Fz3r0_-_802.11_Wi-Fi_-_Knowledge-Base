@@ -277,6 +277,7 @@ In a `Data Exchange` scenario the `Duration` is equal the exchange **AFTER** the
 
 - **Duration** = **`SIFS` + `ACK`**
 
+![image](https://github.com/user-attachments/assets/952e0873-482c-4232-94e0-309667a3c30e)
 
 ### Duration Value Types: 2. `RTS/CTS Data Exchange`
 
@@ -284,9 +285,15 @@ In a `Data Exchange` where `RTS/CTS` is used, Duration is equal the exchange **A
 
 - **Duration** = **`x3 SIFS` + `CTS` + `Data` + `ACK`**
 
+![image](https://github.com/user-attachments/assets/497deddb-ad92-4f5d-8d64-2ffa0e5bf642)
+
 ### Duration Value Types: 3. `CTS-to-Self Data Exchange`
 
 In a `Data Exchange` where `CTS-to-Self` is used, Duration is equal the exchange **AFTER** the `CTS Frame`:
+
+- **Duration** = **`x2 SIFS` + `Data` + `ACK`**
+
+![image](https://github.com/user-attachments/assets/c0e0349e-9a25-4846-9c52-05d47b741e63)
 
 
 
