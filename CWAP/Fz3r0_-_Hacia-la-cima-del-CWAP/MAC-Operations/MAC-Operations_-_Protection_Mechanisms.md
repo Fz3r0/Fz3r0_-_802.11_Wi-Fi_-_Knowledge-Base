@@ -474,6 +474,24 @@ There are multiple types of IFS, some defined by the original standard and other
 
 ````
 
+
+![image](https://github.com/user-attachments/assets/d888e1f2-ae93-4596-aa87-9c9af58ed0ab)
+
+![image](https://github.com/user-attachments/assets/b028afca-bc55-4d1a-b832-d245b314f327)
+
+![image](https://github.com/user-attachments/assets/ea262c58-874d-4bba-a2a2-3d8f881a058d)
+
+![image](https://github.com/user-attachments/assets/e7ddd2d3-dc75-4c9a-8814-56fb7172cb2a)
+
+![image](https://github.com/user-attachments/assets/d2831450-8eed-45a6-a706-0ce351f1d6ee)
+
+![image](https://github.com/user-attachments/assets/3c8372c3-4f27-49d8-8ef4-e8275ea5c2da)
+
+![image](https://github.com/user-attachments/assets/ab487fe0-1252-499d-9ddc-1339bea2300c)
+
+![image](https://github.com/user-attachments/assets/372ca4ca-05a2-4b03-bc19-6586a09b0933)
+
+
 **How Backoff Timer and CW works?**
 
 - After a STA has observed an idle wireless medium with carrier sense (CS) for the appropriate IFS interval (DIFS, EIFS, or AIFS).
