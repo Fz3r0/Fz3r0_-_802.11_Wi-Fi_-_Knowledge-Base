@@ -190,7 +190,7 @@ An **ACK (Acknowledgment)** frame is a `Control Frame` used in wireless networks
 
 ### ACK: `Frame Exchange`
 
-![image](https://github.com/user-attachments/assets/e423d47a-98ce-44e6-a8f2-b11da8ec90d1)
+![image](https://github.com/user-attachments/assets/cf632b58-bdd1-4b2a-bd24-0d2f53852ae5)
 
 1. When a 802.11 device (eg. `Alice (STA)`) wants to send data to another device (eg. `AP`), it first transmits the `data frame`.
 2. Once the `AP` receives the data frame, it checks the integrity of the received data (using `CRC` error-checking methods).
@@ -208,7 +208,7 @@ The ACK frame only includes the Receiver Address because its sole purpose is to 
 
 The time required to transmit the ACK and its short interframe space is subtracted from the duration in the most recent fragment. The duration calculation in nonfinal ACK frames is similar to the CTS duration calculation. In fact, the 802.11 specification refers to the duration setting in the ACK frames as a virtual CTS.
 
-ACK aprox Duration:
+Duration **BEFORE** an `ACK` frame (eg. a Data Frame) a lot of time of `44 μS` (time for a `ACK` + `SIFS`) for tx data frame, & The `Duration` field of an `ACK` frame **will always be = `0 μS`**
 
 - **2.4 GHz = `1 Mbps` Data Rate = `304 μS`** 
 - **5 GHz = `6 Mbps` Data Rate = `44 μS`** 
@@ -219,7 +219,31 @@ Quality-of-service enhancements relax the requirement for a single acknowledgmen
 
 ### ACK: `Frame`
 
-(wlan.fc.type == 1)&&(wlan.fc.subtype == 13)
+````sh
+# ACK Frame
+
+802.11 radio information
+IEEE 802.11 Acknowledgement, Flags: ........C
+    Type/Subtype: Acknowledgement (0x001d)
+    Frame Control Field: 0xd400
+        .... ..00 = Version: 0
+        .... 01.. = Type: Control frame (1)  <<<---| Type:     Control Frame = 01
+        1101 .... = Subtype: 13              <<<---| SubType:  ACK Frame = 13
+        Flags: 0x00
+    .000 0000 0000 0000 = Duration: 0 microseconds           <<<<<------|| Duration = 0 μS
+    Receiver address: f0:f0:f0:f0:f0:f0 (f0:f0:f0:f0:f0:f0)  <<<<<------|| Receiver Address (AP)
+    Frame check sequence: 0x011125d9 [correct]               <<<<<------|| CRC Check Sequence
+    [FCS Status: Good]                                       <<<<<------|| CRC Check = OK! (wireshark auto calculation)
+    [WLAN Flags: ........C]
+````
+| **Field**                              	| **Description** 	| **Wireshark Filter**                                                            	|
+|----------------------------------------	|-----------------	|---------------------------------------------------------------------------------	|
+| **Acknowledgement Frame**              	|                 	| `wlan.fc.type == 01 && wlan.fc.subtype == 13`                                   	|
+| **ACK Duration**                       	|                 	| `wlan.fc.type == 01 && wlan.fc.subtype == 13 && (wlan.duration == 0)`           	|
+| **ACK Receiver Address (RA)**          	|                 	| `wlan.fc.type == 01 && wlan.fc.subtype == 13 && (wlan.ra == aa:aa:aa:aa:aa:aa)` 	|
+| **ACK FCS (Frame Check Sequence)**     	|                 	| `wlan.fc.type == 01 && wlan.fc.subtype == 13 && (wlan.fcs == 0x011125d9)`       	|
+| **Good CRC (Cyclic Redundancy Check)** 	|                 	| `wlan.fc.type == 01 && wlan.fc.subtype == 13 && (wlan.fcs.status == "Good")`    	|
+| **Bad CRC (Cyclic Redundancy Check)**  	|                 	| `wlan.fc.type == 01 && wlan.fc.subtype == 13 && (wlan.fcs.status == "Bad")`     	|
 
 
 
