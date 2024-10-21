@@ -277,7 +277,7 @@ In a `Data Exchange` scenario the `Duration` is equal the exchange **AFTER** the
 
 - **Duration** = **`SIFS` + `ACK`**
 
-![image](https://github.com/user-attachments/assets/952e0873-482c-4232-94e0-309667a3c30e)
+![image](https://github.com/user-attachments/assets/e1a2f979-ce09-4592-9a13-98d9ebaa5584)
 
 ### Duration Value Types: 2. `RTS/CTS Data Exchange`
 
@@ -285,7 +285,7 @@ In a `Data Exchange` where `RTS/CTS` is used, Duration is equal the exchange **A
 
 - **Duration** = **`x3 SIFS` + `CTS` + `Data` + `ACK`**
 
-![image](https://github.com/user-attachments/assets/497deddb-ad92-4f5d-8d64-2ffa0e5bf642)
+![image](https://github.com/user-attachments/assets/9dc5f45c-9da8-4e79-8ae3-89d6be50e69a)
 
 ### Duration Value Types: 3. `CTS-to-Self Data Exchange`
 
@@ -293,7 +293,8 @@ In a `Data Exchange` where `CTS-to-Self` is used, Duration is equal the exchange
 
 - **Duration** = **`x2 SIFS` + `Data` + `ACK`**
 
-![image](https://github.com/user-attachments/assets/c0e0349e-9a25-4846-9c52-05d47b741e63)
+![image](https://github.com/user-attachments/assets/2585151a-849f-47b9-a42d-dc39edf940be)
+
 
 Once the medium is free, the client STA can access the medium for wireless transmissions. For every frame transmitted in air, there should be an ACK from the AP. There is a SIFs delay between each frame: RTS, CTS, DATA and ACK frames. At times, this mechanism can create a lot of overhead in the network leading to a lot of congestion. And hence, this can be enabled only if the frame size is equal or above a specific configured threshold that depends on the network.
 
