@@ -465,6 +465,37 @@ There are different Random Backoff Values for each PHY. There are also different
 `---
 
 
+
+
+
+
+![image](https://github.com/user-attachments/assets/afaff3ba-fab7-4542-b2b7-55d10069c5f8)
+
+![image](https://github.com/user-attachments/assets/82d8eea1-2a95-4a2f-99df-32b8aa82ee25)
+
+![image](https://github.com/user-attachments/assets/c6854024-7d55-4293-9514-6dcbdbfd161d)
+
+![image](https://github.com/user-attachments/assets/089ba06f-0d89-42a4-8527-3f87884c4a09)
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ![image](https://github.com/user-attachments/assets/d888e1f2-ae93-4596-aa87-9c9af58ed0ab)
 
 ![image](https://github.com/user-attachments/assets/b028afca-bc55-4d1a-b832-d245b314f327)
