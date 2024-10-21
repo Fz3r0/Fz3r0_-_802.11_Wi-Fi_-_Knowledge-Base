@@ -36,11 +36,13 @@ In IEEE 802.11 Wi-Fi Networks, the **Protection Mechanisms** are used for 3 main
 
 ### 1. `Backward Compatibility`
 
-802.11 (Wi-Fi) networks allows for backward compatibility with previous generations (eg. Wi-Fi 4 (802.11n) is backward compatible with Wi-Fi 1 or Wi-Fi 3 (802.11b/g)). This is one reason the technology is so popular, people can upgrade their devices at their own pace, without worrying about whether their old ones will still work. 
+802.11 (Wi-Fi) networks are designed to support backward compatibility across different generations (e.g., Wi-Fi 4 (802.11n) is backward compatible with Wi-Fi 1 or Wi-Fi 3 (802.11b/g)). This feature is a significant reason for the technology's popularity, as it allows users to upgrade their devices at their own pace without compromising the functionality of older ones.
 
-HR/DSSS (802.11b legacy Wi-Fi-1) STAs does not understand OFDM Modulation used by ERP (802.11g Wi-Fi-3) STAs, but HT/ERP/OFDM (802.11n Wi-Fi-4 {modern}) STAs are backwards compatible with HR/DSSS STAs & can transmit & understand HR/DSSS modulation. The way to acomplish that is using RTS/CTS mechanisms in case that legacy STAs are using the same AP of modern devices.
+Legacy HR/DSSS (802.11b, Wi-Fi 1) STAs are incapable of interpreting the OFDM modulation used by ERP (802.11g, Wi-Fi 3) devices. However, modern HT/ERP/OFDM stations (802.11n, Wi-Fi 4) are designed with backward compatibility in mind, enabling them to communicate using HR/DSSS modulation to support legacy devices. 
 
-**`Important`**: Wi-Fi backward compatibility has long been a double-edged sword because backward copatibility brings some drawbacks for newer STAs using the same BSS witn legacy STAs nearby llike **RTS/CTS Overhead**, **Airtime Consumption** or **Connectivity Problems**. But, for the first time in 20 years, Wi-Fi does not require backward compatibility. This is because Wi-Fi 6E and the 6 GHz frequency band. There is no need for RTS/CTS protection mechanisms for legacy Wi-Fi devices in 6 GHz, legacy clients do not consume airtime while transmitting using slow data rates.  This is because Wi-Fi is brand new to 6 GHz, and there are no legacy clients. Altough in the future maybe we will need backward compatibility again in Wi-Fi 7, Wi-Fi 8, and Wi-Fi 9 if they still using 6 GHz band. 
+This backward compatibility is managed through Protection Mechanisms (eg. RTS/CTS or CTS-to-Self), which are utilized when both legacy and modern STAs are connected to the same AP. These mechanisms help ensure that legacy devices, which are unable to understand modern modulations, can coexist and communicate efficiently without causing interference or transmission collisions.
+
+**`Important`**: Backward compatibility in Wi-Fi has traditionally been a source of inefficiencies for modern STAs sharing the same BSS with legacy devices, causing issues such as RTS/CTS overhead, increased airtime usage, and connectivity degradation. However, with Wi-Fi 6E and the introduction of the 6 GHz band, backward compatibility is no longer required. Legacy protection mechanisms like RTS/CTS are unnecessary _(at least for backward compatibility, hidden node problem still persist)_, as there are no legacy devices operating in this band, eliminating the inefficiencies caused by slower data rates. Although future generations (e.g., Wi-Fi 7, Wi-Fi 8) may reintroduce backward compatibility if they continue to utilize the 6 GHz band, the current environment remains free from legacy constraints.
 
 ### 2. `Hidden Node Problem Protection`
 
@@ -52,7 +54,7 @@ Practical protocol solutions exist to the hidden node problem. For example, Requ
 
 RTS (Request to Send) and CTS (Clear to Send) signals are mainly used in CSMA/CA to have co-ordinate access to the channel, and making sure that only one node or device sends data at a time to prevent the collisions
 
-Steps demonstrating how RTS and CTS are used to avoid collision in CSMA/CA
+Steps demonstrating in a basic manner how RTS/CTS mechanism is used to avoid collision in CSMA/CA
 
 - Step 1: Channel Checking - Firstly, before sending the data, the device using CSMA/CA first checks if the channel is idle or not.
 - Step 2: RTS Frame - When the channel becomes in the idle state, the actual transmission device sends the RTS frame to the destination receiving devices. This RTS frame includes the actual length of the data packet, which is to be send.
@@ -61,7 +63,7 @@ Steps demonstrating how RTS and CTS are used to avoid collision in CSMA/CA
 - Step 5: Backoff Mechanism - If there is any collision, then the pack of mechanism is used in. this mechanism, the colliding devices wait for the random duration of time before attempting to retransmit the data.
 - Step 6: Repeat Process -  The RTS and CTS processes are repeated till each of the data transmission is completed and also helps in minimizing the collisions in CSMA/CA based networks.
 
-**`Important`**: RTS/CTS are the most used mechanism in Wi-Fi, there's also a mechanism called CTS-to-self that is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame, this is usually done by the AP.
+**`Important`**: RTS/CTS is the most used mechanism in Wi-Fi, there's also a mechanism called CTS-to-self that is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame.
 
 ## 🙋🛜🚦 Background Concepts: `Hidden Node`
 
