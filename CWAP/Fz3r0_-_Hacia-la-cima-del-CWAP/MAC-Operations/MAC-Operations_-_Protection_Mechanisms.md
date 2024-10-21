@@ -86,7 +86,7 @@ Steps demonstrating in a basic manner how RTS/CTS mechanism is used to avoid col
 
 Due to this, `Physical Carrier Sense` (CSMA/CA) by `Alice` & `Bob/Carl` **will never indicate that medium is busy** when either one of them is transmitting in the air and could result in corruption and distortion of signal. **To avoid this situation, we can use `RTS/CTS` mechanism:**
 
-![image](https://github.com/user-attachments/assets/b8e6e42e-57b6-45d8-aba3-f2ec3b99d4a5)
+![image](https://github.com/user-attachments/assets/8aa1ca74-2c87-438e-ae6f-66deac50d1d0)
 
 - Any 802.11 device that wishes to transmit in the medium should send `RTS (Request to Send)` frame **requesting for medium access to the AP**.
 - When the `RTS` sent by **Alice STA** is received by the **AP**, it will respond with a `CTS` _(if the medium is idle)_, to indicate to **Alice STA** that she can transmit the data frame.
