@@ -446,8 +446,7 @@ There are multiple types of IFS, some defined by the original standard and other
 - **`Contention Window`**: A range of numbers netween CWmin and CWmax from which a STA picks a random backoff value. <br><br>
 - **`Backoff`**: A random backoff value is counted down in a number of slots. If the medium becomes busy, pause the backoff time, and defer. 
 
-![image](https://github.com/user-attachments/assets/a6543161-7863-44a4-8c60-0cb1542cd55a)
-
+![image](https://github.com/user-attachments/assets/db0e5d41-5757-4b06-a1e3-9d8338fd767f)
 
 ### Random Backoff Values
 
