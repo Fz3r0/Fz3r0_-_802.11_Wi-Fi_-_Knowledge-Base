@@ -532,6 +532,7 @@ There are different Random Backoff Values for each PHY. There are also different
 
 ![image](https://github.com/user-attachments/assets/237dee3e-51e1-4ab0-9b11-0aba49add796)
 
+![image](https://github.com/user-attachments/assets/eb735500-65ed-46eb-af00-01f926c33860)
 
 
 **How Backoff Timer and CW works?**
