@@ -524,6 +524,13 @@ There are different Random Backoff Values for each PHY. There are also different
 
 ![image](https://github.com/user-attachments/assets/15dc8c90-41c3-4230-bda6-fded024f399d)
 
+---
+
+![image](https://github.com/user-attachments/assets/a04cf0e2-e0c6-4e8f-a20e-17056d97d60a)
+
+![image](https://github.com/user-attachments/assets/5d25afa9-57af-409f-b343-fa94296fe200)
+
+![image](https://github.com/user-attachments/assets/237dee3e-51e1-4ab0-9b11-0aba49add796)
 
 
 
@@ -1461,6 +1468,11 @@ MAC Frames and formats:
 
 - https://howiwifi.com/2020/07/13/802-11-frame-types-and-formats/
 
+
+
+backoff con el indian
+
+- https://www.youtube.com/watch?v=sK1wxkDXzEo
 
 ---
 
