@@ -512,6 +512,20 @@ There are different Random Backoff Values for each PHY. There are also different
 
 ![image](https://github.com/user-attachments/assets/372ca4ca-05a2-4b03-bc19-6586a09b0933)
 
+![image](https://github.com/user-attachments/assets/4cb51216-e3be-46f5-a7ef-c3ee136d2bb4)
+
+![image](https://github.com/user-attachments/assets/07eec27c-e6c4-4d50-bd61-dbbcbeeb3417)
+
+![image](https://github.com/user-attachments/assets/f943584c-f1a5-4c43-ac7e-0c7ec7f0010c)
+
+![image](https://github.com/user-attachments/assets/4a80bd24-2f14-4044-bbad-630810937ec0)
+
+![image](https://github.com/user-attachments/assets/c94dbdb0-e99d-42d4-932c-96a1853dce9a)
+
+![image](https://github.com/user-attachments/assets/15dc8c90-41c3-4230-bda6-fded024f399d)
+
+
+
 
 **How Backoff Timer and CW works?**
 
@@ -1435,6 +1449,9 @@ rts cts attack
 
 - https://wiki.sj.ifsc.edu.br/index.php/PJI11103:_Redes_sem-fio_IEEE_802.11
 
+
+Buena presentaicon
+- https://slideplayer.com/slide/14020063/
 
 SIFS bueno:
 - https://telcomatraining.com/what-is-sifs-short-interframe-space/
