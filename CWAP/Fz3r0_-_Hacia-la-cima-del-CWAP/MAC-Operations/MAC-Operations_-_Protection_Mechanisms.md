@@ -458,7 +458,8 @@ There are different Random Backoff Values for each PHY. There are also different
 
 - `802.11/g` can be a Random Backoff Value between 0 and 15 slots:
 
-![image](https://github.com/user-attachments/assets/1cac1bcf-1a17-45ac-8d90-4487a2db0229)
+![image](https://github.com/user-attachments/assets/ae56b7b4-a4df-4eb4-958b-c4d74165c5ce)
+
 
 
 
