@@ -448,8 +448,7 @@ There are multiple types of IFS, some defined by the original standard and other
 - **`Contention Window`**: A range of numbers netween CWmin and CWmax from which a STA picks a random backoff value. <br><br>
 - **`Backoff`**: A random backoff value is counted down in a number of slots. If the medium becomes busy, pause the backoff time, and defer. 
 
-![image](https://github.com/user-attachments/assets/8d007a10-afd3-4a6c-92cf-68299af6ef25)
-
+![image](https://github.com/user-attachments/assets/a96b731b-936c-45b9-bf4e-b148736108ed)
 
 ### Random Backoff Values
 
@@ -457,15 +456,11 @@ There are different Random Backoff Values for each PHY. There are also different
 
 - `802.11b` can be a Random Backoff Value between 0 and 31 slots:
 
-![image](https://github.com/user-attachments/assets/3aae836d-5c24-497e-8efc-3e237a22b6f2)
+![image](https://github.com/user-attachments/assets/64cf6202-08b9-451e-a65a-8bc07e5efe94)
 
 - `802.11/g` can be a Random Backoff Value between 0 and 15 slots:
 
-![image](https://github.com/user-attachments/assets/ae56b7b4-a4df-4eb4-958b-c4d74165c5ce)
-
-
-
-
+![image](https://github.com/user-attachments/assets/af0525e1-9fcb-4c87-992d-f04e66f8499a)
 
 ![image](https://github.com/user-attachments/assets/c1c904a5-39bc-46b2-b435-1aaf5fcabca7)
 
