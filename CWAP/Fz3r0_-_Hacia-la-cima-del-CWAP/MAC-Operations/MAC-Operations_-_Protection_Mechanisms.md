@@ -551,6 +551,27 @@ There are different Random Backoff Values for each PHY. There are also different
 ![image](https://github.com/user-attachments/assets/eb735500-65ed-46eb-af00-01f926c33860)
 
 
+
+
+---
+
+QoS & EDCA
+
+![image](https://github.com/user-attachments/assets/f18d671c-ae17-440b-a242-348a7b97b2c6)
+
+![image](https://github.com/user-attachments/assets/bcb6ce10-cbb0-4569-b6d7-00a89129b2b3)
+
+![image](https://github.com/user-attachments/assets/8a747fa9-d09c-466e-a0dc-2332ddf85a4e)
+
+![image](https://github.com/user-attachments/assets/d3ad57d1-89f3-407b-8a49-f2f65e51a989)
+
+![image](https://github.com/user-attachments/assets/da374694-8858-4865-861a-3bce6559a42c)
+
+![image](https://github.com/user-attachments/assets/29a28ce7-1d83-4177-ae21-c3b760e45f3e)
+
+![image](https://github.com/user-attachments/assets/6671aa09-366c-4208-8e69-14a421d51e6e)
+
+
 **How Backoff Timer and CW works?**
 
 - After a STA has observed an idle wireless medium with carrier sense (CS) for the appropriate IFS interval (DIFS, EIFS, or AIFS).
