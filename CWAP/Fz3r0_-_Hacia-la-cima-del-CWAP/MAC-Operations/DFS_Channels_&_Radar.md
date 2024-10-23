@@ -27,9 +27,17 @@
 
 # DFS: Dynamic Frequency Selection
 
-DFS is all about radar detection and avoidance. `Radar` stands for `Radio detection and ranging`. In the past, the radars used to operate in frequency ranges where they were the only type of device operating there. **Now that regulatory agencies are opening those frequencies for other uses (like wireless LAN), there is a need for those devices to operate in accordance of the radars.** _(802.11a->DFS)_
+Dynamic Frequency Selection (DFS) is a channel allocation scheme specified for 802.11 WLANs (Wi-Fi). It was standardized in 2003 as part of IEEE 802.11h.
 
-`Note`: _DFS is required for ETSI devices working in the European Union in the ETSI 5ghz band. It can be not mandatory in other parts of the world._
+DFS is all about radar `detection` and `avoidance`. It is designed to prevent electromagnetic interference by avoiding co-channel operation with systems that predated Wi-Fi, such as: 
+
+- Military radar
+- Satellite communication
+- weather radar
+
+It also to provide on aggregate a near-uniform loading of the spectrum (uniform spreading).
+
+`Radar` stands for `Radio detection and ranging`. In the past, the radars used to operate in frequency ranges where they were the only type of device operating there. **Now that regulatory agencies are opening those frequencies for other uses (like wireless LAN), there is a need for those devices to operate in accordance of the radars.** _(802.11a->DFS)_
 
 **The general behavior of a device complying with the DFS protocol is:**
 
@@ -39,6 +47,10 @@ DFS is all about radar detection and avoidance. `Radar` stands for `Radio detect
 4. **jump** on it if it is ok. (eg. no radar there as well).
 
 `Important`: The **process for a radio to detect a radar** is a complicated task that **is actually not part of the standard**. Hence, wrong radar detections can occur.
+
+`Note`: _DFS is required for ETSI devices working in the European Union in the ETSI 5ghz band. It can be not mandatory in other parts of the world._
+
+## DFS: Frame Exchange
 
 DFS operations use different ways of exchanging information between STAs. Information can be put in specific elements: 
 
@@ -136,9 +148,11 @@ y on the shoulders of the AP. Certain channels like 120,124 and 128 have specifi
 
 # Resources
 
+
 - https://community.cisco.com/t5/wireless-mobility-knowledge-base/tpc-and-dfs-overview/ta-p/3110379
 - https://en.wikipedia.org/wiki/IEEE_802.11h-2003
-
+- https://en.wikipedia.org/wiki/Dynamic_frequency_selection
+- https://en.wikipedia.org/wiki/Power_control#Transmit_Power_Control
 
 
 
