@@ -1,5 +1,5 @@
 
-# 🙋🛜🚦MAC Operations: DFS
+# 🙋🛜🚦MAC Operations: `802.11h` - `DFS` & `TPC`
 
 ![My Video](https://user-images.githubusercontent.com/94720207/165892585-b830998d-d7c5-43b4-a3ad-f71a07b9077e.gif)
 
@@ -18,14 +18,61 @@
 
 
 
+# `802.11h` - `DFS` & `TPC`
+
+
+802.11h was meant to bring two main features : DFS and TPC. DFS, Dynamic Frequency Selection as spectrum management (mainly to co-operate with radars) and TPC, Transmit Power Control, to limit the overall RF “pollution” of wireless devices.
+
+
+
+# DFS: Dynamic Frequency Selection
+
+DFS is all about radar detection and avoidance. `Radar` stands for `Radio detection and ranging`. In the past, the radars used to operate in frequency ranges where they were the only type of device operating there. **Now that regulatory agencies are opening those frequencies for other uses (like wireless LAN), there is a need for those devices to operate in accordance of the radars.**
+
+`Note`: _DFS is required for ETSI devices working in the European Union in the ETSI 5ghz band. It can be not mandatory in other parts of the world._
+
+**The general behavior of a device complying with the DFS protocol is:**
+
+1. Being able to **detect** when a radar is occupying the channel
+2. **Stop using that occupied channel**.
+3. **Monitor** another channel
+4. **jump** on it if it is ok. (eg. no radar there as well).
+
+`Important`: The **process for a radio to detect a radar** is a complicated task that **is actually not part of the standard**. Hence, wrong radar detections can occur.
+
+DFS operations use different ways of exchanging information between STAs. Information can be put in specific elements: 
+
+1. beacon
+2. probe response but a : the
+3. action frame (specific frame can also be used to report information). 
+
+## DFS: `Radars`
+
+There are 2 main types of Radars:
+
+1. fixed (often civilian airport or military base, but also weather radar)
+2. mobile (ships). 
+
+### How it works
+
+1. A Radar-STA will transmit a set of powerful pulses periodically and observe the reflections.
+2. Because the energy reflected back to the radar is much weaker than the original signal, the radar has to transmit a very powerful signal.
+3. Also, because the energy reflected back to the radar is very weak, it could confuse it with other radio signals (like a wireless LAN to give an example).
+
+### DFS in action
+
+1. When the radio detects a radar, it must **stop using the channel** for **30 minutes at least** to protect that service.
+2. It then **monitors another channel**
+3. AP **start using that channel** **after at least 1 minute if no radar was detected**.
+
+### DFS and 5 GHz band
+
+Because the 2.4Ghz band is free of radar, the DFS rules only apply to the 5.250 ->5.725 Ghz band.
 
 
 
 
 
-# 🙋🛜🚦MAC Operations: `Protection Mechanisms`
-
-There are 2 types of MAC Operations: **Power Management** & **Protection Mechanisms**:
 
 
 
@@ -74,8 +121,9 @@ There are 2 types of MAC Operations: **Power Management** & **Protection Mechani
 
 
 
+# Resources
 
-
+https://community.cisco.com/t5/wireless-mobility-knowledge-base/tpc-and-dfs-overview/ta-p/3110379
 
 
 
