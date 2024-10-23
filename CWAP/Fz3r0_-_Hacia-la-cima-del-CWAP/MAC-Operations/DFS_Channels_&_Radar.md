@@ -32,8 +32,16 @@ Important background concepts and terminologies to understand before `DFS` and `
 
 ## Background Concepts: `CAC (Channel Availability Check)`
 
+CAC (Channel Availability Check) is the time for which the system must monitor a channel for radar prior to any data being transmitted over the channel. 
 
+- `Normal DFS channel CAC` = _max:_ **`60 seconds`**
+- `Weather DFS channel CAC` = _max:_**`600 seconds`**
 
+## Background Concepts: `Channel Move Time`
+
+The time taken by the system to vacuate a channel, it's measured from the end of the radar burst to the end of the data transmission on that channel. 
+
+- `DFS channel move time` = _max:_**`10 seconds`**
 
 # 802.11h - `DFS (Dynamic Frequency Selection)`
 
