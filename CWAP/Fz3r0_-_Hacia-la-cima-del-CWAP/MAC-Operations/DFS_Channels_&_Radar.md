@@ -123,7 +123,8 @@ Because the 2.4Ghz band is free of radar, the DFS rules only apply to the 5.250 
 
 # Resources
 
-https://community.cisco.com/t5/wireless-mobility-knowledge-base/tpc-and-dfs-overview/ta-p/3110379
+- https://community.cisco.com/t5/wireless-mobility-knowledge-base/tpc-and-dfs-overview/ta-p/3110379
+- https://en.wikipedia.org/wiki/IEEE_802.11h-2003
 
 
 
