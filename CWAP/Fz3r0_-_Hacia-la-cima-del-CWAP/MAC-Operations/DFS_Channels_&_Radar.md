@@ -59,7 +59,11 @@ There are 2 main types of Radars:
 2. Because the energy reflected back to the radar is much weaker than the original signal, the radar has to transmit a very powerful signal.
 3. Also, because the energy reflected back to the radar is very weak, it could confuse it with other radio signals (like a wireless LAN to give an example).
 
-### DFS in action
+## 5 5ghz spectrum & radars
+
+![image](https://github.com/user-attachments/assets/b725da15-06a5-4688-ace4-fafe6cee9a15)
+
+## DFS in action
 
 1. When the radio detects a radar, it must **stop using the channel** for **30 minutes at least** to protect that service.
 2. It then **monitors another channel**
