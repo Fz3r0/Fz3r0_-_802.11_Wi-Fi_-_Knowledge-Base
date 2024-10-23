@@ -75,8 +75,17 @@ There are 2 main types of Radars:
 
 ![image](https://github.com/user-attachments/assets/b725da15-06a5-4688-ace4-fafe6cee9a15)
 
-## DFS in action
+## DFS: Radar detection mechanism
 
+When AP starts operation:
+
+1. The AP automatically selects channels with low interference levels in a phase known as `Channel Availability Check (CAC)`.
+2. During this phase, the access point is in a passive state scanning for radar signals _(This commonly takes one to two minutes, but could take up to ten minutes)_.
+3. hereafter, the access point performs In-Service Monitoring (ISM) to detect active radar signals
+
+If radar is detected by the AP:
+
+1. AP broadcasts a `Action Frame: switch-channel event` to its clients and follows by switching the channel.
 1. When the radio detects a radar, it must **stop using the channel** for **30 minutes at least** to protect that service.
 2. It then **monitors another channel**
 3. AP **start using that channel** **after at least 1 minute if no radar was detected**.
