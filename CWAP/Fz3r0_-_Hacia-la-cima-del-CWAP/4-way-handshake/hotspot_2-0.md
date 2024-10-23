@@ -108,7 +108,14 @@ Cada AP que proporciona Hotspot 2.0 debe estar configurado con los parámetros d
 
 
 
-# Identity Provider Network Identifier
+
+
+
+
+
+
+
+# 3GPP : Identity Provider Network Identifier
 
 El dominio WLAN.mnc480.mcc311.3gppnetwork.org es parte de la arquitectura de red de 3GPP (3rd Generation Partnership Project), específicamente relacionada con redes móviles. 
 
@@ -118,14 +125,17 @@ Aquí tienes un desglose de sus componentes:
 - mnc480: Esto se refiere al Mobile Network Code (MNC), que se utiliza para identificar a un operador de red móvil específico dentro de un país. El número "480" indica un operador específico.
 - mcc311: Esto representa el Mobile Country Code (MCC), que identifica el país de la red móvil.
 
+---
+
+### smartzone 3gpp
+
+El controller soporta dos flujos de llamadas diferentes para la authentication y authorization:
+
+Una solución basada en el estándar 3GPP, donde la authentication y la service authorization se realizan por separado.
+Una solución propietaria donde la authentication y authorization están combinadas. Esta guía enumera todos los interface messages y los RADIUS VSAs utilizados entre el controller y el AAA.
 
 
-
-
-
-
-
-
+---
 
 
 
@@ -196,3 +206,5 @@ hese protocols run on top of 802.11 and enable the Hotspot 2.0 experience
 - http://repo.darmajaya.ac.id/4779/1/The%20Telecommunications%20Handbook_%20Engineering%20Guidelines%20for%20Fixed%2C%20Mobile%20and%20Satellite%20Systems%20%28%20PDFDrive%20%29.pdf
 - https://en.wikipedia.org/wiki/IEEE_802.11u
 - https://www.wi-fi.org/system/files/Wi-Fi_CERTIFIED_Passpoint_Deployment_Guidelines_v1.3.3.pdf
+- https://support.alcadis.nl/Support_files/Ruckus/SmartZone//Manuals/SmartZone%205.1.x/SmartZone%205.1.2.0.302/SZ100vSZE-5.1.2-AAA-RADIUS-InterfaceGuide-RevA-20190830.pdf
+- 
