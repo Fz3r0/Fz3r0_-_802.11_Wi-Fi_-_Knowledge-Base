@@ -27,7 +27,7 @@
 
 # DFS: Dynamic Frequency Selection
 
-DFS is all about radar detection and avoidance. `Radar` stands for `Radio detection and ranging`. In the past, the radars used to operate in frequency ranges where they were the only type of device operating there. **Now that regulatory agencies are opening those frequencies for other uses (like wireless LAN), there is a need for those devices to operate in accordance of the radars.**
+DFS is all about radar detection and avoidance. `Radar` stands for `Radio detection and ranging`. In the past, the radars used to operate in frequency ranges where they were the only type of device operating there. **Now that regulatory agencies are opening those frequencies for other uses (like wireless LAN), there is a need for those devices to operate in accordance of the radars.** _(802.11a->DFS)_
 
 `Note`: _DFS is required for ETSI devices working in the European Union in the ETSI 5ghz band. It can be not mandatory in other parts of the world._
 
@@ -59,7 +59,7 @@ There are 2 main types of Radars:
 2. Because the energy reflected back to the radar is much weaker than the original signal, the radar has to transmit a very powerful signal.
 3. Also, because the energy reflected back to the radar is very weak, it could confuse it with other radio signals (like a wireless LAN to give an example).
 
-## 5 5ghz spectrum & radars
+## DFS: 5 5ghz spectrum & radars
 
 ![image](https://github.com/user-attachments/assets/b725da15-06a5-4688-ace4-fafe6cee9a15)
 
@@ -69,10 +69,19 @@ There are 2 main types of Radars:
 2. It then **monitors another channel**
 3. AP **start using that channel** **after at least 1 minute if no radar was detected**.
 
-### DFS and 5 GHz band
+## DFS and 5 GHz band
 
 Because the 2.4Ghz band is free of radar, the DFS rules only apply to the 5.250 ->5.725 Ghz band.
 
+## DFS: Rules
+
+An AP, when moving to a new DFS channel, has to listen silently to the medium for one minute before it is allowed to transmit anything (like a beacon) in order to make sure that  no radar is currently operating on that channel. Clients do not have such a responsibility and are allowed to send wifi frames if an AP is already present and beaconing on the channel, this leaves all the responsibilit
+
+y on the shoulders of the AP. Certain channels like 120,124 and 128 have specific rules where an AP even has to wait 10 minutes before being able to use those channels.
+
+## Examples: 
+
+![image](https://github.com/user-attachments/assets/0eeabed0-02b9-43c0-8099-d7268012f259)
 
 
 
