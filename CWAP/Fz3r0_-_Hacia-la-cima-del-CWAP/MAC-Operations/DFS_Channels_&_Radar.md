@@ -21,11 +21,21 @@
 # `802.11h` - `DFS` & `TPC`
 
 
-802.11h was meant to bring two main features : DFS and TPC. DFS, Dynamic Frequency Selection as spectrum management (mainly to co-operate with radars) and TPC, Transmit Power Control, to limit the overall RF “pollution” of wireless devices.
+802.11h was meant to bring two main features : `DFS` and `TPC`.
+
+1. `DFS (Dynamic Frequency Selection)`: Based on **Spectrum** management to ensures that channels containing **Radar** are avoided by the **AP** // Energy is spread across the band to reduce interference to **Satellites** 
+2. `TPC (Transmit Power Control)`: Ensures that the average power on the 802.11 device (AP/STA) is less than the regulatory domain maximun to reduce interference to satellites. This means that the TPC mechanism "limit the overall RF power/gain of 802.11 devices".
+
+# DFS & TPC: `Background Concepts`
+
+Important background concepts and terminologies to understand before `DFS` and `TPC` topics are:
+
+## Background Concepts: `CAC (Channel Availability Check)`
 
 
 
-# DFS: Dynamic Frequency Selection
+
+# 802.11h - `DFS (Dynamic Frequency Selection)`
 
 Dynamic Frequency Selection (DFS) is a channel allocation scheme specified for 802.11 WLANs (Wi-Fi). It was standardized in 2003 as part of IEEE 802.11h.
 
@@ -162,6 +172,7 @@ y on the shoulders of the AP. Certain channels like 120,124 and 128 have specifi
 - https://en.wikipedia.org/wiki/IEEE_802.11h-2003
 - https://en.wikipedia.org/wiki/Dynamic_frequency_selection
 - https://en.wikipedia.org/wiki/Power_control#Transmit_Power_Control
+- https://www.youtube.com/watch?v=1x8odxiswz8
 
 
 
