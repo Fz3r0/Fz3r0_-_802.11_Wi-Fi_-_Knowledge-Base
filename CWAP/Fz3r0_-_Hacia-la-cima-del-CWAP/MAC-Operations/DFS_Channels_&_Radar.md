@@ -242,8 +242,9 @@ y on the shoulders of the AP. Certain channels like 120,124 and 128 have specifi
 
 # Resources
 
-- https://journals.ametsoc.org/view/journals/bams/97/7/bams-d-15-00048.1.xml
 - https://www.etsi.org/deliver/etsi_en/301800_301899/301893/01.08.01_60/en_301893v010801p.pdf
+- https://journals.ametsoc.org/view/journals/bams/97/7/bams-d-15-00048.1.xml
+- https://youtu.be/glqLGYaKU3g?si=I2iRcSIuO9ozLV4N
 - https://mrncciew.com/2014/10/29/cwap-channel-switch-announcement/
 - https://mrncciew.com/2014/10/09/802-11-mgmt-action-frames/
 - https://community.cisco.com/t5/wireless-mobility-knowledge-base/tpc-and-dfs-overview/ta-p/3110379
