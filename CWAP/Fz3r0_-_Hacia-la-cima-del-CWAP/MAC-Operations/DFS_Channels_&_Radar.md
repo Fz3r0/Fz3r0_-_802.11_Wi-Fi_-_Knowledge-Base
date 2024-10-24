@@ -44,7 +44,7 @@ DFS is all about radar `detection` and `avoidance`. It is designed to prevent el
 
 It also to provide on aggregate a near-uniform loading of the spectrum (uniform spreading).
 
-## DFS: `Background Concepts`
+## DFS: `Background Concepts & Terminologies`
 
 Important background concepts and terminologies to understand `DFS`:
 
@@ -59,6 +59,11 @@ Important background concepts and terminologies to understand `DFS`:
 | **`Master Device`**                | A device that **can detect** radar. (Typically an **AP**)                                                                                                                                                                                                | **AP**                        |
 | **`Client Device`**                | A device that **cannot detect** radar. Instead, it relies on seeing valid data from the master device’s beacon frame.  (Typically a client **STA**)                                                                                                                             | **STA**                       |
 
+## DFS: DFS Channels
+
+
+
+![image](https://github.com/user-attachments/assets/b725da15-06a5-4688-ace4-fafe6cee9a15)
 
 ## DFS: `Radars`
 
@@ -98,7 +103,7 @@ DFS operations use different ways of exchanging information between STAs. Inform
 
 ## DFS: 5 5ghz spectrum & radars
 
-![image](https://github.com/user-attachments/assets/b725da15-06a5-4688-ace4-fafe6cee9a15)
+
 
 ## DFS: Radar detection mechanism
 
