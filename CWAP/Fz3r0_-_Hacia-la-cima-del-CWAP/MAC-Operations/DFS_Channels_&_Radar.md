@@ -211,7 +211,11 @@ y on the shoulders of the AP. Certain channels like 120,124 and 128 have specifi
 
 
 
+# TPC 
 
+![image](https://github.com/user-attachments/assets/600e3b64-e693-4305-8181-0a753d162e49)
+
+nowday is used for toher things that interfere with satellites
 
 
 
