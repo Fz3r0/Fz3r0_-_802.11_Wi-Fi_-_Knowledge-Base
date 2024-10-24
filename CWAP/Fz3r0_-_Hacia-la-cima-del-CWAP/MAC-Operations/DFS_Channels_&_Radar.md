@@ -73,11 +73,20 @@ These channels require devices to monitor for radar signals before transmitting 
 
 | **UNII Band**            | **Channels**                                                                                                                                                     | **Frequency**                | **Bandwidth (MHz)**     | **DFS**             | **Usage**                                |
 |--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|-------------------------|---------------------|------------------------------------------|
-| **UNII-1**               | 36, 40, 44, 48                                                                                                                                                  | 5.150 GHz – 5.250 GHz         | 20/40/80                | No                  | Indoor, no DFS requirements              |
-| **UNII-2**               | 52, 56, 60, 64                                                                                                                                                  | 5.250 GHz – 5.350 GHz         | 20/40/80                | Yes                 | Indoor/Outdoor with DFS requirements     |
-| **UNII-2 Extended**      | 100, 104, 108, 112, 116, 120, 124, 128, 132, 136, 140, 144                                                                                                      | 5.470 GHz – 5.725 GHz         | 20/40/80/160            | Yes                 | Indoor/Outdoor with DFS requirements     |
-| **UNII-2 Extended:** <br>**DFS Radar Channels**   | 116, **120, 124, 128**, 132                                                                                                                                         | 5.580 GHz – 5.660 GHz         | 20/40/80                | Yes (High interference) | Prone to meteorological radar interference |
+| _**UNII-1**_               | _36, 40, 44, 48_                                                                                                                                                  | _5.150 GHz – 5.250 GHz_         | _20/40/80_                | **NO**                  | _Indoor, no DFS requirements_              |
+| **UNII-2a**               | **52, 56, 60, 64**                                                                                                                                                  | **5.250 GHz – 5.350 GHz**         | **20/40/80**                | **YES**                | **Indoor/Outdoor with DFS requirements**     |
+| **UNII-2c Extended**      | **100, 104, 108, 112, 116, 120, 124, 128, 132, 136, 140, 144**                                                                                                      | **5.470 GHz – 5.725 GHz**         | **20/40/80/160**            | **YES**                 | **Indoor/Outdoor with DFS requirements**     |
+| **UNII-2c Extended:** <br>**DFS Radar Channels**   | _116_, **120, 124, 128**, _132_                                                                                                                                         | **5.580 GHz – 5.660 GHz**         | **20/40/80**                | **YES (High interference)** | **Prone to meteorological radar interference** |
 | **UNII-3**               | 149, 153, 157, 161, 165                                                                                                                                         | 5.725 GHz – 5.850 GHz         | 20/40/80                | No                  | Outdoor/Indoor, no DFS requirements      |
+
+- **ALL** the channels in the `UNII-2a` & `UNII-2c` bands are known as `DFS Channels`.
+- WLAN radios operating in these 5 GHz bands **must support DFS**, to protect WLAN communications from interfering with military or weather radar systems.
+- 
+    - **`Good Practice`**: In most cases, **DFS channels should be usen**. Including DFS channels in the channel reuse pattern will help to **reduce the CCI** between same channels than can "hear" each other.
+
+**`Important`**: Most current-day client devices are being certified to transmit on the DFS channels, and the inclusion of DFS channels in channel reuse patterns is becoming more commonplace. **There are still 802.11 devices out in the wild that cant't "hear" DFS channels tho!!!**
+
+![efa44f3a40ebb8ae0e1215d05428031a_Design_Overview_5-6-removebg-preview](https://github.com/user-attachments/assets/7e288269-3b75-4e20-b2b8-5c00da4d5742)
 
 
 ![image](https://github.com/user-attachments/assets/3d937af5-aeb4-4162-ba1c-96cd57094c90)
