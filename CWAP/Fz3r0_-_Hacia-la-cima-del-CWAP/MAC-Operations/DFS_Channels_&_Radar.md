@@ -26,73 +26,6 @@
 1. `DFS (Dynamic Frequency Selection)`: Based on **Spectrum** management to ensures that channels containing **Radar** are avoided by the **AP** // Energy is spread across the band to reduce interference to **Satellites** 
 2. `TPC (Transmit Power Control)`: Ensures that the average power on the 802.11 device (AP/STA) is less than the regulatory domain maximun to reduce interference to satellites. This means that the TPC mechanism "limit the overall RF power/gain of 802.11 devices".
 
-# DFS & TPC: `Background Concepts`
-
-Important background concepts and terminologies to understand before `DFS` and `TPC` topics are:
-
-| **Concept**                     | **Description**                                                                                                                                                                                                                                  | **Max/Min Time**              |
-|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|
-| **`CAC (Channel Availability Check)`** | The time for which the system must monitor a channel for radar prior to any data being transmitted over the channel.                                                                                                                           | Normal DFS: _(max)_ **60 seconds**<br>Weather DFS: _(max)_ **600 seconds** |
-| **`Channel Move Time`**            | The time taken by the system to vacate a channel. It's measured from the end of the radar burst to the end of the data transmission on that channel.                                                                                              | _(max)_ **10 seconds**                |
-| **`NOP (Non-Occupancy Period)`**   | The period for which a radar-detected channel should not be used.                                                                                                                                                                               | _(at least)_ **30 minutes**          |
-| **`NOL (Non-Occupancy List)`**     | A **list of channels** where the AP has detected radar presence within the last 30 minutes per timer.                                                                                                                                               | **Last 30 minutes**           |
-| **`Channel Closing Time`**         | The time in which the AP must **cease data transmission** on the channel.                                                                                                                                                                           | **1 second**                  |
-| **`In-Service Monitor`**           | AP monitors the operating channel for the presence of **ISM radar**.                                                                                                                                                                                | **Continuously**              |
-| **`Master Device`**                | A device that **can detect** radar. (Typically an **AP**)                                                                                                                                                                                                | **AP**                        |
-| **`Client Device`**                | A device that **cannot detect** radar. Instead, it relies on seeing valid data from the master device’s beacon frame.  (Typically a client **STA**)                                                                                                                             | **STA**                       |
-
-
-
-## Background Concepts: `CAC (Channel Availability Check)`
-
-CAC (Channel Availability Check) is the time for which the system must monitor a channel for radar prior to any data being transmitted over the channel. 
-
-- `Normal DFS channel CAC` = _max:_ **`60 seconds`**
-- `Weather DFS channel CAC` = _max:_**`600 seconds`**
-
-## Background Concepts: `Channel Move Time`
-
-The time taken by the system to vacuate a channel, it's measured from the end of the radar burst to the end of the data transmission on that channel. 
-
-- `Channel move time` = _max:_**`10 seconds`**
-
-## Background Concepts: `NOP (Non-Ocupancy Period)`
-
-The period for which a radar detected channel should not be used
-
--  `NOP (Non-Ocupancy Period)` = _min:_**`30 minutes`**
-
-## Background Concepts: `NOL (Non-Ocupancy List)`
-
-A list of channels, the AP has seen radar presence within 30 minutes per timer. 
-
--  `NOL (Non-Ocupancy List)` = _within per radar/timer:_**`last 30 minutes`**
-
-## Background Concepts: `Channel Closing Time`
-
-The time in which the AP has to cease data transmission in the channel.
-
-- `Channel Closing Time` = **`1 second`**
-
-## Background Concepts: `In-Service Monitor`
-
-AP monitors the operating channel for the presence of **ISM Radar**
-
-- `In-Service Monitor` = **`Continously`**
-
-## Background Concepts: `Master Device`
-
-A device that **can detect a radar**, typically an **AP**
-
-- `Master Device` = **`AP`**
-
-## Background Concepts: `Client Device`
-
-A device that **CANNOT detect a radar** (typically a client **STA**), instead it relies on **seeing valid data** on a channel from a master device's (AP) **Beacon** frame.
-
-- `Client Device` = **`STA`**
-
-
 
 
 
@@ -111,6 +44,22 @@ DFS is all about radar `detection` and `avoidance`. It is designed to prevent el
 
 It also to provide on aggregate a near-uniform loading of the spectrum (uniform spreading).
 
+## DFS: `Background Concepts`
+
+Important background concepts and terminologies to understand `DFS`:
+
+| **Concept**                     | **Description**                                                                                                                                                                                                                                  | **Max/Min Time**              |
+|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|
+| **`CAC (Channel Availability Check)`** | The time for which the system must monitor a channel for radar prior to any data being transmitted over the channel.                                                                                                                           | Normal DFS: _(max)_ **60 seconds**<br>Weather DFS: _(max)_ **600 seconds** |
+| **`Channel Move Time`**            | The time taken by the system to vacate a channel. It's measured from the end of the radar burst to the end of the data transmission on that channel.                                                                                              | _(max)_ **10 seconds**                |
+| **`NOP (Non-Occupancy Period)`**   | The period for which a radar-detected channel should not be used.                                                                                                                                                                               | _(at least)_ **30 minutes**          |
+| **`NOL (Non-Occupancy List)`**     | A **list of channels** where the AP has detected radar presence within the last 30 minutes per timer.                                                                                                                                               | **Last 30 minutes**           |
+| **`Channel Closing Time`**         | The time in which the AP must **cease data transmission** on the channel.                                                                                                                                                                           | **1 second**                  |
+| **`In-Service Monitor`**           | AP monitors the operating channel for the presence of **ISM radar**.                                                                                                                                                                                | **Continuously**              |
+| **`Master Device`**                | A device that **can detect** radar. (Typically an **AP**)                                                                                                                                                                                                | **AP**                        |
+| **`Client Device`**                | A device that **cannot detect** radar. Instead, it relies on seeing valid data from the master device’s beacon frame.  (Typically a client **STA**)                                                                                                                             | **STA**                       |
+
+
 ## DFS: `Radars`
 
 **Radar stands for **RAdio Detection And Ranging**. In the past, the Radars used to operate in frequency ranges where they were the only type of device operating there. **Now that regulatory agencies are opening those frequencies for other uses (like wireless LAN), there is a need for those devices to operate in accordance of the radars.** _(802.11a->DFS)_
@@ -120,13 +69,11 @@ There are 2 main types of Radars:
 1. `Fixed`: Often **civilian airport** or **military base**, but also **weather radars**
 2. `Mobile`: Ships 
 
-### How it works
+### Radars: `How Radars and DFS work?`
 
 1. A Radar-STA will transmit a set of powerful pulses periodically and observe the reflections.
 2. Because the energy reflected back to the radar is much weaker than the original signal, the radar has to transmit a very powerful signal.
 3. Also, because the energy reflected back to the radar is very weak, it could confuse it with other radio signals (like a wireless LAN to give an example).
-
-
 
 **The general behavior of a device complying with the DFS protocol is:**
 
@@ -143,9 +90,9 @@ There are 2 main types of Radars:
 
 DFS operations use different ways of exchanging information between STAs. Information can be put in specific elements: 
 
-1. beacon
-2. probe response but a : the
-3. action frame (specific frame can also be used to report information). 
+1. Beacon
+2. Probe Response
+3. Action Frame (specific frame can also be used to report information) 
 
 
 
