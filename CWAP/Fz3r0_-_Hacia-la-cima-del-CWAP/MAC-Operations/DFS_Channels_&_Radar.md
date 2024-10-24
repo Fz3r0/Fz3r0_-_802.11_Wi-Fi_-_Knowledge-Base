@@ -89,7 +89,36 @@ There are 2 main types of Radars:
 1. `Fixed`: Often **civilian airport** or **military base**, but also **weather radars**
 2. `Mobile`: Ships 
 
+![image](https://github.com/user-attachments/assets/beedc97d-d948-4ca8-b0ab-02993731e51e)
+
+### Radars: `Weather Signature` VS `Doppler Radar + Wi-Fi Interference`
+
+The next screenshoot is from a typical weather Doppler Radar signature, it could be rain, snow etc. Meteorological Institutions are using these RADARs to detect atmospheric events in an area. So, for the below image, we can see some rain. This is a regular output for a rainy day(s):
+
+![image](https://github.com/user-attachments/assets/6d8ebfac-fd1b-4ac8-9e24-b95bbef274a1)
+
+![image](https://github.com/user-attachments/assets/df80aa0d-fdd7-496d-ba59-42cc90eb817f)
+
+
+However, RADARs are using very very high gain antennas and they can pick up your very weak WiFi transmission. So, if not DFS rules are used, literally "blinds" the RADAR and it cannot see the atmosphere, it cannot work as expected.
+
+In the next picture some "unnatural straight lines" are seen, that's 802.11 Wi-Fi signal without using DFS rules and "blinding" the RADAR:
+
+![image](https://github.com/user-attachments/assets/7c5274bb-66b5-4694-b00e-221b2a2fe5bd)
+
+![image](https://github.com/user-attachments/assets/e5ceb6d6-c752-43a8-ab50-cfc592ccd49f)
+
+![image](https://github.com/user-attachments/assets/a6c4fa0d-bc83-4fe1-aaf0-34e9b0156266)
+
+
 ### Radars: `How Radars and DFS work?`
+
+**Radar typical operation:**
+
+1. Radar measures the distance to the target from the time of arrival of the scattered pulse.
+2. When it receives a signal from a device sending a continuous wave (CW), such as telecommunication links, we see a line oriented radially toward the center of the radar image.
+3. If the interfering transmitter is near the radar, we see the disturbance in a sector that can be as much as several tens of degrees wide _(eg. Wi-Fi lines or real weather lines in the last pictures)_.
+
 
 1. A Radar-STA will transmit a set of powerful pulses periodically and observe the reflections.
 2. Because the energy reflected back to the radar is much weaker than the original signal, the radar has to transmit a very powerful signal.
@@ -202,7 +231,8 @@ y on the shoulders of the AP. Certain channels like 120,124 and 128 have specifi
 
 # Resources
 
-
+- https://journals.ametsoc.org/view/journals/bams/97/7/bams-d-15-00048.1.xml
+- https://www.etsi.org/deliver/etsi_en/301800_301899/301893/01.08.01_60/en_301893v010801p.pdf
 - https://mrncciew.com/2014/10/29/cwap-channel-switch-announcement/
 - https://mrncciew.com/2014/10/09/802-11-mgmt-action-frames/
 - https://community.cisco.com/t5/wireless-mobility-knowledge-base/tpc-and-dfs-overview/ta-p/3110379
@@ -210,6 +240,8 @@ y on the shoulders of the AP. Certain channels like 120,124 and 128 have specifi
 - https://en.wikipedia.org/wiki/Dynamic_frequency_selection
 - https://en.wikipedia.org/wiki/Power_control#Transmit_Power_Control
 - https://www.youtube.com/watch?v=1x8odxiswz8
+- https://oguzhaneren.com/2017/12/08/what-are-the-dfs-channels-and-how-are-they-dealing-with-radar-systems/
+- https://www.researchgate.net/profile/Carmine-Massarelli/publication/358307051/figure/fig1/AS:1119418167898112@1643901497400/Weather-radar-principle-of-function-Weather-radar-image-reworked-from-source-7_Q320.jpg
 
 
 
