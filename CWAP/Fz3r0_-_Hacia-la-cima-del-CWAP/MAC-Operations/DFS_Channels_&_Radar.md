@@ -95,14 +95,22 @@ There are 2 main types of Radars:
 
 The next screenshoot is from a typical weather Doppler Radar signature, it could be rain, snow etc. Meteorological Institutions are using these RADARs to detect atmospheric events in an area. So, for the below image, we can see some rain. This is a regular output for a rainy day(s):
 
+![image](https://github.com/user-attachments/assets/288352d5-8e95-44c5-8a14-8ec490c841dc)
+
+
 ![image](https://github.com/user-attachments/assets/6d8ebfac-fd1b-4ac8-9e24-b95bbef274a1)
 
 ![image](https://github.com/user-attachments/assets/df80aa0d-fdd7-496d-ba59-42cc90eb817f)
+
+![image](https://github.com/user-attachments/assets/26ab851f-c4e1-48eb-8deb-d3ef4e17d06e)
 
 
 However, RADARs are using very very high gain antennas and they can pick up your very weak WiFi transmission. So, if not DFS rules are used, literally "blinds" the RADAR and it cannot see the atmosphere, it cannot work as expected.
 
 In the next picture some "unnatural straight lines" are seen, that's 802.11 Wi-Fi signal without using DFS rules and "blinding" the RADAR:
+
+![image](https://github.com/user-attachments/assets/738d0c96-dec6-41d4-9deb-dc2f93f04df5)
+
 
 ![image](https://github.com/user-attachments/assets/7c5274bb-66b5-4694-b00e-221b2a2fe5bd)
 
