@@ -59,11 +59,26 @@ Important background concepts and terminologies to understand `DFS`:
 | **`Master Device`**                | A device that **can detect** radar. (Typically an **AP**)                                                                                                                                                                                                | **AP**                        |
 | **`Client Device`**                | A device that **cannot detect** radar. Instead, it relies on seeing valid data from the master device’s beacon frame.  (Typically a client **STA**)                                                                                                                             | **STA**                       |
 
-## DFS: DFS Channels
+## DFS: `5 GHz - UNNI & DFS Channels`
 
+The 5 GHz band is a frequency range used for wireless communication, particularly in 802.11  (Wi-Fi) networks, offering multiple channels designated as **UNII channels (Unlicensed National Information Infrastructure)** for different uses. 
 
+Introduced in the late 1990s and early 2000s, these channels provide wider bandwidth and less interference compared to the congested 2.4 GHz band. 
+
+- However, **certain DFS (Dynamic Frequency Selection) channels within the UNII-2 Extended and UNII-2 bands are subject to radar detection due to their proximity to frequencies used by weather and aviation radars.**
+
+These channels require devices to monitor for radar signals before transmitting to avoid interference, which can disrupt radar operations and compromise safety. The regulations were established to ensure that wireless devices could coexist with these critical radar systems.
 
 ![image](https://github.com/user-attachments/assets/b725da15-06a5-4688-ace4-fafe6cee9a15)
+
+| **UNII Band**            | **Channels**                                                                                                                                                     | **Frequency**                | **Bandwidth (MHz)**     | **DFS**             | **Usage**                                |
+|--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|-------------------------|---------------------|------------------------------------------|
+| **UNII-1**               | 36, 40, 44, 48                                                                                                                                                  | 5.150 GHz – 5.250 GHz         | 20/40/80                | No                  | Indoor, no DFS requirements              |
+| **UNII-2**               | 52, 56, 60, 64                                                                                                                                                  | 5.250 GHz – 5.350 GHz         | 20/40/80                | Yes                 | Indoor/Outdoor with DFS requirements     |
+| **UNII-2 Extended**      | 100, 104, 108, 112, 116, 120, 124, 128, 132, 136, 140, 144                                                                                                      | 5.470 GHz – 5.725 GHz         | 20/40/80/160            | Yes                 | Indoor/Outdoor with DFS requirements     |
+| **UNII-2 Extended:** <br>**DFS Radar Channels**   | 116, **120, 124, 128**, 132                                                                                                                                         | 5.580 GHz – 5.660 GHz         | 20/40/80                | Yes (High interference) | Prone to meteorological radar interference |
+| **UNII-3**               | 149, 153, 157, 161, 165                                                                                                                                         | 5.725 GHz – 5.850 GHz         | 20/40/80                | No                  | Outdoor/Indoor, no DFS requirements      |
+
 
 ## DFS: `Radars`
 
