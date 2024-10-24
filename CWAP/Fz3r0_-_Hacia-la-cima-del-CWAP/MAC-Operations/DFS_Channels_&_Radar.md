@@ -67,6 +67,19 @@ AP monitors the operating channel for the presence of **ISM Radar**
 
 - `In-Service Monitor` = **`Continously`**
 
+## Background Concepts: `Master Device`
+
+A device that **can detect a radar**, typically an **AP**
+
+- `Master Device` = **`AP`**
+
+## Background Concepts: `Client Device`
+
+A device that **CANNOT detect a radar** (typically a client **STA**), instead it relies on **seeing valid data** on a channel from a master device's (AP) **Beacon** frame.
+
+- `Client Device` = **`STA`**
+
+
 
 
 
@@ -85,7 +98,22 @@ DFS is all about radar `detection` and `avoidance`. It is designed to prevent el
 
 It also to provide on aggregate a near-uniform loading of the spectrum (uniform spreading).
 
-`Radar` stands for `Radio detection and ranging`. In the past, the radars used to operate in frequency ranges where they were the only type of device operating there. **Now that regulatory agencies are opening those frequencies for other uses (like wireless LAN), there is a need for those devices to operate in accordance of the radars.** _(802.11a->DFS)_
+## DFS: `Radars`
+
+**Radar stands for **RAdio Detection And Ranging**. In the past, the Radars used to operate in frequency ranges where they were the only type of device operating there. **Now that regulatory agencies are opening those frequencies for other uses (like wireless LAN), there is a need for those devices to operate in accordance of the radars.** _(802.11a->DFS)_
+
+There are 2 main types of Radars:
+
+1. `Fixed`: Often **civilian airport** or **military base**, but also **weather radars**
+2. `Mobile`: Ships 
+
+### How it works
+
+1. A Radar-STA will transmit a set of powerful pulses periodically and observe the reflections.
+2. Because the energy reflected back to the radar is much weaker than the original signal, the radar has to transmit a very powerful signal.
+3. Also, because the energy reflected back to the radar is very weak, it could confuse it with other radio signals (like a wireless LAN to give an example).
+
+
 
 **The general behavior of a device complying with the DFS protocol is:**
 
@@ -106,18 +134,7 @@ DFS operations use different ways of exchanging information between STAs. Inform
 2. probe response but a : the
 3. action frame (specific frame can also be used to report information). 
 
-## DFS: `Radars`
 
-There are 2 main types of Radars:
-
-1. fixed (often civilian airport or military base, but also weather radar)
-2. mobile (ships). 
-
-### How it works
-
-1. A Radar-STA will transmit a set of powerful pulses periodically and observe the reflections.
-2. Because the energy reflected back to the radar is much weaker than the original signal, the radar has to transmit a very powerful signal.
-3. Also, because the energy reflected back to the radar is very weak, it could confuse it with other radio signals (like a wireless LAN to give an example).
 
 ## DFS: 5 5ghz spectrum & radars
 
