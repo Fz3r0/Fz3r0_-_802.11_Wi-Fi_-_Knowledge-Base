@@ -41,7 +41,37 @@ CAC (Channel Availability Check) is the time for which the system must monitor a
 
 The time taken by the system to vacuate a channel, it's measured from the end of the radar burst to the end of the data transmission on that channel. 
 
-- `DFS channel move time` = _max:_**`10 seconds`**
+- `Channel move time` = _max:_**`10 seconds`**
+
+## Background Concepts: `NOP (Non-Ocupancy Period)`
+
+The period for which a radar detected channel should not be used
+
+-  `NOP (Non-Ocupancy Period)` = _min:_**`30 minutes`**
+
+## Background Concepts: `NOL (Non-Ocupancy List)`
+
+A list of channels, the AP has seen radar presence within 30 minutes per timer. 
+
+-  `NOL (Non-Ocupancy List)` = _within per radar/timer:_**`last 30 minutes`**
+
+## Background Concepts: `Channel Closing Time`
+
+The time in which the AP has to cease data transmission in the channel.
+
+- `Channel Closing Time` = **`1 second`**
+
+## Background Concepts: `In-Service Monitor`
+
+AP monitors the operating channel for the presence of **ISM Radar**
+
+- `In-Service Monitor` = **`Continously`**
+
+
+
+
+The period
+
 
 # 802.11h - `DFS (Dynamic Frequency Selection)`
 
@@ -176,6 +206,8 @@ y on the shoulders of the AP. Certain channels like 120,124 and 128 have specifi
 # Resources
 
 
+- https://mrncciew.com/2014/10/29/cwap-channel-switch-announcement/
+- https://mrncciew.com/2014/10/09/802-11-mgmt-action-frames/
 - https://community.cisco.com/t5/wireless-mobility-knowledge-base/tpc-and-dfs-overview/ta-p/3110379
 - https://en.wikipedia.org/wiki/IEEE_802.11h-2003
 - https://en.wikipedia.org/wiki/Dynamic_frequency_selection
