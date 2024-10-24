@@ -30,6 +30,18 @@
 
 Important background concepts and terminologies to understand before `DFS` and `TPC` topics are:
 
+| **Concept**                     | **Description**                                                                                                                                                                                                                                  | 
+|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **CAC (Channel Availability Check)** | The time for which the system must monitor a channel for radar prior to any data being transmitted over the channel.                                                                                                                           | 
+| **Channel Move Time**            | The time taken by the system to vacate a channel. It's measured from the end of the radar burst to the end of the data transmission on that channel.                                                                                              | 
+| **NOP (Non-Occupancy Period)**   | The period for which a radar-detected channel should not be used.                                                                                                                                                                               | 
+| **NOL (Non-Occupancy List)**     | A list of channels where the AP has detected radar presence within the last 30 minutes per timer.                                                                                                                                               | 
+| **Channel Closing Time**         | The time in which the AP must cease data transmission on the channel.                                                                                                                                                                           | 
+| **In-Service Monitor**           | AP monitors the operating channel for the presence of ISM radar.                                                                                                                                                                                | 
+| **Master Device**                | A device that can detect radar, typically an AP.                                                                                                                                                                                                | 
+| **Client Device**                | A device that cannot detect radar. Instead, it relies on seeing valid data from the master device’s beacon frame.                                                                                                                               | 
+
+
 ## Background Concepts: `CAC (Channel Availability Check)`
 
 CAC (Channel Availability Check) is the time for which the system must monitor a channel for radar prior to any data being transmitted over the channel. 
@@ -83,7 +95,7 @@ A device that **CANNOT detect a radar** (typically a client **STA**), instead it
 
 
 
-The period
+
 
 
 # 802.11h - `DFS (Dynamic Frequency Selection)`
