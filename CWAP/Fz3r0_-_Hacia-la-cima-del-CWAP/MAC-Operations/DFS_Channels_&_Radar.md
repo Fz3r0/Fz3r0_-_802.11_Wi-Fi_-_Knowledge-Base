@@ -129,6 +129,8 @@ In the next picture some "unnatural straight lines" are seen, that's 802.11 Wi-F
 ![image](https://github.com/user-attachments/assets/a6c4fa0d-bc83-4fe1-aaf0-34e9b0156266)
 
 
+
+
 ### Radars: `How Radars and DFS work?`
 
 **Radar typical operation:**
@@ -164,6 +166,21 @@ DFS operations use different ways of exchanging information between STAs. Inform
 
 
 ## DFS: 5 5ghz spectrum & radars
+
+1.
+
+![image](https://github.com/user-attachments/assets/0557d887-cf2a-4558-a3a2-dd7b77140599)
+
+2.
+
+![image](https://github.com/user-attachments/assets/a2da7f0a-63a8-4081-a4a0-3f9853dbc866)
+
+![image](https://github.com/user-attachments/assets/4a4ccf8b-11c8-49fd-89c6-6448fe9fb77d)
+
+3.
+
+![image](https://github.com/user-attachments/assets/94388a6c-ede1-4cd6-b61c-38c69276e3c5)
+
 
 
 
