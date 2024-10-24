@@ -80,6 +80,13 @@ These channels require devices to monitor for radar signals before transmitting 
 | **UNII-3**               | 149, 153, 157, 161, 165                                                                                                                                         | 5.725 GHz – 5.850 GHz         | 20/40/80                | No                  | Outdoor/Indoor, no DFS requirements      |
 
 
+![image](https://github.com/user-attachments/assets/3d937af5-aeb4-4162-ba1c-96cd57094c90)
+
+![image](https://github.com/user-attachments/assets/59057ed3-8892-4628-a3e9-a35e5d427b58)
+
+![image](https://github.com/user-attachments/assets/9b48da5a-a9f6-40bb-b30d-6203c01cf432)
+
+
 ## DFS: `Radars`
 
 **Radar stands for **RAdio Detection And Ranging**. In the past, the Radars used to operate in frequency ranges where they were the only type of device operating there. **Now that regulatory agencies are opening those frequencies for other uses (like wireless LAN), there is a need for those devices to operate in accordance of the radars.** _(802.11a->DFS)_
