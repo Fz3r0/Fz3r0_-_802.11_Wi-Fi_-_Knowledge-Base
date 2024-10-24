@@ -81,20 +81,12 @@ These channels require devices to monitor for radar signals before transmitting 
 
 - **ALL** the channels in the `UNII-2a` & `UNII-2c` bands are known as `DFS Channels`.
 - WLAN radios operating in these 5 GHz bands **must support DFS**, to protect WLAN communications from interfering with military or weather radar systems.
-- 
+- If **radar pulses** are detected in **ANY of the DFS channels**, 802.11 APs and client STAs are not allowed to transmit on the same chanel. <br><br>
     - **`Good Practice`**: In most cases, **DFS channels should be usen**. Including DFS channels in the channel reuse pattern will help to **reduce the CCI** between same channels than can "hear" each other.
 
 **`Important`**: Most current-day client devices are being certified to transmit on the DFS channels, and the inclusion of DFS channels in channel reuse patterns is becoming more commonplace. **There are still 802.11 devices out in the wild that cant't "hear" DFS channels tho!!!**
 
 ![efa44f3a40ebb8ae0e1215d05428031a_Design_Overview_5-6-removebg-preview](https://github.com/user-attachments/assets/7e288269-3b75-4e20-b2b8-5c00da4d5742)
-
-
-![image](https://github.com/user-attachments/assets/3d937af5-aeb4-4162-ba1c-96cd57094c90)
-
-![image](https://github.com/user-attachments/assets/59057ed3-8892-4628-a3e9-a35e5d427b58)
-
-![image](https://github.com/user-attachments/assets/9b48da5a-a9f6-40bb-b30d-6203c01cf432)
-
 
 ## DFS: `Radars`
 
