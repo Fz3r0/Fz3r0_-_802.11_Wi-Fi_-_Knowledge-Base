@@ -89,11 +89,12 @@ There are 2 main types of Radars:
 1. `Fixed`: Often **civilian airport** or **military base**, but also **weather radars**
 2. `Mobile`: Ships 
 
-![image](https://github.com/user-attachments/assets/beedc97d-d948-4ca8-b0ab-02993731e51e)
-
 ### Radars: `Weather Signature` VS `Doppler Radar + Wi-Fi Interference`
 
 The next screenshoot is from a typical weather Doppler Radar signature, it could be rain, snow etc. Meteorological Institutions are using these RADARs to detect atmospheric events in an area. So, for the below image, we can see some rain. This is a regular output for a rainy day(s):
+
+![image](https://github.com/user-attachments/assets/204c1b5e-66ac-41b7-94e3-a4949a15948d)
+
 
 ![image](https://github.com/user-attachments/assets/288352d5-8e95-44c5-8a14-8ec490c841dc)
 
