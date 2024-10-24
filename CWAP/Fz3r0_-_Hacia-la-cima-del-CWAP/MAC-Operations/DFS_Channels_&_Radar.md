@@ -96,7 +96,7 @@ The next screenshoot is from a typical weather Doppler Radar signature, it could
 ![image](https://github.com/user-attachments/assets/204c1b5e-66ac-41b7-94e3-a4949a15948d)
 
 
-![image](https://github.com/user-attachments/assets/288352d5-8e95-44c5-8a14-8ec490c841dc)
+
 
 
 ![image](https://github.com/user-attachments/assets/6d8ebfac-fd1b-4ac8-9e24-b95bbef274a1)
@@ -109,6 +109,8 @@ The next screenshoot is from a typical weather Doppler Radar signature, it could
 However, RADARs are using very very high gain antennas and they can pick up your very weak WiFi transmission. So, if not DFS rules are used, literally "blinds" the RADAR and it cannot see the atmosphere, it cannot work as expected.
 
 In the next picture some "unnatural straight lines" are seen, that's 802.11 Wi-Fi signal without using DFS rules and "blinding" the RADAR:
+
+![image](https://github.com/user-attachments/assets/288352d5-8e95-44c5-8a14-8ec490c841dc)
 
 ![image](https://github.com/user-attachments/assets/738d0c96-dec6-41d4-9deb-dc2f93f04df5)
 
