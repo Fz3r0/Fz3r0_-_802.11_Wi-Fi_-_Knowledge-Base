@@ -265,6 +265,7 @@ nowday is used for toher things that interfere with satellites
 - https://www.youtube.com/watch?v=1x8odxiswz8
 - https://oguzhaneren.com/2017/12/08/what-are-the-dfs-channels-and-how-are-they-dealing-with-radar-systems/
 - https://www.researchgate.net/profile/Carmine-Massarelli/publication/358307051/figure/fig1/AS:1119418167898112@1643901497400/Weather-radar-principle-of-function-Weather-radar-image-reworked-from-source-7_Q320.jpg
+- https://www.element.com/connected-technologies/dynamic-frequency-selection-dfs-testing-certification
 
 
 
