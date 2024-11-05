@@ -18,6 +18,8 @@ Null data packet (NDP) announcement frames notify the recipient that an NDP will
 ![image](https://github.com/user-attachments/assets/320d9c8d-d3e6-43cf-9e0a-45c903814c69)
 
 
+### Link Adaption Control Subfield Format:
+
 ![image](https://github.com/user-attachments/assets/db71346c-aade-4a1f-97e5-31bc5f9f4763)
 
 
