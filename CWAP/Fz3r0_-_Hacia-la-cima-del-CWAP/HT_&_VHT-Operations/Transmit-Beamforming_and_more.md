@@ -36,6 +36,9 @@ The figure below shows the frame exchange process. The beamformer (AP) will requ
 # Key concepts
 
 - When looking at an 802.11n packet decode in a protocol analyzer, you notice the NDP Announcement subfield set: An **NDP will follow the current frame but will not be seen by a protocol analyzer.**
+- During a VHT Transmit Beamforming sounding exchange, the beamformee transmits a Compressed Beamforming frame to the beamformer: **Feedback Matrix is communicated within this Compressed Beamforming frame**
+
+
 
 # Resources
 
