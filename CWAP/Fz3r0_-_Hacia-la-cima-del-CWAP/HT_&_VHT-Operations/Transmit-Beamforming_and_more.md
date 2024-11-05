@@ -9,7 +9,9 @@ Transmit beamforming got introduced in 802.11n, which has two methods Implicit a
 
 ## VHT/HE NDP Announcement
 
-Null data packet (NDP) announcement frames notify the recipient that an NDP will follow. The figure below shows the frame exchange process. The beamformer (AP) will request that the station send an NDP sounding frame by setting the training request (TRQ) value in the Link Adaption Control subfield of the HT Control Field. The information gathered from the sounding frame can be used to calculate a steering matrix for the purpose of using beamforming for future transmissions to the same station.
+- Null data packet (NDP) announcement frames **notify the recipient that an NDP will follow**.
+
+The figure below shows the frame exchange process. The beamformer (AP) will request that the station send an NDP sounding frame by setting the training request (TRQ) value in the Link Adaption Control subfield of the HT Control Field. The information gathered from the sounding frame can be used to calculate a steering matrix for the purpose of using beamforming for future transmissions to the same station.
 
 
 ### NDP Announcement Frame Exchange:
