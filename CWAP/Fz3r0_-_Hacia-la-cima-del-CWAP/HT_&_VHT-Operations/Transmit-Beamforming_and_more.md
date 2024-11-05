@@ -4,6 +4,25 @@
 Transmit beamforming got introduced in 802.11n, which has two methods Implicit and Explicit beamforming.
 
 
+Can be used when there are more transmitting antennas than there are spatial data streams.
+A digital signal processing technology on the transmitting device that duplicates the transmitted signal on more than one antenna to optimize a combined signal at the client.
+Carefully controlling the phase of the signals transmitted from multiple antennas has the effect of improving gain, thus emulating a higher-gain unidirectional antenna.
+Is adjusting the phase of the transmissions.
+Result in greater range for individual clients communicating with an access point.
+When utilizing transmit beamforming the transmitter will not be sending multiple unique spatial streams but will instead be sending multiple streams of the same data with the phase adjusted for each RF signal.
+Types of transmit beamforming:
+
+Implicit TxBF: Uses an implicit channel-sounding process to optimize the phase differentials between the transmit chains.
+Explicit TxBF: Requires feedback from the stations in order to determine the amount of phase-shift required for each signal.
+The 802.11n amendment defined transmit beamforming:
+
+Optional PHY capability
+Can use Implicit TxBF or Explicit TxBF 
+The 802.11ac amendment defined transmit beamforming:
+
+Uses Explicit TxBF
+requiring the use of channel measurement frames
+both the transmitter and the receiver must support beamforming.
 
 ## 
 
@@ -42,5 +61,8 @@ The figure below shows the frame exchange process. The beamformer (AP) will requ
 
 # Resources
 
+- https://dot11ap.wordpress.com/cwna/radio-frequency-rf-technologies/transmit-beam-forming-txbf-as-defined-in-the-802-11-standard/
 - https://www.wirelessnewbies.com/post/transmit-beamforming
 - https://howiwifi.com/2020/07/13/802-11-frame-types-and-formats/
+- https://www.oreilly.com/library/view/80211ac-a-survival/9781449357702/ch04.html
+- https://www.mathworks.com/help/wlan/ug/802-11ac-transmit-beamforming.html
