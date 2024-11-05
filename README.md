@@ -6319,6 +6319,8 @@ One very important thing in Wireless and Wired traffic are voice calls quality. 
 
 ## Measuring Voice QoS
 
+- **Each direction of a call is carried in a separate RTP session and therefore may have different MOS scores.**
+
 On unencrypted networks or on networks where you can enter a preshared key to decrypt the packets, you are able to analyze the call and signaling information of your VoIP conversations. Some network analyzers include special VoIP analysis features:
 
 - Call Quality matrix (MOS & R-Factor): A table or matrix that evaluates the quality of VoIP calls using metrics such as Mean Opinion Score (MOS) and R-Factor. MOS is a numerical measure of the perceived quality of voice communication, while R-Factor is a rating used to assess the quality and performance of VoIP calls. <br><br>
