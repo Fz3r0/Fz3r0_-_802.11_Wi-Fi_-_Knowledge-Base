@@ -1,4 +1,7 @@
 
+# Transmit Beamforming
+
+Transmit beamforming got introduced in 802.11n, which has two methods Implicit and Explicit beamforming.
 
 
 
@@ -30,4 +33,5 @@ Null data packet (NDP) announcement frames notify the recipient that an NDP will
 
 # Resources
 
+- https://www.wirelessnewbies.com/post/transmit-beamforming
 - https://howiwifi.com/2020/07/13/802-11-frame-types-and-formats/
