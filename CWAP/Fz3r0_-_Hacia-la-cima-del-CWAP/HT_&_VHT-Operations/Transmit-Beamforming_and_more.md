@@ -33,6 +33,10 @@ The figure below shows the frame exchange process. The beamformer (AP) will requ
 ![image](https://github.com/user-attachments/assets/16b2bb09-f5ff-47ae-ae99-f9b35286e11b)
 
 
+# Key concepts
+
+- When looking at an 802.11n packet decode in a protocol analyzer, you notice the NDP Announcement subfield set: An **NDP will follow the current frame but will not be seen by a protocol analyzer.**
+
 # Resources
 
 - https://www.wirelessnewbies.com/post/transmit-beamforming
