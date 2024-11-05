@@ -61,6 +61,8 @@ The figure below shows the frame exchange process. The beamformer (AP) will requ
 
 # Resources
 
+- https://wificoops.com/2018/01/14/beam-me-up-scotty/
+- https://community.fs.com/blog/beamforming.html
 - https://dot11ap.wordpress.com/cwna/radio-frequency-rf-technologies/transmit-beam-forming-txbf-as-defined-in-the-802-11-standard/
 - https://www.wirelessnewbies.com/post/transmit-beamforming
 - https://howiwifi.com/2020/07/13/802-11-frame-types-and-formats/
