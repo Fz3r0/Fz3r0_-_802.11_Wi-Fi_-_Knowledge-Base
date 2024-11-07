@@ -1,3 +1,26 @@
+
+
+### Encapuslation: `MTU`
+
+- [Maximum transmission unit (MTU) :: All networks MTU table](https://en.wikipedia.org/wiki/Maximum_transmission_unit) _`wikipedia`_
+
+In computer networking, the maximum transmission unit (MTU) is the size of the largest protocol data unit (PDU) that can be communicated in a single network layer transaction.  The MTU relates to, but is not identical to the maximum frame size that can be transported on the data link layer, e.g., Ethernet frame.
+
+- Larger MTU is associated with reduced overhead. Smaller MTU values can reduce network delay. In many cases, MTU is dependent on underlying network capabilities and must be adjusted manually or automatically so as to not exceed these capabilities. MTU parameters may appear in association with a communications interface or standard. Some systems may decide MTU at connect time, e.g. using Path MTU Discovery.
+
+### MTU: MSDU (IEEE 802.11 Wi-Fi (WLAN))
+
+- Maximum MSDU size = `2304` _(Before encryption || When a packet is passed down from the Network layer to the Data-Link layer for transmission)_
+- WEP will add 8 bytes = `2312`
+- WPA-TKIP will add 20 bytes = `2324`
+- WPA2-CCMP will add 16 bytes = `2320`
+
+_See also Frame aggregation mechanisms in 802.11n._
+
+
+
+
+
 # 4-Way-Handshake
 
 - The 4-Way-Handshake is the process of exchanging 4 messages between an access point (authenticator) and the client device (supplicant) to generate some encryption keys which can be used to encrypt actual data sent over Wireless medium.
