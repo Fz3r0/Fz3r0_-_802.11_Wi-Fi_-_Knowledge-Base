@@ -1,5 +1,5 @@
 - The 4-way auhtentication process has a duration between 30 and 45 ms from state machine 1 to 4.
-- 802.1X/EAP full authentication can take from 70ms to even 300ms or more. 
+- 802.1X/EAP full authentication, only EAP by itself can take from 70ms to even 300ms or more depending on the Server, route, etc. 
 
 ### Encapuslation: `MTU`
 
