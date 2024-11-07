@@ -1,4 +1,4 @@
-
+The 4-way auhtentication process has a duration between 30 and 45 ms from state machine 1 to 4. 
 
 ### Encapuslation: `MTU`
 
