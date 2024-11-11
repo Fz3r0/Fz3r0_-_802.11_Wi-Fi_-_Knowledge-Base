@@ -25,10 +25,11 @@
 
 ## QoS & EDCA
 
-- AIFS & CW
+### AIFS & CW
 
 ![image](https://github.com/user-attachments/assets/789900e1-0a3b-4781-ad52-bf420a2550af)
 
+- When an 802.11n station begins the arbitration process after a failed frame transmission = `AIFS`
 
 # Security
 
