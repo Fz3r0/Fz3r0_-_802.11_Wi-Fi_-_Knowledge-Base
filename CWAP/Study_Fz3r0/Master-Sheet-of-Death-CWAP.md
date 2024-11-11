@@ -41,3 +41,18 @@
 | **WEP**                                              | 2312               | 8                 |
 | **WPA-TKIP**                                          | 2324               | 20                |
 | **WPA2-CCMP**                                         | 2320               | 16                |
+
+
+
+
+
+
+
+
+
+
+## Protection Mechanisms
+
+### ERP
+
+- 802.11/802.11b station `associated` to the AP = `NonERP Present`
