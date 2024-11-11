@@ -1,6 +1,17 @@
 
 
 
+# Physical Layer
+
+### Guard Interval
+
+| **Wi-Fi Standard** | **Guard Intervals (GIs)**                          | **Explanation**                                                                                   |
+|--------------------|----------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| **802.11n**        | 400 ns (short), 800 ns (long)                      | The 800 ns GI was chosen to accommodate the maximum multipath echo time in indoor environments.    |
+| **802.11ac**       | 400 ns (short), 800 ns (long)                      | Same as 802.11n, offering 400 ns for short and 800 ns for long to optimize performance.            |
+| **802.11ax**       | 800 ns (normal), 1600 ns (double), 3200 ns (quadruple) | Supports multiple GIs to handle higher frequencies and minimize interference in more complex environments. |
+
+
 ## Channels & Spectrum
 
 ### 2.4 GHz
