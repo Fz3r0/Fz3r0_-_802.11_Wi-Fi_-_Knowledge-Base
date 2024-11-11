@@ -17,6 +17,14 @@
 - VoWiFi Phone
 
 
+
+
+
+
+
+
+
+
 # Physical Layer
 
 ### Guard Interval
@@ -41,11 +49,30 @@
 
 
 
+
+
+
+
+
+
+
+
+
 ## Addresses
 
 - https://excalidraw.com/#room=5e34d48995724e4effe4,bOzzxMz520Zl-6fU124PjA
 
 ![image](https://github.com/user-attachments/assets/668f8296-5831-4e62-9ed7-3a94747b2c9f)
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -78,8 +105,39 @@
 
 
 
+
+
+
+
+
+
+
+
+
 ## Protection Mechanisms
 
 ### ERP
 
 - 802.11/802.11b station `associated` to the AP = `NonERP Present`
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Interference
+
+### Retransmission can caused by:
+
+- RF interference	
+- Low SNR
+- Multipath
+- Adjacent cell interference (ACI)
+- Co-channel interference (CCI)
