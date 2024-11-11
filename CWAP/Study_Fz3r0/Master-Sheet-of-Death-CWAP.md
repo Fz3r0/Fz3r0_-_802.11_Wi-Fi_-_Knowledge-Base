@@ -18,7 +18,8 @@
 
 - https://excalidraw.com/#room=5e34d48995724e4effe4,bOzzxMz520Zl-6fU124PjA
 
-![image](https://github.com/user-attachments/assets/21d5b228-eac4-4233-8619-77cb60ef6eef)
+![image](https://github.com/user-attachments/assets/668f8296-5831-4e62-9ed7-3a94747b2c9f)
+
 
 
 
