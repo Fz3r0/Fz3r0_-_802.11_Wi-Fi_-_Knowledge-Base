@@ -141,3 +141,9 @@
 - Multipath
 - Adjacent cell interference (ACI)
 - Co-channel interference (CCI)
+
+### Effects of retransmission:
+
+- Excessive MAC sublayer overhead
+- Latency
+- Jitter
