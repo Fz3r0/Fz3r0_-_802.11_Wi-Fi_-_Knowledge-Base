@@ -1,6 +1,17 @@
 
 
 
+## Channels & Spectrum
+
+### 2.4 GHz
+
+![image](https://github.com/user-attachments/assets/96b5c4d4-3661-4e7d-a803-2c16e23d9642)
+
+### 5 GHz
+
+![image](https://github.com/user-attachments/assets/d7ee7e60-fe4c-4042-b521-3ce9b943e67e)
+
+
 
 
 ## Addresses
