@@ -1,5 +1,21 @@
 
 
+# Architecture
+
+## DS Devices
+
+- WLAN controller	
+- Mesh Access point
+- Autonomous access point
+- Switch
+
+
+## STA Devices
+
+- Smartphone
+- Laptop client radio
+- VoWiFi Phone
+
 
 # Physical Layer
 
