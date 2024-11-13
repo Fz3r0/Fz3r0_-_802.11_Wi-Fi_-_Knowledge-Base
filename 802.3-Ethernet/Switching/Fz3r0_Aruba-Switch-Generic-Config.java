@@ -127,6 +127,8 @@ interface 1/1/1-1/1/52
 !
 ! ## NOTE: IN CASE OF CONFIGURING INDIVIDUAL INTERFACES:
 !
+! ## TRUNK / TAGGED
+!
 !interface 1/1/1
 !    no shutdown
 !    vlan trunk native 1
@@ -137,6 +139,18 @@ interface 1/1/1-1/1/52
 !    vlan trunk allowed 10,20,30,40,50,60
 !etc... etc.. etc...
 !
+! ## ACCESS / UNTAGGED
+!
+!interface 1/1/3
+!    no shutdown
+!    no routing  
+!    vlan access 50
+!interface 1/1/4
+!    no shutdown
+!    no routing  
+!    vlan access 60
+!etc... etc.. etc...
+!
 ! ###################################################
 ! ### MANAGEMENT VLAN & IP (ip dhcp is ignored when static ip is configured)
 ! ###################################################
@@ -144,6 +158,8 @@ interface 1/1/1-1/1/52
 interface vlan 1
 ! 
 ip address 10.10.0.10/24
+!
+!  -----------------------------------------------------------------------------
 !
 ! ###################################################
 ! ### SAVE CONFIGS:
@@ -155,5 +171,3 @@ exit
 !
 !
 
-
-    
