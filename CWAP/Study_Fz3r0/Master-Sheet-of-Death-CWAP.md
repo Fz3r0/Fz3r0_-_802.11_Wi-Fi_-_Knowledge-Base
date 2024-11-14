@@ -46,9 +46,36 @@
 
 ![image](https://github.com/user-attachments/assets/d7ee7e60-fe4c-4042-b521-3ce9b943e67e)
 
+## OFDM Subcarriers
+
+### Subcarrier Arrangement in 802.11n/ac 20MHz Channel
+
+![image](https://github.com/user-attachments/assets/73b89035-dc47-4206-8f89-313a5c9a9ad8)
+
+### Subcarrier Arrangement in 802.11n/ac 40MHz Channel
+
+![image](https://github.com/user-attachments/assets/97692cb5-115d-450d-833d-bb61d54773a2)
+
+### Subcarrier Arrangement in 802.11ac 80MHz Channel
+
+![image](https://github.com/user-attachments/assets/14f9ab23-565b-4e79-9264-411880a5f4a7)
+
+### Subcarrier Arrangement in 802.11ac 160MHz Channel 
+
+![image](https://github.com/user-attachments/assets/c8c96917-3045-4e36-95fd-2ae39a9b1e3e)
 
 
+### 802.11ax OFDMA Subcarriers
 
+https://www.cleartosend.net/802-11ax-ofdma-subcarriers/
+
+- Full:
+
+![image](https://github.com/user-attachments/assets/692a3207-ff6e-45a3-9ef0-c278cd762321)
+
+- Zoom:
+  
+![image](https://github.com/user-attachments/assets/1af41848-1f31-49ef-9615-3787227669dd)
 
 
 
