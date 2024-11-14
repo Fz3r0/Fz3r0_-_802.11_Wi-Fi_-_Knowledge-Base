@@ -3516,7 +3516,13 @@ _802.11 frames are categorized into three main types: **Management, Control & Da
 - [CWNP: Basics of MAC Architecture – Part 2 of 3 :: Management, Control & Data Frames](https://www.cwnp.com/802.11-mac-series-ndash-basics-mac-architecture-ndash-part-2-3/)
 
 ## ⚙️🛜💊 802.11 MAC Frames :: `Management`
-_IEEE 802.11-2020 9.3.3 (PV0) :: Management frames are used to manage the connections and maintenance of communication between devices within a WLAN. These frames are crucial for tasks such as discovering and joining networks, authenticating devices, and maintaining network associations._ 
+_IEEE 802.11-2020 9.3.3 (PV0) ::_ 
+
+- The function of 802.11 management frames is to **manage the BSS**.
+
+Management frames are used to manage the connections and maintenance of communication between devices within a WLAN. These frames are crucial for tasks such as discovering and joining networks, authenticating devices, and maintaining network associations.
+
+A BSS (Basic Service Set) is a group of STAs (stations) that share a common SSID (Service Set Identifier) and communicate with each other through an AP (access point) or directly in an ad hoc mode. Management frames are one of the three types of 802.11 frames, along with control and data frames. Management frames are used to establish, maintain, and terminate associations between STAs and APs, as well as to advertise and discover BSSs, exchange security information, report errors, and perform other management functions.
 
 **Primary functions of Management Frames:** 
 - **`Network discovery and association`**: Frames like Beacon, Probe Request, and Probe Response are used by devices to discover networks and initiate connections. <br><br>
@@ -8109,7 +8115,7 @@ _Understanding network traffic through packet views is crucial for effective ana
 _Various time metric columns provide insights into different aspects of packet timing._
 
 - ⏳ **`Absolute time`** / **`Arrival Time`**: Display the time the packet was captured based on the system clock in the computer, this is the actual capture date and time based on the time zone of the capture device, this means, the time when the packet was captured, provides the real-world time of packet capture for example date and hour. This metric is useful for correlating captured data with real-world events and time-based troubleshooting. <br> <br>
-- ⏳ **`Delta time`**: This is the elapsed time from the previous packet to the current packet, this means, measures the time elapsed between successive packets. This metric helps in understanding the time intervals between packet transmissions, which can be useful for performance analysis. <br> <br>
+- ⏳ **`Delta time`**: Measures the time difference between two consecutive packets in a capture file. In other words, it is the elapsed time from the previous packet to the current packet. This metric helps in understanding the time intervals between packet transmissions, which can be useful for performance analysis. <br> <br>
 - ⏳ **`Relative time`**: This is the time from the first packet in a capture file, but it can be also similar to the Seconds Since Beginning of Capture option. Cumulative time from a selected packet to another selected packet, it can be used to identify how long it takes for a frame exchange to occur. Some protocol analyzer software programs make this a very simple task. This information is valuable in determining problems such as latency or contention with specific frame exchanges. (ex. in a 4-way-handshake you can select the first frame, and then look how many time does the 4th frame took)
 
 ## Frame Analysis: `Name Resolution`
