@@ -192,6 +192,7 @@ hese protocols run on top of 802.11 and enable the Hotspot 2.0 experience
 
 # Resources
 
+- https://www.linkedin.com/pulse/effortless-wi-fi-meet-80211u-hotspot-20-arun-sai-konchada-5ndec
 - https://www.netwifistore.com/HotSpot-2-0.asp
 - https://www.wi-fi.org/discover-wi-fi/passpoint
 - https://www.arubanetworks.com/techdocs/ArubaOS_80_Web_Help/Content/ArubaFrameStyles/hotspot/predepoyment_overview.htm
