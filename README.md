@@ -7616,6 +7616,9 @@ Time synchronization is essential in Wi-Fi networks to ensure reliable and error
 ## Design: `Best Practices` & `Checklists`
 - [Wi-Fi Checklists @ _WLAN Professionals_](https://wlanprofessionals.com/wi-fi-checklists/)
 - [Advanced RF Design & Troubleshooting](https://www.slideshare.net/ArubaNetworks/shanghai-breakout-advanced-rf-design-and-troubleshooting)
+- [Ekahau - 7 common network fails (image)](https://github.com/user-attachments/assets/6019df2f-187d-4d9d-b117-a523054af468)
+- [Why Most Wi-Fi Networks Fail | Matt Starling | WLPC Prague 2024](https://www.youtube.com/watch?v=Vp3rxOLOJ1I)
+
 
 ## SSID / Beacon Overhead
 
