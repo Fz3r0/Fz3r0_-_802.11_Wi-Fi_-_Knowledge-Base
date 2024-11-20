@@ -112,13 +112,14 @@ Here are some different views available in a spectrum analyzer:
 - Swept: This is the same information as the real-time FFT but often in a different view and tracked over a longer period. These views can often be configured within software to specify the length of time
 - Waterfall: The information from the swept spectrogram showing time, frequency, and power but viewed vertically.
 
-![image](https://github.com/user-attachments/assets/21a3c49a-33f2-47db-9dad-bf99953247d1)
+![image](https://github.com/user-attachments/assets/b9985589-e1a3-42f4-b534-ff94315d311c)
 
-![image](https://github.com/user-attachments/assets/6c5c365f-9ed0-4318-a996-b4d1528fa2dc)
+![image](https://github.com/user-attachments/assets/21a3c49a-33f2-47db-9dad-bf99953247d1)
 
 ![image](https://github.com/user-attachments/assets/756e48bf-a7af-47d2-9af5-7212337e93fe)
 
 ![image](https://github.com/user-attachments/assets/e7242689-bf1f-42e6-8b7d-08274a2b598f)
+
 
 
 
@@ -133,7 +134,7 @@ Here are some different views available in a spectrum analyzer:
 
 ❗ Horizontal axis represent frequency & vertical axis represent energy in dBm with **`brightness of color`** being determined by how many times that specific bit of information has been captured.
 
-![image](https://github.com/user-attachments/assets/b9985589-e1a3-42f4-b534-ff94315d311c)
+
 
 
 - **Power Spectral Density** can be also referred to as **spectrum density**
