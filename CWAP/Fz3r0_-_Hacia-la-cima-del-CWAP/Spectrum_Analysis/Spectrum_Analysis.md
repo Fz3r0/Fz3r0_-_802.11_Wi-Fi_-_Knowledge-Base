@@ -159,6 +159,8 @@ Here are some different views available in a spectrum analyzer:
 
 ❗ Spectrum Analysis + Information of WLANs similar to a **`Wi-Fi analyzer tool (SSIDs name, RSSI, etc)`**
 
+![image](https://github.com/user-attachments/assets/58e58b23-730f-4847-9367-c739b233b574)
+
 - When spectrum analyzer has WiFi integration capability, it can combined those views. WiFi NIC can scan other channels & report that information to give a overall view on a particular band.
 - Spectrum analyzers show layer one information. It is frequently useful to view information from layer 2 within the same views. WLAN integration with spectrum analysis software enables this feature. The images below show the SSIDs and number of APs in Spectrum XT. We can also see detailed information in Ekahau about the APs, the SSIDs they broadcast, along with operating and capability information.
 
