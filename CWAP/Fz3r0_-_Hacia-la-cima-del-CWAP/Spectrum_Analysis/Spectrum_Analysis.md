@@ -78,7 +78,7 @@ Here are some different views available in a spectrum analyzer:
 
 <p align="center"> <img src="https://github.com/user-attachments/assets/a66c4bfa-b413-4c6a-954c-58ca4ded148f" height="450> </p>
 
-<p align="center"> <img src="https://github.com/user-attachments/assets/115dafa3-ff0d-4811-9209-fcccb386aff5" height="170> </p>
+<p align="center"> <img src="https://github.com/user-attachments/assets/115dafa3-ff0d-4811-9209-fcccb386aff5" height="150> </p>
 
 
 
