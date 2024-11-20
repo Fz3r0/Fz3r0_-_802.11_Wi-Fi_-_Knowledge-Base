@@ -64,7 +64,7 @@ It is very important to understand what information can be understood from the d
 
 Here are some different views available in a spectrum analyzer:
 
-<p align="center"> <img src="https://github.com/user-attachments/assets/147b04db-bb6a-4322-8580-0176dc2daf21" height="600"> </p>
+<p align="center"> <img src="https://github.com/user-attachments/assets/147b04db-bb6a-4322-8580-0176dc2daf21" height="580"> </p>
 
 <p align="center"> <img src="https://github.com/user-attachments/assets/e536e616-b057-45f8-870b-81ad2803da09" height="550"> </p>
 
