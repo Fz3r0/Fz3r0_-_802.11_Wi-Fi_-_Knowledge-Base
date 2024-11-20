@@ -43,7 +43,7 @@ _Spectrum analyzers are **frequency domain tools** used to measure amplitude in 
 - `Time Domain`: Seen by a **Osciloscope** :: The RF in a time domain is where you can see the sine waves (or any other form) being generated.
 - `Frequency Domain`: Seen by a **Spectrum Analyzer** :: Is like see the wave "coming at us". This means, signal strenghts on a frequency, and this is achieved using the FFT (Fast Fourier Transform)
 
-## Spectrum Analyzer: `Types`
+# Spectrum Analyzer: `Types`
 
 Spectrum Analyzers can be classified in 3 basic categories in reference to their architecture: 
 
@@ -54,7 +54,7 @@ Spectrum Analyzers can be classified in 3 basic categories in reference to their
 | **Vector Signal Analyzers (VSA)** | PXI Vector Signal Analyzer                          | Error Vector Magnitude (EVM) is a measure used in wireless communications to quantify the performance of a transmitted signal compared to its ideal or reference signal. It essentially evaluates how much the actual signal deviates from the expected signal, which helps to assess the quality of the transmission. Especially relevant in systems that use advanced modulation schemes (like 802.11ac/ax, LTE, and 5G), where small errors can significantly impact performance.  | **Signal integrity**: Measures both amplitude and phase, offering in-depth analysis of modulation accuracy and signal quality (EVM). |
 
 
-## Spectrum Analyzer: `Spectrum Views`
+# Spectrum Analyzer: `Spectrum Views`
 
 It is very important to understand what information can be understood from the different views:
 
@@ -64,13 +64,11 @@ It is very important to understand what information can be understood from the d
 
 Here are some different views available in a spectrum analyzer:
 
----
-
-### 📈📏 Spectrum Views: `Real time FFT (Fast Fourier Transform)`
+## 📈📏 Spectrum Views: `Real time FFT (Fast Fourier Transform)`
 
 ❗ Frequency represent in horizontal axis and the energy in **`dBm defined`** in vertical axis
 
-- This view is considered a **Real-time Spectrum Analyzer (RSA).**
+- `Type:` **Real-time Spectrum Analyzer (RSA).** <br><br>
 - The key words of FFT are **`real-time`**; **the information shown is live.**. That's why the FFT graphics are common named as **Real Time FFT**. <br><br>
 - FFT is an algorithm that samples a signal over a period of time or space divides it into its frequency components. This means, the FFT decomposes a signal into its component frequencies and their amplitudes. <br><br>
 - The spectrum analyzer captures the RF energy within the time domain and converts the information to the frequency domain using the FFT process which is then viewable without gaps. <br><br>
@@ -86,9 +84,9 @@ Concepts used in FFT:
 - **`Dwell time`**: <br><br>
     - The amount of time spent measuring each sample    
 
----
 
-### 📈💯 Spectrum Views: `Duty Cycle` / `Channel Utilization`
+
+## 📈💯 Spectrum Views: `Duty Cycle` / `Channel Utilization`
 
 ❗ Show the **`percent (%)`** of channel utilization
 
