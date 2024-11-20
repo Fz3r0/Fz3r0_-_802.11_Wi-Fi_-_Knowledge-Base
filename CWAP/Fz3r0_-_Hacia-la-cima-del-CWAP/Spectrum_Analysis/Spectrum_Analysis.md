@@ -47,8 +47,6 @@ _Spectrum analyzers are **frequency domain tools** used to measure amplitude in 
 
 Spectrum Analyzers can be classified in 3 basic categories in reference to their architecture: 
 
-## Spectrum Analyzer: `Types`
-
 | **Type**                    | **Example**                                        | **Info**                                                                                                                                         | **Key Differentiator**                                                                                  |
 |-----------------------------|----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
 | **Real-time Spectrum Analyzers (RSA or RSTA)**  | Aaronia: SPECTRAN V6 series                        | Real-time analyzers capture the spectrum continuously, providing immediate feedback on signal events and interference, ideal for detecting transient signal issues. These analyzers can display live, real-time spectral data. | **Real-time analysis**: Displays continuous, live spectrum data, ideal for detecting quick, transient events. |
