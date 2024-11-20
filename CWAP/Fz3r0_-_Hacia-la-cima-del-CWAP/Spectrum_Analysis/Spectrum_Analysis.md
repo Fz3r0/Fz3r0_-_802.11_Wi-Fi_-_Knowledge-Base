@@ -95,6 +95,9 @@ Here are some different views available in a spectrum analyzer:
 
 ❗ Show the **`percent (%)`** of channel utilization
 
+![image](https://github.com/user-attachments/assets/8e8d1535-85b6-4b6a-b909-65eb69df8b0e)
+
+
 - In this veiw you can see whether a device is constantly using a frequency (100% duty cycle on a particular channel mean it is not usable & caused by sort of jammers)
 - Displays a measurement of the amount of time a received signal amplitude is above the noise floor or another arbitrary threshold
 - Although the term duty cycle can be subjective based on the context in which it is used within WLAN technology, it is commonly identifies the percentage of time an RF signal is above a specific threshold. A high duty cycle such as 95-100% can indicate a problem such as an RF jammer or other devise that is causing high utilization of the RF channel.
@@ -133,6 +136,10 @@ Here are some different views available in a spectrum analyzer:
 ### 📈🌈 Spectrum Views: `Power Spectral Density` / `Density View`
 
 ❗ Horizontal axis represent frequency & vertical axis represent energy in dBm with **`brightness of color`** being determined by how many times that specific bit of information has been captured.
+
+![image](https://github.com/user-attachments/assets/2e19ae70-850f-4679-8836-2534293e4931)
+
+![image](https://github.com/user-attachments/assets/92fc8055-15eb-4e42-97f9-4b8ba2dd992c)
 
 
 
@@ -308,6 +315,7 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 - https://telonic.co.uk/real-time-vs-swept-spectrum-analysers/
 - https://rfexplorer.com/wifisurveyor/
 - https://www.cleartosend.net/spectrum-analysis/
+- https://www.youtube.com/watch?v=ImSRW6CHcto
 
 
 
