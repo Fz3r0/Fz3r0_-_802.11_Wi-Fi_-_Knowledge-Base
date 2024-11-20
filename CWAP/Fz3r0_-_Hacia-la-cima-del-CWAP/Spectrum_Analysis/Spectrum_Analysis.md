@@ -64,7 +64,7 @@ It is very important to understand what information can be understood from the d
 
 Here are some different views available in a spectrum analyzer:
 
-<p align="center"> <img src="https://github.com/user-attachments/assets/0294e53a-00af-4df4-9c45-93863bd1a7a2" height="600"> </p>
+<p align="center"> <img src="https://github.com/user-attachments/assets/147b04db-bb6a-4322-8580-0176dc2daf21" height="600"> </p>
 
 ## 📈📏 Spectrum Views: `Real time FFT (Fast Fourier Transform)`
 
@@ -119,9 +119,17 @@ Here are some different views available in a spectrum analyzer:
 - Swept: This is the same information as the real-time FFT but often in a different view and tracked over a longer period. These views can often be configured within software to specify the length of time
 - Waterfall: The information from the swept spectrogram showing time, frequency, and power but viewed vertically.
 
-![image](https://github.com/user-attachments/assets/b9985589-e1a3-42f4-b534-ff94315d311c)
+#### Swept View
 
 ![image](https://github.com/user-attachments/assets/21a3c49a-33f2-47db-9dad-bf99953247d1)
+
+
+
+#### Waterfall View
+
+![image](https://github.com/user-attachments/assets/b9985589-e1a3-42f4-b534-ff94315d311c)
+
+
 
 ![image](https://github.com/user-attachments/assets/756e48bf-a7af-47d2-9af5-7212337e93fe)
 
