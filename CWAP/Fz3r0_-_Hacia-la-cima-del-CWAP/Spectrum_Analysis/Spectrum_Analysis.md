@@ -80,9 +80,9 @@ Here are some different views available in a spectrum analyzer:
 - `Frequency` represented in **horizontal** axis
 - `Energy` represented in **`dBm defined`** in **vertical** axis
 
-<p align="center"> <img src="https://github.com/user-attachments/assets/a66c4bfa-b413-4c6a-954c-58ca4ded148f" height="450> </p>
+<p align="center"> <img src="https://github.com/user-attachments/assets/a66c4bfa-b413-4c6a-954c-58ca4ded148f" height="450"> </p>
 
-<p align="center"> <img src="https://github.com/user-attachments/assets/115dafa3-ff0d-4811-9209-fcccb386aff5" height="170> </p>
+<p align="center"> <img src="https://github.com/user-attachments/assets/115dafa3-ff0d-4811-9209-fcccb386aff5" height="170"> </p>
 
 
 
@@ -109,6 +109,8 @@ Here are some different views available in a spectrum analyzer:
 ❗ Show the **`percent (%)`** of channel utilization
 
 ![image](https://github.com/user-attachments/assets/8e8d1535-85b6-4b6a-b909-65eb69df8b0e)
+
+![image](https://github.com/user-attachments/assets/2168616b-b5d3-4be8-b9db-bbea11227ab3)
 
 
 - In this veiw you can see whether a device is constantly using a frequency (100% duty cycle on a particular channel mean it is not usable & caused by sort of jammers)
