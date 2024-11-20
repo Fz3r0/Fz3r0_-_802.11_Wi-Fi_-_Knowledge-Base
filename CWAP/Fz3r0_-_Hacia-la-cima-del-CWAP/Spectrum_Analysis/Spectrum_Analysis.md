@@ -25,6 +25,9 @@ Sometimes there's something in the enviorment that is not 802.11 MAC Layer signa
 
 Spectrum Analyzers are tools that help to find something based on the existance of RF Energy. This tools have different features and capabilities to help to find RF signatures, The RF signature can be consider as a fingerprint of a electromagnetic radiation signal.
 
+## Spectrum Analyzers
+
+Spectrum analyzers are frequency measuring devices. They measure electromagnetic radiation, analyze the frequency spectrum and help with EMC tests or frequency monitoring and analysis, for example.
 
 
 ## `Oscilloscope - Time Domain` VS `Spectrum Analyzer - Frequency Domain`
@@ -32,21 +35,26 @@ _Spectrum analyzers are **frequency domain tools** used to measure amplitude in 
 
 ### Difference between a spectrum analyzer and an oscilloscope:
 
-- Oscilloscope: Used to measure the timing information around a signal. 
-- Spectrum Analyzer: is used to measure frequency information on a signal
+- `Oscilloscope`: Used to measure the **TIMING** information around a signal. 
+- `Spectrum Analyzer`: is used to measure **FREQUENCY** information on a signal
 
 ### Difference between Time Domain & Frequency Domain
 
-- `Time Domain`: Seen by a Osciloscope :: The RF in a time domain is where you can see the sine waves (or any other form) being generated.
-- `Frequency Domain`: Seen by a Spectrum Analyzer :: Is like see the wave "coming at us". This means, signal strenghts on a frequency, and this is achieved using the FFT (Fast Fourier Transform)
+- `Time Domain`: Seen by a **Osciloscope** :: The RF in a time domain is where you can see the sine waves (or any other form) being generated.
+- `Frequency Domain`: Seen by a **Spectrum Analyzer** :: Is like see the wave "coming at us". This means, signal strenghts on a frequency, and this is achieved using the FFT (Fast Fourier Transform)
 
 ## Spectrum Analyzer: `Types`
 
 Spectrum Analyzers can be classified in 3 basic categories in reference to their architecture: 
 
-- Real-time Spectrum Analyzers (RSA or RSTA):
-- Swept Spectrum Analyzers (SA):
-- Vector Signal Analyzers (VSA):
+## Spectrum Analyzer: `Types`
+
+| **Type**                    | **Example**                                        | **Info**                                                                                                                                         | **Key Differentiator**                                                                                  |
+|-----------------------------|----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
+| **Real-time Spectrum Analyzers (RSA or RSTA)**  | Aaronia: SPECTRAN V6 series                        | Real-time analyzers capture the spectrum continuously, providing immediate feedback on signal events and interference, ideal for detecting transient signal issues. These analyzers can display live, real-time spectral data. | **Real-time analysis**: Displays continuous, live spectrum data, ideal for detecting quick, transient events. |
+| **Swept Spectrum Analyzers (SA)** | Wifisurveyor @ RF Explorer Digital Handheld Spectrum Analyzer 6G Combo Plus - Slim (waterfall view) | Swept spectrum analyzers measure the spectrum by sweeping through frequencies over time. They provide a frequency vs time (waterfall) view, which helps visualize signal behavior over a given period. | **Frequency sweeping**: Provides a time-frequency waterfall view, ideal for monitoring signal variations over time. |
+| **Vector Signal Analyzers (VSA)** | PXI Vector Signal Analyzer                          | Error Vector Magnitude (EVM) is a measure used in wireless communications to quantify the performance of a transmitted signal compared to its ideal or reference signal. It essentially evaluates how much the actual signal deviates from the expected signal, which helps to assess the quality of the transmission. Especially relevant in systems that use advanced modulation schemes (like 802.11ac/ax, LTE, and 5G), where small errors can significantly impact performance.  | **Signal integrity**: Measures both amplitude and phase, offering in-depth analysis of modulation accuracy and signal quality (EVM). |
+
 
 ## Spectrum Analyzer: `Spectrum Views`
 
@@ -278,6 +286,9 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 - [Fundamentals of Real-Time Spectrum Analysis](https://svelto.faculty.polimi.it/didattica/materiale_didattico/materiale%20didattico_MRF/appnote/real_time_spectrum_analysis.pdf)
 - [Metageek Wi-Spy Air Review](https://wifinigel.blogspot.com/2019/06/metageek-wi-spy-air-review.html) _`Wi-Fi nigel`_
 - [Spectrum Analyzer How-To Guide](https://www.tek.com/en/documents/primer/what-spectrum-analyzer-and-why-do-you-need-one)
+- https://aaronia.com/en/produkte/spectrum-analyzer?gad_source=1&gclid=CjwKCAiArva5BhBiEiwA-oTnXYGyJiON7XUdmxe3T9QGLJMCTTWrgasiRr0HBe1w5ME1yVcsmqvYWhoCOGkQAvD_BwE
+- https://telonic.co.uk/real-time-vs-swept-spectrum-analysers/
+- https://rfexplorer.com/wifisurveyor/
 
 
 
