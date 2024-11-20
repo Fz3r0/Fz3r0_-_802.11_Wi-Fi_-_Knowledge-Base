@@ -64,6 +64,8 @@ It is very important to understand what information can be understood from the d
 
 Here are some different views available in a spectrum analyzer:
 
+![image](https://github.com/user-attachments/assets/0294e53a-00af-4df4-9c45-93863bd1a7a2)
+
 ## 📈📏 Spectrum Views: `Real time FFT (Fast Fourier Transform)`
 
 - `Frequency` represented in **horizontal** axis
