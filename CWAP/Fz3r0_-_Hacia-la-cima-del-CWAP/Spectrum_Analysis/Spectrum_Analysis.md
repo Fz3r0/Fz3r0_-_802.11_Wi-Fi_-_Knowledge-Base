@@ -66,7 +66,7 @@ Here are some different views available in a spectrum analyzer:
 
 <p align="center"> <img src="https://github.com/user-attachments/assets/147b04db-bb6a-4322-8580-0176dc2daf21" height="600"> </p>
 
-<p align="center"> <img src="https://github.com/user-attachments/assets/e536e616-b057-45f8-870b-81ad2803da09" height="600"> </p>
+<p align="center"> <img src="https://github.com/user-attachments/assets/e536e616-b057-45f8-870b-81ad2803da09" height="550"> </p>
 
 
 
@@ -78,7 +78,7 @@ Here are some different views available in a spectrum analyzer:
 
 <p align="center"> <img src="https://github.com/user-attachments/assets/a66c4bfa-b413-4c6a-954c-58ca4ded148f" height="450> </p>
 
-<p align="center"> <img src="https://github.com/user-attachments/assets/115dafa3-ff0d-4811-9209-fcccb386aff5" height="150> </p>
+<p align="center"> <img src="https://github.com/user-attachments/assets/115dafa3-ff0d-4811-9209-fcccb386aff5" height="170> </p>
 
 
 
