@@ -66,15 +66,20 @@ Here are some different views available in a spectrum analyzer:
 
 ## 📈📏 Spectrum Views: `Real time FFT (Fast Fourier Transform)`
 
-❗ Frequency represent in horizontal axis and the energy in **`dBm defined`** in vertical axis
+- `Frequency` represented in **horizontal** axis
+- `Energy` represented in **`dBm defined`** in **vertical** axis
+
+![image](https://github.com/user-attachments/assets/a66c4bfa-b413-4c6a-954c-58ca4ded148f)
+
+![image](https://github.com/user-attachments/assets/115dafa3-ff0d-4811-9209-fcccb386aff5)
 
 - `Type:` **Real-time Spectrum Analyzer (RSA).** <br><br>
-- The key words of FFT are **`real-time`**; **the information shown is live.**. That's why the FFT graphics are common named as **Real Time FFT**. <br><br>
-- FFT is an algorithm that samples a signal over a period of time or space divides it into its frequency components. This means, the FFT decomposes a signal into its component frequencies and their amplitudes. <br><br>
-- The spectrum analyzer captures the RF energy within the time domain and converts the information to the frequency domain using the FFT process which is then viewable without gaps. <br><br>
+- The key words of FFT are **`real-time`**; **the information shown is live.**. That's why the FFT graphics are common named as **Real Time FFT**. 
+- FFT is an algorithm that samples a signal over a period of time or space divides it into its frequency components. This means, the FFT decomposes a signal into its component frequencies and their amplitudes.
+- The spectrum analyzer captures the RF energy within the time domain and converts the information to the frequency domain using the FFT process which is then viewable without gaps. 
 - FFT can be explained as: "Measurments of points in the time of the spectrum". Each "point" es marked at the midde of each "FFT bin"
 
-Concepts used in FFT:
+### Concepts used in FFT:
 
 - **`FFT Bin`**:  <br><br>
     - The resolution bandwidth (RBW) is dictated by the size of the FFT Bin
@@ -285,6 +290,7 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 - https://aaronia.com/en/produkte/spectrum-analyzer?gad_source=1&gclid=CjwKCAiArva5BhBiEiwA-oTnXYGyJiON7XUdmxe3T9QGLJMCTTWrgasiRr0HBe1w5ME1yVcsmqvYWhoCOGkQAvD_BwE
 - https://telonic.co.uk/real-time-vs-swept-spectrum-analysers/
 - https://rfexplorer.com/wifisurveyor/
+- https://www.cleartosend.net/spectrum-analysis/
 
 
 
