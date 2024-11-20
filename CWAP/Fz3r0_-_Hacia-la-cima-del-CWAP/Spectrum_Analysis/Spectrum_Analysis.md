@@ -69,9 +69,11 @@ Here are some different views available in a spectrum analyzer:
 - `Frequency` represented in **horizontal** axis
 - `Energy` represented in **`dBm defined`** in **vertical** axis
 
-![image](https://github.com/user-attachments/assets/a66c4bfa-b413-4c6a-954c-58ca4ded148f)
+<p align="center"> <img src="https://github.com/user-attachments/assets/a66c4bfa-b413-4c6a-954c-58ca4ded148f" height="300> </p>
 
-![image](https://github.com/user-attachments/assets/115dafa3-ff0d-4811-9209-fcccb386aff5)
+<p align="center"> <img src="https://github.com/user-attachments/assets/115dafa3-ff0d-4811-9209-fcccb386aff5" height="300> </p>
+
+
 
 - `Type:` **Real-time Spectrum Analyzer (RSA).** <br><br>
 - The key words of FFT are **`real-time`**; **the information shown is live.**. That's why the FFT graphics are common named as **Real Time FFT**. 
@@ -337,7 +339,7 @@ In
 <img src="https://github.com/user-attachments/assets/bbe05510-5d98-4fcb-ba25-a5110ccf78da" width="300" height="300"> </p>
 
 
-
+<p align="center"> <img src="https://github.com/user-attachments/assets/807020b5-82bd-4313-8213-99a4a646f226" height="300> </p>
 
 
 
