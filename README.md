@@ -6975,7 +6975,7 @@ _HR/DSSS STAs (802.11b legacy) does not understand OFDM Modulation used by ERP S
 
 - `RTS/CTS` :: (802.11g or newer) :: The most used mechanism in Wi-Fi
 - `CTS-to-self` :: (802.11g or newer) :: that is not a frame defined in the standard, this frame is a CTS frame without a preciding RTS frame, this is usually done by the AP 
-- `Dual CTS` Protection is used by the AP to set a NAV at STAs that do not support STBC and at STAs that can associate solely through the STBC beacon. (0 – dual CTS protection is not required, 1 – dual CTS protection is required)
+- `Dual CTS` Protection is used by the AP to set a NAV at STAs that do not support Space-Time Block Coding (STBC) and at STAs that can associate solely through the STBC beacon. (0 – dual CTS protection is not required, 1 – dual CTS protection is required). (STBC is a method used in wireless communication to improve reliability and performance, especially in environments with high interference or signal fading. It is a type of Multiple Input Multiple Output (MIMO) coding technique that transmits multiple copies of data streams across multiple antennas using redundant information
 
 ## Protection Modes: `Important Concepts`
 
