@@ -34,36 +34,72 @@
 
 Transmit Beamforming (TxBF) is a wireless signal enhancement technique introduced as an optional feature in 802.11n and later standardized in 802.11ac/ax. 
 
-802.11ac enables single user (SU) and multi user (MU) beamforming which aims to improve SNR (and hence throughput) between a wireless client and AP.  
+- **“Beamforming gains are expected to be approximately `+ 3 dB` in the transmitted direction. In practice, this gain will typically be one step up in data rates (increasing one `+1 MCS` number) for a mid-range transmission.”**
+- 802.11ac: enables single user (SU) and multi user (MU) beamforming which aims to improve SNR (and hence throughput) between a wireless client and AP. 
 
-Some WLAN vendors implement Transmit Beamforming (TxBF) in different proprietary ways.
+Beamforming uses a calibration process called `Channel Sounding` **between APs and client STAs** to determine if and how energy can be radiated in an optimal direction.
+
+Some WLAN vendors implement Transmit Beamforming (TxBF) in different proprietary ways:
+
+---
 
 ### 802.11n: `Transmit Beamforming (TxBF)`
 
-Transmit Beamforming (TxBF) got introduced as an optional feature of the 802.11n amendment. It uses multiple antennas to focus and direct the transmission toward a specific client, improving signal strength, range, and reliability. However, for TxBF to work, the client device must support Transmit Channel Feedback (TxCBF) to provide feedback to the access point. This dependency limits its effectiveness in environments with legacy or non-compliant devices.
+- Transmit Beamforming (TxBF) got introduced as an optional feature of the 802.11n amendment and later standardized in 802.11ac/ax.
+- It uses multiple antennas to focus and direct the transmission toward a specific client, improving signal strength, range, and reliability.
+- However, for TxBF to work, the client device must support Transmit Channel Feedback (TxCBF) to provide feedback to the access point.
+- This dependency limits its effectiveness in environments with legacy or non-compliant devices.
+
+---
 
 ### Cisco: `Client Link`
 
-While beamforming (TxBF) is effective, it has limitations tied to client-side capabilities. Cisco ClientLink is a more versatile solution because it doesn’t depend on client support and works across all device types, ensuring better overall network performance, especially in mixed environments with legacy devices.
+- While beamforming (TxBF) is effective, it has limitations tied to client-side capabilities.
+- Cisco ClientLink is a more versatile solution because it doesn’t depend on client support and works across all device types, ensuring better overall network performance, especially in mixed environments with legacy devices.
+
+---
 
 ### Ruckus: `Beamflex`
 
-Beamforming in 802.11ac is a radio based technology. Whereas BeamFlex engages adaptive antennas so this is an antenna based technology.
-
-What Ruckus does is use beamforming (which is radio based) and combines it with adaptive antennas (BeamFlex which antenna based) to maximize the performance.
-
+- Beamforming in 802.11ac is a **radio based technology**.
+- Whereas BeamFlex engages adaptive antennas so this is an **antenna based technology**.
+- What Ruckus does is use beamforming (which is radio based) and combines it with adaptive antennas (BeamFlex which antenna based) to maximize the performance.
 
 
 
 
 ## Transmit Beamforming (TxBF) Methods: `Explicit` & `Implicit`
 
-
-
 which has two methods `Implicit` and `Explicit` beamforming.
 
 
-As you may know beamforming was introduced,  (i.e. Cisco ClientLink)
+
+
+
+
+## Steps for Beamforming
+
+A summary of the steps to enable beamforming is:
+
+1. The `beamformer` transmits a `Null Data Packet (NDP) Announcement` frame which identifies `beamformees`.
+2. This is then followed by another `NDP` frame which is a `sounding frame` used by the receiver to analyse training fields for various subcarriers and calculates a response.
+3. This `response` from the `beamformee` contains a `feedback matrix`.
+4. The `beamformer` uses the `feedback matrix` to calculate a steering matrix to direct RF energy toward the beamformee.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
