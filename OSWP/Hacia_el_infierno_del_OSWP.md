@@ -32,11 +32,15 @@ clear; airmon-ng start wlan0; iwconfig wlan0 && ifconfig wlan0 down; macchanger 
 ````
 
 # Cambiar de canal
-iwconfig wlan0 channel 34
 
-iw dev wlan2 set channel 40 ht40+
-Channel 40 + Channel 44 = HT40+
-Channel 40 + Channel 36 = HT40- 
+````
+iwconfig wlan0 channel 36
+iwconfig wlan0mon channel 36
+
+
+
+````
+
 
 ---
 
