@@ -1,0 +1,19 @@
+# ff-ff-ff-ff-ff-ff    Broadcast
+# c0-00-ff-ff-ff-ff    TR_broadcast
+# 00.2b.08.93.4b.a1    Freds_machine
+
+44:e5:17:06:e4:60    STA-Intel
+50:4e:dc:90:2e:b8    AP-Telmex
+70:ca:97:68:c7:9c    AP-Ruckus 
+
+80-bc-37-95-b4-50    AP-Ruckus
+52-e8-b0-c3-7f-c0    STA-iPhone
+
+4c:b1:cd:b3:de:7d    AP-Authenticator
+24:79:2a:1b:39:ad    AP-Authenticator
+
+
+de:d8:99:34:a8:30    STA-Supplicant
+
+5e:41:c1:61:b3:da    STA-Client
+66:5e:af:42:54:82    STA-Client
