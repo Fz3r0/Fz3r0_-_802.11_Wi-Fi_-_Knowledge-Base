@@ -517,6 +517,34 @@ txpower
 
 ---
 
+
+### Bandiwdth
+
+````sh
+# Simple
+iw wlan0mon set channel 52 80MHz
+
+
+# 5180 es la frecuencia central del canal 36.
+# 80 indica el ancho de banda (MHz).
+# 5210 es la frecuencia secundaria central para 80 MHz (center frequency 1).
+iw wlan0mon set freq 5180 80 5210
+````
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Full lists & Bibles
 
 ````sh
