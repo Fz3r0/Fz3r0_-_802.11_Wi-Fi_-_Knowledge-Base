@@ -111,6 +111,82 @@ which has two methods `Implicit` and `Explicit` beamforming.
 
 
 
+## Transmit Beamforming (TxBF) Methods: `Frames` & `Elements`
+
+HT or VHT Capabilities in Bacon Frames:
+
+````java
+
+
+802.11 radio information
+IEEE 802.11 Beacon frame, Flags: ........
+IEEE 802.11 Wireless Management
+    Fixed parameters (12 bytes)
+    Tagged parameters (334 bytes)
+        Tag: SSID parameter set: "Fz3r0 💀🎩"
+
+        Tag: HT Capabilities (802.11n D1.10)
+            Tag Number: HT Capabilities (802.11n D1.10) (45)
+            Tag length: 26
+            HT Capabilities Info: 0x19ef
+            A-MPDU Parameters: 0x17
+            Rx Supported Modulation and Coding Scheme Set: MCS Set
+            HT Extended Capabilities: 0x0000
+            Transmit Beam Forming (TxBF) Capabilities: 0x19810418
+                .... .... .... .... .... .... .... ...0 = Transmit Beamforming: Not supported                                                                         <<<<-----||
+                .... .... .... .... .... .... .... ..0. = Receive Staggered Sounding: Not supported                                                                   <<<<-----||
+                .... .... .... .... .... .... .... .0.. = Transmit Staggered Sounding: Not supported                                                                  <<<<-----||
+                .... .... .... .... .... .... .... 1... = Receive Null Data packet (NDP): Supported
+                .... .... .... .... .... .... ...1 .... = Transmit Null Data packet (NDP): Supported
+                .... .... .... .... .... .... ..0. .... = Implicit TxBF capable: Not supported                                                                        <<<<-----||
+                .... .... .... .... .... .... 00.. .... = Calibration: incapable (0x0)                                                                                <<<<-----||
+                .... .... .... .... .... ...0 .... .... = STA can apply TxBF using CSI explicit feedback: Not supported                                               <<<<-----||
+                .... .... .... .... .... ..0. .... .... = STA can apply TxBF using uncompressed beamforming feedback matrix: Not supported                            <<<<-----||
+                .... .... .... .... .... .1.. .... .... = STA can apply TxBF using compressed beamforming feedback matrix: Supported                                  <<<<-----||
+                .... .... .... .... ...0 0... .... .... = Receiver can return explicit CSI feedback: not supported (0x0)                                              <<<<-----||
+                .... .... .... .... .00. .... .... .... = Receiver can return explicit uncompressed Beamforming Feedback Matrix: not supported (0x0)                  <<<<-----||
+                .... .... .... ...1 0... .... .... .... = STA can compress and use compressed Beamforming Feedback Matrix: immediate feedback capable (0x2)           <<<<-----||
+                .... .... .... .00. .... .... .... .... = Minimal grouping used for explicit feedback reports: No grouping supported (0x0)                            <<<<-----||
+                .... .... ...0 0... .... .... .... .... = Max antennae STA can support when CSI feedback required: 1 TX antenna sounding (0x0)                        <<<<-----||
+                .... .... .00. .... .... .... .... .... = Max antennae STA can support when uncompressed Beamforming feedback required: 1 TX antenna sounding (0x0)   <<<<-----||
+                .... ...1 1... .... .... .... .... .... = Max antennae STA can support when compressed Beamforming feedback required: 4 TX antenna sounding (0x3)     <<<<-----||
+                .... .00. .... .... .... .... .... .... = Maximum number of rows of CSI explicit feedback: 1 row of CSI (0x0)                                         <<<<-----||   
+                ...1 1... .... .... .... .... .... .... = Maximum number of space time streams for which channel dimensions can be simultaneously estimated: 4 space time streams (0x3)
+                000. .... .... .... .... .... .... .... = Reserved: 0x0
+
+            Antenna Selection (ASEL) Capabilities: 0x00
+        Tag: HT Information (802.11n D1.10)
+
+        Tag: VHT Capabilities
+            Tag Number: VHT Capabilities (191)
+            Tag length: 12
+            VHT Capabilities Info: 0x43c179b1
+                .... .... .... .... .... .... .... ..01 = Maximum MPDU Length: 7 991 (0x1)
+                .... .... .... .... .... .... .... 00.. = Supported Channel Width Set: Neither 160MHz nor 80+80 supported (0x0)
+                .... .... .... .... .... .... ...1 .... = Rx LDPC: Supported
+                .... .... .... .... .... .... ..1. .... = Short GI for 80MHz/TVHT_MODE_4C: Supported
+                .... .... .... .... .... .... .0.. .... = Short GI for 160MHz and 80+80MHz: Not supported
+                .... .... .... .... .... .... 1... .... = Tx STBC: Supported
+                .... .... .... .... .... .001 .... .... = Rx STBC: 1 Spatial Stream Supported (0x1)
+                .... .... .... .... .... 1... .... .... = SU Beamformer Capable: Supported        <<<<-----||
+                .... .... .... .... ...1 .... .... .... = SU Beamformee Capable: Supported        <<<<-----||
+                .... .... .... .... 011. .... .... .... = Beamformee STS Capability: 4 (0x3)      <<<<-----||
+                .... .... .... .001 .... .... .... .... = Number of Sounding Dimensions: 2 (0x1)
+                .... .... .... 0... .... .... .... .... = MU Beamformer Capable: Not supported    <<<<-----||
+                .... .... ...0 .... .... .... .... .... = MU Beamformee Capable: Not supported    <<<<-----||
+                .... .... ..0. .... .... .... .... .... = TXOP PS: Not supported
+                .... .... .1.. .... .... .... .... .... = +HTC-VHT Capable: Supported
+                .... ..11 1... .... .... .... .... .... = Max A-MPDU Length Exponent: 1 048 575 (0x7)
+                .... 00.. .... .... .... .... .... .... = VHT Link Adaptation: No Feedback (0x0)
+                ...0 .... .... .... .... .... .... .... = Rx Antenna Pattern Consistency: Not supported
+                ..0. .... .... .... .... .... .... .... = Tx Antenna Pattern Consistency: Not supported
+                01.. .... .... .... .... .... .... .... = Extended NSS BW Support: 0x1
+
+            VHT Supported MCS Set
+        Tag: VHT Operation
+````
+
+
 
 ## Steps for Beamforming
 
