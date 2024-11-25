@@ -193,7 +193,7 @@ Es decir, si queremos capturar todos los frames que se envían en una red inalá
 
 Hay que recordar que, el tráfico WiFi en el aire puede ser capturado por cualquiera que esté a su alcance y tenga las herramientas adecuadas _(por ello la importancia de la encriptación y otros procesos de seguridad)_
 
-![image](https://user-images.githubusercontent.com/94720207/231614242-d43e9592-73e2-4a22-9417-b8d8e630fdd6.png)
+![image](https://github.com/user-attachments/assets/055ced38-34ec-474c-ac78-a5c78d5c1441)
 
 ---
 
