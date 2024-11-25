@@ -32,7 +32,7 @@
 
 # Transmit Beamforming (TxBF)
 
-Transmit Beamforming (TxBF) is a wireless signal enhancement technique introduced as an optional feature in 802.11n and later standardized in 802.11ac/ax. 
+**Transmit Beamforming (TxBF)** is a wireless signal enhancement technique** introduced as an optional feature in 802.11n** and **later standardized in 802.11ac/ax**. 
 
 - **“Beamforming gains are expected to be approximately `+ 3 dB` in the transmitted direction. In practice, this gain will typically be one step up in data rates (increasing one `+1 MCS` number) for a mid-range transmission.”**
 - 802.11ac: enables single user (SU) and multi user (MU) beamforming which aims to improve SNR (and hence throughput) between a wireless client and AP. 
