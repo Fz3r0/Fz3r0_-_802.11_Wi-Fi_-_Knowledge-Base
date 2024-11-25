@@ -113,7 +113,9 @@ which has two methods `Implicit` and `Explicit` beamforming.
 
 ## Transmit Beamforming (TxBF) Methods: `Frames` & `Elements`
 
-HT or VHT Capabilities in Bacon Frames:
+### Beacon Frames
+
+- `HT Capabilities` or `VHT Capabilities` in **Bacon Frames**:
 
 ````java
 
@@ -185,6 +187,113 @@ IEEE 802.11 Wireless Management
             VHT Supported MCS Set
         Tag: VHT Operation
 ````
+
+### Beacon Frames
+
+````
+Frame 6407: 75 bytes on wire (600 bits), 75 bytes captured (600 bits)
+Radiotap Header v0, Length 56
+802.11 radio information
+IEEE 802.11 VHT/HE/EHT/RANGING NDP Announcement, Flags: ........
+    Type/Subtype: VHT/HE/EHT/RANGING NDP Announcement (0x0015)
+    Frame Control Field: 0x5400
+        .... ..00 = Version: 0
+        .... 01.. = Type: Control frame (1)
+        0101 .... = Subtype: 5
+        Flags: 0x00
+    .000 0000 0111 0100 = Duration: 116 microseconds
+    Receiver address: Android.local (3c:13:5a:f2:46:88)
+    Transmitter address: AP-Huawei (50:4e:dc:90:2e:bd)
+    Sounding Dialog Token: 0x84 VHT NDP Announcement
+        .... ..00 = NDP Announcement Variant: VHT NDP Announcement (0x0)
+        1000 01.. = Sounding Dialog Token: 0x21
+    STA list
+        STA 0
+            .... 0000 0000 0010 = AID12: 0x002
+            ...0 .... .... .... = Feedback Type: SU feedback requested
+            .... .... .... .... 000. .... .... .... = Reserved: 0x0
+    [WLAN Flags: ........]
+
+````
+
+- NDP Announcement (VHT/HE/EHT/RANGING) // `wlan.fc.type_subtype == 0x0015`
+
+
+
+### `Action No ACK - VHT 802.11ax` - `VHT Compressed Beamforming` : `Average SNR` & `Feedback Matrcies`
+
+````java
+
+802.11 radio information
+IEEE 802.11 Action No Ack, Flags: ........
+    Type/Subtype: Action No Ack (0x000e)
+    Frame Control Field: 0xe000
+        .... ..00 = Version: 0
+        .... 00.. = Type: Management frame (0)
+        1110 .... = Subtype: 14
+        Flags: 0x00
+
+    Receiver address:     AP-Huawei 
+    Destination address:  AP-Huawei 
+    Transmitter address:  STA-Android 
+    Source address:       STA-Android 
+    BSS Id:               AP-Huawei
+
+IEEE 802.11 Wireless Management
+    Fixed parameters
+        Category code: VHT (21)
+        VHT Action: VHT Compressed Beamforming (0)                <<<<----||
+
+        VHT MIMO Control: 0x848488, Nc Index: 1 Column, Nr Index: 2 Rows, Channel Width: 80 MHz, Grouping (Ng): 1 (No Grouping), Feedback Type: SU
+            .... .... .... .... .... .000 = Nc Index: 1 Column (0x0)
+            .... .... .... .... ..00 1... = Nr Index: 2 Rows (0x1)
+            .... .... .... .... 10.. .... = Channel Width: 80 MHz (0x2)
+            .... .... .... ..00 .... .... = Grouping (Ng): 1 (No Grouping) (0x0)
+            .... .... .... .1.. .... .... = Codebook Information: 0x1
+            .... .... .... 0... .... .... = Feedback Type: SU (0x0)
+            .... .... .000 .... .... .... = Remaining Feedback Segments: 0x0
+            .... .... 1... .... .... .... = First Feedback Segments: 0x1
+            .... ..00 .... .... .... .... = Reserved: 0x0
+            1000 01.. .... .... .... .... = Sounding Dialog Token Number: 0x21
+
+        VHT Compressed Beamforming Report […]: 4ff3c8324f3cf3cc238f3cf3cc33cf3cf3cc330f3df3cc33cf3cf4d0430f4d34d144134d34d154534d35d554535d75d555575d75d555575d75d555976db6d5569b6db6d9669b6db6d9669b7df6d9679f7df6d9779f7df6d968a38d36da68a38d37da69
+            Average Signal to Noise Ratio                        <<<<----||
+                Stream 1 - Signal to Noise Ratio:  41.75dB
+            Feedback Matrices                                    <<<<----||
+                SCIDX: -122, φ11:51, ψ21:3
+                SCIDX: -121, φ11:50, ψ21:2
+                SCIDX: -120, φ11:51, ψ21:3
+                SCIDX: -119, φ11:49, ψ21:3
+                SCIDX: -118, φ11:51, ψ21:3
+                SCIDX: -117, φ11:51, ψ21:3
+                SCIDX: -113, φ11:51, ψ21:3
+                SCIDX: -112, φ11:51, ψ21:3
+                SCIDX: -111, φ11:51, ψ21:3
+                SCIDX: -110, φ11:51, ψ21:3
+                SCIDX: -109, φ11:51, ψ21:3
+                SCIDX: -108, φ11:51, ψ21:3
+                SCIDX: -101, φ11:52, ψ21:3
+                SCIDX: -100, φ11:52, ψ21:3
+                SCIDX: -99, φ11:52, ψ21:3
+                SCIDX: -98, φ11:52, ψ21:4
+                SCIDX: -97, φ11:52, ψ21:4
+                SCIDX: -96, φ11:52, ψ21:4
+                SCIDX: -95, φ11:52, ψ21:4
+                SCIDX: -88, φ11:53, ψ21:4
+                SCIDX: -87, φ11:53, ψ21:4
+                SCIDX: -86, φ11:53, ψ21:5
+                SCIDX: -85, φ11:53, ψ21:5
+                .
+                .
+                .
+                .
+      
+````
+
+- wlan.vht.action == 0
+
+
+
 
 
 
