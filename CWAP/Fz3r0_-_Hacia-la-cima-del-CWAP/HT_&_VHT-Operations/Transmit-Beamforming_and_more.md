@@ -37,13 +37,45 @@
 - **“Beamforming gains are expected to be approximately `+ 3 dB` in the transmitted direction. In practice, this gain will typically be one step up in data rates (increasing one `+1 MCS` number) for a mid-range transmission.”**
 - 802.11ac: enables single user (SU) and multi user (MU) beamforming which aims to improve SNR (and hence throughput) between a wireless client and AP. 
 
-Beamforming uses a calibration process called `Channel Sounding` **between APs and client STAs** to determine if and how energy can be radiated in an optimal direction.
+**Beamforming** uses a calibration process called **`Channel Sounding`** **between `APs` and client `STAs`** to determine if and how energy can be radiated in an optimal direction.
+
+## Transmit Beamforming (TxBF): `3 main categories`
+
+There are various forms of beamforming, some standards-based, most proprietary to certain vendors. The 3 main types are: 
+
+---
+
+### 1. On-Chip Beamforming 
+
+- **802.11n standards-based** transmit beamforming.
+- The radio chipset coordinates the signal processing across multiple transmit radio chains, altering timing and phase alignment of each signal, in an attempt to have multiple signal copies arrive at the receiver "in-phase" to provide passive gain.
+- **Signal gains are `3dB` maximum**, which is quite logical if you think about what's going on at the receiver - **two in-phase signals merge, potentially doubling the amplitude of the signal at the receiver**.
+
+---
+
+### 2. Static Beamforming 
+
+- Semi-directional or directional antennas.
+- Antennas don't change, or move, or dynamically adjust. They simply focus the signal in a specific direction.
+- **Signal gains can potentially be very large `>10dB**`, based on the dBi rating of the antenna selected.
+
+---
+
+### 3. Antenna Beamforming
+
+- **This is what Ruckus does best**.
+- They have **multiple antenna elements (an antenna array if you will)**, some **polarized horizontally** and some **polarized vertically**.
+- The radio chipset sends one signal and a complex formula selects the best possible antenna element combinations to transmit the signal to the client.
+- **Signal gains max out around `9dB` in the Ruckus implementation**, _(it could be higher with different antenna array designs)_.
+
+
+## Transmit Beamforming (TxBF): `Vendor Implementation`
 
 Some WLAN vendors implement Transmit Beamforming (TxBF) in different proprietary ways:
 
 ---
 
-### 802.11n: `Transmit Beamforming (TxBF)`
+### 802.11n: `Transmit Beamforming (TxBF)` _Original feature_
 
 - Transmit Beamforming (TxBF) got introduced as an optional feature of the 802.11n amendment and later standardized in 802.11ac/ax.
 - It uses multiple antennas to focus and direct the transmission toward a specific client, improving signal strength, range, and reliability.
@@ -55,14 +87,15 @@ Some WLAN vendors implement Transmit Beamforming (TxBF) in different proprietary
 ### Cisco: `Client Link`
 
 - While beamforming (TxBF) is effective, it has limitations tied to client-side capabilities.
+- ClientLink would fit into the category of **on-chip beamforming**  using standards-based **transmit beamforming with implicit feedback**, since **the client is not required to support beamforming and explicit feedback mechanisms**.
+- That's one of their big selling points, improvement of legacy clients by upgrading to 802.11n APs.
 - Cisco ClientLink is a more versatile solution because it doesn’t depend on client support and works across all device types, ensuring better overall network performance, especially in mixed environments with legacy devices.
 
 ---
 
 ### Ruckus: `Beamflex`
 
-- Beamforming in 802.11ac is a **radio based technology**.
-- Whereas BeamFlex engages adaptive antennas so this is an **antenna based technology**.
+- The "normal" Beamforming in 802.11ac is a **radio based technology**. Whereas BeamFlex engages adaptive antennas so this is an **antenna based technology**.
 - What Ruckus does is use beamforming (which is radio based) and combines it with adaptive antennas (BeamFlex which antenna based) to maximize the performance.
 
 
