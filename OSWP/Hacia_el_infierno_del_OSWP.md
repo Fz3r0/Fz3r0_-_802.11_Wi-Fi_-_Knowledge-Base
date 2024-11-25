@@ -181,6 +181,8 @@ Existen diferencias de `Modo` entre capturar en WiFi o Ethernet:
 - Para capturar `Ethernet 802.3` solo es necesario conectar el cable ethernet a la interfaz, encender `Promiscous Mode` y ya se podrá capturar tráfico ¡Así de fácil!
 - Para capturar `WiFi 802.11` es un poco más complejo, ya que además de tener activado el `Promiscous Mode`, se necesitan herramientras de hardware adicional, también se deben confgurar los drivers para una función diferente, como el `Monitor Mode`. Tanto el Sistema Operativo, Hardware _(adaptadores WiFi)_ y Software _(Protocol Analyzers & Sniffers)_ deben ser compatibles con `Monitor Mode`
 
+![image](https://github.com/user-attachments/assets/17a63597-fc3c-4c8c-b28e-b51b0c73293d)
+
 ---
 
 ### ⭕ `Monitor Mode`
@@ -194,6 +196,8 @@ Es decir, si queremos capturar todos los frames que se envían en una red inalá
 Hay que recordar que, el tráfico WiFi en el aire puede ser capturado por cualquiera que esté a su alcance y tenga las herramientas adecuadas _(por ello la importancia de la encriptación y otros procesos de seguridad)_
 
 ![image](https://github.com/user-attachments/assets/055ced38-34ec-474c-ac78-a5c78d5c1441)
+
+![image](https://github.com/user-attachments/assets/02218ace-8436-4c94-9432-1486ebc48664)
 
 ---
 
