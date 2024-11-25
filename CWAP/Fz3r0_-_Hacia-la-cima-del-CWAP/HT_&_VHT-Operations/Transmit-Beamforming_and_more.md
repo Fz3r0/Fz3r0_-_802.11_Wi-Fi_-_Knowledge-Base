@@ -39,29 +39,25 @@
 
 **Beamforming** uses a calibration process called **`Channel Sounding`** **between `APs` and client `STAs`** to determine if and how energy can be radiated in an optimal direction.
 
+
+
 ## Transmit Beamforming (TxBF): `3 main categories`
 
 There are various forms of beamforming, some standards-based, most proprietary to certain vendors. The 3 main types are: 
 
----
-
-### 1. On-Chip Beamforming 
+### 1. `On-Chip Beamforming`
 
 - **802.11n standards-based** transmit beamforming.
 - The radio chipset coordinates the signal processing across multiple transmit radio chains, altering timing and phase alignment of each signal, in an attempt to have multiple signal copies arrive at the receiver "in-phase" to provide passive gain.
 - **Signal gains are `3dB` maximum**, which is quite logical if you think about what's going on at the receiver - **two in-phase signals merge, potentially doubling the amplitude of the signal at the receiver**.
 
----
-
-### 2. Static Beamforming 
+### 2. `Static Beamforming` 
 
 - Semi-directional or directional antennas.
 - Antennas don't change, or move, or dynamically adjust. They simply focus the signal in a specific direction.
 - **Signal gains can potentially be very large `>10dB**`, based on the dBi rating of the antenna selected.
 
----
-
-### 3. Antenna Beamforming
+### 3. `Antenna Beamforming`
 
 - **This is what Ruckus does best**.
 - They have **multiple antenna elements (an antenna array if you will)**, some **polarized horizontally** and some **polarized vertically**.
@@ -69,11 +65,10 @@ There are various forms of beamforming, some standards-based, most proprietary t
 - **Signal gains max out around `9dB` in the Ruckus implementation**, _(it could be higher with different antenna array designs)_.
 
 
+
 ## Transmit Beamforming (TxBF): `Vendor Implementation`
 
 Some WLAN vendors implement Transmit Beamforming (TxBF) in different proprietary ways:
-
----
 
 ### 802.11n: `Transmit Beamforming (TxBF)` _Original feature_
 
@@ -82,8 +77,6 @@ Some WLAN vendors implement Transmit Beamforming (TxBF) in different proprietary
 - However, for TxBF to work, the client device must support Transmit Channel Feedback (TxCBF) to provide feedback to the access point.
 - This dependency limits its effectiveness in environments with legacy or non-compliant devices.
 
----
-
 ### Cisco: `Client Link`
 
 - While beamforming (TxBF) is effective, it has limitations tied to client-side capabilities.
@@ -91,14 +84,23 @@ Some WLAN vendors implement Transmit Beamforming (TxBF) in different proprietary
 - That's one of their big selling points, improvement of legacy clients by upgrading to 802.11n APs.
 - Cisco ClientLink is a more versatile solution because it doesn’t depend on client support and works across all device types, ensuring better overall network performance, especially in mixed environments with legacy devices.
 
----
-
 ### Ruckus: `Beamflex`
 
 - The "normal" Beamforming in 802.11ac is a **radio based technology**. Whereas BeamFlex engages adaptive antennas so this is an **antenna based technology**.
 - What Ruckus does is use beamforming (which is radio based) and combines it with adaptive antennas (BeamFlex which antenna based) to maximize the performance.
 
+## Transmit Beamforming (TxBF): `Beamformer` & `Beamformee`
 
+Beamforming (TxBF) relies on two key entities: 
+
+1. `Beamformer`: Which actively shapes the transmission pattern. (Typical = AP)
+2. `Beamformee`: Which receives and provides feedback to facilitate optimization. (Typical = client STA)
+
+|                   	|                                                                                                                                         **Beamformer**                                                                                                                                         	|                                                                                             **Beamformee**                                                                                            	|                                                                                                                                        **Beamforming**                                                                                                                                        	|
+|:-----------------:	|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:	|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:	|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:	|
+| **Device**        	| `AP`<br>Generates the directional transmission pattern to optimize the signal                                                                                                                                                                                                                  	| `Client STA`<br>Receiving device interpreting signals optimized by the beamformer (AP)                                                                                                                	| `Unidirectional` <br>Typical in setups where only the AP optimizes the link toward clients                                                                                                                                                                                                    	|
+| **Device**        	| `AP & client STA` <br>In advanced MU-MIMO systems where both entities can mutually optimize                                                                                                                                                                                                    	| `AP & client STA` <br>Receivers that provide channel state information to the beamformer (AP/STA).                                                                                                    	| `Bidirectional`<br>Implemented in advanced setups like 802.11ax with downlink and uplink MU-MIMO                                                                                                                                                                                              	|
+| _**Description**_ 	| _The beamformer uses antenna arrays and beamforming algorithms to compute signal weights based on the channel response matrix (CSI). <br>This enables focusing the signal toward a specific receiver, enhancing the signal-to-noise ratio (SNR) and minimizing interference to other devices._ 	| _The beamformee measures channel characteristics and provides feedback to the beamformer via the Compressed Beamforming Report, containing spatial matrix data (CSI Feedback) for link optimization._ 	| _Beamforming is a signal processing technique using MIMO antennas to steer transmissions toward specific receivers. <br>In Wi-Fi, its main purpose is to maximize spectral efficiency by reducing propagation losses and improving overall network capacity, critical in dense environments._ 	|
 
 
 ## Transmit Beamforming (TxBF) Methods: `Explicit` & `Implicit`
