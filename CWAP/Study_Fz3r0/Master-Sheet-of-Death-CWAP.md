@@ -315,11 +315,7 @@ https://www.cleartosend.net/802-11ax-ofdma-subcarriers/
 
 
 
-### AIFS & CW
 
-![image](https://github.com/user-attachments/assets/789900e1-0a3b-4781-ad52-bf420a2550af)
-
-- When an 802.11n station begins the arbitration process after a failed frame transmission = `AIFS`
 
 
 
@@ -351,7 +347,13 @@ https://www.cleartosend.net/802-11ax-ofdma-subcarriers/
 
 ````
 
-**Table:**
+### AIFS & CW
+
+![image](https://github.com/user-attachments/assets/789900e1-0a3b-4781-ad52-bf420a2550af)
+
+- When an 802.11n station begins the arbitration process after a failed frame transmission = `AIFS`
+
+### Full Table
 
 | **PHY**      | **Contention Window Min<br>(aCWmin)** | **Contention Window Max<br>(CWmax)** |
 |--------------|---------------------------------------|--------------------------------------|
