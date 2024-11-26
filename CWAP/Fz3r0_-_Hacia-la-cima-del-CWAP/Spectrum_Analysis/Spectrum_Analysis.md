@@ -274,6 +274,14 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 
 
 
+# Device Signartures
+
+## 802.11 Wi-Fi Singatures
+
+
+### Signatures: `2.4 GHz - PSK`
+
+![image](https://github.com/user-attachments/assets/2ccb8151-0272-413f-96a5-ea8c7c372e73)
 
 
 
