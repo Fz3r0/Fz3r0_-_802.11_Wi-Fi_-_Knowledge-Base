@@ -300,6 +300,39 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 
 
 
+
+
+## NON-802.11 Wi-Fi Singatures
+
+### Bluetooth : 2.4 GHz
+
+- Bluetooth devices are active in the 2.4 GHz band.
+- These devices are **frequency hoppers that impact all channels**, so you can't move your Wi-Fi to avoid their transmissions.
+- However, Bluetooth devices are relatively low-powered and hop very quickly, and **will have limited impact on Wi-Fi devices**.
+- It isn't until **many Bluetooth devices are active simultaneously that you are likely to see problems with your Wi-Fi.**
+
+![image](https://github.com/user-attachments/assets/5c686312-b844-4579-9c5a-1d6c73cf291c)
+
+--- 
+
+### Cordless Phone : 2.4 GHz
+
+- **Not all cordless phones create the same pattern in the spectrum.**
+- Some may create a **constant spike in amplitude**
+- Some may frequency hop **across the entire spectrum.**
+- Cordless phones may change their frequency each time they are used.
+- **Channel changes will be noticeable in the `amplitude history` or `waterfall`.**
+
+![image](https://github.com/user-attachments/assets/1780f1b6-0178-486c-b085-9cccdcd718e7)
+
+--- 
+
+### Microwave : 2.4 GHz
+
+
+
+
+
 ## Spectrum Analysis: `Device Signatures` & `Non-WiFi Interference`
 - [Metageek :: Wi-Fi & No-Wi-Fi Interference examples](https://www.metageek.com/training/resources/wifi-and-non-wifi-interference/)
 - [Metageek :: Interference Identification Guide](https://www.4gon.co.uk/documents/meetageek_interference_identification_guide.pdf)
