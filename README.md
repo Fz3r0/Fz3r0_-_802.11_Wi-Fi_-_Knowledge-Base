@@ -7619,6 +7619,9 @@ Time synchronization is essential in Wi-Fi networks to ensure reliable and error
 - [Ekahau - 7 common network fails (image)](https://github.com/user-attachments/assets/6019df2f-187d-4d9d-b117-a523054af468)
 - [Why Most Wi-Fi Networks Fail | Matt Starling | WLPC Prague 2024](https://www.youtube.com/watch?v=Vp3rxOLOJ1I)
 
+## Device Checkers and Searches
+
+- [client STA device checker list capabilites, channels, PHY, captures, etc](https://script.google.com/macros/s/AKfycbwLK19WyO063oCJGO5BYscQ_PTpsALAwKQe0amwpfqcShklIUpHNjjfIA_FTGI8JMXoaQ/exec)
 
 ## SSID / Beacon Overhead
 
