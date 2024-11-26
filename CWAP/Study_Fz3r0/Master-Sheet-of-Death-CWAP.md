@@ -54,6 +54,7 @@
 
 **PLCP `Preamble`:**
 
+- Gives the time for the synchronizer (the reciever of the transmission) to synchronize with the transmission of the BSS. 
 - Indicated to all nearby STAs that a frame is forthcoming.
 - Includes a known pattern of 1's and 0's, when seen by other STAs they will know that a frame is coming. 
 - Provides time for the receiver to detect the signal and synchronise with the signal.
