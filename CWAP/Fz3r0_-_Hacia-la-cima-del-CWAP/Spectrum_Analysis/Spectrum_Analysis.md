@@ -279,14 +279,47 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 ## 802.11 Wi-Fi Singatures
 
 
-### Signatures: `2.4 GHz - PSK`
+### Signatures: `2.4 GHz` : `PSK` : `20 MHz`
 
 ![image](https://github.com/user-attachments/assets/2ccb8151-0272-413f-96a5-ea8c7c372e73)
 
 
 
 
+### Signatures: `5 GHz` : `OFDM` : `UNNI-2` : `20 MHz`
 
+![image](https://github.com/user-attachments/assets/91e3d557-ba9a-4b52-a09b-59fe29de099b)
+
+
+
+
+
+
+
+
+
+
+
+## Spectrum Analysis: `Device Signatures` & `Non-WiFi Interference`
+- [Metageek :: Wi-Fi & No-Wi-Fi Interference examples](https://www.metageek.com/training/resources/wifi-and-non-wifi-interference/)
+- [Metageek :: Interference Identification Guide](https://www.4gon.co.uk/documents/meetageek_interference_identification_guide.pdf)
+- [Ekahau :: Identifying Wi-Fi Interference with Ekahau Analyzer](https://www.ekahau.com/blog/identifying-wi-fi-interference-with-ekahau-analyzer/)
+- [Aruba :: No-Wi-Fi interference examples](https://www.arubanetworks.com/techdocs/ArubaOS_8.11.0_Web_Help/Content/arubaos-solutions/spectrum-analysis/non-wifi-inte.htm) <br> <br>
+- [Wideband Jammer]() `Ultra high & Wide Duty Cicle`
+- [Bluetooth]() `Low Duty Cicle`
+- [Cordless Phone]() `Low Duty Cicle` | 2 or more channels
+- [Wireless Camera]() `High Duty Cicle`
+
+
+
+
+## Spectrum Analysis: `Find non RF Device`
+
+two systematic methods for dividing and locating or tracking unknown RF devices are:
+
+	
+- Triangulation
+- Quadrants
 
 
 
