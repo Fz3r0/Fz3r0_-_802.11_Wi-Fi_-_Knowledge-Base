@@ -24,6 +24,147 @@
 
 
 
+# Important Elements to Remember
+
+## MAC Header
+
+## MAC Frame Sections :: `MAC Header` + `Frame Body` + `FCS`
+_All MAC frames contain the first three header fields and the FCS. The frame type and subtype determine the additional fields that are contained in the frame. | The HT Control field is a part of the 802.11n amendment which is added to the MAC header || **IEEE-802.11-2020 :: 9.2.3 General frame format :: page 756**_
+
+- [`MAC Header`](https://mrncciew.com/2014/09/27/cwap-mac-header-frame-control/) _`nayarasi`_ <br><br>
+    - [MAC Header: `Frame Control`](https://mrncciew.com/2014/09/27/cwap-mac-header-frame-control/)
+    - [MAC Header: `Duration` / `ID`](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/)
+    - [MAC Header: `Addresses`](https://mrncciew.com/2014/09/28/cwap-mac-headeraddresses/)
+    - [MAC Header: `Sequence Control`](https://mrncciew.com/2014/11/01/cwap-mac-header-sequence-control/)
+    - [MAC Header: `QoS Control`](https://mrncciew.com/2014/10/03/cwap-mac-header-qos-control/)
+    - [MAC Header: `HT Control`](https://mrncciew.com/2014/10/20/cwap-ht-control-field/) <br><br>
+
+````py
+## MAC Frame Sections :: MAC Header + Frame Body + FCS
+
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------||-------------||----------|
+|  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     ||    Frame    ||    FCS   |
+| Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control | Control ||     Body    ||          |
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------||-------------||----------|
+|    2         2           6       0 or 6    0 or 6    0 or 2     0 or 6    0 or 2    0 or 4 ||                               <<== Bytes
+|____________________________________________________________________________________________||_____________||__________|
+ \                                                                                          /   \          /  \        /
+   \                                                                                      /       \      /      \    /
+     \__________________________________________________________________________________/           \__/          \/
+                                   MAC HEADER                                                   FRAME BODY        FCS
+                              - Addressing                                                     - Var Lenght      - 32-Bit CRC:
+                                 - Transmiter, Receiver, Source, Destination, BSSID               - Data /          - Check Sequence
+                              - Control:                                                          - Payload         - Integrity
+                                 - Frame Control
+                                 - Duration                      
+                                 - Sequence Control                                                   
+                                 - QoS Control
+                                 - HT Control
+
+````
+
+---
+
+### 💊📦 `Duration / ID` :: _2 Bytes / 16 Bits_
+_2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a two different purposes: 1 ) Duration: This field is used to reset NAV timers for devices on channel. Time in microseconds needed to complete the frame exchange, used to update STAs NAV (Network Allocation Vector). This is used a lot and it's important to know that this is not the duration of the current frame, it is the duration of the exchanges after the current frame requeried to actually complete the transaction 2) ID: Used in legacy PS-poll Frame to indicate the AID (Association ID) of the STA (AKA: ID of the Client Station given to the AP) to send the buffered frame in the AP | Expected duration of current transmission. Stations waiting for the medium use this to estimate when the channel will be free. | The contents of this field vary with frame type and subtype, with whether the frame is transmitted during the CFP, and with the QoS capabilities of the sending STA. | Omni peek shows this as duration, however it really is a duration / id field._ 
+
+````py
+## MAC Frame Sections :: MAC Header + Frame Body + FCS
+
+## Duration (actual) :: Reset NAV timers for devices on channel STAs waiting for the medium use this to estimate when the channel will be free. Expected duration of current transmission after current frame
+## ID (legacy)       :: STA send PS-poll Frame to AP to indicate the AID (Association ID) of the STA
+
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------|
+|  Frame  | Duration/ | Address | Address | Address | Sequence | Address |  QoS    |  HT     |
+| Control |    ID     |    1    |    2    |    3    |  Control |    4    | Control | Control |
+|---------|-----------|---------|---------|---------|----------|---------|---------|---------|
+               ||
+               \/
+        |-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+        |  0  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  | 10  | 11  | 12  | 13  | 14  | 15  |
+        |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
+        |-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+           1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     <<== 2 Bytes / 16 Bits
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+## ID (legacy)
+
+#  Legacy Power Management – PS Poll frames use this field as an association identifer (AID)
+
+        |-----|-----||-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+        |  1  |  1  ||     |     |     |     |     |     |     |     |     |     |     |     |     |     |
+        |     |     ||     |     |     |     |     |     |     |     |     |     |     |     |     |     |
+        |-----|-----||-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+           1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     <<== 2 Bytes / 16 Bits
+                      |_________________________________________________________________________________|
+                                                       Values:  0 - 2007
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+## Duration (Actual)
+
+#  Virtual Carrier Sense – This is the main purpose which used to reset the NAV timer of the other stations
+
+        |-----||-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+        |  0  ||     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
+        |     ||     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
+        |-----||-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+           1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     <<== 2 Bytes / 16 Bits
+                |________________________________________________________________________________________|
+                                                    Values:  0 - 32767
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+## CFP Duration (PCF - Never Implemented in 802.11 Wi-Fi)
+
+# Contention-Free Period (CFP) – This field is used as an indicator that a point coordination function (PCF) process has begun.
+
+        |-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+        |  1  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |
+        |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
+        |-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+           1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     1     <<== 2 Bytes / 16 Bits
+         |_____________________________________________________________________________________________|
+                                         23768  Transmitted by PC during CFP
+
+````
+
+- 📦 [**`Duration`** / **`ID`**](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/)  <br> <br>
+    - ⭕ [ID (legacy)](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/) :: Legacy Power Management <br> <br>
+        - PS-Poll (Legacy) :: AID 41 (ID of Station = 41) = `wlan.aid == 41`
+        - PS-Poll (Legacy) :: AID 1723 (ID of Station = 1723) = `wlan.aid == 1723`
+        - PS-Poll (Legacy) :: AID 2007 (ID of Station = 2007 [maximum value]) = `wlan.aid == 2007` br> <br>
+    - ⭕ [Duration (Actual)](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/) :: Virtual Carrier Sense <br> <br>
+        - Duration (Actual) :: ACK = 0 microseconds = `wlan.fc.type_subtype == 29 && wlan.duration == 0`
+        - Duration (Actual) :: ACK > 0 microseconds = `wlan.fc.type_subtype == 29 && wlan.duration > 0` <br> <br>
+        - Duration (Actual) :: Duration more that 0 microseconds = `wlan.duration > 0`
+        - Duration (Actual) :: Maximum duration possible (32767) = `wlan.duration == 32767`
+        - Duration (Actual) :: Duration more that 0 microseconds, without control frames = `wlan.duration > 0 && !wlan.fc.type == 1` <br> <br>
+    - ⭕ [CFP Duration (PCF) - Not implemented in 802.11 Wi-Fi)](https://mrncciew.com/2014/10/25/cwap-mac-header-durationid/) :: Point Coordination Function (PCF) process has begun. <br><br>
+        - _I can't find a CFP duration captured in the wild yet :(_
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Physical Layer
 
