@@ -53,14 +53,18 @@ Beamforming operates on a principle analogous to how beams of light intersect an
 
 In the context of multiple antennas, each acting like a flashlight emitting a beam, the configuration of their emissions can influence the form of the collective radio beam. When the multiple signal beams originating from these antennas converge at a given point, occasionally a 'spatial hole' might form if two signals with the same signal strength arrive with opposite phase shifts, effectively canceling each other out. 
 
+![image](https://github.com/user-attachments/assets/a3fdc00e-0e39-4734-9bbe-d845d299619e)
+
 - **Beamforming intelligently adjusts the phase of the signals from each transmitting antenna, enabling these beams to constructively overlap, enhancing their combined effect. _(Just like the flashlight analogy)_**
 
 To fine-tune beamforming, parameters are derived by analyzing the `Channel State Information (CSI)`, which offers insight into the transmission environment. **Depending on how CSI is gathered, beamforming can be executed in one of two modes:** explicit or implicit. 
 
-- **`Explicit beamforming` is the most used nowdays and the only mode suuported by 802.11ac/ax**, it involves direct communication using request-response CSI frames (in form of `action no ack` or `null data packet (NDP)` frames) from the receiver to the transmitter (STA <-> AP)
+- **`Explicit beamforming` is the most used nowdays and the only mode suuported by 802.11ac/ax**, it is also known as `Sounding Based Beamforming` _(because of the use of CSI sounding frames)_. It involves direct communication using request-response CSI frames (in form of `action no ack` or `null data packet (NDP)` frames) from the receiver to the transmitter (STA <-> AP)
 - **`Implicit beamforming` is used by legacy devices and only supported by 802.11n**, it  relies on the transmitter deducing this information indirectly (WITHOUT using dedicated frames between both devices). 
 
-from the 802.11ac standard, implicit beamforming has not been supported due to its inherent complexity and limitations.
+From the 802.11ac standard, implicit beamforming has not been supported due to its inherent complexity and limitations.
+
+![image](https://github.com/user-attachments/assets/0bb1730d-13e5-4582-99bd-5106413e29c6)
 
 ## Transmit Beamforming (TxBF): `3 main categories`
 
@@ -478,7 +482,7 @@ A summary of the steps to enable beamforming is:
 
 1. The `beamformer` transmits a `Null Data Packet (NDP) Announcement` frame which identifies `beamformees`.
 2. This is then followed by another `Null Data Packet (NDP) Sounding Frame` used by the receiver to analyse training fields for various subcarriers and calculates a response.
-3. The `beamformee` respond with an `Action Frame no-ACK` that contains a `feedback matrix`.
+3. The `beamformee` respond with an `Action Frame no-ACK Sounding Frame` that contains a `feedback matrix`.
 4. The `beamformer` uses the `feedback matrix` to **calculate a steering matrix to direct RF energy toward the beamformee**.
 
 Note:  In this example I couldn't capture NDP Announcement sent from the client STA (Xiaomi Phone) despite it being capable of being a beamformer, perhaps that is a driver limitation or factory configuration. This is also curious because the captures show that SU Beamforming is used (both devices can be beamformer)
@@ -590,6 +594,7 @@ The figure below shows the frame exchange process. The beamformer (AP) will requ
 - https://www.mathworks.com/help/wlan/ug/802-11ac-transmit-beamforming.html
 - https://www.commscope.com/globalassets/digizuite/923965-ruckus-beamflex-pa-115628-en.pdf
 - https://www.cisco.com/c/en/us/td/docs/wireless/technology/5760_deploy/CT5760_Controller_Deployment_Guide/Mobility_Design_and_Configuration.pdf
+- https://www.youtube.com/watch?v=6-CKZ9kqv7w&list=PLqMJQcp7oyf5RBdZFtQsf6r0pgnaGK07x
 
 
 
