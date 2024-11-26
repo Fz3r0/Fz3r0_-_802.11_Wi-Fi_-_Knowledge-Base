@@ -40,6 +40,8 @@ Beamforming technique concentrates radio waves in precise directions toward clie
 - **Beamforming gains are expected to be approximately `+ 3 dB` in the transmitted direction. In practice, this gain will typically be one step up in data rates (increasing one `+1 MCS` number) for a mid-range transmission.**
 - **Beamforming** uses a calibration process called **`Channel Sounding`** **between `APs` and client `STAs`** to determine if and how energy can be radiated in an optimal direction.
 
+![image](https://github.com/user-attachments/assets/0a25dbdb-a004-431b-9607-8b8c1ee5320c)
+
 ### Beamforming in 802.11ac Wi-Fi 5
 
 - In 802.11ac, Explicit beamforming got fine-tuned, and only Null data packet (NDP) Explicit Beamforming is supported
