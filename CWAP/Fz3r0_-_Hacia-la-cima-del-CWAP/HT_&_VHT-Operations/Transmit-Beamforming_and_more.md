@@ -35,11 +35,12 @@
 **Transmit Beamforming (TxBF)** is a wireless signal enhancement technique **introduced as an optional feature in 802.11n** and **later standardized in 802.11ac/ax**. 
 
 - **“Beamforming gains are expected to be approximately `+ 3 dB` in the transmitted direction. In practice, this gain will typically be one step up in data rates (increasing one `+1 MCS` number) for a mid-range transmission.”**
+- **Beamforming** uses a calibration process called **`Channel Sounding`** **between `APs` and client `STAs`** to determine if and how energy can be radiated in an optimal direction.
+
+### Beamforming in 802.11ac Wi-Fi 5
+
+- In 802.11ac, Explicit beamforming got fine-tuned, and only Null data packet (NDP) Explicit Beamforming is supported
 - 802.11ac: enables single user (SU) and multi user (MU) beamforming which aims to improve SNR (and hence throughput) between a wireless client and AP. 
-
-**Beamforming** uses a calibration process called **`Channel Sounding`** **between `APs` and client `STAs`** to determine if and how energy can be radiated in an optimal direction.
-
-
 
 ## Transmit Beamforming (TxBF): `3 main categories`
 
@@ -88,10 +89,17 @@ Some WLAN vendors implement Transmit Beamforming (TxBF) in different proprietary
 
 - The "normal" Beamforming in 802.11ac is a **radio based technology**. Whereas BeamFlex engages adaptive antennas so this is an **antenna based technology**.
 - What Ruckus does is use beamforming (which is radio based) and combines it with adaptive antennas (BeamFlex which antenna based) to maximize the performance.
+- **BeamFlex is not client dependent**. It can work with any 802.11 standard client. Whereas beamforming requires a 802.11ac client. Just to add, not all 802.11ac standard clients come with TxBF built-in.
+- **Because of this... you will not see NPS Announcements or HT/VHT Sounding Feedback Matrix/SNR frame exchange between APs & STAs**
+
+
+
 
 ## Transmit Beamforming (TxBF): `Beamformer` & `Beamformee`
 
 Beamforming (TxBF) relies on two key entities: 
+
+The beamformer is the transmitter, and beamformee is the receiver.
 
 1. `Beamformer`: Which actively shapes the transmission pattern. (Typical = AP)
 2. `Beamformee`: Which receives and provides feedback to facilitate optimization. (Typical = client STA)
@@ -103,9 +111,25 @@ Beamforming (TxBF) relies on two key entities:
 | _**Description**_ 	| _The beamformer uses antenna arrays and beamforming algorithms to compute signal weights based on the channel response matrix (CSI). <br>This enables focusing the signal toward a specific receiver, enhancing the signal-to-noise ratio (SNR) and minimizing interference to other devices._ 	| _The beamformee measures channel characteristics and provides feedback to the beamformer via the Compressed Beamforming Report, containing spatial matrix data (CSI Feedback) for link optimization._ 	| _Beamforming is a signal processing technique using MIMO antennas to steer transmissions toward specific receivers. <br>In Wi-Fi, its main purpose is to maximize spectral efficiency by reducing propagation losses and improving overall network capacity, critical in dense environments._ 	|
 
 
+
+
 ## Transmit Beamforming (TxBF) Methods: `Explicit` & `Implicit`
 
 which has two methods `Implicit` and `Explicit` beamforming.
+
+### `Explicit Beamforming (TxBF)` - Tipical Use
+
+- **Requires feedback from the stations in order to determine the amount of phase-shift required for each signal.**
+
+### `Implicit Beamforming (TxBF)` - 
+
+- **Uses an implicit channel-sounding process to optimize the phase differentials between the transmit chains.**
+
+
+## Transmit Beamforming (TxBF): `SU (Single User)` & `MU (Multi User)`
+
+- `In Multi-User Beamforming`: only Access Point can be a Beamformer. (Most Commonly Used)
+- `In Single User beamforming`:  Access Point or client STA can be a Beamformer.
 
 
 
@@ -122,6 +146,8 @@ There are different 802.11 frames involved in transmit beamforming:
 - Sent from the `Beamformer / AP` to `Broacast`
 - Beacon frames include the HT Capabilities and VHT Capabilities tags, which signal beamforming capabilities and support in 802.11n/ac networks. 
 - These fields indicate whether an AP (Access Point) or STA (Station) can perform transmit beamforming, receive beamforming, and related operations.
+
+#### This Beacon Frame es showing that the AP `SU Single User`  beamformer:
 
 ````java
 
@@ -176,12 +202,12 @@ IEEE 802.11 Wireless Management
                 .... .... .... .... .... .... .0.. .... = Short GI for 160MHz and 80+80MHz: Not supported
                 .... .... .... .... .... .... 1... .... = Tx STBC: Supported
                 .... .... .... .... .... .001 .... .... = Rx STBC: 1 Spatial Stream Supported (0x1)
-                .... .... .... .... .... 1... .... .... = SU Beamformer Capable: Supported        <<<<-----||
-                .... .... .... .... ...1 .... .... .... = SU Beamformee Capable: Supported        <<<<-----||
+                .... .... .... .... .... 1... .... .... = SU Beamformer Capable: Supported        <<<<-----|| SINGLE USER (SU) BEAMFORMER CAPABLE
+                .... .... .... .... ...1 .... .... .... = SU Beamformee Capable: Supported        <<<<-----|| SINGLE USER (SU) BEAMFORMER CAPABLE
                 .... .... .... .... 011. .... .... .... = Beamformee STS Capability: 4 (0x3)      <<<<-----||
                 .... .... .... .001 .... .... .... .... = Number of Sounding Dimensions: 2 (0x1)
-                .... .... .... 0... .... .... .... .... = MU Beamformer Capable: Not supported    <<<<-----||
-                .... .... ...0 .... .... .... .... .... = MU Beamformee Capable: Not supported    <<<<-----||
+                .... .... .... 0... .... .... .... .... = MU Beamformer Capable: Not supported    <<<<-----|| MULTI USER (MU) BEAMFORMER NON-CAPABLE
+                .... .... ...0 .... .... .... .... .... = MU Beamformee Capable: Not supported    <<<<-----|| MULTI USER (MU) BEAMFORMER NON-CAPABLE
                 .... .... ..0. .... .... .... .... .... = TXOP PS: Not supported
                 .... .... .1.. .... .... .... .... .... = +HTC-VHT Capable: Supported
                 .... ..11 1... .... .... .... .... .... = Max A-MPDU Length Exponent: 1 048 575 (0x7)
