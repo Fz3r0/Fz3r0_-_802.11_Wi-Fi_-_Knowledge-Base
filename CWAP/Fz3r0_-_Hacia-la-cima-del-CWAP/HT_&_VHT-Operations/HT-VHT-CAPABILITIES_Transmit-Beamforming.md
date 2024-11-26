@@ -136,6 +136,8 @@ The beamformer is the transmitter, and beamformee is the receiver.
 | **Device**        	| `AP & client STA` <br>In advanced MU-MIMO systems where both entities can mutually optimize                                                                                                                                                                                                    	| `AP & client STA` <br>Receivers that provide channel state information to the beamformer (AP/STA).                                                                                                    	| `Bidirectional`<br>Implemented in advanced setups like 802.11ax with downlink and uplink MU-MIMO                                                                                                                                                                                              	|
 | _**Description**_ 	| _The beamformer uses antenna arrays and beamforming algorithms to compute signal weights based on the channel response matrix (CSI). <br>This enables focusing the signal toward a specific receiver, enhancing the signal-to-noise ratio (SNR) and minimizing interference to other devices._ 	| _The beamformee measures channel characteristics and provides feedback to the beamformer via the Compressed Beamforming Report, containing spatial matrix data (CSI Feedback) for link optimization._ 	| _Beamforming is a signal processing technique using MIMO antennas to steer transmissions toward specific receivers. <br>In Wi-Fi, its main purpose is to maximize spectral efficiency by reducing propagation losses and improving overall network capacity, critical in dense environments._ 	|
 
+![image](https://github.com/user-attachments/assets/f55b120e-e6a9-48ff-a5d2-248a484a62dc)
+
 
 
 
