@@ -180,14 +180,18 @@ which has two methods `Implicit` and `Explicit` beamforming.
 
 - only Access Point can be a Beamformer. (Most Commonly Used)
 
-**MU (Multi User) Beamforming Characteristics:**
+This is the most common Transmit Beamforming used, and if only the AP can be the Beamformer means:
+
+- **Beamforming is one way, so you dont' have the same advantages with the client STA is Tx Data = Upload (From STA to AP) than when the client STA is Rx Data = Download (From AP to STA). This means, the only frames that get beamformed are the frames sent from the AP (Beamformer) to the client STA (Beamformee).**
+
+
  
 ### `In Single User beamforming`
 
 - Access Point or client STA can be a Beamformer.
 - Beamforming is applied to improve the signal quality for a single device (STA) at a time
 
-**SU (Single User) Beamforming Characteristics:**
+
 
 
 ## Transmit Beamforming (TxBF): `SU (Single User)` & `MU (Multi User)` VS `Explicit` & `Implicit`
