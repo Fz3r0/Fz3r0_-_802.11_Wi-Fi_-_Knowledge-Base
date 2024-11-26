@@ -278,8 +278,21 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 
 ## 802.11 Wi-Fi Singatures
 
+802.11 has two basic shapes: 
 
-### Signatures: `2.4 GHz` : `PSK` : `20 MHz`
+1. 802.11b transmissions look like a bell curve (PSK/BPSK/QPSK)
+2. 802.11g/n/ac/ax are faster 802.11 data rates with flat across the top.
+
+
+
+### Signatures: `2.4 GHz` : `802.11b` / `Wi-Fi 1` : `PSK / BPSK / QPSK` : `22 MHz`
+
+- 802.11 BPSK / QPSK
+- PHY: 2.4 GHz
+- Data Rates: 1, 2, 5.5, 11 Mbps
+- Channel Width: 22 MHz
+
+![image](https://github.com/user-attachments/assets/4f42cd14-cb38-4679-8b49-9639f9771089)
 
 ![image](https://github.com/user-attachments/assets/2ccb8151-0272-413f-96a5-ea8c7c372e73)
 
@@ -328,6 +341,41 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 --- 
 
 ### Microwave : 2.4 GHz
+
+- Microwave ovens operate in the 2.4 GHz band
+- Typically create a **mountain-like shape in the Density View.**
+- Most people use a **microwave oven in exact time lengths like 1 minute bursts, which are easily measured in the `Waterfall View`.**
+- The amplitude levels of microwave oven leakage in the 2.4 GHz vary depending on their age, shielding, and distance from the spectrum analyzer.
+
+![image](https://github.com/user-attachments/assets/8cbf3c61-ef11-47b5-8ef9-5daec9f98d2a)
+
+--- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
