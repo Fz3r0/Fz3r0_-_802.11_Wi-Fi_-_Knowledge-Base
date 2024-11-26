@@ -68,6 +68,9 @@ From the 802.11ac standard, implicit beamforming has not been supported due to i
 
 ![image](https://github.com/user-attachments/assets/0bb1730d-13e5-4582-99bd-5106413e29c6)
 
+![image](https://github.com/user-attachments/assets/494e8340-950b-4d7f-9da5-360825f98626)
+
+
 ## Transmit Beamforming (TxBF): `3 main categories`
 
 There are various forms of beamforming, some standards-based, most proprietary to certain vendors. The 3 main types are: 
@@ -380,8 +383,7 @@ IEEE 802.11 Wireless Management
 - It initiates the sounding process for channel state information (CSI) feedback.
 
 ````java
-Frame 6407: 75 bytes on wire (600 bits), 75 bytes captured (600 bits)
-Radiotap Header v0, Length 56
+
 802.11 radio information
 IEEE 802.11 VHT/HE/EHT/RANGING NDP Announcement, Flags: ........
     Type/Subtype: VHT/HE/EHT/RANGING NDP Announcement (0x0015)
@@ -492,6 +494,44 @@ A summary of the steps to enable beamforming is:
 2. This is then followed by another `Null Data Packet (NDP) Sounding Frame` used by the receiver to analyse training fields for various subcarriers and calculates a response.
 3. The `beamformee` respond with an `Action Frame no-ACK Sounding Frame` that contains a `feedback matrix`.
 4. The `beamformer` uses the `feedback matrix` to **calculate a steering matrix to direct RF energy toward the beamformee**.
+
+Total three frames exchanged between beamformer and beamformer: 
+
+1. `Control Frame` : VHT/HE/EHT/RANGING NDP Announcement
+2. `NDP Frame` : Not seen in Protocol Analyzers
+3. `Action No-ACK` :  Feedbackmatrix + Average SNR
+
+IMPORTANT: **we cannot capture NDP using Protocol analyzers as it does not have any MAC!!! That's why it will never been seen in Wireshark**
+
+![image](https://github.com/user-attachments/assets/fed73547-b238-4b19-b8c7-d49c2ef1cc58)
+
+### 1. `Control Frame` : VHT/HE/EHT/RANGING NDP Announcement
+
+- The beamformer begins the process by transmitting a VHT Null Data Packet Announcement frame, used to gain control of the channel and identify Beamformee and other clients ignore the frame.
+- We can filter the VHT NDP Announcement frame - (wlan.fc.type==0 && wlan.fc.subtype==5)  OR (wlan.fc.type_subtype==21)
+
+### 2. `NDP Frame` : Not seen in Protocol Analyzers
+
+- The beamformer sends NDP frame after VHT-NDP Announcement. NDP frame, which does not have any MAC ( Imagine like Preamble from the Beamformer), will be used by the beamformee to prepare the feedback matrix.
+- The Beamformee using the NDP frame calculates the Feedback Matrix and compresses the feedback matrix to be small and takes less airtime to transfer the frame.
+
+### 3. `Action No-ACK` :  Feedbackmatrix + Average SNR
+
+- The Beamformee sends an Action No-ACK including the feedback matrix calculated before using the NDP frame
+- Once the Beamformer receives the Compressed Feedback Matrix (is Action with NO Ack frame) from the beamformee, it builds the Steering Matrix.
+- The beamformer uses Steering Matrix to focus the signal in the beamformee direction while sending the data frame.
+
+### Frame Exchange: `Multi-user beamforming Variant`
+
+- This is only found where BSSID supports MU Beamforming, not available in SU. 
+- In Multi-user beamforming, everything works as 3 steps mentioned before, but we will have an extra frame known as `Beamforming Report Poll`, which polls for individual feedback matrix from beamformees.
+- This is easy to find, it's just a list coontaining the AIDS from different STAs.
+  
+![image](https://github.com/user-attachments/assets/9668ce83-e811-4bd3-aa22-ea33002841fd)
+
+Wireshark filter for Beamforming Report Poll = (wlan.fc.type==1 && wlan.fc.subtype==4) OR  wlan.fc.type_subtype==20
+
+### Frame Exchange: Fz3r0 Capture`
 
 Note:  In this example I couldn't capture NDP Announcement sent from the client STA (Xiaomi Phone) despite it being capable of being a beamformer, perhaps that is a driver limitation or factory configuration. This is also curious because the captures show that SU Beamforming is used (both devices can be beamformer)
 
