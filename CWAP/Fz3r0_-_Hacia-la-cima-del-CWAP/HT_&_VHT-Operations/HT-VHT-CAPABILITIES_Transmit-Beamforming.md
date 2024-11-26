@@ -365,13 +365,13 @@ IEEE 802.11 VHT/HE/EHT/RANGING NDP Announcement, Flags: ........
     .000 0000 0111 0100 = Duration: 116 microseconds
     Receiver address: Android.local (3c:13:5a:f2:46:88)
     Transmitter address: AP-Huawei (50:4e:dc:90:2e:bd)
-    Sounding Dialog Token: 0x84 VHT NDP Announcement
-        .... ..00 = NDP Announcement Variant: VHT NDP Announcement (0x0)
+    Sounding Dialog Token: 0x84 VHT NDP Announcement                       
+        .... ..00 = NDP Announcement Variant: VHT NDP Announcement (0x0)    <<<<----|| VHT NDP Announcement
         1000 01.. = Sounding Dialog Token: 0x21
     STA list
         STA 0
-            .... 0000 0000 0010 = AID12: 0x002
-            ...0 .... .... .... = Feedback Type: SU feedback requested
+            .... 0000 0000 0010 = AID12: 0x002                              <<<<----|| Association ID for each STA
+            ...0 .... .... .... = Feedback Type: SU feedback requested      <<<<----|| SU Feedback requested @ the client STA)
             .... .... .... .... 000. .... .... .... = Reserved: 0x0
     [WLAN Flags: ........]
 
@@ -422,9 +422,9 @@ IEEE 802.11 Wireless Management
             1000 01.. .... .... .... .... = Sounding Dialog Token Number: 0x21
 
         VHT Compressed Beamforming Report […]: 4ff3c8324f3cf3cc238f3cf3cc33cf3cf3cc330f3df3cc33cf3cf4d0430f4d34d144134d34d154534d35d554535d75d555575d75d555575d75d555976db6d5569b6db6d9669b6db6d9669b7df6d9679f7df6d9779f7df6d968a38d36da68a38d37da69
-            Average Signal to Noise Ratio                        <<<<----||
+            Average Signal to Noise Ratio                        <<<<----|| Average SNR sent fron the STA to the AP
                 Stream 1 - Signal to Noise Ratio:  41.75dB
-            Feedback Matrices                                    <<<<----||
+            Feedback Matrices                                    <<<<----|| Feedback Matrices sent fron the STA to the AP
                 SCIDX: -122, φ11:51, ψ21:3
                 SCIDX: -121, φ11:50, ψ21:2
                 SCIDX: -120, φ11:51, ψ21:3
