@@ -187,11 +187,11 @@ There are different 802.11 frames involved in transmit beamforming:
 
 ---
 
-### Beacon Frames
+### `Beacon Frames & Probe Responses` : `AP Beamforming Capabilities`
 
 - Sent from the `Beamformer / AP` to `Broacast`
 - Beacon frames include the HT Capabilities and VHT Capabilities tags, which signal beamforming capabilities and support in 802.11n/ac networks. 
-- These fields indicate whether an AP (Access Point) or STA (Station) can perform transmit beamforming, receive beamforming, and related operations.
+- These fields indicate whether an AP (Access Point) can perform transmit beamforming, receive beamforming, and related operations.
 
 #### This Beacon Frame es showing that the AP `SU Single User`  beamformer:
 
@@ -250,8 +250,8 @@ IEEE 802.11 Wireless Management
                 .... .... .... .... .... .001 .... .... = Rx STBC: 1 Spatial Stream Supported (0x1)
                 .... .... .... .... .... 1... .... .... = SU Beamformer Capable: Supported        <<<<-----|| SINGLE USER (SU) BEAMFORMER CAPABLE
                 .... .... .... .... ...1 .... .... .... = SU Beamformee Capable: Supported        <<<<-----|| SINGLE USER (SU) BEAMFORMER CAPABLE
-                .... .... .... .... 011. .... .... .... = Beamformee STS Capability: 4 (0x3)      <<<<-----||
-                .... .... .... .001 .... .... .... .... = Number of Sounding Dimensions: 2 (0x1)
+                .... .... .... .... 011. .... .... .... = Beamformee STS Capability: 4 (0x3)    
+                .... .... .... .001 .... .... .... .... = Number of Sounding Dimensions: 2 (0x1)  <<<<-----|| 2 sounding dimentions
                 .... .... .... 0... .... .... .... .... = MU Beamformer Capable: Not supported    <<<<-----|| MULTI USER (MU) BEAMFORMER NON-CAPABLE
                 .... .... ...0 .... .... .... .... .... = MU Beamformee Capable: Not supported    <<<<-----|| MULTI USER (MU) BEAMFORMER NON-CAPABLE
                 .... .... ..0. .... .... .... .... .... = TXOP PS: Not supported
@@ -264,6 +264,82 @@ IEEE 802.11 Wireless Management
 
             VHT Supported MCS Set
         Tag: VHT Operation
+````
+
+---
+
+### `Probe Request & (Re)Association Request` : `STA Beamforming Capabilities`
+
+- Sent from the `Beamformer / Beamformee / STA` to `AP`
+- Probe Request & (Re)Association Request include the HT Capabilities and VHT Capabilities tags, which signal beamforming capabilities and support in 802.11n/ac networks. 
+- These fields indicate whether a STA (Station) can perform transmit beamforming, receive beamforming, and related operations.
+
+````
+
+802.11 radio information
+IEEE 802.11 Association Request, Flags: ........
+IEEE 802.11 Wireless Management
+    Fixed parameters (4 bytes)
+    Tagged parameters (204 bytes)
+        Tag: SSID parameter set: "Fz3r0 💀🎩"
+
+        Tag: HT Capabilities (802.11n D1.10)
+            Tag Number: HT Capabilities (802.11n D1.10) (45)
+            Tag length: 26
+            HT Capabilities Info: 0x096f
+            A-MPDU Parameters: 0x13
+            Rx Supported Modulation and Coding Scheme Set: MCS Set
+            HT Extended Capabilities: 0x0000
+            Transmit Beam Forming (TxBF) Capabilities: 0x00000000
+                .... .... .... .... .... .... .... ...0 = Transmit Beamforming: Not supported
+                .... .... .... .... .... .... .... ..0. = Receive Staggered Sounding: Not supported
+                .... .... .... .... .... .... .... .0.. = Transmit Staggered Sounding: Not supported
+                .... .... .... .... .... .... .... 0... = Receive Null Data packet (NDP): Not supported
+                .... .... .... .... .... .... ...0 .... = Transmit Null Data packet (NDP): Not supported
+                .... .... .... .... .... .... ..0. .... = Implicit TxBF capable: Not supported
+                .... .... .... .... .... .... 00.. .... = Calibration: incapable (0x0)
+                .... .... .... .... .... ...0 .... .... = STA can apply TxBF using CSI explicit feedback: Not supported
+                .... .... .... .... .... ..0. .... .... = STA can apply TxBF using uncompressed beamforming feedback matrix: Not supported
+                .... .... .... .... .... .0.. .... .... = STA can apply TxBF using compressed beamforming feedback matrix: Not supported
+                .... .... .... .... ...0 0... .... .... = Receiver can return explicit CSI feedback: not supported (0x0)
+                .... .... .... .... .00. .... .... .... = Receiver can return explicit uncompressed Beamforming Feedback Matrix: not supported (0x0)
+                .... .... .... ...0 0... .... .... .... = STA can compress and use compressed Beamforming Feedback Matrix: not supported (0x0)
+                .... .... .... .00. .... .... .... .... = Minimal grouping used for explicit feedback reports: No grouping supported (0x0)
+                .... .... ...0 0... .... .... .... .... = Max antennae STA can support when CSI feedback required: 1 TX antenna sounding (0x0)
+                .... .... .00. .... .... .... .... .... = Max antennae STA can support when uncompressed Beamforming feedback required: 1 TX antenna sounding (0x0)
+                .... ...0 0... .... .... .... .... .... = Max antennae STA can support when compressed Beamforming feedback required: 1 TX antenna sounding (0x0)
+                .... .00. .... .... .... .... .... .... = Maximum number of rows of CSI explicit feedback: 1 row of CSI (0x0)
+                ...0 0... .... .... .... .... .... .... = Maximum number of space time streams for which channel dimensions can be simultaneously estimated: 1 space time stream (0x0)
+                000. .... .... .... .... .... .... .... = Reserved: 0x0
+            Antenna Selection (ASEL) Capabilities: 0x00
+
+        Tag: VHT Capabilities
+            Tag Number: VHT Capabilities (191)
+            Tag length: 12
+            VHT Capabilities Info: 0x33807132
+                .... .... .... .... .... .... .... ..10 = Maximum MPDU Length: 11 454 (0x2)
+                .... .... .... .... .... .... .... 00.. = Supported Channel Width Set: Neither 160MHz nor 80+80 supported (0x0)
+                .... .... .... .... .... .... ...1 .... = Rx LDPC: Supported
+                .... .... .... .... .... .... ..1. .... = Short GI for 80MHz/TVHT_MODE_4C: Supported
+                .... .... .... .... .... .... .0.. .... = Short GI for 160MHz and 80+80MHz: Not supported
+                .... .... .... .... .... .... 0... .... = Tx STBC: Not supported
+                .... .... .... .... .... .001 .... .... = Rx STBC: 1 Spatial Stream Supported (0x1)
+                .... .... .... .... .... 0... .... .... = SU Beamformer Capable: Not supported
+                .... .... .... .... ...1 .... .... .... = SU Beamformee Capable: Supported        <<<<-----|| SINGLE USER (SU) BEAMFORMER CAPABLE
+                .... .... .... .... 011. .... .... .... = Beamformee STS Capability: 4 (0x3)
+                .... .... .... .000 .... .... .... .... = Number of Sounding Dimensions: 1 (0x0)  <<<<-----|| 1 sounding dimention
+                .... .... .... 0... .... .... .... .... = MU Beamformer Capable: Not supported   
+                .... .... ...0 .... .... .... .... .... = MU Beamformee Capable: Not supported    <<<<-----|| MULTI USER (MU) BEAMFORMER NON-CAPABLE
+                .... .... ..0. .... .... .... .... .... = TXOP PS: Not supported
+                .... .... .0.. .... .... .... .... .... = +HTC-VHT Capable: Not supported
+                .... ..11 1... .... .... .... .... .... = Max A-MPDU Length Exponent: 1 048 575 (0x7)
+                .... 00.. .... .... .... .... .... .... = VHT Link Adaptation: No Feedback (0x0)
+                ...1 .... .... .... .... .... .... .... = Rx Antenna Pattern Consistency: Supported
+                ..1. .... .... .... .... .... .... .... = Tx Antenna Pattern Consistency: Supported
+                00.. .... .... .... .... .... .... .... = Extended NSS BW Support: 0x0
+            VHT Supported MCS Set
+
+
 ````
 
 ---
