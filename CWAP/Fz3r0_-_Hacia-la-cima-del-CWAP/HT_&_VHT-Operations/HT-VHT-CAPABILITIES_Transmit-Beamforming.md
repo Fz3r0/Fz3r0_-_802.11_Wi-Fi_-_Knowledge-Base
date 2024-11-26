@@ -32,15 +32,35 @@
 
 # Transmit Beamforming (TxBF)
 
-**Transmit Beamforming (TxBF)** is a wireless signal enhancement technique **introduced as an optional feature in 802.11n** and **later standardized in 802.11ac/ax**. 
+- **Transmit Beamforming (TxBF)** is a **wireless signal enhancement technique.**
+- **Transmit Beamforming (TxBF) was introduced as an optional feature in 802.11n (Wi-Fi 4)** and **later standardized in 802.11ac/ax (Wi-Fi 5/6)**. 
 
-- **“Beamforming gains are expected to be approximately `+ 3 dB` in the transmitted direction. In practice, this gain will typically be one step up in data rates (increasing one `+1 MCS` number) for a mid-range transmission.”**
+Beamforming technique concentrates radio waves in precise directions toward client STAs, resulting in a substantial enhancement of their Received Signal Strength Indicators (RSSIs). This improvement in RSSIs leads to an increase in the Data Rate transmission speeds (due to SNR increase) for those STAs. 
+
+- **Beamforming gains are expected to be approximately `+ 3 dB` in the transmitted direction. In practice, this gain will typically be one step up in data rates (increasing one `+1 MCS` number) for a mid-range transmission.**
 - **Beamforming** uses a calibration process called **`Channel Sounding`** **between `APs` and client `STAs`** to determine if and how energy can be radiated in an optimal direction.
 
 ### Beamforming in 802.11ac Wi-Fi 5
 
 - In 802.11ac, Explicit beamforming got fine-tuned, and only Null data packet (NDP) Explicit Beamforming is supported
 - 802.11ac: enables single user (SU) and multi user (MU) beamforming which aims to improve SNR (and hence throughput) between a wireless client and AP. 
+
+## Transmit Beamforming (TxBF): `How it works?`
+
+Beamforming operates on a principle analogous to how beams of light intersect and interact: 
+
+- **Just as layers of light from multiple flashlights can be combined to create a brighter and differently shaped composite beam, the same concept applies to radio signals in wireless communications.**
+
+In the context of multiple antennas, each acting like a flashlight emitting a beam, the configuration of their emissions can influence the form of the collective radio beam. When the multiple signal beams originating from these antennas converge at a given point, occasionally a 'spatial hole' might form if two signals with the same signal strength arrive with opposite phase shifts, effectively canceling each other out. 
+
+- **Beamforming intelligently adjusts the phase of the signals from each transmitting antenna, enabling these beams to constructively overlap, enhancing their combined effect. _(Just like the flashlight analogy)_**
+
+To fine-tune beamforming, parameters are derived by analyzing the `Channel State Information (CSI)`, which offers insight into the transmission environment. **Depending on how CSI is gathered, beamforming can be executed in one of two modes:** explicit or implicit. 
+
+- **`Explicit beamforming` is the most used nowdays and the only mode suuported by 802.11ac/ax**, it involves direct communication using request-response CSI frames (in form of `action no ack` or `null data packet (NDP)` frames) from the receiver to the transmitter (STA <-> AP)
+- **`Implicit beamforming` is used by legacy devices and only supported by 802.11n**, it  relies on the transmitter deducing this information indirectly (WITHOUT using dedicated frames between both devices). 
+
+from the 802.11ac standard, implicit beamforming has not been supported due to its inherent complexity and limitations.
 
 ## Transmit Beamforming (TxBF): `3 main categories`
 
