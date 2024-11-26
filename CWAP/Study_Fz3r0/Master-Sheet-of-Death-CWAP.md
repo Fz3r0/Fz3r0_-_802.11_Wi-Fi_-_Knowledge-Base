@@ -36,6 +36,133 @@
 | **802.11ax**       | 800 ns (normal), 1600 ns (double), 3200 ns (quadruple) | Supports multiple GIs to handle higher frequencies and minimize interference in more complex environments. |
 
 
+### 📡📏🤏 `HR-DSSS` / `802.11b` Short Preamble VS Long Preamble PPDU's:
+
+|                                 | **Long Preamble PPDU**  | **Short Preamble PPDU** |
+|---------------------------------|-------------------------|-------------------------|
+| **Preamble lenght**             | 144 bits                | 72 bits                 |
+| **SYNC lenght**                 | 128 bits                | 56 bits                 |
+| **SFD lenght**                  | 16 bits                 | 16 bits                 |
+| **SFD bits content**            | 1111 0011 0101 0000     | 0000 0101 1100 1111     |
+| **Preamble Tx Rate**            | DBPSK (1 Mbps)          | DBPSK (1 Mbps)          |
+| **PLCP-Header Tx Rate**         | DBPSK (1 Mbps)          | DQPSK (2 Mbps)          |
+| **PSDU Tx Rate**                | 1, 2, 5.5 or 11 Mbps    | 2, 5.5 or 11 Mbps       |
+| **(Preamble + Header) Tx Time** | 192 μs                  | 96 μs                   |
+
+
+### PLCP Headers & Preamble
+
+**PLCP `Preamble`:**
+
+- Indicated to all nearby STAs that a frame is forthcoming.
+- Includes a known pattern of 1's and 0's, when seen by other STAs they will know that a frame is coming. 
+- Provides time for the receiver to detect the signal and synchronise with the signal.
+    - Sent at the most robust Data Rate (lowest Data Rate in the band):
+        - 2.4 GHz = 1 Mbps / 2 Mbps
+        - 5 GHz   = 6 Mbps
+
+**PLCP `Header`:**
+
+- Communicates important information about the forthcoming PSDU such as Lenght and Data Rate.
+- Information of the PLCP-Header is often shown in the Radio Tap Header or PPI section of a protocol decode.
+    - Sent the Data Rate speciefied by the PHY:
+        - HR-DSSS = Long Preamble  :: 1 Mbps
+        - HR-DSSS = Short Preamble :: 2 Mbps
+        - ERP, OFDM (HT/VHT/HE)    :: 6 Mbps
+
+````py
+
+## PLCP OFDM PPDU (802.11a/g) :: The PPDU is formed by the Data + Sugnal + Training Field (Preamble)
+
+PCLP Layer (upper layer 1):
+
+    - OFDM Preamble PPDU Format:
+
+<-------------------------------------------- PPDU ------------------------------------------->
+|-----------------|-----------------||--------------------------------------------------------|
+| Training Field  |      Signal     ||                            Data                        |
+|   (Preamble)    |                 ||                                                        |
+|-----------------|-----------------||--------------------------------------------------------|
+<-- 12 Symbols -->
+   ||                          || 
+   \/                          \/
+|--------|--------|          |----------|----------|----------|----------|----------|----------||----------|----------|----------|
+|   STF  |   LTF  |          |   Rate   | Reserved |  Lenght  |  Parity  |   Tail   |  Service ||   PSDU   |   Tail   |    Pad   |
+|        |        |          |          |          |          |          |      
+|--------|--------|          |----------|----------|----------|----------|----------|----------||----------|----------|----------|
+    10        2                                                              
+  Short      Long            <---------------------------- 24 bits ---------------------------->
+ Symbols   Symbols
+ 
+
+
+````
+
+````py
+
+## PLCP Header & Preamble :: The PPDU is formed by the PSDU + PLCP Header + Preamble (short or long)
+
+PCLP Layer (upper layer 1):
+
+    - Long Preamble PPDU Format:
+
+<-------------------------------------------- PPDU ------------------------------------------->
+|-----------------|-----------------||--------------------------------------------------------|
+|    Preamble     |   PLCP-Header   ||                        PSDU (MPDU)                     |
+|                 |   (PHY Header)  ||     (1 Mbps - DBPSK | 2 Mbps - DQPSK | 5.5 or 11)      |
+|-----------------|-----------------||--------------------------------------------------------|
+<-------------- 192 μs ------------->
+   ||                          || 
+   \/                          \/
+|--------|--------|          |----------|----------|----------|----------|
+|  SYNC  |  SFD   |          |  Singal  |  Service |  Lenght  |   CRC    |
+|  (1s)  |        |          |  / Rate  |          |          |          |
+|--------|--------|          |----------|----------|----------|----------|
+   128       16                   8          8          16         16        <<== 144 bits (Preamble) + 48 bits (PLCP-Header) 
+<--- 144 bits --->           <------------ 48 bits @ 1 Mbps ------------->
+
+- Long SFD :   1111 0011 1010 0000
+  
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+    - Short Preamble PPDU Format:
+
+<-------------------------------------------- PPDU ------------------------------------------->
+|-----------------|-----------------||--------------------------------------------------------|
+|    Preamble     |   PLCP-Header   ||                        PSDU (MPDU)                     |
+|                 |   (PHY Header)  ||           (Variable: 2 Mbps, 5 Mbps or 11 Mbps)        |
+|-----------------|-----------------||--------------------------------------------------------|
+<--------------- 96 μs ------------->
+   ||                          || 
+   \/                          \/
+|--------|--------|          |----------|----------|----------|----------|
+|  SYNC  |  SFD   |          |  Singal  |  Service |  Lenght  |   CRC    |
+|  (0s)  |        |          |  / Rate  |          |          |          |
+|--------|--------|          |----------|----------|----------|----------|
+   56       16                   8          8          16         16        <<== 72 bits (Preamble) + 48 bits (PLCP-Header) 
+<---  72 bits --->           <------------ 48 bits @ 2 Mbps ------------->
+
+- Long SFD :   0000 0101 1100 1111
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+Note: # The MAC Layer 2 uses the FCS (Frame Check Sequence) for error check validation, while the PHY Layer 1 uses the CRC (Cyclic Redundancy Check).
+
+````
+
+## MTU Sizes
+
+| **Process**                                          | **Size (bytes)**   | **Adds (bytes)**  |
+|------------------------------------------------------|--------------------|-------------------|
+| **Maximum MSDU size** (Before encryption or when a packet is passed from the Network layer to the Data-Link layer for transmission) | 2304               | 0                 |
+| **WEP**                                              | 2312               | 8                 |
+| **WPA-TKIP**                                          | 2324               | 20                |
+| **WPA2-CCMP**                                         | 2320               | 16                |
+
+
+
+
 ## Channels & Spectrum
 
 ### 2.4 GHz
@@ -114,14 +241,6 @@ https://www.cleartosend.net/802-11ax-ofdma-subcarriers/
 
 # Security
 
-## MTU Sizes
-
-| **Process**                                          | **Size (bytes)**   | **Adds (bytes)**  |
-|------------------------------------------------------|--------------------|-------------------|
-| **Maximum MSDU size** (Before encryption or when a packet is passed from the Network layer to the Data-Link layer for transmission) | 2304               | 0                 |
-| **WEP**                                              | 2312               | 8                 |
-| **WPA-TKIP**                                          | 2324               | 20                |
-| **WPA2-CCMP**                                         | 2320               | 16                |
 
 
 
