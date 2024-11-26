@@ -274,7 +274,7 @@ IEEE 802.11 Wireless Management
 - Probe Request & (Re)Association Request include the HT Capabilities and VHT Capabilities tags, which signal beamforming capabilities and support in 802.11n/ac networks. 
 - These fields indicate whether a STA (Station) can perform transmit beamforming, receive beamforming, and related operations.
 
-````
+````java
 
 802.11 radio information
 IEEE 802.11 Association Request, Flags: ........
