@@ -472,3 +472,36 @@ _Various time metric columns provide insights into different aspects of packet t
 - ⏳ **`Absolute time`** / **`Arrival Time`**: Display the time the packet was captured based on the system clock in the computer, this is the actual capture date and time based on the time zone of the capture device, this means, the time when the packet was captured, provides the real-world time of packet capture for example date and hour. This metric is useful for correlating captured data with real-world events and time-based troubleshooting. <br> <br>
 - ⏳ **`Delta time`**: Measures the time difference between two consecutive packets in a capture file. In other words, it is the elapsed time from the previous packet to the current packet. This metric helps in understanding the time intervals between packet transmissions, which can be useful for performance analysis. <br> <br>
 - ⏳ **`Relative time`**: This is the time from the first packet in a capture file, but it can be also similar to the Seconds Since Beginning of Capture option. Cumulative time from a selected packet to another selected packet, it can be used to identify how long it takes for a frame exchange to occur. Some protocol analyzer software programs make this a very simple task. This information is valuable in determining problems such as latency or contention with specific frame exchanges. (ex. in a 4-way-handshake you can select the first frame, and then look how many time does the 4th frame took)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# HT/VHT Operations & Capabilites
+
+
+### HT Reverse Direction (RD) Protocol
+
+Before the RD protocol, each uni-directional data transfer required the initiating station to capture (and possibly reserve time on) a contention-based RF medium.  With RD, once the transmitting station has obtained a TXOP, it may essentially grant permission to the other station to send information back during its TXOP.
+
+- **Upon receipt of a reverse direction grant (RDG), the receiving station may Transmit data back to the source of the RDG within the current TXOP**
