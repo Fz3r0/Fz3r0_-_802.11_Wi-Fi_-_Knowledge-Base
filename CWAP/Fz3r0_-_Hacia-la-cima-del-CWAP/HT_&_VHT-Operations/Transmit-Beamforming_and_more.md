@@ -231,7 +231,7 @@ IEEE 802.11 VHT/HE/EHT/RANGING NDP Announcement, Flags: ........
 
 - NDP Announcement (VHT/HE/EHT/RANGING) // `wlan.fc.type_subtype == 0x0015`
 
-
+---
 
 ### `Action No ACK - VHT 802.11ax` - `VHT Compressed Beamforming` : `Average SNR` & `Feedback Matrcies`
 
