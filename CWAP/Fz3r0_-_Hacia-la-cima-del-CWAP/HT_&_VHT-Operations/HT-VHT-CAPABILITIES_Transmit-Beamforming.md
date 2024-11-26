@@ -181,19 +181,17 @@ which has two methods `Implicit` and `Explicit` beamforming.
 
 
 
-## Transmit Beamforming (TxBF) Methods: `Frames` & `Elements`
+# Transmit Beamforming (TxBF) Methods: `Frames` & `Elements`
 
 There are different 802.11 frames involved in transmit beamforming:
 
----
-
-### `Beacon Frames & Probe Responses` : `AP Beamforming Capabilities`
+## `Beacon Frames & Probe Responses` : `AP Beamforming Capabilities`
 
 - Sent from the `Beamformer / AP` to `Broacast`
 - Beacon frames include the HT Capabilities and VHT Capabilities tags, which signal beamforming capabilities and support in 802.11n/ac networks. 
 - These fields indicate whether an AP (Access Point) can perform transmit beamforming, receive beamforming, and related operations.
 
-#### This Beacon Frame es showing that the AP `SU Single User`  beamformer:
+#### This Beacon Frame is showing that the AP `SU Single User`  beamformer:
 
 ````java
 
@@ -266,9 +264,9 @@ IEEE 802.11 Wireless Management
         Tag: VHT Operation
 ````
 
----
+## `Probe Request & (Re)Association Request` : `STA Beamforming Capabilities`
 
-### `Probe Request & (Re)Association Request` : `STA Beamforming Capabilities`
+Depending on how the client STA probes, you may see VHT capabilities (or only HT capabilities) in probe requests or in the (re)association request
 
 - Sent from the `Beamformer / Beamformee / STA` to `AP`
 - Probe Request & (Re)Association Request include the HT Capabilities and VHT Capabilities tags, which signal beamforming capabilities and support in 802.11n/ac networks. 
@@ -342,9 +340,7 @@ IEEE 802.11 Wireless Management
 
 ````
 
----
-
-### `NDP Announcement` (VHT/HE/EHT/RANGING)
+## `NDP Announcement` (VHT/HE/EHT/RANGING)
 
 - Sent from the `Beamformer / AP` to the `Beamformee / client STA`
 - An NDP (Null Data Packet) Announcement Frame is a control frame (Type/Subtype 0x0015) used to prepare for beamforming measurements.
@@ -379,9 +375,7 @@ IEEE 802.11 VHT/HE/EHT/RANGING NDP Announcement, Flags: ........
 
 - NDP Announcement (VHT/HE/EHT/RANGING) // `wlan.fc.type_subtype == 0x0015`
 
----
-
-### `Action No ACK - VHT 802.11ax` - `VHT Compressed Beamforming` : `Average SNR` & `Feedback Matrcies`
+## `Action No ACK - VHT 802.11ax` - `VHT Compressed Beamforming` : `Average SNR` & `Feedback Matrcies`
 
 - Sent from the `Beamformee / client STA` to the `Beamformer / AP`
 - The Action No ACK frame with VHT Compressed Beamforming is a management frame (Type/Subtype 0x000e) that conveys `CSI feedback` from a STA to the AP.
@@ -458,18 +452,24 @@ IEEE 802.11 Wireless Management
 - wlan.vht.action == 0
 
 
-
-
-
-
-## Steps for Beamforming
+# Transmit Beamforming (TxBF): `Frame Exchange`
 
 A summary of the steps to enable beamforming is:
 
 1. The `beamformer` transmits a `Null Data Packet (NDP) Announcement` frame which identifies `beamformees`.
-2. This is then followed by another `NDP` frame which is a `sounding frame` used by the receiver to analyse training fields for various subcarriers and calculates a response.
-3. This `response` from the `beamformee` contains a `feedback matrix`.
-4. The `beamformer` uses the `feedback matrix` to calculate a steering matrix to direct RF energy toward the beamformee.
+2. This is then followed by another `Null Data Packet (NDP) Sounding Frame` used by the receiver to analyse training fields for various subcarriers and calculates a response.
+3. The `beamformee` respond with an `Action Frame no-ACK` that contains a `feedback matrix`.
+4. The `beamformer` uses the `feedback matrix` to **calculate a steering matrix to direct RF energy toward the beamformee**.
+
+Note:  In this example I couldn't capture NDP Announcement sent from the client STA (Xiaomi Phone) despite it being capable of being a beamformer, perhaps that is a driver limitation or factory configuration. This is also curious because the captures show that SU Beamforming is used (both devices can be beamformer)
+
+![image](https://github.com/user-attachments/assets/ddf3c63e-9b95-4767-a3d7-54a82173d648)
+
+### Action No ACK : `Average SNR` & `Feedback Matrcies` (From Huawei-AP)
+
+![image](https://github.com/user-attachments/assets/49a084e0-8114-488e-839e-23104b791f0e)
+
+![image](https://github.com/user-attachments/assets/d971ffe4-b1f2-495d-ba18-ad74b534d423)
 
 
 
