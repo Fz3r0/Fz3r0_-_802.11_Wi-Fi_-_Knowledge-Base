@@ -117,20 +117,66 @@ The beamformer is the transmitter, and beamformee is the receiver.
 
 which has two methods `Implicit` and `Explicit` beamforming.
 
-### `Explicit Beamforming (TxBF)` - Tipical Use
+### `Explicit Beamforming (TxBF)` - Commonly Used
 
 - **Requires feedback from the stations in order to determine the amount of phase-shift required for each signal.**
 
-### `Implicit Beamforming (TxBF)` - 
+**How it works?**
+
+1. The Transmitter (e.g., AP) sends a sounding frame (like a Null Data Packet, NDP)
+2. the Receiver (e.g., STA) calculates channel characteristics. It then sends feedback to the transmitter, including the required phase-shift and amplitude adjustments for beamforming.
+
+**Explicit Beamforming (TxBF) Characteristics**
+
+- Requires feedback from the client (receiver).
+- Achieves higher accuracy since the transmitter has detailed channel information.
+- Common in modern Wi-Fi standards like 802.11ac (VHT) and 802.11ax (HE).
+
+### `Implicit Beamforming (TxBF)` - Not Commonly Used
 
 - **Uses an implicit channel-sounding process to optimize the phase differentials between the transmit chains.**
 
+**How it works?**
+
+1. The transmitter estimates the channel state by analyzing incoming signals from the receiver, like regular traffic frames or ACKs. It uses these estimations to calculate beamforming parameters without explicit feedback.
+
+**Implicit Beamforming (TxBF) Characteristics**
+
+- May be used in simpler or **legacy** systems
+- No explicit feedback is required from the receiver.
+- Less accurate because channel estimation relies on indirect observations.
 
 ## Transmit Beamforming (TxBF): `SU (Single User)` & `MU (Multi User)`
 
-- `In Multi-User Beamforming`: only Access Point can be a Beamformer. (Most Commonly Used)
-- `In Single User beamforming`:  Access Point or client STA can be a Beamformer.
+### `In Multi-User Beamforming`
 
+- only Access Point can be a Beamformer. (Most Commonly Used)
+
+**MU (Multi User) Beamforming Characteristics:**
+ 
+### `In Single User beamforming`
+
+- Access Point or client STA can be a Beamformer.
+- Beamforming is applied to improve the signal quality for a single device (STA) at a time
+
+**SU (Single User) Beamforming Characteristics:**
+
+
+## Transmit Beamforming (TxBF): `SU (Single User)` & `MU (Multi User)` VS `Explicit` & `Implicit`
+
+- Explicit vs. Implicit Beamforming: Describes **`HOW`** the beamforming parameters are determined.
+    - `Explicit` relies on client feedback
+    - `Implicit` uses estimated data. <br><br>
+- Single-User vs. Multi-User Beamforming: Describes **`WHO`** the target of the beamforming is.
+    - `SU` focuses on one device at a time
+    - `MU` optimizes streams for multiple devices simultaneously.
+
+|     **Beamforming Type**    	|   **Key Method**   	| **Beamformer** 	| **Beamformee** 	|                      **Primary Use Case**                      	|
+|:---------------------------:	|:------------------:	|----------------	|:--------------:	|:--------------------------------------------------------------:	|
+| **Explicit Beamforming**    	| Feedback-based     	| AP             	| STA            	| Mostly Used<br>High-performance networks, precise tuning       	|
+| **Implicit Beamforming**    	| Estimation-based   	| AP or STA      	| AP or STA      	| Less used (only for 802.11n)<br>Simpler systems, less overhead 	|
+| **Multi-User Beamforming**  	| Multi-device focus 	| AP             	| STA            	| Mostly Used<br>High-density networks with many devices         	|
+| **Single-User Beamforming** 	| Per-device focus   	| AP or STA      	| AP or STA      	| Less used<br>Individual device optimization                    	|
 
 
 
