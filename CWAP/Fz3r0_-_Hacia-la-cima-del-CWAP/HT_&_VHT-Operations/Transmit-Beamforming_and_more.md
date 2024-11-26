@@ -113,9 +113,15 @@ which has two methods `Implicit` and `Explicit` beamforming.
 
 ## Transmit Beamforming (TxBF) Methods: `Frames` & `Elements`
 
+There are different 802.11 frames involved in transmit beamforming:
+
+---
+
 ### Beacon Frames
 
-- `HT Capabilities` or `VHT Capabilities` in **Bacon Frames**:
+- Sent from the `Beamformer / AP` to `Broacast`
+- Beacon frames include the HT Capabilities and VHT Capabilities tags, which signal beamforming capabilities and support in 802.11n/ac networks. 
+- These fields indicate whether an AP (Access Point) or STA (Station) can perform transmit beamforming, receive beamforming, and related operations.
 
 ````java
 
@@ -188,7 +194,14 @@ IEEE 802.11 Wireless Management
         Tag: VHT Operation
 ````
 
-### Beacon Frames
+---
+
+### `NDP Announcement` (VHT/HE/EHT/RANGING)
+
+- Sent from the `Beamformer / AP` to the `Beamformee / client STA`
+- An NDP (Null Data Packet) Announcement Frame is a control frame (Type/Subtype 0x0015) used to prepare for beamforming measurements.
+- The NDP Announcement is sent by the AP and signals the client STAs to prepare for transmitting feedback based on a Null Data Packet, which is sent immediately after the announcement. 
+- It initiates the sounding process for channel state information (CSI) feedback.
 
 ````
 Frame 6407: 75 bytes on wire (600 bits), 75 bytes captured (600 bits)
@@ -221,6 +234,10 @@ IEEE 802.11 VHT/HE/EHT/RANGING NDP Announcement, Flags: ........
 
 
 ### `Action No ACK - VHT 802.11ax` - `VHT Compressed Beamforming` : `Average SNR` & `Feedback Matrcies`
+
+- Sent from the `Beamformee / client STA` to the `Beamformer / AP`
+- The Action No ACK frame with VHT Compressed Beamforming is a management frame (Type/Subtype 0x000e) that conveys `CSI feedback` from a STA to the AP.
+- This frame **enables the AP to adjust beamforming** based on the `CSI feedback`, improving signal strength and spatial multiplexing efficiency.
 
 ````java
 
