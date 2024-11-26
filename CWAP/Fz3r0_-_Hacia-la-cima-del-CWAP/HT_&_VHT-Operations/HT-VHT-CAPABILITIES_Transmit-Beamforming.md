@@ -30,7 +30,7 @@
 
 
 
-# Transmit Beamforming (TxBF)
+# 📡🛜🎯 Transmit Beamforming (TxBF)
 
 - **Transmit Beamforming (TxBF)** is a **wireless signal enhancement technique.**
 - **Transmit Beamforming (TxBF) was introduced as an optional feature in 802.11n (Wi-Fi 4)** and **later standardized in 802.11ac/ax (Wi-Fi 5/6)**. 
@@ -42,12 +42,12 @@ Beamforming technique concentrates radio waves in precise directions toward clie
 
 ![image](https://github.com/user-attachments/assets/0a25dbdb-a004-431b-9607-8b8c1ee5320c)
 
-### Beamforming in 802.11ac Wi-Fi 5
+### 🎯 Beamforming in 802.11ac Wi-Fi 5
 
 - In 802.11ac, Explicit beamforming got fine-tuned, and only Null data packet (NDP) Explicit Beamforming is supported
 - 802.11ac: enables single user (SU) and multi user (MU) beamforming which aims to improve SNR (and hence throughput) between a wireless client and AP. 
 
-## Transmit Beamforming (TxBF): `How it works?`
+## ⚙️🎯❓ Transmit Beamforming (TxBF): `How it works?`
 
 Beamforming operates on a principle analogous to how beams of light intersect and interact: 
 
@@ -71,23 +71,23 @@ From the 802.11ac standard, implicit beamforming has not been supported due to i
 ![image](https://github.com/user-attachments/assets/494e8340-950b-4d7f-9da5-360825f98626)
 
 
-## Transmit Beamforming (TxBF): `3 main categories`
+## 3️⃣🎯📡 Transmit Beamforming (TxBF): `3 main categories`
 
 There are various forms of beamforming, some standards-based, most proprietary to certain vendors. The 3 main types are: 
 
-### 1. `On-Chip Beamforming`
+### 🎯 1. `On-Chip Beamforming`
 
 - **802.11n standards-based** transmit beamforming.
 - The radio chipset coordinates the signal processing across multiple transmit radio chains, altering timing and phase alignment of each signal, in an attempt to have multiple signal copies arrive at the receiver "in-phase" to provide passive gain.
 - **Signal gains are `3dB` maximum**, which is quite logical if you think about what's going on at the receiver - **two in-phase signals merge, potentially doubling the amplitude of the signal at the receiver**.
 
-### 2. `Static Beamforming` 
+### 🎯 2. `Static Beamforming` 
 
 - Semi-directional or directional antennas.
 - Antennas don't change, or move, or dynamically adjust. They simply focus the signal in a specific direction.
 - **Signal gains can potentially be very large `>10dB**`, based on the dBi rating of the antenna selected.
 
-### 3. `Antenna Beamforming`
+### 🎯 3. `Antenna Beamforming`
 
 - **This is what Ruckus does best**.
 - They have **multiple antenna elements (an antenna array if you will)**, some **polarized horizontally** and some **polarized vertically**.
@@ -96,25 +96,25 @@ There are various forms of beamforming, some standards-based, most proprietary t
 
 
 
-## Transmit Beamforming (TxBF): `Vendor Implementation`
+## 🎯🐶👑 Transmit Beamforming (TxBF): `Vendor Implementation`
 
 Some WLAN vendors implement Transmit Beamforming (TxBF) in different proprietary ways:
 
-### 802.11n: `Transmit Beamforming (TxBF)` _Original feature_
+### 🎯 802.11n: `Transmit Beamforming (TxBF)` _Original feature_
 
 - Transmit Beamforming (TxBF) got introduced as an optional feature of the 802.11n amendment and later standardized in 802.11ac/ax.
 - It uses multiple antennas to focus and direct the transmission toward a specific client, improving signal strength, range, and reliability.
 - However, for TxBF to work, the client device must support Transmit Channel Feedback (TxCBF) to provide feedback to the access point.
 - This dependency limits its effectiveness in environments with legacy or non-compliant devices.
 
-### Cisco: `Client Link`
+### 👑 Cisco: `Client Link`
 
 - While beamforming (TxBF) is effective, it has limitations tied to client-side capabilities.
 - ClientLink would fit into the category of **on-chip beamforming**  using standards-based **transmit beamforming with implicit feedback**, since **the client is not required to support beamforming and explicit feedback mechanisms**.
 - That's one of their big selling points, improvement of legacy clients by upgrading to 802.11n APs.
 - Cisco ClientLink is a more versatile solution because it doesn’t depend on client support and works across all device types, ensuring better overall network performance, especially in mixed environments with legacy devices.
 
-### Ruckus: `Beamflex`
+### 🐶 Ruckus: `Beamflex`
 
 - The "normal" Beamforming in 802.11ac is a **radio based technology**. Whereas BeamFlex engages adaptive antennas so this is an **antenna based technology**.
 - What Ruckus does is use beamforming (which is radio based) and combines it with adaptive antennas (BeamFlex which antenna based) to maximize the performance.
@@ -124,14 +124,14 @@ Some WLAN vendors implement Transmit Beamforming (TxBF) in different proprietary
 
 
 
-## Transmit Beamforming (TxBF): `Beamformer` & `Beamformee`
+## 📡🎯📱 Transmit Beamforming (TxBF): `Beamformer` & `Beamformee`
 
 Beamforming (TxBF) relies on two key entities: 
 
 The beamformer is the transmitter, and beamformee is the receiver.
 
-1. `Beamformer`: Which actively shapes the transmission pattern. (Typical = AP)
-2. `Beamformee`: Which receives and provides feedback to facilitate optimization. (Typical = client STA)
+1. 📡 `Beamformer`: Which actively shapes the transmission pattern. (Typical = AP)
+2. 📱 `Beamformee`: Which receives and provides feedback to facilitate optimization. (Typical = client STA)
 
 |                   	|                                                                                                                                         **Beamformer**                                                                                                                                         	|                                                                                             **Beamformee**                                                                                            	|                                                                                                                                        **Beamforming**                                                                                                                                        	|
 |:-----------------:	|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:	|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:	|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:	|
@@ -144,11 +144,11 @@ The beamformer is the transmitter, and beamformee is the receiver.
 
 
 
-## Transmit Beamforming (TxBF) Methods: `Explicit` & `Implicit`
+## 💬🎯👂 Transmit Beamforming (TxBF) Methods: `Explicit` & `Implicit`
 
 which has two methods `Implicit` and `Explicit` beamforming.
 
-### `Explicit Beamforming (TxBF)` - Commonly Used
+### 💬🎯 `Explicit Beamforming (TxBF)` - Commonly Used
 
 - **Requires feedback from the stations in order to determine the amount of phase-shift required for each signal.**
 
@@ -163,7 +163,7 @@ which has two methods `Implicit` and `Explicit` beamforming.
 - Achieves higher accuracy since the transmitter has detailed channel information.
 - Common in modern Wi-Fi standards like 802.11ac (VHT) and 802.11ax (HE).
 
-### `Implicit Beamforming (TxBF)` - Not Commonly Used
+### 👂🎯 `Implicit Beamforming (TxBF)` - Not Commonly Used
 
 - **Uses an implicit channel-sounding process to optimize the phase differentials between the transmit chains.**
 
@@ -177,9 +177,9 @@ which has two methods `Implicit` and `Explicit` beamforming.
 - No explicit feedback is required from the receiver.
 - Less accurate because channel estimation relies on indirect observations.
 
-## Transmit Beamforming (TxBF): `SU (Single User)` & `MU (Multi User)`
+## 🧑‍🧒‍🧒🎯🙋 Transmit Beamforming (TxBF): `SU (Single User)` & `MU (Multi User)`
 
-### `In Multi-User Beamforming`
+### 🧑‍🧒‍🧒🎯 `In Multi-User Beamforming`
 
 - only Access Point can be a Beamformer. (Most Commonly Used)
 
@@ -188,8 +188,7 @@ This is the most common Transmit Beamforming used, and if only the AP can be the
 - **Beamforming is one way, so you dont' have the same advantages with the client STA is Tx Data = Upload (From STA to AP) than when the client STA is Rx Data = Download (From AP to STA). This means, the only frames that get beamformed are the frames sent from the AP (Beamformer) to the client STA (Beamformee).**
 
 
- 
-### `In Single User beamforming`
+### 🙋🎯 `In Single User beamforming`
 
 - Access Point or client STA can be a Beamformer.
 - Beamforming is applied to improve the signal quality for a single device (STA) at a time
@@ -197,7 +196,7 @@ This is the most common Transmit Beamforming used, and if only the AP can be the
 
 
 
-## Transmit Beamforming (TxBF): `SU (Single User)` & `MU (Multi User)` VS `Explicit` & `Implicit`
+## 🎯⚠️✅ Transmit Beamforming (TxBF): `SU (Single User)` & `MU (Multi User)` VS `Explicit` & `Implicit`
 
 - Explicit vs. Implicit Beamforming: Describes **`HOW`** the beamforming parameters are determined.
     - `Explicit` relies on client feedback
