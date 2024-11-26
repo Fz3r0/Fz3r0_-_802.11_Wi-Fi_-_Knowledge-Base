@@ -71,33 +71,39 @@
         - HR-DSSS = Short Preamble :: 2 Mbps
         - ERP, OFDM (HT/VHT/HE)    :: 6 Mbps
 
-````py
+### 📡📏🦒 `HR-DSSS` / `802.11b` Long Preamble PPDU:
 
-## PLCP OFDM PPDU (802.11a/g) :: The PPDU is formed by the Data + Sugnal + Training Field (Preamble)
+- 🔁 `Preamble`: <br><br>
+    - **144 bits lenght** Preamble, includes fields: `SYNC` & `SFD`
+    - The oldest PPDU format, supports 802.11 legacy technology <br><br>
+        - ⭕ `SYNC` (128 bits) :: Gives the time for the synchronizer (the reciever of the transmission) to synchronize with this. **128 bits scrambled ones (1s)** <br><br>
+        - ⭕ `SFD (Start Frame Delimiter)` (16 bits) :: Inform that the Preamble is ending and it's time to start to send the PLCP-Header using a unique sequence **1111 0011 1010 0000** <br><br>
+- 🏷️ `PLCP-Header`: <br><br>
+    - 48 bits lenght PLCP-Header (PHY-Header), includes fields: `Signal / Rate`, `Service`, `Lenght` & `CRC` <br><br>
+        - ⭕ `Signal Rate` (8 bits) :: The Speed / Data Rate at which the PSDU (PMDU) is going to be transmited. Wether this value is, is going to be multiplied by * 100 Kbits/s <br><br>
+        - ⭕ `Service` (8 bits) :: Defines High Rate Extensions for HR-DSSS: **0 = Barker Code Coding = 1/2 Mbps** / **1 = CCK Coding = 5.5 Mbps** 
+        - ⭕ `Lenght` (16 bits) :: Defines how many microsecods (μs) are requiered to transmit the PSDU (MPDU)  <br><br>
+        - ⭕ `CRC (Cyclic Redundancy Check)` (16 bits) :: 16 CRC Frame check to validate the PLCP-Header Information: Signal, Service & Lenght fields
 
-PCLP Layer (upper layer 1):
+---
 
-    - OFDM Preamble PPDU Format:
+### 📡📏🤏 `HR-DSSS` / `802.11b` Short Preamble PPDU:
 
-<-------------------------------------------- PPDU ------------------------------------------->
-|-----------------|-----------------||--------------------------------------------------------|
-| Training Field  |      Signal     ||                            Data                        |
-|   (Preamble)    |                 ||                                                        |
-|-----------------|-----------------||--------------------------------------------------------|
-<-- 12 Symbols -->
-   ||                          || 
-   \/                          \/
-|--------|--------|          |----------|----------|----------|----------|----------|----------||----------|----------|----------|
-|   STF  |   LTF  |          |   Rate   | Reserved |  Lenght  |  Parity  |   Tail   |  Service ||   PSDU   |   Tail   |    Pad   |
-|        |        |          |          |          |          |          |      
-|--------|--------|          |----------|----------|----------|----------|----------|----------||----------|----------|----------|
-    10        2                                                              
-  Short      Long            <---------------------------- 24 bits ---------------------------->
- Symbols   Symbols
- 
+- 🔁 `Preamble`: <br><br>
+    - **72 bits lenght** Preamble **(half lenght VS long preamble because the SYNC is shorter)**, includes fields: `SYNC` & `SFD` <br><br>
+        - ⭕ `SYNC` (56 bits) :: Gives the time for the synchronizer (the reciever of the transmission) to synchronize with this. **56 bits scrambled zeros (0s)** <br><br>
+        - ⭕ `SFD (Start Frame Delimiter)` (16 bits) :: Inform that the Preamble is ending and it's time to start to send the PLCP-Header using a unique sequence **0000 0101 1100 1111** <br><br>
+- 🏷️ `PLCP-Header`: <br><br>
+    - 48 bits lenght PLCP-Header (PHY-Header), includes fields: `Signal / Rate`, `Service`, `Lenght` & `CRC` <br><br>
+        - ⭕ `Signal Rate` (8 bits) :: The Speed / Data Rate at which the PSDU (PMDU) is going to be transmited. Wether this value is, is going to be multiplied by * 100 Kbits/s <br><br>
+        - ⭕ `Service` (8 bits) :: Defines High Rate Extensions for HR-DSSS: **0 = Barker Code Coding = 1/2 Mbps** / **1 = CCK Coding = 5.5 Mbps** 
+        - ⭕ `Lenght` (16 bits) :: Defines how many microsecods (μs) are requiered to transmit the PSDU (MPDU)  <br><br>
+        - ⭕ `CRC (Cyclic Redundancy Check)` (16 bits) :: 16 CRC Frame check to validate the PLCP-Header Information: Signal, Service & Lenght fields
 
+### PLCP Header & Preamble : 802.11b
 
-````
+- Long = 802.11b - 1mbps min Data Rate
+- Short = 802.11b - 2mbps min Data Rate
 
 ````py
 
@@ -151,6 +157,37 @@ PCLP Layer (upper layer 1):
 Note: # The MAC Layer 2 uses the FCS (Frame Check Sequence) for error check validation, while the PHY Layer 1 uses the CRC (Cyclic Redundancy Check).
 
 ````
+
+### PLCP Header & Preamble : OFDM 
+
+````py
+
+## PLCP OFDM PPDU (802.11a/g) :: The PPDU is formed by the Data + Sugnal + Training Field (Preamble)
+
+PCLP Layer (upper layer 1):
+
+    - OFDM Preamble PPDU Format:
+
+<-------------------------------------------- PPDU ------------------------------------------->
+|-----------------|-----------------||--------------------------------------------------------|
+| Training Field  |      Signal     ||                            Data                        |
+|   (Preamble)    |                 ||                                                        |
+|-----------------|-----------------||--------------------------------------------------------|
+<-- 12 Symbols -->
+   ||                          || 
+   \/                          \/
+|--------|--------|          |----------|----------|----------|----------|----------|----------||----------|----------|----------|
+|   STF  |   LTF  |          |   Rate   | Reserved |  Lenght  |  Parity  |   Tail   |  Service ||   PSDU   |   Tail   |    Pad   |
+|        |        |          |          |          |          |          |      
+|--------|--------|          |----------|----------|----------|----------|----------|----------||----------|----------|----------|
+    10        2                                                              
+  Short      Long            <---------------------------- 24 bits ---------------------------->
+ Symbols   Symbols
+ 
+
+
+````
+
 
 ## MTU Sizes
 
