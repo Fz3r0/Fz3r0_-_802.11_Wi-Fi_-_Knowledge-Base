@@ -1,5 +1,5 @@
 
-# 📡🛜🎯802.11n features - `Transmit Beamforming`
+# 📡🛜🎯HT/VHT Capabilities: `Transmit Beamforming`
 
 ![My Video](https://user-images.githubusercontent.com/94720207/165892585-b830998d-d7c5-43b4-a3ad-f71a07b9077e.gif)
 
@@ -8,7 +8,7 @@
 
 ---
  
-#### Keywords: `Networking` `Wireless Networking` `IEEE 802.11` `Wi-Fi` `CWNA` `CWAP` `CWNE` `CCNP` `Beamforming` `Transmit Beamforming` `Implicit Beamforming` `Explicit Beamforming` `Beamformee` `Beamformer`
+#### Keywords: `Networking` `Wireless Networking` `IEEE 802.11` `Wi-Fi` `CWNA` `CWAP` `CWNE` `CCNP` `HT/VHT Capabilities` `Beamforming` `Transmit Beamforming` `Implicit Beamforming` `Explicit Beamforming` `Beamformee` `Beamformer` `SU (Single User) Beamforming` `MU (Multi User) Beamforming`
 
 ---
 
