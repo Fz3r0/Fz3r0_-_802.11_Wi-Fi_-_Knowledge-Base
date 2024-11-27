@@ -178,7 +178,7 @@ _2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a
     - Protocol analyzers will use this information differently and in some cases will show a misrepresentation of the information that was received vs. the information that was transmitted.
 
 - FCS Errors : Layer 2 : MAC Frame
-    - The Frame Check Sequence is a checksum added to the end of a data frame at the Layer 2 level (MAC layer) to verify data integrity during transmission.
+    - The Frame Check Sequence is a checksum added to the end of a data frame at the Layer 2 level (MAC layer) to verify data integrity during transmission. (A calculation over all fields in an 802.11 MAC frame).
     - When a device receives a frame, it calculates its own FCS based on the data received and compares it to the FCS included in the frame. If they don't match, an FCS error is flagged, and the frame is discarded.
    
 
