@@ -164,6 +164,8 @@ Here are some different views available in a spectrum analyzer:
 
 ❗ Horizontal axis represent frequency & vertical axis represent energy in dBm with **`brightness of color`** being determined by how many times that specific bit of information has been captured.
 
+![image](https://github.com/user-attachments/assets/d883bebd-43f0-46a6-acfc-c82245b3d719)
+
 ![image](https://github.com/user-attachments/assets/2e19ae70-850f-4679-8836-2534293e4931)
 
 ![image](https://github.com/user-attachments/assets/92fc8055-15eb-4e42-97f9-4b8ba2dd992c)
@@ -327,6 +329,7 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 
 ![image](https://github.com/user-attachments/assets/34e437b2-9363-490f-901a-f2baf5d5bca0)
 
+![image](https://github.com/user-attachments/assets/c130adf7-c929-450d-990b-8898a78e2533)
 
 
 
@@ -557,6 +560,7 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 - https://www.4gon.co.uk/documents/meetageek_interference_identification_guide.pdf
 - https://www.youtube.com/watch?v=w1mdQn-XL6U
 - https://www.youtube.com/@AaroniaDe/videos
+- https://www.batterfly.com/shop/en/blog-posts/introduction-density-view-spectrum-analyzer
 
 
 
