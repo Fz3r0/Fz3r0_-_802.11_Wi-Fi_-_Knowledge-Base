@@ -70,6 +70,8 @@ Here are some different views available in a spectrum analyzer:
 
 ![image](https://github.com/user-attachments/assets/c0ba9372-750f-493f-a253-f93f5373320e)
 
+![image](https://github.com/user-attachments/assets/bccb2df6-3646-40c2-9a00-a47dfdfe8f0e)
+
 
 
 
@@ -111,6 +113,10 @@ Here are some different views available in a spectrum analyzer:
 
 ![image](https://github.com/user-attachments/assets/8f541f6e-5116-4da8-a687-83f00da60c77)
 
+![image](https://github.com/user-attachments/assets/d2b9d2c7-36e5-4dbf-8c70-0a9be00ffd81)
+
+![image](https://github.com/user-attachments/assets/a7ef848d-6a68-47e9-b2ba-bac539a60b23)
+
 
 - In this veiw you can see whether a device is constantly using a frequency (100% duty cycle on a particular channel mean it is not usable & caused by sort of jammers)
 - Displays a measurement of the amount of time a received signal amplitude is above the noise floor or another arbitrary threshold
@@ -126,20 +132,18 @@ Here are some different views available in a spectrum analyzer:
 
 ❗ In this view vertical/horizontal axis shows the **`historical data (similar to a waterfall rectangle from Up-to-Down or Left-to-Right)`**
 
-- Swept: This is the same information as the real-time FFT but often in a different view and tracked over a longer period. These views can often be configured within software to specify the length of time
+- Swept / Waterfall: This is the same information as the real-time FFT but often in a different view and tracked over a longer period. These views can often be configured within software to specify the length of time
 - Waterfall: The information from the swept spectrogram showing time, frequency, and power but viewed vertically.
 
-#### Swept View
+
 
 ![image](https://github.com/user-attachments/assets/21a3c49a-33f2-47db-9dad-bf99953247d1)
 
-
-
-#### Waterfall View
+![image](https://github.com/user-attachments/assets/98fe65eb-4904-43ce-b82a-c9207899d709)
 
 ![image](https://github.com/user-attachments/assets/b9985589-e1a3-42f4-b534-ff94315d311c)
 
-
+![image](https://github.com/user-attachments/assets/890563d0-ce20-4f64-a315-65834993846b)
 
 ![image](https://github.com/user-attachments/assets/756e48bf-a7af-47d2-9af5-7212337e93fe)
 
@@ -163,6 +167,9 @@ Here are some different views available in a spectrum analyzer:
 
 ![image](https://github.com/user-attachments/assets/92fc8055-15eb-4e42-97f9-4b8ba2dd992c)
 
+![image](https://github.com/user-attachments/assets/39e18fcc-e0c0-440c-8c1f-20f56ad56f05)
+
+![image](https://github.com/user-attachments/assets/5d067904-94b8-4f2b-90eb-97ab1c15bf03)
 
 
 
@@ -180,6 +187,11 @@ Here are some different views available in a spectrum analyzer:
 ❗ Spectrum Analysis + Information of WLANs similar to a **`Wi-Fi analyzer tool (SSIDs name, RSSI, etc)`**
 
 ![image](https://github.com/user-attachments/assets/58e58b23-730f-4847-9367-c739b233b574)
+
+![image](https://github.com/user-attachments/assets/0a65699f-7e3d-4121-bd8b-d74047af6279)
+
+![image](https://github.com/user-attachments/assets/ca4d9783-d349-4231-bfd3-3ffb4396969e)
+
 
 - When spectrum analyzer has WiFi integration capability, it can combined those views. WiFi NIC can scan other channels & report that information to give a overall view on a particular band.
 - Spectrum analyzers show layer one information. It is frequently useful to view information from layer 2 within the same views. WLAN integration with spectrum analysis software enables this feature. The images below show the SSIDs and number of APs in Spectrum XT. We can also see detailed information in Ekahau about the APs, the SSIDs they broadcast, along with operating and capability information.
@@ -284,16 +296,21 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 
 ---
 
-### Signatures: `2.4 GHz` : `802.11b` / `Wi-Fi 1` : `PSK / BPSK / QPSK` : `22 MHz`
+### Signatures: `2.4 GHz` : `802.11b` / `Wi-Fi 1` : `HR-DSSS` (_`PSK / BPSK / QPSK`_) : `22 MHz`
 
 - 802.11 BPSK / QPSK
 - PHY: 2.4 GHz
 - Data Rates: 1, 2, 5.5, 11 Mbps
 - Channel Width: 22 MHz
 
+![image](https://github.com/user-attachments/assets/d8849142-d6a8-4889-82c4-ebbf15a6b56f)
+
 ![image](https://github.com/user-attachments/assets/4f42cd14-cb38-4679-8b49-9639f9771089)
 
 ![image](https://github.com/user-attachments/assets/2ccb8151-0272-413f-96a5-ea8c7c372e73)
+
+![image](https://github.com/user-attachments/assets/5c976d42-90c0-438a-817f-1d7028f4c085)
+
 
 ---
 
@@ -303,18 +320,32 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 - PHY: 2.4 GHz
 - Data Rates: 6, 12, 24, 54 Mbps 
 - Channel Width: 20 MHz
+- 802.11g brought OFDM to 2.4GHz (The views are the same as 802.11a.)
 
 ![image](https://github.com/user-attachments/assets/11f5da3e-6f51-465b-bb01-e6d146248425)
 
+![image](https://github.com/user-attachments/assets/34e437b2-9363-490f-901a-f2baf5d5bca0)
+
+
+
+
 ---
 
-### Signatures: `5 GHz` : `802.11a` / `Wi-Fi 2` : `OFDM` : `20 MHz`
+### Signatures: `5 GHz` : `802.11a` / `Wi-Fi 2` : `OFDM` (`BPSK, QPSK, 16QAM, 64Qam`) : `20 MHz`
 
 - PHY: 5 GHz
 - Data Rates: 6-54 Mbps
 - Channel Width: 20 MHz
+- Subcarrier Spacing = 312.15 Khz
+- Total Subcarriers = 52
+- Pilot Subcarriers = 4
+- Data Subcarriers = 48
+
+![image](https://github.com/user-attachments/assets/f1d36aaa-5c27-487c-a7c6-cbf9bc22e898)
 
 ![image](https://github.com/user-attachments/assets/4fbe7790-8bbe-4edd-9219-ad843271600c)
+
+![image](https://github.com/user-attachments/assets/112eb11a-1b2e-4a45-b2f2-00fd101b2d56)
 
 ![image](https://github.com/user-attachments/assets/91e3d557-ba9a-4b52-a09b-59fe29de099b)
 
@@ -337,6 +368,18 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 
 
 
+### 80 mhZ:
+
+Identifying 40, 80, and 160MHz wide channels are easy; they appear as a wider 20MHz OFDM split on the center channel. With bonded channels, all management and control frames are sent on the primary channel which results in that channel being busier than others due to the required overhead to send 802.11 frames.
+
+![image](https://github.com/user-attachments/assets/8a5ca02e-1270-4755-8dd7-1cc153007247)
+
+
+
+
+
+
+
 ## NON-802.11 Wi-Fi Singatures
 
 ### Bluetooth : 2.4 GHz
@@ -347,6 +390,13 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 - It isn't until **many Bluetooth devices are active simultaneously that you are likely to see problems with your Wi-Fi.**
 
 ![image](https://github.com/user-attachments/assets/5c686312-b844-4579-9c5a-1d6c73cf291c)
+
+![image](https://github.com/user-attachments/assets/b0260fa5-7786-4a99-b3d6-0951a886a62f)
+
+![image](https://github.com/user-attachments/assets/b40d0966-0ed6-4fe9-9936-f50e6739da83)
+
+![image](https://github.com/user-attachments/assets/2224c7c5-57f8-482d-8d2b-3c3387fa0901)
+
 
 --- 
 
@@ -360,6 +410,11 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 
 ![image](https://github.com/user-attachments/assets/1780f1b6-0178-486c-b085-9cccdcd718e7)
 
+- Cordless Phone FHSS
+
+![image](https://github.com/user-attachments/assets/ea2362fe-58fe-4437-a9f2-1466c2bf0372)
+
+
 --- 
 
 ### Microwave : 2.4 GHz
@@ -371,8 +426,14 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 
 ![image](https://github.com/user-attachments/assets/8cbf3c61-ef11-47b5-8ef9-5daec9f98d2a)
 
+![image](https://github.com/user-attachments/assets/b68fd8f6-9e3d-431b-9cf5-17f1ccb44d8f)
+
+
 --- 
 
+### Jammer
+
+![image](https://github.com/user-attachments/assets/eb2b61ff-7334-4f7d-80a9-bedbea0a7a55)
 
 
 
@@ -489,6 +550,10 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 - https://rfexplorer.com/wifisurveyor/
 - https://www.cleartosend.net/spectrum-analysis/
 - https://www.youtube.com/watch?v=ImSRW6CHcto
+- https://support.metageek.com/hc/en-us/articles/201872824-Chanalyzer-5-Wi-Spy-User-Guide
+- https://www.arubanetworks.com/techdocs/ArubaOS%206_3_1_Web_Help/Content/ArubaFrameStyles/Spectrum_Analysis/Customizing_Spectrum_Ana.htm#spectrum_analysis_69050016_1006374
+- https://www.emona-tims.com/wp-content/uploads/2015/10/ILLINOIS-I-T-Spectral-Signatures-and-Interference-of-802_11-Wi-Fi-Signals-with-Barker-Code-Spreading.pdf
+- https://www.4gon.co.uk/documents/meetageek_interference_identification_guide.pdf
 
 
 
