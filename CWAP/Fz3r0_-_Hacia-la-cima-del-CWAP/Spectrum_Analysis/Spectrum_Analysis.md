@@ -72,6 +72,7 @@ Here are some different views available in a spectrum analyzer:
 
 ![image](https://github.com/user-attachments/assets/bccb2df6-3646-40c2-9a00-a47dfdfe8f0e)
 
+![image](https://github.com/user-attachments/assets/b821d960-f640-4a0a-b739-c2a7307f06df)
 
 
 
@@ -554,6 +555,7 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 - https://www.arubanetworks.com/techdocs/ArubaOS%206_3_1_Web_Help/Content/ArubaFrameStyles/Spectrum_Analysis/Customizing_Spectrum_Ana.htm#spectrum_analysis_69050016_1006374
 - https://www.emona-tims.com/wp-content/uploads/2015/10/ILLINOIS-I-T-Spectral-Signatures-and-Interference-of-802_11-Wi-Fi-Signals-with-Barker-Code-Spreading.pdf
 - https://www.4gon.co.uk/documents/meetageek_interference_identification_guide.pdf
+- https://www.youtube.com/watch?v=w1mdQn-XL6U
 
 
 
