@@ -66,11 +66,9 @@ Here are some different views available in a spectrum analyzer:
 
 <p align="center"> <img src="https://github.com/user-attachments/assets/36e79a62-f080-43ae-b32c-e47618e843b9" height="580"> </p>
 
-
-
-
-
 <p align="center"> <img src="https://github.com/user-attachments/assets/e536e616-b057-45f8-870b-81ad2803da09" height="550"> </p>
+
+![image](https://github.com/user-attachments/assets/c0ba9372-750f-493f-a253-f93f5373320e)
 
 
 
@@ -84,6 +82,7 @@ Here are some different views available in a spectrum analyzer:
 
 <p align="center"> <img src="https://github.com/user-attachments/assets/115dafa3-ff0d-4811-9209-fcccb386aff5" height="170"> </p>
 
+![image](https://github.com/user-attachments/assets/46b32017-540b-450d-9f4d-83ea1055344c)
 
 
 - `Type:` **Real-time Spectrum Analyzer (RSA).** <br><br>
@@ -111,6 +110,8 @@ Here are some different views available in a spectrum analyzer:
 ![image](https://github.com/user-attachments/assets/8e8d1535-85b6-4b6a-b909-65eb69df8b0e)
 
 ![image](https://github.com/user-attachments/assets/2168616b-b5d3-4be8-b9db-bbea11227ab3)
+
+![image](https://github.com/user-attachments/assets/8f541f6e-5116-4da8-a687-83f00da60c77)
 
 
 - In this veiw you can see whether a device is constantly using a frequency (100% duty cycle on a particular channel mean it is not usable & caused by sort of jammers)
@@ -383,11 +384,15 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 
 
 
+AX FFT
+
+![image](https://github.com/user-attachments/assets/46b32017-540b-450d-9f4d-83ea1055344c)
 
 
 
+AX SWEPT
 
-
+![image](https://github.com/user-attachments/assets/464bc598-0dcf-4ab8-a2cd-4a681cdfdb33)
 
 
 
