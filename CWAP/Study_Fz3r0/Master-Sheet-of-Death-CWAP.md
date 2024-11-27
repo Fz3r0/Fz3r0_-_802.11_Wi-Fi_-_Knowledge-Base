@@ -68,6 +68,8 @@ _All MAC frames contain the first three header fields and the FCS. The frame typ
 ### 💊📦 `Duration / ID` :: _2 Bytes / 16 Bits_
 _2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a two different purposes: 1 ) Duration: This field is used to reset NAV timers for devices on channel. Time in microseconds needed to complete the frame exchange, used to update STAs NAV (Network Allocation Vector). This is used a lot and it's important to know that this is not the duration of the current frame, it is the duration of the exchanges after the current frame requeried to actually complete the transaction 2) ID: Used in legacy PS-poll Frame to indicate the AID (Association ID) of the STA (AKA: ID of the Client Station given to the AP) to send the buffered frame in the AP | Expected duration of current transmission. Stations waiting for the medium use this to estimate when the channel will be free. | The contents of this field vary with frame type and subtype, with whether the frame is transmitted during the CFP, and with the QoS capabilities of the sending STA. | Omni peek shows this as duration, however it really is a duration / id field._ 
 
+- 802.11 management frames that are sent to a broadcast address of FF FF FF FF FF FF will **have a duration value of zero**. The duration is a time value that STA’s will use to reserve the medium informing other STA’s in the BSS how long it will take for the frame exchange to complete. In this case since these frames are no acknowledged by a receiver they have a duration value of zero. The duration field is still in the MAC header but it is not used.
+
 ````py
 ## MAC Frame Sections :: MAC Header + Frame Body + FCS
 
