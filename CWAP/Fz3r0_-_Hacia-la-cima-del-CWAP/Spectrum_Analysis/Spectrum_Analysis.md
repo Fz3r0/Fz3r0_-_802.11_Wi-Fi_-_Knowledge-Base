@@ -283,7 +283,7 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 1. 802.11b transmissions look like a bell curve (PSK/BPSK/QPSK)
 2. 802.11g/n/ac/ax are faster 802.11 data rates with flat across the top.
 
-
+---
 
 ### Signatures: `2.4 GHz` : `802.11b` / `Wi-Fi 1` : `PSK / BPSK / QPSK` : `22 MHz`
 
@@ -296,17 +296,43 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 
 ![image](https://github.com/user-attachments/assets/2ccb8151-0272-413f-96a5-ea8c7c372e73)
 
+---
+
+### Signatures: `2.4 GHz` : `802.11g` / `Wi-Fi 3` : `ERP-OFDM` : `20 MHz`
+
+- 802.11 ERP-OFDM
+- PHY: 2.4 GHz
+- Data Rates: 6, 12, 24, 54 Mbps 
+- Channel Width: 20 MHz
+
+![image](https://github.com/user-attachments/assets/11f5da3e-6f51-465b-bb01-e6d146248425)
 
 
+![image](https://github.com/user-attachments/assets/fb19b132-9e89-4691-859c-2e29ccd2e7e1)
 
-### Signatures: `5 GHz` : `OFDM` : `UNNI-2` : `20 MHz`
+---
+
+### Signatures: `5 GHz` : `802.11a` / `Wi-Fi 2` : `OFDM` : `20 MHz`
+
+- PHY: 5 GHz
+- Data Rates: 6-54 Mbps
+- Channel Width: 20 MHz
+
+![image](https://github.com/user-attachments/assets/4fbe7790-8bbe-4edd-9219-ad843271600c)
 
 ![image](https://github.com/user-attachments/assets/91e3d557-ba9a-4b52-a09b-59fe29de099b)
 
+---
 
+### Signatures: `5 GHz` : `802.11n` / `Wi-Fi 4` : `OFDM - 64 QAM` : `20 MHz`
 
+- PHY: 2.4 & 5 GHz
+- Data Rates: 6-450 Mbps
+- Channel Width: 20-40 MHz
 
+![image](https://github.com/user-attachments/assets/d8f764c6-5123-4922-b0d3-f209462b0e63)
 
+---
 
 
 
