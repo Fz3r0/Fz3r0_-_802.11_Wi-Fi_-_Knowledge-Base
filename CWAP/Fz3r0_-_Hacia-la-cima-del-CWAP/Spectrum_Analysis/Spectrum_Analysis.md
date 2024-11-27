@@ -556,6 +556,7 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 - https://www.emona-tims.com/wp-content/uploads/2015/10/ILLINOIS-I-T-Spectral-Signatures-and-Interference-of-802_11-Wi-Fi-Signals-with-Barker-Code-Spreading.pdf
 - https://www.4gon.co.uk/documents/meetageek_interference_identification_guide.pdf
 - https://www.youtube.com/watch?v=w1mdQn-XL6U
+- https://www.youtube.com/@AaroniaDe/videos
 
 
 
