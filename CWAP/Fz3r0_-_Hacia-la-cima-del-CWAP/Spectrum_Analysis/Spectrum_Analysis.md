@@ -109,8 +109,6 @@ Here are some different views available in a spectrum analyzer:
 
 ![image](https://github.com/user-attachments/assets/8e8d1535-85b6-4b6a-b909-65eb69df8b0e)
 
-![image](https://github.com/user-attachments/assets/2168616b-b5d3-4be8-b9db-bbea11227ab3)
-
 ![image](https://github.com/user-attachments/assets/8f541f6e-5116-4da8-a687-83f00da60c77)
 
 
