@@ -307,9 +307,6 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 
 ![image](https://github.com/user-attachments/assets/11f5da3e-6f51-465b-bb01-e6d146248425)
 
-
-![image](https://github.com/user-attachments/assets/fb19b132-9e89-4691-859c-2e29ccd2e7e1)
-
 ---
 
 ### Signatures: `5 GHz` : `802.11a` / `Wi-Fi 2` : `OFDM` : `20 MHz`
