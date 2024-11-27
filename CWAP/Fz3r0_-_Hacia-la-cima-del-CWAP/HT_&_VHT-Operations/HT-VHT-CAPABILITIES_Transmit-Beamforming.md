@@ -47,6 +47,12 @@ Beamforming technique concentrates radio waves in precise directions toward clie
 - In 802.11ac, Explicit beamforming got fine-tuned, and only Null data packet (NDP) Explicit Beamforming is supported
 - 802.11ac: enables single user (SU) and multi user (MU) beamforming which aims to improve SNR (and hence throughput) between a wireless client and AP. 
 
+## 🔢📡🎯 Transmit Beamforming (TxBF): `TxBF` & `MIMO / MU-MIMO`
+
+- In order for MU-MIMO to function the access point must support transmit beamforming.
+- Ideally the access point will be capable of 4X4:4 MIMO. 
+
+
 ## ⚙️🎯❓ Transmit Beamforming (TxBF): `How it works?`
 
 Beamforming operates on a principle analogous to how beams of light intersect and interact: 
