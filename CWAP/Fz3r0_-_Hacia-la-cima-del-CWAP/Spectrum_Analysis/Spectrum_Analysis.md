@@ -195,6 +195,10 @@ Here are some different views available in a spectrum analyzer:
 
 ![image](https://github.com/user-attachments/assets/ca4d9783-d349-4231-bfd3-3ffb4396969e)
 
+![image](https://github.com/user-attachments/assets/ab67d025-cc06-4a15-8ba5-31aba86c91f6)
+
+![image](https://github.com/user-attachments/assets/601057a7-a20f-4911-98b8-f06d4f2dc108)
+
 
 - When spectrum analyzer has WiFi integration capability, it can combined those views. WiFi NIC can scan other channels & report that information to give a overall view on a particular band.
 - Spectrum analyzers show layer one information. It is frequently useful to view information from layer 2 within the same views. WLAN integration with spectrum analysis software enables this feature. The images below show the SSIDs and number of APs in Spectrum XT. We can also see detailed information in Ekahau about the APs, the SSIDs they broadcast, along with operating and capability information.
@@ -386,6 +390,11 @@ Identifying 40, 80, and 160MHz wide channels are easy; they appear as a wider 20
 
 ## NON-802.11 Wi-Fi Singatures
 
+### ZigBee
+
+![image](https://github.com/user-attachments/assets/290e9a85-55a7-400f-9a8c-2375a6830f90)
+
+
 ### Bluetooth : 2.4 GHz
 
 - Bluetooth devices are active in the 2.4 GHz band.
@@ -401,6 +410,8 @@ Identifying 40, 80, and 160MHz wide channels are easy; they appear as a wider 20
 
 ![image](https://github.com/user-attachments/assets/2224c7c5-57f8-482d-8d2b-3c3387fa0901)
 
+![image](https://github.com/user-attachments/assets/4d700012-f5cb-4b6f-9e54-d36e4e0903e0)
+
 
 --- 
 
@@ -415,6 +426,8 @@ Identifying 40, 80, and 160MHz wide channels are easy; they appear as a wider 20
 ![image](https://github.com/user-attachments/assets/1780f1b6-0178-486c-b085-9cccdcd718e7)
 
 - Cordless Phone FHSS
+
+![image](https://github.com/user-attachments/assets/e9a1e481-1abd-44ae-b7ea-288f48cbc45b)
 
 ![image](https://github.com/user-attachments/assets/ea2362fe-58fe-4437-a9f2-1466c2bf0372)
 
@@ -439,6 +452,13 @@ Identifying 40, 80, and 160MHz wide channels are easy; they appear as a wider 20
 
 ![image](https://github.com/user-attachments/assets/eb2b61ff-7334-4f7d-80a9-bedbea0a7a55)
 
+
+
+### Video Camera
+
+- 3 spikes is tyical for a videp camera
+
+![image](https://github.com/user-attachments/assets/f9a8b02e-78b3-482f-8aa2-51e32737a7d6)
 
 
 
@@ -561,6 +581,9 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 - https://www.youtube.com/watch?v=w1mdQn-XL6U
 - https://www.youtube.com/@AaroniaDe/videos
 - https://www.batterfly.com/shop/en/blog-posts/introduction-density-view-spectrum-analyzer
+- https://www.youtube.com/watch?v=YjXpc6uTg3g
+- https://www.youtube.com/watch?v=r41ut1XfM7s
+- https://www.youtube.com/watch?v=tKXsxqBsWMg
 
 
 
