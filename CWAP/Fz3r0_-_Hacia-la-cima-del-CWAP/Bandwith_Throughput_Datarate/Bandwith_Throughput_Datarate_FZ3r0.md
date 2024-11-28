@@ -70,3 +70,11 @@ Example: On a network primarily used by 802.11n clients, the admin might disable
 - When a device attempts to associate with an AP (Access Point), it must confirm that it can handle all the basic rates configured on that AP. If it cannot, the device will fail to associate.
 
 802.11 standards specify different data rates based on the supported protocols and frequency bands. Here’s a breakdown of common basic rates:
+
+
+
+
+
+# Resources
+
+- https://www.netally.com/wifi-solutions/differences-between-wi-fi-throughput-bandwidth-and-data-rates/
