@@ -78,3 +78,4 @@ Example: On a network primarily used by 802.11n clients, the admin might disable
 # Resources
 
 - https://www.netally.com/wifi-solutions/differences-between-wi-fi-throughput-bandwidth-and-data-rates/
+- https://www.rcti.com.mx/index.php/blog/item/41-data-rate
