@@ -454,6 +454,28 @@ PCLP Layer (upper layer 1):
 
 ![image](https://github.com/user-attachments/assets/96b5c4d4-3661-4e7d-a803-2c16e23d9642)
 
+````sh
+Channel 01 : 2.412 GHz
+
+   Channel 02 : 2.417 GHz
+   Channel 03 : 2.422 GHz
+   Channel 04 : 2.427 GHz
+   Channel 05 : 2.432 GHz
+
+Channel 06 : 2.437 GHz
+
+   Channel 07 : 2.442 GHz
+   Channel 08 : 2.447 GHz
+   Channel 09 : 2.452 GHz
+   Channel 10 : 2.457 GHz
+
+Channel 11 : 2.462 GHz
+
+   Channel 12 : 2.467 GHz
+   Channel 13 : 2.472 GHz
+   Channel 14 : 2.477 GHz
+````
+
 ### 5 GHz
 
 ![image](https://github.com/user-attachments/assets/d7ee7e60-fe4c-4042-b521-3ce9b943e67e)
