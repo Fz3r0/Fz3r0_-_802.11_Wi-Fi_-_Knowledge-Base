@@ -11,6 +11,29 @@ _CWAP methodology provide comprehensive methodologies that include problem ident
 6. Choose appropiate remediation steps
 7. Document the problem and resolution
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Architecture
 
 ## DS Devices
@@ -26,6 +49,32 @@ _CWAP methodology provide comprehensive methodologies that include problem ident
 - Smartphone
 - Laptop client radio
 - VoWiFi Phone
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# MAC Frames
+
+## Management - Beacon
+
+- The target beacon transmission time (TBTT) determines the rate at which Beacon management frames are sent.
+- This value is 1,024 microseconds
+- 102.4 milliseconds = 100 TU (time units)
+
 
 
 
