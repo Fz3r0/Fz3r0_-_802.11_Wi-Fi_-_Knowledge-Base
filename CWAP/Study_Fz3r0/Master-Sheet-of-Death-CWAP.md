@@ -71,11 +71,17 @@ _CWAP methodology provide comprehensive methodologies that include problem ident
 
 ## Management - Beacon
 
+TBTT
+
 - The target beacon transmission time (TBTT) determines the rate at which Beacon management frames are sent.
 - This value is 1,024 microseconds
 - 102.4 milliseconds = 100 TU (time units)
 
+Listen Interval
 
+- The listen interval information element in some 802.11 management frames is used for **unicast** power management purposes
+- This value informs the access point of how many Beacons the STA will be dozing when in a power save state.
+- For example if a STA has a listen interval of 15 that means it will doze for 15 Beacons and if the Beacon interval is 100 time units the STA will doze for approximately 1.5 seconds.
 
 
 
