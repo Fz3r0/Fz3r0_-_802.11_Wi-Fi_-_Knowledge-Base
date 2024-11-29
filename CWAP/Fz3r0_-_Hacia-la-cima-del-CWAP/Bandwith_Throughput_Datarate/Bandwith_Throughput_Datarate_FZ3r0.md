@@ -37,9 +37,21 @@ These rates are used for `Management frames` and `Control frames`, such as `beac
 
 - **SO, IF THE CLIENT STA DOESN'T SUPPORT THE REQUIRED BASIC RATES (E.G., 802.11b IN "`OFDM ONLY - (802.1b exclude)`" MODE WITH `6/12/24 MBPS DATA RATES`), IT WILL NOT BE ABLE TO AUTHENTICATE TO THE BSS. (BECAUSE 802.11b ONLY SUPPORTS `1, 2, 5.5, 11 MBPS DATA RATES`**
 
+Example:
 
+- In an 802.11g network, the administrator might configure 6 Mbps as a basic rate to ensure all devices can receive critical frames and having the best performance possible _(excluding 802.11b data rates)_.
 
-- Example: In an 802.11g network, the admin might configure 6 Mbps as a basic rate to ensure all devices can receive critical frames.
+#### Basic rates `Layer 1 PHY (PHY Preamble & PHY Header)` & `Layer 2 MAC (MAC Frames)`:
+
+- The **PHY header and Preamble are always sent out at the lowest rate possible**, **even if that data rate is disabled on the device)**.
+
+Example: 
+
+- IEEE 802.11ac operates only in the 5 GHz band and the minimum data rate is 6 Mbps for 5 GHz.
+- If the administrator manually set the **Supported Rates** to **24mbps**: <br><br>
+    - The **PHY Preamble & Header** will be transmitted at 6mbps (minimum datarate)
+    - The **MAC Frames** like Management and Control will be transmitted at 24mbps
+
 
 ### Mandatory Rates:
 
