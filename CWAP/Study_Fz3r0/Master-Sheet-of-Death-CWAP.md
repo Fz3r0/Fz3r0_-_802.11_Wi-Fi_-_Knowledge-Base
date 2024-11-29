@@ -85,6 +85,15 @@ Listen Interval
 
 
 
+## Management - Association Request
+
+- The Association Request frame from a client station contains the capabilities of the device.
+- If the capabilities match those of the access point the STA is connecting to will become associated to the access point and part of the BSS.
+
+
+
+
+
 
 
 
