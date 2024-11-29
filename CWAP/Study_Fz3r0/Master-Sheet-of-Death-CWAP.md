@@ -1,5 +1,16 @@
 
 
+## 🚨🆘 WLAN Troubleshooting Methodology: `CWAP`
+_CWAP methodology provide comprehensive methodologies that include problem identification, data analysis, and thorough documentation._
+
+1. Identify the problem
+2. Discover the scale of the problem
+3. Identify possible causes of the problem
+4. Capture and Analyze the Data
+5. Observe the Problem
+6. Choose appropiate remediation steps
+7. Document the problem and resolution
+
 # Architecture
 
 ## DS Devices
