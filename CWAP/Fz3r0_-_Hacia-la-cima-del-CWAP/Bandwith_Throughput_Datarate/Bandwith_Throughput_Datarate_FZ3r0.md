@@ -39,7 +39,7 @@ These rates are used for `Management frames` and `Control frames`, such as `beac
 
 Example:
 
-- In an 802.11g network, the administrator might configure 6 Mbps as a basic rate to ensure all devices can receive critical frames and having the best performance possible _(excluding 802.11b data rates)_.
+- In an 802.11g (ERP-OFDM) network, the administrator might configure **6 Mbps** as a **Basic Rate** to ensure all devices can receive critical frames and having the best performance possible. _(this configuration is also known as **"OFDM Only"** because only supports 6, 12, 24 Mbps; excluding 802.11b HR-DSSS data rates of 1, 2, 5.5, 11 Mbps)_.
 
 #### Basic rates `Layer 1 PHY (PHY Preamble & PHY Header)` & `Layer 2 MAC (MAC Frames)`:
 
@@ -47,10 +47,10 @@ Example:
 
 Example: 
 
-- IEEE 802.11ac operates only in the 5 GHz band and the minimum data rate is 6 Mbps for 5 GHz.
+- IEEE 802.11ac operates only in the 5 GHz band and the minimum data rate is **6 Mbps** for **5 GHz**.
 - If the administrator manually set the **Supported Rates** to **24mbps**: <br><br>
-    - The **PHY Preamble & Header** will be transmitted at 6mbps (minimum datarate)
-    - The **MAC Frames** like Management and Control will be transmitted at 24mbps
+    - The **PHY Preamble & Header** will be transmitted at **`6mbps` (minimum data rate)**
+    - The **MAC Frames** like Management and Control will be transmitted at **`24mbps` (supported data rate)**
 
 
 ### Mandatory Rates:
