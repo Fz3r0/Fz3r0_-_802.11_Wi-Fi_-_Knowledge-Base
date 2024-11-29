@@ -11,8 +11,7 @@
 ![image](https://github.com/user-attachments/assets/711ec53d-b5c1-4a2b-b222-de98cb0747da)
 
 
-
-
+IMPRTANT: The IEEE-802.11_2020 standard states that an 802.11n Wi-Fi 4 (HT) STA can support 100 Mbps and greater of throughput. Keep in mind that throughput is how much data is actually moving between stations and signaling/data/MCS rate is how much the system is capable of.
 
 # Data Rate in 802.11 Wi-Fi
 
