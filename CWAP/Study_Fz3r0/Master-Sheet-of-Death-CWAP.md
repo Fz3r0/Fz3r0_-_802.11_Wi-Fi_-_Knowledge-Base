@@ -455,6 +455,18 @@ PCLP Layer (upper layer 1):
 ![image](https://github.com/user-attachments/assets/96b5c4d4-3661-4e7d-a803-2c16e23d9642)
 
 ````sh
+
+Channel 01 (First Freq)        = 2.412 GHz
+Channel 11 (Last Freq)         = 2.462 GHz
+
+Jump from 1 channel to another = .005
+
+From Channel 01 to Channel 06  = .035
+From Channel 06 to Channel 11  = .035
+From Channel 01 to Channel 11  = .070
+
+---
+
 Channel 01 : 2.412 GHz
 
    Channel 02 : 2.417 GHz
@@ -474,6 +486,7 @@ Channel 11 : 2.462 GHz
    Channel 12 : 2.467 GHz
    Channel 13 : 2.472 GHz
    Channel 14 : 2.477 GHz
+
 ````
 
 ### 5 GHz
