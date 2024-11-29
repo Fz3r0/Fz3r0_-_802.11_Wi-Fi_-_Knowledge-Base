@@ -63,6 +63,21 @@ _CWAP methodology provide comprehensive methodologies that include problem ident
 
 
 
+## Load Balanding and Band Balancing
+
+- Load Balancing: In Load Balancing an access point to request client stations to transition to a specific access point or to indicate to a client device a set of preferred access points. Load balancing is the process of moving associated stations to other access points in order to lessen the possibility of overloading an access point. <br><br>
+
+- Band Balancing:
+
+
+
+
+
+
+
+
+
+
 
 
 
