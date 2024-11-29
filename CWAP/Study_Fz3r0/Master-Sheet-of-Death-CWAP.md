@@ -493,6 +493,58 @@ Channel 11 : 2.462 GHz
 
 ![image](https://github.com/user-attachments/assets/d7ee7e60-fe4c-4042-b521-3ce9b943e67e)
 
+
+````
+
+Channel 36  (First Freq)        = 5.180 GHz
+Channel 165 (Last Freq)         = 5.825 GHz
+
+Jump from 1 channel to another = .020
+
+From Channel 36 to Channel 165  = .645
+
+---
+
+   # U-NNI-1:
+
+Channel 36  : 5.180 GHz
+Channel 40  : 5.200 GHz
+Channel 44  : 5.220 GHz
+Channel 48  : 5.240 GHz
+
+   # U-NNI-2a:
+
+Channel 52  : 5.260 GHz
+Channel 56  : 5.280 GHz
+Channel 60  : 5.300 GHz
+Channel 64  : 5.320 GHz
+
+   # U-NNI-2c (extended):
+
+Channel 100 : 5.500 GHz
+Channel 104 : 5.520 GHz
+Channel 108 : 5.540 GHz
+Channel 112 : 5.560 GHz
+Channel 116 : 5.580 GHz
+Channel 120 : 5.600 GHz
+Channel 124 : 5.620 GHz
+Channel 128 : 5.640 GHz
+Channel 132 : 5.660 GHz
+Channel 136 : 5.680 GHz
+Channel 140 : 5.700 GHz
+Channel 144 : 5.720 GHz
+
+   # U-NNI-3:
+
+Channel 149 : 5.745 GHz
+Channel 153 : 5.765 GHz
+Channel 157 : 5.785 GHz
+Channel 161 : 5.805 GHz
+Channel 165 : 5.825 GHz
+
+
+````
+
 ## OFDM Subcarriers
 
 ### Subcarrier Arrangement in 802.11n/ac 20MHz Channel
