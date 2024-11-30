@@ -70,6 +70,9 @@ The client sends an acknowledgment
 
 ![image](https://github.com/user-attachments/assets/7177caaf-e152-4dcd-b935-c7341ae76ad5)
 
+![image](https://github.com/user-attachments/assets/f05d11e9-57e2-4d6f-9514-f445a0cad9de)
+
+
 ## Pairwise Keys and Group Keys
 
 - There are 2 different type of keys in the Key Hierarchy Pairwise Keys and Group Keys
@@ -91,13 +94,18 @@ The client sends an acknowledgment
 
 ## 4-Way-Handshake: Keys & Components
 
+- 
+- 💳🔐 **`PSK (Pre-Shared Key)`**: Gets generated from the Passphrase using PBKDF2 <br><br>
 - 🗝️🏭 **`MSK (Master Session Key)`**: The first level key is generated is MSK during the process of 802.1X/EAP or PSK authentication.
 - 🗝️↔️  **`PMK (Pairwise Master Key)`**: 
 - 🗝️👨‍👨‍👦‍👦 **`GMK (Group Master Key)`**:
 - 🔑↔️ **`PTK (Pairwise Transient Key)`**:
-- 🔑👨‍👨‍👦‍👦 **`GTK (Group Temporal Key)`**:
-- 📡🔢 **`ANonce (Authenticator/AP Nonce)`**:
-- 🤳🔢 **`SNonce (Supplicant/STA Nonce)`**:
+    - KCK
+    - KEK
+    - TK
+- 🔑👨‍👨‍👦‍👦 **`GTK (Group Temporal Key)`**: <br><br>
+- 📡🔢 **`ANonce (Authenticator/AP Nonce)`**: 
+- 🤳🔢 **`SNonce (Supplicant/STA Nonce)`**: <br><br>
 - 📩🛡️ **`MIC 1 (Message Integrity Check 1)`**:
 - 📩🛡️ **`MIC 2 (Message Integrity Check 2)`**:
 
@@ -105,9 +113,12 @@ The client sends an acknowledgment
 
 
 
----
+# PSK [WPA/WPA2 Personal - Passphrase Key]
 
-# 🗝️🏭👑  MSK (Master Session Key) [AAA/802.1X Key]
+- PSK Gets generated from the passphrase & SSID to generate the PSK.
+- The "Passphrase" is also known as the "password" of the Wi-Fi network
+
+# 🗝️🏭👑  MSK (Master Session Key) [WPA/WPA2 Enterprise - AAA/802.1X Key]
 
 - The MSK is the first level key and is derived during the process of **802.1X-EAP (Enterprise) authentication**.
 - The MSK **serves as the foundation for deriving the PMK (Pairwise Master Key)**, which is then used in subsequent 4-way handshake processes to derive encryption keys like the **PTK (Pairwise Transient Key)** and **GTK (Group Temporal Key)**.
@@ -221,6 +232,10 @@ print("Simulated MSK (Master Session Key):", msk.hex())
 print("Salt used (for demo):", salt.hex())
 
 ````
+
+
+
+
 
 # 🗝️↔️🤝 PMK (Pairwise Master Key)
 
@@ -561,7 +576,7 @@ print(format_nonce_as_block(snonce))
 
 
 
-
+- https://praneethwifi.in/2019/11/09/4-way-hand-shake-keys-generation-and-mic-verification/
 - https://telcomatraining.com/what-is-msk-master-session-key-2/
 - https://networklessons.com/cisco/ccnp-encor-350-401/wpa-and-wpa2-4-way-handshake
 - https://networklessons.com/cisco/ccnp-encor-350-401/introduction-to-wpa-key-hierarchy
