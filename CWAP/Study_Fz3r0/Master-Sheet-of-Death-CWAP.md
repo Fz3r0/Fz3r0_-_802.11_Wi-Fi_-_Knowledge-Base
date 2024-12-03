@@ -65,9 +65,9 @@ _CWAP methodology provide comprehensive methodologies that include problem ident
 
 ## Load Balanding and Band Balancing
 
-- Load Balancing: In Load Balancing an access point to request client stations to transition to a specific access point or to indicate to a client device a set of preferred access points. Load balancing is the process of moving associated stations to other access points in order to lessen the possibility of overloading an access point. <br><br>
+- `Load Balancing`: **Moves already associated STA from AP-A to AP-B**. In Load Balancing an access point to request client stations to transition to a specific access point or to indicate to a client device a set of preferred access points. Load balancing is the process of moving associated stations to other access points in order to lessen the possibility of overloading an access point. <br><br>
 
-- Band Balancing:
+- `Band Balancing`: **Ignore probe request on 2.4 GHz & wait for probe request on 5 ghz from new STA associations**. Band steering is a proprietary technology that is used to encourage dual band client STA’s to associate to the less crowded 5 GHz band instead of the 2.4 GHz band. One method that may be used is for the access point to ignore Probe Request frames that were sent from the client STA with the thought it will use 5 GHz. If the STA does not get an association to the 5 GHz it will end up connecting to the 2.4 GHz band during a later scan of the 2.4 GHz band.
 
 
 
