@@ -84,6 +84,26 @@ _CWAP methodology provide comprehensive methodologies that include problem ident
 
 # MAC Frames
 
+
+- Presudo Header: Information not included in the MAC frame but captured by the PHY layer or added by capture tools. Examples include additional metadata about the transmission.
+    - Radiotap header: Provides detailed transmission parameters (e.g., channel, RSSI, data rate).
+    - Per PAcket Information (PPI): An older header format similar to Radiotap, providing metadata about packets. <br><br>
+- Radio Information: Captured at the PHY layer but not part of the actual MAC frame. This data is used for analysis but isn't transmitted over the air. Examples include: Signal strength (RSSI, dBm Antenna Signal). Noise level (dBm Antenna Noise). Channel and frequency details. Modulation and coding schemes (MCS). <br><br>
+
+- MAC Header: 
+
+- Information Elements (IE): The information inside Management Frames
+
+- Fixed Parameters
+
+- Tagged Parameters:
+
+- Data: Data inside data or QoS data frames, commonly coming from/to the DS. like a ping. 
+
+- HT/VHT Capabilities
+
+- HT/VHT Operation
+
 ## Management - Beacon
 
 TBTT
