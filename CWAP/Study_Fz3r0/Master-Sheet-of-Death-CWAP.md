@@ -173,6 +173,20 @@ _All MAC frames contain the first three header fields and the FCS. The frame typ
 
 ````
 
+### 💊📦 `Frame Control` :: _2 Bytes / 16 Bits_
+
+- Protocol Version
+- Type
+- Subtype
+- To DS
+- From DS
+- More Fragments
+- Retry
+- Power Management
+- More Data
+- Protected Frame
+- Order
+
 ---
 
 ### 💊📦 `Duration / ID` :: _2 Bytes / 16 Bits_
