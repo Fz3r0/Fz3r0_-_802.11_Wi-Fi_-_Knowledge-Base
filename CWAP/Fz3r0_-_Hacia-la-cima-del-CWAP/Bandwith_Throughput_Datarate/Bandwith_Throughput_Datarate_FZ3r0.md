@@ -89,6 +89,21 @@ Example: On a network primarily used by 802.11n clients, the admin might disable
 
 
 
+
+
+
+
+
+
+#
+
+- 802.11n HT Wi-Fi 4 station can support 100 Mbps 
+
+
+
+
+
+
 # Resources
 
 - https://www.netally.com/wifi-solutions/differences-between-wi-fi-throughput-bandwidth-and-data-rates/
