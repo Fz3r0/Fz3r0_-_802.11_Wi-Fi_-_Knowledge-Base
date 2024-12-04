@@ -7,9 +7,9 @@ _CWAP methodology provide comprehensive methodologies that include problem ident
 2. Discover the scale of the problem
 3. Identify possible causes of the problem
 4. Capture and Analyze the Data
-5. Observe the Problem
+5. Observe the Problem: Eg. install other driver on the device experimenting issues either client or network related. 
 6. Choose appropiate remediation steps
-7. Document the problem and resolution
+7. Document the problem and resolution: Documentation can be a daunting task and therefore is often put off to a later time or sometimes not done at all. This part of the troubleshooting process plays an important role as it allows for streamlined troubleshooting when a similar problem appears.
 
 
 
