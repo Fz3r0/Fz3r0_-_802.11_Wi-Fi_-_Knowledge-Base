@@ -20,7 +20,7 @@ IMPRTANT: The IEEE-802.11_2020 standard states that an 802.11n Wi-Fi 4 (HT) STA 
 
 ## 802.11 Data Rate Categories
 
-- **`IMPORTANT`**: A client STA device **must support ALL basic date rates** or it will not associate to the AP. eg. If 6 Mbps is configured in the BSS, 802.11b/HR-DSSS/Wi-Fi 1/legacy devices will not associate to the BSS and it will be an **Association error**.
+- **`IMPORTANT`**: A client STA device **must support ALL Basic/Mandatory date rates** or it will not associate to the AP. eg. If 6 Mbps is configured in the BSS, 802.11b/HR-DSSS/Wi-Fi 1/legacy devices will not associate to the BSS and it will be an **Association error**.
 
 | **Category**                          	| **Purpose**                                                                                                                                                                                                                                                              	| **Examples (General)**                	| **Examples (Per PHY)**                                                                                                                      	| **Configured by Admin?**                  	|
 |---------------------------------------	|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|---------------------------------------	|---------------------------------------------------------------------------------------------------------------------------------------------	|-------------------------------------------	|
