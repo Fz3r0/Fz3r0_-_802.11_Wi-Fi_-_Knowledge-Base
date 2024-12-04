@@ -280,6 +280,29 @@ _2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Physical Layer
 
 ### Integrity Check
@@ -636,6 +659,117 @@ https://www.cleartosend.net/802-11ax-ofdma-subcarriers/
 - https://excalidraw.com/#room=5e34d48995724e4effe4,bOzzxMz520Zl-6fU124PjA
 
 ![image](https://github.com/user-attachments/assets/668f8296-5831-4e62-9ed7-3a94747b2c9f)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# State Machine
+
+## 802.11 State Machine: Authentication & Association
+
+The 802.11 station keeps two variables for tracking the **authentication state** and the **association state**. The states that are tracked are as follows:
+
+1. `Authentication state`: unauthenticated or authenticated
+2. `Association state`: unassociated or associated
+
+Together, these two variables create three possible states for the stations.
+
+- `State 1`: initial start state :: unauthenticated and unassociated
+- `State 2`: Authentication state :: authenticated and unassociated
+- `State 3`: Association state :: and associated _(pending security mechanisms / RSNA)_
+
+**Note:** Because a station must authenticate before it can associate, it can never be unauthenticated and associated. 
+
+Since the introduction of 802.11i security mechanisms, the IEEE 802.11-2012 standard now considers there to a forth state in the connection state machine (State 4: authenticated and associated – PSK or 802.1X security mechanisms completed.):
+
+## ⛔➡️✅ 802.11 State Machine: `4 States`
+
+| **State #**        | **State Name**                 | **Description**                                                  | **Frame Classes**      | **RSNA**                    |
+|--------------------|--------------------------------|---------------------------------------------------------------------|------------------------|-----------------------------|
+| ⛔ **State 1**     | Unauthenticated, Unassociated |  Client STA NOT Connected                                           | Class 1               | /                           |
+| ❓ **State 2**     | `Authenticated`, Unassociated |  Client STA Authenticated to AP _(AP validating STA capabilities)_  | Class 1 & 2           | /                           |
+| ✅ **State 3**     | `Authenticated`, `Associated` |  Client STA Associated to AP _(open-auth)_                          | Class 1, 2 & 3        | RSNA: Blocked (Pending RSNA) |
+| 🔓 **State 4**     | `Authenticated`, `Associated`   |  Client STA Associated to AP _(RSNA)_                               | Class 1, 2 & 3        | RSNA: Un-Blocked (RSNA OK!)  |
+
+### 🥇🥈🥉 802.11 State Machine: `Frame Classes` `1`, `2`, `3`
+
+**🥇🖽 `Class1 Frames`**
+
+- [**Control**: `RTS & CTS`, `ACK`, `CF-End+CF-Ack & CF-End`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+- [**Management**: `Beacon`, `Probe Req/Res`, `Auth/Deauth`, `ATIM`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+- [**Data**: `Any frame with ToDS & FromDS false(0)`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)<br><br>
+
+**🥈🖽 `Class2 Frames`
+
+- [**Control**: _None_](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+- [**Management**: `Association Req/Res`, `Re-Association Req/Res`. `Disassociation`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+- [**Data**: _None_](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)<br><br>
+
+**🥉🖽 `Class3 Frames`
+
+- [**Control**: `PS-Poll`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+- [**Management**: `Deauthentication`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+- [**Data**: `Any frame with ToDS or FromDS true(1)`](https://www.rfwireless-world.com/Terminology/WLAN-class1-class2-class3-frames.html)
+
+**All management frames including the  authentication/association proccess are sent in lowest mandatory data rate supported eg 802.11b 1mbps or 802.11ac 6mbps**
+
+|          **Frame**          	|     **Phase & State**    	|                                                            **Purpose**                                                           	|                                                                                                                    **Key Characteristics**                                                                                                                    	|
+|:---------------------------:	|:------------------------:	|:--------------------------------------------------------------------------------------------------------------------------------:	|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:	|
+| **Beacon**                  	| Discovery / State 1      	| Communicates BSS characteristics to client STA                                                                                   	| Sent by APs during passive scanning. <br>- Mandatory Fields: Timestamp, Beacon Interval, Capability Info, SSID, Supported Rates. <br>- Optional Fields: Country Code, Transmit Power, QBSS Load Element, HT/VHT Info & Capabilities, RSN Information Element. 	|
+| **Probe Request**           	| Discovery / State 1      	| Allows client STA to actively scan and discover APs                                                                              	| Sends broadcast and directed probes. <br>May request additional information from APs, such as supported capabilities.                                                                                                                                         	|
+| **Probe Response**          	| Discovery / State 1      	| Communicates BSS characteristics to client STA & Provides additional information to client STA (if requested)                    	| Similar to a Beacon frame but without a TIM and QoS Capability fields. <br>Can include additional requested elements from STA in the Probe Request.                                                                                                           	|
+| **Authentication Request**  	| Authentication / State 2 	| Initiates authentication process between client STA & AP<br>client STA send basic information about device type & authentication 	| Validates device type and capability to join. <br>Indicates Open System or Shared Key (legacy WEP) authentication type.                                                                                                                                       	|
+| **Authentication Response** 	| Authentication / State 2 	| Confirms or denies authentication request.<br>if client STA device is compatible it can proceed to association phase.            	| Contains Auth Seq Number (2) and status code: 0 for success, 1 for failure. <br>Matches device type and validates compatibility with AP.                                                                                                                      	|
+| **Association Request**     	| Association / State 3    	| Association process allow client STA to: join the cell, obtain an AID & compare STA/BSS capabilities                             	| Includes STA’s listen interval, SSID to join, and capabilities <br>(e.g., supported rates, power/channel capabilities, RSN, QoS, HT, VHT). Allows comparison of STA and AP compatibility.                                                                     	|
+| **Association Response**    	| Association / State 3    	| Confirms successful association, assigns an AID, or denies access if capabilities are incompatible                               	| Verifies fields in the request. If successful, provides an AID and AP parameters. <br>Denies access with a status code (e.g., 1 for rejection) if capabilities are incompatible.                                                                              	|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
