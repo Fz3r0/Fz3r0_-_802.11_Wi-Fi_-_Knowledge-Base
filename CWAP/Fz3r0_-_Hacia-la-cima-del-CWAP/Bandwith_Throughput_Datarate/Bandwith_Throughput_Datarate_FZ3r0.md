@@ -20,7 +20,9 @@ IMPRTANT: The IEEE-802.11_2020 standard states that an 802.11n Wi-Fi 4 (HT) STA 
 
 ## 802.11 Data Rate Categories
 
-- **`IMPORTANT`**: A client STA device **must support ALL Basic/Mandatory date rates** or it will not associate to the AP. eg. If 6 Mbps is configured in the BSS, 802.11b/HR-DSSS/Wi-Fi 1/legacy devices will not associate to the BSS and it will be an **Association error**.
+- **`PHY Frames Data Rates`**: The **PHY header** and **Preamble** are always sent out at the **lowest rate even if that data rate is disabled on the device**. IEEE 802.11ac operates only in the 5 GHz band and the minimum data rate is 6 Mbps for 5 GHz. <br><br>
+- **`MAC Frames Data Rates`**: A client STA device **must support ALL Basic/Mandatory date rates** or it will not associate to the AP. eg. If 6 Mbps is configured in the BSS, 802.11b/HR-DSSS/Wi-Fi 1/legacy devices will not associate to the BSS and it will be an **Association error**.
+
 
 | **Category**                          	| **Purpose**                                                                                                                                                                                                                                                              	| **Examples (General)**                	| **Examples (Per PHY)**                                                                                                                      	| **Configured by Admin?**                  	|
 |---------------------------------------	|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|---------------------------------------	|---------------------------------------------------------------------------------------------------------------------------------------------	|-------------------------------------------	|
