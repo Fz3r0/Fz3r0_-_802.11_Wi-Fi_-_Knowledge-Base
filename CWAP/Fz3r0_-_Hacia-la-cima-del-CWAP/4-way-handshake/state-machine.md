@@ -472,6 +472,18 @@ iphone - respuesta
 
 ---
 
+## 802.11 Authentication Frames Fields & Elements presence
+
+
+
+
+
+
+
+
+
+
+
 
 ## 802.11 Association Status Codes
 
