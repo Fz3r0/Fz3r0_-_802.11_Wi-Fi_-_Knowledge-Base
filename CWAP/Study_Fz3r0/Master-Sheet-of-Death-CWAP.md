@@ -4,7 +4,7 @@
 _CWAP methodology provide comprehensive methodologies that include problem identification, data analysis, and thorough documentation._
 
 1. **Identify the problem**: What is happening? Example: Some users are reporting very slow speeds since the new APs were installed. 
-2. **Discover the scale of the problem**: How many clients are afected? Example: Only clients connected to the 5 GHz network where new APs were installed. 
+2. **Discover the scale of the problem**: How many clients are impacted? Example: Only clients connected to the 5 GHz network where new APs were installed. 
 3. **Identify possible causes of the problem**: Whatis causing the issue? There was a recent change (new APs installation) and all the configurations are the same as always. Something with new APs. 
 4. **Capture and Analyze the Data**: The QBSS Load Element is always to 90%
 5. **Observe the Problem**: Reproduce the problem. Example: Install another driver on the device experimenting issues either client (eg. Smartphone) or network related (eg. Access Point). The airtime went down wen downgrading the firmware to the AP. 
