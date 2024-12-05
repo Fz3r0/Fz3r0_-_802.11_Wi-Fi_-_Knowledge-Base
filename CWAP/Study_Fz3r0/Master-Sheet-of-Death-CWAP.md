@@ -515,6 +515,27 @@ PCLP Layer (upper layer 1):
 
 
 
+# OFDM
+
+
+## MIMO
+
+- SU-MIMO: (single-user MIMO) :: the AP transmits one at a time to each client.
+- MU-MIMO: (multi-user MIMO) :: allows the access point to send multiple data packets to multiple clients over the same frequency. allows for multiple client STA’s to communicate with an access point simultaneously. This technology uses different spatial streams on the same RF channel to allow for the simultaneous sessions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
