@@ -919,6 +919,61 @@ Since the introduction of 802.11i security mechanisms, the IEEE 802.11-2012 stan
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Roaming
+
+## FT Fast Transition
+
+### Over the Air:
+
+- Do not use action frame
+
+### Over the DS:
+
+- Use FT Action Frame
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## QoS & EDCA
 
 ### ⌛📅 All in one IFS table:
