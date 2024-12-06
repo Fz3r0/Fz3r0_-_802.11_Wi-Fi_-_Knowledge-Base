@@ -1565,3 +1565,39 @@ Scheduling and trigger frames
 6.5.3                       Load balancing
 
 6.5.4                       Band steering
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- https://robinwifi.eu/cwnp/cwap-404-chapter-1-802-11-the-protocol/
