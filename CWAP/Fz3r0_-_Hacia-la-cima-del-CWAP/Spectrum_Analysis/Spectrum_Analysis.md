@@ -452,6 +452,12 @@ Identifying 40, 80, and 160MHz wide channels are easy; they appear as a wider 20
 
 ![image](https://github.com/user-attachments/assets/eb2b61ff-7334-4f7d-80a9-bedbea0a7a55)
 
+### Narrow Band Jammer
+
+- Jamming only narrow targeting
+
+![image](https://github.com/user-attachments/assets/2e548a55-51af-4316-960b-42faa38a7c08)
+
 
 
 ### Video Camera
