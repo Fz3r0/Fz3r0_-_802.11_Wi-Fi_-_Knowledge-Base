@@ -3663,6 +3663,47 @@ Probe Request with SSID element > 0 :: `Directed Probe Request`
 
 
 
+
+
+## IEEE 802.11: `Action Frames`
+
+- Action Frames are management frames used to trigger specific actions in a wireless cell.
+
+Below is a detailed breakdown of the **Category Codes** and their respective **Action Codes**, along with Wireshark filters for each:
+
+| **Category Code** | **Category Description**            | **Action Code**                                                                                      | **Wireshark Filter (Category)**           | **Wireshark Filter (Action)**              |
+|--------------------|-------------------------------------|-----------------------------------------------------------------------------------------------------|-------------------------------------------|---------------------------------------------|
+| **0**             | Spectrum Management                | 0: Measurement Request<br>1: Measurement Report<br>2: TPC Request<br>3: TPC Report<br>4: Channel Switch Announcement<br>5-255: Reserved | wlan.fixed.category_code == 0            | wlan.fixed.action_code == {Action Code}    |
+| **1**             | QoS                                | 0: ADDTS Request<br>1: ADDTS Response<br>2: DELTS<br>3: Schedule<br>4: QoS Map Configure<br>5-255: Reserved | wlan.fixed.category_code == 1            | wlan.fixed.action_code == {Action Code}    |
+| **2**             | DLS                                | 0: DLS Request<br>1: DLS Response<br>2: DLS Teardown<br>3-255: Reserved                            | wlan.fixed.category_code == 2            | wlan.fixed.action_code == {Action Code}    |
+| **3**             | Block ACK                          | 0: ADDBA Request<br>1: ADDBA Response<br>2: DELBA<br>3-255: Reserved                               | wlan.fixed.category_code == 3            | wlan.fixed.action_code == {Action Code}    |
+| **4**             | Public                             | Action codes vary (refer to specific implementations)                                              | wlan.fixed.category_code == 4            | wlan.fixed.action_code == {Action Code}    |
+| **5**             | Radio Measurement                  | 0: Radio Measurement Request<br>1: Radio Measurement Report<br>2: Link Measurement Request<br>3: Link Measurement Report<br>4: Neighbor Report Request<br>5: Neighbor Report Response<br>6-255: Reserved | wlan.fixed.category_code == 5            | wlan.fixed.action_code == {Action Code}    |
+| **6**             | Fast BSS Transition                | 0: Reserved<br>1: FT Request<br>2: FT Response<br>3: FT Confirm<br>4: FT ACK<br>5-255: Reserved   | wlan.fixed.category_code == 6            | wlan.fixed.action_code == {Action Code}    |
+| **7**             | High Throughput (HT)               | 0: Notify Channel Width<br>1: SM Power Save<br>2: PMSP<br>3: Set PCO Phase<br>4: CSI<br>5: Noncompressed Beamforming<br>6: Compressed Beamforming<br>7: ASEL Indices Feedback<br>8-255: Reserved | wlan.fixed.category_code == 7            | wlan.fixed.action_code == {Action Code}    |
+| **8**             | SA Query                           | 0: SA Query Request<br>1: SA Query Response                                                       | wlan.fixed.category_code == 8            | wlan.fixed.action_code == {Action Code}    |
+| **9**             | Protected Dual of Public Action    | Action codes vary (refer to specific implementations)                                              | wlan.fixed.category_code == 9            | wlan.fixed.action_code == {Action Code}    |
+| **10-125**        | Reserved/Unused                    | N/A                                                                                               | wlan.fixed.category_code == {Category}   | wlan.fixed.action_code == {Action Code}    |
+| **126**           | Vendor Specific Protected          | Action codes vary (proprietary use)                                                               | wlan.fixed.category_code == 126          | wlan.fixed.action_code == {Action Code}    |
+| **127**           | Vendor Specific                    | Action codes vary (proprietary use)                                                               | wlan.fixed.category_code == 127          | wlan.fixed.action_code == {Action Code}    |
+| **128-255**       | Error                              | N/A                                                                                               | wlan.fixed.category_code == {Category}   | wlan.fixed.action_code == {Action Code}    |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Other 802.11 Frames
 - [`AWDL`: AN OVERVIEW OF APPLE WIRELESS DIRECT](https://wlanprofessionals.com/an-overview-of-apple-wireless-direct/) Channel 149 Jammer
 
