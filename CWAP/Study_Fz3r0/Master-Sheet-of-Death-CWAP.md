@@ -846,6 +846,63 @@ https://www.cleartosend.net/802-11ax-ofdma-subcarriers/
 
 ![image](https://github.com/user-attachments/assets/668f8296-5831-4e62-9ed7-3a94747b2c9f)
 
+- 📍 **To DS** and **From DS** fields are `both 0`: <br> <br>
+    - 🛈 The frame is part of an `ad-hoc network` / The frame is `Management` or `Control` frame.
+    - 🛈 The frame is **not intended to leave the wireless environment**: `Management` and `Control` frames will always have the To DS and From DS fields set to 0 and are never sent to the distribution system network. (eg. an `Association Response` or `Beacon` will have **To DS** = 0 and **From DS** = 0) <br> <br>
+        - `Address 1` = Destination
+        - `Address 2` = Source
+        - `Address 3` = BSSID <br> <br>
+- 📍 **To DS** field is `1` and **From DS** field is `0`: <br> <br>
+    - 🛈 The frame **is leaving the wireless environment** and is intended for a computer on the distribution system network.
+    - 🛈 For example after a wireless station authenticates it will **need to obtain an IP address and that request will be forwarded by the AP to the DHCP server** that resides on the distribution system network. <br> <br>
+        - `Address 1` = BSSID
+        - `Address 2` = Source
+        - `Address 3` = Destination <br> <br>
+- 📍 **To DS** field is `0` and **From DS** field is `1`: <br> <br> 
+    - 🛈 The packet **is entering the wireless environment coming from the DS.**
+    - 🛈 For example it could be a `Data` frame **coming from the DS to the client STA via the AP.** <br> <br>
+        - `Address 1` = Destination
+        - `Address 2` = BSSID
+        - `Address 3` = Source <br> <br>
+- 📍 **To DS** and **From DS** fields are `both 1`: <br> <br>
+    - 🛈 The frame is involved with a `wireless distribution system (WDS)` network.
+    - 🛈 WDS networks are used to connect multiple networks together, typically for building-to-building connectivity, or a WDS can connect access points together to from a wireless mesh network. <br> <br>
+        - `Address 1` = Receiver
+        - `Address 2` = Transmitter
+        - `Address 3` = Source
+        - `Address 4` = Destination
+
+**Important notes on `Addresses`:**
+
+- `Management` frames **use three of the four available address fields** in an 802.11 frame `Addresses 1 to 3`. A management frame is also known as MAC Management Protocol Data Unit (MMPDU) and they do not use the Address 4 field which is only used with a mesh basic service set. <br> <br>
+- `Address 4` field is only present in a `mesh network` for infrastructure device communication. <br> <br>
+- `Address 4` is the **source address** when both the **To DS** and **From DS** fields are `1`. <br> <br>
+- `RTS` frames **uses only two available address fields** in an 802.11 frame `Addresses 1 to 2`. <br> <br>
+- `CTS` frames **uses only one address field** in an 802.11 frame `Address 1`. <br> <br>
+- `Address 1` is always the `receiver address (RA)`.
+- `Address 2` is always the `transmitter address (TA)`. <br> <br>
+- If `To DS` and `From DS` are `both set to 0` then the frame can be `Management`, `Control` or `Ad-Hoc` Netowrk
+
+
+**Each of the four 802.11 Address Fields may have one of 5 different interpretations:**
+
+1. ⭕ `Destination Address` : **`DA`** :: Final Destination of Transmission <br> <br>
+    - DA (F0:F0:F0:F0:F0:F0) = `wlan.da == F0:F0:F0:F0:F0:F0` <br> <br>
+2. ⭕ `Source Address` : **`SA`** :: Starting Point of the Transmission <br> <br>
+    - SA (F0:F0:F0:F0:F0:F0) = `wlan.sa == F0:F0:F0:F0:F0:F0` <br> <br>
+3. ⭕ `Receiver Address` : **`RA`** :: Next Wireless Destination of the Transmission <br> <br>
+    - RA (F0:F0:F0:F0:F0:F0) = `wlan.ra == F0:F0:F0:F0:F0:F0` <br> <br>
+4. ⭕ `Transmitter Address` : **`TA`** :: STA/AP that transmitted the frame onto the WM (Wireless Medium)  <br> <br>
+    - TA (F0:F0:F0:F0:F0:F0) = `wlan.ta == F0:F0:F0:F0:F0:F0` <br> <br>
+5. ⭕ `Basic Service Set Identifier` : **`BSSID`** :: ID of the BSS (Similar to MAC Address) <br> <br>
+    - TA (F0:F0:F0:F0:F0:F0) = `wlan.bssid == F0:F0:F0:F0:F0:F0` <br> <br>
+
+**Filter specific MAC of any hardware address (AP or STA) of any 5 Addresses:**
+
+- ⭕ `Any AP or STA client traffic` : **`WLAN Address`** :: ID of any hardware antenna transmission <br> <br>
+    - STA or AP (F0:F0:F0:F0:F0:F0) = `wlan.addr == F0:F0:F0:F0:F0:F0` <br> <br>
+- ⭕ `Any AP or STA client traffic` : **`WLAN Address OUI`** :: Filter only for the OUI MAC "F0:F0:F0: _xx:xx:xx_" <br> <br>
+    - STA or AP (F0:F0:F0: _xx:xx:xx_) = `  wlan.addr [0:3] == F0:F0:F0`
 
 
 
