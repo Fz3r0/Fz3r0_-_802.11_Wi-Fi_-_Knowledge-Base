@@ -206,7 +206,7 @@ This is the most common Transmit Beamforming used, and if only the AP can be the
 
 - Explicit vs. Implicit Beamforming: Describes **`HOW`** the beamforming parameters are determined.
     - `Explicit` relies on client feedback
-    - `Implicit` uses estimated data. <br><br>
+    - `Implicit` uses estimated data (over-the-air). <br><br>
 - Single-User vs. Multi-User Beamforming: Describes **`WHO`** the target of the beamforming is.
     - `SU` focuses on one device at a time
     - `MU` optimizes streams for multiple devices simultaneously.
@@ -214,7 +214,7 @@ This is the most common Transmit Beamforming used, and if only the AP can be the
 |     **Beamforming Type**    	|   **Key Method**   	| **Beamformer** 	| **Beamformee** 	|                      **Primary Use Case**                      	|
 |:---------------------------:	|:------------------:	|----------------	|:--------------:	|:--------------------------------------------------------------:	|
 | **Explicit Beamforming**    	| Feedback-based     	| AP             	| STA            	| Mostly Used<br>High-performance networks, precise tuning       	|
-| **Implicit Beamforming**    	| Estimation-based   	| AP or STA      	| AP or STA      	| Less used (only for 802.11n)<br>Simpler systems, less overhead 	|
+| **Implicit Beamforming**    	| Estimation-based (over-the-air)   	| AP or STA      	| AP or STA      	| Less used (only for 802.11n)<br>Simpler systems, less overhead 	|
 | **Multi-User Beamforming**  	| Multi-device focus 	| AP             	| STA            	| Mostly Used<br>High-density networks with many devices         	|
 | **Single-User Beamforming** 	| Per-device focus   	| AP or STA      	| AP or STA      	| Less used<br>Individual device optimization                    	|
 
