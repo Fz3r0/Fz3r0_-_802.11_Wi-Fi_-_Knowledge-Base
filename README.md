@@ -1727,8 +1727,11 @@ In computer networking, the maximum transmission unit (MTU) is the size of the l
 
 ### MTU: MSDU (IEEE 802.11 Wi-Fi (WLAN))
 
+- the frame body **lenght** in bytes of an 802.11 `MPDU` is **variable**, however the maximum size of the `MSDU` (payload of a data frame) must be **2304** (plus encryption)
+
 | **Process**                                          | **Size (bytes)**   | **Adds (bytes)**  |
 |------------------------------------------------------|--------------------|-------------------|
+| **802.11 MPDU lenght**                                      | Variable           | 0                 |
 | **Maximum MSDU size** (Before encryption or when a packet is passed from the Network layer to the Data-Link layer for transmission) | 2304               | 0                 |
 | **WEP**                                              | 2312               | 8                 |
 | **WPA-TKIP**                                          | 2324               | 20                |
