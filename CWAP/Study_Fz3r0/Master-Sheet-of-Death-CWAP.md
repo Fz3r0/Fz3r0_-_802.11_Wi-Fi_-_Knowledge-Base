@@ -1130,6 +1130,19 @@ Retries  |----------------------------------------------------------------------
 | **HT<br>802.11n**       | 2.4GHz Long = 20μS<br>2.4GHz Short = 9μS<br>5GHz = 20μS                          | 2.4GHz = 10μS<br>5GHz = 16μS                                               | 2μS              | 2.4GHz = 342μS<br>5GHz = 94μS                                                       | _2.4GHz Long = 30μS_<br>_2.4GHz Short = 19μS_<br>_5GHz = 25μS_ | 2.4GHz Long = 50μS<br>2.4GHz Short = 28μS<br>5GHz = 34μS    | Variable:<br>Depending Access Method / CW |
 | **VHT<br>802.11ac**     | 9μS                                                                              | 16μS                                                                       | _N/A_            | 94μS <br>(Depends on ACK Time)                                                      | _25μS_                                                         | 34μS                                                        | Variable:<br>Depending Access Method / CW |
 
+### TXOP
+
+- 802.11e standard defines default TXOP limit value for each AC, but values can be configured on AP.
+
+**TXOP limit** are set in intervals of `32µs` (microseconds).
+
+- Default TXOP is `47` for `AC_VO` (47×32 = `1504µs`) for OFDM.
+- Default TXOP is `94` for `AC_VI` (94×32 = `3008µs`) for OFDM.
+- Default TXOP for `AC_BE` & `AC_BK` always TXOP set to `0`. (in other words those traffic category always has to send one frame at at time (no CFB).)
+
+Here is the default settings (AIFSN, CW_min, CW_max, x value, TXOP, AIFS) of those four access categories:
+
+![image](https://github.com/user-attachments/assets/d72fcfdd-9c20-401e-9bf5-50e7e8fb8334)
 
 
 
