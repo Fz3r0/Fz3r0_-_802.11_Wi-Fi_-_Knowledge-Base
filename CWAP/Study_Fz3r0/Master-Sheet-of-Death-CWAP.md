@@ -646,7 +646,7 @@ PCLP Layer (upper layer 1):
 
 ## MTU Sizes
 
-- the frame body **lenght** in bytes of an 802.11 `MPDU` is **variable**, however the maximum size of the `MSDU` must be **2304** (plus encryption)
+- the frame body **lenght** in bytes of an 802.11 `MPDU` is **variable**, however the maximum size of the `MSDU` (payload of a data frame) must be **2304** (plus encryption)
 
 | **Process**                                          | **Size (bytes)**   | **Adds (bytes)**  |
 |------------------------------------------------------|--------------------|-------------------|
