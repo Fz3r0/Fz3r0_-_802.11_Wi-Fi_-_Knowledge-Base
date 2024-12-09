@@ -339,6 +339,18 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 
 ---
 
+## 802.11a/n/ac – OFDM/HT/VHT
+
+- Identifying OFDM, HT and VHT using spectrum analyzers is a matter of identifying bonded channels.
+- HT & VHT standards use OFDM digital modulation.
+- 802.11n introduced 40MHz wide channels.
+- 802.11ac introduced 80 and 160MHz wide channels.
+
+Identifying 40, 80, and 160MHz wide channels are easy; they appear as a wider 20MHz OFDM split on the center channel. With bonded channels, all management and control frames are sent on the primary channel which results in that channel being busier than others due to the required overhead to send 802.11 frames. Be sure you understand the number of subcarriers in use with OFDM when using 20 and 40 MHz wide channels.
+
+![image](https://github.com/user-attachments/assets/890704c7-57fb-4273-98ab-1c574d70623b)
+
+
 ### Signatures: `5 GHz` : `802.11a` / `Wi-Fi 2` : `OFDM` (`BPSK, QPSK, 16QAM, 64Qam`) : `20 MHz`
 
 - PHY: 5 GHz
@@ -376,11 +388,46 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 
 
 
+
+
+
+
 ### 80 mhZ:
 
 Identifying 40, 80, and 160MHz wide channels are easy; they appear as a wider 20MHz OFDM split on the center channel. With bonded channels, all management and control frames are sent on the primary channel which results in that channel being busier than others due to the required overhead to send 802.11 frames.
 
 ![image](https://github.com/user-attachments/assets/8a5ca02e-1270-4755-8dd7-1cc153007247)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
