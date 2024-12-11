@@ -16,6 +16,25 @@ _CWAP methodology provide comprehensive methodologies that include problem ident
 
 
 
+---
+
+| **Standard** 	| **Ratification Period** 	| **Wi-Fi Version** 	|       **PHY Type**      	|   **Frequency Bands**   	| **Maximum Speed** 	|      **802.11-2012**     	|      **802.11-2016**     	|      **802.11-2020**     	|
+|:------------:	|:-----------------------:	|:-----------------:	|:-----------------------:	|:-----------------------:	|:-----------------:	|:------------------------:	|:------------------------:	|:------------------------:	|
+| **802.11**   	| 1997 original           	| "Prime"           	| DSSS /<br>FHSS          	| 2.4 GHz                 	| 2 Mbps            	| Clause 14 /<br>Clause 15 	| Clause 14 /<br>Clause 15 	| Clause 14 /<br>Clause 15 	|
+| **802.11b**  	| 1999 r1.1999->2007      	| Wi-Fi 1           	| HR-DSSS                 	| 2.4 GHz                 	| 11 Mbps           	| Clause 17                	| Clause 16                	| Clause 16                	|
+| **802.11a**  	| 1999 r1.1999->2007      	| Wi-Fi 2           	| OFDM                    	| 5 GHz                   	| 54 Mbps           	| Clause 18                	| Clause 17                	| Clause 17                	|
+| **802.11g**  	| 2003 r1.2003->2007      	| Wi-Fi 3           	| ERP-OFDM & ERP-DSSS/CCK 	| 2.4 GHz                 	| 54 Mbps           	| Clause 19                	| Clause 18                	| Clause 18                	|
+| **802.11n**  	| 2009 r2.2009->2012      	| Wi-Fi 4           	| HT-OFDM (SU-MIMO)       	| 2.4 & 5 GHz             	| 600 Mbps          	| Clause 20                	| Clause 19                	| Clause 19                	|
+| **802.11ac** 	| 2013 r3.2013->2016      	| Wi-Fi 5           	| VHT-OFDM (MU-MIMO)      	| 5 GHz                   	| 7 Gbps            	| Clause 22                	| Clause 22                	| Clause 22                	|
+| **802.11ax** 	| 2021 r5.2021->2020      	| Wi-Fi 6 & 6E      	| HE-OFDMA (MU-MIMO)      	| 2.4, 5 & 6 GHz          	| 9.6 Gbps          	| N/A                      	| N/A                      	| Clause 27                	|
+| **802.11be** 	| 2023 r5.2023->2024      	| Wi-Fi 7           	| EHT                     	| 5 & 6 GHz               	| 40 Gbps           	| N/A                      	|                          	|                          	|
+| **802.11ad** 	| 2012 r3.2012->2016      	| _non Wi-Fi_       	| DMG                     	| 60 GHz (WiGig Networks) 	| 7 Gbps            	| //                       	|                          	|                          	|
+| **802.11af** 	| 2013 r3.2013->2016      	| _non Wi-Fi_       	| TVHT                    	| TV White Space (TVWS)   	| 570 Mbps          	| //                       	|                          	|                          	|
+| **802.11ah** 	| 2016 r4.2016->2020      	| _non Wi-Fi_       	| S1G                     	| < 1 GHz (IoT & M2M)     	| 350 Mbps          	| //                       	|                          	|                          	|
+| **802.11ay** 	| 2021 r5.2021-><<DRAFT>> 	| _non Wi-Fi_       	| Enhanced DMG            	| > 45 GHz                	| //                	| //                       	|                          	|                          	|
+| **802.11bb** 	| 2023 r5.2023-><<DRAFT>> 	| _non Wi-Fi_       	| Li-Fi                   	| Light Waves             	| //                	| //                       	|                          	|                          	|
+
+![image](https://github.com/user-attachments/assets/cb3c5ab7-42d6-4234-9d7f-1e460c722bfc)
 
 
 
