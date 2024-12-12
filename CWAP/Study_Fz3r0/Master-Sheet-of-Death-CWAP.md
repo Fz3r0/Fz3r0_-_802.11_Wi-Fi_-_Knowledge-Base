@@ -64,15 +64,31 @@ _CWAP methodology provide comprehensive methodologies that include problem ident
 
 ## 🤳🏾 STA Devices
 
+Everything that can understand and Tx/Rx IEEE 802.11 Wi-Fi transmissions
+
+- Smartphone
+- Laptop client radio
+- VoWiFi Phone
+- Access Point
+- QAP
+
+
+
+## 🤳🏾 client-STA Devices
+
+Better known just as "client STA"
+
 - Smartphone
 - Laptop client radio
 - VoWiFi Phone
 
-## 📡 AP Devices
+## 📡 AP-STA Devices
+
+Better known just as "AP"
 
 - Access Point
-- QAP
-
+- QAP (QoS AP)
+  
 ## 🤳🏾🏗️📡 802.11 Services: `The 3 Categories`
 _The architecture categorizes services into three primary types, each serving distinct purposes._
 1. **`SS`**: Station Service
@@ -91,12 +107,16 @@ _There are two diffenet type of STAs (APs & Client STA), the third type is the s
 ---
 
 ### 🟣🤳🏾 Client STA: `Modes`
-_STAs can have any of the following modes:_
+
+STAs can have any of the following modes:
+
 - 🤳🏾[**`Infrastructure Mode`**](https://www.lifewire.com/infrastructure-mode-in-wireless-networking-816539) :: Device that needs an AP to connect to the Network
 - 🤳🏾[**`Ad-Hoc Mode`**](https://www.ii.pwr.edu.pl/~kano/course/module8/8.1.3.2/8.1.3.2.html#:~:text=An%20ad%20hoc%20wireless%20network,device%20to%20connect%20to%20it.) :: 2 wireless devices communicate in a peer-to-peer (P2P) manner without using APs
 
 ### 🟣📡 AP: `Modes`
-_APs can have any of the following modes:_
+
+APs can have any of the following modes:
+
 - 📡[**`Root Mode`**](http://webhelp.zyxel.com/wohView/help_docs/NWA5123-AC_V4.22_AAZY/Book/Wireless/h_Wireless.htm) Radio acts as AP & bring Wi-Fi connectivity to client STAs (supports connections with other APs in repeater mode)
 - 📡[**`Repeater Mode`**]() Extends the wireless coverage of an existing network by amplifying the signal from another AP.
 - 📡[**`Mesh Mode`** (Gateway / Repeaters)]() Multiple APs communicate over wireless interfaces to form a single network
@@ -109,7 +129,9 @@ _APs can have any of the following modes:_
 ---
 
 ### 🟣🛜 802.11 SS (Station Services): `Services`
-_APs or client STAs can manage any of the next services:_
+
+APs or client STAs can manage any of the next services:
+
 - **`Authentication`** - Validates the identity of devices trying to join the WLAN.
 - **`Deauthentication`** - Removes authenticated status of devices from the WLAN.
 - **`Data confidentiality (encryption)`** - Ensures that transmitted data is secure and cannot be intercepted.
@@ -122,7 +144,8 @@ _APs or client STAs can manage any of the next services:_
 - **`DSE (Dynamic STA Enablement)`** - Enables dynamic stations based on network requirements.
 
 ## 🏘️📡🖧 `DSS (Distribution System Service)`
-_Distribution System Service (DSS) according to IEEE 802.11 is a functionality that allows the interconnection of several WLAN networks, thus creating a larger and more efficient network. This service allows several workstations to connect to the same network, regardless of their physical location. The DSS service is used in business and public environments, such as airports, shopping malls, and train stations. It allows a fluid and uninterrupted connection to users who move from one coverage area to another. The DSS service provides a scalable and flexible infrastructure, allowing companies and organizations to adapt to the changing needs of their users. Additionally, the DSS service is compatible with a wide range of devices, making it easy to deploy and maintain._
+
+Distribution System Service (DSS) according to IEEE 802.11 is a functionality that allows the interconnection of several WLAN networks, thus creating a larger and more efficient network. This service allows several workstations to connect to the same network, regardless of their physical location. The DSS service is used in business and public environments, such as airports, shopping malls, and train stations. It allows a fluid and uninterrupted connection to users who move from one coverage area to another. The DSS service provides a scalable and flexible infrastructure, allowing companies and organizations to adapt to the changing needs of their users. Additionally, the DSS service is compatible with a wide range of devices, making it easy to deploy and maintain.
 
 | **Service Name**                                            | **Network Type**                                    | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | **Example**                                                                                                                     |
 |-------------------------------------------------------------|-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
