@@ -1480,6 +1480,62 @@ Before the RD protocol, each uni-directional data transfer required the initiati
 
 
 
+# Power Management
+
+## Power Management: `Types`
+_From the original version in 1997 to now, many features that reduce power consumption have been added to the standard. Some of them have fallen into disuse (PS-Poll), some have been granted certifications (WMM-Power Save) and others relate to specific technologies (MIMO PSPM, 11ac VHT TXOP PS). And there are many other mechanisms related to power-saving that are not discussed in this article (PSMP, TIM Broadcast, Proxy ARP, etc.). Future amendments (802.11ax, 802.11ah) will also introduce new and enhanced power saving techniques._
+
+- **`802.11–1997 prime Power Management`**: 802.11 Power Management (Legacy Power Save Mode)
+- **`802.11e-2005 Power Management`**: Wi-Fi Multimedia (WMM) using Automatic Power Save Delivery (APSD) (Scheduled & Unscheduled (S-APSD / U-APSD)). U-APSD is the main Power Save used in 802.11e.
+- **`802.11n-2009 Power Management`**: Power Save Multi-Poll (PSMP) & _Spatial Multiplexing Power Save (SMPS)_ 
+- **`802.11ac-2013 Power Management`**: VHT TXOP (Transmit Opportunity) Power Save
+- **`802.11ax-2019 Power Management`**: Target Wake Time (TWT)
+
+---
+
+### 802.11 Wi-Fi Power Management: `Methods` 
+
+The 5 main methods of power management used in 802.11, the others mentioned before are not used or are very limited for Wi-Fi
+
+1. `Legacy Power Management` 802.11 Power Management (Legacy Power Save Mode)
+2. `802.11e-2005 Power Management`: Unscheduled Automatic Power Save Delivery (U-APSD) from 802.11e amendment
+3. `802.11n-2009 Power Management`: Power Save Multi-Poll (PSMP) from 802.11n amendment
+4. `802.11ac-2013 Power Management`: VHT TXOP (Transmit Opportunity) Power Save  
+5. `802.11ax-2019 Power Management`: Target Wake Time (TWT)
+
+### Power Management: `PHY PS types`
+
+| **Standard**  | **Year**   | **Power Saving Modes**                                                                                      |
+|---------------|------------|-------------------------------------------------------------------------------------------------------------|
+| 802.11 prime  | 1997       | 802.11 Power Save (Legacy Power Save Mode)                                                                  |
+| 802.11b/a     | 1999       | Legacy Power Save Mode ;; _can utilize enhancements from 802.11e if driver & hardware support it_           |
+| 802.11g       | 2003       | Legacy Power Save Mode ;;  _can utilize enhancements from 802.11e if driver & hardware support it_          |
+| _802.11e_       | _2005_   | _Wi-Fi Multimedia (WMM) - Unscheduled Automatic Power Save Delivery (U-APSD)_                               |
+| 802.11n       | 2009       | Power Save Multi-Poll (PSMP) & Spatial Multiplexing Power Save (SMPS)                                       |
+| 802.11ac      | 2013       | VHT TXOP (Transmit Opportunity) Power Save                                                                  |
+| 802.11ax      | 2019       | Target Wake Time (TWT)                                                                                      |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
