@@ -1980,10 +1980,52 @@ Scheduling and trigger frames
 
 
 
+- https://www.actual4test.com/exam/CWAP-404-questions
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-402-topic-1-question-58-discussion-p1007042.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-1-question-19-discussion-p1006232.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-1-question-55-discussion-p1007476.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-1-question-56-discussion-p1012042.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-403-topic-2-question-56-discussion-p1012043.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-1-question-36-discussion-p1015175.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-1-question-122-discussion-p1037474.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-402-topic-1-question-51-discussion-p1037858.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-403-topic-9-question-24-discussion-p1037859.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-1-question-130-discussion-p1037860.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-1-question-32-discussion-p1045971.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-1-question-97-discussion-p1047384.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-1-question-13-discussion-p1056268.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-3-question-34-discussion-p1056323.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-402-topic-1-question-26-discussion-p1064780.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-1-question-160-discussion-p1064782.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-3-question-79-discussion-p1065464.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-1-question-188-discussion-p1066060.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-6-question-138-discussion-p1066718.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-2-question-91-discussion-p1068486.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-4-question-20-discussion-p1069235.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-4-question-19-discussion-p1069545.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-2-question-128-discussion-p1070029.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-5-question-10-discussion-p1071024.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-1-question-4-discussion-p1071461.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-3-question-113-discussion-p1072565.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-4-question-132-discussion-p1073474.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-402-topic-1-question-19-discussion-p1073538.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-3-question-140-discussion-p1074406.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-402-topic-1-question-32-discussion-p1074965.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-403-topic-8-question-46-discussion-p1075200.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-2-question-117-discussion-p1075201.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-2-question-117-discussion-p1075201.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-1-question-161-discussion-p1078901.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-6-question-152-discussion-p1079312.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-4-question-123-discussion-p1079787.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-5-question-6-discussion-p1080789.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-5-question-166-discussion-p1082239.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-402-topic-1-question-4-discussion-p1082612.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-403-topic-5-question-37-discussion-p1082619.html
+- https://www.actual4test.com/discussions/CWNP/exam-cwap-404-topic-6-question-122-discussion-p1090965.html
+- https://www.jpntest.com/free/CWAP-402-mondaishu-certified-wireless-analysis-professional#
 
 
-
-
+---
 
 
 - https://robinwifi.eu/cwnp/cwap-404-chapter-1-802-11-the-protocol/
