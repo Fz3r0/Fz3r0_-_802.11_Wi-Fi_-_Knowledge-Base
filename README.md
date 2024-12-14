@@ -5481,7 +5481,8 @@ After each frame transmission 802.11 protocol require an idle period on the medi
 ### ⌛📏 `RIFS`: Reduced IFS
 
 - Shortest IFS at 2μs. _Even shorter than SIFS_
-- RIFS were introduced with 802.11n for networks operating in Greenfield mode to improve efficiency for transmissions to the same receiver in which a SIFS-separated response is not required, such as a transmission burst (CFB-Contention Free Burst)
+- ONLY FOR 802.11n @ GREENFIELD MODE
+- RIFS were introduced with 802.11n for networks OPERATING ONLY IN GREENFIELD MODE to improve efficiency for transmissions to the same receiver in which a SIFS-separated response is not required, such as a transmission burst (CFB-Contention Free Burst)
 - 802.11n standard use RIFS & Block Acknowledgement (mandatory in 802.11n). RIFS is used only when Block ACK is enabled. When Block ACK are used, data frames of a CFB may send consecutively without interruption by ACK. At the end of CFB, Tx Station will simply send BAR (BlockACKRequest) & receiving a single Block Acknowledgement (BA).
 - In actual 802.11n application RIFS is not used due to Aggregation with Block ACK getting more advantages.
 - 802.11ac and later standards **do not use RIFS**.
