@@ -57,10 +57,12 @@ _CWAP methodology provide comprehensive methodologies that include problem ident
 
 ## 🏗️ DS Devices
 
-- WLAN controller	
+- WLAN Controller	
 - Mesh Access point
 - Autonomous access point
 - Switch
+- Router
+- Firewall
 
 ## 🤳🏾 STA Devices
 
@@ -71,8 +73,6 @@ Everything that can understand and Tx/Rx IEEE 802.11 Wi-Fi transmissions
 - VoWiFi Phone
 - Access Point
 - QAP
-
-
 
 ## 🤳🏾 client-STA Devices
 
@@ -90,13 +90,16 @@ Better known just as "AP"
 - QAP (QoS AP)
   
 ## 🤳🏾🏗️📡 802.11 Services: `The 3 Categories`
-_The architecture categorizes services into three primary types, each serving distinct purposes._
+
+The architecture categorizes services into three primary types, each serving distinct purposes.
+
 1. **`SS`**: Station Service
 2. **`DSS`**: Distribution System Service
 3. **`PCPS`**: BSS Control Point Service _(CWAP out of Scope)_
 
 ## 🤳🏾📡 `SS (Station Services)` 
-_A Station Service (SS) exists in all 802.11 stations, including client stations (STAs) and access points (APs)._
+
+A Station Service (SS) exists in all 802.11 stations, including client stations (STAs) and access points (APs).
 
 ### 🤳🏾📡 SS (Station Services): `Types`
 _There are two diffenet type of STAs (APs & Client STA), the third type is the same as APs or STAs but with QpS support._
