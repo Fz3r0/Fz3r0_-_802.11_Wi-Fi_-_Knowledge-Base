@@ -298,8 +298,8 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 
 802.11 has two basic shapes: 
 
-1. 802.11b transmissions look like a bell curve (PSK/BPSK/QPSK)
-2. 802.11g/n/ac/ax are faster 802.11 data rates with flat across the top.
+1. 802.11b - **HR-DSSS** (PSK/BPSK/QPSK) :: Transmissions look like a **bell curve**. 
+2. 802.11g/n/ac/ax - **OFDM** (MCS Table) :: Transmissions has faster data rates with **flat across the top**.
 
 Note: The noise floor can be seen at the bottom around -90db
 
