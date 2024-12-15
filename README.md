@@ -3609,6 +3609,47 @@ Key Notes on Control Frames:
 | CF-End                         | 01       | 1110        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 30` | Ends the contention-free period in PCF mode.                                                                     |
 | CF-End + CF-Ack                | 01       | 1111        | `wlan.fc.type == 01 && wlan.fc.type_subtype == 31` | Ends the contention-free period and acknowledges the receipt of data frames.                                      |
 
+## ACK Frames
+
+ACK Frames are 14-byte control frames containing the following fields:
+
+- Frame Control, Duration, Receiver Address, and FCS.
+- All UNICAST frames must be acknowledged with an ACK frame, except when the transmitted frame is itself an ACK.
+
+### 3 Types of ACK Frames
+
+1. ACK: A standard acknowledgment frame for a single data frame.
+2. Block ACK: Allows acknowledgment of multiple data frames with a single control frame.
+3. CTS (Clear-to-Send): Serves as an acknowledgment for an RTS (Ready-to-Send) frame.
+
+### ACK vs Block ACK: Performance and Efficiency
+
+#### ACK (Acknowledgment)
+
+**IMPORTANT: The BlockACK bitmap contain each frame ACKed by the BlockACK**
+
+- Function: Acknowledges the receipt of 1 data frame.
+- Behavior: The receiver sends an ACK after successfully receiving each data frame.
+- Limitation: Higher overhead and latency since each frame requires an individual acknowledgment.
+
+Example:
+
+- Scenario: Transmission of 10 data frames.
+- **Total Frames: 10 data frames + 10 ACK frames = 20 frames in total.**
+
+#### Block ACK (Block Acknowledgment)
+
+- Function: Acknowledges up to 64 data frames in a single Block ACK frame.
+- Behavior: The transmitter sends multiple data frames in a block (burst), and the receiver acknowledges them with one
+- Advantage: Significantly reduces overhead by consolidating multiple acknowledgments into one frame.
+
+Example:
+
+- Scenario: Transmission of 64 data frames.
+- **Total Frames: 64 data frames + 1 Block ACK = 65 frames in total.**
+
+
+
 ## 💾🛜💊 802.11 MAC Frames :: `Data`
 _Data frames carry the actual data payload between devices in a WLAN. These frames are used for transmitting user data as well as network management information. Data frames can also incorporate quality of service (QoS) features to prioritize certain types of traffic._
 
