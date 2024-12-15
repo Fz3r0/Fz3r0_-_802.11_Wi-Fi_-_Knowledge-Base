@@ -1326,9 +1326,9 @@ Some devices can be configured for `No protection` mode. _(eg. Ruckus vSZ Virtua
 | **Important Notes**               | **RTS/CTS** is the most commonly used mechanism in **802.11g or newer** Wi-Fi networks to prevent collisions and ensure efficient medium access. | **CTS-to-Self** is not defined as a standard frame in the Wi-Fi specification; instead, it is a **CTS frame** sent without a preceding **RTS frame**, and it is typically used by the **AP**. | **Dual CTS Protection** is used by the **AP** to set a **NAV** at **STAs** that do not support **STBC** and those that associate only through the **STBC** beacon. **STBC** helps improve reliability and performance in environments with high interference or signal fading. |
 | **Key Additions**                 | **RTS/CTS** is widely used in **802.11g or newer** networks to avoid collisions and is the most used mechanism in Wi-Fi. | **CTS-to-Self** is used by the **AP** to protect wide channel transmissions without a preceding **RTS** frame, especially in **802.11n (HT)** and **802.11ac (VHT)** networks. | **Dual CTS Protection** is used by the **AP** to set a **NAV** at **STAs** that don't support **STBC** or associate only through the **STBC** beacon. **STBC** improves communication reliability in high interference or fading environments. |
 
+## ERP Protection
 
-
-### ERP Protection
+- Can be validated in **`ERP Information` Element** @ Beacon Frame
 
 | **Scenario**                                                                                              | **Triggering Event**                                                                                                                                          | **Protection Mechanism**                             | **Details**                                                                                                                     |
 |-----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
@@ -1338,9 +1338,9 @@ Some devices can be configured for `No protection` mode. _(eg. Ruckus vSZ Virtua
 | **4. Use of ERP Protection for ERP-OFDM MPDUs or MMPDUs**                                                  | When the **Use_Protection** field in the ERP element is set to 1, and ERP-OFDM MPDUs or MMPDUs of type Data or MMPDU are transmitted.                            | **RTS/CTS** or **CTS-to-Self**                        | The **Use_Protection** field triggers the protection mechanism for ERP-OFDM MPDUs or MMPDUs of type Data or MMPDU. **This can be configured from the AP.**              |
 | **5. No Protection for ERP-PBCC or DSSS-OFDM**                                                            | Frames starting with a DSSS header, such as ERP-PBCC or DSSS-OFDM.                                                                                          | **No Protection**                                     | Frames using DSSS headers do not require protection mechanisms, as they are inherently protected.                             |
 
-### OFDM Protection
+## HT Protection
 
-# Protección en Modos de Operación
+- Can be validated in **`HT Information` Element** @ Beacon Frame
 
 | **Operating Mode**          | **Protection Mode**         | **Description**                                                                                                                                  | **Conditions**                                                                                                                              | **Protection Mechanisms**                            |
 |-----------------------------|-----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
