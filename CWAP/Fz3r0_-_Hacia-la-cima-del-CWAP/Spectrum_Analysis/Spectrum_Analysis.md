@@ -301,6 +301,10 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 1. 802.11b transmissions look like a bell curve (PSK/BPSK/QPSK)
 2. 802.11g/n/ac/ax are faster 802.11 data rates with flat across the top.
 
+Note: The noise floor can be seen at the bottom around -90db
+
+![image](https://github.com/user-attachments/assets/db7c8990-a181-4ae7-aeca-2071c7d870d6)
+
 ---
 
 ### Signatures: `2.4 GHz` : `802.11b` / `Wi-Fi 1` : `HR-DSSS` (_`PSK / BPSK / QPSK`_) : `22 MHz`
