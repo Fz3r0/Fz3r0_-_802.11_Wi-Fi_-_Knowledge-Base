@@ -1320,7 +1320,12 @@ DFS was mandated between channels 52 and 144 for 5 GHz to reduce interference wi
 
 - More Channels: Channel 144 is in use, before 802.11ac this channel was unused. 
 
+### Bandwidth Filters 802.11ac
 
+- 20 MHz = `wlan_radio.11ac.bandwidth == 0`
+- 40 MHz = `wlan_radio.11ac.bandwidth == 1`
+- 80 MHz = `wlan_radio.11ac.bandwidth == 4`
+- 160 MHz = `wlan_radio.11ac.bandwidth == 11`
 
 
 
