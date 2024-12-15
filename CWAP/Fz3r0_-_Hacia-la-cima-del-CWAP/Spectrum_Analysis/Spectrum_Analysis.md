@@ -641,6 +641,7 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 - https://www.youtube.com/watch?v=YjXpc6uTg3g
 - https://www.youtube.com/watch?v=r41ut1XfM7s
 - https://www.youtube.com/watch?v=tKXsxqBsWMg
+- https://www.sharetechnote.com/html/WLAN_PHY_Frames.html
 
 
 
