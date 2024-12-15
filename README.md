@@ -3166,7 +3166,7 @@ _The Sequence Control field is 16 bits in length and consists of two subfields, 
         - Fragment number = 0 (excluding control frames because not present) :: `!wlan.fc.type == 1 && wlan.frag == 0`
         - Fragment more than 0 (excluding control frames because not present) :: `!wlan.fc.type == 1 && wlan.frag > 0` <br><br>
         - Fragment + Control Frames (malformed +/or weird frame indicator) `wlan.fc.type == 1 && wlan.frag` <br><br>
-    - ⭕ **`Sequence Number`**: Identifies the MPDU | ID begins at 0 and goes up to 4095 | Will be the same for every fragment | The Sequence Number field is a 12-bit field indicating the sequence number of an MSDU, A-MSDU, or MMPDU. Each MSDU, A-MSDU, or MMPDU transmitted by a STA is assigned a sequence number.The sequence number remains constant in all retransmissions of an MSDU, MMPDU, or fragment thereof. <br><br>
+    - ⭕ **`Sequence Number`**: Identifies the MPDU | ID begins at 0 and goes up to 4095 | Will be the same for every fragment | The Sequence Number field is a 12-bit field indicating the sequence number of an MSDU, A-MSDU, or MMPDU. Each MSDU, A-MSDU, or MMPDU transmitted by a STA is assigned a sequence number.The sequence number remains constant in all retransmissions of an MSDU, MMPDU, or fragment thereof. **One way to confirm if you have missing packets in your packet capture is to look for gaps in the sequence number in MAC headers.** <br><br>
         - Sequence number = 0 (initial sequence) :: `wlan.seq == 0`
         - Sequence number more than 0 (non initial) :: `wlan.seq > 0`
         - Sequence number = 4095 (max sequence) :: `wlan.seq == 4095` <br><br>
