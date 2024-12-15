@@ -1300,6 +1300,30 @@ Here is the default settings (AIFSN, CW_min, CW_max, x value, TXOP, AIFS) of tho
 
 ## Protection Mechanisms
 
+### No Protection: `Frame Exchange`
+
+![image](https://github.com/user-attachments/assets/b486b3fa-4fc7-4820-8a88-198e186a63e8)
+
+### No Protection: `Configuration`
+
+Some devices can be configured for `No protection` mode. _(eg. Ruckus vSZ Virtual Smartzone Controller v6)_
+
+- **`Important`**:  **It is not a good practice turning off the RTS/CTS or CTS-to-Selft Protection Mechanisms!!!**
+
+![image](https://github.com/user-attachments/assets/623dffb3-2c3b-45a8-bf98-b16ab7c45ff8)
+
+## 🙋🤳🏻📡 Protection Mechanisms: `RTS/CTS` VS `CTS-to-self`
+
+| **Feature**                      | **Normal RTS/CTS**                             | **CTS-to-Self**                                |
+|-----------------------------------|------------------------------------------------|------------------------------------------------|
+| **Description**                   | A medium access control mechanism to avoid collisions. The **RTS (Request to Send)** is sent to reserve the channel, followed by a **CTS (Clear to Send)**. Used in networks with interference or long distances. | Used to protect transmissions on **wide channels** in **802.11n/ac**. The **CTS-to-Self** is sent by a device to the AP to protect the channel during the transmission. |
+| **Primary Use**                   | Collision avoidance, especially in environments with interference or long distances. | Protects transmission on wide channels in **802.11n/ac** networks. |
+| **Supported PHY**                 | **802.11a/b/g/n/ac**                           | **802.11n (HT)**, **802.11ac (VHT)**            |
+| **When to Use**                   | In **802.11a/b/g/n/ac** networks to avoid collisions on 20 MHz channels, in interference-prone environments or long distances. | In **802.11n (HT)** and **802.11ac (VHT)** networks to protect transmission on high-speed wide channels. |
+| **Real-Life Example**             | In an environment with multiple APs, **RTS/CTS** is used to prevent stations from interfering with each other when attempting to transmit data simultaneously. | In an **802.11ac** network, a device sends a **CTS-to-Self** before transmitting to ensure the channel is clear of interference and collisions. |
+| **Supported Bandwidth**           | **20 MHz**, **40 MHz**, **80 MHz** (depending on the environment and configuration) | **20 MHz**, **40 MHz**, **80 MHz**, **160 MHz** (in **802.11ac (VHT)** networks) |
+
+
 ### ERP
 
 - 802.11/802.11b station `associated` to the AP = `NonERP Present`
