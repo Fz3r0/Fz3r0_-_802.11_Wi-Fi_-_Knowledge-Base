@@ -538,6 +538,8 @@ _2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a
 
 ### 📡📏🤏 `HR-DSSS` / `802.11b` Short Preamble VS Long Preamble PPDU's:
 
+- Long Preamble is mostly used by legacy systems (802.11-Prime & 802.11b) and has a sync of 128 bits where as Short Preamble has sync of 56 bits. SFD in both cases remains same at 16 bits.
+
 |                                 | **Long Preamble PPDU**  | **Short Preamble PPDU** |
 |---------------------------------|-------------------------|-------------------------|
 | **Preamble lenght**             | 144 bits                | 72 bits                 |
@@ -548,6 +550,10 @@ _2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a
 | **PLCP-Header Tx Rate**         | DBPSK (1 Mbps)          | DQPSK (2 Mbps)          |
 | **PSDU Tx Rate**                | 1, 2, 5.5 or 11 Mbps    | 2, 5.5 or 11 Mbps       |
 | **(Preamble + Header) Tx Time** | 192 μs                  | 96 μs                   |
+
+![image](https://github.com/user-attachments/assets/a06aecbd-0e80-48e5-9caa-92d1ff0f3002)
+
+![image](https://github.com/user-attachments/assets/e20453e3-d7b4-4d19-94ab-ad2236097aa9)
 
 
 ### PLCP Headers & Preamble
