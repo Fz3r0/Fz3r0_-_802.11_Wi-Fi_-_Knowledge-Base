@@ -3622,7 +3622,7 @@ ACK Frames are 14-byte control frames containing the following fields:
 2. Block ACK: Allows acknowledgment of multiple data frames with a single control frame.
 3. CTS (Clear-to-Send): Serves as an acknowledgment for an RTS (Ready-to-Send) frame.
 
-`IMPORTANT`: One noticable difference between a normal `ACK` and a `CTS` is the **Duration** field, `ACK` will be always = `0` (no other frames or IFS are coming after for that transmition) and `CTS` will have a duration because more frames and IFS are coming after that. 
+`IMPORTANT`: The `ACK` and `CTS` are almost identical, **THE ONLY DIFFERENCE** between an `ACK` and a `CTS` is the **Duration** field, `ACK` will be always = `0` (no other frames or IFS are coming after for that transmition) and `CTS` will have a duration because more frames and IFS are coming after that frame. 
 
 ### ACK vs Block ACK: Performance and Efficiency
 
