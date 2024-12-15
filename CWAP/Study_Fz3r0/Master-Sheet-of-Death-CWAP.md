@@ -1097,11 +1097,14 @@ Since the introduction of 802.11i security mechanisms, the IEEE 802.11-2012 stan
 
 ### Over the Air:
 
-- Do not use action frame
+- **All APs** in the ESS has the **PMK-R1 shared by the WLC**
+- **DO NOT** use any additional Action frame
+- The AP just send the FT `Authentication` + `Re-Association` frames when roaming (Containing the 4-way-handshake inside that exchange eg, Snonce, Anonce, PMK-R0 holder ID, PMK-R1 holder ID, etc, etc)
 
-### Over the DS:
+### Over the DS (Action Based):
 
-- Use FT Action Frame
+- **All APs** in the ESS has the **PMK-R1 shared by the WLC**... but!!! it uses an Action Frame for the transition. 
+- Use **FT Action Frame**
 
 
 
