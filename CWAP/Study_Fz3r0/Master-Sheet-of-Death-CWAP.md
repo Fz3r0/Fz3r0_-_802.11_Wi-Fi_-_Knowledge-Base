@@ -557,19 +557,19 @@ _2 Bytes / 16 bits long AKA 2 Octates | The duration field in a mac header has a
 - Gives the time for the synchronizer (the reciever of the transmission) to synchronize with the transmission of the BSS. 
 - Indicated to all nearby STAs that a frame is forthcoming.
 - Includes a known pattern of 1's and 0's, when seen by other STAs they will know that a frame is coming. 
-- Provides time for the receiver to detect the signal and synchronise with the signal.
-    - Sent at the most robust Data Rate (lowest Data Rate in the band):
-        - 2.4 GHz = 1 Mbps / 2 Mbps
-        - 5 GHz   = 6 Mbps
+- Provides time for the receiver to detect the signal and synchronise with the signal. <br><br>
+    - Sent at the most robust Data Rate (**lowest Data Rate in the band**): <br><br>
+        - 2.4 GHz = `1 Mbps` / `2 Mbps`
+        - 5 GHz   = `6 Mbps`
 
 **PLCP `Header`:**
 
 - Communicates important information about the forthcoming PSDU such as Lenght and Data Rate.
 - Information of the PLCP-Header is often shown in the Radio Tap Header or PPI section of a protocol decode.
-    - Sent the Data Rate speciefied by the PHY:
-        - HR-DSSS = Long Preamble  :: 1 Mbps
-        - HR-DSSS = Short Preamble :: 2 Mbps
-        - ERP, OFDM (HT/VHT/HE)    :: 6 Mbps
+    - Sent the Data Rate speciefied by the PHY **Mandatory Rates**: <br><br>
+        - HR-DSSS = Long Preamble  :: `1 Mbps`
+        - HR-DSSS = Short Preamble :: `2 Mbps`
+        - ERP, OFDM (HT/VHT/HE)    :: `6 Mbps`
 
 ### 📡📏🦒 `HR-DSSS` / `802.11b` Long Preamble PPDU:
 
