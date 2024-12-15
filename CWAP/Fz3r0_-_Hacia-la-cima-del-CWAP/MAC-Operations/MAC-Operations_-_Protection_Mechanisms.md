@@ -683,6 +683,17 @@ Some devices can be configured for `No protection` mode. _(eg. Ruckus vSZ Virtua
 
 ![image](https://github.com/user-attachments/assets/623dffb3-2c3b-45a8-bf98-b16ab7c45ff8)
 
+## 🙋🤳🏻📡 Protection Mechanisms: `RTS/CTS` VS `CTS-to-self`
+
+| **Feature**                      | **Normal RTS/CTS**                             | **CTS-to-Self**                                |
+|-----------------------------------|------------------------------------------------|------------------------------------------------|
+| **Description**                   | A medium access control mechanism to avoid collisions. The **RTS (Request to Send)** is sent to reserve the channel, followed by a **CTS (Clear to Send)**. Used in networks with interference or long distances. | Used to protect transmissions on **wide channels** in **802.11n/ac**. The **CTS-to-Self** is sent by a device to the AP to protect the channel during the transmission. |
+| **Primary Use**                   | Collision avoidance, especially in environments with interference or long distances. | Protects transmission on wide channels in **802.11n/ac** networks. |
+| **Supported PHY**                 | **802.11a/b/g/n/ac**                           | **802.11n (HT)**, **802.11ac (VHT)**            |
+| **When to Use**                   | In **802.11a/b/g/n/ac** networks to avoid collisions on 20 MHz channels, in interference-prone environments or long distances. | In **802.11n (HT)** and **802.11ac (VHT)** networks to protect transmission on high-speed wide channels. |
+| **Real-Life Example**             | In an environment with multiple APs, **RTS/CTS** is used to prevent stations from interfering with each other when attempting to transmit data simultaneously. | In an **802.11ac** network, a device sends a **CTS-to-Self** before transmitting to ensure the channel is clear of interference and collisions. |
+| **Supported Bandwidth**           | **20 MHz**, **40 MHz**, **80 MHz** (depending on the environment and configuration) | **20 MHz**, **40 MHz**, **80 MHz**, **160 MHz** (in **802.11ac (VHT)** networks) |
+
 ## 🙋🤳🏻📡 Protection Mechanisms: `RTS/CTS` _(802.11g or newer)_ 
 
 2. RTS/CTS Data Exchange
