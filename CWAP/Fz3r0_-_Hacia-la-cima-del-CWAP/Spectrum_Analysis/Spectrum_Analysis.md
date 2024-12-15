@@ -303,6 +303,8 @@ two systematic methods for dividing and locating or tracking unknown RF devices 
 
 Note: The noise floor can be seen at the bottom around -90db
 
+- **`IMPORTANT`: SOMETIMES IS POSSIBLE TO KNOW THE DIFFERENCE `BETWEEN` OFDM AND `HT` SPECTRUM SIGNATURE**. The OFDM (Orthogonal Frequency Division Multiplexing) and VHT (Very High Throughput) Physical Layers (PHYs) are **only available in the 5 GHz frequency band**. The HT (High Throughput) PHY is **available in both 2.4 GHz and 5 GHz**. So, when a "OFDM" signature is located on 2.4GHz band, it would be an HT signature. 
+
 ![image](https://github.com/user-attachments/assets/db7c8990-a181-4ae7-aeca-2071c7d870d6)
 
 ---
