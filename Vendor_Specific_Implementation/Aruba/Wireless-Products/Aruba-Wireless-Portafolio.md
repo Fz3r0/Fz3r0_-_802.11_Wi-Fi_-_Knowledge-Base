@@ -23,21 +23,27 @@
 
 ## Aruba Mobility Controllers
 
+- https://www.arubanetworks.com/products/wireless/gateways-and-controllers/
+
 Aruba Mobility Controllers are the central components in an enterprise wireless network, responsible for managing and optimizing Wi-Fi performance, security, and scalability. These controllers handle tasks such as traffic routing, access point (AP) configuration, and user authentication, ensuring seamless connectivity across all devices. Available in physical, virtual, and centralized management forms, Mobility Controllers provide flexible solutions for networks of all sizes, from small offices to large-scale deployments like universities, airports, and smart cities.
 
-| **Controller Type**       | **Model**     | **Purpose**                            | **Max APs** | **Max Users**  | **Ports** | **Special Features**                             | **Real-World Use Case**                                                                                                                                         |
-|---------------------------|---------------|----------------------------------------|-------------|----------------|-----------|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **7000 Series**           | **7005**      | Small controller                       | 16          | 1,000          | 5         | Compact design for small offices                | Ideal for a small branch office with a limited number of employees and devices, e.g., a satellite office or retail store.                                        |
-|                           | **7008**      | Small controller + firewall (2 ports)  | 16          | 1,000          | 8         | Integrated port-based firewall                  | Suitable for small businesses requiring security, e.g., a healthcare clinic ensuring HIPAA compliance with limited IT infrastructure.                            |
-|                           | **7010**      | Small controller + firewall (4 ports)  | 32          | 2,000          | 12        | Higher capacity with multiple port options      | Perfect for medium-sized offices or school branches with moderate user density, supporting educational Wi-Fi applications like eLearning platforms.              |
-|                           | **7024**      | Small controller + firewall (4 ports)  | 32          | 2,000          | 24        | Additional port capacity                        | Ideal for locations with a mix of wired and wireless devices, such as warehouses or logistics hubs with IoT deployments.                                         |
-| **7200 Series**           | **7205**      | Large controller                       | 256         | 8,000          | 12        | High capacity for enterprise use                | Great for a corporate HQ supporting heavy video conferencing, VoIP, and high-density Wi-Fi deployments.                                                         |
-|                           | **7210**      | Large controller                       | 512         | 16,000         | 20        | Increased scalability for large deployments     | Designed for large campuses such as universities with hundreds of APs and thousands of students and staff.                                                      |
-|                           | **7240**      | Largest controller                     | 2,048       | 32,000         | 40        | Ultimate scalability and performance            | Best for large enterprises, airports, or stadiums requiring seamless connectivity for tens of thousands of devices simultaneously.                               |
-| **vMC** (Virtual)         | **vMC**       | Virtual Mobility Controller            | 100–500     | 5,000–25,000   | N/A       | Runs on hypervisors (VMware, KVM, Hyper-V)      | Excellent for cloud-first businesses or companies with multiple data centers requiring flexible controller deployment without hardware.                         |
-| **Mobility Master (MM)**  | **MM-VA-50**  | Virtual Mobility Master                | N/A         | N/A            | N/A       | Centralized management for up to 50 devices     | A small organization requiring centralized management for their Aruba infrastructure, optimizing updates and policies.                                           |
-|                           | **MM-HW-1K**  | Hardware Mobility Master               | N/A         | N/A            | N/A       | Centralized management for up to 1,000 devices | Ideal for medium enterprises managing complex network architectures with a mix of branch and HQ locations.                                                       |
-|                           | **MM-HW-10K** | Hardware Mobility Master               | N/A         | N/A            | N/A       | Centralized management for up to 10,000 devices | Suitable for very large deployments like smart cities or nationwide retail chains with thousands of connected locations.                                        |
+Enterprise-class performance: Aruba 9200 Series Campus Gateways are modern Wi-Fi appliances that scale to support up to 2,048 APs and 32K devices. Delivers 24x7 reliability, live upgrades, and always-on connectivity. Zero touch provisioning reduces the need for on-site IT support. Meet Aruba’s next-generation gateway Engineered for mission-critical environments, the Aruba 9200 Series delivers high performance, seamless roaming, consistent policy enforcement, and always-on connectivity – even during upgrades.
+
+- [Aruba 9200 series Datasheet](https://www.hpe.com/psnow/doc/a00121209enw)
+
+
+
+| **Series**                       | **Purpose**                                                      | **Max APs**            | **Max Users/Throughput**             | **Special Features**                                   | **Real-World Use Case**                                                                                       |
+|-----------------------------------|------------------------------------------------------------------|------------------------|---------------------------------------|-------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| **9200 Series**                   | Enhanced scalability and security for midsized and large enterprises | N/A                    | N/A                                   | Superior performance and security features             | Perfect for growing enterprises needing to scale up their wireless infrastructure while maintaining security. |
+| **9100 Series**                   | Ideal for large branch deployments and small campus networks     | N/A                    | N/A                                   | Extends enterprise services securely and seamlessly    | Ideal for large branch offices or small campuses requiring enterprise-grade wireless connectivity.           |
+| **9000 Series**                   | Ideal for branches to provide SD-WAN and enhanced security       | N/A                    | N/A                                   | SD-WAN capabilities with security enhancements         | Suitable for small branches needing secure and reliable connectivity to cloud applications.                  |
+| **7200 Series**                   | Large campus WLAN controllers                                    | Up to 2,048            | Up to 100 Gbps                        | High capacity for large-scale deployments              | Suitable for corporate HQs, universities, stadiums, and airports.                                           |
+| **7000 Series**                   | Midsize campus and branch WLAN controllers                       | Up to 64               | Up to 8 Gbps                          | Compact, flexible, and cost-effective                  | Designed for small to midsized offices or retail stores.                                                     |
+| **Mobility Controller Virtual**   | Virtual controller for campuses/branches                        | Up to 1,000            | N/A                                   | Flexibility for virtualized environments               | Great for businesses with cloud-first strategies or multiple data centers.                                   |
+| **Mobility Master (MM)**          | Centralized management for Mobility Controllers                  | N/A                    | N/A                                   | Simplifies management of complex networks             | Ideal for organizations managing distributed WLANs or smart city deployments.                                |
+| **SD-WAN Virtual Gateways**       | Connectivity for public cloud infrastructure                    | N/A                    | Up to 4 Gbps                         | Optimized for cloud connectivity                       | Perfect for enterprises leveraging public cloud platforms like AWS, Azure, or Google Cloud.                  |
+
 
 - **vMC**: Provides the same feature set as physical controllers but allows flexibility in deployment, making it ideal for virtualized environments.
 - **Mobility Master (MM)**: Acts as the centralized management entity introduced with ArubaOS 8.x, enabling advanced features like hitless failover, dynamic segmentation, and better scalability.
@@ -46,7 +52,9 @@ Aruba Mobility Controllers are the central components in an enterprise wireless 
 
 # 📚🗂️🎥 Resources
 
-- 
+- https://www.arubanetworks.com/assets/matrix/matrix_WLAN-platforms-software-support-matrix.pdf
+- https://www.arubanetworks.com/products/wireless/gateways-and-controllers/9200-series/
+- https://www.hpe.com/psnow/doc/a00121209enw
   
 ---
 
