@@ -21,7 +21,7 @@
 
 # Wireless Products
 
-## Aruba Mobility Controllers
+## Aruba: `Mobility Controllers`
 
 - https://www.arubanetworks.com/products/wireless/gateways-and-controllers/
 
@@ -48,6 +48,19 @@ Enterprise-class performance: Aruba 9200 Series Campus Gateways are modern Wi-Fi
 
 - **vMC**: Provides the same feature set as physical controllers but allows flexibility in deployment, making it ideal for virtualized environments.
 - **Mobility Master (MM)**: Acts as the centralized management entity introduced with ArubaOS 8.x, enabling advanced features like hitless failover, dynamic segmentation, and better scalability.
+
+## Aruba: `Access Points`
+
+### Aruba Access Points: `Indoor`
+
+- https://www.arubanetworks.com/products/wireless/access-points/indoor-access-points/
+
+---
+
+### Aruba Access Points: `Outdoor & Ruggedized` 
+
+- https://www.arubanetworks.com/products/wireless/access-points/outdoor-ruggedized-access-points/
+
 
 
 
