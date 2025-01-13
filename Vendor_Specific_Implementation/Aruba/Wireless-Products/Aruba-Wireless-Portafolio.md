@@ -30,6 +30,7 @@ Aruba Mobility Controllers are the central components in an enterprise wireless 
 Enterprise-class performance: Aruba 9200 Series Campus Gateways are modern Wi-Fi appliances that scale to support up to 2,048 APs and 32K devices. Delivers 24x7 reliability, live upgrades, and always-on connectivity. Zero touch provisioning reduces the need for on-site IT support. Meet Aruba’s next-generation gateway Engineered for mission-critical environments, the Aruba 9200 Series delivers high performance, seamless roaming, consistent policy enforcement, and always-on connectivity – even during upgrades.
 
 - [Aruba 9200 series Datasheet](https://www.hpe.com/psnow/doc/a00121209enw)
+- [Aruba 7200 series Overview & Comparison](https://www.arubanetworks.com/products/wireless/gateways-and-controllers/7200-series/#features)
 
 
 
