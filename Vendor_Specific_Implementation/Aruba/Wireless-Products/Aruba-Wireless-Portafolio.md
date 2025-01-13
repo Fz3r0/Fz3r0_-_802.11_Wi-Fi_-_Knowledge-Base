@@ -51,15 +51,58 @@ Enterprise-class performance: Aruba 9200 Series Campus Gateways are modern Wi-Fi
 
 ## Aruba: `Access Points`
 
+- Indoor: Access Points designed for indoor environments, optimized for office, residential, or campus use.
+- Outdoor & Ruggedized: Access Points designed for outdoor environments, including ruggedized options for hazardous conditions or extreme weather.
+
+| **Term**      | **Description**                                                                                      | **Key Features**                                                                                 |
+|----------------|------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
+| **CAP**        | Campus Access Points managed by a **Mobility Controller**.                                           | Centralized management, policy enforcement, RF optimization, and advanced network features.     |
+| **AM**         | Air Monitor (Monitor Mode)                                                                           | Operates at **Layer 2**, providing **RF monitoring** and **Intrusion Detection System (IDS)**.  |
+| **SAM**        | Spectrum Access Point                                                                               | Operates at **Layer 1**, focusing on RF spectrum analysis for interference and noise mitigation.|
+| **RAP**        | Remote Access Points, similar to CAPs, but managed via a **cloud controller** instead of an on-site controller. <br> Any CAP can be converted into a RAP for flexible deployment. |                                                                                                  |
+| **IAP**        | Instant Access Points, standalone APs that do not require a **Mobility Controller**. Managed by a **virtual controller (vC)** installed on a master AP, similar to **Ruckus Unleashed** for small-to-medium deployments. |                                                                                                  |
+
+
 ### Aruba Access Points: `Indoor`
 
 - https://www.arubanetworks.com/products/wireless/access-points/indoor-access-points/
+
+| **Series** | **Description**                                           | **Max Speed (Gbps)** | **Wi-Fi Type (Standard)** | **Key Features**                                                             |
+|------------|-----------------------------------------------------------|-----------------------|----------------------------|------------------------------------------------------------------------------|
+| **750**    | Flagship Wi-Fi 7 APs with three 4x4 MIMO radios           | 28.8                 | Wi-Fi 7 (802.11be)        | Two 10Gbps ports, dual IoT radios, and USB ports                             |
+| **730**    | High-capacity Wi-Fi 7 AP                                  | 14.4                 | Wi-Fi 7 (802.11be)        | Dual IoT radios and USB ports                                                |
+| **650**    | Most powerful Wi-Fi 6E indoor access point                | 7.8                  | Wi-Fi 6E (802.11ax)       | High availability with configurable dual 5Gbps Ethernet ports                |
+| **630**    | High-capacity Wi-Fi 6E access point                       | 3.9                  | Wi-Fi 6E (802.11ax)       | Up to seven 160 MHz channels in the 6 GHz band                               |
+| **610**    | Compact, affordable Wi-Fi 6E access point                 | 3.6                  | Wi-Fi 6E (802.11ax)       | Dual-radio, tri-band architecture (5 GHz and 6 GHz)                          |
+| **550**    | Flagship Wi-Fi 6 campus access point                      | N/A                  | Wi-Fi 6 (802.11ax)        | Support for 8x8 or dual 4x4 5 GHz radios                                     |
+| **530**    | High-performance Wi-Fi 6 campus access point              | N/A                  | Wi-Fi 6 (802.11ax)        | Ideal for high-density mobile and IoT deployments with bi-directional MU-MIMO |
+| **510**    | Mid-range Wi-Fi 6 campus access point                     | N/A                  | Wi-Fi 6 (802.11ax)        | 2.5 Gbps Smart Rate port; ideal for campus deployments                        |
+| **500**    | Entry-level Wi-Fi 6 campus access point                   | N/A                  | Wi-Fi 6 (802.11ax)        | Full feature support with 802.3af PoE; ideal for medium-density deployments   |
+| **503**    | Most cost-effective Wi-Fi 6 indoor access point           | N/A                  | Wi-Fi 6 (802.11ax)        | Full feature support with 802.3af PoE; option to add IoT support with expansion radio |
+| **303**    | Low-cost Wi-Fi 5 Wave 2 campus access point               | N/A                  | Wi-Fi 5 Wave 2 (802.11ac) | Ideal for medium-density enterprise environments                              |
+| **200**    | Entry-level Wi-Fi 5 campus access point (*end-of-life legacy*) | N/A              | Wi-Fi 5 (802.11ac)        | Affordable access point for small and medium enterprise environments          |
+| **100**    | Low-cost Wi-Fi 4 campus access point (*end-of-life legacy*) | N/A               | Wi-Fi 4 (802.11n)         | Basic features; ideal for small, legacy deployments                           |
+
 
 ---
 
 ### Aruba Access Points: `Outdoor & Ruggedized` 
 
 - https://www.arubanetworks.com/products/wireless/access-points/outdoor-ruggedized-access-points/
+
+| **Series**    | **Description**                                              | **Wi-Fi Type (Standard)**       | **Key Features**                                                                                          |
+|---------------|--------------------------------------------------------------|---------------------------------|----------------------------------------------------------------------------------------------------------|
+| **670EX**     | High-performance Wi-Fi 6E AP for hazardous locations         | Wi-Fi 6E (802.11ax)            | High-power Bluetooth and Zigbee radios; Standard Power (SP) device operation                             |
+| **670**       | High-performance outdoor Wi-Fi 6E AP                         | Wi-Fi 6E (802.11ax)            | High-power Bluetooth and Zigbee radios; Standard Power (SP) device operation                             |
+| **580**       | Ultimate outdoor Wi-Fi 6 performance and speed               | Wi-Fi 6 (802.11ax)             | Bluetooth and 802.15.4/Zigbee radios; dual redundant power/port failover and support for AC              |
+| **580EX**     | Ultimate Wi-Fi 6 performance for hazardous locations         | Wi-Fi 6 (802.11ax)             | Bluetooth and 802.15.4/Zigbee radios; dual redundant power/port failover and support for AC              |
+| **570**       | High-performance Wi-Fi 6 outdoor access point                | Wi-Fi 6 (802.11ax)             | Built-in BLE and Zigbee support; ideal for high-density outdoor environments                              |
+| **570EX**     | High-performance Wi-Fi 6 AP for hazardous locations          | Wi-Fi 6 (802.11ax)             | Built-in BLE and Zigbee support; ideal for high-density outdoor environments                              |
+| **560**       | Low-cost Wi-Fi 6 outdoor access point                        | Wi-Fi 6 (802.11ax)             | Small form factor; ideal for outdoor and warehouse environments                                           |
+| **560EX**     | Wi-Fi 6 for hazardous environments with extreme temperature support | Wi-Fi 6 (802.11ax)       | Class 1 Division 2 and ATEX Zone 2 certification; small form factor                                      |
+| **518**       | High-performance Wi-Fi 6 ruggedized access point             | Wi-Fi 6 (802.11ax)             | Supports both indoor and outdoor mounting brackets; ideal for extreme temperatures                       |
+| **370**       | High-performance Wi-Fi 5 outdoor access point                | Wi-Fi 5 (802.11ac)             | Offers maximum outdoor coverage; ideal for environments requiring fiber uplink                            |
+| **360**       | Low-cost Wi-Fi 5 Wave 2 outdoor access point                 | Wi-Fi 5 Wave 2 (802.11ac)      | Ideal for outdoor enterprise environments                                                                 |
 
 
 
