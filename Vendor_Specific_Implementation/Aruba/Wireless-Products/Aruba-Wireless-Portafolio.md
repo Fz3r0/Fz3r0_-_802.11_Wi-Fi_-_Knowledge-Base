@@ -57,10 +57,10 @@ Enterprise-class performance: Aruba 9200 Series Campus Gateways are modern Wi-Fi
 | **Term**      | **Description**                                                                                      | **Key Features**                                                                                 |
 |----------------|------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
 | **CAP**        | Campus Access Points managed by a **Mobility Controller**.                                           | Centralized management, policy enforcement, RF optimization, and advanced network features.     |
-| **AM**         | Air Monitor (Monitor Mode)                                                                           | Operates at **Layer 2**, providing **RF monitoring** and **Intrusion Detection System (IDS)**.  |
-| **SAM**        | Spectrum Access Point                                                                               | Operates at **Layer 1**, focusing on RF spectrum analysis for interference and noise mitigation.|
-| **RAP**        | Remote Access Points, similar to CAPs, but managed via a **cloud controller** instead of an on-site controller. <br> Any CAP can be converted into a RAP for flexible deployment. |                                                                                                  |
-| **IAP**        | Instant Access Points, standalone APs that do not require a **Mobility Controller**. Managed by a **virtual controller (vC)** installed on a master AP, similar to **Ruckus Unleashed** for small-to-medium deployments. |                                                                                                  |
+| **AM**         | Air Monitor (Monitor Mode) - Operates at **Layer 2**, providing **RF monitoring** and **Intrusion Detection System (IDS)**.  | Provides RF monitoring, security via IDS, and detects interference.                            |
+| **SAM**        | Spectrum Access Point - Operates at **Layer 1**, focusing on RF spectrum analysis for interference and noise mitigation. | Helps to identify interference and optimize spectrum usage.                                     |
+| **RAP**        | Remote Access Points, similar to CAPs, but managed via a **cloud controller** instead of an on-site controller. Any CAP can be converted into a RAP for flexible deployment. | Managed remotely, providing flexibility for remote locations, supports conversion from CAP.    |
+| **IAP**        | Instant Access Points - Standalone APs that do not require a **Mobility Controller**. Managed by a **virtual controller (vC)** installed on a master AP, similar to **Ruckus Unleashed** for small-to-medium deployments. | No need for external controllers, managed via a virtual controller, ideal for small deployments. |
 
 
 ### Aruba Access Points: `Indoor`
