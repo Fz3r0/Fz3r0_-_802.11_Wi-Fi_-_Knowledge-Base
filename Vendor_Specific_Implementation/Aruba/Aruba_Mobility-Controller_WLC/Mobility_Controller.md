@@ -21,6 +21,9 @@
 # 📚🗂️🎥 Resources
 
 - https://www.youtube.com/watch?v=U0A2747YY7c
+- https://nds.id/en/how-to-setting-aruba-controller-correctly/
+- https://www.youtube.com/watch?v=XVd2KgmdwUE&list=PLgz6oh-wTMAjtBcEY5Sx7GfhDXr-qgfa6
+- https://github.com/hegdepavankumar/Cisco-Images-for-GNS3-and-EVE-NG
   
 ---
 
