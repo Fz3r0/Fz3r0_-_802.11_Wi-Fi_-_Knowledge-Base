@@ -1,4 +1,4 @@
-# 🔥🧱🛡️ Aruba: `Aruba Wireless Products`
+# 🔥🧱🛡️ Aruba: `HPE Aruba Networking Central (Aruba Central)`
 
 ![My Video](https://user-images.githubusercontent.com/94720207/165892585-b830998d-d7c5-43b4-a3ad-f71a07b9077e.gif)
 
@@ -7,7 +7,7 @@
 
 ---
  
-#### Keywords: `Aruba` `MC` `Mobility Controller` `WLC` `IEEE 802.11` `Wireless`
+#### Keywords: `Aruba` `MC` `Mobility Controller` `WLC` `IEEE 802.11` `Wireless` `Aruba Central`
 
 ---
 
