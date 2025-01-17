@@ -17,7 +17,7 @@
 
 # Aruba: `Wireless Products & Modes`
 
-## Aruba: `Access Points`
+# Aruba: `Access Points`
 
 ### `AP Location Types`
 
@@ -35,7 +35,7 @@
 | **SAM**        | Spectrum Access Point       | Operates at **Layer 1**, focusing on RF spectrum analysis for interference and noise mitigation.      | Helps to identify interference and optimize spectrum usage.                                     |                                  |
 
 
-### Aruba Access Points: `Indoor`
+## Aruba Access Points: `Indoor`
 
 - https://www.arubanetworks.com/products/wireless/access-points/indoor-access-points/
 
@@ -56,9 +56,8 @@
 | **100**    | Low-cost Wi-Fi 4 campus access point (*end-of-life legacy*) | N/A               | Wi-Fi 4 (802.11n)         | Basic features; ideal for small, legacy deployments                           |
 
 
----
 
-### Aruba Access Points: `Outdoor & Ruggedized` 
+## Aruba Access Points: `Outdoor & Ruggedized` 
 
 - https://www.arubanetworks.com/products/wireless/access-points/outdoor-ruggedized-access-points/
 
@@ -137,9 +136,9 @@ Enterprise-class performance: Aruba 9200 Series Campus Gateways are modern Wi-Fi
 | **Configuration Validation**                  | Configurations are validated and verified before being pushed | No configuration validation or confirmation before applying |
 
 
----
 
-### `Aruba Controllers`
+
+## `Aruba Controllers`
 
 | **Series**                       | **Purpose**                                                      | **Max APs**            | **Max Users/Throughput**             | **Special Features**                                   | **Real-World Use Case**                                                                                       |
 |-----------------------------------|------------------------------------------------------------------|------------------------|---------------------------------------|-------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
