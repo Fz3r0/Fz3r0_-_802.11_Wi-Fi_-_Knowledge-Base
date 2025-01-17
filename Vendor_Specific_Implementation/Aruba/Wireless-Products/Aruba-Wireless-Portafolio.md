@@ -32,7 +32,7 @@ Enterprise-class performance: Aruba 9200 Series Campus Gateways are modern Wi-Fi
 - [Aruba 9200 series Datasheet](https://www.hpe.com/psnow/doc/a00121209enw)
 - [Aruba 7200 series Overview & Comparison](https://www.arubanetworks.com/products/wireless/gateways-and-controllers/7200-series/#features)
 
-
+### Aruba AP: `AP Modes`
 
 | **Series**                       | **Purpose**                                                      | **Max APs**            | **Max Users/Throughput**             | **Special Features**                                   | **Real-World Use Case**                                                                                       |
 |-----------------------------------|------------------------------------------------------------------|------------------------|---------------------------------------|-------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
