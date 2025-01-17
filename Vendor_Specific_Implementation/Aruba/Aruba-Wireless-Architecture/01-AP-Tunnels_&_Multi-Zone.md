@@ -21,6 +21,9 @@ before talking about Multi-zone. First, we need to understand tunnels that are c
 
 ## Aruba: `AP Tunnels`
 
+![image](https://github.com/user-attachments/assets/11c341c3-fedc-4c19-a74d-27c79c112c1a)
+
+
 - Access points will create GRE tunnels.
 - And in those tunnels you will see that access points will send the traffic directly to the controller.
 - The controller will decrypt the packets in those tunnels because normally the access point receives the packets encrypted.
@@ -48,13 +51,9 @@ GRE Tunnels
 - So, when your access point get the configuration from the controller, it essentially creates GRE tunnels and pass that user traffic from the access point to your controller, and APs will create one tunnel per SSID.
 - It sill also create one extra GRE tunnel for the keep-alives.
 - The total of tunnels will be: **Total SSIDs + 1 (keep alive)**
-- If you have 3 SSIDs and 2 radios (2.4 & 5 ghz), then you will have 6 SSIDs and 1 keeps alive:  **Total SSIDs x 2 (2.4 & 5) + 1 (keep alive)**
-- So, if we have 10 APs with 2 radios each and 6 SSIDs each would be the total of tunnels:
-    - SSIDs = 6
-    - APs = 10
-    - Keep Alive = 1 * 10
-    - GRE for SSIDs = 12 * 10
-    - Total Tunels = 130 
+- If you have 3 SSIDs and 2 radios (2.4 & 5 ghz), then you will have 6 SSIDs and 1 keeps alive:  **Total SSIDs x 2 (2.4 & 5) + 1 (keep alive) = `7 Tunnels`**
+- So, if we have 10 APs with 2 radios each and 6 SSIDs each would be the total of tunnels: 7 Tunnels * 10 APs = `70 GRE Tunnels`
+
 
 # 📚🗂️🎥 Resources
 
