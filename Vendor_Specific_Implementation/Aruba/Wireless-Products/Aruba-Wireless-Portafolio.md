@@ -84,7 +84,7 @@
 
 
 
-## Aruba: `Mobility Controllers`
+# Aruba: `Mobility Controllers`
 
 - https://www.arubanetworks.com/products/wireless/gateways-and-controllers/
 
@@ -96,7 +96,49 @@ Enterprise-class performance: Aruba 9200 Series Campus Gateways are modern Wi-Fi
 - [Aruba 7200 series Overview & Comparison](https://www.arubanetworks.com/products/wireless/gateways-and-controllers/7200-series/#features)
 
 
-### `Controller Modes`
+## Aruba: `Controller Modes`
+
+| **Controller Mode**      | **Description**                                                                                                                                                                                                                                                                         | **Key Features**                                                                                                                                                                          | **Recommended Use Cases**              |
+|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
+| **MM - Mobility Master**  | Centralized architecture introduced in version 8.x. Responsible for the **Control Plane**, managing multiple **Mobility Controllers (MCs)** that handle APs and traffic.                                                                                                                | - Centralizes configurations, management, and monitoring.<br>- APs connect to MCs, not directly to the MM.<br>- High scalability for large and distributed networks.<br>- Smooth operation. | Large and distributed networks.       |
+| **M-L - Master-Local**    | Version 6.x architecture where the **Master Controller** distributes configurations to **Local Controllers**. APs can report to both the Master and Local Controllers.                                                                                                                  | - Master handles global configurations (WLAN, RF, firewall).<br>- Local Controllers directly manage APs and client traffic.<br>- Supports migration to 8.x.<br>- Traffic flows through Local Controllers. | Medium networks or migration from 6.x. |
+| **Standalone**            | A single controller operating independently without MM or ML integration.                                                                                                                                                                                                              | - Direct configuration on the controller.<br>- Does not require centralized management.<br>- Lacks advanced features available in MM or ML.<br>- Low scalability.                       | Small and independent networks.        |
+| **Branch Controller (ZTP)** | Designed for small branches with **Zero Touch Provisioning (ZTP)**, integrated with a Mobility Master.                                                                                                                                                                               | - Ideal for remote locations.<br>- Seamless integration with MM.<br>- Simplifies configuration and remote deployment.<br>- Reduces operational costs.<br>- High scalability via MM.       | Branches with remote management.       |
+
+---
+
+### `MC: Mobility Controller` VS `LC: Local Controller`
+
+| **Controller Mode**      | **Controller Type**         | **Management Details**                                   |
+|--------------------------|-----------------------------|---------------------------------------------------------|
+| **MM - Mobility Master** | **MC: Mobility Controller**     | Controlled by the Mobility Master (MM).                 |
+| **M-L - Master-Local**   | **LC: Local Controller**        | Controlled by the Master Controller (M).                |
+
+
+
+---
+
+### General Comparison between modes:
+
+| **Mode**                 | **Requires MM** | **Centralized Control** | **Scalability** | **Recommended Use Cases**                |
+|--------------------------|-----------------|--------------------------|-----------------|------------------------------------------|
+| **MM - Mobility Master** | Yes             | Yes                      | High            | Large and distributed networks.          |
+| **M-L - Master-Local**   | No              | Yes                      | Medium          | Medium networks or migration from 6.x.   |
+| **Standalone**           | No              | No                       | Low             | Small and independent networks.          |
+| **Branch Controller**    | Yes             | Yes                      | High            | Branches with Zero Touch Provisioning.   |
+
+---
+
+### `Mobility Master (MM)` VS `Mobility Controller (MC)`
+
+
+| **Feature**                                   | **Mobility Master (MM)**                                  | **Mobility Controller (MC)**                              |
+|-----------------------------------------------|-----------------------------------------------------------|-----------------------------------------------------------|
+| **Management**                                | MM manages **Managed Devices (MDs)**                      | MC manages **Local Controllers (LC)**                     |
+| **Deployment**                                | Can be **hardware** or **virtual**                        | Only **hardware**                                          |
+| **AP Termination**                            | APs are not terminated in MM; they connect to MCs         | APs are terminated directly in MC                          |
+| **Configuration**                             | Full configuration pushed from MM to APs                  | Partial configuration (no IP, DHCP, VLAN) pushed to APs    |
+| **Configuration Validation**                  | Configurations are validated and verified before being pushed | No configuration validation or confirmation before applying |
 
 
 ---
