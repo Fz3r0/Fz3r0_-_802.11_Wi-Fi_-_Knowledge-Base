@@ -40,6 +40,8 @@ Aruba APs establish **two main tunnels** with the controller:
    - Uses **GRE (Generic Routing Encapsulation)** for encapsulation.
    - GRE operates using **Protocol 47**.
 
+![image](https://github.com/user-attachments/assets/11c341c3-fedc-4c19-a74d-27c79c112c1a)
+
 ---
 
 ### **Summary of Traffic Tunnels**
@@ -49,7 +51,7 @@ Aruba APs establish **two main tunnels** with the controller:
 | **Control Traffic**      | AP management and configuration | PaPi         | UDP Port 8211 (CPSec)    |
 | **Data Traffic**         | User data forwarding            | GRE          | Protocol 47 (Data GRE)   |
 
-![image](https://github.com/user-attachments/assets/11c341c3-fedc-4c19-a74d-27c79c112c1a)
+
 
 ---
 
