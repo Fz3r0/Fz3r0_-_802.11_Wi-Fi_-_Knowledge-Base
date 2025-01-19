@@ -11,48 +11,68 @@
 
 ---
 
+
+
 <br>
 
 # 📝❓📄 `Index`
 
-# Aruba: `Tunnels` & `MultiZone`
 
-before talking about Multi-zone. First, we need to understand tunnels that are created by access points to controller Aruba 
 
-## Aruba: `AP Tunnels`
+# **Aruba: Tunnels & MultiZone**
+
+Before discussing **MultiZone**, let’s first understand the tunneling mechanisms used by Aruba Access Points (APs) to communicate with controllers.
+
+---
+
+## **Aruba AP Tunnels**
+
+Aruba APs establish **two main tunnels** with the controller:
+
+1. **Control Traffic Tunnel**:
+   - Responsible for transmitting **management and control traffic** between the AP and the controller.
+   - Uses **CPSec (Control Plane Security)** to encrypt communication, ensuring secure delivery.
+   - The protocol used is **PaPi (Protocol for Access Points)**, which operates on:
+     - **UDP Port 8211**.
+
+2. **Data Traffic Tunnel**:
+   - Carries **user data traffic** from the AP to the controller.
+   - Uses **GRE (Generic Routing Encapsulation)** for encapsulation.
+   - GRE operates using **Protocol 47**.
+
+---
+
+### **Summary of Traffic Tunnels**
+
+| **Tunnel Type**         | **Purpose**                     | **Protocol** | **Port/Protocol**       |
+|--------------------------|----------------------------------|--------------|--------------------------|
+| **Control Traffic**      | AP management and configuration | PaPi         | UDP Port 8211 (CPSec)    |
+| **Data Traffic**         | User data forwarding            | GRE          | Protocol 47 (Data GRE)   |
 
 ![image](https://github.com/user-attachments/assets/11c341c3-fedc-4c19-a74d-27c79c112c1a)
 
+---
 
-- Access points will create GRE tunnels.
-- And in those tunnels you will see that access points will send the traffic directly to the controller.
-- The controller will decrypt the packets in those tunnels because normally the access point receives the packets encrypted.
-- The controller will firewall the packet. Then, according to the need, it will either switch the packet inside or route it to the outside network.
-- Before this, the user must authenticate to the network and this will happen with the help of control traffic.
-- **So as you can see, you will have two tunnels. **One is for data**, the other **one is for control**.
-- The **contorl traffic** will use CPSec This is a secure tunnel that is using PaPi protocol using porr 90 and 11 UDP.
-- The **data traffic** will use GRE using the port 47.
+### **Key Points About Tunnels**
 
-Extra notes about tunnels:
+- **Dual Tunnels**:
+   Each AP creates **two primary tunnels**:
+   - One for **control traffic** to manage configurations, authentication, and policies.
+   - Another for **data traffic** to carry user payloads.
 
-- When you configure your cluster (WLC) your AP will forward the user traffic to the user controller using the GRE tunnel. 
-- An access point will send the control traffic to its access point anchor controller, and this willthis will be sent with the help of puppy.
-- Access points will not use the GRE tunnel to forward the user traffic in the bridge mode So this is an exception to sending the user traffic in GRE and the mobility controller, Aruba Mobility
+- **Separation of Roles**:
+   - Control and data traffic are processed independently.
+   - The control tunnel ensures **management traffic is secure**, while the data tunnel handles **high-throughput user traffic**.
 
-Controller Side Tasks:
+- **CPSec (Control Plane Security)**:
+   - Encrypted communication for the control tunnel is provided by CPSec.
+   - This ensures sensitive information, such as authentication and configuration, is protected.
 
-- controller will deal with the configuration of access point
--  will deal with the client authentication
--  User roles and firewall policies.
+- **GRE for Data Traffic**:
+   - User traffic is encapsulated in GRE to allow routing and switching through the controller.
+   - GRE supports scalability, enabling multiple SSIDs and APs to share the same encapsulation framework.
 
-GRE Tunnels
-
-- When you're using GRE tunnels, you need to know that you can have different tunnels for different wireless lans.
-- So, when your access point get the configuration from the controller, it essentially creates GRE tunnels and pass that user traffic from the access point to your controller, and APs will create one tunnel per SSID.
-- It sill also create one extra GRE tunnel for the keep-alives.
-- The total of tunnels will be: **Total SSIDs + 1 (keep alive)**
-- If you have 3 SSIDs and 2 radios (2.4 & 5 ghz), then you will have 6 SSIDs and 1 keeps alive:  **Total SSIDs x 2 (2.4 & 5) + 1 (keep alive) = `7 Tunnels`**
-- So, if we have 10 APs with 2 radios each and 6 SSIDs each would be the total of tunnels: 7 Tunnels * 10 APs = `70 GRE Tunnels`
+---
 
 
 # 📚🗂️🎥 Resources
