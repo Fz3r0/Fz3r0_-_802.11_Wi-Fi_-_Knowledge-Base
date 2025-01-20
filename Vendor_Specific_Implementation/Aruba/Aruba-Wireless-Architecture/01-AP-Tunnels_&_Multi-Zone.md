@@ -134,24 +134,6 @@ Aruba uses **two main types of tunnels**:
 
 ---
 
-## **Aruba MultiZone**
-
-**MultiZone** enables a single AP to connect to multiple controllers simultaneously, segmenting traffic between zones. 
-
-### **How it Works**
-1. **Primary Zone**:
-   - Default controller for AP management and primary traffic handling.
-2. **Secondary Zones**:
-   - Additional controllers for specific networks (e.g., guest networks).
-3. **Traffic Segmentation**:
-   - Isolates traffic between zones for enhanced security.
-
-### **Example**:
-- **Primary Zone**: Internal corporate network.
-- **Secondary Zone**: Guest Wi-Fi for isolated internet access.
-
----
-
 ## **Controller Responsibilities**
 
 The Aruba controller manages:
@@ -186,6 +168,102 @@ The Aruba controller manages:
 - **MultiZone** allows one AP to connect to multiple controllers for traffic segmentation.
 - Proper tunnel management ensures efficient and secure network operations.
 ---
+
+
+
+
+
+
+
+
+
+
+## **Aruba Multi-Zone**
+
+- **MultiZone enables a single AP to connect to multiple controllers simultaneously, segmenting traffic between zones.** 
+
+The **Multi-Zone** feature allows an Aruba Access Point (AP) to connect to multiple controllers, thereby segmenting traffic between different zones. Each zone operates independently, meaning controllers in one zone cannot manage the devices in another zone.
+
+### **How Multi-Zone Works**
+
+1. **Primary Zone**: 
+   - The **primary zone** is where the AP initially connects.
+   - The **primary zone device** will provide configuration details to the AP.
+
+2. **Secondary Zones**: 
+   - Secondary zones enable APs to communicate with multiple controllers for different network segments or needs.
+   - These zones allow for isolated configurations, ensuring that devices in one zone don’t interfere with those in another.
+
+3. **Traffic Segmentation**: 
+   - By using Multi-Zone, different wireless networks can be broadcast from the same AP without interference. For example, an AP in an airport may serve multiple airlines, each with their own wireless LANs (WLANs).
+   - Each airline’s wireless network operates independently, allowing admins to control their own network settings without impacting others.
+
+
+
+
+---
+
+
+
+
+---
+
+### **Real-World Example of Multi-Zone Use**
+
+#### Basic Example:
+
+- **Primary Zone**: Internal corporate network.
+- **Secondary Zone**: Guest Wi-Fi for isolated internet access.
+
+#### Real-Life Scenario:
+
+Imagine an airport where several airlines need separate wireless connections. By utilizing Multi-Zone:
+
+- **Airline 1** uses one AP to connect to its **primary zone** for its own wireless LAN.
+- The same AP then connects to a **secondary zone** managed by another mobility controller, handling another set of wireless networks for **Airline 2**.
+- Each airline can manage its own wireless network independently, avoiding interference even though they share the same physical AP.
+
+This type of network setup works not only for airlines but also for any scenario where different entities need isolated but shared wireless access points, such as bus companies at a terminal or different corporate entities within the same building.
+
+---
+
+### **Benefits of Multi-Zone**:
+
+- **Improved Traffic Separation**: Each zone manages its own wireless LANs, preventing cross-network interference.
+- **Independent Management**: Multiple teams (e.g., airline administrators) can manage their own settings without affecting others.
+- **Flexibility**: One AP can connect to multiple mobility controllers, allowing for flexible deployments in environments with multiple networks or clients.
+
+---
+
+### **Mobility Controllers and Their Role in Multi-Zone**
+
+In Multi-Zone setups, **mobility controllers** play a central role. They can either be standalone or managed by **mobility masters**:
+
+- **Primary Controllers**: Manage the initial connection and provide basic configuration.
+- **Secondary Controllers**: Handle the additional zones, ensuring that each zone operates independently, with its own set of wireless LANs.
+  
+Controllers in different zones cannot manage each other directly, thus ensuring complete separation between network zones.
+
+---
+
+### **Use Cases for Multi-Zone**:
+
+1. **Airports**: Airlines can control their own networks without affecting others, while still using the same AP hardware.
+2. **Public Transport Terminals**: Different bus companies or services can deploy their own networks independently.
+3. **Corporate Campuses**: Separate corporate networks can be deployed across different zones to avoid traffic interference.
+
+---
+
+## **Key Takeaways**
+
+- The **Multi-Zone feature** in Aruba allows an AP to connect to multiple controllers in different zones, ensuring isolated configurations and independent traffic management.
+- **Multi-Zone** is beneficial in environments where different entities need to share AP hardware but require separate network management, such as airports or corporate campuses.
+- By using this feature, Aruba provides flexibility and improved traffic separation without compromising on performance or network security.
+
+
+![image](https://github.com/user-attachments/assets/44c8d76f-4ad3-42b4-8050-f0d8fe633c1b)
+
+
 
 
 # 📚🗂️🎥 Resources
