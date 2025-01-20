@@ -193,17 +193,25 @@ The **Multi-Zone** feature allows an Aruba Access Point (AP) to connect to multi
    - By using Multi-Zone, different wireless networks can be broadcast from the same AP without interference. For example, an AP in an airport may serve multiple airlines, each with their own wireless LANs (WLANs).
    - Each airline’s wireless network operates independently, allowing admins to control their own network settings without impacting others.
 
+## **Mobility Controllers and Their Role in Multi-Zone**
 
----
+In Multi-Zone setups, **mobility controllers** play a central role. They can either be standalone or managed by **mobility masters**:
 
-### **Real-World Example of Multi-Zone Use**
+- **Primary Controllers**: Manage the initial connection and provide basic configuration.
+- **Secondary Controllers**: Handle the additional zones, ensuring that each zone operates independently, with its own set of wireless LANs.
+  
+Controllers in different zones cannot manage each other directly, thus ensuring complete separation between network zones.
 
-#### Basic Example:
+
+
+## **Real-World Example of Multi-Zone Use**
+
+### Basic Example:
 
 - **Primary Zone**: Internal corporate network.
 - **Secondary Zone**: Guest Wi-Fi for isolated internet access.
 
-#### Real-Life Scenario:
+### Real-Life Scenario:
 
 Imagine an airport where several airlines need separate wireless connections. By utilizing Multi-Zone:
 
@@ -222,14 +230,6 @@ This type of network setup works not only for airlines but also for any scenario
 - **Flexibility**: One AP can connect to multiple mobility controllers, allowing for flexible deployments in environments with multiple networks or clients.
 
 
-## **Mobility Controllers and Their Role in Multi-Zone**
-
-In Multi-Zone setups, **mobility controllers** play a central role. They can either be standalone or managed by **mobility masters**:
-
-- **Primary Controllers**: Manage the initial connection and provide basic configuration.
-- **Secondary Controllers**: Handle the additional zones, ensuring that each zone operates independently, with its own set of wireless LANs.
-  
-Controllers in different zones cannot manage each other directly, thus ensuring complete separation between network zones.
 
 
 ## **Use Cases for Multi-Zone**:
