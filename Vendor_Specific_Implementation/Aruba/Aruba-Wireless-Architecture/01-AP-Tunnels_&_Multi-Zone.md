@@ -176,17 +176,20 @@ The Aruba controller manages:
 
 The **Multi-Zone** feature allows an Aruba Access Point (AP) to connect to multiple controllers, thereby segmenting traffic between different zones. Each zone operates independently, meaning controllers in one zone cannot manage the devices in another zone.
 
+![image](https://github.com/user-attachments/assets/ea081264-efe0-4de4-8139-035f2a903182)
+
 ### **How Multi-Zone Works**
 
 1. **Primary Zone**: 
    - The **primary zone** is where the AP initially connects.
    - The **primary zone device** will provide configuration details to the AP.
 
-2. **Secondary Zones**: 
+2. **Secondary Zones**:
    - Secondary zones enable APs to communicate with multiple controllers for different network segments or needs.
+   - Only traffic/data from SSID in secondary MC will be forwarded to that controller.
    - These zones allow for isolated configurations, ensuring that devices in one zone don’t interfere with those in another.
 
-3. **Traffic Segmentation**: 
+4. **Traffic Segmentation**: 
    - By using Multi-Zone, different wireless networks can be broadcast from the same AP without interference. For example, an AP in an airport may serve multiple airlines, each with their own wireless LANs (WLANs).
    - Each airline’s wireless network operates independently, allowing admins to control their own network settings without impacting others.
 
@@ -253,7 +256,7 @@ Controllers in different zones cannot manage each other directly, thus ensuring 
 - By using this feature, Aruba provides flexibility and improved traffic separation without compromising on performance or network security.
 
 
-![image](https://github.com/user-attachments/assets/ea081264-efe0-4de4-8139-035f2a903182)
+
 
 
 
