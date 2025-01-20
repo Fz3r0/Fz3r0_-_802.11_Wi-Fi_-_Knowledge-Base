@@ -97,7 +97,7 @@ Aruba uses **two main types of tunnels**:
 
 ---
 
-## **GRE Tunnels: Advanced Details**
+## **GRE Tunnels: Number of Tunnels**
 
 ### **1. Per-SSID Tunnels**
 - Each AP creates:
@@ -105,26 +105,18 @@ Aruba uses **two main types of tunnels**:
   - **One keep-alive tunnel** for monitoring communication health.
 - **Example**:
   - **AP with 3 SSIDs and 2 radios**:
-    - \( (3 \text{ SSIDs}) \times (2 \text{ radios}) + 1 \text{ keep-alive tunnel} = 7 \text{ total tunnels} \).
+    - To calculate the total tunnels: (3 SSIDs) x (2 radios) + 1 keep-alive tunnel = 7 total tunnels.
 
 ### **2. Total Tunnel Calculation**
-- **Formula**:  
-  \[
-  \text{Total Tunnels} = (\text{SSIDs per Radio}) \times (\text{Radios}) + 1 \text{ (Keep-Alive Tunnel)}
-  \]
+- To calculate the total tunnels for an AP:
+  - **Total Tunnels = (SSIDs per Radio) x (Radios) + 1 (Keep-Alive Tunnel)**
 
 - **Example Calculations**:
   1. **Single AP with 3 SSIDs and 2 Radios**:
-     \[
-     3 \text{ SSIDs} \times 2 \text{ Radios} + 1 \text{ Keep-Alive} = 7 \text{ Tunnels}
-     \]
+     - (3 SSIDs) x (2 Radios) + 1 Keep-Alive = 7 Tunnels
   2. **10 APs, Each with 6 SSIDs and 2 Radios**:
-     \[
-     6 \text{ SSIDs} \times 2 \text{ Radios} + 1 \text{ Keep-Alive} = 13 \text{ Tunnels per AP}
-     \]
-     \[
-     13 \text{ Tunnels per AP} \times 10 \text{ APs} = 130 \text{ Total Tunnels}
-     \]
+     - (6 SSIDs) x (2 Radios) + 1 Keep-Alive = 13 Tunnels per AP
+     - 13 Tunnels per AP x 10 APs = 130 Total Tunnels
 
 ---
 
