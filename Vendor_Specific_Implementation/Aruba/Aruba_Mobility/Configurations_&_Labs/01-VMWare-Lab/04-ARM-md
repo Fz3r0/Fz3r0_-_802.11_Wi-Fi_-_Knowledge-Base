@@ -1,0 +1,184 @@
+# 🔥🧱🛡️ Aruba: `Lab -ARM`
+
+![My Video](https://user-images.githubusercontent.com/94720207/165892585-b830998d-d7c5-43b4-a3ad-f71a07b9077e.gif)
+
+### 🐦 Twitter  : [@fz3r0_OPs](https://twitter.com/Fz3r0_OPs)
+### 🐱 Github  : [Fz3r0](https://github.com/fz3r0) 
+
+---
+ 
+#### Keywords: `Aruba` `MC` `Mobility Controller` `WLC` `IEEE 802.11` `Wireless`
+
+---
+
+
+
+<br>
+
+# 📝❓📄 `Index`
+
+
+# Adaptive Radio Management (ARM)
+
+Adaptive Radio Management (ARM) is a cutting-edge radio frequency management technology designed to optimize Wi-Fi network performance, particularly in high-traffic environments. ARM dynamically and intelligently selects the best 802.11 channel and transmit power settings for each Instant Access Point (IAP) based on the current RF conditions, ensuring optimal WLAN performance.
+
+ARM adheres to the IEEE 802.11 standards and works with all standard client devices across all operating systems, without the need for proprietary client software. It guarantees low-latency roaming, consistently high performance, and maximum client compatibility in multi-channel environments, supporting mixed client types like 802.11a/b/g/n/ac.
+
+ARM provides several key features that contribute to WLAN optimization:
+
+## Key Features of ARM
+
+### 1. **Channel or Power Assignment**
+
+This feature automates the process of assigning channels and power levels to APs, based on real-time RF conditions. This simplifies network setup and adaptation as the RF environment changes.
+
+| Feature          | Description                                                                                                                                             |
+|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Automatic Adjustment** | Adjusts channel and power settings dynamically, reducing the need for manual configuration.                                                        |
+| **RF Environment Awareness**  | Reacts to RF interference, congestion, and changes in the environment.                                                                          |
+
+---
+
+### 2. **Voice Aware Scanning**
+
+Voice Aware Scanning improves the quality of voice calls by preventing APs from scanning for other channels when an active voice call is in progress. Once the voice call ends, scanning resumes.
+
+| Feature           | Description                                                                                       |
+|-------------------|---------------------------------------------------------------------------------------------------|
+| **Voice Call Priority**   | Ensures that scanning does not interrupt active voice calls, enhancing call quality.        |
+| **Automatic Resumption**   | Scanning resumes after the call ends, optimizing RF management. |
+
+---
+
+### 3. **Load Aware Scanning**
+
+Load Aware Scanning dynamically adjusts the scanning behavior to prevent interruptions during high-traffic periods. The system resumes full scans once traffic drops to normal levels.
+
+| Feature           | Description                                                                                       |
+|-------------------|---------------------------------------------------------------------------------------------------|
+| **Dynamic Scanning**    | Reduces scanning during high network traffic to maintain data transfer. |
+| **Traffic Monitoring**   | Monitors traffic levels and adjusts scanning intervals accordingly. |
+
+---
+
+### 4. **Band Steering Mode**
+
+Band Steering directs dual-band clients to the 5 GHz band on dual-band APs, reducing co-channel interference and optimizing bandwidth availability.
+
+| Feature            | Description                                                                                     |
+|--------------------|-------------------------------------------------------------------------------------------------|
+| **Optimized Band Usage**  | Moves dual-band clients to the 5 GHz band, which has more available channels than 2.4 GHz. |
+| **Increased Bandwidth**    | Reduces congestion on the 2.4 GHz band by shifting clients to 5 GHz. |
+
+---
+
+### 5. **Client Match**
+
+Client Match continually monitors the RF conditions of associated clients to provide dynamic load balancing, band steering, and optimal AP reassignment.
+
+| Feature            | Description                                                                                         |
+|--------------------|-----------------------------------------------------------------------------------------------------|
+| **Dynamic Load Balancing**  | Distributes clients based on load and signal strength, improving client experience.       |
+| **Sticky Client Management** | Moves clients with poor signal strength to a more suitable AP to improve connectivity. |
+| **Band Steering**    | Ensures dual-band clients are directed to the optimal band (2.4 GHz or 5 GHz) based on current signal conditions. |
+
+---
+
+### 6. **Airtime Fairness Mode**
+
+Airtime Fairness ensures that all clients, regardless of type or capability, get equal access to the wireless medium, preventing high-performance clients from monopolizing bandwidth.
+
+| Feature            | Description                                                                                     |
+|--------------------|-------------------------------------------------------------------------------------------------|
+| **Equal Resource Allocation**  | Allocates equal airtime for all clients, improving fairness in data transmission. |
+| **Prevention of Resource Monopoly**  | Prevents fast clients from dominating the available airtime. |
+
+---
+
+### 7. **Access Point Control**
+
+ARM provides several features for optimizing access point performance and behavior:
+
+| Feature             | Description                                                                                      |
+|---------------------|--------------------------------------------------------------------------------------------------|
+| **Customize Valid Channels**   | Allows for custom configuration of valid 5 GHz and 2.4 GHz channels. |
+| **Transmit Power Control**     | Controls the minimum and maximum transmit power (EIRP) to ensure optimal range and regulatory compliance. |
+| **Client Aware**    | Ensures that ARM does not change channels for APs with active clients, maintaining connection stability. |
+
+---
+
+### 8. **ARM Metrics**
+
+ARM evaluates coverage and interference metrics for each channel and adjusts the channel and transmit power settings for each IAP. These metrics include:
+
+| Metric             | Description                                                                                      |
+|--------------------|--------------------------------------------------------------------------------------------------|
+| **Coverage Metric**   | Measures the performance of each channel to select the best one for the IAP.                   |
+| **Interference Metric** | Evaluates interference levels across channels to determine optimal conditions.                  |
+| **Signal-to-Noise Ratio (SNR)** | Determines which channels provide the best signal quality for clients.                     |
+
+---
+
+### 9. **Network Monitoring**
+
+When ARM is enabled, APs perform continuous scanning of all 802.11 channels within their regulatory domain, reporting WLAN coverage, interference, and intrusion detection data back to the Virtual Controller.
+
+| Feature             | Description                                                                                      |
+|---------------------|--------------------------------------------------------------------------------------------------|
+| **Continuous Monitoring** | Constantly scans RF conditions to optimize channel selection and transmit power.             |
+| **Intrusion Detection** | Identifies unauthorized RF activity or interference and adjusts accordingly. |
+
+---
+
+## Summary of ARM Benefits
+
+- **High Performance**: ARM ensures consistent high performance across all devices, including voice, video, and data applications.
+- **Dynamic Channel and Power Management**: Automatically adjusts settings based on real-time RF environment changes.
+- **Load and Band Steering**: Balances network load and directs clients to the optimal band.
+- **Fair Access**: Airtime fairness ensures that no client monopolizes the channel, providing equal access to all devices.
+- **Client Experience**: Improves client roaming, load balancing, and signal strength management.
+
+
+
+
+# 📚🗂️🎥 Resources
+
+- https://www.arubanetworks.com/techdocs/ArubaOS_60/UserGuide/ARM.php
+  
+  
+---
+
+<span align="center"> <p align="center"> ![giphy](https://user-images.githubusercontent.com/94720207/166587250-292d9a9f-e590-4c25-a678-d457e2268e85.gif) </p> </span> 
+
+
+
+&nbsp;
+
+<span align="center"> <p align="center"> _I hope this information was useful for someone_ </p> </span> 
+<span align="center"> <p align="center"> _and please, don't forget to enjoy your days..._ </p> </span> 
+<span align="center"> <p align="center"> _...It is getting dark... so dark..._ </p> </span> 
+
+&nbsp;
+
+<span align="center"> <p align="center"> _In the mist of the night you could see me come, where shadows move and Demons lie..._ </p> </span> 
+<span align="center"> <p align="center"> _I am [Fz3r0 💀](https://github.com/Fz3r0/) and the Sun no longer rises..._ </p> </span> 
+
+---
+
+
+
+
+
+
+---
+
+> ![hecho en mexico 5](https://user-images.githubusercontent.com/94720207/166068790-fa1f243d-2db9-4810-a6e4-eb3c4ad23700.png)
+>
+> _- Hecho en México - by [Fz3r0 💀](https://github.com/Fz3r0/)_  
+>
+> _"In the mist of the night you could see me come, where shadows move and Demons lie..."_ 
+
+
+
+
+
