@@ -194,13 +194,6 @@ The **Multi-Zone** feature allows an Aruba Access Point (AP) to connect to multi
    - Each airline’s wireless network operates independently, allowing admins to control their own network settings without impacting others.
 
 
-
-
----
-
-
-
-
 ---
 
 ### **Real-World Example of Multi-Zone Use**
@@ -228,9 +221,8 @@ This type of network setup works not only for airlines but also for any scenario
 - **Independent Management**: Multiple teams (e.g., airline administrators) can manage their own settings without affecting others.
 - **Flexibility**: One AP can connect to multiple mobility controllers, allowing for flexible deployments in environments with multiple networks or clients.
 
----
 
-### **Mobility Controllers and Their Role in Multi-Zone**
+## **Mobility Controllers and Their Role in Multi-Zone**
 
 In Multi-Zone setups, **mobility controllers** play a central role. They can either be standalone or managed by **mobility masters**:
 
@@ -239,15 +231,14 @@ In Multi-Zone setups, **mobility controllers** play a central role. They can eit
   
 Controllers in different zones cannot manage each other directly, thus ensuring complete separation between network zones.
 
----
 
-### **Use Cases for Multi-Zone**:
+## **Use Cases for Multi-Zone**:
 
 1. **Airports**: Airlines can control their own networks without affecting others, while still using the same AP hardware.
 2. **Public Transport Terminals**: Different bus companies or services can deploy their own networks independently.
 3. **Corporate Campuses**: Separate corporate networks can be deployed across different zones to avoid traffic interference.
 
----
+
 
 ## **Key Takeaways**
 
