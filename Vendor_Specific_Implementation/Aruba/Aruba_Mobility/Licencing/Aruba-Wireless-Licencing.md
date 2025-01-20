@@ -137,7 +137,6 @@ License usage is straightforward to manage through ArubaOS, with options for glo
 
 Be sure to plan your license acquisition and management carefully to make the most out of your Aruba Wireless capabilities!
 
-Thank you for reading, and good luck with your Aruba network implementation!
 
 
 
