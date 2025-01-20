@@ -24,7 +24,9 @@
 
 An **AP Group** is a collection of access points (APs) managed under a single configuration set, which allows you to apply uniform settings to all the APs in the group. This concept significantly reduces the complexity of managing individual AP configurations, making it easier to scale and optimize your network.
 
-## What is an AP Group?
+Aruba's **AP Groups** offer a powerful and flexible way to manage large wireless networks by grouping access points and applying centralized configurations. This simplifies management, improves scalability, and enhances network performance. With features such as **Virtual APs (VAPs)**, **Client Match**, and **RF Management**, Aruba provides the tools necessary to optimize wireless networks for various use cases and environments.
+
+By utilizing **AP Groups**, network administrators can easily scale their Aruba wireless infrastructure while maintaining a high level of control and customization over the wireless experience for different user groups.
 
 An **AP Group** in Aruba refers to a logical collection of access points (APs) managed by a Mobility Controller. All APs within a group share the same configuration settings, meaning you can apply wireless configurations to the group as a whole, rather than individually configuring each AP. This approach simplifies network management and enhances consistency across your wireless infrastructure.
 
@@ -70,15 +72,19 @@ By grouping APs in this way, you ensure that only the necessary SSIDs are broadc
 ## Advanced Features in AP Groups
 
 ### 1. **Client Match**  
+
 Aruba’s **Client Match** technology automatically directs wireless clients to the optimal access point based on signal strength, load balancing, and other factors. This reduces the chances of congestion and ensures that clients are connected to the best AP.
 
 ### 2. **RF Management**  
+
 Aruba’s **RF management** dynamically adjusts channel selection, transmit power, and other RF parameters to minimize interference and ensure optimal network performance. These adjustments can be configured at the **AP Group** level to suit specific network requirements for each area.
 
 ### 3. **Mesh Networking**  
+
 AP Groups can be configured to support **mesh networking**, where APs wirelessly connect to each other to extend coverage without requiring physical cabling. Mesh network settings can be managed at the AP group level, allowing for consistent wireless performance across all connected APs.
 
 ### 4. **Policy Configuration**  
+
 You can configure **network policies** (e.g., bandwidth limits, access control) for each VAP within an AP group. This ensures that critical traffic, like VoIP or video conferencing, is prioritized, while less critical traffic, such as guest access, is handled differently.
 
 ## Accessing and Managing AP Groups
@@ -88,13 +94,125 @@ To access and manage AP Groups, Aruba Mobility Controllers provide both a **Grap
 - **GUI**: The Aruba Mobility Controller’s web-based interface provides an intuitive way to configure and monitor AP groups.
 - **CLI**: Use commands like `show ap-group` to view the current AP groups and `configure ap-group <name>` to enter configuration mode for a specific AP group.
 
-## Conclusion
 
-Aruba's **AP Groups** offer a powerful and flexible way to manage large wireless networks by grouping access points and applying centralized configurations. This simplifies management, improves scalability, and enhances network performance. With features such as **Virtual APs (VAPs)**, **Client Match**, and **RF Management**, Aruba provides the tools necessary to optimize wireless networks for various use cases and environments.
 
-By utilizing **AP Groups**, network administrators can easily scale their Aruba wireless infrastructure while maintaining a high level of control and customization over the wireless experience for different user groups.
 
-Thank you for reading.
+
+
+
+
+# Aruba Mobility Controller: `AP Group Configuration`
+
+To access AP groups, go to **Configuration** and click on **Access Point Groups** (also known as "AP Groups"). You will see two default AP groups:
+
+1. **Default** – We strongly recommend not modifying this, as changing its settings could interfere with other configurations.
+2. **Node Group** – The second default group.
+
+## Creating AP Group
+
+Click on the **plus icon** to create one. Let’s name this group "Hockey" and click **Submit**.
+
+![image](https://github.com/user-attachments/assets/6eb9375e-db11-4f00-82cc-21a372c77b63)
+
+Once created, click on the group name to explore various options like **Apps**, **Wireless**, **LANs**, **Radio**, **Mesh**, **LMS**, and **Multi-zone**. Let's take a look at each one:
+
+![image](https://github.com/user-attachments/assets/9dad262f-98d5-4a5a-b10c-ed207dc6050f)
+
+## APs
+
+Here, you will find details such as:
+
+- The AP's name
+- IP address 
+- MAC address
+- AP type
+- Serial number
+
+![image](https://github.com/user-attachments/assets/277c9278-82ef-4a7f-9bf1-8e09676c443c)
+
+## WLANs
+
+You can create a new wireless LAN by clicking the **plus icon** (at the bottom). Choose a **Virtual AP**. We'll use the default for now, but you can customize it later. When you select the Virtual AP, you can choose the AP group and set various limits, including airtime per user and per radio.
+
+![image](https://github.com/user-attachments/assets/04c55294-686a-4ae1-9661-139a724d173e)
+
+![image](https://github.com/user-attachments/assets/a0a51ab1-3928-4c57-b479-47f8f8b92976)
+
+To delete an AP, simply click the **trash icon**.
+
+![image](https://github.com/user-attachments/assets/4f699eb3-8a6c-450f-8d13-57e0cd87e8a9)
+
+### Virtual AP
+
+The **Virtual AP** is essentially what we call a **Wireless LAN**. It includes the SSID name and Triple-A (authentication, authorization, and accounting) settings. Let’s break these down:
+
+- **SSID Profile**: Defines the SSID, encryption, and authentication requirements.
+- **Triple-A Profile**: Specifies the authentication method, user roles, and servers for Triple-A functionality.
+
+You can have multiple Virtual APs, but it’s recommended to limit them to 3-4 SSIDs per AP. Too many SSIDs could overwhelm the radio's bandwidth with management frames, reducing airtime for data transmission. The maximum limit for SSIDs per AP is 16, but beyond 3-4 SSIDs can cause issues.
+
+## Radio Settings
+
+Under the **Radio** section, you'll find settings for both **2.4 GHz** and **5 GHz** bands:
+
+- Select the **mode** (AP or spectrum mode).
+- Enable **spectrum monitoring**.
+- Adjust the **transmit power**.
+
+There are different values for the 2.4 GHz and 5 GHz bands, and you can also select **valid channels**. The **Advanced tab** offers additional options, such as interference immunity, which we won’t focus on for now. 
+
+**Assignment**: It would be great if you could research the meaning of the interference immunity options. Perhaps you'll be rewarded with a course credit!
+
+### Client Control
+
+You can enable **Client Match** here, which we’ll cover in a future video. 
+
+In the **Elements Settings**, you can define the IP addresses for backup options and local mobility switches. You can also configure IPv6 addresses here if needed.
+
+### Multi-zone
+If the **Multi-zone** feature is enabled, you’ll see profiles for it. This feature requires a license, and here you can set the **primary zone** and **number of controllers** associated with it. If you're not focusing on Multi-zone, you can disable this feature for now.
+
+### Right Panel Options
+On the right-hand side, you can manage changes to the group, such as setting a **group time limit** or other constraints. If you don’t need these options, you can remove them. You can also see **pending changes** that have been made to the AP group.
+
+To deploy changes to the Mobility Controller, click **Deploy Changes**. If you wish to discard them, click **Discard Changes**.
+
+### Summary
+In this video, we covered:
+- AP groups and how to configure them.
+- Virtual AP settings and their elements.
+- Radio and other configuration options for the AP group.
+
+I hope this video has been helpful. Thank you for watching!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
