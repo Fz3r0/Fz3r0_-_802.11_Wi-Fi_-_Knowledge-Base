@@ -72,7 +72,17 @@ Here, you can configure the VLAN for your wireless LAN. For example, you might s
 Now, choose your preferred security settings based on the network type.
 
 - **Enterprise Network**: Choose **WPA3 Enterprise** or **WPA2 Enterprise**. You can select key management options and add a RADIUS server for authentication.
+
+![image](https://github.com/user-attachments/assets/fd2beefd-1762-4c5e-8a3b-33a1efcf8377)
+
+![image](https://github.com/user-attachments/assets/060a54e4-ac82-418f-8e64-fd93890cb4f8)
+
+![image](https://github.com/user-attachments/assets/11a48fd2-bd5e-48b2-a22d-e66e2c34f06d)
+  
 - **Personal Network**: Enter a passphrase for WPA3 or WPA2 personal security.
+
+![image](https://github.com/user-attachments/assets/8e9f6ee8-4479-4538-b990-8ce8c3e28db4)
+  
 - **Open Network**: This option doesn't offer encryption but provides MAC authentication if desired.
 
 For enterprise networks, you can configure re-authentication intervals, machine authentication, and blacklist settings to enhance security. Personal and open networks have simpler configurations with fewer options.
