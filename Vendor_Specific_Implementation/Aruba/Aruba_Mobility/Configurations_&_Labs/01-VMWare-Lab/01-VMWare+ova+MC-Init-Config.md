@@ -22,6 +22,19 @@
 
 # `Mobility Controller Init Config`
 
+## Virtual Machine Init Configs
+
+...
+
+- After completing all propmpts you can enter de CLI:
+
+![image](https://github.com/user-attachments/assets/ad21d4a6-d787-436a-9daa-4b454952a4b6)
+
+## Enter the GUI
+
+- Enter `192.168.1.139:4343`
+
+![image](https://github.com/user-attachments/assets/33951391-cd2e-4d22-a4a0-d5fcc34462d5)
 
 
 
