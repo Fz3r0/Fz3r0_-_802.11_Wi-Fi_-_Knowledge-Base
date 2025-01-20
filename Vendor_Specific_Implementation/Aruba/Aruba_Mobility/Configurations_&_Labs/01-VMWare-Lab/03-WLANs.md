@@ -63,8 +63,26 @@ In this case I will select "Tunnel", then click **Next** to continue.
 
 ## Step 5: VLAN Configuration
 
-Here, you can configure the VLAN for your wireless LAN. For example, you might select VLAN 87 (or another VLAN like 51) to associate wi
+Here, you can configure the VLAN for your wireless LAN. For example, you might select VLAN 87 (or any another VLAN like 51, 5, 666, etc) to associate with your SSID. You can click the **Plus (+)** button to add a new VLAN if needed.
 
+![image](https://github.com/user-attachments/assets/a8cc9516-0735-4a39-9741-61843892ba69)
+
+## Step 6: Security Settings
+
+Now, choose your preferred security settings based on the network type.
+
+- **Enterprise Network**: Choose **WPA3 Enterprise** or **WPA2 Enterprise**. You can select key management options and add a RADIUS server for authentication.
+- **Personal Network**: Enter a passphrase for WPA3 or WPA2 personal security.
+- **Open Network**: This option doesn't offer encryption but provides MAC authentication if desired.
+
+For enterprise networks, you can configure re-authentication intervals, machine authentication, and blacklist settings to enhance security. Personal and open networks have simpler configurations with fewer options.
+
+## Step 7: Finalizing Configuration
+Select a **default role** (e.g., guest, user) for this wireless LAN. We'll discuss roles in more detail in future videos, but for now, selecting a default role is important for defining access levels.
+
+At this point, you have successfully configured your new wireless LAN, including SSID naming, VLAN association, and security options. 
+
+Thank you for watching this tutorial!
 
 
 
