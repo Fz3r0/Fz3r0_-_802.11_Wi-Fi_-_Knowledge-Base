@@ -17,14 +17,47 @@
 
 # Aruba: `Wireless Products & Modes`
 
-# Aruba: `Access Points`
+# Aruba: `Instant Access Points`
+
+Instant APs are standalone devices that don't require a central controller, making them ideal for small to medium-sized businesses. They offer easy setup, management via a cloud platform or a simple web interface, and are limited in scalability (up to 8 APs). They're perfect for environments that need quick deployment and less complex network management.
+
+## **1. Indoor Access Points**
+
+| **Model** | **Key Features** | **Number of Devices Supported** | **Real-Life Use Case** |
+|-----------|------------------|---------------------------------|------------------------|
+| **AP32**  | Supports Wi-Fi 6E, ideal for high-density areas. | Up to 75 active devices. | Perfect for large offices, hotel lobbies, or restaurants. |
+| **AP25**  | Ultra-high-speed performance, superior coverage. | High device capacity and better coverage. | Ideal for tech start-ups, boutique hotels, and professional offices. |
+| **AP22**  | Wi-Fi CERTIFIED 6™ (Wi-Fi 6), designed for high device volumes. | Up to 75 active devices. | Ideal for reimagined offices, schools, and retail/hospitality businesses. |
+| **AP21**  | Optimized for small spaces, excellent performance in small areas. | Up to 50 active devices. | Perfect for small meeting rooms, retail spaces, and small offices. |
+| **AP15**  | Built for high Wi-Fi usage, including video conferences and multimedia apps. | Up to 100 active devices. | Ideal for video conferencing, critical applications, and content creation. |
+| **AP12**  | Affordable, great for moderate usage like voice, video, and music streaming. | Up to 75 active devices. | Ideal for moderate use, such as VoIP calls, music, and video streaming. |
+| **AP11**  | Budget-friendly, perfect for light use like web browsing and productivity apps. | Up to 50 active devices. | Great for small offices, apartments, or spaces with light network demand. |
+
+## **2. In-Room Access Points**
+
+| **Model**  | **Key Features** | **Number of Devices Supported** | **Real-Life Use Case** |
+|------------|------------------|---------------------------------|------------------------|
+| **AP22D**  | 1x 2.5GbE uplink port for higher bandwidth, ideal for offices and rooms. | Up to 75 active devices. | Perfect for offices, medical clinics, or hotel rooms. |
+| **AP11D**  | Designed for single-room coverage, budget-friendly option. | Up to 50 active devices. | Ideal for hotel rooms, small offices, or short-term rentals. |
+
+## **3. Outdoor Access Points**
+
+| **Model**  | **Key Features** | **Number of Devices Supported** | **Real-Life Use Case** |
+|------------|------------------|---------------------------------|------------------------|
+| **AP27**   | Weatherproof, IP67-rated, ideal for outdoor use. | Up to 75 active devices. | Perfect for patios, poolsides, or outdoor areas like restaurants and retail spaces. |
+| **AP17**   | Durable, weather-resistant, ideal for smaller outdoor locations. | Up to 50 active devices. | Ideal for outdoor cafes, car dealership lots, or open-air restaurants. |
+
+
+# Aruba: `Controller Based Access Points`
+
+Controller-based APs rely on a centralized Mobility Controller or Mobility Master, offering advanced management, scalability (thousands of APs), and high availability. These systems are better suited for large enterprise networks where advanced features, redundancy, and detailed control over network performance are crucial. They're more complex to set up but provide a more robust and scalable solution for high-demand environments.
 
 ### `AP Location Types`
 
 - `Indoor`: Access Points designed for indoor environments, optimized for office, residential, or campus use.
 - `Outdoor` & `Ruggedized`: Access Points designed for outdoor environments, including ruggedized options for hazardous conditions or extreme weather.
 
-### `AP Modes`
+## `AP Modes`
 
 | **Term**      | **Full Name**               | **Description**                                                                                      | **Key Features**                                                                                 |
 |----------------|-----------------------------|------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
