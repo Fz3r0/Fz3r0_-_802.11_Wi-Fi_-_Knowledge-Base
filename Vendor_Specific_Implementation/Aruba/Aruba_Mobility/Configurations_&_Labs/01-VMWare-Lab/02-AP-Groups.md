@@ -200,21 +200,51 @@ Aruba’s interference immunity features enhance network performance by mitigati
 
 ARM dynamically monitors and adjusts the network to provide optimal access for all users. The system has five levels of interference immunity, with each level offering increased protection against different types of interference, but higher levels may reduce the AP's range. Increasing the immunity level improves performance but can limit coverage.
 
----
 
-### Client Control
+## Client Control
 
 You can enable **Client Match**.
 
-In the **Elements Settings**, you can define the IP addresses for backup options and local mobility switches. You can also configure IPv6 addresses here if needed.
+![image](https://github.com/user-attachments/assets/daa20795-737e-4cd6-9804-f2279a3cb120)
 
-### Multi-zone
+## Mesh
+
+Aruba AP groups mesh is a feature in Aruba Networks that allows users to configure mesh radio profiles and mesh cluster profiles for AP groups. This feature can be used to extend wireless coverage or bridge multiple Ethernet LANs. 
+
+![image](https://github.com/user-attachments/assets/59962c52-baf9-43a3-816f-7478027079a1)
+
+
+## LMS (Local Mobility Switch)
+
+LMS is a switch that manages access points (APs) and terminates user traffic from them. It directs APs to the controller that handles their traffic. If the LMS is unreachable, the AP will try to reconnect to a backup LMS. In multi-controller networks, each controller acts as an LMS.
+
+![image](https://github.com/user-attachments/assets/449722c9-7833-4df3-b627-bfdbc48e9d6b)
+
+LMS provides Layer 3 and site redundancy. It can also monitor network-attached devices for conditions that require administrative attention.
+
+## Multi-zone
+
 If the **Multi-zone** feature is enabled, you’ll see profiles for it. This feature requires a license, and here you can set the **primary zone** and **number of controllers** associated with it. If you're not focusing on Multi-zone, you can disable this feature for now.
 
+![image](https://github.com/user-attachments/assets/065a8db1-7e42-423b-99b0-dca2eba98b9f)
+
+![image](https://github.com/user-attachments/assets/222ce580-1b67-4cb6-9355-944717125887)
+
 ### Right Panel Options
+
 On the right-hand side, you can manage changes to the group, such as setting a **group time limit** or other constraints. If you don’t need these options, you can remove them. You can also see **pending changes** that have been made to the AP group.
 
+![image](https://github.com/user-attachments/assets/6cc1a3b5-4612-4434-80b3-8e4e67938c3b)
+
+## Deploy Changes
+
 To deploy changes to the Mobility Controller, click **Deploy Changes**. If you wish to discard them, click **Discard Changes**.
+
+![image](https://github.com/user-attachments/assets/e33a5295-a1dd-4409-8b94-9a7bd5552f24)
+
+![image](https://github.com/user-attachments/assets/71794776-7cb0-4689-9571-3bda855f1376)
+
+
 
 ### Summary
 In this video, we covered:
