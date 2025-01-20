@@ -26,17 +26,23 @@ Before exploring **MultiZone**, it’s essential to understand the tunneling mec
 
 ![image](https://github.com/user-attachments/assets/11c341c3-fedc-4c19-a74d-27c79c112c1a)
 
----
 
-## **Aruba AP Tunnels**
 
-### **How AP Tunnels Work**
 
-#### **1. Tunnel Establishment**
+
+
+
+# **Aruba AP Tunnels**
+
+Let's get this party started:
+
+## **How AP Tunnels Work**
+
+### **1. Tunnel Establishment**
 - Aruba APs create **GRE tunnels** to connect to the Aruba controller.
 - These tunnels enable secure communication and traffic forwarding.
 
-#### **2. Traffic Flow**
+### **2. Traffic Flow**
 1. APs send encrypted traffic to the controller via these tunnels.
 2. The controller:
    - Decrypts the packets.
@@ -46,10 +52,10 @@ Before exploring **MultiZone**, it’s essential to understand the tunneling mec
    - Switched internally.
    - Routed externally, based on configuration.
 
-#### **3. User Authentication**
+### **3. User Authentication**
 - Before transmitting data, users must authenticate through **control traffic**, managed securely by the controller.
 
----
+
 
 ## **Types of Tunnels**
 
@@ -170,7 +176,17 @@ The Aruba controller manages:
 
 
 
-## **Aruba Multi-Zone**
+
+
+
+
+
+
+
+
+
+
+# **Aruba Multi-Zone**
 
 - **MultiZone enables a single AP to connect to multiple controllers simultaneously, segmenting traffic between zones.** 
 
