@@ -30,6 +30,8 @@ In this guide, we will discuss three different wireless deployment types that ar
 
 **All Aruba Infraestructure is on-site**. Campus deployments are typically used in large enterprise environments where multiple access points (APs) need to be centrally managed. Aruba uses a **Mobility Controller** and a **Mobility Master** to manage these APs, providing scalable and efficient wireless network operations.
 
+![image](https://github.com/user-attachments/assets/61e40a57-9f88-4eb5-87d5-c38da5b58330)
+
 ### Key Components:
 
 - **Campus Access Points (CAPs)**: These are the standard access points used in campus networks. They connect to the mobility controllers to manage traffic and security policies.
