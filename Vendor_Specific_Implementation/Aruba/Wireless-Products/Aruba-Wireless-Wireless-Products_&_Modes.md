@@ -17,6 +17,10 @@
 
 # Aruba: `Wireless Products & Modes`
 
+Aruba offers a variety of wireless access points and network solutions designed to optimize connectivity in business environments of all sizes. From standalone access points ideal for small and medium-sized businesses to controller-based solutions for larger networks, Aruba provides flexibility, performance, and scalability. 
+
+Below are the key products and modes offered by Aruba, suitable for various applications, from office spaces to demanding outdoor environments.
+
 # Aruba: `Instant Access Points`
 
 Instant APs are standalone devices that don't require a central controller, making them ideal for small to medium-sized businesses. They offer easy setup, management via a cloud platform or a simple web interface, and are limited in scalability (up to 8 APs). They're perfect for environments that need quick deployment and less complex network management.
