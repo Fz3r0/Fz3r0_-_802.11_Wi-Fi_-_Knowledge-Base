@@ -159,9 +159,41 @@ Under the **Radio** section, you'll find settings for both **2.4 GHz** and **5 G
 - Enable **spectrum monitoring**.
 - Adjust the **transmit power**.
 
-There are different values for the 2.4 GHz and 5 GHz bands, and you can also select **valid channels**. The **Advanced tab** offers additional options, such as interference immunity, which we won’t focus on for now. 
+There are different values for the 2.4 GHz and 5 GHz bands, and you can also select **valid channels**. The **Advanced tab** offers additional options, such as interference immunity.
 
-**Assignment**: It would be great if you could research the meaning of the interference immunity options. Perhaps you'll be rewarded with a course credit!
+### Basic Settings:
+
+![image](https://github.com/user-attachments/assets/4201edf9-86fe-4dd9-916a-09f4bbb05bef)
+
+## Advanced Settings:
+
+| **Parameter**                     | **Description**                                                                                                                                                                                                                                         |
+|------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Name**                           | Enter a name for the 2.4 GHz or 5 GHz radio profile.                                                                                                                                                                                                     |
+| **Zone**                           | Enter the zone name for configuration. The same zone name can be configured on both 2.4 GHz and 5 GHz profiles, but not on two 2.4 GHz or two 5 GHz profiles.                                                                                           |
+| **Legacy only**                    | Toggle to run the radio in non-802.11n mode (disabled by default).                                                                                                                                                                                      |
+| **802.11d / 802.11h**              | Toggle to allow the radio to advertise 802.11d (Country Information) and 802.11h TPC capabilities (disabled by default).                                                                                                                                |
+| **Beacon interval**                | Enter the Beacon period in milliseconds (range: 60-500, default 100 ms). Specifies how often the 802.11 beacon frames are transmitted.                                                                                                                   |
+| **Interference immunity level**    | Select immunity level to improve performance in high-interference environments (default level is 2).                                                                                                                                                      |
+| **Channel switch announcement count** | Specify the number of announcements before switching to a new channel to help clients recover gracefully from the channel change.                                                                                                                       |
+| **Background spectrum monitoring** | Toggle to allow Instant APs to monitor RF interference while continuing normal access service, including monitoring non-Wi-Fi sources (e.g., microwaves, cordless phones).                                                                               |
+| **Customize ARM power range**      | Enable to select minimum and maximum power range for 2.4 GHz and 5 GHz frequencies (default 3 dBm).                                                                                                                                                       |
+| **Very high throughput (VHT)**     | Ensure VHT is enabled for 5 GHz radio on 802.11ac devices. Clear to disable VHT, making the AP function as 802.11n.                                                                                                                                      |
+| **Smart antenna**                  | Select Enabled for smart antenna polarization on IAP-335 access points to optimize antenna selection based on collected data. This feature helps improve signal reception and performance. (Disabled by default).                                       |
+
+### Interference Immunity
+
+Aruba’s interference immunity features enhance network performance by mitigating interference from other devices. Aruba’s Adaptive Radio Management (ARM) leverages multiple tools to optimize the network:
+
+- **RFProtect Spectrum Analyzer** detects and classifies interference.
+- **Noise immunity** boosts performance in environments with non-802.11 noise.
+- **Transmit Power Control (TPC)** lowers RF output to minimize interference.
+
+ARM dynamically monitors and adjusts the network to provide optimal access for all users. The system has five levels of interference immunity, with each level offering increased protection against different types of interference, but higher levels may reduce the AP's range. Increasing the immunity level improves performance but can limit coverage.
+
+---
+
+
 
 ### Client Control
 
@@ -220,7 +252,7 @@ I hope this video has been helpful. Thank you for watching!
 
 # 📚🗂️🎥 Resources
 
--
+- https://www.arubanetworks.com/techdocs/Instant_83_WebHelp/Content/Instant_UG/ARM/Configuring_Radio_Settings.htm
   
 ---
 
