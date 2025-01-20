@@ -253,7 +253,8 @@ Controllers in different zones cannot manage each other directly, thus ensuring 
 - By using this feature, Aruba provides flexibility and improved traffic separation without compromising on performance or network security.
 
 
-![image](https://github.com/user-attachments/assets/44c8d76f-4ad3-42b4-8050-f0d8fe633c1b)
+![image](https://github.com/user-attachments/assets/841d2f46-49a4-48db-aa3e-88bbc03336e9)
+
 
 
 
