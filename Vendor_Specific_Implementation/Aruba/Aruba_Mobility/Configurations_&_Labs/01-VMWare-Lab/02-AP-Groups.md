@@ -39,9 +39,9 @@ An **AP Group** in Aruba refers to a logical collection of access points (APs) m
 
 ## Virtual APs (VAPs) and AP Groups
 
-### What is a Virtual AP (VAP)?
-
 A **Virtual AP (VAP)** allows a physical access point (AP) to broadcast multiple SSIDs (Service Set Identifiers). In an Aruba network, each VAP corresponds to a **Basic Service Set Identifier (BSSID)**, which is unique to the SSID. This enables each AP to support multiple WLANs through separate VAP profiles, with each profile representing a unique SSID and associated configuration.
+
+![image](https://github.com/user-attachments/assets/376c9037-0da2-433f-b37e-aee04f7c0029)
 
 ### VAP Configuration in AP Groups
 
