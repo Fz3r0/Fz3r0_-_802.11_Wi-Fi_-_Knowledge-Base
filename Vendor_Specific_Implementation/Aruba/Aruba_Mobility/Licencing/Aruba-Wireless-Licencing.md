@@ -118,7 +118,7 @@ ArubaOS offers a centralized licensing architecture that allows for the manageme
 
 ### License Calculation Example:
 
-If you have 3 mobility controllers and 350 access points, the required licenses would be:
+If you have 3 mobility controllers managed by 1 mobility master and 350 access points, the required licenses would be:
 
 | **Resource**              | **Required Quantity** |
 |--------------------------|-----------------------|
@@ -128,6 +128,8 @@ If you have 3 mobility controllers and 350 access points, the required licenses 
 | RF Protect Licenses       | 350                   |
 
 **Note**: RF Protect, WebRTC, and Policy Enforcement Firewall licenses are optional but recommended based on network needs.
+
+**Note 2:** The Mobility Master does not requiere additional Licence, just the Mobility Master licences for each Mobility Controller
 
 ## Summary
 
