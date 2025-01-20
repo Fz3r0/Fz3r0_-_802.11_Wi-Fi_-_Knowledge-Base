@@ -36,6 +36,14 @@
 
 ![image](https://github.com/user-attachments/assets/33951391-cd2e-4d22-a4a0-d5fcc34462d5)
 
+- Enter the user & password:
+
+![image](https://github.com/user-attachments/assets/fd723bc3-5c67-42cb-8538-a29f70b514b0)
+
+- Enter the GUI:
+
+![image](https://github.com/user-attachments/assets/0d14a71f-c98d-4144-a668-3018e47f82fa)
+
 
 
 
