@@ -159,13 +159,20 @@ Under the **Radio** section, you'll find settings for both **2.4 GHz** and **5 G
 - Enable **spectrum monitoring**.
 - Adjust the **transmit power**.
 
+![image](https://github.com/user-attachments/assets/6690e8b4-e6c3-465e-b8e8-10916e69983e)
+
 There are different values for the 2.4 GHz and 5 GHz bands, and you can also select **valid channels**. The **Advanced tab** offers additional options, such as interference immunity.
 
 ### Basic Settings:
 
 ![image](https://github.com/user-attachments/assets/4201edf9-86fe-4dd9-916a-09f4bbb05bef)
 
-## Advanced Settings:
+---
+
+### Advanced Settings:
+
+![image](https://github.com/user-attachments/assets/c8df57fc-b47b-4323-b1cb-f11c97ae7c0a)
+
 
 | **Parameter**                     | **Description**                                                                                                                                                                                                                                         |
 |------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -181,6 +188,8 @@ There are different values for the 2.4 GHz and 5 GHz bands, and you can also sel
 | **Very high throughput (VHT)**     | Ensure VHT is enabled for 5 GHz radio on 802.11ac devices. Clear to disable VHT, making the AP function as 802.11n.                                                                                                                                      |
 | **Smart antenna**                  | Select Enabled for smart antenna polarization on IAP-335 access points to optimize antenna selection based on collected data. This feature helps improve signal reception and performance. (Disabled by default).                                       |
 
+- **Note:** In Aruba networking, "split radio" refers to a feature on certain access points that essentially divides a single 5GHz radio band into two separate, smaller 5GHz radios, allowing the AP to operate with three distinct radio bands (one 2.4GHz and two separate 5GHz) - effectively giving the AP "tri-radio" functionality
+
 ### Interference Immunity
 
 Aruba’s interference immunity features enhance network performance by mitigating interference from other devices. Aruba’s Adaptive Radio Management (ARM) leverages multiple tools to optimize the network:
@@ -193,11 +202,9 @@ ARM dynamically monitors and adjusts the network to provide optimal access for a
 
 ---
 
-
-
 ### Client Control
 
-You can enable **Client Match** here, which we’ll cover in a future video. 
+You can enable **Client Match**.
 
 In the **Elements Settings**, you can define the IP addresses for backup options and local mobility switches. You can also configure IPv6 addresses here if needed.
 
