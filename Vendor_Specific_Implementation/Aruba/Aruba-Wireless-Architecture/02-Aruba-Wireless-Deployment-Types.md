@@ -57,6 +57,16 @@ In this guide, we will discuss three different wireless deployment types that ar
 
 **Some Aruba Infraestructure is in the Cloud, for example, the Mobility Master or Mobility Controller**. Remote deployments are designed for situations where employees or branch offices are located away from the central campus. In these scenarios, Aruba's **Remote Access Points (RAPs)** provide a seamless way to extend the corporate network to remote locations.
 
+#### Normal Remote Deployment:
+
+
+
+#### VIA Remote Deployment:
+
+![image](https://github.com/user-attachments/assets/0a4ab90d-143d-4992-ac86-912c8dbacbe1)
+
+VIA: Virtual Intranet Access (VIA) is part of the Aruba remote networks solution targeted for teleworkersand mobile users. VIA detects the users network environment (trusted and un-trusted) and automatically connects the user to their enterprise network. Trusted networks typically refers to a protected office network that allows users to directly access corporate intranet. Un-trusted networks are public Wi-Fi hotspots like airports, cafes, or home network. The VIA solution comes in two parts— VIA Windows desktop application and the controller configuration. VIA Windows Application—Teleworkers and mobile users can install a light weight application on their Microsoft Windows computers to connect to their enterprise network from remote locations (see “VIAWindows Application”). Controller Configuration—To set up virtual intranet access for remote users, you must configure your controller to include setting up user roles, authentication, and connection profiles. You can use either WebUI or Command Line to configure your controller (see “Configuring the VIAController” ).
+
 ### Key Components:
 
 - **Remote Access Points (RAPs)**: These APs are deployed in remote offices or home offices and are connected to the corporate network over the internet.
