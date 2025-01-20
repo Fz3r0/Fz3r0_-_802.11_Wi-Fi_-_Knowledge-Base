@@ -16,10 +16,12 @@
 # 📝❓📄 `Index`
 
 
+# Aruba Central Bible
+
+- [Aruba Central Bible](https://www.arubanetworks.com/techdocs/central/2.5.7/content/nms/overview/overview.htm)
 
 
-
-# HPE Aruba Networking Central (Aruba Central)
+## HPE Aruba Networking Central (Aruba Central)
 
 Aruba Central (also known as HPE Aruba Networking Central) is a cloud-based platform designed to manage networking devices like Wi-Fi access points, switches, and security appliances. It offers a single interface to control and monitor your network, providing features like automated network management, AI-driven insights for performance optimization, and enhanced security to help simplify and improve network operations in enterprise environments.
 
