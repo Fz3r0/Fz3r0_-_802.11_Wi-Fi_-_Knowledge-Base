@@ -91,7 +91,10 @@ VIA: Virtual Intranet Access (VIA) is part of the Aruba remote networks solution
 
 ### Overview
 
-**Mobity Master is in the Cloud, and the Mobility Controllers are on-site or virtualized.** Branch deployments are used to extend the corporate network to smaller locations, such as regional offices, that may not require the full complexity of a campus deployment. This deployment typically uses smaller, cost-effective branch office controllers.
+**Mobity Master is in the Cloud, and the Mobility Controllers are on-site _(or virtualized on-site)_.** Branch deployments are used to extend the corporate network to smaller locations, such as regional offices, that may not require the full complexity of a campus deployment. This deployment typically uses smaller, cost-effective branch office controllers.
+
+![image](https://github.com/user-attachments/assets/fceda611-17dd-4793-bcc0-ef085be7a28e)
+
 
 ### Key Components:
 
