@@ -113,10 +113,10 @@ Aruba uses **two main types of tunnels**:
 
 - **Example Calculations**:
   1. **Single AP with 3 SSIDs and 2 Radios**:
-     - (3 SSIDs) x (2 Radios) + 1 Keep-Alive = 7 Tunnels
-  2. **10 APs, Each with 6 SSIDs and 2 Radios**:
-     - (6 SSIDs) x (2 Radios) + 1 Keep-Alive = 13 Tunnels per AP
-     - 13 Tunnels per AP x 10 APs = 130 Total Tunnels
+     - (3 SSIDs) x (2 Radios) + 1 Keep-Alive = **7 Tunnels** <br><br>
+  2. **10 APs, Each with 3 SSIDs and 2 Radios**:
+     - (3 SSIDs) x (2 Radios) + 1 Keep-Alive = **7 Tunnels _(per AP)_**
+     - 7 Tunnels per AP x 10 APs = **70 Total Tunnels**
 
 ---
 
