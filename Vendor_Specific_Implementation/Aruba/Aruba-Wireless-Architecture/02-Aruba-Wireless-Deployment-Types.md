@@ -59,7 +59,7 @@ In this guide, we will discuss three different wireless deployment types that ar
 
 #### Normal Remote Deployment:
 
-
+![image](https://github.com/user-attachments/assets/b7d533c2-231d-4bdd-8fed-e77cb4c5fd55)
 
 #### VIA Remote Deployment:
 
