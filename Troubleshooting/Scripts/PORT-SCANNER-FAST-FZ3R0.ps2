@@ -1,0 +1,2 @@
+$computer = "10.10.0.100"
+1..1000 | ForEach-Object { Test-NetConnection -ComputerName $computer -Port $_ }
