@@ -7731,6 +7731,10 @@ Time synchronization is essential in Wi-Fi networks to ensure reliable and error
 
 - [Beacon/SSID Calculator](https://revolutionwifi.blogspot.com/p/ssid-overhead-calculator.html)
 
+## FSPL Calculator - Free Space Path Loss
+
+- [Free Space Path Loss Calculator](https://macdonaldwits.com/fspl-calculator)
+
 ## Gain & Bandwith
 
 ````py
