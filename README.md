@@ -8766,7 +8766,10 @@ _Even if you getting for example 360mbps of Data Rate, it will noever be the act
 
 
 
+## WifiInfoView: SSID & BSSID Manual Selector
+_WifiInfoView is a lightweight Wi-Fi scanner that shows all nearby networks and lets you manually connect to the exact BSSID of your choice, giving you full control over which AP you're using._
 
+- [WifiInfoView](https://www.nirsoft.net/utils/wifi_information_view.html#google_vignette)
 
 
 
