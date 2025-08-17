@@ -17,6 +17,8 @@
 
 # 🛜🐶🔐 Ruckus SmartZone: `Configure AAA 802.1X Authentication with Windows Server RADIUS (NPS)`
 
+<img width="362" height="425" alt="image" src="https://github.com/user-attachments/assets/754f0edb-3043-4951-89cb-042bea295da8" />
+
 
 <img width="360" height="414" alt="image" src="https://github.com/user-attachments/assets/146f58fd-b407-42cd-99b3-ff56a30f9080" />
 
