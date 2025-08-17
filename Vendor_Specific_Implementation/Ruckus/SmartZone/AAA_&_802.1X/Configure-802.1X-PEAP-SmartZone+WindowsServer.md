@@ -32,6 +32,25 @@
 
 
 
+## PEAP and Certificate explanation
+
+PEAP Certificate Validation real life example:
+
+- Many Android devices (especially Xiaomi, Huawei, some Samsung models) default to “Do not validate certificate” when configuring Wi-Fi with EAP-PEAP/MSCHAPv2.
+
+- This allows them to connect without prompting the user about the RADIUS server’s certificate, even if it’s self-signed or untrusted.
+
+- While convenient, it exposes users to “evil twin” or rogue AP attacks, since the client will trust any server that presents a PEAP tunnel.
+
+By contrast:
+
+- iOS and macOS are stricter: they prompt the user to explicitly trust the server certificate the first time.
+
+- Windows also enforces certificate validation by default, warning if the CA isn’t trusted.
+
+On Android, users can manually enable certificate validation by selecting “Use system certificates” and specifying the trusted CA. However, many skip this step or leave it as “Do not validate,” creating a security gap.
+
+
 ## Descargar certificado a mano (manual fast & ez)
 
 
