@@ -90,6 +90,30 @@ Llévalo a tu laptop (Si estás en RDP: puedes copiarlo con portapapeles compart
 
 <img width="360" height="310" alt="image" src="https://github.com/user-attachments/assets/bd5fddfa-15ce-4c17-abd6-d4bc056b81f7" />
 
+Doble click para abrirlo y click en "open"
+
+<img width="486" height="359" alt="image" src="https://github.com/user-attachments/assets/a5efe9ce-4f98-4c72-8487-b048c40da2bc" />
+
+Install Certificate:
+
+<img width="412" height="522" alt="image" src="https://github.com/user-attachments/assets/8f522ff4-00e0-4ab3-a3ba-289d15f08607" />
+
+Puede ser usuer o machine, en la vida real sería solo para el user (client), pero en este caso le daré a toda mi PC Admin
+
+<img width="543" height="529" alt="image" src="https://github.com/user-attachments/assets/58be6125-9f50-4d17-bcd2-3c299d082553" />
+
+Auto select:
+
+<img width="534" height="529" alt="image" src="https://github.com/user-attachments/assets/33aef98a-a780-431b-accd-12f7a5bf98b9" />
+
+Fnish!
+
+<img width="536" height="527" alt="image" src="https://github.com/user-attachments/assets/3b083a47-8508-48ba-b123-5998d48f58df" />
+
+<img width="522" height="588" alt="image" src="https://github.com/user-attachments/assets/1361d29b-ee67-4653-899e-122fa8c364bf" />
+
+Ahora ya solo queda pribar, ya no se debe´ria ver la alerta ni por RDP, ni por Wi-Fi, ni por HTTP, ni nada que esté alojado en ese server con ese certificado que tambien lo use allá. 
+
 ---
 
 ## Unir laptop a dominio (certificado automatico y enrollment)
