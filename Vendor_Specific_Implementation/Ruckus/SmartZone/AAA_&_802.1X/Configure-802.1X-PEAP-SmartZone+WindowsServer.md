@@ -91,8 +91,16 @@ Navega en el árbol:
 - Certificates (Local Computer) > Trusted Root Certification Authorities > Certificates
 - Ahí busca tu fz3r0-WINSER-FZ3R0-1-CA.
 - Click derecho → All Tasks → Export…
+
+<img width="1258" height="522" alt="image" src="https://github.com/user-attachments/assets/fb0aefff-623b-44de-b1eb-797b07a00d3c" />
+
 - No exportes la clave privada!!!
-- Guárdalo como .CER.
+- Guárdalo como .CER. Base 64 Encoded
+- Nombre ``
+
+<img width="539" height="528" alt="image" src="https://github.com/user-attachments/assets/d1e35bf7-43e6-443e-a85a-33e361ebc6ce" />
+
+
 
 Ese es el bueno para distribuir!!!
 
