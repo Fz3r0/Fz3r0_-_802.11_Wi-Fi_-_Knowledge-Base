@@ -51,74 +51,77 @@ By contrast:
 On Android, users can manually enable certificate validation by selecting “Use system certificates” and specifying the trusted CA. However, many skip this step or leave it as “Do not validate,” creating a security gap.
 
 
+
+
+
+
+
+
+
+
+
 ##  Exportar el certificado raíz de la CA en Windows Server (manual fast & ez)
 
-Abre la consola de Certificados de la CA
+Pasos para sacar el correcto (.CER de la CA):
 
-- Ve a Start → Administrative Tools → Certification Authority.
-- O abre certsrv.msc.
+En tu Windows Server, abre la consola:
 
-<img width="695" height="336" alt="image" src="https://github.com/user-attachments/assets/7c9e7b62-1a4e-4dcf-9b4a-214421afcd87" />
+mmc.exe
 
-Encuentra tu certificado raíz
+<img width="763" height="295" alt="image" src="https://github.com/user-attachments/assets/7dff1b50-2941-4c4d-a824-fa37af947853" />
 
-- En el árbol de la izquierda, dale clic derecho a tu CA (ejemplo: fz3r0-WINSER-FZ3R0-1-CA).
-- Selecciona Properties.
-- Ve a la pestaña General.
-- Ahí verás el certificado de la CA.
+Menú File → Add/Remove Snap-in
 
-<img width="1062" height="911" alt="image" src="https://github.com/user-attachments/assets/990495e0-ae2a-4390-800e-9083c91c535e" />
+<img width="336" height="319" alt="image" src="https://github.com/user-attachments/assets/0664fec6-a5f4-45a0-a0a4-6ce9e8b021c2" />
 
-Exporta el certificado
+Elige Certificates → dale a “Computer account” → “Local Computer”.
 
-- Haz clic en View Certificate.
-- Pestaña Details → Copy to File….
+<img width="855" height="591" alt="image" src="https://github.com/user-attachments/assets/7168fd77-df8e-4c29-9874-f0dd73bb6da1" />
 
-<img width="964" height="535" alt="image" src="https://github.com/user-attachments/assets/ffcf49cb-cb05-4810-93ac-9a61653fedff" />
+<img width="524" height="393" alt="image" src="https://github.com/user-attachments/assets/9a0617da-debb-44ff-bb64-5657f22bd203" />
 
-Se abrirá el asistente:
+Ve a Certificates (Local Computer) → Trusted Root Certification Authorities → Certificates.
 
-- Elige Base-64 encoded X.509 (.CER).
+<img width="518" height="396" alt="image" src="https://github.com/user-attachments/assets/c0698e8e-dc3d-4d3b-ab64-fc924226cb03" />
 
-<img width="539" height="533" alt="image" src="https://github.com/user-attachments/assets/012ee0f8-6bd2-48fd-87c1-810c0ad07928" />
- 
-- Guarda el archivo en alguna carpeta, por ejemplo: `C:\Users\Administrator\Desktop\Fz3r0-dojo-cert.cer`
+Busca el cert con el nombre de tu CA:
 
-<img width="542" height="529" alt="image" src="https://github.com/user-attachments/assets/e518faa7-123f-4b93-831f-e09423c46202" />
+Navega en el árbol:
 
-Llévalo a tu laptop (Si estás en RDP: puedes copiarlo con portapapeles compartido o habilitar Shared Drive en tu cliente RDP. Alternativa: súbelo a un share (\\server\c$) o incluso mándalo por correo a ti mismo.)
+- Certificates (Local Computer) > Trusted Root Certification Authorities > Certificates
+- Ahí busca tu fz3r0-WINSER-FZ3R0-1-CA.
+- Click derecho → All Tasks → Export…
+- No exportes la clave privada!!!
+- Guárdalo como .CER.
 
-<img width="360" height="310" alt="image" src="https://github.com/user-attachments/assets/bd5fddfa-15ce-4c17-abd6-d4bc056b81f7" />
-
-Doble click para abrirlo y click en "open"
-
-<img width="486" height="359" alt="image" src="https://github.com/user-attachments/assets/a5efe9ce-4f98-4c72-8487-b048c40da2bc" />
-
-Install Certificate:
-
-<img width="412" height="522" alt="image" src="https://github.com/user-attachments/assets/8f522ff4-00e0-4ab3-a3ba-289d15f08607" />
-
-Puede ser usuer o machine, en la vida real sería solo para el user (client), pero en este caso le daré a toda mi PC Admin
-
-<img width="543" height="529" alt="image" src="https://github.com/user-attachments/assets/58be6125-9f50-4d17-bcd2-3c299d082553" />
-
-En esta pantalla, elige la segunda opción: "Place all certificates in the following store".
-
-- Luego clic en Browse… → selecciona Trusted Root Certification Authorities.
-
-<img width="306" height="279" alt="image" src="https://github.com/user-attachments/assets/872fc5d0-f558-4634-8f86-8c7e090f2200" />
-
-<img width="534" height="529" alt="image" src="https://github.com/user-attachments/assets/d0b0a23c-3067-474a-875c-4f800fb3ca1c" />
-
-<img width="532" height="523" alt="image" src="https://github.com/user-attachments/assets/536b7edd-4acd-4fa5-a1cc-c402c393777e" />
+Ese es el bueno para distribuir!!!
 
 
-- Finish → aceptar el warning que dice algo como “Adding a certificate to the Trusted Root store is a security risk…” → aceptar.
 
-<img width="516" height="585" alt="image" src="https://github.com/user-attachments/assets/a41e57b6-9677-4992-bee5-028572ef1167" />
 
-Ahora ya solo queda pribar, ya no se debe´ria ver la alerta ni por RDP, ni por Wi-Fi, ni por HTTP, ni nada que esté alojado en ese server con ese certificado que tambien lo use allá. 
 
+
+
+
+Issued to y Issued by iguales (ejemplo: fz3r0-WINSER-FZ3R0-1-CA).
+
+Ese es tu CA raíz.
+
+Haz clic derecho → All Tasks → Export…
+
+Elige No exportar clave privada.
+
+Formato: DER encoded .CER (el más simple).
+
+Guárdalo (ejemplo: Fz3r0-RootCA.cer).
+
+Llévalo a tu laptop (o cualquier cliente).
+
+Doble click → Install Certificate.
+
+Elige Local Machine (no Current User, mejor para que todas las cuentas lo usen).
+
+Trusted Root Certification Authorities como almacén.
 
 
 ---
