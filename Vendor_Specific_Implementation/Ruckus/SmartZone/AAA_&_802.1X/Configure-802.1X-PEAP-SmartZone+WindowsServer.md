@@ -62,76 +62,19 @@ On Android, users can manually enable certificate validation by selecting “Use
 
 ##  Exportar el certificado raíz de la CA en Windows Server (manual fast & ez)
 
-Pasos para sacar el correcto (.CER de la CA):
+ai aqui y bajar el PERSONAL!!!!
 
-En tu Windows Server, abre la consola:
+<img width="1896" height="521" alt="image" src="https://github.com/user-attachments/assets/c5f036e9-6b59-42c0-acd3-4e8e4c3da4f7" />
 
-mmc.exe
+Exportar
 
-<img width="763" height="295" alt="image" src="https://github.com/user-attachments/assets/7dff1b50-2941-4c4d-a824-fa37af947853" />
+<img width="1720" height="498" alt="image" src="https://github.com/user-attachments/assets/6b94f47c-b403-4f2e-bbd1-822989723d64" />
 
-Menú File → Add/Remove Snap-in
+no epxortar llave privad
 
-<img width="336" height="319" alt="image" src="https://github.com/user-attachments/assets/0664fec6-a5f4-45a0-a0a4-6ce9e8b021c2" />
+<img width="550" height="537" alt="image" src="https://github.com/user-attachments/assets/da5ab2dd-5fb1-4122-b501-a1f35a8bf856" />
 
-Elige Certificates → dale a “Computer account” → “Local Computer”.
-
-<img width="855" height="591" alt="image" src="https://github.com/user-attachments/assets/7168fd77-df8e-4c29-9874-f0dd73bb6da1" />
-
-<img width="524" height="393" alt="image" src="https://github.com/user-attachments/assets/9a0617da-debb-44ff-bb64-5657f22bd203" />
-
-Ve a Certificates (Local Computer) → Trusted Root Certification Authorities → Certificates.
-
-<img width="518" height="396" alt="image" src="https://github.com/user-attachments/assets/c0698e8e-dc3d-4d3b-ab64-fc924226cb03" />
-
-Busca el cert con el nombre de tu CA:
-
-Navega en el árbol:
-
-- Certificates (Local Computer) > Trusted Root Certification Authorities > Certificates
-- Ahí busca tu fz3r0-WINSER-FZ3R0-1-CA.
-- Click derecho → All Tasks → Export…
-
-<img width="1258" height="522" alt="image" src="https://github.com/user-attachments/assets/fb0aefff-623b-44de-b1eb-797b07a00d3c" />
-
-- No exportes la clave privada!!!
-- Guárdalo como .CER. Base 64 Encoded
-- Nombre, fijars ebien en la ruta par ano perderlo `C:\Users\Administrator\Desktop\Fz3r0-ROOT-CA.cer`
-
-<img width="545" height="534" alt="image" src="https://github.com/user-attachments/assets/a20f544e-310b-4abb-9d67-9479eb0a15e1" />
-
-Ahora si , ya tienes el file ese instalar en otra PC:
-
-<img width="357" height="357" alt="image" src="https://github.com/user-attachments/assets/85e471b1-bea8-4cd0-80e8-9e4516d89306" />
-
-
-
-
-
-
-
-
-
-Issued to y Issued by iguales (ejemplo: fz3r0-WINSER-FZ3R0-1-CA).
-
-Ese es tu CA raíz.
-
-Haz clic derecho → All Tasks → Export…
-
-Elige No exportar clave privada.
-
-Formato: DER encoded .CER (el más simple).
-
-Guárdalo (ejemplo: Fz3r0-RootCA.cer).
-
-Llévalo a tu laptop (o cualquier cliente).
-
-Doble click → Install Certificate.
-
-Elige Local Machine (no Current User, mejor para que todas las cuentas lo usen).
-
-Trusted Root Certification Authorities como almacén.
-
+encode 64
 
 ---
 
