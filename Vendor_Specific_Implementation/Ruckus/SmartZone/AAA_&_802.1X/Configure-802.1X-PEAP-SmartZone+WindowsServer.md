@@ -184,7 +184,7 @@ A partir de ese momento, tu laptop es parte del dominio. Ya puedes aplicar Group
 
 # 🗃️ Resources
 
-- 
+- https://learn.microsoft.com/es-es/azure/vpn-gateway/vpn-gateway-certificates-point-to-site
 
 ---
 
