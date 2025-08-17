@@ -20,6 +20,11 @@
 
 <img width="360" height="414" alt="image" src="https://github.com/user-attachments/assets/146f58fd-b407-42cd-99b3-ff56a30f9080" />
 
+<img width="392" height="404" alt="image" src="https://github.com/user-attachments/assets/aa7d71d4-a1f0-4c02-928c-c4be50befcd0" />
+
+<img width="404" height="515" alt="image" src="https://github.com/user-attachments/assets/ef75feef-0158-47b7-8316-18a0e7ca632a" />
+
+
 
 # 🗃️ Resources
 
