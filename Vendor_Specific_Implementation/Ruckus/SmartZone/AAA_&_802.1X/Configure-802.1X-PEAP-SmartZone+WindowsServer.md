@@ -58,6 +58,8 @@ Abre la consola de Certificados de la CA
 - Ve a Start → Administrative Tools → Certification Authority.
 - O abre certsrv.msc.
 
+<img width="695" height="336" alt="image" src="https://github.com/user-attachments/assets/7c9e7b62-1a4e-4dcf-9b4a-214421afcd87" />
+
 Encuentra tu certificado raíz
 
 - En el árbol de la izquierda, dale clic derecho a tu CA (ejemplo: fz3r0-WINSER-FZ3R0-1-CA).
@@ -65,17 +67,28 @@ Encuentra tu certificado raíz
 - Ve a la pestaña General.
 - Ahí verás el certificado de la CA.
 
+<img width="1062" height="911" alt="image" src="https://github.com/user-attachments/assets/990495e0-ae2a-4390-800e-9083c91c535e" />
+
 Exporta el certificado
 
 - Haz clic en View Certificate.
 - Pestaña Details → Copy to File….
 
+<img width="964" height="535" alt="image" src="https://github.com/user-attachments/assets/ffcf49cb-cb05-4810-93ac-9a61653fedff" />
+
 Se abrirá el asistente:
 
 - Elige Base-64 encoded X.509 (.CER).
-- Guarda el archivo en alguna carpeta, por ejemplo: C:\CAcert.cer.
+
+<img width="539" height="533" alt="image" src="https://github.com/user-attachments/assets/012ee0f8-6bd2-48fd-87c1-810c0ad07928" />
+ 
+- Guarda el archivo en alguna carpeta, por ejemplo: `C:\Users\Administrator\Desktop\Fz3r0-dojo-cert.cer`
+
+<img width="542" height="529" alt="image" src="https://github.com/user-attachments/assets/e518faa7-123f-4b93-831f-e09423c46202" />
 
 Llévalo a tu laptop (Si estás en RDP: puedes copiarlo con portapapeles compartido o habilitar Shared Drive en tu cliente RDP. Alternativa: súbelo a un share (\\server\c$) o incluso mándalo por correo a ti mismo.)
+
+<img width="360" height="310" alt="image" src="https://github.com/user-attachments/assets/bd5fddfa-15ce-4c17-abd6-d4bc056b81f7" />
 
 ---
 
