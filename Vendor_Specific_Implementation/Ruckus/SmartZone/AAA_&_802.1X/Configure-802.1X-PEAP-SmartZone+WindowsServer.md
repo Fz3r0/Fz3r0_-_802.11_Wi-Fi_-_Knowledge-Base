@@ -32,6 +32,51 @@
 
 
 
+## Descargar certificado a mano (manual fast & ez)
+
+
+
+---
+
+## Unir laptop a dominio (certificado automatico y enrollment)
+
+Pasos para unir tu laptop a tu dominio fz3r0.dojo
+
+1. Confirma la red/DNS
+
+- Tu laptop debe tener como DNS principal la IP de tu controlador de dominio (el Windows Server donde instalaste AD DS).
+- Ejemplo: si tu servidor tiene la IP 192.168.1.100, en la laptop pon eso como DNS (si usas otro DNS no va a resolver fz3r0.dojo).
+
+2. Comprueba con (Debe devolverte la IP de tu server):
+
+- nslookup fz3r0.dojo
+
+Abre configuración del sistema en tu laptop:
+
+- Haz clic derecho en Este equipo → Propiedades / O ve a Panel de control → Sistema y seguridad → Sistema.
+- Ahí verás el nombre del equipo y el grupo de trabajo.
+- Cambiar a dominio
+- Haz clic en Cambiar configuración (a la derecha, donde dice “Nombre del equipo, dominio y grupo de trabajo”).
+- En la nueva ventana, dale a Cambiar….
+- Marca Dominio y escribe: fz3r0.dojo
+
+3. Credenciales
+
+- Te pedirá un usuario con permisos en el dominio (generalmente tu Administrador de AD).
+- Ejemplo Usuario: fz3r0\Administrator
+- Password: el del admin que creaste al instalar AD.
+- Exit y reinicio
+
+Si todo sale bien, te dirá “¡Bienvenido al dominio fz3r0.dojo!”.
+
+- Dale aceptar y reinicia la laptop.
+- Inicia sesión con tu usuario de dominio
+- En el login ya no solo verás la cuenta local. Ahora podrás elegir un usuario de AD.
+- Ejemplo Usuario: fz3r0\juanito
+- Password: el que configuraste en AD.
+
+A partir de ese momento, tu laptop es parte del dominio. Ya puedes aplicar Group Policies (GPO), empujar certificados, mapear carpetas, etc.
+
 # 🗃️ Resources
 
 - 
