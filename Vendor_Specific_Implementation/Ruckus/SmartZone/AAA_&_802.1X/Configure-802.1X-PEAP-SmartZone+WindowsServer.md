@@ -119,6 +119,16 @@ En esta pantalla, elige la segunda opción: "Place all certificates in the follo
 
 Ahora ya solo queda pribar, ya no se debe´ria ver la alerta ni por RDP, ni por Wi-Fi, ni por HTTP, ni nada que esté alojado en ese server con ese certificado que tambien lo use allá. 
 
+
+
+---
+
+Facil y rpaido, bajar del RDP ja!
+
+<img width="410" height="919" alt="image" src="https://github.com/user-attachments/assets/1ecc84f3-57b8-4921-bda3-abbb9e8a3d3e" />
+
+
+
 ---
 
 ## Unir laptop a dominio (certificado automatico y enrollment)
