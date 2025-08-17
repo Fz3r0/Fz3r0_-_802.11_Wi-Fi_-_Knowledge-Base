@@ -96,13 +96,14 @@ Navega en el árbol:
 
 - No exportes la clave privada!!!
 - Guárdalo como .CER. Base 64 Encoded
-- Nombre ``
+- Nombre, fijars ebien en la ruta par ano perderlo `C:\Users\Administrator\Desktop\Fz3r0-ROOT-CA.cer`
 
-<img width="539" height="528" alt="image" src="https://github.com/user-attachments/assets/d1e35bf7-43e6-443e-a85a-33e361ebc6ce" />
+<img width="545" height="534" alt="image" src="https://github.com/user-attachments/assets/a20f544e-310b-4abb-9d67-9479eb0a15e1" />
 
+Ahora si , ya tienes el file ese instalar en otra PC:
 
+<img width="357" height="357" alt="image" src="https://github.com/user-attachments/assets/85e471b1-bea8-4cd0-80e8-9e4516d89306" />
 
-Ese es el bueno para distribuir!!!
 
 
 
