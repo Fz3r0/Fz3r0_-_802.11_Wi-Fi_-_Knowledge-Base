@@ -105,21 +105,17 @@ Puede ser usuer o machine, en la vida real sería solo para el user (client), pe
 En esta pantalla, elige la segunda opción: "Place all certificates in the following store".
 
 - Luego clic en Browse… → selecciona Trusted Root Certification Authorities.
+
+<img width="306" height="279" alt="image" src="https://github.com/user-attachments/assets/872fc5d0-f558-4634-8f86-8c7e090f2200" />
+
+<img width="534" height="529" alt="image" src="https://github.com/user-attachments/assets/d0b0a23c-3067-474a-875c-4f800fb3ca1c" />
+
+<img width="532" height="523" alt="image" src="https://github.com/user-attachments/assets/536b7edd-4acd-4fa5-a1cc-c402c393777e" />
+
+
 - Finish → aceptar el warning que dice algo como “Adding a certificate to the Trusted Root store is a security risk…” → aceptar.
 
-
-
-
-
-
-
-
-
-Liston
-
-<img width="536" height="527" alt="image" src="https://github.com/user-attachments/assets/3b083a47-8508-48ba-b123-5998d48f58df" />
-
-<img width="522" height="588" alt="image" src="https://github.com/user-attachments/assets/1361d29b-ee67-4653-899e-122fa8c364bf" />
+<img width="516" height="585" alt="image" src="https://github.com/user-attachments/assets/a41e57b6-9677-4992-bee5-028572ef1167" />
 
 Ahora ya solo queda pribar, ya no se debe´ria ver la alerta ni por RDP, ni por Wi-Fi, ni por HTTP, ni nada que esté alojado en ese server con ese certificado que tambien lo use allá. 
 
