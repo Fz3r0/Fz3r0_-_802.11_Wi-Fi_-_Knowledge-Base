@@ -51,9 +51,31 @@ By contrast:
 On Android, users can manually enable certificate validation by selecting “Use system certificates” and specifying the trusted CA. However, many skip this step or leave it as “Do not validate,” creating a security gap.
 
 
-## Descargar certificado a mano (manual fast & ez)
+##  Exportar el certificado raíz de la CA en Windows Server (manual fast & ez)
 
+Abre la consola de Certificados de la CA
 
+- Ve a Start → Administrative Tools → Certification Authority.
+- O abre certsrv.msc.
+
+Encuentra tu certificado raíz
+
+- En el árbol de la izquierda, dale clic derecho a tu CA (ejemplo: fz3r0-WINSER-FZ3R0-1-CA).
+- Selecciona Properties.
+- Ve a la pestaña General.
+- Ahí verás el certificado de la CA.
+
+Exporta el certificado
+
+- Haz clic en View Certificate.
+- Pestaña Details → Copy to File….
+
+Se abrirá el asistente:
+
+- Elige Base-64 encoded X.509 (.CER).
+- Guarda el archivo en alguna carpeta, por ejemplo: C:\CAcert.cer.
+
+Llévalo a tu laptop (Si estás en RDP: puedes copiarlo con portapapeles compartido o habilitar Shared Drive en tu cliente RDP. Alternativa: súbelo a un share (\\server\c$) o incluso mándalo por correo a ti mismo.)
 
 ---
 
