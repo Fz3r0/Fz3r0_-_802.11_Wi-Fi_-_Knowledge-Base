@@ -102,11 +102,20 @@ Puede ser usuer o machine, en la vida real sería solo para el user (client), pe
 
 <img width="543" height="529" alt="image" src="https://github.com/user-attachments/assets/58be6125-9f50-4d17-bcd2-3c299d082553" />
 
-Auto select:
+En esta pantalla, elige la segunda opción: "Place all certificates in the following store".
 
-<img width="534" height="529" alt="image" src="https://github.com/user-attachments/assets/33aef98a-a780-431b-accd-12f7a5bf98b9" />
+- Luego clic en Browse… → selecciona Trusted Root Certification Authorities.
+- Finish → aceptar el warning que dice algo como “Adding a certificate to the Trusted Root store is a security risk…” → aceptar.
 
-Fnish!
+
+
+
+
+
+
+
+
+Liston
 
 <img width="536" height="527" alt="image" src="https://github.com/user-attachments/assets/3b083a47-8508-48ba-b123-5998d48f58df" />
 
