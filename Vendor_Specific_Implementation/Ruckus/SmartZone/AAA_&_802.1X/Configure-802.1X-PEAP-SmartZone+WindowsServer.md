@@ -17,6 +17,63 @@
 
 # 🛜🐶🔐 Ruckus SmartZone: `Configure AAA 802.1X Authentication with Windows Server RADIUS (NPS)`
 
+
+
+
+
+
+
+
+
+
+
+
+
+## Troubleshooting 802.1X Authentication
+
+- Controller as Proxy (Authenticator will be the Controller):
+
+<img width="1694" height="379" alt="image" src="https://github.com/user-attachments/assets/d00d0fe4-c7a7-4907-877c-b9ea5d94c132" />
+
+- AP as authenticator
+
+<img width="1384" height="421" alt="image" src="https://github.com/user-attachments/assets/51449d89-3506-4305-9abe-e04aa650df9c" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Certificates in 802.1X
+
+
 <img width="362" height="425" alt="image" src="https://github.com/user-attachments/assets/754f0edb-3043-4951-89cb-042bea295da8" />
 
 <img width="371" height="415" alt="image" src="https://github.com/user-attachments/assets/2832be0f-fd95-4042-8de8-4cb3bffe37f4" />
