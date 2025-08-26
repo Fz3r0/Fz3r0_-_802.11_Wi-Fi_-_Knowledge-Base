@@ -29,6 +29,26 @@
 
 
 
+
+
+
+# RADIUS Logs in Windows Server (NPS)
+
+Así es como se ven los **logs de RADIUS (NPS)** en el Visor de Eventos de Windows Server:
+
+- Ruta: **Event Viewer** → `Custom Views` → `Server Roles` → `Network Policy and Access Services`
+
+<img width="800" height="366" alt="image" src="https://github.com/user-attachments/assets/7aafe3ec-5d89-4b95-a474-ff782fe25f03" />
+
+- Los eventos de autenticación RADIUS aparecen con el **Source**: `Microsoft Windows security auditing.`
+- **Event ID 6272** = "Network Policy Server granted access"** (autenticación exitosa).
+
+## Ejemplo de Detalle de Evento
+
+
+
+
+
 ## Troubleshooting 802.1X Authentication
 
 - Controller as Proxy (Authenticator will be the Controller):
