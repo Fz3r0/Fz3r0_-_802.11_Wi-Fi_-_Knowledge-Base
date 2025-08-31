@@ -21,23 +21,95 @@
 
 # 🏝️📡 Aruba Mobility :: `AOS 8x Architecture`
 
+Aruba 8.x Architecture introduces a centralized and scalable design where the **Mobility Master (MM)** acts as the central brain for configuration, licensing, monitoring, and upgrades, while the **Mobility Controllers (MC)**, also known as **Managed Nodes (MN)** when under an MM, handle APs and client traffic. Using a **hierarchical configuration model**, all policies flow top-down from the MM, enabling flexibility across global, regional, and site levels, with deployment options ranging from a single MM with multiple MCs to redundant MMs for high availability.
 
+## 🧠 Mobility Master (MM)
 
+**Definition:** The central brain of the Aruba 8.x architecture. It does not handle client traffic but manages the configuration, licenses, monitoring, and upgrades of all Mobility Controllers (MC).  
 
+**Functions:**  
 
+- **Hierarchical Configuration Model:** Configuration flows top-down, from the MM to the MCs (Managed Nodes).  
+- **Centralized Licensing:** The MM acts as a license server and distributes licenses to all MCs.  
+- **Centralized Image Upgrades:** Software images are uploaded once to the MM and distributed to all MCs.  
+- **Centralized Visibility & Monitoring:** A single dashboard for APs, clients, and network policies.  
+- **Multi-Version Support:** An MM can manage MCs running different, but compatible, versions of ArubaOS.  
 
+⚠️ **Note:** APs never connect directly to an MM. Only MCs terminate AP tunnels and handle client data (in case the AP is tunneled).
 
+## 📦 Mobility Controller (MC) / Managed Node (MN)
 
+**Definition:** The device that terminates AP tunnels, authenticates clients, and handles client traffic.  
+
+- When standalone, it is simply called an **MC**.  
+- When connected under an MM, it becomes a **Managed Node (MN)**.  
+
+**Role in the hierarchy:**  
+
+- Inherits configuration from the MM.  
+- Receives licenses from the MM.  
+- Runs the control plane + data plane for APs and clients.
+
+✅ **Key Point:** Every MN is an MC, but not every MC is an MN **(only when managed by an MM)**.
+
+## 🗂️ Hierarchical Configuration Model
+
+**Concept:** Configuration is structured and flows from the top down.  
+
+1. **Global (root at MM):** Policies and parameters applied to all nodes.  
+2. **Folders (e.g., geo-loc1, geo-loc2):** Logical separation by region or function.  
+3. **Groups (e.g., site1, site2):** Site-specific configuration.  
+4. **MC/MN:** The final node that enforces configuration and serves APs and clients.  
+
+**Advantages:**  
+
+- Centralized and scalable management.  
+- Flexibility to apply global, regional, or site-specific settings.  
+- Reduces misconfiguration and improves consistency.
+
+## 🏛️ Deployment Designs
+
+### 1️⃣ One MM with Multiple MCs
+
+- The most common enterprise design.  
+- One MM at HQ, managing several MCs deployed at different data centers or branches.  
+- All licenses, policies, and upgrades flow from the MM.  
+
+### 2️⃣ Redundant MMs with Multiple MCs
+
+- Recommended for high availability.  
+- Two MMs in a cluster (Primary/Backup).  
+- If one MM fails, the other continues managing licensing, configuration, and monitoring.  
+- MCs remain operational, connected to APs and clients without disruption.  
+
+### 3️⃣ Standalone MC
+
+- A single MC without an MM.  
+- Manages APs and clients directly.  
+- Simpler, but lacks hierarchical configuration, centralized licensing, and unified upgrades.  
+
+## 📊 MM vs MC (Summary)
+
+| ⚙️ Feature               | 🧠 Mobility Master (MM)                     | 📦 Mobility Controller (MC) / Managed Node (MN) |
+|--------------------------|----------------------------------------------|------------------------------------------------|
+| Role                     | Centralized configuration, licensing, upgrades| Terminates AP tunnels, authenticates users, handles client traffic |
+| Handles APs/Clients      | ❌ No                                        | ✅ Yes                                         |
+| Visibility & Monitoring  | Global, centralized                          | Local (site-level)                             |
+| Licenses                 | Acts as license server                       | Receives licenses from MM                      |
+| Version Support          | Can manage MCs with different versions       | Must run a compatible ArubaOS version          |
+| Hierarchy Name           | Root / Top node                              | Managed Node (MN) when under MM                |
+
+---
+
+## 🖼️ ADiagrams
+
+### One MM with Multiple MCs
 
 <img width="773" height="347" alt="image" src="https://github.com/user-attachments/assets/ab90ee75-d8f3-4a59-9afb-6cfb90b4add6" />
 
+### Two MMs for HA with Multiple MCs
+
 <img width="779" height="463" alt="image" src="https://github.com/user-attachments/assets/bf2024db-de04-4c10-a903-b6464a79fab8" />
-
-
-
-
-
-
 
 ---
 
