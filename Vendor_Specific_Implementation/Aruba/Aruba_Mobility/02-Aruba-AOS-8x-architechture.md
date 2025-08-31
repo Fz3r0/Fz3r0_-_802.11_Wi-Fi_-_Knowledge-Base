@@ -39,10 +39,11 @@ Aruba 8.x Architecture introduces a centralized and scalable design where the **
 
 ## 📦 Mobility Controller (MC) / Managed Node (MN)
 
-**Definition:** The device that terminates AP tunnels, authenticates clients, and handles client traffic.  
+**Definition:** The device that terminates AP tunnels, authenticates clients, and handles client traffic (if tunneled).  
 
 - When standalone, it is simply called an **MC**.  
 - When connected under an MM, it becomes a **Managed Node (MN)**.  
+- In some Aruba documentation, you will also see the term **Managed Device (MD)**, which is used interchangeably with **Managed Node (MN)**.
 
 **Role in the hierarchy:**  
 
@@ -50,7 +51,7 @@ Aruba 8.x Architecture introduces a centralized and scalable design where the **
 - Receives licenses from the MM.  
 - Runs the control plane + data plane for APs and clients.
 
-✅ **Key Point:** Every MN is an MC, but not every MC is an MN **(only when managed by an MM)**.
+✅ **Key Point:** Every MN is an MC, but not every MC is an MN **(only when managed by an MM)**.  
 
 ## 🗂️ Hierarchical Configuration Model
 
@@ -99,7 +100,36 @@ Aruba 8.x Architecture introduces a centralized and scalable design where the **
 | Version Support          | Can manage MCs with different versions       | Must run a compatible ArubaOS version          |
 | Hierarchy Name           | Root / Top node                              | Managed Node (MN) when under MM                |
 
----
+## 🤔 What happens if you configure directly on the MC insteaf of MM?
+
+In Aruba 8.x with Mobility Master, the **Hierarchical Configuration Model** rules.  
+
+This means that any configuration made **directly on the MC (Managed Node)** will be **overwritten by the MM** the next time the config syncs.  
+
+Configuring directly on a Mobility Controller (MC/MM) instead of the Mobility Master (MM) bypasses the centralized management, leading to configurations not being inherited by other controllers or the network, potentially causing inconsistencies and a loss of the benefits of the hierarchical architecture, such as simplified deployment and license management. While it may not immediately impact client traffic, it undermines the system's scalability and reliability by removing the single point of configuration for global policies and dynamic license allocation.
+
+- **Note**: If you configure directly on an MC that’s managed by an MM, the MM will **push its own config down and override it**, unless that config is specifically allowed to be local.
+
+### 🔎 Why?
+
+- The MM is the **single source of truth** for configuration.  
+- The MC is not meant to keep its own independent config once it’s registered to an MM.  
+- When you try to configure something on the MC CLI, you’ll often see a warning like:  
+  *“This node is managed by Mobility Master. Configuration must be done at the MM.”*  
+
+### 🤔 What to do?
+
+- Use the Mobility Master for all configurations: for the network's global policies and settings. 
+- Manage individual devices (APs and controllers): through the Mobility Master to maintain consistency and leverage the system's full capabilities. 
+- Implement redundancy: by using a backup Mobility Master with VRRP to ensure seamless connectivity and management in case of a primary MM failure. 
+
+### 📝 Exceptions
+
+Some local/site-specific commands can be executed on the MC, such as:  
+- Debugging commands (`show`, `debug`).  
+- Temporary troubleshooting tweaks (packet captures, logs).  
+
+But **persistent configuration** (VLANs, SSIDs, roles, policies) must be done at the MM level.
 
 ## 🖼️ ADiagrams
 
@@ -109,7 +139,8 @@ Aruba 8.x Architecture introduces a centralized and scalable design where the **
 
 ### Two MMs for HA with Multiple MCs
 
-<img width="779" height="463" alt="image" src="https://github.com/user-attachments/assets/bf2024db-de04-4c10-a903-b6464a79fab8" />
+<img width="1024" height="791" alt="image" src="https://github.com/user-attachments/assets/0ff7472e-2870-4219-9b1d-c6fe932059b3" />
+
 
 ---
 
@@ -117,6 +148,7 @@ Aruba 8.x Architecture introduces a centralized and scalable design where the **
 
 - https://arubanetworking.hpe.com/techdocs/ArubaOS-8.x-Books/89/ArubaOS-8.9.0.0-User-Guide.pdf
 - https://arubanetworking.hpe.com/techdocs/Archived/AOS-8/ArubaOS_85_Web_Help/Content/arubaos-solutions/rap/und-rap-modes.htm
+- https://www.netprojnetworks.com/arubaos-8-x-configure-communication-between-mobility-master-and-managed-devices-md-controllers/
 
 ---
 
