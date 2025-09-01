@@ -21,6 +21,12 @@
 
 # 🏝️📡 Aruba Mobility :: `AP Modes: CAP, RAP, IAP, Mesh, AM, SA`
 
+Aruba APs can operate in multiple modes depending on the network design, site requirements, and whether a controller is present. Each mode changes how the AP discovers its configuration, how client traffic is handled, and what level of dependency it has on centralized infrastructure.  
+
+Understanding the differences between CAP, RAP, IAP, Mesh, AM, and SA is essential to deploying Aruba WLANs correctly. Choosing the right mode ensures that security, roaming, performance, and resiliency align with the use case—whether it’s a large campus with centralized controllers, a small branch office, or a fully remote user setup.
+
+<img width="942" height="428" alt="image" src="https://github.com/user-attachments/assets/007666c6-aaed-47d3-92d6-c0c7b437ea89" />
+
 ## 📡 Campus AP (CAP)
 
 - **Definition:** A Campus AP operates in a *controller-dependent* mode. 
