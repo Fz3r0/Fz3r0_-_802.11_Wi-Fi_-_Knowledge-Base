@@ -139,58 +139,6 @@ RF management is critical for wireless performance. Aruba allows per-group tunin
 
 
 
-
-
-
-# 📡 Aruba WLAN AP-Groups
-
-## 🌍 Introduction
-
----
-
-## 📖 Definition and Purpose
-
-
----
-
-
-
----
-
-
----
-
-
----
-
-
-
----
-
-## 🚀 Conclusion
-Aruba AP-Groups are at the core of scalable WLAN design. They allow admins to apply **uniform policies**, ensure **network consistency**, and simplify **large-scale deployments**. By leveraging AP-Groups effectively—along with advanced features like RBAC, ARM, and captive portals—administrators can deliver a **robust, secure, and high-performance wireless experience** across the enterprise.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ---
 
 # 🗃️ Resources
