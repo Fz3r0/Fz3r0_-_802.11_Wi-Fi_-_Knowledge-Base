@@ -40,7 +40,6 @@ When an AP boots up and joins the controller, it automatically inherits all poli
 - Changes applied at the AP-Group level instantly propagate to all APs inside it.  
 - Each AP belongs to exactly **one AP-Group**.  
 
-
 ## 🌟 Benefits of Using AP-Groups
 
 - **Simplified management** – manage multiple APs as a single unit.  
@@ -116,6 +115,22 @@ RF management is critical for wireless performance. Aruba allows per-group tunin
 - **Adaptive Radio Management (ARM)** – auto-optimization of channels, power, and load.  
 - **AP Load Balancing** – distribute clients to prevent AP overload.  
 - **Captive Portal Integration** – custom login pages, external auth servers, usage tracking.  
+
+
+
+
+
+
+
+
+
+
+<img width="1072" height="599" alt="image" src="https://github.com/user-attachments/assets/86749933-9ba6-4a63-b4fb-cca3519acf19" />
+
+<img width="1080" height="605" alt="image" src="https://github.com/user-attachments/assets/aed4c470-7e07-4b67-9cea-988241454fce" />
+
+
+
 
 # ⚙️ How to Set Up an AP-Group
 
