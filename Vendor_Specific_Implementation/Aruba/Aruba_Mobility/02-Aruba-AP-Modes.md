@@ -23,47 +23,45 @@
 
 ## 📡 Campus AP (CAP)
 
-**Definition:** A Campus AP operates in a *controller-dependent* mode.
-**Location:** Same LAN / site as the Mobility Controller (MC/MM).
-**Process:**
-- Discovers the Controller via DHCP Option 43, DNS, or broadcast.
-- Downloads its configuration directly from the Controller.
-- Client traffic is typically tunneled to the Controller (GRE/IPSec).
-**Services:** Security, roles, AAA profiles, firewall policies, and VLAN assignments are centrally enforced by the Controller.
-**Cisco Equivalent:** Lightweight AP (LAP).
-**Ruckus Equivalent:** Ruckus **ZoneFlex** AP managed by **SmartZone** controller.
+- **Definition:** A Campus AP operates in a *controller-dependent* mode. 
+- **Location:** Same LAN / site as the Mobility Controller (MC/MM).
+- **Process:**
+   - Discovers the Controller via DHCP Option 43, DNS, or broadcast.
+   - Downloads its configuration directly from the Controller.
+   - Client traffic is typically tunneled to the Controller (GRE/IPSec).
+- **Services:** Security, roles, AAA profiles, firewall policies, and VLAN assignments are centrally enforced by the Controller.
+- **Cisco Equivalent:** Lightweight AP (LAP).
+- **Ruckus Equivalent:** Ruckus **ZoneFlex** AP managed by **SmartZone** controller.
 
-### ✅ **Advantages:**
+### ✅ Campus AP (CAP) :: **Advantages**
 
 - Centralized management, easier troubleshooting, and consistent policy enforcement.
 - Supports fast roaming (802.11r/k/v) since mobility is managed by the Controller.
 
-### ⚠️ **Limitations:**
+### ⚠️ Campus AP (CAP) :: **Limitations**
 
 - Full dependency on the Controller—if it's down, CAPs cannot service clients.
 - Requires reliable, low-latency connectivity to Controller.
 
----
-
 ## 🌐 Remote AP (RAP)
 
-**Definition:** Extends WLAN services to a *remote location* without a local Controller.
-**Location:** Remote branches, home offices, or non-campus sites.
-**Process:**
-- Connects to the Controller over WAN, Internet, or MPLS.
-- Establishes an IPSec tunnel to the Controller.
-- Downloads configuration and offers the same SSIDs as a campus-controlled environment.
-**Services:** Roles, VLANs, and policies are centrally managed—same as CAP.
-**Cisco Equivalent:** REAP / FlexConnect (legacy).
-**Ruckus Equivalent:** **Ruckus AP in Flex Mode** (connects to remote SmartZone / vSZ) or **Tunnel Mode with GRE to DC**.
+- **Definition:** Extends WLAN services to a *remote location* without a local Controller.
+- **Location:** Remote branches, home offices, or non-campus sites.
+- **Process:**
+   - Connects to the Controller over WAN, Internet, or MPLS.
+   - Establishes an IPSec tunnel to the Controller.
+   - Downloads configuration and offers the same SSIDs as a campus-controlled environment.
+- **Services:** Roles, VLANs, and policies are centrally managed—same as CAP.
+- **Cisco Equivalent:** REAP / FlexConnect (legacy).
+- **Ruckus Equivalent:** **Ruckus AP in Flex Mode** (connects to remote SmartZone / vSZ) or **Tunnel Mode with GRE to DC**.
 
-### ✅ **Advantages:**
+### ✅ Remote AP (RAP) :: **Advantages:**
 
 - Enables a full corporate wireless experience in remote locations.
 - Centralized security/policy enforcement without need for local Controller.
 - Supports **split-tunnel**, sending corporate traffic back to Controller, while Internet traffic exits locally.
 
-### ⚠️ **Limitations:**
+### ⚠️ Remote AP (RAP) :: **Limitations:**
 
 - Depends heavily on stable WAN or Internet connectivity.
 - Latency and bandwidth limitations can impact performance.
