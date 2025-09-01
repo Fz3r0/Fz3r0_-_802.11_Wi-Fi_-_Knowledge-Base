@@ -135,11 +135,24 @@ RF management is critical for wireless performance. Aruba allows per-group tunin
 # ⚙️ How to Set Up an AP-Group
 
 1. Log in to the Aruba controller (MM/MC) interface.  
-2. Navigate to **Configuration → AP Groups**.  
-3. Create a new AP-Group, assign a descriptive name.  
-4. Configure WLANs, VLANs, and RF profiles for that group.  
-5. Assign APs to the group under **Access Points → Change Group**.  
-6. Save and apply changes → APs reboot and adopt the new config.  
+2. Navigate to **Configuration → AP Groups**, and click ++"+"++.
+3. 
+<img width="1919" height="909" alt="image" src="https://github.com/user-attachments/assets/e25abbe8-5d0d-4e85-bf2b-e43ca299cc8a" />
+
+4. Create a new AP-Group, assign a descriptive name, and push the changes. _For this point, the AP group **"ORION"** will already have been created, specifically within the sub-group **ALFA**, which in turn is inside the group **Site Controllers1.** In other words, the configurations will only be applied to the two MCs that are inside **ALFA**_
+
+<img width="1176" height="604" alt="image" src="https://github.com/user-attachments/assets/938f992c-c95f-46c2-818a-62b11e63c6a5" />
+
+5. Configure WLANs, VLANs, and RF profiles for that group:
+
+- **IMPORTANT!!! FIRST OF ALL YOU NEED TO ACTIVATE THE "SHOW ADVANCED PROFILE" OPTION AT TOP RIGHT CORNER**
+
+<img width="1208" height="328" alt="image" src="https://github.com/user-attachments/assets/dc787146-802d-4744-995b-b6ce19a52994" />
+
+
+
+7. Assign APs to the group under **Access Points → Change Group**.  
+8. Save and apply changes → APs reboot and adopt the new config.  
 
 
 
