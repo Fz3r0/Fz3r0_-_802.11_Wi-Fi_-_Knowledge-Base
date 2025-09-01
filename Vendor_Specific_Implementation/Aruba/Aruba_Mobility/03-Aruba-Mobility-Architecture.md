@@ -23,6 +23,9 @@
 
 Aruba 8.x Architecture introduces a centralized and scalable design where the **Mobility Master (MM)** acts as the central brain for configuration, licensing, monitoring, and upgrades, while the **Mobility Controllers (MC)**, also known as **Managed Nodes (MN)** when under an MM, handle APs and client traffic. Using a **hierarchical configuration model**, all policies flow top-down from the MM, enabling flexibility across global, regional, and site levels, with deployment options ranging from a single MM with multiple MCs to redundant MMs for high availability.
 
+<img height="400" alt="image" src="https://github.com/user-attachments/assets/9cabb044-2ea4-43a9-92f1-21435f7b7884" />
+
+
 ## 🧠 Mobility Master (MM)
 
 **Definition:** The central brain of the Aruba 8.x architecture. It does not handle client traffic but manages the configuration, licenses, monitoring, and upgrades of all Mobility Controllers (MC).  
