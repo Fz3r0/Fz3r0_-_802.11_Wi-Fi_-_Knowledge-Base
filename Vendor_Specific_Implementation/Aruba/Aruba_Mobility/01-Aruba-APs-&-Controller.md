@@ -123,7 +123,7 @@ _AP-510 Series Installation Guide; AP-510 datasheet/brief._
 | **Alt Green/Amber** | One radio access, one monitor |
 
 
-## 🛠️ Controllers — MM & MC (Virtual vs Hardware Controllers)
+## 🎮 Aruba Controllers :: `MM & MC (Virtual vs Hardware Controllers)`
 
 Aruba offers both **virtual** and **hardware** appliances for its controller architecture. The choice depends on **scale, resiliency, and deployment model**. Both support the same ArubaOS 8.x features (MM hierarchy, licensing, configuration model), but they differ in **performance, form factor, and scaling capacity**.
 
