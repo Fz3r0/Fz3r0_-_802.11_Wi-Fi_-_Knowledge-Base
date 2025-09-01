@@ -1,4 +1,4 @@
-# 🏝️📡🛰️ Aruba Mobility: `Aruba Mobility - AP Modes`
+# 🏝️📡🛰️ Aruba Mobility: `Aruba Mobility - AP Modes: CAP, RAP, IAP, Mesh, AM, SA`
 
 ![My Video](https://user-images.githubusercontent.com/94720207/165892585-b830998d-d7c5-43b4-a3ad-f71a07b9077e.gif)
 
@@ -19,7 +19,7 @@
 # 📄 `Index`
 
 
-# 🏝️📡 Aruba Mobility :: `AP Modes`
+# 🏝️📡 Aruba Mobility :: `AP Modes: CAP, RAP, IAP, Mesh, AM, SA`
 
 ## 📡 Campus AP (CAP)
 
@@ -31,7 +31,7 @@
    - Client traffic is typically tunneled to the Controller (GRE/IPSec).
 - **Services:** Security, roles, AAA profiles, firewall policies, and VLAN assignments are centrally enforced by the Controller.
 - **Cisco Equivalent:** Lightweight AP (LAP).
-- **Ruckus Equivalent:** Ruckus **ZoneFlex** AP managed by **SmartZone** controller.
+- **Ruckus Equivalent:** Ruckus AP managed by **SmartZone** on-premise (on-site).
 
 ### ✅ Campus AP (CAP) :: **Advantages**
 
@@ -53,7 +53,7 @@
    - Downloads configuration and offers the same SSIDs as a campus-controlled environment.
 - **Services:** Roles, VLANs, and policies are centrally managed—same as CAP.
 - **Cisco Equivalent:** REAP / FlexConnect (legacy).
-- **Ruckus Equivalent:** **Ruckus AP in Flex Mode** (connects to remote SmartZone / vSZ) or **Tunnel Mode with GRE to DC**.
+- **Ruckus Equivalent:** Ruckus AP managed by a remote vSZ High Scale.
 
 ### ✅ Remote AP (RAP) :: **Advantages:**
 
@@ -68,30 +68,30 @@
 
 ## 🔌 Instant AP (IAP)
 
-**Definition:** Works in an autonomous or controller-less mode—no Controller needed.
-**Virtual Controller (VC):** Within a cluster, one IAP becomes the VC and manages the rest.
-**Use Cases:** Small offices or sites where deploying a Controller isn't cost-effective.
-**Cisco Equivalent:** Autonomous AP (older IOS APs running standalone).
-**Ruckus Equivalent:** **Unleashed APs** (cluster elects a Master AP that manages others).
+- **Definition:** Works in an autonomous or controller-less mode—no Controller needed.
+- **Virtual Controller (VC):** Within a cluster, one IAP becomes the VC and manages the rest.
+- **Use Cases:** Small offices or sites where deploying a Controller isn't cost-effective.
+- **Cisco Equivalent:** Autonomous AP (older IOS APs running standalone).
+- **Ruckus Equivalent:** **Ruckus Unleashed APs** (cluster elects a Master AP that manages others).
 
 ## 📶 Other Modes
 
 **Mesh Portal / Mesh Point:** Extend WLAN via wireless backhaul (no Ethernet).  
 
-- *Cisco Equivalent:* Mesh AP (MAP/RAP).  
-- *Ruckus Equivalent:* Mesh APs under SmartZone or Unleashed mesh topology.  
+- **Cisco Equivalent**: Mesh AP (MAP/RAP).  
+- **Ruckus Equivalent**: Mesh APs under SmartZone or Unleashed mesh topology.  
 
 **Air Monitor (AM):** RF sensor AP to scan for rogue APs and perform IDS/IPS.  
 
-- *Cisco Equivalent:* AP in Monitor Mode.  
-- *Ruckus Equivalent:* Dedicated WIPS sensor mode.  
+- **Cisco Equivalent:** AP in Monitor Mode.
+- **Ruckus Equivalent:** Packet Catpure Option or AP Monitor Mode.
 
 **Spectrum AP (SA):** Dedicated to spectrum analysis—detects RF interference sources like microwaves and Bluetooth.  
 
-- *Cisco Equivalent:* CleanAir Spectrum Expert Mode.  
-- *Ruckus Equivalent:* Spectrum Analysis tool in SZ/Unleashed.  
+- **Cisco Equivalent:** CleanAir Spectrum Expert Mode.  
+- **Ruckus Equivalent:** Spectrum Analysis tool in SZ/Unleashed.  
 
-## 📊 CAP vs RAP – Quick Comparison
+## 📊 Aruba AP Modes :: CAP vs RAP
 
 | ⚙️ Feature               | 🏠 CAP (Campus AP)                | 🌍 RAP (Remote AP)                          |
 |--------------------------|-----------------------------------|----------------------------------------------|
