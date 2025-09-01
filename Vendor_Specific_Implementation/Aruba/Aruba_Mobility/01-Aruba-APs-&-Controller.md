@@ -53,7 +53,7 @@ Aruba offers a wide portfolio of Access Points designed for **different environm
 Common suffixes on SKUs: **-US** (United States/FCC), **-RW** (Rest of World), **-JP** (Japan), **-IL** (Israel).  
 > Region is enforced in hardware; **-RW cannot be used in the US**.
 
-## 📦 Example Indoor Model — Aruba **AP-515** (510 Series)
+## 📦 Aruba AP :: Indoor Model - 510 Series - Aruba AP-515
 
 **Platform:** Dual-radio Wi-Fi 6 (802.11ax); backward compatible with a/b/g/n/ac.  
 **Radios/MIMO:** 2.4 GHz **2×2:2**, 5 GHz **4×4:4**.  
