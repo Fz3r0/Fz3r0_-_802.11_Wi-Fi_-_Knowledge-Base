@@ -55,21 +55,25 @@ Common suffixes on SKUs: **-US** (United States/FCC), **-RW** (Rest of World), *
 
 ## 📦 Aruba AP :: Indoor Model - 510 Series - Aruba AP-515
 
-**Platform:** Dual-radio Wi-Fi 6 (802.11ax); backward compatible with a/b/g/n/ac.  
-**Radios/MIMO:** 2.4 GHz **2×2:2**, 5 GHz **4×4:4**.  
-**Antenna Options:**  
-- AP-514 → external antennas.  
-- AP-515 → integrated antennas.  
-**SSIDs:** Up to **16 per radio**.  
-**IoT:** BLE + Zigbee built-in.  
-**Ports:**  
-- **E0:** 2.5G PoE-in (802.3af/at/bt).  
-- **E1:** 1G, no PoE.  
-- LACP supported on E0+E1.  
-**Other:** DC input (priority over PoE), USB-A 2.0 (~5W), micro-USB console.  
-**Power/IPM:**  
-- With 802.3bt/at/DC → no restrictions.  
-- With 802.3af → works with reduced features under IPM.  
+**Aruba AP-515:**
+
+<img width="1385" height="932" alt="image" src="https://github.com/user-attachments/assets/5921d2ba-1e89-4e79-b5c1-efeb68702d6f" />
+
+- **Platform:** Dual-radio Wi-Fi 6 (802.11ax); backward compatible with a/b/g/n/ac.  
+   - **Radios/MIMO:** 2.4 GHz **2×2:2**, 5 GHz **4×4:4**.  
+- **Antenna Options:**  
+   - AP-514 → external antennas.  
+   - AP-515 → integrated antennas.  
+- **SSIDs:** Up to **16 per radio**.  
+- **IoT:** BLE + Zigbee built-in.  
+- **Ports:**  
+   - **E0:** 2.5G PoE-in (802.3af/at/bt).  
+   - **E1:** 1G, no PoE.  
+   - LACP supported on E0+E1.  
+- **Other:** DC input (priority over PoE), USB-A 2.0 (~5W), micro-USB console.  
+- **Power/IPM:**  
+   - With 802.3bt/at/DC → no restrictions.  
+   - With 802.3af → works with reduced features under IPM.  
 
 ## 📊 Side-by-Side Comparison of Three Aruba APs
 
