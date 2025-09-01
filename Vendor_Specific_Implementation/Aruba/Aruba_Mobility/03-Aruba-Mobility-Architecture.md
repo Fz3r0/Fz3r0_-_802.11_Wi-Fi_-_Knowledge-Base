@@ -100,6 +100,16 @@ Aruba 8.x Architecture introduces a centralized and scalable design where the **
 | Version Support          | Can manage MCs with different versions       | Must run a compatible ArubaOS version          |
 | Hierarchy Name           | Root / Top node                              | Managed Node (MN) when under MM                |
 
+## 🖼️ MM & MC Diagrams
+
+### One MM with Multiple MCs
+
+<img width="773" height="347" alt="image" src="https://github.com/user-attachments/assets/ab90ee75-d8f3-4a59-9afb-6cfb90b4add6" />
+
+### Two MMs for HA with Multiple MCs
+
+<img width="1024" height="791" alt="image" src="https://github.com/user-attachments/assets/0ff7472e-2870-4219-9b1d-c6fe932059b3" />
+
 ## 🤔 What happens if you configure directly on the MC insteaf of MM?
 
 In ArubaOS 8.x, when using a **Mobility Master (MM)** with multiple **Mobility Controllers (MCs)**, the **hierarchical configuration model** applies.  
@@ -123,10 +133,18 @@ Any config made directly on the MC (when it is managed by an MM) will eventually
 
 There are some exceptions:  
 
+- Disaster Recovery: A bad configuration was pushed from MM and now MC is unaccesible. 
 - Local operational commands (debug, show, packet captures) can still be executed directly on the MC.  
 - Temporary changes may work for a short time but will not persist after a config sync.  
 
-✅ **Key Point:** 
+### 🚨 Disaster Recovery Mode
+
+In case of an issue for example if a **bad configuration is pushed from the MM** and the MD becomes unreachable there is a special **Disaster Recovery Mode**.
+
+- Allows the administrator to access and configure the MD **locally**, bypassing the MM.  
+- While in this mode, the MD blocks any further config sync from the MM.  
+- The admin now has **full control** of the MD and can apply emergency fixes.  
+- Once changes are complete, Disaster Recovery Mode must be disabled so the MD can sync back to the MM.
 
 ## 🗂️ Aruba Configuration Hierarchy
 
@@ -188,19 +206,6 @@ The hierarchy is built like a **tree**, with `/root` at the top. Each level refi
   → Affects only that single controller.  
 
 
-
-
-
-
-## 🖼️ ADiagrams
-
-### One MM with Multiple MCs
-
-<img width="773" height="347" alt="image" src="https://github.com/user-attachments/assets/ab90ee75-d8f3-4a59-9afb-6cfb90b4add6" />
-
-### Two MMs for HA with Multiple MCs
-
-<img width="1024" height="791" alt="image" src="https://github.com/user-attachments/assets/0ff7472e-2870-4219-9b1d-c6fe932059b3" />
 
 
 ---
