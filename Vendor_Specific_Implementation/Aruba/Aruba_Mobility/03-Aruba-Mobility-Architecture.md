@@ -38,6 +38,11 @@ Aruba 8.x Architecture introduces a centralized and scalable design where the **
 - **Centralized Visibility & Monitoring:** A single dashboard for APs, clients, and network policies.  
 - **Multi-Version Support:** An MM can manage MCs running different, but compatible, versions of ArubaOS.  
 
+**Role in the hierarchy:**  
+
+- Centralized configuration, licensing, upgrades, monitoring, advanced services.
+- Runs the control / management plane for the MCs.
+
 ⚠️ **Note:** APs never connect directly to an MM. Only MCs terminate AP tunnels and handle client data (in case the AP is tunneled).
 
 ## 📦 Mobility Controller (MC) / Managed Node (MN)
@@ -56,7 +61,10 @@ Aruba 8.x Architecture introduces a centralized and scalable design where the **
 
 ✅ **Key Point:** Every MN is an MC, but not every MC is an MN **(only when managed by an MM)**.  
 
-## 🗂️ Hierarchical Configuration Model
+## 🗂️ Aruba Configuration Hierarchy
+
+ArubaOS 8.x introduces a **hierarchical configuration model** that follows a strict **top-to-bottom inheritance**.  
+Any configuration applied at a higher level in the hierarchy is automatically **pushed down** to all lower levels, unless overridden at a more specific node.
 
 **Concept:** Configuration is structured and flows from the top down.  
 
@@ -71,7 +79,62 @@ Aruba 8.x Architecture introduces a centralized and scalable design where the **
 - Flexibility to apply global, regional, or site-specific settings.  
 - Reduces misconfiguration and improves consistency.
 
-## 🏛️ Deployment Designs
+### 🌳 Structure Overview
+
+The hierarchy is built like a **tree**, with `/root` at the top. Each level refines configuration scope:
+
+<img width="1011" height="578" alt="image" src="https://github.com/user-attachments/assets/b7bf82a3-9a55-4403-b85b-3c798f730d71" />
+
+1. **/root**  
+   - Absolute top of the tree.  
+   - A logical node; **no configuration can be applied here**.  
+   - It has two “branches”: one toward the **Mobility Master (MM)** system group, and another toward the **Managed Network**.
+
+2. **System Group**  
+   - Example: `Mobility Master`, `Managed Network`.  
+   - The **Mobility Master system group** is only a container for the physical or virtual MMs.  
+   - The **Managed Network system group** contains all site controllers and sub-hierarchies.
+
+3. **Group**  
+   - Example: `Site Controllers`.  
+   - Configuration applied here is inherited by all subgroups and devices inside.  
+   - **If I configure at "Site Controllers" → settings push down to Europe + Asia → then to MC1 and MC2**.
+
+4. **Sub Group**  
+   - Example: `Europe`, `Asia`.  
+   - Narrower scope; config applies only to the devices within.  
+   - **If I configure only "Europe" → only MC1 inherits**.
+
+5. **Managed Devices (MCs)**  
+   - The lowest level.  
+   - Here live the **Mobility Controllers (MC1, MC2, MC_US, etc.)**.  
+   - They receive inherited configuration unless something is overridden at a higher subgroup.
+
+### 📌 Key Points
+
+- **Top-down push:** Changes made at higher levels propagate down automatically.  
+- **Granularity:** You can choose to configure broadly (e.g., all controllers in "Site Controllers") or very specifically (e.g., only MC1 in "Europe").  
+- **/root limitation:** Even though `/root` is visible, it is a **non-editable node**. Configuration must start below it.  
+- **Mobility Master side:**  
+  - The `Mobility Master` system group is just a container.  
+  - Inside it, you place one or two physical/virtual MM nodes (for redundancy).  
+- **Managed Network side:**  
+  - Holds the logical organization of controllers, grouped by geography, function, or site.  
+  - Example: `Asia` subgroup with MC2, `Europe` subgroup with MC1, `US` subgroup with MC_US.
+
+### 🖼️ Example: Configuration Propagation
+
+- **Config at “Site Controllers” group**  
+  → Inherited by **Europe** and **Asia** subgroups → then applied to **MC1** and **MC2**.  
+
+- **Config at “Europe” subgroup**  
+  → Only inherited by **MC1**, leaving MC2 untouched.  
+
+- **Config directly at MC1**  
+  → Affects only that single controller.  
+
+
+## 🏛️ Aruba Mobility Deployment Designs
 
 ### 1️⃣ One MM with Multiple MCs
 
@@ -149,64 +212,7 @@ In case of an issue for example if a **bad configuration is pushed from the MM**
 - The admin now has **full control** of the MD and can apply emergency fixes.  
 - Once changes are complete, Disaster Recovery Mode must be disabled so the MD can sync back to the MM.
 
-## 🗂️ Aruba Configuration Hierarchy
 
-ArubaOS 8.x introduces a **hierarchical configuration model** that follows a strict **top-to-bottom inheritance**.  
-Any configuration applied at a higher level in the hierarchy is automatically **pushed down** to all lower levels, unless overridden at a more specific node.
-
-### 🌳 Structure Overview
-
-The hierarchy is built like a **tree**, with `/root` at the top. Each level refines configuration scope:
-
-<img width="1011" height="578" alt="image" src="https://github.com/user-attachments/assets/b7bf82a3-9a55-4403-b85b-3c798f730d71" />
-
-1. **/root**  
-   - Absolute top of the tree.  
-   - A logical node; **no configuration can be applied here**.  
-   - It has two “branches”: one toward the **Mobility Master (MM)** system group, and another toward the **Managed Network**.
-
-2. **System Group**  
-   - Example: `Mobility Master`, `Managed Network`.  
-   - The **Mobility Master system group** is only a container for the physical or virtual MMs.  
-   - The **Managed Network system group** contains all site controllers and sub-hierarchies.
-
-3. **Group**  
-   - Example: `Site Controllers`.  
-   - Configuration applied here is inherited by all subgroups and devices inside.  
-   - **If I configure at "Site Controllers" → settings push down to Europe + Asia → then to MC1 and MC2**.
-
-4. **Sub Group**  
-   - Example: `Europe`, `Asia`.  
-   - Narrower scope; config applies only to the devices within.  
-   - **If I configure only "Europe" → only MC1 inherits**.
-
-5. **Managed Devices (MCs)**  
-   - The lowest level.  
-   - Here live the **Mobility Controllers (MC1, MC2, MC_US, etc.)**.  
-   - They receive inherited configuration unless something is overridden at a higher subgroup.
-
-### 📌 Key Points
-
-- **Top-down push:** Changes made at higher levels propagate down automatically.  
-- **Granularity:** You can choose to configure broadly (e.g., all controllers in "Site Controllers") or very specifically (e.g., only MC1 in "Europe").  
-- **/root limitation:** Even though `/root` is visible, it is a **non-editable node**. Configuration must start below it.  
-- **Mobility Master side:**  
-  - The `Mobility Master` system group is just a container.  
-  - Inside it, you place one or two physical/virtual MM nodes (for redundancy).  
-- **Managed Network side:**  
-  - Holds the logical organization of controllers, grouped by geography, function, or site.  
-  - Example: `Asia` subgroup with MC2, `Europe` subgroup with MC1, `US` subgroup with MC_US.
-
-### 🖼️ Example: Configuration Propagation
-
-- **Config at “Site Controllers” group**  
-  → Inherited by **Europe** and **Asia** subgroups → then applied to **MC1** and **MC2**.  
-
-- **Config at “Europe” subgroup**  
-  → Only inherited by **MC1**, leaving MC2 untouched.  
-
-- **Config directly at MC1**  
-  → Affects only that single controller.  
 
 
 
