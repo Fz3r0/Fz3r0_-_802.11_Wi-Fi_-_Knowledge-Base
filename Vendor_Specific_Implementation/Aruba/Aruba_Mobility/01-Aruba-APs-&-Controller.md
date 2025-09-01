@@ -57,7 +57,7 @@ Common suffixes on SKUs: **-US** (United States/FCC), **-RW** (Rest of World), *
 
 **Aruba AP-515:**
 
-<img width="910" height="613" alt="image" src="https://github.com/user-attachments/assets/bad5d134-eeac-4030-b431-9c4b363479f1" />
+<img height="400" alt="image" src="https://github.com/user-attachments/assets/bad5d134-eeac-4030-b431-9c4b363479f1" />
 
 - **Platform:** Dual-radio Wi-Fi 6 (802.11ax); backward compatible with a/b/g/n/ac.  
    - **Radios/MIMO:** 2.4 GHz **2×2:2**, 5 GHz **4×4:4**.  
