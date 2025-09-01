@@ -18,12 +18,17 @@
 
 # 📄 `Index`
 
-[🏝️📡 Aruba Mobility :: `Access Points (APs) and Wireless LAN Controllers (WLC)`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Vendor_Specific_Implementation/Aruba/Aruba_Mobility/01-Aruba-APs-%26-Controller.md#%EF%B8%8F-aruba-mobility--access-points-aps-and-wireless-lan-controllers-wlc)
-- [🏠 Indoor APs](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Vendor_Specific_Implementation/Aruba/Aruba_Mobility/01-Aruba-APs-%26-Controller.md#-indoor-aps)
-- [🌦️ Outdoor APs](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Vendor_Specific_Implementation/Aruba/Aruba_Mobility/01-Aruba-APs-%26-Controller.md#%EF%B8%8F-outdoor-aps)
-- [💡 Aruba APs Design Notes](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Vendor_Specific_Implementation/Aruba/Aruba_Mobility/01-Aruba-APs-%26-Controller.md#-aruba-aps-design-notes)
-    - [🌍 Regulatory/Ordering Regions](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Vendor_Specific_Implementation/Aruba/Aruba_Mobility/01-Aruba-APs-%26-Controller.md#-regulatoryordering-regions)
+[🏝️📡 **Aruba Mobility** :: `Access Points (APs) and Wireless LAN Controllers (WLC)`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Vendor_Specific_Implementation/Aruba/Aruba_Mobility/01-Aruba-APs-%26-Controller.md#%EF%B8%8F-aruba-mobility--access-points-aps-and-wireless-lan-controllers-wlc)
 
+- [🏠 Aruba AP :: `Indoor APs`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Vendor_Specific_Implementation/Aruba/Aruba_Mobility/01-Aruba-APs-%26-Controller.md#-indoor-aps)
+- [🌦️ Aruba AP :: `Outdoor APs`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Vendor_Specific_Implementation/Aruba/Aruba_Mobility/01-Aruba-APs-%26-Controller.md#%EF%B8%8F-outdoor-aps)
+- [💡 Aruba AP :: `Design Notes`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Vendor_Specific_Implementation/Aruba/Aruba_Mobility/01-Aruba-APs-%26-Controller.md#-aruba-aps-design-notes)
+    - [🌍 `Regulatory Regions`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Vendor_Specific_Implementation/Aruba/Aruba_Mobility/01-Aruba-APs-%26-Controller.md#-regulatoryordering-regions)
+
+[📦 Aruba AP :: `Indoor Model` - `510 Series` - `Aruba AP-515`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Vendor_Specific_Implementation/Aruba/Aruba_Mobility/01-Aruba-APs-&-Controller.md#-aruba-ap--indoor-model---510-series---aruba-ap-515)
+
+- [🔔 Aruba AP :: `LED Status`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Vendor_Specific_Implementation/Aruba/Aruba_Mobility/01-Aruba-APs-&-Controller.md#-led-status)
+- [📊 `Side-by-Side Comparison of Three Aruba APs`](https://github.com/Fz3r0/Fz3r0_-_802.11_Wi-Fi_-_Knowledge-Base/blob/main/Vendor_Specific_Implementation/Aruba/Aruba_Mobility/01-Aruba-APs-&-Controller.md#-side-by-side-comparison-of-three-aruba-aps)
 # 🏝️📡 Aruba Mobility :: `Access Points (APs) and Wireless LAN Controllers (WLC)`
 
 Aruba offers a wide portfolio of Access Points designed for **different environments and use cases**. Broadly, APs are categorized as **indoor** or **outdoor** models. While their Wi-Fi capabilities are often similar (support for 802.11a/b/g/n/ac/ax, multiple radios, MIMO chains), their **physical design, durability, uplink options, and cost** vary significantly depending on the deployment scenario.
