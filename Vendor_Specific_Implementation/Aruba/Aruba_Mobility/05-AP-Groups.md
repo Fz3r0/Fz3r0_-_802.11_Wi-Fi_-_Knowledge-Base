@@ -125,9 +125,9 @@ RF management is critical for wireless performance. Aruba allows per-group tunin
 
 
 
-<img width="1072" height="599" alt="image" src="https://github.com/user-attachments/assets/86749933-9ba6-4a63-b4fb-cca3519acf19" />
+<img height="250" alt="image" src="https://github.com/user-attachments/assets/86749933-9ba6-4a63-b4fb-cca3519acf19" />
 
-<img width="1080" height="605" alt="image" src="https://github.com/user-attachments/assets/aed4c470-7e07-4b67-9cea-988241454fce" />
+<img height="250" alt="image" src="https://github.com/user-attachments/assets/aed4c470-7e07-4b67-9cea-988241454fce" />
 
 
 
