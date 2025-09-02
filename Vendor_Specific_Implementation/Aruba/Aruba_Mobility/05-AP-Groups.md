@@ -161,7 +161,9 @@ Example:
 
 <img width="693" height="349" alt="image" src="https://github.com/user-attachments/assets/d0fd11eb-389a-418f-8084-16c8572e0952" />
 
-8. Save and apply changes → APs reboot and adopt the new config.  
+8. Save and deploy changes, and click on "continue and reboot". APs will reboot automatically and adopt the new config.  
+
+<img width="345" height="205" alt="image" src="https://github.com/user-attachments/assets/b999a120-a9c4-4a34-aee9-5618de7e2666" />
 
 
 
