@@ -153,9 +153,14 @@ Then you can see the advanced profile tab:
 
 <img width="2309" height="624" alt="image" src="https://github.com/user-attachments/assets/87cf4e02-0a26-4188-b577-47e8fb22b1b0" />
 
-
-
 7. Assign APs to the group under **Access Points → Change Group**.  
+
+<img width="936" height="563" alt="image" src="https://github.com/user-attachments/assets/ac7e98e7-d616-4d40-84e8-9f68b653709e" />
+
+Example:
+
+<img width="693" height="349" alt="image" src="https://github.com/user-attachments/assets/d0fd11eb-389a-418f-8084-16c8572e0952" />
+
 8. Save and apply changes → APs reboot and adopt the new config.  
 
 
