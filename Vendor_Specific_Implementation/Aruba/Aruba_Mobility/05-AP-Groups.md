@@ -177,6 +177,7 @@ Then you can see the advanced profile tab:
 
 - https://arubanetworking.hpe.com/techdocs/CLI-Bank/Content/aos8/sh-ap-ap-grp.htm
 - https://networkwords.com/aruba-wlan-ap-group/
+- https://www.youtube.com/watch?v=dq7nFysmISY
 
 ---
 
