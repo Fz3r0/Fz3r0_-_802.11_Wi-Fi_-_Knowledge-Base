@@ -137,11 +137,11 @@ RF management is critical for wireless performance. Aruba allows per-group tunin
 1. Log in to the Aruba controller (MM/MC) interface.  
 2. Navigate to **Configuration → AP Groups**, and click ++"+"++.
 3. 
-<img height="400" alt="image" src="https://github.com/user-attachments/assets/e25abbe8-5d0d-4e85-bf2b-e43ca299cc8a" />
+<img height="250" alt="image" src="https://github.com/user-attachments/assets/e25abbe8-5d0d-4e85-bf2b-e43ca299cc8a" />
 
 4. Create a new AP-Group, assign a descriptive name, and push the changes. _For this point, the AP group **"ORION"** will already have been created, specifically within the sub-group **ALFA**, which in turn is inside the group **Site Controllers1.** In other words, the configurations will only be applied to the two MCs that are inside **ALFA**_
 
-<img width="1959" height="433" alt="image" src="https://github.com/user-attachments/assets/d79067c6-3150-4a25-b405-ad270b9f79ed" />
+<img height="200" alt="image" src="https://github.com/user-attachments/assets/d79067c6-3150-4a25-b405-ad270b9f79ed" />
 
 5. Configure WLANs, VLANs, and RF profiles for that group:
 
