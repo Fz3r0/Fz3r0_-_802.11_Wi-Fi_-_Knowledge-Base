@@ -151,8 +151,7 @@ RF management is critical for wireless performance. Aruba allows per-group tunin
 
 Then you can see the advanced profile tab:
 
-<img width="2342" height="621" alt="image" src="https://github.com/user-attachments/assets/11731e74-4ce7-4462-a53c-cc86194b442e" />
-
+<img width="2309" height="624" alt="image" src="https://github.com/user-attachments/assets/87cf4e02-0a26-4188-b577-47e8fb22b1b0" />
 
 
 
