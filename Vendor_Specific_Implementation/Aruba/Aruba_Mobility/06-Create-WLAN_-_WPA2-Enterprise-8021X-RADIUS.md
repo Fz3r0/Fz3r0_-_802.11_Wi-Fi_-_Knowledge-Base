@@ -59,6 +59,7 @@ Agregar el VLAN ID y un nombre identificador y hacer deplot de los cambios
 
 
 
+<img width="632" height="456" alt="image" src="https://github.com/user-attachments/assets/2c51137b-be52-4d3b-8ad9-56d207c76b95" />
 
 
 
