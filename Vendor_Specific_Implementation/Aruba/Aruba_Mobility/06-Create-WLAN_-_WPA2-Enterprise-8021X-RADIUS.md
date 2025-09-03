@@ -71,9 +71,25 @@ Ahora pasamos a la parte de seguridad:
 - Aquí podemos seleccionar ya sea WPA2 o WPA3 Enterprise, yo usaré WPA2 para fines prácticos
 - El reauth interval en aruba es...
 - el mahcina authentication es.... por ahor alo dejare en disabled
-- el deny listing se suma con el max authentication, aqui simplemente es el nuemro de beves que peudes bla bla... 
+- el deny listing se suma con el max authentication, aqui simplemente es el nuemro de beves que peudes bla bla... el máximo es 5 
 
-<img width="1162" height="708" alt="image" src="https://github.com/user-attachments/assets/eb318155-971f-4f9d-9a26-74e26cc72ae0" />
+<img width="1173" height="680" alt="image" src="https://github.com/user-attachments/assets/34cd8050-2f3a-43d5-8fcf-8de3f9de1881" />
+
+Hacer click en "+" para agregar el authetnication server. 
+
+- En este lab yo usaré mi Windows Server 2022 Data center, dodne tengo ya un NPS jalando. RADIUS: 192.168.1.86	shared secret:	Cisco.12345
+
+<img width="642" height="491" alt="image" src="https://github.com/user-attachments/assets/0426c71e-ea46-4484-ad28-512c9400ab2b" />
+
+En caso de un "Employee" el Default Role siempre será guest (esto confirmamelo porfa vektor)
+
+<img width="1188" height="238" alt="image" src="https://github.com/user-attachments/assets/c4615fc9-fc75-4fe6-a6b2-5104d3e3a295" />
+
+Y listo! simplemente hacer el deploy: 
+
+<img width="1280" height="291" alt="image" src="https://github.com/user-attachments/assets/93b960cc-73f6-4476-aff2-9ab1807ff08d" />
+
+
 
 
 ---
