@@ -22,8 +22,42 @@
 # 🏝️📡 Aruba Mobility :: `Create WLAN WPA2-Enterprise : 802.1X : RADIUS`
 
 
-## Step 1: ``
 
+### `Step 1`: Crear la VLAN que llevará mi WLAN/SSID
+
+- La VLAN será la que transporte esta red, del lado del backbone esta VLAN tiene que estar configurada en el DHCP en caso de estar en modo bridge, o existir en la controladora en caso de estar tunneled.
+- Es decir, la VLAN debe coincidir ya sea con la controladora o la LAN
+
+Grupo > Sub-Grupo > Configuration > Interfaces > VLAN:
+
+<img width="1919" height="766" alt="image" src="https://github.com/user-attachments/assets/e0ee79f3-afbd-459a-90d5-410de97bfbec" />
+
+Agregar el VLAN ID y un nombre identificador y hacer deplot de los cambios
+
+- Nota: Mas adelante se podrá seleccionar la VLAN tanto por el nombre como por el número. 
+
+<img width="1269" height="530" alt="image" src="https://github.com/user-attachments/assets/118877f5-fd99-4bfe-a622-32bb1292aaf3" />
+
+### `Step 2`: Configurar WLAN (SSID)
+
+
+
+
+
+
+
+
+
+
+
+### `Step 1`: Seleccionar el grupo de manera  jerarquica donde se quiere configurar
+
+- En mi caso será en el grupo "ALFA" que tiene 2 MC redundantes, justo la que estoy usando para mi laboratorio.
+- Dar click en el boton de "+"
+
+<img width="1919" height="767" alt="image" src="https://github.com/user-attachments/assets/eed65a02-8b77-4dc1-ada4-07cb22236875" />
+
+### `Step 2`: Seleccionar el grupo de manera  jerarquica donde se quiere configurar
 
 
 
