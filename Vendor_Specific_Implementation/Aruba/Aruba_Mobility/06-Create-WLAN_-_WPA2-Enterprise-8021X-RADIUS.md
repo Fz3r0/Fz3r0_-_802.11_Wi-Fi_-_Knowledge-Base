@@ -44,24 +44,32 @@ Agregar el VLAN ID y un nombre identificador y hacer deplot de los cambios
 
 **Grupo > Sub-Grupo > Configuration > WLANs:**
 
-
-
-
-
-
-
-
-
-
 <img width="1919" height="767" alt="image" src="https://github.com/user-attachments/assets/eed65a02-8b77-4dc1-ada4-07cb22236875" />
 
+Llenar los campos según sea necesario, particularmente para este lab yo usaré: 
 
-
-
+- Name (SSID): `V10-EMPLOYEE_ENTERPRISE_TUNNEL`
+- Primary usage: `Employee`
+- Select AP Groups Broadcast: `AP-GROUP1_office-branch-01`
+- Forwarding mode: `Tunnel`
 
 <img width="632" height="456" alt="image" src="https://github.com/user-attachments/assets/2c51137b-be52-4d3b-8ad9-56d207c76b95" />
 
+Después, seleccionar la VLAN:
 
+- Aquí podemos usar ya sea el VLAN ID "10" o el nombre completo de la VLAN.
+- Podemos incluso ver las VLANs que ya hay creadas por si tenemos duda
+
+<img width="1256" height="658" alt="image" src="https://github.com/user-attachments/assets/69c63a95-8042-4f6d-84c4-0b5f0f1d33fa" />
+
+Ahora pasamos a la parte de seguridad:
+
+- Aquí podemos seleccionar ya sea WPA2 o WPA3 Enterprise, yo usaré WPA2 para fines prácticos
+- El reauth interval en aruba es...
+- el mahcina authentication es.... por ahor alo dejare en disabled
+- el deny listing se suma con el max authentication, aqui simplemente es el nuemro de beves que peudes bla bla... 
+
+<img width="1162" height="708" alt="image" src="https://github.com/user-attachments/assets/eb318155-971f-4f9d-9a26-74e26cc72ae0" />
 
 
 ---
