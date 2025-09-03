@@ -53,6 +53,10 @@ Llenar los campos según sea necesario, particularmente para este lab yo usaré:
 - Select AP Groups Broadcast: `AP-GROUP1_office-branch-01`
 - Forwarding mode: `Tunnel`
 
+NOTA: La gran diferencia entr ebridged y tunnel es que bridged se comporta el AP como un "switch" todas las VLANs que vienen de los SSID saldrán trunkled con 802.1q y por ende el switch también debe ser trunked, uan vez que sale del AP los datos ya todo se pasa a la LAN y ahi se debe hacer cargo del DHCP y demas, tal cual como otro switch truinked. Por otro lado, si esta tunnel todo sera tunneleado por una misma VLAN hasta la controladora, y ya la controladora se harña cargo de DHCP y el control de datos. 
+
+NOTA 2: la diferneci aen aruba con un Employee un y Guest es..... aqui pon que odna vektor. 
+
 <img width="632" height="456" alt="image" src="https://github.com/user-attachments/assets/2c51137b-be52-4d3b-8ad9-56d207c76b95" />
 
 Después, seleccionar la VLAN:
