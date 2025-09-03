@@ -36,7 +36,7 @@ Agregar el VLAN ID y un nombre identificador y hacer deplot de los cambios
 
 - Nota: Mas adelante se podrá seleccionar la VLAN tanto por el nombre como por el número. 
 
-<img width="1269" height="530" alt="image" src="https://github.com/user-attachments/assets/118877f5-fd99-4bfe-a622-32bb1292aaf3" />
+<img width="1952" height="523" alt="image" src="https://github.com/user-attachments/assets/692b81e8-c4af-4cca-8d7b-d8d31525ff8d" />
 
 ### `Step 2`: Configurar WLAN (SSID)
 
@@ -55,7 +55,7 @@ Agregar el VLAN ID y un nombre identificador y hacer deplot de los cambios
 
 <img width="1919" height="767" alt="image" src="https://github.com/user-attachments/assets/eed65a02-8b77-4dc1-ada4-07cb22236875" />
 
-### `Step 2`: Seleccionar el grupo de manera  jerarquica donde se quiere configurar
+
 
 
 
