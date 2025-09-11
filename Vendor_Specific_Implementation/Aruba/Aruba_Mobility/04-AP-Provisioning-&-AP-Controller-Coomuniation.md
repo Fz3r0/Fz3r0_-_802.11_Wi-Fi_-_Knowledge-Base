@@ -38,11 +38,13 @@ Nota: UN AP Aruba (e.g. AP-515) puede ser IAP o CAP según el firmware que tenga
 ### Primer acceso al AP via IP
 
 1. Conéctalo a tu switch con PoE (mínimo 802.3at PoE+ porque el 515 es hungry).
-2. Dale conectividad en una VLAN con DHCP (más fácil al inicio).
+2. Dale conectividad en una VLAN con DHCP (más fácil al inicio), busca la IP con algún scanner o en la pool del DHCP.
 3. Si es IAP, va a pedir IP vía DHCP y puedes buscarla:
     - show arp en tu switch/router
     - scanner tipo nmap o arp-scan.
     - Default login: `admin`/`(serial_number)`
+
+<img width="734" height="349" alt="image" src="https://github.com/user-attachments/assets/0a1117f6-304d-4f6e-9b74-5d3b367f62e0" />
 
 Nota: Si es CAP, al bootear intentará llegar a un MC/MM. Sin controlador, suele quedarse con IP DHCP y página mínima que dice que necesita controller.
 
