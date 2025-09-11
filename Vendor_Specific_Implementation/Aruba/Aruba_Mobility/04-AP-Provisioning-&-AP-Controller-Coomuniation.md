@@ -80,14 +80,16 @@ Notas:
     
     * Ejemplo: `convert-aos-ap CAP 192.168.1.196` lo convierte a CAP apuntando al controller con esa IP. 
 
-* Enverso contrario, hay opciones para convertir CAP → IAP en modelos soportados, usualmente mediante interfaz web o mediante “Convert to Instant” desde el Controller GUI, si el modelo/AP tiene soporte, versión de firmware correcta, etc.
-
 1. El AP y el Controller deben estar en el **mismo dominio regulatorio** (regulatory domain). Si no, la conversión puede fallar. 
 2. El firmware del controller debe ser lo suficientemente nuevo (por ejemplo, ArubaOS versión ≥ cierta release) para soportar la operación `convert-aos-ap`. 
 3. Compatibilidad de imagen: si conviertes, el AP descargará la imagen (firmware) desde el controller automáticamente al hacer `convert-aos-ap`. 
 4. Es necesario que la red permita que el AP llegue al controller (que la IP del controller sea accesible, que haya ruta, DNS si aplica, etc.). 
 
 El AP descargará automáticamente el firmware adecuado desde el controller, hará reboot, y al reiniciar operará como CAP / Remote AP apuntando al Controller.
+
+#### IAP to CAP: UI
+
+
 
 ### De CAP a IAP (modo standalone / Instant lab):**
 
@@ -266,11 +268,7 @@ _Just add the IP helper on SVI, see Step 2, no more config is needed._
 
 # 🗃️ Resources
 
-- https://community.arubanetworks.com/discussion/how-to-convert-ap-515-to-iap?utm_source=chatgpt.com "HOW TO CONVERT AP-515 to IAP | Controllerless Networks"
-- https://arubanetworking.hpe.com/techdocs/CLI-Bank/Content/instant/convert-aos-ap.htm?utm_source=chatgpt.com "convert-aos-ap"
-- https://community.arubanetworks.com/discussion/converting-instant-aps-to-campus-aps-the-struggle-is-real?utm_source=chatgpt.com "Converting instant APs to campus APs -- the struggle is real"
-- https://artofrf.com/2022/02/20/aruba-convert-cap-to-iap/?utm_source=chatgpt.com "Aruba – Convert CAP to IAP - artofrf.com"
-- https://community.arubanetworks.com/discussion/convert-iap-to-cap-issue-on-ap-515?utm_source=chatgpt.com "Convert IAP to CAP issue on AP-515 | Controllerless Networks"
+- https://arubanetworking.hpe.com/techdocs/Archived/Instant-AOS-8/Instant_83_WebHelp/Content/Instant_UG/IAP_maintenance/ConvertingIAPtoCAP.htm
 
 ---
 
