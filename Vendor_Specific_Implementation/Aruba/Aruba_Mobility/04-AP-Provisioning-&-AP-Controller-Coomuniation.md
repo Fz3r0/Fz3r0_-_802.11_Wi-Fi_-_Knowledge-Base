@@ -48,8 +48,13 @@ Nota: UN AP Aruba (e.g. AP-515) puede ser IAP o CAP según el firmware que tenga
 
 <img width="902" height="541" alt="image" src="https://github.com/user-attachments/assets/1f5438f3-8603-4275-8f00-7231714710c1" />
 
-- Si el AP no deja hacer login, es posible ya venga con un user y password personalizados, en ese caso hay que hacer Factory Reset.
+Una vez dentro, el dashboard se verá así:
 
+<img width="1919" height="702" alt="image" src="https://github.com/user-attachments/assets/fb46733e-99c8-4c80-9453-e91263af1a8c" />
+
+Notas:
+
+- Si el AP no deja hacer login, es posible ya venga con un user y password personalizados, en ese caso hay que hacer Factory Reset.
 - Si es CAP, al bootear intentará llegar a un MC/MM. Sin controlador, suele quedarse con IP DHCP y página mínima que dice que necesita controller.
 
 ### Primer acceso al AP via Console
