@@ -61,7 +61,10 @@ Nota: UN AP Aruba (e.g. AP-515) puede ser IAP o CAP según el firmware que tenga
 
 1. Botón reset en la parte trasera, déjalo presionado unos 10-15s hasta que parpadee el LED.
 2. Al soltar, regresa a defaults (IAP o CAP según firmware instalado).
+3. Entrar con credenciales default `admin`/`(Serial_Number)`
+4. Hacer reset de password
 
+<img width="302" height="223" alt="image" src="https://github.com/user-attachments/assets/463e6f05-4c3f-49f0-8326-a580d660055f" />
 
 
 ### 🔄 Cambiar firmware entre IAP ↔ CAP
