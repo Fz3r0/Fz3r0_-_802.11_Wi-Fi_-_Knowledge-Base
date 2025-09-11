@@ -103,6 +103,37 @@ Instant AP to Campus AP conversion:
 
 <img width="269" height="170" alt="image" src="https://github.com/user-attachments/assets/cfe4357f-3189-4630-b5a7-4b738865cc6c" />
 
+El Ap aparecerá automáticamente en la controladorA: 
+
+
+**OJO!!!** Si por alguna razon no aparece, entrar por SSH a la MC (no a la MM!!) y lanzar el comando, por ejemplo aqui el error es porque aún no cargo ninguna licencia, y no aparece en GUI, pero en CLI aparece como "denied". 
+
+````
+(MGD-DEV::MC-Fz3r0-1) #show ap database
+
+AP Database
+-----------
+Name               Group    AP Type  IP Address     Status  Flags  Switch IP      Standby IP
+----               -----    -------  ----------     ------  -----  ---------      ----------
+f4:2e:7f:c8:30:f4  default  515      10.10.130.101  Denied         192.168.1.196  0.0.0.0           <<<<<<<<<<-------------------- OJO!!!!
+
+Flags: 1 = 802.1x authenticated AP use EAP-PEAP;   1+ = 802.1x use EST;    1- = 802.1x use factory cert
+       2 = Using IKE version 2;                    4 = WiFi Uplink
+       B = Built-in AP;                            C = Cellular RAP;       D = Dirty or no config
+       E = Regulatory Domain Mismatch;             F = AP failed 802.1x authentication
+       G = No such group;        I = Inactive;     J = USB cert at AP;     L = Unlicensed
+       M = Mesh node
+       N = Duplicate name;       P = PPPoe AP;     R = Remote AP;          R- = Remote AP requires Auth
+       S = Standby-mode AP;      T = Thermal ShutDown;    U = Unprovisioned;    X = Maintenance Mode
+       Y = Mesh Recovery
+       b = bypass of AP1x timeout;    c = CERT-based RAP;    e = Custom EST cert;    f = No Spectrum FFT support
+       i = Indoor;                    o = Outdoor;           l = LAG 802.3ad;        m = Protocol Mismatch
+       p = In deep-sleep status;      r = Power Restricted;  s = LACP striping;      t = Temperature Restricted
+       u = Custom-Cert RAP;           z = Datazone AP
+
+Total APs:1
+(MGD-DEV::MC-Fz3r0-1) #
+````
 
 ### De CAP a IAP (modo standalone / Instant lab):**
 
