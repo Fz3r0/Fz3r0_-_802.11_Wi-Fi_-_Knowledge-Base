@@ -42,7 +42,7 @@ Nota: UN AP Aruba (e.g. AP-515) puede ser IAP o CAP según el firmware que tenga
 3. Si es IAP, va a pedir IP vía DHCP y puedes buscarla:
     - show arp en tu switch/router
     - scanner tipo nmap o arp-scan.
-    - Default login: `admin`/`(serial_number)`
+    - Default login: `admin`/`(SERIAL_NUMBER_MAYUS)`
 
 <img width="734" height="349" alt="image" src="https://github.com/user-attachments/assets/0a1117f6-304d-4f6e-9b74-5d3b367f62e0" />
 
@@ -54,19 +54,15 @@ Una vez dentro, el dashboard se verá así:
 
 Notas:
 
-- Si el AP no deja hacer login, es posible ya venga con un user y password personalizados, en ese caso hay que hacer Factory Reset.
-- Si es CAP, al bootear intentará llegar a un MC/MM. Sin controlador, suele quedarse con IP DHCP y página mínima que dice que necesita controller.
-
-### Primer acceso al AP via Console
-
-1. Consola serial: conéctale un cable micro-USB (los Aruba 5xx traen puerto console micro-USB) o adaptador RJ-45 console si aplica.
-2. Durante boot verás si carga como ArubaOS Instant (IAP) o como CAP.
+- Si el AP no deja hacer login debido a credenciales incorrectas, es posible ya venga con un user y password personalizados, en ese caso hay que hacer Factory Reset.
+- Si el AP viene como CAP, al bootear intentará llegar a un MC/MM y no tendrá acceso por GUI. Sin controlador, suele quedarse con IP DHCP y solo puede accederse por SSH, en ese caso hay que hacer Factory Reset.
+- Primer acceso al AP via Console: conéctale un cable micro-USB (los Aruba 5xx traen puerto console micro-USB) o adaptador RJ-45 console si aplica.
 
 ### Factory Reset
 
 1. Botón reset en la parte trasera, déjalo presionado unos 10-15s hasta que parpadee el LED.
 2. Al soltar, regresa a defaults (IAP o CAP según firmware instalado).
-3. Entrar con credenciales default `admin`/`(Serial_Number)`
+3. Entrar con credenciales default `admin`/`(SERIAL_NUMBER_MAYUS)`
 4. Hacer reset de password
 
 <img width="302" height="223" alt="image" src="https://github.com/user-attachments/assets/463e6f05-4c3f-49f0-8326-a580d660055f" />
