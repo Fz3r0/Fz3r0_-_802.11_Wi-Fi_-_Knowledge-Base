@@ -101,6 +101,8 @@ Instant AP to Campus AP conversion:
 
 <img width="671" height="222" alt="image" src="https://github.com/user-attachments/assets/ec0cbe77-3a1d-434a-b19b-2d3304a3ad28" />
 
+<img width="269" height="170" alt="image" src="https://github.com/user-attachments/assets/cfe4357f-3189-4630-b5a7-4b738865cc6c" />
+
 
 ### De CAP a IAP (modo standalone / Instant lab):**
 
