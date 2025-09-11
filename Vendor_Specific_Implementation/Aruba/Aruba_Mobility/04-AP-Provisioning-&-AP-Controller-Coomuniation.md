@@ -131,6 +131,18 @@ Total APs:1
 (MGD-DEV::MC-Fz3r0-1) #
 ````
 
+Yo tuve que meterlo a la whitelist a mano (aunque ya me pare´cia dentro pero aun asi apliqye el comando)
+Y además poner el certificado yo como valido:
+
+````py
+! # Crear whitelist (quizás ya esté creada)
+whitelist-db cpsec add mac-address f4:2e:7f:c8:30:f4 ap-group default ap-name Lab-AP515
+
+! # approved manual
+whitelist-db cpsec modify mac-address f4:2e:7f:c8:30:f4 state approved-ready-for-cert
+````
+
+
 ### De CAP a IAP (modo standalone / Instant lab):**
 
 1. Verifica que el modelo/AP tenga soporte para modo IAP (AP-515 lo tiene en muchas entregas).
