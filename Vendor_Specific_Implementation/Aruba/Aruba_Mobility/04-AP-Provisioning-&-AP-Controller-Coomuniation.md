@@ -68,6 +68,111 @@ The diagram below illustrates a typical **first-boot scenario** for an Aruba AP 
    * Optionally, Controller IP (DHCP option 43/60)
 4. AP uses this info to initiate secure communication with the controller.
 
+**Configuration Steps:**
+
+#### STEP 1 :: Create WLAN VLAN (Native Bridge or Combined / Access Tunnel Only)
+
+vlan 300
+   name v300-ARUBA-WIRELESS-MGMTandTUNNEL
+exit
+
+#### STEP 2 :: Create SVI (v300 Gateway)
+
+- Local DHCP Server method
+
+````py
+interface Vlan300
+   description *** ARUBA WIRELESS SVI - LOCAL DHCP ***
+   ip address 10.35.41.254 255.255.254.0
+   ip ospf 1 area 0
+exit
+````
+
+- DHCP helper method:
+
+````py
+interface Vlan300
+   description *** ARUBA WIRELESS SVI - DHCP HELPER ***
+   ip address 10.34.13.254 255.255.254.0
+   ip helper-address 10.10.66.185
+   ip helper-address 10.10.66.186
+   ip pim sparse-mode
+   ip ospf 1 area 0
+exit
+````
+
+#### STEP 3 :: Add VLAN to AP interfaces:
+
+````py
+! # ACCESS INTERFACE (TUNNEL)
+interface GigabitEthernet 1/0/11
+   *** v300 Wi-Fi :: TUNNEL (ACCESS) ***
+   switchport mode access
+   switchport access vlan 300
+      spanning-tree portfast edge 
+      no shutdown 
+exit 
+
+!
+
+
+````
+
+or
+
+````py
+! # ACCESS INTERFACE (BRIDGE OR COMBINED)
+interface GigabitEthernet 1/0/19
+   *** v300 Wi-Fi :: BRIDGE (TRUNK) ***
+   switchport access vlan 300
+   switchport mode trunk
+   ! # Management/Tunnel VLAN 300 as Native 
+   switchport trunk native vlan 300 
+   ! # SSIDs allowed & pruned, e.g VLAN 300 (or others)
+   switchport trunk allowed VLAN 300
+      spanning-tree portfast trunk 
+      no shutdown
+exit 
+
+!
+
+ 
+````
+
+#### 4. Create DHCP server or DHCP helper (v300 DHCP pool)
+
+- Local DHCP Server:
+
+````py
+! # Excluded IPs v300
+ip dhcp excluded-address 10.10.130.1 10.10.130.100
+ip dhcp excluded-address 10.10.130.201 10.10.130.254
+!
+! # DHCP pool v300
+ip dhcp pool v300-ARUBA-WIRELESS
+   network 10.10.130.0 255.255.255.0
+   default-router 10.10.130.254
+   dns-server 8.8.8.8 1.1.1.1
+   domain-name fz3r0.dojo
+   lease 0 8 0
+      ! # OPTION 60: 
+      option 60 ascii ArubaAP
+      ! # OPTION 43: ARUBA MC IP (WLC controller)
+      option 43 ip 192.168.1.196
+         ! # Fixed IPs (if needed) 
+         address 10.10.130.101 client-id 01f0.f0f0.f0f0.f0
+exit  
+
+!
+
+````
+
+- DHCP Helper (eg. for external DHCP server or DDI service):
+
+_Just add the IP helper on SVI, see Step 2, no more config is needed._
+
+---
+
 ### Scenario B: `Static IP (No DHCP)`
 
 * Same topology, but DHCP server is not required.
