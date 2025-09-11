@@ -142,6 +142,9 @@ whitelist-db cpsec add mac-address f4:2e:7f:c8:30:f4 ap-group default ap-name La
 whitelist-db cpsec modify mac-address f4:2e:7f:c8:30:f4 state approved-ready-for-cert
 ````
 
+Pero además es porque no tengo la licencia, en caso de tener licencia aparecerá auomaticamente: 
+
+<img width="1919" height="441" alt="image" src="https://github.com/user-attachments/assets/8a175932-9a1b-45b4-a620-5e204a1f2b36" />
 
 ### De CAP a IAP (modo standalone / Instant lab):**
 
