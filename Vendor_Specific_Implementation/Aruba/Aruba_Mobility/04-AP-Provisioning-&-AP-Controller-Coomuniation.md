@@ -83,7 +83,7 @@ exit
 ````py
 interface Vlan300
    description *** ARUBA WIRELESS SVI - LOCAL DHCP ***
-   ip address 10.35.41.254 255.255.254.0
+   ip address 10.10.130.254 255.255.255.0
    ip ospf 1 area 0
 exit
 ````
@@ -93,7 +93,7 @@ exit
 ````py
 interface Vlan300
    description *** ARUBA WIRELESS SVI - DHCP HELPER ***
-   ip address 10.34.13.254 255.255.254.0
+   ip address 10.10.130.254 255.255.255.0
    ip helper-address 10.10.66.185
    ip helper-address 10.10.66.186
    ip pim sparse-mode
