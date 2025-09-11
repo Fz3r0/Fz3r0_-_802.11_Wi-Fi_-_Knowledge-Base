@@ -46,6 +46,8 @@ Nota: UN AP Aruba (e.g. AP-515) puede ser IAP o CAP según el firmware que tenga
 
 <img width="734" height="349" alt="image" src="https://github.com/user-attachments/assets/0a1117f6-304d-4f6e-9b74-5d3b367f62e0" />
 
+<img width="902" height="541" alt="image" src="https://github.com/user-attachments/assets/1f5438f3-8603-4275-8f00-7231714710c1" />
+
 Nota: Si es CAP, al bootear intentará llegar a un MC/MM. Sin controlador, suele quedarse con IP DHCP y página mínima que dice que necesita controller.
 
 ### Primer acceso al AP via Console
