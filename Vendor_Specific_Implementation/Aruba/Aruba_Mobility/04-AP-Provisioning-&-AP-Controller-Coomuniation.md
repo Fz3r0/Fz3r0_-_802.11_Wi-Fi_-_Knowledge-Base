@@ -48,78 +48,44 @@ Nota: UN AP Aruba (e.g. AP-515) puede ser IAP o CAP según el firmware que tenga
 
 <img width="902" height="541" alt="image" src="https://github.com/user-attachments/assets/1f5438f3-8603-4275-8f00-7231714710c1" />
 
-Nota: Si es CAP, al bootear intentará llegar a un MC/MM. Sin controlador, suele quedarse con IP DHCP y página mínima que dice que necesita controller.
+- Si el AP no deja hacer login, es posible ya venga con un user y password personalizados, en ese caso hay que hacer Factory Reset.
+
+- Si es CAP, al bootear intentará llegar a un MC/MM. Sin controlador, suele quedarse con IP DHCP y página mínima que dice que necesita controller.
 
 ### Primer acceso al AP via Console
 
 1. Consola serial: conéctale un cable micro-USB (los Aruba 5xx traen puerto console micro-USB) o adaptador RJ-45 console si aplica.
 2. Durante boot verás si carga como ArubaOS Instant (IAP) o como CAP.
 
-Si ya trae config vieja de otra red, puedes hacer factory reset:
+### Factory Reset
 
 1. Botón reset en la parte trasera, déjalo presionado unos 10-15s hasta que parpadee el LED.
 2. Al soltar, regresa a defaults (IAP o CAP según firmware instalado).
 
+
+
 ### 🔄 Cambiar firmware entre IAP ↔ CAP
 
-**De IAP a CAP (para usarlo con un Mobility Controller):**
+* El AP-515 **trae código Instant/AP por defecto** en muchas entregas. Si al encenderlo **no encuentra un controller**, arranca como IAP. 
+* Sin embargo, **no todos los AP son “modelos totalmente Instant-only”**. Aruba soporta la conversión de Instant APs a Campus AP (CAP) o Remote AP (RAP) si el firmware y modelo lo permiten. 
+* El comando CLI `convert-aos-ap <mode> <Controller-IP>` sirve para convertir un Instant AP (IAP) a CAP o RAP, siempre que el controller esté corriendo una versión de ArubaOS compatible. 
+    
+    * Ejemplo: `convert-aos-ap CAP 192.168.1.196` lo convierte a CAP apuntando al controller con esa IP. 
 
-Listo Carlos, investigué a fondo. Hay matices importantes que corregir/modificar respecto a lo que te decía, especialmente para AP-515 y versiones modernas de Aruba. Aquí la versión actualizada:
+* Enverso contrario, hay opciones para convertir CAP → IAP en modelos soportados, usualmente mediante interfaz web o mediante “Convert to Instant” desde el Controller GUI, si el modelo/AP tiene soporte, versión de firmware correcta, etc.
 
----
+1. El AP y el Controller deben estar en el **mismo dominio regulatorio** (regulatory domain). Si no, la conversión puede fallar. 
+2. El firmware del controller debe ser lo suficientemente nuevo (por ejemplo, ArubaOS versión ≥ cierta release) para soportar la operación `convert-aos-ap`. 
+3. Compatibilidad de imagen: si conviertes, el AP descargará la imagen (firmware) desde el controller automáticamente al hacer `convert-aos-ap`. 
+4. Es necesario que la red permita que el AP llegue al controller (que la IP del controller sea accesible, que haya ruta, DNS si aplica, etc.). 
 
-## 🔍 Datos reales sobre IAP ↔ CAP para Aruba APs como el 515
+El AP descargará automáticamente el firmware adecuado desde el controller, hará reboot, y al reiniciar operará como CAP / Remote AP apuntando al Controller.
 
-* El AP-515 **trae código Instant/AP por defecto** en muchas entregas. Si al encenderlo **no encuentra un controller**, arranca como IAP. ([Airheads Community][1])
-* Sin embargo, **no todos los AP son “modelos totalmente Instant-only”**. Aruba soporta la conversión de Instant APs a Campus AP (CAP) o Remote AP (RAP) si el firmware y modelo lo permiten. ([HPE Aruba Networking][2])
-* El comando CLI `convert-aos-ap <mode> <Controller-IP>` sirve para convertir un Instant AP (IAP) a CAP o RAP, siempre que el controller esté corriendo una versión de ArubaOS compatible. ([HPE Aruba Networking][2])
-
-  * Ejemplo: `convert-aos-ap CAP 10.10.31.208` lo convierte a CAP apuntando al controller con esa IP. ([Airheads Community][3])
-* Enverso contrario, hay opciones para convertir CAP → IAP en modelos soportados, usualmente mediante interfaz web o mediante “Convert to Instant” desde el Controller GUI, si el modelo/AP tiene soporte, versión de firmware correcta, etc. ([Art of RF][4])
-* Otras condiciones importantes que encontré:
-
-  1. El AP y el Controller deben estar en el **mismo dominio regulatorio** (regulatory domain). Si no, la conversión puede fallar. ([HPE Aruba Networking][2])
-  2. El firmware del controller debe ser lo suficientemente nuevo (por ejemplo, ArubaOS versión ≥ cierta release) para soportar la operación `convert-aos-ap`. ([HPE Aruba Networking][2])
-  3. Compatibilidad de imagen: si conviertes, el AP descargará la imagen (firmware) desde el controller automáticamente al hacer `convert-aos-ap`. ([Airheads Community][5])
-  4. Es necesario que la red permita que el AP llegue al controller (que la IP del controller sea accesible, que haya ruta, DNS si aplica, etc.). ([Airheads Community][5])
-
----
-
-## ✅ Versión corregida del bloque para ti
-
-Aquí cómo quedaría mejor explicado con la información real:
-
----
-
-### 🔄 Cambiar entre IAP ↔ CAP (AP-515 / Aruba modelos recientes)
-
-**De IAP a CAP (usar con Mobility Controller / Controller-based network):**
-
-1. Verifica que tu controller corre una versión de ArubaOS compatible con la conversión de Instant APs (por ejemplo versiones 6.x+, ArubaOS que soporte el comando `convert-aos-ap`).
-2. Asegúrate de que AP y controller estén en el mismo dominio regulatorio y que el controller sea accesible desde el AP.
-3. En la consola del AP Instant, ejecuta:
-
-   ```
-   enable
-   convert-aos-ap CAP <IP-del-Controller>
-   ```
-
-4. El AP descargará automáticamente el firmware adecuado desde el controller, hará reboot, y al reiniciar operará como CAP / Remote AP apuntando al Controller.
-
-**De CAP a IAP (modo standalone / Instant lab):**
+### De CAP a IAP (modo standalone / Instant lab):**
 
 1. Verifica que el modelo/AP tenga soporte para modo IAP (AP-515 lo tiene en muchas entregas).
 2. Si el AP no detecta un controller o ha sido reseteado, al arrancar puede volver a levantarse en modo IAP (especialmente si lo traías configurado como Instant anteriormente). 
 3. Si necesitas forzar la conversión, busca en la GUI del controller la opción “Convert to Instant mode” para ese AP, si tu versión la tiene. También podría requerirse un preload de la imagen Instant si el AP no tiene ya esa parte de firmware.
-
----
-
-
-
-
----
-
-¿Quieres que te arme también la **lista de comandos CLI** típica para hacer el upgrade por consola (los `copy`, `boot system`, etc.), para que lo tengas listo en tu lab sin depender de la GUI?
 
 
 
