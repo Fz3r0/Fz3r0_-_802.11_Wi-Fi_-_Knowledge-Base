@@ -87,8 +87,19 @@ Notas:
 
 El AP descargará automáticamente el firmware adecuado desde el controller, hará reboot, y al reiniciar operará como CAP / Remote AP apuntando al Controller.
 
-#### IAP to CAP: UI
+#### IAP to CAP: GUI
 
+Instant AP to Campus AP conversion:
+
+1. Go to the Maintenance > Convert page.
+2. Select Campus APs managed by a Mobility Controller from the Convert one or more Access Points to drop-down list.
+3. Enter the host name, FQDN, or the IP address of the controller in the Hostname or IP Address of Mobility Controller text box. Contact your local administrator to obtain these details.
+4. Click Convert to complete the conversion.
+5. Click OK to confirm the conversion. The Instant AP reboots and begins operating in the Campus AP mode. After conversion, the Instant AP is managed by the Mobility Controller.
+
+<img width="1919" height="825" alt="image" src="https://github.com/user-attachments/assets/8f06b185-51aa-4b38-931a-550f9ecdbdf0" />
+
+<img width="671" height="222" alt="image" src="https://github.com/user-attachments/assets/ec0cbe77-3a1d-434a-b19b-2d3304a3ad28" />
 
 
 ### De CAP a IAP (modo standalone / Instant lab):**
