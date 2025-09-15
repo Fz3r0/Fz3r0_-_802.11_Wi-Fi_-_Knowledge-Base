@@ -155,7 +155,23 @@ Be sure to plan your license acquisition and management carefully to make the mo
 - MC Virtual
 - APs OJO!!! revisar si el AP es US, RW, etc!!!
 - Firewall (optional)
-- 
+
+4- CAUTION!!! SI SALE EL SIGUIENTE LETRERO ES MEJOR CONFIGURAR LA OCNTROLLER CON NTP, SINO CADA QUE REINICIE SE CANCELARÁN LAS LICENCIAS, ASÍ QUE PRIMERO CONFIGURAR HORA NTP Y ESTAR SGEURO QUE CADA QUE SE REINICIE AGARRE BIEN LA HORA: 
+
+<img width="398" height="190" alt="image" src="https://github.com/user-attachments/assets/8b2af920-b498-4601-92ee-b7bab4e2190b" />
+
+Yo puse el NTP de google: 
+
+5 - Empezer a activar la MM (pegar el key que manda Aruba):
+
+<img width="1919" height="664" alt="image" src="https://github.com/user-attachments/assets/433ac824-dfed-4de3-a713-45a5371438f2" />
+
+<img width="606" height="398" alt="image" src="https://github.com/user-attachments/assets/e2e1e6dc-6c0f-4ff6-8ecf-e6b9db973424" />
+
+<img width="1330" height="444" alt="image" src="https://github.com/user-attachments/assets/bb48b566-55ad-4827-bb57-fa5b60416543" />
+
+6 - Despues: 
+
 
 
 
