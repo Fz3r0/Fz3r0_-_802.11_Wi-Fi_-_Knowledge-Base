@@ -162,6 +162,8 @@ Be sure to plan your license acquisition and management carefully to make the mo
 
 Yo puse el NTP de google: 
 
+<img width="1802" height="736" alt="image" src="https://github.com/user-attachments/assets/03632101-f8ff-44f4-a85b-475765529e2c" />
+
 5 - Empezer a activar la MM (pegar el key que manda Aruba):
 
 <img width="1919" height="664" alt="image" src="https://github.com/user-attachments/assets/433ac824-dfed-4de3-a713-45a5371438f2" />
@@ -170,7 +172,16 @@ Yo puse el NTP de google:
 
 <img width="1330" height="444" alt="image" src="https://github.com/user-attachments/assets/bb48b566-55ad-4827-bb57-fa5b60416543" />
 
-6 - Despues: 
+6 - Despues para la MC:
+
+<img width="1328" height="451" alt="image" src="https://github.com/user-attachments/assets/3b6fabdc-18a9-4e61-b5cb-41fef88ab0ea" />
+
+7 - Finalmente APs y demás licencias, esto solo con pponer "+" encima de "AP" se ponen todas: 
+
+Ojo! click en enable PEF si llega a preguntaR: 
+
+<img width="617" height="236" alt="image" src="https://github.com/user-attachments/assets/8be1e663-3150-4c7d-99f1-d6b36b861d09" />
+
 
 
 
