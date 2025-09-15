@@ -182,6 +182,11 @@ Ojo! click en enable PEF si llega a preguntaR:
 
 <img width="617" height="236" alt="image" src="https://github.com/user-attachments/assets/8be1e663-3150-4c7d-99f1-d6b36b861d09" />
 
+Los 3 se verán así: 
+
+OJOOOOO MI AP ES DE US, ASÍ QUE LA MC TAMBIEN ES DE US!!!! ME HABIAN PUESTO UNA RW Y PUES NO, YO LA HABIA PUESTO US OHJASO CON ESO, DEPSUE SYA ME DIERON LA US
+
+<img width="1304" height="564" alt="image" src="https://github.com/user-attachments/assets/f32afee9-2c58-4725-bd92-7dcad0588b48" />
 
 
 
