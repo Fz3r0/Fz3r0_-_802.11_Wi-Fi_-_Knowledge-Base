@@ -139,9 +139,23 @@ License usage is straightforward to manage through ArubaOS, with options for glo
 
 Be sure to plan your license acquisition and management carefully to make the most out of your Aruba Wireless capabilities!
 
+# Licensing procedure for Demo licenses
 
+1. Ir a licensing
 
+<img width="1492" height="427" alt="image" src="https://github.com/user-attachments/assets/21b84d22-e6ba-42c3-902a-a43bf7cbc7cc" />
 
+2. Copiar passphrase para enviar a Aruba Suppor PArtner
+
+<img width="531" height="345" alt="image" src="https://github.com/user-attachments/assets/f964688a-d8c3-4b7a-8a2f-e4a9bedf8758" />
+
+3. Ellos se harán cargo de generar licencias como: 
+
+- MM Virtual
+- MC Virtual
+- APs OJO!!! revisar si el AP es US, RW, etc!!!
+- Firewall (optional)
+- 
 
 
 
