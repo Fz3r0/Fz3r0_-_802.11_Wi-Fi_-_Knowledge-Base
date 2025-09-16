@@ -1,4 +1,4 @@
-<img width="901" height="307" alt="image" src="https://github.com/user-attachments/assets/430be8d3-e045-4ea6-bad0-7feaade77395" /># 🏝️📡🛰️ Aruba Mobility: `Aruba Mobility - Remote 802.11 Frame Capture`
+# 🏝️📡🛰️ Aruba Mobility: `Aruba Mobility - Remote 802.11 Frame Capture`
 
 ![My Video](https://user-images.githubusercontent.com/94720207/165892585-b830998d-d7c5-43b4-a3ad-f71a07b9077e.gif)
 
