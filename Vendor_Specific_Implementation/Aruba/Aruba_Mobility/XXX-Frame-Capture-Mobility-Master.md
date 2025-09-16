@@ -53,6 +53,11 @@
 NOTE: IF YOU STILL LOOKING ONLY ENCODED ARUBA PACKETS, TRY TO DECODE AGAIN AS SHOW COUPLE STEPS EARLIER
 
 
+ojo cambiar la vlan del VAPª!!!!!
+
+<img width="1919" height="920" alt="image" src="https://github.com/user-attachments/assets/4b47c908-c252-42d0-b2b0-349679582224" />
+
+
 ---
 
 # 🗃️ Resources
