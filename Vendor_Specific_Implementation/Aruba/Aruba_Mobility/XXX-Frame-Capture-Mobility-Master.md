@@ -1,4 +1,4 @@
-# 🏝️📡🛰️ Aruba Mobility: `Aruba Mobility - Remote 802.11 Frame Capture`
+<img width="901" height="307" alt="image" src="https://github.com/user-attachments/assets/430be8d3-e045-4ea6-bad0-7feaade77395" /># 🏝️📡🛰️ Aruba Mobility: `Aruba Mobility - Remote 802.11 Frame Capture`
 
 ![My Video](https://user-images.githubusercontent.com/94720207/165892585-b830998d-d7c5-43b4-a3ad-f71a07b9077e.gif)
 
@@ -21,15 +21,24 @@
 
 # 🏝️📡 Aruba Mobility :: `Remote 802.11 Frame Capture`
 
+### `Step 1`: Setup Capture from MM
 
 
-### `Step 1`: Setup Wireshark with Aruba ERM Protocol
+
+### `Step 2`: Setup Wireshark with Aruba ERM Protocol
 
 - Preferences > Protocols > Aruba_ERM
 - Port: `5555` (default, or use any other)
 
 <img width="814" height="592" alt="image" src="https://github.com/user-attachments/assets/9060a65e-18c1-4f41-9498-783514c9faf6" />
 
+- Analyze > Decode As...
+
+<img width="595" height="323" alt="image" src="https://github.com/user-attachments/assets/e5489432-e8d8-4986-9957-4734def43144" />
+
+- Use capture filter: `udp port 5555` for get only tunneled capture packets
+
+<img width="901" height="307" alt="image" src="https://github.com/user-attachments/assets/3d8df1ed-6f5b-4702-8070-770518f8c114" />
 
 
 
