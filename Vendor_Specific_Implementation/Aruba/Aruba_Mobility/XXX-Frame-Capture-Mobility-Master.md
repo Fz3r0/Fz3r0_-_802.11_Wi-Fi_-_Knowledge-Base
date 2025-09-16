@@ -23,6 +23,10 @@
 
 ### `Step 1`: Setup Capture from MM
 
+- Access Point > Packet Capture
+- Add following data:
+
+<img width="469" height="339" alt="image" src="https://github.com/user-attachments/assets/fc677056-c465-4e50-ab56-ae21456f85ca" />
 
 
 ### `Step 2`: Setup Wireshark with Aruba ERM Protocol
