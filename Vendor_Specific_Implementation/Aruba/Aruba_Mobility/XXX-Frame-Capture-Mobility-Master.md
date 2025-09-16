@@ -50,7 +50,7 @@
 
 <img width="1919" height="1034" alt="image" src="https://github.com/user-attachments/assets/b2983472-216f-44e7-8517-9517b6e4b919" />
 
-
+NOTE: IF YOU STILL LOOKING ONLY ENCODED ARUBA PACKETS, TRY TO DECODE AGAIN AS SHOW COUPLE STEPS EARLIER
 
 
 ---
