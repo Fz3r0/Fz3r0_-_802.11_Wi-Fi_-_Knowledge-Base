@@ -36,6 +36,202 @@ ESTO PASA POR QUE LA NATIVE DEL VAP SIGUE SIENDO 1 POR DEFAULT, Y LAS TAGGED SER
 <img width="1256" height="457" alt="image" src="https://github.com/user-attachments/assets/60f17a69-e1a6-4a95-af20-b09bbc3dd841" />
 
 
+
+
+## 1) NPS (Windows Server) :: Agregar los Aruba MC's como RADIUS clients
+
+En el NPS:
+
+1. **RADIUS Clients and Servers » RADIUS Clients » New…**
+
+<img width="933" height="304" alt="image" src="https://github.com/user-attachments/assets/d209779d-cfc4-4b38-b29f-5d9874138aef" />
+
+- **Friendly name:** `MGD-DEV::MC-Fz3r0-1`
+- **Address (IP):** `192.168.1.196`
+- **Shared secret:** `Cisco.12345`
+- **Vendor:** RADIUS Standard.
+
+Repite para el segundo MC: 
+
+- **Friendly name:** `MGD-DEV::MC-Fz3r0-2`
+- **Address (IP):** `192.168.1.197`
+- **Shared secret:** `Cisco.12345`
+- **Vendor:** RADIUS Standard.
+
+<img width="919" height="590" alt="image" src="https://github.com/user-attachments/assets/2f7a47f5-048e-4e87-8e45-093e479b8ebf" />
+
+<img width="939" height="290" alt="image" src="https://github.com/user-attachments/assets/3dda08ab-c115-44d8-a8f8-260a7f652c7c" />
+
+2. Verifica tu **Network Policy** (PEAP/EAP-TLS, etc.), condición puede ser “NAS Port Type = Wireless – IEEE 802.11” y/o “Client Friendly Name = MGD-DEV::MC-Fz3r0-1 o MGD-DEV::MC-Fz3r0-2”.
+
+<img width="936" height="924" alt="image" src="https://github.com/user-attachments/assets/be1d6544-74c0-4ecd-9a86-8fadfe04651b" />
+
+> Si usas PEAP/EAP-TLS: el NPS debe tener cert de servidor válido y la hora sincronizada (NTP).
+
+
+
+
+
+
+
+
+# 2) Aruba – apuntar al NPS y usarlo en el SSID 802.1X
+
+CLI equivalente (ajusta nombres/IP/secret):
+
+```bash
+configure terminal
+
+# Servidor RADIUS (tu NPS)
+radius server NPS1
+  host <IP_DEL_NPS>
+  key <TU_SHARED_SECRET>
+  timeout 5
+  retransmit 3
+exit
+
+# Grupo AAA que usa ese RADIUS
+aaa server-group NPS-SG
+  auth-server NPS1
+exit
+
+# Perfil 802.1X
+aaa authentication dot1x DOT1X-NPS
+  server-group NPS-SG
+  no cp-profile
+exit
+
+# Rol inicial (logon) y rol final
+user-role dot1x-logon
+  access-rule logon-control
+exit
+
+user-role employee-vlan30
+  vlan 30
+  access-rule allowall
+exit
+
+# AAA profile para el VAP 802.1X
+aaa profile EMP-AAA
+  initial-role dot1x-logon
+  dot1x-auth-profile DOT1X-NPS
+  # (opcional) enforce-vlan o defínelo en el VAP
+exit
+
+# SSID (enterprise 802.1X en bridge)
+wlan ssid-profile EMP-8021X
+  ssid EMP-8021X
+  opmode wpa2-aes
+  wpa-passphrase disable
+  wpa-psk 0  # (no PSK)
+  auth-server NPS-SG  # si tu versión lo pide en ssid-profile
+  dot1x authentication-profile DOT1X-NPS
+  forward-mode bridge
+exit
+
+wlan virtual-ap EMP-8021X-VAP
+  ssid-profile EMP-8021X
+  aaa-profile EMP-AAA
+  vlan 30
+exit
+
+ap-group LAB
+  virtual-ap EMP-8021X-VAP
+  # recuerda: ya alineaste el native-vlan-id del AP system-profile a 300 (tu mgmt)
+exit
+
+write memory
+```
+
+> Si prefieres GUI: **Configuration » Authentication » Servers** (creas el RADIUS y server-group), luego **WLANs » tu SSID » Security** (802.1X/Enterprise) y seleccionas el **server-group**. En **Access**/Profiles estableces rol inicial y VLAN.
+
+# 3) Validaciones rápidas
+
+En el **MD**:
+
+* Ver quién hace las peticiones y qué VLAN cae:
+
+  ```
+  show user-table verbose
+  ```
+* Probar reachability del NPS:
+
+  ```
+  ping <IP_DEL_NPS>
+  ```
+* Probar RADIUS con un usuario de prueba:
+
+  ```
+  aaa test-server radius NPS1 username <user> password <pass>
+  ```
+* Estadísticas RADIUS:
+
+  ```
+  show aaa authentication-server radius statistics
+  show log security | include radius
+  ```
+
+En el **NPS**:
+
+* Ver que ya **no** salga “invalid RADIUS client … 192.168.1.196”.
+* Que aparezcan eventos de **Access-Accept/Reject** según credenciales/política.
+
+# 4) Cosas que suelen romper 802.1X
+
+* **Shared secret** distinto (NPS vs Aruba).
+* **IP de origen** del MD distinta a la autorizada en NPS. Si quieres fijarla:
+
+  ```
+  ip radius source-interface vlan <ID_que_quieras>
+  ```
+
+  (si no, NPS debe aceptar la que realmente usa el MD — hoy ves 192.168.1.196).
+* **Hora** desfasada si usas PEAP/EAP-TLS (certs).
+* **Política NPS** demasiado estricta (por ejemplo, solo EAP-TLS y tu cliente usa PEAP-MSCHAPv2).
+
+Con eso, al conectar al SSID 802.1X te debe dejar de pedir credenciales en loop y verás el cliente en **show user-table** con **Role** ≈ tu rol post-auth y **Vlan 30 (30)**.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### `Step 1`: Crear la VLAN que llevará mi WLAN/SSID
 
 - La VLAN será la que transporte esta red, del lado del backbone esta VLAN tiene que estar configurada en el DHCP en caso de estar en modo bridge, o existir en la controladora en caso de estar tunneled.
