@@ -27,6 +27,107 @@ BEFORE CONFIGURING AN SSID IN OTHER VLAN THAT DEFAULT 1, YOU NEED TO MAKE SURE T
 
 <img width="1352" height="753" alt="image" src="https://github.com/user-attachments/assets/8df868af-dd53-4401-991d-2703be891492" />
 
+Por alguna razon, con todas las VLANs fucniona el broisdge cuando las pongo dentro del trunk.... pero si intent con la vlan 300 radiarla, la cual ya es el mgmt de los APs, me sale como que tunneled bien raro: 
+
+````
+(MGD-DEV::MC-Fz3r0-1) #show user-table verbose
+
+Users
+-----
+    IP              MAC            Name     Role         Age(d:h:m)  Auth           VPN link  AP name  Roaming             Essid/Bssid/Phy                        Profile               Forward mode  Type  Host Name  User Type  Server    Vlan       Bwm  UaStr:ParseDisable/Flag/ShortIndex
+----------     ------------       ------    ----         ----------  ----           --------  -------  -------             ---------------                        -------               ------------  ----  ---------  ---------  ------    ----       ---  ----------------------------------
+10.10.130.101  00:00:00:00:00:00            sys-ap-role  00:00:43    TRANSPORT-VPN            N/A                                                                 default-cap           tunnel                         WIRELESS             0 (0)           OFF/0/0
+10.10.30.102   44:e5:17:06:e4:60            00-ALL       00:00:02                             Fz3r0    Associated(Remote)  Fz3r0-Aruba/f4:2e:7f:03:0f:50/5GHz-HE  Fz3r0-Aruba_aaa_prof  bridge                         WIRELESS             300 (300)       OFF/0/0
+
+User Entries: 2/2
+ Curr/Cum Alloc:2/18 Free:1/16 Dyn:3 AllocErr:0 FreeErr:0
+(MGD-DEV::MC-Fz3r0-1) #show ap config ap-name Fz3r0 | include virtual-ap
+Virtual AP enable                                               Enabled          Enabled          N/A             Enabled          wlan virtual-ap "Fz3r0-Aruba"
+VLAN                                                            300              300              N/A             300              wlan virtual-ap "Fz3r0-Aruba"
+Forward mode                                                    bridge           bridge           N/A             bridge           wlan virtual-ap "Fz3r0-Aruba"
+Allowed band                                                    all              all              N/A             all              wlan virtual-ap "Fz3r0-Aruba"
+Allowed 5G radio                                                all              all              N/A             all              wlan virtual-ap "Fz3r0-Aruba"
+Allow 6GHz band                                                 Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+Disable 6GHz vap for mesh                                       Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+Allow-band-6GHz-supplement                                      Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+Band Steering                                                   Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+Cellular handoff assist                                         Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+Openflow Enable                                                 Enabled          Enabled          N/A             Enabled          wlan virtual-ap "Fz3r0-Aruba"
+Fine Timing Measurement (802.11mc) Responder Mode               Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+Steering Mode                                                   prefer-5ghz      prefer-5ghz      N/A             prefer-5ghz      wlan virtual-ap "Fz3r0-Aruba"
+Dynamic Multicast Optimization (DMO)                            Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+Dynamic Multicast Optimization (DMO) Threshold                  6                6                N/A             6                wlan virtual-ap "Fz3r0-Aruba"
+Drop Broadcast and Multicast                                    Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+Convert Broadcast ARP requests to unicast                       Enabled          Enabled          N/A             Enabled          wlan virtual-ap "Fz3r0-Aruba"
+Authentication Failure Denylist Time                            3600 sec         3600 sec         N/A             3600 sec         wlan virtual-ap "Fz3r0-Aruba"
+Denylist Time                                                   3600 sec         3600 sec         N/A             3600 sec         wlan virtual-ap "Fz3r0-Aruba"
+Deny inter user traffic                                         Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+Deny time range                                                 N/A              N/A              N/A             N/A              wlan virtual-ap "Fz3r0-Aruba"
+DoS Prevention                                                  Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+HA Discovery on-association                                     Enabled          Enabled          N/A             Enabled          wlan virtual-ap "Fz3r0-Aruba"
+Mobile IP                                                       Enabled          Enabled          N/A             Enabled          wlan virtual-ap "Fz3r0-Aruba"
+Preserve Client VLAN                                            Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+Remote-AP Operation                                             standard         standard         N/A             standard         wlan virtual-ap "Fz3r0-Aruba"
+Station Denylisting                                             Enabled          Enabled          N/A             Enabled          wlan virtual-ap "Fz3r0-Aruba"
+Strict Compliance                                               Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+VLAN Mobility                                                   Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+WAN Operation mode                                              always           always           N/A             always           wlan virtual-ap "Fz3r0-Aruba"
+FDB Update on Assoc                                             Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+Pure UAC BSS Deferred Deletion Delay                            10 min           10 min           N/A             10 min           wlan virtual-ap "Fz3r0-Aruba"
+(MGD-DEV::MC-Fz3r0-1) # 
+````
+
+y en otra vlan como la 30, si sirvey se ve así: 
+
+````
+(MGD-DEV::MC-Fz3r0-1) #show user-table verbose
+
+Users
+-----
+    IP                          MAC            Name     Role         Age(d:h:m)  Auth           VPN link  AP name  Roaming             Essid/Bssid/Phy                         Profile               Forward mode  Type   Host Name  User Type  Server    Vlan     Bwm  UaStr:ParseDisable/Flag/ShortIndex
+----------                 ------------       ------    ----         ----------  ----           --------  -------  -------             ---------------                         -------               ------------  ----   ---------  ---------  ------    ----     ---  ----------------------------------
+10.10.130.101              00:00:00:00:00:00            sys-ap-role  00:00:29    TRANSPORT-VPN            N/A                                                                  default-cap           tunnel                          WIRELESS             0 (0)         OFF/0/0
+10.10.30.101               be:7c:4c:22:56:51            00-ALL       00:00:00                             Fz3r0    Associated(Remote)  Fz3r0-Aruba/f4:2e:7f:03:0f:50/5GHz-VHT  Fz3r0-Aruba_aaa_prof  bridge        Linux             WIRELESS             30 (30)       ON/1/105
+fe80::bc7c:4cff:fe22:5651  be:7c:4c:22:56:51            00-ALL       00:00:00                             Fz3r0    Associated(Remote)  Fz3r0-Aruba/f4:2e:7f:03:0f:50/5GHz-VHT  Fz3r0-Aruba_aaa_prof  bridge        Linux             WIRELESS             30 (30)       ON/1/105
+
+
+Total Roles:15
+(MGD-DEV::MC-Fz3r0-1) #show ap config ap-name Fz3r0 | include virtual-ap
+Virtual AP enable                                               Enabled          Enabled          N/A             Enabled          wlan virtual-ap "Fz3r0-Aruba"
+VLAN                                                            30               30               N/A             30               wlan virtual-ap "Fz3r0-Aruba"
+Forward mode                                                    bridge           bridge           N/A             bridge           wlan virtual-ap "Fz3r0-Aruba"
+Allowed band                                                    all              all              N/A             all              wlan virtual-ap "Fz3r0-Aruba"
+Allowed 5G radio                                                all              all              N/A             all              wlan virtual-ap "Fz3r0-Aruba"
+Allow 6GHz band                                                 Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+Disable 6GHz vap for mesh                                       Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+Allow-band-6GHz-supplement                                      Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+Band Steering                                                   Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+Cellular handoff assist                                         Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+Openflow Enable                                                 Enabled          Enabled          N/A             Enabled          wlan virtual-ap "Fz3r0-Aruba"
+Fine Timing Measurement (802.11mc) Responder Mode               Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+Steering Mode                                                   prefer-5ghz      prefer-5ghz      N/A             prefer-5ghz      wlan virtual-ap "Fz3r0-Aruba"
+Dynamic Multicast Optimization (DMO)                            Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+Dynamic Multicast Optimization (DMO) Threshold                  6                6                N/A             6                wlan virtual-ap "Fz3r0-Aruba"
+Drop Broadcast and Multicast                                    Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+Convert Broadcast ARP requests to unicast                       Enabled          Enabled          N/A             Enabled          wlan virtual-ap "Fz3r0-Aruba"
+Authentication Failure Denylist Time                            3600 sec         3600 sec         N/A             3600 sec         wlan virtual-ap "Fz3r0-Aruba"
+Denylist Time                                                   3600 sec         3600 sec         N/A             3600 sec         wlan virtual-ap "Fz3r0-Aruba"
+Deny inter user traffic                                         Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+Deny time range                                                 N/A              N/A              N/A             N/A              wlan virtual-ap "Fz3r0-Aruba"
+DoS Prevention                                                  Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+HA Discovery on-association                                     Enabled          Enabled          N/A             Enabled          wlan virtual-ap "Fz3r0-Aruba"
+Mobile IP                                                       Enabled          Enabled          N/A             Enabled          wlan virtual-ap "Fz3r0-Aruba"
+Preserve Client VLAN                                            Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+Remote-AP Operation                                             standard         standard         N/A             standard         wlan virtual-ap "Fz3r0-Aruba"
+Station Denylisting                                             Enabled          Enabled          N/A             Enabled          wlan virtual-ap "Fz3r0-Aruba"
+Strict Compliance                                               Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+VLAN Mobility                                                   Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+WAN Operation mode                                              always           always           N/A             always           wlan virtual-ap "Fz3r0-Aruba"
+FDB Update on Assoc                                             Disabled         Disabled         N/A             Disabled         wlan virtual-ap "Fz3r0-Aruba"
+Pure UAC BSS Deferred Deletion Delay                            10 min           10 min           N/A             10 min           wlan virtual-ap "Fz3r0-Aruba"
+
+````
+
 ### `Step 1`: Crear la VLAN que llevará mi WLAN/SSID
 
 - La VLAN será la que transporte esta red, del lado del backbone esta VLAN tiene que estar configurada en el DHCP en caso de estar en modo bridge, o existir en la controladora en caso de estar tunneled.
