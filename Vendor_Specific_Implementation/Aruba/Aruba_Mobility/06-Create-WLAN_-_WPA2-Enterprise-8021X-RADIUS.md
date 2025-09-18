@@ -300,6 +300,13 @@ Y listo! simplemente hacer el deploy:
 
 
 
+---
+
+## Instalar Certificado en cliente: 
+
+<img width="372" height="401" alt="image" src="https://github.com/user-attachments/assets/da3fd53f-a609-431d-bf3c-dd156aed00e0" />
+
+
 
 ---
 
