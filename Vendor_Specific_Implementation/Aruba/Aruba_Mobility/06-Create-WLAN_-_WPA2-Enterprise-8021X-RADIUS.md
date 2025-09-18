@@ -27,7 +27,7 @@ BEFORE CONFIGURING AN SSID IN OTHER VLAN THAT DEFAULT 1, YOU NEED TO MAKE SURE T
 
 <img width="1352" height="753" alt="image" src="https://github.com/user-attachments/assets/8df868af-dd53-4401-991d-2703be891492" />
 
-Por alguna razon, con todas las VLANs fucniona el broisdge cuando las pongo dentro del trunk.... pero si intent con la vlan 300 radiarla, la cual ya es el mgmt de los APs, me sale como que tunneled bien raro: 
+Por alguna razon, con todas las VLANs fucniona el broisdge cuando las pongo dentro del trunk, por ejemplo la 30.... pero si intent con la vlan 300 radiarla, la cual ya es el mgmt de los APs, me sale solo el AP que esta tunneleado o algo asi, pero no users, o si se llega a conectar no tienen ip ni nada y depsues los vota, con la vlan 3'0 no tengo ese problema
 
 ````
 (MGD-DEV::MC-Fz3r0-1) #show user-table verbose
@@ -37,7 +37,6 @@ Users
     IP              MAC            Name     Role         Age(d:h:m)  Auth           VPN link  AP name  Roaming             Essid/Bssid/Phy                        Profile               Forward mode  Type  Host Name  User Type  Server    Vlan       Bwm  UaStr:ParseDisable/Flag/ShortIndex
 ----------     ------------       ------    ----         ----------  ----           --------  -------  -------             ---------------                        -------               ------------  ----  ---------  ---------  ------    ----       ---  ----------------------------------
 10.10.130.101  00:00:00:00:00:00            sys-ap-role  00:00:43    TRANSPORT-VPN            N/A                                                                 default-cap           tunnel                         WIRELESS             0 (0)           OFF/0/0
-10.10.30.102   44:e5:17:06:e4:60            00-ALL       00:00:02                             Fz3r0    Associated(Remote)  Fz3r0-Aruba/f4:2e:7f:03:0f:50/5GHz-HE  Fz3r0-Aruba_aaa_prof  bridge                         WIRELESS             300 (300)       OFF/0/0
 
 User Entries: 2/2
  Curr/Cum Alloc:2/18 Free:1/16 Dyn:3 AllocErr:0 FreeErr:0
