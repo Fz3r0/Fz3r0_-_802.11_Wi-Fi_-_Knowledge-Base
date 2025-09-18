@@ -68,11 +68,9 @@ Repite para el segundo MC:
 
 > Si usas PEAP/EAP-TLS: el NPS debe tener cert de servidor válido y la hora sincronizada (NTP).
 
+3. En el NPS se verá un aviso:
 
-
-
-
-
+<img width="1893" height="473" alt="image" src="https://github.com/user-attachments/assets/748e1436-2c7a-4d10-aa33-dd71b5d69e90" />
 
 
 # 2) Aruba – apuntar al NPS y usarlo en el SSID 802.1X
@@ -299,12 +297,19 @@ Y listo! simplemente hacer el deploy:
 <img width="1280" height="291" alt="image" src="https://github.com/user-attachments/assets/93b960cc-73f6-4476-aff2-9ab1807ff08d" />
 
 
+Ahora si el cliente podra conectar :D (aunque aun no tiene instalado el certificado se le puede dar aceptar y listo)
+
+<img width="1894" height="994" alt="image" src="https://github.com/user-attachments/assets/ab25a74b-9227-4d5d-b0b6-26b53fd7f59a" />
+
+
 
 ---
 
 ## Instalar Certificado en cliente: 
 
 <img width="372" height="401" alt="image" src="https://github.com/user-attachments/assets/da3fd53f-a609-431d-bf3c-dd156aed00e0" />
+
+<img width="1894" height="994" alt="image" src="https://github.com/user-attachments/assets/67c6e527-967e-4d00-903f-63c945a8cce7" />
 
 
 
