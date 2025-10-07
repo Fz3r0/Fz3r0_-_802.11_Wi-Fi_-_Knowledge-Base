@@ -277,6 +277,8 @@ En el modo "Tunnel", el AP encapsula todo hacia la controladora usando la VLAN d
 
 ### `Step 3`: Configurar DHCP en la controladora para la VLAN 702
 
+OJO AQUI EM EQUEDE!!! REVISAR SI EL SVI Y DHCOP ES EN EL FRUPO O SUBGRUPO
+
 **Grupo > Sub-Grupo > Configuration > Services > DHCP**
 
 * DHCP Server: Enable
