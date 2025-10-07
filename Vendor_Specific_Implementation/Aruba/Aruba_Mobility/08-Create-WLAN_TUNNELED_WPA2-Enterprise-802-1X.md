@@ -216,10 +216,6 @@ Con eso, al conectar al SSID 802.1X te debe dejar de pedir credenciales en loop 
 
 
 
-### `Step 1`: Crear la VLAN que llevará mi WLAN/SSID
-
-
-
 
 
 
@@ -240,7 +236,7 @@ En el modo "Tunnel", el AP encapsula todo hacia la controladora usando la VLAN d
 
 ### `Step 1`: Crear la VLAN de usuarios en la controladora
 
-Group > Sub-Group > Configuration > Interfaces > VLANs
+**Group > Sub-Group > Configuration > Interfaces > VLANs**
 
 1. Add
    - VLAN ID: `702`
@@ -249,21 +245,33 @@ Group > Sub-Group > Configuration > Interfaces > VLANs
 
 > Aunque el tráfico irá “tunneleado” por la VLAN 300, necesitas definir la VLAN 702 para que la controladora la “desempaque” y haga L3/DHCP.
 
+<img width="1357" height="628" alt="image" src="https://github.com/user-attachments/assets/a51039c2-2ed1-48a0-a20c-169ee3f15bb8" />
+
 ---
 
 ### `Step 2`: Crear la SVI (gateway) para esa VLAN
 
-**Grupo > Sub-Grupo > Configuration > Interfaces > VLAN Interfaces**
+**Group > Sub-Group > Configuration > Interfaces > VLANs >>> Select Tunnel 702 > 702 > IPv4**
 
-* Add
+<img width="1913" height="775" alt="image" src="https://github.com/user-attachments/assets/75703bf4-08e1-4e2b-bf62-f1158cbe1a7e" />
 
-  * VLAN: `702`
-  * IP address: `10.70.2.1`
-  * Netmask: `255.255.255.0`
-  * Admin state: `Up`
-* Save / Deploy
+- IP assignment: `Static`
+- IP address: `10.70.2.254`
+- Netmask: `255.255.255.0`
+- IP DHCP settings: `Act as server`
+- Network: `10.70.2.0`
+- Netmask: `255.255.255.0`
+- Pool name: `vlan_702`
+- Default router: `10.70.2.254`
+- DNS server: `8.8.8.8`
+- Netbios name `server: 
+- MTU:
+- Suppress ARP:
 
 > Esta SVI convierte a la controladora en el default gateway de los clientes del SSID.
+
+<img width="428" height="657" alt="image" src="https://github.com/user-attachments/assets/dccc8fd8-093a-4e90-bb73-8e83f46158ad" />
+
 
 ---
 
