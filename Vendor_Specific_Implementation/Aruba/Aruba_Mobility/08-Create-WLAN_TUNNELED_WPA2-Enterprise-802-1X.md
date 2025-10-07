@@ -21,20 +21,6 @@
 
 # 🏝️📡 Aruba Mobility :: `Create WLAN WPA2-Enterprise : 802.1X : RADIUS`
 
-### IMPORTANT!!! 
-
-ESTO NO ES CIERTO, NO ES NECESARIO PERO SI ES LA NUEBA PRACTICA TENERLA COMO TRUNK, PERO SI SIRVE CUALQUIER VLAN (ESCEPTO LA NATIVE m))BEFORE CONFIGURING AN SSID IN OTHER VLAN THAT DEFAULT 1, YOU NEED TO MAKE SURE THE MANAGEMENT INTERFACE OF THE MM IS SET TO TRUNK, ALLOWING THE VLANS WE WANT TO USE. EVEN IF THE MM IS LOCATED REMOTLY ON ANOTHER SUBNET, THIS BRINGS UP THE VLAN INTERFACE. 
-
-<img width="1352" height="753" alt="image" src="https://github.com/user-attachments/assets/8df868af-dd53-4401-991d-2703be891492" />
-
-Por alguna razon, con todas las VLANs fucniona el broisdge cuando las pongo dentro del trunk, por ejemplo la 30.... pero si intent con la vlan 300 radiarla, la cual ya es el mgmt de los APs, me sale solo el AP que esta tunneleado o algo asi, pero no users, o si se llega a conectar no tienen ip ni nada y depsues los vota, con la vlan 3'0 no tengo ese problema
-
-ESTO PASA POR QUE LA NATIVE DEL VAP SIGUE SIENDO 1 POR DEFAULT, Y LAS TAGGED SERVIRAS AUN ASI, PERO LA NATIVE AHI SI NO, SI POR ALGUNA RAZON QUIERES RADIAR LA NATIVE TMB, HAY QUE CAMBAIR LA NATIVE DEL VAP: 
-
-<img width="1890" height="905" alt="image" src="https://github.com/user-attachments/assets/e38186cb-d6ef-430b-8476-ede0587423ca" />
-
-<img width="1256" height="457" alt="image" src="https://github.com/user-attachments/assets/60f17a69-e1a6-4a95-af20-b09bbc3dd841" />
-
 
 
 
@@ -232,75 +218,171 @@ Con eso, al conectar al SSID 802.1X te debe dejar de pedir credenciales en loop 
 
 ### `Step 1`: Crear la VLAN que llevará mi WLAN/SSID
 
-- La VLAN será la que transporte esta red, del lado del backbone esta VLAN tiene que estar configurada en el DHCP en caso de estar en modo bridge, o existir en la controladora en caso de estar tunneled.
-- Es decir, la VLAN debe coincidir ya sea con la controladora o la LAN
-
-**Grupo > Sub-Grupo > Configuration > Interfaces > VLAN:**
-
-<img width="1919" height="766" alt="image" src="https://github.com/user-attachments/assets/e0ee79f3-afbd-459a-90d5-410de97bfbec" />
-
-Agregar el VLAN ID y un nombre identificador y hacer deplot de los cambios
-
-- Nota: Mas adelante se podrá seleccionar la VLAN tanto por el nombre como por el número. 
-
-<img width="1952" height="523" alt="image" src="https://github.com/user-attachments/assets/692b81e8-c4af-4cca-8d7b-d8d31525ff8d" />
-
-### `Step 2`: Configurar WLAN (SSID)
-
-- Al principio no existirá ninguna WLAN ya que no hemos creado ninguna
-
-**Grupo > Sub-Grupo > Configuration > WLANs:**
-
-<img width="1919" height="767" alt="image" src="https://github.com/user-attachments/assets/eed65a02-8b77-4dc1-ada4-07cb22236875" />
-
-Llenar los campos según sea necesario, particularmente para este lab yo usaré: 
-
-- Name (SSID): `V10-EMPLOYEE_ENTERPRISE_TUNNEL`
-- Primary usage: `Employee`
-- Select AP Groups Broadcast: `AP-GROUP1_office-branch-01`
-- Forwarding mode: `Tunnel`
-
-NOTA: La gran diferencia entr ebridged y tunnel es que bridged se comporta el AP como un "switch" todas las VLANs que vienen de los SSID saldrán trunkled con 802.1q y por ende el switch también debe ser trunked, uan vez que sale del AP los datos ya todo se pasa a la LAN y ahi se debe hacer cargo del DHCP y demas, tal cual como otro switch truinked. Por otro lado, si esta tunnel todo sera tunneleado por una misma VLAN hasta la controladora, y ya la controladora se harña cargo de DHCP y el control de datos. 
-
-NOTA 2: la diferneci aen aruba con un Employee un y Guest es..... aqui pon que odna vektor. 
-
-<img width="632" height="456" alt="image" src="https://github.com/user-attachments/assets/2c51137b-be52-4d3b-8ad9-56d207c76b95" />
-
-Después, seleccionar la VLAN:
-
-- Aquí podemos usar ya sea el VLAN ID "10" o el nombre completo de la VLAN.
-- Podemos incluso ver las VLANs que ya hay creadas por si tenemos duda
-
-<img width="1256" height="658" alt="image" src="https://github.com/user-attachments/assets/69c63a95-8042-4f6d-84c4-0b5f0f1d33fa" />
-
-Ahora pasamos a la parte de seguridad:
-
-- Aquí podemos seleccionar ya sea WPA2 o WPA3 Enterprise, yo usaré WPA2 para fines prácticos
-- El reauth interval en aruba es...
-- el mahcina authentication es.... por ahor alo dejare en disabled
-- el deny listing se suma con el max authentication, aqui simplemente es el nuemro de beves que peudes bla bla... el máximo es 5 
-
-<img width="1173" height="680" alt="image" src="https://github.com/user-attachments/assets/34cd8050-2f3a-43d5-8fcf-8de3f9de1881" />
-
-Hacer click en "+" para agregar el authetnication server. 
-
-- En este lab yo usaré mi Windows Server 2022 Data center, dodne tengo ya un NPS jalando. RADIUS: 192.168.1.86	shared secret:	Cisco.12345
-
-<img width="642" height="491" alt="image" src="https://github.com/user-attachments/assets/0426c71e-ea46-4484-ad28-512c9400ab2b" />
-
-En caso de un "Employee" el Default Role siempre será guest (esto confirmamelo porfa vektor)
-
-<img width="1188" height="238" alt="image" src="https://github.com/user-attachments/assets/c4615fc9-fc75-4fe6-a6b2-5104d3e3a295" />
-
-Y listo! simplemente hacer el deploy: 
-
-<img width="1280" height="291" alt="image" src="https://github.com/user-attachments/assets/93b960cc-73f6-4476-aff2-9ab1807ff08d" />
 
 
-Ahora si el cliente podra conectar :D (aunque aun no tiene instalado el certificado se le puede dar aceptar y listo)
 
-<img width="1894" height="994" alt="image" src="https://github.com/user-attachments/assets/ab25a74b-9227-4d5d-b0b6-26b53fd7f59a" />
 
+
+
+
+### `Step 0`: Planeación rápida de direcciones
+
+En el modo "Tunnel", el AP encapsula todo hacia la controladora usando la VLAN de management, por ejemplo 300. La VLAN del SSID, por ejemplo 702, no sale del AP en el cable. La controladora termina el túnel y “desempaca” en la VLAN 702, donde puede ser gateway y servidor DHCP. **En la LAN solo necesitas el puerto del AP en access a la 300. Solo usarías trunk si mezclas con algún SSID en Bridged.**
+
+- VLAN de management: `300`  (APs llegan por aquí, túnel viaja por aquí)
+- VLAN de usuarios (SSID): `702`
+- SVI de la controladora (MM/MC) para VLAN 702: `172.20.2.1/24`
+- Scope DHCP para VLAN 702: `172.20.2.10 - 172.20.2.200`
+- DNS: `8.8.8.8`,`1.1.1.1`
+- Default route de la controladora hacia tu core/Internet: `0.0.0.0/0 - <next-hop-en-VLAN300>`
+
+---
+
+### `Step 1`: Crear la VLAN de usuarios en la controladora
+
+Group > Sub-Group > Configuration > Interfaces > VLANs
+
+1. Add
+   - VLAN ID: `702`
+   - Name: `VLAN-702-EMP-TUNNEL`
+2. Save / Deploy
+
+> Aunque el tráfico irá “tunneleado” por la VLAN 300, necesitas definir la VLAN 702 para que la controladora la “desempaque” y haga L3/DHCP.
+
+---
+
+### `Step 2`: Crear la SVI (gateway) para esa VLAN
+
+**Grupo > Sub-Grupo > Configuration > Interfaces > VLAN Interfaces**
+
+* Add
+
+  * VLAN: `702`
+  * IP address: `10.70.2.1`
+  * Netmask: `255.255.255.0`
+  * Admin state: `Up`
+* Save / Deploy
+
+> Esta SVI convierte a la controladora en el default gateway de los clientes del SSID.
+
+---
+
+### `Step 3`: Configurar DHCP en la controladora para la VLAN 702
+
+**Grupo > Sub-Grupo > Configuration > Services > DHCP**
+
+* DHCP Server: Enable
+* Add Scope
+
+  * Scope name: `DHCP-702`
+  * VLAN: `702`
+  * Network: `10.70.2.0`
+  * Mask: `255.255.255.0`
+  * Default gateway: `10.70.2.1`
+  * DNS servers: `10.10.10.10`  (o el que uses)
+  * Lease time: `8h`  (o tu valor)
+  * Address range: `10.70.2.10 – 10.70.2.200`
+* Save / Deploy
+
+> Si prefieres DHCP externo, omite esto y en su lugar prepara el enrutamiento o IP helpers. Para este tutorial usamos DHCP local.
+
+---
+
+### `Step 4`: Asegurar enrutamiento de salida de la controladora
+
+**Grupo > Sub-Grupo > Configuration > Routing > Static Routes**
+
+* Add
+
+  * Destination: `0.0.0.0/0`
+  * Next hop: `<IP del gateway en VLAN 300>`  (por ejemplo `10.70.0.1`)
+* Save / Deploy
+
+> Esto permite que el tráfico de la VLAN 702 salga a tu LAN/Internet. Si tu red usa enrutamiento dinámico puedes omitir y usar OSPF/BGP, pero con default route es suficiente para el lab.
+
+---
+
+### `Step 5`: Crear el SSID en modo Tunnel
+
+**Grupo > Sub-Grupo > Configuration > WLANs**
+
+* Add
+
+  * Name (SSID): `V10-EMPLOYEE_ENTERPRISE_TUNNEL`
+  * Primary usage: `Employee`
+  * Forwarding mode: `Tunnel`
+  * VLAN: `702`  (puedes seleccionar por ID o por nombre)
+  * Broadcast to AP Groups: `AP-GROUP1_office-branch-01`
+* Security
+
+  * Key management: `WPA2-Enterprise`  (o WPA3 si lo deseas)
+  * Authentication server / Server group: selecciona tu RADIUS ya existente
+  * Reauth interval: `8h`
+  * Machine authentication: `Disabled` por ahora
+* Save / Deploy
+
+> “Tunnel” hace que todo el tráfico cliente-AP viaje encapsulado hasta la controladora por la VLAN 300. La controladora actúa como gateway y DHCP para la VLAN 702.
+
+---
+
+### `Step 6`: Asignar el SSID al AP Group y verificar perfiles
+
+**Grupo > Sub-Grupo > Configuration > AP Groups > AP-GROUP1_office-branch-01**
+
+* WLANs: agrega `V10-EMPLOYEE_ENTERPRISE_TUNNEL`
+* Verifica que el AP Group tenga RF profiles y AP system profile correctos
+* Save / Deploy
+
+> Si tus APs quedan en “Pending”, valida conectividad a management VLAN 300 y reachability hacia la controladora.
+
+---
+
+### `Step 7`: Verificación rápida
+
+CLI de la controladora:
+
+```bash
+# Asociaciones y usuarios
+show user-table
+show aaa authentication sessions
+
+# BSS y radios
+show ap bss-table
+
+# DHCP (leases)
+show ip dhcp binding
+show ip dhcp statistics
+
+# Enrutamiento y reachability
+show ip route
+ping 10.70.2.10   # IP de un cliente
+```
+
+En el cliente:
+
+* Conéctate al SSID `V10-EMPLOYEE_ENTERPRISE_TUNNEL`
+* Debe recibir IP en `10.70.2.0/24` con gateway `10.70.2.1` y DNS configurado
+* Debe autenticar vía 802.1X contra tu RADIUS ya existente
+
+---
+
+### `Step 8` (Opcional): Políticas mínimas de rol
+
+Si usas roles por defecto, asegúrate de permitir DNS, DHCP, y el tráfico necesario hacia tu red o Internet. Lo más simple para validar el lab es permitir salida a Internet y bloquear inter-user si lo deseas.
+
+---
+
+### Checklist final
+
+* VLAN `702` creada
+* SVI `10.70.2.1/24` Up en VLAN 702
+* DHCP scope activo para VLAN 702
+* Default route configurada hacia el core por VLAN 300
+* SSID `V10-EMPLOYEE_ENTERPRISE_TUNNEL` en modo `Tunnel` con VLAN 702
+* SSID asignado al `AP-GROUP1_office-branch-01`
+* Cliente obtiene IP, gateway y navega
+
+Con esto tienes el SSID en modo Tunnel, con la controladora funcionando como gateway y servidor DHCP para la VLAN del SSID. Si quieres, luego afinamos roles, ACLs y ya metemos Machine Auth/EAP-TLS.
 
 
 ---
