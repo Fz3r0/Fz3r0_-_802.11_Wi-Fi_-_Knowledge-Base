@@ -479,6 +479,7 @@ Prepárense para reír, sentir pena ajena y tal vez incluso derramar una lágrim
 ---
 
 
+<img width="526" height="701" alt="image" src="https://github.com/user-attachments/assets/d6f6bc84-f20a-4b8f-811d-7e33964d65b9" />
 
 
 
